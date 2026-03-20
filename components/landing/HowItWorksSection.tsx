@@ -1,0 +1,172 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { Map, Brain, CheckCircle } from 'lucide-react';
+
+const steps = [
+  {
+    num: '01',
+    title: 'Map',
+    icon: Map,
+    accent: '#4B4DF7',
+    desc: 'Assess skills, mindset, and readiness across candidates and employees using AI-powered psychometric assessments, customized to your leadership model and deployable at scale across 50+ languages.',
+    keywords: ['Skills', 'Mindset', 'Readiness', '50+ languages'],
+  },
+  {
+    num: '02',
+    title: 'Predict',
+    icon: Brain,
+    accent: '#7577F8',
+    desc: 'AI co-pilots surface who is ready now, who can be developed in 3-6 months, and where gaps will block your strategy, before they become expensive surprises.',
+    keywords: ['Ready now', '3-6 months', 'Gap analysis', 'AI co-pilot'],
+  },
+  {
+    num: '03',
+    title: 'Decide',
+    icon: CheckCircle,
+    accent: '#FF5F24',
+    desc: 'Every hire, promotion, and transformation investment is backed by objective, auditable data. GDPR-compliant. Defensible to boards, regulators, and investors.',
+    keywords: ['Objective data', 'Auditable', 'GDPR', 'Defensible'],
+  },
+];
+
+export default function HowItWorksSection() {
+  const [active, setActive] = useState(0);
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: '-80px' });
+
+  // Auto-advance every 5s
+  useEffect(() => {
+    const timer = setInterval(() => setActive(p => (p + 1) % 3), 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <section
+      id="how-it-works"
+      data-testid="how-it-works-section"
+      className="section-breathe relative flex items-center overflow-hidden"
+      style={{ minHeight: '100vh' }}
+      ref={sectionRef}
+    >
+      <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-20 lg:py-28">
+
+        {/* Title */}
+        <motion.div
+          className="text-center mb-16 lg:mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7 }}
+        >
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#1A1A2E]">
+            From assessment to action{' '}
+            <span className="italic font-bold gradient-text-on-light">in three steps</span>
+          </h2>
+        </motion.div>
+
+        {/* 3-column cards — always visible, active one is highlighted */}
+        <div className="grid lg:grid-cols-3 gap-4 lg:gap-5">
+          {steps.map((step, i) => {
+            const Icon = step.icon;
+            const isActive = i === active;
+            return (
+              <motion.div
+                key={step.num}
+                onClick={() => setActive(i)}
+                className="cursor-pointer relative group"
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+              >
+                {/* Card */}
+                <motion.div
+                  className="relative rounded-2xl overflow-hidden h-full"
+                  animate={{
+                    backgroundColor: isActive ? '#0D0D1F' : '#F0F0F8',
+                    borderColor: isActive ? 'rgba(75,77,247,0.3)' : 'rgba(26,26,46,0.08)',
+                  }}
+                  transition={{ duration: 0.5 }}
+                  style={{ border: '1px solid' }}
+                >
+                  {/* Top progress bar */}
+                  <div className="h-1 w-full relative" style={{ background: isActive ? 'rgba(75,77,247,0.15)' : 'rgba(26,26,46,0.04)' }}>
+                    {isActive && (
+                      <motion.div
+                        className="absolute left-0 top-0 h-full rounded-full"
+                        style={{ background: step.accent }}
+                        initial={{ width: '0%' }}
+                        animate={{ width: '100%' }}
+                        transition={{ duration: 5, ease: 'linear' }}
+                        key={`bar-${active}`}
+                      />
+                    )}
+                  </div>
+
+                  <div className="p-8 lg:p-10">
+                    {/* Number + Icon row */}
+                    <div className="flex items-center justify-between mb-8">
+                      <motion.span
+                        className="text-[48px] lg:text-[56px] font-bold leading-none tracking-[-0.04em]"
+                        animate={{ color: isActive ? 'rgba(155,157,251,0.3)' : 'rgba(26,26,46,0.12)' }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        {step.num}
+                      </motion.span>
+                      <motion.div
+                        className="w-12 h-12 rounded-xl flex items-center justify-center"
+                        animate={{
+                          backgroundColor: isActive ? 'rgba(75,77,247,0.15)' : 'rgba(75,77,247,0.05)',
+                          borderColor: isActive ? 'rgba(155,157,251,0.2)' : 'rgba(75,77,247,0.08)',
+                        }}
+                        transition={{ duration: 0.5 }}
+                        style={{ border: '1px solid' }}
+                      >
+                        <Icon className="h-5 w-5" style={{ color: isActive ? '#9B9DFB' : 'rgba(75,77,247,0.35)' }} strokeWidth={1.5} />
+                      </motion.div>
+                    </div>
+
+                    {/* Title */}
+                    <motion.h3
+                      className="text-[28px] lg:text-[32px] font-bold mb-4 leading-tight tracking-[-0.02em]"
+                      animate={{ color: isActive ? 'rgba(255,255,255,0.95)' : 'rgba(26,26,46,0.85)' }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      {step.title}
+                    </motion.h3>
+
+                    {/* Description */}
+                    <motion.p
+                      className="text-[15px] leading-[1.8] mb-8"
+                      animate={{ color: isActive ? 'rgba(255,255,255,0.5)' : 'rgba(26,26,46,0.55)' }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      {step.desc}
+                    </motion.p>
+
+                    {/* Keyword tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {step.keywords.map(kw => (
+                        <motion.span
+                          key={kw}
+                          className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide"
+                          animate={{
+                            color: isActive ? 'rgba(155,157,251,0.7)' : 'rgba(75,77,247,0.5)',
+                            backgroundColor: isActive ? 'rgba(75,77,247,0.12)' : 'rgba(75,77,247,0.04)',
+                            borderColor: isActive ? 'rgba(75,77,247,0.2)' : 'rgba(75,77,247,0.08)',
+                          }}
+                          transition={{ duration: 0.5 }}
+                          style={{ border: '1px solid' }}
+                        >
+                          {kw}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
