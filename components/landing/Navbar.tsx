@@ -35,6 +35,7 @@ const navLinks = [
     items: [
       { name: 'White Papers', path: '/resources/whitepapers' },
       { name: 'Blog', path: '/blog' },
+      { name: 'Press', path: '/resources/press' },
       { name: 'About', path: '/about' },
     ],
   },
