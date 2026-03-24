@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Linkedin } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const lead = {
   name: 'Dr. Tony Lee, Ph.D.',
@@ -19,6 +20,7 @@ const members = [
 ];
 
 export default function ScienceTeam() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -34,8 +36,8 @@ export default function ScienceTeam() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">
-            The team behind the{' '}
-            <span className="italic font-bold gradient-text-on-light">science</span>
+            {t('The team behind the')}{' '}
+            <span className="italic font-bold gradient-text-on-light">{t('science')}</span>
           </h2>
         </motion.div>
 
@@ -55,10 +57,10 @@ export default function ScienceTeam() {
                 {lead.name}
               </h3>
               <p className="text-[15px] font-semibold text-[#4B4DF7]/70 mb-6">
-                {lead.role}
+                {t(lead.role)}
               </p>
               <p className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.8] max-w-2xl">
-                {lead.bio}
+                {t(lead.bio)}
               </p>
               <a
                 href={lead.linkedin}
@@ -92,7 +94,7 @@ export default function ScienceTeam() {
                 {m.name}
               </h4>
               <p className="text-[13px] text-[#1A1A2E]/45 leading-snug">
-                {m.role}
+                {t(m.role)}
               </p>
             </motion.div>
           ))}
@@ -108,7 +110,7 @@ export default function ScienceTeam() {
           <span className="text-[48px] font-bold text-[#1A1A2E] leading-none tracking-[-0.03em] shrink-0">50+</span>
           <div className="w-px h-10 bg-[#1A1A2E]/[0.08] hidden sm:block shrink-0" />
           <p className="text-[16px] text-[#1A1A2E]/[0.5] leading-[1.7]">
-            External collaborators from academic, HR consulting and corporate world
+            {t('External collaborators from academic, HR consulting and corporate world')}
           </p>
         </motion.div>
       </div>

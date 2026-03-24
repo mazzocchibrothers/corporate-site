@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const dimensions = [
   { title: 'Suitability', subtitle: 'Person-job fit', desc: 'Evaluates objective eligibility: qualifications, availability, logistics, baseline requirements. A structured screening layer before deeper assessment.' },
@@ -11,6 +12,7 @@ const dimensions = [
 ];
 
 export default function WhatWeAssess() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -24,11 +26,11 @@ export default function WhatWeAssess() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-6">
-            Five dimensions for{' '}
-            <span className="italic font-bold gradient-text-on-light">objective evaluations</span>
+            {t('Five dimensions for')}{' '}
+            <span className="italic font-bold gradient-text-on-light">{t('objective evaluations')}</span>
           </h2>
           <p className="text-[18px] text-[#1A1A2E]/[0.65] leading-[1.75] max-w-2xl">
-            Every person evaluated through a structured, science-backed framework. whether they're a candidate or a 20-year veteran.
+            {t("Every person evaluated through a structured, science-backed framework. whether they're a candidate or a 20-year veteran.")}
           </p>
         </motion.div>
 
@@ -42,9 +44,9 @@ export default function WhatWeAssess() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
             >
-              <h3 className="text-[17px] font-bold text-[#1A1A2E] mb-1">{dim.title}</h3>
-              <span className="text-[12px] text-[#4B4DF7]/[0.65] font-medium mb-4">{dim.subtitle}</span>
-              <p className="text-[14px] text-[#1A1A2E]/[0.65] leading-[1.7]">{dim.desc}</p>
+              <h3 className="text-[17px] font-bold text-[#1A1A2E] mb-1">{t(dim.title)}</h3>
+              <span className="text-[12px] text-[#4B4DF7]/[0.65] font-medium mb-4">{t(dim.subtitle)}</span>
+              <p className="text-[14px] text-[#1A1A2E]/[0.65] leading-[1.7]">{t(dim.desc)}</p>
             </motion.div>
           ))}
         </div>
@@ -56,7 +58,7 @@ export default function WhatWeAssess() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <a href="/science" className="group inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] shrink-0 transition-colors duration-300">
-            Discover the Science
+            {t('Discover the Science')}
             <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
         </motion.div>

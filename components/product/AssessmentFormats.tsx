@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MessageSquare, MonitorSmartphone, ListChecks, UserCheck, Target, BookOpen, Wrench, GitBranch, Mic, Video, PenLine, CheckSquare } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const layers = [
   {
@@ -36,6 +37,7 @@ const layers = [
 ];
 
 export default function AssessmentFormats() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -49,8 +51,8 @@ export default function AssessmentFormats() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.03em] text-white/90">
-            Assessment designed to surface{' '}
-            <span className="italic font-bold gradient-text">verified capabilities</span>
+            {t('Assessment designed to surface')}{' '}
+            <span className="italic font-bold gradient-text">{t('verified capabilities')}</span>
           </h2>
         </motion.div>
 
@@ -67,8 +69,8 @@ export default function AssessmentFormats() {
               {/* Section label */}
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[#FF5F24] to-[#FF5F24]/30" />
-                <span className="text-[15px] font-bold text-[#FF5F24] tracking-[0.1em] uppercase">{layer.title}</span>
-                <span className="text-[15px] text-white/35 font-light">{layer.subtitle}</span>
+                <span className="text-[15px] font-bold text-[#FF5F24] tracking-[0.1em] uppercase">{t(layer.title)}</span>
+                <span className="text-[15px] text-white/35 font-light">{t(layer.subtitle)}</span>
               </div>
 
               <div className={`grid gap-3 ${layer.items.length === 5 ? 'grid-cols-2 lg:grid-cols-5' : layer.items.length === 4 ? 'grid-cols-2 lg:grid-cols-4' : 'grid-cols-1 md:grid-cols-3'}`}>
@@ -82,8 +84,8 @@ export default function AssessmentFormats() {
                       <div className="w-10 h-10 rounded-lg bg-white/[0.06] flex items-center justify-center mb-4">
                         <Icon className="h-5 w-5 text-white/50" />
                       </div>
-                      <h4 className="text-[15px] font-bold text-white/90 mb-1.5 leading-tight">{item.name}</h4>
-                      <p className="text-[13px] text-white/[0.4] leading-[1.55]">{item.desc}</p>
+                      <h4 className="text-[15px] font-bold text-white/90 mb-1.5 leading-tight">{t(item.name)}</h4>
+                      <p className="text-[13px] text-white/[0.4] leading-[1.55]">{t(item.desc)}</p>
                     </div>
                   );
                 })}

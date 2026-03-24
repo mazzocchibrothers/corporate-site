@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function PlatformInfographic() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -15,10 +17,10 @@ export default function PlatformInfographic() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#1A1A2E] tracking-[-0.02em] mb-4">
-            From signals to decisions. One connected flow.
+            {t('From signals to decisions. One connected flow.')}
           </h2>
           <p className="text-[17px] text-[#1A1A2E]/[0.45] leading-[1.75] max-w-2xl mx-auto">
-            Skillvue gathers signals from candidates, workforce, and market data, processes them through AI-powered skills intelligence, integrates with your core HR systems, and enables every talent decision with objective, defensible data.
+            {t('Skillvue gathers signals from candidates, workforce, and market data, processes them through AI-powered skills intelligence, integrates with your core HR systems, and enables every talent decision with objective, defensible data.')}
           </p>
         </motion.div>
 

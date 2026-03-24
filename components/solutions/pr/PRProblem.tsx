@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const pains = [
   { title: 'Staffing by availability, not capability', desc: "Project teams assembled based on who's free, not who has the right skills. Result: delivery delays, rework, and frustration." },
@@ -9,6 +10,7 @@ const pains = [
 ];
 
 export default function PRProblem() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -17,8 +19,8 @@ export default function PRProblem() {
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">
-            The blind spots in your{' '}
-            <span className="italic font-bold gradient-text-on-light">project staffing</span>
+            {t('The blind spots in your')}{' '}
+            <span className="italic font-bold gradient-text-on-light">{t('project staffing')}</span>
           </h2>
         </motion.div>
 
@@ -33,8 +35,8 @@ export default function PRProblem() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.12 }}
             >
-              <h3 className="text-[18px] font-bold text-[#1A1A2E] mb-3">{p.title}</h3>
-              <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.75]">{p.desc}</p>
+              <h3 className="text-[18px] font-bold text-[#1A1A2E] mb-3">{t(p.title)}</h3>
+              <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.75]">{t(p.desc)}</p>
             </motion.div>
           ))}
         </div>

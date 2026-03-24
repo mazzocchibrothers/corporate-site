@@ -2,8 +2,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function ScienceHero() {
+  const { t } = useLanguage();
   return (
     <section id="science-hero" data-testid="science-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
@@ -16,8 +18,8 @@ export default function ScienceHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Science you can stake<br />talent decisions{' '}
-              <span className="italic font-bold gradient-text">on.</span>
+              {t('Science you can stake')}<br />{t('talent decisions')}{' '}
+              <span className="italic font-bold gradient-text">{t('on.')}</span>
             </motion.h1>
           </div>
         </div>
@@ -32,10 +34,10 @@ export default function ScienceHero() {
             className="text-[18px] text-white/[0.65] leading-[1.75] max-w-md lg:max-w-lg"
             style={{ fontWeight: 300 }}
           >
-            Measuring people is hard. To make talent decisions you can trust, accuracy and reliability aren't optional. Skillvue is built on I/O psychology and psychometrics, ensuring every data point holds up to scrutiny.
+            {t("Measuring people is hard. To make talent decisions you can trust, accuracy and reliability aren't optional. Skillvue is built on I/O psychology and psychometrics, ensuring every data point holds up to scrutiny.")}
           </p>
           <a href="/book-meeting" className="group inline-flex items-center justify-between shrink-0 w-full lg:w-[480px] px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500">
-            <span>Book a Meeting</span>
+            <span>{t('Book a Meeting')}</span>
             <ArrowRight className="h-5 w-5 ml-8 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
           </a>
         </motion.div>

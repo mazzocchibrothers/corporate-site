@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const steps = [
   { num: '01', title: 'Information Gathering', what: 'We learn your organization: competency frameworks, HR processes, systems, documentation.', capability: 'Context, process, and data ingestion' },
@@ -12,6 +13,7 @@ const steps = [
 ];
 
 export default function HowSkillvueWorks() {
+  const { t } = useLanguage();
   const [active, setActive] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
@@ -26,11 +28,11 @@ export default function HowSkillvueWorks() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-4xl mb-6">
-            From your context to actionable intelligence{' '}
-            <span className="italic font-bold gradient-text">in six steps</span>
+            {t('From your context to actionable intelligence')}{' '}
+            <span className="italic font-bold gradient-text">{t('in six steps')}</span>
           </h2>
           <p className="text-[18px] text-white/[0.65] leading-[1.75] max-w-2xl">
-            Skillvue doesn't ask you to change how you work. We start by learning your organization and deliver insights where your teams already operate.
+            {t("Skillvue doesn't ask you to change how you work. We start by learning your organization and deliver insights where your teams already operate.")}
           </p>
         </motion.div>
 
@@ -62,14 +64,14 @@ export default function HowSkillvueWorks() {
         >
           <div className="grid lg:grid-cols-2 gap-10">
             <div>
-              <span className="text-[12px] font-semibold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-4 block">STEP {steps[active].num}</span>
-              <h3 className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-white/90 mb-5 leading-[1.2]">{steps[active].title}</h3>
-              <p className="text-[16px] text-white/[0.65] leading-[1.75]">{steps[active].what}</p>
+              <span className="text-[12px] font-semibold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-4 block">{t('STEP')} {steps[active].num}</span>
+              <h3 className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-white/90 mb-5 leading-[1.2]">{t(steps[active].title)}</h3>
+              <p className="text-[16px] text-white/[0.65] leading-[1.75]">{t(steps[active].what)}</p>
             </div>
             <div className="flex items-end">
               <div className="rounded-xl bg-white/[0.04] border border-white/[0.06] p-6 w-full">
-                <span className="text-[11px] font-semibold text-white/30 tracking-[0.1em] uppercase mb-3 block">KEY CAPABILITY</span>
-                <p className="text-[15px] text-white/[0.65] leading-[1.7]">{steps[active].capability}</p>
+                <span className="text-[11px] font-semibold text-white/30 tracking-[0.1em] uppercase mb-3 block">{t('KEY CAPABILITY')}</span>
+                <p className="text-[15px] text-white/[0.65] leading-[1.7]">{t(steps[active].capability)}</p>
               </div>
             </div>
           </div>

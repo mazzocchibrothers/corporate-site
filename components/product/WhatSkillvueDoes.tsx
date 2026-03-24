@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, Target, BarChart3, GraduationCap, ArrowLeftRight } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const pillars = [
   {
@@ -34,6 +35,7 @@ const pillars = [
 ];
 
 export default function WhatSkillvueDoes() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -47,11 +49,11 @@ export default function WhatSkillvueDoes() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl mb-6">
-            From screening to succession. every talent decision,{' '}
-            <span className="italic font-bold gradient-text-on-light">connected.</span>
+            {t('From screening to succession. every talent decision,')}{' '}
+            <span className="italic font-bold gradient-text-on-light">{t('connected.')}</span>
           </h2>
           <p className="text-[18px] text-[#1A1A2E]/[0.65] leading-[1.75] max-w-2xl">
-            Most organizations run hiring, performance, L&D, and mobility on disconnected tools with different frameworks. Skillvue connects them through one skills language and one data layer so every decision compounds.
+            {t('Most organizations run hiring, performance, L&D, and mobility on disconnected tools with different frameworks. Skillvue connects them through one skills language and one data layer so every decision compounds.')}
           </p>
         </motion.div>
 
@@ -68,10 +70,10 @@ export default function WhatSkillvueDoes() {
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
               >
                 <Icon className="h-6 w-6 text-[#4B4DF7]/40 mb-5" strokeWidth={1.5} />
-                <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-4">{pillar.title}</h3>
-                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.75] mb-8 flex-1">{pillar.desc}</p>
+                <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-4">{t(pillar.title)}</h3>
+                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.75] mb-8 flex-1">{t(pillar.desc)}</p>
                 <a href="#" className="group/link inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
-                  {pillar.link}
+                  {t(pillar.link)}
                   <ArrowRight className="h-3.5 w-3.5 group-hover/link:translate-x-1 transition-transform duration-300" />
                 </a>
               </motion.div>

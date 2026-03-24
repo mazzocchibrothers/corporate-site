@@ -6,8 +6,10 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { whitepapers, filterLabels } from '@/data/whitepapers';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function WhitepapersPage() {
+  const { t } = useLanguage();
   const router = useRouter();
   const labels = filterLabels.en;
 
@@ -56,13 +58,13 @@ export default function WhitepapersPage() {
         <section className="relative pt-[80px] min-h-screen flex items-center">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <span className="text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.25em] uppercase mb-8 block">Resources</span>
+              <span className="text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.25em] uppercase mb-8 block">{t('Resources')}</span>
               <h1 className="font-bold text-white/95 mb-8" style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
-                White Papers<br />
-                & <span className="italic gradient-text">Reports</span>
+                {t('White Papers')}<br />
+                {t('&')} <span className="italic gradient-text">{t('Reports')}</span>
               </h1>
               <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>
-                Research-backed insights to help you rethink how you hire, develop, and manage talent. Browse our library and download the resources that matter to you.
+                {t('Research-backed insights to help you rethink how you hire, develop, and manage talent. Browse our library and download the resources that matter to you.')}
               </p>
               <a
                 href="#wp-grid"
@@ -72,7 +74,7 @@ export default function WhitepapersPage() {
                 <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
                   <ArrowRight className="h-4 w-4 rotate-90" />
                 </span>
-                Explore the library
+                {t('Explore the library')}
               </a>
             </motion.div>
           </div>
@@ -107,7 +109,7 @@ export default function WhitepapersPage() {
                                 </div>
                                 <h3 className="text-[clamp(2rem,3vw,2.8rem)] font-bold text-white leading-[1.1] mb-5">{c.title}</h3>
                               </div>
-                              <span className="text-[11px] text-white/35 font-semibold tracking-[0.15em] uppercase">White Paper</span>
+                              <span className="text-[11px] text-white/35 font-semibold tracking-[0.15em] uppercase">{t('White Paper')}</span>
                             </div>
                           </div>
                         ) : (
@@ -146,16 +148,16 @@ export default function WhitepapersPage() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-white/90 mb-4 leading-[1.2] max-w-2xl mx-auto">
-                Want to see the science in action?
+                {t('Want to see the science in action?')}
               </h2>
               <p className="text-[16px] text-white/[0.45] mb-8 max-w-xl mx-auto">
-                Book a meeting with our team and discover how Skillvue turns talent decisions into a competitive advantage.
+                {t('Book a meeting with our team and discover how Skillvue turns talent decisions into a competitive advantage.')}
               </p>
               <button
                 onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center justify-between px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
               >
-                <span>Book a Meeting</span>
+                <span>{t('Book a Meeting')}</span>
                 <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
               </button>
             </motion.div>

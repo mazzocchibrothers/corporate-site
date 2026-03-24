@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { User, Briefcase } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const candidateItems = [
   '5-30 minutes depending on funnel stage',
@@ -18,6 +19,7 @@ const hrItems = [
 ];
 
 export default function TAExperience() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -37,14 +39,14 @@ export default function TAExperience() {
               <div className="w-10 h-10 rounded-full bg-white/[0.06] border border-white/[0.1] flex items-center justify-center">
                 <User className="h-4 w-4 text-[#9B9DFB]/70" strokeWidth={1.5} />
               </div>
-              <h3 className="text-[20px] font-bold text-white/90">Candidate Experience</h3>
+              <h3 className="text-[20px] font-bold text-white/90">{t('Candidate Experience')}</h3>
             </div>
-            <p className="text-[15px] text-white/[0.65] font-medium mb-8">Fast, frictionless, and designed to meet people where they are.</p>
+            <p className="text-[15px] text-white/[0.65] font-medium mb-8">{t('Fast, frictionless, and designed to meet people where they are.')}</p>
             <div className="space-y-4">
               {candidateItems.map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <span className="w-1 h-1 rounded-full bg-[#9B9DFB] mt-2.5 shrink-0" />
-                  <span className="text-[15px] text-white/[0.65] leading-[1.7]">{item}</span>
+                  <span className="text-[15px] text-white/[0.65] leading-[1.7]">{t(item)}</span>
                 </div>
               ))}
             </div>
@@ -61,14 +63,14 @@ export default function TAExperience() {
               <div className="w-10 h-10 rounded-full bg-white/[0.06] border border-white/[0.1] flex items-center justify-center">
                 <Briefcase className="h-4 w-4 text-[#9B9DFB]/70" strokeWidth={1.5} />
               </div>
-              <h3 className="text-[20px] font-bold text-white/90">HR Experience</h3>
+              <h3 className="text-[20px] font-bold text-white/90">{t('HR Experience')}</h3>
             </div>
-            <p className="text-[15px] text-white/[0.65] font-medium mb-8">From automation to insight.</p>
+            <p className="text-[15px] text-white/[0.65] font-medium mb-8">{t('From automation to insight.')}</p>
             <div className="space-y-4">
               {hrItems.map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <span className="w-1 h-1 rounded-full bg-[#9B9DFB] mt-2.5 shrink-0" />
-                  <span className="text-[15px] text-white/[0.65] leading-[1.7]">{item}</span>
+                  <span className="text-[15px] text-white/[0.65] leading-[1.7]">{t(item)}</span>
                 </div>
               ))}
             </div>

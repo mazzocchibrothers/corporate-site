@@ -2,6 +2,7 @@
 import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
+import { useLanguage } from '@/i18n/LanguageContext';
 import TAHero from '@/components/solutions/ta/TAHero';
 import TAProblem from '@/components/solutions/ta/TAProblem';
 import TAShift from '@/components/solutions/ta/TAShift';
@@ -15,6 +16,7 @@ import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 
 export default function TalentAcquisitionPage() {
+  const { t } = useLanguage();
   return (
     <>
       <Navbar />
@@ -29,7 +31,7 @@ export default function TalentAcquisitionPage() {
         <TAImpact />
         <div className="fade-into-dark" />
         <SolutionCrossLinks currentPath="/solutions/talent-acquisition" />
-        <SolutionFinalCTA headline="Ready to hire with" accentWord="confidence?" />
+        <SolutionFinalCTA headline={t('Ready to hire with')} accentWord={t('confidence?')} />
       <Footer />
       </main>
     </>

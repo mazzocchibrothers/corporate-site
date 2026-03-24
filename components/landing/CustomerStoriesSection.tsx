@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const stories = [
   {
@@ -31,6 +32,7 @@ const stories = [
 ];
 
 export default function CustomerStoriesSection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
@@ -46,10 +48,10 @@ export default function CustomerStoriesSection() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-4">
-            Proof, not <span className="italic font-bold gradient-text">promises.</span>
+            {t('Proof, not')} <span className="italic font-bold gradient-text">{t('promises.')}</span>
           </h2>
           <p className="text-[18px] text-white/[0.65] leading-[1.75] max-w-2xl">
-            Leading Global enterprises make talent decisions with confidence.
+            {t('Leading Global enterprises make talent decisions with confidence.')}
           </p>
         </motion.div>
 
@@ -67,18 +69,18 @@ export default function CustomerStoriesSection() {
             >
               {/* Company + industry */}
               <div className="flex items-center gap-3 mb-8">
-                <h3 className="text-[22px] font-bold text-white/90">{s.company}</h3>
+                <h3 className="text-[22px] font-bold text-white/90">{t(s.company)}</h3>
                 <span className="text-[14px] text-white/40">·</span>
-                <span className="text-[15px] text-white/40">{s.industry}</span>
+                <span className="text-[15px] text-white/40">{t(s.industry)}</span>
               </div>
 
               {/* Quote */}
-              <p className="text-[17px] text-white/[0.65] italic leading-[1.7] mb-8">"{s.quote}"</p>
+              <p className="text-[17px] text-white/[0.65] italic leading-[1.7] mb-8">"{t(s.quote)}"</p>
 
               {/* Author */}
               <div>
-                <span className="text-[15px] font-semibold text-white/60">{s.author}</span>
-                <span className="text-[14px] text-white/35 ml-2">{s.role}</span>
+                <span className="text-[15px] font-semibold text-white/60">{t(s.author)}</span>
+                <span className="text-[14px] text-white/35 ml-2">{t(s.role)}</span>
               </div>
             </motion.div>
           ))}
@@ -96,14 +98,14 @@ export default function CustomerStoriesSection() {
               onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
               className="group inline-flex items-center justify-between px-7 py-3.5 text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
             >
-              <span>Book a Meeting</span>
+              <span>{t('Book a Meeting')}</span>
               <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
             </button>
             <button
               onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
               className="group inline-flex items-center gap-2.5 text-[13px] font-semibold text-white/[0.45] hover:text-white/80 transition-colors duration-300 tracking-wide"
             >
-              Join 50+ Global enterprises
+              {t('Join 50+ Global enterprises')}
               <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
@@ -117,15 +119,15 @@ export default function CustomerStoriesSection() {
           transition={{ duration: 0.6, delay: 0.7 }}
         >
           <h3 className="text-[20px] font-bold text-white/90 mb-4">
-            Built <span className="italic font-bold gradient-text">enterprise-ready</span>
+            {t('Built')} <span className="italic font-bold gradient-text">{t('enterprise-ready')}</span>
           </h3>
           <p className="text-[15px] text-white/[0.65] leading-[1.75] mb-6 max-w-3xl">
-            100+ native integrations (Oracle, SAP, Workday, Greenhouse + more). Fully customisable to your processes, on your terms.
+            {t('100+ native integrations (Oracle, SAP, Workday, Greenhouse + more). Fully customisable to your processes, on your terms.')}
           </p>
           <div className="flex flex-wrap gap-3">
             {['ISO 27001', 'SOC 2', 'GDPR', 'EU AI Act'].map(b => (
               <span key={b} className="inline-flex px-4 py-2 rounded-full text-[12px] font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03] tracking-wide">
-                {b}
+                {t(b)}
               </span>
             ))}
           </div>

@@ -5,6 +5,7 @@ import Navbar from '@/components/landing/Navbar';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, Brain, Shield, Cpu, Globe, Award, Users, ChevronDown } from 'lucide-react';
 import { useRouter } from 'next/router';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const stats = [
   { value: '€9M+', label: 'Raised', icon: Award },
@@ -20,6 +21,7 @@ const values = [
 ];
 
 export default function AboutPage() {
+  const { t } = useLanguage();
   const router = useRouter();
   const valuesRef = useRef(null);
   const valuesInView = useInView(valuesRef, { once: true, margin: '-100px' });
@@ -36,17 +38,17 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40" />
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-4xl">
-              <span className="text-[14px] font-semibold text-[#4B4DF7]/60 tracking-[0.2em] uppercase mb-8 block">About Us</span>
+              <span className="text-[14px] font-semibold text-[#4B4DF7]/60 tracking-[0.2em] uppercase mb-8 block">{t('About Us')}</span>
               <h1
                 className="font-bold text-white/95 mb-8"
                 style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
               >
-                Every talent decision,<br />
-                finally backed by<br />
-                <span className="italic gradient-text">science.</span>
+                {t('Every talent decision,')}<br />
+                {t('finally backed by')}<br />
+                <span className="italic gradient-text">{t('science.')}</span>
               </h1>
               <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-xl" style={{ fontWeight: 300 }}>
-                We're building the intelligence layer that makes hiring, promotion, development, and transformation decisions objective, predictive, and defensible at enterprise scale.
+                {t("We're building the intelligence layer that makes hiring, promotion, development, and transformation decisions objective, predictive, and defensible at enterprise scale.")}
               </p>
             </motion.div>
           </div>
@@ -69,7 +71,7 @@ export default function AboutPage() {
                   >
                     <Icon className="h-5 w-5 text-[#4B4DF7]/50 mb-4" />
                     <span className="block text-[#1A1A2E] font-bold text-[28px] tracking-[-0.03em] mb-1">{s.value}</span>
-                    <span className="text-[13px] text-[#1A1A2E]/35">{s.label}</span>
+                    <span className="text-[13px] text-[#1A1A2E]/35">{t(s.label)}</span>
                   </motion.div>
                 );
               })}
@@ -83,25 +85,25 @@ export default function AboutPage() {
             <motion.div initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <div className="grid lg:grid-cols-12 gap-16 lg:gap-20">
                 <div className="lg:col-span-5">
-                  <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">Our Story</span>
+                  <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('Our Story')}</span>
                   <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold text-[#1A1A2E] mb-8 tracking-[-0.02em] leading-[1.1]">
-                    We believe talent decisions deserve the same rigour as <span className="italic gradient-text-on-light">business decisions.</span>
+                    {t('We believe talent decisions deserve the same rigour as')} <span className="italic gradient-text-on-light">{t('business decisions.')}</span>
                   </h2>
                   <div className="border-l-2 border-[#4B4DF7]/30 pl-6 my-10">
                     <p className="text-[17px] text-[#1A1A2E]/60 leading-[1.8] italic">
-                      "Organizations spend billions on talent yet still rely on gut feeling for their most important people decisions. We are changing that."
+                      "{t('Organizations spend billions on talent yet still rely on gut feeling for their most important people decisions. We are changing that.')}"
                     </p>
                   </div>
                 </div>
                 <div className="lg:col-span-7">
                   <p className="text-[17px] text-[#1A1A2E]/[0.55] leading-[1.85] mb-8">
-                    Skillvue is an AI-powered talent intelligence platform that adds a dynamic, objective dimension to HR data, transforming static information into predictive insights that drive better decisions across hiring, performance management, internal mobility, and learning & development.
+                    {t('Skillvue is an AI-powered talent intelligence platform that adds a dynamic, objective dimension to HR data, transforming static information into predictive insights that drive better decisions across hiring, performance management, internal mobility, and learning & development.')}
                   </p>
                   <p className="text-[17px] text-[#1A1A2E]/[0.55] leading-[1.85] mb-8">
-                    Founded in 2021, we've raised over €9 million from national and international investors to build a product that combines psychometric rigour with modern AI. Our team brings together experts in psychometrics, AI, product design, and enterprise go-to-market, operating out of Milan and London.
+                    {t("Founded in 2021, we've raised over €9 million from national and international investors to build a product that combines psychometric rigour with modern AI. Our team brings together experts in psychometrics, AI, product design, and enterprise go-to-market, operating out of Milan and London.")}
                   </p>
                   <p className="text-[17px] text-[#1A1A2E]/[0.55] leading-[1.85]">
-                    Leading European enterprises across retail, financial services, pharma, and professional services already trust Skillvue to make their most critical talent decisions objective, scalable, and defensible.
+                    {t('Leading European enterprises across retail, financial services, pharma, and professional services already trust Skillvue to make their most critical talent decisions objective, scalable, and defensible.')}
                   </p>
                 </div>
               </div>
@@ -113,8 +115,8 @@ export default function AboutPage() {
         <section className="relative py-24 lg:py-32" ref={teamRef}>
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
             <motion.div className="mb-12" initial={{ opacity: 0, y: 20 }} animate={teamInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-              <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold text-white/95 mb-3 tracking-[-0.02em]">Our Team</h2>
-              <p className="text-[16px] text-white/[0.35] max-w-lg">Psychometricians, AI engineers, designers, and product managers, united by one mission.</p>
+              <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold text-white/95 mb-3 tracking-[-0.02em]">{t('Our Team')}</h2>
+              <p className="text-[16px] text-white/[0.35] max-w-lg">{t('Psychometricians, AI engineers, designers, and product managers, united by one mission.')}</p>
             </motion.div>
 
             <motion.div
@@ -127,8 +129,8 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-10 flex items-end justify-between">
                 <div>
-                  <span className="text-[24px] font-bold text-white/90 block mb-1">+40 people</span>
-                  <span className="text-[14px] text-white/50">Milan, London & Berlin</span>
+                  <span className="text-[24px] font-bold text-white/90 block mb-1">{t('+40 people')}</span>
+                  <span className="text-[14px] text-white/50">{t('Milan, London & Berlin')}</span>
                 </div>
               </div>
             </motion.div>
@@ -138,7 +140,7 @@ export default function AboutPage() {
         {/* 5. Investors. Marquee scroll, right under team */}
         <section className="relative pt-4 pb-8">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <span className="text-[12px] font-bold text-white/25 tracking-[0.2em] uppercase mb-6 block text-center">Backed by</span>
+            <span className="text-[12px] font-bold text-white/25 tracking-[0.2em] uppercase mb-6 block text-center">{t('Backed by')}</span>
           </div>
           <div
             className="overflow-hidden relative"
@@ -172,8 +174,8 @@ export default function AboutPage() {
         <section className="section-breathe" ref={valuesRef} style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-16 lg:py-20 w-full">
             <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} animate={valuesInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-              <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-5 block">Our Values</span>
-              <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#1A1A2E] tracking-[-0.02em]">What Drives Us</h2>
+              <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-5 block">{t('Our Values')}</span>
+              <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#1A1A2E] tracking-[-0.02em]">{t('What Drives Us')}</h2>
             </motion.div>
             <div className="grid lg:grid-cols-3 gap-6">
               {values.map((v, i) => {
@@ -189,8 +191,8 @@ export default function AboutPage() {
                     <div className="w-20 h-20 rounded-2xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.1] flex items-center justify-center mx-auto mb-10 group-hover:bg-[#4B4DF7]/[0.12] group-hover:border-[#4B4DF7]/[0.2] transition-all duration-500">
                       <Icon className="h-8 w-8 text-[#4B4DF7]/60 group-hover:text-[#4B4DF7] transition-colors duration-500" />
                     </div>
-                    <h3 className="text-[22px] font-bold text-[#1A1A2E] mb-5 leading-tight">{v.title}</h3>
-                    <p className="text-[16px] text-[#1A1A2E]/[0.50] leading-[1.85]">{v.desc}</p>
+                    <h3 className="text-[22px] font-bold text-[#1A1A2E] mb-5 leading-tight">{t(v.title)}</h3>
+                    <p className="text-[16px] text-[#1A1A2E]/[0.50] leading-[1.85]">{t(v.desc)}</p>
                   </motion.div>
                 );
               })}
@@ -203,14 +205,14 @@ export default function AboutPage() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">
-                Ready to make talent decisions you can defend?
+                {t('Ready to make talent decisions you can defend?')}
               </h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">
-                Book a meeting with our team and see how Skillvue can transform your hiring, performance, and development processes.
+                {t('Book a meeting with our team and see how Skillvue can transform your hiring, performance, and development processes.')}
               </p>
               <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center justify-between px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500">
-                <span>Book a Meeting</span>
+                <span>{t('Book a Meeting')}</span>
                 <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
               </button>
             </motion.div>

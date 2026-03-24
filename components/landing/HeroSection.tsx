@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import GradientBlinds from '../backgrounds/GradientBlinds';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const trustLogos = ['Unicredit', 'Loro Piana', 'Carrefour', 'Fidia', 'Generali', 'Capgemini', 'Coop', 'Douglas'];
 
@@ -16,6 +17,7 @@ const logoImages: Record<string, string> = {
 };
 
 export default function HeroSection() {
+  const { t } = useLanguage();
   const [isMobile, setIsMobile] = React.useState(false);
 
   React.useEffect(() => {
@@ -65,9 +67,9 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                Every talent<br />
-                decision, <span className="italic font-bold gradient-text">finally</span><br />
-                backed by science.
+                {t('Every talent')}<br />
+                {t('decision,')} <span className="italic font-bold gradient-text">{t('finally')}</span><br />
+                {t('backed by science.')}
               </motion.h1>
               <motion.p
                 className="text-[18px] text-white/80 leading-[1.75] mt-8 max-w-xl"
@@ -76,7 +78,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                Skillvue combines psychometric rigour with modern AI to assess skills, predict performance, and guide every talent decision, from hiring to promotion to transformation readiness.
+                {t('Skillvue combines psychometric rigour with modern AI to assess skills, predict performance, and guide every talent decision, from hiring to promotion to transformation readiness.')}
               </motion.p>
             </div>
 
@@ -108,7 +110,7 @@ export default function HeroSection() {
               className="inline-flex items-center px-6 py-2.5 rounded-lg border border-white/[0.3] text-[15px] text-white/70 whitespace-nowrap hover:text-white/90 hover:border-white/[0.5] transition-all duration-500"
               style={{ fontWeight: 300, letterSpacing: '0.02em' }}
             >
-              Our Customers
+              {t('Our Customers')}
             </span>
           </div>
 

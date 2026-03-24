@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Eye, GitBranch, Zap } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const pillars = [
   { icon: Eye, num: '01', title: 'End-to-end talent visibility', desc: 'Continuous mapping of skills and potential to match capabilities with needs. Reduce turnover and replacement costs by seeing your full talent picture.' },
@@ -10,6 +11,7 @@ const pillars = [
 ];
 
 export default function IMHowSolves() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -25,8 +27,8 @@ export default function IMHowSolves() {
             transition={{ duration: 0.7 }}
           >
             <h2 className="text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.08] tracking-[-0.02em] text-[#1A1A2E]">
-              Three pillars of{' '}
-              <span className="italic font-bold gradient-text-on-light">intelligent mobility</span>
+              {t('Three pillars of')}{' '}
+              <span className="italic font-bold gradient-text-on-light">{t('intelligent mobility')}</span>
             </h2>
           </motion.div>
 
@@ -55,8 +57,8 @@ export default function IMHowSolves() {
                   {/* Right: content */}
                   <div className="pb-10">
                     <span className="text-[12px] font-bold text-[#4B4DF7]/30 tracking-[0.1em] mb-3 block">{p.num}</span>
-                    <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-3">{p.title}</h3>
-                    <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.75] max-w-lg">{p.desc}</p>
+                    <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-3">{t(p.title)}</h3>
+                    <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.75] max-w-lg">{t(p.desc)}</p>
                   </div>
                 </motion.div>
               );

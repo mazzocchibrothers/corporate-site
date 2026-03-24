@@ -5,6 +5,7 @@ import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
 import { ArrowLeft, MessageSquare, Database, Mail, Tag, BarChart3, Eye, Megaphone, Server, Activity, Globe, User } from 'lucide-react';
 import { useRouter } from 'next/router';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const dataGroups = [
   [
@@ -116,6 +117,7 @@ function ServiceBlock({ item }) {
 }
 
 export default function PrivacyPolicyPage() {
+  const { t } = useLanguage();
   const router = useRouter();
 
   return (
@@ -127,7 +129,7 @@ export default function PrivacyPolicyPage() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-24">
             <button onClick={() => router.back()} className="group inline-flex items-center gap-2 text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300 mb-10">
               <ArrowLeft className="h-3.5 w-3.5 group-hover:-translate-x-1 transition-transform duration-300" />
-              Back
+              {t('Back')}
             </button>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-bold text-white/95 mb-4 tracking-[-0.03em] leading-[1.1]">

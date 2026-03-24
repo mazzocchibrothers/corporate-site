@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const pains = [
   { stat: '30-40%', title: 'of hires fail within 18 months', desc: 'Costing 3-4x salary each time \u2014 before you count the opportunity cost of a vacant role.' },
@@ -9,6 +10,7 @@ const pains = [
 ];
 
 export default function TAProblem() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -17,11 +19,11 @@ export default function TAProblem() {
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.div className="max-w-[900px] mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-8">
-            The blind spots in your{' '}
-            <span className="italic font-bold gradient-text-on-light">hiring decisions</span>
+            {t('The blind spots in your')}{' '}
+            <span className="italic font-bold gradient-text-on-light">{t('hiring decisions')}</span>
           </h2>
           <p className="text-[18px] text-[#1A1A2E]/[0.65] leading-[1.75]">
-            How do you really know who will perform before the interview? How do you make screening predictive and comparable at scale? How do you cut early turnover and mismatch from day one?
+            {t('How do you really know who will perform before the interview? How do you make screening predictive and comparable at scale? How do you cut early turnover and mismatch from day one?')}
           </p>
         </motion.div>
 
@@ -40,8 +42,8 @@ export default function TAProblem() {
                 <span className="block text-[#1A1A2E]" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.8rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.03em' }}>{p.stat}</span>
               </div>
               <div className="col-span-8 lg:col-span-9">
-                <h3 className="text-[18px] font-bold text-[#1A1A2E]/80 mb-2">{p.title}</h3>
-                <p className="text-[15px] text-[#1A1A2E]/50 leading-[1.7]">{p.desc}</p>
+                <h3 className="text-[18px] font-bold text-[#1A1A2E]/80 mb-2">{t(p.title)}</h3>
+                <p className="text-[15px] text-[#1A1A2E]/50 leading-[1.7]">{t(p.desc)}</p>
               </div>
             </motion.div>
           ))}

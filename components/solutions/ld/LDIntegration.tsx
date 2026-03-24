@@ -1,10 +1,12 @@
 // @ts-nocheck
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const integrations = ['Cornerstone', 'Docebo', 'SAP Learning'];
 
 export default function LDIntegration() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -18,11 +20,11 @@ export default function LDIntegration() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold text-white/90 mb-6">
-            Skillvue enriches your{' '}
-            <span className="italic font-bold gradient-text">learning ecosystem</span>
+            {t('Skillvue enriches your')}{' '}
+            <span className="italic font-bold gradient-text">{t('learning ecosystem')}</span>
           </h2>
           <p className="text-[16px] text-white/[0.65] leading-[1.75] max-w-3xl mb-10">
-            Skillvue integrates natively with your LMS and LXP. feeding precise skill gap data into the systems where learning is delivered. The result: the right content reaches the right people based on verified needs, not generic assignments.
+            {t('Skillvue integrates natively with your LMS and LXP. feeding precise skill gap data into the systems where learning is delivered. The result: the right content reaches the right people based on verified needs, not generic assignments.')}
           </p>
           <div className="flex flex-wrap gap-3">
             {integrations.map((name) => (
@@ -30,7 +32,7 @@ export default function LDIntegration() {
                 {name}
               </span>
             ))}
-            <span className="inline-flex px-5 py-2.5 rounded-full text-[13px] font-medium text-white/40 border border-white/[0.06]">+ more</span>
+            <span className="inline-flex px-5 py-2.5 rounded-full text-[13px] font-medium text-white/40 border border-white/[0.06]">{t('+ more')}</span>
           </div>
         </motion.div>
       </div>
