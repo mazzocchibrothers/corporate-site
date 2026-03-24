@@ -132,17 +132,17 @@ export default function PressPage() {
               className="max-w-3xl"
             >
               <span className="text-[14px] font-semibold text-[#4B4DF7]/60 tracking-[0.2em] uppercase mb-8 block">
-                Press
+                {t('Press')}
               </span>
               <h1
                 className="font-bold text-white/95 mb-6"
                 style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
               >
-                Skillvue in<br />
-                <span className="italic gradient-text">the News</span>
+                {t('Skillvue in')}<br />
+                <span className="italic gradient-text">{t('the News')}</span>
               </h1>
               <p className="text-[18px] text-white/[0.45] leading-[1.8] max-w-lg mb-10" style={{ fontWeight: 300 }}>
-                See how the world's leading publications are covering the rise of AI-powered talent intelligence.
+                {t("See how the world's leading publications are covering the rise of AI-powered talent intelligence.")}
               </p>
               <a
                 href="mailto:press@skillvue.ai"
@@ -166,10 +166,10 @@ export default function PressPage() {
               className="mb-12"
             >
               <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
-                Press Coverage
+                {t('Press Coverage')}
               </span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#1A1A2E] tracking-[-0.02em]">
-                Coverage from leading publications
+                {t('Coverage from leading publications')}
               </h2>
             </motion.div>
 
@@ -221,10 +221,10 @@ export default function PressPage() {
               className="mb-12"
             >
               <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
-                Interviews
+                {t('Interviews')}
               </span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#1A1A2E] tracking-[-0.02em]">
-                In conversation
+                {t('In conversation')}
               </h2>
             </motion.div>
 
@@ -256,7 +256,7 @@ export default function PressPage() {
                   </div>
                   <div className="mt-6 flex items-center gap-2">
                     <span className="text-[12px] font-semibold text-[#4B4DF7]/50 tracking-[0.08em] uppercase group-hover:text-[#4B4DF7]/80 transition-colors duration-300">
-                      Read interview
+                      {t('Read interview')}
                     </span>
                     <ArrowUpRight className="h-3.5 w-3.5 text-[#4B4DF7]/40 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                   </div>
@@ -277,10 +277,10 @@ export default function PressPage() {
               className="mb-12"
             >
               <span className="text-[11px] font-bold text-[#4B4DF7]/40 tracking-[0.2em] uppercase mb-4 block">
-                Press Releases
+                {t('Press Releases')}
               </span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-white/90 tracking-[-0.02em]">
-                Official announcements
+                {t('Official announcements')}
               </h2>
             </motion.div>
 
@@ -305,7 +305,7 @@ export default function PressPage() {
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
                     <span className="text-[12px] font-semibold text-white/25 tracking-[0.08em] uppercase hidden sm:block group-hover:text-white/50 transition-colors duration-300">
-                      Download
+                      {t('Download')}
                     </span>
                     <Download className="h-4 w-4 text-white/20 group-hover:text-white/50 transition-colors duration-300" />
                   </div>
@@ -319,7 +319,7 @@ export default function PressPage() {
         <section className="relative pt-8 pb-8 bg-black">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
             <span className="text-[12px] font-bold text-white/25 tracking-[0.2em] uppercase mb-6 block text-center">
-              Backed by
+              {t('Backed by')}
             </span>
           </div>
           <div
@@ -365,16 +365,16 @@ export default function PressPage() {
                 className="font-bold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]"
                 style={{ fontSize: 'clamp(1.8rem,3.5vw,3rem)' }}
               >
-                Want to learn more?
+                {t('Want to learn more?')}
               </h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">
-                Get in touch with our team to see how Skillvue turns every talent decision into a data-driven one.
+                {t('Get in touch with our team to see how Skillvue turns every talent decision into a data-driven one.')}
               </p>
               <button
                 onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center justify-between px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
               >
-                <span>Book a Meeting</span>
+                <span>{t('Book a Meeting')}</span>
                 <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
               </button>
             </motion.div>

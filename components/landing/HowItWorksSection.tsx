@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Map, Brain, CheckCircle } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const steps = [
   {
@@ -30,6 +31,7 @@ const steps = [
 ];
 
 export default function HowItWorksSection() {
+  const { t } = useLanguage();
   const [active, setActive] = useState(0);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-80px' });
@@ -58,8 +60,8 @@ export default function HowItWorksSection() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#1A1A2E]">
-            From assessment to action{' '}
-            <span className="italic font-bold gradient-text-on-light">in three steps</span>
+            {t('From assessment to action')}{' '}
+            <span className="italic font-bold gradient-text-on-light">{t('in three steps')}</span>
           </h2>
         </motion.div>
 
@@ -130,7 +132,7 @@ export default function HowItWorksSection() {
                       animate={{ color: isActive ? 'rgba(255,255,255,0.95)' : 'rgba(26,26,46,0.85)' }}
                       transition={{ duration: 0.5 }}
                     >
-                      {step.title}
+                      {t(step.title)}
                     </motion.h3>
 
                     {/* Description */}
@@ -139,7 +141,7 @@ export default function HowItWorksSection() {
                       animate={{ color: isActive ? 'rgba(255,255,255,0.5)' : 'rgba(26,26,46,0.55)' }}
                       transition={{ duration: 0.5 }}
                     >
-                      {step.desc}
+                      {t(step.desc)}
                     </motion.p>
 
                     {/* Keyword tags */}
@@ -156,7 +158,7 @@ export default function HowItWorksSection() {
                           transition={{ duration: 0.5 }}
                           style={{ border: '1px solid' }}
                         >
-                          {kw}
+                          {t(kw)}
                         </motion.span>
                       ))}
                     </div>

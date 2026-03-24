@@ -71,7 +71,7 @@ export default function InsMercatoStoryPage() {
           </div>
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <motion.div className="mb-10 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <button onClick={() => { router.push('/customers'); window.scrollTo(0,0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">Customers</button>
+              <button onClick={() => { router.push('/customers'); window.scrollTo(0,0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">{t('Customers')}</button>
               <span className="text-white/20">/</span>
               <span className="text-[13px] text-white/[0.65]">In's Mercato</span>
             </motion.div>
@@ -80,19 +80,19 @@ export default function InsMercatoStoryPage() {
               <div className="lg:col-span-8">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
                   <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.12 }}>
-                    ~900 people assessed.<br />A Store Manager pipeline built from within.
+                    {t('~900 people assessed.')}<br />{t('A Store Manager pipeline built from within.')}
                   </h1>
                   <div className="flex flex-wrap gap-6 mb-12">
                     {metrics.map(m => (
                       <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-6 py-4">
                         <span className="block text-white" style={{ fontSize: '2rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[13px] text-white/[0.65] mt-1 block">{m.label}</span>
+                        <span className="text-[13px] text-white/[0.65] mt-1 block">{t(m.label)}</span>
                       </div>
                     ))}
                   </div>
                   <div className="border-l-2 border-[#4B4DF7]/30 pl-6">
-                    <p className="text-[17px] text-white/[0.65] italic leading-[1.7]">"More agile, data-driven selection, with significant time savings for our teams."</p>
-                    <p className="text-[14px] text-white/50 mt-3 font-semibold">Mirko Tortolano, <span className="font-normal text-white/35">HR Director, In's Mercato</span></p>
+                    <p className="text-[17px] text-white/[0.65] italic leading-[1.7]">{t('"More agile, data-driven selection, with significant time savings for our teams."')}</p>
+                    <p className="text-[14px] text-white/50 mt-3 font-semibold">Mirko Tortolano, <span className="font-normal text-white/35">{t("HR Director, In's Mercato")}</span></p>
                   </div>
                 </motion.div>
               </div>
@@ -102,8 +102,8 @@ export default function InsMercatoStoryPage() {
                   <div className="divide-y divide-white/[0.08]">
                     {sidebar.map(s => (
                       <div key={s.label} className="py-4 first:pt-0 last:pb-0">
-                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
-                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{s.value}</p>
+                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{t(s.label)}</span>
+                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{t(s.value)}</p>
                       </div>
                     ))}
                   </div>
@@ -119,7 +119,7 @@ export default function InsMercatoStoryPage() {
 
             {/* Context */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">The Context</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Context')}</h2>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 {[
                   { num: '1.5B', label: 'EUR revenue' },
@@ -129,7 +129,7 @@ export default function InsMercatoStoryPage() {
                 ].map(s => (
                   <div key={s.num} className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/70 p-6 text-center">
                     <span className="block text-[#1A1A2E]" style={{ fontSize: '1.8rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{s.num}</span>
-                    <span className="text-[13px] text-[#1A1A2E]/50 mt-2 block">{s.label}</span>
+                    <span className="text-[13px] text-[#1A1A2E]/50 mt-2 block">{t(s.label)}</span>
                   </div>
                 ))}
               </div>
@@ -140,26 +140,26 @@ export default function InsMercatoStoryPage() {
 
             {/* Challenge. Business + HR split */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">The Challenge</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Challenge')}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8">
-                  <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-6 block">Business Impact</span>
+                  <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-6 block">{t('Business Impact')}</span>
                   <div className="space-y-6">
                     {businessPains.map(p => (
                       <div key={p.title}>
-                        <h4 className="text-[15px] font-bold text-[#1A1A2E]/70 mb-1">{p.title}</h4>
-                        <p className="text-[14px] text-[#1A1A2E]/50 leading-[1.6]">{p.desc}</p>
+                        <h4 className="text-[15px] font-bold text-[#1A1A2E]/70 mb-1">{t(p.title)}</h4>
+                        <p className="text-[14px] text-[#1A1A2E]/50 leading-[1.6]">{t(p.desc)}</p>
                       </div>
                     ))}
                   </div>
                 </div>
                 <div className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-[#4B4DF7]/[0.03] p-8">
-                  <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-6 block">HR Reality</span>
+                  <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-6 block">{t('HR Reality')}</span>
                   <div className="space-y-6">
                     {hrPains.map(p => (
                       <div key={p.title}>
-                        <h4 className="text-[15px] font-bold text-[#1A1A2E]/70 mb-1">{p.title}</h4>
-                        <p className="text-[14px] text-[#1A1A2E]/[0.65] leading-[1.6]">{p.desc}</p>
+                        <h4 className="text-[15px] font-bold text-[#1A1A2E]/70 mb-1">{t(p.title)}</h4>
+                        <p className="text-[14px] text-[#1A1A2E]/[0.65] leading-[1.6]">{t(p.desc)}</p>
                       </div>
                     ))}
                   </div>
@@ -169,7 +169,7 @@ export default function InsMercatoStoryPage() {
 
             {/* Solution. Skills framework + setup */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">The Solution</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Solution')}</h2>
               <div className="grid lg:grid-cols-2 gap-10 items-start mb-10">
                 <div>
                   <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-6">
@@ -180,11 +180,11 @@ export default function InsMercatoStoryPage() {
                   </p>
                 </div>
                 <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8">
-                  <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.1em] uppercase mb-5 block">6 Soft Skills Assessed</span>
+                  <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.1em] uppercase mb-5 block">{t('6 Soft Skills Assessed')}</span>
                   <div className="grid grid-cols-2 gap-3">
                     {skills.map(s => (
                       <div key={s} className="rounded-lg bg-[#4B4DF7]/[0.04] px-4 py-3">
-                        <span className="text-[13px] text-[#1A1A2E]/[0.65] font-medium">{s}</span>
+                        <span className="text-[13px] text-[#1A1A2E]/[0.65] font-medium">{t(s)}</span>
                       </div>
                     ))}
                   </div>
@@ -194,13 +194,13 @@ export default function InsMercatoStoryPage() {
 
             {/* Results. Funnel visualization */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">The Results</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Results')}</h2>
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-3 gap-6 mb-12">
                   {metrics.map(m => (
                     <div key={m.value} className="text-center">
                       <span className="block text-white" style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                      <span className="text-[14px] text-white/[0.65] mt-3 block">{m.label}</span>
+                      <span className="text-[14px] text-white/[0.65] mt-3 block">{t(m.label)}</span>
                     </div>
                   ))}
                 </div>
@@ -216,7 +216,7 @@ export default function InsMercatoStoryPage() {
                       transition={{ duration: 0.4, delay: i * 0.08 }}
                     >
                       <span className="block text-white font-bold mb-2" style={{ fontSize: '1.5rem', letterSpacing: '-0.03em' }}>{f.value}</span>
-                      <span className="text-[11px] text-white/40 leading-tight block">{f.label}</span>
+                      <span className="text-[11px] text-white/40 leading-tight block">{t(f.label)}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -232,8 +232,8 @@ export default function InsMercatoStoryPage() {
                     <div key={item.title} className="flex items-start gap-3">
                       <div className="w-2 h-2 rounded-full bg-[#4B4DF7]/40 mt-2 shrink-0" />
                       <div>
-                        <span className="text-[14px] font-bold text-[#1A1A2E]/70">{item.title}</span>
-                        <p className="text-[14px] text-[#1A1A2E]/50 leading-[1.5]">{item.desc}</p>
+                        <span className="text-[14px] font-bold text-[#1A1A2E]/70">{t(item.title)}</span>
+                        <p className="text-[14px] text-[#1A1A2E]/50 leading-[1.5]">{t(item.desc)}</p>
                       </div>
                     </div>
                   ))}
@@ -241,11 +241,11 @@ export default function InsMercatoStoryPage() {
                 <div className="grid grid-cols-2 gap-3">
                   <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/60 p-5 text-center">
                     <span className="block text-[#1A1A2E]" style={{ fontSize: '2rem', fontWeight: 800, lineHeight: 1 }}>47%</span>
-                    <span className="text-[12px] text-[#1A1A2E]/50 mt-2 block">Role-Ready<br />(~42 profiles)</span>
+                    <span className="text-[12px] text-[#1A1A2E]/50 mt-2 block">{t('Role-Ready')}<br />{t('(~42 profiles)')}</span>
                   </div>
                   <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/60 p-5 text-center">
                     <span className="block text-[#1A1A2E]" style={{ fontSize: '2rem', fontWeight: 800, lineHeight: 1 }}>53%</span>
-                    <span className="text-[12px] text-[#1A1A2E]/50 mt-2 block">In Development<br />(~48 profiles)</span>
+                    <span className="text-[12px] text-[#1A1A2E]/50 mt-2 block">{t('In Development')}<br />{t('(~48 profiles)')}</span>
                   </div>
                 </div>
               </div>
@@ -259,7 +259,7 @@ export default function InsMercatoStoryPage() {
                     <ArrowRight className="h-6 w-6 text-[#4B4DF7]/50" />
                   </div>
                   <div>
-                    <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold text-[#1A1A2E] mb-6 leading-[1.2]">2026: From Internal Development to Integrated Talent Strategy</h2>
+                    <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold text-[#1A1A2E] mb-6 leading-[1.2]">{t('2026: From Internal Development to Integrated Talent Strategy')}</h2>
                     <div className="space-y-4 mb-6">
                       {[
                         'Same framework from hiring to development. every person evaluated with one consistent logic from day one',
@@ -269,7 +269,7 @@ export default function InsMercatoStoryPage() {
                       ].map(item => (
                         <div key={item} className="flex items-start gap-3">
                           <div className="w-1.5 h-1.5 rounded-full bg-[#4B4DF7]/40 mt-2 shrink-0" />
-                          <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.6]">{item}</p>
+                          <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.6]">{t(item)}</p>
                         </div>
                       ))}
                     </div>
@@ -281,19 +281,19 @@ export default function InsMercatoStoryPage() {
             {/* Science Note */}
             <Section>
               <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8 lg:p-10">
-                <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-6 block">The Science Behind It</span>
+                <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-6 block">{t('The Science Behind It')}</span>
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div className="rounded-xl bg-black/[0.03] p-6 text-center">
                     <span className="block text-[#1A1A2E]/30" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>14%</span>
-                    <span className="text-[13px] text-[#1A1A2E]/40 mt-2 block">Unstructured interviews<br />predictive accuracy</span>
+                    <span className="text-[13px] text-[#1A1A2E]/40 mt-2 block">{t('Unstructured interviews')}<br />{t('predictive accuracy')}</span>
                   </div>
                   <div className="rounded-xl bg-[#4B4DF7]/[0.06] p-6 text-center">
                     <span className="block text-[#1A1A2E]" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>51%+</span>
-                    <span className="text-[13px] text-[#1A1A2E]/[0.65] mt-2 block">Structured competency assessment<br />predictive validity</span>
+                    <span className="text-[13px] text-[#1A1A2E]/[0.65] mt-2 block">{t('Structured competency assessment')}<br />{t('predictive validity')}</span>
                   </div>
                 </div>
                 <button onClick={() => { router.push('/science'); window.scrollTo(0,0); }} className="group inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
-                  Discover the Science <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
+                  {t('Discover the Science')} <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
               </div>
             </Section>
@@ -306,16 +306,16 @@ export default function InsMercatoStoryPage() {
         {/* Related Stories */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 mb-12">Related Stories</h3>
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 mb-12">{t('Related Stories')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {[{ id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO \u00b7 Hiring', headline: '35% fewer days to hire. 30% better hires.' },
                 { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail \u00b7 Hiring', headline: 'Winning Gen Z Talent Without Drowning in Interviews.' }].map(s => (
                 <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0,0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
-                  <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
+                  <span className="text-[14px] text-white/40 mb-4 block">{t(s.tag)}</span>
                   <h4 className="text-[24px] font-bold text-white/90 mb-4">{s.company}</h4>
-                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
+                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{t(s.headline)}</p>
                   <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
-                    Read the story <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    {t('Read the story')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
               ))}
@@ -323,7 +323,7 @@ export default function InsMercatoStoryPage() {
           </div>
         </section>
 
-        <SolutionFinalCTA headline="Ready to see what Skillvue can do for your" accentWord="organization?" />
+        <SolutionFinalCTA headline={t("Ready to see what Skillvue can do for your")} accentWord={t("organization?")} />
       <Footer />
       </main>
     </>

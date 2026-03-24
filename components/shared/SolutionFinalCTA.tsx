@@ -2,8 +2,10 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function SolutionFinalCTA({ headline, accentWord }) {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -24,7 +26,7 @@ export default function SolutionFinalCTA({ headline, accentWord }) {
             href="/book-meeting"
             className="group inline-flex items-center gap-4 px-10 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/15 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
           >
-            <span>Book a Meeting</span>
+            <span>{t('Book a Meeting')}</span>
             <ArrowRight className="h-5 w-5 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
           </a>
         </motion.div>

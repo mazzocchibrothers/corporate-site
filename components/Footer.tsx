@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import SkillvueLogo from './landing/SkillvueLogo';
 import { Instagram, Facebook, Linkedin } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const footerLinks = [
   {
@@ -41,6 +42,7 @@ const socials = [
 ];
 
 export default function Footer() {
+  const { t } = useLanguage();
   const router = useRouter();
 
   const handleClick = (href: string) => (e: React.MouseEvent) => {
@@ -88,7 +90,7 @@ export default function Footer() {
           <div className="grid grid-cols-3 gap-10 lg:ml-auto lg:w-[60%]">
             {footerLinks.map((group) => (
               <div key={group.title}>
-                <h4 className="text-[16px] font-semibold text-white/85 mb-7">{group.title}</h4>
+                <h4 className="text-[16px] font-semibold text-white/85 mb-7">{t(group.title)}</h4>
                 <ul className="space-y-5 lg:space-y-4">
                   {group.links.map((link) => (
                     <li key={link.name}>
@@ -97,7 +99,7 @@ export default function Footer() {
                         onClick={handleClick(link.href)}
                         className="text-[15px] text-white/35 hover:text-white/65 transition-colors duration-300"
                       >
-                        {link.name}
+                        {t(link.name)}
                       </a>
                     </li>
                   ))}
@@ -110,12 +112,12 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/[0.04] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <span className="text-[13px] text-white/20">
-            &copy; {new Date().getFullYear()} Skillvue. All rights reserved.
+            &copy; {new Date().getFullYear()} Skillvue. {t('All rights reserved.')}
           </span>
           <div className="flex items-center gap-6">
-            <span className="text-[13px] text-white/20"><a href="/privacy-policy" onClick={handleClick('/privacy-policy')} className="hover:text-white/40 transition-colors duration-300">Privacy Policy</a></span>
-            <span className="text-[13px] text-white/20">Cookie Policy</span>
-            <span className="text-[13px] text-white/20">Terms of Service</span>
+            <span className="text-[13px] text-white/20"><a href="/privacy-policy" onClick={handleClick('/privacy-policy')} className="hover:text-white/40 transition-colors duration-300">{t('Privacy Policy')}</a></span>
+            <span className="text-[13px] text-white/20">{t('Cookie Policy')}</span>
+            <span className="text-[13px] text-white/20">{t('Terms of Service')}</span>
           </div>
         </div>
       </div>

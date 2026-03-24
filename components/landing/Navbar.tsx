@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { useRouter } from 'next/router';
 import SkillvueLogo from './SkillvueLogo';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 
 const navLinks = [
@@ -104,6 +105,8 @@ export default function Navbar() {
     closeTimeout.current = setTimeout(() => setOpenMenu(null), 250);
   }, []);
 
+  const { lang, switchLang } = useLanguage();
+
   const isLight = onLightSection && scrolled && !hasDropdown;
 
   const textColor = isLight ? '#1A1A2E' : '#ffffff';
@@ -200,6 +203,29 @@ export default function Navbar() {
 
           {/* Desktop CTA + Language */}
           <div className="hidden lg:flex items-center gap-5">
+            {/* Language toggle */}
+            <div
+              className="flex items-center rounded-full overflow-hidden"
+              style={{ border: `1px solid ${hasDropdown ? 'rgba(255,255,255,0.15)' : btnBorder}` }}
+            >
+              {(['en', 'it'] as const).map((l, i) => (
+                <button
+                  key={l}
+                  onClick={() => switchLang(l)}
+                  className="px-3 py-1.5 text-[13px] font-medium tracking-wide transition-all duration-200"
+                  style={{
+                    color: lang === l
+                      ? (hasDropdown ? '#ffffff' : textColor)
+                      : (hasDropdown ? 'rgba(255,255,255,0.35)' : textMuted),
+                    borderLeft: i === 1 ? `1px solid ${hasDropdown ? 'rgba(255,255,255,0.15)' : btnBorder}` : 'none',
+                    background: lang === l ? (hasDropdown ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)') : 'transparent',
+                  }}
+                >
+                  {l.toUpperCase()}
+                </button>
+              ))}
+            </div>
+
             <a
               href="/book-meeting"
               data-testid="nav-book-demo"
@@ -212,7 +238,6 @@ export default function Navbar() {
             >
               Book a Meeting
             </a>
-
           </div>
 
           {/* Mobile hamburger */}
@@ -331,7 +356,25 @@ export default function Navbar() {
             </div>
 
             {/* Mobile CTA */}
-            <div className="mt-auto pt-8 pb-4">
+            <div className="mt-auto pt-8 pb-4 flex flex-col gap-4">
+              {/* Language toggle */}
+              <div className="flex items-center rounded-full overflow-hidden border border-white/15 self-start">
+                {(['en', 'it'] as const).map((l, i) => (
+                  <button
+                    key={l}
+                    onClick={() => switchLang(l)}
+                    className="px-5 py-2 text-[14px] font-medium tracking-wide transition-all duration-200"
+                    style={{
+                      color: lang === l ? '#ffffff' : 'rgba(255,255,255,0.35)',
+                      borderLeft: i === 1 ? '1px solid rgba(255,255,255,0.15)' : 'none',
+                      background: lang === l ? 'rgba(255,255,255,0.08)' : 'transparent',
+                    }}
+                  >
+                    {l.toUpperCase()}
+                  </button>
+                ))}
+              </div>
+
               <button
                 onClick={() => navigateTo('/book-meeting')}
                 className="w-full flex items-center justify-center py-4 text-[16px] font-semibold text-white rounded-full border border-white/15"

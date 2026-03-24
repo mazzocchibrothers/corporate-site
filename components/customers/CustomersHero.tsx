@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const metrics = [
   { value: '50+', label: 'European enterprises' },
@@ -23,6 +24,7 @@ const logoFiles = [
 const logos = ['Unicredit', 'Carrefour', 'Loro Piana', 'Capgemini', 'Credem', 'Luxottica', 'Fidia', 'NovaCoop', 'Douglas', 'Generali', 'Coop'];
 
 export default function CustomersHero() {
+  const { t } = useLanguage();
   return (
     <section id="customers-hero" data-testid="customers-hero" className="relative pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-24 lg:py-32">
@@ -33,8 +35,8 @@ export default function CustomersHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          The decisions that define your organization. Finally backed by{' '}
-          <span className="italic font-bold gradient-text">proof.</span>
+          {t('The decisions that define your organization. Finally backed by')}{' '}
+          <span className="italic font-bold gradient-text">{t('proof.')}</span>
         </motion.h1>
         <motion.p
           className="text-[18px] text-white/[0.65] leading-[1.75] max-w-2xl mb-16"
@@ -43,7 +45,7 @@ export default function CustomersHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          50+ European enterprises have replaced gut feel with objective talent intelligence. across hiring, promotion, development, and transformation readiness. These are their stories.
+          {t('50+ European enterprises have replaced gut feel with objective talent intelligence. across hiring, promotion, development, and transformation readiness. These are their stories.')}
         </motion.p>
 
         {/* CTA - Read the stories */}
@@ -54,7 +56,7 @@ export default function CustomersHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.55 }}
         >
-          <span>Read the stories</span>
+          <span>{t('Read the stories')}</span>
           <svg className="h-4 w-4 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-y-1 transition-all duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
         </motion.a>
 
@@ -68,7 +70,7 @@ export default function CustomersHero() {
           {metrics.map((m) => (
             <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.03] p-6">
               <span className="block text-white mb-1" style={{ fontSize: '2rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-              <span className="text-[13px] text-white/[0.65]">{m.label}</span>
+              <span className="text-[13px] text-white/[0.65]">{t(m.label)}</span>
             </div>
           ))}
         </motion.div>
@@ -87,7 +89,7 @@ export default function CustomersHero() {
                 className="inline-flex items-center px-6 py-2.5 rounded-lg border border-white/[0.3] text-[15px] text-white/70 whitespace-nowrap font-medium"
                 style={{ fontWeight: 300, letterSpacing: '0.02em' }}
               >
-                Our Customers
+                {t('Our Customers')}
               </span>
             </div>
             <div

@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const painCards = [
   {
@@ -36,6 +37,7 @@ function AnimatedSection({ children, className = '' }: { children: React.ReactNo
 }
 
 export default function ProblemSection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -48,20 +50,20 @@ export default function ProblemSection() {
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
         <AnimatedSection className="mb-6">
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">
-            Your Biggest <span className="italic font-bold gradient-text-on-light">Opportunity</span>
+            {t('Your Biggest')} <span className="italic font-bold gradient-text-on-light">{t('Opportunity')}</span>
           </h2>
         </AnimatedSection>
 
         <AnimatedSection className="max-w-[900px] mb-24">
           <p className="text-[clamp(1.1rem,2vw,1.5rem)] font-normal leading-[1.55] text-[#1A1A2E]">
-            Talent represents 60-70% of your operating costs.{' '}
+            {t('Talent represents 60-70% of your operating costs.')}{' '}
             <span className="text-[#1A1A2E]/35">
-              Yet hiring decisions are based on CVs and gut feel. Promotions go to whoever is most visible, not most capable. Transformations stall because nobody mapped the skill gaps before spending millions in that project.
+              {t('Yet hiring decisions are based on CVs and gut feel. Promotions go to whoever is most visible, not most capable. Transformations stall because nobody mapped the skill gaps before spending millions in that project.')}
             </span>
           </p>
           <p className="text-[clamp(1.1rem,2vw,1.5rem)] font-normal leading-[1.55] text-[#1A1A2E]/35 mt-6">
-            And when the CFO asks for talent ROI,{' '}
-            <span className="font-semibold gradient-text-on-light">HR has no answer.</span>
+            {t('And when the CFO asks for talent ROI,')}{' '}
+            <span className="font-semibold gradient-text-on-light">{t('HR has no answer.')}</span>
           </p>
         </AnimatedSection>
 
@@ -90,12 +92,12 @@ export default function ProblemSection() {
 
               {/* Title */}
               <h3 className="text-[15px] lg:text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-3 lg:mb-4">
-                {card.title}
+                {t(card.title)}
               </h3>
 
               {/* Description */}
               <p className="text-[13px] lg:text-[15px] text-[#1A1A2E]/50 leading-[1.7] lg:leading-[1.75]">
-                {card.desc}
+                {t(card.desc)}
               </p>
             </motion.div>
           ))}

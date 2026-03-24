@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Target, TrendingUp, Award, Shield } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const pillars = [
   {
@@ -38,6 +39,7 @@ const pillars = [
 ];
 
 export default function SolutionSection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -52,11 +54,11 @@ export default function SolutionSection() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-3xl">
-            Skillvue brings people processes<br />
-            <span className="italic font-bold gradient-text-warm">to life.</span>
+            {t('Skillvue brings people processes')}<br />
+            <span className="italic font-bold gradient-text-warm">{t('to life.')}</span>
           </h2>
           <p className="text-[18px] text-white/[0.65] leading-[1.7] mt-6 max-w-xl">
-            One platform for every talent decision. hiring, performance, development, mobility. Objective. Scalable. Defensible.
+            {t('One platform for every talent decision. hiring, performance, development, mobility. Objective. Scalable. Defensible.')}
           </p>
         </motion.div>
 
@@ -82,12 +84,12 @@ export default function SolutionSection() {
                 <h3
                   className="text-2xl font-semibold text-white/85 group-hover:text-white/95 transition-colors duration-500 mb-4"
                 >
-                  {pillar.label}
+                  {t(pillar.label)}
                 </h3>
 
                 {/* Description */}
                 <p className="text-[16px] text-white/[0.65] group-hover:text-white/[0.75] leading-[1.75] transition-colors duration-500 mb-8">
-                  {pillar.desc}
+                  {t(pillar.desc)}
                 </p>
 
                 {/* Stat */}
@@ -104,7 +106,7 @@ export default function SolutionSection() {
                     {pillar.stat}
                   </span>
                   <span className="text-[13px] text-white/[0.65] font-medium tracking-wide">
-                    {pillar.statLabel}
+                    {t(pillar.statLabel)}
                   </span>
                 </div>
               </div>

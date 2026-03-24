@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Zap, Target, TrendingUp } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const kpis = [
   {
@@ -28,6 +29,7 @@ const kpis = [
 ];
 
 export default function LDImpact() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -38,11 +40,11 @@ export default function LDImpact() {
         {/* Header */}
         <motion.div className="text-center mb-16 lg:mb-20" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-5">
-            Measurable impact on{' '}
-            <span className="italic font-bold gradient-text-on-light">L&D outcomes</span>
+            {t('Measurable impact on')}{' '}
+            <span className="italic font-bold gradient-text-on-light">{t('L&D outcomes')}</span>
           </h2>
           <p className="text-[17px] text-[#1A1A2E]/[0.45] leading-[1.75] max-w-2xl mx-auto">
-            When learning investments are driven by objective skill data, the results speak for themselves.
+            {t('When learning investments are driven by objective skill data, the results speak for themselves.')}
           </p>
         </motion.div>
 
@@ -75,14 +77,14 @@ export default function LDImpact() {
 
                 {/* Label */}
                 <h3 className="text-[17px] font-semibold text-[#1A1A2E]/80 leading-snug mb-1.5">
-                  {k.label} <span className="font-normal text-[#1A1A2E]/40">{k.sublabel}</span>
+                  {t(k.label)} <span className="font-normal text-[#1A1A2E]/40">{t(k.sublabel)}</span>
                 </h3>
 
                 {/* Divider */}
                 <div className="w-12 h-px bg-[#4B4DF7]/[0.15] my-5" />
 
                 {/* Detail text */}
-                <p className="text-[14px] text-[#1A1A2E]/[0.45] leading-[1.75] flex-1">{k.detail}</p>
+                <p className="text-[14px] text-[#1A1A2E]/[0.45] leading-[1.75] flex-1">{t(k.detail)}</p>
               </motion.div>
             );
           })}

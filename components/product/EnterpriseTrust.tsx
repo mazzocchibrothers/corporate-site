@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Settings, Shield, Scale } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const pillars = [
   {
@@ -23,6 +24,7 @@ const pillars = [
 const badges = ['EU AI Act', 'ISO 27001', 'GDPR', 'AICPA SOC 2'];
 
 export default function EnterpriseTrust() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -36,11 +38,11 @@ export default function EnterpriseTrust() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-6">
-            Built{' '}
-            <span className="italic font-bold gradient-text-on-light">enterprise ready</span>
+            {t('Built')}{' '}
+            <span className="italic font-bold gradient-text-on-light">{t('enterprise ready')}</span>
           </h2>
           <p className="text-[18px] text-[#1A1A2E]/[0.65] leading-[1.75] max-w-2xl">
-            We are opinionated about science, flexible about everything else. From deep customizability to the most demanding regulatory environments.
+            {t('We are opinionated about science, flexible about everything else. From deep customizability to the most demanding regulatory environments.')}
           </p>
         </motion.div>
 
@@ -57,8 +59,8 @@ export default function EnterpriseTrust() {
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
               >
                 <Icon className="h-6 w-6 text-[#4B4DF7]/50 mb-5" strokeWidth={1.5} />
-                <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-4">{pillar.title}</h3>
-                <p className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.75]">{pillar.desc}</p>
+                <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-4">{t(pillar.title)}</h3>
+                <p className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.75]">{t(pillar.desc)}</p>
               </motion.div>
             );
           })}
@@ -75,7 +77,7 @@ export default function EnterpriseTrust() {
               key={badge}
               className="inline-flex px-5 py-2.5 rounded-full text-[12px] font-semibold text-[#4B4DF7]/70 border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.04] tracking-wide"
             >
-              {badge}
+              {t(badge)}
             </span>
           ))}
         </motion.div>

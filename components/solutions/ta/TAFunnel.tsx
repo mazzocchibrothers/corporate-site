@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Zap, BarChart3, Plug, FileText, Calendar, MessageSquare, Users, Filter, Trophy, Brain, Search, ArrowDown } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const stages = [
   {
@@ -94,7 +95,7 @@ const stages = [
   },
 ];
 
-function ColumnCard({ data, delay }) {
+function ColumnCard({ data, delay, t }) {
   const Icon = data.icon;
   return (
     <motion.div
@@ -108,7 +109,7 @@ function ColumnCard({ data, delay }) {
         <div className="w-9 h-9 rounded-lg bg-[#4B4DF7]/[0.12] flex items-center justify-center">
           <Icon className="h-4.5 w-4.5 text-[#9B9DFB]" />
         </div>
-        <h4 className="text-[14px] font-bold text-[#1A1A2E]/70 tracking-wide">{data.title}</h4>
+        <h4 className="text-[14px] font-bold text-[#1A1A2E]/70 tracking-wide">{t(data.title)}</h4>
       </div>
 
       {data.items ? (
@@ -119,9 +120,9 @@ function ColumnCard({ data, delay }) {
               <div key={i} className="flex items-start gap-3">
                 <ItemIcon className="h-4 w-4 text-[#4B4DF7]/40 mt-0.5 shrink-0" />
                 <div>
-                  <span className="text-[14px] text-[#1A1A2E]/80 font-medium">{item.text}</span>
+                  <span className="text-[14px] text-[#1A1A2E]/80 font-medium">{t(item.text)}</span>
                   {item.detail && (
-                    <span className="text-[12px] text-[#1A1A2E]/35 ml-1.5">({item.detail})</span>
+                    <span className="text-[12px] text-[#1A1A2E]/35 ml-1.5">({t(item.detail)})</span>
                   )}
                 </div>
               </div>
@@ -130,7 +131,7 @@ function ColumnCard({ data, delay }) {
         </div>
       ) : (
         <div>
-          <p className="text-[14px] text-[#1A1A2E]/60 font-semibold mb-5">{data.text}</p>
+          <p className="text-[14px] text-[#1A1A2E]/60 font-semibold mb-5">{t(data.text)}</p>
           <div className="grid grid-cols-3 gap-3">
             {data.logos.map((logo) => (
               <div key={logo} className="flex items-center justify-center h-8">
@@ -151,6 +152,7 @@ function ColumnCard({ data, delay }) {
 }
 
 export default function TAFunnel() {
+  const { t } = useLanguage();
   const [active, setActive] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
@@ -168,8 +170,8 @@ export default function TAFunnel() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">
-            From automation to insight, what your team gets at{' '}
-            <span className="italic font-bold gradient-text-on-light">every stage of the funnel</span>
+            {t('From automation to insight, what your team gets at')}{' '}
+            <span className="italic font-bold gradient-text-on-light">{t('every stage of the funnel')}</span>
           </h2>
         </motion.div>
 
@@ -192,10 +194,10 @@ export default function TAFunnel() {
               }`}
             >
               <span className={`text-[11px] font-bold tracking-[0.15em] uppercase block mb-1 ${i === active ? 'text-[#9B9DFB]' : 'text-[#1A1A2E]/25'}`}>
-                Stage {s.number}
+                {t('Stage')} {s.number}
               </span>
               <span className={`text-[18px] font-bold ${i === active ? 'text-white' : 'text-[#1A1A2E]/50'}`}>
-                {s.label}
+                {t(s.label)}
               </span>
               {i === active && (
                 <motion.div
@@ -221,9 +223,9 @@ export default function TAFunnel() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <ColumnCard data={stage.automation} delay={0} />
-            <ColumnCard data={stage.reporting} delay={0.08} />
-            <ColumnCard data={stage.integration} delay={0.16} />
+            <ColumnCard data={stage.automation} delay={0} t={t} />
+            <ColumnCard data={stage.reporting} delay={0.08} t={t} />
+            <ColumnCard data={stage.integration} delay={0.16} t={t} />
           </motion.div>
         </AnimatePresence>
       </div>

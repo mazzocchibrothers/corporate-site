@@ -2,6 +2,7 @@
 import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
+import { useLanguage } from '@/i18n/LanguageContext';
 import IMHero from '@/components/solutions/im/IMHero';
 import IMProblem from '@/components/solutions/im/IMProblem';
 import IMShift from '@/components/solutions/im/IMShift';
@@ -11,6 +12,7 @@ import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 
 export default function InternalMobilityPage() {
+  const { t } = useLanguage();
   return (
     <>
       <Navbar />
@@ -24,7 +26,7 @@ export default function InternalMobilityPage() {
         <IMHowSolves />
         <div className="fade-into-dark" />
         <SolutionCrossLinks currentPath="/solutions/internal-mobility" />
-        <SolutionFinalCTA headline="Ready to unlock the talent you" accentWord="already have?" />
+        <SolutionFinalCTA headline={t('Ready to unlock the talent you')} accentWord={t('already have?')} />
       <Footer />
       </main>
     </>

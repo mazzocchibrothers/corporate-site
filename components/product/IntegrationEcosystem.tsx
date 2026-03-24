@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const integrations = [
   { name: 'Oracle', logo: '/logos/integrations/oracle_white.png' },
@@ -35,6 +36,7 @@ function LogoItem({ item }: { item: { name: string; logo: string } }) {
 }
 
 export default function IntegrationEcosystem() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -53,14 +55,14 @@ export default function IntegrationEcosystem() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-4">
-            Giving life to your{' '}
-            <span className="italic font-bold gradient-text-on-light">core HR systems</span>
+            {t('Giving life to your')}{' '}
+            <span className="italic font-bold gradient-text-on-light">{t('core HR systems')}</span>
           </h2>
           <p className="text-[18px] text-[#1A1A2E]/[0.65] leading-[1.75] max-w-2xl mb-6">
-            Skillvue layers objective talent data into your existing stack, turning them from process gatekeepers into decision engines.
+            {t('Skillvue layers objective talent data into your existing stack, turning them from process gatekeepers into decision engines.')}
           </p>
           <p className="text-[15px] text-[#1A1A2E]/[0.4] leading-[1.75]">
-            Integrating with <span className="text-[#4B4DF7]/70 font-semibold">ATS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LXP</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">PMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">HRIS</span> &mdash; 100+ native integrations
+            {t('Integrating with')} <span className="text-[#4B4DF7]/70 font-semibold">ATS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LXP</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">PMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">HRIS</span> &mdash; {t('100+ native integrations')}
           </p>
         </motion.div>
       </div>
@@ -92,7 +94,7 @@ export default function IntegrationEcosystem() {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          If it has an API, we connect.
+          {t('If it has an API, we connect.')}
         </motion.p>
       </div>
     </section>

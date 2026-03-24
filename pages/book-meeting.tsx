@@ -4,8 +4,10 @@ import Footer from '@/components/Footer';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import { ArrowLeft } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function BookMeetingPage() {
+  const { t } = useLanguage();
   const formRef = useRef(null);
   const router = useRouter();
 
@@ -47,19 +49,19 @@ export default function BookMeetingPage() {
                 className="group inline-flex items-center gap-2 text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300 mb-10"
               >
                 <ArrowLeft className="h-3.5 w-3.5 group-hover:-translate-x-1 transition-transform duration-300" />
-                Back
+                {t('Back')}
               </button>
 
               <h1
                 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.03em] text-white/95 mb-6"
                 style={{ lineHeight: 1.1 }}
               >
-                Let's talk about your{' '}
-                <span className="italic font-bold gradient-text">talent strategy.</span>
+                {t("Let's talk about your")}{' '}
+                <span className="italic font-bold gradient-text">{t('talent strategy.')}</span>
               </h1>
 
               <p className="text-[18px] text-white/[0.55] leading-[1.75] max-w-md" style={{ fontWeight: 300 }}>
-                Book a meeting with our team to see how Skillvue can transform your hiring, performance, and development processes with science-backed talent intelligence.
+                {t('Book a meeting with our team to see how Skillvue can transform your hiring, performance, and development processes with science-backed talent intelligence.')}
               </p>
             </div>
 

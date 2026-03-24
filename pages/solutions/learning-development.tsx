@@ -2,6 +2,7 @@
 import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
+import { useLanguage } from '@/i18n/LanguageContext';
 import LDHero from '@/components/solutions/ld/LDHero';
 import LDProblem from '@/components/solutions/ld/LDProblem';
 import LDShift from '@/components/solutions/ld/LDShift';
@@ -12,6 +13,7 @@ import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 
 export default function LearningDevelopmentPage() {
+  const { t } = useLanguage();
   return (
     <>
       <Navbar />
@@ -29,7 +31,7 @@ export default function LearningDevelopmentPage() {
         <div className="fade-into-light" />
         <LDImpact />
         <div className="fade-into-dark" />
-        <SolutionFinalCTA headline="Ready to prove L&D impact with" accentWord="data?" />
+        <SolutionFinalCTA headline={t('Ready to prove L&D impact with')} accentWord={t('data?')} />
       <Footer />
       </main>
     </>

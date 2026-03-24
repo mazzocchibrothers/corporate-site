@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const stats = [
   {
@@ -24,6 +25,7 @@ const stats = [
 ];
 
 export default function ROISection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -45,9 +47,9 @@ export default function ROISection() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.6rem,3.5vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">
-            People are your biggest cost.{' '}
+            {t('People are your biggest cost.')}{' '}
             <span className="italic font-bold gradient-text-warm-on-light">
-              They can also be your biggest return.
+              {t('They can also be your biggest return.')}
             </span>
           </h2>
           <a
@@ -55,7 +57,7 @@ export default function ROISection() {
             data-testid="roi-cta"
             className="group inline-flex items-center gap-3 px-7 py-3.5 text-[13px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:bg-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/30 transition-all duration-500 shrink-0 mt-2"
           >
-            Book a Meeting
+            {t('Book a Meeting')}
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
         </motion.div>
@@ -88,12 +90,12 @@ export default function ROISection() {
               <h3
                 className="text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-4"
               >
-                {stat.label} <span className="font-normal text-[#1A1A2E]/50">{stat.sublabel}</span>
+                {t(stat.label)} <span className="font-normal text-[#1A1A2E]/50">{t(stat.sublabel)}</span>
               </h3>
 
               {/* Footnote */}
               <p className="text-[15px] text-[#1A1A2E]/50 leading-relaxed">
-                {stat.footnote}
+                {t(stat.footnote)}
               </p>
             </motion.div>
           ))}

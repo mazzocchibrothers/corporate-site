@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const solutions = [
   { name: 'Talent Acquisition', path: '/solutions/talent-acquisition', desc: 'Predict who will perform' },
@@ -13,6 +14,7 @@ const solutions = [
 ];
 
 export default function ProductCrossLinks() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
@@ -23,7 +25,7 @@ export default function ProductCrossLinks() {
     <section className="relative pt-8 pb-2 lg:pt-10 lg:pb-2" ref={ref}>
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <h3 className="text-[20px] font-bold text-white/90 mb-8">Explore by use case</h3>
+          <h3 className="text-[20px] font-bold text-white/90 mb-8">{t('Explore by use case')}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
             {solutions.map((s, i) => (
               <motion.button
@@ -36,8 +38,8 @@ export default function ProductCrossLinks() {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-[15px] font-semibold text-white/85 block mb-1">{s.name}</span>
-                    <span className="text-[13px] text-white/40">{s.desc}</span>
+                    <span className="text-[15px] font-semibold text-white/85 block mb-1">{t(s.name)}</span>
+                    <span className="text-[13px] text-white/40">{t(s.desc)}</span>
                   </div>
                   <ArrowRight className="h-4 w-4 text-white/20 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-300 shrink-0" />
                 </div>

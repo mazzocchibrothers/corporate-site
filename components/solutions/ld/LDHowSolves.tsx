@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Search, Layers, TrendingUp } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const pillars = [
   {
@@ -31,6 +32,7 @@ const pillars = [
 ];
 
 export default function LDHowSolves() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -40,11 +42,11 @@ export default function LDHowSolves() {
 
         <motion.div className="max-w-3xl mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-5">
-            Three pillars of{' '}
-            <span className="italic font-bold gradient-text-on-light">skill-driven L&D</span>
+            {t('Three pillars of')}{' '}
+            <span className="italic font-bold gradient-text-on-light">{t('skill-driven L&D')}</span>
           </h2>
           <p className="text-[17px] text-[#1A1A2E]/[0.45] leading-[1.75]">
-            Stop investing in training that doesn't move the needle. Measure gaps, design programs, and track impact with objective data.
+            {t("Stop investing in training that doesn't move the needle. Measure gaps, design programs, and track impact with objective data.")}
           </p>
         </motion.div>
 
@@ -66,12 +68,12 @@ export default function LDHowSolves() {
                   </div>
                 </div>
 
-                <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-3 leading-tight">{p.title}</h3>
-                <p className="text-[15px] text-[#1A1A2E]/[0.5] leading-[1.75] mb-8 flex-1">{p.desc}</p>
+                <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-3 leading-tight">{t(p.title)}</h3>
+                <p className="text-[15px] text-[#1A1A2E]/[0.5] leading-[1.75] mb-8 flex-1">{t(p.desc)}</p>
 
                 <div className="rounded-xl bg-[#F5F5FA] border border-[#1A1A2E]/[0.06] p-5">
                   <span className="text-[28px] font-bold text-[#1A1A2E] leading-none tracking-[-0.02em] block mb-1.5">{p.stat}</span>
-                  <span className="text-[12px] text-[#1A1A2E]/[0.4] leading-[1.5]">{p.statLabel}</span>
+                  <span className="text-[12px] text-[#1A1A2E]/[0.4] leading-[1.5]">{t(p.statLabel)}</span>
                 </div>
               </motion.div>
             );

@@ -3,8 +3,10 @@ import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ChevronDown, Volume2, VolumeX } from 'lucide-react';
 import AnimatedWaveform from '../ui/AnimatedWaveform';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function CustomerStoriesShowcase() {
+  const { t } = useLanguage();
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
@@ -29,19 +31,19 @@ export default function CustomerStoriesShowcase() {
             transition={{ duration: 0.7 }}
           >
             <span className="text-[11px] font-bold text-white/30 tracking-[0.2em] uppercase mb-6 block">
-              Customer Stories
+              {t('Customer Stories')}
             </span>
 
             <h2
               className="font-bold text-white/95 mb-8"
               style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
             >
-              See how<br />they{' '}
-              <span className="italic gradient-text">grow.</span>
+              {t('See how')}<br />{t('they')}{' '}
+              <span className="italic gradient-text">{t('grow.')}</span>
             </h2>
 
             <p className="text-[18px] text-white/[0.5] leading-[1.75] max-w-md mb-12" style={{ fontWeight: 300 }}>
-              Organizations harness Skillvue to make talent decisions with confidence, eliminating guesswork and empowering their people. These are their stories.
+              {t('Organizations harness Skillvue to make talent decisions with confidence, eliminating guesswork and empowering their people. These are their stories.')}
             </p>
 
             <a
@@ -55,7 +57,7 @@ export default function CustomerStoriesShowcase() {
               <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
                 <ChevronDown className="h-4 w-4" />
               </span>
-              Explore all stories
+              {t('Explore all stories')}
             </a>
           </motion.div>
 
@@ -119,14 +121,14 @@ export default function CustomerStoriesShowcase() {
               >
                 {/* Quote */}
                 <p className="text-[clamp(1.2rem,2.2vw,1.6rem)] font-bold text-white leading-[1.35] mb-5">
-                  has enabled me to turn that formerly manual process into a very fine tune{' '}
-                  <span className="text-[#FF5F24]">machine.</span>
+                  {t('has enabled me to turn that formerly manual process into a very fine tune')}{' '}
+                  <span className="text-[#FF5F24]">{t('machine.')}</span>
                 </p>
 
                 {/* Author */}
                 <div className="mb-6">
                   <span className="text-[14px] font-semibold text-white/80">Alessandro Mazzarol</span>
-                  <span className="text-[13px] text-white/40 ml-2">TA & EB Manager, Carrefour</span>
+                  <span className="text-[13px] text-white/40 ml-2">{t('TA & EB Manager, Carrefour')}</span>
                 </div>
 
                 {/* Navigation bars */}
