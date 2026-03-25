@@ -9,10 +9,11 @@ const allStories = [
   { id: 'carrefour', company: 'Carrefour', industry: 'Retail', useCase: 'Hiring & Screening', headline: "How Carrefour Italia is Hiring Better, Faster, and at Scale. Without Adding a Single Person to the Team with Skillvue", bgImage: '/logos/carrefour-bg.jpg' },
   { id: 'subdued', company: 'Subdued', industry: 'Retail', useCase: 'Hiring & Screening', headline: 'Winning Gen Z Talent Without Drowning in Interviews. The Subdued Story with Skillvue', bgImage: '/logos/subdued-bg.jpg' },
   { id: 'ins-mercato', company: "In's Mercato", industry: 'Retail', useCase: 'Internal Mobility & Succession', headline: "Building the Next Generation of Store Managers from Within. How In's Mercato Did It with Skillvue", bgImage: '/logos/insmercato-bg.jpg' },
+  { id: 'adr', company: 'Aeroporti di Roma', industry: 'Aviation', useCase: 'Internal Mobility & Succession', headline: 'Come Aeroporti di Roma ha democratizzato l\'accesso allo sviluppo per 5.000 persone con Skillvue', bgImage: '/logos/adr-logo.jpg', bgStyle: 'contain' },
 ];
 
 const filters = {
-  industry: ['All', 'Retail'],
+  industry: ['All', 'Retail', 'Aviation'],
   useCase: ['All', 'Hiring & Screening', 'Internal Mobility & Succession'],
 };
 
@@ -75,7 +76,11 @@ export default function ExploreStories() {
                 {/* Card visual area */}
                 <div className="relative rounded-2xl border border-white/[0.08] hover:border-white/[0.14] transition-all duration-500 overflow-hidden" style={{ aspectRatio: '16/9' }}>
                   {/* Background image if available */}
-                  {s.bgImage ? (
+                  {s.bgImage && s.bgStyle === 'contain' ? (
+                    <div className="absolute inset-0 flex items-center justify-center bg-white/[0.06] p-10">
+                      <img src={s.bgImage} alt="" className="max-w-[60%] max-h-[60%] object-contain opacity-90" />
+                    </div>
+                  ) : s.bgImage ? (
                     <>
                       <img src={s.bgImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/70" />
