@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/User/Documents/GitHub/corporate-site/pages -type f \\\\\\(-name *.ts -o -name *.tsx -o -name *.js -o -name *.jsx \\\\\\))",
+      "WebFetch(domain:tech.eu)",
+      "WebFetch(domain:cfotech.co.uk)",
+      "WebFetch(domain:www.globenewswire.com)",
+      "WebFetch(domain:www.businessinsider.com)",
+      "WebFetch(domain:startuprise.co.uk)",
+      "WebFetch(domain:aiworld.eu)",
+      "WebFetch(domain:www.forbes.com)",
+      "WebFetch(domain:hrtechedge.com)",
+      "Bash(curl -sL \"https://tech.eu/img/techeu-color.svg\" -o \"press-techeu.svg\")",
+      "Bash(curl -sL \"https://www.globenewswire.com/content/logo/color.svg\" -o \"press-globenewswire.svg\")",
+      "Bash(curl -sL \"https://aiworld.eu/logo-aiworld-eu-horizontal.svg\" -o \"press-aiworld.svg\")",
+      "Bash(curl -sL \"https://startuprise.co.uk/wp-content/themes/jajoorashmi/assets/images/logo.png\" -o \"press-startuprise.png\")",
+      "WebFetch(domain:markets.businessinsider.com)",
+      "Bash(curl -sL \"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Forbes_logo.svg/320px-Forbes_logo.svg.png\" -o \"press-forbes.png\" -w \"%{http_code}\")",
+      "Bash(curl -sL \"https://upload.wikimedia.org/wikipedia/commons/5/5e/Business_Insider_Logo.svg\" -o \"press-businessinsider.svg\" -w \"%{http_code}\")",
+      "WebFetch(domain:www.cfotech.co.uk)",
+      "Bash(curl -sL \"https://logo.clearbit.com/forbes.com\" -o \"press-forbes.png\" -w \" %{http_code}\\\\n\")",
+      "Bash(curl -sL \"https://logo.clearbit.com/businessinsider.com\" -o \"press-businessinsider.png\" -w \" %{http_code}\\\\n\")",
+      "Bash(curl -sL \"https://logo.clearbit.com/cfotech.co.uk\" -o \"press-cfotech.png\" -w \" %{http_code}\\\\n\")",
+      "Bash(curl -sL \"https://logo.clearbit.com/hrtechedge.com\" -o \"press-hrtechedge.png\" -w \" %{http_code}\\\\n\")",
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://i.forbesimg.com/media/assets/forbes_1200x1200.png\" -o \"press-forbes.png\" -w \"%{http_code}\\\\n\")",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://static.businessinsider.com/public/build/img/bi-logo.svg\" -o \"press-businessinsider.svg\" -w \"%{http_code}\\\\n\")",
+      "Bash(npm run:*)",
+      "Read(//c/Users/User/.claude/**)"
+    ]
+  }
+}
