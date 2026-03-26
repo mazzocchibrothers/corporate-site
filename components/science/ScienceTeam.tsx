@@ -8,15 +8,15 @@ const lead = {
   name: 'Dr. Tony Lee, Ph.D.',
   role: 'Head of AI & Science',
   bio: 'Computational psychologist with double Ph.D. degrees and hands-on experience in Machine Learning and AI-based assessment. His interdisciplinary background brings a unique perspective to the assessment field, combining psychological knowledge with advanced AI and machine learning techniques. At Skillvue, he leads the AI & Science team, innovating, validating and implementing new competency assessment models built on the latest technologies.',
-  photo: '/team/tony-lee.avif',
+  photo: '/team/tony-lee.jpg',
   linkedin: 'https://www.linkedin.com/in/dr-tony-lee/',
 };
 
 const members = [
-  { name: 'Jatin Babbar', role: 'Senior Machine Learning Engineer', photo: '/team/jatin-babbar.avif', linkedin: 'https://www.linkedin.com/in/jatin-babbar/' },
-  { name: 'Dr. Serena Dolfi, Ph.D.', role: 'People Scientist', photo: '/team/serena-dolfi.avif', linkedin: 'https://www.linkedin.com/in/serena-dolfi/' },
-  { name: 'Wamiq Raza', role: 'Machine Learning Engineer', photo: '/team/wamiq-raza.avif', linkedin: 'https://www.linkedin.com/in/wamiq-raza/' },
-  { name: 'Luca Sbrollini', role: 'People Scientist', photo: '/team/luca-sbrollini.avif', linkedin: 'https://www.linkedin.com/in/luca-sbrollini/' },
+  { name: 'Jatin Babbar', role: 'Senior Machine Learning Engineer', photo: '/team/jatin-babbar.jpg', linkedin: 'https://www.linkedin.com/in/jatin-babbar/' },
+  { name: 'Dr. Serena Dolfi, Ph.D.', role: 'People Scientist', photo: '/team/serena-dolfi.jpg', linkedin: 'https://www.linkedin.com/in/serena-dolfi/' },
+  { name: 'Wamiq Raza', role: 'Machine Learning Engineer', photo: '/team/wamiq-raza.jpg', linkedin: 'https://www.linkedin.com/in/wamiq-raza/' },
+  { name: 'Luca Sbrollini', role: 'People Scientist', photo: '/team/luca-sbrollini.jpg', linkedin: 'https://www.linkedin.com/in/luca-sbrollini/' },
 ];
 
 export default function ScienceTeam() {
