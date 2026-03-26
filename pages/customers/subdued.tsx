@@ -332,11 +332,25 @@ const content = {
   },
 };
 
+const beforeItems = [
+  '10–15 hours a week on introductory calls with no structured pre-screening',
+  'CVs don\'t differentiate Gen Z candidates — soft skills invisible on paper',
+  'No cross-country evaluation standard across 6 markets',
+  'Half of candidates passing first screen lacked the soft skills for store work',
+];
+
+const afterItems = [
+  'AI pre-screening with objective competency data before any human interaction',
+  'Introductory call hours cut from 10–15 to 3–5 per week',
+  'Consistent evaluation framework across Italy, UK, France, Netherlands, Belgium',
+  'Turnover halved, new hire retention up from 65% to 85%',
+];
+
 // ─── PAGE COMPONENT ───────────────────────────────────────────────────────────
 
 export default function SubduedStoryPage() {
   const router = useRouter();
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
 
   return (
@@ -367,7 +381,7 @@ export default function SubduedStoryPage() {
                     {t('Winning Gen Z talent.')}<br />{t('Without drowning in interviews.')}
                   </h1>
                   <div className="flex flex-wrap gap-6 mb-12">
-                    {metrics.map(m => (
+                    {c.heroMetrics.map(m => (
                       <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-6 py-4">
                         <span className="block text-white" style={{ fontSize: '1.5rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                         <span className="text-[13px] text-white/[0.65] mt-1 block">{t(m.label)}</span>
@@ -455,10 +469,8 @@ export default function SubduedStoryPage() {
                         <span className="text-[12px] font-bold text-[#1A1A2E]/30 shrink-0 mt-1 w-6">{String(i+1).padStart(2,'0')}</span>
                         <p className="text-[15px] text-[#1A1A2E]/50 leading-[1.6]">{t(item)}</p>
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
                 <div className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-[#4B4DF7]/[0.03] p-8">
                   <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-6 block">{t('With Skillvue')}</span>
@@ -468,10 +480,8 @@ export default function SubduedStoryPage() {
                         <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] shrink-0 mt-1 w-6">{String(i+1).padStart(2,'0')}</span>
                         <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.6]">{t(item)}</p>
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </Section>
@@ -605,7 +615,7 @@ export default function SubduedStoryPage() {
         </section>
 
         <SolutionFinalCTA headline={t("Ready to see what Skillvue can do for your")} accentWord={t("organization?")} />
-      <Footer />
+        <Footer />
       </main>
     </>
   );

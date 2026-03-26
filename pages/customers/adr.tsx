@@ -324,7 +324,7 @@ const content = {
 
 export default function ADRStoryPage() {
   const router = useRouter();
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
 
   return (
