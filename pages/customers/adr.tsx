@@ -68,9 +68,9 @@ const content = {
           text: 'Su 5.000 dipendenti, solo ~1.000 corporate avevano accesso a percorsi di assessment e crescita strutturati. I ~4.000 operativi — che rappresentano il cuore del servizio aeroportuale — non erano mai stati valutati formalmente sulle competenze trasversali (leadership, comunicazione, safety awareness), nonostante queste fossero decisive per la qualità del servizio. Democratizzare l\'accesso allo sviluppo era la precondizione per sbloccare il potenziale dell\'intera organizzazione.',
         },
         {
-          icon: Eye,
-          title: '3.000 dipendenti operativi esclusi dallo sviluppo',
-          text: 'Solo ~1.000 dipendenti corporate avevano accesso a percorsi di sviluppo strutturati. I ~4.000 operativi — che rappresentano il cuore del servizio aeroportuale — non erano mai stati valutati sulle soft skill, lasciando un enorme bacino di talento invisibile.',
+          icon: Target,
+          title: 'Nessuna disponibilità immediata di talento per i ruoli chiave',
+          text: "Senza una mappatura strutturata delle competenze sull'intera popolazione, ADR non aveva visibilità su chi fosse pronto a ricoprire posizioni chiave nel momento in cui si liberavano. Ogni ruolo scoperto diventava un'emergenza: tempi lunghi per identificare candidati interni, nessun dato oggettivo per confrontarli, e il rischio concreto di dover ricorrere al mercato esterno per posizioni che potevano essere coperte dall'interno.",
         },
         {
           icon: Scale,
@@ -139,7 +139,7 @@ const content = {
         { value: '3-4 mesi → ~3 giorni', label: 'Time-to-process', sublabel: 'Per gestire 150+ candidature interne' },
         { value: '5.000', label: 'Dipendenti con accesso allo sviluppo', sublabel: 'Da ~1.000 (solo corporate) a tutta la popolazione' },
         { value: '150+', label: 'Candidature per processo', sublabel: 'Gestite con supporto AI strutturato' },
-        { value: '~3.000', label: 'Operativi inclusi per la prima volta', sublabel: 'Precedentemente esclusi da ogni percorso di sviluppo' },
+        { value: '4.000', label: 'Operativi inclusi per la prima volta', sublabel: 'Precedentemente esclusi da ogni percorso di sviluppo' },
       ],
       qualitative: [
         { icon: Users, title: 'Democratizzazione dello sviluppo', text: 'Ogni dipendente può ora partecipare alle selezioni interne con pari opportunità. Per la prima volta, lo sviluppo professionale è un diritto accessibile a tutti i 5.000 dipendenti, non un privilegio riservato ai ruoli corporate.' },
@@ -156,8 +156,7 @@ const content = {
       objective: 'Costruire un unico ciclo coerente in cui ogni persona, dal primo giorno, viene valutata, orientata e accompagnata con la stessa logica, coprendo l\'intera popolazione di 5.000 dipendenti.',
       bullets: [
         'Estensione di Skillvue a tutte le selezioni interne nel 2026, sfruttando la scalabilità della piattaforma',
-        'Integrazione più ampia nel Talent Acquisition per creare continuità tra selezione e sviluppo',
-        'Assessment asincrono per la selezione esterna: i candidati completano da qualsiasi device tramite link, abbattendo le barriere di accesso',
+        "Integrazione più ampia dello strumento nella selezione esterna: i candidati completano l'assessment da qualsiasi device tramite link, abbattendo le barriere di accesso",
       ],
     },
     related: {
@@ -218,9 +217,9 @@ const content = {
           text: 'Out of 5,000 employees, only ~1,000 corporate staff had access to structured assessment and growth paths. The ~4,000 operational employees — the backbone of airport services — had never been formally assessed on cross-functional competencies (leadership, communication, safety awareness), despite these being critical for service quality. Democratizing access to development was the precondition to unlocking the potential of the entire organization.',
         },
         {
-          icon: Eye,
-          title: '3,000 operational employees excluded from development',
-          text: 'Only ~1,000 corporate employees had access to structured development paths. The ~4,000 operational staff — the heart of airport services — had never been assessed on soft skills, leaving an enormous pool of talent invisible.',
+          icon: Target,
+          title: 'No immediate talent availability for key roles',
+          text: "Without a structured competency mapping across the entire workforce, ADR had no visibility on who was ready to fill key positions when they opened up. Every vacant role became an emergency: long timelines to identify internal candidates, no objective data to compare them, and a concrete risk of having to turn to the external market for positions that could have been filled internally.",
         },
         {
           icon: Scale,
@@ -289,7 +288,7 @@ const content = {
         { value: '3–4 months → ~3 days', label: 'Time-to-process', sublabel: 'To manage 150+ internal applications' },
         { value: '5,000', label: 'Employees with access to development', sublabel: 'From ~1,000 (corporate only) to the entire workforce' },
         { value: '150+', label: 'Applications per process', sublabel: 'Managed with structured AI support' },
-        { value: '~3,000', label: 'Operational staff included for the first time', sublabel: 'Previously excluded from any development path' },
+        { value: '4,000', label: 'Operational staff included for the first time', sublabel: 'Previously excluded from any development path' },
       ],
       qualitative: [
         { icon: Users, title: 'Democratization of development', text: 'Every employee can now participate in internal selections with equal opportunity. For the first time, professional development is a right accessible to all 5,000 employees, not a privilege reserved for corporate roles.' },
@@ -306,8 +305,7 @@ const content = {
       objective: 'Build a single coherent cycle in which every person, from day one, is assessed, guided, and supported with the same logic, covering the entire population of 5,000 employees.',
       bullets: [
         "Extension of Skillvue to all internal selections in 2026, leveraging the platform's scalability",
-        'Broader integration into Talent Acquisition to create continuity between selection and development',
-        'Asynchronous assessment for external recruitment: candidates complete from any device via link, removing all access barriers',
+        'Broader integration of the tool into external recruitment: candidates complete the assessment from any device via link, removing all access barriers',
       ],
     },
     related: {

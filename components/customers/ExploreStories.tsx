@@ -6,15 +6,18 @@ import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const allStories = [
-  { id: 'carrefour', company: 'Carrefour', industry: 'Retail', useCase: 'Hiring & Screening', headline: "How Carrefour Italia is Hiring Better, Faster, and at Scale. Without Adding a Single Person to the Team with Skillvue", bgImage: '/logos/carrefour-bg.jpg' },
-  { id: 'subdued', company: 'Subdued', industry: 'Retail', useCase: 'Hiring & Screening', headline: 'Winning Gen Z Talent Without Drowning in Interviews. The Subdued Story with Skillvue', bgImage: '/logos/subdued-bg.jpg' },
-  { id: 'ins-mercato', company: "In's Mercato", industry: 'Retail', useCase: 'Internal Mobility & Succession', headline: "Building the Next Generation of Store Managers from Within. How In's Mercato Did It with Skillvue", bgImage: '/logos/insmercato-bg.jpg' },
-  { id: 'adr', company: 'Aeroporti di Roma', industry: 'Aviation', useCase: 'Internal Mobility & Succession', headline: 'Come Aeroporti di Roma ha democratizzato l\'accesso allo sviluppo per 5.000 persone con Skillvue', bgImage: '/logos/adr-logo.jpg', bgStyle: 'contain' },
+  { id: 'carrefour', company: 'Carrefour', industry: 'Retail', useCases: ['Hiring'], headline: "How Carrefour Italia is Hiring Better, Faster, and at Scale. Without Adding a Single Person to the Team with Skillvue", bgImage: '/logos/carrefour-bg.jpg' },
+  { id: 'subdued', company: 'Subdued', industry: 'Retail', useCases: ['Hiring'], headline: 'Winning Gen Z Talent Without Drowning in Interviews. The Subdued Story with Skillvue', bgImage: '/logos/subdued-bg.jpg' },
+  { id: 'ins-mercato', company: "In's Mercato", industry: 'Retail', useCases: ['Internal Mobility'], headline: "Building the Next Generation of Store Managers from Within. How In's Mercato Did It with Skillvue", bgImage: '/logos/insmercato-bg.jpg' },
+  { id: 'adr', company: 'Aeroporti di Roma', industry: 'Transportation & Logistics', useCases: ['Hiring', 'Internal Mobility'], headline: 'Come Aeroporti di Roma ha democratizzato l\'accesso allo sviluppo per 5.000 persone con Skillvue', bgImage: '/logos/adr-background-explore-stories.jpg' },
+  { id: 'unicomm', company: 'Unicomm', industry: 'GDO', useCases: ['Hiring', 'Learning & Development', 'Internal Mobility'], headline: 'How Unicomm digitized the entire talent lifecycle — hiring, confirmations and development — starting from zero', bgImage: '/logos/unicomm-background-explore-stories.jpg' },
+  { id: 'mediaset', company: 'Mediaset', industry: 'Media & Telecom', useCases: ['Hiring'], headline: 'How Mediaset managed 3,000 applications in 5 weeks with 3 people — and turned soft skills into the first selection filter', bgImage: '/logos/mediaset-background-explore-stories.jpg' },
+  { id: 'europ-assistance', company: 'Europ Assistance', industry: 'Insurance', useCases: ['Hiring'], headline: 'How Europ Assistance hired 24% more with 18% fewer interviews — a 3-person HR team, nearly 2,000 candidates assessed', bgImage: '/logos/europ-assistance-background-explore-stories.jpg' },
 ];
 
 const filters = {
-  industry: ['All', 'Retail', 'Aviation'],
-  useCase: ['All', 'Hiring & Screening', 'Internal Mobility & Succession'],
+  industry: ['All', 'Retail', 'GDO', 'Transportation & Logistics', 'Media & Telecom', 'Insurance'],
+  useCase: ['All', 'Hiring', 'Performance Management', 'Learning & Development', 'Internal Mobility', 'Project Resourcing'],
 };
 
 export default function ExploreStories() {
@@ -27,7 +30,7 @@ export default function ExploreStories() {
 
   const filtered = allStories.filter(s => {
     if (activeIndustry !== 'All' && s.industry !== activeIndustry) return false;
-    if (activeUseCase !== 'All' && s.useCase !== activeUseCase) return false;
+    if (activeUseCase !== 'All' && !s.useCases.includes(activeUseCase)) return false;
     return true;
   });
 
