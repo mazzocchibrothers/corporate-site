@@ -104,7 +104,11 @@ export default function ExploreStories() {
           <div className="flex flex-wrap gap-2">
             <span className="text-[13px] font-bold text-white/35 tracking-[0.1em] uppercase mr-4 self-center">{t('Industry')}</span>
             {filters.industry.map(f => (
+<<<<<<< HEAD
               <button key={f} onClick={() => setActiveIndustry(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{t(industryLabel(f))}</button>
+=======
+              <button key={f} onClick={() => setActiveIndustry(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{industryLabel(f)}</button>
+>>>>>>> d237e91 (Add Douglas and Credem case studies, update ExploreStories filters and industries)
             ))}
           </div>
           <div className="flex flex-wrap gap-2">

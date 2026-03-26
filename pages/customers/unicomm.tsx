@@ -53,9 +53,9 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Unicomm è un gruppo della <strong className="text-[#1A1A2E]/80 font-semibold">Grande Distribuzione Organizzata</strong> con oltre <strong className="text-[#1A1A2E]/80 font-semibold">270 punti vendita</strong> in 7 regioni, <strong className="text-[#1A1A2E]/80 font-semibold">7.000 dipendenti</strong> e 7 insegne. Associato al Gruppo Commerciale Selex dal 1964, è una delle principali realtà della GDO italiana. L’azienda partiva da una digitalizzazione HR ancora agli inizi, con processi largamente manuali. La sfida non era ottimizzare un processo esistente, ma costruirne uno strutturato: standardizzare le valutazioni su tutta la rete e adottare un approccio oggettivo alle competenze — dagli addetti vendita ai gerenti.
+        Unicomm è un gruppo della <strong className="text-[#1A1A2E]/80 font-semibold">Grande Distribuzione Organizzata</strong> con oltre <strong className="text-[#1A1A2E]/80 font-semibold">270 punti vendita</strong> in 7 regioni, <strong className="text-[#1A1A2E]/80 font-semibold">7.000 dipendenti</strong> e 7 insegne. Associato al Gruppo Commerciale Selex dal 1964, è una delle principali realtà della GDO italiana. L"azienda partiva da una digitalizzazione HR ancora agli inizi, con processi largamente manuali. La sfida non era ottimizzare un processo esistente, ma costruirne uno strutturato: standardizzare le valutazioni su tutta la rete e adottare un approccio oggettivo alle competenze — dagli addetti vendita ai gerenti.
       </>,
-      summary: "Il progetto sta trasformando Unicomm da un’organizzazione con processi HR largamente manuali a una realtà in cui selezione, conferme e sviluppo interno vengono progressivamente gestiti con un unico sistema strutturato e basato sulle competenze — un percorso di trasformazione end-to-end avviato di recente e in fase di consolidamento.",
+      summary: "Il progetto sta trasformando Unicomm da un'organizzazione con processi HR largamente manuali a una realtà in cui selezione, conferme e sviluppo interno vengono progressivamente gestiti con un unico sistema strutturato e basato sulle competenze — un percorso di trasformazione end-to-end avviato di recente e in fase di consolidamento.",
     },
     challenge: {
       badge: 'LA SFIDA',
@@ -102,10 +102,10 @@ const content = {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
       title: 'Cosa doveva cambiare',
       items: [
-        { icon: Zap, text: "Strutturare l’intero talent lifecycle: selezione, conferme e sviluppo interno gestiti in un unico sistema integrato, superando processi manuali e non standardizzati" },
-        { icon: Scale, text: "Standardizzare le valutazioni su tutta la rete: stessi criteri, stesso framework di competenze, indipendentemente dall’insegna, dal punto vendita o dal singolo responsabile" },
+        { icon: Zap, text: "Strutturare l'intero talent lifecycle: selezione, conferme e sviluppo interno gestiti in un unico sistema integrato, superando processi manuali e non standardizzati" },
+        { icon: Scale, text: "Standardizzare le valutazioni su tutta la rete: stessi criteri, stesso framework di competenze, indipendentemente dall'insegna, dal punto vendita o dal singolo responsabile" },
         { icon: CheckCircle, text: "Adottare un approccio skills-based completo: valutazioni calibrate per obiettivo (hiring, conferma, sviluppo) e per ruolo/reparto, con un mix personalizzato di soft e hard skill" },
-        { icon: Users, text: "Guidare un change management significativo: trasformare la cultura HR dell’organizzazione, portandola verso un sistema strutturato con il supporto di un partner tecnologico a 360°" },
+        { icon: Users, text: "Guidare un change management significativo: trasformare la cultura HR dell'organizzazione, portandola verso un sistema strutturato con il supporto di un partner tecnologico a 360°" },
       ],
     },
     solution: {
@@ -137,7 +137,7 @@ const content = {
     results: {
       badge: 'RISULTATI',
       title: 'Key Metrics & Impatto',
-      subtitle: "I risultati ottenuti da Unicomm attraverso l’adozione di Skillvue per la costruzione del proprio talent lifecycle.",
+      subtitle: "I risultati ottenuti da Unicomm attraverso l'adozione di Skillvue per la costruzione del proprio talent lifecycle.",
       metrics: [
         { value: '3', label: 'Filoni attivati in parallelo', sublabel: 'Hiring, conferme, sviluppo interno' },
         { value: '4', label: 'Livelli di ruolo coperti', sublabel: 'Da addetto vendita a gerente' },
@@ -145,13 +145,13 @@ const content = {
         { value: '7 insegne', label: 'Rete distribuita in fase di standardizzazione', sublabel: '270+ punti vendita coperti' },
       ],
       qualitative: [
-        { icon: TrendingUp, title: ‘Verso un talent lifecycle integrato’, text: "Selezione, conferme e sviluppo interno gestiti con un\u2019unica logica skills-based. Un percorso avviato di recente che produce gi\u00e0 i primi risultati concreti nella standardizzazione." },
-        { icon: Scale, title: ‘Standardizzazione in corso su tutta la rete’, text: "Le 7 insegne su 270+ punti vendita stanno adottando gli stessi criteri e framework. L\u2019obiettivo: decisioni su assunzioni, conferme e promozioni basate su dati oggettivi." },
+        { icon: TrendingUp, title: "Verso un talent lifecycle integrato", text: "Selezione, conferme e sviluppo interno gestiti con un\u2019unica logica skills-based. Un percorso avviato di recente che produce gi\u00e0 i primi risultati concreti nella standardizzazione." },
+        { icon: Scale, title: "Standardizzazione in corso su tutta la rete", text: "Le 7 insegne su 270+ punti vendita stanno adottando gli stessi criteri e framework. L\u2019obiettivo: decisioni su assunzioni, conferme e promozioni basate su dati oggettivi." },
       ],
     },
     vision: {
       badge: 'LA VISIONE',
-      title: "Verso un’organizzazione completamente skills-based",
+      title: "Verso un'organizzazione completamente skills-based",
       intro: "Con i tre filoni del talent lifecycle avviati in parallelo, la visione di Unicomm è consolidare il modello skills-based come spina dorsale di tutte le decisioni sulle persone.",
       objective: "Ogni persona valutata, sviluppata e accompagnata con la stessa logica skills-based, dal primo giorno, indipendentemente dall\u2019insegna, dal ruolo o dal territorio.",
       bullets: [
@@ -162,7 +162,7 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'ins-mercato', company: "In’s Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "~900 persone valutate. Una pipeline di Store Manager costruita dall’interno." },
+        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "~900 persone valutate. Una pipeline di Store Manager costruita dall'interno." },
         { id: 'adr', company: 'Aeroporti di Roma', industry: 'Aviation', tag: 'Aviation · Sviluppo Interno', headline: 'Come Aeroporti di Roma ha democratizzato l\'accesso allo sviluppo per 5.000 persone.' },
       ],
       cta: 'Leggi la storia',
@@ -202,47 +202,47 @@ const content = {
       badge: 'CONTEXT',
       title: 'The Project Context',
       paragraph: <>
-        Unicomm is a <strong className="text-[#1A1A2E]/80 font-semibold">grocery and organized retail group</strong> headquartered in <strong className="text-[#1A1A2E]/80 font-semibold">Dueville (Vicenza), Italy</strong>, operating across <strong className="text-[#1A1A2E]/80 font-semibold">7 regions and 32 provinces</strong> with over <strong className="text-[#1A1A2E]/80 font-semibold">270 direct stores</strong> and <strong className="text-[#1A1A2E]/80 font-semibold">7 retail brands</strong> (Emisfero, Famila, Mega, Emi, A&O, C+C Cash&Carry, Hurrà). With over <strong className="text-[#1A1A2E]/80 font-semibold">7,000 employees</strong> and a historic association with the <strong className="text-[#1A1A2E]/80 font-semibold">Selex Commercial Group since 1964</strong>, it is one of Italy’s leading organized retail players. The company was starting from a position of <strong className="text-[#1A1A2E]/80 font-semibold">virtually zero HR digitization</strong> — largely manual, unstructured processes — with the ambition to make a qualitative leap. The challenge was not to optimize an existing process, but to build one from scratch: standardize assessments across a distributed network, centralize HR processes and adopt an objective competency-based approach at every level, from sales associates to store managers. A project of <strong className="text-[#1A1A2E]/80 font-semibold">radical change management</strong>, accompanied by the adoption of Skillvue as the technology partner to cover the entire talent lifecycle with a skills-based approach.
+        Unicomm is a <strong className="text-[#1A1A2E]/80 font-semibold">grocery and organized retail group</strong> headquartered in <strong className="text-[#1A1A2E]/80 font-semibold">Dueville (Vicenza), Italy</strong>, operating across <strong className="text-[#1A1A2E]/80 font-semibold">7 regions and 32 provinces</strong> with over <strong className="text-[#1A1A2E]/80 font-semibold">270 direct stores</strong> and <strong className="text-[#1A1A2E]/80 font-semibold">7 retail brands</strong> (Emisfero, Famila, Mega, Emi, A&O, C+C Cash&Carry, Hurrà). With over <strong className="text-[#1A1A2E]/80 font-semibold">7,000 employees</strong> and a historic association with the <strong className="text-[#1A1A2E]/80 font-semibold">Selex Commercial Group since 1964</strong>, it is one of Italy"s leading organized retail players. The company was starting from a position of <strong className="text-[#1A1A2E]/80 font-semibold">virtually zero HR digitization</strong> — largely manual, unstructured processes — with the ambition to make a qualitative leap. The challenge was not to optimize an existing process, but to build one from scratch: standardize assessments across a distributed network, centralize HR processes and adopt an objective competency-based approach at every level, from sales associates to store managers. A project of <strong className="text-[#1A1A2E]/80 font-semibold">radical change management</strong>, accompanied by the adoption of Skillvue as the technology partner to cover the entire talent lifecycle with a skills-based approach.
       </>,
       summary: "The project is transforming Unicomm from an organization with largely manual HR processes into a company where hiring, confirmations and internal development are progressively managed through a single structured, competency-based system — an end-to-end transformation journey recently launched and currently in its consolidation phase.",
     },
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'The Structural Problem',
-      intro: "Unicomm didn’t need to optimize its HR processes: it needed to rethink them from scratch. With digitization still in its early stages, no structured assessment and 270+ stores across 7 regions, the constraint was both operational and cultural.",
+      intro: "Unicomm didn't need to optimize its HR processes: it needed to rethink them from scratch. With digitization still in its early stages, no structured assessment and 270+ stores across 7 regions, the constraint was both operational and cultural.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Zap,
-          title: ‘HR digitization at zero’,
+          title: "HR digitization at zero",
           text: "Hiring, confirmations and career growth paths were managed manually and without structure. Impossible to have any overview of talent quality across 7,000+ employees without an integrated, traceable system.",
         },
         {
           icon: Layers,
-          title: ‘Distributed network, zero standardization’,
+          title: "Distributed network, zero standardization",
           text: "With 7 brands across 7 regions, each location operated with its own criteria. Two candidates with the same potential could have completely different paths — not by merit, but due to the lack of a common framework.",
         },
         {
           icon: Target,
-          title: ‘Three critical processes to cover in parallel’,
+          title: "Three critical processes to cover in parallel",
           text: "The need was to cover simultaneously hiring across all brands, confirmations of new hires to permanent contract, and internal development through an academy for progression to department head and store manager.",
         },
       ],
       hrChallenges: [
         {
           icon: Eye,
-          title: ‘No objective competency assessment’,
+          title: "No objective competency assessment",
           text: "Hiring, confirmations and promotions were based exclusively on the experience and impressions of managers. No structured data on soft or hard skills.",
         },
         {
           icon: Heart,
-          title: ‘Change management in a non-digital culture’,
+          title: "Change management in a non-digital culture",
           text: "Introducing digital assessments with no prior HR technology meant significant cultural resistance. The project needed a partner capable of guiding change at every level, not just a tool.",
         },
         {
           icon: Wrench,
-          title: ‘Sector-specific competencies not mapped’,
+          title: "Sector-specific competencies not mapped",
           text: "The Unicomm model included soft skills specific to grocery retail not present in standard libraries. Bespoke assessments were needed, calibrated to internal evaluation matrices and the specifics of different roles.",
         },
       ],
@@ -254,13 +254,13 @@ const content = {
         { icon: Zap, text: "Digitize the entire talent lifecycle from scratch: hiring, confirmations and internal development managed in a single structured system, eliminating unstructured and untraceable processes" },
         { icon: Scale, text: "Standardize assessments across the entire network: same criteria, same competency framework, regardless of brand, store or individual manager" },
         { icon: CheckCircle, text: "Adopt a complete skills-based approach: assessments calibrated by objective (hiring, confirmation, development) and by role/department, with a customized mix of soft and hard skills" },
-        { icon: Users, text: "Lead radical change management: transform the organization’s HR culture, moving from scratch with zero digitization to a structured system with the support of a 360° technology partner" },
+        { icon: Users, text: "Lead radical change management: transform the organization's HR culture, moving from scratch with zero digitization to a structured system with the support of a 360° technology partner" },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was adopted to build Unicomm’s talent lifecycle with three parallel streams: hiring, confirmations and internal development. Assessments combine the process objective and the role/department, with bespoke customizations on the Unicomm model.",
+      intro: "Skillvue was adopted to build Unicomm's talent lifecycle with three parallel streams: hiring, confirmations and internal development. Assessments combine the process objective and the role/department, with bespoke customizations on the Unicomm model.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Heart, label: 'Unicomm-specific soft skills (developed bespoke)' },
@@ -270,15 +270,15 @@ const content = {
       methodologyLabel: 'METHODOLOGY',
       methodology: [
         {
-          title: ‘Three streams in parallel’,
+          title: "Three streams in parallel",
           text: "Hiring for open positions, confirmations for new hires to be converted to permanent contract, internal development through an academy with two annual milestones for progression to department head or store manager. One system, three objectives.",
         },
         {
-          title: ‘Assessments customized by role and objective’,
-          text: "Calibrated on two dimensions: process objective (hiring, confirmation and development measure different aspects) and specific role/department. Competencies not in the standard library were developed bespoke on Unicomm’s evaluation matrices.",
+          title: "Assessments customized by role and objective",
+          text: "Calibrated on two dimensions: process objective (hiring, confirmation and development measure different aspects) and specific role/department. Competencies not in the standard library were developed bespoke on Unicomm's evaluation matrices.",
         },
         {
-          title: ‘Change management as a project pillar’,
+          title: "Change management as a project pillar",
           text: "Not just a technology implementation, but a cultural transformation. Onboarding involved HR Manager, operatives and IT. Skillvue as a 360° people partner, not a simple tool.",
         },
       ],
@@ -311,7 +311,7 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'ins-mercato', company: "In’s Mercato", tag: "Retail GDO · Internal Mobility", headline: "~900 people assessed. A Store Manager pipeline built from within." },
+        { id: 'ins-mercato', company: "In's Mercato", tag: "Retail GDO · Internal Mobility", headline: "~900 people assessed. A Store Manager pipeline built from within." },
         { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Development', headline: 'How Aeroporti di Roma democratized access to development for 5,000 people.' },
       ],
       cta: 'Read the story',
