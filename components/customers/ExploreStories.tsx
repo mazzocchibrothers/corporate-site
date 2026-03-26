@@ -7,7 +7,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 
 const allStories = [
   {
-    id: 'carrefour', company: 'Carrefour', industry: 'Retail', useCases: ['Hiring', 'Internal Mobility'],
+    id: 'carrefour', company: 'Carrefour', industry: 'GDO', useCases: ['Hiring', 'Learning & Development'],
     headlineIt: 'Come Carrefour Italia ha trasformato la selezione di 30.000 candidature l\u2019anno con soli 3 recruiter',
     headlineEn: 'How Carrefour Italia transformed the screening of 30,000 applications a year with just 3 recruiters',
     bgImage: '/logos/carrefour-bg.jpg',
@@ -19,7 +19,7 @@ const allStories = [
     bgImage: '/logos/subdued-bg.jpg',
   },
   {
-    id: 'ins-mercato', company: "In's Mercato", industry: 'Retail', useCases: ['Internal Mobility'],
+    id: 'ins-mercato', company: "In's Mercato", industry: 'GDO', useCases: ['Internal Mobility'],
     headlineIt: "Come In\u2019s Mercato ha costruito la prossima generazione di Store Manager dall\u2019interno",
     headlineEn: "Building the Next Generation of Store Managers from Within. How In's Mercato Did It with Skillvue",
     bgImage: '/logos/insmercato-bg.jpg',
@@ -43,15 +43,27 @@ const allStories = [
     bgImage: '/logos/mediaset-background-explore-stories.jpg',
   },
   {
-    id: 'europ-assistance', company: 'Europ Assistance', industry: 'Insurance', useCases: ['Hiring'],
+    id: 'europ-assistance', company: 'Europ Assistance', industry: 'Financial Services', useCases: ['Hiring'],
     headlineIt: 'Come Europ Assistance ha assunto il 24% in pi\u00f9 con il 18% di colloqui in meno',
     headlineEn: 'How Europ Assistance hired 24% more with 18% fewer interviews',
     bgImage: '/logos/europ-assistance-background-explore-stories.jpg',
   },
+  {
+    id: 'douglas', company: 'Douglas', industry: 'Retail', useCases: ['Learning & Development', 'Internal Mobility'],
+    headlineIt: 'Come Douglas ha mappato le competenze di 2.200 persone in 5 settimane in 4 paesi',
+    headlineEn: 'How Douglas mapped the competencies of 2,200 people in 5 weeks across 4 countries',
+    bgImage: '/logos/douglas-background-explore-stories.jpg',
+  },
+  {
+    id: 'credem', company: 'Credem', industry: 'Financial Services', useCases: ['Hiring'],
+    headlineIt: 'Come Credem ha dimezzato il time-to-hire raddoppiando la qualità dei candidati in colloquio',
+    headlineEn: 'How Credem halved time-to-hire while doubling interview quality',
+    bgImage: '/logos/credem-background-explore-stories.jpg',
+  },
 ];
 
 const filters = {
-  industry: ['All', 'Retail', 'GDO', 'Transportation & Logistics', 'Media & Telecom', 'Insurance'],
+  industry: ['All', 'Retail', 'GDO', 'Transportation & Logistics', 'Media & Telecom', 'Financial Services'],
   useCase: ['All', 'Hiring', 'Performance Management', 'Learning & Development', 'Internal Mobility', 'Project Resourcing'],
 };
 
@@ -62,6 +74,11 @@ export default function ExploreStories() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
+
+  const industryLabel = (f: string) => {
+    if (f === 'GDO' && lang === 'en') return 'Large scale distribution';
+    return f;
+  };
 
   const filtered = allStories.filter(s => {
     if (activeIndustry !== 'All' && s.industry !== activeIndustry) return false;
@@ -87,7 +104,7 @@ export default function ExploreStories() {
           <div className="flex flex-wrap gap-2">
             <span className="text-[13px] font-bold text-white/35 tracking-[0.1em] uppercase mr-4 self-center">{t('Industry')}</span>
             {filters.industry.map(f => (
-              <button key={f} onClick={() => setActiveIndustry(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{f}</button>
+              <button key={f} onClick={() => setActiveIndustry(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{industryLabel(f)}</button>
             ))}
           </div>
           <div className="flex flex-wrap gap-2">

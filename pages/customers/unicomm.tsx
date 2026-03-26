@@ -178,14 +178,14 @@ const content = {
       before: 'How Unicomm digitized the ',
       highlight1: 'entire talent lifecycle',
       middle: ' starting ',
-      highlight2: 'from zero',
+      highlight2: 'from scratch',
       after: '',
     },
     subtitle: "No ATS, no structured processes, over 7,000 employees across 270+ stores in 7 regions. With Skillvue, Unicomm transformed hiring, confirmations and internal development into a single skills-based system — a quantum leap in talent management.",
     heroMetrics: [
       { value: '3', label: 'Streams activated in parallel' },
       { value: '4', label: 'Role levels covered' },
-      { value: '0 → 1', label: 'From zero digitization to integrated system' },
+      { value: '0 → 1', label: 'From scratch: zero digitization to integrated system' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -255,7 +255,7 @@ const content = {
         { icon: Zap, text: "Digitize the entire talent lifecycle from scratch: hiring, confirmations and internal development managed in a single structured system, eliminating unstructured and untraceable processes" },
         { icon: Scale, text: "Standardize assessments across the entire network: same criteria, same competency framework, regardless of brand, store or individual manager" },
         { icon: CheckCircle, text: "Adopt a complete skills-based approach: assessments calibrated by objective (hiring, confirmation, development) and by role/department, with a customized mix of soft and hard skills" },
-        { icon: Users, text: "Lead radical change management: transform the organization’s HR culture, moving from zero digitization to a structured system with the support of a 360° technology partner" },
+        { icon: Users, text: "Lead radical change management: transform the organization’s HR culture, moving from scratch with zero digitization to a structured system with the support of a 360° technology partner" },
       ],
     },
     solution: {
@@ -291,11 +291,11 @@ const content = {
       metrics: [
         { value: '3', label: 'Streams activated in parallel', sublabel: 'Hiring, confirmations, internal development' },
         { value: '4', label: 'Role levels covered', sublabel: 'From sales associate to store manager' },
-        { value: '0 → 1', label: 'From zero digitization to integrated system', sublabel: 'No ATS → complete talent lifecycle' },
+        { value: '0 → 1', label: 'From scratch: zero digitization to integrated system', sublabel: 'No ATS → complete talent lifecycle' },
         { value: '7 brands', label: 'Distributed network standardized', sublabel: '270+ stores covered' },
       ],
       qualitative: [
-        { icon: TrendingUp, title: 'From zero to integrated talent lifecycle', text: "Unicomm went from an organization with no digitized HR processes to a company where hiring, confirmations and internal development are managed through a single structured system. A leap that normally takes years, achieved with a single technology partner." },
+        { icon: TrendingUp, title: 'From scratch to integrated talent lifecycle', text: "Unicomm went from an organization with no digitized HR processes to a company where hiring, confirmations and internal development are managed through a single structured system. A leap that normally takes years, achieved with a single technology partner." },
         { icon: Scale, title: 'Standardization across the entire network', text: "For the first time, all 7 group brands across 270+ stores assess talent with the same criteria and framework. Decisions on hiring, confirmations and promotions are supported by objective data, not by individual store logic." },
       ],
     },
@@ -411,6 +411,17 @@ export default function UnicommStoryPage() {
                 </div>
               </motion.div>
             </div>
+
+            {/* Video interview */}
+            <motion.div className="mt-16 px-8 lg:px-16" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }}>
+              <video
+                className="w-full rounded-2xl border border-white/[0.08]"
+                src={lang === 'it' ? '/videos/unicomm-interview-it.mp4' : '/videos/unicomm-interview-en.mp4'}
+                autoPlay
+                muted
+                controls
+              />
+            </motion.div>
           </div>
         </section>
 
@@ -550,7 +561,7 @@ export default function UnicommStoryPage() {
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
                   {c.vision.badge}
                 </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.vision.title}</h2>
+                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4 leading-[1.3]">{c.vision.title}</h2>
                 <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8 max-w-3xl">{c.vision.intro}</p>
                 <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
