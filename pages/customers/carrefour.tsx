@@ -8,6 +8,34 @@ import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
 
+const metrics = [
+  { value: '-35%', label: 'time-to-hire' },
+  { value: '+30%', label: 'new hire success rate' },
+  { value: '30K', label: 'CVs/year managed' },
+];
+
+const sidebar = [
+  { label: 'Industry', value: 'Large-Scale Retail (GDO)' },
+  { label: 'Employees', value: '18,000+' },
+  { label: 'Region', value: 'Italy' },
+  { label: 'Use Cases', value: 'Hiring & Screening, Internal Skills Mapping' },
+  { label: 'Customer Since', value: '2024' },
+];
+
+const beforeItems = [
+  '30,000 CVs/year with no objective competency layer at screening',
+  'Video interviews in use, but no automated scoring output',
+  'Team split across 3 sales channels + HQ: bandwidth at the limit',
+  'Employer Branding and data analysis sacrificed to manage volume',
+];
+
+const afterItems = [
+  'AI pre-screening for all candidatures with deep competency evaluation',
+  "Carrefour's '4C' values model mapped onto Skillvue assessments",
+  'HR team freed to focus on nurturing, data analysis, and Employer Branding',
+  'Same framework extended to internal skills mapping',
+];
+
 function Section({ children, className = '' }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
@@ -402,8 +430,8 @@ export default function CarrefourStoryPage() {
                   <div className="divide-y divide-white/[0.08]">
                     {c.clientCard.facts.map(s => (
                       <div key={s.label} className="py-4 first:pt-0 last:pb-0">
-                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
-                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{s.value}</p>
+                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{t(s.label)}</span>
+                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{t(s.value)}</p>
                       </div>
                     ))}
                   </div>
@@ -591,7 +619,7 @@ export default function CarrefourStoryPage() {
                 <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
                   <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
                   <h4 className="text-[24px] font-bold text-white/90 mb-4">{s.company}</h4>
-                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
+                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{t(s.headline)}</p>
                   <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
                     {c.related.cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>

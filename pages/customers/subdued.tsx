@@ -354,7 +354,7 @@ export default function SubduedStoryPage() {
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             {/* Breadcrumb */}
             <motion.div className="mb-10 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <button onClick={() => { router.push('/customers'); window.scrollTo(0, 0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">{c.breadcrumb}</button>
+              <button onClick={() => { router.push('/customers'); window.scrollTo(0,0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">{t('Customers')}</button>
               <span className="text-white/20">/</span>
               <span className="text-[13px] text-white/[0.65]">Subdued</span>
             </motion.div>
@@ -363,28 +363,20 @@ export default function SubduedStoryPage() {
               {/* Main content */}
               <div className="lg:col-span-7">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-bold tracking-[0.12em] uppercase mb-8 block w-fit" style={{ background: 'rgba(75,77,247,0.15)', color: '#7b7df9', border: '1px solid rgba(75,77,247,0.2)' }}>
-                    {c.badge}
-                  </span>
-                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.12 }}>
-                    {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
+                  <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.12 }}>
+                    {t('Winning Gen Z talent.')}<br />{t('Without drowning in interviews.')}
                   </h1>
-                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
-                  <div className="flex flex-wrap gap-4 mb-12">
-                    {c.heroMetrics.map(m => (
-                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
-                        <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[13px] text-white/[0.55] mt-1 block">{m.label}</span>
+                  <div className="flex flex-wrap gap-6 mb-12">
+                    {metrics.map(m => (
+                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-6 py-4">
+                        <span className="block text-white" style={{ fontSize: '1.5rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="text-[13px] text-white/[0.65] mt-1 block">{t(m.label)}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="flex flex-wrap gap-4">
-                    <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300" style={{ background: '#4b4df7' }}>
-                      {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
-                    </button>
-                    <button onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white/70 border border-white/[0.15] hover:border-white/[0.25] hover:text-white transition-all duration-300">
-                      {c.ctaSecondary} <ArrowRight className="h-4 w-4" />
-                    </button>
+                  <div className="border-l-2 border-[#4B4DF7]/30 pl-6">
+                    <p className="text-[17px] text-white/[0.65] italic leading-[1.7]">"{t('It not only improves the quality of my work, it makes us very attractive to candidates. The innovation of the selection process became a genuine element of Employer Branding.')}"</p>
+                    <p className="text-[14px] text-white/50 mt-3 font-semibold">Valentina Cianciaruso, <span className="font-normal text-white/35">{t('HR Manager Dept. Italy, Subdued')}</span></p>
                   </div>
                 </motion.div>
               </div>
@@ -404,8 +396,8 @@ export default function SubduedStoryPage() {
                   <div className="divide-y divide-white/[0.08]">
                     {c.clientCard.facts.map(s => (
                       <div key={s.label} className="py-4 first:pt-0 last:pb-0">
-                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
-                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{s.value}</p>
+                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{t(s.label)}</span>
+                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{t(s.value)}</p>
                       </div>
                     ))}
                   </div>
@@ -428,116 +420,120 @@ export default function SubduedStoryPage() {
         <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#f8fafc' }}>
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
 
-            {/* CONTEXT */}
-            <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-6 max-w-3xl">{c.context.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8 max-w-3xl">{c.context.paragraph}</p>
-              <p className="text-[15px] text-[#1A1A2E]/40 italic leading-[1.75] max-w-2xl border-l-2 border-[#4b4df7]/20 pl-5">
-                {c.context.summary}
-              </p>
-            </Section>
-
-            {/* CHALLENGE */}
-            <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.challenge.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14 max-w-3xl">{c.challenge.intro}</p>
-
-              <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
-                <div className="grid md:grid-cols-3 gap-5">
-                  {c.challenge.businessChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
-                      </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
-                <div className="grid md:grid-cols-3 gap-5">
-                  {c.challenge.hrChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
-                      </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Section>
-
-            {/* OBJECTIVES */}
-            <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{c.objectives.title}</h2>
-              <div className="grid md:grid-cols-2 gap-5">
-                {c.objectives.items.map((o, i) => (
-                  <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
-                    </div>
-                    <p className="text-[15px] text-[#1A1A2E]/70 leading-[1.65] pt-1.5">{o.text}</p>
+            {/* Context */}
+            <Section className="mb-20">
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Context')}</h2>
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                {[
+                  { num: '50+', label: 'stores across Europe' },
+                  { num: 'Gen Z', label: 'primary candidate pool' },
+                  { num: 'Lean', label: 'HR team, multiple locations' },
+                ].map(s => (
+                  <div key={s.num} className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/70 p-6 text-center">
+                    <span className="block text-[#1A1A2E]" style={{ fontSize: '1.8rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{s.num}</span>
+                    <span className="text-[13px] text-[#1A1A2E]/50 mt-2 block">{t(s.label)}</span>
                   </div>
                 ))}
               </div>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] max-w-3xl">
+{                t('In fashion retail, turnover is structurally high and Gen Z candidates bring strong instincts but limited CV depth. For Store Managers and Sales Assistants, what matters most. communication, selling, teamwork. is invisible on a CV. The only way to assess it was interviews, creating an unsustainable equation for a lean HR team.')}
+              </p>
             </Section>
 
-            {/* SOLUTION */}
-            <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.solution.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.solution.intro}</p>
-
-              <div className="mb-12">
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
-                <div className="flex flex-wrap gap-3">
-                  {c.solution.skills.map((s) => (
-                    <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
-                      <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#1A1A2E]/70">{s.label}</span>
+            {/* Challenge. Before/After */}
+            <Section className="mb-20">
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{t('The challenge')}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-10 max-w-3xl">
+{                t('The calendar fills up with back-to-back interviews, wait times stretch, and strategic HR work gets consistently sacrificed.')}
+              </p>
+              <div className="grid md:grid-cols-2 gap-5">
+                <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8">
+                  <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-6 block">{t('Before')}</span>
+                  <div className="space-y-5">
+                    {beforeItems.map((item, i) => (
+                      <div key={item} className="flex items-start gap-4">
+                        <span className="text-[12px] font-bold text-[#1A1A2E]/30 shrink-0 mt-1 w-6">{String(i+1).padStart(2,'0')}</span>
+                        <p className="text-[15px] text-[#1A1A2E]/50 leading-[1.6]">{t(item)}</p>
+                      </div>
+                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-[#4B4DF7]/[0.03] p-8">
+                  <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-6 block">{t('With Skillvue')}</span>
+                  <div className="space-y-5">
+                    {afterItems.map((item, i) => (
+                      <div key={item} className="flex items-start gap-4">
+                        <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] shrink-0 mt-1 w-6">{String(i+1).padStart(2,'0')}</span>
+                        <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.6]">{t(item)}</p>
+                      </div>
+                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
               </div>
+            </Section>
 
-              <div>
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
-                <div className="grid md:grid-cols-3 gap-5">
-                  {c.solution.methodology.map((m, i) => (
-                    <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
-                      <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4] relative">{m.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65] relative">{m.text}</p>
-                    </div>
-                  ))}
-                </div>
+            {/* Transformation. 3 steps */}
+            <Section className="mb-20">
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-12">{t('The Transformation')}</h2>
+              <div className="grid lg:grid-cols-3 gap-4 mb-10">
+                {[
+                  { step: '01', title: 'Co-design assessments', desc: "Valentina's team worked with Skillvue to select the right tests per role. Store Manager vs Sales Assistant with different competency weights" },
+                  { step: '02', title: 'Algo Interview first', desc: 'Candidates complete a structured behavioural interview autonomously, from any device, within set days' },
+                  { step: '03', title: 'Human where it matters', desc: 'HR reviews objective competency profiles, then invests interview time only in validated candidates' },
+                ].map(s => (
+                  <div key={s.step} className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/60 p-6">
+                    <span className="text-[12px] font-bold text-[#4B4DF7]/40 mb-3 block">{s.step}</span>
+                    <h4 className="text-[16px] font-bold text-[#1A1A2E] mb-2">{t(s.title)}</h4>
+                    <p className="text-[14px] text-[#1A1A2E]/50 leading-[1.6]">{t(s.desc)}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="border-l-2 border-[#4B4DF7]/20 pl-6 max-w-3xl">
+                <p className="text-[15px] text-[#1A1A2E]/50 italic leading-[1.7]">"{t('Using Skillvue for competency evaluation at the pre-screening stage, I managed to reduce time-to-hire, maintain a direct relationship with candidates, and recover precious time for strategic activities I previously had to sacrifice.')}"</p>
+                <p className="text-[13px] text-[#1A1A2E]/40 mt-2 font-semibold">Valentina Cianciaruso</p>
               </div>
             </Section>
 
-            {/* RESULTS */}
-            <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
-
+            {/* Results */}
+            <Section className="mb-20">
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Results')}</h2>
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
-                  {c.results.metrics.map(m => (
-                    <div key={m.label} className="text-center">
-                      <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
-                      <span className="text-[13px] text-white/[0.65] mt-3 block leading-[1.4]">{m.label}</span>
-                      {m.sublabel && <span className="text-[11px] text-white/30 mt-1 block leading-[1.4]">{m.sublabel}</span>}
+                <div className="grid lg:grid-cols-3 gap-6">
+                  {[
+                    { icon: 'Calendar freed', desc: 'Back-to-back screening interviews eliminated. Every human conversation now more productive.' },
+                    { icon: 'Strategic time back', desc: 'Employer branding, workforce planning, talent development. no longer sacrificed to volume.' },
+                    { icon: 'EB asset unlocked', desc: 'The hiring process itself became a talent attraction tool for Gen Z candidates.' },
+                  ].map(r => (
+                    <div key={r.icon} className="rounded-xl bg-white/[0.04] p-6">
+                      <h4 className="text-[16px] font-bold text-white/90 mb-3">{t(r.icon)}</h4>
+                      <p className="text-[14px] text-white/[0.65] leading-[1.7]">{t(r.desc)}</p>
                     </div>
                   ))}
+                </div>
+              </div>
+              <div className="border-l-2 border-[#4B4DF7]/20 pl-6 max-w-3xl">
+                <p className="text-[15px] text-[#1A1A2E]/50 italic leading-[1.7]">"{t('I no longer have to squeeze one interview after another into my calendar. At first I had some doubts about such advanced technology, but I immediately understood that it not only improves my work quality. it made us very attractive to our candidates.')}"</p>
+                <p className="text-[13px] text-[#1A1A2E]/40 mt-2 font-semibold">Valentina Cianciaruso</p>
+              </div>
+            </Section>
+
+            {/* What's Next */}
+            <Section className="mb-20">
+              <div className="rounded-2xl border border-[#4B4DF7]/[0.1] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-10 lg:p-14">
+                <div className="grid lg:grid-cols-[auto_1fr] gap-8 items-start">
+                  <div className="w-14 h-14 rounded-xl bg-[#4B4DF7]/[0.08] flex items-center justify-center shrink-0">
+                    <ArrowRight className="h-6 w-6 text-[#4B4DF7]/50" />
+                  </div>
+                  <div>
+                    <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{t("What's Next")}</h2>
+                    <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] max-w-2xl">
+{                      t('With an expanding European footprint. stores already in five major European cities alongside the Italian network. the ability to run a consistent, high-quality, technology-supported selection process across locations is not just an advantage. It is a prerequisite for growth.')}
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -556,15 +552,16 @@ export default function SubduedStoryPage() {
 
             {/* FUTURE VISION */}
             <Section>
-              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10 lg:p-14">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
-                  {c.vision.badge}
-                </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8 max-w-3xl">{c.vision.intro}</p>
-                <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
-                    <Target className="h-5 w-5" style={{ color: '#4b4df7' }} />
+              <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8 lg:p-10">
+                <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-6 block">{t('The Science Behind It')}</span>
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="rounded-xl bg-black/[0.03] p-6 text-center">
+                    <span className="block text-[#1A1A2E]/30" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>14%</span>
+                    <span className="text-[13px] text-[#1A1A2E]/40 mt-2 block">{t('Unstructured interviews')}<br />{t('predictive accuracy')}</span>
+                  </div>
+                  <div className="rounded-xl bg-[#4B4DF7]/[0.06] p-6 text-center">
+                    <span className="block text-[#1A1A2E]" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>51%+</span>
+                    <span className="text-[13px] text-[#1A1A2E]/[0.65] mt-2 block">{t('Structured competency assessment')}<br />{t('predictive validity')}</span>
                   </div>
                   <p className="text-[15px] text-[#1A1A2E]/75 leading-[1.7]">{c.vision.objective}</p>
                 </div>
@@ -576,6 +573,9 @@ export default function SubduedStoryPage() {
                     </div>
                   ))}
                 </div>
+                <button onClick={() => { router.push('/science'); window.scrollTo(0,0); }} className="group inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
+                  {t('Discover the Science')} <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
               </div>
             </Section>
 
@@ -587,15 +587,16 @@ export default function SubduedStoryPage() {
         {/* RELATED STORIES */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 mb-12">{c.related.title}</h3>
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 mb-12">{t('Related Stories')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
-              {c.related.stories.map(s => (
-                <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
-                  <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
+              {[{ id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: '35% fewer days to hire. 30% better hires.' },
+                { id: 'credem', company: 'Credem', tag: 'Financial Services · Hiring', headline: 'Time-to-hire halved. Twice the quality.' }].map(s => (
+                <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0,0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
+                  <span className="text-[14px] text-white/40 mb-4 block">{t(s.tag)}</span>
                   <h4 className="text-[24px] font-bold text-white/90 mb-4">{s.company}</h4>
-                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
+                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{t(s.headline)}</p>
                   <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
-                    {c.related.cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    {t('Read the story')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
               ))}
@@ -603,8 +604,8 @@ export default function SubduedStoryPage() {
           </div>
         </section>
 
-        <SolutionFinalCTA headline={c.finalCta.headline} accentWord={c.finalCta.accent} />
-        <Footer />
+        <SolutionFinalCTA headline={t("Ready to see what Skillvue can do for your")} accentWord={t("organization?")} />
+      <Footer />
       </main>
     </>
   );
