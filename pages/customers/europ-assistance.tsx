@@ -52,14 +52,14 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Europ Assistance, parte del <strong className="text-[#1A1A2E]/80 font-semibold">Gruppo Generali</strong>, opera nel settore assicurativo con focus su assistenza e customer care. L'azienda affronta <strong className="text-[#1A1A2E]/80 font-semibold">due picchi stagionali di assunzioni all'anno</strong> per il personale di call center e assistenza, generando volumi massivi di candidature, nell'ordine delle migliaia. Il team HR è composto da <strong className="text-[#1A1A2E]/80 font-semibold">3 persone</strong> che devono gestire l'intero ciclo di selezione su <strong className="text-[#1A1A2E]/80 font-semibold">più sedi</strong>. I ruoli richiedono soft skill trasversali fondamentali per il successo — problem solving, orientamento al cliente, comunicazione — impossibili da rilevare da un CV o da un breve screening telefonico. Il calo demografico sta inoltre riducendo il bacino di candidati disponibili, rendendo ogni decisione di assunzione più critica. In questo contesto, Europ Assistance cercava non solo efficienza, ma un cambio di paradigma: <strong className="text-[#1A1A2E]/80 font-semibold">selezionare per il potenziale, non solo per il fit immediato.</strong>
+        Europ Assistance, parte del <strong className="text-[#1A1A2E]/80 font-semibold">Gruppo Generali</strong>, opera nel settore assicurativo con focus su assistenza e customer care. L’azienda affronta <strong className="text-[#1A1A2E]/80 font-semibold">due picchi stagionali di assunzioni all’anno</strong> per il personale di call center e assistenza, generando volumi massivi di candidature, nell’ordine delle migliaia. Il team HR è composto da <strong className="text-[#1A1A2E]/80 font-semibold">3 persone</strong> che devono gestire l’intero ciclo di selezione su <strong className="text-[#1A1A2E]/80 font-semibold">più sedi</strong>. I ruoli richiedono soft skill trasversali fondamentali per il successo — problem solving, orientamento al cliente, comunicazione — impossibili da rilevare da un CV o da un breve screening telefonico. Il calo demografico sta inoltre riducendo il bacino di candidati disponibili, rendendo ogni decisione di assunzione più critica. In questo contesto, Europ Assistance cercava non solo efficienza, ma un cambio di paradigma: <strong className="text-[#1A1A2E]/80 font-semibold">selezionare per il potenziale, non solo per il fit immediato.</strong>
       </>,
-      summary: "Il progetto ha trasformato il pre-screening da attività manuale che assorbiva il tempo dei recruiter a un processo AI-driven che filtra il 96% delle candidature prima del colloquio, liberando il team per concentrarsi su valutazione approfondita e analisi del potenziale. Il valore dimostrato nella selezione ha portato all'espansione verso la mappatura delle competenze interne.",
+      summary: "Il progetto ha trasformato il pre-screening da attività manuale che assorbiva il tempo dei recruiter a un processo AI-driven che filtra il 96% delle candidature prima del colloquio, liberando il team per concentrarsi su valutazione approfondita e analisi del potenziale. Il valore dimostrato nella selezione ha portato all’espansione verso la mappatura delle competenze interne.",
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Il problema strutturale',
-      intro: "Europ Assistance è un'azienda che deve assumere in massa, in tempi stretti, con un team minimo. Con picchi stagionali di migliaia di candidature e soli 3 FTE nel team HR, il business aveva un vincolo operativo chiaro: trovare un modo per scalare la qualità della selezione senza moltiplicare le risorse.",
+      intro: "Europ Assistance è un’azienda che deve assumere in massa, in tempi stretti, con un team minimo. Con picchi stagionali di migliaia di candidature e soli 3 FTE nel team HR, il business aveva un vincolo operativo chiaro: trovare un modo per scalare la qualità della selezione senza moltiplicare le risorse.",
       businessLabel: 'IMPATTO SUL BUSINESS',
       hrLabel: 'IMPATTO SU HR & PEOPLE',
       businessChallenges: [
@@ -88,7 +88,7 @@ const content = {
         {
           icon: Scale,
           title: 'Valutazione soggettiva e rischio bias',
-          text: "Il processo di selezione si basava sul giudizio soggettivo del recruiter, senza dati strutturati sulle competenze. L'obiettivo era costruire un processo equo, basato sulle competenze e meno condizionato da stereotipi e pregiudizi inconsci.",
+          text: "Il processo di selezione si basava sul giudizio soggettivo del recruiter, senza dati strutturati sulle competenze. L’obiettivo era costruire un processo equo, basato sulle competenze e meno condizionato da stereotipi e pregiudizi inconsci.",
         },
         {
           icon: BarChart3,
@@ -124,15 +124,15 @@ const content = {
       methodology: [
         {
           title: '7 profili, 2 sedi, un unico processo',
-          text: "Assessment configurati per 7 ruoli distinti, dai professionisti dell'assistenza (mobilità, casa, viaggi, sanitario) agli agenti customer care fino ai ruoli HR specialistici, su sedi diverse. Ogni profilo ha un set di competenze specifico, dimostrando la versatilità e scalabilità della piattaforma.",
+          text: "Assessment configurati per 7 ruoli distinti, dai professionisti dell’assistenza (mobilità, casa, viaggi, sanitario) agli agenti customer care fino ai ruoli HR specialistici, su sedi diverse. Ogni profilo ha un set di competenze specifico, dimostrando la versatilità e scalabilità della piattaforma.",
         },
         {
           title: 'Pre-screening AI integrato nel funnel',
-          text: "Skillvue si inserisce come primo step di valutazione dopo la candidatura. I candidati completano l'assessment in autonomia da qualsiasi device. Solo i profili idonei avanzano al colloquio, permettendo ai recruiter di concentrare il tempo sulle interviste ad alto valore e sull'analisi del potenziale.",
+          text: "Skillvue si inserisce come primo step di valutazione dopo la candidatura. I candidati completano l’assessment in autonomia da qualsiasi device. Solo i profili idonei avanzano al colloquio, permettendo ai recruiter di concentrare il tempo sulle interviste ad alto valore e sull’analisi del potenziale.",
         },
         {
           title: 'Human-in-the-loop a ogni fase',
-          text: "L'AI non sostituisce il recruiter: lo potenzia. Ogni candidato che raggiunge il colloquio arriva con un profilo di competenze strutturato. Il team HR mantiene il pieno controllo decisionale, utilizzando i dati Skillvue come supporto informativo, non come verdetto automatico.",
+          text: "L’AI non sostituisce il recruiter: lo potenzia. Ogni candidato che raggiunge il colloquio arriva con un profilo di competenze strutturato. Il team HR mantiene il pieno controllo decisionale, utilizzando i dati Skillvue come supporto informativo, non come verdetto automatico.",
         },
       ],
     },
@@ -147,7 +147,7 @@ const content = {
       ],
       pipelineReady: { percent: '76%', label: 'candidati idonei' },
       pipelineNotReady: { percent: '24%', label: 'candidati non idonei' },
-      completionNote: "Tasso di completamento dell'assessment: 23% sul totale degli invitati (su 5.116 invitati complessivi fino a marzo 2026). Il dato riflette l'autoselezione tipica dei funnel di recruiting ad alto volume con candidati esterni.",
+      completionNote: "Tasso di completamento dell’assessment: 23% sul totale degli invitati (su 5.116 invitati complessivi fino a marzo 2026). Il dato riflette l’autoselezione tipica dei funnel di recruiting ad alto volume con candidati esterni.",
       metrics: [
         { value: '+24%', label: 'Assunzioni anno su anno', sublabel: 'Da 92 a 114, stesso team di 3 persone' },
         { value: '-18%', label: 'Colloqui necessari', sublabel: 'Da 457 a 376 — shortlist più qualificate' },
@@ -160,7 +160,7 @@ const content = {
         { icon: Zap, title: 'Recruiter liberati dallo screening', text: "Il pre-screening è ora gestito da Skillvue, liberando il team di 3 persone per concentrarsi su colloqui approfonditi, valutazione del potenziale e analisi qualitativa. Il tempo del recruiter è tornato ad alto valore aggiunto." },
         { icon: CheckCircle, title: 'Shortlist radicalmente più qualificate', text: "I line manager ricevono candidati già valutati su competenze oggettive, con un profilo strutturato allegato. Il tasso colloquio-assunzione del 76% dimostra la qualità della pre-selezione: 3 candidati su 4 vengono assunti." },
         { icon: Shield, title: 'Riduzione del bias nella selezione', text: "La valutazione basata su competenze strutturate ha ridotto la dipendenza dal giudizio soggettivo del singolo recruiter, costruendo un processo più equo e meno condizionato da stereotipi e pregiudizi inconsci." },
-        { icon: Heart, title: 'Candidate experience positiva', text: "Punteggi di soddisfazione tra 4.0 e 4.7 su 5 su tutte le fasce d'età (18-64 anni) per esperienza, usabilità e comunicazione." },
+        { icon: Heart, title: 'Candidate experience positiva', text: "Punteggi di soddisfazione tra 4.0 e 4.7 su 5 su tutte le fasce d’età (18-64 anni) per esperienza, usabilità e comunicazione." },
         { icon: BarChart3, title: 'Visibilità sul potenziale di crescita', text: "Per la prima volta, il team HR e i line manager hanno dati sulle soft skill dei candidati fin dal primo step. Questo permette non solo decisioni di assunzione migliori, ma anche visibilità su come una persona potrà crescere nel tempo." },
       ],
     },
@@ -168,11 +168,11 @@ const content = {
       badge: 'EVOLUZIONE 2026',
       title: 'Da hiring tool a talent intelligence partner',
       intro: "Quando i risultati sul recruiting hanno dimostrato che Skillvue poteva scalare qualità e velocità contemporaneamente, il passo naturale è stato estendere la piattaforma allo sviluppo interno, eliminando la discontinuità tra come si seleziona chi entra e come si fa crescere chi è già in azienda.",
-      objective: "Costruire una mappatura strategica delle competenze sull'intera workforce, allineata al modello di leadership \"We IMPACT\" di Europ Assistance, per progettare percorsi di sviluppo individuali, career planning e succession readiness.",
+      objective: "Costruire una mappatura strategica delle competenze sull’intera workforce, allineata al modello di leadership \"We IMPACT\" di Europ Assistance, per progettare percorsi di sviluppo individuali, career planning e succession readiness.",
       bullets: [
         "Mappatura competenze interne su 5 competenze di leadership (Strategic Thinker, Collaborative Achiever, Innovative Driver, Engaging Manager, Client & Business Advocate) e 3 livelli di seniority (Line Manager, Manager of Managers, Senior Leader)",
         "Assessment personalizzati sul modello di leadership proprietario di Europ Assistance, con indicatori comportamentali psicometricamente validati tramite il soft-contextualizer di Skillvue",
-        "Verso un'organizzazione skills-based: dati sulle competenze dal primo giorno di selezione fino alla pianificazione della successione",
+        "Verso un’organizzazione skills-based: dati sulle competenze dal primo giorno di selezione fino alla pianificazione della successione",
       ],
     },
     related: {
@@ -241,7 +241,7 @@ const content = {
         {
           icon: TrendingUp,
           title: 'Shrinking candidate pool',
-          text: "The demographic decline is progressively reducing the available candidate pool, making every hiring decision higher-risk. Finding candidates is no longer enough: what's needed is identifying those with the potential to grow over time, not just to fill the role today.",
+          text: "The demographic decline is progressively reducing the available candidate pool, making every hiring decision higher-risk. Finding candidates is no longer enough: what’s needed is identifying those with the potential to grow over time, not just to fill the role today.",
         },
       ],
       hrChallenges: [
@@ -253,7 +253,7 @@ const content = {
         {
           icon: Scale,
           title: 'Subjective evaluation and bias risk',
-          text: "The selection process relied on the recruiter's subjective judgment, without structured competency data. The goal was to build a fair, competency-based process less influenced by stereotypes and unconscious biases.",
+          text: "The selection process relied on the recruiter’s subjective judgment, without structured competency data. The goal was to build a fair, competency-based process less influenced by stereotypes and unconscious biases.",
         },
         {
           icon: BarChart3,
@@ -275,7 +275,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was integrated into the pre-screening phase of Europ Assistance's selection process, covering 7 distinct role profiles across 2 locations. The assessments combine soft skills, English language tests and, for some roles, specific hard skill tests. The deployment is recurring, tied to 2 seasonal mass-hiring campaigns per year.",
+      intro: "Skillvue was integrated into the pre-screening phase of Europ Assistance’s selection process, covering 7 distinct role profiles across 2 locations. The assessments combine soft skills, English language tests and, for some roles, specific hard skill tests. The deployment is recurring, tied to 2 seasonal mass-hiring campaigns per year.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Heart, label: 'Problem Solving' },
@@ -289,7 +289,7 @@ const content = {
       methodology: [
         {
           title: '7 roles, 2 locations, one single process',
-          text: "Assessments configured for 7 distinct roles, from assistance professionals (mobility, home, travel, healthcare) to customer care agents to specialist HR roles, across different locations. Each profile has a specific competency set, demonstrating the platform's versatility and scalability.",
+          text: "Assessments configured for 7 distinct roles, from assistance professionals (mobility, home, travel, healthcare) to customer care agents to specialist HR roles, across different locations. Each profile has a specific competency set, demonstrating the platform’s versatility and scalability.",
         },
         {
           title: 'AI pre-screening integrated into the funnel',
@@ -324,7 +324,7 @@ const content = {
       qualitative: [
         { icon: Zap, title: 'Recruiters freed from screening', text: "Pre-screening is now handled by Skillvue, freeing the 3-person team to focus on in-depth interviews, potential evaluation and qualitative analysis. Recruiter time has returned to high-value activities." },
         { icon: CheckCircle, title: 'Radically more qualified shortlists', text: "Line managers receive candidates already evaluated on objective competencies, with a structured profile attached. The 76% interview-to-hire rate proves the quality of the pre-selection: 3 out of 4 candidates are hired." },
-        { icon: Shield, title: 'Bias reduction in selection', text: "The structured competency-based evaluation has reduced reliance on the individual recruiter's subjective judgment, building a fairer process less influenced by stereotypes and unconscious biases." },
+        { icon: Shield, title: 'Bias reduction in selection', text: "The structured competency-based evaluation has reduced reliance on the individual recruiter’s subjective judgment, building a fairer process less influenced by stereotypes and unconscious biases." },
         { icon: Heart, title: 'Positive candidate experience', text: "Satisfaction scores between 4.0 and 4.7 out of 5 across all age groups (18–64) for experience, usability and communication." },
         { icon: BarChart3, title: 'Visibility on growth potential', text: "For the first time, the HR team and line managers have soft skill data on candidates from the very first step. This enables not only better hiring decisions, but also visibility on how a person can grow over time." },
       ],
@@ -333,10 +333,10 @@ const content = {
       badge: 'EVOLUTION 2026',
       title: 'From hiring tool to talent intelligence partner',
       intro: "When the recruiting results proved that Skillvue could scale quality and speed simultaneously, the natural step was to extend the platform to internal development, eliminating the disconnect between how new hires are selected and how existing employees are developed.",
-      objective: "Build a strategic competency mapping across the entire workforce, aligned with Europ Assistance's \"We IMPACT\" leadership model, to design individual development paths, career planning and succession readiness.",
+      objective: "Build a strategic competency mapping across the entire workforce, aligned with Europ Assistance’s \"We IMPACT\" leadership model, to design individual development paths, career planning and succession readiness.",
       bullets: [
         "Internal competency mapping across 5 leadership competencies (Strategic Thinker, Collaborative Achiever, Innovative Driver, Engaging Manager, Client & Business Advocate) and 3 seniority levels (Line Manager, Manager of Managers, Senior Leader)",
-        "Assessments customized on Europ Assistance's proprietary leadership model, with psychometrically validated behavioural indicators through Skillvue's soft-contextualizer",
+        "Assessments customized on Europ Assistance’s proprietary leadership model, with psychometrically validated behavioural indicators through Skillvue’s soft-contextualizer",
         "Towards a skills-based organization: competency data from the first day of selection through to succession planning",
       ],
     },

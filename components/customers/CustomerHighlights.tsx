@@ -5,14 +5,12 @@ import { useLanguage } from '@/i18n/LanguageContext';
 
 const highlights = [
   {
-    quote: 'Skillvue allowed us to strengthen our People Strategy, making skills mapping faster, more effective and data-driven.',
     author: 'Alessandro Mazzarol',
     role: 'TA & EB Manager, Carrefour Italia',
     metric: '-35%',
     metricLabel: 'time-to-hire',
   },
   {
-    quote: 'A single objective standard now applies across all markets and geographies. from 500 to 10,000 candidates assessed per year.',
     author: 'Loro Piana',
     role: 'Luxury & Retail',
     metric: '20x',
@@ -59,11 +57,6 @@ export default function CustomerHighlights() {
                 </span>
                 <span className="text-[13px] text-[#1A1A2E]/[0.55] font-medium">{t(h.metricLabel)}</span>
               </div>
-
-              {/* Quote */}
-              <p className="text-[14px] text-[#1A1A2E]/50 italic leading-[1.7] mb-6 flex-1">
-                "{t(h.quote)}"
-              </p>
 
               {/* Author */}
               <div>

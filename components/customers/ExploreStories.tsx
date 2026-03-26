@@ -6,13 +6,48 @@ import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const allStories = [
-  { id: 'carrefour', company: 'Carrefour', industry: 'Retail', useCases: ['Hiring'], headline: "How Carrefour Italia is Hiring Better, Faster, and at Scale. Without Adding a Single Person to the Team with Skillvue", bgImage: '/logos/carrefour-bg.jpg' },
-  { id: 'subdued', company: 'Subdued', industry: 'Retail', useCases: ['Hiring'], headline: 'Winning Gen Z Talent Without Drowning in Interviews. The Subdued Story with Skillvue', bgImage: '/logos/subdued-bg.jpg' },
-  { id: 'ins-mercato', company: "In's Mercato", industry: 'Retail', useCases: ['Internal Mobility'], headline: "Building the Next Generation of Store Managers from Within. How In's Mercato Did It with Skillvue", bgImage: '/logos/insmercato-bg.jpg' },
-  { id: 'adr', company: 'Aeroporti di Roma', industry: 'Transportation & Logistics', useCases: ['Hiring', 'Internal Mobility'], headline: 'Come Aeroporti di Roma ha democratizzato l\'accesso allo sviluppo per 5.000 persone con Skillvue', bgImage: '/logos/adr-background-explore-stories.jpg' },
-  { id: 'unicomm', company: 'Unicomm', industry: 'GDO', useCases: ['Hiring', 'Learning & Development', 'Internal Mobility'], headline: 'How Unicomm digitized the entire talent lifecycle — hiring, confirmations and development — starting from zero', bgImage: '/logos/unicomm-background-explore-stories.jpg' },
-  { id: 'mediaset', company: 'Mediaset', industry: 'Media & Telecom', useCases: ['Hiring'], headline: 'How Mediaset managed 3,000 applications in 5 weeks with 3 people — and turned soft skills into the first selection filter', bgImage: '/logos/mediaset-background-explore-stories.jpg' },
-  { id: 'europ-assistance', company: 'Europ Assistance', industry: 'Insurance', useCases: ['Hiring'], headline: 'How Europ Assistance hired 24% more with 18% fewer interviews — a 3-person HR team, nearly 2,000 candidates assessed', bgImage: '/logos/europ-assistance-background-explore-stories.jpg' },
+  {
+    id: 'carrefour', company: 'Carrefour', industry: 'Retail', useCases: ['Hiring', 'Internal Mobility'],
+    headlineIt: 'Come Carrefour Italia ha trasformato la selezione di 30.000 candidature l\u2019anno con soli 3 recruiter',
+    headlineEn: 'How Carrefour Italia transformed the screening of 30,000 applications a year with just 3 recruiters',
+    bgImage: '/logos/carrefour-bg.jpg',
+  },
+  {
+    id: 'subdued', company: 'Subdued', industry: 'Retail', useCases: ['Hiring'],
+    headlineIt: 'Come Subdued ha dimezzato il turnover e ridotto il time-to-hire del 40% su 130+ store in 6 paesi',
+    headlineEn: 'How Subdued halved turnover and cut time-to-hire by 40% across 130+ stores in 6 countries',
+    bgImage: '/logos/subdued-bg.jpg',
+  },
+  {
+    id: 'ins-mercato', company: "In's Mercato", industry: 'Retail', useCases: ['Internal Mobility'],
+    headlineIt: "Come In\u2019s Mercato ha costruito la prossima generazione di Store Manager dall\u2019interno",
+    headlineEn: "Building the Next Generation of Store Managers from Within. How In's Mercato Did It with Skillvue",
+    bgImage: '/logos/insmercato-bg.jpg',
+  },
+  {
+    id: 'adr', company: 'Aeroporti di Roma', industry: 'Transportation & Logistics', useCases: ['Hiring', 'Internal Mobility'],
+    headlineIt: 'Come Aeroporti di Roma ha democratizzato l\u2019accesso allo sviluppo per 5.000 persone',
+    headlineEn: 'How Aeroporti di Roma democratized access to development for 5,000 people',
+    bgImage: '/logos/adr-background-explore-stories.jpg',
+  },
+  {
+    id: 'unicomm', company: 'Unicomm', industry: 'GDO', useCases: ['Hiring', 'Learning & Development', 'Internal Mobility'],
+    headlineIt: 'Come Unicomm ha digitalizzato l\u2019intero talent lifecycle su 270+ punti vendita partendo da zero',
+    headlineEn: 'How Unicomm digitized the entire talent lifecycle — hiring, confirmations and development — starting from zero',
+    bgImage: '/logos/unicomm-background-explore-stories.jpg',
+  },
+  {
+    id: 'mediaset', company: 'Mediaset', industry: 'Media & Telecom', useCases: ['Hiring'],
+    headlineIt: 'Come Mediaset ha gestito 3.000 candidature in 5 settimane con 3 persone',
+    headlineEn: 'How Mediaset managed 3,000 applications in 5 weeks with 3 people',
+    bgImage: '/logos/mediaset-background-explore-stories.jpg',
+  },
+  {
+    id: 'europ-assistance', company: 'Europ Assistance', industry: 'Insurance', useCases: ['Hiring'],
+    headlineIt: 'Come Europ Assistance ha assunto il 24% in pi\u00f9 con il 18% di colloqui in meno',
+    headlineEn: 'How Europ Assistance hired 24% more with 18% fewer interviews',
+    bgImage: '/logos/europ-assistance-background-explore-stories.jpg',
+  },
 ];
 
 const filters = {
@@ -21,7 +56,7 @@ const filters = {
 };
 
 export default function ExploreStories() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [activeIndustry, setActiveIndustry] = useState('All');
   const [activeUseCase, setActiveUseCase] = useState('All');
   const ref = useRef(null);
@@ -99,7 +134,7 @@ export default function ExploreStories() {
                   </div>
                 </div>
                 {/* Title below. left aligned with card, with left padding */}
-                <h3 className="text-[18px] font-semibold text-white/[0.65] leading-[1.45] mt-5 pl-2 group-hover:text-white/90 transition-colors duration-400">{t(s.headline)}</h3>
+                <h3 className="text-[18px] font-semibold text-white/[0.65] leading-[1.45] mt-5 pl-2 group-hover:text-white/90 transition-colors duration-400">{lang === 'it' ? s.headlineIt : s.headlineEn}</h3>
               </motion.div>
             ))}
           </div>
