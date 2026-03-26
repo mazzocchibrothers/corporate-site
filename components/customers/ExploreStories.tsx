@@ -28,7 +28,7 @@ const allStories = [
     id: 'adr', company: 'Aeroporti di Roma', industry: 'Transportation & Logistics', useCases: ['Hiring', 'Internal Mobility'],
     headlineIt: 'Come Aeroporti di Roma ha democratizzato l\u2019accesso allo sviluppo per 5.000 persone',
     headlineEn: 'How Aeroporti di Roma democratized access to development for 5,000 people',
-    bgImage: '/logos/ADR-background-explore-stories.jpg',
+    bgImage: '/logos/adr-background-explore-stories.jpg',
   },
   {
     id: 'unicomm', company: 'Unicomm', industry: 'GDO', useCases: ['Hiring', 'Learning & Development', 'Internal Mobility'],
@@ -95,7 +95,7 @@ export default function ExploreStories() {
             <span className="italic font-bold gradient-text">{t('story.')}</span>
           </h2>
           <p className="text-[20px] text-white/[0.65] leading-[1.75] max-w-2xl">
-            {t('Every challenge is different. Every context is specific. Filter by what matters to you.')}
+            {t('Every challenge is different. Every context is specific. Filter by what matters to you.. Every context is specific. Filter by what matters to you.')}
           </p>
         </motion.div>
 
@@ -104,17 +104,13 @@ export default function ExploreStories() {
           <div className="flex flex-wrap gap-2">
             <span className="text-[13px] font-bold text-white/35 tracking-[0.1em] uppercase mr-4 self-center">{t('Industry')}</span>
             {filters.industry.map(f => (
-<<<<<<< HEAD
-              <button key={f} onClick={() => setActiveIndustry(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{t(industryLabel(f))}</button>
-=======
               <button key={f} onClick={() => setActiveIndustry(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{industryLabel(f)}</button>
->>>>>>> d237e91 (Add Douglas and Credem case studies, update ExploreStories filters and industries)
             ))}
           </div>
           <div className="flex flex-wrap gap-2">
             <span className="text-[13px] font-bold text-white/35 tracking-[0.1em] uppercase mr-4 self-center">{t('Use Case')}</span>
             {filters.useCase.map(f => (
-              <button key={f} onClick={() => setActiveUseCase(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeUseCase === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{t(f)}</button>
+              <button key={f} onClick={() => setActiveUseCase(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeUseCase === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{f}</button>
             ))}
           </div>
         </motion.div>
