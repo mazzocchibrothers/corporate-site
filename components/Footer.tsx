@@ -8,7 +8,7 @@ const footerLinks = [
   {
     title: 'Solutions',
     links: [
-      { name: 'Talent Acquisition', href: '/solutions/talent-acquisition' },
+      { name: 'Hiring', href: '/solutions/talent-acquisition' },
       { name: 'Performance Management', href: '/solutions/performance-management' },
       { name: 'Learning & Development', href: '/solutions/learning-development' },
       { name: 'Internal Mobility', href: '/solutions/internal-mobility' },
@@ -20,13 +20,17 @@ const footerLinks = [
     links: [
       { name: 'Product', href: '/product-overview' },
       { name: 'Science', href: '/science' },
-      { name: 'Customers', href: '/customers' },
+    ],
+  },
+  {
+    title: 'Customers',
+    links: [
+      { name: 'Customer Stories', href: '/customers' },
     ],
   },
   {
     title: 'Resources',
     links: [
-      { name: 'Customer Stories', href: '/customers' },
       { name: 'Blog', href: '/blog' },
       { name: 'White Papers', href: '/resources/whitepapers' },
       { name: 'About', href: '/about' },
