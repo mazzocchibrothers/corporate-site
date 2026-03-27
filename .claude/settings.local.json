@@ -26,7 +26,13 @@
       "Bash(curl -sL -A \"Mozilla/5.0\" \"https://i.forbesimg.com/media/assets/forbes_1200x1200.png\" -o \"press-forbes.png\" -w \"%{http_code}\\\\n\")",
       "Bash(curl -sL -A \"Mozilla/5.0\" \"https://static.businessinsider.com/public/build/img/bi-logo.svg\" -o \"press-businessinsider.svg\" -w \"%{http_code}\\\\n\")",
       "Bash(npm run:*)",
-      "Read(//c/Users/User/.claude/**)"
+      "Read(//c/Users/User/.claude/**)",
+      "Bash(grep -l \"useLanguage\" /Users/marcelloroehrssen/Projects/munnezza/corporate_site/pages/customers/*.tsx)",
+      "Bash(xargs grep:*)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(sed -i '' 's/const { lang } = useLanguage\\(\\);/const { lang, t } = useLanguage\\(\\);/' /Users/marcelloroehrssen/Projects/munnezza/corporate_site/pages/customers/$f.tsx)",
+      "Bash(done)"
     ]
   }
 }

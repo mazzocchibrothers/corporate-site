@@ -326,7 +326,7 @@ const content = {
 
 export default function UnicommStoryPage() {
   const router = useRouter();
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
 
   return (
