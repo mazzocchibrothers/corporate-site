@@ -36,7 +36,7 @@ function LogoItem({ item }: { item: { name: string; logo: string } }) {
 }
 
 export default function IntegrationEcosystem() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -62,7 +62,11 @@ export default function IntegrationEcosystem() {
             {t('Skillvue layers objective talent data into your existing stack, turning them from process gatekeepers into decision engines.')}
           </p>
           <p className="text-[15px] text-[#1A1A2E]/[0.4] leading-[1.75]">
-            {t('Integrating with')} <span className="text-[#4B4DF7]/70 font-semibold">ATS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LXP</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">PMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">HRIS</span> &mdash; {t('100+ native integrations')}
+            {lang === 'it' ? (
+              <>Ci integriamo nativamente con 100+ tra i principali <span className="text-[#4B4DF7]/70 font-semibold">ATS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LXP</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">PMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">HRIS</span></>
+            ) : (
+              <>{t('Integrating with')} <span className="text-[#4B4DF7]/70 font-semibold">ATS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LXP</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">PMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">HRIS</span> &mdash; {t('100+ native integrations')}</>
+            )}
           </p>
         </motion.div>
       </div>

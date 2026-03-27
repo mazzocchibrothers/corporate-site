@@ -8,41 +8,102 @@ import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
 
-const metrics = [
-  { value: '~900', label: 'AI assessments completed' },
-  { value: '90', label: 'top talent identified' },
-  { value: '95%', label: 'completion rate' },
+const heroMetrics = [
+  { value: '~1,000', label: 'Employees involved' },
+  { value: '95%', label: 'Completion rate' },
+  { value: '~90', label: 'Top Talent identified' },
+  { value: '47%', label: 'Role-Ready' },
+  { value: '6', label: 'Soft skills assessed' },
 ];
 
 const sidebar = [
   { label: 'Industry', value: 'GDO - Hard Discount' },
-  { label: 'Revenue', value: '1.5 billion EUR' },
+  { label: 'Revenue', value: '€1.5B' },
   { label: 'Employees', value: '4,200+' },
   { label: 'Stores', value: '570+' },
   { label: 'Region', value: 'Italy' },
-  { label: 'Use Cases', value: 'Internal Mobility, Succession Planning, Hiring' },
+  { label: 'Use Cases', value: 'Internal Mobility, Succession Planning' },
 ];
 
-const skills = ['People Orientation', 'Leadership', 'Resilience', 'Organization & Planning', 'Cognitive Flexibility', 'Goal Orientation'];
+const skills = ['Customer Orientation', 'Leadership', 'Resilience', 'Organization & Planning', 'Cognitive Flexibility', 'Goal Orientation'];
 
 const businessPains = [
-  { title: 'Expansion blocked', desc: 'New store openings at risk without qualified Store Managers ready and aligned to company culture' },
-  { title: 'Store ROI at stake', desc: 'Every opening is a significant investment. without the right SM, stores underperform from day one' },
-  { title: 'External dependency', desc: 'Chasing external hires: higher costs, longer onboarding, cultural mismatch risk' },
+  {
+    title: 'Expansion held back by Store Manager shortage',
+    desc: 'An active new opening plan, but without qualified, ready, and culturally aligned managerial talent, every new store risks underperforming.',
+  },
+  {
+    title: 'Store performance and return on investment',
+    desc: 'Every new opening is a significant investment: without the right Store Manager to lead it, that store doesn\'t reach its potential. Failing to identify high-value people in time means compromising profitability.',
+  },
+  {
+    title: 'Dependence on external hiring',
+    desc: 'Chasing demand through external recruitment means higher costs, longer onboarding times, and a real risk of cultural mismatch — in a sector where finding experienced profiles is increasingly difficult.',
+  },
 ];
 
 const hrPains = [
-  { title: 'Invisible talent', desc: 'No objective visibility on capabilities of thousands of employees across 570+ stores' },
-  { title: 'Fragmented evaluations', desc: 'Every manager evaluated with different criteria. two people with same potential, completely different paths' },
-  { title: 'Reactive, not predictive', desc: 'Every key role to fill became an external recruitment process. Double cost: recruiting + losing internal talent' },
+  {
+    title: 'Invisible talent across the network',
+    desc: 'No objective visibility into the competencies of thousands of sales associates distributed across 570+ stores: decisions on potential were based on sales numbers and subjective perceptions.',
+  },
+  {
+    title: 'Fragmented and non-comparable evaluations',
+    desc: 'Each store manager assessed with their own criteria, each area operated with different standards: two people with the same potential could have completely different career paths — not based on merit, but on geographic luck.',
+  },
+  {
+    title: 'Reactive talent management, not predictive',
+    desc: 'Without structured visibility on internal potential, every key position to fill turned into an external recruitment process. A double cost: time and investment to recruit, plus the risk of losing unrecognized talent already in the company.',
+  },
+];
+
+const methodologyCards = [
+  {
+    title: 'Mobile-first assessment',
+    text: '~30 minutes from a smartphone, completed during paid working hours. 1,000 people involved across 570 stores.',
+  },
+  {
+    title: 'Neutral baseline',
+    text: 'Target population selected without prior high-potential nominations: sales associates with 18–48 months of tenure. An objective snapshot of real talent, not a confirmation of existing impressions.',
+  },
+  {
+    title: 'Communication as an engagement lever',
+    text: 'A paid activity, completed during working hours, and positioned as an investment in professional development. Not an exam, but an opportunity — with a direct impact on participation rates and positive perception of the entire project.',
+  },
 ];
 
 const funnel = [
-  { label: 'Involved', value: '~1,000', width: '100%' },
-  { label: 'Completed', value: '~900', width: '90%' },
-  { label: 'Top Talent', value: '~90', width: '30%' },
-  { label: 'Role-Ready (47%)', value: '~42', width: '18%' },
-  { label: 'In Development (53%)', value: '~48', width: '20%' },
+  { label: 'Involved', value: '~1,000' },
+  { label: 'Assessments completed', value: '~900' },
+  { label: 'Top Talent identified', value: '~90' },
+  { label: 'Role-Ready (47%)', value: '~42' },
+  { label: 'In Development (53%)', value: '~48' },
+];
+
+const impactCards = [
+  {
+    title: 'Internal pipeline built',
+    text: 'For the first time, In\'s has an objective map of potential across the network and can plan openings with the certainty of having qualified talent available.',
+  },
+  {
+    title: 'From reactive to predictive',
+    text: 'People development has been directly linked to the real estate expansion plan: the internal pipeline becomes a business asset that enables growth.',
+  },
+  {
+    title: 'Significant cultural impact',
+    text: 'Participants who attended in-person sessions returned to their stores sharing the experience, generating a positive ripple effect and a perception of meritocracy.',
+  },
+  {
+    title: 'Internal mobility unlocked',
+    text: 'The project opened not only vertical opportunities (sales associate → Store Manager) but also lateral moves across divisions, for example into logistics roles at distribution centers.',
+  },
+];
+
+const visionBullets = [
+  'Same criteria and competency framework from hiring to development: new hires are assessed from day one with the same logic used to develop them',
+  'Assessment via WhatsApp: in grocery retail this isn\'t a convenience choice, it\'s a strategic one. It removes every barrier to access and drives completion rates that other tools can\'t match',
+  'Extending assessment to current Store Managers to identify profiles ready for the Area Manager role',
+  'Hiring, development, and training integrated into one continuous system. No longer separate processes, but a single talent strategy that works as a business asset',
 ];
 
 function Section({ children, className = '' }) {
@@ -57,7 +118,7 @@ function Section({ children, className = '' }) {
 
 export default function InsMercatoStoryPage() {
   const router = useRouter();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <>
@@ -79,20 +140,25 @@ export default function InsMercatoStoryPage() {
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
               <div className="lg:col-span-8">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-                  <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.12 }}>
-                    {t('~900 people assessed.')}<br />{t('A Store Manager pipeline built from within.')}
+                  <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-bold tracking-[-0.03em] text-white/95 mb-6" style={{ lineHeight: 1.12 }}>
+                    {lang === 'it'
+                      ? <>Come In's Mercato ha costruito una <span className="italic gradient-text">pipeline interna</span> di Store Manager</>
+                      : <>How In's Mercato built an <span className="italic gradient-text">internal pipeline</span> of Store Managers</>
+                    }
                   </h1>
-                  <div className="flex flex-wrap gap-6 mb-12">
-                    {metrics.map(m => (
-                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-6 py-4">
-                        <span className="block text-white" style={{ fontSize: '2rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[13px] text-white/[0.65] mt-1 block">{t(m.label)}</span>
+                  <p className="text-[17px] text-white/[0.65] leading-[1.7] mb-10 max-w-2xl">
+                    {lang === 'it'
+                      ? "La crescita della rete dipende dalla capacità di avere figure manageriali formate nel momento in cui servono. Con Skillvue, In's ha trasformato la gestione del talento da reattiva a predittiva."
+                      : "Network growth depends on having trained managerial talent ready when it's needed. With Skillvue, In's transformed talent management from reactive to predictive."
+                    }
+                  </p>
+                  <div className="flex flex-wrap gap-4 mb-12">
+                    {heroMetrics.map(m => (
+                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-5 py-4">
+                        <span className="block text-white" style={{ fontSize: '1.8rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="text-[12px] text-white/[0.55] mt-1 block">{t(m.label)}</span>
                       </div>
                     ))}
-                  </div>
-                  <div className="border-l-2 border-[#4B4DF7]/30 pl-6">
-                    <p className="text-[17px] text-white/[0.65] italic leading-[1.7]">{t('"More agile, data-driven selection, with significant time savings for our teams."')}</p>
-                    <p className="text-[14px] text-white/50 mt-3 font-semibold">Mirko Tortolano, <span className="font-normal text-white/35">{t("HR Director, In's Mercato")}</span></p>
                   </div>
                 </motion.div>
               </div>
@@ -119,28 +185,32 @@ export default function InsMercatoStoryPage() {
 
             {/* Context */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Context')}</h2>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                {[
-                  { num: '1.5B', label: 'EUR revenue' },
-                  { num: '4,200+', label: 'employees' },
-                  { num: '570+', label: 'stores across Italy' },
-                  { num: 'Active', label: 'expansion plan (new openings)' },
-                ].map(s => (
-                  <div key={s.num} className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/70 p-6 text-center">
-                    <span className="block text-[#1A1A2E]" style={{ fontSize: '1.8rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{s.num}</span>
-                    <span className="text-[13px] text-[#1A1A2E]/50 mt-2 block">{t(s.label)}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] max-w-3xl">
-{                t('Without qualified Store Managers. ready, trained, culturally aligned. new stores risk underperforming from day one. Growth depends directly on having the right managerial talent when and where it is needed.')}
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-6">{t('The Context')}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] max-w-3xl mb-6">
+                {lang === 'it'
+                  ? "In's Mercato è una delle principali insegne hard discount italiane, con un fatturato di 1,5 miliardi di euro, oltre 4.200 dipendenti e una rete di più di 570 punti vendita. L'azienda è in una fase di forte espansione immobiliare, con un piano di nuove aperture che pone un vincolo operativo preciso: senza Store Manager qualificati, pronti e pienamente allineati alla cultura aziendale, i nuovi negozi rischiano di sottoperformare. La crescita della rete dipende direttamente dalla capacità di avere figure manageriali formate nel momento in cui servono."
+                  : "In's Mercato is one of Italy's leading hard discount grocery chains, with €1.5 billion in revenue, over 4,200 employees, and a network of more than 570 stores. The company is in a phase of aggressive real estate expansion, with a new store opening plan that creates a clear operational constraint: without qualified Store Managers who are ready and fully aligned with the company culture, new stores risk underperforming. Network growth depends directly on having trained managerial talent available when it's needed."
+                }
               </p>
+              <div className="rounded-xl border border-[#4B4DF7]/[0.1] bg-[#4B4DF7]/[0.03] px-8 py-6 max-w-3xl">
+                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.7] italic">
+                  {lang === 'it'
+                    ? "Il progetto ha trasformato la gestione del talento da reattiva a predittiva, collegando direttamente la people strategy al piano di espansione: ogni nuova apertura può ora contare su una pipeline interna di figure pronte, invece di rincorrere il fabbisogno sul mercato esterno."
+                    : "The project transformed talent management from reactive to predictive, directly linking the people strategy to the expansion plan: every new opening can now count on an internal pipeline of ready talent, instead of chasing demand on the external market."
+                  }
+                </p>
+              </div>
             </Section>
 
-            {/* Challenge. Business + HR split */}
+            {/* Challenge */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Challenge')}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-6">{t('The Challenge')}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] max-w-3xl mb-10">
+                {lang === 'it'
+                  ? "In's Mercato è un'azienda in forte crescita. Con oltre 570 punti vendita e un piano di sviluppo immobiliare attivo, il business aveva un vincolo operativo che precedeva qualsiasi considerazione HR."
+                  : "In's Mercato is a fast-growing company. With over 570 stores and an active real estate development plan, the business faced an operational constraint that preceded any HR consideration."
+                }
+              </p>
               <div className="grid md:grid-cols-2 gap-5">
                 <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8">
                   <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-6 block">{t('Business Impact')}</span>
@@ -167,18 +237,16 @@ export default function InsMercatoStoryPage() {
               </div>
             </Section>
 
-            {/* Solution. Skills framework + setup */}
+            {/* Solution */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Solution')}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-6">{t('The Solution')}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] max-w-3xl mb-10">
+                {lang === 'it'
+                  ? "Skillvue ha abilitato un assessment strutturato, basato sul framework di soft skill che In's aveva già costruito internamente per il profilo di Store Manager."
+                  : "Skillvue enabled a structured assessment based on the soft skill framework that In's had already built internally for the Store Manager profile."
+                }
+              </p>
               <div className="grid lg:grid-cols-2 gap-10 items-start mb-10">
-                <div>
-                  <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-6">
-{                    t('Skillvue enabled a structured assessment based on the soft skill framework Ins had already built for the Store Manager profile. ~1,000 employees assessed via mobile in ~30 minutes during work hours.')}
-                  </p>
-                  <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8]">
-{                    t('Target population chosen without prior high-potential flags: sales associates with 18-48 months tenure. An objective picture of real talent. not a confirmation of existing impressions.')}
-                  </p>
-                </div>
                 <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8">
                   <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.1em] uppercase mb-5 block">{t('6 Soft Skills Assessed')}</span>
                   <div className="grid grid-cols-2 gap-3">
@@ -189,23 +257,23 @@ export default function InsMercatoStoryPage() {
                     ))}
                   </div>
                 </div>
-              </div>
-            </Section>
-
-            {/* Results. Funnel visualization */}
-            <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Results')}</h2>
-              <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-3 gap-6 mb-12">
-                  {metrics.map(m => (
-                    <div key={m.value} className="text-center">
-                      <span className="block text-white" style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                      <span className="text-[14px] text-white/[0.65] mt-3 block">{t(m.label)}</span>
+                <div className="space-y-4">
+                  {methodologyCards.map(card => (
+                    <div key={card.title} className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/50 p-6">
+                      <h4 className="text-[14px] font-bold text-[#1A1A2E]/70 mb-2">{t(card.title)}</h4>
+                      <p className="text-[13px] text-[#1A1A2E]/50 leading-[1.6]">{t(card.text)}</p>
                     </div>
                   ))}
                 </div>
-                {/* Assessment funnel. clean stat cards */}
-                <div className="grid grid-cols-5 gap-3">
+              </div>
+            </Section>
+
+            {/* Results */}
+            <Section className="mb-20">
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Results')}</h2>
+              <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
+                {/* Funnel */}
+                <div className="grid grid-cols-5 gap-3 mb-10">
                   {funnel.map((f, i) => (
                     <motion.div
                       key={f.label}
@@ -220,60 +288,58 @@ export default function InsMercatoStoryPage() {
                     </motion.div>
                   ))}
                 </div>
+                {/* Role split */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="rounded-xl border border-white/[0.06] bg-white/[0.04] p-6 text-center">
+                    <span className="block text-white" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>47%</span>
+                    <span className="text-[13px] text-white/[0.55] mt-2 block">{t('Role-Ready')} <span className="text-white/30">(~42 {t('profiles')})</span></span>
+                  </div>
+                  <div className="rounded-xl border border-white/[0.06] bg-white/[0.04] p-6 text-center">
+                    <span className="block text-white" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>53%</span>
+                    <span className="text-[13px] text-white/[0.55] mt-2 block">{t('In Development')} <span className="text-white/30">(~48 {t('profiles')})</span></span>
+                  </div>
+                </div>
+                <p className="text-[12px] text-white/20 mt-4 text-center">
+                  {lang === 'it'
+                    ? 'Completamento al netto delle cause esterne (dimissioni, malattia). 48 non terminate per cause esterne.'
+                    : 'Completion rate net of external causes (resignations, sick leave). 48 not completed due to external causes.'
+                  }
+                </p>
               </div>
-              <div className="grid lg:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  {[
-                    { title: 'Internal pipeline built', desc: 'First-ever objective talent map across the entire store network' },
-                    { title: 'Reactive to predictive', desc: 'People development now directly linked to expansion plan' },
-                    { title: 'Cultural impact', desc: 'Participants shared the experience, generating positive perception of meritocracy' },
-                    { title: 'Cross-functional mobility', desc: 'Opened paths not just vertical but across divisions (e.g. logistics)' },
-                  ].map(item => (
-                    <div key={item.title} className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[#4B4DF7]/40 mt-2 shrink-0" />
-                      <div>
-                        <span className="text-[14px] font-bold text-[#1A1A2E]/70">{t(item.title)}</span>
-                        <p className="text-[14px] text-[#1A1A2E]/50 leading-[1.5]">{t(item.desc)}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/60 p-5 text-center">
-                    <span className="block text-[#1A1A2E]" style={{ fontSize: '2rem', fontWeight: 800, lineHeight: 1 }}>47%</span>
-                    <span className="text-[12px] text-[#1A1A2E]/50 mt-2 block">{t('Role-Ready')}<br />{t('(~42 profiles)')}</span>
+
+              {/* Impact cards */}
+              <div className="grid md:grid-cols-2 gap-5">
+                {impactCards.map(card => (
+                  <div key={card.title} className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/60 p-6">
+                    <h4 className="text-[15px] font-bold text-[#1A1A2E]/70 mb-2">{t(card.title)}</h4>
+                    <p className="text-[14px] text-[#1A1A2E]/50 leading-[1.6]">{t(card.text)}</p>
                   </div>
-                  <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/60 p-5 text-center">
-                    <span className="block text-[#1A1A2E]" style={{ fontSize: '2rem', fontWeight: 800, lineHeight: 1 }}>53%</span>
-                    <span className="text-[12px] text-[#1A1A2E]/50 mt-2 block">{t('In Development')}<br />{t('(~48 profiles)')}</span>
-                  </div>
-                </div>
+                ))}
               </div>
             </Section>
 
-            {/* What's Next */}
+            {/* Future Vision */}
             <Section className="mb-20">
               <div className="rounded-2xl border border-[#4B4DF7]/[0.1] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-10 lg:p-14">
-                <div className="grid lg:grid-cols-[auto_1fr] gap-8 items-start">
-                  <div className="w-14 h-14 rounded-xl bg-[#4B4DF7]/[0.08] flex items-center justify-center shrink-0">
-                    <ArrowRight className="h-6 w-6 text-[#4B4DF7]/50" />
-                  </div>
-                  <div>
-                    <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold text-[#1A1A2E] mb-6 leading-[1.2]">{t('2026: From Internal Development to Integrated Talent Strategy')}</h2>
-                    <div className="space-y-4 mb-6">
-                      {[
-                        'Same framework from hiring to development. every person evaluated with one consistent logic from day one',
-                        'WhatsApp-based assessment: in GDO, this is strategic. removes every access barrier',
-                        'Extending evaluation to current Store Managers to identify Area Manager readiness',
-                        'Selection, development, and training integrated into one continuous talent strategy',
-                      ].map(item => (
-                        <div key={item} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#4B4DF7]/40 mt-2 shrink-0" />
-                          <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.6]">{t(item)}</p>
-                        </div>
-                      ))}
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.08)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.15)' }}>
+                  {lang === 'it' ? 'EVOLUZIONE 2026' : 'EVOLUTION 2026'}
+                </span>
+                <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold text-[#1A1A2E] mb-4 leading-[1.2]">
+                  {lang === 'it' ? 'Da sviluppo interno a talent strategy integrata' : 'From internal development to integrated talent strategy'}
+                </h2>
+                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.7] mb-8 max-w-2xl">
+                  {lang === 'it'
+                    ? "Quando l'assessment sullo sviluppo interno ha iniziato a produrre risultati concreti e scalabili, la scelta naturale è stata estenderlo anche alla selezione esterna, eliminando la discontinuità tra \"chi cerchiamo\" e \"come lo facciamo crescere\"."
+                    : "When the internal development assessment began delivering concrete, scalable results, the natural next step was extending it to external hiring — eliminating the gap between \"who we're looking for\" and \"how we develop them.\""
+                  }
+                </p>
+                <div className="space-y-4">
+                  {visionBullets.map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#4B4DF7]/40 mt-2 shrink-0" />
+                      <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.6]">{t(item)}</p>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </Section>
@@ -308,8 +374,10 @@ export default function InsMercatoStoryPage() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
             <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 mb-12">{t('Related Stories')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
-              {[{ id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO \u00b7 Hiring', headline: '35% fewer days to hire. 30% better hires.' },
-                { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail \u00b7 Hiring', headline: 'Winning Gen Z Talent Without Drowning in Interviews.' }].map(s => (
+              {[
+                { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: '35% fewer days to hire. 30% better hires.' },
+                { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: 'Winning Gen Z Talent Without Drowning in Interviews.' },
+              ].map(s => (
                 <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0,0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
                   <span className="text-[14px] text-white/40 mb-4 block">{t(s.tag)}</span>
                   <h4 className="text-[24px] font-bold text-white/90 mb-4">{s.company}</h4>
@@ -324,7 +392,7 @@ export default function InsMercatoStoryPage() {
         </section>
 
         <SolutionFinalCTA headline={t("Ready to see what Skillvue can do for your")} accentWord={t("organization?")} />
-      <Footer />
+        <Footer />
       </main>
     </>
   );

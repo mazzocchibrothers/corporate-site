@@ -28,7 +28,7 @@ const allStories = [
     id: 'adr', company: 'Aeroporti di Roma', industry: 'Transportation & Logistics', useCases: ['Hiring', 'Internal Mobility'],
     headlineIt: 'Come Aeroporti di Roma ha democratizzato l\u2019accesso allo sviluppo per 5.000 persone',
     headlineEn: 'How Aeroporti di Roma democratized access to development for 5,000 people',
-    bgImage: '/logos/adr-background-explore-stories.jpg',
+    bgImage: '/logos/ADR-background-explore-stories.jpg',
   },
   {
     id: 'unicomm', company: 'Unicomm', industry: 'GDO', useCases: ['Hiring', 'Learning & Development', 'Internal Mobility'],
