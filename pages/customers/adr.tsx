@@ -23,7 +23,7 @@ function Section({ children, className = '' }) {
 const content = {
   it: {
     breadcrumb: 'Clienti',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'Come Aeroporti di Roma ha ',
       highlight1: 'democratizzato',
@@ -77,6 +77,11 @@ const content = {
           title: 'Vincolo regolatorio e scrutinio pubblico',
           text: 'Come concessionario pubblico, ogni processo di valutazione deve reggere allo scrutinio del regolatore. Servivano fondamenta accademiche e psicometriche solide dietro ogni strumento utilizzato, non solo efficienza operativa.',
         },
+        {
+          icon: TrendingUp,
+          title: 'Bisogno diffuso di chiarezza e trasparenza nei percorsi di crescita',
+          text: "Le survey interne avevano evidenziato una domanda chiara da parte dei dipendenti: maggiore trasparenza nei criteri di selezione per i ruoli di responsabilità e feedback strutturati sul proprio percorso professionale. ADR aveva l'esigenza di rispondere a questa aspettativa con strumenti oggettivi, per rafforzare la fiducia nel processo di sviluppo interno e trattenere i talenti ad alto potenziale.",
+        },
       ],
       hrChallenges: [
         {
@@ -90,9 +95,9 @@ const content = {
           text: "Ogni processo di crescita richiedeva 5-10 persone HR, test in presenza e colloqui individuali distribuiti su 3-4 mesi. Un modello impossibile da scalare sull'intera popolazione, che di fatto limitava lo sviluppo ai soli ruoli corporate.",
         },
         {
-          icon: Heart,
-          title: 'Scetticismo e resistenza al cambiamento',
-          text: 'Il personale operativo non aveva alcuna esperienza pregressa con strumenti di assessment digitale. Serviva un piano di change management strutturato, con accompagnamento sul campo e comunicazione trasparente, per superare la paura del giudizio e trasformarla in desiderio di autovalutazione.',
+          icon: Layers,
+          title: 'Due processi interni ad alto volume senza strumenti adeguati',
+          text: "ADR gestiva ogni anno circa 20 job posting interni con oltre 25 candidature per posizione, e circa 30 percorsi di crescita verticale che generavano centinaia di candidature ciascuno. Senza strumenti di valutazione standardizzati, il carico di screening, colloqui e feedback ricadeva interamente sul team HR, con tempi incompatibili con le esigenze di business.",
         },
       ],
     },
@@ -104,12 +109,24 @@ const content = {
         { icon: Target, text: 'Oggettivare la valutazione: passare dal giudizio soggettivo del singolo responsabile a un assessment strutturato e data-driven sulle competenze, incluse le soft skill per i ruoli operativi' },
         { icon: Zap, text: 'Scalare senza sacrificare la qualità: processare 150+ candidature interne in giorni anziché mesi, preservando il rigore psicometrico richiesto dal regolatore' },
         { icon: Layers, text: 'Costruire un modello human-in-the-loop: lo strumento deve supportare le decisioni manageriali con dati, non sostituirle — intelligenza aumentata, non automazione del giudizio' },
+        { icon: Shield, text: 'Rispondere alla domanda di trasparenza: fornire a ogni dipendente criteri chiari e feedback strutturati sui percorsi di crescita, rafforzando la fiducia nel processo di sviluppo interno' },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue',
-      intro: "Skillvue è stato integrato nella People Strategy esistente di ADR, che già includeva un modello di leadership e percorsi di crescita strutturati (Green Field Program, Talent Building Program, Management Career Path). Il team People Science di Skillvue ha lavorato con l'HR di ADR per allineare la piattaforma al modello di competenze aziendale.",
+      intro: "Skillvue è stato integrato nella People Strategy esistente di ADR, che già includeva un modello di leadership e percorsi di crescita strutturati (Green Field Program, Talent Building Program, Management Career Path). Il team People Science di Skillvue ha lavorato con l'HR di ADR per allineare la piattaforma al modello di competenze aziendale. Il progetto si è articolato su due stream paralleli, ciascuno con logiche e volumi propri.",
+      streamsLabel: 'DUE STREAM DI PROGETTO',
+      streams: [
+        {
+          title: 'Job Posting interno',
+          text: "Per le circa 20 selezioni interne annuali, con oltre 25 candidature per posizione, Skillvue ha introdotto un primo filtro oggettivo basato su competenze tecniche e soft skill rilevanti per il ruolo. L'assessment standardizzato consente di identificare rapidamente i candidati idonei, eliminando soggettività nella preselezione e garantendo criteri uniformi, equi e orientati alla meritocrazia.",
+        },
+        {
+          title: 'Career Growth — Crescita verticale',
+          text: "Per le circa 30 opportunità annuali di sviluppo verso ruoli di maggiore responsabilità — ciascuna delle quali genera centinaia di candidature — Skillvue valuta l'intero set di competenze chiave richiesto, dalle soft skill alle competenze tecniche. Il sistema restituisce report dettagliati sia ai manager che ai candidati, rendendo il processo trasparente e fondato su dati, non su opinioni.",
+        },
+      ],
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Wrench, label: 'Competenze tecniche (role-specific, adattate al modello di competenze di ADR)' },
@@ -146,7 +163,7 @@ const content = {
         { icon: Eye, title: 'Talento nascosto scoperto', text: 'ADR ha individuato profili ad alto potenziale in ruoli operativi dove prima non esisteva alcuna visibilità. Persone di valore che sarebbero rimaste invisibili con il vecchio approccio basato sul solo giudizio del responsabile.' },
         { icon: Scale, title: 'Valutazione oggettivata e difendibile', text: 'Le decisioni sono ora supportate da dati strutturati sulle competenze, non più da sole opinioni soggettive. Un aspetto cruciale per un concessionario pubblico che deve poter giustificare ogni processo davanti al regolatore.' },
         { icon: Layers, title: 'Primo vero modello human-in-the-loop', text: "L'assessment non produce un verdetto ma informazioni che alimentano un processo decisionale manageriale consapevole. Lo sforzo cognitivo per i manager aumenta, perché ora hanno dati su cui decidere - nessun assessore esterno a cui delegare la responsabilità." },
-        { icon: TrendingUp, title: 'Miglioramento engagement', text: "La dimensione 'accesso alle opportunità di sviluppo' nelle survey di engagement interne è migliorata nel tempo dopo l'implementazione di Skillvue, segnalando un impatto percepito e concreto sulla employee experience." },
+        { icon: TrendingUp, title: 'Risposta concreta alla domanda di trasparenza', text: "I dipendenti hanno ora visibilità su criteri di selezione chiari e ricevono feedback strutturati. La dimensione 'accesso alle opportunità di sviluppo' nelle survey di engagement interne è migliorata nel tempo dopo l'implementazione di Skillvue, segnalando un impatto percepito e concreto sulla employee experience." },
       ],
     },
     vision: {
@@ -156,7 +173,9 @@ const content = {
       objective: 'Costruire un unico ciclo coerente in cui ogni persona, dal primo giorno, viene valutata, orientata e accompagnata con la stessa logica, coprendo l\'intera popolazione di 5.000 dipendenti.',
       bullets: [
         'Estensione di Skillvue a tutte le selezioni interne nel 2026, sfruttando la scalabilità della piattaforma',
-        "Integrazione più ampia dello strumento nella selezione esterna: i candidati completano l'assessment da qualsiasi device tramite link, abbattendo le barriere di accesso",
+        'Integrazione più ampia nel Talent Acquisition per creare continuità tra selezione e sviluppo',
+        "Assessment asincrono per la selezione esterna: i candidati completano da qualsiasi device tramite link, abbattendo le barriere di accesso",
+        'Pilota sul recruitment esterno per profili operativi, con mappatura di soft skill, inglese e idoneità al ruolo',
       ],
     },
     related: {
@@ -172,7 +191,7 @@ const content = {
 
   en: {
     breadcrumb: 'Customers',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'How Aeroporti di Roma ',
       highlight1: 'democratized',
@@ -226,6 +245,11 @@ const content = {
           title: 'Regulatory constraints and public scrutiny',
           text: 'As a public concession holder, every assessment process must withstand scrutiny from the regulator. Solid academic and psychometric foundations were required behind every tool used, not just operational efficiency.',
         },
+        {
+          icon: TrendingUp,
+          title: 'Widespread demand for clarity and transparency in career paths',
+          text: "Internal surveys had surfaced a clear employee ask: greater transparency in the selection criteria for leadership roles and structured feedback on their own professional trajectory. ADR needed to respond to this expectation with objective tools, to strengthen trust in the internal development process and retain high-potential talent.",
+        },
       ],
       hrChallenges: [
         {
@@ -239,9 +263,9 @@ const content = {
           text: 'Each growth process required 5–10 HR people, in-person tests and individual interviews spread over 3–4 months. A model impossible to scale across the entire workforce, which in practice limited development to corporate roles only.',
         },
         {
-          icon: Heart,
-          title: 'Skepticism and resistance to change',
-          text: 'Operational staff had zero prior experience with digital assessment tools. A structured change management plan was needed, with on-site accompaniment and transparent communication, to overcome the fear of judgment and transform it into a desire for self-assessment.',
+          icon: Layers,
+          title: 'Two high-volume internal processes with no adequate tools',
+          text: "ADR managed roughly 20 internal job postings per year with over 25 applications per position, and around 30 vertical growth paths each generating hundreds of applications. Without standardized assessment tools, the entire burden of screening, interviews and feedback fell on the HR team, at a pace incompatible with business needs.",
         },
       ],
     },
@@ -253,12 +277,24 @@ const content = {
         { icon: Target, text: 'Objectify evaluation: move from subjective individual manager judgment to a structured, data-driven competency assessment, including soft skills for operational roles' },
         { icon: Zap, text: 'Scale without sacrificing quality: process 150+ internal applications in days instead of months, while preserving the psychometric rigour required by the regulator' },
         { icon: Layers, text: 'Build a human-in-the-loop model: the tool must support managerial decisions with data, not replace them — augmented intelligence, not automation of judgment' },
+        { icon: Shield, text: 'Respond to the demand for transparency: give every employee clear criteria and structured feedback on career growth paths, strengthening trust in the internal development process' },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was integrated into ADR's existing People Strategy, which already included a leadership model and structured career growth paths (Green Field Program, Talent Building Program, Management Career Path). Skillvue's People Science team worked with ADR's HR to align the platform with the company's competency model.",
+      intro: "Skillvue was integrated into ADR's existing People Strategy, which already included a leadership model and structured career growth paths (Green Field Program, Talent Building Program, Management Career Path). Skillvue's People Science team worked with ADR's HR to align the platform with the company's competency model. The project ran across two parallel streams, each with its own logic and volume.",
+      streamsLabel: 'TWO PROJECT STREAMS',
+      streams: [
+        {
+          title: 'Internal Job Posting',
+          text: "For the roughly 20 annual internal selections, each drawing over 25 applications, Skillvue introduced an objective first filter based on technical competencies and role-relevant soft skills. The standardised assessment rapidly identifies suitable candidates, removing subjectivity from pre-selection and ensuring uniform, fair, merit-based criteria.",
+        },
+        {
+          title: 'Career Growth — Vertical Progression',
+          text: "For the roughly 30 annual opportunities to move into higher-responsibility roles — each generating hundreds of applications — Skillvue evaluates the full set of required competencies, from soft skills to technical knowledge. The system returns detailed reports to both managers and candidates, making the process transparent and data-driven rather than opinion-based.",
+        },
+      ],
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Wrench, label: 'Technical competencies (role-specific, adapted to ADR\'s competency model)' },
@@ -295,7 +331,7 @@ const content = {
         { icon: Eye, title: 'Hidden talent discovered', text: "ADR identified high-potential profiles in operational roles where no visibility previously existed. Valuable people who would have remained invisible under the old approach based solely on manager judgment." },
         { icon: Scale, title: 'Objectified and defensible evaluation', text: 'Decisions are now supported by structured competency data, no longer by subjective opinions alone. A crucial aspect for a public concession holder that must be able to justify every process before the regulator.' },
         { icon: Layers, title: 'First true human-in-the-loop model', text: 'The assessment does not produce a verdict but information that feeds a conscious managerial decision-making process. The cognitive effort for managers increases, because they now have data to decide on — no external assessor to delegate responsibility to.' },
-        { icon: TrendingUp, title: 'Engagement improvement', text: "The 'access to development opportunities' dimension in internal engagement surveys has improved over time following Skillvue's implementation, signaling a perceived and concrete impact on the employee experience." },
+        { icon: TrendingUp, title: 'A concrete answer to the demand for transparency', text: "Employees now have visibility into clear selection criteria and receive structured feedback. The 'access to development opportunities' dimension in internal engagement surveys has improved over time following Skillvue's implementation, signaling a perceived and concrete impact on the employee experience." },
       ],
     },
     vision: {
@@ -305,7 +341,9 @@ const content = {
       objective: 'Build a single coherent cycle in which every person, from day one, is assessed, guided, and supported with the same logic, covering the entire population of 5,000 employees.',
       bullets: [
         "Extension of Skillvue to all internal selections in 2026, leveraging the platform's scalability",
-        'Broader integration of the tool into external recruitment: candidates complete the assessment from any device via link, removing all access barriers',
+        'Broader integration into Talent Acquisition to create continuity between selection and development',
+        'Asynchronous assessment for external recruitment: candidates complete from any device via link, removing all access barriers',
+        'Pilot for external recruitment of operational profiles, mapping soft skills, English proficiency and role suitability',
       ],
     },
     related: {
@@ -484,6 +522,21 @@ export default function ADRStoryPage() {
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.solution.title}</h2>
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.solution.intro}</p>
+
+              {c.solution.streams && (
+                <div className="mb-12">
+                  <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.streamsLabel}</span>
+                  <div className="grid md:grid-cols-2 gap-5">
+                    {c.solution.streams.map((s, i) => (
+                      <div key={s.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
+                        <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
+                        <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4] relative">{s.title}</h4>
+                        <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65] relative">{s.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="mb-12">
                 <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>

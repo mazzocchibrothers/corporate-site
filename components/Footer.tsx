@@ -42,7 +42,7 @@ const socials = [
 ];
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const router = useRouter();
 
   const handleClick = (href: string) => (e: React.MouseEvent) => {
@@ -84,6 +84,12 @@ export default function Footer() {
                 );
               })}
             </div>
+
+            <p className="text-[11px] text-white/25 leading-[1.5] text-center lg:text-left max-w-[180px]">
+              {lang === 'it'
+                ? "Partner della ricerca 2025/2026 dell'Osservatorio HR del Politecnico di Milano"
+                : 'Partner of the 2025/2026 research of Osservatorio HR Politecnico di Milano'}
+            </p>
           </div>
 
           {/* Right: 3 link columns — aligned right matching reference */}
@@ -114,10 +120,29 @@ export default function Footer() {
           <span className="text-[13px] text-white/20">
             &copy; {new Date().getFullYear()} Skillvue. {t('All rights reserved.')}
           </span>
-          <div className="flex items-center gap-6">
-            <span className="text-[13px] text-white/20"><a href="/privacy-policy" onClick={handleClick('/privacy-policy')} className="hover:text-white/40 transition-colors duration-300">{t('Privacy Policy')}</a></span>
-            <span className="text-[13px] text-white/20">{t('Cookie Policy')}</span>
-            <span className="text-[13px] text-white/20">{t('Terms of Service')}</span>
+          <div className="flex flex-wrap items-center gap-6">
+            {[
+              {
+                label: 'Privacy Policy',
+                href: lang === 'it' ? 'https://www.iubenda.com/privacy-policy/75783964' : 'https://www.iubenda.com/privacy-policy/45750674/full-legal',
+              },
+              {
+                label: 'Cookie Policy',
+                href: lang === 'it' ? 'https://www.iubenda.com/privacy-policy/75783964/cookie-policy' : 'https://www.iubenda.com/privacy-policy/45750674/cookie-policy',
+              },
+              {
+                label: lang === 'it' ? 'Politica dei Sistemi di Gestione' : 'Management System Policy',
+                href: 'https://cdn.prod.website-files.com/63eb9c5c0665608db409b4df/68711dddeb1206d0f80e3194_PoliticaDeiSistemiDiGestione.pdf',
+              },
+              {
+                label: lang === 'it' ? 'Politica di Sicurezza delle Informazioni' : 'Information Security Policy',
+                href: 'https://cdn.prod.website-files.com/63eb9c5c0665608db409b4df/68711e6395c0cd387565988b_PoliticaDiSicurezzaDelleInformazioni.pdf',
+              },
+            ].map(({ label, href }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/20 hover:text-white/40 transition-colors duration-300">
+                {label}
+              </a>
+            ))}
           </div>
         </div>
       </div>

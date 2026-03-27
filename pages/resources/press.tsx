@@ -52,6 +52,49 @@ const pressArticles = [
   },
 ];
 
+const pressArticlesIt = [
+  {
+    publication: 'La Repubblica',
+    title: "L'IA per valutare le competenze in azienda: per Skillvue 5,5 milioni di investimenti",
+    url: 'https://www.repubblica.it/economia/finanza/2025/05/05/news/l_ia_per_valutare_le_competenze_in_azienda_per_skillvue_55_milioni_di_investimenti-424166391/',
+  },
+  {
+    publication: 'Il Quotidiano d\'Italia',
+    title: 'Skillvue chiude un round seed da 5,5 milioni',
+    url: 'https://ilquotidianoditalia.it/skillvue-chiude-un-round-seed-da-55-milioni/',
+  },
+  {
+    publication: 'Forbes Italia',
+    title: 'La startup HR Skillvue raccoglie 5,5 milioni di euro per cambiare la valutazione delle competenze con l\'intelligenza artificiale',
+    url: 'https://forbes.it/2025/05/05/la-startup-hr-skillvue-raccoglie-55-milioni-di-euro-per-cambiare-la-valutazione-delle-competenze-con-lintelligenza-artificiale/',
+  },
+  {
+    publication: 'Borsa Italiana / Radiocor',
+    title: 'Skillvue chiude round seed da 5,5 mln guidato da italofrancese 360 Capital',
+    url: 'https://www.borsaitaliana.it/borsa/notizie/radiocor/finanza/dettaglio/skillvue-chiude-round-seed-da-55-mln-guidato-da-italofrancese-360-capital-nRC_05052025_1113_211100406.html',
+  },
+  {
+    publication: 'La Stampa',
+    title: 'Skillvue: round seed da 5,5 milioni di euro guidato da 360 Capital',
+    url: 'https://finanza.lastampa.it/News/2025/05/05/skillvue-round-seed-da-5-5-milioni-di-euro-guidato-da-360-capital/OTlfMjAyNS0wNS0wNV9UTEI',
+  },
+  {
+    publication: 'La Repubblica (Finanza)',
+    title: 'Skillvue: round seed da 5,5 milioni di euro guidato da 360 Capital',
+    url: 'https://finanza.repubblica.it/News/2025/05/05/skillvue_round_seed_da_5_5_milioni_di_euro_guidato_da_360_capital-99/',
+  },
+  {
+    publication: 'Il Sole 24 Ore',
+    title: 'Round seed da 5,5 milioni di euro: Skillvue, la startup HR tech che sta cambiando la valutazione delle competenze attraverso l\'intelligenza artificiale',
+    url: 'https://ntplusdiritto.ilsole24ore.com/art/round-seed-55-milioni-euro-skillvue-startup-hr-tech-che-sta-cambiando-valutazione-competenze-attraverso-l-intelligenza-artificiale-AH8qYEd',
+  },
+  {
+    publication: 'La Repubblica',
+    title: 'A maggio investiti 426 milioni in startup in Italia: i round e le notizie principali',
+    url: 'https://www.ilgiorno.it/milano/cronaca/i-nuovi-cacciatori-di-teste-f6af576a',
+  },
+];
+
 const interviews = [
   {
     publication: 'Forbes',
@@ -73,12 +116,16 @@ const pressReleases = [
   {
     date: 'May 5, 2025',
     title: 'Skillvue raises €5.5M seed round to transform skills assessment with AI',
+    titleIt: "Round Seed di 5 milioni per Skillvue, la startup che sta cambiando la valutazione delle competenze con l'AI",
     url: 'https://drive.google.com/file/d/1gLVJF8SDxvNA4kG3gWfzmuS-IW_RVneu/view',
+    urlIt: 'https://drive.google.com/file/d/1vX3y93J-tVmDDyUTVtzmIITEkBfDA0TR/view?usp=sharing',
   },
   {
     date: 'September 3, 2024',
     title: 'Algo AI raises €2.5M and becomes Skillvue',
+    titleIt: "Round Seed di 5 milioni per Skillvue, la startup che sta cambiando la valutazione delle competenze con l'AI",
     url: 'https://drive.google.com/file/d/1uDckbrpFysgHJtz1DS5XrvQjjwGeHCnQ/view',
+    urlIt: 'https://drive.google.com/file/d/1BAfx-JMQ5KjI9EVY3HfY6yK8P4sn4o66/view?usp=sharing',
   },
 ];
 
@@ -93,7 +140,7 @@ const investors = [
 
 export default function PressPage() {
   const router = useRouter();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <>
@@ -210,6 +257,58 @@ export default function PressPage() {
           </div>
         </section>
 
+        {/* 2b. Italian Press Coverage — only shown in IT */}
+        {lang === 'it' && (
+          <section className="section-breathe py-16 lg:py-20 border-t border-[#1A1A2E]/[0.04]">
+            <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="mb-12"
+              >
+                <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
+                  Stampa italiana
+                </span>
+                <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#1A1A2E] tracking-[-0.02em]">
+                  Skillvue sui media italiani
+                </h2>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {pressArticlesIt.map((article, i) => (
+                  <motion.a
+                    key={`${article.publication}-${i}`}
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col justify-between rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.07 }}
+                  >
+                    <div>
+                      <div className="mb-4">
+                        <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.12em] uppercase">
+                          {article.publication}
+                        </span>
+                      </div>
+                      <p className="text-[15px] font-medium text-[#1A1A2E]/80 leading-[1.65] group-hover:text-[#1A1A2E] transition-colors duration-300">
+                        {article.title}
+                      </p>
+                    </div>
+                    <div className="mt-6 flex items-center justify-end">
+                      <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]/30 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* 3. Interviews */}
         <section className="section-breathe py-16 lg:py-20 border-t border-[#1A1A2E]/[0.04]">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
@@ -288,7 +387,7 @@ export default function PressPage() {
               {pressReleases.map((release, i) => (
                 <motion.a
                   key={release.title}
-                  href={release.url}
+                  href={lang === 'it' && release.urlIt ? release.urlIt : release.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center justify-between gap-6 rounded-2xl border border-white/[0.06] hover:border-white/[0.14] hover:bg-white/[0.03] px-8 py-6 transition-all duration-300"
@@ -300,7 +399,7 @@ export default function PressPage() {
                   <div className="flex items-start gap-8 min-w-0">
                     <span className="text-[13px] text-white/25 shrink-0 mt-0.5 font-mono">{release.date}</span>
                     <span className="text-[15px] font-medium text-white/70 group-hover:text-white/90 leading-[1.55] transition-colors duration-300">
-                      {release.title}
+                      {lang === 'it' && release.titleIt ? release.titleIt : release.title}
                     </span>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
