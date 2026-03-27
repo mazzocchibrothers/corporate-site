@@ -138,10 +138,20 @@ export default function Footer() {
                 label: lang === 'it' ? 'Politica di Sicurezza delle Informazioni' : 'Information Security Policy',
                 href: 'https://cdn.prod.website-files.com/63eb9c5c0665608db409b4df/68711e6395c0cd387565988b_PoliticaDiSicurezzaDelleInformazioni.pdf',
               },
+              {
+                label: 'Trattamento dati personali',
+                href: '/privacy-policy-algo',
+              },
             ].map(({ label, href }) => (
-              <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/20 hover:text-white/40 transition-colors duration-300">
-                {label}
-              </a>
+              href.startsWith('http') ? (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/20 hover:text-white/40 transition-colors duration-300">
+                  {label}
+                </a>
+              ) : (
+                <a key={label} href={href} onClick={handleClick(href)} className="text-[13px] text-white/20 hover:text-white/40 transition-colors duration-300">
+                  {label}
+                </a>
+              )
             ))}
           </div>
         </div>
