@@ -51,7 +51,7 @@ function Section({ children, className = '' }) {
 const content = {
   it: {
     breadcrumb: 'Clienti',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'Come Carrefour Italia ha trasformato la selezione di ',
       highlight1: '30.000 candidature',
@@ -205,7 +205,7 @@ const content = {
 
   en: {
     breadcrumb: 'Customers',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'How Carrefour Italia transformed the screening of ',
       highlight1: '30,000 applications',
