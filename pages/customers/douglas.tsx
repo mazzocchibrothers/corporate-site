@@ -52,47 +52,48 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Il Gruppo Douglas, con oltre <strong className="text-[#1A1A2E]/80 font-semibold">1.800 profumerie in 19 paesi europei</strong>, è uno dei player più importanti nel mercato europeo del beauty e della cosmetica. Presente in Italia dal <strong className="text-[#1A1A2E]/80 font-semibold">2017</strong> con l'acquisizione del Gruppo LLG Limoni La Gardenia, Douglas è stata la prima realtà del settore a istituire una catena di profumerie sul territorio nazionale, con oltre <strong className="text-[#1A1A2E]/80 font-semibold">370 punti vendita</strong> inseriti dal 2021 nella Southern Europe Region del Gruppo. L'azienda opera con una rete vendita di circa <strong className="text-[#1A1A2E]/80 font-semibold">2.500 persone</strong> distribuite su quasi <strong className="text-[#1A1A2E]/80 font-semibold">400 store</strong>, con la frequente percezione di distanza dalla sede centrale. L'HQ non disponeva di <strong className="text-[#1A1A2E]/80 font-semibold">alcun dato oggettivo sulle competenze</strong> della forza lavoro nei punti vendita: l'unica fonte erano i feedback soggettivi dei responsabili di negozio o di area. In un contesto caratterizzato da <strong className="text-[#1A1A2E]/80 font-semibold">alti tassi di turnover</strong>, soprattutto nelle fasce più giovani, e da una crescente talent scarcity nel settore beauty/retail, il team HR ha riconosciuto nella tecnologia di Skillvue il giusto alleato per adottare un approccio smart e data-driven alla gestione del talento.      </>,
+        Il Gruppo Douglas, con oltre <strong className="text-[#1A1A2E]/80 font-semibold">1.800 profumerie in 19 paesi europei</strong>, opera in Italia con oltre <strong className="text-[#1A1A2E]/80 font-semibold">370 punti vendita</strong> e circa <strong className="text-[#1A1A2E]/80 font-semibold">2.500 persone</strong>. L'HQ non disponeva di <strong className="text-[#1A1A2E]/80 font-semibold">alcun dato oggettivo sulle competenze</strong> della forza lavoro: l'unica fonte erano i feedback soggettivi dei responsabili di negozio o di area. In un settore con <strong className="text-[#1A1A2E]/80 font-semibold">alti tassi di turnover</strong> e crescente talent scarcity, il team HR ha scelto Skillvue per adottare un approccio data-driven alla gestione del talento.
+      </>,
       summary: "Il progetto ha trasformato la gestione del talento da un modello basato su feedback soggettivi e osservazione in presenza a un sistema scalabile e data-driven, creando per la prima volta una fotografia completa e oggettiva delle competenze dell'intera rete vendita — soft skill e hard skill — e abilitando percorsi di crescita, mobilità interna e formazione customizzata basati su dati reali.",
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Il problema strutturale',
-      intro: "Con 2.500 dipendenti distribuiti su quasi 400 punti vendita e un team HR di sole 3 persone operative, Douglas si trovava davanti a un problema strutturale: l'HQ non sapeva nulla sulle competenze della propria forza lavoro. In un settore con turnover elevato e percorsi di carriera in rapida evoluzione, l'assenza di dati significava perdere talento, non investire sulla formazione giusta e non riuscire a pianificare la mobilità interna. Il modello precedente, basato sull'osservazione in presenza e sui feedback dei manager, non era sostenibile né scalabile.",
+      intro: "Su 2.500 dipendenti in quasi 400 punti vendita, l\u2019HQ non disponeva di alcun dato strutturato sulle competenze. In un settore con turnover elevato, l\u2019assenza di dati significava perdere talento, formare male e non pianificare la mobilit\u00e0 interna.",
       businessLabel: 'IMPATTO SUL BUSINESS',
       hrLabel: 'IMPATTO SU HR & PEOPLE',
       businessChallenges: [
         {
           icon: Eye,
           title: 'Zero visibilità sulle competenze della rete vendita',
-          text: "Su 2.500 dipendenti distribuiti in quasi 400 punti vendita, l'HQ non disponeva di alcun dato strutturato sulle competenze e il potenziale della forza lavoro. Le uniche informazioni provenivano dai feedback soggettivi dei responsabili di negozio o di area, con risultati disomogenei tra le sedi e nessuna possibilità di confronto oggettivo. Senza dati, ogni decisione su crescita, formazione e mobilità interna era basata su impressioni, non su evidenze.",
+          text: "Su quasi 400 punti vendita l\u2019HQ non aveva dati strutturati sulle competenze. Le uniche informazioni erano i feedback soggettivi dei responsabili, disomogenei tra le sedi e senza possibilit\u00e0 di confronto oggettivo.",
         },
         {
           icon: Users,
           title: 'Forte distanza tra HQ e rete vendita',
-          text: "La rete vendita percepiva una forte disconnessione dalla sede centrale. I dipendenti nei punti vendita non avevano opportunità strutturate per far emergere le proprie competenze e aspirazioni di crescita. Il talento restava invisibile e non valorizzato, con un impatto diretto sull'engagement e sulla retention in un settore già caratterizzato da alta rotazione.",
+          text: "La rete percepiva una forte disconnessione dalla sede centrale. I dipendenti non avevano opportunit\u00e0 per far emergere competenze e aspirazioni: il talento restava invisibile, con impatto diretto su engagement e retention.",
         },
         {
           icon: TrendingUp,
           title: 'Turnover elevato e talent scarcity crescente',
-          text: "Il settore beauty/retail soffre di tassi di turnover elevati, soprattutto tra le fasce più giovani, e di una crescente scarsità di talento. Ogni perdita di una persona di valore rappresentava un costo diretto e indiretto significativo. Senza la capacità di identificare e valorizzare proattivamente i talenti interni, il rischio di perdere le persone migliori era costante e crescente.",
+          text: "Il beauty/retail soffre di turnover elevato e crescente talent scarcity. Senza la capacit\u00e0 di identificare e valorizzare proattivamente i talenti interni, il rischio di perderli era costante e crescente.",
         },
       ],
       hrChallenges: [
         {
           icon: Zap,
           title: 'Analisi delle competenze non sostenibile',
-          text: "Il modello precedente prevedeva l'osservazione in presenza da parte di responsabili di negozio o di area, con tempi lunghi, costi elevati e risultati disomogenei tra le sedi. Con 2.500 persone sul territorio, raccogliere informazioni sulle competenze come in passato non era più pensabile. Serviva un approccio data-driven e altamente scalabile, sostenibile sia dal punto di vista economico che delle tempistiche.",
+          text: "L\u2019osservazione in presenza dei responsabili comportava tempi lunghi, costi elevati e risultati disomogenei. Su 2.500 persone distribuite sul territorio, il modello precedente non era pi\u00f9 pensabile.",
         },
         {
           icon: Layers,
           title: 'Sviluppo riservato al 5-10% della popolazione',
-          text: "Il concetto di talento era ancora legato al tradizionale 5-10% della popolazione aziendale proiettato verso una crescita verticale. Mancava la capacità di lavorare su scala, partendo da un'analisi dell'intera popolazione aziendale — per quanto ampia e frammentata sul territorio — per offrire opportunità di crescita a tutti i talenti in azienda, non solo ai pochi già identificati.",
+          text: "Il talento era ancora legato al 5-10% della popolazione aziendale. Mancava la capacit\u00e0 di lavorare su scala, offrendo opportunit\u00e0 di crescita a tutta la forza lavoro, non solo ai pochi gi\u00e0 identificati.",
         },
         {
           icon: BarChart3,
           title: 'Nessun feedback strutturato ai dipendenti',
-          text: "I dipendenti della rete vendita non ricevevano alcun feedback oggettivo sulle proprie competenze. L'assenza di una restituzione strutturata limitava la possibilità di lavorare preventivamente sui bisogni formativi e sulle aspirazioni di crescita, lasciando l'iniziativa di sviluppo interamente nelle mani del singolo responsabile.",
+          text: "Nessun feedback oggettivo sulle competenze per i dipendenti della rete. L\u2019assenza di una restituzione strutturata lasciava l\u2019iniziativa di sviluppo interamente nelle mani del singolo responsabile.",
         },
       ],
     },
@@ -109,7 +110,7 @@ const content = {
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue',
-      intro: "Skillvue è stato adottato direttamente con un contratto full, senza pilota preliminare — una scelta che testimonia la fiducia immediata nella soluzione. Il team People Science di Skillvue ha lavorato con l'HR di Douglas per allineare la piattaforma al modello di competenze aziendale e creare assessment calati sulle reali situazioni lavorative affrontate quotidianamente dai dipendenti nei punti vendita.",
+      intro: "Skillvue \u00e8 stato adottato con contratto full senza pilota preliminare, a testimonianza della fiducia immediata. Il team People Science ha allineato la piattaforma al modello Douglas e creato assessment calati sulle reali situazioni lavorative dei punti vendita.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Wrench, label: 'Hard Skill Make-up & Skincare (personalizzate)' },
@@ -121,15 +122,15 @@ const content = {
       methodology: [
         {
           title: 'Hard Skill Test verticali per il beauty',
-          text: "Per ottenere il massimo livello di predittività, sono stati creati Hard Skill Test personalizzati sulle competenze di vendita dell'area Make-up & Skincare, calati sulle reali situazioni lavorative quotidiane. Questi test verticali sono stati poi combinati con i Soft Skill Test della libreria Skillvue per costruire assessment completi e specifici per ciascun ruolo.",
+          text: "Hard Skill Test personalizzati su Make-up & Skincare, calati sulle situazioni lavorative reali. Combinati con i Soft Skill Test della libreria Skillvue per assessment completi e specifici per ciascun ruolo.",
         },
         {
           title: 'Assessment differenziati per ruolo',
-          text: "Ogni ruolo — Beauty Advisor, Sales Assistant, Store Manager — ha ricevuto un assessment specifico con il mix più indicato di hard e soft skill, rispettando le specificità del modello di competenze aziendale Douglas. Un unico standard di misurazione, declinato sulle diverse responsabilità e competenze richieste.",
+          text: "Beauty Advisor, Sales Assistant e Store Manager: assessment specifici con il mix pi\u00f9 indicato di hard e soft skill, calibrati sul modello di competenze Douglas. Un unico standard declinato per ruolo.",
         },
         {
           title: 'Deployment diretto, senza pilota',
-          text: "Nessun test preliminare su singole posizioni o ruoli: gli assessment sono stati erogati direttamente a tutti i 2.500 dipendenti sul territorio. Un approccio che ha permesso di ottenere una fotografia completa in tempi rapidi, con raccolta dell'output in sole 5 settimane. Il primo progetto di queste dimensioni nel portfolio Skillvue realizzato senza alcuna integrazione tecnica.",
+          text: "Assessment erogati direttamente a tutti i 2.500 dipendenti senza test preliminari. Fotografia completa raccolta in sole 5 settimane, senza alcuna integrazione tecnica — primo progetto di queste dimensioni nel portfolio Skillvue.",
         },
       ],
     },
@@ -144,22 +145,21 @@ const content = {
         { value: '3 ruoli', label: 'Profili analizzati', sublabel: 'Beauty Advisor, Sales Assistant, Store Manager' },
       ],
       qualitative: [
-        { icon: Eye, title: 'Prima fotografia oggettiva delle competenze', text: "Per la prima volta, l'HQ dispone di una visione chiara e oggettiva dello skill set di ogni persona della rete vendita, sia sulle competenze tecniche del beauty che sulle soft skill trasversali. Un quadro direttamente fruibile dal team HR per effettuare analisi più rapide e consapevoli sulle aree di intervento." },
-        { icon: Target, title: 'Talento nascosto e potenziale predittivo', text: "L'analisi ha portato un doppio risultato: da una parte fotografare lo skill set attuale di ogni persona, dall'altra individuare in maniera predittiva propensioni a ruoli diversi per il futuro. Questo ha agevolato la previsione di possibili spostamenti interni sia orizzontali che verticali, scoprendo talento dove prima non esisteva visibilità." },
-        { icon: CheckCircle, title: 'Formazione customizzata e skill gap colmati', text: "Con i dati raccolti è stato possibile attivare percorsi di formazione customizzati per colmare gli skill gap esistenti e definire più rapidamente le ricollocazioni interne dei talenti. Il tempo e le risorse recuperate dall'efficientamento del processo sono stati reinvestiti in attività di sviluppo a maggior valore aggiunto." },
-        { icon: Heart, title: 'Distanza HQ-rete vendita accorciata', text: "Ogni dipendente ha avuto per la prima volta l'opportunità di far emergere le proprie competenze e potenzialità direttamente verso l'HQ, senza la mediazione del solo feedback del responsabile. Un segnale concreto di attenzione e valorizzazione che ha contribuito a ridurre la percezione di distanza dalla sede centrale." },
-        { icon: Zap, title: 'Ottimizzazione di tempi e costi', text: "L'inserimento degli Skill Assessment Agent di Skillvue ha permesso di ottimizzare i tempi e i costi della selezione dall'esterno e di limitare l'impegno di tempo dei responsabili di negozio o di area nel fornire feedback sul personale. Decisioni più informate su percorsi di crescita, mobilità e formazione." },
+        { icon: Eye, title: 'Prima fotografia oggettiva delle competenze', text: "Per la prima volta l\u2019HQ dispone di una visione chiara di ogni persona della rete vendita, sia sulle competenze tecniche beauty che sulle soft skill. Un quadro direttamente fruibile per analisi pi\u00f9 rapide sulle aree di intervento." },
+        { icon: Target, title: 'Talento nascosto e potenziale predittivo', text: "L\u2019analisi ha fotografato lo skill set attuale e individuato propensioni predittive a ruoli diversi. Ha agevolato spostamenti interni orizzontali e verticali, scoprendo talento dove prima non esisteva visibilit\u00e0." },
+        { icon: CheckCircle, title: 'Formazione customizzata e skill gap colmati', text: "Con i dati raccolti sono stati attivati percorsi formativi customizzati per colmare i gap esistenti e definire pi\u00f9 rapidamente le ricollocazioni interne dei talenti." },
+        { icon: Heart, title: 'Distanza HQ-rete vendita accorciata', text: "Ogni dipendente ha potuto far emergere competenze e potenzialit\u00e0 direttamente verso l\u2019HQ, riducendo la percezione di distanza dalla sede centrale." },
+        { icon: Zap, title: 'Ottimizzazione di tempi e costi', text: "Skillvue ha ottimizzato i tempi di analisi delle competenze e ridotto l\u2019impegno dei responsabili nel fornire feedback, liberando risorse per attivit\u00e0 di sviluppo a maggior valore." },
       ],
     },
     vision: {
       badge: 'EVOLUZIONE',
       title: 'Da mappatura una tantum a people strategy skills-based continua',
       intro: "La mappatura ha dimostrato che un approccio scalabile e data-driven alla gestione del talento è possibile anche su una rete frammentata di 2.500 persone. Il passo naturale è consolidare questo modello come standard continuo per tutte le decisioni sulle persone.",
-      objective: "Trasformare la fotografia una tantum delle competenze in un sistema ricorrente e integrato, in cui ogni persona viene valutata, orientata e accompagnata con la stessa logica skills-based — dalla selezione alla mobilità interna allo sviluppo.",
+      objective: "Trasformare la fotografia una tantum in un sistema ricorrente: ogni persona valutata con la stessa logica skills-based dalla selezione alla mobilit\u00e0 interna allo sviluppo.",
       bullets: [
-        "Consolidamento della mappatura competenze come processo ricorrente, non più one-shot, per mantenere il database sempre aggiornato rispetto al turnover e all'evoluzione dei ruoli",
-        "Estensione del modello skills-based alla selezione dall'esterno, per allineare le competenze misurate in fase di hiring con quelle sviluppate internamente",
-        "Verso un'organizzazione in cui le decisioni su crescita, mobilità e formazione si basano su dati oggettivi sulle competenze, su tutta la rete e su tutti i livelli",
+        "Mappatura competenze come processo ricorrente per mantenere il database aggiornato rispetto al turnover",
+        "Estensione del modello skills-based alla selezione esterna, allineando hiring e sviluppo interno",
       ],
     },
     related: {
@@ -210,41 +210,41 @@ const content = {
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'The Structural Problem',
-      intro: "With 2,500 employees spread across nearly 400 stores and an HR team of just 3 operational people, Douglas faced a structural problem: the HQ knew nothing about the competencies of its workforce. In a sector with high turnover and fast-evolving career paths, the absence of data meant losing talent, misallocating training investment, and being unable to plan internal mobility. The previous model — based on in-person observation and manager feedback — was neither sustainable nor scalable.",
+      intro: "Across 2,500 employees in nearly 400 stores, the HQ had no structured data on competencies. In a high-turnover sector, the absence of data meant losing talent, training poorly and being unable to plan internal mobility.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Eye,
           title: 'Zero visibility on sales force competencies',
-          text: "Across 2,500 employees in nearly 400 stores, the HQ had no structured data on the competencies and potential of the workforce. The only information came from the subjective feedback of store or area managers, with inconsistent results across locations and no possibility of objective comparison. Without data, every decision on growth, training and internal mobility was based on impressions, not evidence.",
+          text: "Across nearly 400 stores the HQ had no structured data on competencies. The only information was the subjective feedback of store or area managers, inconsistent across locations and without objective comparison.",
         },
         {
           icon: Users,
           title: 'A strong gap between HQ and the retail network',
-          text: "The retail network felt a strong disconnect from the central office. Employees in stores had no structured opportunities to surface their competencies and growth aspirations. Talent remained invisible and undervalued, with a direct impact on engagement and retention in a sector already characterised by high rotation.",
+          text: "The network felt a strong disconnect from the central office. Employees had no opportunities to surface their competencies and aspirations: talent remained invisible, with direct impact on engagement and retention.",
         },
         {
           icon: TrendingUp,
           title: 'High turnover and growing talent scarcity',
-          text: "The beauty/retail sector suffers from high turnover rates, especially among younger cohorts, and growing talent scarcity. Every loss of a valuable person represented a significant direct and indirect cost. Without the ability to proactively identify and develop internal talent, the risk of losing the best people was constant and increasing.",
+          text: "The beauty/retail sector suffers from high turnover and growing talent scarcity. Without the ability to proactively identify and develop internal talent, the risk of losing the best people was constant and increasing.",
         },
       ],
       hrChallenges: [
         {
           icon: Zap,
           title: 'Unsustainable competency analysis model',
-          text: "The previous model involved in-person observation by store or area managers, with long lead times, high costs and inconsistent results across locations. With 2,500 people spread across the territory, gathering competency information the old way was no longer feasible. A data-driven and highly scalable approach was needed — sustainable both economically and in terms of speed.",
+          text: "In-person observation by managers meant long timelines, high costs and inconsistent results. With 2,500 people distributed across the territory, the previous model was no longer feasible.",
         },
         {
           icon: Layers,
           title: 'Development reserved for only 5–10% of the workforce',
-          text: "The concept of talent was still tied to the traditional 5–10% of the organisation projected towards vertical growth. There was no capability to work at scale — starting from an analysis of the entire workforce, however large and geographically fragmented — to offer growth opportunities to all talent in the company, not just the few already identified.",
+          text: "Talent was still tied to the 5–10% of the organisation projected towards vertical growth. There was no capability to work at scale and offer growth opportunities to all employees, not just the few already identified.",
         },
         {
           icon: BarChart3,
           title: 'No structured feedback to employees',
-          text: "Sales network employees received no objective feedback on their own competencies. The absence of structured feedback limited the ability to proactively address training needs and growth aspirations, leaving development entirely at the discretion of each individual line manager.",
+          text: "Sales network employees received no objective feedback on their competencies. The absence of structured feedback left development entirely at the discretion of each individual line manager.",
         },
       ],
     },
@@ -261,7 +261,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was adopted directly on a full contract, with no preliminary pilot — a choice that reflects immediate trust in the solution. Skillvue's People Science team worked with Douglas's HR team to align the platform to the company's competency model and build assessments grounded in the real daily work situations faced by employees in the stores.",
+      intro: "Skillvue was adopted on a full contract without a preliminary pilot, a sign of immediate trust. The People Science team aligned the platform to the Douglas model and created assessments grounded in the real working situations of store employees.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Wrench, label: 'Make-up & Skincare Hard Skills (custom)' },
@@ -273,15 +273,15 @@ const content = {
       methodology: [
         {
           title: 'Vertical Hard Skill Tests for beauty',
-          text: "To achieve the highest level of predictivity, custom Hard Skill Tests were created for Make-up & Skincare sales competencies, grounded in the real daily work situations. These vertical tests were then combined with Soft Skill Tests from the Skillvue library to build complete, role-specific assessments.",
+          text: "Custom Hard Skill Tests for Make-up & Skincare, grounded in real daily work situations. Combined with Soft Skill Tests from the Skillvue library for complete, role-specific assessments.",
         },
         {
           title: 'Role-differentiated assessments',
-          text: "Each role — Beauty Advisor, Sales Assistant, Store Manager — received a specific assessment with the most appropriate mix of hard and soft skills, respecting the specificities of Douglas's competency model. One measurement standard, adapted to the different responsibilities and competencies required.",
+          text: "Beauty Advisor, Sales Assistant and Store Manager: specific assessments with the most appropriate mix of hard and soft skills, calibrated to the Douglas competency model. One standard, adapted per role.",
         },
         {
           title: 'Direct deployment, no pilot',
-          text: "No preliminary testing on individual positions or roles: assessments were deployed directly to all 2,500 employees across the territory. An approach that delivered a complete skills picture in record time, with all output collected in just 5 weeks — the first project of this scale in Skillvue's portfolio completed without any technical integration.",
+          text: "Assessments deployed directly to all 2,500 employees without preliminary testing. Full skills picture collected in just 5 weeks, without any technical integration — first project of this scale in the Skillvue portfolio.",
         },
       ],
     },
@@ -296,22 +296,21 @@ const content = {
         { value: '3 roles', label: 'Profiles assessed', sublabel: 'Beauty Advisor, Sales Assistant, Store Manager' },
       ],
       qualitative: [
-        { icon: Eye, title: 'First objective picture of competencies', text: "For the first time, the HQ has a clear, objective view of every person's skill set across the retail network — both technical beauty competencies and cross-functional soft skills. A picture directly usable by the HR team for faster, more informed analyses of where to intervene." },
-        { icon: Target, title: 'Hidden talent and predictive potential', text: "The analysis delivered a dual result: capturing each person's current skill set, while also predictively identifying propensities for different roles in the future. This facilitated the anticipation of possible internal moves — both horizontal and vertical — revealing talent where no visibility previously existed." },
-        { icon: CheckCircle, title: 'Customised training and skill gaps closed', text: "With the collected data it was possible to activate customised training paths to close existing skill gaps and define internal talent redeployments more quickly. The time and resources freed by streamlining the process were reinvested in higher-value development activities." },
-        { icon: Heart, title: 'HQ-to-network distance closed', text: "Every employee had the opportunity, for the first time, to surface their competencies and potential directly to the HQ — without the sole mediation of their line manager's feedback. A concrete signal of recognition and development focus that contributed to reducing the perceived distance from the central office." },
-        { icon: Zap, title: 'Time and cost optimisation', text: "Deploying Skillvue's Skill Assessment Agents optimised the time and cost of external hiring and reduced the time burden on store and area managers for providing staff feedback. More informed decisions on career paths, mobility and training." },
+        { icon: Eye, title: 'First objective picture of competencies', text: "For the first time the HQ has a clear view of every person across the retail network — both technical beauty competencies and soft skills. A picture directly usable for faster analyses of where to intervene." },
+        { icon: Target, title: 'Hidden talent and predictive potential', text: "The analysis captured each person's current skill set and predictively identified propensities for different roles, facilitating horizontal and vertical internal moves and revealing talent where no visibility previously existed." },
+        { icon: CheckCircle, title: 'Customised training and skill gaps closed', text: "With the collected data, customised training paths were activated to close existing gaps and define internal talent redeployments more quickly." },
+        { icon: Heart, title: 'HQ-to-network distance closed', text: "Every employee could surface their competencies and potential directly to the HQ, reducing the perceived distance from the central office." },
+        { icon: Zap, title: 'Time and cost optimisation', text: "Skillvue optimised the time of competency analysis and reduced the burden on managers for providing feedback, freeing resources for higher-value development activities." },
       ],
     },
     vision: {
       badge: 'EVOLUTION',
       title: 'From a one-off mapping to a continuous skills-based people strategy',
       intro: "The mapping demonstrated that a scalable, data-driven approach to talent management is possible even across a fragmented network of 2,500 people. The natural next step is to consolidate this model as the ongoing standard for all people decisions.",
-      objective: "Transform the one-off competency snapshot into a recurring, integrated system in which every person is assessed, guided and supported with the same skills-based logic — from hiring through to internal mobility and development.",
+      objective: "Transform the one-off snapshot into a recurring system: every person assessed with the same skills-based logic from selection to internal mobility and development.",
       bullets: [
-        "Consolidation of competency mapping as a recurring process — not one-shot — to keep the database continuously updated as turnover and role evolution happen",
-        "Extension of the skills-based model to external hiring, aligning the competencies measured during the hiring process with those developed internally",
-        "Towards an organisation where decisions on growth, mobility and training are based on objective competency data, across the entire network and at every level",
+        "Competency mapping as a recurring process to keep the database updated as turnover and role evolution happen",
+        "Extension of the skills-based model to external hiring, aligning competencies measured at hiring with those developed internally",
       ],
     },
     related: {

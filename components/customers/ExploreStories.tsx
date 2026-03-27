@@ -95,7 +95,7 @@ export default function ExploreStories() {
             <span className="italic font-bold gradient-text">{t('story.')}</span>
           </h2>
           <p className="text-[20px] text-white/[0.65] leading-[1.75] max-w-2xl">
-            {t('Every challenge is different. Every context is specific. Filter by what matters to you.. Every context is specific. Filter by what matters to you.')}
+            {t('Every challenge is different. Every context is specific. Filter by what matters to you.')}
           </p>
         </motion.div>
 
@@ -104,13 +104,13 @@ export default function ExploreStories() {
           <div className="flex flex-wrap gap-2">
             <span className="text-[13px] font-bold text-white/35 tracking-[0.1em] uppercase mr-4 self-center">{t('Industry')}</span>
             {filters.industry.map(f => (
-              <button key={f} onClick={() => setActiveIndustry(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{industryLabel(f)}</button>
+              <button key={f} onClick={() => setActiveIndustry(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{t(industryLabel(f))}</button>
             ))}
           </div>
           <div className="flex flex-wrap gap-2">
             <span className="text-[13px] font-bold text-white/35 tracking-[0.1em] uppercase mr-4 self-center">{t('Use Case')}</span>
             {filters.useCase.map(f => (
-              <button key={f} onClick={() => setActiveUseCase(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeUseCase === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{f}</button>
+              <button key={f} onClick={() => setActiveUseCase(f)} className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${activeUseCase === f ? 'bg-[#4B4DF7] text-white' : 'text-white/50 border border-white/[0.1] hover:border-white/[0.2]'}`}>{t(f)}</button>
             ))}
           </div>
         </motion.div>

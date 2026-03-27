@@ -124,7 +124,7 @@ export const translations = {
 
   // ===== PRODUCT HERO =====
   'One platform.': 'Una piattaforma.',
-  'Every talent decision.': 'Tutte le tue decisione sulle persone.',
+  'Every talent decision.': 'Tutte le tue decisioni sulle persone.',
   'Objective data.': 'Con dati oggettivi.',
   'Skillvue is the AI-powered talent intelligence platform that turns static HR processes into predictive, objective insights. Assess skills, predict potential, and make every people decision defensible.': 'Skillvue è la piattaforma di talent intelligence basata su AI che trasforma i processi HR statici in insight predittivi e oggettivi. Valuta le competenze, ottieni una visione predittiva sul potenziale e rendi ogni decisione sulle persone più difendibile',
 
@@ -161,7 +161,7 @@ export const translations = {
   'Custom Models': 'Modelli Personalizzati',
 
   // ===== PRODUCT - INTEGRATIONS =====
-  'Giving life to your': 'Dando vita ai tuoi',
+  'Giving life to your': 'Diamo vita ai tuoi',
   'core HR systems': 'processi HR più strategici',
   'Skillvue layers objective talent data into your existing stack, turning them from process gatekeepers into decision engines.': 'Skillvue inserisce dati oggettivi sul talento e le competenze nel tuo stack esistente, trasformandoli da punto di blocco dei tuoi processi a benzina per le tue decisioni',
   '100+ native integrations. If it has an API, we connect.': "Oltre 100 integrazioni native. Se ha un'API, ci colleghiamo.",
@@ -239,7 +239,7 @@ export const translations = {
   'not availability.': 'non per disponibilità.',
 
   // ===== CUSTOMERS HUB =====
-  'The decisions that define your organization. Finally backed by': 'Le decisioni che definiscono la tua organizzazione. Finalmente supportate da',
+  'The decisions that define your organization. Finally backed by': 'Le decisioni che definiscono la tua organizzazione, finalmente supportate da',
   'data.': 'dati.',
   '50+': '50+',
   'European enterprises': 'aziende europee',
@@ -260,10 +260,10 @@ export const translations = {
   // ===== EXPLORE STORIES =====
   'Find your': 'Trova la tua',
   'story.': 'storia.',
-  'Every challenge is different. Every context is specific. Filter by what matters to you.': 'Ogni sfida è diversa. Ogni contesto è specifico. Filtra per ciò che conta per te.',
+  'Every challenge is different. Every context is specific. Filter by what matters to you.': 'Ogni sfida è diversa. Ogni contesto ha le sue particolarità. Scegli quello che ti serve davvero scoprire.',
   'Industry': 'Settore',
   'Use Case': 'Caso d\'uso',
-  'All': 'Tutti',
+  'All': 'tutti',
   'Retail': 'Retail',
   'Hiring & Screening': 'Selezione & Screening',
   'Internal Mobility & Succession': 'Mobilità Interna & Successione',
@@ -446,7 +446,7 @@ export const translations = {
   'Assessments designed to surface': 'Valutazioni progettate per far emergere',
   'Assessment designed to surface': 'Assessment costruiti per far emergere le vere',
   'verified capabilities': 'capacità',
-  'How is the assessment delivered': "Come viene erogato l'assessment",
+  'How is the assessment delivered': "Come viene costruito l'assessment",
   'Standardized question set for fair comparable evaluation': 'Set di domande standardizzate per una valutazione comparabile ed equa',
   'AI-driven dialogues that adapt in real time': "Conversazioni guidate dall'AI che si adattano al contesto in tempo reale",
   'Targeted items for scalable objective measurement': 'Focus su item specifici per ottenere una misurazione oggettiva',
@@ -464,7 +464,7 @@ export const translations = {
   'Free-text responses for handling writing-heavy skills or allowing in-room assessments': 'Risposte a testo libero per gestire competenze che richiedono molta scrittura o per assessment svolti in ufficio',
   'Structured choice for scalable objective scoring': 'Scelta strutturata per scoring scalabile e oggettivo',
   'Interaction Format': 'Formato di Interazione',
-  'How the assessment is delivered': 'Come viene erogata la valutazione',
+  'How the assessment is delivered': "Come viene erogato l'assessment",
   'Assessment Method': 'Metodo di Valutazione',
   'What is being measured': 'Cosa viene misurato',
   'Response Format': 'Formato di Risposta',
@@ -511,7 +511,7 @@ export const translations = {
   "From GDPR to the EU AI Act, we build for the most demanding regulatory environments so you don't have to worry about what's next.": "Dal GDPR all'EU AI Act, costruiamo per gli ambienti normativi più esigenti così non devi preoccuparti del futuro.",
 
   // ===== PRODUCT - INTEGRATIONS =====
-  'Giving life to your': 'Dando vita ai tuoi',
+  'Giving life to your': 'Diamo vita ai tuoi',
   'core HR systems': 'processi HR più strategici',
 
   // ===== PRODUCT - WHAT WE ASSESS DESCRIPTIONS =====

@@ -51,48 +51,48 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Mediaset, parte del gruppo <strong className="text-[#1A1A2E]/80 font-semibold">MFE (MediaForEurope)</strong>, è una delle principali media company italiane con sede a <strong className="text-[#1A1A2E]/80 font-semibold">Cologno Monzese (Milano)</strong>. L’azienda ha lanciato il <strong className="text-[#1A1A2E]/80 font-semibold">"Progetto GRAPE"</strong> (Graduate Program), un percorso di selezione per stagisti e profili junior da inserire in diverse funzioni aziendali. Il programma ha generato quasi <strong className="text-[#1A1A2E]/80 font-semibold">3.000 candidature da gestire in sole 5 settimane</strong>, con un team HR di <strong className="text-[#1A1A2E]/80 font-semibold">3 persone</strong> (1 manager + 2 operative) e l’obiettivo di passare <strong className="text-[#1A1A2E]/80 font-semibold">80 candidati pre-screenati a settimana</strong> alle fasi successive della selezione. Per profili junior e neolaureati, il CV non offre elementi differenzianti: le soft skill diventano l’unico vero filtro per identificare l’alto potenziale.
+        Mediaset, parte del gruppo <strong className="text-[#1A1A2E]/80 font-semibold">MFE (MediaForEurope)</strong>, ha lanciato il <strong className="text-[#1A1A2E]/80 font-semibold">"Progetto GRAPE"</strong> (Graduate Program) per selezionare stagisti e profili junior in diverse funzioni aziendali. Il programma ha generato quasi <strong className="text-[#1A1A2E]/80 font-semibold">3.000 candidature in sole 5 settimane</strong>, con un team HR di <strong className="text-[#1A1A2E]/80 font-semibold">3 persone</strong> e l’obiettivo di passare <strong className="text-[#1A1A2E]/80 font-semibold">80 candidati a settimana</strong> alle fasi successive. Per profili junior, il CV non offre elementi differenzianti: le soft skill diventano l’unico vero filtro per identificare l’alto potenziale.
       </>,
       summary: 'Il progetto ha trasformato la selezione da un processo manuale impossibile da scalare a un sistema di pre-screening basato sulle competenze, dando al team HR dati oggettivi su ogni candidato — come se avessero condotto un primo colloquio con ognuno dei 3.000 candidati.',
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Il problema operativo',
-      intro: 'Mediaset è un brand con standard reputazionali elevati. Con oltre 3.000 candidature per un graduate program, un team di 3 persone e una finestra di 5 settimane, il business aveva un vincolo operativo chiaro: valutare tutte le application con velocità senza sacrificare la qualità della selezione né l’esperienza del candidato.',
+      intro: ‘Con oltre 3.000 candidature per un graduate program, 3 persone e 5 settimane di tempo, il vincolo era chiaro: valutare tutte le application con velocità senza sacrificare qualità né esperienza del candidato.’,
       businessLabel: 'IMPATTO SUL BUSINESS',
       hrLabel: 'IMPATTO SU HR & PEOPLE',
       businessChallenges: [
         {
           icon: Zap,
           title: 'Volumi estremi in tempi compressi',
-          text: 'Oltre 3.000 candidature in 5 settimane, con l’obiettivo di passare 80 profili pre-screenati a settimana alle fasi successive della selezione. Con un team di 3 persone, lo screening telefonico individuale era fisicamente impossibile — serviva un filtro scalabile senza compromessi sulla qualità.',
+          text: ‘Oltre 3.000 candidature in 5 settimane e 80 profili pre-screenati a settimana da passare alle fasi successive. Con 3 persone, lo screening telefonico individuale era fisicamente impossibile.’,
         },
         {
           icon: Users,
           title: 'Il CV non differenzia i profili junior',
-          text: 'Stagisti e neolaureati hanno CV sostanzialmente identici: poca esperienza, qualifiche simili. Le soft skill — problem solving, ragionamento logico, motivazione — sono l’unico vero differenziatore per identificare l’alto potenziale, ma sono completamente invisibili sulla carta.',
+          text: ‘Stagisti e neolaureati hanno CV sostanzialmente identici. Problem solving, ragionamento logico e motivazione sono gli unici veri differenziatori, ma completamente invisibili sulla carta.’,
         },
         {
           icon: Shield,
           title: 'Standard reputazionali di un brand Tier-1',
-          text: 'Mediaset è uno dei brand più riconoscibili d’Italia. Il primo contatto con i candidati deve essere all’altezza delle aspettative reputazionali dell’azienda. Un processo di selezione che perde talento nella massa o offre un’esperienza scadente non è accettabile.',
+          text: ‘Mediaset è uno dei brand più riconoscibili d\u2019Italia. Il primo contatto con i candidati deve essere all\u2019altezza delle aspettative reputazionali: un processo che perde talento nella massa non è accettabile.’,
         },
       ],
       hrChallenges: [
         {
           icon: Wrench,
           title: 'Pre-screening manuale insostenibile',
-          text: 'Con 3.000+ candidature e 3 persone, non c’è tempo per screening telefonici individuali. Il team HR aveva bisogno di un filtro strutturato che producesse un ranking comparabile e oggettivo come primo step del funnel, non una semplice scrematura per parole chiave.',
+          text: ‘Con 3.000+ candidature e 3 persone non c\u2019\u00e8 tempo per screening individuali. Serve un filtro strutturato che produca un ranking comparabile e oggettivo, non una semplice scrematura per parole chiave.’,
         },
         {
           icon: Eye,
           title: 'Nessun dato sulle competenze prima del colloquio',
-          text: 'Prima di Skillvue, i candidati passavano alle fasi successive senza alcun dato strutturato sulle competenze. Le decisioni di pre-screening si basavano sull’intuizione, non su una valutazione oggettiva — rendendo impossibile distinguere il potenziale in un mare di profili simili.',
+          text: ‘Prima di Skillvue i candidati avanzavano senza dati strutturati sulle competenze. Le decisioni si basavano sull\u2019intuizione, rendendo impossibile distinguere il potenziale in un mare di profili simili.’,
         },
         {
           icon: Layers,
           title: 'Processo di selezione multi-fase da integrare',
-          text: 'Il processo di selezione prevede più fasi — dal pre-screening iniziale ai colloqui individuali fino agli assessment di gruppo in sede. Serviva uno strumento che si integrasse in questo ecosistema, producendo output validabili dal team HR e direttamente utilizzabili nelle fasi successive.',
+          text: 'Dal pre-screening ai colloqui individuali fino agli assessment di gruppo in sede. Serviva uno strumento integrabile in questo ecosistema, con output validabili e utilizzabili nelle fasi successive.',
         },
       ],
     },
@@ -109,7 +109,7 @@ const content = {
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'AI Pre-screening con Skillvue',
-      intro: 'Skillvue è stato integrato come primo filtro di pre-screening nel Progetto GRAPE, combinando assessment su soft skill, test logici e domande di conoscenza. Il ranking finale viene rivisto e validato dal team HR su un file esterno, integrandolo con il modello di competenze proprietario di Mediaset. I profili pre-screenati avanzano poi nelle fasi successive della selezione.',
+      intro: 'Skillvue \u00e8 stato integrato come primo filtro del Progetto GRAPE, combinando soft skill, test logici e domande di conoscenza. Il ranking viene validato dal team HR sul modello di competenze Mediaset; i profili idonei avanzano alle fasi successive.',
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Target, label: 'Problem Solving' },
@@ -121,15 +121,15 @@ const content = {
       methodology: [
         {
           title: 'Pre-screening AI come primo filtro del funnel',
-          text: 'Skillvue è stato utilizzato come strumento di valutazione oggettiva e ranking. Ogni candidato viene valutato su soft skill, logica e conoscenze, producendo un punteggio comparabile che il team HR utilizza per costruire le shortlist settimanali da passare alle fasi successive.',
+          text: 'Ogni candidato viene valutato su soft skill, logica e conoscenze, producendo un punteggio comparabile che il team HR usa per costruire le shortlist settimanali da passare alle fasi successive.',
         },
         {
           title: 'Ranking validato sul modello Mediaset',
-          text: 'Il ranking prodotto da Skillvue viene rivisto e validato dal team HR su un file esterno, integrandolo con il modello di competenze proprietario di Mediaset. L’AI supporta, il recruiter decide — un approccio human-in-the-loop che garantisce controllo e personalizzazione.',
+          text: ‘Il ranking viene rivisto dal team HR e integrato con il modello di competenze Mediaset. L\u2019AI supporta, il recruiter decide: human-in-the-loop con pieno controllo e personalizzazione.’,
         },
         {
           title: 'Integrato in un processo multi-fase',
-          text: 'Skillvue si inserisce come primo step di un processo di selezione a più fasi: dal pre-screening AI ai colloqui individuali, fino agli assessment di gruppo in sede Mediaset. Un modello che dimostra l’integrabilità della piattaforma in ecosistemi di recruiting strutturati e complessi.',
+          text: ‘Primo step di un processo a pi\u00f9 fasi: pre-screening AI, colloqui individuali, assessment di gruppo in sede. Un modello che dimostra l\u2019integrabilit\u00e0 della piattaforma in ecosistemi di recruiting complessi.’,
         },
       ],
     },
@@ -155,21 +155,20 @@ const content = {
         ],
       },
       qualitative: [
-        { icon: Eye, title: 'Dati sulle competenze per la prima volta', text: 'Per la prima volta, il team HR ha avuto dati strutturati sulle competenze di ogni candidato prima del colloquio — come se avessero condotto un primo colloquio con ognuno dei 3.000 candidati, qualcosa di impossibile manualmente.' },
-        { icon: Target, title: 'Shortlist qualificate per le fasi successive', text: 'Le fasi successive della selezione hanno ricevuto profili pre-validati e ranked per competenze, non una lista generica di CV. Il risultato: colloqui più mirati, assessment di gruppo più efficaci, e un funnel che ha portato a 15 assunzioni.' },
-        { icon: Shield, title: 'Candidate experience all’altezza del brand', text: 'Il 77% dei candidati ha valutato l’esperienza 4 o 5 su 5, con l’84% che non ha riscontrato problemi tecnici — nonostante il 76% non avesse mai usato questo formato. Un primo contatto con Mediaset che rispetta gli standard reputazionali del brand.' },
-        { icon: TrendingUp, title: 'Da progetto a metodo', text: 'Il valore dimostrato nel Progetto GRAPE ha portato Mediaset ad espandere spontaneamente Skillvue al Talent Acquisition più ampio, con la selezione di Junior HR Business Partner (1.500+ candidature). Un segnale forte di fiducia e scalabilità percepita.' },
+        { icon: Eye, title: ‘Dati sulle competenze per la prima volta’, text: ‘Per la prima volta il team HR ha avuto dati strutturati su ogni candidato prima del colloquio — come se avessero condotto un primo screening con ognuno dei 3.000, impossibile manualmente.’ },
+        { icon: Target, title: ‘Shortlist qualificate per le fasi successive’, text: ‘Le fasi successive hanno ricevuto profili pre-validati e ranked per competenze, non liste generiche di CV. Risultato: colloqui mirati e funnel che ha portato a 15 assunzioni.’ },
+        { icon: Shield, title: ‘Candidate experience all\u2019altezza del brand’, text: ‘Il 77% dei candidati ha dato 4 o 5 su 5, con l\u201984% senza problemi tecnici nonostante il 76% non avesse mai usato questo formato.’ },
+        { icon: TrendingUp, title: ‘Da progetto a metodo’, text: ‘Il successo del GRAPE ha portato all\u2019espansione spontanea di Skillvue alla selezione Junior HR Business Partner (1.500+ candidature) — segnale forte di fiducia e scalabilit\u00e0.’ },
       ],
     },
     vision: {
       badge: 'EVOLUZIONE 2026',
       title: 'Da graduate program a Talent Acquisition strategy',
       intro: 'Quando il Progetto GRAPE ha dimostrato che Skillvue poteva gestire 3.000 candidature in 5 settimane con 3 persone e un’esperienza candidato positiva, l’espansione al Talent Acquisition più ampio è stata la conseguenza naturale.',
-      objective: 'Estendere il modello di pre-screening basato sulle competenze a tutti i processi di Talent Acquisition di Mediaset, trasformando un progetto pilota in un metodo strutturale di selezione.',
+      objective: ‘Estendere il pre-screening AI a tutti i processi di Talent Acquisition di Mediaset, trasformando il pilota graduate program in metodo strutturale.’,
       bullets: [
-        'Selezione Junior HR Business Partner già avviata con 1.500+ candidature e 523 candidati valutati su 1.190 invitati',
-        'Verso un modello in cui ogni processo di selezione Mediaset parte da dati oggettivi sulle competenze, non da CV',
-        'Transizione da progetto pilota (graduate program) a metodo strutturale per l’intero Talent Acquisition',
+        ‘Selezione Junior HR Business Partner gi\u00e0 avviata con 1.500+ candidature’,
+        ‘Verso un modello in cui ogni processo parte da dati oggettivi sulle competenze, non da CV’,
       ],
     },
     related: {
@@ -220,41 +219,41 @@ const content = {
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'The Operational Problem',
-      intro: 'Mediaset is a top-tier brand with high reputational standards. With over 3,000 applications for a graduate program, a 3-person team and a 5-week window, the business had a clear operational constraint: screen at industrial volumes without sacrificing selection quality or candidate experience.',
+      intro: 'With over 3,000 applications for a graduate program, 3 people and a 5-week window, the constraint was clear: evaluate all applications at speed without sacrificing quality or candidate experience.',
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Zap,
-          title: 'Extreme volumes in a compressed timeframe',
-          text: 'Over 3,000 applications in 5 weeks, with the target of passing 80 pre-screened profiles per week to the next stages of selection. With a 3-person team, individual phone screening was physically impossible — a scalable filter was needed without compromising quality.',
+          title: ‘Extreme volumes in a compressed timeframe’,
+          text: ‘Over 3,000 applications in 5 weeks and 80 pre-screened profiles per week to pass to the next stages. With 3 people, individual phone screening was physically impossible.’,
         },
         {
           icon: Users,
-          title: 'CVs don’t differentiate junior profiles',
-          text: 'Interns and recent graduates have essentially identical CVs: limited experience, similar qualifications. Soft skills — problem solving, logical reasoning, motivation — are the only real differentiator for identifying high potential, but they are completely invisible on paper.',
+          title: ‘CVs don\u2019t differentiate junior profiles’,
+          text: ‘Interns and recent graduates have essentially identical CVs. Problem solving, logical reasoning and motivation are the only real differentiators, but completely invisible on paper.’,
         },
         {
           icon: Shield,
-          title: 'Reputational standards of a Tier-1 brand',
-          text: 'Mediaset is one of Italy’s most recognizable brands. The first point of contact with candidates must meet the company’s reputational expectations. A selection process that loses talent in the crowd or delivers a poor experience is unacceptable.',
+          title: ‘Reputational standards of a Tier-1 brand’,
+          text: ‘Mediaset is one of Italy\u2019s most recognizable brands. The first contact with candidates must meet reputational expectations: a process that loses talent in the crowd is unacceptable.’,
         },
       ],
       hrChallenges: [
         {
           icon: Wrench,
-          title: 'Unsustainable manual pre-screening',
-          text: 'With 3,000+ applications and 3 people, there is no time for individual phone screens. The HR team needed a structured filter that could produce a comparable and objective ranking as the first funnel step, not a simple keyword-based cull.',
+          title: ‘Unsustainable manual pre-screening’,
+          text: ‘With 3,000+ applications and 3 people there is no time for individual screening. A structured filter was needed to produce a comparable and objective ranking, not a simple keyword-based cull.’,
         },
         {
           icon: Eye,
-          title: 'No competency data before the interview',
-          text: 'Before Skillvue, candidates advanced to the next stages without any structured competency data. Pre-screening decisions were based on intuition, not objective evaluation — making it impossible to distinguish potential in a sea of similar profiles.',
+          title: ‘No competency data before the interview’,
+          text: ‘Before Skillvue, candidates advanced without any structured competency data. Decisions were based on intuition, making it impossible to distinguish potential in a sea of similar profiles.’,
         },
         {
           icon: Layers,
-          title: 'Multi-phase selection process to integrate',
-          text: 'The selection process involves multiple phases — from initial pre-screening to individual interviews to on-site group assessments. A tool was needed that could integrate into this ecosystem, producing outputs validatable by the HR team and directly usable in subsequent stages.',
+          title: ‘Multi-phase selection process to integrate’,
+          text: ‘From pre-screening to individual interviews to on-site group assessments. A tool was needed that could integrate into this ecosystem, with outputs usable in subsequent stages.’,
         },
       ],
     },
@@ -271,7 +270,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Pre-screening with Skillvue',
-      intro: 'Skillvue was integrated as the first pre-screening filter in Progetto GRAPE, combining assessments on soft skills, logic tests and knowledge questions. The final ranking is reviewed and validated by the HR team on an external file, integrating it with Mediaset’s proprietary competency model. Pre-screened profiles then advance to the next stages of selection.',
+      intro: ‘Skillvue was integrated as the first filter of Progetto GRAPE, combining soft skills, logic tests and knowledge questions. The ranking is validated by the HR team on Mediaset\u2019s competency model; suitable profiles advance to the next stages.’,
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Target, label: 'Problem Solving' },
@@ -282,16 +281,16 @@ const content = {
       methodologyLabel: 'METHODOLOGY',
       methodology: [
         {
-          title: 'AI pre-screening as the first funnel filter',
-          text: 'Skillvue was used as an objective evaluation and ranking tool. Every candidate is assessed on soft skills, logic and knowledge, producing a comparable score that the HR team uses to build weekly shortlists to pass to the next stages.',
+          title: ‘AI pre-screening as the first funnel filter’,
+          text: ‘Every candidate is assessed on soft skills, logic and knowledge, producing a comparable score the HR team uses to build weekly shortlists to pass to the next stages.’,
         },
         {
-          title: 'Ranking validated against the Mediaset model',
-          text: 'The ranking produced by Skillvue is reviewed and validated by the HR team on an external file, integrating it with Mediaset’s proprietary competency model. AI supports, the recruiter decides — a human-in-the-loop approach that ensures control and customization.',
+          title: ‘Ranking validated against the Mediaset model’,
+          text: ‘The ranking is reviewed and validated by the HR team, integrating it with Mediaset\u2019s competency model. AI supports, the recruiter decides — human-in-the-loop with full control and customization.’,
         },
         {
-          title: 'Integrated into a multi-phase process',
-          text: 'Skillvue is inserted as the first step of a multi-phase selection process: from AI pre-screening to individual interviews to on-site group assessments at Mediaset. A model that demonstrates the platform’s integrability into structured and complex recruiting ecosystems.',
+          title: ‘Integrated into a multi-phase process’,
+          text: ‘First step of a multi-phase process: AI pre-screening, individual interviews, on-site group assessments. A model that demonstrates the platform\u2019s integrability into complex recruiting ecosystems.’,
         },
       ],
     },
@@ -317,21 +316,20 @@ const content = {
         ],
       },
       qualitative: [
-        { icon: Eye, title: 'Competency data for the first time', text: 'For the first time, the HR team had structured competency data on every candidate before the interview — as if they had conducted a first interview with each of the 3,000 candidates, something impossible to do manually.' },
-        { icon: Target, title: 'Qualified shortlists for the next stages', text: 'The subsequent selection stages received pre-validated profiles ranked by competencies, not a generic list of CVs. The result: more targeted interviews, more effective group assessments, and a funnel that led to 15 hires.' },
-        { icon: Shield, title: 'Candidate experience worthy of the brand', text: '77% of candidates rated the experience 4 or 5 out of 5, with 84% reporting no technical issues — despite 76% having never used this format before. A first contact with Mediaset that meets the reputational standards of the brand.' },
-        { icon: TrendingUp, title: 'From project to method', text: 'The value demonstrated in Progetto GRAPE led Mediaset to spontaneously expand Skillvue to broader Talent Acquisition, with the Junior HR Business Partner selection (1,500+ applications). A strong signal of trust and perceived scalability.' },
+        { icon: Eye, title: 'Competency data for the first time', text: 'For the first time the HR team had structured data on every candidate before the interview — as if they had conducted a first screening with each of the 3,000, impossible to do manually.' },
+        { icon: Target, title: 'Qualified shortlists for the next stages', text: 'The subsequent stages received pre-validated profiles ranked by competencies, not generic CV lists. Result: targeted interviews and a funnel that led to 15 hires.' },
+        { icon: Shield, title: 'Candidate experience worthy of the brand', text: '77% of candidates rated the experience 4 or 5 out of 5, with 84% reporting no technical issues despite 76% having never used this format before.' },
+        { icon: TrendingUp, title: 'From project to method', text: 'The success of GRAPE led to the spontaneous expansion of Skillvue to the Junior HR Business Partner selection (1,500+ applications) — a strong signal of trust and scalability.' },
       ],
     },
     vision: {
       badge: 'EVOLUTION 2026',
       title: 'From graduate program to Talent Acquisition strategy',
       intro: 'When Progetto GRAPE demonstrated that Skillvue could manage 3,000 applications in 5 weeks with 3 people and a positive candidate experience, the expansion to broader Talent Acquisition was the natural consequence.',
-      objective: 'Extend the competency-based pre-screening model to all Mediaset Talent Acquisition processes, transforming a pilot project into a structural selection method.',
+      objective: 'Extend the AI pre-screening to all Mediaset Talent Acquisition processes, transforming the graduate program pilot into a structural method.',
       bullets: [
         'Junior HR Business Partner selection already underway with 1,500+ applications',
-        'Towards a model where every Mediaset selection process starts from objective competency data, not CVs',
-        'Transition from pilot project (graduate program) to structural method for the entire Talent Acquisition',
+        'Towards a model where every process starts from objective competency data, not CVs',
       ],
     },
     related: {
