@@ -53,48 +53,48 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Subdued \u00e8 uno dei brand italiani pi\u00f9 iconici nel segmento <strong className="text-[#1A1A2E]/80 font-semibold">teen fashion</strong>, con oltre <strong className="text-[#1A1A2E]/80 font-semibold">130 punti vendita monomarca</strong> in Italia, Europa e Asia, <strong className="text-[#1A1A2E]/80 font-semibold">1.000+ dipendenti</strong> e un fatturato 2024 di <strong className="text-[#1A1A2E]/80 font-semibold">\u20ac163,9M</strong>. Fondato a Roma negli anni \u201990, il brand si rivolge a ragazze tra i <strong className="text-[#1A1A2E]/80 font-semibold">12 e i 20 anni</strong> con un modello 100% direct-to-consumer e una supply chain capace di portare un prodotto dal design al negozio in <strong className="text-[#1A1A2E]/80 font-semibold">7 giorni</strong>. L\u2019espansione internazionale accelerata \u2014 <strong className="text-[#1A1A2E]/80 font-semibold">14 nuove aperture nel 2024</strong>, con ingresso negli USA e in Cina \u2014 ha creato una sfida HR strutturale: mantenere una qualit\u00e0 di selezione costante su pi\u00f9 paesi e lingue con un team snello. Il team HR (<strong className="text-[#1A1A2E]/80 font-semibold">7 persone su 6 paesi</strong>) era completamente assorbito dall\u2019operativit\u00e0: tutta la valutazione avveniva tramite <strong className="text-[#1A1A2E]/80 font-semibold">colloqui diretti</strong>, senza alcuna fase di pre-screening strutturato. I recruiter dedicavano <strong className="text-[#1A1A2E]/80 font-semibold">10-15 ore a settimana</strong> a telefonate introduttive, senza tempo per attivit\u00e0 strategiche.
+        Subdued è uno dei brand italiani più iconici nel segmento <strong className="text-[#1A1A2E]/80 font-semibold">teen fashion</strong>, con oltre <strong className="text-[#1A1A2E]/80 font-semibold">130 punti vendita</strong> in Italia, Europa e Asia, <strong className="text-[#1A1A2E]/80 font-semibold">1.000+ dipendenti</strong> e un fatturato 2024 di <strong className="text-[#1A1A2E]/80 font-semibold">€163,9M</strong>. Con <strong className="text-[#1A1A2E]/80 font-semibold">14 nuove aperture nel 2024</strong> e l’ingresso in USA e Cina, la sfida HR era chiara: mantenere qualità di selezione costante su più paesi con un team di sole <strong className="text-[#1A1A2E]/80 font-semibold">7 persone su 6 paesi</strong>. Tutta la valutazione avveniva tramite colloqui diretti — nessun pre-screening strutturato — con i recruiter impegnati <strong className="text-[#1A1A2E]/80 font-semibold">10-15 ore a settimana</strong> in telefonate introduttive.
       </>,
       summary: 'Il progetto ha trasformato il pre-screening da attivit\u00e0 interamente manuale a processo strutturato e AI-driven, inserendo per la prima volta una valutazione oggettiva delle competenze prima del colloquio. Il risultato: turnover dimezzato, retention salita fino a circa il 70% e un processo di selezione che \u00e8 diventato esso stesso un elemento di attrattivit\u00e0 per i candidati Gen Z.',
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Il problema strutturale',
-      intro: 'Subdued \u00e8 un brand in espansione rapida, con 14 nuove aperture nel solo 2024 e nuovi mercati da USA a Cina. Ma un team HR di 7 persone su 6 paesi non poteva sostenere il ritmo: turnover mensile elevato, volumi massicci di candidati junior con CV indifferenziati, e met\u00e0 dei candidati che superavano il primo screening si rivelavano privi delle soft skill necessarie per il lavoro quotidiano in negozio.',
+      intro: 'Con 14 nuove aperture nel 2024 e nuovi mercati da USA a Cina, un team HR di 7 persone su 6 paesi non reggeva il ritmo. Turnover elevato, CV junior indistinguibili e met\u00e0 dei candidati screened privi delle soft skill necessarie per il lavoro in negozio.',
       businessLabel: 'IMPATTO SUL BUSINESS',
       hrLabel: 'IMPATTO SU HR & PEOPLE',
       businessChallenges: [
         {
           icon: TrendingUp,
           title: 'Espansione internazionale, team HR invariato',
-          text: '14 nuove aperture nel 2024, ingresso in USA e Cina, e un team di sole 7 persone su 6 paesi a gestire tutto il recruiting. Ogni nuova apertura in un nuovo mercato significava nuovi volumi di candidature, nuove lingue, nuovi contesti culturali, senza alcun incremento di risorse HR. Il modello basato su colloqui individuali per ogni candidato era fisicamente insostenibile.',
+          text: '14 nuove aperture nel 2024, USA e Cina in arrivo, e 7 persone su 6 paesi a gestire tutto il recruiting. Ogni nuovo mercato significava nuovi volumi, nuove lingue e nuovi contesti culturali senza incremento di risorse HR.',
         },
         {
           icon: Target,
           title: 'Errori di assunzione ricorrenti',
-          text: 'Candidati con buoni CV ma privi delle soft skill pratiche per il lavoro quotidiano in negozio venivano assunti troppo spesso. In un settore ad alto turnover con margini stretti, ogni assunzione sbagliata aveva un costo diretto su performance del punto vendita, onboarding e morale del team.',
+          text: 'Candidati con buoni CV ma privi delle soft skill per il lavoro in negozio venivano assunti troppo spesso. In un settore ad alto turnover con margini stretti, ogni assunzione sbagliata pesava su performance, onboarding e morale del team.',
         },
         {
           icon: Users,
           title: 'Il brand experience parte dalle persone',
-          text: 'Per un brand costruito sull\u2019esperienza in-store e sulla community, le persone in negozio SONO il brand. Assumere le persone giuste \u2014 con le reali competenze di comunicazione e vendita \u2014 non \u00e8 una metrica HR: \u00e8 una questione di sopravvivenza del brand in un mercato competitivo.',
+          text: 'Per un brand costruito sull\u2019esperienza in-store, le persone in negozio SONO il brand. Assumere le persone giuste non \u00e8 una metrica HR: \u00e8 una questione di sopravvivenza in un mercato competitivo.',
         },
       ],
       hrChallenges: [
         {
           icon: Zap,
           title: '10-15 ore a settimana in telefonate introduttive',
-          text: 'Senza alcuna fase di pre-screening strutturato, ogni candidato richiedeva lo stesso investimento di tempo da parte del recruiter, indipendentemente dal reale potenziale. Il team HR era completamente assorbito dall\u2019operativit\u00e0, con zero tempo per employer branding, formazione o strategia \u2014 attivit\u00e0 sacrificate interamente.',
+          text: 'Senza pre-screening strutturato, ogni candidato assorbiva lo stesso tempo del recruiter. Il team era completamente operativo, con zero margine per employer branding, formazione o strategia.',
         },
         {
           icon: Eye,
           title: 'Il CV non differenzia i candidati Gen Z',
-          text: 'Candidati junior al primo o secondo impiego hanno CV sostanzialmente identici: nessuna esperienza significativa, qualifiche simili. Le competenze che determinano il successo in negozio \u2014 comunicazione, vendita, teamworking \u2014 sono completamente invisibili sulla carta. Serviva uno strumento per renderle visibili prima del colloquio.',
+          text: 'Candidati junior al primo impiego hanno CV sostanzialmente identici. Comunicazione, vendita e teamworking — le competenze che determinano il successo in negozio — sono invisibili sulla carta.',
         },
         {
           icon: Scale,
           title: 'Nessuno standard di valutazione cross-country',
-          text: 'Con l\u2019espansione in UK, Francia, Paesi Bassi, Belgio e oltre, ogni paese valutava i candidati con criteri propri. Mancava un framework comune che garantisse coerenza nella qualit\u00e0 delle assunzioni indipendentemente dal mercato, dalla lingua o dal singolo recruiter.',
+          text: 'Con l\u2019espansione in UK, Francia, Paesi Bassi, Belgio e oltre, ogni paese usava criteri propri. Mancava un framework comune che garantisse coerenza nelle assunzioni, indipendentemente dal mercato o dal singolo recruiter.',
         },
       ],
     },
@@ -111,7 +111,7 @@ const content = {
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue',
-      intro: 'Skillvue \u00e8 stato integrato come fase di pre-screening nel processo di selezione di Subdued, tra la candidatura e il primo colloquio HR. Il team HR di Valentina Cianciaruso ha lavorato direttamente con Skillvue per selezionare i test e le domande pi\u00f9 efficaci dalla Skill Library per le esigenze specifiche del retail Subdued. L\u2019onboarding \u00e8 stato completato in sole 2 settimane dal kick-off al go-live, una delle implementazioni pi\u00f9 rapide nel portfolio Skillvue.',
+      intro: 'Skillvue \u00e8 stato integrato come fase di pre-screening tra la candidatura e il primo colloquio HR. Il team HR ha selezionato test e domande dalla Skill Library per le esigenze del retail Subdued, con onboarding completato in sole 2 settimane.',
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: CheckCircle, label: 'Comunicazione' },
@@ -122,15 +122,15 @@ const content = {
       methodology: [
         {
           title: 'Assessment su misura per paese e ruolo',
-          text: 'Assessment configurati per profili e mercati diversi: in Italia, video-presentazione + 2 soft skill (3 domande ciascuna, max 15 minuti); in UK, killer question + video-presentazione + 1 soft skill (max 10 minuti). Per gli Store Manager, test su comunicazione, vendita e teamworking. Ogni configurazione \u00e8 adattata al contesto locale mantenendo lo stesso standard di valutazione.',
+          text: 'In Italia: video-presentazione + 2 soft skill (max 15 minuti); in UK: killer question + video + 1 soft skill (max 10 minuti). Store Manager: comunicazione, vendita e teamworking. Ogni configurazione adattata al contesto locale, stesso standard di valutazione.',
         },
         {
           title: 'Delivery via WhatsApp \u2014 mobile-first per Gen Z',
-          text: 'Il link all\u2019assessment viene inviato ai candidati via WhatsApp, non via email: una scelta pragmatica e mobile-first perfettamente allineata alle abitudini della Gen Z. Questo switch, introdotto nelle prime settimane, ha migliorato significativamente il tasso di conversione. I candidati completano l\u2019assessment da qualsiasi device entro una deadline predefinita.',
+          text: 'Il link all\u2019assessment viene inviato via WhatsApp, non via email: mobile-first e allineato alle abitudini della Gen Z. Questo switch ha migliorato significativamente il tasso di conversione nelle prime settimane.',
         },
         {
           title: 'Rollout progressivo su 6 paesi',
-          text: 'Il progetto \u00e8 partito dall\u2019Italia ed \u00e8 stato progressivamente esteso a UK, Francia, Paesi Bassi/Belgio, con espansione confermata verso Svezia e Irlanda. 7 utenti Skillvue attivi su 6 paesi, un modello che dimostra la scalabilit\u00e0 della piattaforma per il retail internazionale con risorse HR contenute.',
+          text: 'Partito dall\u2019Italia, esteso a UK, Francia, Paesi Bassi/Belgio, con espansione verso Svezia e Irlanda. 7 utenti attivi su 6 paesi, stesso modello e risorse HR invariate.',
         },
       ],
     },
@@ -147,22 +147,21 @@ const content = {
         { value: '6 paesi', label: 'Copertura internazionale', sublabel: '7 utenti Skillvue attivi' },
       ],
       qualitative: [
-        { icon: Zap, title: 'Recruiter liberati dall\u2019operativit\u00e0', text: 'Il pre-screening produce ora un report strutturato per ogni candidato \u2014 dati oggettivi su comunicazione, vendita e teamworking prima di qualsiasi interazione umana. Le ore di telefonate introduttive sono passate da 10-15 a 3-5 a settimana, restituendo al team tempo per attivit\u00e0 strategiche prima completamente sacrificate.' },
-        { icon: Target, title: 'Colloqui pi\u00f9 mirati e personalizzati', text: 'Il primo colloquio \u00e8 ora basato sul report Skillvue: il recruiter arriva preparato con dati sulle competenze del candidato, rendendo l\u2019interazione pi\u00f9 profonda e mirata. Solo i profili pre-validati raggiungono il colloquio: niente pi\u00f9 back-to-back di screening a calendario.' },
-        { icon: Shield, title: 'Errori di assunzione drasticamente ridotti', text: 'La combinazione di turnover dimezzato (-50%) e retention dal 65% all\u201985% dimostra che i candidati assunti con Skillvue sono significativamente pi\u00f9 adatti al ruolo. Meno assunzioni sbagliate significa meno costi di onboarding ripetuto, meno impatto sulla performance di negozio e meno pressione sul team HR.' },
-        { icon: Scale, title: 'Standard di valutazione coerente su 6 paesi', text: 'Per la prima volta, tutti i paesi valutano i candidati con gli stessi criteri e lo stesso framework di competenze, adattato per lingua e contesto locale. Le decisioni di assunzione poggiano su dati oggettivi, non sulle logiche del singolo mercato o recruiter.' },
-        { icon: Heart, title: 'Employer branding inatteso', text: 'Un risultato inizialmente non previsto: l\u2019innovazione del processo di selezione \u00e8 diventata un elemento differenziante nell\u2019attrarre candidati. Per un brand il cui pubblico \u2014 sia come clienti che come potenziali dipendenti \u2014 \u00e8 la Gen Z, l\u2019allineamento tra innovazione tecnologica e aspettative generazionali rappresenta un vantaggio competitivo concreto nel mercato del lavoro retail.' },
+        { icon: Zap, title: 'Recruiter liberati dall\u2019operativit\u00e0', text: 'Le ore di telefonate introduttive sono passate da 10-15 a 3-5 a settimana. Il pre-screening produce report strutturati su comunicazione, vendita e teamworking, restituendo al team tempo per attivit\u00e0 strategiche.' },
+        { icon: Target, title: 'Colloqui pi\u00f9 mirati e personalizzati', text: 'Il primo colloquio \u00e8 basato sul report Skillvue: il recruiter arriva preparato con dati sulle competenze. Solo profili pre-validati raggiungono il colloquio, eliminando back-to-back di screening.' },
+        { icon: Shield, title: 'Errori di assunzione drasticamente ridotti', text: 'Turnover dimezzato (-50%) e retention dal 65% all\u201985% dimostrano che i candidati assunti con Skillvue sono pi\u00f9 adatti al ruolo. Meno costi di onboarding, meno impatto sulla performance di negozio.' },
+        { icon: Scale, title: 'Standard di valutazione coerente su 6 paesi', text: 'Per la prima volta tutti i paesi usano gli stessi criteri, adattati per lingua e contesto locale. Le decisioni poggiano su dati oggettivi, non sulle logiche del singolo mercato.' },
+        { icon: Heart, title: 'Employer branding inatteso', text: 'Il processo innovativo \u00e8 diventato un elemento differenziante nell\u2019attrarre candidati Gen Z. Allineamento tra innovazione tecnologica e aspettative generazionali come vantaggio competitivo concreto.' },
       ],
     },
     vision: {
       badge: 'EVOLUZIONE',
       title: 'Scalare la selezione di qualit\u00e0 al ritmo dell\u2019espansione internazionale',
       intro: 'Con i risultati dimostrati su 6 paesi e il modello di pre-screening consolidato, il passo naturale \u00e8 estendere la copertura ai nuovi mercati al ritmo dell\u2019espansione internazionale di Subdued \u2014 garantendo che ogni nuovo negozio, in qualsiasi paese, parta con le persone giuste.',
-      objective: 'Costruire un\u2019infrastruttura di selezione scalabile che accompagni l\u2019espansione di Subdued in ogni nuovo mercato, mantenendo lo stesso standard di qualit\u00e0 e la stessa velocit\u00e0 indipendentemente dal paese.',
+      objective: "Un'infrastruttura di selezione scalabile che accompagni ogni nuova apertura con lo stesso standard di qualit\u00e0, indipendentemente dal paese.",
       bullets: [
-        'Espansione confermata verso Svezia e Irlanda, con ulteriori mercati al passo con le nuove aperture',
-        'Consolidamento del modello di assessment per ruoli Store Manager su tutti i paesi',
-        'Evoluzione verso un processo di selezione completamente integrato e scalabile a livello globale',
+        'Espansione verso Svezia e Irlanda, con ulteriori mercati al passo con le nuove aperture',
+        'Consolidamento del modello di assessment per Store Manager su tutti i paesi',
       ],
     },
     related: {
@@ -215,41 +214,41 @@ const content = {
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'The Structural Problem',
-      intro: 'Subdued is a rapidly expanding brand, with 14 new openings in 2024 alone and new markets from the US to China. But a 7-person HR team across 6 countries could not keep pace: high monthly turnover, massive volumes of junior candidates with undifferentiated CVs, and half of those passing the first screen lacking the soft skills needed for daily store work.',
+      intro: 'With 14 new openings in 2024 and new markets from the US to China, a 7-person HR team across 6 countries could not keep pace. High turnover, junior CVs indistinguishable from one another, and half of screened candidates lacking the soft skills needed for daily store work.',
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: TrendingUp,
           title: 'International expansion, unchanged HR team',
-          text: '14 new openings in 2024, entry into the US and China, and a team of just 7 people across 6 countries managing all recruiting. Every new opening in a new market meant new application volumes, new languages, new cultural contexts \u2014 with no increase in HR resources. The model of individual interviews for every candidate was physically unsustainable.',
+          text: '14 new openings in 2024, the US and China on the horizon, and 7 people across 6 countries managing all recruiting. Every new market meant new volumes, new languages and new cultural contexts with no increase in HR resources.',
         },
         {
           icon: Target,
           title: 'Recurring hiring mistakes',
-          text: 'Candidates with good CVs but lacking the practical soft skills for daily store work were being hired too often. In a high-turnover sector with tight margins, every wrong hire had a direct cost on store performance, onboarding and team morale.',
+          text: 'Candidates with good CVs but lacking the soft skills for daily store work were hired too often. In a high-turnover sector with tight margins, every wrong hire weighed on store performance, onboarding and team morale.',
         },
         {
           icon: Users,
           title: 'The brand experience starts with people',
-          text: 'For a brand built on the in-store experience and community, the people in the store ARE the brand. Hiring the right people \u2014 with genuine communication and selling skills \u2014 is not an HR metric: it\u2019s a matter of brand survival in a competitive market.',
+          text: 'For a brand built on the in-store experience, the people in the store ARE the brand. Hiring the right people is not an HR metric: it is a matter of survival in a competitive market.',
         },
       ],
       hrChallenges: [
         {
           icon: Zap,
-          title: '10\u201315 hours a week on introductory calls',
-          text: 'With no structured pre-screening phase, every candidate required the same time investment from the recruiter regardless of actual potential. The HR team was completely absorbed by operations, with zero time for employer branding, training or strategy \u2014 activities sacrificed entirely.',
+          title: '10–15 hours a week on introductory calls',
+          text: 'Without structured pre-screening, every candidate absorbed the same recruiter time. The team was completely operational, with zero margin for employer branding, training or strategy.',
         },
         {
           icon: Eye,
           title: 'CVs don\u2019t differentiate Gen Z candidates',
-          text: 'Junior candidates in their first or second job have essentially identical CVs: no significant experience, similar qualifications. The competencies that drive success in-store \u2014 communication, selling, teamwork \u2014 are completely invisible on paper. A tool was needed to make them visible before the interview.',
+          text: 'Junior candidates in their first job have essentially identical CVs. Communication, selling and teamworking — the competencies that determine success in store — are invisible on paper.',
         },
         {
           icon: Scale,
           title: 'No cross-country evaluation standard',
-          text: 'With expansion into the UK, France, the Netherlands, Belgium and beyond, each country assessed candidates using its own criteria. There was no common framework to ensure consistent hiring quality regardless of market, language or individual recruiter.',
+          text: 'With expansion into the UK, France, the Netherlands, Belgium and beyond, each country used its own criteria. A common framework was missing to guarantee consistent hiring quality regardless of market or individual recruiter.',
         },
       ],
     },
@@ -266,7 +265,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: 'Skillvue was integrated as a pre-screening stage in Subdued\u2019s selection process, between the application and the first HR interview. Valentina Cianciaruso\u2019s HR team worked directly with Skillvue to select the most effective tests and questions from the Skill Library for Subdued\u2019s specific retail needs. Onboarding was completed in just 2 weeks from kick-off to go-live, one of the fastest implementations in the Skillvue portfolio.',
+      intro: 'Skillvue was integrated as a pre-screening stage between the application and the first HR interview. The HR team selected tests and questions from the Skill Library for Subdued\u2019s retail needs, with onboarding completed in just 2 weeks.',
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: CheckCircle, label: 'Communication' },
@@ -277,15 +276,15 @@ const content = {
       methodology: [
         {
           title: 'Tailored assessments by country and role',
-          text: 'Assessments configured for different profiles and markets: in Italy, video pitch + 2 soft skills (3 questions each, max 15 min); in the UK, killer question + video pitch + 1 soft skill (max 10 min). For Store Managers, tests covering communication, selling and teamworking. Each configuration is adapted to the local context while maintaining the same evaluation standard.',
+          text: 'In Italy: video pitch + 2 soft skills (max 15 minutes); in the UK: killer question + video + 1 soft skill (max 10 minutes). For Store Managers: communication, selling and teamworking. Each configuration adapted to the local context, same evaluation standard.',
         },
         {
-          title: 'Delivery via WhatsApp \u2014 mobile-first for Gen Z',
-          text: 'The assessment link is sent to candidates via WhatsApp, not email: a pragmatic, mobile-first choice perfectly aligned with Gen Z habits. This switch, introduced in the first few weeks, significantly improved completion rates. Candidates complete the assessment from any device within a set deadline.',
+          title: 'Delivery via WhatsApp — mobile-first for Gen Z',
+          text: 'The assessment link is sent via WhatsApp, not email: mobile-first and aligned with Gen Z habits. This switch significantly improved completion rates in the first weeks.',
         },
         {
           title: 'Progressive rollout across 6 countries',
-          text: 'The project started in Italy and was progressively extended to the UK, France, the Netherlands and Belgium, with confirmed expansion toward Sweden and Ireland. 7 active Skillvue users across 6 countries \u2014 a model that demonstrates platform scalability for international retail with contained HR resources.',
+          text: 'Started in Italy, extended to the UK, France, the Netherlands and Belgium, with expansion toward Sweden and Ireland. 7 active Skillvue users across 6 countries, same model and unchanged HR resources.',
         },
       ],
     },
@@ -302,22 +301,21 @@ const content = {
         { value: '6 countries', label: 'International coverage', sublabel: '7 active Skillvue users' },
       ],
       qualitative: [
-        { icon: Zap, title: 'Recruiters freed from operations', text: 'Pre-screening now produces a structured report for every candidate \u2014 objective data on communication, selling and teamworking before any human interaction. Introductory call hours dropped from 10\u201315 to 3\u20135 per week, returning strategic time to a team that had none.' },
-        { icon: Target, title: 'More focused and personalised interviews', text: 'The first interview is now grounded in the Skillvue report: the recruiter arrives prepared with competency data on the candidate, making the interaction deeper and more targeted. Only pre-validated profiles reach the interview \u2014 no more back-to-back screening sessions on the calendar.' },
-        { icon: Shield, title: 'Hiring mistakes drastically reduced', text: 'The combination of halved turnover (-50%) and retention rising from 65% to 85% shows that candidates hired with Skillvue are significantly better suited to the role. Fewer wrong hires means lower repeat onboarding costs, less impact on store performance and less pressure on the HR team.' },
-        { icon: Scale, title: 'Consistent evaluation standard across 6 countries', text: 'For the first time, every country assesses candidates using the same criteria and the same competency framework, adapted by language and local context. Hiring decisions rest on objective data, not on the logic of an individual market or recruiter.' },
-        { icon: Heart, title: 'Unexpected employer branding effect', text: 'An initially unforeseen outcome: the innovation of the selection process has become a differentiating element in attracting candidates. For a brand whose audience \u2014 both as customers and potential employees \u2014 is Gen Z, the alignment between technological innovation and generational expectations is a concrete competitive advantage in the retail labour market.' },
+        { icon: Zap, title: 'Recruiters freed from operations', text: 'Pre-screening hours dropped from 10–15 to 3–5 per week. The pre-screening produces structured reports on communication, selling and teamworking, returning strategic time to the team.' },
+        { icon: Target, title: 'More focused and personalised interviews', text: 'The first interview is based on the Skillvue report: the recruiter arrives prepared with competency data. Only pre-validated profiles reach the interview, eliminating back-to-back screening sessions.' },
+        { icon: Shield, title: 'Hiring mistakes drastically reduced', text: 'Turnover halved (-50%) and retention from 65% to 85% demonstrate that candidates hired with Skillvue are better suited to the role. Fewer onboarding costs, less impact on store performance.' },
+        { icon: Scale, title: 'Consistent evaluation standard across 6 countries', text: 'For the first time all countries use the same criteria, adapted by language and local context. Decisions rest on objective data, not on the logic of an individual market.' },
+        { icon: Heart, title: 'Unexpected employer branding effect', text: 'The innovative process has become a differentiating element in attracting Gen Z candidates. Alignment between technological innovation and generational expectations as a concrete competitive advantage.' },
       ],
     },
     vision: {
       badge: 'EVOLUTION',
       title: 'Scaling quality hiring at the pace of international expansion',
       intro: 'With results proven across 6 countries and the pre-screening model consolidated, the natural next step is to extend coverage to new markets at the pace of Subdued\u2019s international expansion \u2014 ensuring every new store, in any country, starts with the right people.',
-      objective: 'Build a scalable hiring infrastructure that accompanies Subdued\u2019s expansion into every new market, maintaining the same quality standard and the same speed regardless of country.',
+      objective: "A scalable hiring infrastructure that accompanies every new store opening with the same quality standard, regardless of country.",
       bullets: [
-        'Confirmed expansion toward Sweden and Ireland, with further markets following new store openings',
+        'Expansion toward Sweden and Ireland, with further markets following new store openings',
         'Consolidation of the Store Manager assessment model across all countries',
-        'Evolution toward a fully integrated, globally scalable selection process',
       ],
     },
     related: {
