@@ -23,7 +23,7 @@ function Section({ children, className = '' }) {
 const content = {
   it: {
     breadcrumb: 'Clienti',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'Come Douglas ha mappato le competenze di ',
       highlight1: '2.200 persone',
@@ -175,7 +175,7 @@ const content = {
 
   en: {
     breadcrumb: 'Customers',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'How Douglas mapped the skills of ',
       highlight1: '2,200 people',

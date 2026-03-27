@@ -23,7 +23,7 @@ function Section({ children, className = '' }) {
 const content = {
   it: {
     breadcrumb: 'Clienti',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'Come Unicomm sta costruendo un ',
       highlight1: 'talent lifecycle skills-based',
@@ -173,7 +173,7 @@ const content = {
 
   en: {
     breadcrumb: 'Customers',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'How Unicomm digitized the ',
       highlight1: 'entire talent lifecycle',

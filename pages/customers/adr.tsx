@@ -31,10 +31,10 @@ const content = {
       highlight2: '5.000 persone',
       after: '',
     },
-    subtitle: "Con Skillvue, ADR ha incrementato la velocità di assessment delle risorse interne e trasformato lo sviluppo del talento in vera e propria leva strategica.",
+    subtitle: "Da assessment manuali riservati a pochi, a un sistema AI scalabile che copre l'intera popolazione aziendale. Con Skillvue, ADR ha trasformato lo sviluppo del talento da privilegio a diritto.",
     heroMetrics: [
-      { value: '-97%', label: 'time-to-process' },
-      { value: '3-4 giorni', label: 'tempo attuale' },
+      { value: '~3 giorni', label: 'time-to-process' },
+      { value: '5.000', label: 'dipendenti coinvolti' },
       { value: '3-4 mesi', label: 'tempo precedente' },
     ],
     ctaPrimary: 'Contattaci',
@@ -51,31 +51,31 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Aeroporti di Roma (ADR) gestisce tra Fiumicino e Ciampino circa <strong className="text-[#1A1A2E]/80 font-semibold">5.000 dipendenti</strong>, di cui 4.000 operativi. Il rimbalzo post-COVID ha imposto una velocità senza precedenti di assunzioni: <strong className="text-[#1A1A2E]/80 font-semibold">oltre 2.000 contratti a tempo determinato nel solo 2023</strong>, con una conseguente crescita dell'organico proseguita a ritmi sostenuti fino ai giorni recenti. Il team HR, davanti a questa popolazione aziendale così ampia, aveva un obiettivo chiaro: identificare e sviluppare i profili ad alto potenziale, garantendo opportunità di valorizzazione e crescita eque per tutti. Il modello di valutazione utilizzato fino a quel momento non riusciva a intercettare tutti i talenti con chiarezza: l'accesso alle opportunità di sviluppo interno era infatti guidato dalle segnalazioni dei responsabili.
+        Aeroporti di Roma (ADR), parte del Gruppo Mundys, gestisce gli aeroporti di Fiumicino "Leonardo da Vinci" e Ciampino "G.B. Pastine" con circa <strong className="text-[#1A1A2E]/80 font-semibold">5.000 dipendenti</strong>, di cui 4.000 in ruoli operativi (manutenzione, sicurezza, ground handling, pulizie) e 1.000 in ruoli corporate. Il rimbalzo del traffico post-COVID ha imposto ad ADR di assumere e promuovere a velocità senza precedenti, arrivando ad attivare <strong className="text-[#1A1A2E]/80 font-semibold">oltre 2.000 contratti a tempo determinato nel solo 2023</strong>. In quanto realtà pubblica, ADR deve garantire processi di valutazione equi e rigorosi. L'approccio precedente prevedeva assessment solo per le promozioni, gestiti manualmente da un <strong className="text-[#1A1A2E]/80 font-semibold">team HR di 5-10 persone</strong>: questo poteva portare a tempi di gestione delle candidature fino a <strong className="text-[#1A1A2E]/80 font-semibold">3-4 mesi</strong> nei periodi di picchi di application come quello post-Covid. Lo stesso problema si riscontrava sull'interno: l'<strong className="text-[#1A1A2E]/80 font-semibold">accesso alle opportunità di sviluppo</strong> rimaneva un punto critico, in questo tipo di contesto e struttura.
       </>,
       summary: "Il progetto ha trasformato l'assessment da strumento necessariamente riservato a pochi a un sistema scalabile e democratico, estendendo per la prima volta percorsi di sviluppo strutturati all'intera popolazione aziendale, inclusi i dipendenti operativi precedentemente esclusi.",
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Il problema strutturale',
-      intro: 'Garantire a tutta la popolazione aziendale, non solo ai ruoli corporate, pari accesso a percorsi di sviluppo e valutazione non era facile, soprattutto mantenendo la qualità e il rigore che una realtà pubblica richiede. Il modello precedente non era scalabile e lasciava invisibili le competenze di migliaia di dipendenti.',
+      intro: 'Con 5.000 dipendenti e un piano di crescita post-COVID senza precedenti, ADR doveva risolvere un problema strutturale: garantire a tutta la popolazione aziendale, non solo ai ruoli corporate, pari accesso a percorsi di sviluppo e valutazione, mantenendo la qualità e il rigore che una realtà pubblica richiede. Il modello precedente, basato su assessment manuali e sul giudizio del singolo responsabile, non era scalabile e lasciava invisibili le competenze di migliaia di dipendenti operativi.',
       businessLabel: 'IMPATTO SUL BUSINESS',
       hrLabel: 'IMPATTO SU HR & PEOPLE',
       businessChallenges: [
         {
           icon: Users,
-          title: 'Talento invisibile, sviluppo accessibile solo a pochi',
-          text: "Su 5.000 dipendenti, solo 1.000 corporate avevano accesso a percorsi strutturati di assessment e crescita. I 4.000 operativi non potevano essere ugualmente valutati, lasciando ADR senza visibilità sul potenziale interno.",
+          title: 'Sviluppo accessibile solo a una minoranza',
+          text: 'Su 5.000 dipendenti, solo ~1.000 corporate avevano accesso a percorsi di assessment e crescita strutturati. I ~4.000 operativi — che rappresentano il cuore del servizio aeroportuale — non erano mai stati valutati formalmente sulle competenze trasversali (leadership, comunicazione, safety awareness), nonostante queste fossero decisive per la qualità del servizio. Democratizzare l\'accesso allo sviluppo era la precondizione per sbloccare il potenziale dell\'intera organizzazione.',
+        },
+        {
+          icon: Target,
+          title: 'Nessuna disponibilità immediata di talento per i ruoli chiave',
+          text: "Senza una mappatura strutturata delle competenze sull'intera popolazione, ADR non aveva visibilità su chi fosse pronto a ricoprire posizioni chiave nel momento in cui si liberavano. Ogni ruolo scoperto diventava un'emergenza: tempi lunghi per identificare candidati interni, nessun dato oggettivo per confrontarli, e il rischio concreto di dover ricorrere al mercato esterno per posizioni che potevano essere coperte dall'interno.",
         },
         {
           icon: Scale,
-          title: 'Vincolo regolatorio e domanda di trasparenza',
-          text: "Ogni processo di valutazione deve anche reggere allo scrutinio del regolatore: servivano fondamenta psicometriche solide e garanzia di trasparenza nei criteri di selezione e nei feedback per i percorsi di crescita.",
-        },
-        {
-          icon: TrendingUp,
-          title: 'Rischio turnover legato alla mancanza di prospettive',
-          text: "Senza percorsi di sviluppo chiari e accessibili, i profili più motivati erano i primi a rischio di ricerca di nuove opportunità altrove, con un potenziale impatto negativo sulla retention.",
+          title: 'Vincolo regolatorio e scrutinio pubblico',
+          text: 'Come concessionario pubblico, ogni processo di valutazione deve reggere allo scrutinio del regolatore. Servivano fondamenta accademiche e psicometriche solide dietro ogni strumento utilizzato, non solo efficienza operativa.',
         },
         {
           icon: TrendingUp,
@@ -86,18 +86,18 @@ const content = {
       hrChallenges: [
         {
           icon: Eye,
-          title: 'Sviluppo guidato dalle segnalazioni dei responsabili',
-          text: 'Le decisioni su chi sviluppare e promuovere dipendevano dalle indicazioni del manager diretto, senza dati oggettivi a supporto. Il potenziale non segnalato restava invisibile.',
+          title: 'Nessuna visibilità sulle competenze della popolazione operativa',
+          text: 'Per i ~4.000 dipendenti operativi non esisteva alcuna mappatura strutturata delle competenze. Le decisioni sul potenziale si basavano esclusivamente sul giudizio del responsabile diretto, senza dati oggettivi a supporto.',
         },
         {
           icon: BarChart3,
-          title: 'Assessment non accessibili a tutta la popolazione',
-          text: 'I percorsi di valutazione strutturata erano riservati ai ruoli corporate. I dipendenti operativi non avevano mai avuto accesso a strumenti formali di assessment.',
+          title: 'Assessment manuali e non scalabili',
+          text: "Ogni processo di crescita richiedeva 5-10 persone HR, test in presenza e colloqui individuali distribuiti su 3-4 mesi. Un modello impossibile da scalare sull'intera popolazione, che di fatto limitava lo sviluppo ai soli ruoli corporate.",
         },
         {
           icon: Layers,
-          title: 'Assessment non scalabili e troppo lenti',
-          text: 'Ogni processo richiedeva test in presenza, colloqui individuali e fino a 3-4 mesi di gestione — tempi incompatibili con le esigenze di business, in particolare per le selezioni interne.',
+          title: 'Due processi interni ad alto volume senza strumenti adeguati',
+          text: "ADR gestiva ogni anno circa 20 job posting interni con oltre 25 candidature per posizione, e circa 30 percorsi di crescita verticale che generavano centinaia di candidature ciascuno. Senza strumenti di valutazione standardizzati, il carico di screening, colloqui e feedback ricadeva interamente sul team HR, con tempi incompatibili con le esigenze di business.",
         },
       ],
     },
@@ -107,7 +107,7 @@ const content = {
       items: [
         { icon: Users, text: "Democratizzare l'accesso all'assessment: garantire a tutti i 5.000 dipendenti pari opportunità di sviluppo, non solo al personale corporate" },
         { icon: Target, text: 'Oggettivare la valutazione: passare dal giudizio soggettivo del singolo responsabile a un assessment strutturato e data-driven sulle competenze, incluse le soft skill per i ruoli operativi' },
-        { icon: Zap, text: 'Scalare senza sacrificare la qualità: processare le candidature interne in giorni anziché mesi, preservando il rigore psicometrico' },
+        { icon: Zap, text: 'Scalare senza sacrificare la qualità: processare 150+ candidature interne in giorni anziché mesi, preservando il rigore psicometrico richiesto dal regolatore' },
         { icon: Layers, text: 'Costruire un modello human-in-the-loop: lo strumento deve supportare le decisioni manageriali con dati, non sostituirle — intelligenza aumentata, non automazione del giudizio' },
         { icon: Shield, text: 'Rispondere alla domanda di trasparenza: fornire a ogni dipendente criteri chiari e feedback strutturati sui percorsi di crescita, rafforzando la fiducia nel processo di sviluppo interno' },
       ],
@@ -115,26 +115,36 @@ const content = {
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue',
-      intro: "Skillvue è stato integrato nella People Strategy esistente di ADR, che già includeva un modello di leadership e percorsi di crescita strutturati Il team People Science di Skillvue ha lavorato con ADR per allineare la piattaforma al modello di competenze aziendale.",
+      intro: "Skillvue è stato integrato nella People Strategy esistente di ADR, che già includeva un modello di leadership e percorsi di crescita strutturati (Green Field Program, Talent Building Program, Management Career Path). Il team People Science di Skillvue ha lavorato con l'HR di ADR per allineare la piattaforma al modello di competenze aziendale. Il progetto si è articolato su due stream paralleli, ciascuno con logiche e volumi propri.",
+      streamsLabel: 'DUE STREAM DI PROGETTO',
+      streams: [
+        {
+          title: 'Job Posting interno',
+          text: "Per le circa 20 selezioni interne annuali, con oltre 25 candidature per posizione, Skillvue ha introdotto un primo filtro oggettivo basato su competenze tecniche e soft skill rilevanti per il ruolo. L'assessment standardizzato consente di identificare rapidamente i candidati idonei, eliminando soggettività nella preselezione e garantendo criteri uniformi, equi e orientati alla meritocrazia.",
+        },
+        {
+          title: 'Career Growth — Crescita verticale',
+          text: "Per le circa 30 opportunità annuali di sviluppo verso ruoli di maggiore responsabilità — ciascuna delle quali genera centinaia di candidature — Skillvue valuta l'intero set di competenze chiave richiesto, dalle soft skill alle competenze tecniche. Il sistema restituisce report dettagliati sia ai manager che ai candidati, rendendo il processo trasparente e fondato su dati, non su opinioni.",
+        },
+      ],
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Wrench, label: 'Competenze tecniche (role-specific, adattate al modello di competenze di ADR)' },
         { icon: CheckCircle, label: 'Lingua inglese (come competenza tecnica)' },
-        { icon: Heart, label: 'Soft skills' },
       ],
       methodologyLabel: 'METODOLOGIA',
       methodology: [
         {
           title: 'Assessment multi-step strutturato',
-          text: 'Un percorso a più fasi: filtro dei prerequisiti, test di inglese, test tecnico, assessment delle soft skill, assessment center in presenza per i top-ranked, decisione finale manageriale.',
+          text: 'Un percorso a più fasi: filtro dei prerequisiti, test di inglese, test tecnico, assessment center in presenza per i top-ranked, decisione finale manageriale.',
         },
         {
           title: 'Invito aperto e inclusivo',
-          text: 'Tutti i dipendenti eleggibili sono invitati a partecipare, senza pre-selezione da parte dei responsabili. Una scelta per garantire equità di accesso e far emergere talento nascosto.',
+          text: 'Tutti i dipendenti eleggibili sono invitati a partecipare - nessuna pre-selezione da parte dei responsabili di linea. Una scelta progettuale per garantire equità di accesso e far emergere talento nascosto, coerente con i requisiti di un concessionario pubblico.',
         },
         {
           title: 'Change management sul campo',
-          text: "Per i ruoli corporate l'adozione è stata immediata. Per i ruoli operativi è stato scelto un accompagnamento strutturato: sessioni guidate in sede e supporto on-site nelle prime fasi di assessment.",
+          text: "Per i ruoli corporate l'adozione è stata immediata. Per i ruoli operativi è stato scelto un accompagnamento strutturato: sessioni guidate in sede, comunicazione estensiva fino a livello sindacale, e supporto on-site durante le prime fasi di assessment. Un dialogo costante con Skillvue, incluse sessioni di lavoro in presenza presso l'HQ di ADR.",
         },
       ],
     },
@@ -143,26 +153,29 @@ const content = {
       title: 'Key Metrics & Impatto',
       subtitle: 'I risultati misurabili ottenuti da ADR attraverso l\'adozione di Skillvue per la gestione dei processi di sviluppo interno.',
       metrics: [
-        { value: '-97%', label: 'Time-to-process' },
-        { value: '4.000', label: 'Operativi inclusi per la prima volta' },
-        { value: 'Giorni, non settimane', label: 'lunghezza del processo di selezione interna' },
+        { value: '3-4 mesi → ~3 giorni', label: 'Time-to-process', sublabel: 'Per gestire 150+ candidature interne' },
+        { value: '5.000', label: 'Dipendenti con accesso allo sviluppo', sublabel: 'Da ~1.000 (solo corporate) a tutta la popolazione' },
+        { value: '150+', label: 'Candidature per processo', sublabel: 'Gestite con supporto AI strutturato' },
+        { value: '4.000', label: 'Operativi inclusi per la prima volta', sublabel: 'Precedentemente esclusi da ogni percorso di sviluppo' },
       ],
       qualitative: [
         { icon: Users, title: 'Democratizzazione dello sviluppo', text: 'Ogni dipendente può ora partecipare alle selezioni interne con pari opportunità. Per la prima volta, lo sviluppo professionale è un diritto accessibile a tutti i 5.000 dipendenti, non un privilegio riservato ai ruoli corporate.' },
         { icon: Eye, title: 'Talento nascosto scoperto', text: 'ADR ha individuato profili ad alto potenziale in ruoli operativi dove prima non esisteva alcuna visibilità. Persone di valore che sarebbero rimaste invisibili con il vecchio approccio basato sul solo giudizio del responsabile.' },
         { icon: Scale, title: 'Valutazione oggettivata e difendibile', text: 'Le decisioni sono ora supportate da dati strutturati sulle competenze, non più da sole opinioni soggettive. Un aspetto cruciale per un concessionario pubblico che deve poter giustificare ogni processo davanti al regolatore.' },
         { icon: Layers, title: 'Primo vero modello human-in-the-loop', text: "L'assessment non produce un verdetto ma informazioni che alimentano un processo decisionale manageriale consapevole. Lo sforzo cognitivo per i manager aumenta, perché ora hanno dati su cui decidere - nessun assessore esterno a cui delegare la responsabilità." },
-        { icon: TrendingUp, title: 'Risposta concreta alla domanda di trasparenza', text: "I dipendenti hanno ora visibilità su criteri di selezione chiari e ricevono feedback strutturati sul proprio percorso professionale — con un impatto percepito e concreto sulla employee experience." },
+        { icon: TrendingUp, title: 'Risposta concreta alla domanda di trasparenza', text: "I dipendenti hanno ora visibilità su criteri di selezione chiari e ricevono feedback strutturati. La dimensione 'accesso alle opportunità di sviluppo' nelle survey di engagement interne è migliorata nel tempo dopo l'implementazione di Skillvue, segnalando un impatto percepito e concreto sulla employee experience." },
       ],
     },
     vision: {
       badge: 'EVOLUZIONE 2026',
       title: 'Da sviluppo interno a talent strategy integrata su tutta la workforce',
       intro: "Quando l'assessment sullo sviluppo interno ha dimostrato di essere scalabile e rigoroso, il passo naturale è stato estenderlo anche alla selezione esterna, eliminando la discontinuità tra come si valuta chi è già in azienda e come si seleziona chi entra.",
-      objective: 'Costruire un unico ciclo coerente in cui selezione e sviluppo seguono la stessa logica, per tutta la popolazione aziendale.',
+      objective: 'Costruire un unico ciclo coerente in cui ogni persona, dal primo giorno, viene valutata, orientata e accompagnata con la stessa logica, coprendo l\'intera popolazione di 5.000 dipendenti.',
       bullets: [
-        'Estensione di Skillvue a tutte le selezioni interne nel 2026',
-        'Integrazione nel Talent Acquisition per creare continuità tra selezione esterna e sviluppo interno',
+        'Estensione di Skillvue a tutte le selezioni interne nel 2026, sfruttando la scalabilità della piattaforma',
+        'Integrazione più ampia nel Talent Acquisition per creare continuità tra selezione e sviluppo',
+        "Assessment asincrono per la selezione esterna: i candidati completano da qualsiasi device tramite link, abbattendo le barriere di accesso",
+        'Pilota sul recruitment esterno per profili operativi, con mappatura di soft skill, inglese e idoneità al ruolo',
       ],
     },
     related: {
@@ -186,10 +199,10 @@ const content = {
       highlight2: '5,000 people',
       after: '',
     },
-    subtitle: 'With Skillvue, ADR transformed talent development into a true strategic lever.',
+    subtitle: 'From manual assessments reserved for the few, to a scalable AI system covering the entire workforce. With Skillvue, ADR transformed talent development from a privilege into a right.',
     heroMetrics: [
-      { value: '-97%', label: 'time-to-process' },
-      { value: '3–4 days', label: 'current time' },
+      { value: '~3 days', label: 'time-to-process' },
+      { value: '5,000', label: 'employees reached' },
       { value: '3–4 months', label: 'previous time' },
     ],
     ctaPrimary: 'Contact Us',
@@ -206,31 +219,31 @@ const content = {
       badge: 'CONTEXT',
       title: 'The Project Context',
       paragraph: <>
-        Aeroporti di Roma (ADR) manages Fiumicino and Ciampino with approximately <strong className="text-[#1A1A2E]/80 font-semibold">5,000 employees</strong>, of which 4,000 operational. The post-COVID traffic rebound imposed unprecedented hiring speed: <strong className="text-[#1A1A2E]/80 font-semibold">over 2,000 fixed-term contracts in 2023 alone</strong>, with sustained headcount growth continuing to the present day. The HR team, faced with this large workforce, had a clear objective: identify and develop high-potential profiles, ensuring fair opportunities for growth and recognition for all. The assessment model in use at the time could not identify all talent with clarity: access to internal development opportunities was driven by manager nominations.
+        Aeroporti di Roma (ADR), part of the Mundys Group, manages the airports of Fiumicino "Leonardo da Vinci" and Ciampino "G.B. Pastine" with approximately <strong className="text-[#1A1A2E]/80 font-semibold">5,000 employees</strong>, of which 4,000 in operational roles (maintenance, security, ground handling, cleaning) and 1,000 in corporate roles. The post-COVID traffic rebound forced ADR to hire and promote at unprecedented speed, activating <strong className="text-[#1A1A2E]/80 font-semibold">over 2,000 fixed-term contracts in 2023 alone</strong>. As a public entity, ADR must guarantee fair and rigorous assessment processes. The previous approach limited assessments to promotions only, managed manually by an <strong className="text-[#1A1A2E]/80 font-semibold">HR team of 5–10 people</strong>: this could lead to candidate processing times of up to <strong className="text-[#1A1A2E]/80 font-semibold">3–4 months</strong> during application peaks such as the post-COVID period. The same issue applied internally: <strong className="text-[#1A1A2E]/80 font-semibold">access to development opportunities</strong> remained a critical pain point within this type of context and structure.
       </>,
       summary: 'The project transformed the assessment from a tool necessarily reserved for the few into a scalable and democratic system, extending structured development paths for the first time to the entire workforce, including operational employees who had previously been excluded.',
     },
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'The Structural Problem',
-      intro: 'Guaranteeing the entire workforce — not just corporate roles — equal access to development and assessment pathways was no easy task, especially while maintaining the quality and rigour that a public entity requires. The previous model was not scalable and left the competencies of thousands of employees invisible.',
+      intro: 'With 5,000 employees and an unprecedented post-COVID growth plan, ADR needed to solve a structural problem: guaranteeing the entire workforce — not just corporate roles — equal access to development and assessment pathways, while maintaining the quality and rigour that a public entity requires. The previous model, based on manual assessments and individual manager judgment, was not scalable and left the competencies of thousands of operational employees invisible.',
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Users,
-          title: 'Invisible talent, development accessible only to a few',
-          text: 'Out of 5,000 employees, only 1,000 corporate staff had access to structured assessment and growth paths. The 4,000 operational employees had never been assessed, leaving ADR with no visibility on internal potential.',
+          title: 'Development accessible only to a minority',
+          text: 'Out of 5,000 employees, only ~1,000 corporate staff had access to structured assessment and growth paths. The ~4,000 operational employees — the backbone of airport services — had never been formally assessed on cross-functional competencies (leadership, communication, safety awareness), despite these being critical for service quality. Democratizing access to development was the precondition to unlocking the potential of the entire organization.',
+        },
+        {
+          icon: Target,
+          title: 'No immediate talent availability for key roles',
+          text: "Without a structured competency mapping across the entire workforce, ADR had no visibility on who was ready to fill key positions when they opened up. Every vacant role became an emergency: long timelines to identify internal candidates, no objective data to compare them, and a concrete risk of having to turn to the external market for positions that could have been filled internally.",
         },
         {
           icon: Scale,
-          title: 'Regulatory constraints and demand for transparency',
-          text: 'Every assessment process must also withstand regulatory scrutiny: solid psychometric foundations were required, along with guaranteed transparency in selection criteria and feedback for career development paths.',
-        },
-        {
-          icon: TrendingUp,
-          title: 'Turnover risk tied to lack of clear career paths',
-          text: 'Without clear and accessible development paths, the most motivated employees were the first at risk of seeking new opportunities elsewhere — with a potential negative impact on retention.',
+          title: 'Regulatory constraints and public scrutiny',
+          text: 'As a public concession holder, every assessment process must withstand scrutiny from the regulator. Solid academic and psychometric foundations were required behind every tool used, not just operational efficiency.',
         },
         {
           icon: TrendingUp,
@@ -241,18 +254,18 @@ const content = {
       hrChallenges: [
         {
           icon: Eye,
-          title: 'Development driven by manager nominations',
-          text: 'Decisions on who to develop and promote depended on direct manager signals, without objective data to support them. Unrecognised potential remained invisible.',
+          title: 'Zero visibility on the competencies of the operational workforce',
+          text: "For the ~4,000 operational employees, no structured competency mapping existed. Decisions on potential were based exclusively on the direct manager's judgment, without any objective data to support them.",
         },
         {
           icon: BarChart3,
-          title: 'Assessments not accessible to the entire workforce',
-          text: 'Structured assessment paths were reserved for corporate roles. Operational employees had never had access to formal assessment tools.',
+          title: 'Manual and non-scalable assessments',
+          text: 'Each growth process required 5–10 HR people, in-person tests and individual interviews spread over 3–4 months. A model impossible to scale across the entire workforce, which in practice limited development to corporate roles only.',
         },
         {
           icon: Layers,
-          title: 'Assessments not scalable and too slow',
-          text: 'Every process required in-person tests, individual interviews, and up to 3–4 months of management — timelines incompatible with business needs, especially for internal selections.',
+          title: 'Two high-volume internal processes with no adequate tools',
+          text: "ADR managed roughly 20 internal job postings per year with over 25 applications per position, and around 30 vertical growth paths each generating hundreds of applications. Without standardized assessment tools, the entire burden of screening, interviews and feedback fell on the HR team, at a pace incompatible with business needs.",
         },
       ],
     },
@@ -262,7 +275,7 @@ const content = {
       items: [
         { icon: Users, text: 'Democratize access to assessment: guarantee all 5,000 employees equal development opportunities, not just corporate staff' },
         { icon: Target, text: 'Objectify evaluation: move from subjective individual manager judgment to a structured, data-driven competency assessment, including soft skills for operational roles' },
-        { icon: Zap, text: 'Scale without sacrificing quality: process internal applications in days instead of months, while preserving psychometric rigour' },
+        { icon: Zap, text: 'Scale without sacrificing quality: process 150+ internal applications in days instead of months, while preserving the psychometric rigour required by the regulator' },
         { icon: Layers, text: 'Build a human-in-the-loop model: the tool must support managerial decisions with data, not replace them — augmented intelligence, not automation of judgment' },
         { icon: Shield, text: 'Respond to the demand for transparency: give every employee clear criteria and structured feedback on career growth paths, strengthening trust in the internal development process' },
       ],
@@ -270,7 +283,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue's People Science team worked with ADR to align the platform with the company's competency model.",
+      intro: "Skillvue was integrated into ADR's existing People Strategy, which already included a leadership model and structured career growth paths (Green Field Program, Talent Building Program, Management Career Path). Skillvue's People Science team worked with ADR's HR to align the platform with the company's competency model. The project ran across two parallel streams, each with its own logic and volume.",
       streamsLabel: 'TWO PROJECT STREAMS',
       streams: [
         {
@@ -286,21 +299,20 @@ const content = {
       skills: [
         { icon: Wrench, label: 'Technical competencies (role-specific, adapted to ADR\'s competency model)' },
         { icon: CheckCircle, label: 'English language (as a technical competency)' },
-        { icon: Heart, label: 'Soft skills' },
       ],
       methodologyLabel: 'METHODOLOGY',
       methodology: [
         {
           title: 'Structured multi-step assessment',
-          text: 'A multi-phase process: prerequisite filtering, English language test, technical test, soft skills assessment, in-person assessment center for top-ranked candidates, final managerial decision.',
+          text: 'A multi-phase process: prerequisite filtering, English language test, technical test, in-person assessment center for top-ranked candidates, final managerial decision.',
         },
         {
           title: 'Open and inclusive invitation',
-          text: 'All eligible employees are invited to participate, with no pre-selection by line managers. A deliberate choice to guarantee equal access and surface hidden talent.',
+          text: 'All eligible employees are invited to participate — no pre-selection by line managers. A deliberate design choice to guarantee equal access and surface hidden talent, consistent with the requirements of a public concession holder.',
         },
         {
           title: 'On-the-ground change management',
-          text: 'For corporate roles, adoption was immediate. For operational roles, a structured accompaniment was chosen: guided on-site sessions and on-site support during the early assessment phases.',
+          text: "For corporate roles, adoption was immediate. For operational roles, a structured accompaniment was chosen: guided on-site sessions, extensive communication up to union level, and on-site support during the early assessment phases. A constant dialogue with Skillvue, including in-person working sessions at ADR's HQ.",
         },
       ],
     },
@@ -309,26 +321,29 @@ const content = {
       title: 'Key Metrics & Impact',
       subtitle: 'The measurable outcomes ADR achieved through Skillvue across its internal development processes.',
       metrics: [
-        { value: '-97%', label: 'Time-to-process' },
-        { value: '4,000', label: 'Operational staff included for the first time' },
-        { value: 'Days, not weeks', label: 'length of the internal selection process' },
+        { value: '3–4 months → ~3 days', label: 'Time-to-process', sublabel: 'To manage 150+ internal applications' },
+        { value: '5,000', label: 'Employees with access to development', sublabel: 'From ~1,000 (corporate only) to the entire workforce' },
+        { value: '150+', label: 'Applications per process', sublabel: 'Managed with structured AI support' },
+        { value: '4,000', label: 'Operational staff included for the first time', sublabel: 'Previously excluded from any development path' },
       ],
       qualitative: [
         { icon: Users, title: 'Democratization of development', text: 'Every employee can now participate in internal selections with equal opportunity. For the first time, professional development is a right accessible to all 5,000 employees, not a privilege reserved for corporate roles.' },
         { icon: Eye, title: 'Hidden talent discovered', text: "ADR identified high-potential profiles in operational roles where no visibility previously existed. Valuable people who would have remained invisible under the old approach based solely on manager judgment." },
         { icon: Scale, title: 'Objectified and defensible evaluation', text: 'Decisions are now supported by structured competency data, no longer by subjective opinions alone. A crucial aspect for a public concession holder that must be able to justify every process before the regulator.' },
         { icon: Layers, title: 'First true human-in-the-loop model', text: 'The assessment does not produce a verdict but information that feeds a conscious managerial decision-making process. The cognitive effort for managers increases, because they now have data to decide on — no external assessor to delegate responsibility to.' },
-        { icon: TrendingUp, title: 'A concrete answer to the demand for transparency', text: "Employees now have visibility into clear selection criteria and receive structured feedback on their professional trajectory — with a perceived and concrete impact on employee experience." },
+        { icon: TrendingUp, title: 'A concrete answer to the demand for transparency', text: "Employees now have visibility into clear selection criteria and receive structured feedback. The 'access to development opportunities' dimension in internal engagement surveys has improved over time following Skillvue's implementation, signaling a perceived and concrete impact on the employee experience." },
       ],
     },
     vision: {
       badge: 'EVOLUTION 2026',
       title: 'From internal development to an integrated talent strategy across the entire workforce',
       intro: 'When the internal development assessment proved to be scalable and rigorous, the natural step was to extend it to external recruitment as well, eliminating the disconnect between how existing employees are evaluated and how new hires are selected.',
-      objective: 'Build a single coherent cycle in which selection and development follow the same logic, for the entire workforce.',
+      objective: 'Build a single coherent cycle in which every person, from day one, is assessed, guided, and supported with the same logic, covering the entire population of 5,000 employees.',
       bullets: [
-        'Extension of Skillvue to all internal selections in 2026',
-        'Integration into Talent Acquisition to create continuity between external selection and internal development',
+        "Extension of Skillvue to all internal selections in 2026, leveraging the platform's scalability",
+        'Broader integration into Talent Acquisition to create continuity between selection and development',
+        'Asynchronous assessment for external recruitment: candidates complete from any device via link, removing all access barriers',
+        'Pilot for external recruitment of operational profiles, mapping soft skills, English proficiency and role suitability',
       ],
     },
     related: {
@@ -347,7 +362,7 @@ const content = {
 
 export default function ADRStoryPage() {
   const router = useRouter();
-  const { lang, t } = useLanguage();
+  const { lang } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
 
   return (
@@ -444,6 +459,9 @@ export default function ADRStoryPage() {
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-6 max-w-3xl">{c.context.title}</h2>
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8 max-w-3xl">{c.context.paragraph}</p>
+              <p className="text-[15px] text-[#1A1A2E]/40 italic leading-[1.75] max-w-2xl border-l-2 border-[#4b4df7]/20 pl-5">
+                {c.context.summary}
+              </p>
             </Section>
 
             {/* CHALLENGE */}
@@ -553,7 +571,7 @@ export default function ADRStoryPage() {
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                   {c.results.metrics.map(m => (
                     <div key={m.label} className="text-center">
                       <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
