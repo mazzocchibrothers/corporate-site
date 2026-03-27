@@ -81,48 +81,48 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Carrefour Italia, oggi <strong className="text-[#1A1A2E]/80 font-semibold">Princes Retail S.p.A.</strong> all\u2019interno del gruppo NewPrinces, è una delle principali realtà della Grande Distribuzione Organizzata in Italia dal 1972, con circa <strong className="text-[#1A1A2E]/80 font-semibold">1.200 punti vendita</strong> (di cui oltre 900 in franchising), <strong className="text-[#1A1A2E]/80 font-semibold">13.000 dipendenti diretti</strong> e circa <strong className="text-[#1A1A2E]/80 font-semibold">8.000 persone nella rete franchising</strong>. L\u2019organizzazione opera su <strong className="text-[#1A1A2E]/80 font-semibold">3 canali commerciali</strong> (Ipermercati, Market, Express), Cash &amp; Carry e HQ corporate, ciascuno con profili e requisiti diversi. L\u2019azienda riceve circa <strong className="text-[#1A1A2E]/80 font-semibold">30.000 CV all\u2019anno</strong> e gestisce <strong className="text-[#1A1A2E]/80 font-semibold">800 colloqui annui con soli 3 recruiter</strong> — un rapporto volume-risorse estremo. Il processo di selezione pre-Skillvue era solo parzialmente digitalizzato: il team aveva già introdotto un ATS (SAP) e video-interviste asincrone senza AI, ma mancava qualsiasi analisi strutturata delle competenze prima del colloquio. Parallelamente, la rete di punti vendita non disponeva di alcuna mappatura strutturata delle competenze. La domanda strategica era chiara: riempire posizioni, o trovare la persona giusta per il ruolo giusto?
+        Carrefour Italia (oggi <strong className="text-[#1A1A2E]/80 font-semibold">Princes Retail S.p.A.</strong>) è una delle principali realtà della GDO italiana, con circa <strong className="text-[#1A1A2E]/80 font-semibold">1.200 punti vendita</strong>, <strong className="text-[#1A1A2E]/80 font-semibold">13.000 dipendenti diretti</strong> e una rete franchising di 8.000 persone. L’azienda riceve circa <strong className="text-[#1A1A2E]/80 font-semibold">30.000 CV all’anno</strong> e gestisce <strong className="text-[#1A1A2E]/80 font-semibold">800 colloqui con soli 3 recruiter</strong>. Il processo pre-Skillvue era parzialmente digitalizzato — ATS e video-interviste asincrone — ma mancava qualsiasi analisi strutturata delle competenze. La domanda strategica era chiara: riempire posizioni, o trovare la persona giusta per il ruolo giusto?
       </>,
       summary: "Il progetto ha trasformato il pre-screening da attività manuale a processo AI-driven con output strutturato su ogni candidato, riducendo drasticamente i tempi e aumentando la qualità delle shortlist. Il valore dimostrato nella selezione ha portato all\u2019estensione del modello anche alla mappatura delle competenze interne su 6.000 dipendenti della rete.",
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Il problema strutturale',
-      intro: "Con 30.000 CV l\u2019anno e soli 3 recruiter su un\u2019organizzazione multi-canale con 1.200 punti vendita, Carrefour Italia aveva un vincolo operativo insostenibile: scalare la qualità della selezione senza moltiplicare le risorse, integrando un modello di competenze proprietario (il framework \u201c4C\u201d) e mantenendo un\u2019esperienza candidato all\u2019altezza di un brand Tier-1 certificato Top Employer per l\u2019ottavo anno consecutivo.",
+      intro: "Con 30.000 CV l\u2019anno e soli 3 recruiter su 1.200 punti vendita, Carrefour Italia aveva un vincolo operativo chiaro: scalare la qualità della selezione senza moltiplicare le risorse. Il tutto integrando il framework proprietario \u201c4C\u201d e mantenendo un\u2019esperienza candidato all\u2019altezza di un brand Top Employer.",
       businessLabel: 'IMPATTO SUL BUSINESS',
       hrLabel: 'IMPATTO SU HR & PEOPLE',
       businessChallenges: [
         {
           icon: Target,
           title: 'Trovare la persona giusta, non solo riempire il ruolo',
-          text: "Con un turnover elevato e margini in contrazione, ogni assunzione sbagliata aveva un costo crescente. Il modello precedente era orientato alla sopravvivenza: coprire le posizioni il più velocemente possibile. Serviva un cambio di paradigma: passare dal riempire ruoli al trovare la persona giusta per il ruolo giusto, supportando la decisione con dati oggettivi sulle competenze.",
+          text: "Con turnover elevato e margini in contrazione, il modello precedente era orientato alla sopravvivenza: coprire posizioni il più rapidamente possibile. Serviva un cambio di paradigma verso la persona giusta per il ruolo giusto, supportato da dati oggettivi sulle competenze.",
         },
         {
           icon: Layers,
           title: "Organizzazione multi-canale, un solo team",
-          text: "3 canali retail (Ipermercati, Market, Express), Cash & Carry e HQ corporate, ciascuno con profili, competenze e volumi diversi. Un team di 3 recruiter doveva gestire 800 colloqui l\u2019anno su tutti i canali, con forte dipendenza da headhunter esterni e costi significativi. Serviva uno strumento flessibile per adattarsi a scenari diversi senza moltiplicare le risorse.",
+          text: "3 canali retail, Cash & Carry e HQ corporate, ciascuno con profili e volumi diversi. Un team di 3 recruiter gestiva 800 colloqui l\u2019anno su tutti i canali, con forte dipendenza da headhunter esterni. Serviva uno strumento flessibile che non moltiplicasse le risorse.",
         },
         {
           icon: Eye,
           title: 'Il CV non racconta le competenze',
-          text: "Per i profili junior (stage, tirocini) e operativi (addetti vendita, cassieri), i CV sono sostanzialmente identici: poca esperienza, qualifiche simili. Le competenze trasversali — problem solving, orientamento al cliente, capacità di adattamento — sono il primo predittore di successo ma completamente invisibili sulla carta.",
+          text: "Per profili junior e operativi, i CV sono sostanzialmente identici. Le competenze trasversali — problem solving, orientamento al cliente, adattamento — sono il primo predittore di successo ma completamente invisibili sulla carta.",
         },
       ],
       hrChallenges: [
         {
           icon: BarChart3,
           title: 'Nessun output strutturato prima del colloquio',
-          text: "Nonostante l\u2019introduzione di video-interviste asincrone (senza AI), il processo non produceva alcuna valutazione specifica per ogni candidato. Le decisioni di pre-screening si basavano sull\u2019intuizione del recruiter, senza dati strutturati sulle competenze. Skillvue ha aggiunto la dimensione di analisi quantitativa e comportamentale che mancava.",
+          text: "Nonostante le video-interviste asincrone, il processo non produceva alcuna valutazione specifica per candidato. Le decisioni di pre-screening si basavano sull\u2019intuizione, senza dati strutturati sulle competenze.",
         },
         {
           icon: Wrench,
           title: 'Modello di competenze proprietario da integrare',
-          text: "Carrefour opera con un framework di competenze proprietario — il modello \u20184C\u2019 (Collaborazione, Coraggio, Cambiamento, Cliente). Qualsiasi soluzione tecnologica doveva integrarsi con questo modello, non sostituirlo: replicare il comportamento di valutazione del recruiter, allineando i test alle competenze e ai comportamenti tipici del framework aziendale.",
+          text: "Carrefour opera con il modello \u20184C\u2019 (Collaborazione, Coraggio, Cambiamento, Cliente). La soluzione doveva integrarsi con questo framework, replicando il comportamento di valutazione del recruiter e allineando i test ai comportamenti tipici del modello.",
         },
         {
           icon: Users,
           title: 'Competenze della rete vendita mai mappate',
-          text: "Per la rete di punti vendita, migliaia di persone, non esisteva alcuna mappatura strutturata delle competenze. Le valutazioni avvenivano tramite osservazione in presenza da parte dei formatori, con tempi lunghi, costi elevati, risultati disomogenei tra sedi e nessun feedback strutturato al dipendente.",
+          text: "Per migliaia di persone nella rete vendita non esisteva alcuna mappatura strutturata delle competenze. Le valutazioni avvenivano tramite osservazione in presenza, con tempi lunghi, costi elevati e risultati disomogenei tra sedi.",
         },
       ],
     },
@@ -139,7 +139,7 @@ const content = {
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue',
-      intro: "Skillvue è stato integrato nel processo di selezione di Carrefour Italia a partire da giugno 2024, con un onboarding di circa 1 mese dal kick-off al go-live. Il team People Science di Skillvue ha lavorato con l\u2019HR di Carrefour per mappare il framework \u20184C\u2019 sulla Skill Library della piattaforma, allineando non solo le descrizioni ma soprattutto i comportamenti tipici da identificare nei candidati. Il modello è stato poi esteso anche alla mappatura delle competenze interne della rete vendita.",
+      intro: "Skillvue è stato integrato nel processo di selezione di Carrefour Italia con un onboarding di circa 1 mese dal kick-off al go-live. Il framework \u20184C\u2019 è stato mappato sulla Skill Library, allineando competenze e comportamenti tipici — poi esteso alla mappatura interna della rete vendita.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Heart, label: "Soft skill allineate al modello 4C (Collaborazione, Coraggio, Cambiamento, Cliente)" },
@@ -150,15 +150,15 @@ const content = {
       methodology: [
         {
           title: "Integrazione profonda con il modello 4C",
-          text: "I team Skillvue e Carrefour hanno lavorato insieme per mappare le competenze del framework aziendale sulla Skill Library della piattaforma, calibrando contenuti e comportamenti tipici. Una calibrazione congiunta nel tempo ha garantito che l\u2019AI replicasse il comportamento di valutazione del recruiter rispetto ai valori aziendali.",
+          text: "I team hanno mappato il framework 4C sulla Skill Library, calibrando contenuti e comportamenti tipici. La calibrazione congiunta garantisce che l\u2019AI replichi il comportamento di valutazione del recruiter rispetto ai valori aziendali.",
         },
         {
           title: "Architettura multi-canale, un unico processo",
-          text: "Assessment configurati per profili diversi — stage HQ, ruoli operativi su più formati di punto vendita, profili di leadership — ciascuno con un mix specifico di soft e hard skill. I candidati completano l\u2019assessment da qualsiasi device; il recruiter riceve un report strutturato con profilo di competenze e matching rispetto al ruolo.",
+          text: "Assessment configurati per profili diversi — stage HQ, ruoli operativi, leadership — ciascuno con mix specifico di soft e hard skill. Il recruiter riceve un report strutturato con profilo di competenze e matching rispetto al ruolo.",
         },
         {
           title: "Dal hiring alla mappatura interna",
-          text: "Il valore dimostrato nella selezione ha portato all\u2019estensione del modello alla rete vendita: 6.000 dipendenti mappati sulle competenze in un singolo mese, sostituendo l\u2019osservazione in presenza con un\u2019analisi strutturata e scalabile. Un unico standard di misurazione dalla selezione allo sviluppo.",
+          text: "Il successo nel hiring ha portato all\u2019estensione alla rete vendita: 6.000 dipendenti mappati in un mese, sostituendo l\u2019osservazione in presenza. Un unico standard dalla selezione allo sviluppo.",
         },
       ],
     },
@@ -174,22 +174,21 @@ const content = {
         { value: '3 FTE', label: 'Team recruiting invariato', sublabel: 'Stesse risorse, risultati esponenzialmente migliori' },
       ],
       qualitative: [
-        { icon: BarChart3, title: 'Pre-screening con output strutturato', text: "Per la prima volta, ogni video-assessment produce un risultato specifico di valutazione delle competenze. Il report è diventato \u2018la parte fondamentale\u2019: una sintesi strutturata per l\u2019hiring manager che combina matching AI con la valutazione personale del recruiter." },
-        { icon: Zap, title: "Tempo liberato per attività ad alto valore", text: "La riduzione drastica del tempo dedicato allo screening CV (-30%) e alle telefonate (-50%) ha liberato il team per concentrarsi su employer branding, analisi dei dati e nurturing dei candidati — attività prima impossibili con i volumi gestiti." },
-        { icon: CheckCircle, title: 'Shortlist radicalmente più qualificate', text: "L\u2019aumento del tasso di successo degli hiring manager dal 65% all\u201985% dimostra la qualità delle shortlist: candidati più allineati tecnicamente e culturalmente al framework 4C, con una riduzione diretta del tempo di colloquio sprecato." },
-        { icon: Eye, title: 'Talento nascosto scoperto nella rete', text: "La mappatura interna di 6.000 dipendenti della rete vendita ha fatto emergere profili ad alto potenziale e profili con aree di miglioramento dove prima non esisteva alcuna visibilità, fornendo anche informazioni chiave per coordinare gli sforzi formativi." },
-        { icon: TrendingUp, title: 'Allineamento tra selezione e sviluppo', text: "Lo stesso standard di competenze viene applicato al hiring e allo sviluppo interno, creando un parallelismo completo tra i team di selezione e formazione. L\u2019obiettivo: anticipare i bisogni formativi già in fase di assunzione e abilitare la mobilità interna basata sui dati." },
+        { icon: BarChart3, title: 'Pre-screening con output strutturato', text: "Per la prima volta ogni video-assessment produce una valutazione specifica delle competenze. Il report combina matching AI e valutazione del recruiter, diventando la parte fondamentale della shortlist." },
+        { icon: Zap, title: "Tempo liberato per attività ad alto valore", text: "La riduzione del tempo su screening CV e telefonate ha liberato il team per employer branding, analisi dati e nurturing — attività prima impossibili con i volumi gestiti." },
+        { icon: CheckCircle, title: 'Shortlist radicalmente più qualificate', text: "Il tasso di successo degli hiring manager è salito dal 65% all\u201985%: candidati più allineati al framework 4C, con riduzione diretta dei colloqui inutili." },
+        { icon: Eye, title: 'Talento nascosto scoperto nella rete', text: "La mappatura di 6.000 dipendenti ha fatto emergere profili ad alto potenziale dove prima non esisteva alcuna visibilità, orientando gli sforzi formativi." },
+        { icon: TrendingUp, title: 'Allineamento tra selezione e sviluppo', text: "Lo stesso standard di competenze è applicato a hiring e sviluppo interno, anticipando i bisogni formativi dall\u2019assunzione e abilitando la mobilità basata sui dati." },
       ],
     },
     vision: {
       badge: 'EVOLUZIONE',
       title: 'Verso un modello skills-based integrato su tutta l\u2019organizzazione',
       intro: "Con i risultati dimostrati sia sulla selezione che sulla mappatura interna, il passo naturale è consolidare il modello skills-based come standard unico per tutte le decisioni sulle persone, dalla selezione alla mobilità interna allo sviluppo.",
-      objective: "Costruire un framework di competenze unificato in cui ogni persona — dal primo giorno di selezione fino alla pianificazione della crescita — viene valutata e accompagnata con la stessa logica, su tutti i canali e formati della rete.",
+      objective: "Un framework di competenze unificato in cui ogni persona viene valutata con la stessa logica — dalla selezione alla pianificazione della crescita, su tutti i canali della rete.",
       bullets: [
         "Estensione progressiva del modello di selezione AI a tutta la rete di punti vendita",
-        "Consolidamento della mappatura competenze interne come base per mobilità, formazione e succession planning",
-        "Verso un\u2019organizzazione skills-based: un unico standard di misurazione dalla selezione allo sviluppo",
+        "Consolidamento della mappatura interna come base per mobilità, formazione e succession planning",
       ],
     },
     related: {
@@ -242,41 +241,41 @@ const content = {
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'The Structural Problem',
-      intro: "With 30,000 CVs per year and only 3 recruiters across a multi-channel organization with 1,200 stores, Carrefour Italia faced an unsustainable operational constraint: scale selection quality without multiplying resources, integrate a proprietary competency model (the \u20184C\u2019 framework), and maintain a candidate experience worthy of a Tier-1 brand certified Top Employer for the eighth consecutive year.",
+      intro: "With 30,000 CVs per year and only 3 recruiters across 1,200 stores, Carrefour Italia had a clear operational constraint: scale selection quality without multiplying resources. All while integrating the proprietary '4C' framework and maintaining a candidate experience worthy of a Top Employer brand.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Target,
           title: 'Find the right person, not just fill the role',
-          text: "With high turnover and shrinking margins, every wrong hire carried a growing cost. The previous model was survival-oriented: cover positions as fast as possible. A paradigm shift was needed: move from filling roles to finding the right person for the right role, backed by objective competency data.",
+          text: "With high turnover and shrinking margins, the previous model was survival-oriented: cover positions as quickly as possible. A paradigm shift was needed toward finding the right person for the right role, backed by objective competency data.",
         },
         {
           icon: Layers,
           title: 'Multi-channel organization, one team',
-          text: "3 retail channels (Hypermarkets, Market, Express), Cash & Carry and corporate HQ — each with different profiles, competencies and volumes. A 3-person recruiting team had to manage 800 interviews a year across all channels, with heavy reliance on external headhunters and significant costs. A flexible tool was needed to adapt to different scenarios without multiplying resources.",
+          text: "3 retail channels, Cash & Carry and corporate HQ, each with different profiles and volumes. A team of 3 recruiters managed 800 interviews a year across all channels, with strong reliance on external headhunters. A flexible tool was needed that would not multiply resources.",
         },
         {
           icon: Eye,
           title: "CVs don't reveal competencies",
-          text: "For junior profiles (internships, traineeships) and operational roles (sales staff, cashiers), CVs are virtually identical: little experience, similar qualifications. Cross-functional competencies — problem solving, customer orientation, adaptability — are the top predictor of success but completely invisible on paper.",
+          text: "For junior and operational profiles, CVs are essentially identical. Cross-functional competencies — problem solving, customer orientation, adaptability — are the top predictor of success but completely invisible on paper.",
         },
       ],
       hrChallenges: [
         {
           icon: BarChart3,
           title: 'No structured output before the interview',
-          text: "Despite introducing async video interviews (without AI), the process produced no specific competency assessment for each candidate. Pre-screening decisions were based on recruiter intuition, without structured data. Skillvue added the quantitative and behavioural analysis dimension that was missing.",
+          text: "Despite async video interviews, the process produced no specific competency assessment per candidate. Pre-screening decisions were based on intuition, without structured data.",
         },
         {
           icon: Wrench,
           title: 'Proprietary competency model to integrate',
-          text: "Carrefour operates with a proprietary competency framework — the \u20184C\u2019 model (Collaboration, Courage, Change, Customer). Any technology solution had to integrate with this model, not replace it: replicating the recruiter\u2019s evaluation behaviour by aligning tests to the competencies and typical behaviours of the company framework.",
+          text: "Carrefour operates with the '4C' model (Collaboration, Courage, Change, Customer). The solution had to integrate with this framework, replicating the recruiter's evaluation behaviour and aligning tests to the typical behaviours of the company model.",
         },
         {
           icon: Users,
           title: 'Store network competencies never mapped',
-          text: "For the store network — thousands of people — no structured competency mapping existed. Assessments were done through in-person observation by trainers, with long timelines, high costs, inconsistent results across locations, and no structured feedback to employees.",
+          text: "For thousands of people in the store network, no structured competency mapping existed. Assessments were done through in-person observation, with long timelines, high costs and inconsistent results across locations.",
         },
       ],
     },
@@ -293,7 +292,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was integrated into Carrefour Italia\u2019s selection process from June 2024, with an onboarding of approximately one month from kick-off to go-live. Skillvue\u2019s People Science team worked with Carrefour\u2019s HR to map the \u20184C\u2019 framework onto the platform\u2019s Skill Library, aligning not just descriptions but above all the typical behaviours to identify in candidates. The model was then extended to internal competency mapping across the store network.",
+      intro: "Skillvue was integrated into Carrefour Italia's selection process with an onboarding of approximately one month from kick-off to go-live. The '4C' framework was mapped onto the Skill Library, aligning competencies and typical behaviours — then extended to internal mapping of the store network.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Heart, label: "Soft skills aligned to the 4C model (Collaboration, Courage, Change, Customer)" },
@@ -304,15 +303,15 @@ const content = {
       methodology: [
         {
           title: "Deep integration with the 4C model",
-          text: "Skillvue and Carrefour teams worked together to map the company\u2019s competency framework onto the platform\u2019s Skill Library, calibrating content and typical behaviours. Ongoing joint calibration ensured the AI replicated the recruiter\u2019s evaluation behaviour relative to company values.",
+          text: "The teams mapped the 4C framework onto the Skill Library, calibrating content and typical behaviours. Joint calibration ensures the AI replicates the recruiter's evaluation behaviour relative to company values.",
         },
         {
           title: "Multi-channel architecture, one process",
-          text: "Assessments configured for different profiles — HQ internships, operational roles across multiple store formats, leadership profiles — each with a specific soft and hard skill mix. Candidates complete the assessment from any device; the recruiter receives a structured report with competency profile and role matching.",
+          text: "Assessments configured for different profiles — HQ internships, operational roles, leadership — each with a specific mix of soft and hard skills. The recruiter receives a structured report with competency profile and role matching.",
         },
         {
           title: "From hiring to internal mapping",
-          text: "The value demonstrated in selection led to extending the model to the store network: 6,000 employees mapped on competencies in a single month, replacing in-person observation with structured, scalable analysis. One single measurement standard from selection to development.",
+          text: "The success in hiring led to extending the model to the store network: 6,000 employees mapped in one month, replacing in-person observation. One single standard from selection to development.",
         },
       ],
     },
@@ -328,22 +327,21 @@ const content = {
         { value: '3 FTE', label: 'Recruiting team unchanged', sublabel: 'Same resources, exponentially better results' },
       ],
       qualitative: [
-        { icon: BarChart3, title: 'Pre-screening with structured output', text: "For the first time, every video-assessment produces a specific competency evaluation. The report has become \u2018the fundamental part\u2019: a structured summary for the hiring manager combining AI matching with the recruiter\u2019s personal assessment." },
-        { icon: Zap, title: 'Time freed for high-value activities', text: "The drastic reduction in time spent on CV screening (-30%) and phone calls (-50%) freed the team to focus on employer branding, data analysis and candidate nurturing — activities previously impossible to manage given the volumes." },
-        { icon: CheckCircle, title: 'Radically more qualified shortlists', text: "The increase in hiring manager success rate from 65% to 85% demonstrates shortlist quality: candidates better aligned technically and culturally to the 4C framework, with a direct reduction in wasted interview time." },
-        { icon: Eye, title: 'Hidden talent discovered in the network', text: "The internal mapping of 6,000 store employees surfaced high-potential profiles and profiles with development areas where no visibility previously existed, also providing key information to coordinate training efforts." },
-        { icon: TrendingUp, title: 'Alignment between selection and development', text: "The same competency standard is applied to hiring and internal development, creating a full parallel between selection and training teams. The goal: anticipate training needs at the hiring stage and enable data-driven internal mobility." },
+        { icon: BarChart3, title: 'Pre-screening with structured output', text: "For the first time, every video-assessment produces a specific competency evaluation. The report combines AI matching and the recruiter's assessment, becoming the fundamental part of the shortlist." },
+        { icon: Zap, title: 'Time freed for high-value activities', text: "The reduction in time spent on CV screening and phone calls freed the team for employer branding, data analysis and nurturing — activities previously impossible given the volumes." },
+        { icon: CheckCircle, title: 'Radically more qualified shortlists', text: "The hiring manager success rate rose from 65% to 85%: candidates more aligned with the 4C framework, with a direct reduction in wasted interviews." },
+        { icon: Eye, title: 'Hidden talent discovered in the network', text: "The mapping of 6,000 employees surfaced high-potential profiles where no visibility previously existed, guiding training efforts." },
+        { icon: TrendingUp, title: 'Alignment between selection and development', text: "The same competency standard is applied to hiring and internal development, anticipating training needs from the hiring stage and enabling data-driven internal mobility." },
       ],
     },
     vision: {
       badge: 'EVOLUTION',
       title: 'Towards an integrated skills-based model across the entire organization',
       intro: "With results proven both in selection and internal mapping, the natural step is to consolidate the skills-based model as the single standard for all people decisions — from selection to internal mobility to development.",
-      objective: "Build a unified competency framework where every person — from their first day of selection through to career planning — is assessed and supported with the same logic, across all channels and formats in the network.",
+      objective: "A unified competency framework where every person is assessed with the same logic — from selection to career planning, across all channels in the network.",
       bullets: [
         "Progressive extension of the AI selection model to the entire store network",
         "Consolidation of internal competency mapping as the basis for mobility, training and succession planning",
-        "Towards a skills-based organization: one single measurement standard from selection to development",
       ],
     },
     related: {
