@@ -23,7 +23,7 @@ function Section({ children, className = '' }) {
 const content = {
   it: {
     breadcrumb: 'Clienti',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'Come Subdued ha ',
       highlight1: 'dimezzato il turnover',
@@ -178,7 +178,7 @@ const content = {
 
   en: {
     breadcrumb: 'Customers',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'How Subdued ',
       highlight1: 'halved turnover',

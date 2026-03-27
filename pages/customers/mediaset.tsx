@@ -23,7 +23,7 @@ function Section({ children, className = '' }) {
 const content = {
   it: {
     breadcrumb: 'Clienti',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'Come Mediaset ha gestito ',
       highlight1: '3.000 candidature',
@@ -185,7 +185,7 @@ const content = {
 
   en: {
     breadcrumb: 'Customers',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'How Mediaset managed ',
       highlight1: '3,000 applications',

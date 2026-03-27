@@ -23,7 +23,7 @@ function Section({ children, className = '' }) {
 const content = {
   it: {
     breadcrumb: 'Clienti',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'Come Credem ha ',
       highlight1: 'dimezzato il time-to-hire',
@@ -176,7 +176,7 @@ const content = {
 
   en: {
     breadcrumb: 'Customers',
-    badge: 'CASE STUDY',
+    badge: 'CUSTOMER STORY',
     headline: {
       before: 'How Credem ',
       highlight1: 'halved time-to-hire',
