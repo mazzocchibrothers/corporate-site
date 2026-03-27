@@ -53,48 +53,48 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Credem (Credito Emiliano) è uno dei gruppi bancari più consolidati d'Italia, con oltre <strong className="text-[#1A1A2E]/80 font-semibold">5.000 dipendenti</strong>, <strong className="text-[#1A1A2E]/80 font-semibold">600+ filiali</strong> distribuite in <strong className="text-[#1A1A2E]/80 font-semibold">19 regioni</strong> e una presenza capillare sul territorio nazionale. Ogni anno, il gruppo riceve circa <strong className="text-[#1A1A2E]/80 font-semibold">30.000 candidature</strong>, in larga parte da giovani professionisti che si affacciano per la prima volta sul mercato del lavoro. La sfida per Credem non era il volume in sé, ma trovare i profili ad alto potenziale nascosti al suo interno. Il primo filtro di screening non era sufficientemente selettivo: candidati con competenze eccellenti si perdevano nella massa, mentre profili meno adatti avanzavano alle fasi di colloquio, rallentando l'intero processo e allungando i tempi di selezione. In un settore bancario sempre più competitivo sul fronte del talento, i migliori candidati spesso accettavano altre offerte prima che il processo Credem si concludesse, con <strong className="text-[#1A1A2E]/80 font-semibold">tempi di gestione delle candidature che potevano raggiungere diverse settimane</strong>. Il modello precedente, basato su una prima scrematura dei CV con limitata profondità di valutazione, non permetteva di distinguere il potenziale reale dei candidati junior.
+        Credem (Credito Emiliano) è uno dei gruppi bancari più consolidati d'Italia, con oltre <strong className="text-[#1A1A2E]/80 font-semibold">5.000 dipendenti</strong> e <strong className="text-[#1A1A2E]/80 font-semibold">600+ filiali</strong> in 19 regioni. Ogni anno il gruppo riceve circa <strong className="text-[#1A1A2E]/80 font-semibold">30.000 candidature</strong>, in larga parte da giovani professionisti. La sfida non era il volume, ma la scarsa selettività del primo screening: profili eccellenti si perdevano nella massa, mentre candidati meno adatti avanzavano ai colloqui. In un settore bancario sempre più competitivo, i migliori candidati spesso accettavano altre offerte prima che il processo si concludesse.
       </>,
       summary: "Il progetto ha trasformato lo screening da un filtro generico basato sul CV a un sistema di valutazione AI-driven delle competenze, inserito subito dopo la raccolta dei CV. Per la prima volta, ogni candidato viene valutato in profondità prima del colloquio, con lo stesso effort operativo ma una qualità delle shortlist radicalmente superiore.",
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Il problema strutturale',
-      intro: "Con 30.000 candidature l'anno distribuite su 600+ filiali in 19 regioni, Credem doveva risolvere un problema strutturale: il primo filtro di selezione non era abbastanza selettivo per intercettare l'alto potenziale. I candidati migliori, spesso giovani con CV poco differenziati, si perdevano nel volume, mentre i colloqui erano affollati da profili non realmente in linea con il ruolo. I tempi lunghi del processo facevano perdere i talenti migliori, che accettavano altre offerte prima della conclusione della selezione.",
+      intro: "Con 30.000 candidature l\u2019anno su 600+ filiali, il primo filtro non era abbastanza selettivo: i talenti migliori si perdevano nel volume mentre i colloqui si affollavam di profili non in linea. I tempi lunghi facevano accettare ad altri le offerte migliori.",
       businessLabel: 'IMPATTO SUL BUSINESS',
       hrLabel: 'IMPATTO SU HR & PEOPLE',
       businessChallenges: [
         {
           icon: TrendingUp,
           title: 'I migliori candidati nascosti dal processo',
-          text: "Con tempi di selezione troppo lunghi, i profili ad alto potenziale — i più richiesti dal mercato — rischiavano di abbandonare il processo prima di arrivare a conclusione. In un settore bancario sempre più competitivo nella guerra per il talento, la velocità di risposta era diventata un fattore critico: ogni settimana di ritardo significava perdere candidati che altri istituti intercettavano prima.",
+          text: "Con tempi troppo lunghi, i profili ad alto potenziale abbandonavano il processo prima della conclusione. In un settore bancario sempre pi\u00f9 competitivo, ogni settimana di ritardo significava perdere candidati a favore di altri istituti.",
         },
         {
           icon: Users,
           title: 'Colloqui affollati da candidati non in linea',
-          text: "La fase di colloquio era sistematicamente sovraffollata da candidati che non possedevano le competenze reali per il ruolo. Senza un filtro strutturato sulle competenze prima dell'intervista, i recruiter e gli hiring manager investivano tempo prezioso in colloqui a basso rendimento, con un impatto diretto sulla produttività del team HR e sulla percezione del processo da parte dei responsabili di linea.",
+          text: "Senza un filtro strutturato prima del colloquio, recruiter e hiring manager investivano tempo in interviste a basso rendimento. L\u2019impatto sulla produttivit\u00e0 del team HR e sulla percezione dei responsabili era diretto.",
         },
         {
           icon: Heart,
           title: "Employer brand non sufficientemente valorizzato dall'hiring process",
-          text: "Un processo di selezione macchinoso impattava negativamente sulla percezione del brand Credem come datore di lavoro. I candidati, soprattutto i più giovani e digitalmente nativi, si aspettano ormai molto spesso un'esperienza di selezione moderna, rapida e inclusiva.",
+          text: "Un processo macchinoso impattava negativamente sull\u2019employer brand. I candidati, soprattutto i pi\u00f9 giovani, si aspettano un\u2019esperienza di selezione moderna, rapida e inclusiva.",
         },
       ],
       hrChallenges: [
         {
           icon: Target,
           title: 'Primo filtro non sufficientemente selettivo',
-          text: "Su 30.000 candidature annue, il primo step di screening non riusciva a separare efficacemente i profili ad alto potenziale dalla massa. La valutazione iniziale, basata principalmente sul CV, non aveva la profondità necessaria per intercettare le competenze trasversali che determinano il successo nel ruolo, lasciando passare troppi candidati non idonei e, paradossalmente, filtrando profili di valore.",
+          text: "Su 30.000 candidature, lo screening basato sul CV non intercettava le competenze trasversali decisive. Troppi candidati non idonei avanzavano e, paradossalmente, profili di valore venivano filtrati.",
         },
         {
           icon: Layers,
           title: 'CV poco differenziati per i profili junior',
-          text: "La maggior parte delle candidature proveniva da giovani professionisti al primo ingresso nel mercato del lavoro, con CV sostanzialmente identici: poca esperienza, percorsi formativi simili, nessun elemento oggettivo per distinguere il potenziale reale. Le competenze che fanno la differenza — problem solving, orientamento al cliente, capacità relazionali — erano completamente invisibili sulla carta.",
+          text: "La maggior parte delle candidature erano giovani professionisti con CV identici: poca esperienza, percorsi simili. Problem solving, orientamento al cliente e capacit\u00e0 relazionali — i veri differenziatori — erano invisibili sulla carta.",
         },
         {
           icon: BarChart3,
           title: 'Scalabilità del processo su 600+ filiali',
-          text: "Garantire una qualità di valutazione omogenea su una rete di oltre 600 filiali distribuite in 19 regioni era una sfida operativa significativa. Senza uno standard centralizzato e strutturato, il livello di selezione variava in base alla sede, al singolo recruiter e al volume locale di candidature, creando disomogeneità nella qualità delle assunzioni.",
+          text: "Garantire qualit\u00e0 omogenea su 600+ filiali in 19 regioni era una sfida operativa. Senza uno standard centralizzato, il livello di selezione variava per sede, recruiter e volume locale di candidature.",
         },
       ],
     },
@@ -111,7 +111,7 @@ const content = {
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue',
-      intro: "Skillvue è stato integrato nel processo di selezione di Credem con un approccio graduale: prima la validazione dell'impatto con dati reali, poi l'estensione progressiva. La piattaforma è stata inserita subito dopo la raccolta dei CV, aggiungendo una valutazione approfondita delle competenze senza modificare la banda operativa del team HR. Il team People Science di Skillvue ha selezionato i test dalla Skillvue Library per ogni profilo target, calibrandoli sulle esigenze specifiche di Credem.",
+      intro: "Skillvue \u00e8 stato integrato con approccio graduale: prima validazione su dati reali, poi estensione progressiva. Inserito subito dopo la raccolta dei CV, aggiunge valutazione approfondita delle competenze senza modificare la banda operativa del team HR.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Target, label: 'Competenze trasversali dalla Skillvue Library' },
@@ -123,15 +123,15 @@ const content = {
       methodology: [
         {
           title: 'Rollout graduale e data-driven',
-          text: "Anziché un deployment a tappeto, Credem ha scelto un approccio incrementale: validare l'impatto con dati reali su un perimetro iniziale prima di estendere il modello. Questo ha permesso di misurare i risultati, calibrare i parametri e costruire fiducia interna nel sistema prima della scalata.",
+          text: "Approccio incrementale: validare l\u2019impatto con dati reali su un perimetro iniziale, poi estendere il modello. Questo ha permesso di misurare risultati e costruire fiducia interna prima della scalata.",
         },
         {
           title: 'Inserimento post-CV, stessa banda operativa',
-          text: "Skillvue è stato posizionato subito dopo la raccolta dei CV, come primo step di valutazione approfondita. I candidati completano l'assessment in autonomia. Il team HR mantiene lo stesso carico operativo ma riceve shortlist radicalmente più qualificate, con profili di competenza chiari per ogni candidato.",
+          text: "Posizionato subito dopo la raccolta dei CV, i candidati completano l\u2019assessment in autonomia. Il team HR mantiene lo stesso carico operativo ma riceve shortlist radicalmente pi\u00f9 qualificate.",
         },
         {
           title: 'Libreria di competenze per ruolo',
-          text: "Per ogni profilo target, i test sono stati selezionati dalla Skillvue Library e calibrati sulle competenze specifiche richieste dal ruolo. L'AI genera profili di competenza completi per ogni candidato, permettendo ai recruiter di prendere decisioni informate con dati oggettivi.",
+          text: "Test selezionati dalla Skillvue Library e calibrati sulle competenze specifiche di ogni profilo. L\u2019AI genera profili completi per ogni candidato, per decisioni informate con dati oggettivi.",
         },
       ],
     },
@@ -146,21 +146,21 @@ const content = {
         { value: '30.000', label: 'Candidature annue gestite', sublabel: 'Con la stessa banda operativa del team HR' },
       ],
       qualitative: [
-        { icon: CheckCircle, title: 'Qualità dei colloqui radicalmente migliorata', text: "La fase di colloquio è passata dall'essere affollata da candidati non in linea a una shortlist dove il 50% in più dei candidati è realmente idoneo al ruolo. Gli hiring manager ricevono profili pre-valutati con dati strutturati sulle competenze, rendendo ogni colloquio più mirato e produttivo." },
-        { icon: Eye, title: "Più candidati hanno l'opportunità di dimostrare il proprio valore", text: "L'assessment AI ha dato a un numero maggiore di candidati la possibilità di far emergere le proprie competenze reali, andando oltre i limiti del CV. Profili ad alto potenziale che prima si perdevano nel volume sono ora intercettati e portati alle fasi successive della selezione." },
-        { icon: Heart, title: 'Employer brand migliorato e misurabile', text: "Il processo di selezione è diventato più rapido, inclusivo e trasparente. La percezione di Credem come datore di lavoro è migliorata in modo misurabile: un processo moderno e innovativo che risponde alle aspettative dei candidati, soprattutto delle generazioni più giovani." },
-        { icon: Zap, title: 'Valutazione più profonda a parità di risorse', text: "Senza aumentare il carico operativo del team HR, Credem ha aggiunto un livello di valutazione approfondita che prima non esisteva. Ogni candidato viene ora valutato sulle competenze reali prima del colloquio, come se il team avesse condotto un primo screening individuale su ciascuno dei 30.000 candidati." },
-        { icon: TrendingUp, title: 'Risultati qualitativi e quantitativi in crescita esponenziale', text: "L'integrazione di Skillvue nel processo di selezione ha prodotto un miglioramento simultaneo su più dimensioni: velocità (time-to-hire dimezzato), qualità (fit-to-hire raddoppiato) e efficienza (meno colloqui, più assunzioni riuscite). Un circolo virtuoso che si consolida con ogni ciclo di selezione." },
+        { icon: CheckCircle, title: 'Qualità dei colloqui radicalmente migliorata', text: "Il 50% in pi\u00f9 dei candidati in shortlist \u00e8 realmente idoneo al ruolo. Gli hiring manager ricevono profili pre-valutati con dati strutturati, rendendo ogni colloquio pi\u00f9 mirato e produttivo." },
+        { icon: Eye, title: "Pi\u00f9 candidati dimostrano il proprio valore", text: "L\u2019assessment AI ha dato a pi\u00f9 candidati la possibilit\u00e0 di far emergere competenze reali oltre i limiti del CV. Profili ad alto potenziale prima persi nel volume sono ora intercettati." },
+        { icon: Heart, title: 'Employer brand migliorato e misurabile', text: "Il processo \u00e8 diventato pi\u00f9 rapido, inclusivo e trasparente. La percezione di Credem come datore di lavoro \u00e8 migliorata in modo misurabile, soprattutto tra le generazioni pi\u00f9 giovani." },
+        { icon: Zap, title: 'Valutazione pi\u00f9 profonda a parit\u00e0 di risorse', text: "Senza aumentare il carico operativo, Credem ha aggiunto valutazione approfondita su ogni candidato — come se il team avesse condotto un screening individuale su ciascuno dei 30.000." },
+        { icon: TrendingUp, title: 'Miglioramento su pi\u00f9 dimensioni simultanee', text: "Velocit\u00e0 (time-to-hire dimezzato), qualit\u00e0 (fit-to-hire raddoppiato) ed efficienza (meno colloqui, pi\u00f9 assunzioni riuscite): un circolo virtuoso che si consolida a ogni ciclo." },
       ],
     },
     vision: {
       badge: 'EVOLUZIONE',
       title: 'Dalla selezione a una talent strategy skills-based su scala nazionale',
       intro: "Con i risultati dimostrati sullo screening e la qualità delle shortlist, il passo naturale è estendere il modello Skillvue ad altre fasi del ciclo del talento, consolidando un approccio integrato che copra dalla selezione allo sviluppo interno su tutte le 600+ filiali.",
-      objective: "Costruire un sistema integrato in cui ogni candidato e ogni dipendente viene valutato con la stessa logica basata sulle competenze, dalla prima candidatura ai percorsi di crescita interna, su tutte le 19 regioni.",
+      objective: "Un sistema in cui ogni candidato e dipendente \u00e8 valutato con la stessa logica skills-based, dalla prima candidatura alla crescita interna, su tutte le 19 regioni.",
       bullets: [
-        "Estensione del modello di assessment a tutti i profili e tutte le filiali del gruppo",
-        "Consolidamento dell'approccio skills-based come standard unico per le decisioni di selezione",
+        "Estensione del modello di assessment a tutti i profili e le filiali del gruppo",
+        "Consolidamento dell\u2019approccio skills-based come standard unico per le decisioni di selezione",
       ],
     },
     related: {
@@ -213,41 +213,41 @@ const content = {
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'The Structural Problem',
-      intro: "With 30,000 applications per year spread across 600+ branches in 19 regions, Credem had to solve a structural problem: the first selection filter was not selective enough to identify high-potential candidates. The best candidates — often young people with undifferentiated CVs — were lost in the volume, while interviews were filled with profiles not genuinely aligned with the role. Long process timelines caused the best talent to be lost, as they accepted other offers before the selection concluded.",
+      intro: "With 30,000 applications per year across 600+ branches, the first filter was not selective enough: the best talent was lost in the volume while interviews were crowded with misaligned profiles. Long timelines caused top candidates to accept other offers before the process concluded.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: TrendingUp,
           title: 'The best candidates hidden by the process',
-          text: "With selection timelines too long, high-potential profiles — the most sought after in the market — risked abandoning the process before it concluded. In an increasingly competitive banking sector in the war for talent, speed of response had become a critical factor: every week of delay meant losing candidates that other institutions were capturing first.",
+          text: "With timelines too long, high-potential profiles abandoned the process before it concluded. In an increasingly competitive banking sector, every week of delay meant losing candidates to other institutions.",
         },
         {
           icon: Users,
           title: 'Interviews crowded with misaligned candidates',
-          text: "The interview stage was systematically overcrowded with candidates who did not possess the real competencies for the role. Without a structured competency filter before the interview, recruiters and hiring managers invested valuable time in low-yield interviews — with a direct impact on HR team productivity and on the perception of the process by line managers.",
+          text: "Without a structured competency filter before the interview, recruiters and hiring managers invested time in low-yield interviews — with a direct impact on HR team productivity and on the perception of the process by line managers.",
         },
         {
           icon: Heart,
           title: 'Employer brand undersold by the hiring process',
-          text: "A cumbersome selection process negatively impacted the perception of Credem as an employer of choice. Candidates — especially the youngest and most digitally native — increasingly expect a modern, fast and inclusive selection experience.",
+          text: "A cumbersome process negatively impacted Credem's perception as an employer. Candidates — especially the youngest — expect a modern, fast and inclusive selection experience.",
         },
       ],
       hrChallenges: [
         {
           icon: Target,
           title: 'First filter not selective enough',
-          text: "Across 30,000 annual applications, the first screening step could not effectively separate high-potential profiles from the crowd. The initial assessment, based primarily on the CV, lacked the depth needed to surface the cross-functional competencies that determine success in the role — letting through too many unsuitable candidates while, paradoxically, filtering out candidates of genuine value.",
+          text: "Across 30,000 applications, the CV-based screening did not surface cross-functional competencies. Too many unsuitable candidates advanced, while, paradoxically, genuinely valuable profiles were filtered out.",
         },
         {
           icon: Layers,
           title: 'Undifferentiated CVs for junior profiles',
-          text: "The majority of applications came from young professionals entering the labour market for the first time, with essentially identical CVs: little experience, similar educational backgrounds, no objective element to distinguish real potential. The competencies that make the difference — problem solving, customer orientation, relationship skills — were completely invisible on paper.",
+          text: "Most applications came from young professionals with essentially identical CVs. Problem solving, customer orientation and relationship skills — the real differentiators — were completely invisible on paper.",
         },
         {
           icon: BarChart3,
           title: 'Process scalability across 600+ branches',
-          text: "Ensuring consistent evaluation quality across a network of over 600 branches in 19 regions was a significant operational challenge. Without a centralised, structured standard, the level of selection varied by location, individual recruiter and local application volume — creating inconsistency in the quality of hires.",
+          text: "Ensuring consistent quality across 600+ branches in 19 regions was a significant operational challenge. Without a centralised standard, the selection level varied by location, recruiter and local volume.",
         },
       ],
     },
@@ -264,7 +264,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was integrated into Credem's selection process with a gradual approach: first validate the impact with real data, then progressively expand. The platform was inserted immediately after CV collection — adding an in-depth competency assessment without changing the operational bandwidth of the HR team. Skillvue's People Science team selected tests from the Skillvue Library for each target profile, calibrating them to Credem's specific requirements.",
+      intro: "Skillvue was integrated with a gradual approach: first validate on real data, then progressively expand. Inserted immediately after CV collection, it adds in-depth competency assessment without changing the HR team's operational bandwidth.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Target, label: 'Cross-functional skills from the Skillvue Library' },
@@ -276,15 +276,15 @@ const content = {
       methodology: [
         {
           title: 'Gradual, data-driven rollout',
-          text: "Rather than a blanket deployment, Credem chose an incremental approach: validate the impact with real data on an initial perimeter before expanding the model. This made it possible to measure results, calibrate parameters and build internal trust in the system before scaling.",
+          text: "Incremental approach: validate impact with real data on an initial perimeter, then extend the model. This allowed results to be measured and internal trust built before scaling.",
         },
         {
           title: 'Post-CV insertion, same operational bandwidth',
-          text: "Skillvue was positioned immediately after CV collection as the first in-depth assessment step. Candidates complete the assessment independently. The HR team maintains the same operational load but receives radically more qualified shortlists, with clear competency profiles for every candidate.",
+          text: "Positioned immediately after CV collection, candidates complete the assessment independently. The HR team maintains the same operational load but receives radically more qualified shortlists.",
         },
         {
           title: 'Competency library by role',
-          text: "For each target profile, tests were selected from the Skillvue Library and calibrated to the specific competencies required for the role. The AI generates complete competency profiles for each candidate, enabling recruiters to make informed decisions with objective data.",
+          text: "Tests selected from the Skillvue Library and calibrated to the specific competencies of each profile. The AI generates complete profiles for each candidate, enabling informed decisions with objective data.",
         },
       ],
     },
@@ -299,20 +299,20 @@ const content = {
         { value: '30,000', label: 'Annual applications managed', sublabel: 'With the same HR team operational bandwidth' },
       ],
       qualitative: [
-        { icon: CheckCircle, title: 'Radically improved interview quality', text: "The interview stage went from being crowded with misaligned candidates to a shortlist where 50% more candidates are genuinely suited to the role. Hiring managers receive pre-assessed profiles with structured competency data, making every interview more targeted and productive." },
-        { icon: Eye, title: 'More candidates get the chance to demonstrate their value', text: "The AI assessment gave a greater number of candidates the opportunity to surface their real competencies — going beyond the limitations of the CV. High-potential profiles that were previously lost in the volume are now identified and brought forward to the next stages of selection." },
-        { icon: Heart, title: 'Employer brand improved and measurable', text: "The selection process became faster, more inclusive and more transparent. The perception of Credem as an employer improved in a measurable way: a modern, innovative process that meets candidate expectations, especially those of the youngest generations." },
-        { icon: Zap, title: 'Deeper assessment with the same resources', text: "Without increasing the HR team's operational load, Credem added a level of in-depth assessment that did not previously exist. Every candidate is now assessed on real competencies before the interview — as if the team had conducted an individual first screening for each of the 30,000 applicants." },
-        { icon: TrendingUp, title: 'Exponential growth in qualitative and quantitative results', text: "Integrating Skillvue into the selection process produced simultaneous improvement across multiple dimensions: speed (time-to-hire halved), quality (fit-to-hire doubled) and efficiency (fewer interviews, more successful hires). A virtuous cycle that strengthens with every selection round." },
+        { icon: CheckCircle, title: 'Radically improved interview quality', text: "50% more candidates in shortlists are genuinely suited to the role. Hiring managers receive pre-assessed profiles with structured competency data, making every interview more targeted and productive." },
+        { icon: Eye, title: 'More candidates get the chance to demonstrate their value', text: "The AI assessment gave more candidates the opportunity to surface real competencies beyond the CV. High-potential profiles previously lost in the volume are now identified." },
+        { icon: Heart, title: 'Employer brand improved and measurable', text: "The process became faster, more inclusive and more transparent. Credem's perception as an employer improved in a measurable way, especially among the youngest generations." },
+        { icon: Zap, title: 'Deeper assessment with the same resources', text: "Without increasing the operational load, Credem added in-depth assessment on every candidate — as if the team had conducted an individual first screening for each of the 30,000 applicants." },
+        { icon: TrendingUp, title: 'Improvement across multiple dimensions simultaneously', text: "Speed (time-to-hire halved), quality (fit-to-hire doubled) and efficiency (fewer interviews, more successful hires): a virtuous cycle that consolidates with every selection round." },
       ],
     },
     vision: {
       badge: 'EVOLUTION',
       title: 'From hiring to a skills-based talent strategy at national scale',
       intro: "With the results demonstrated on screening and shortlist quality, the natural next step is to extend the Skillvue model to other phases of the talent cycle — consolidating an integrated approach covering selection through to internal development across all 600+ branches.",
-      objective: "Build an integrated system in which every candidate and every employee is assessed with the same competency-based logic — from the first application through to internal career development, across all 19 regions.",
+      objective: "A system in which every candidate and employee is assessed with the same skills-based logic — from the first application to internal career development, across all 19 regions.",
       bullets: [
-        "Extension of the assessment model to all profiles and all branches of the group",
+        "Extension of the assessment model to all profiles and branches of the group",
         "Consolidation of the skills-based approach as the single standard for selection decisions",
       ],
     },
