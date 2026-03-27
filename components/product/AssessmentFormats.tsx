@@ -84,7 +84,7 @@ export default function AssessmentFormats() {
                       <div className="w-10 h-10 rounded-lg bg-white/[0.06] flex items-center justify-center mb-4">
                         <Icon className="h-5 w-5 text-white/50" />
                       </div>
-                      <h4 className="text-[15px] font-bold text-white/90 mb-1.5 leading-tight">{t(item.name)}</h4>
+                      <h4 className="text-[15px] font-bold text-white/90 mb-1.5 leading-tight" style={{ whiteSpace: 'pre-line' }}>{t(item.name)}</h4>
                       <p className="text-[13px] text-white/[0.4] leading-[1.55]">{t(item.desc)}</p>
                     </div>
                   );

@@ -34,12 +34,13 @@ const pillars = [
     label: 'De-risk transformation',
     desc: 'Map the skill gaps that will derail your next transformation. Know exactly where to invest in reskilling.',
     stat: '6-9mo',
+    statIt: '6-9 mesi',
     statLabel: 'faster execution',
   },
 ];
 
 export default function SolutionSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -103,7 +104,7 @@ export default function SolutionSection() {
                       lineHeight: 1,
                     }}
                   >
-                    {pillar.stat}
+                    {lang === 'it' && (pillar as any).statIt ? (pillar as any).statIt : pillar.stat}
                   </span>
                   <span className="text-[13px] text-white/[0.65] font-medium tracking-wide">
                     {t(pillar.statLabel)}
