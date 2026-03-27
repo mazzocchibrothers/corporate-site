@@ -77,6 +77,11 @@ const content = {
           title: 'Rischio turnover legato alla mancanza di prospettive',
           text: "Senza percorsi di sviluppo chiari e accessibili, i profili più motivati erano i primi a rischio di ricerca di nuove opportunità altrove, con un potenziale impatto negativo sulla retention.",
         },
+        {
+          icon: TrendingUp,
+          title: 'Bisogno diffuso di chiarezza e trasparenza nei percorsi di crescita',
+          text: "Le survey interne avevano evidenziato una domanda chiara da parte dei dipendenti: maggiore trasparenza nei criteri di selezione per i ruoli di responsabilità e feedback strutturati sul proprio percorso professionale. ADR aveva l'esigenza di rispondere a questa aspettativa con strumenti oggettivi, per rafforzare la fiducia nel processo di sviluppo interno e trattenere i talenti ad alto potenziale.",
+        },
       ],
       hrChallenges: [
         {
@@ -226,6 +231,11 @@ const content = {
           icon: TrendingUp,
           title: 'Turnover risk tied to lack of clear career paths',
           text: 'Without clear and accessible development paths, the most motivated employees were the first at risk of seeking new opportunities elsewhere — with a potential negative impact on retention.',
+        },
+        {
+          icon: TrendingUp,
+          title: 'Widespread demand for clarity and transparency in career paths',
+          text: "Internal surveys had surfaced a clear employee ask: greater transparency in the selection criteria for leadership roles and structured feedback on their own professional trajectory. ADR needed to respond to this expectation with objective tools, to strengthen trust in the internal development process and retain high-potential talent.",
         },
       ],
       hrChallenges: [
