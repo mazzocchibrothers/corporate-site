@@ -72,7 +72,7 @@ export default function LDImpact() {
                   className="block mb-2 text-[#1A1A2E]"
                   style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}
                 >
-                  {k.value}
+                  {t(k.value)}
                 </span>
 
                 {/* Label */}
