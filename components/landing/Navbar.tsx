@@ -8,14 +8,16 @@ import { useLanguage } from '@/i18n/LanguageContext';
 const navLinks = [
   {
     label: 'Platform',
+    labelIt: 'Piattaforma',
     href: '#hero',
     items: [
-      { name: 'Product', path: '/product-overview' },
-      { name: 'Science', path: '/science' },
+      { name: 'Product', nameIt: 'Prodotto', path: '/product-overview' },
+      { name: 'Science', nameIt: 'Scienza', path: '/science' },
     ],
   },
   {
     label: 'Solutions',
+    labelIt: 'Soluzioni',
     href: '#solutions',
     items: [
       { name: 'Hiring', path: '/solutions/talent-acquisition' },
@@ -27,11 +29,13 @@ const navLinks = [
   },
   {
     label: 'Customers',
+    labelIt: 'Clienti',
     href: '/customers',
     items: null,
   },
   {
     label: 'Resources',
+    labelIt: 'Risorse',
     href: '#',
     items: [
       { name: 'White Papers', path: '/resources/whitepapers' },
@@ -185,7 +189,7 @@ export default function Navbar() {
                     }
                   }}
                 >
-                  {link.label}
+                  {lang === 'it' ? (link as any).labelIt : link.label}
                   {link.items && (
                     <ChevronDown
                       className="h-3.5 w-3.5"
@@ -226,18 +230,20 @@ export default function Navbar() {
               ))}
             </div>
 
-            <a
-              href="/book-meeting"
-              data-testid="nav-book-demo"
-              className="inline-flex items-center px-7 py-3 text-[14px] font-medium tracking-wide rounded-full transition-all duration-300"
-              style={{
-                color: hasDropdown ? '#ffffff' : textColor,
-                border: `1px solid ${hasDropdown ? 'rgba(255,255,255,0.15)' : btnBorder}`,
-              }}
-              onClick={(e) => { e.preventDefault(); navigateTo('/book-meeting'); }}
-            >
-              Book a Meeting
-            </a>
+            {lang !== 'it' && (
+              <a
+                href="/book-meeting"
+                data-testid="nav-book-demo"
+                className="inline-flex items-center px-7 py-3 text-[14px] font-medium tracking-wide rounded-full transition-all duration-300"
+                style={{
+                  color: hasDropdown ? '#ffffff' : textColor,
+                  border: `1px solid ${hasDropdown ? 'rgba(255,255,255,0.15)' : btnBorder}`,
+                }}
+                onClick={(e) => { e.preventDefault(); navigateTo('/book-meeting'); }}
+              >
+                Book a Meeting
+              </a>
+            )}
           </div>
 
           {/* Mobile hamburger */}
@@ -291,7 +297,7 @@ export default function Navbar() {
                   }}
                 >
                   <span className="text-[14px] font-medium text-white/90 group-hover:text-white transition-colors duration-200">
-                    {item.name}
+                    {lang === 'it' && (item as any).nameIt ? (item as any).nameIt : item.name}
                   </span>
                 </a>
               ))}
@@ -325,7 +331,7 @@ export default function Navbar() {
                       }
                     }}
                   >
-                    <span className="text-[18px] font-medium text-white">{link.label}</span>
+                    <span className="text-[18px] font-medium text-white">{lang === 'it' ? (link as any).labelIt : link.label}</span>
                     {link.items && (
                       <ChevronDown
                         className="h-4 w-4 text-white/40"
@@ -346,7 +352,7 @@ export default function Navbar() {
                           className="w-full text-left py-3 text-[16px] text-white/60 hover:text-white transition-colors duration-200"
                           onClick={() => navigateTo(item.path)}
                         >
-                          {item.name}
+                          {lang === 'it' && (item as any).nameIt ? (item as any).nameIt : item.name}
                         </button>
                       ))}
                     </div>
@@ -375,12 +381,14 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <button
-                onClick={() => navigateTo('/book-meeting')}
-                className="w-full flex items-center justify-center py-4 text-[16px] font-semibold text-white rounded-full border border-white/15"
-              >
-                Book a Meeting
-              </button>
+              {lang !== 'it' && (
+                <button
+                  onClick={() => navigateTo('/book-meeting')}
+                  className="w-full flex items-center justify-center py-4 text-[16px] font-semibold text-white rounded-full border border-white/15"
+                >
+                  Book a Meeting
+                </button>
+              )}
             </div>
           </div>
         </div>
