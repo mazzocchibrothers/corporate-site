@@ -145,8 +145,8 @@ const content = {
         { value: '7 insegne', label: 'Rete distribuita in fase di standardizzazione', sublabel: '270+ punti vendita coperti' },
       ],
       qualitative: [
-        { icon: TrendingUp, title: ‘Verso un talent lifecycle integrato’, text: "Selezione, conferme e sviluppo interno gestiti con un\u2019unica logica skills-based. Un percorso avviato di recente che produce gi\u00e0 i primi risultati concreti nella standardizzazione." },
-        { icon: Scale, title: ‘Standardizzazione in corso su tutta la rete’, text: "Le 7 insegne su 270+ punti vendita stanno adottando gli stessi criteri e framework. L\u2019obiettivo: decisioni su assunzioni, conferme e promozioni basate su dati oggettivi." },
+        { icon: TrendingUp, title: "Verso un talent lifecycle integrato", text: "Selezione, conferme e sviluppo interno gestiti con un\u2019unica logica skills-based. Un percorso avviato di recente che produce gi\u00e0 i primi risultati concreti nella standardizzazione." },
+        { icon: Scale, title: "Standardizzazione in corso su tutta la rete", text: "Le 7 insegne su 270+ punti vendita stanno adottando gli stessi criteri e framework. L\u2019obiettivo: decisioni su assunzioni, conferme e promozioni basate su dati oggettivi." },
       ],
     },
     vision: {
@@ -215,34 +215,34 @@ const content = {
       businessChallenges: [
         {
           icon: Zap,
-          title: ‘HR digitization at zero’,
+          title: "HR digitization at zero",
           text: "Hiring, confirmations and career growth paths were managed manually and without structure. Impossible to have any overview of talent quality across 7,000+ employees without an integrated, traceable system.",
         },
         {
           icon: Layers,
-          title: ‘Distributed network, zero standardization’,
+          title: "Distributed network, zero standardization",
           text: "With 7 brands across 7 regions, each location operated with its own criteria. Two candidates with the same potential could have completely different paths — not by merit, but due to the lack of a common framework.",
         },
         {
           icon: Target,
-          title: ‘Three critical processes to cover in parallel’,
+          title: "Three critical processes to cover in parallel",
           text: "The need was to cover simultaneously hiring across all brands, confirmations of new hires to permanent contract, and internal development through an academy for progression to department head and store manager.",
         },
       ],
       hrChallenges: [
         {
           icon: Eye,
-          title: ‘No objective competency assessment’,
+          title: "No objective competency assessment",
           text: "Hiring, confirmations and promotions were based exclusively on the experience and impressions of managers. No structured data on soft or hard skills.",
         },
         {
           icon: Heart,
-          title: ‘Change management in a non-digital culture’,
+          title: "Change management in a non-digital culture",
           text: "Introducing digital assessments with no prior HR technology meant significant cultural resistance. The project needed a partner capable of guiding change at every level, not just a tool.",
         },
         {
           icon: Wrench,
-          title: ‘Sector-specific competencies not mapped’,
+          title: "Sector-specific competencies not mapped",
           text: "The Unicomm model included soft skills specific to grocery retail not present in standard libraries. Bespoke assessments were needed, calibrated to internal evaluation matrices and the specifics of different roles.",
         },
       ],
@@ -270,15 +270,15 @@ const content = {
       methodologyLabel: 'METHODOLOGY',
       methodology: [
         {
-          title: ‘Three streams in parallel’,
+          title: "Three streams in parallel",
           text: "Hiring for open positions, confirmations for new hires to be converted to permanent contract, internal development through an academy with two annual milestones for progression to department head or store manager. One system, three objectives.",
         },
         {
-          title: ‘Assessments customized by role and objective’,
+          title: "Assessments customized by role and objective",
           text: "Calibrated on two dimensions: process objective (hiring, confirmation and development measure different aspects) and specific role/department. Competencies not in the standard library were developed bespoke on Unicomm’s evaluation matrices.",
         },
         {
-          title: ‘Change management as a project pillar’,
+          title: "Change management as a project pillar",
           text: "Not just a technology implementation, but a cultural transformation. Onboarding involved HR Manager, operatives and IT. Skillvue as a 360° people partner, not a simple tool.",
         },
       ],

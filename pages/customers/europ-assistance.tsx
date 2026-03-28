@@ -157,11 +157,11 @@ const content = {
         { value: '7', label: 'Profili di ruolo coperti', sublabel: 'Assistenza, customer care e ruoli HR' },
       ],
       qualitative: [
-        { icon: Zap, title: ‘Recruiter liberati dallo screening’, text: "Il pre-screening gestito da Skillvue libera il team di 3 persone per colloqui approfonditi e analisi del potenziale. Il tempo del recruiter torna ad alto valore aggiunto." },
-        { icon: CheckCircle, title: ‘Shortlist radicalmente più qualificate’, text: "I line manager ricevono candidati pre-valutati con profilo strutturato allegato. Il tasso colloquio-assunzione del 76% dimostra la qualità: 3 candidati su 4 vengono assunti." },
-        { icon: Shield, title: ‘Riduzione del bias nella selezione’, text: "La valutazione su competenze strutturate riduce la dipendenza dal giudizio soggettivo, costruendo un processo più equo e meno condizionato da pregiudizi inconsci." },
-        { icon: Heart, title: ‘Candidate experience positiva’, text: "Punteggi tra 4.0 e 4.7 su 5 su tutte le fasce d\u2019et\u00e0 per esperienza, usabilit\u00e0 e comunicazione." },
-        { icon: BarChart3, title: ‘Visibilità sul potenziale di crescita’, text: "Per la prima volta HR e line manager hanno dati sulle soft skill fin dal primo step, abilitando decisioni migliori e visibilit\u00e0 su come le persone potranno crescere nel tempo." },
+        { icon: Zap, title: "Recruiter liberati dallo screening", text: "Il pre-screening gestito da Skillvue libera il team di 3 persone per colloqui approfonditi e analisi del potenziale. Il tempo del recruiter torna ad alto valore aggiunto." },
+        { icon: CheckCircle, title: "Shortlist radicalmente più qualificate", text: "I line manager ricevono candidati pre-valutati con profilo strutturato allegato. Il tasso colloquio-assunzione del 76% dimostra la qualità: 3 candidati su 4 vengono assunti." },
+        { icon: Shield, title: "Riduzione del bias nella selezione", text: "La valutazione su competenze strutturate riduce la dipendenza dal giudizio soggettivo, costruendo un processo più equo e meno condizionato da pregiudizi inconsci." },
+        { icon: Heart, title: "Candidate experience positiva", text: "Punteggi tra 4.0 e 4.7 su 5 su tutte le fasce d\u2019et\u00e0 per esperienza, usabilit\u00e0 e comunicazione." },
+        { icon: BarChart3, title: "Visibilità sul potenziale di crescita", text: "Per la prima volta HR e line manager hanno dati sulle soft skill fin dal primo step, abilitando decisioni migliori e visibilit\u00e0 su come le persone potranno crescere nel tempo." },
       ],
     },
     vision: {
@@ -229,34 +229,34 @@ const content = {
       businessChallenges: [
         {
           icon: Users,
-          title: ‘Massive volumes with a minimal team’,
+          title: "Massive volumes with a minimal team",
           text: "Thousands of applications with seasonal peaks concentrated in 3–4 months, managed by a team of 3 people. Recruiter time was absorbed by initial screening instead of interviews and potential evaluation.",
         },
         {
           icon: Eye,
-          title: ‘The decisive soft skills are invisible in the CV’,
+          title: "The decisive soft skills are invisible in the CV",
           text: "Problem solving, customer orientation and stress management are the top predictor of success in assistance roles, but impossible to detect from a CV or phone screen.",
         },
         {
           icon: TrendingUp,
-          title: ‘Shrinking candidate pool’,
+          title: "Shrinking candidate pool",
           text: "The demographic decline is shrinking the available pool, raising the risk of every hire. Finding candidates is not enough: identifying those with the potential to grow, not just to fill the role today, is essential.",
         },
       ],
       hrChallenges: [
         {
           icon: Layers,
-          title: ‘Non-scalable screening process’,
+          title: "Non-scalable screening process",
           text: "No structured way to evaluate thousands of candidates in depth before the interview. The trade-off between quality and speed was unsustainable with recurring seasonal peaks.",
         },
         {
           icon: Scale,
-          title: ‘Subjective evaluation and bias risk’,
+          title: "Subjective evaluation and bias risk",
           text: "The process relied on the recruiter’s subjective judgment, without structured data. The goal was to build a fair, skills-based process less influenced by stereotypes and unconscious biases.",
         },
         {
           icon: BarChart3,
-          title: ‘No visibility on growth potential’,
+          title: "No visibility on growth potential",
           text: "Selection only assessed immediate role fit. The ability to identify soft skills predictive of future growth was entirely missing — data line managers were requesting to plan team development.",
         },
       ],
@@ -287,15 +287,15 @@ const content = {
       methodologyLabel: 'METHODOLOGY',
       methodology: [
         {
-          title: ‘7 roles, 2 locations, one single process’,
+          title: "7 roles, 2 locations, one single process",
           text: "Assessments configured for 7 distinct roles — from assistance (mobility, home, travel, healthcare) to customer care to HR roles — across 2 locations. Each profile has a specific competency set.",
         },
         {
-          title: ‘AI pre-screening integrated into the funnel’,
+          title: "AI pre-screening integrated into the funnel",
           text: "First evaluation step after the application: candidates complete the assessment independently. Only suitable profiles advance to the interview, freeing recruiters for high-value interviews and potential analysis.",
         },
         {
-          title: ‘Human-in-the-loop at every stage’,
+          title: "Human-in-the-loop at every stage",
           text: "The AI empowers the recruiter, not replaces them. Every candidate at interview arrives with a structured profile; the HR team maintains full decision-making control over Skillvue data.",
         },
       ],
@@ -321,11 +321,11 @@ const content = {
         { value: '7', label: 'Role profiles covered', sublabel: 'Assistance, customer care and HR roles' },
       ],
       qualitative: [
-        { icon: Zap, title: ‘Recruiters freed from screening’, text: "Pre-screening handled by Skillvue frees the 3-person team for in-depth interviews and potential analysis. Recruiter time returns to high-value activities." },
-        { icon: CheckCircle, title: ‘Radically more qualified shortlists’, text: "Line managers receive candidates pre-evaluated with a structured profile attached. The 76% interview-to-hire rate proves the quality: 3 out of 4 candidates are hired." },
-        { icon: Shield, title: ‘Bias reduction in selection’, text: "Evaluation based on structured competencies reduces reliance on subjective judgment, building a fairer process less influenced by unconscious biases." },
-        { icon: Heart, title: ‘Positive candidate experience’, text: "Satisfaction scores between 4.0 and 4.7 out of 5 across all age groups for experience, usability and communication." },
-        { icon: BarChart3, title: ‘Visibility on growth potential’, text: "For the first time HR and line managers have soft skill data from the very first step, enabling better hiring decisions and visibility on how people can grow over time." },
+        { icon: Zap, title: "Recruiters freed from screening", text: "Pre-screening handled by Skillvue frees the 3-person team for in-depth interviews and potential analysis. Recruiter time returns to high-value activities." },
+        { icon: CheckCircle, title: "Radically more qualified shortlists", text: "Line managers receive candidates pre-evaluated with a structured profile attached. The 76% interview-to-hire rate proves the quality: 3 out of 4 candidates are hired." },
+        { icon: Shield, title: "Bias reduction in selection", text: "Evaluation based on structured competencies reduces reliance on subjective judgment, building a fairer process less influenced by unconscious biases." },
+        { icon: Heart, title: "Positive candidate experience", text: "Satisfaction scores between 4.0 and 4.7 out of 5 across all age groups for experience, usability and communication." },
+        { icon: BarChart3, title: "Visibility on growth potential", text: "For the first time HR and line managers have soft skill data from the very first step, enabling better hiring decisions and visibility on how people can grow over time." },
       ],
     },
     vision: {
