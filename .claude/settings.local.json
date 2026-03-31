@@ -32,7 +32,8 @@
       "Bash(for f:*)",
       "Bash(do)",
       "Bash(sed -i '' 's/const { lang } = useLanguage\\(\\);/const { lang, t } = useLanguage\\(\\);/' /Users/marcelloroehrssen/Projects/munnezza/corporate_site/pages/customers/$f.tsx)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(git push:*)"
     ]
   }
 }

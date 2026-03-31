@@ -44,7 +44,7 @@ const featureCards = [
       </svg>
     ),
     title: 'La classificazione che cambia tutto',
-    desc: 'L'AI Act classifica i sistemi di screening, ranking e assunzione come applicazioni ad alto rischio (Allegato III, punto 4). Le banche che li utilizzano sono deployer responsabili — la responsabilità non è delegabile al fornitore.',
+    desc: "L'AI Act classifica i sistemi di screening, ranking e assunzione come applicazioni ad alto rischio (Allegato III, punto 4). Le banche che li utilizzano sono deployer responsabili — la responsabilità non è delegabile al fornitore.",
   },
   {
     icon: (
@@ -62,7 +62,7 @@ const featureCards = [
       </svg>
     ),
     title: 'I tre criteri per valutare un fornitore AI',
-    desc: 'Explainability per decisione, gestione trasparente dell'incertezza, audit trail completo. Non sono requisiti aggiuntivi: sono indicatori della maturità tecnica del sistema. Conformità e qualità tendono a coincidere.',
+    desc: "Explainability per decisione, gestione trasparente dell'incertezza, audit trail completo. Non sono requisiti aggiuntivi: sono indicatori della maturità tecnica del sistema. Conformità e qualità tendono a coincidere.",
   },
 ];
 
