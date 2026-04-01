@@ -66,7 +66,7 @@ const content = {
       businessChallenges: [
         {
           icon: Eye,
-          title: 'CV ben costruiti, ma poco indicativi',
+          title: 'Andare oltre il CV per identificare le vere capacità di vendita',
           text: 'Il 50% dei candidati che superavano il primo screening si rivelava privo delle soft skill necessarie per il lavoro in store. Comunicazione, vendita e predisposizione al cliente: invisibili sulla carta.',
         },
         {
@@ -76,25 +76,15 @@ const content = {
         },
         {
           icon: TrendingUp,
-          title: 'Turnover strutturalmente alto',
+          title: 'Il turnover era strutturalmente alto',
           text: 'Nel fashion retail il turnover è fisiologicamente elevato. Per un brand dove l\'esperienza in negozio è parte della vendita, ogni assunzione sbagliata moltiplicava ulteriormente questo rischio.',
         },
       ],
       hrChallenges: [
         {
           icon: Zap,
-          title: '10-15 ore a settimana in telefonate introduttive',
-          text: 'Senza filtro strutturato, ogni candidato richiedeva un forte investimento di tempo. 10-15 ore/settimana di screening telefonico e zero margine per attività strategiche.',
-        },
-        {
-          icon: Target,
-          title: 'Il team HR non poteva scalare',
-          text: 'Con l\'ingresso in USA, Medio Oriente e Asia, 7 persone su 6 paesi non potevano garantire qualità di selezione costante. Ogni nuova apertura aumentava il carico senza incremento di risorse.',
-        },
-        {
-          icon: BarChart3,
-          title: 'Le competenze decisive erano invisibili',
-          text: 'Comunicazione, vendita, teamworking: impossibili da rilevare dai CV. La sola strada era il colloquio — un collo di bottiglia che moltiplicava tempi e costi operativi.',
+          title: '10-15 ore a settimana di telefonate introduttive',
+          text: 'Senza un filtro strutturato, ogni candidato richiedeva un forte investimento di tempo anche solo per un pre-screening. 10-15 ore a settimana di screening telefonico e zero tempo per attività più strategiche.',
         },
       ],
     },
@@ -209,7 +199,7 @@ const content = {
       businessChallenges: [
         {
           icon: Eye,
-          title: 'Strong CVs, weak signals',
+          title: 'Going beyond the CV to identify true selling ability',
           text: '50% of candidates who passed initial screening lacked the soft skills for daily store work. Communication, selling ability and customer orientation: all invisible on paper.',
         },
         {
@@ -219,7 +209,7 @@ const content = {
         },
         {
           icon: TrendingUp,
-          title: 'Structurally high turnover',
+          title: 'Turnover was structurally high',
           text: 'Turnover in fashion retail is inherently elevated. For a brand where the in-store experience is a core part of the sale, every wrong hire amplified this risk further.',
         },
       ],
@@ -227,17 +217,7 @@ const content = {
         {
           icon: Zap,
           title: '10–15 hours a week on introductory calls',
-          text: 'Without a structured filter, every candidate required a significant time investment just for pre-screening. Zero margin left for strategic HR work.',
-        },
-        {
-          icon: Target,
-          title: 'The HR team could not scale',
-          text: 'With entry into the US, Middle East and Asia, 7 people across 6 countries could not guarantee consistent selection quality. Every new opening added to the load with no resource increase.',
-        },
-        {
-          icon: BarChart3,
-          title: 'The decisive competencies were invisible',
-          text: 'Communication, selling, teamworking: impossible to detect from CVs. The only option was interviews — a bottleneck that multiplied timelines and operational costs.',
+          text: 'Without a structured filter, every candidate required a significant time investment just for pre-screening. 10–15 hours a week on calls and zero time for anything more strategic.',
         },
       ],
     },
