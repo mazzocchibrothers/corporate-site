@@ -427,15 +427,6 @@ export default function EuropAssistanceStoryPage() {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 pt-6 border-t border-white/[0.08] flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-white/[0.12] bg-white/[0.08]">
-                      <img src="/logos/europ-assistance-nicole.jpg" alt="Nicole Cerruti" className="w-full h-full object-cover object-top" />
-                    </div>
-                    <div>
-                      <p className="text-[14px] font-semibold text-white/80">Nicole Cerruti</p>
-                      <p className="text-[12px] text-white/40 leading-[1.5]">Recruiting & Onboarding Manager Italy</p>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             </div>

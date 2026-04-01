@@ -413,15 +413,6 @@ export default function ADRStoryPage() {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 pt-6 border-t border-white/[0.08] flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-white/[0.12]">
-                      <img src="/logos/adr-alberto.jpg" alt="Alberto Valenza" className="w-full h-full object-cover object-top" />
-                    </div>
-                    <div>
-                      <p className="text-[14px] font-semibold text-white/80">Alberto Valenza</p>
-                      <p className="text-[12px] text-white/40 leading-[1.5]">SVP Human Capital, Organization & Procurement</p>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             </div>

@@ -402,15 +402,6 @@ export default function DouglasStoryPage() {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 pt-6 border-t border-white/[0.08] flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-white/[0.12] bg-white/[0.08] flex items-center justify-center">
-                      <Users className="h-5 w-5 text-white/30" />
-                    </div>
-                    <div>
-                      <p className="text-[14px] font-semibold text-white/80">Stefania de Martino</p>
-                      <p className="text-[12px] text-white/40 leading-[1.5]">Head of Talent Acquisition, L&D, Product Training, Employer Branding</p>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             </div>
