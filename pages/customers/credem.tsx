@@ -55,25 +55,20 @@ const content = {
       paragraph: <>
         Credem (Credito Emiliano) è uno dei gruppi bancari privati più accreditati d'Italia e d'Europa. Con un utile netto di <strong className="text-[#1A1A2E]/80 font-semibold">€621 milioni nel 2025</strong>, è riconosciuta come una delle realtà più solide per qualità degli attivi e gestione del rischio. Al tempo stesso è anche, e soprattutto, una banca che cresce: mentre il settore bancario italiano chiude sportelli e riduce l'organico, Credem fa il contrario — dal 2020 ha creato oltre <strong className="text-[#1A1A2E]/80 font-semibold">1.400 nuovi posti di lavoro</strong>.
         <br /><br />
-        Questa crescita genera un nodo cruciale per HR: ogni anno Credem riceve circa <strong className="text-[#1A1A2E]/80 font-semibold">30.000 candidature</strong>, in larga parte da profili junior, diplomati e neolaureati che si candidano attraverso il <strong className="text-[#1A1A2E]/80 font-semibold">Progetto Giovani</strong>, il principale canale di ingresso del gruppo. In un settore dove l'età media dei dipendenti è di oltre 48 anni e il 20-25% della forza lavoro raggiungerà il pensionamento entro il 2035, la capacità di identificare e inserire giovani ad alto potenziale non è un'attività amministrativa: è la leva che determina se la banca potrà continuare a crescere.
+        Questa crescita genera un nodo cruciale per HR: ogni anno Credem riceve circa <strong className="text-[#1A1A2E]/80 font-semibold">30.000 candidature</strong>, in larga parte da profili junior, diplomati e neolaureati che si candidano attraverso il <strong className="text-[#1A1A2E]/80 font-semibold">Progetto Giovani</strong>, il principale canale di ingresso del gruppo. In un settore dove l'età media dei dipendenti è di oltre <strong className="text-[#1A1A2E]/80 font-semibold">48 anni</strong> e il <strong className="text-[#1A1A2E]/80 font-semibold">20-25%</strong> della forza lavoro raggiungerà il pensionamento entro il 2035, la capacità di identificare e inserire giovani ad alto potenziale non è un'attività amministrativa: è la leva che determina se la banca potrà continuare a crescere.
       </>,
     },
     challenge: {
       badge: 'LA SFIDA',
       title: '30.000 candidature, 600+ filiali, profili junior indistinguibili da CV.',
       intro: "I migliori candidati rischiavano di andarsene prima che il processo si concludesse. In un mercato dove Credem compete con altre banche, fintech e tech company per gli stessi profili, ogni settimana di ritardo nel processo aumentava il rischio di perdere i candidati più ricercati.",
-      businessLabel: 'IMPATTO SUL BUSINESS',
-      hrLabel: 'IMPATTO SU HR & PEOPLE',
+      businessLabel: 'BUSINESS IMPACT',
+      hrLabel: 'HR REALITY',
       businessChallenges: [
         {
           icon: TrendingUp,
           title: 'I giovani ad alto potenziale non erano immediatamente visibili',
           text: "Lo screening basato sul CV non era in grado di differenziare i profili junior. Le soft skill davvero importanti per questi ruoli erano completamente invisibili nel primo step. Il risultato: troppi falsi positivi in colloquio, troppi profili ad alto potenziale non individuati.",
-        },
-        {
-          icon: Users,
-          title: 'Il time-to-hire rischiava di far perdere i candidati migliori',
-          text: "In un mercato dove Credem compete con altre banche, fintech e tech company per gli stessi profili, ogni settimana di ritardo nel processo aumentava il rischio di perdere i candidati più ricercati.",
         },
         {
           icon: Heart,
@@ -83,19 +78,14 @@ const content = {
       ],
       hrChallenges: [
         {
+          icon: Users,
+          title: 'Il time-to-hire rischiava di far perdere i candidati migliori',
+          text: "In un mercato dove Credem compete con altre banche, fintech e tech company per gli stessi profili, ogni settimana di ritardo nel processo aumentava il rischio di perdere i candidati più ricercati.",
+        },
+        {
           icon: Target,
           title: 'La qualità della selezione non era omogenea',
           text: "Garantire standard di screening uniformi su una rete di oltre 600 filiali distribuite in 19 regioni era una sfida operativa e di equità. Senza un filtro centralizzato e strutturato, il livello di selezione poteva subire grosse variazioni.",
-        },
-        {
-          icon: Layers,
-          title: 'CV poco differenziati per i profili junior',
-          text: "La maggior parte delle candidature venivano da giovani professionisti con CV identici: poca esperienza, percorsi simili. Problem solving, orientamento al cliente e capacità relazionali — i veri differenziatori — erano invisibili sulla carta.",
-        },
-        {
-          icon: BarChart3,
-          title: 'Scalabilità del processo su 600+ filiali',
-          text: "Senza uno standard centralizzato, il livello di selezione variava per sede, recruiter e volume locale di candidature — rendendo impossibile garantire equità e qualità omogenea su scala nazionale.",
         },
       ],
     },
@@ -104,8 +94,7 @@ const content = {
       title: 'Trasformare lo screening da collo di bottiglia a vantaggio competitivo.',
       items: [
         { icon: Target, text: "Rendere il primo filtro più selettivo e predittivo: intercettare i profili ad alto potenziale nascosti nelle 30.000 candidature, riducendo i falsi positivi" },
-        { icon: Zap, text: "Ridurre il time-to-hire: rispondere ai candidati migliori prima della concorrenza" },
-        { icon: CheckCircle, text: "Ottimizzare la qualità delle shortlist: portare al colloquio solo candidati con competenze verificate" },
+        { icon: Zap, text: "Ridurre il time-to-hire e ottimizzare le shortlist: rispondere ai candidati migliori prima della concorrenza e portare al colloquio solo candidati con competenze verificate" },
         { icon: Layers, text: "Garantire standard omogenei su tutta la rete: stesso livello di valutazione su 600+ filiali" },
         { icon: Heart, text: "Migliorare l'employer brand: processo rapido, inclusivo e moderno, coerente con il posizionamento Top Employer" },
       ],
@@ -114,33 +103,30 @@ const content = {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue',
       intro: "Skillvue è stato integrato nel processo di selezione del Progetto Giovani con un approccio graduale e data-driven: prima la validazione su un perimetro iniziale, poi l'estensione progressiva. L'obiettivo era misurare l'impatto con dati reali prima di scalare.",
-      skillsLabel: 'COME FUNZIONA',
+      skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
-        { icon: CheckCircle, label: 'Raccolta candidature — il team HR raccoglie e seleziona le application' },
-        { icon: Target, label: 'Assessment AI (Skillvue) — ogni candidato completa un assessment su competenze trasversali, problem solving e orientamento al cliente' },
-        { icon: BarChart3, label: 'Ranking e shortlist — Skillvue produce un ranking con profilo dettagliato per ogni candidato' },
-        { icon: Users, label: 'Colloquio con il team Credem — i recruiter partono da una base informativa solida e profili già ben delineati' },
+        { icon: Target, label: 'Problem solving — capacità di analisi e gestione di situazioni complesse, chiave per i ruoli a contatto con i clienti in filiale' },
+        { icon: Users, label: 'Orientamento al cliente — attitudine alla relazione, ascolto e gestione delle esigenze del cliente' },
       ],
-      methodologyLabel: 'METODOLOGIA',
+      methodologyLabel: 'COME È STATO COSTRUITO',
       methodology: [
         {
-          title: 'Rollout graduale e data-driven',
-          text: "Prima la validazione su dati reali su un perimetro iniziale, poi l'estensione progressiva. Questo ha permesso di misurare risultati concreti e costruire fiducia interna prima di scalare.",
+          title: 'Raccolta candidature e Assessment AI',
+          text: "Il team HR raccoglie e seleziona le application. Ogni candidato completa un assessment su competenze trasversali chiave per la gestione del cliente in filiale.",
         },
         {
-          title: 'Inserimento post-CV, stessa banda operativa',
-          text: "Posizionato subito dopo la raccolta dei CV, i candidati completano l'assessment in autonomia. Il team HR mantiene lo stesso carico operativo ma riceve shortlist radicalmente più qualificate.",
+          title: 'Ranking e shortlist',
+          text: "Skillvue produce un ranking con profilo dettagliato per ogni candidato. Il team HR direziona i colloqui sulla base di dati strutturati.",
         },
         {
-          title: 'Libreria di competenze per ruolo',
-          text: "Test selezionati dalla Skillvue Library e calibrati sulle competenze specifiche di ogni profilo. L'AI genera profili completi per ogni candidato, per decisioni informate con dati oggettivi.",
+          title: 'Colloquio con il team Credem',
+          text: "I recruiter e gli hiring manager partono da una base informativa solida e da profili già ben delineati.",
         },
       ],
     },
     results: {
       badge: 'RISULTATI',
       title: 'Cosa è cambiato e perché conta.',
-      subtitle: "I risultati misurabili e qualitativi del progetto Skillvue x Credem.",
       metrics: [
         { value: '-50%', label: 'Time-to-hire' },
         { value: '+50%', label: 'Fit-to-hire al colloquio' },
@@ -197,7 +183,7 @@ const content = {
       paragraph: <>
         Credem (Credito Emiliano) is one of Italy's and Europe's most respected private banking groups. With a net profit of <strong className="text-[#1A1A2E]/80 font-semibold">€621 million in 2025</strong>, it is recognised as one of the most solid institutions for asset quality and risk management. It is also, and above all, a bank that grows: while the Italian banking sector closes branches and reduces headcount, Credem does the opposite — since 2020 it has created over <strong className="text-[#1A1A2E]/80 font-semibold">1,400 new jobs</strong>.
         <br /><br />
-        This growth creates a critical challenge for HR: every year Credem receives around <strong className="text-[#1A1A2E]/80 font-semibold">30,000 applications</strong>, largely from junior profiles, school leavers and recent graduates applying through the <strong className="text-[#1A1A2E]/80 font-semibold">Progetto Giovani</strong>, the group's main entry channel. In a sector where the average employee age exceeds 48 and 20–25% of the workforce will reach retirement by 2035, the ability to identify and onboard high-potential young talent is not an administrative task: it is the lever that determines whether the bank can continue to grow.
+        This growth creates a critical challenge for HR: every year Credem receives around <strong className="text-[#1A1A2E]/80 font-semibold">30,000 applications</strong>, largely from junior profiles, school leavers and recent graduates applying through the <strong className="text-[#1A1A2E]/80 font-semibold">Progetto Giovani</strong>, the group's main entry channel. In a sector where the average employee age exceeds <strong className="text-[#1A1A2E]/80 font-semibold">48</strong> and <strong className="text-[#1A1A2E]/80 font-semibold">20–25%</strong> of the workforce will reach retirement by 2035, the ability to identify and onboard high-potential young talent is not an administrative task: it is the lever that determines whether the bank can continue to grow.
       </>,
     },
     challenge: {
@@ -205,17 +191,12 @@ const content = {
       title: '30,000 applications, 600+ branches, junior profiles indistinguishable by CV.',
       intro: "The best candidates risked leaving before the process concluded. In a market where Credem competes with other banks, fintechs and tech companies for the same profiles, every week of delay in the process increased the risk of losing the most sought-after candidates.",
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR & PEOPLE IMPACT',
+      hrLabel: 'HR REALITY',
       businessChallenges: [
         {
           icon: TrendingUp,
           title: 'High-potential young talent was not immediately visible',
           text: "CV-based screening could not differentiate junior profiles. The soft skills that truly matter for these roles were completely invisible at the first step. The result: too many false positives in interviews, too many high-potential profiles missed.",
-        },
-        {
-          icon: Users,
-          title: 'Time-to-hire risked losing the best candidates',
-          text: "In a market where Credem competes with other banks, fintechs and tech companies for the same profiles, every week of delay increased the risk of losing the most in-demand candidates.",
         },
         {
           icon: Heart,
@@ -225,19 +206,14 @@ const content = {
       ],
       hrChallenges: [
         {
+          icon: Users,
+          title: 'Time-to-hire risked losing the best candidates',
+          text: "In a market where Credem competes with other banks, fintechs and tech companies for the same profiles, every week of delay increased the risk of losing the most in-demand candidates.",
+        },
+        {
           icon: Target,
           title: 'Selection quality was not consistent',
           text: "Guaranteeing uniform screening standards across a network of 600+ branches in 19 regions was an operational and fairness challenge. Without a centralised, structured filter, selection quality could vary significantly.",
-        },
-        {
-          icon: Layers,
-          title: 'Undifferentiated CVs for junior profiles',
-          text: "Most applications came from young professionals with essentially identical CVs: little experience, similar paths. Problem solving, customer orientation and relationship skills — the real differentiators — were completely invisible on paper.",
-        },
-        {
-          icon: BarChart3,
-          title: 'Process scalability across 600+ branches',
-          text: "Without a centralised standard, selection quality varied by location, recruiter and local volume — making it impossible to guarantee fairness and consistent quality at national scale.",
         },
       ],
     },
@@ -246,8 +222,7 @@ const content = {
       title: 'Turn screening from a bottleneck into a competitive advantage.',
       items: [
         { icon: Target, text: "Make the first filter more selective and predictive: identify high-potential profiles hidden among the 30,000 applications, reducing false positives" },
-        { icon: Zap, text: "Reduce time-to-hire: respond to the best candidates before the competition" },
-        { icon: CheckCircle, text: "Optimise shortlist quality: bring to interview only candidates with verified competencies" },
+        { icon: Zap, text: "Reduce time-to-hire and optimise shortlists: respond to the best candidates before the competition and bring to interview only candidates with verified competencies" },
         { icon: Layers, text: "Guarantee consistent standards across the network: same level of evaluation across 600+ branches" },
         { icon: Heart, text: "Improve employer brand: a fast, inclusive and modern process, consistent with the Top Employer positioning" },
       ],
@@ -256,33 +231,30 @@ const content = {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
       intro: "Skillvue was integrated into the Progetto Giovani selection process with a gradual, data-driven approach: first validation on an initial perimeter, then progressive extension. The goal was to measure impact with real data before scaling.",
-      skillsLabel: 'HOW IT WORKS',
+      skillsLabel: 'SKILLS ASSESSED',
       skills: [
-        { icon: CheckCircle, label: 'Application collection — the HR team collects and shortlists applications' },
-        { icon: Target, label: 'AI Assessment (Skillvue) — every candidate completes an assessment measuring cross-functional competencies, problem solving and customer orientation' },
-        { icon: BarChart3, label: 'Ranking and shortlist — Skillvue produces a ranking with a detailed profile for each candidate' },
-        { icon: Users, label: 'Interview with the Credem team — recruiters start from a solid information base and already well-defined profiles' },
+        { icon: Target, label: 'Problem solving — analytical thinking and ability to handle complex situations, key for client-facing branch roles' },
+        { icon: Users, label: 'Customer orientation — relationship skills, active listening and ability to manage client needs' },
       ],
-      methodologyLabel: 'METHODOLOGY',
+      methodologyLabel: 'HOW IT WAS BUILT',
       methodology: [
         {
-          title: 'Gradual, data-driven rollout',
-          text: "First validation on real data on an initial perimeter, then progressive extension. This made it possible to measure concrete results and build internal confidence before scaling.",
+          title: 'Application collection and AI Assessment',
+          text: "The HR team collects and shortlists applications. Every candidate completes an assessment on the key cross-functional competencies for client management in branch.",
         },
         {
-          title: 'Post-CV insertion, same operational bandwidth',
-          text: "Positioned immediately after CV collection, candidates complete the assessment independently. The HR team maintains the same operational load but receives radically more qualified shortlists.",
+          title: 'Ranking and shortlist',
+          text: "Skillvue produces a ranking with a detailed profile for each candidate. The HR team directs interviews on the basis of structured data.",
         },
         {
-          title: 'Competency library by role',
-          text: "Tests selected from the Skillvue Library and calibrated to the specific competencies of each profile. The AI generates complete profiles for each candidate, enabling informed decisions with objective data.",
+          title: 'Interview with the Credem team',
+          text: "Recruiters and hiring managers start from a solid information base and already well-defined profiles.",
         },
       ],
     },
     results: {
       badge: 'RESULTS',
       title: "What changed and why it matters.",
-      subtitle: "Measurable and qualitative outcomes from the Skillvue x Credem project.",
       metrics: [
         { value: '-50%', label: 'Time-to-hire' },
         { value: '+50%', label: 'Fit-to-hire in interviews' },
@@ -396,22 +368,19 @@ export default function CredemStoryPage() {
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6 max-w-3xl">{c.context.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8 max-w-3xl">{c.context.paragraph}</p>
-              <p className="text-[15px] text-[#1A1A2E]/40 italic leading-[1.75] max-w-2xl border-l-2 border-[#4b4df7]/20 pl-5">
-                {c.context.summary}
-              </p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6">{c.context.title}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.challenge.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14 max-w-3xl">{c.challenge.intro}</p>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
               <div className="mb-10">
                 <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
-                <div className="grid md:grid-cols-3 gap-5">
+                <div className="grid md:grid-cols-2 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
@@ -426,7 +395,7 @@ export default function CredemStoryPage() {
 
               <div>
                 <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
-                <div className="grid md:grid-cols-3 gap-5">
+                <div className="grid md:grid-cols-2 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
@@ -462,7 +431,7 @@ export default function CredemStoryPage() {
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.solution.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.solution.intro}</p>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
 
               <div className="mb-12">
                 <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
@@ -493,11 +462,10 @@ export default function CredemStoryPage() {
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-12">{c.results.title}</h2>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-3 max-w-2xl mx-auto gap-8">
                   {c.results.metrics.map(m => (
                     <div key={m.label} className="text-center">
                       <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
