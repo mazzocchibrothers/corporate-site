@@ -167,7 +167,7 @@ export default function InsMercatoStoryPage() {
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
               <div className="lg:col-span-8">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-                  <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-bold tracking-[-0.03em] text-white/95 mb-6" style={{ lineHeight: 1.12 }}>
+                  <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-bold tracking-[-0.03em] text-white/95 mb-6" style={{ lineHeight: 1.25 }}>
                     {lang === 'it'
                       ? <>Come In's Mercato ha costruito una <span className="italic gradient-text">pipeline interna</span> di Store Manager</>
                       : <>How In's Mercato built an <span className="italic gradient-text">internal pipeline</span> of Store Managers</>
@@ -212,16 +212,16 @@ export default function InsMercatoStoryPage() {
 
             {/* Context */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-2">
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-2">
                 {lang === 'it' ? 'Contesto' : 'Context'}
               </h2>
               <p className="text-[14px] font-semibold text-[#1A1A2E]/40 uppercase tracking-[0.08em] mb-6">
                 {lang === 'it' ? 'Il contesto del progetto' : 'Project Background'}
               </p>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] max-w-3xl mb-6">
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-6">
                 {lang === 'it'
-                  ? "In's Mercato è una delle principali insegne hard discount italiane, con un fatturato di 1,5 miliardi di euro, oltre 4.200 dipendenti e una rete di più di 570 punti vendita. L'azienda è in una fase di forte espansione immobiliare, con un piano di nuove aperture che pone un vincolo operativo preciso: senza Store Manager qualificati, pronti e pienamente allineati alla cultura aziendale, i nuovi negozi rischiano di sottoperformare. La crescita della rete dipende direttamente dalla capacità di avere figure manageriali formate nel momento in cui servono."
-                  : "In's Mercato is one of Italy's leading hard discount grocery chains, with €1.5 billion in revenue, over 4,200 employees, and a network of more than 570 stores. The company is in a phase of aggressive real estate expansion, with a new store opening plan that creates a clear operational constraint: without qualified Store Managers who are ready and fully aligned with the company culture, new stores risk underperforming. Network growth depends directly on having trained managerial talent available when it's needed."
+                  ? <>In's Mercato è una delle principali insegne hard discount italiane, con un fatturato di <strong className="text-[#1A1A2E]/80 font-semibold">1,5 miliardi di euro</strong>, oltre <strong className="text-[#1A1A2E]/80 font-semibold">4.200 dipendenti</strong> e una rete di più di <strong className="text-[#1A1A2E]/80 font-semibold">570 punti vendita</strong>. L'azienda è in una fase di forte espansione immobiliare, con un piano di nuove aperture che pone un vincolo operativo preciso: senza Store Manager qualificati, pronti e pienamente allineati alla cultura aziendale, i nuovi negozi rischiano di sottoperformare. La crescita della rete dipende direttamente dalla capacità di avere figure manageriali formate nel momento in cui servono.</>
+                  : <>In's Mercato is one of Italy's leading hard discount grocery chains, with <strong className="text-[#1A1A2E]/80 font-semibold">€1.5 billion in revenue</strong>, over <strong className="text-[#1A1A2E]/80 font-semibold">4,200 employees</strong>, and a network of more than <strong className="text-[#1A1A2E]/80 font-semibold">570 stores</strong>. The company is in a phase of aggressive real estate expansion, with a new store opening plan that creates a clear operational constraint: without qualified Store Managers who are ready and fully aligned with the company culture, new stores risk underperforming. Network growth depends directly on having trained managerial talent available when it's needed.</>
                 }
               </p>
               <div className="rounded-xl border border-[#4B4DF7]/[0.1] bg-[#4B4DF7]/[0.03] px-8 py-6 max-w-3xl">
@@ -236,13 +236,13 @@ export default function InsMercatoStoryPage() {
 
             {/* Challenge */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-2">
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-2">
                 {lang === 'it' ? 'La Sfida' : 'The Challenge'}
               </h2>
               <p className="text-[14px] font-semibold text-[#1A1A2E]/40 uppercase tracking-[0.08em] mb-6">
                 {lang === 'it' ? 'Il problema strutturale' : 'The Structural Problem'}
               </p>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] max-w-3xl mb-10">
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-10">
                 {lang === 'it'
                   ? "In's Mercato è un'azienda in forte crescita. Con oltre 570 punti vendita e un piano di sviluppo immobiliare attivo, il business aveva un vincolo operativo che precedeva qualsiasi considerazione HR."
                   : "In's Mercato is a fast-growing company. With over 570 stores and an active real estate development plan, the business faced an operational constraint that preceded any HR consideration."
@@ -278,7 +278,7 @@ export default function InsMercatoStoryPage() {
 
             {/* Objectives */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-2">
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-2">
                 {lang === 'it' ? 'Obiettivi di Collaborazione' : 'Collaboration Objectives'}
               </h2>
               <p className="text-[14px] font-semibold text-[#1A1A2E]/40 uppercase tracking-[0.08em] mb-8">
@@ -300,13 +300,13 @@ export default function InsMercatoStoryPage() {
 
             {/* Solution */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-2">
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-2">
                 {lang === 'it' ? 'La Soluzione' : 'The Solution'}
               </h2>
               <p className="text-[14px] font-semibold text-[#1A1A2E]/40 uppercase tracking-[0.08em] mb-6">
                 {lang === 'it' ? 'Assessment AI con Skillvue' : 'AI Assessment with Skillvue'}
               </p>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] max-w-3xl mb-10">
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-10">
                 {lang === 'it'
                   ? "Skillvue ha abilitato un assessment strutturato, basato sul framework di soft skill che In's aveva già costruito internamente per il profilo di Store Manager."
                   : "Skillvue enabled a structured assessment based on the soft skill framework that In's had already built internally for the Store Manager profile."
@@ -338,7 +338,7 @@ export default function InsMercatoStoryPage() {
 
             {/* Results */}
             <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-2">
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-2">
                 {lang === 'it' ? 'Risultati' : 'The Results'}
               </h2>
               <p className="text-[14px] font-semibold text-[#1A1A2E]/40 uppercase tracking-[0.08em] mb-10">
@@ -464,7 +464,7 @@ export default function InsMercatoStoryPage() {
         {/* Related Stories */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 mb-12">{t('Related Stories')}</h3>
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 leading-[1.4] mb-12">{t('Related Stories')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {[
                 { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: '35% fewer days to hire. 30% better hires.' },
