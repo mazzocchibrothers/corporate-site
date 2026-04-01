@@ -66,7 +66,7 @@ const content = {
       businessChallenges: [
         {
           icon: Target,
-          title: 'Ogni assunzione sbagliata rischiava di erodere i margini',
+          title: 'Costo delle possibili assunzioni errate',
           text: "Il costo di sostituzione varia da €3.000 a €6.600 per un frontline, fino a €90.000 per uno store manager. Ogni assunzione sbagliata erode direttamente i margini.",
         },
         {
@@ -204,7 +204,7 @@ const content = {
       businessChallenges: [
         {
           icon: Target,
-          title: 'Every wrong hire risked eroding margins',
+          title: 'Cost of potential wrong hires',
           text: "Frontline replacement costs €3,000–6,600; a store manager can reach €40,000–90,000. Keeping selection quality high and turnover low was a direct financial imperative.",
         },
         {
