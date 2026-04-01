@@ -44,7 +44,6 @@ const content = {
       facts: [
         { label: 'Dipendenti', value: '~5.000' },
         { label: 'Aeroporti', value: 'Fiumicino e Ciampino' },
-        { label: 'Masterplan', value: '€9 miliardi · 2046' },
         { label: 'Gruppo', value: 'Mundys' },
       ],
     },
@@ -103,11 +102,10 @@ const content = {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
       title: 'Costruire la capacità organizzativa che la crescita richiede.',
       items: [
-        { icon: Users, text: "Rendere visibile il potenziale su tutta la popolazione — assessment strutturato per tutti i 5.000 dipendenti, non solo i 1.000 corporate. Includere per la prima volta i 4.000 operativi" },
-        { icon: Target, text: 'Oggettivare le decisioni di sviluppo — passare dalle segnalazioni soggettive a dati strutturati sulle competenze, soft skill incluse, per ogni ruolo' },
-        { icon: Zap, text: 'Scalare senza sacrificare il rigore — processare le candidature interne in giorni anziché mesi, mantenendo la qualità psicometrica che una realtà pubblica richiede' },
-        { icon: Layers, text: "Costruire un modello human-in-the-loop — l'assessment deve produrre intelligenza a supporto delle decisioni manageriali, non sostituirle. Dati per decidere meglio, non verdetti automatici" },
-        { icon: Shield, text: 'Garantire trasparenza — criteri chiari e auditabili, feedback strutturati per ogni dipendente, rafforzando la fiducia nel processo e la compliance regolatoria' },
+        { icon: Users, text: "Rendere visibile il potenziale su tutta la popolazione: assessment strutturato per tutti i 5.000 dipendenti, non solo i 1.000 corporate. Includere per la prima volta i 4.000 operativi" },
+        { icon: Target, text: 'Oggettivare le decisioni e garantire risultati auditabili: passare dalle segnalazioni soggettive a dati strutturati per ogni ruolo, con criteri chiari, feedback per ogni dipendente e piena compliance regolatoria' },
+        { icon: Zap, text: 'Scalare senza sacrificare il rigore: processare le candidature interne in giorni anziché mesi, mantenendo la qualità psicometrica che una realtà pubblica richiede' },
+        { icon: Layers, text: "Costruire un modello human-in-the-loop: l'assessment deve produrre intelligenza a supporto delle decisioni manageriali, non sostituirle. Dati per decidere meglio, non verdetti automatici" },
       ],
     },
     solution: {
@@ -120,19 +118,15 @@ const content = {
         { icon: CheckCircle, label: 'Lingua inglese (competenza critica per un hub internazionale con 240 destinazioni)' },
         { icon: Heart, label: 'Soft skills (attenzione al passeggero, narrative communication, proattività, ecc.)' },
       ],
-      methodologyLabel: 'METODOLOGIA',
+      methodologyLabel: 'DUE SCELTE PROGETTUALI DECISIVE',
       methodology: [
-        {
-          title: 'Processo multi-step strutturato',
-          text: 'Filtro dei prerequisiti → test di inglese → assessment tecnico → assessment soft skills → assessment center in presenza per i top-ranked → decisione finale manageriale.',
-        },
         {
           title: 'Apertura inclusiva',
           text: 'Tutti i dipendenti eleggibili sono stati invitati a partecipare senza pre-selezione da parte dei responsabili. La porta è aperta a tutta la popolazione, non solo a chi è già visibile al proprio manager.',
         },
         {
           title: 'Change management differenziato',
-          text: "Adozione immediata per i ruoli corporate; accompagnamento strutturato on-site per i ruoli operativi, con sessioni guidate in sede nelle prime fasi di assessment.",
+          text: 'Adozione immediata per i ruoli corporate; accompagnamento strutturato on-site per i ruoli operativi, con sessioni guidate in sede nelle prime fasi di assessment.',
         },
       ],
     },
@@ -141,8 +135,8 @@ const content = {
       title: 'Cosa è cambiato e perché conta.',
       subtitle: "I risultati misurabili e qualitativi del progetto Skillvue x Aeroporti di Roma.",
       metrics: [
-        { value: '-97%', label: 'Time-to-Process', sublabel: 'da 3-4 mesi a 3-4 giorni' },
-        { value: '4.000', label: 'operativi inclusi', sublabel: 'mai valutati in precedenza' },
+        { value: '-97%', label: 'Time-to-Process' },
+        { value: 'fino a 4.000', label: 'operativi inclusi' },
         { value: 'Giorni, non mesi', label: 'tempi di selezione interna' },
       ],
       qualitative: [
@@ -201,7 +195,6 @@ const content = {
       facts: [
         { label: 'Employees', value: '~5,000' },
         { label: 'Airports', value: 'Fiumicino and Ciampino' },
-        { label: 'Masterplan', value: '€9 billion · 2046' },
         { label: 'Group', value: 'Mundys' },
       ],
     },
@@ -260,11 +253,10 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'Building the organizational capacity that growth demands.',
       items: [
-        { icon: Users, text: "Make potential visible across the entire workforce — structured assessment for all 5,000 employees, not just the 1,000 corporate staff. Including the 4,000 operational employees for the first time" },
-        { icon: Target, text: 'Objectify development decisions — move from subjective nominations to structured competency data, soft skills included, for every role' },
-        { icon: Zap, text: 'Scale without sacrificing rigour — process internal applications in days instead of months, while preserving the psychometric quality a public entity requires' },
-        { icon: Layers, text: "Build a human-in-the-loop model — the assessment must produce intelligence to support managerial decisions, not replace them. Data to decide better, not automated verdicts" },
-        { icon: Shield, text: 'Guarantee transparency — clear and auditable criteria, structured feedback for every employee, strengthening trust in the process and regulatory compliance' },
+        { icon: Users, text: "Make potential visible across the entire workforce: structured assessment for all 5,000 employees, not just the 1,000 corporate staff. Including the 4,000 operational employees for the first time" },
+        { icon: Target, text: 'Objectify decisions and ensure auditable results: move from subjective nominations to structured competency data for every role, with clear criteria, structured feedback for each employee, and full regulatory compliance' },
+        { icon: Zap, text: 'Scale without sacrificing rigour: process internal applications in days instead of months, while preserving the psychometric quality a public entity requires' },
+        { icon: Layers, text: "Build a human-in-the-loop model: the assessment must produce intelligence to support managerial decisions, not replace them. Data to decide better, not automated verdicts" },
       ],
     },
     solution: {
@@ -277,19 +269,15 @@ const content = {
         { icon: CheckCircle, label: 'English language (critical for an international hub with 240 destinations and 100+ airlines)' },
         { icon: Heart, label: 'Soft skills (for operational roles too, for the first time in ADR\'s history)' },
       ],
-      methodologyLabel: 'METHODOLOGY',
+      methodologyLabel: 'TWO DECISIVE DESIGN CHOICES',
       methodology: [
-        {
-          title: 'Structured multi-step process',
-          text: 'Prerequisite filtering → English language test → technical assessment → soft skills assessment → in-person assessment center for top-ranked candidates → final managerial decision.',
-        },
         {
           title: 'Inclusive open invitation',
           text: 'All eligible employees were invited to participate with no pre-selection by line managers. The door is open to the entire workforce, not just those already visible to their manager.',
         },
         {
           title: 'Differentiated change management',
-          text: "Immediate adoption for corporate roles; structured on-site accompaniment for operational roles, with guided sessions during the early assessment phases.",
+          text: 'Immediate adoption for corporate roles; structured on-site accompaniment for operational roles, with guided sessions during the early assessment phases.',
         },
       ],
     },
@@ -298,8 +286,8 @@ const content = {
       title: "What changed and why it matters.",
       subtitle: "Measurable and qualitative outcomes from the Skillvue x Aeroporti di Roma project.",
       metrics: [
-        { value: '-97%', label: 'Time-to-Process', sublabel: 'from 3–4 months to 3–4 days' },
-        { value: '4,000', label: 'operational staff included', sublabel: 'never assessed before' },
+        { value: '-97%', label: 'Time-to-Process' },
+        { value: 'up to 4,000', label: 'operational staff included' },
         { value: 'Days, not months', label: 'internal selection timeline' },
       ],
       qualitative: [
