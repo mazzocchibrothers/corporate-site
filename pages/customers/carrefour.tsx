@@ -60,7 +60,7 @@ const content = {
     challenge: {
       badge: 'LA SFIDA',
       title: 'Il problema strutturale',
-      intro: "Con 30.000 candidature l'anno e soli 3 recruiter su 1.200 punti vendita, Carrefour Italia aveva un vincolo operativo chiaro: scalare la qualità della selezione senza moltiplicare le risorse, in un settore dove ogni assunzione sbagliata erode direttamente i margini.",
+      intro: "Carrefour Italia aveva un vincolo operativo chiaro: scalare la qualità della selezione senza moltiplicare le risorse, in un settore dove ogni assunzione sbagliata erode direttamente i margini.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR REALITY',
       businessChallenges: [
