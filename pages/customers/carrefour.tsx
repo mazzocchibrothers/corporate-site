@@ -94,7 +94,7 @@ const content = {
         {
           icon: Users,
           title: 'Il modello di competenze esisteva sulla carta, non nel processo',
-          text: "Il modello di competenze era definito per ogni ruolo, ma le assunzioni non avvenivano con valutazione sistematica rispetto ad esso. Il framework non diventava mai strumento operativo.",
+          text: "Il modello di competenze era definito per ogni ruolo, ma le assunzioni non avvenivano con valutazione sistematica rispetto ad esso.",
         },
       ],
     },
