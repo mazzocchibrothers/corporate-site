@@ -45,7 +45,6 @@ const content = {
         { label: 'Settore', value: 'Fashion Retail' },
         { label: 'Dipendenti', value: '1.000+' },
         { label: 'Punti vendita', value: '130+ monomarca' },
-        { label: 'Team HR', value: '7 persone su 6 paesi' },
       ],
     },
     context: {
@@ -74,17 +73,17 @@ const content = {
           title: 'Nessuno standard cross-country',
           text: 'Ogni paese valutava con criteri diversi, in lingue diverse. Non esisteva un framework comune: "la persona giusta per Subdued" significava cose diverse a Milano e a Londra.',
         },
-        {
-          icon: TrendingUp,
-          title: 'Il turnover era strutturalmente alto',
-          text: 'Nel fashion retail il turnover è fisiologicamente elevato. Per un brand dove l\'esperienza in negozio è parte della vendita, ogni assunzione sbagliata moltiplicava ulteriormente questo rischio.',
-        },
       ],
       hrChallenges: [
         {
           icon: Zap,
           title: '10-15 ore a settimana di telefonate introduttive',
           text: 'Senza un filtro strutturato, ogni candidato richiedeva un forte investimento di tempo anche solo per un pre-screening. 10-15 ore a settimana di screening telefonico e zero tempo per attività più strategiche.',
+        },
+        {
+          icon: TrendingUp,
+          title: 'Il turnover era strutturalmente alto',
+          text: 'Nel fashion retail il turnover è fisiologicamente elevato. Per un brand dove l\'esperienza in negozio è parte della vendita, ogni assunzione sbagliata moltiplicava ulteriormente questo rischio.',
         },
       ],
     },
@@ -178,7 +177,6 @@ const content = {
         { label: 'Industry', value: 'Fashion Retail' },
         { label: 'Employees', value: '1,000+' },
         { label: 'Stores', value: '130+ mono-brand' },
-        { label: 'HR Team', value: '7 people across 6 countries' },
       ],
     },
     context: {
@@ -207,17 +205,17 @@ const content = {
           title: 'No cross-country evaluation standard',
           text: 'Each country used different criteria, different languages, different cultural sensitivities. No common framework existed to ensure "the right person for Subdued" meant the same thing in Milan and in London.',
         },
-        {
-          icon: TrendingUp,
-          title: 'Turnover was structurally high',
-          text: 'Turnover in fashion retail is inherently elevated. For a brand where the in-store experience is a core part of the sale, every wrong hire amplified this risk further.',
-        },
       ],
       hrChallenges: [
         {
           icon: Zap,
           title: '10–15 hours a week on introductory calls',
           text: 'Without a structured filter, every candidate required a significant time investment just for pre-screening. 10–15 hours a week on calls and zero time for anything more strategic.',
+        },
+        {
+          icon: TrendingUp,
+          title: 'Turnover was structurally high',
+          text: 'Turnover in fashion retail is inherently elevated. For a brand where the in-store experience is a core part of the sale, every wrong hire amplified this risk further.',
         },
       ],
     },
