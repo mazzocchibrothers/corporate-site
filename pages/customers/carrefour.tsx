@@ -8,34 +8,6 @@ import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
 
-const metrics = [
-  { value: '-35%', label: 'time-to-hire' },
-  { value: '+30%', label: 'new hire success rate' },
-  { value: '30K', label: 'CVs/year managed' },
-];
-
-const sidebar = [
-  { label: 'Industry', value: 'Large-Scale Retail (GDO)' },
-  { label: 'Employees', value: '18,000+' },
-  { label: 'Region', value: 'Italy' },
-  { label: 'Use Cases', value: 'Hiring & Screening, Internal Skills Mapping' },
-  { label: 'Customer Since', value: '2024' },
-];
-
-const beforeItems = [
-  '30,000 CVs/year with no objective competency layer at screening',
-  'Video interviews in use, but no automated scoring output',
-  'Team split across 3 sales channels + HQ: bandwidth at the limit',
-  'Employer Branding and data analysis sacrificed to manage volume',
-];
-
-const afterItems = [
-  'AI pre-screening for all candidatures with deep competency evaluation',
-  "Carrefour's '4C' values model mapped onto Skillvue assessments",
-  'HR team freed to focus on nurturing, data analysis, and Employer Branding',
-  'Same framework extended to internal skills mapping',
-];
-
 function Section({ children, className = '' }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
@@ -56,7 +28,7 @@ const content = {
       before: 'Carrefour: come proteggere i margini su ',
       highlight1: '1.200 punti vendita',
       middle: ' ottimizzando il ',
-      highlight2: 'KPI chiave della selezione',
+      highlight2: 'KPI chiave del processo di selezione',
       after: '',
     },
     subtitle: "In un settore dove il costo del lavoro è 3.4x l'utile operativo, Carrefour Italia ha trasformato la selezione in una vera e propria leva di profittabilità, grazie a dati chiari sulle persone e sulle loro competenze.",
@@ -117,7 +89,7 @@ const content = {
         {
           icon: Wrench,
           title: 'Pre-screening senza output strutturato',
-          text: "Le decisioni si basavano sulla gestione personale del recruiter e su colloqui non strutturati, abbassando l'accuratezza predittiva. Nessun dato oggettivo sulle competenze poteva essere generato e valutato prima di arrivare al colloquio.",
+          text: "Le decisioni si basavano sulla gestione personale del recruiter e su colloqui non strutturati, abbassando l'accuratezza predittiva del 14%. Nessun dato oggettivo sulle competenze poteva essere generato e valutato prima di arrivare al colloquio.",
         },
         {
           icon: Users,
@@ -256,7 +228,7 @@ const content = {
         {
           icon: Wrench,
           title: 'Pre-screening with no structured output',
-          text: "Decisions relied on the individual recruiter's judgment and unstructured interviews, reducing predictive accuracy. No objective competency data could be generated and evaluated before the interview stage.",
+          text: "Decisions relied on the individual recruiter's judgment and unstructured interviews, reducing predictive accuracy by 14%. No objective competency data could be generated and evaluated before the interview stage.",
         },
         {
           icon: Users,
@@ -362,7 +334,7 @@ export default function CarrefourStoryPage() {
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-bold tracking-[0.12em] uppercase mb-8 block w-fit" style={{ background: 'rgba(75,77,247,0.15)', color: '#7b7df9', border: '1px solid rgba(75,77,247,0.2)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.12 }}>
+                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
                   <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
@@ -418,14 +390,14 @@ export default function CarrefourStoryPage() {
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-6 max-w-3xl">{c.context.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6 max-w-3xl">{c.context.title}</h2>
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8 max-w-3xl">{c.context.paragraph}</p>
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.challenge.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.challenge.title}</h2>
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14 max-w-3xl">{c.challenge.intro}</p>
 
               <div className="mb-10">
@@ -462,7 +434,7 @@ export default function CarrefourStoryPage() {
             {/* OBJECTIVES */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{c.objectives.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {c.objectives.items.map((o, i) => (
                   <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -478,7 +450,7 @@ export default function CarrefourStoryPage() {
             {/* SOLUTION */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.solution.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.solution.title}</h2>
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.solution.intro}</p>
 
               <div className="mb-12">
@@ -510,7 +482,7 @@ export default function CarrefourStoryPage() {
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.results.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
@@ -546,7 +518,7 @@ export default function CarrefourStoryPage() {
         {/* RELATED STORIES */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 mb-12">{c.related.title}</h3>
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 leading-[1.4] mb-12">{c.related.title}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {c.related.stories.map(s => (
                 <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
