@@ -67,34 +67,34 @@ const content = {
         {
           icon: Target,
           title: 'Ogni assunzione sbagliata rischiava di erodere i margini',
-          text: "Il costo di sostituzione di un dipendente frontline nella GDO varia dai €3.000 ai €6.600; per uno store manager arriva a €40.000–90.000. Numeri che rendevano evidente la necessità di tenere alta la qualità del processo di selezione e più bassi possibili i livelli di turnover.",
+          text: "Il costo di sostituzione varia da €3.000 a €6.600 per un frontline, fino a €90.000 per uno store manager. Ogni assunzione sbagliata erode direttamente i margini.",
         },
         {
           icon: Layers,
           title: 'Contesto multi-formato',
-          text: "4 formati retail, ciascuno con profili e competenze diverse. Un team di 3 recruiter non poteva garantire qualità e profondità di valutazione sul personale di tutti i 1.200 punti vendita, rischiando di impattare direttamente le performance di store.",
+          text: "4 formati retail, profili e competenze diverse. 3 recruiter non potevano garantire profondità di valutazione su 1.200 punti vendita senza impattare le performance di store.",
         },
         {
           icon: Eye,
           title: 'Competenze invisibili sulla rete vendita',
-          text: "Per migliaia di dipendenti non esisteva alcuna mappatura strutturata. Le decisioni su chi promuovere, dove investire in formazione, chi era pronto per un ruolo di maggiore responsabilità non avevano dati a supporto.",
+          text: "Per migliaia di dipendenti non esisteva alcuna mappatura strutturata. Promozioni, formazione, mobilità interna: tutte decisioni senza dati.",
         },
       ],
       hrChallenges: [
         {
           icon: BarChart3,
           title: 'Il CV non prediceva la performance',
-          text: "Per profili junior e operativi — la maggioranza delle 30.000 candidature annue — i CV sono un indicatore poco efficace del reale talento. Le competenze che predicono il successo nel ruolo (orientamento al cliente, problem solving, adattamento) sono invisibili sulla carta.",
+          text: "Per profili junior e operativi — la maggioranza delle 30.000 candidature — i CV sono un indicatore inefficace. Orientamento al cliente, problem solving, adattamento: invisibili sulla carta.",
         },
         {
           icon: Wrench,
           title: 'Pre-screening senza output strutturato',
-          text: "Le decisioni si basavano sulla gestione personale del recruiter e su colloqui non strutturati, abbassando l'accuratezza predittiva del 14%. Nessun dato oggettivo sulle competenze poteva essere generato e valutato prima di arrivare al colloquio.",
+          text: "Decisioni basate sul giudizio del recruiter e colloqui non strutturati, con un calo dell'accuratezza predittiva del 14%. Nessun dato sulle competenze prima del colloquio.",
         },
         {
           icon: Users,
           title: 'Il modello di competenze esisteva sulla carta, non nel processo',
-          text: "Carrefour aveva definito i comportamenti critici per ogni ruolo ma le assunzioni non potevano sempre avvenire con una valutazione sistematica rispetto a quel framework. Il modello non si traduceva sempre in uno strumento operativo.",
+          text: "Il modello di competenze era definito per ogni ruolo, ma le assunzioni non avvenivano con valutazione sistematica rispetto ad esso. Il framework non diventava mai strumento operativo.",
         },
       ],
     },
@@ -205,12 +205,12 @@ const content = {
         {
           icon: Target,
           title: 'Every wrong hire risked eroding margins',
-          text: "The replacement cost for a frontline employee in grocery retail ranges from €3,000 to €6,600; for a store manager it reaches €40,000–90,000. Numbers that made it clear: keeping selection quality high and turnover low was a financial imperative.",
+          text: "Frontline replacement costs €3,000–6,600; a store manager can reach €40,000–90,000. Keeping selection quality high and turnover low was a direct financial imperative.",
         },
         {
           icon: Layers,
           title: 'Multi-format complexity',
-          text: "4 retail formats, each with different profiles and competencies. A team of 3 recruiters could not guarantee consistent depth of evaluation across all 1,200 stores, with a direct risk of impacting store performance.",
+          text: "4 retail formats, each with different profiles and competencies. 3 recruiters could not guarantee evaluation depth across 1,200 stores without risking store performance.",
         },
         {
           icon: Eye,
@@ -222,12 +222,12 @@ const content = {
         {
           icon: BarChart3,
           title: "CVs didn't predict performance",
-          text: "For junior and operational profiles — the majority of the 30,000 annual applications — CVs are a poor indicator of real talent. The competencies that predict success in role (customer orientation, problem solving, adaptability) are invisible on paper.",
+          text: "For junior and operational profiles — most of the 30,000 annual applications — CVs are a poor predictor. Customer orientation, problem solving, adaptability: all invisible on paper.",
         },
         {
           icon: Wrench,
           title: 'Pre-screening with no structured output',
-          text: "Decisions relied on the individual recruiter's judgment and unstructured interviews, reducing predictive accuracy by 14%. No objective competency data could be generated and evaluated before the interview stage.",
+          text: "Decisions relied on individual judgment and unstructured interviews, reducing predictive accuracy by 14%. No competency data before the interview.",
         },
         {
           icon: Users,
