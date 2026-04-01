@@ -25,145 +25,122 @@ const content = {
     breadcrumb: 'Clienti',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Come Unicomm sta costruendo un ',
-      highlight1: 'talent lifecycle skills-based',
-      middle: ' su ',
-      highlight2: '270+ punti vendita',
-      after: '',
+      before: 'Come Unicomm sta costruendo una nuova ',
+      highlight1: 'gestione del talento',
+      middle: ' su una rete di ',
+      highlight2: '270 punti vendita',
+      after: ' in costante aumento',
     },
-    subtitle: "Una digitalizzazione HR ancora agli inizi, oltre 7.000 dipendenti su 7 regioni e la necessità di standardizzare selezione, conferme e sviluppo interno. Con Skillvue, Unicomm sta trasformando la gestione del talento in un sistema unico basato sulle competenze.",
+    subtitle: "Con Skillvue, Unicomm sta trasformando un'infrastruttura HR ancora poco digitalizzata in un sistema skills-based agile e capace di rispondere con efficacia alle necessità di selezione, conferme e sviluppo interno su tutta la rete.",
     heroMetrics: [
-      { value: '3', label: 'Filoni attivati in parallelo' },
-      { value: '4', label: 'Livelli di ruolo coperti' },
-      { value: 'End-to-end', label: 'Talent lifecycle in costruzione' },
+      { value: '3', label: 'Filoni attivati in parallelo (hiring, conferme, sviluppo)' },
+      { value: '4', label: "Livelli di ruolo coperti, dall'addetto vendita al gerente" },
+      { value: 'End-to-end', label: 'Talent lifecycle su 7 insegne e 7 regioni' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
-        { label: 'Dipendenti', value: '7.000+' },
-        { label: 'Insegne', value: '7 (Emisfero, Famila, Mega, Emi, A&O, C+C Cash&Carry, Hurrà)' },
+        { label: 'Dipendenti', value: '8.000+' },
+        { label: 'Insegne', value: '7' },
         { label: 'Punti vendita diretti', value: '270+' },
         { label: 'Regioni', value: '7' },
-        { label: 'Gruppo commerciale', value: 'Selex (dal 1964)' },
       ],
     },
     context: {
       badge: 'CONTESTO',
-      title: 'Il contesto del progetto',
+      title: 'Un gruppo che raddoppia il fatturato in tre anni ha bisogno di persone pronte alla stessa velocità.',
       paragraph: <>
-        Unicomm è un gruppo della <strong className="text-[#1A1A2E]/80 font-semibold">Grande Distribuzione Organizzata</strong> con oltre <strong className="text-[#1A1A2E]/80 font-semibold">270 punti vendita</strong> in 7 regioni, <strong className="text-[#1A1A2E]/80 font-semibold">7.000 dipendenti</strong> e 7 insegne. Associato al Gruppo Commerciale Selex dal 1964, è una delle principali realtà della GDO italiana. L’azienda partiva da una digitalizzazione HR ancora agli inizi, con processi largamente manuali. La sfida non era ottimizzare un processo esistente, ma costruirne uno strutturato: standardizzare le valutazioni su tutta la rete e adottare un approccio oggettivo alle competenze — dagli addetti vendita ai gerenti.
+        <strong className="text-[#1A1A2E]/80 font-semibold">Gruppo Unicomm</strong>, parte di <strong className="text-[#1A1A2E]/80 font-semibold">Selex Gruppo Commerciale</strong>, è una delle principali realtà della <strong className="text-[#1A1A2E]/80 font-semibold">Grande Distribuzione Organizzata</strong> italiana. Negli ultimi 3 anni il gruppo ha registrato una <strong className="text-[#1A1A2E]/80 font-semibold">crescita quasi doppia</strong> rispetto alla media di settore, con l'obiettivo dichiarato di proseguire lavorando all'apertura di nuovi punti vendita, all'integrazione strategica con <strong className="text-[#1A1A2E]/80 font-semibold">Etruria Retail</strong> e alla realizzazione di nuove infrastrutture logistiche. In questo scenario di espansione accelerata, la capacità di selezionare, confermare e sviluppare le persone giuste diventa una priorità tanto per HR quanto per il business — soprattutto considerando che nel mercato del lavoro della GDO italiana il <strong className="text-[#1A1A2E]/80 font-semibold">50% delle posizioni</strong> è classificato come "difficile da chiudere" e uno store manager richiede in media <strong className="text-[#1A1A2E]/80 font-semibold">90-120 giorni</strong> di ricerca.
       </>,
-      summary: "Il progetto sta trasformando Unicomm da un’organizzazione con processi HR largamente manuali a una realtà in cui selezione, conferme e sviluppo interno vengono progressivamente gestiti con un unico sistema strutturato e basato sulle competenze — un percorso di trasformazione end-to-end avviato di recente e in fase di consolidamento.",
     },
     challenge: {
       badge: 'LA SFIDA',
-      title: 'Il problema strutturale',
-      intro: "Unicomm non doveva ottimizzare i propri processi HR: doveva ripensarli da zero. Con digitalizzazione agli inizi, nessuna valutazione strutturata e 270+ punti vendita su 7 regioni, il vincolo era operativo e culturale insieme.",
-      businessLabel: 'IMPATTO SUL BUSINESS',
-      hrLabel: 'IMPATTO SU HR & PEOPLE',
+      title: 'Non bastava ottimizzare: serviva costruire dalle fondamenta.',
+      intro: "Unicomm partiva da una infrastruttura HR ancora poco digitalizzata, e lo faceva nel momento di crescita più intensa della propria storia.",
+      businessLabel: 'BUSINESS IMPACT',
+      hrLabel: 'HR REALITY',
       businessChallenges: [
         {
-          icon: Zap,
-          title: 'Digitalizzazione HR ancora agli inizi',
-          text: "Selezione, conferme e crescita erano gestiti in modo manuale e non standardizzato. Impossibile avere una visione d\u2019insieme sulla qualit\u00e0 del talento su 7.000 dipendenti senza un sistema integrato e tracciabile.",
-        },
-        {
           icon: Layers,
-          title: 'Rete distribuita, poca standardizzazione',
-          text: "Con 7 insegne su 7 regioni, ogni sede operava con criteri propri. Due candidati con lo stesso potenziale potevano avere percorsi completamente diversi, non per merito ma per mancanza di un framework comune.",
+          title: 'Rete distribuita, criteri frammentati',
+          text: "Due candidati con lo stesso potenziale potevano avere percorsi diversi per mancanza di un framework comune. In un settore dove la variazione di performance tra uno store manager può valere il 15-25% del fatturato di un punto vendita, l'assenza di criteri oggettivi era un rischio commerciale.",
         },
         {
           icon: Target,
-          title: 'Tre processi critici da coprire in parallelo',
-          text: "Serviva coprire simultaneamente hiring su tutte le insegne, conferme dei neoassunti a tempo indeterminato e sviluppo interno tramite academy per capo reparto e store manager.",
+          title: 'Tre processi critici per il business da attivare contemporaneamente',
+          text: "Unicomm doveva attivarsi simultaneamente sulle selezioni per le nuove aperture, le conferme di decine di neoassunti al mese, e lo sviluppo interno attraverso l'Academy per la progressione a capo reparto e store manager.",
         },
       ],
       hrChallenges: [
         {
-          icon: Eye,
-          title: 'Nessuna valutazione oggettiva delle competenze',
-          text: "Assunzioni, conferme e promozioni si basavano esclusivamente sull\u2019esperienza e sulle impressioni dei responsabili. Nessun dato strutturato su competenze soft o hard.",
+          icon: Zap,
+          title: 'Una digitalizzazione HR ancora agli inizi',
+          text: "Selezione, conferme del personale e percorsi di sviluppo venivano gestiti in modo manuale ed erano affidati alle capacità dei singoli responsabili di negozio o area. Non esisteva una visione d'insieme sul talento dei 7.000 dipendenti.",
         },
         {
           icon: Heart,
-          title: 'Change management su una cultura non digitale',
-          text: "Introdurre assessment digitali senza precedenti tecnologici in HR significava resistenze culturali importanti. Serviva un partner capace di accompagnare il cambiamento a tutti i livelli, non solo un tool.",
-        },
-        {
-          icon: Wrench,
-          title: 'Competenze specifiche non mappate',
-          text: "Il modello Unicomm includeva soft skill GDO specifiche non presenti nelle librerie standard. Serviva la capacit\u00e0 di sviluppare valutazioni ad hoc sulle matrici interne e sulle specificit\u00e0 dei diversi ruoli.",
+          title: 'Change management senza precedenti digitali',
+          text: "Introdurre assessment digitali in un'organizzazione che non aveva mai utilizzato strumenti tecnologici per la gestione delle persone significava dover promuovere una trasformazione profonda, a tutti i livelli.",
         },
       ],
     },
     objectives: {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
-      title: 'Cosa doveva cambiare',
+      title: "Costruire l'infrastruttura di talento che la crescita richiede.",
       items: [
-        { icon: Zap, text: "Strutturare l’intero talent lifecycle: selezione, conferme e sviluppo interno gestiti in un unico sistema integrato, superando processi manuali e non standardizzati" },
-        { icon: Scale, text: "Standardizzare le valutazioni su tutta la rete: stessi criteri, stesso framework di competenze, indipendentemente dall’insegna, dal punto vendita o dal singolo responsabile" },
-        { icon: CheckCircle, text: "Adottare un approccio skills-based completo: valutazioni calibrate per obiettivo (hiring, conferma, sviluppo) e per ruolo/reparto, con un mix personalizzato di soft e hard skill" },
-        { icon: Users, text: "Guidare un change management significativo: trasformare la cultura HR dell’organizzazione, portandola verso un sistema strutturato con il supporto di un partner tecnologico a 360°" },
+        { icon: Scale, text: "Standardizzare le valutazioni su tutta la rete: stessi criteri, stesso framework di competenze, indipendentemente dall'insegna, dal punto vendita o dal singolo responsabile" },
+        { icon: CheckCircle, text: "Adottare un approccio skills-based completo: valutazioni calibrate per obiettivo (hiring, conferma, sviluppo) e per ruolo/reparto, con un mix di soft e hard skill" },
+        { icon: Wrench, text: "Costruire competenze di valutazione specifiche per la GDO: sviluppare assessment ad hoc laddove il modello Unicomm lo richiedeva" },
+        { icon: Users, text: "Guidare un change management reale: trasformare la cultura HR dell'organizzazione, non solo introdurre uno strumento" },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Assessment AI con Skillvue',
-      intro: "Skillvue \u00e8 stato adottato per costruire il talent lifecycle di Unicomm con tre filoni in parallelo: hiring, conferme e sviluppo interno. Gli assessment combinano obiettivo del processo e ruolo/reparto, con personalizzazioni ad hoc sul modello Unicomm.",
+      title: 'Assessment AI su tre filoni in parallelo, calibrato sul modello Unicomm.',
+      intro: "Skillvue è stato integrato come partner per la costruzione del talent lifecycle di Unicomm, lavorando con il team HR guidato da Giuseppe Curci per allineare la piattaforma al modello di competenze aziendale e alle specificità della GDO.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
-        { icon: Heart, label: 'Soft skill specifiche del modello Unicomm (sviluppate ad hoc)' },
-        { icon: Wrench, label: 'Competenze tecniche GDO (adattate alle matrici di valutazione interne)' },
-        { icon: Layers, label: 'Mix calibrato per ruolo (client-facing vs. non, addetto vendita vs. gerente)' },
+        { icon: Wrench, label: 'Competenze tecniche GDO — differenziate per reparto e livello di responsabilità (ruolo client-facing o meno, livello da addetto vendita a gerente)' },
+        { icon: Heart, label: 'Soft skill specifiche — sviluppate ad hoc sul modello Unicomm (es. orientamento al servizio in contesti GDO, gestione del team su turni)' },
       ],
-      methodologyLabel: 'METODOLOGIA',
+      methodologyLabel: 'STRUTTURA DEL PROGETTO — TRE FILONI IN PARALLELO',
       methodology: [
         {
-          title: 'Tre filoni in parallelo',
-          text: "Hiring per le posizioni aperte, conferme per i neoassunti da portare a tempo indeterminato, sviluppo tramite academy con due momenti annuali per progressione a capo reparto o store manager. Un sistema, tre finalit\u00e0.",
+          title: 'Hiring',
+          text: "Selezione per le posizioni aperte sulle diverse insegne del Gruppo, con assessment calibrati sul ruolo specifico.",
         },
         {
-          title: 'Assessment personalizzati per ruolo e obiettivo',
-          text: "Calibrati sull\u2019obiettivo del processo (selezione, conferma, sviluppo misurano aspetti diversi) e sul ruolo specifico. Le competenze non presenti nella libreria sono state sviluppate ad hoc sulle matrici Unicomm.",
+          title: 'Conferme',
+          text: "Decine di collaboratori al mese da valutare per la conferma a tempo indeterminato, con criteri strutturati e tracciabili.",
         },
         {
-          title: 'Change management come pilastro del progetto',
-          text: "Non solo implementazione tecnologica, ma trasformazione culturale. L\u2019onboarding ha coinvolto HR Manager, operativi e IT. Skillvue come people partner a 360\u00b0, non come semplice strumento.",
+          title: "03 — Sviluppo",
+          text: "Due momenti l'anno per la progressione a capo reparto o store manager, tramite Academy interna basata su dati di competenza oggettivi.",
         },
       ],
     },
     results: {
       badge: 'RISULTATI',
-      title: 'Key Metrics & Impatto',
-      subtitle: "I risultati ottenuti da Unicomm attraverso l’adozione di Skillvue per la costruzione del proprio talent lifecycle.",
+      title: 'Cosa sta cambiando.',
       metrics: [
-        { value: '3', label: 'Filoni attivati in parallelo', sublabel: 'Hiring, conferme, sviluppo interno' },
-        { value: '4', label: 'Livelli di ruolo coperti', sublabel: 'Da addetto vendita a gerente' },
-        { value: 'End-to-end', label: 'Talent lifecycle in costruzione', sublabel: 'Selezione, conferme e sviluppo in un unico sistema' },
-        { value: '7 insegne', label: 'Rete distribuita in fase di standardizzazione', sublabel: '270+ punti vendita coperti' },
+        { value: '3', label: 'Filoni attivati in parallelo' },
+        { value: '4', label: 'Livelli di ruolo coperti' },
+        { value: 'End-to-end', label: 'Talent lifecycle in costruzione' },
       ],
       qualitative: [
-        { icon: TrendingUp, title: "Verso un talent lifecycle integrato", text: "Selezione, conferme e sviluppo interno gestiti con un\u2019unica logica skills-based. Un percorso avviato di recente che produce gi\u00e0 i primi risultati concreti nella standardizzazione." },
-        { icon: Scale, title: "Standardizzazione in corso su tutta la rete", text: "Le 7 insegne su 270+ punti vendita stanno adottando gli stessi criteri e framework. L\u2019obiettivo: decisioni su assunzioni, conferme e promozioni basate su dati oggettivi." },
-      ],
-    },
-    vision: {
-      badge: 'LA VISIONE',
-      title: "Verso un’organizzazione completamente skills-based",
-      intro: "Con i tre filoni del talent lifecycle avviati in parallelo, la visione di Unicomm è consolidare il modello skills-based come spina dorsale di tutte le decisioni sulle persone.",
-      objective: "Ogni persona valutata, sviluppata e accompagnata con la stessa logica skills-based, dal primo giorno, indipendentemente dall\u2019insegna, dal ruolo o dal territorio.",
-      bullets: [
-        "Consolidamento dei tre filoni (hiring, conferme, sviluppo) in un modello operativo unico",
-        "Evoluzione verso career path e succession planning guidati dai dati di competenza",
+        { icon: TrendingUp, title: "Da zero a sistema integrato", text: "Unicomm è passata dall'assenza totale di strumenti digitali HR a un talent lifecycle strutturato che copre selezione, conferme e sviluppo in un unico sistema. Non un'ottimizzazione incrementale, ma un salto di paradigma realizzato durante la fase di crescita più intensa del Gruppo." },
+        { icon: Wrench, title: "Competenze GDO finalmente misurabili", text: "Le soft skill specifiche del settore vengono ora valutate con strumenti calibrati sul modello Unicomm, non con assessment generici. Misurare queste competenze è una leva di business, non un mero esercizio HR." },
+        { icon: BarChart3, title: "Decisioni basate su dati, non su impressioni", text: "Gli assessment producono informazioni strutturate che supportano le decisioni manageriali senza sostituirle. I manager decidono con più dati, e questo alza il livello della decisione." },
+        { icon: Users, title: "Un percorso di change management in corso", text: "La trasformazione culturale è ancora in atto, ma le fondamenta sono solide: il sistema è operativo, i tre filoni avanzano in parallelo, e l'organizzazione sta costruendo la familiarità con un approccio skills-based che prima non esisteva." },
       ],
     },
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'ins-mercato', company: "In’s Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "~900 persone valutate. Una pipeline di Store Manager costruita dall’interno." },
-        { id: 'adr', company: 'Aeroporti di Roma', industry: 'Aviation', tag: 'Aviation · Sviluppo Interno', headline: 'Come Aeroporti di Roma ha democratizzato l\'accesso allo sviluppo per 5.000 persone.' },
+        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "~900 persone valutate. Una pipeline di Store Manager costruita dall'interno." },
+        { id: 'adr', company: 'Aeroporti di Roma', industry: 'Aviation', tag: 'Aviation · Sviluppo Interno', headline: "Come Aeroporti di Roma ha democratizzato l'accesso allo sviluppo per 5.000 persone." },
       ],
       cta: 'Leggi la storia',
     },
@@ -174,144 +151,121 @@ const content = {
     breadcrumb: 'Customers',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'How Unicomm is building a ',
-      highlight1: 'skills-based talent lifecycle',
-      middle: ' across ',
-      highlight2: '270+ stores',
-      after: '',
+      before: 'How Unicomm is building a new ',
+      highlight1: 'talent management system',
+      middle: ' across a network of ',
+      highlight2: '270 stores',
+      after: ' and growing',
     },
-    subtitle: "HR digitization still in its early stages, over 7,000 employees across 7 regions and the need to standardize hiring, confirmations and internal development. With Skillvue, Unicomm is transforming talent management into a single skills-based system.",
+    subtitle: "With Skillvue, Unicomm is transforming a barely-digitized HR infrastructure into an agile, skills-based system capable of effectively responding to the needs of hiring, confirmations and internal development across its entire network.",
     heroMetrics: [
-      { value: '3', label: 'Streams activated in parallel' },
-      { value: '4', label: 'Role levels covered' },
-      { value: 'End-to-end', label: 'Talent lifecycle in progress' },
+      { value: '3', label: 'Streams activated in parallel (hiring, confirmations, development)' },
+      { value: '4', label: 'Role levels covered, from sales associate to store manager' },
+      { value: 'End-to-end', label: 'Talent lifecycle across 7 brands and 7 regions' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
-        { label: 'Employees', value: '7,000+' },
-        { label: 'Retail Brands', value: '7 (Emisfero, Famila, Mega, Emi, A&O, C+C Cash&Carry, Hurrà)' },
+        { label: 'Employees', value: '8,000+' },
+        { label: 'Retail Brands', value: '7' },
         { label: 'Direct Stores', value: '270+' },
         { label: 'Regions', value: '7' },
-        { label: 'Commercial Group', value: 'Selex (since 1964)' },
       ],
     },
     context: {
       badge: 'CONTEXT',
-      title: 'The Project Context',
+      title: 'A group that doubles revenue in three years needs people ready at the same speed.',
       paragraph: <>
-        Unicomm is a <strong className="text-[#1A1A2E]/80 font-semibold">grocery and organized retail group</strong> headquartered in <strong className="text-[#1A1A2E]/80 font-semibold">Dueville (Vicenza), Italy</strong>, operating across <strong className="text-[#1A1A2E]/80 font-semibold">7 regions and 32 provinces</strong> with over <strong className="text-[#1A1A2E]/80 font-semibold">270 direct stores</strong> and <strong className="text-[#1A1A2E]/80 font-semibold">7 retail brands</strong> (Emisfero, Famila, Mega, Emi, A&O, C+C Cash&Carry, Hurrà). With over <strong className="text-[#1A1A2E]/80 font-semibold">7,000 employees</strong> and a historic association with the <strong className="text-[#1A1A2E]/80 font-semibold">Selex Commercial Group since 1964</strong>, it is one of Italy’s leading organized retail players. The company was starting from a position of <strong className="text-[#1A1A2E]/80 font-semibold">virtually zero HR digitization</strong> — largely manual, unstructured processes — with the ambition to make a qualitative leap. The challenge was not to optimize an existing process, but to build one from scratch: standardize assessments across a distributed network, centralize HR processes and adopt an objective competency-based approach at every level, from sales associates to store managers. A project of <strong className="text-[#1A1A2E]/80 font-semibold">radical change management</strong>, accompanied by the adoption of Skillvue as the technology partner to cover the entire talent lifecycle with a skills-based approach.
+        <strong className="text-[#1A1A2E]/80 font-semibold">Gruppo Unicomm</strong>, part of <strong className="text-[#1A1A2E]/80 font-semibold">Selex Gruppo Commerciale</strong>, is one of Italy's leading <strong className="text-[#1A1A2E]/80 font-semibold">organized grocery retail</strong> groups. Over the past 3 years, the group has recorded <strong className="text-[#1A1A2E]/80 font-semibold">growth nearly double the sector average</strong>, with a declared objective to continue — through new store openings, strategic integration with <strong className="text-[#1A1A2E]/80 font-semibold">Etruria Retail</strong>, and new logistics infrastructure. In this context of accelerated expansion, the ability to hire, confirm and develop the right people becomes a priority for both HR and the business — especially given that in Italy's grocery retail labor market, <strong className="text-[#1A1A2E]/80 font-semibold">50% of positions</strong> are classified as "hard to fill" and a store manager requires an average of <strong className="text-[#1A1A2E]/80 font-semibold">90-120 days</strong> to recruit.
       </>,
-      summary: "The project is transforming Unicomm from an organization with largely manual HR processes into a company where hiring, confirmations and internal development are progressively managed through a single structured, competency-based system — an end-to-end transformation journey recently launched and currently in its consolidation phase.",
     },
     challenge: {
       badge: 'THE CHALLENGE',
-      title: 'The Structural Problem',
-      intro: "Unicomm didn’t need to optimize its HR processes: it needed to rethink them from scratch. With digitization still in its early stages, no structured assessment and 270+ stores across 7 regions, the constraint was both operational and cultural.",
+      title: 'Optimization was not enough: they needed to build from scratch.',
+      intro: "Unicomm was starting from a barely-digitized HR infrastructure, and doing so at the most intense growth phase in its history.",
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR & PEOPLE IMPACT',
+      hrLabel: 'HR REALITY',
       businessChallenges: [
         {
-          icon: Zap,
-          title: "HR digitization at zero",
-          text: "Hiring, confirmations and career growth paths were managed manually and without structure. Impossible to have any overview of talent quality across 7,000+ employees without an integrated, traceable system.",
-        },
-        {
           icon: Layers,
-          title: "Distributed network, zero standardization",
-          text: "With 7 brands across 7 regions, each location operated with its own criteria. Two candidates with the same potential could have completely different paths — not by merit, but due to the lack of a common framework.",
+          title: 'Distributed network, fragmented criteria',
+          text: "Two candidates with the same potential could have completely different paths due to the lack of a common framework. In a sector where store manager performance variance can account for 15-25% of a store's revenue, the absence of objective criteria was a commercial risk.",
         },
         {
           icon: Target,
-          title: "Three critical processes to cover in parallel",
-          text: "The need was to cover simultaneously hiring across all brands, confirmations of new hires to permanent contract, and internal development through an academy for progression to department head and store manager.",
+          title: 'Three critical business processes to activate simultaneously',
+          text: "Unicomm needed to act simultaneously on hiring for new store openings, confirming dozens of new hires per month to permanent contracts, and internal development through the Academy for progression to department head and store manager.",
         },
       ],
       hrChallenges: [
         {
-          icon: Eye,
-          title: "No objective competency assessment",
-          text: "Hiring, confirmations and promotions were based exclusively on the experience and impressions of managers. No structured data on soft or hard skills.",
+          icon: Zap,
+          title: 'HR digitization still at zero',
+          text: "Hiring, confirmations and development paths were managed manually and relied on the individual capabilities of store or area managers. There was no overview of talent quality across 7,000 employees.",
         },
         {
           icon: Heart,
-          title: "Change management in a non-digital culture",
-          text: "Introducing digital assessments with no prior HR technology meant significant cultural resistance. The project needed a partner capable of guiding change at every level, not just a tool.",
-        },
-        {
-          icon: Wrench,
-          title: "Sector-specific competencies not mapped",
-          text: "The Unicomm model included soft skills specific to grocery retail not present in standard libraries. Bespoke assessments were needed, calibrated to internal evaluation matrices and the specifics of different roles.",
+          title: 'Change management with no digital precedents',
+          text: "Introducing digital assessments into an organization that had never used HR technology meant driving a deep transformation at every level of the organization.",
         },
       ],
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: 'What Needed to Change',
+      title: "Build the talent infrastructure that growth requires.",
       items: [
-        { icon: Zap, text: "Digitize the entire talent lifecycle from scratch: hiring, confirmations and internal development managed in a single structured system, eliminating unstructured and untraceable processes" },
         { icon: Scale, text: "Standardize assessments across the entire network: same criteria, same competency framework, regardless of brand, store or individual manager" },
-        { icon: CheckCircle, text: "Adopt a complete skills-based approach: assessments calibrated by objective (hiring, confirmation, development) and by role/department, with a customized mix of soft and hard skills" },
-        { icon: Users, text: "Lead radical change management: transform the organization’s HR culture, moving from scratch with zero digitization to a structured system with the support of a 360° technology partner" },
+        { icon: CheckCircle, text: "Adopt a complete skills-based approach: assessments calibrated by objective (hiring, confirmation, development) and by role/department, with a mix of soft and hard skills" },
+        { icon: Wrench, text: "Build sector-specific assessment capabilities: develop bespoke assessments where the Unicomm model required it" },
+        { icon: Users, text: "Lead real change management: transform the organization's HR culture, not just introduce a tool" },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was adopted to build Unicomm’s talent lifecycle with three parallel streams: hiring, confirmations and internal development. Assessments combine the process objective and the role/department, with bespoke customizations on the Unicomm model.",
+      title: 'AI assessment across three parallel streams, calibrated on the Unicomm model.',
+      intro: "Skillvue was integrated as a partner for building Unicomm's talent lifecycle, working with the HR team led by Giuseppe Curci to align the platform to the company's competency model and the specifics of grocery retail.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
-        { icon: Heart, label: 'Unicomm-specific soft skills (developed bespoke)' },
-        { icon: Wrench, label: 'Grocery retail technical competencies (adapted to internal evaluation matrices)' },
-        { icon: Layers, label: 'Role-calibrated mix (client-facing vs. non, sales associate vs. store manager)' },
+        { icon: Wrench, label: 'Grocery retail technical competencies — differentiated by department and level of responsibility (client-facing or not, from sales associate to store manager)' },
+        { icon: Heart, label: 'Bespoke soft skills — developed ad hoc on the Unicomm model (e.g. service orientation in grocery retail contexts, team management across shifts)' },
       ],
-      methodologyLabel: 'METHODOLOGY',
+      methodologyLabel: 'PROJECT STRUCTURE — THREE PARALLEL STREAMS',
       methodology: [
         {
-          title: "Three streams in parallel",
-          text: "Hiring for open positions, confirmations for new hires to be converted to permanent contract, internal development through an academy with two annual milestones for progression to department head or store manager. One system, three objectives.",
+          title: 'Hiring',
+          text: "Selection for open positions across the Group's different brands, with assessments calibrated to the specific role.",
         },
         {
-          title: "Assessments customized by role and objective",
-          text: "Calibrated on two dimensions: process objective (hiring, confirmation and development measure different aspects) and specific role/department. Competencies not in the standard library were developed bespoke on Unicomm’s evaluation matrices.",
+          title: 'Confirmations',
+          text: "Dozens of employees per month assessed for confirmation to permanent contract, with structured and traceable criteria.",
         },
         {
-          title: "Change management as a project pillar",
-          text: "Not just a technology implementation, but a cultural transformation. Onboarding involved HR Manager, operatives and IT. Skillvue as a 360° people partner, not a simple tool.",
+          title: 'Development',
+          text: "Two annual milestones for progression to department head or store manager, through an internal Academy based on objective competency data.",
         },
       ],
     },
     results: {
       badge: 'RESULTS',
-      title: 'Key Metrics & Impact',
-      subtitle: 'The outcomes Unicomm achieved through Skillvue in building its talent lifecycle from scratch.',
+      title: 'What is changing.',
       metrics: [
-        { value: '3', label: 'Streams activated in parallel', sublabel: 'Hiring, confirmations, internal development' },
-        { value: '4', label: 'Role levels covered', sublabel: 'From sales associate to store manager' },
-        { value: 'End-to-end', label: 'Talent lifecycle in progress', sublabel: 'Hiring, confirmations and development in one system' },
-        { value: '7 brands', label: 'Distributed network in standardization', sublabel: '270+ stores covered' },
+        { value: '3', label: 'Streams activated in parallel' },
+        { value: '4', label: 'Role levels covered' },
+        { value: 'End-to-end', label: 'Talent lifecycle in progress' },
       ],
       qualitative: [
-        { icon: TrendingUp, title: 'Towards an integrated talent lifecycle', text: "Hiring, confirmations and internal development managed with a single skills-based logic. A recently launched path that is already producing concrete results in standardization." },
-        { icon: Scale, title: 'Standardization in progress across the entire network', text: "The 7 brands across 270+ stores are adopting the same criteria and framework. The goal: decisions on hiring, confirmations and promotions based on objective data." },
-      ],
-    },
-    vision: {
-      badge: 'THE VISION',
-      title: 'Towards a fully skills-based organization',
-      intro: "With the coverage of the entire talent lifecycle underway, the natural step for Unicomm is to consolidate the skills-based model as the backbone of all people decisions.",
-      objective: "Every person assessed, developed and supported with the same skills-based logic, from day one, regardless of brand, role or territory.",
-      bullets: [
-        "Consolidation of the three streams (hiring, confirmations, development) into a single operating model",
-        "Evolution towards career paths and succession planning driven by competency data",
+        { icon: TrendingUp, title: "From zero to integrated system", text: "Unicomm has gone from the complete absence of digital HR tools to a structured talent lifecycle covering hiring, confirmations and development in a single system. Not an incremental optimization, but a paradigm shift achieved during the most intense growth phase of the Group." },
+        { icon: Wrench, title: "Grocery retail competencies now measurable", text: "Sector-specific soft skills are now assessed with tools calibrated to the Unicomm model, not generic assessments. Measuring these competencies is a business lever, not just an HR exercise." },
+        { icon: BarChart3, title: "Decisions based on data, not impressions", text: "Assessments produce structured information that supports managerial decisions without replacing them. Managers decide with more data, and this raises the quality of the decision." },
+        { icon: Users, title: "An ongoing change management journey", text: "The cultural transformation is still underway, but the foundations are solid: the system is live, the three streams are advancing in parallel, and the organization is building familiarity with a skills-based approach that did not exist before." },
       ],
     },
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'ins-mercato', company: "In’s Mercato", tag: "Retail GDO · Internal Mobility", headline: "~900 people assessed. A Store Manager pipeline built from within." },
+        { id: 'ins-mercato', company: "In's Mercato", tag: "Retail GDO · Internal Mobility", headline: "~900 people assessed. A Store Manager pipeline built from within." },
         { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Development', headline: 'How Aeroporti di Roma democratized access to development for 5,000 people.' },
       ],
       cta: 'Read the story',
@@ -354,18 +308,10 @@ export default function UnicommStoryPage() {
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-bold tracking-[0.12em] uppercase mb-8 block w-fit" style={{ background: 'rgba(75,77,247,0.15)', color: '#7b7df9', border: '1px solid rgba(75,77,247,0.2)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.12 }}>
+                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
                   <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
-                  <div className="flex flex-wrap gap-4 mb-12">
-                    {c.heroMetrics.map(m => (
-                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
-                        <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[13px] text-white/[0.55] mt-1 block">{m.label}</span>
-                      </div>
-                    ))}
-                  </div>
                   <div className="flex flex-wrap gap-4">
                     <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300" style={{ background: '#4b4df7' }}>
                       {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
@@ -378,47 +324,49 @@ export default function UnicommStoryPage() {
               </div>
 
               {/* Client card */}
-              <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
-                  <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
+              <motion.div className="lg:col-span-5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-6">
+                  <div className="flex items-center gap-4 mb-4 pb-4 border-b border-white/[0.08]">
+                    <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
                       <img src="/logos/unicomm-logo.jpg" alt="Unicomm logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>
-                      <p className="text-[18px] font-bold text-white/90">Unicomm</p>
+                      <p className="text-[16px] font-bold text-white/90">Unicomm</p>
                     </div>
                   </div>
-                  <div className="divide-y divide-white/[0.08]">
+                  <div className="grid grid-cols-2 gap-x-6 gap-y-4">
                     {c.clientCard.facts.map(s => (
-                      <div key={s.label} className="py-4 first:pt-0 last:pb-0">
+                      <div key={s.label}>
                         <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
-                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{s.value}</p>
+                        <p className="text-[13px] text-white/[0.65] leading-[1.5]">{s.value}</p>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 pt-6 border-t border-white/[0.08] flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-white/[0.12] bg-white/[0.08] flex items-center justify-center">
-                      <Users className="h-5 w-5 text-white/30" />
-                    </div>
-                    <div>
-                      <p className="text-[14px] font-semibold text-white/80">Giuseppe Curci</p>
-                      <p className="text-[12px] text-white/40 leading-[1.5]">{lang === 'it' ? 'Direttore Risorse Umane di Gruppo' : 'Group Human Resources Director'}</p>
-                    </div>
-                  </div>
+                </div>
+                <div className="mt-4 rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                  <iframe
+                    className="w-full h-full"
+                    src={lang === 'it' ? 'https://www.youtube.com/embed/QddxrTw82h4?autoplay=1&mute=1' : 'https://www.youtube.com/embed/EVFraMnOgDg?autoplay=1&mute=1'}
+                    title="Unicomm interview"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
               </motion.div>
             </div>
 
-            {/* Video interview */}
-            <motion.div className="mt-16 px-8 lg:px-16" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }}>
-              <video
-                className="w-full rounded-2xl border border-white/[0.08]"
-                src={lang === 'it' ? '/videos/unicomm-interview-it.mp4' : '/videos/unicomm-interview-en.mp4'}
-                autoPlay
-                muted
-                controls
-              />
+
+            {/* Hero metrics — horizontal row */}
+            <motion.div className="mt-12" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }}>
+              <div className="grid grid-cols-3 gap-5">
+                {c.heroMetrics.map(m => (
+                  <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-5 text-center">
+                    <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                    <span className="text-[13px] text-white/[0.55] mt-2 block leading-[1.4]">{m.label}</span>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </section>
@@ -430,22 +378,19 @@ export default function UnicommStoryPage() {
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-6 max-w-3xl">{c.context.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6 max-w-3xl">{c.context.title}</h2>
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8 max-w-3xl">{c.context.paragraph}</p>
-              <p className="text-[15px] text-[#1A1A2E]/40 italic leading-[1.75] max-w-2xl border-l-2 border-[#4b4df7]/20 pl-5">
-                {c.context.summary}
-              </p>
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.challenge.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.challenge.title}</h2>
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14 max-w-3xl">{c.challenge.intro}</p>
 
               <div className="mb-10">
                 <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
-                <div className="grid md:grid-cols-3 gap-5">
+                <div className="grid md:grid-cols-2 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
@@ -460,7 +405,7 @@ export default function UnicommStoryPage() {
 
               <div>
                 <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
-                <div className="grid md:grid-cols-3 gap-5">
+                <div className="grid md:grid-cols-2 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
@@ -477,14 +422,16 @@ export default function UnicommStoryPage() {
             {/* OBJECTIVES */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{c.objectives.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {c.objectives.items.map((o, i) => (
                   <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <p className="text-[15px] text-[#1A1A2E]/70 leading-[1.65] pt-1.5">{o.text}</p>
+                    <p className="text-[15px] text-[#1A1A2E]/70 leading-[1.65] pt-1.5">
+                      {o.text.includes(':') ? <><strong className="font-semibold text-[#1A1A2E]">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -493,7 +440,7 @@ export default function UnicommStoryPage() {
             {/* SOLUTION */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.solution.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.solution.title}</h2>
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.solution.intro}</p>
 
               <div className="mb-12">
@@ -525,11 +472,10 @@ export default function UnicommStoryPage() {
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-10">{c.results.title}</h2>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
                   {c.results.metrics.map(m => (
                     <div key={m.label} className="text-center">
                       <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
@@ -553,31 +499,6 @@ export default function UnicommStoryPage() {
               </div>
             </Section>
 
-            {/* FUTURE VISION */}
-            <Section>
-              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10 lg:p-14">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
-                  {c.vision.badge}
-                </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4 leading-[1.3]">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8 max-w-3xl">{c.vision.intro}</p>
-                <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
-                    <Target className="h-5 w-5" style={{ color: '#4b4df7' }} />
-                  </div>
-                  <p className="text-[15px] text-[#1A1A2E]/75 leading-[1.7]">{c.vision.objective}</p>
-                </div>
-                <div className="space-y-4">
-                  {c.vision.bullets.map((b, i) => (
-                    <div key={i} className="flex items-start gap-4">
-                      <ArrowRight className="h-4 w-4 mt-1 shrink-0" style={{ color: '#4b4df7' }} />
-                      <p className="text-[15px] text-[#1A1A2E]/65 leading-[1.65]">{b}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Section>
-
           </div>
         </section>
 
@@ -586,7 +507,7 @@ export default function UnicommStoryPage() {
         {/* RELATED STORIES */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 mb-12">{c.related.title}</h3>
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 leading-[1.4] mb-12">{c.related.title}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {c.related.stories.map(s => (
                 <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
