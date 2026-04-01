@@ -146,7 +146,6 @@ const content = {
         { icon: CheckCircle, title: 'Shortlist radicalmente più qualificate', text: "I candidati portati avanti nel processo erano più allineati alle aspettative, con riduzione diretta dei colloqui senza esito. Su 30.000 candidature/anno, centinaia di errori evitati, ciascuno con un costo di €3.000–6.600." },
         { icon: Eye, title: 'Talento nascosto scoperto nella rete', text: "La mappatura di 6.000 dipendenti ha fatto emergere profili ad alto potenziale dove prima non esisteva alcuna visibilità. In un mercato dove formare internamente costa il 30–50% in meno rispetto a reclutare dall'esterno, sapere chi hai è il primo passo per smettere di rincorrere il fabbisogno sul mercato." },
         { icon: Wrench, title: 'Il modello di leadership ha preso davvero vita', text: "Il framework proprietario è diventato un criterio di selezione misurabile. Ogni candidato viene valutato con output strutturato: il modello informa le decisioni, non solo i valori dichiarati." },
-        { icon: TrendingUp, title: 'Da selezione a sistema di competenze', text: "Lo stesso standard è ora applicato a hiring e sviluppo interno: chi entra viene valutato con la stessa logica con cui verrà sviluppato. Un prerequisito per costruire mobilità interna e succession planning basati su dati, non su segnalazioni." },
       ],
     },
     related: {
@@ -285,7 +284,6 @@ const content = {
         { icon: CheckCircle, title: 'Radically more qualified shortlists', text: "Candidates advanced in the process were more aligned to expectations, with a direct reduction in interviews that didn't lead to a hire. Across 30,000 applications/year, hundreds of mistakes avoided — each costing €3,000–6,600." },
         { icon: Eye, title: 'Hidden talent discovered in the network', text: "Mapping 6,000 employees surfaced high-potential profiles where no visibility previously existed. In a market where developing internally costs 30–50% less than external hiring, knowing who you have is the first step to stop chasing demand on the market." },
         { icon: Wrench, title: 'The leadership model came to life in practice', text: "The proprietary framework became a measurable selection criterion. Every candidate is evaluated with structured output: the model informs decisions, not just declared values." },
-        { icon: TrendingUp, title: 'From selection to a competency system', text: "The same standard is now applied to hiring and internal development: new hires are evaluated with the same logic that will guide their growth. A prerequisite for building internal mobility and succession planning based on data, not nominations." },
       ],
     },
     related: {
