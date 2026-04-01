@@ -35,7 +35,7 @@ const content = {
     heroMetrics: [
       { value: '-40%', label: 'Time-to-hire' },
       { value: '-50%', label: 'Turnover' },
-      { value: '+20%', label: 'Retention nuovi assunti' },
+      { value: '80%', label: 'Candidati qualificati al 2° step' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
@@ -45,6 +45,7 @@ const content = {
         { label: 'Settore', value: 'Fashion Retail' },
         { label: 'Dipendenti', value: '1.000+' },
         { label: 'Punti vendita', value: '130+ monomarca' },
+        { label: 'Paesi', value: '6' },
       ],
     },
     context: {
@@ -53,7 +54,7 @@ const content = {
       paragraph: <>
         Subdued è un brand italiano di fashion retail. Fondato in Italia, oggi opera con oltre <strong className="text-[#1A1A2E]/80 font-semibold">130 negozi monomarca</strong> in continua espansione, <strong className="text-[#1A1A2E]/80 font-semibold">più di 1.000 dipendenti</strong> e una presenza in crescita su più continenti — inclusi USA, Medio Oriente, Sud-Est asiatico, Corea e Cina.
         <br /><br />
-        In questo scenario, la capacità di selezionare le persone giuste al ritmo delle aperture diventa il vincolo operativo numero uno. Ogni nuovo negozio richiede un team capace di rappresentare il brand e il suo DNA italiano davanti a un pubblico Gen Z in mercati culturalmente diversi, ma il team HR è composto da sole <strong className="text-[#1A1A2E]/80 font-semibold">7 persone su 6 paesi</strong>. Con i metodi tradizionali, l'equazione non regge.
+        In questo scenario, la capacità di selezionare le persone giuste al ritmo delle aperture diventa il vincolo operativo numero uno. Ogni nuovo negozio richiede un team capace di rappresentare il brand e il suo DNA italiano davanti a un pubblico Gen Z in mercati culturalmente diversi, ma il team HR è composto da <strong className="text-[#1A1A2E]/80 font-semibold">1-3 persone per ciascuno dei paesi di attività</strong>. Con i metodi tradizionali, l'equazione non regge.
       </>,
     },
     challenge: {
@@ -110,16 +111,16 @@ const content = {
       methodologyLabel: 'COME È STATO COSTRUITO',
       methodology: [
         {
-          title: 'Candidatura ricevuta, assessment inviato via WhatsApp',
-          text: 'La candidatura arriva nell\'ATS di Subdued. Il link all\'assessment Skillvue viene inviato via WhatsApp — mobile-first e allineato alle abitudini della Gen Z. Il candidato completa l\'assessment in massimo 15 minuti da qualunque device.',
+          title: 'Invio del link all\'assessment Skillvue via WhatsApp',
+          text: 'Una scelta progettuale chiave per garantire un\'esperienza frictionless e un buon tasso di completamento.',
         },
         {
-          title: 'Assessment diversificati per ruolo e paese',
-          text: 'Italia: video-presentazione + 2 soft skill (max 15 min). UK: killer question + video + 1 soft skill (max 10 min). Store Manager: comunicazione, vendita e teamworking. Stesso standard, adattato al contesto locale.',
+          title: 'Il candidato completa l\'assessment',
+          text: 'Video presentation + domande comportamentali strutturate su comunicazione, vendita e teamwork. Massimo 15 minuti, da qualunque device, entro una deadline definita.',
         },
         {
-          title: 'Report strutturato e colloquio mirato',
-          text: 'Skillvue genera un report con punteggio per competenza, compatibilità complessiva, aree di forza e miglioramento. L\'HR utilizza il report per il colloquio in persona: più mirato, più personalizzato.',
+          title: 'Skillvue genera un report dettagliato',
+          text: 'Punteggio per competenza, compatibilità complessiva, aree di forza e miglioramento che l\'HR utilizza per la gestione del colloquio in persona.',
         },
       ],
     },
@@ -128,18 +129,14 @@ const content = {
       title: 'Key Metrics & Impatto',
       subtitle: 'I risultati misurabili ottenuti da Subdued attraverso l\'adozione di Skillvue nei processi di selezione su 6 paesi.',
       metrics: [
-        { value: '-40%', label: 'Time-to-hire' },
-        { value: '-50%', label: 'Turnover' },
-        { value: '+20%', label: 'Retention nuovi assunti' },
         { value: '-70%', label: 'Ore di pre-screening' },
         { value: '80%', label: 'Candidati qualificati al 2° step' },
-        { value: '6 paesi', label: 'Copertura internazionale' },
+        { value: '-50%', label: 'Turnover' },
       ],
       qualitative: [
-        { icon: Zap, title: 'Recruiter liberati dall\'operatività', text: 'Le ore di telefonate sono passate da 10-15 a 3-5 a settimana. Il team ha recuperato tempo per attività ad alto valore: employer branding, workforce planning, sviluppo.' },
-        { icon: Target, title: 'Colloqui più mirati e personalizzati', text: 'Il primo colloquio è basato sul report Skillvue: il recruiter arriva preparato con dati sulle competenze. Solo profili pre-validati raggiungono il colloquio.' },
-        { icon: Shield, title: 'Errori di assunzione drasticamente ridotti', text: 'Turnover dimezzato e retention in crescita del 20% dimostrano che i candidati assunti con Skillvue sono più adatti al ruolo. Meno costi di onboarding, meno impatto sulla performance di store.' },
-        { icon: Heart, title: 'Employer branding inatteso', text: 'Il processo innovativo è diventato un elemento differenziante nell\'attrarre candidati Gen Z. Il processo di selezione stesso è diventato uno strumento di employer branding.' },
+        { icon: Heart, title: 'L\'employer branding inatteso', text: 'Il risultato che nessuno aveva previsto: il processo di selezione innovativo è diventato esso stesso un elemento di attrazione, un vantaggio competitivo concreto nel mercato del lavoro retail.' },
+        { icon: Users, title: 'Human-in-the-loop, sempre', text: 'Il primo colloquio in persona è ora più mirato e personalizzato, basato sui dati del report. Il recruiter arriva preparato. Il candidato si sente ascoltato. La connessione umana è preservata.' },
+        { icon: Layers, title: 'Espansione cross-country del progetto', text: 'I team HR localizzati in UK, Paesi Bassi, Belgio e Francia stanno ora applicando la stessa metodologia per raggiungere gli stessi risultati: più velocità e scalabilità, maggiore qualità della selezione, e candidati soddisfatti.' },
       ],
     },
     related: {
@@ -167,7 +164,7 @@ const content = {
     heroMetrics: [
       { value: '-40%', label: 'Time-to-hire' },
       { value: '-50%', label: 'Turnover' },
-      { value: '+20%', label: 'New hire retention' },
+      { value: '80%', label: 'Qualified candidates at 2nd step' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -177,6 +174,7 @@ const content = {
         { label: 'Industry', value: 'Fashion Retail' },
         { label: 'Employees', value: '1,000+' },
         { label: 'Stores', value: '130+ mono-brand' },
+        { label: 'Countries', value: '6' },
       ],
     },
     context: {
@@ -185,7 +183,7 @@ const content = {
       paragraph: <>
         Subdued is an Italian fashion retail brand. Founded in Italy, it now operates over <strong className="text-[#1A1A2E]/80 font-semibold">130 mono-brand stores</strong> in continuous expansion, <strong className="text-[#1A1A2E]/80 font-semibold">1,000+ employees</strong> and a growing presence across multiple continents — including the US, Middle East, South-East Asia, Korea and China.
         <br /><br />
-        In this context, the ability to hire the right people at the pace of new store openings becomes the number one operational constraint. Every new store requires a team capable of representing the brand and its Italian DNA to a Gen Z audience in culturally different markets — yet the HR team is just <strong className="text-[#1A1A2E]/80 font-semibold">7 people across 6 countries</strong>. With traditional methods, the equation simply does not work.
+        In this context, the ability to hire the right people at the pace of new store openings becomes the number one operational constraint. Every new store requires a team capable of representing the brand and its Italian DNA to a Gen Z audience in culturally different markets — yet each country's HR team is just <strong className="text-[#1A1A2E]/80 font-semibold">1–3 people</strong>. With traditional methods, the equation simply does not work.
       </>,
     },
     challenge: {
@@ -242,16 +240,16 @@ const content = {
       methodologyLabel: 'HOW IT WAS BUILT',
       methodology: [
         {
-          title: 'Application received, assessment sent via WhatsApp',
-          text: 'The application arrives in Subdued\'s ATS. The Skillvue assessment link is sent via WhatsApp — mobile-first and aligned with Gen Z habits. Candidates complete it in max 15 minutes from any device.',
+          title: 'Skillvue assessment link sent via WhatsApp',
+          text: 'A deliberate design choice to ensure a frictionless experience and strong completion rates.',
         },
         {
-          title: 'Assessments tailored by role and country',
-          text: 'Italy: video pitch + 2 soft skills (max 15 min). UK: killer question + video + 1 soft skill (max 10 min). Store Managers: communication, selling and teamworking. Same standard, adapted to local context.',
+          title: 'Candidate completes the assessment',
+          text: 'Video presentation + structured behavioural questions on communication, sales, and teamwork. Max 15 minutes, any device, within a set deadline.',
         },
         {
-          title: 'Structured report and focused interview',
-          text: 'Skillvue generates a report with score per competency, overall fit, strengths and areas for improvement. HR uses the report to run the in-person interview: more targeted, more personalised.',
+          title: 'Skillvue generates a detailed report',
+          text: 'Score per competency, overall fit, strengths, and development areas — used by HR to guide the in-person interview.',
         },
       ],
     },
@@ -260,18 +258,14 @@ const content = {
       title: 'Key Metrics & Impact',
       subtitle: 'The measurable outcomes Subdued achieved through Skillvue across its hiring processes in 6 countries.',
       metrics: [
-        { value: '-40%', label: 'Time-to-hire' },
-        { value: '-50%', label: 'Turnover' },
-        { value: '+20%', label: 'New hire retention' },
         { value: '-70%', label: 'Pre-screening hours' },
         { value: '80%', label: 'Qualified candidates at 2nd step' },
-        { value: '6 countries', label: 'International coverage' },
+        { value: '-50%', label: 'Turnover' },
       ],
       qualitative: [
-        { icon: Zap, title: 'Recruiters freed from operations', text: 'Call hours dropped from 10–15 to 3–5 per week. The team recovered time for high-value activities: employer branding, workforce planning, development.' },
-        { icon: Target, title: 'More focused and personalised interviews', text: 'The first interview is based on the Skillvue report: the recruiter arrives prepared with competency data. Only pre-validated profiles reach the interview stage.' },
-        { icon: Shield, title: 'Hiring mistakes drastically reduced', text: 'Turnover halved and retention up 20% show that candidates hired with Skillvue are better suited to the role. Fewer onboarding costs, less impact on store performance.' },
-        { icon: Heart, title: 'Unexpected employer branding effect', text: 'The innovative process became a differentiating element in attracting Gen Z candidates. The selection process itself turned into an employer branding asset.' },
+        { icon: Heart, title: 'The unexpected employer branding effect', text: 'The result no one anticipated: the innovative selection process itself became an attraction asset — a concrete competitive advantage in the retail labour market.' },
+        { icon: Users, title: 'Human-in-the-loop, always', text: 'The first in-person interview is now more focused and personalised, grounded in report data. The recruiter arrives prepared. The candidate feels heard. The human connection is preserved.' },
+        { icon: Layers, title: 'Cross-country expansion of the project', text: 'HR teams in the UK, Netherlands, Belgium, and France are now applying the same methodology to achieve the same results: greater speed and scalability, higher hiring quality, and satisfied candidates.' },
       ],
     },
     related: {
@@ -347,7 +341,7 @@ export default function SubduedStoryPage() {
               <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
+                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center">
                       <img src="/logos/subdued-logo.png" alt="Subdued logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
@@ -388,7 +382,7 @@ export default function SubduedStoryPage() {
 
               <div className="mb-10">
                 <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
-                <div className="grid md:grid-cols-3 gap-5">
+                <div className="grid md:grid-cols-2 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
@@ -403,7 +397,7 @@ export default function SubduedStoryPage() {
 
               <div>
                 <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
-                <div className="grid md:grid-cols-3 gap-5">
+                <div className="grid md:grid-cols-2 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
@@ -474,7 +468,7 @@ export default function SubduedStoryPage() {
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
                   {c.results.metrics.map(m => (
                     <div key={m.label} className="text-center">
                       <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
