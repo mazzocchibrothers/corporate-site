@@ -430,7 +430,7 @@ export default function UnicommStoryPage() {
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
                     <p className="text-[15px] text-[#1A1A2E]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-semibold text-[#1A1A2E]">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
+                      {o.text.includes(':') ? <><strong className="font-bold text-[#1A1A2E]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
                     </p>
                   </div>
                 ))}
