@@ -198,7 +198,7 @@ const content = {
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'The Structural Problem',
-      intro: "With 30,000 applications per year and only 3 recruiters across 1,200 stores, Carrefour Italia had a clear operational constraint: scale selection quality without multiplying resources — in a sector where every wrong hire directly erodes margins.",
+      intro: "Carrefour Italia had a clear operational constraint: scale selection quality without multiplying resources — in a sector where every wrong hire directly erodes margins.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR REALITY',
       businessChallenges: [
@@ -232,7 +232,7 @@ const content = {
         {
           icon: Users,
           title: 'The competency model existed on paper, not in the process',
-          text: "Carrefour had defined critical behaviours for each role, but hiring could not always happen with a systematic evaluation against that framework. The model did not consistently translate into an operational tool.",
+          text: "Carrefour had defined critical behaviours for each role, but hiring could not always happen with a systematic evaluation against that framework.",
         },
       ],
     },
