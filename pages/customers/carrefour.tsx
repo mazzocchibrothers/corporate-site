@@ -139,7 +139,7 @@ const content = {
       subtitle: "I risultati misurabili ottenuti da Carrefour Italia attraverso l'adozione di Skillvue nei processi di selezione e mappatura interna.",
       metrics: [
         { value: '-35%', label: 'Time-to-hire' },
-        { value: '65% → 85%', label: 'Tasso successo Hiring Manager' },
+        { value: '65% → 85%', label: 'Tasso successo selezioni portate avanti da Hiring Manager' },
         { value: '6.000', label: 'Dipendenti mappati in 1 mese' },
       ],
       qualitative: [
@@ -277,7 +277,7 @@ const content = {
       subtitle: 'The measurable outcomes Carrefour Italia achieved through Skillvue across selection and internal skills mapping.',
       metrics: [
         { value: '-35%', label: 'Time-to-hire' },
-        { value: '65% → 85%', label: 'Hiring Manager success rate' },
+        { value: '65% → 85%', label: 'Success rate of selections advanced by Hiring Managers' },
         { value: '6,000', label: 'Employees mapped in 1 month' },
       ],
       qualitative: [
