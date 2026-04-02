@@ -151,7 +151,7 @@ const content = {
       title: 'Storie correlate',
       stories: [
         { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring & Screening', headline: 'Come Carrefour Italia assume meglio, più velocemente e su scala. Senza aggiungere una sola persona al team.' },
-        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Mobility', headline: "Come ADR ha democratizzato l'accesso allo sviluppo per 5.000 persone con Skillvue." },
+        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Mobility', headline: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi." },
       ],
       cta: 'Leggi la storia',
     },
@@ -288,7 +288,7 @@ const content = {
       title: 'Related Stories',
       stories: [
         { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring & Screening', headline: 'How Carrefour Italia is Hiring Better, Faster, and at Scale. Without Adding a Single Person to the Team.' },
-        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Mobility', headline: 'How ADR democratized access to development for 5,000 people with Skillvue.' },
+        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Mobility', headline: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a €9 billion plan.' },
       ],
       cta: 'Read the story',
     },
