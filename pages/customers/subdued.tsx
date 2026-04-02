@@ -25,76 +25,66 @@ const content = {
     breadcrumb: 'Clienti',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Come Subdued ha ',
-      highlight1: 'dimezzato il turnover',
-      middle: ' e ridotto il time-to-hire del 40% su ',
-      highlight2: '130+ store',
-      after: ' in 6 paesi',
+      before: 'Subdued: come creare uno ',
+      highlight1: 'standard di selezione unico',
+      middle: ' e scalabile per l\'espansione di una rete di ',
+      highlight2: '130+ negozi',
+      after: '',
     },
-    subtitle: 'Un brand cult della moda teen con 1.000+ dipendenti, candidati Gen Z con CV indistinguibili e un team HR di 7 persone che dedicava 10-15 ore a settimana a screening telefonici. Con Skillvue, Subdued ha trasformato il pre-screening in un vantaggio competitivo e il processo di selezione innovativo \u00e8 diventato esso stesso uno strumento di employer branding.',
+    subtitle: 'Con Skillvue, Subdued ha costruito un processo di valutazione coerente e scalabile su più mercati, permettendo a un team HR di dimensioni ridotte di applicare lo stesso rigore di selezione su ogni paese e dimezzando il turnover.',
     heroMetrics: [
-      { value: '-50%', label: 'turnover' },
-      { value: '65% \u2192 85%', label: 'retention nuovi assunti' },
-      { value: '-40%', label: 'time-to-hire' },
+      { value: '-40%', label: 'Time-to-hire' },
+      { value: '-50%', label: 'Turnover' },
+      { value: '80%', label: 'Candidati qualificati al 2° step' },
     ],
     ctaPrimary: 'Contattaci',
-    ctaSecondary: 'Scopri di pi\u00f9',
+    ctaSecondary: 'Scopri di più',
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
         { label: 'Settore', value: 'Fashion Retail' },
         { label: 'Dipendenti', value: '1.000+' },
         { label: 'Punti vendita', value: '130+ monomarca' },
-        { label: 'Paesi', value: 'Italia, UK, Francia, Paesi Bassi, Belgio, Svezia, Irlanda' },
-        { label: 'Team HR', value: '7 persone su 6 paesi' },
+        { label: 'Paesi', value: '6' },
       ],
     },
     context: {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Subdued è uno dei brand italiani più iconici nel segmento <strong className="text-[#1A1A2E]/80 font-semibold">teen fashion</strong>, con oltre <strong className="text-[#1A1A2E]/80 font-semibold">130 punti vendita</strong> in Italia, Europa e Asia, <strong className="text-[#1A1A2E]/80 font-semibold">1.000+ dipendenti</strong> e un fatturato 2024 di <strong className="text-[#1A1A2E]/80 font-semibold">€163,9M</strong>. Con <strong className="text-[#1A1A2E]/80 font-semibold">14 nuove aperture nel 2024</strong> e l’ingresso in USA e Cina, la sfida HR era chiara: mantenere qualità di selezione costante su più paesi con un team di sole <strong className="text-[#1A1A2E]/80 font-semibold">7 persone su 6 paesi</strong>. Tutta la valutazione avveniva tramite colloqui diretti — nessun pre-screening strutturato — con i recruiter impegnati <strong className="text-[#1A1A2E]/80 font-semibold">10-15 ore a settimana</strong> in telefonate introduttive.
+        Subdued è un brand italiano di fashion retail. Fondato in Italia, oggi opera con oltre <strong className="text-[#1A1A2E]/80 font-semibold">130 negozi monomarca</strong> in continua espansione, <strong className="text-[#1A1A2E]/80 font-semibold">più di 1.000 dipendenti</strong> e una presenza in crescita su più continenti — inclusi USA, Medio Oriente, Sud-Est asiatico, Corea e Cina.
+        <br /><br />
+        In questo scenario, la capacità di selezionare le persone giuste al ritmo delle aperture diventa il vincolo operativo numero uno. Ogni nuovo negozio richiede un team capace di rappresentare il brand e il suo DNA italiano davanti a un pubblico Gen Z in mercati culturalmente diversi, ma il team HR è composto da <strong className="text-[#1A1A2E]/80 font-semibold">1-3 persone per ciascuno dei paesi di attività</strong>. Con i metodi tradizionali, l'equazione non regge.
       </>,
-      summary: 'Il progetto ha trasformato il pre-screening da attivit\u00e0 interamente manuale a processo strutturato e AI-driven, inserendo per la prima volta una valutazione oggettiva delle competenze prima del colloquio. Il risultato: turnover dimezzato, retention salita fino a circa il 70% e un processo di selezione che \u00e8 diventato esso stesso un elemento di attrattivit\u00e0 per i candidati Gen Z.',
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Il problema strutturale',
-      intro: 'Con 14 nuove aperture nel 2024 e nuovi mercati da USA a Cina, un team HR di 7 persone su 6 paesi non reggeva il ritmo. Turnover elevato, CV junior indistinguibili e met\u00e0 dei candidati screened privi delle soft skill necessarie per il lavoro in negozio.',
-      businessLabel: 'IMPATTO SUL BUSINESS',
-      hrLabel: 'IMPATTO SU HR & PEOPLE',
+      intro: 'Tante figure chiave da selezionare, turnover alto e un team HR snello che non poteva scalare con l\'espansione senza un sistema strutturato.',
+      businessLabel: 'BUSINESS IMPACT',
+      hrLabel: 'HR REALITY',
       businessChallenges: [
         {
-          icon: TrendingUp,
-          title: 'Espansione internazionale, team HR invariato',
-          text: '14 nuove aperture nel 2024, USA e Cina in arrivo, e 7 persone su 6 paesi a gestire tutto il recruiting. Ogni nuovo mercato significava nuovi volumi, nuove lingue e nuovi contesti culturali senza incremento di risorse HR.',
+          icon: Eye,
+          title: 'Andare oltre il CV per identificare le vere capacità di vendita',
+          text: 'Il 50% dei candidati che superavano il primo screening si rivelava privo delle soft skill necessarie per il lavoro in store. Comunicazione, vendita e predisposizione al cliente: invisibili sulla carta.',
         },
         {
-          icon: Target,
-          title: 'Errori di assunzione ricorrenti',
-          text: 'Candidati con buoni CV ma privi delle soft skill per il lavoro in negozio venivano assunti troppo spesso. In un settore ad alto turnover con margini stretti, ogni assunzione sbagliata pesava su performance, onboarding e morale del team.',
-        },
-        {
-          icon: Users,
-          title: 'Il brand experience parte dalle persone',
-          text: 'Per un brand costruito sull\u2019esperienza in-store, le persone in negozio SONO il brand. Assumere le persone giuste non \u00e8 una metrica HR: \u00e8 una questione di sopravvivenza in un mercato competitivo.',
+          icon: Scale,
+          title: 'Nessuno standard cross-country',
+          text: 'Ogni paese valutava con criteri diversi, in lingue diverse. Non esisteva un framework comune: "la persona giusta per Subdued" significava cose diverse a Milano e a Londra.',
         },
       ],
       hrChallenges: [
         {
           icon: Zap,
-          title: '10-15 ore a settimana in telefonate introduttive',
-          text: 'Senza pre-screening strutturato, ogni candidato assorbiva lo stesso tempo del recruiter. Il team era completamente operativo, con zero margine per employer branding, formazione o strategia.',
+          title: '10-15 ore a settimana di telefonate introduttive',
+          text: 'Senza un filtro strutturato, ogni candidato richiedeva un forte investimento di tempo anche solo per un pre-screening. 10-15 ore a settimana di screening telefonico e zero tempo per attività più strategiche.',
         },
         {
-          icon: Eye,
-          title: 'Il CV non differenzia i candidati Gen Z',
-          text: 'Candidati junior al primo impiego hanno CV sostanzialmente identici. Comunicazione, vendita e teamworking — le competenze che determinano il successo in negozio — sono invisibili sulla carta.',
-        },
-        {
-          icon: Scale,
-          title: 'Nessuno standard di valutazione cross-country',
-          text: 'Con l\u2019espansione in UK, Francia, Paesi Bassi, Belgio e oltre, ogni paese usava criteri propri. Mancava un framework comune che garantisse coerenza nelle assunzioni, indipendentemente dal mercato o dal singolo recruiter.',
+          icon: TrendingUp,
+          title: 'Il turnover era strutturalmente alto',
+          text: 'Nel fashion retail il turnover è fisiologicamente elevato. Per un brand dove l\'esperienza in negozio è parte della vendita, ogni assunzione sbagliata moltiplicava ulteriormente questo rischio.',
         },
       ],
     },
@@ -102,73 +92,58 @@ const content = {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
       title: 'Cosa doveva cambiare',
       items: [
-        { icon: Zap, text: 'Inserire una fase di pre-screening strutturato: valutare comunicazione, vendita e teamworking prima del colloquio, con dati oggettivi su ogni candidato, liberando il team HR dall\u2019operativit\u00e0' },
-        { icon: Target, text: 'Ridurre gli errori di assunzione: portare al colloquio solo candidati con competenze verificate, aumentando il tasso di successo e riducendo il turnover che pesava su performance e costi' },
-        { icon: Layers, text: 'Scalare su pi\u00f9 paesi con un unico standard: un processo di valutazione coerente su Italia, UK, Francia, Paesi Bassi, Belgio e mercati futuri, adattabile per lingua e ruolo senza moltiplicare le risorse' },
-        { icon: Heart, text: 'Preservare la relazione umana: la tecnologia deve potenziare il recruiter, non sostituirlo \u2014 Subdued voleva mantenere il rapporto diretto con i candidati che \u00e8 parte del DNA del brand' },
+        { icon: Zap, text: 'Rendere visibili le competenze invisibili: valutare comunicazione, vendita e teamworking prima del colloquio, con dati oggettivi su ogni candidato' },
+        { icon: Target, text: 'Liberare il team dall\'operatività: ridurre le ore di screening per recuperare tempo per attività strategiche, employer branding e sviluppo' },
+        { icon: Layers, text: 'Creare uno standard cross-country: stessi criteri di valutazione su tutti i mercati, adattati per lingua e ruolo, senza moltiplicare le risorse HR' },
+        { icon: Heart, text: 'Scalare al ritmo dell\'espansione: un\'infrastruttura di selezione che accompagni ogni nuova apertura senza gravare sull\'operatività HR' },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue',
-      intro: 'Skillvue \u00e8 stato integrato come fase di pre-screening tra la candidatura e il primo colloquio HR. Il team HR ha selezionato test e domande dalla Skill Library per le esigenze del retail Subdued, con onboarding completato in sole 2 settimane.',
+      intro: 'Il team HR di Subdued ha lavorato direttamente con Skillvue per selezionare le skill più rilevanti per i profili di store e costruire un assessment strutturato, erogato via WhatsApp — una scelta progettuale chiave per garantire un\'esperienza frictionless e un buon tasso di completamento.',
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: CheckCircle, label: 'Comunicazione' },
-        { icon: TrendingUp, label: 'Vendita' },
+        { icon: TrendingUp, label: 'Capacità di vendita' },
         { icon: Users, label: 'Teamworking' },
       ],
-      methodologyLabel: 'METODOLOGIA',
+      methodologyLabel: 'COME È STATO COSTRUITO',
       methodology: [
         {
-          title: 'Assessment su misura per paese e ruolo',
-          text: 'In Italia: video-presentazione + 2 soft skill (max 15 minuti); in UK: killer question + video + 1 soft skill (max 10 minuti). Store Manager: comunicazione, vendita e teamworking. Ogni configurazione adattata al contesto locale, stesso standard di valutazione.',
+          title: 'Invio del link all\'assessment Skillvue via WhatsApp',
+          text: 'Una scelta progettuale chiave per garantire un\'esperienza frictionless e un buon tasso di completamento.',
         },
         {
-          title: 'Delivery via WhatsApp \u2014 mobile-first per Gen Z',
-          text: 'Il link all\u2019assessment viene inviato via WhatsApp, non via email: mobile-first e allineato alle abitudini della Gen Z. Questo switch ha migliorato significativamente il tasso di conversione nelle prime settimane.',
+          title: 'Il candidato completa l\'assessment',
+          text: 'Video presentation + domande comportamentali strutturate su comunicazione, vendita e teamwork. Massimo 15 minuti, da qualunque device, entro una deadline definita.',
         },
         {
-          title: 'Rollout progressivo su 6 paesi',
-          text: 'Partito dall\u2019Italia, esteso a UK, Francia, Paesi Bassi/Belgio, con espansione verso Svezia e Irlanda. 7 utenti attivi su 6 paesi, stesso modello e risorse HR invariate.',
+          title: 'Skillvue genera un report dettagliato',
+          text: 'Punteggio per competenza, compatibilità complessiva, aree di forza e miglioramento che l\'HR utilizza per la gestione del colloquio in persona.',
         },
       ],
     },
     results: {
       badge: 'RISULTATI',
       title: 'Key Metrics & Impatto',
-      subtitle: 'I risultati misurabili ottenuti da Subdued attraverso l\u2019adozione di Skillvue nei processi di selezione su 6 paesi.',
+      subtitle: 'I risultati misurabili ottenuti da Subdued attraverso l\'adozione di Skillvue nei processi di selezione su 6 paesi.',
       metrics: [
-        { value: '-50%', label: 'Turnover', sublabel: 'Dimezzato rispetto al periodo pre-Skillvue' },
-        { value: '65% \u2192 85%', label: 'Retention nuovi assunti', sublabel: '+20 punti percentuali' },
-        { value: '-40%', label: 'Time-to-hire', sublabel: 'Riduzione del 30-50% su tutti i mercati' },
-        { value: '50% \u2192 80%', label: 'Tasso di successo al 2\u00b0 step', sublabel: '+20-30pp \u2014 candidati pi\u00f9 qualificati ai colloqui' },
-        { value: '-65/70%', label: 'Ore di pre-screening', sublabel: 'Da 10-15 ore/sett. a 3-5 ore/sett.' },
-        { value: '6 paesi', label: 'Copertura internazionale', sublabel: '7 utenti Skillvue attivi' },
+        { value: '-70%', label: 'Ore di pre-screening' },
+        { value: '80%', label: 'Candidati qualificati al 2° step' },
+        { value: '-50%', label: 'Turnover' },
       ],
       qualitative: [
-        { icon: Zap, title: 'Recruiter liberati dall\u2019operativit\u00e0', text: 'Le ore di telefonate introduttive sono passate da 10-15 a 3-5 a settimana. Il pre-screening produce report strutturati su comunicazione, vendita e teamworking, restituendo al team tempo per attivit\u00e0 strategiche.' },
-        { icon: Target, title: 'Colloqui pi\u00f9 mirati e personalizzati', text: 'Il primo colloquio \u00e8 basato sul report Skillvue: il recruiter arriva preparato con dati sulle competenze. Solo profili pre-validati raggiungono il colloquio, eliminando back-to-back di screening.' },
-        { icon: Shield, title: 'Errori di assunzione drasticamente ridotti', text: 'Turnover dimezzato (-50%) e retention dal 65% all\u201985% dimostrano che i candidati assunti con Skillvue sono pi\u00f9 adatti al ruolo. Meno costi di onboarding, meno impatto sulla performance di negozio.' },
-        { icon: Scale, title: 'Standard di valutazione coerente su 6 paesi', text: 'Per la prima volta tutti i paesi usano gli stessi criteri, adattati per lingua e contesto locale. Le decisioni poggiano su dati oggettivi, non sulle logiche del singolo mercato.' },
-        { icon: Heart, title: 'Employer branding inatteso', text: 'Il processo innovativo \u00e8 diventato un elemento differenziante nell\u2019attrarre candidati Gen Z. Allineamento tra innovazione tecnologica e aspettative generazionali come vantaggio competitivo concreto.' },
-      ],
-    },
-    vision: {
-      badge: 'EVOLUZIONE',
-      title: 'Scalare la selezione di qualit\u00e0 al ritmo dell\u2019espansione internazionale',
-      intro: 'Con i risultati dimostrati su 6 paesi e il modello di pre-screening consolidato, il passo naturale \u00e8 estendere la copertura ai nuovi mercati al ritmo dell\u2019espansione internazionale di Subdued \u2014 garantendo che ogni nuovo negozio, in qualsiasi paese, parta con le persone giuste.',
-      objective: "Un'infrastruttura di selezione scalabile che accompagni ogni nuova apertura con lo stesso standard di qualit\u00e0, indipendentemente dal paese.",
-      bullets: [
-        'Espansione verso Svezia e Irlanda, con ulteriori mercati al passo con le nuove aperture',
-        'Consolidamento del modello di assessment per Store Manager su tutti i paesi',
+        { icon: Heart, title: 'L\'employer branding inatteso', text: 'Il risultato che nessuno aveva previsto: il processo di selezione innovativo è diventato esso stesso un elemento di attrazione, un vantaggio competitivo concreto nel mercato del lavoro retail.' },
+        { icon: Users, title: 'Human-in-the-loop, sempre', text: 'Il primo colloquio in persona è ora più mirato e personalizzato, basato sui dati del report. Il recruiter arriva preparato. Il candidato si sente ascoltato. La connessione umana è preservata.' },
+        { icon: Layers, title: 'Espansione cross-country del progetto', text: 'I team HR localizzati in UK, Paesi Bassi, Belgio e Francia stanno ora applicando la stessa metodologia per raggiungere gli stessi risultati: più velocità e scalabilità, maggiore qualità della selezione, e candidati soddisfatti.' },
       ],
     },
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail \u00b7 Hiring at Scale', headline: 'Come Carrefour Italia ha trasformato la selezione di 30.000 candidature l\u2019anno con soli 3 recruiter.' },
-        { id: 'unicomm', company: 'Unicomm', tag: 'GDO \u00b7 Hiring & Sviluppo', headline: 'Come Unicomm ha digitalizzato l\u2019intero ciclo del talento su 270+ store e 7 brand retail.' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: 'Come Carrefour Italia ha trasformato la selezione di 30.000 candidature l\'anno con soli 3 recruiter.' },
+        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'Come Europ Assistance ha assunto il 24% in più con il 18% di colloqui in meno.' },
       ],
       cta: 'Leggi la storia',
     },
@@ -179,17 +154,17 @@ const content = {
     breadcrumb: 'Customers',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'How Subdued ',
-      highlight1: 'halved turnover',
-      middle: ' and cut time-to-hire by 40% across ',
+      before: 'Subdued: building a ',
+      highlight1: 'single scalable selection standard',
+      middle: ' for a network of ',
       highlight2: '130+ stores',
-      after: ' in 6 countries',
+      after: '',
     },
-    subtitle: 'A cult teen fashion brand with 1,000+ employees, Gen Z candidates with indistinguishable CVs, and a 7-person HR team spending 10\u201315 hours a week on phone screens. With Skillvue, Subdued turned pre-screening into a competitive advantage \u2014 and the innovative selection process itself became an employer branding asset.',
+    subtitle: 'With Skillvue, Subdued built a consistent, scalable evaluation process across multiple markets — allowing a lean HR team to apply the same selection rigour in every country while halving turnover.',
     heroMetrics: [
-      { value: '-50%', label: 'turnover' },
-      { value: '65% \u2192 85%', label: 'new hire retention' },
-      { value: '-40%', label: 'time-to-hire' },
+      { value: '-40%', label: 'Time-to-hire' },
+      { value: '-50%', label: 'Turnover' },
+      { value: '80%', label: 'Qualified candidates at 2nd step' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -199,56 +174,46 @@ const content = {
         { label: 'Industry', value: 'Fashion Retail' },
         { label: 'Employees', value: '1,000+' },
         { label: 'Stores', value: '130+ mono-brand' },
-        { label: 'Countries', value: 'Italy, UK, France, Netherlands, Belgium, Sweden, Ireland' },
-        { label: 'HR Team', value: '7 people across 6 countries' },
+        { label: 'Countries', value: '6' },
       ],
     },
     context: {
       badge: 'CONTEXT',
       title: 'The Project Context',
       paragraph: <>
-        Subdued is one of Italy\u2019s most iconic brands in the <strong className="text-[#1A1A2E]/80 font-semibold">teen fashion</strong> segment, with over <strong className="text-[#1A1A2E]/80 font-semibold">130 mono-brand stores</strong> across Italy, Europe and Asia, <strong className="text-[#1A1A2E]/80 font-semibold">1,000+ employees</strong> and 2024 revenues of <strong className="text-[#1A1A2E]/80 font-semibold">\u20ac163.9M</strong>. Founded in Rome in the 1990s, the brand targets girls aged <strong className="text-[#1A1A2E]/80 font-semibold">12 to 20</strong> with a 100% direct-to-consumer model and a supply chain that delivers a product from design to store in <strong className="text-[#1A1A2E]/80 font-semibold">7 days</strong>. Accelerated international expansion \u2014 <strong className="text-[#1A1A2E]/80 font-semibold">14 new openings in 2024</strong> including entry into the US and China \u2014 created a structural HR challenge: maintaining consistent selection quality across multiple countries and languages with a lean team. The HR team (<strong className="text-[#1A1A2E]/80 font-semibold">7 people across 6 countries</strong>) was completely absorbed by operations: all evaluation happened through <strong className="text-[#1A1A2E]/80 font-semibold">direct interviews</strong>, with no structured pre-screening phase. Recruiters were spending <strong className="text-[#1A1A2E]/80 font-semibold">10\u201315 hours a week</strong> on introductory calls, with no time left for strategic work.
+        Subdued is an Italian fashion retail brand. Founded in Italy, it now operates over <strong className="text-[#1A1A2E]/80 font-semibold">130 mono-brand stores</strong> in continuous expansion, <strong className="text-[#1A1A2E]/80 font-semibold">1,000+ employees</strong> and a growing presence across multiple continents — including the US, Middle East, South-East Asia, Korea and China.
+        <br /><br />
+        In this context, the ability to hire the right people at the pace of new store openings becomes the number one operational constraint. Every new store requires a team capable of representing the brand and its Italian DNA to a Gen Z audience in culturally different markets — yet each country's HR team is just <strong className="text-[#1A1A2E]/80 font-semibold">1–3 people</strong>. With traditional methods, the equation simply does not work.
       </>,
-      summary: 'The project transformed pre-screening from a fully manual activity into a structured, AI-driven process \u2014 introducing objective competency assessment before the interview for the first time. The result: turnover halved, retention rising to around 70%, and a selection process that itself became an attraction asset for Gen Z candidates.',
     },
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'The Structural Problem',
-      intro: 'With 14 new openings in 2024 and new markets from the US to China, a 7-person HR team across 6 countries could not keep pace. High turnover, junior CVs indistinguishable from one another, and half of screened candidates lacking the soft skills needed for daily store work.',
+      intro: 'Key store roles to fill, structurally high turnover, and a lean HR team that could not scale with global expansion without a structured system.',
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR & PEOPLE IMPACT',
+      hrLabel: 'HR REALITY',
       businessChallenges: [
         {
-          icon: TrendingUp,
-          title: 'International expansion, unchanged HR team',
-          text: '14 new openings in 2024, the US and China on the horizon, and 7 people across 6 countries managing all recruiting. Every new market meant new volumes, new languages and new cultural contexts with no increase in HR resources.',
+          icon: Eye,
+          title: 'Going beyond the CV to identify true selling ability',
+          text: '50% of candidates who passed initial screening lacked the soft skills for daily store work. Communication, selling ability and customer orientation: all invisible on paper.',
         },
         {
-          icon: Target,
-          title: 'Recurring hiring mistakes',
-          text: 'Candidates with good CVs but lacking the soft skills for daily store work were hired too often. In a high-turnover sector with tight margins, every wrong hire weighed on store performance, onboarding and team morale.',
-        },
-        {
-          icon: Users,
-          title: 'The brand experience starts with people',
-          text: 'For a brand built on the in-store experience, the people in the store ARE the brand. Hiring the right people is not an HR metric: it is a matter of survival in a competitive market.',
+          icon: Scale,
+          title: 'No cross-country evaluation standard',
+          text: 'Each country used different criteria, different languages, different cultural sensitivities. No common framework existed to ensure "the right person for Subdued" meant the same thing in Milan and in London.',
         },
       ],
       hrChallenges: [
         {
           icon: Zap,
           title: '10–15 hours a week on introductory calls',
-          text: 'Without structured pre-screening, every candidate absorbed the same recruiter time. The team was completely operational, with zero margin for employer branding, training or strategy.',
+          text: 'Without a structured filter, every candidate required a significant time investment just for pre-screening. 10–15 hours a week on calls and zero time for anything more strategic.',
         },
         {
-          icon: Eye,
-          title: 'CVs don\u2019t differentiate Gen Z candidates',
-          text: 'Junior candidates in their first job have essentially identical CVs. Communication, selling and teamworking — the competencies that determine success in store — are invisible on paper.',
-        },
-        {
-          icon: Scale,
-          title: 'No cross-country evaluation standard',
-          text: 'With expansion into the UK, France, the Netherlands, Belgium and beyond, each country used its own criteria. A common framework was missing to guarantee consistent hiring quality regardless of market or individual recruiter.',
+          icon: TrendingUp,
+          title: 'Turnover was structurally high',
+          text: 'Turnover in fashion retail is inherently elevated. For a brand where the in-store experience is a core part of the sale, every wrong hire amplified this risk further.',
         },
       ],
     },
@@ -256,35 +221,35 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What Needed to Change',
       items: [
-        { icon: Zap, text: 'Introduce a structured pre-screening phase: assess communication, selling and teamworking before the interview, with objective data on every candidate \u2014 freeing the HR team from operational work' },
-        { icon: Target, text: 'Reduce hiring mistakes: bring to interview only candidates with verified competencies, increasing the success rate and reducing turnover that was weighing on performance and costs' },
-        { icon: Layers, text: 'Scale across multiple countries with a single standard: a consistent evaluation process across Italy, UK, France, the Netherlands, Belgium and future markets, adaptable by language and role without multiplying resources' },
-        { icon: Heart, text: 'Preserve the human relationship: technology must empower the recruiter, not replace them \u2014 Subdued wanted to maintain the direct connection with candidates that is part of the brand\u2019s DNA' },
+        { icon: Zap, text: 'Make invisible competencies visible: assess communication, selling and teamworking before the interview, with objective data on every candidate' },
+        { icon: Target, text: 'Free the team from operational work: reduce screening hours to recover time for strategic activities, employer branding and development' },
+        { icon: Layers, text: 'Create a cross-country standard: the same evaluation criteria across all markets, adapted by language and role, without multiplying HR resources' },
+        { icon: Heart, text: 'Scale at the pace of expansion: a hiring infrastructure that supports every new store opening without adding pressure to the HR team' },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: 'Skillvue was integrated as a pre-screening stage between the application and the first HR interview. The HR team selected tests and questions from the Skill Library for Subdued\u2019s retail needs, with onboarding completed in just 2 weeks.',
+      intro: 'The Subdued HR team worked directly with Skillvue to select the most relevant skills for store profiles and build a structured assessment — delivered via WhatsApp, a deliberate design choice to ensure a frictionless experience and strong completion rates.',
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: CheckCircle, label: 'Communication' },
-        { icon: TrendingUp, label: 'Selling' },
+        { icon: TrendingUp, label: 'Selling ability' },
         { icon: Users, label: 'Teamworking' },
       ],
-      methodologyLabel: 'METHODOLOGY',
+      methodologyLabel: 'HOW IT WAS BUILT',
       methodology: [
         {
-          title: 'Tailored assessments by country and role',
-          text: 'In Italy: video pitch + 2 soft skills (max 15 minutes); in the UK: killer question + video + 1 soft skill (max 10 minutes). For Store Managers: communication, selling and teamworking. Each configuration adapted to the local context, same evaluation standard.',
+          title: 'Skillvue assessment link sent via WhatsApp',
+          text: 'A deliberate design choice to ensure a frictionless experience and strong completion rates.',
         },
         {
-          title: 'Delivery via WhatsApp — mobile-first for Gen Z',
-          text: 'The assessment link is sent via WhatsApp, not email: mobile-first and aligned with Gen Z habits. This switch significantly improved completion rates in the first weeks.',
+          title: 'Candidate completes the assessment',
+          text: 'Video presentation + structured behavioural questions on communication, sales, and teamwork. Max 15 minutes, any device, within a set deadline.',
         },
         {
-          title: 'Progressive rollout across 6 countries',
-          text: 'Started in Italy, extended to the UK, France, the Netherlands and Belgium, with expansion toward Sweden and Ireland. 7 active Skillvue users across 6 countries, same model and unchanged HR resources.',
+          title: 'Skillvue generates a detailed report',
+          text: 'Score per competency, overall fit, strengths, and development areas — used by HR to guide the in-person interview.',
         },
       ],
     },
@@ -293,36 +258,21 @@ const content = {
       title: 'Key Metrics & Impact',
       subtitle: 'The measurable outcomes Subdued achieved through Skillvue across its hiring processes in 6 countries.',
       metrics: [
-        { value: '-50%', label: 'Turnover', sublabel: 'Halved vs. the pre-Skillvue period' },
-        { value: '65% \u2192 85%', label: 'New hire retention', sublabel: '+20 percentage points' },
-        { value: '-40%', label: 'Time-to-hire', sublabel: '30\u201350% reduction across all markets' },
-        { value: '50% \u2192 80%', label: '2nd-step success rate', sublabel: '+20\u201330pp \u2014 more qualified candidates at interview' },
-        { value: '-65/70%', label: 'Pre-screening hours', sublabel: 'From 10\u201315 hrs/week to 3\u20135 hrs/week' },
-        { value: '6 countries', label: 'International coverage', sublabel: '7 active Skillvue users' },
+        { value: '-70%', label: 'Pre-screening hours' },
+        { value: '80%', label: 'Qualified candidates at 2nd step' },
+        { value: '-50%', label: 'Turnover' },
       ],
       qualitative: [
-        { icon: Zap, title: 'Recruiters freed from operations', text: 'Pre-screening hours dropped from 10–15 to 3–5 per week. The pre-screening produces structured reports on communication, selling and teamworking, returning strategic time to the team.' },
-        { icon: Target, title: 'More focused and personalised interviews', text: 'The first interview is based on the Skillvue report: the recruiter arrives prepared with competency data. Only pre-validated profiles reach the interview, eliminating back-to-back screening sessions.' },
-        { icon: Shield, title: 'Hiring mistakes drastically reduced', text: 'Turnover halved (-50%) and retention from 65% to 85% demonstrate that candidates hired with Skillvue are better suited to the role. Fewer onboarding costs, less impact on store performance.' },
-        { icon: Scale, title: 'Consistent evaluation standard across 6 countries', text: 'For the first time all countries use the same criteria, adapted by language and local context. Decisions rest on objective data, not on the logic of an individual market.' },
-        { icon: Heart, title: 'Unexpected employer branding effect', text: 'The innovative process has become a differentiating element in attracting Gen Z candidates. Alignment between technological innovation and generational expectations as a concrete competitive advantage.' },
-      ],
-    },
-    vision: {
-      badge: 'EVOLUTION',
-      title: 'Scaling quality hiring at the pace of international expansion',
-      intro: 'With results proven across 6 countries and the pre-screening model consolidated, the natural next step is to extend coverage to new markets at the pace of Subdued\u2019s international expansion \u2014 ensuring every new store, in any country, starts with the right people.',
-      objective: "A scalable hiring infrastructure that accompanies every new store opening with the same quality standard, regardless of country.",
-      bullets: [
-        'Expansion toward Sweden and Ireland, with further markets following new store openings',
-        'Consolidation of the Store Manager assessment model across all countries',
+        { icon: Heart, title: 'The unexpected employer branding effect', text: 'The result no one anticipated: the innovative selection process itself became an attraction asset — a concrete competitive advantage in the retail labour market.' },
+        { icon: Users, title: 'Human-in-the-loop, always', text: 'The first in-person interview is now more focused and personalised, grounded in report data. The recruiter arrives prepared. The candidate feels heard. The human connection is preserved.' },
+        { icon: Layers, title: 'Cross-country expansion of the project', text: 'HR teams in the UK, Netherlands, Belgium, and France are now applying the same methodology to achieve the same results: greater speed and scalability, higher hiring quality, and satisfied candidates.' },
       ],
     },
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail \u00b7 Hiring at Scale', headline: 'How Carrefour Italia transformed the selection of 30,000 applications a year with just 3 recruiters.' },
-        { id: 'unicomm', company: 'Unicomm', tag: 'GDO \u00b7 Hiring & Development', headline: 'How Unicomm digitized the entire talent lifecycle across 270+ stores and 7 retail brands.' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: 'How Carrefour Italia transformed the selection of 30,000 applications a year with just 3 recruiters.' },
+        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'How Europ Assistance hired 24% more with 18% fewer interviews.' },
       ],
       cta: 'Read the story',
     },
@@ -330,25 +280,11 @@ const content = {
   },
 };
 
-const beforeItems = [
-  '10–15 hours a week on introductory calls with no structured pre-screening',
-  'CVs don\'t differentiate Gen Z candidates — soft skills invisible on paper',
-  'No cross-country evaluation standard across 6 markets',
-  'Half of candidates passing first screen lacked the soft skills for store work',
-];
-
-const afterItems = [
-  'AI pre-screening with objective competency data before any human interaction',
-  'Introductory call hours cut from 10–15 to 3–5 per week',
-  'Consistent evaluation framework across Italy, UK, France, Netherlands, Belgium',
-  'Turnover halved, new hire retention up from 65% to 85%',
-];
-
 // ─── PAGE COMPONENT ───────────────────────────────────────────────────────────
 
 export default function SubduedStoryPage() {
   const router = useRouter();
-  const { lang, t } = useLanguage();
+  const { lang } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
 
   return (
@@ -366,7 +302,7 @@ export default function SubduedStoryPage() {
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             {/* Breadcrumb */}
             <motion.div className="mb-10 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <button onClick={() => { router.push('/customers'); window.scrollTo(0,0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">{t('Customers')}</button>
+              <button onClick={() => { router.push('/customers'); window.scrollTo(0, 0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">{c.breadcrumb}</button>
               <span className="text-white/20">/</span>
               <span className="text-[13px] text-white/[0.65]">Subdued</span>
             </motion.div>
@@ -375,20 +311,28 @@ export default function SubduedStoryPage() {
               {/* Main content */}
               <div className="lg:col-span-7">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-                  <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.12 }}>
-                    {t('Winning Gen Z talent.')}<br />{t('Without drowning in interviews.')}
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-bold tracking-[0.12em] uppercase mb-8 block w-fit" style={{ background: 'rgba(75,77,247,0.15)', color: '#7b7df9', border: '1px solid rgba(75,77,247,0.2)' }}>
+                    {c.badge}
+                  </span>
+                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
+                    {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
-                  <div className="flex flex-wrap gap-6 mb-12">
+                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
+                  <div className="flex flex-wrap gap-4 mb-12">
                     {c.heroMetrics.map(m => (
-                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-6 py-4">
-                        <span className="block text-white" style={{ fontSize: '1.5rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[13px] text-white/[0.65] mt-1 block">{t(m.label)}</span>
+                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
+                        <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="text-[13px] text-white/[0.55] mt-1 block">{m.label}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="border-l-2 border-[#4B4DF7]/30 pl-6">
-                    <p className="text-[17px] text-white/[0.65] italic leading-[1.7]">"{t('It not only improves the quality of my work, it makes us very attractive to candidates. The innovation of the selection process became a genuine element of Employer Branding.')}"</p>
-                    <p className="text-[14px] text-white/50 mt-3 font-semibold">Valentina Cianciaruso, <span className="font-normal text-white/35">{t('HR Manager Dept. Italy, Subdued')}</span></p>
+                  <div className="flex flex-wrap gap-4">
+                    <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300" style={{ background: '#4b4df7' }}>
+                      {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
+                    </button>
+                    <button onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white/70 border border-white/[0.15] hover:border-white/[0.25] hover:text-white transition-all duration-300">
+                      {c.ctaSecondary} <ArrowRight className="h-4 w-4" />
+                    </button>
                   </div>
                 </motion.div>
               </div>
@@ -397,7 +341,7 @@ export default function SubduedStoryPage() {
               <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
+                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center">
                       <img src="/logos/subdued-logo.png" alt="Subdued logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
@@ -408,19 +352,10 @@ export default function SubduedStoryPage() {
                   <div className="divide-y divide-white/[0.08]">
                     {c.clientCard.facts.map(s => (
                       <div key={s.label} className="py-4 first:pt-0 last:pb-0">
-                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{t(s.label)}</span>
-                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{t(s.value)}</p>
+                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
+                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{s.value}</p>
                       </div>
                     ))}
-                  </div>
-                  <div className="mt-6 pt-6 border-t border-white/[0.08] flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-white/[0.12] bg-white/[0.08]">
-                      <img src="/logos/subdued-valentina.jpg" alt="Valentina Cianciaruso" className="w-full h-full object-cover object-top" />
-                    </div>
-                    <div>
-                      <p className="text-[14px] font-semibold text-white/80">Valentina Cianciaruso</p>
-                      <p className="text-[12px] text-white/40 leading-[1.5]">HR Manager Dept. Italy</p>
-                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -432,116 +367,114 @@ export default function SubduedStoryPage() {
         <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#f8fafc' }}>
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
 
-            {/* Context */}
-            <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Context')}</h2>
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-                {[
-                  { num: '50+', label: 'stores across Europe' },
-                  { num: 'Gen Z', label: 'primary candidate pool' },
-                  { num: 'Lean', label: 'HR team, multiple locations' },
-                ].map(s => (
-                  <div key={s.num} className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/70 p-6 text-center">
-                    <span className="block text-[#1A1A2E]" style={{ fontSize: '1.8rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{s.num}</span>
-                    <span className="text-[13px] text-[#1A1A2E]/50 mt-2 block">{t(s.label)}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] max-w-3xl">
-{                t('In fashion retail, turnover is structurally high and Gen Z candidates bring strong instincts but limited CV depth. For Store Managers and Sales Assistants, what matters most. communication, selling, teamwork. is invisible on a CV. The only way to assess it was interviews, creating an unsustainable equation for a lean HR team.')}
-              </p>
+            {/* CONTEXT */}
+            <Section className="mb-24">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6">{c.context.title}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
             </Section>
 
-            {/* Challenge. Before/After */}
-            <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{t('The challenge')}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-10 max-w-3xl">
-{                t('The calendar fills up with back-to-back interviews, wait times stretch, and strategic HR work gets consistently sacrificed.')}
-              </p>
-              <div className="grid md:grid-cols-2 gap-5">
-                <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8">
-                  <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-6 block">{t('Before')}</span>
-                  <div className="space-y-5">
-                    {beforeItems.map((item, i) => (
-                      <div key={item} className="flex items-start gap-4">
-                        <span className="text-[12px] font-bold text-[#1A1A2E]/30 shrink-0 mt-1 w-6">{String(i+1).padStart(2,'0')}</span>
-                        <p className="text-[15px] text-[#1A1A2E]/50 leading-[1.6]">{t(item)}</p>
+            {/* CHALLENGE */}
+            <Section className="mb-24">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.challenge.title}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
+
+              <div className="mb-10">
+                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
+                <div className="grid md:grid-cols-2 gap-5">
+                  {c.challenge.businessChallenges.map((ch) => (
+                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-[#4B4DF7]/[0.03] p-8">
-                  <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-6 block">{t('With Skillvue')}</span>
-                  <div className="space-y-5">
-                    {afterItems.map((item, i) => (
-                      <div key={item} className="flex items-start gap-4">
-                        <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] shrink-0 mt-1 w-6">{String(i+1).padStart(2,'0')}</span>
-                        <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.6]">{t(item)}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </Section>
-
-            {/* Transformation. 3 steps */}
-            <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-12">{t('The Transformation')}</h2>
-              <div className="grid lg:grid-cols-3 gap-4 mb-10">
-                {[
-                  { step: '01', title: 'Co-design assessments', desc: "Valentina's team worked with Skillvue to select the right tests per role. Store Manager vs Sales Assistant with different competency weights" },
-                  { step: '02', title: 'Algo Interview first', desc: 'Candidates complete a structured behavioural interview autonomously, from any device, within set days' },
-                  { step: '03', title: 'Human where it matters', desc: 'HR reviews objective competency profiles, then invests interview time only in validated candidates' },
-                ].map(s => (
-                  <div key={s.step} className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/60 p-6">
-                    <span className="text-[12px] font-bold text-[#4B4DF7]/40 mb-3 block">{s.step}</span>
-                    <h4 className="text-[16px] font-bold text-[#1A1A2E] mb-2">{t(s.title)}</h4>
-                    <p className="text-[14px] text-[#1A1A2E]/50 leading-[1.6]">{t(s.desc)}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="border-l-2 border-[#4B4DF7]/20 pl-6 max-w-3xl">
-                <p className="text-[15px] text-[#1A1A2E]/50 italic leading-[1.7]">"{t('Using Skillvue for competency evaluation at the pre-screening stage, I managed to reduce time-to-hire, maintain a direct relationship with candidates, and recover precious time for strategic activities I previously had to sacrifice.')}"</p>
-                <p className="text-[13px] text-[#1A1A2E]/40 mt-2 font-semibold">Valentina Cianciaruso</p>
-              </div>
-            </Section>
-
-            {/* Results */}
-            <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-10">{t('The Results')}</h2>
-              <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid lg:grid-cols-3 gap-6">
-                  {[
-                    { icon: 'Calendar freed', desc: 'Back-to-back screening interviews eliminated. Every human conversation now more productive.' },
-                    { icon: 'Strategic time back', desc: 'Employer branding, workforce planning, talent development. no longer sacrificed to volume.' },
-                    { icon: 'EB asset unlocked', desc: 'The hiring process itself became a talent attraction tool for Gen Z candidates.' },
-                  ].map(r => (
-                    <div key={r.icon} className="rounded-xl bg-white/[0.04] p-6">
-                      <h4 className="text-[16px] font-bold text-white/90 mb-3">{t(r.icon)}</h4>
-                      <p className="text-[14px] text-white/[0.65] leading-[1.7]">{t(r.desc)}</p>
+                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="border-l-2 border-[#4B4DF7]/20 pl-6 max-w-3xl">
-                <p className="text-[15px] text-[#1A1A2E]/50 italic leading-[1.7]">"{t('I no longer have to squeeze one interview after another into my calendar. At first I had some doubts about such advanced technology, but I immediately understood that it not only improves my work quality. it made us very attractive to our candidates.')}"</p>
-                <p className="text-[13px] text-[#1A1A2E]/40 mt-2 font-semibold">Valentina Cianciaruso</p>
+
+              <div>
+                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
+                <div className="grid md:grid-cols-2 gap-5">
+                  {c.challenge.hrChallenges.map((ch) => (
+                    <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </Section>
 
-            {/* What's Next */}
-            <Section className="mb-20">
-              <div className="rounded-2xl border border-[#4B4DF7]/[0.1] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-10 lg:p-14">
-                <div className="grid lg:grid-cols-[auto_1fr] gap-8 items-start">
-                  <div className="w-14 h-14 rounded-xl bg-[#4B4DF7]/[0.08] flex items-center justify-center shrink-0">
-                    <ArrowRight className="h-6 w-6 text-[#4B4DF7]/50" />
-                  </div>
-                  <div>
-                    <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4">{t("What's Next")}</h2>
-                    <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] max-w-2xl">
-{                      t('With an expanding European footprint. stores already in five major European cities alongside the Italian network. the ability to run a consistent, high-quality, technology-supported selection process across locations is not just an advantage. It is a prerequisite for growth.')}
+            {/* OBJECTIVES */}
+            <Section className="mb-24">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-10">{c.objectives.title}</h2>
+              <div className="grid md:grid-cols-2 gap-5">
+                {c.objectives.items.map((o, i) => (
+                  <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                      <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                    </div>
+                    <p className="text-[15px] text-[#1A1A2E]/70 leading-[1.65] pt-1.5">
+                      {o.text.includes(':') ? <><strong className="font-bold text-[#1A1A2E]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
                     </p>
                   </div>
+                ))}
+              </div>
+            </Section>
+
+            {/* SOLUTION */}
+            <Section className="mb-24">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.solution.title}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
+
+              <div className="mb-12">
+                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  {c.solution.skills.map((s) => (
+                    <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
+                      <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
+                      <span className="text-[14px] font-semibold text-[#1A1A2E]/70">{s.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
+                <div className="grid md:grid-cols-3 gap-5">
+                  {c.solution.methodology.map((m, i) => (
+                    <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
+                      <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
+                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4] relative">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
+                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65] relative">{m.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Section>
+
+            {/* RESULTS */}
+            <Section className="mb-24">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
+
+              <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
+                <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+                  {c.results.metrics.map(m => (
+                    <div key={m.label} className="text-center">
+                      <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
+                      <span className="text-[13px] text-white/[0.65] mt-3 block leading-[1.4]">{m.label}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -558,34 +491,6 @@ export default function SubduedStoryPage() {
               </div>
             </Section>
 
-            {/* FUTURE VISION */}
-            <Section>
-              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10 lg:p-14">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
-                  {c.vision.badge}
-                </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] mb-4 leading-[1.3]">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8 max-w-3xl">{c.vision.intro}</p>
-                <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
-                    <Target className="h-5 w-5" style={{ color: '#4b4df7' }} />
-                  </div>
-                  <p className="text-[15px] text-[#1A1A2E]/75 leading-[1.7]">{c.vision.objective}</p>
-                </div>
-                <div className="space-y-4">
-                  {c.vision.bullets.map((b, i) => (
-                    <div key={i} className="flex items-start gap-4">
-                      <ArrowRight className="h-4 w-4 mt-1 shrink-0" style={{ color: '#4b4df7' }} />
-                      <p className="text-[15px] text-[#1A1A2E]/65 leading-[1.65]">{b}</p>
-                    </div>
-                  ))}
-                </div>
-                <button onClick={() => { router.push('/science'); window.scrollTo(0,0); }} className="group inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
-                  {t('Discover the Science')} <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
-              </div>
-            </Section>
-
           </div>
         </section>
 
@@ -594,16 +499,15 @@ export default function SubduedStoryPage() {
         {/* RELATED STORIES */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 mb-12">{t('Related Stories')}</h3>
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 leading-[1.4] mb-12">{c.related.title}</h3>
             <div className="grid md:grid-cols-2 gap-5">
-              {[{ id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: '35% fewer days to hire. 30% better hires.' },
-                { id: 'credem', company: 'Credem', tag: 'Financial Services · Hiring', headline: 'Time-to-hire halved. Twice the quality.' }].map(s => (
-                <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0,0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
-                  <span className="text-[14px] text-white/40 mb-4 block">{t(s.tag)}</span>
+              {c.related.stories.map(s => (
+                <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
+                  <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
                   <h4 className="text-[24px] font-bold text-white/90 mb-4">{s.company}</h4>
-                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{t(s.headline)}</p>
+                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
                   <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
-                    {t('Read the story')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    {c.related.cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
               ))}
@@ -611,7 +515,7 @@ export default function SubduedStoryPage() {
           </div>
         </section>
 
-        <SolutionFinalCTA headline={t("Ready to see what Skillvue can do for your")} accentWord={t("organization?")} />
+        <SolutionFinalCTA headline={c.finalCta.headline} accentWord={c.finalCta.accent} />
         <Footer />
       </main>
     </>
