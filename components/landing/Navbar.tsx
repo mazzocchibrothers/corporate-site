@@ -59,6 +59,7 @@ export default function Navbar() {
   const router = useRouter();
 
   const hasDropdown = !!(openMenu && navLinks.find(l => l.label === openMenu)?.items);
+  const menuActive = !!openMenu;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -111,7 +112,7 @@ export default function Navbar() {
 
   const { lang, switchLang } = useLanguage();
 
-  const isLight = onLightSection && scrolled && !hasDropdown;
+  const isLight = onLightSection && scrolled && !menuActive;
 
   const textColor = isLight ? '#1A1A2E' : '#ffffff';
   const textMuted = isLight ? 'rgba(26,26,46,0.7)' : 'rgba(255,255,255,0.7)';
@@ -138,13 +139,13 @@ export default function Navbar() {
         data-testid="navbar"
         style={{
           transition: 'background-color 0.3s ease',
-          backgroundColor: hasDropdown || mobileOpen
+          backgroundColor: menuActive || mobileOpen
             ? '#000000'
             : isLight
               ? 'rgba(245,245,250,0.92)'
               : 'transparent',
-          backdropFilter: hasDropdown || isLight || mobileOpen ? 'blur(40px) saturate(1.2)' : 'none',
-          WebkitBackdropFilter: hasDropdown || isLight || mobileOpen ? 'blur(40px) saturate(1.2)' : 'none',
+          backdropFilter: menuActive || isLight || mobileOpen ? 'blur(40px) saturate(1.2)' : 'none',
+          WebkitBackdropFilter: menuActive || isLight || mobileOpen ? 'blur(40px) saturate(1.2)' : 'none',
         }}
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between h-[80px] relative">
@@ -152,11 +153,11 @@ export default function Navbar() {
             <SkillvueLogo
               size={28}
               className="transition-colors duration-300"
-              style={{ color: hasDropdown || mobileOpen ? '#ffffff' : textColor }}
+              style={{ color: menuActive || mobileOpen ? '#ffffff' : textColor }}
             />
             <span
               className="font-semibold text-[17px] tracking-tight transition-colors duration-300"
-              style={{ color: hasDropdown || mobileOpen ? '#ffffff' : textColor }}
+              style={{ color: menuActive || mobileOpen ? '#ffffff' : textColor }}
             >
               Skillvue
             </span>
@@ -168,7 +169,7 @@ export default function Navbar() {
               <div
                 key={link.label}
                 className="relative"
-                onMouseEnter={() => link.items && handleEnter(link.label)}
+                onMouseEnter={() => handleEnter(link.label)}
                 onMouseLeave={handleLeave}
               >
                 <a
@@ -176,7 +177,7 @@ export default function Navbar() {
                   data-testid={`nav-link-${link.label.toLowerCase()}`}
                   className="text-[15px] font-light tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300"
                   style={{
-                    color: hasDropdown
+                    color: menuActive
                       ? (openMenu === link.label ? '#ffffff' : 'rgba(255,255,255,0.5)')
                       : (openMenu === link.label ? textColor : textMuted),
                   }}
@@ -210,7 +211,7 @@ export default function Navbar() {
             {/* Language toggle */}
             <div
               className="flex items-center rounded-full overflow-hidden"
-              style={{ border: `1px solid ${hasDropdown ? 'rgba(255,255,255,0.15)' : btnBorder}` }}
+              style={{ border: `1px solid ${menuActive ? 'rgba(255,255,255,0.15)' : btnBorder}` }}
             >
               {(['en', 'it'] as const).map((l, i) => (
                 <button
@@ -219,10 +220,10 @@ export default function Navbar() {
                   className="px-3 py-1.5 text-[13px] font-medium tracking-wide transition-all duration-200"
                   style={{
                     color: lang === l
-                      ? (hasDropdown ? '#ffffff' : textColor)
-                      : (hasDropdown ? 'rgba(255,255,255,0.35)' : textMuted),
-                    borderLeft: i === 1 ? `1px solid ${hasDropdown ? 'rgba(255,255,255,0.15)' : btnBorder}` : 'none',
-                    background: lang === l ? (hasDropdown ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)') : 'transparent',
+                      ? (menuActive ? '#ffffff' : textColor)
+                      : (menuActive ? 'rgba(255,255,255,0.35)' : textMuted),
+                    borderLeft: i === 1 ? `1px solid ${menuActive ? 'rgba(255,255,255,0.15)' : btnBorder}` : 'none',
+                    background: lang === l ? (menuActive ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)') : 'transparent',
                   }}
                 >
                   {l.toUpperCase()}
@@ -230,20 +231,18 @@ export default function Navbar() {
               ))}
             </div>
 
-            {lang !== 'it' && (
-              <a
-                href="/book-meeting"
-                data-testid="nav-book-demo"
-                className="inline-flex items-center px-7 py-3 text-[14px] font-medium tracking-wide rounded-full transition-all duration-300"
-                style={{
-                  color: hasDropdown ? '#ffffff' : textColor,
-                  border: `1px solid ${hasDropdown ? 'rgba(255,255,255,0.15)' : btnBorder}`,
-                }}
-                onClick={(e) => { e.preventDefault(); navigateTo('/book-meeting'); }}
-              >
-                Book a Meeting
-              </a>
-            )}
+            <a
+              href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+              data-testid="nav-book-demo"
+              className="inline-flex items-center px-7 py-3 text-[14px] font-medium tracking-wide rounded-full transition-all duration-300"
+              style={{
+                color: menuActive ? '#ffffff' : textColor,
+                border: `1px solid ${menuActive ? 'rgba(255,255,255,0.15)' : btnBorder}`,
+              }}
+              onClick={(e) => { e.preventDefault(); navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); }}
+            >
+              {lang === 'it' ? 'Prenota un Incontro' : 'Book a Meeting'}
+            </a>
           </div>
 
           {/* Mobile hamburger */}
@@ -381,14 +380,12 @@ export default function Navbar() {
                 ))}
               </div>
 
-              {lang !== 'it' && (
-                <button
-                  onClick={() => navigateTo('/book-meeting')}
-                  className="w-full flex items-center justify-center py-4 text-[16px] font-semibold text-white rounded-full border border-white/15"
-                >
-                  Book a Meeting
-                </button>
-              )}
+              <button
+                onClick={() => navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting')}
+                className="w-full flex items-center justify-center py-4 text-[16px] font-semibold text-white rounded-full border border-white/15"
+              >
+                {lang === 'it' ? 'Prenota un Incontro' : 'Book a Meeting'}
+              </button>
             </div>
           </div>
         </div>

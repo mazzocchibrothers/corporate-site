@@ -105,8 +105,9 @@ const content = {
       intro: "Skillvue è stato integrato nel processo di selezione del Progetto Giovani con un approccio graduale e data-driven: prima la validazione su un perimetro iniziale, poi l'estensione progressiva. L'obiettivo era misurare l'impatto con dati reali prima di scalare.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
-        { icon: Target, label: 'Problem solving — capacità di analisi e gestione di situazioni complesse, chiave per i ruoli a contatto con i clienti in filiale' },
-        { icon: Users, label: 'Orientamento al cliente — attitudine alla relazione, ascolto e gestione delle esigenze del cliente' },
+        { icon: Target, label: 'Resilienza' },
+        { icon: Users, label: 'Intelligenza emotiva' },
+        { icon: Layers, label: 'Orientamento agli obiettivi' },
       ],
       methodologyLabel: 'COME È STATO COSTRUITO',
       methodology: [
@@ -233,8 +234,9 @@ const content = {
       intro: "Skillvue was integrated into the Progetto Giovani selection process with a gradual, data-driven approach: first validation on an initial perimeter, then progressive extension. The goal was to measure impact with real data before scaling.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
-        { icon: Target, label: 'Problem solving — analytical thinking and ability to handle complex situations, key for client-facing branch roles' },
-        { icon: Users, label: 'Customer orientation — relationship skills, active listening and ability to manage client needs' },
+        { icon: Target, label: 'Resilienza' },
+        { icon: Users, label: 'Intelligenza emotiva' },
+        { icon: Layers, label: 'Orientamento agli obiettivi' },
       ],
       methodologyLabel: 'HOW IT WAS BUILT',
       methodology: [
