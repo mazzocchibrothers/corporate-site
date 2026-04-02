@@ -6,35 +6,39 @@ import { useLanguage } from '@/i18n/LanguageContext';
 
 const footerLinks = [
   {
-    title: 'Solutions',
+    title: 'Platform',
+    titleIt: 'Piattaforma',
     links: [
-      { name: 'Hiring', href: '/solutions/talent-acquisition' },
-      { name: 'Performance Management', href: '/solutions/performance-management' },
-      { name: 'Learning & Development', href: '/solutions/learning-development' },
-      { name: 'Internal Mobility', href: '/solutions/internal-mobility' },
-      { name: 'Project Resourcing', href: '/solutions/project-resourcing' },
+      { name: 'Product', nameIt: 'Prodotto', href: '/product-overview' },
+      { name: 'Science', nameIt: 'Scienza', href: '/science' },
     ],
   },
   {
-    title: 'Platform',
+    title: 'Solutions',
+    titleIt: 'Soluzioni',
     links: [
-      { name: 'Product', href: '/product-overview' },
-      { name: 'Science', href: '/science' },
+      { name: 'Hiring', nameIt: 'Hiring', href: '/solutions/talent-acquisition' },
+      { name: 'Performance Management', nameIt: 'Performance Management', href: '/solutions/performance-management' },
+      { name: 'Learning & Development', nameIt: 'Learning & Development', href: '/solutions/learning-development' },
+      { name: 'Internal Mobility', nameIt: 'Internal Mobility', href: '/solutions/internal-mobility' },
+      { name: 'Project Resourcing', nameIt: 'Project Resourcing', href: '/solutions/project-resourcing' },
     ],
   },
   {
     title: 'Customers',
+    titleIt: 'Clienti',
     links: [
-      { name: 'Customer Stories', href: '/customers' },
+      { name: 'Customer Stories', nameIt: 'Customer Stories', href: '/customers' },
     ],
   },
   {
     title: 'Resources',
+    titleIt: 'Risorse',
     links: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'White Papers', href: '/resources/whitepapers' },
-      { name: 'About', href: '/about' },
-      { name: 'Book a Meeting', href: '/book-meeting' },
+      { name: 'Blog', nameIt: 'Blog', href: '/blog' },
+      { name: 'White Papers', nameIt: 'White Papers', href: '/resources/whitepapers' },
+      { name: 'About', nameIt: 'Chi siamo', href: '/about' },
+      { name: 'Book a Meeting', nameIt: 'Prenota un Incontro', href: '/book-meeting', hrefIt: '/prenota-incontro' },
     ],
   },
 ];
@@ -96,23 +100,29 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Right: 3 link columns — aligned right matching reference */}
-          <div className="grid grid-cols-3 gap-10 lg:ml-auto lg:w-[60%]">
+          {/* Right: 4 link columns matching nav order */}
+          <div className="grid grid-cols-4 gap-8">
             {footerLinks.map((group) => (
               <div key={group.title}>
-                <h4 className="text-[16px] font-semibold text-white/85 mb-7">{t(group.title)}</h4>
+                <h4 className="text-[16px] font-semibold text-white/85 mb-7">
+                  {lang === 'it' ? group.titleIt : group.title}
+                </h4>
                 <ul className="space-y-5 lg:space-y-4">
-                  {group.links.map((link) => (
-                    <li key={link.name}>
-                      <a
-                        href={link.href}
-                        onClick={handleClick(link.href)}
-                        className="text-[15px] text-white/35 hover:text-white/65 transition-colors duration-300"
-                      >
-                        {t(link.name)}
-                      </a>
-                    </li>
-                  ))}
+                  {group.links.map((link) => {
+                    const href = lang === 'it' && (link as any).hrefIt ? (link as any).hrefIt : link.href;
+                    const name = lang === 'it' ? (link as any).nameIt : link.name;
+                    return (
+                      <li key={link.name}>
+                        <a
+                          href={href}
+                          onClick={handleClick(href)}
+                          className="text-[15px] text-white/35 hover:text-white/65 transition-colors duration-300"
+                        >
+                          {name}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}

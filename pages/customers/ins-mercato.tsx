@@ -154,60 +154,113 @@ export default function InsMercatoStoryPage() {
         {/* Hero */}
         <section className="relative pt-[80px]">
           <div className="absolute inset-0 overflow-hidden">
-            <img src="/logos/insmercato-bg.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.4)', transform: 'scale(1.1)' }} />
-            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0a0a1a 0%, #111128 50%, #0d0d1f 100%)' }} />
+            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #4b4df7 0%, transparent 50%), radial-gradient(circle at 80% 20%, #3b3be0 0%, transparent 40%)' }} />
           </div>
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <motion.div className="mb-10 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <button onClick={() => { router.push('/customers'); window.scrollTo(0,0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">{t('Customers')}</button>
+              <button onClick={() => { router.push('/customers'); window.scrollTo(0, 0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">
+                {lang === 'it' ? 'Clienti' : 'Customers'}
+              </button>
               <span className="text-white/20">/</span>
               <span className="text-[13px] text-white/[0.65]">In's Mercato</span>
             </motion.div>
 
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-              <div className="lg:col-span-8">
+              {/* Main content */}
+              <div className="lg:col-span-7">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-                  <h1 className="text-[clamp(2.2rem,4.5vw,3.8rem)] font-bold tracking-[-0.03em] text-white/95 mb-6" style={{ lineHeight: 1.25 }}>
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-bold tracking-[0.12em] uppercase mb-8 block w-fit" style={{ background: 'rgba(75,77,247,0.15)', color: '#7b7df9', border: '1px solid rgba(75,77,247,0.2)' }}>
+                    CUSTOMER STORY
+                  </span>
+                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
                     {lang === 'it'
-                      ? <>Come In's Mercato ha costruito una <span className="italic gradient-text">pipeline interna</span> di Store Manager</>
-                      : <>How In's Mercato built an <span className="italic gradient-text">internal pipeline</span> of Store Managers</>
+                      ? <>Come In's Mercato ha costruito una <span style={{ color: '#7b7df9' }}>pipeline interna</span> di Store Manager</>
+                      : <>How In's Mercato built an <span style={{ color: '#7b7df9' }}>internal pipeline</span> of Store Managers</>
                     }
                   </h1>
-                  <p className="text-[17px] text-white/[0.65] leading-[1.7] mb-10 max-w-2xl">
+                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">
                     {lang === 'it'
                       ? "La crescita della rete dipende dalla capacità di avere figure manageriali formate nel momento in cui servono. Con Skillvue, In's ha trasformato la gestione del talento da reattiva a predittiva."
                       : "Network growth depends on having trained managerial talent ready when it's needed. With Skillvue, In's transformed talent management from reactive to predictive."
                     }
                   </p>
-                  <div className="flex flex-wrap gap-4 mb-12">
-                    {heroMetrics.map(m => (
-                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-5 py-4">
-                        <span className="block text-white" style={{ fontSize: '1.8rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[12px] text-white/[0.55] mt-1 block">{m.label[l]}</span>
-                      </div>
-                    ))}
+                  <div className="flex flex-wrap gap-4">
+                    <button onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300" style={{ background: '#4b4df7' }}>
+                      {lang === 'it' ? 'Contattaci' : 'Contact us'} <ArrowRight className="h-4 w-4" />
+                    </button>
+                    <button onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white/70 border border-white/[0.15] hover:border-white/[0.25] hover:text-white transition-all duration-300">
+                      {lang === 'it' ? 'Scopri di più' : 'Learn more'} <ArrowRight className="h-4 w-4" />
+                    </button>
                   </div>
                 </motion.div>
               </div>
 
-              <motion.div className="lg:col-span-4 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
-                  <div className="divide-y divide-white/[0.08]">
-                    {sidebar.map(s => (
-                      <div key={s.label.en} className="py-4 first:pt-0 last:pb-0">
-                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label[l]}</span>
-                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{s.value[l]}</p>
+              {/* Client card + video */}
+              <motion.div className="lg:col-span-5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-6">
+                  <div className="flex items-center gap-4 mb-4 pb-4 border-b border-white/[0.08]">
+                    <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
+                      <img src="/logos/insmercato-logo.png" alt="In's Mercato logo" className="w-full h-full object-contain" />
+                    </div>
+                    <div>
+                      <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">
+                        {lang === 'it' ? 'SCHEDA CLIENTE' : 'CLIENT PROFILE'}
+                      </span>
+                      <p className="text-[16px] font-bold text-white/90">In's Mercato</p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                    {(lang === 'it' ? [
+                      { label: 'Settore', value: 'GDO - Hard Discount' },
+                      { label: 'Fatturato', value: '1,5 mld €' },
+                      { label: 'Dipendenti', value: '4.200' },
+                      { label: 'Punti vendita', value: '+570' },
+                    ] : [
+                      { label: 'Industry', value: 'GDO - Hard Discount' },
+                      { label: 'Revenue', value: '€1.5B' },
+                      { label: 'Employees', value: '4,200+' },
+                      { label: 'Stores', value: '570+' },
+                    ]).map(s => (
+                      <div key={s.label}>
+                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
+                        <p className="text-[13px] text-white/[0.65] leading-[1.5]">{s.value}</p>
                       </div>
                     ))}
                   </div>
                 </div>
+                <div className="mt-4 rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                  <iframe
+                    className="w-full h-full"
+                    src={lang === 'it' ? 'https://www.youtube.com/embed/GE_fLi5IeyU?autoplay=1&mute=1' : 'https://www.youtube.com/embed/nQhV9xScwOg?autoplay=1&mute=1'}
+                    title="In's Mercato interview"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
               </motion.div>
             </div>
+
+            {/* Hero metrics */}
+            <motion.div className="mt-12" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }}>
+              <div className="grid grid-cols-3 gap-5">
+                {[
+                  { value: '~1,000', label: lang === 'it' ? 'Collaboratori coinvolti' : 'Employees involved' },
+                  { value: '95%', label: lang === 'it' ? 'Tasso di completamento' : 'Completion rate' },
+                  { value: '~90', label: lang === 'it' ? 'Top Talent identificati' : 'Top Talent identified' },
+                ].map(m => (
+                  <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-5 text-center">
+                    <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                    <span className="text-[13px] text-white/[0.55] mt-2 block leading-[1.4]">{m.label}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Content */}
-        <section className="section-breathe relative py-16 lg:py-20">
+        <section id="context-section" className="section-breathe relative py-16 lg:py-20">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
 
             {/* Context */}
