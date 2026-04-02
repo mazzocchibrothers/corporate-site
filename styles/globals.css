@@ -192,12 +192,18 @@ html {
 .marquee-track {
   animation: marqueeScroll 30s linear infinite;
 }
+.lp-marquee {
+  animation: marqueeScroll 12s linear infinite;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 @keyframes marqueeScroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
+  .marquee-track, .lp-marquee { animation: none; }
 }
 
 

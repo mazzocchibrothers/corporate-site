@@ -66,60 +66,30 @@ const featureCards = [
 ];
 
 function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
-  const [form, setForm] = useState({ nome: '', cognome: '', email: '' });
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [errors, setErrors] = useState<Record<string, string>>({});
   const formRef = useRef<HTMLDivElement>(null);
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
-  const validate = () => {
-    const e: Record<string, string> = {};
-    if (!form.nome.trim()) e.nome = 'Campo obbligatorio';
-    if (!form.cognome.trim()) e.cognome = 'Campo obbligatorio';
-    if (!form.email.trim()) e.email = 'Campo obbligatorio';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Email non valida';
-    else if (/gmail|yahoo|hotmail|outlook|icloud|libero|virgilio/i.test(form.email))
-      e.email = 'Inserisci un indirizzo email aziendale';
-    return e;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const errs = validate();
-    if (Object.keys(errs).length) { setErrors(errs); return; }
-    setSubmitting(true);
-    try {
-      await fetch(
-        `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            fields: [
-              { name: 'firstname', value: form.nome },
-              { name: 'lastname', value: form.cognome },
-              { name: 'email', value: form.email },
-            ],
-            context: {
-              pageUri: typeof window !== 'undefined' ? window.location.href : '',
-              pageName: 'Career Aspiration Intelligence - Insurance WP-I2',
-            },
-          }),
-        }
-      );
-    } catch (_) {
-      // fail silently — still grant access
-    }
-    setSubmitting(false);
-    setSubmitted(true);
-    if (typeof window !== 'undefined') {
-      window.open('/lp/career-aspiration-insurance?access=true', '_blank');
-    }
-  };
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//js.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
+    script.async = true;
+    script.onload = () => {
+      if ((window as any).hbspt) {
+        (window as any).hbspt.forms.create({
+          portalId: '48438018',
+          formId: '0c51980d-9722-42e9-8807-ac011247ee3c',
+          region: 'na1',
+          target: '#hs-form-container',
+        });
+      }
+    };
+    document.head.appendChild(script);
+    return () => { script.remove(); };
+  }, []);
 
   return (
     <div style={{ background: '#F8F8FA', minHeight: '100vh', fontFamily: 'inherit' }}>
@@ -152,7 +122,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
               className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8"
               style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
             >
-              WP-I2 · Insurance · 2026
+              Insurance · 2026
             </span>
           </motion.div>
 
@@ -187,6 +157,44 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             <span className="w-px h-3 bg-[#0D0D0D]/15" />
             <span>CHRO · Chief Talent Officer · Head of Leadership Development</span>
           </motion.div>
+
+          {/* Logo marquee */}
+          {(() => {
+            const logos = [
+              { src: '/logos/generali.png', alt: 'Generali' },
+              { src: '/logos/reale-mutua.png', alt: 'Reale Mutua' },
+              { src: '/logos/unipol.svg', alt: 'Unipol' },
+              { src: '/logos/plenitude.png', alt: 'Plenitude', square: true },
+              { src: '/logos/mediaset-logo.png', alt: 'Mediaset' },
+              { src: '/logos/windtre.svg', alt: 'WindTre Business' },
+            ];
+            const logoStyle = { filter: 'brightness(0)', opacity: 0.55 } as const;
+            const LogoSet = ({ ariaHidden }: { ariaHidden?: boolean }) => (
+              <div className="shrink-0 flex items-center gap-10" aria-hidden={ariaHidden || undefined}>
+                {logos.map((logo, i) => (
+                  <div key={i} className="shrink-0 flex items-center justify-center" style={{ width: 168, height: logo.square ? 80 : 48 }}>
+                    <img src={logo.src} alt={ariaHidden ? '' : logo.alt} style={{ maxWidth: '90%', maxHeight: '90%', objectFit: 'contain', ...logoStyle }} />
+                  </div>
+                ))}
+              </div>
+            );
+            return (
+              <motion.div
+                variants={fadeUp} initial="hidden" animate="visible" custom={0.27}
+                className="relative overflow-hidden mb-10 mx-auto"
+                style={{
+                  maxWidth: 700,
+                  maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                }}
+              >
+                <div className="lp-marquee flex items-center" style={{ width: 'max-content' }}>
+                  <LogoSet />
+                  <LogoSet ariaHidden />
+                </div>
+              </motion.div>
+            );
+          })()}
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.3}>
             <button
@@ -313,116 +321,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
               <h3 className="text-[17px] font-bold text-[#0D0D0D] mb-1">Compila per scaricare il PDF</h3>
               <p className="text-[13px] text-[#0D0D0D]/35 mb-7">Gratuito · Accesso immediato</p>
 
-              {submitted ? (
-                <div className="flex flex-col items-center justify-center py-10 text-center gap-4">
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center"
-                    style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
-                  >
-                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-[16px] font-semibold text-[#0D0D0D] mb-1">Il whitepaper si è aperto in una nuova scheda.</p>
-                    <p className="text-[13px] text-[#0D0D0D]/40">Controlla il tuo browser se non lo vedi subito.</p>
-                  </div>
-                  <button
-                    onClick={() => window.open('/lp/career-aspiration-insurance?access=true', '_blank')}
-                    className="inline-flex items-center gap-2 px-5 py-2 rounded-lg text-[13px] font-semibold border transition-all hover:opacity-70"
-                    style={{ borderColor: 'rgba(75,77,247,0.3)', color: '#4B4DF7' }}
-                  >
-                    <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    Apri di nuovo
-                  </button>
-                </div>
-              ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Nome */}
-                <div>
-                  <label className="block text-[12px] font-medium text-[#0D0D0D]/60 mb-1.5">
-                    Nome <span className="text-red-400">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Il tuo nome"
-                    value={form.nome}
-                    onChange={e => { setForm(f => ({ ...f, nome: e.target.value })); setErrors(er => ({ ...er, nome: '' })); }}
-                    className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none transition-all"
-                    style={{
-                      borderColor: errors.nome ? '#EF4444' : 'rgba(0,0,0,0.12)',
-                      background: '#FAFAFA',
-                    }}
-                  />
-                  {errors.nome && <p className="text-[11px] text-red-500 mt-1">{errors.nome}</p>}
-                </div>
-
-                {/* Cognome */}
-                <div>
-                  <label className="block text-[12px] font-medium text-[#0D0D0D]/60 mb-1.5">
-                    Cognome <span className="text-red-400">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Il tuo cognome"
-                    value={form.cognome}
-                    onChange={e => { setForm(f => ({ ...f, cognome: e.target.value })); setErrors(er => ({ ...er, cognome: '' })); }}
-                    className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none transition-all"
-                    style={{
-                      borderColor: errors.cognome ? '#EF4444' : 'rgba(0,0,0,0.12)',
-                      background: '#FAFAFA',
-                    }}
-                  />
-                  {errors.cognome && <p className="text-[11px] text-red-500 mt-1">{errors.cognome}</p>}
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label className="block text-[12px] font-medium text-[#0D0D0D]/60 mb-1.5">
-                    Email Lavorativa <span className="text-red-400">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="nome@azienda.com"
-                    value={form.email}
-                    onChange={e => { setForm(f => ({ ...f, email: e.target.value })); setErrors(er => ({ ...er, email: '' })); }}
-                    className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none transition-all"
-                    style={{
-                      borderColor: errors.email ? '#EF4444' : 'rgba(0,0,0,0.12)',
-                      background: '#FAFAFA',
-                    }}
-                  />
-                  {errors.email && <p className="text-[11px] text-red-500 mt-1">{errors.email}</p>}
-                  {!errors.email && <p className="text-[11px] text-[#0D0D0D]/25 mt-1">Richiesta email aziendale (non personale)</p>}
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-[14px] font-semibold text-white transition-all hover:opacity-90 disabled:opacity-60"
-                  style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)', marginTop: '8px' }}
-                >
-                  {submitting ? (
-                    <>
-                      <svg className="animate-spin" width="16" height="16" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                      </svg>
-                      Caricamento…
-                    </>
-                  ) : (
-                    <>
-                      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                      </svg>
-                      Scarica il Report
-                    </>
-                  )}
-                </button>
-              </form>
-              )}
+              <div id="hs-form-container" />
             </motion.div>
           </div>
         </div>
@@ -569,7 +468,7 @@ function WhitepaperLayer() {
               className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-7"
               style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
             >
-              WP-I2 · INSURANCE · 2026
+              INSURANCE · 2026
             </span>
             <h1 className="text-[2rem] font-bold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
               Career Aspiration Intelligence
@@ -1042,7 +941,7 @@ function WhitepaperLayer() {
 
             {/* Footer */}
             <div className="border-t border-black/[0.07] pt-6 mt-8 flex items-center justify-between">
-              <span className="text-[11px] text-[#0D0D0D]/25">WP-I2 · Insurance · 2026</span>
+              <span className="text-[11px] text-[#0D0D0D]/25">Insurance · 2026</span>
               <div className="flex items-center gap-2">
                 <SkillvueIcon size={16} />
                 <span className="text-[11px] text-[#0D0D0D]/25">Skillvue</span>
