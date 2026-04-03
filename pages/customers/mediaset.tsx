@@ -42,10 +42,11 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
+        { label: 'Settore', value: 'Media & Telecom' },
         { label: 'Gruppo', value: 'MFE – MediaForEurope' },
         { label: 'Fatturato', value: '~2,5 mld €' },
         { label: 'Dipendenti', value: '~5.000' },
-        { label: 'HQ', value: 'Cologno Monzese (MI)' },
+        { label: 'Use Case', value: 'Hiring' },
       ],
     },
     context: {
@@ -151,7 +152,7 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring & Screening', headline: 'Come Carrefour Italia assume meglio, più velocemente e su scala. Senza aggiungere una sola persona al team.' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring & Screening', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
         { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Mobility', headline: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi." },
       ],
       cta: 'Leggi la storia',
@@ -180,10 +181,11 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
+        { label: 'Industry', value: 'Media & Telecom' },
         { label: 'Group', value: 'MFE – MediaForEurope' },
         { label: 'Revenue', value: '~€2.5B' },
         { label: 'Employees', value: '~5,000' },
-        { label: 'HQ', value: 'Cologno Monzese (MI)' },
+        { label: 'Use Case', value: 'Hiring' },
       ],
     },
     context: {
@@ -289,7 +291,7 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring & Screening', headline: 'How Carrefour Italia is Hiring Better, Faster, and at Scale. Without Adding a Single Person to the Team.' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring & Screening', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
         { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Mobility', headline: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a €9 billion plan.' },
       ],
       cta: 'Read the story',
@@ -313,7 +315,7 @@ export default function MediasetStoryPage() {
         {/* ===== HERO ===== */}
         <section className="relative pt-[80px]">
           <div className="absolute inset-0 overflow-hidden">
-            <img src="/logos/mediaset-background-explore-stories.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
+            <img src="/logos/mediaset-background-explore-stories (2).jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
             <div className="absolute inset-0 bg-black/40" />
           </div>
 
@@ -359,8 +361,8 @@ export default function MediasetStoryPage() {
               <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
-                      <img src="/logos/mediaset-logo.png" alt="Mediaset logo" className="w-full h-full object-contain" />
+                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
+                      <img src="/logos/mediaset-logo.png" alt="Mediaset logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>
@@ -500,14 +502,14 @@ export default function MediasetStoryPage() {
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
                   </div>
-                  {/* 4.1/5 score display */}
+                  {/* 4.1/5 — 5 columns, 4 filled */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 80 80" className="w-20 h-20" fill="none">
-                        <circle cx="40" cy="40" r="34" fill="rgba(75,77,247,0.12)" stroke="rgba(75,77,247,0.3)" strokeWidth="2"/>
-                        <text x="40" y="36" textAnchor="middle" fill="white" fontSize="16" fontWeight="800" fontFamily="system-ui">4.1</text>
-                        <text x="40" y="52" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="10" fontFamily="system-ui">/ 5</text>
-                      </svg>
+                    <div className="w-24 h-24 mb-5 flex items-end justify-center gap-2 pb-2">
+                      <div className="rounded-sm bg-[#4b4df7]" style={{ width: 12, height: 56 }} />
+                      <div className="rounded-sm bg-[#4b4df7]" style={{ width: 12, height: 56 }} />
+                      <div className="rounded-sm bg-[#4b4df7]" style={{ width: 12, height: 56 }} />
+                      <div className="rounded-sm bg-[#4b4df7]" style={{ width: 12, height: 56 }} />
+                      <div className="rounded-sm bg-white/15" style={{ width: 12, height: 56 }} />
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>

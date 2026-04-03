@@ -42,11 +42,11 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
-        { label: 'Settore', value: 'Aviation · Transport & Logistics' },
-        { label: 'Dipendenti', value: 'Oltre 4.500' },
+        { label: 'Settore', value: 'Transportation & Logistics' },
         { label: 'Fatturato', value: '>1B€' },
+        { label: 'Dipendenti', value: 'Oltre 4.500' },
         { label: 'Passeggeri gestiti annualmente', value: '>55 milioni' },
-        { label: 'Use Case', value: 'Internal Mobility & Succession Planning' },
+        { label: 'Use Case', value: 'Internal Mobility, Learning & Development' },
       ],
     },
     context: {
@@ -157,8 +157,8 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "~900 persone valutate. Una pipeline di Store Manager costruita dall'interno." },
-        { id: 'credem', company: 'Credem', tag: 'Banking & Finance · Sviluppo', headline: 'Competenze e sviluppo del talento nel settore bancario.' },
+        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "Come In's Mercato ha costruito una pipeline interna di Store Manager" },
+        { id: 'credem', company: 'Credem', tag: 'Banking & Finance · Sviluppo', headline: 'Credem: come scovare i migliori talenti su larga scala tra 30.000 candidature per nutrire la crescita del business' },
       ],
       cta: 'Leggi la storia',
     },
@@ -186,11 +186,11 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
-        { label: 'Industry', value: 'Aviation · Transport & Logistics' },
-        { label: 'Employees', value: '4,500+' },
+        { label: 'Industry', value: 'Transportation & Logistics' },
         { label: 'Revenue', value: '>€1B' },
+        { label: 'Employees', value: '4,500+' },
         { label: 'Passengers managed annually', value: '>55 million' },
-        { label: 'Use Case', value: 'Internal Mobility & Succession Planning' },
+        { label: 'Use Case', value: 'Internal Mobility, Learning & Development' },
       ],
     },
     context: {
@@ -301,8 +301,8 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Internal Mobility', headline: '~900 people assessed. A Store Manager pipeline built from within.' },
-        { id: 'credem', company: 'Credem', tag: 'Banking & Finance · Development', headline: 'Skills and talent development in the banking sector.' },
+        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Internal Mobility', headline: "How In's Mercato built an internal pipeline of Store Managers" },
+        { id: 'credem', company: 'Credem', tag: 'Banking & Finance · Development', headline: 'Credem: how to find the best talent at scale among 30,000 applications to fuel business growth' },
       ],
       cta: 'Read the story',
     },
@@ -372,8 +372,8 @@ export default function ADRStoryPage() {
               <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
-                      <img src="/logos/adr-logo.jpg" alt="ADR logo" className="w-full h-full object-contain" />
+                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
+                      <img src="/logos/adr-logo.jpg" alt="ADR logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>

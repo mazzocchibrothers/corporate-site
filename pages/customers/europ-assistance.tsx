@@ -42,11 +42,11 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
-        { label: 'Settore', value: 'Insurance & Assistance' },
+        { label: 'Settore', value: 'Financial Services' },
         { label: 'Gruppo', value: 'Generali' },
         { label: 'Fatturato', value: '~1,5 mld €' },
-        { label: 'Sedi italiane', value: 'Assago (MI) e Rende (CS)' },
         { label: 'Centri assistenza in Italia', value: '4.300' },
+        { label: 'Use Case', value: 'Hiring' },
       ],
     },
     context: {
@@ -151,8 +151,8 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring at Scale', headline: 'Come Carrefour Italia assume meglio, più velocemente e su larga scala senza aggiungere una singola persona al team.' },
-        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'Come Mediaset ha gestito 3.000 candidature in 5 settimane con 3 persone.' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring at Scale', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
+        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'Come selezionare e far crescere il talento su scala in un gruppo che sta triplicando le dimensioni' },
       ],
       cta: 'Leggi la storia',
     },
@@ -180,11 +180,11 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
-        { label: 'Industry', value: 'Insurance & Assistance' },
+        { label: 'Industry', value: 'Financial Services' },
         { label: 'Group', value: 'Generali' },
         { label: 'Revenue', value: '~€1.5B' },
-        { label: 'Italian offices', value: 'Assago (MI) and Rende (CS)' },
         { label: 'Assistance centres in Italy', value: '4,300' },
+        { label: 'Use Case', value: 'Hiring' },
       ],
     },
     context: {
@@ -289,8 +289,8 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring at Scale', headline: 'How Carrefour Italia is Hiring Better, Faster, and at Scale — Without Adding a Single Person to the Team.' },
-        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'How Mediaset managed 3,000 applications in 5 weeks with 3 people.' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'How to select and grow talent at scale in a group that is tripling in size' },
       ],
       cta: 'Read the story',
     },
@@ -359,8 +359,8 @@ export default function EuropAssistanceStoryPage() {
               <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
-                      <img src="/logos/europ-assistance-logo.png" alt="Europ Assistance logo" className="w-full h-full object-contain" />
+                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center">
+                      <img src="/logos/europ-assistance-logo.png" alt="Europ Assistance logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>
@@ -388,8 +388,8 @@ export default function EuropAssistanceStoryPage() {
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6 max-w-3xl">{c.context.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8 max-w-3xl">{c.context.paragraph}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6">{c.context.title}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
             </Section>
 
             {/* CHALLENGE */}
@@ -488,24 +488,23 @@ export default function EuropAssistanceStoryPage() {
               {/* Key metrics */}
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* +24% upward bar chart */}
+                  {/* +24% upward arrow */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-end justify-center gap-1.5 pb-2">
-                      <div className="rounded-sm bg-white/20" style={{ width: 14, height: 30 }} />
-                      <div className="rounded-sm bg-white/35" style={{ width: 14, height: 44 }} />
-                      <div className="rounded-sm bg-white/55" style={{ width: 14, height: 58 }} />
-                      <div className="rounded-sm bg-[#4b4df7]" style={{ width: 14, height: 76 }} />
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <path d="M32 52V16" stroke="#4b4df7" strokeWidth="4" strokeLinecap="round"/>
+                        <path d="M16 32l16-16 16 16" stroke="#4b4df7" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
                   </div>
-                  {/* -18% circular progress */}
+                  {/* -18% downward arrow */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-5">
-                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 40 * 0.18} ${2 * Math.PI * 40}`} />
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <path d="M32 12v36" stroke="#4b4df7" strokeWidth="4" strokeLinecap="round"/>
+                        <path d="M16 32l16 16 16-16" stroke="#4b4df7" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>

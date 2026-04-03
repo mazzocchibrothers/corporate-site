@@ -42,10 +42,12 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
+        { label: 'Settore', value: 'GDO' },
         { label: 'Gruppo', value: 'Carrefour Group' },
         { label: 'Fatturato', value: '~4,5 mld €' },
         { label: 'Dipendenti', value: '13.000+ diretti + 8.000 rete franchising' },
         { label: 'Punti vendita', value: '~1.200' },
+        { label: 'Use Case', value: 'Hiring, Learning & Development' },
       ],
     },
     context: {
@@ -152,7 +154,7 @@ const content = {
       title: 'Storie correlate',
       stories: [
         { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'Come Europ Assistance ha assunto il 24% in più con il 18% di colloqui in meno.' },
-        { id: 'subdued', company: 'Subdued', tag: 'Retail Fashion · Hiring', headline: 'Vincere la guerra per il talento Gen Z senza annegare nei colloqui.' },
+        { id: 'subdued', company: 'Subdued', tag: 'Retail Fashion · Hiring', headline: "Subdued: come creare uno standard di selezione unico e scalabile per l'espansione di una rete di 130+ negozi" },
       ],
       cta: 'Leggi la storia',
     },
@@ -180,10 +182,12 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
+        { label: 'Industry', value: 'GDO' },
         { label: 'Group', value: 'Carrefour Group' },
         { label: 'Revenue', value: '~€4.5B' },
         { label: 'Employees', value: '13,000+ direct + 8,000 franchise network' },
         { label: 'Stores', value: '~1,200' },
+        { label: 'Use Case', value: 'Hiring, Learning & Development' },
       ],
     },
     context: {
@@ -290,7 +294,7 @@ const content = {
       title: 'Related Stories',
       stories: [
         { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'How Europ Assistance hired 24% more with 18% fewer interviews.' },
-        { id: 'subdued', company: 'Subdued', tag: 'Retail Fashion · Hiring', headline: 'Winning Gen Z Talent Without Drowning in Interviews.' },
+        { id: 'subdued', company: 'Subdued', tag: 'Retail Fashion · Hiring', headline: 'Subdued: building a single scalable selection standard for a network of 130+ stores' },
       ],
       cta: 'Read the story',
     },
@@ -359,8 +363,8 @@ export default function CarrefourStoryPage() {
               <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
-                      <img src="/logos/carrefour.png" alt="Carrefour logo" className="w-full h-full object-contain" />
+                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
+                      <img src="/logos/carrefour.png" alt="Carrefour logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>

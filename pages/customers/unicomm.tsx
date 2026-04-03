@@ -42,12 +42,12 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
+        { label: 'Settore', value: 'GDO' },
         { label: 'Gruppo', value: 'Gruppo Unicomm' },
         { label: 'Fatturato', value: '~2 mld €' },
         { label: 'Dipendenti', value: '8.000+' },
-        { label: 'Insegne', value: '7' },
         { label: 'Punti vendita diretti', value: '270+' },
-        { label: 'Regioni', value: '7' },
+        { label: 'Use Case', value: 'Hiring, Learning & Development, Internal Mobility' },
       ],
     },
     context: {
@@ -141,7 +141,7 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "~900 persone valutate. Una pipeline di Store Manager costruita dall'interno." },
+        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "Come In's Mercato ha costruito una pipeline interna di Store Manager" },
         { id: 'adr', company: 'Aeroporti di Roma', industry: 'Aviation', tag: 'Aviation · Sviluppo Interno', headline: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi." },
       ],
       cta: 'Leggi la storia',
@@ -170,12 +170,12 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
+        { label: 'Industry', value: 'GDO' },
         { label: 'Group', value: 'Unicomm Group' },
         { label: 'Revenue', value: '~€2B' },
         { label: 'Employees', value: '8,000+' },
-        { label: 'Retail Brands', value: '7' },
         { label: 'Direct Stores', value: '270+' },
-        { label: 'Regions', value: '7' },
+        { label: 'Use Case', value: 'Hiring, Learning & Development, Internal Mobility' },
       ],
     },
     context: {
@@ -269,7 +269,7 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'ins-mercato', company: "In's Mercato", tag: "Retail GDO · Internal Mobility", headline: "~900 people assessed. A Store Manager pipeline built from within." },
+        { id: 'ins-mercato', company: "In's Mercato", tag: "Retail GDO · Internal Mobility", headline: "How In's Mercato built an internal pipeline of Store Managers" },
         { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Development', headline: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a €9 billion plan.' },
       ],
       cta: 'Read the story',
@@ -331,8 +331,8 @@ export default function UnicommStoryPage() {
               <motion.div className="lg:col-span-5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-6">
                   <div className="flex items-center gap-4 mb-4 pb-4 border-b border-white/[0.08]">
-                    <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
-                      <img src="/logos/unicomm-logo.jpg" alt="Unicomm logo" className="w-full h-full object-contain" />
+                    <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center">
+                      <img src="/logos/unicomm-logo.jpg" alt="Unicomm logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>
@@ -494,33 +494,31 @@ export default function UnicommStoryPage() {
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
                   </div>
-                  {/* Metric 1 — calendar icon */}
+                  {/* Metric 1 — 4 people icons */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <rect x="4" y="10" width="56" height="50" rx="6" stroke="rgba(255,255,255,0.15)" strokeWidth="3" />
-                        <rect x="4" y="10" width="56" height="16" rx="6" fill="#4b4df7" />
-                        <line x1="20" y1="4" x2="20" y2="18" stroke="white" strokeWidth="3" strokeLinecap="round" />
-                        <line x1="44" y1="4" x2="44" y2="18" stroke="white" strokeWidth="3" strokeLinecap="round" />
-                        <rect x="13" y="34" width="8" height="8" rx="2" fill="rgba(255,255,255,0.5)" />
-                        <rect x="28" y="34" width="8" height="8" rx="2" fill="rgba(255,255,255,0.5)" />
-                        <rect x="43" y="34" width="8" height="8" rx="2" fill="rgba(255,255,255,0.5)" />
-                        <rect x="13" y="48" width="8" height="8" rx="2" fill="rgba(255,255,255,0.3)" />
-                        <rect x="28" y="48" width="8" height="8" rx="2" fill="rgba(75,77,247,0.8)" />
+                      <svg viewBox="0 0 80 64" className="w-20 h-16" fill="none">
+                        <circle cx="10" cy="20" r="7" fill="rgba(75,77,247,0.25)" stroke="#4b4df7" strokeWidth="2"/>
+                        <path d="M2 44c0-8 4-12 8-12s8 4 8 12" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
+                        <circle cx="30" cy="20" r="7" fill="rgba(75,77,247,0.4)" stroke="#4b4df7" strokeWidth="2"/>
+                        <path d="M22 44c0-8 4-12 8-12s8 4 8 12" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
+                        <circle cx="50" cy="20" r="7" fill="rgba(75,77,247,0.6)" stroke="#4b4df7" strokeWidth="2"/>
+                        <path d="M42 44c0-8 4-12 8-12s8 4 8 12" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
+                        <circle cx="70" cy="20" r="7" fill="#4b4df7" stroke="#4b4df7" strokeWidth="2"/>
+                        <path d="M62 44c0-8 4-12 8-12s8 4 8 12" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
                       </svg>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
                   </div>
-                  {/* Metric 2 — pipeline/flow icon */}
+                  {/* Metric 2 — 2 dots connected by arrow */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <rect x="4" y="24" width="16" height="16" rx="4" fill="rgba(75,77,247,0.3)" stroke="#4b4df7" strokeWidth="2"/>
-                        <rect x="24" y="24" width="16" height="16" rx="4" fill="rgba(75,77,247,0.5)" stroke="#4b4df7" strokeWidth="2"/>
-                        <rect x="44" y="24" width="16" height="16" rx="4" fill="#4b4df7" stroke="#4b4df7" strokeWidth="2"/>
-                        <line x1="20" y1="32" x2="24" y2="32" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
-                        <line x1="40" y1="32" x2="44" y2="32" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
+                      <svg viewBox="0 0 64 32" className="w-16 h-8" fill="none">
+                        <circle cx="8" cy="16" r="7" fill="#4b4df7" stroke="#4b4df7" strokeWidth="2"/>
+                        <line x1="15" y1="16" x2="49" y2="16" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round"/>
+                        <path d="M44 10l8 6-8 6" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                        <circle cx="56" cy="16" r="7" fill="rgba(75,77,247,0.3)" stroke="#4b4df7" strokeWidth="2"/>
                       </svg>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.1rem,2vw,1.6rem)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>{c.results.metrics[2].value}</span>
