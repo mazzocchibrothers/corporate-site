@@ -25,15 +25,15 @@ const content = {
     breadcrumb: 'Clienti',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Come Douglas ha mappato le competenze di ',
+      before: 'Come il primo beauty retailer europeo ha reso visibili le competenze di ',
       highlight1: '2.200 persone',
-      middle: ' su 370 store in sole ',
+      middle: ' su 370 store in ',
       highlight2: '5 settimane',
       after: '',
     },
-    subtitle: "Una rete vendita di 2.500 dipendenti distribuita su quasi 400 punti vendita, nessuna visibilità sulle competenze e un turnover elevato tipico del retail. Con Skillvue, Douglas ha creato per la prima volta un database completo di competenze dell'intera forza lavoro, accorciando la distanza tra HQ e rete vendita e abilitando percorsi di crescita basati sui dati.",
+    subtitle: "Una rete vendita di 2.500 dipendenti distribuita su quasi 400 punti vendita, nessuna visibilità sulle competenze e un turnover elevato tipico del beauty retail. Con Skillvue, Douglas ha creato per la prima volta un database completo di competenze dell'intera forza lavoro, accorciando la distanza tra HQ e rete vendita e abilitando percorsi di crescita basati sui dati.",
     heroMetrics: [
-      { value: '2.200', label: 'persone mappate' },
+      { value: '2K', label: 'persone portate nel radar di HR' },
       { value: '5 sett.', label: 'tempo di mappatura' },
       { value: '88%', label: 'tasso di completion' },
     ],
@@ -44,7 +44,7 @@ const content = {
       facts: [
         { label: 'Settore', value: 'Retail' },
         { label: 'Gruppo', value: 'Douglas Group' },
-        { label: 'Fatturato', value: '~4,4 mld €' },
+        { label: 'Fatturato', value: '521,5 mln €' },
         { label: 'Dipendenti', value: '2.500' },
         { label: 'Punti vendita', value: '370+' },
         { label: 'Use Case', value: 'Learning & Development, Internal Mobility' },
@@ -54,7 +54,7 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Il Gruppo Douglas, con oltre <strong className="text-[#1A1A2E]/80 font-semibold">1.800 profumerie in 19 paesi europei</strong>, opera in Italia con oltre <strong className="text-[#1A1A2E]/80 font-semibold">370 punti vendita</strong> e circa <strong className="text-[#1A1A2E]/80 font-semibold">2.500 persone</strong>. L'HQ non disponeva di <strong className="text-[#1A1A2E]/80 font-semibold">alcun dato oggettivo sulle competenze</strong> della forza lavoro: l'unica fonte erano i feedback soggettivi dei responsabili di negozio o di area. In un settore con <strong className="text-[#1A1A2E]/80 font-semibold">alti tassi di turnover</strong> e crescente talent scarcity, il team HR ha scelto Skillvue per adottare un approccio data-driven alla gestione del talento.
+        Douglas Group, con <strong className="text-[#1A1A2E]/80 font-semibold">1.972 punti vendita in 22 paesi</strong>, un fatturato di <strong className="text-[#1A1A2E]/80 font-semibold">€4,58 miliardi</strong> a livello europeo e un piano di espansione da <strong className="text-[#1A1A2E]/80 font-semibold">200 nuove aperture e 400 ristrutturazioni entro fine 2026</strong>, è il primo beauty retailer omnicanale in Europa. La qualità della consulenza in-store è il principale vantaggio competitivo del retail fisico rispetto all'e-commerce, ma è anche la variabile meno misurata e strutturata del settore. In Italia, Douglas opera con oltre <strong className="text-[#1A1A2E]/80 font-semibold">370 punti vendita</strong> e circa <strong className="text-[#1A1A2E]/80 font-semibold">2.500 persone</strong> nella rete commerciale, in un mercato beauty che traina i consumi interni per <strong className="text-[#1A1A2E]/80 font-semibold">€14,2 miliardi</strong>.<br /><br />Seppure in un contesto di crescita molto solida, dal punto di vista people emergevano delle lacune. L\u2019HQ italiano non disponeva di <strong className="text-[#1A1A2E]/80 font-semibold">alcun dato oggettivo sulle competenze</strong> distribuite nelle persone in rete vendita: l\u2019unica fonte erano i feedback dei responsabili di negozio o di area. In un settore dove il turnover del personale di vendita oscilla tra il <strong className="text-[#1A1A2E]/80 font-semibold">25% e il 35%</strong> annuo e può essere direttamente ricollegato alla possibilità di crescita e sviluppo all\u2019interno dell\u2019azienda, è diventata chiara la necessità di adottare un approccio più data-driven alla gestione del talento.
       </>,
       summary: "Il progetto ha trasformato la gestione del talento da un modello basato su feedback soggettivi e osservazione in presenza a un sistema scalabile e data-driven, creando per la prima volta una fotografia completa e oggettiva delle competenze dell'intera rete vendita — soft skill e hard skill — e abilitando percorsi di crescita, mobilità interna e formazione customizzata basati su dati reali.",
     },
@@ -67,35 +67,35 @@ const content = {
       businessChallenges: [
         {
           icon: Eye,
-          title: 'Zero visibilità sulle competenze della rete vendita',
-          text: "Su quasi 400 punti vendita l\u2019HQ non aveva dati strutturati sulle competenze. Le uniche informazioni erano i feedback soggettivi dei responsabili, disomogenei tra le sedi e senza possibilit\u00e0 di confronto oggettivo.",
+          title: 'Assenza di visibilità sulle figure ad alto potenziale',
+          text: "Le uniche informazioni disponibili erano feedback soggettivi dei responsabili, disomogenei e non confrontabili tra sedi.",
         },
         {
           icon: Users,
           title: 'Forte distanza tra HQ e rete vendita',
-          text: "La rete percepiva una forte disconnessione dalla sede centrale. I dipendenti non avevano opportunit\u00e0 per far emergere competenze e aspirazioni: il talento restava invisibile, con impatto diretto su engagement e retention.",
+          text: "I dipendenti non avevano modo di far emergere competenze e aspirazioni. Il talento restava invisibile, con impatto su engagement e retention.",
         },
         {
           icon: TrendingUp,
-          title: 'Turnover elevato e talent scarcity crescente',
-          text: "Il beauty/retail soffre di turnover elevato e crescente talent scarcity. Senza la capacit\u00e0 di identificare e valorizzare proattivamente i talenti interni, il rischio di perderli era costante e crescente.",
+          title: 'Turnover elevato e consulenza in-store a rischio',
+          text: "Con un turnover del 25-35% e la crescente complessit\u00e0 del prodotto beauty \u2013 skincare scientifica, fragranze di nicchia, clean beauty \u2013 trattenere e sviluppare i talenti interni \u00e8 un asset strategico non negoziabile.",
         },
       ],
       hrChallenges: [
         {
           icon: Zap,
-          title: 'Analisi delle competenze non sostenibile',
-          text: "L\u2019osservazione in presenza dei responsabili comportava tempi lunghi, costi elevati e risultati disomogenei. Su 2.500 persone distribuite sul territorio, il modello precedente non era pi\u00f9 pensabile.",
+          title: 'Analisi delle competenze necessaria ma insostenibile',
+          text: "Su 2.500 persone distribuite sul territorio, l\u2019osservazione in presenza comportava tempi lunghi, costi elevati e risultati disomogenei.",
         },
         {
           icon: Layers,
           title: 'Sviluppo riservato al 5-10% della popolazione',
-          text: "Il talento era ancora legato al 5-10% della popolazione aziendale. Mancava la capacit\u00e0 di lavorare su scala, offrendo opportunit\u00e0 di crescita a tutta la forza lavoro, non solo ai pochi gi\u00e0 identificati.",
+          text: "Mancava la capacit\u00e0 di offrire opportunit\u00e0 di crescita su scala, non solo ai pochi gi\u00e0 identificati.",
         },
         {
           icon: BarChart3,
           title: 'Nessun feedback strutturato ai dipendenti',
-          text: "Nessun feedback oggettivo sulle competenze per i dipendenti della rete. L\u2019assenza di una restituzione strutturata lasciava l\u2019iniziativa di sviluppo interamente nelle mani del singolo responsabile.",
+          text: "L\u2019assenza di una restituzione oggettiva lasciava l\u2019iniziativa di sviluppo nelle mani del singolo responsabile.",
         },
       ],
     },
@@ -103,65 +103,36 @@ const content = {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
       title: 'Cosa doveva cambiare',
       items: [
-        { icon: Eye, text: "Fotografare in maniera oggettiva e immediata le competenze dell'intera rete vendita: un'analisi standardizzata su tutti i 2.500 dipendenti, su tutti i ruoli (Beauty Advisor, Sales Assistant, Store Manager) e su tutte le seniority" },
-        { icon: Zap, text: "Ottimizzare tempi e costi dell'analisi delle competenze interne: renderli sostenibili per i tassi di turnover e la velocità del mercato del lavoro, sostituendo l'osservazione in presenza con un sistema scalabile" },
-        { icon: TrendingUp, text: "Promuovere percorsi di crescita interna e ridurre il turnover: identificare persone ad alto potenziale e propensioni a ruoli diversi per agevolare spostamenti interni orizzontali e verticali, riducendo gli effort di selezione dall'esterno" },
-        { icon: Target, text: "Lavorare preventivamente su formazione e sviluppo: costruire un database di competenze condiviso che permetta di attivare percorsi formativi customizzati per colmare i gap esistenti e pianificare lo sviluppo della forza lavoro" },
+        { icon: Eye, text: "Fotografare in maniera oggettiva e immediata le competenze dell'intera rete vendita: un\u2019analisi standardizzata su tutti i ruoli (Beauty Advisor, Sales Assistant, Store Manager) e su tutte le seniority." },
+        { icon: Zap, text: "Ottimizzare tempi e costi dell\u2019analisi delle competenze interne: renderli sostenibili per i tassi di turnover e la velocit\u00e0 del mercato del lavoro, sostituendo l\u2019osservazione in presenza con un sistema scalabile." },
+        { icon: TrendingUp, text: "Promuovere percorsi di crescita interna e ridurre il turnover: identificare persone ad alto potenziale e propensioni a ruoli diversi per agevolare spostamenti interni orizzontali e verticali, riducendo gli effort di selezione dall\u2019esterno." },
+        { icon: Target, text: "Lavorare preventivamente su formazione e sviluppo: costruire un database di competenze condiviso che permetta di attivare percorsi formativi customizzati per colmare i gap esistenti e pianificare lo sviluppo della forza lavoro." },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue',
-      intro: "Skillvue \u00e8 stato adottato con contratto full senza pilota preliminare, a testimonianza della fiducia immediata. Il team People Science ha allineato la piattaforma al modello Douglas e creato assessment calati sulle reali situazioni lavorative dei punti vendita.",
+      intro: "Il team People Science Skillvue ha lavorato per allineare gli assessment costruiti in piattaforma con il modello di leadership aziendale e creato valutazioni calate sulle reali situazioni lavorative dei punti vendita.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
-        { icon: Wrench, label: 'Hard Skill Make-up & Skincare (personalizzate)' },
-        { icon: Heart, label: 'Soft Skill trasversali' },
-        { icon: Target, label: 'Competenze di vendita' },
-        { icon: Users, label: 'Mix calibrato per ruolo' },
-      ],
-      methodologyLabel: 'METODOLOGIA',
-      methodology: [
-        {
-          title: 'Hard Skill Test verticali per il beauty',
-          text: "Hard Skill Test personalizzati su Make-up & Skincare, calati sulle situazioni lavorative reali. Combinati con i Soft Skill Test della libreria Skillvue per assessment completi e specifici per ciascun ruolo.",
-        },
-        {
-          title: 'Assessment differenziati per ruolo',
-          text: "Beauty Advisor, Sales Assistant e Store Manager: assessment specifici con il mix pi\u00f9 indicato di hard e soft skill, calibrati sul modello di competenze Douglas. Un unico standard declinato per ruolo.",
-        },
-        {
-          title: 'Deployment diretto, senza pilota',
-          text: "Assessment erogati direttamente a tutti i 2.500 dipendenti senza test preliminari. Fotografia completa raccolta in sole 5 settimane, senza alcuna integrazione tecnica — primo progetto di queste dimensioni nel portfolio Skillvue.",
-        },
+        { icon: Wrench, label: 'Hard Skill industry-specific' },
+        { icon: Heart, label: 'Soft Skill chiave per la vendita' },
       ],
     },
     results: {
       badge: 'RISULTATI',
       title: 'Key Metrics & Impatto',
-      subtitle: "I risultati misurabili ottenuti da Douglas attraverso la mappatura delle competenze dell'intera rete vendita con Skillvue.",
+      subtitle: "I risultati quantitativi e qualitativi del progetto Skillvue x Douglas.",
       metrics: [
-        { value: '2.200', label: 'Persone mappate', sublabel: 'Su una rete di 2.500 dipendenti (88% di completion rate)' },
-        { value: '5 sett.', label: 'Tempo di mappatura', sublabel: "Per l'intera rete vendita su tutto il territorio nazionale" },
-        { value: '370+', label: 'Punti vendita coinvolti', sublabel: 'Per copertura totale della rete' },
-        { value: '3 ruoli', label: 'Profili analizzati', sublabel: 'Beauty Advisor, Sales Assistant, Store Manager' },
+        { value: '88%', label: 'Completion rate' },
+        { value: '5 sett.', label: 'Tempo di mappatura' },
+        { value: 'Solo 3', label: 'Persone nel team HR' },
       ],
       qualitative: [
-        { icon: Eye, title: 'Prima fotografia oggettiva delle competenze', text: "Per la prima volta l\u2019HQ dispone di una visione chiara di ogni persona della rete vendita, sia sulle competenze tecniche beauty che sulle soft skill. Un quadro direttamente fruibile per analisi pi\u00f9 rapide sulle aree di intervento." },
-        { icon: Target, title: 'Talento nascosto e potenziale predittivo', text: "L\u2019analisi ha fotografato lo skill set attuale e individuato propensioni predittive a ruoli diversi. Ha agevolato spostamenti interni orizzontali e verticali, scoprendo talento dove prima non esisteva visibilit\u00e0." },
-        { icon: CheckCircle, title: 'Formazione customizzata e skill gap colmati', text: "Con i dati raccolti sono stati attivati percorsi formativi customizzati per colmare i gap esistenti e definire pi\u00f9 rapidamente le ricollocazioni interne dei talenti." },
-        { icon: Heart, title: 'Distanza HQ-rete vendita accorciata', text: "Ogni dipendente ha potuto far emergere competenze e potenzialit\u00e0 direttamente verso l\u2019HQ, riducendo la percezione di distanza dalla sede centrale." },
-        { icon: Zap, title: 'Ottimizzazione di tempi e costi', text: "Skillvue ha ottimizzato i tempi di analisi delle competenze e ridotto l\u2019impegno dei responsabili nel fornire feedback, liberando risorse per attivit\u00e0 di sviluppo a maggior valore." },
-      ],
-    },
-    vision: {
-      badge: 'EVOLUZIONE',
-      title: 'Da mappatura una tantum a people strategy skills-based continua',
-      intro: "La mappatura ha dimostrato che un approccio scalabile e data-driven alla gestione del talento è possibile anche su una rete frammentata di 2.500 persone. Il passo naturale è consolidare questo modello come standard continuo per tutte le decisioni sulle persone.",
-      objective: "Trasformare la fotografia una tantum in un sistema ricorrente: ogni persona valutata con la stessa logica skills-based dalla selezione alla mobilit\u00e0 interna allo sviluppo.",
-      bullets: [
-        "Mappatura competenze come processo ricorrente per mantenere il database aggiornato rispetto al turnover",
-        "Estensione del modello skills-based alla selezione esterna, allineando hiring e sviluppo interno",
+        { icon: Eye, title: 'Competenze finalmente visibili', text: "Per la prima volta, una visione chiara e confrontabile delle competenze di oggi e di domani per ogni persona della rete vendita: un quadro direttamente azionabile per decisioni su crescita, mobilit\u00e0 e formazione." },
+        { icon: Target, title: 'Talento nascosto e potenziale predittivo', text: "L\u2019analisi ha individuato propensioni predittive a ruoli diversi, agevolando spostamenti interni orizzontali e verticali e scoprendo talento dove prima non esisteva visibilit\u00e0." },
+        { icon: CheckCircle, title: 'Formazione customizzata e skill gap colmati', text: "Con i dati raccolti sono stati attivati percorsi formativi customizzati per colmare i gap esistenti e definire pi\u00f9 rapidamente le ricollocazioni interne. Un altro punto cruciale per ottimizzare costi e performance." },
+        { icon: Zap, title: 'Ottimizzazione di tempi e costi', text: "Tempi di analisi ottimizzati e impegno dei responsabili ridotto, liberando risorse per attivit\u00e0 di sviluppo a maggior valore." },
       ],
     },
     related: {
@@ -179,15 +150,15 @@ const content = {
     breadcrumb: 'Customers',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'How Douglas mapped the skills of ',
+      before: 'How Europe\u2019s leading beauty retailer made the skills of ',
       highlight1: '2,200 people',
-      middle: ' across 370 stores in just ',
+      middle: ' across 370 stores visible in ',
       highlight2: '5 weeks',
       after: '',
     },
-    subtitle: "A retail network of 2,500 employees spread across nearly 400 stores, zero visibility on competencies, and the high turnover typical of retail. With Skillvue, Douglas created the first-ever complete skills database of its entire workforce, closing the gap between HQ and the sales network and enabling data-driven career development.",
+    subtitle: "A retail network of 2,500 employees spread across nearly 400 stores, zero visibility on competencies, and the high turnover typical of beauty retail. With Skillvue, Douglas created the first-ever complete skills database of its entire workforce, closing the gap between HQ and the sales network and enabling data-driven career development.",
     heroMetrics: [
-      { value: '2,200', label: 'people mapped' },
+      { value: '2K', label: 'people brought into HR\u2019s radar' },
       { value: '5 weeks', label: 'mapping timeframe' },
       { value: '88%', label: 'completion rate' },
     ],
@@ -198,7 +169,7 @@ const content = {
       facts: [
         { label: 'Industry', value: 'Retail' },
         { label: 'Group', value: 'Douglas Group' },
-        { label: 'Revenue', value: '~€4.4B' },
+        { label: 'Revenue', value: '€521.5M (Italy)' },
         { label: 'Employees', value: '2,500' },
         { label: 'Stores', value: '370+' },
         { label: 'Use Case', value: 'Learning & Development, Internal Mobility' },
@@ -208,7 +179,8 @@ const content = {
       badge: 'CONTEXT',
       title: 'The Project Context',
       paragraph: <>
-        Douglas Group, with over <strong className="text-[#1A1A2E]/80 font-semibold">1,800 perfumeries across 19 European countries</strong>, is one of the most important players in the European beauty and cosmetics market. Present in Italy since <strong className="text-[#1A1A2E]/80 font-semibold">2017</strong> following the acquisition of the LLG Limoni La Gardenia Group, Douglas was the first company in the sector to establish a perfumery chain across the country, with over <strong className="text-[#1A1A2E]/80 font-semibold">370 stores</strong> incorporated into the Group's Southern Europe Region since 2021. The company operates a retail network of approximately <strong className="text-[#1A1A2E]/80 font-semibold">2,500 people</strong> distributed across nearly <strong className="text-[#1A1A2E]/80 font-semibold">400 stores</strong>, with a frequent perception of distance from the central HQ. The HQ had <strong className="text-[#1A1A2E]/80 font-semibold">no objective competency data</strong> on its sales force: the only source was the subjective feedback of store or area managers. In a context characterised by <strong className="text-[#1A1A2E]/80 font-semibold">high turnover rates</strong>, especially among younger cohorts, and growing talent scarcity in the beauty/retail sector, the HR team identified Skillvue's technology as the right partner to adopt a smart, data-driven approach to talent management.      </>,
+        Douglas Group, with <strong className="text-[#1A1A2E]/80 font-semibold">1,972 stores across 22 countries</strong>, a European revenue of <strong className="text-[#1A1A2E]/80 font-semibold">€4.58 billion</strong>, and an expansion plan of <strong className="text-[#1A1A2E]/80 font-semibold">200 new openings and 400 renovations by end of 2026</strong>, is Europe\u2019s leading omnichannel beauty retailer. The quality of in-store advisory is the primary competitive advantage of physical retail over e-commerce \u2014 yet it is also the least measured and structured variable in the sector. In Italy, Douglas operates with over <strong className="text-[#1A1A2E]/80 font-semibold">370 stores</strong> and approximately <strong className="text-[#1A1A2E]/80 font-semibold">2,500 people</strong> in the commercial network, in a beauty market worth <strong className="text-[#1A1A2E]/80 font-semibold">€14.2 billion</strong> in domestic consumption.<br /><br />Despite a context of very solid growth, people-side gaps were emerging. The Italian HQ had <strong className="text-[#1A1A2E]/80 font-semibold">no objective data on the competencies</strong> of its sales network: the only source was feedback from store or area managers. In a sector where sales staff turnover ranges between <strong className="text-[#1A1A2E]/80 font-semibold">25% and 35%</strong> annually \u2014 and can be directly linked to opportunities for growth and development within the company \u2014 the need to adopt a more data-driven approach to talent management became clear.
+      </>,
       summary: "The project transformed talent management from a model based on subjective feedback and in-person observation to a scalable, data-driven system — creating for the first time a complete and objective picture of skills across the entire sales network, both soft and hard skills, and enabling career development, internal mobility and customised training based on real data.",
     },
     challenge: {
@@ -220,35 +192,35 @@ const content = {
       businessChallenges: [
         {
           icon: Eye,
-          title: 'Zero visibility on sales force competencies',
-          text: "Across nearly 400 stores the HQ had no structured data on competencies. The only information was the subjective feedback of store or area managers, inconsistent across locations and without objective comparison.",
+          title: 'No visibility on high-potential profiles',
+          text: "The only information available was subjective feedback from managers \u2014 inconsistent and not comparable across locations.",
         },
         {
           icon: Users,
-          title: 'A strong gap between HQ and the retail network',
-          text: "The network felt a strong disconnect from the central office. Employees had no opportunities to surface their competencies and aspirations: talent remained invisible, with direct impact on engagement and retention.",
+          title: 'A wide gap between HQ and the retail network',
+          text: "Employees had no way to surface their competencies and aspirations. Talent remained invisible, with direct impact on engagement and retention.",
         },
         {
           icon: TrendingUp,
-          title: 'High turnover and growing talent scarcity',
-          text: "The beauty/retail sector suffers from high turnover and growing talent scarcity. Without the ability to proactively identify and develop internal talent, the risk of losing the best people was constant and increasing.",
+          title: 'High turnover and in-store advisory at risk',
+          text: "With 25\u201335% turnover and the growing complexity of beauty products \u2014 scientific skincare, niche fragrances, clean beauty \u2014 retaining and developing internal talent is a non-negotiable strategic asset.",
         },
       ],
       hrChallenges: [
         {
           icon: Zap,
-          title: 'Unsustainable competency analysis model',
-          text: "In-person observation by managers meant long timelines, high costs and inconsistent results. With 2,500 people distributed across the territory, the previous model was no longer feasible.",
+          title: 'Competency analysis: necessary but unsustainable',
+          text: "With 2,500 people distributed across the territory, in-person observation meant long timelines, high costs and inconsistent results.",
         },
         {
           icon: Layers,
-          title: 'Development reserved for only 5–10% of the workforce',
-          text: "Talent was still tied to the 5–10% of the organisation projected towards vertical growth. There was no capability to work at scale and offer growth opportunities to all employees, not just the few already identified.",
+          title: 'Development reserved for only 5\u201310% of the workforce',
+          text: "There was no capability to offer growth opportunities at scale \u2014 only to the few already identified.",
         },
         {
           icon: BarChart3,
           title: 'No structured feedback to employees',
-          text: "Sales network employees received no objective feedback on their competencies. The absence of structured feedback left development entirely at the discretion of each individual line manager.",
+          text: "The absence of objective feedback left development initiatives entirely in the hands of each individual manager.",
         },
       ],
     },
@@ -256,65 +228,36 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What Needed to Change',
       items: [
-        { icon: Eye, text: "Map the competencies of the entire retail network in an objective, immediate way: a standardised assessment across all 2,500 employees, all roles (Beauty Advisor, Sales Assistant, Store Manager) and all seniority levels" },
-        { icon: Zap, text: "Optimise the time and cost of internal competency analysis: make it sustainable given turnover rates and the pace of the labour market, replacing in-person observation with a scalable system" },
-        { icon: TrendingUp, text: "Promote internal career paths and reduce turnover: identify high-potential people and propensities for different roles to facilitate horizontal and vertical internal moves, reducing the need for external hiring" },
-        { icon: Target, text: "Work proactively on training and development: build a shared competency database to activate customised learning paths that close existing skill gaps and plan workforce development" },
+        { icon: Eye, text: "Map the competencies of the entire retail network objectively and immediately: a standardised assessment across all roles (Beauty Advisor, Sales Assistant, Store Manager) and all seniority levels." },
+        { icon: Zap, text: "Optimise the time and cost of internal competency analysis: make it sustainable given turnover rates and the pace of the labour market, replacing in-person observation with a scalable system." },
+        { icon: TrendingUp, text: "Promote internal career paths and reduce turnover: identify high-potential people and propensities for different roles to facilitate horizontal and vertical internal moves, reducing the need for external hiring." },
+        { icon: Target, text: "Work proactively on training and development: build a shared competency database to activate customised learning paths that close existing skill gaps and plan workforce development." },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was adopted on a full contract without a preliminary pilot, a sign of immediate trust. The People Science team aligned the platform to the Douglas model and created assessments grounded in the real working situations of store employees.",
+      intro: "The Skillvue People Science team worked to align the assessments built on the platform with the company\u2019s leadership model, creating evaluations grounded in the real working situations of store employees.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
-        { icon: Wrench, label: 'Make-up & Skincare Hard Skills (custom)' },
-        { icon: Heart, label: 'Cross-functional Soft Skills' },
-        { icon: Target, label: 'Sales competencies' },
-        { icon: Users, label: 'Role-calibrated mix' },
-      ],
-      methodologyLabel: 'METHODOLOGY',
-      methodology: [
-        {
-          title: 'Vertical Hard Skill Tests for beauty',
-          text: "Custom Hard Skill Tests for Make-up & Skincare, grounded in real daily work situations. Combined with Soft Skill Tests from the Skillvue library for complete, role-specific assessments.",
-        },
-        {
-          title: 'Role-differentiated assessments',
-          text: "Beauty Advisor, Sales Assistant and Store Manager: specific assessments with the most appropriate mix of hard and soft skills, calibrated to the Douglas competency model. One standard, adapted per role.",
-        },
-        {
-          title: 'Direct deployment, no pilot',
-          text: "Assessments deployed directly to all 2,500 employees without preliminary testing. Full skills picture collected in just 5 weeks, without any technical integration — first project of this scale in the Skillvue portfolio.",
-        },
+        { icon: Wrench, label: 'Industry-specific Hard Skills' },
+        { icon: Heart, label: 'Key Soft Skills for sales' },
       ],
     },
     results: {
       badge: 'RESULTS',
       title: 'Key Metrics & Impact',
-      subtitle: 'The measurable outcomes Douglas achieved through the competency mapping of its entire retail network with Skillvue.',
+      subtitle: 'Quantitative and qualitative outcomes of the Skillvue x Douglas project.',
       metrics: [
-        { value: '2,200', label: 'People mapped', sublabel: 'Across a network of 2,500 employees (88% completion rate)' },
-        { value: '5 weeks', label: 'Mapping timeframe', sublabel: 'For the entire national retail network' },
-        { value: '370+', label: 'Stores involved', sublabel: 'Full network coverage' },
-        { value: '3 roles', label: 'Profiles assessed', sublabel: 'Beauty Advisor, Sales Assistant, Store Manager' },
+        { value: '88%', label: 'Completion rate' },
+        { value: '5 weeks', label: 'Mapping timeframe' },
+        { value: 'Only 3', label: 'People in the HR team' },
       ],
       qualitative: [
-        { icon: Eye, title: 'First objective picture of competencies', text: "For the first time the HQ has a clear view of every person across the retail network — both technical beauty competencies and soft skills. A picture directly usable for faster analyses of where to intervene." },
-        { icon: Target, title: 'Hidden talent and predictive potential', text: "The analysis captured each person's current skill set and predictively identified propensities for different roles, facilitating horizontal and vertical internal moves and revealing talent where no visibility previously existed." },
-        { icon: CheckCircle, title: 'Customised training and skill gaps closed', text: "With the collected data, customised training paths were activated to close existing gaps and define internal talent redeployments more quickly." },
-        { icon: Heart, title: 'HQ-to-network distance closed', text: "Every employee could surface their competencies and potential directly to the HQ, reducing the perceived distance from the central office." },
-        { icon: Zap, title: 'Time and cost optimisation', text: "Skillvue optimised the time of competency analysis and reduced the burden on managers for providing feedback, freeing resources for higher-value development activities." },
-      ],
-    },
-    vision: {
-      badge: 'EVOLUTION',
-      title: 'From a one-off mapping to a continuous skills-based people strategy',
-      intro: "The mapping demonstrated that a scalable, data-driven approach to talent management is possible even across a fragmented network of 2,500 people. The natural next step is to consolidate this model as the ongoing standard for all people decisions.",
-      objective: "Transform the one-off snapshot into a recurring system: every person assessed with the same skills-based logic from selection to internal mobility and development.",
-      bullets: [
-        "Competency mapping as a recurring process to keep the database updated as turnover and role evolution happen",
-        "Extension of the skills-based model to external hiring, aligning competencies measured at hiring with those developed internally",
+        { icon: Eye, title: 'Skills finally visible', text: "For the first time, a clear and comparable view of the competencies of every person across the retail network \u2014 a picture directly actionable for decisions on growth, mobility and training." },
+        { icon: Target, title: 'Hidden talent and predictive potential', text: "The analysis identified predictive propensities for different roles, facilitating horizontal and vertical internal moves and revealing talent where no visibility previously existed." },
+        { icon: CheckCircle, title: 'Customised training and skill gaps closed', text: "With the collected data, customised training paths were activated to close existing gaps and define internal redeployments more quickly. A key lever for optimising costs and performance." },
+        { icon: Zap, title: 'Time and cost optimisation', text: "Analysis timelines optimised and the burden on managers reduced, freeing resources for higher-value development activities." },
       ],
     },
     related: {
@@ -496,87 +439,58 @@ export default function DouglasStoryPage() {
                 </div>
               </div>
 
-              <div>
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
-                <div className="grid md:grid-cols-3 gap-5">
-                  {c.solution.methodology.map((m, i) => (
-                    <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
-                      <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4] relative">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65] relative">{m.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </Section>
 
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
               {/* Key metrics */}
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                  {/* Metric 0 — people/users icon */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
+                  {/* 88% — circular ring */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="w-20 h-20 mb-4 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <circle cx="32" cy="22" r="12" fill="rgba(75,77,247,0.25)" stroke="#4b4df7" strokeWidth="2.5"/>
-                        <path d="M10 54c0-12 10-20 22-20s22 8 22 20" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round"/>
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.88} ${2 * Math.PI * 40}`} />
                       </svg>
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.2rem,2vw,1.8rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
-                    <span className="text-[12px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
-                    {c.results.metrics[0].sublabel && <span className="text-[10px] text-white/30 mt-0.5 block">{c.results.metrics[0].sublabel}</span>}
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
                   </div>
-                  {/* Metric 1 — clock/speed icon */}
+                  {/* 5 weeks — 5 vertical bars */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="w-20 h-20 mb-4 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <circle cx="32" cy="32" r="24" stroke="rgba(255,255,255,0.15)" strokeWidth="3"/>
-                        <circle cx="32" cy="32" r="24" stroke="#4b4df7" strokeWidth="3" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 24 * 0.75} ${2 * Math.PI * 24}`} className="-rotate-90 origin-center"/>
-                        <line x1="32" y1="32" x2="32" y2="14" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-                        <line x1="32" y1="32" x2="44" y2="38" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round"/>
-                        <circle cx="32" cy="32" r="3" fill="white"/>
-                      </svg>
+                    <div className="w-24 h-24 mb-5 flex items-end justify-center gap-2">
+                      {[1,1,1,1,1].map((_, i) => (
+                        <div key={i} className="rounded-sm bg-[#4b4df7]" style={{ width: 10, height: `${50 + i * 6}%`, opacity: 0.5 + i * 0.12 }} />
+                      ))}
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.2rem,2vw,1.8rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
-                    <span className="text-[12px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
-                    {c.results.metrics[1].sublabel && <span className="text-[10px] text-white/30 mt-0.5 block">{c.results.metrics[1].sublabel}</span>}
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
                   </div>
-                  {/* Metric 2 — store/building icon */}
+                  {/* Only 3 — 3 people silhouettes */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="w-20 h-20 mb-4 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <rect x="8" y="28" width="48" height="28" rx="3" fill="rgba(75,77,247,0.2)" stroke="#4b4df7" strokeWidth="2.5"/>
-                        <path d="M8 28L32 10l24 18" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        <rect x="24" y="40" width="16" height="16" rx="2" fill="#4b4df7" opacity="0.6"/>
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 48" className="w-20 h-16" fill="none">
+                        <circle cx="12" cy="14" r="7" fill="#4b4df7" opacity="0.5" />
+                        <path d="M0 38c0-6.627 5.373-10 12-10s12 3.373 12 10" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.5" />
+                        <circle cx="32" cy="12" r="8" fill="#4b4df7" />
+                        <path d="M18 38c0-7.732 6.268-12 14-12s14 4.268 14 12" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                        <circle cx="52" cy="14" r="7" fill="#4b4df7" opacity="0.5" />
+                        <path d="M40 38c0-6.627 5.373-10 12-10s12 3.373 12 10" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.5" />
                       </svg>
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.2rem,2vw,1.8rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
-                    <span className="text-[12px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
-                    {c.results.metrics[2].sublabel && <span className="text-[10px] text-white/30 mt-0.5 block">{c.results.metrics[2].sublabel}</span>}
-                  </div>
-                  {/* Metric 3 — layers/roles icon */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-20 h-20 mb-4 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <rect x="12" y="14" width="40" height="10" rx="3" fill="rgba(75,77,247,0.2)" stroke="#4b4df7" strokeWidth="2.5"/>
-                        <rect x="12" y="30" width="40" height="10" rx="3" fill="rgba(75,77,247,0.35)" stroke="#4b4df7" strokeWidth="2.5"/>
-                        <rect x="12" y="46" width="40" height="10" rx="3" fill="rgba(75,77,247,0.55)" stroke="#4b4df7" strokeWidth="2.5"/>
-                      </svg>
-                    </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.2rem,2vw,1.8rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[3].value}</span>
-                    <span className="text-[12px] text-white/[0.65] leading-[1.4]">{c.results.metrics[3].label}</span>
-                    {c.results.metrics[3].sublabel && <span className="text-[10px] text-white/30 mt-0.5 block">{c.results.metrics[3].sublabel}</span>}
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
                   </div>
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid md:grid-cols-2 gap-5">
                 {c.results.qualitative.map((q) => (
                   <div key={q.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
@@ -586,31 +500,6 @@ export default function DouglasStoryPage() {
                     <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{q.text}</p>
                   </div>
                 ))}
-              </div>
-            </Section>
-
-            {/* FUTURE VISION */}
-            <Section>
-              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10 lg:p-14">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
-                  {c.vision.badge}
-                </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4 leading-[1.3]">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8 max-w-3xl">{c.vision.intro}</p>
-                <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
-                    <Target className="h-5 w-5" style={{ color: '#4b4df7' }} />
-                  </div>
-                  <p className="text-[15px] text-[#1A1A2E]/75 leading-[1.7]">{c.vision.objective}</p>
-                </div>
-                <div className="space-y-4">
-                  {c.vision.bullets.map((b, i) => (
-                    <div key={i} className="flex items-start gap-4">
-                      <ArrowRight className="h-4 w-4 mt-1 shrink-0" style={{ color: '#4b4df7' }} />
-                      <p className="text-[15px] text-[#1A1A2E]/65 leading-[1.65]">{b}</p>
-                    </div>
-                  ))}
-                </div>
               </div>
             </Section>
 

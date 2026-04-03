@@ -66,7 +66,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/[0.04] pt-14 pb-6">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-        <div className="grid lg:grid-cols-[220px_1fr] gap-10 lg:gap-12 mb-8">
+        <div className="grid lg:grid-cols-[220px_1fr] gap-10 lg:gap-24 mb-8">
 
           {/* Left: logo + socials + newsletter */}
           <div className="flex flex-col items-center lg:items-start">

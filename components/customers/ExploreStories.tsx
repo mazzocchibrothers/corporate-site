@@ -28,7 +28,7 @@ const allStories = [
     id: 'adr', company: 'Aeroporti di Roma', industry: 'Transportation & Logistics', useCases: ['Internal Mobility', 'Learning & Development'],
     headlineIt: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi",
     headlineEn: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a €9 billion plan',
-    bgImage: '/logos/ADR-background-explore-stories.jpg',
+    bgImage: '/logos/adr-explore-stories.jpg',
   },
   {
     id: 'unicomm', company: 'Unicomm', industry: 'GDO', useCases: ['Hiring', 'Learning & Development', 'Internal Mobility'],
@@ -50,9 +50,15 @@ const allStories = [
   },
   {
     id: 'douglas', company: 'Douglas', industry: 'Retail', useCases: ['Learning & Development', 'Internal Mobility'],
-    headlineIt: 'Douglas: come ha mappato le competenze di 2.200 persone su 370 store in sole 5 settimane',
-    headlineEn: 'Douglas: how it mapped the skills of 2,200 people across 370 stores in just 5 weeks',
+    headlineIt: 'Douglas: come il primo beauty retailer europeo ha reso visibili le competenze di 2.200 persone su 370 store in 5 settimane',
+    headlineEn: 'Douglas: how Europe\u2019s leading beauty retailer made the skills of 2,200 people across 370 stores visible in 5 weeks',
     bgImage: '/logos/douglas-background-explore-stories.jpg',
+  },
+  {
+    id: 'eataly', company: 'Eataly', industry: 'Retail', useCases: ['Hiring', 'Internal Mobility'],
+    headlineIt: 'Eataly: come alimentare un piano di espansione globale selezionando i migliori talenti tra oltre 1.300 candidature',
+    headlineEn: 'Eataly: how to fuel a global expansion plan by selecting the best talent from over 1,300 applications',
+    bgImage: '/logos/eataly-explore-stories.jpg',
   },
   {
     id: 'credem', company: 'Credem', industry: 'Financial Services', useCases: ['Hiring'],
@@ -77,6 +83,7 @@ export default function ExploreStories() {
 
   const industryLabel = (f: string) => {
     if (f === 'GDO' && lang === 'en') return 'Large scale distribution';
+    if (f === 'Transportation & Logistics' && lang === 'it') return 'Trasporti e Logistica';
     return f;
   };
 
