@@ -42,7 +42,7 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
-        { label: 'Settore', value: 'Transportation & Logistics' },
+        { label: 'Settore', value: 'Trasporti e Logistica' },
         { label: 'Fatturato', value: '>1B€' },
         { label: 'Dipendenti', value: 'Oltre 4.500' },
         { label: 'Passeggeri gestiti annualmente', value: '>55 milioni' },
@@ -325,7 +325,7 @@ export default function ADRStoryPage() {
         {/* ===== HERO ===== */}
         <section className="relative pt-[80px]">
           <div className="absolute inset-0 overflow-hidden">
-            <img src="/logos/adr-background-explore-stories.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
+            <img src="/logos/adr-explore-stories.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
             <div className="absolute inset-0 bg-black/40" />
           </div>
 
