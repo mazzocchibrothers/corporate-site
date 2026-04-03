@@ -260,7 +260,7 @@ export const translations = {
   // ===== EXPLORE STORIES =====
   'Find your': 'Trova la tua',
   'story.': 'storia.',
-  'Every challenge is different. Every context is specific. Filter by what matters to you.': 'Ogni sfida è diversa. Ogni contesto ha le sue particolarità. Scegli quello che ti serve davvero scoprire.',
+  'Every challenge is different. Every context is specific. Filter by what matters to you.': 'Ogni sfida è diversa. Ogni contesto ha le sue particolarità. Scoprili uno ad uno!',
   'Industry': 'Settore',
   'Use Case': 'Caso d\'uso',
   'All': 'tutti',
@@ -390,6 +390,10 @@ export const translations = {
 
   // ===== CUSTOMERS ROI =====
   'saved annually in failed hire costs': 'risparmiati annualmente da costi di potenziali assunzioni fallite',
+  'Based on 300 hires, 30% failure rate, €50K average cost per failure': 'Calcolo basato su 300 assunzioni, 30% tasso mishire, €50K costo medio per mishire',
+  'faster strategic execution': 'esecuzione strategica più veloce',
+  'ROI in 18-24 months': 'ROI in 18-24 mesi',
+  'Every other budget line has an ROI framework. These companies proved talent spend can too.': 'Ogni altra area ha un framework consolidato per il calcolo del ROI. Queste storie ti dimostrano che anche HR può averlo.',
   'Reduction in mis-hire rate': 'Riduzione del tasso di assunzioni errate',
   'More candidates objectively assessed without adding headcount': 'Più candidati valutati oggettivamente senza aggiungere personale',
 
