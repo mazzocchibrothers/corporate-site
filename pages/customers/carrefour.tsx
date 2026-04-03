@@ -42,10 +42,10 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
-        { label: 'Settore', value: 'GDO – Retail multi-formato' },
+        { label: 'Gruppo', value: 'Carrefour Group' },
+        { label: 'Fatturato', value: '~4,5 mld €' },
         { label: 'Dipendenti', value: '13.000+ diretti + 8.000 rete franchising' },
         { label: 'Punti vendita', value: '~1.200' },
-        { label: 'Fatturato', value: '3,7 miliardi di euro' },
       ],
     },
     context: {
@@ -180,10 +180,10 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
-        { label: 'Sector', value: 'Grocery Retail – multi-format' },
+        { label: 'Group', value: 'Carrefour Group' },
+        { label: 'Revenue', value: '~€4.5B' },
         { label: 'Employees', value: '13,000+ direct + 8,000 franchise network' },
         { label: 'Stores', value: '~1,200' },
-        { label: 'Revenue', value: '€3.7 billion' },
       ],
     },
     context: {
@@ -486,14 +486,50 @@ export default function CarrefourStoryPage() {
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
-                  {c.results.metrics.map(m => (
-                    <div key={m.label} className="text-center">
-                      <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
-                      <span className="text-[13px] text-white/[0.65] mt-3 block leading-[1.4]">{m.label}</span>
-                      {m.sublabel && <span className="text-[11px] text-white/30 mt-1 block leading-[1.4]">{m.sublabel}</span>}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
+                  {/* -35% circular progress */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.35} ${2 * Math.PI * 40}`} />
+                      </svg>
                     </div>
-                  ))}
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
+                  </div>
+                  {/* 65% → 85% — before/after bars */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center gap-3">
+                      <div className="flex flex-col items-center gap-1">
+                        <div className="rounded-sm bg-white/25" style={{ width: 18, height: 52 }} />
+                        <span className="text-[9px] text-white/30 font-semibold">65%</span>
+                      </div>
+                      <svg viewBox="0 0 16 16" className="w-4 h-4 text-white/30" fill="none">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      <div className="flex flex-col items-center gap-1">
+                        <div className="rounded-sm bg-[#4b4df7]" style={{ width: 18, height: 68 }} />
+                        <span className="text-[9px] text-white/50 font-semibold">85%</span>
+                      </div>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
+                  </div>
+                  {/* 6.000 — people icon */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <circle cx="22" cy="22" r="10" fill="rgba(75,77,247,0.3)" stroke="#4b4df7" strokeWidth="2.5"/>
+                        <circle cx="42" cy="22" r="10" fill="rgba(75,77,247,0.2)" stroke="rgba(75,77,247,0.5)" strokeWidth="2.5"/>
+                        <path d="M4 52c0-10 8-18 18-18s18 8 18 18" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round"/>
+                        <path d="M36 52c0-10 8-18 18-18" stroke="rgba(75,77,247,0.4)" strokeWidth="2.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
+                  </div>
                 </div>
               </div>
 

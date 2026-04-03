@@ -42,6 +42,8 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
+        { label: 'Gruppo', value: 'Gruppo Unicomm' },
+        { label: 'Fatturato', value: '~2 mld €' },
         { label: 'Dipendenti', value: '8.000+' },
         { label: 'Insegne', value: '7' },
         { label: 'Punti vendita diretti', value: '270+' },
@@ -168,6 +170,8 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
+        { label: 'Group', value: 'Unicomm Group' },
+        { label: 'Revenue', value: '~€2B' },
         { label: 'Employees', value: '8,000+' },
         { label: 'Retail Brands', value: '7' },
         { label: 'Direct Stores', value: '270+' },
@@ -289,8 +293,8 @@ export default function UnicommStoryPage() {
         {/* ===== HERO ===== */}
         <section className="relative pt-[80px]">
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0a0a1a 0%, #111128 50%, #0d0d1f 100%)' }} />
-            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #4b4df7 0%, transparent 50%), radial-gradient(circle at 80% 20%, #3b3be0 0%, transparent 40%)' }} />
+            <img src="/logos/unicomm-background-explore-stories.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
+            <div className="absolute inset-0 bg-black/40" />
           </div>
 
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
@@ -475,14 +479,53 @@ export default function UnicommStoryPage() {
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-10">{c.results.title}</h2>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
-                  {c.results.metrics.map(m => (
-                    <div key={m.label} className="text-center">
-                      <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
-                      <span className="text-[13px] text-white/[0.65] mt-3 block leading-[1.4]">{m.label}</span>
-                      {m.sublabel && <span className="text-[11px] text-white/30 mt-1 block leading-[1.4]">{m.sublabel}</span>}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
+                  {/* Metric 0 — process/steps icon */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <circle cx="12" cy="32" r="8" fill="rgba(75,77,247,0.3)" stroke="#4b4df7" strokeWidth="2.5"/>
+                        <circle cx="32" cy="32" r="8" fill="rgba(75,77,247,0.5)" stroke="#4b4df7" strokeWidth="2.5"/>
+                        <circle cx="52" cy="32" r="8" fill="#4b4df7" stroke="#4b4df7" strokeWidth="2.5"/>
+                        <line x1="20" y1="32" x2="24" y2="32" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
+                        <line x1="40" y1="32" x2="44" y2="32" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
+                      </svg>
                     </div>
-                  ))}
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
+                  </div>
+                  {/* Metric 1 — calendar icon */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <rect x="4" y="10" width="56" height="50" rx="6" stroke="rgba(255,255,255,0.15)" strokeWidth="3" />
+                        <rect x="4" y="10" width="56" height="16" rx="6" fill="#4b4df7" />
+                        <line x1="20" y1="4" x2="20" y2="18" stroke="white" strokeWidth="3" strokeLinecap="round" />
+                        <line x1="44" y1="4" x2="44" y2="18" stroke="white" strokeWidth="3" strokeLinecap="round" />
+                        <rect x="13" y="34" width="8" height="8" rx="2" fill="rgba(255,255,255,0.5)" />
+                        <rect x="28" y="34" width="8" height="8" rx="2" fill="rgba(255,255,255,0.5)" />
+                        <rect x="43" y="34" width="8" height="8" rx="2" fill="rgba(255,255,255,0.5)" />
+                        <rect x="13" y="48" width="8" height="8" rx="2" fill="rgba(255,255,255,0.3)" />
+                        <rect x="28" y="48" width="8" height="8" rx="2" fill="rgba(75,77,247,0.8)" />
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
+                  </div>
+                  {/* Metric 2 — pipeline/flow icon */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <rect x="4" y="24" width="16" height="16" rx="4" fill="rgba(75,77,247,0.3)" stroke="#4b4df7" strokeWidth="2"/>
+                        <rect x="24" y="24" width="16" height="16" rx="4" fill="rgba(75,77,247,0.5)" stroke="#4b4df7" strokeWidth="2"/>
+                        <rect x="44" y="24" width="16" height="16" rx="4" fill="#4b4df7" stroke="#4b4df7" strokeWidth="2"/>
+                        <line x1="20" y1="32" x2="24" y2="32" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
+                        <line x1="40" y1="32" x2="44" y2="32" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.1rem,2vw,1.6rem)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>{c.results.metrics[2].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
+                  </div>
                 </div>
               </div>
 

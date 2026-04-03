@@ -42,8 +42,9 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
-        { label: 'Settore', value: 'Assicurazioni' },
+        { label: 'Settore', value: 'Insurance & Assistance' },
         { label: 'Gruppo', value: 'Generali' },
+        { label: 'Fatturato', value: '~1,5 mld €' },
         { label: 'Sedi italiane', value: 'Assago (MI) e Rende (CS)' },
         { label: 'Centri assistenza in Italia', value: '4.300' },
       ],
@@ -179,8 +180,9 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
-        { label: 'Industry', value: 'Insurance' },
+        { label: 'Industry', value: 'Insurance & Assistance' },
         { label: 'Group', value: 'Generali' },
+        { label: 'Revenue', value: '~€1.5B' },
         { label: 'Italian offices', value: 'Assago (MI) and Rende (CS)' },
         { label: 'Assistance centres in Italy', value: '4,300' },
       ],
@@ -311,8 +313,8 @@ export default function EuropAssistanceStoryPage() {
         {/* ===== HERO ===== */}
         <section className="relative pt-[80px]">
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0a0a1a 0%, #111128 50%, #0d0d1f 100%)' }} />
-            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #4b4df7 0%, transparent 50%), radial-gradient(circle at 80% 20%, #3b3be0 0%, transparent 40%)' }} />
+            <img src="/logos/europ-assistance-background-explore-stories.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
+            <div className="absolute inset-0 bg-black/40" />
           </div>
 
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
@@ -485,14 +487,42 @@ export default function EuropAssistanceStoryPage() {
 
               {/* Key metrics */}
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-                  {c.results.metrics.map(m => (
-                    <div key={m.label} className="text-center">
-                      <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
-                      <span className="text-[13px] text-white/[0.65] mt-3 block leading-[1.4]">{m.label}</span>
-                      {m.sublabel && <span className="text-[11px] text-white/30 mt-1 block leading-[1.4]">{m.sublabel}</span>}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
+                  {/* +24% upward bar chart */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-24 h-24 mb-5 flex items-end justify-center gap-1.5 pb-2">
+                      <div className="rounded-sm bg-white/20" style={{ width: 14, height: 30 }} />
+                      <div className="rounded-sm bg-white/35" style={{ width: 14, height: 44 }} />
+                      <div className="rounded-sm bg-white/55" style={{ width: 14, height: 58 }} />
+                      <div className="rounded-sm bg-[#4b4df7]" style={{ width: 14, height: 76 }} />
                     </div>
-                  ))}
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
+                  </div>
+                  {/* -18% circular progress */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.18} ${2 * Math.PI * 40}`} />
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
+                  </div>
+                  {/* 76% circular progress */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.76} ${2 * Math.PI * 40}`} />
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
+                  </div>
                 </div>
               </div>
 

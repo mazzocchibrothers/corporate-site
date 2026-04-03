@@ -43,8 +43,9 @@ const content = {
       label: 'SCHEDA CLIENTE',
       facts: [
         { label: 'Gruppo', value: 'MFE – MediaForEurope' },
+        { label: 'Fatturato', value: '~2,5 mld €' },
+        { label: 'Dipendenti', value: '~5.000' },
         { label: 'HQ', value: 'Cologno Monzese (MI)' },
-        { label: 'Dipendenti', value: '5.000+' },
       ],
     },
     context: {
@@ -180,8 +181,9 @@ const content = {
       label: 'CLIENT PROFILE',
       facts: [
         { label: 'Group', value: 'MFE – MediaForEurope' },
+        { label: 'Revenue', value: '~€2.5B' },
+        { label: 'Employees', value: '~5,000' },
         { label: 'HQ', value: 'Cologno Monzese (MI)' },
-        { label: 'Employees', value: '5,000+' },
       ],
     },
     context: {
@@ -311,8 +313,8 @@ export default function MediasetStoryPage() {
         {/* ===== HERO ===== */}
         <section className="relative pt-[80px]">
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0a0a1a 0%, #111128 50%, #0d0d1f 100%)' }} />
-            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #4b4df7 0%, transparent 50%), radial-gradient(circle at 80% 20%, #3b3be0 0%, transparent 40%)' }} />
+            <img src="/logos/mediaset-background-explore-stories.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
+            <div className="absolute inset-0 bg-black/40" />
           </div>
 
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
@@ -485,14 +487,45 @@ export default function MediasetStoryPage() {
 
               {/* Key metrics */}
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-                  {c.results.metrics.map(m => (
-                    <div key={m.label} className="text-center">
-                      <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
-                      <span className="text-[13px] text-white/[0.65] mt-3 block leading-[1.4]">{m.label}</span>
-                      {m.sublabel && <span className="text-[11px] text-white/30 mt-1 block leading-[1.4]">{m.sublabel}</span>}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
+                  {/* 79% circular progress */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.79} ${2 * Math.PI * 40}`} />
+                      </svg>
                     </div>
-                  ))}
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
+                  </div>
+                  {/* 4.1/5 score display */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 80 80" className="w-20 h-20" fill="none">
+                        <circle cx="40" cy="40" r="34" fill="rgba(75,77,247,0.12)" stroke="rgba(75,77,247,0.3)" strokeWidth="2"/>
+                        <text x="40" y="36" textAnchor="middle" fill="white" fontSize="16" fontWeight="800" fontFamily="system-ui">4.1</text>
+                        <text x="40" y="52" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="10" fontFamily="system-ui">/ 5</text>
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
+                  </div>
+                  {/* 15 — target/bullseye icon */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <circle cx="32" cy="32" r="28" stroke="rgba(255,255,255,0.1)" strokeWidth="2.5"/>
+                        <circle cx="32" cy="32" r="18" stroke="rgba(75,77,247,0.4)" strokeWidth="2.5"/>
+                        <circle cx="32" cy="32" r="8" fill="#4b4df7" opacity="0.8"/>
+                        <line x1="32" y1="4" x2="32" y2="14" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeLinecap="round"/>
+                        <line x1="60" y1="32" x2="50" y2="32" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
+                  </div>
                 </div>
               </div>
 
