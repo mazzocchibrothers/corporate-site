@@ -27,7 +27,7 @@ export default function CustomersROI() {
         <div className="grid lg:grid-cols-3 gap-px bg-[#4B4DF7]/[0.06] rounded-2xl overflow-hidden mb-10">
           {stats.map((s, i) => (
             <motion.div key={s.value} className="bg-[#F5F5FA] p-10 lg:p-12" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}>
-              <span className="block mb-5 text-[#1A1A2E]" style={{ fontSize: 'clamp(2.8rem, 5vw, 4.2rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{s.value}</span>
+              <span className="block mb-5 text-[#1A1A2E]" style={{ fontSize: 'clamp(2.8rem, 5vw, 4.2rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{t(s.value)}</span>
               <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-2">{t(s.label)}</h3>
               <p className="text-[14px] text-[#1A1A2E]/50 leading-relaxed">{t(s.sub)}</p>
             </motion.div>
