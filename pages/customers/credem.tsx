@@ -42,12 +42,12 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
-        { label: 'Dipendenti', value: '5.000+' },
-        { label: 'Filiali', value: '600+' },
-        { label: 'Regioni', value: '19' },
-        { label: 'Candidature/anno', value: '30.000' },
+        { label: 'Settore', value: 'Financial Services' },
         { label: 'Gruppo', value: 'Credito Emiliano' },
         { label: 'Fatturato', value: '~1,6 mld €' },
+        { label: 'Dipendenti', value: '5.000+' },
+        { label: 'Filiali', value: '600+' },
+        { label: 'Use Case', value: 'Hiring' },
       ],
     },
     context: {
@@ -143,7 +143,7 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring at Scale', headline: "Come Carrefour Italia ha trasformato la selezione di 30.000 candidature l'anno con soli 3 recruiter." },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring at Scale', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
         { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring', headline: 'Come Europ Assistance ha assunto il 24% in più con il 18% di colloqui in meno.' },
       ],
       cta: 'Leggi la storia',
@@ -172,12 +172,12 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
-        { label: 'Employees', value: '5,000+' },
-        { label: 'Branches', value: '600+' },
-        { label: 'Regions', value: '19' },
-        { label: 'Applications/year', value: '30,000' },
+        { label: 'Industry', value: 'Financial Services' },
         { label: 'Group', value: 'Credito Emiliano' },
         { label: 'Revenue', value: '~€1.6B' },
+        { label: 'Employees', value: '5,000+' },
+        { label: 'Branches', value: '600+' },
+        { label: 'Use Case', value: 'Hiring' },
       ],
     },
     context: {
@@ -273,7 +273,7 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'GDO Retail · Hiring at Scale', headline: 'How Carrefour Italia transformed the screening of 30,000 applications a year with just 3 recruiters.' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'GDO Retail · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
         { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring', headline: 'How Europ Assistance hired 24% more with 18% fewer interviews.' },
       ],
       cta: 'Read the story',
@@ -343,8 +343,8 @@ export default function CredemStoryPage() {
               <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
-                      <img src="/logos/credem-logo.png" alt="Credem logo" className="w-full h-full object-contain" />
+                    <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
+                      <img src="/logos/credem-logo.png" alt="Credem logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>

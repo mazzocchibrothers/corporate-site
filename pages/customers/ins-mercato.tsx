@@ -2,44 +2,34 @@
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Target, TrendingUp, Layers, Eye, Scale, Zap, Heart, Users, Shield, CheckCircle } from 'lucide-react';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
 
-const heroMetrics = [
-  { value: '~1,000', label: { en: 'Employees involved', it: 'Collaboratori coinvolti' } },
-  { value: '95%', label: { en: 'Completion rate', it: 'Tasso di completamento' } },
-  { value: '~90', label: { en: 'Top Talent identified', it: 'Top Talent identificati' } },
-  { value: '47%', label: { en: 'Role-Ready', it: 'Role-Ready' } },
-  { value: '6', label: { en: 'Soft skills assessed', it: 'Soft skill valutate' } },
+const skills = [
+  { icon: Heart, en: 'Customer Orientation', it: 'Orientamento all\'altro' },
+  { icon: Users, en: 'Leadership', it: 'Leadership' },
+  { icon: Shield, en: 'Resilience', it: 'Resilienza' },
+  { icon: Layers, en: 'Organization & Planning', it: 'Organizzazione e Pianificazione' },
+  { icon: Zap, en: 'Cognitive Flexibility', it: 'Flessibilità cognitiva' },
+  { icon: Target, en: 'Goal Orientation', it: 'Orientamento agli obiettivi' },
 ];
-
-const sidebar = [
-  { label: { en: 'Industry', it: 'Settore' }, value: { en: 'GDO - Hard Discount', it: 'GDO - Hard Discount' } },
-  { label: { en: 'Revenue', it: 'Fatturato' }, value: { en: '€1.5B', it: '1,5 mld €' } },
-  { label: { en: 'Employees', it: 'Dipendenti' }, value: { en: '4,200+', it: '4.200' } },
-  { label: { en: 'Stores', it: 'Punti vendita' }, value: { en: '570+', it: '+570' } },
-  { label: { en: 'Region', it: 'Regione' }, value: { en: 'Italy', it: 'Italia' } },
-  { label: { en: 'Use Cases', it: 'Use Cases' }, value: { en: 'Internal Mobility, Succession Planning', it: 'Internal Mobility, Succession Planning' } },
-];
-
-const skills = {
-  en: ['Customer Orientation', 'Leadership', 'Resilience', 'Organization & Planning', 'Cognitive Flexibility', 'Goal Orientation'],
-  it: ['Orientamento all\'altro', 'Leadership', 'Resilienza', 'Organizzazione e Pianificazione', 'Flessibilità cognitiva', 'Orientamento agli obiettivi'],
-};
 
 const businessPains = [
   {
+    icon: Target,
     en: { title: 'Expansion held back by Store Manager shortage', desc: 'An active new opening plan, but without qualified, ready, and culturally aligned managerial talent, every new store risks underperforming.' },
     it: { title: 'Espansione frenata dalla mancanza di Store Manager', desc: 'Un piano di nuove aperture attivo, ma senza figure manageriali qualificate, pronte e allineate alla cultura aziendale, ogni nuovo punto vendita rischia di sottoperformare.' },
   },
   {
+    icon: TrendingUp,
     en: { title: 'Store performance and return on investment', desc: "Every new opening is a significant investment: without the right Store Manager to lead it, that store doesn't reach its potential. Failing to identify high-value people in time means compromising profitability." },
     it: { title: 'Performance degli store e ritorno sugli investimenti', desc: 'Ogni nuova apertura è un investimento significativo: senza lo Store Manager giusto a presidiarla, quel punto vendita non esprime il suo potenziale. Perdere persone di valore non intercettate in tempo significa compromettere la redditività.' },
   },
   {
+    icon: Layers,
     en: { title: 'Dependence on external hiring', desc: "Chasing demand through external recruitment means higher costs, longer onboarding times, and a real risk of cultural mismatch — in a sector where finding experienced profiles is increasingly difficult." },
     it: { title: 'Dipendenza dal mercato esterno', desc: 'Rincorrere il fabbisogno con selezione esterna significa costi più alti, tempi di inserimento più lunghi e un rischio concreto di mismatch culturale, in un settore dove trovare profili formati è sempre più difficile.' },
   },
@@ -47,33 +37,44 @@ const businessPains = [
 
 const hrPains = [
   {
+    icon: Eye,
     en: { title: 'Invisible talent across the network', desc: 'No objective visibility into the competencies of thousands of sales associates distributed across 570+ stores: decisions on potential were based on sales numbers and subjective perceptions.' },
     it: { title: 'Invisibilità del talento in rete', desc: 'Nessuna visibilità oggettiva sulle competenze di migliaia di addetti vendita distribuiti su oltre 570 punti vendita: le decisioni sul potenziale si basavano su numeri di vendita e percezioni soggettive.' },
   },
   {
+    icon: Scale,
     en: { title: 'Fragmented and non-comparable evaluations', desc: 'Each store manager assessed with their own criteria, each area operated with different standards: two people with the same potential could have completely different career paths — not based on merit, but on geographic luck.' },
     it: { title: 'Valutazioni frammentate e non confrontabili', desc: 'Ogni manager di negozio valutava con criteri propri, ogni area funzionava con logiche diverse: due persone con lo stesso potenziale potevano avere percorsi completamente diversi, non per merito ma per fortuna geografica.' },
   },
   {
+    icon: Zap,
     en: { title: 'Reactive talent management, not predictive', desc: 'Without structured visibility on internal potential, every key position to fill turned into an external recruitment process. A double cost: time and investment to recruit, plus the risk of losing unrecognized talent already in the company.' },
     it: { title: 'Gestione reattiva del talento, non predittiva', desc: 'Senza visibilità strutturata sul potenziale interno, ogni posizione chiave da coprire si trasformava in un processo di selezione esterna. Un doppio costo: tempi e investimenti per reclutare, più il rischio di perdere talenti già in azienda non valorizzati.' },
   },
 ];
 
-const objectives = {
-  en: [
-    'Gain a shared, objective reading of potential across the entire network: same criteria, same language, regardless of territory or individual manager',
-    'Build an internal pipeline of ready Store Managers to support the opening plan without depending on an increasingly competitive and costly external market',
-    'Maximize store performance and return on investment in new openings, ensuring every store is led by a qualified, culturally aligned Store Manager',
-    'Anticipate key role needs months in advance, moving from an emergency-driven logic to a predictive talent planning capability',
-  ],
-  it: [
-    'Ottenere una lettura comune e oggettiva del potenziale su tutta la rete: stessi criteri, stesso linguaggio, indipendentemente dal territorio o dal singolo responsabile',
-    'Costruire una pipeline interna di Store Manager pronti, per sostenere il piano di aperture senza dipendere da un mercato esterno sempre più competitivo e costoso',
-    'Massimizzare la performance dei punti vendita e il ritorno sugli investimenti in nuove aperture, garantendo che ogni store sia presidiato da uno Store Manager qualificato e allineato alla cultura aziendale',
-    'Anticipare il fabbisogno di ruoli chiave con mesi di anticipo, passando da una logica emergenziale a una capacità predittiva di pianificazione del talento',
-  ],
-};
+const objectives = [
+  {
+    icon: Eye,
+    en: 'Gain a shared, objective reading of potential across the entire network: same criteria, same language, regardless of territory or individual manager',
+    it: 'Ottenere una lettura comune e oggettiva del potenziale su tutta la rete: stessi criteri, stesso linguaggio, indipendentemente dal territorio o dal singolo responsabile',
+  },
+  {
+    icon: Users,
+    en: 'Build an internal pipeline of ready Store Managers to support the opening plan without depending on an increasingly competitive and costly external market',
+    it: 'Costruire una pipeline interna di Store Manager pronti, per sostenere il piano di aperture senza dipendere da un mercato esterno sempre più competitivo e costoso',
+  },
+  {
+    icon: TrendingUp,
+    en: 'Maximize store performance and return on investment in new openings, ensuring every store is led by a qualified, culturally aligned Store Manager',
+    it: 'Massimizzare la performance dei punti vendita e il ritorno sugli investimenti in nuove aperture, garantendo che ogni store sia presidiato da uno Store Manager qualificato e allineato alla cultura aziendale',
+  },
+  {
+    icon: Target,
+    en: 'Anticipate key role needs months in advance, moving from an emergency-driven logic to a predictive talent planning capability',
+    it: 'Anticipare il fabbisogno di ruoli chiave con mesi di anticipo, passando da una logica emergenziale a una capacità predittiva di pianificazione del talento',
+  },
+];
 
 const methodologyCards = [
   {
@@ -90,32 +91,41 @@ const methodologyCards = [
   },
 ];
 
-const funnel = [
-  { label: { en: 'Involved', it: 'Coinvolti' }, value: '~1,000' },
-  { label: { en: 'Assessments completed', it: 'Assessment completati' }, value: '~900' },
-  { label: { en: 'Top Talent identified', it: 'Top Talent identificati' }, value: '~90' },
-  { label: { en: 'Role-Ready (47%)', it: 'Role-Ready (47%)' }, value: '~42' },
-  { label: { en: 'In Development (53%)', it: 'In Development (53%)' }, value: '~48' },
-];
-
 const impactCards = [
   {
+    icon: Users,
     en: { title: 'Internal pipeline built', text: "For the first time, In's has an objective map of potential across the network and can plan openings with the certainty of having qualified talent available." },
     it: { title: 'Costruzione pipeline interna', text: "Per la prima volta, In's dispone di una mappatura oggettiva del potenziale sulla rete e può pianificare le aperture con la certezza di avere figure qualificate disponibili." },
   },
   {
+    icon: TrendingUp,
     en: { title: 'From reactive to predictive', text: "People development has been directly linked to the real estate expansion plan: the internal pipeline becomes a business asset that enables growth." },
     it: { title: 'Da logica reattiva a predittiva', text: "Lo sviluppo delle persone è stato collegato direttamente al piano di espansione immobiliare: la pipeline interna diventa un asset di business che abilita la crescita." },
   },
   {
+    icon: Heart,
     en: { title: 'Significant cultural impact', text: "Participants who attended in-person sessions returned to their stores sharing the experience, generating a positive ripple effect and a perception of meritocracy." },
     it: { title: 'Impatto culturale significativo', text: "I partecipanti alle giornate in presenza sono tornati nei punti vendita raccontando l'esperienza, generando un effetto di contaminazione positiva e percezione di meritocrazia." },
   },
   {
+    icon: Layers,
     en: { title: 'Internal mobility unlocked', text: "The project opened not only vertical opportunities (sales associate → Store Manager) but also lateral moves across divisions, for example into logistics roles at distribution centers." },
     it: { title: 'Mobilità interna facilitata', text: "Il progetto ha aperto opportunità non solo verticali (addetto vendita → Store Manager) ma anche trasversali tra divisioni, ad esempio verso ruoli logistici nei depositi." },
   },
 ];
+
+const quote = {
+  it: {
+    text: "Il progetto ha trasformato la gestione del talento da reattiva a predittiva, collegando direttamente la people strategy al piano di espansione: ogni nuova apertura può ora contare su una pipeline interna di figure pronte, invece di rincorrere il fabbisogno sul mercato esterno.",
+    author: 'Mirko Tortolano',
+    role: 'HR Director — In\'s Mercato',
+  },
+  en: {
+    text: "The project transformed talent management from reactive to predictive, directly linking people strategy to the expansion plan: every new opening can now count on an internal pipeline of ready candidates, rather than chasing demand in the external market.",
+    author: 'Mirko Tortolano',
+    role: 'HR Director — In\'s Mercato',
+  },
+};
 
 const visionBullets = {
   en: [
@@ -200,8 +210,8 @@ export default function InsMercatoStoryPage() {
               <motion.div className="lg:col-span-5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-6">
                   <div className="flex items-center gap-4 mb-4 pb-4 border-b border-white/[0.08]">
-                    <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
-                      <img src="/logos/insmercato-logo.png" alt="In's Mercato logo" className="w-full h-full object-contain" />
+                    <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
+                      <img src="/logos/ins-mercato-logo.png" alt="In's Mercato logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">
@@ -216,11 +226,13 @@ export default function InsMercatoStoryPage() {
                       { label: 'Fatturato', value: '1,5 mld €' },
                       { label: 'Dipendenti', value: '4.200' },
                       { label: 'Punti vendita', value: '+570' },
+                      { label: 'Use Case', value: 'Internal Mobility' },
                     ] : [
                       { label: 'Industry', value: 'GDO - Hard Discount' },
                       { label: 'Revenue', value: '€1.5B' },
                       { label: 'Employees', value: '4,200+' },
                       { label: 'Stores', value: '570+' },
+                      { label: 'Use Case', value: 'Internal Mobility' },
                     ]).map(s => (
                       <div key={s.label}>
                         <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
@@ -241,43 +253,24 @@ export default function InsMercatoStoryPage() {
               </motion.div>
             </div>
 
-            {/* Hero metrics */}
-            <motion.div className="mt-12" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }}>
-              <div className="grid grid-cols-3 gap-5">
-                {[
-                  { value: '~1,000', label: lang === 'it' ? 'Collaboratori coinvolti' : 'Employees involved' },
-                  { value: '95%', label: lang === 'it' ? 'Tasso di completamento' : 'Completion rate' },
-                  { value: '~90', label: lang === 'it' ? 'Top Talent identificati' : 'Top Talent identified' },
-                ].map(m => (
-                  <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-5 text-center">
-                    <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                    <span className="text-[13px] text-white/[0.55] mt-2 block leading-[1.4]">{m.label}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
           </div>
         </section>
 
         {/* Content */}
-        <section id="context-section" className="section-breathe relative py-16 lg:py-20">
+        <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#f8fafc' }}>
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
 
             {/* Context */}
-            <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-2">
-                {lang === 'it' ? 'Contesto' : 'Context'}
-              </h2>
-              <p className="text-[14px] font-semibold text-[#1A1A2E]/40 uppercase tracking-[0.08em] mb-6">
-                {lang === 'it' ? 'Il contesto del progetto' : 'Project Background'}
-              </p>
+            <Section className="mb-24">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'CONTESTO' : 'CONTEXT'}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{lang === 'it' ? 'Il contesto del progetto' : 'Project Background'}</h2>
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-6">
                 {lang === 'it'
                   ? <>In's Mercato è una delle principali insegne hard discount italiane, con un fatturato di <strong className="text-[#1A1A2E]/80 font-semibold">1,5 miliardi di euro</strong>, oltre <strong className="text-[#1A1A2E]/80 font-semibold">4.200 dipendenti</strong> e una rete di più di <strong className="text-[#1A1A2E]/80 font-semibold">570 punti vendita</strong>. L'azienda è in una fase di forte espansione immobiliare, con un piano di nuove aperture che pone un vincolo operativo preciso: senza Store Manager qualificati, pronti e pienamente allineati alla cultura aziendale, i nuovi negozi rischiano di sottoperformare. La crescita della rete dipende direttamente dalla capacità di avere figure manageriali formate nel momento in cui servono.</>
                   : <>In's Mercato is one of Italy's leading hard discount grocery chains, with <strong className="text-[#1A1A2E]/80 font-semibold">€1.5 billion in revenue</strong>, over <strong className="text-[#1A1A2E]/80 font-semibold">4,200 employees</strong>, and a network of more than <strong className="text-[#1A1A2E]/80 font-semibold">570 stores</strong>. The company is in a phase of aggressive real estate expansion, with a new store opening plan that creates a clear operational constraint: without qualified Store Managers who are ready and fully aligned with the company culture, new stores risk underperforming. Network growth depends directly on having trained managerial talent available when it's needed.</>
                 }
               </p>
-              <div className="rounded-xl border border-[#4B4DF7]/[0.1] bg-[#4B4DF7]/[0.03] px-8 py-6 max-w-3xl">
+              <div className="rounded-xl border border-[#e2e8f0] bg-white px-8 py-6 shadow-sm">
                 <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.7] italic">
                   {lang === 'it'
                     ? "Il progetto ha trasformato la gestione del talento da reattiva a predittiva, collegando direttamente la people strategy al piano di espansione: ogni nuova apertura può ora contare su una pipeline interna di figure pronte, invece di rincorrere il fabbisogno sul mercato esterno."
@@ -288,101 +281,96 @@ export default function InsMercatoStoryPage() {
             </Section>
 
             {/* Challenge */}
-            <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-2">
-                {lang === 'it' ? 'La Sfida' : 'The Challenge'}
-              </h2>
-              <p className="text-[14px] font-semibold text-[#1A1A2E]/40 uppercase tracking-[0.08em] mb-6">
-                {lang === 'it' ? 'Il problema strutturale' : 'The Structural Problem'}
-              </p>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-10">
+            <Section className="mb-24">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'LA SFIDA' : 'THE CHALLENGE'}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{lang === 'it' ? 'Il problema strutturale' : 'The Structural Problem'}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14 max-w-3xl">
                 {lang === 'it'
                   ? "In's Mercato è un'azienda in forte crescita. Con oltre 570 punti vendita e un piano di sviluppo immobiliare attivo, il business aveva un vincolo operativo che precedeva qualsiasi considerazione HR."
                   : "In's Mercato is a fast-growing company. With over 570 stores and an active real estate development plan, the business faced an operational constraint that preceded any HR consideration."
                 }
               </p>
-              <div className="grid md:grid-cols-2 gap-5">
-                <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8">
-                  <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-6 block">
-                    {lang === 'it' ? 'Business' : 'Business Impact'}
-                  </span>
-                  <div className="space-y-6">
-                    {businessPains.map(p => (
-                      <div key={p.en.title}>
-                        <h4 className="text-[15px] font-bold text-[#1A1A2E]/70 mb-1">{p[l].title}</h4>
-                        <p className="text-[14px] text-[#1A1A2E]/50 leading-[1.6]">{p[l].desc}</p>
+              <div className="mb-10">
+                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{lang === 'it' ? 'IMPATTO SUL BUSINESS' : 'BUSINESS IMPACT'}</span>
+                <div className="grid md:grid-cols-3 gap-5">
+                  {businessPains.map(p => (
+                    <div key={p.en.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <p.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-[#4B4DF7]/[0.03] p-8">
-                  <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-6 block">HR</span>
-                  <div className="space-y-6">
-                    {hrPains.map(p => (
-                      <div key={p.en.title}>
-                        <h4 className="text-[15px] font-bold text-[#1A1A2E]/70 mb-1">{p[l].title}</h4>
-                        <p className="text-[14px] text-[#1A1A2E]/[0.65] leading-[1.6]">{p[l].desc}</p>
-                      </div>
-                    ))}
-                  </div>
+                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{p[l].title}</h4>
+                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{p[l].desc}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </Section>
-
-            {/* Objectives */}
-            <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-2">
-                {lang === 'it' ? 'Obiettivi di Collaborazione' : 'Collaboration Objectives'}
-              </h2>
-              <p className="text-[14px] font-semibold text-[#1A1A2E]/40 uppercase tracking-[0.08em] mb-8">
-                {lang === 'it' ? 'Cosa doveva cambiare' : 'What needed to change'}
-              </p>
-              <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8 lg:p-10 max-w-3xl">
-                <div className="space-y-5">
-                  {objectives[l].map((item, i) => (
-                    <div key={i} className="flex items-start gap-4">
-                      <div className="w-6 h-6 rounded-full bg-[#4B4DF7]/[0.08] flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-[11px] font-bold text-[#4B4DF7]/70">{i + 1}</span>
+              <div>
+                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{lang === 'it' ? 'IMPATTO SU HR & PEOPLE' : 'HR & PEOPLE IMPACT'}</span>
+                <div className="grid md:grid-cols-3 gap-5">
+                  {hrPains.map(p => (
+                    <div key={p.en.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
+                        <p.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.6]">{item}</p>
+                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{p[l].title}</h4>
+                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{p[l].desc}</p>
                     </div>
                   ))}
                 </div>
               </div>
             </Section>
 
+            {/* Objectives */}
+            <Section className="mb-24">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'OBIETTIVI DI COLLABORAZIONE' : 'COLLABORATION OBJECTIVES'}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-10">{lang === 'it' ? 'Cosa doveva cambiare' : 'What needed to change'}</h2>
+              <div className="grid md:grid-cols-2 gap-5">
+                {objectives.map((o, i) => (
+                  <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                      <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                    </div>
+                    <p className="text-[15px] text-[#1A1A2E]/70 leading-[1.65] pt-1.5">
+                      {o[l].includes(':') ? <><strong className="font-bold text-[#1A1A2E]/90">{o[l].split(':')[0]}</strong>:{o[l].split(':').slice(1).join(':')}</> : o[l]}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </Section>
+
             {/* Solution */}
-            <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-2">
-                {lang === 'it' ? 'La Soluzione' : 'The Solution'}
-              </h2>
-              <p className="text-[14px] font-semibold text-[#1A1A2E]/40 uppercase tracking-[0.08em] mb-6">
-                {lang === 'it' ? 'Assessment AI con Skillvue' : 'AI Assessment with Skillvue'}
-              </p>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-10">
+            <Section className="mb-24">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'LA SOLUZIONE' : 'THE SOLUTION'}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{lang === 'it' ? 'Assessment AI con Skillvue' : 'AI Assessment with Skillvue'}</h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">
                 {lang === 'it'
                   ? "Skillvue ha abilitato un assessment strutturato, basato sul framework di soft skill che In's aveva già costruito internamente per il profilo di Store Manager."
                   : "Skillvue enabled a structured assessment based on the soft skill framework that In's had already built internally for the Store Manager profile."
                 }
               </p>
-              <div className="grid lg:grid-cols-2 gap-10 items-start mb-10">
-                <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8">
-                  <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.1em] uppercase mb-5 block">
-                    {lang === 'it' ? 'Le 6 soft skill valutate' : '6 Soft Skills Assessed'}
-                  </span>
-                  <div className="grid grid-cols-2 gap-3">
-                    {skills[l].map(s => (
-                      <div key={s} className="rounded-lg bg-[#4B4DF7]/[0.04] px-4 py-3">
-                        <span className="text-[13px] text-[#1A1A2E]/[0.65] font-medium">{s}</span>
+              <div className="mb-10">
+                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{lang === 'it' ? 'COMPETENZE VALUTATE' : 'SKILLS ASSESSED'}</span>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {skills.map(s => (
+                    <div key={s.en} className="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <s.icon className="h-4 w-4" style={{ color: '#4b4df7' }} />
                       </div>
-                    ))}
-                  </div>
+                      <span className="text-[13px] text-[#1A1A2E]/70 font-medium">{s[l]}</span>
+                    </div>
+                  ))}
                 </div>
-                <div className="space-y-4">
-                  {methodologyCards.map(card => (
-                    <div key={card.en.title} className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/50 p-6">
-                      <h4 className="text-[14px] font-bold text-[#1A1A2E]/70 mb-2">{card[l].title}</h4>
-                      <p className="text-[13px] text-[#1A1A2E]/50 leading-[1.6]">{card[l].text}</p>
+              </div>
+              <div>
+                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{lang === 'it' ? 'COME È STATO COSTRUITO' : 'HOW IT WAS BUILT'}</span>
+                <div className="grid md:grid-cols-3 gap-5">
+                  {methodologyCards.map((card, i) => (
+                    <div key={card.en.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-8 h-8 rounded-lg flex items-center justify-center mb-4" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <span className="text-[12px] font-bold" style={{ color: '#4b4df7' }}>{i + 1}</span>
+                      </div>
+                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-2 leading-[1.4]">{card[l].title}</h4>
+                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{card[l].text}</p>
                     </div>
                   ))}
                 </div>
@@ -390,99 +378,125 @@ export default function InsMercatoStoryPage() {
             </Section>
 
             {/* Results */}
-            <Section className="mb-20">
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-2">
-                {lang === 'it' ? 'Risultati' : 'The Results'}
-              </h2>
-              <p className="text-[14px] font-semibold text-[#1A1A2E]/40 uppercase tracking-[0.08em] mb-10">
+            <Section className="mb-24">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'RISULTATI' : 'RESULTS'}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">
                 {lang === 'it' ? 'Key Metrics & Impatto' : 'Key Metrics & Impact'}
-              </p>
-              <p className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.7] max-w-3xl mb-10">
+              </h2>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">
                 {lang === 'it'
                   ? "I risultati quantitativi e qualitativi del progetto Skillvue x In's Mercato."
                   : "Quantitative and qualitative outcomes of the Skillvue x In's Mercato project."
                 }
               </p>
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                {/* Funnel */}
-                <div className="grid grid-cols-5 gap-3 mb-10">
-                  {funnel.map((f, i) => (
-                    <motion.div
-                      key={f.label.en}
-                      className="rounded-xl border border-white/[0.06] bg-white/[0.04] p-5 text-center"
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: i * 0.08 }}
-                    >
-                      <span className="block text-white font-bold mb-2" style={{ fontSize: '1.5rem', letterSpacing: '-0.03em' }}>{f.value}</span>
-                      <span className="text-[11px] text-white/40 leading-tight block">{f.label[l]}</span>
-                    </motion.div>
-                  ))}
-                </div>
-                {/* Role split */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="rounded-xl border border-white/[0.06] bg-white/[0.04] p-6 text-center">
-                    <span className="block text-white" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>47%</span>
-                    <span className="text-[13px] text-white/[0.55] mt-2 block">
-                      Role-Ready <span className="text-white/30">(~42 {lang === 'it' ? 'profili' : 'profiles'})</span>
-                    </span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
+                  {/* 900/1000 — circular ring at 90% */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.90} ${2 * Math.PI * 40}`} />
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>900/1.000</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{lang === 'it' ? 'assessment completati' : 'assessments completed'}</span>
                   </div>
-                  <div className="rounded-xl border border-white/[0.06] bg-white/[0.04] p-6 text-center">
-                    <span className="block text-white" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>53%</span>
-                    <span className="text-[13px] text-white/[0.55] mt-2 block">
-                      In Development <span className="text-white/30">(~48 {lang === 'it' ? 'profili' : 'profiles'})</span>
-                    </span>
+                  {/* ~90 top talent — people silhouettes */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 48" className="w-20 h-16" fill="none">
+                        <circle cx="12" cy="14" r="7" fill="rgba(75,77,247,0.25)" />
+                        <path d="M0 38c0-6.627 5.373-10 12-10s12 3.373 12 10" stroke="rgba(75,77,247,0.25)" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                        <circle cx="32" cy="12" r="8" fill="#4b4df7" />
+                        <path d="M18 38c0-7.732 6.268-12 14-12s14 4.268 14 12" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                        <circle cx="52" cy="14" r="7" fill="rgba(75,77,247,0.25)" />
+                        <path d="M40 38c0-6.627 5.373-10 12-10s12 3.373 12 10" stroke="rgba(75,77,247,0.25)" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>~90</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{lang === 'it' ? 'Top Talent identificati' : 'Top Talent identified'}</span>
+                  </div>
+                  {/* 47% / 53% split bar */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-24 h-24 mb-5 flex flex-col items-center justify-center gap-2">
+                      <div className="w-full rounded-full overflow-hidden" style={{ height: 10, background: 'rgba(255,255,255,0.08)' }}>
+                        <div className="h-full rounded-full bg-[#4b4df7]" style={{ width: '47%' }} />
+                      </div>
+                      <div className="flex justify-between w-full">
+                        <span className="text-[11px] text-[#4b4df7] font-bold">47%</span>
+                        <span className="text-[11px] text-white/30 font-bold">53%</span>
+                      </div>
+                      <div className="w-full rounded-full overflow-hidden" style={{ height: 10, background: 'rgba(255,255,255,0.08)' }}>
+                        <div className="h-full rounded-full bg-white/20" style={{ width: '53%' }} />
+                      </div>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>47% / 53%</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">Role-Ready / In Development</span>
                   </div>
                 </div>
-                <p className="text-[12px] text-white/20 mt-4 text-center">
-                  {lang === 'it'
-                    ? 'Completamento al netto delle cause esterne (dimissioni, malattia). 48 non terminate per cause esterne.'
-                    : 'Completion rate net of external causes (resignations, sick leave). 48 not completed due to external causes.'
-                  }
-                </p>
+              </div>
+
+              {/* Quote */}
+              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-8 lg:p-10 mb-10">
+                <p className="text-[17px] text-[#1A1A2E]/75 leading-[1.75] italic mb-6">"{quote[l].text}"</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-[#4b4df7]/[0.15]">
+                    <img src="/logos/mirko%20tortolano.png" alt={quote[l].author} className="w-full h-full object-cover object-top" />
+                  </div>
+                  <div>
+                    <p className="text-[14px] font-semibold text-[#1A1A2E]/80">{quote[l].author}</p>
+                    <p className="text-[12px] text-[#1A1A2E]/40 leading-[1.5]">{quote[l].role}</p>
+                  </div>
+                </div>
               </div>
 
               {/* Impact cards */}
               <div className="grid md:grid-cols-2 gap-5">
                 {impactCards.map(card => (
-                  <div key={card.en.title} className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white/60 p-6">
-                    <h4 className="text-[15px] font-bold text-[#1A1A2E]/70 mb-2">{card[l].title}</h4>
-                    <p className="text-[14px] text-[#1A1A2E]/50 leading-[1.6]">{card[l].text}</p>
+                  <div key={card.en.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                      <card.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                    </div>
+                    <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{card[l].title}</h4>
+                    <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{card[l].text}</p>
                   </div>
                 ))}
               </div>
             </Section>
 
             {/* Future Vision */}
-            <Section className="mb-20">
-              <div className="rounded-2xl border border-[#4B4DF7]/[0.1] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-10 lg:p-14">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.08)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.15)' }}>
+            <Section>
+              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10 lg:p-14">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
                   {lang === 'it' ? 'EVOLUZIONE 2026' : 'EVOLUTION 2026'}
                 </span>
-                <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold text-[#1A1A2E] mb-4 leading-[1.2]">
+                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">
                   {lang === 'it' ? 'Da sviluppo interno a talent strategy integrata' : 'From internal development to integrated talent strategy'}
                 </h2>
-                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.7] mb-4 max-w-2xl">
+                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8">
                   {lang === 'it'
                     ? "Quando l'assessment sullo sviluppo interno ha iniziato a produrre risultati concreti e scalabili, la scelta naturale è stata estenderlo anche alla selezione esterna, eliminando la discontinuità tra \"chi cerchiamo\" e \"come lo facciamo crescere\"."
                     : "When the internal development assessment began delivering concrete, scalable results, the natural next step was extending it to external hiring — eliminating the gap between \"who we're looking for\" and \"how we develop them.\""
                   }
                 </p>
-                <p className="text-[14px] font-semibold text-[#1A1A2E]/40 uppercase tracking-[0.08em] mb-6">
-                  {lang === 'it' ? 'Obiettivo strategico' : 'Strategic Goal'}
-                </p>
-                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.7] mb-6 max-w-2xl">
-                  {lang === 'it'
-                    ? "Costruire un ciclo unico e coerente in cui ogni persona, dal primo giorno, viene valutata, orientata e accompagnata con la stessa logica."
-                    : "Build a single, coherent cycle where every person, from day one, is assessed, guided, and developed with the same logic."
-                  }
-                </p>
+                <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
+                    <Target className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                  </div>
+                  <p className="text-[15px] text-[#1A1A2E]/75 leading-[1.7]">
+                    {lang === 'it'
+                      ? "Costruire un ciclo unico e coerente in cui ogni persona, dal primo giorno, viene valutata, orientata e accompagnata con la stessa logica."
+                      : "Build a single, coherent cycle where every person, from day one, is assessed, guided, and developed with the same logic."
+                    }
+                  </p>
+                </div>
                 <div className="space-y-4">
                   {visionBullets[l].map((item, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#4B4DF7]/40 mt-2 shrink-0" />
-                      <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.6]">{item}</p>
+                    <div key={i} className="flex items-start gap-4">
+                      <ArrowRight className="h-4 w-4 mt-1 shrink-0" style={{ color: '#4b4df7' }} />
+                      <p className="text-[15px] text-[#1A1A2E]/65 leading-[1.65]">{item}</p>
                     </div>
                   ))}
                 </div>
@@ -520,8 +534,8 @@ export default function InsMercatoStoryPage() {
             <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 leading-[1.4] mb-12">{t('Related Stories')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {[
-                { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: '35% fewer days to hire. 30% better hires.' },
-                { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: 'Winning Gen Z Talent Without Drowning in Interviews.' },
+                { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+                { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: 'Subdued: building a single scalable selection standard for a network of 130+ stores' },
               ].map(s => (
                 <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0,0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
                   <span className="text-[14px] text-white/40 mb-4 block">{t(s.tag)}</span>

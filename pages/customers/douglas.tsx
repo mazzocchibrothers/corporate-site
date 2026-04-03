@@ -42,11 +42,12 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
-        { label: 'Dipendenti', value: '2.500 (rete vendita Southern Europe)' },
-        { label: 'Punti vendita', value: '370+' },
+        { label: 'Settore', value: 'Retail' },
         { label: 'Gruppo', value: 'Douglas Group' },
         { label: 'Fatturato', value: '~4,4 mld €' },
-        { label: 'Paesi', value: '19' },
+        { label: 'Dipendenti', value: '2.500' },
+        { label: 'Punti vendita', value: '370+' },
+        { label: 'Use Case', value: 'Learning & Development, Internal Mobility' },
       ],
     },
     context: {
@@ -166,8 +167,8 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'unicomm', company: 'Unicomm', tag: 'Retail GDO · Sviluppo interno', headline: 'Come Unicomm sta costruendo un talent lifecycle skills-based su 270+ punti vendita.' },
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring at Scale', headline: 'Come Carrefour Italia ha trasformato la selezione di 30.000 candidature l\'anno con soli 3 recruiter.' },
+        { id: 'unicomm', company: 'Unicomm', tag: 'Retail GDO · Sviluppo interno', headline: 'Come Unicomm sta costruendo una nuova gestione del talento su una rete di 270 punti vendita in costante aumento' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring at Scale', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
       ],
       cta: 'Leggi la storia',
     },
@@ -195,11 +196,12 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
-        { label: 'Employees', value: '2,500 (Southern Europe retail network)' },
-        { label: 'Stores', value: '370+' },
+        { label: 'Industry', value: 'Retail' },
         { label: 'Group', value: 'Douglas Group' },
         { label: 'Revenue', value: '~€4.4B' },
-        { label: 'Countries', value: '19' },
+        { label: 'Employees', value: '2,500' },
+        { label: 'Stores', value: '370+' },
+        { label: 'Use Case', value: 'Learning & Development, Internal Mobility' },
       ],
     },
     context: {
@@ -318,8 +320,8 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'unicomm', company: 'Unicomm', tag: 'GDO Retail · Internal Development', headline: 'How Unicomm is building a skills-based talent lifecycle across 270+ stores.' },
-        { id: 'carrefour', company: 'Carrefour', tag: 'GDO Retail · Hiring at Scale', headline: 'How Carrefour Italia transformed the screening of 30,000 applications a year with just 3 recruiters.' },
+        { id: 'unicomm', company: 'Unicomm', tag: 'GDO Retail · Internal Development', headline: 'How Unicomm is building a new talent management system across a network of 270 stores and growing' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'GDO Retail · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
       ],
       cta: 'Read the story',
     },
@@ -388,8 +390,8 @@ export default function DouglasStoryPage() {
               <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-1.5">
-                      <img src="/logos/douglas-logo.png" alt="Douglas logo" className="w-full h-full object-contain" />
+                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 flex items-center justify-center bg-white">
+                      <img src="/logos/douglas-logo.png" alt="Douglas logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>

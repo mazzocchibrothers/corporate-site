@@ -42,11 +42,11 @@ const content = {
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
-        { label: 'Settore', value: 'Fashion Retail' },
+        { label: 'Settore', value: 'Retail' },
+        { label: 'Fatturato', value: '~50 mln €' },
         { label: 'Dipendenti', value: '1.000+' },
         { label: 'Punti vendita', value: '130+ monomarca' },
-        { label: 'Fatturato', value: '~50 mln €' },
-        { label: 'Paesi', value: '6' },
+        { label: 'Use Case', value: 'Hiring' },
       ],
     },
     context: {
@@ -143,8 +143,8 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: 'Come Carrefour Italia ha trasformato la selezione di 30.000 candidature l\'anno con soli 3 recruiter.' },
-        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'Come Europ Assistance ha assunto il 24% in più con il 18% di colloqui in meno.' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
+        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'Come ottenere un tasso di successo delle assunzioni del 76% in un business fondato sulla componente umana' },
       ],
       cta: 'Leggi la storia',
     },
@@ -172,11 +172,11 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
-        { label: 'Industry', value: 'Fashion Retail' },
+        { label: 'Industry', value: 'Retail' },
+        { label: 'Revenue', value: '~€50M' },
         { label: 'Employees', value: '1,000+' },
         { label: 'Stores', value: '130+ mono-brand' },
-        { label: 'Revenue', value: '~€50M' },
-        { label: 'Countries', value: '6' },
+        { label: 'Use Case', value: 'Hiring' },
       ],
     },
     context: {
@@ -273,8 +273,8 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: 'How Carrefour Italia transformed the selection of 30,000 applications a year with just 3 recruiters.' },
-        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'How Europ Assistance hired 24% more with 18% fewer interviews.' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'How to achieve a 76% hiring success rate in a business built on human interaction' },
       ],
       cta: 'Read the story',
     },
@@ -483,13 +483,12 @@ export default function SubduedStoryPage() {
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
                   </div>
-                  {/* 80% circular progress */}
+                  {/* 80% approval checkmark */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-5">
-                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 40 * 0.80} ${2 * Math.PI * 40}`} />
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <circle cx="32" cy="32" r="28" fill="rgba(75,77,247,0.15)" stroke="#4b4df7" strokeWidth="3"/>
+                        <path d="M18 32l10 10 18-18" stroke="#4b4df7" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
