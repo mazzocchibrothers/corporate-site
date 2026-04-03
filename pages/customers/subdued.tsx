@@ -45,6 +45,7 @@ const content = {
         { label: 'Settore', value: 'Fashion Retail' },
         { label: 'Dipendenti', value: '1.000+' },
         { label: 'Punti vendita', value: '130+ monomarca' },
+        { label: 'Fatturato', value: '~50 mln €' },
         { label: 'Paesi', value: '6' },
       ],
     },
@@ -174,6 +175,7 @@ const content = {
         { label: 'Industry', value: 'Fashion Retail' },
         { label: 'Employees', value: '1,000+' },
         { label: 'Stores', value: '130+ mono-brand' },
+        { label: 'Revenue', value: '~€50M' },
         { label: 'Countries', value: '6' },
       ],
     },
@@ -468,13 +470,43 @@ export default function SubduedStoryPage() {
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-                  {c.results.metrics.map(m => (
-                    <div key={m.label} className="text-center">
-                      <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
-                      <span className="text-[13px] text-white/[0.65] mt-3 block leading-[1.4]">{m.label}</span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
+                  {/* -70% circular progress */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.70} ${2 * Math.PI * 40}`} />
+                      </svg>
                     </div>
-                  ))}
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
+                  </div>
+                  {/* 80% circular progress */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.80} ${2 * Math.PI * 40}`} />
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
+                  </div>
+                  {/* -50% circular progress */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.50} ${2 * Math.PI * 40}`} />
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
+                  </div>
                 </div>
               </div>
 

@@ -45,6 +45,7 @@ const content = {
         { label: 'Dipendenti', value: '2.500 (rete vendita Southern Europe)' },
         { label: 'Punti vendita', value: '370+' },
         { label: 'Gruppo', value: 'Douglas Group' },
+        { label: 'Fatturato', value: '~4,4 mld €' },
         { label: 'Paesi', value: '19' },
       ],
     },
@@ -197,6 +198,7 @@ const content = {
         { label: 'Employees', value: '2,500 (Southern Europe retail network)' },
         { label: 'Stores', value: '370+' },
         { label: 'Group', value: 'Douglas Group' },
+        { label: 'Revenue', value: '~€4.4B' },
         { label: 'Countries', value: '19' },
       ],
     },
@@ -340,8 +342,8 @@ export default function DouglasStoryPage() {
         {/* ===== HERO ===== */}
         <section className="relative pt-[80px]">
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0a0a1a 0%, #111128 50%, #0d0d1f 100%)' }} />
-            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #4b4df7 0%, transparent 50%), radial-gradient(circle at 80% 20%, #3b3be0 0%, transparent 40%)' }} />
+            <img src="/logos/douglas-background-explore-stories.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
+            <div className="absolute inset-0 bg-black/40" />
           </div>
 
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
@@ -514,14 +516,61 @@ export default function DouglasStoryPage() {
 
               {/* Key metrics */}
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                  {c.results.metrics.map(m => (
-                    <div key={m.label} className="text-center">
-                      <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>{m.value}</span>
-                      <span className="text-[13px] text-white/[0.65] mt-3 block leading-[1.4]">{m.label}</span>
-                      {m.sublabel && <span className="text-[11px] text-white/30 mt-1 block leading-[1.4]">{m.sublabel}</span>}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                  {/* Metric 0 — people/users icon */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-20 h-20 mb-4 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <circle cx="32" cy="22" r="12" fill="rgba(75,77,247,0.25)" stroke="#4b4df7" strokeWidth="2.5"/>
+                        <path d="M10 54c0-12 10-20 22-20s22 8 22 20" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round"/>
+                      </svg>
                     </div>
-                  ))}
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.2rem,2vw,1.8rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
+                    <span className="text-[12px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
+                    {c.results.metrics[0].sublabel && <span className="text-[10px] text-white/30 mt-0.5 block">{c.results.metrics[0].sublabel}</span>}
+                  </div>
+                  {/* Metric 1 — clock/speed icon */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-20 h-20 mb-4 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <circle cx="32" cy="32" r="24" stroke="rgba(255,255,255,0.15)" strokeWidth="3"/>
+                        <circle cx="32" cy="32" r="24" stroke="#4b4df7" strokeWidth="3" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 24 * 0.75} ${2 * Math.PI * 24}`} className="-rotate-90 origin-center"/>
+                        <line x1="32" y1="32" x2="32" y2="14" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+                        <line x1="32" y1="32" x2="44" y2="38" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round"/>
+                        <circle cx="32" cy="32" r="3" fill="white"/>
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.2rem,2vw,1.8rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
+                    <span className="text-[12px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
+                    {c.results.metrics[1].sublabel && <span className="text-[10px] text-white/30 mt-0.5 block">{c.results.metrics[1].sublabel}</span>}
+                  </div>
+                  {/* Metric 2 — store/building icon */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-20 h-20 mb-4 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <rect x="8" y="28" width="48" height="28" rx="3" fill="rgba(75,77,247,0.2)" stroke="#4b4df7" strokeWidth="2.5"/>
+                        <path d="M8 28L32 10l24 18" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <rect x="24" y="40" width="16" height="16" rx="2" fill="#4b4df7" opacity="0.6"/>
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.2rem,2vw,1.8rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
+                    <span className="text-[12px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
+                    {c.results.metrics[2].sublabel && <span className="text-[10px] text-white/30 mt-0.5 block">{c.results.metrics[2].sublabel}</span>}
+                  </div>
+                  {/* Metric 3 — layers/roles icon */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-20 h-20 mb-4 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <rect x="12" y="14" width="40" height="10" rx="3" fill="rgba(75,77,247,0.2)" stroke="#4b4df7" strokeWidth="2.5"/>
+                        <rect x="12" y="30" width="40" height="10" rx="3" fill="rgba(75,77,247,0.35)" stroke="#4b4df7" strokeWidth="2.5"/>
+                        <rect x="12" y="46" width="40" height="10" rx="3" fill="rgba(75,77,247,0.55)" stroke="#4b4df7" strokeWidth="2.5"/>
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.2rem,2vw,1.8rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[3].value}</span>
+                    <span className="text-[12px] text-white/[0.65] leading-[1.4]">{c.results.metrics[3].label}</span>
+                    {c.results.metrics[3].sublabel && <span className="text-[10px] text-white/30 mt-0.5 block">{c.results.metrics[3].sublabel}</span>}
+                  </div>
                 </div>
               </div>
 
