@@ -64,7 +64,7 @@ const content = {
       title: 'Il problema strutturale',
       intro: "Carrefour Italia aveva un vincolo operativo chiaro: scalare la qualità della selezione senza moltiplicare le risorse, in un settore dove ogni assunzione sbagliata erode direttamente i margini.",
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Target,
@@ -171,7 +171,7 @@ const content = {
       highlight2: 'key hiring KPI',
       after: '',
     },
-    subtitle: "In a sector where labour cost is 3.4x operating profit, Carrefour Italia turned hiring into a real profitability lever — with clear data on people and their competencies.",
+    subtitle: "In a sector where labour cost is 3.4x operating profit, Carrefour Italia turned hiring into a real profitability lever thanks to clear, transparent data on skills.",
     heroMetrics: [
       { value: '-35%', label: 'Time-to-Hire' },
       { value: '+20%', label: 'Hiring success rate' },
@@ -182,7 +182,7 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
-        { label: 'Industry', value: 'GDO' },
+        { label: 'Industry', value: 'Large-scale distribution' },
         { label: 'Group', value: 'Carrefour Group' },
         { label: 'Revenue', value: '~€4.5B' },
         { label: 'Employees', value: '13,000+ direct + 8,000 franchise network' },
@@ -192,68 +192,68 @@ const content = {
     },
     context: {
       badge: 'CONTEXT',
-      title: 'The Project Context',
+      title: 'The Company and The Context',
       paragraph: <>
-        Carrefour Italia (now <strong className="text-[#1A1A2E]/80 font-semibold">Princes Retail S.p.A.</strong>) operates approximately <strong className="text-[#1A1A2E]/80 font-semibold">1,200 stores</strong> across 4 formats — Hypermarkets, Market, Express, Cash &amp; Carry — with <strong className="text-[#1A1A2E]/80 font-semibold">13,000 direct employees</strong> and a franchise network of 8,000 people.
+        Carrefour Italia (now <strong className="text-[#1A1A2E]/80 font-semibold">Princes Retail S.p.A.</strong>) operates approximately <strong className="text-[#1A1A2E]/80 font-semibold">1,200 stores</strong> across 4 formats (Hypermarkets, Market, Express, Cash &amp; Carry) with <strong className="text-[#1A1A2E]/80 font-semibold">13,000 direct employees</strong> and a franchise network of 8,000 people.
         <br /><br />
-        In a sector where labour cost accounts for <strong className="text-[#1A1A2E]/80 font-semibold">9.8% of revenue</strong> (3.4 times operating profit), every people decision is inevitably also a margin decision. In this context, the ability to put the right person in the right role — at scale, with data — was not an HR issue: it was a prerequisite for protecting profitability. Carrefour received up to <strong className="text-[#1A1A2E]/80 font-semibold">30,000 applications per year</strong>, managed by just <strong className="text-[#1A1A2E]/80 font-semibold">3 recruiters</strong>, with no tool capable of distinguishing — across 1,200 stores — who would perform from who would leave within months.
+        In an industry where labour cost accounts for <strong className="text-[#1A1A2E]/80 font-semibold">9.8% of revenues</strong> (3.4 times the costs of operating profits), every people decision is inevitably also a decision that impacts margins. In this context, the ability to put the right person in the right role at scale, with data, was not just an HR issue: it was a prerequisite for protecting profitability. Carrefour received up to <strong className="text-[#1A1A2E]/80 font-semibold">30,000 applications per year</strong>, managed by just <strong className="text-[#1A1A2E]/80 font-semibold">3 recruiters</strong>, with no tool capable of distinguishing, across 1,200 stores, who would perform from who would leave within months.
       </>,
     },
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'The Structural Problem',
-      intro: "Carrefour Italia had a clear operational constraint: scale selection quality without multiplying resources — in a sector where every wrong hire directly erodes margins.",
+      intro: "Carrefour Italia had a clear operational constraint: scale hiring quality without multiplying resources, in a sector where every wrong hire directly erodes margins.",
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Target,
           title: 'Cost of potential wrong hires',
-          text: "Frontline replacement costs €3,000–6,600; a store manager can reach €40,000–90,000. Keeping selection quality high and turnover low was a direct financial imperative.",
+          text: "Frontline replacement costs €3,000–6,600; a store manager can reach €40,000–90,000. Keeping hiring quality high and turnover low was a direct financial imperative.",
         },
         {
           icon: Layers,
           title: 'Multi-format complexity',
-          text: "4 retail formats, each with different profiles and competencies. 3 recruiters could not guarantee evaluation depth across 1,200 stores without risking store performance.",
+          text: "4 retail formats, each with different profiles and skills. 3 recruiters could not guarantee the correct depth of evaluation across 1,200 stores without risking negative impact on store performance.",
         },
         {
           icon: Eye,
-          title: 'Competencies invisible across the store network',
-          text: "For thousands of employees, no structured mapping existed. Decisions on who to promote, where to invest in training, who was ready for more responsibility had no data behind them.",
+          title: 'Skills invisible across the store network',
+          text: "No structured skills mapping was available for thousands of employees. Decisions on who to promote, where to invest in training, who was ready for more responsibility had no data behind them.",
         },
       ],
       hrChallenges: [
         {
           icon: BarChart3,
           title: "CVs didn't predict performance",
-          text: "For junior and operational profiles — most of the 30,000 annual applications — CVs are a poor predictor. Customer orientation, problem solving, adaptability: all invisible on paper.",
+          text: "For junior and operational profiles — most of the 30,000 annual applications — CVs are a poor predictor of real capabilities. Customer orientation, problem solving, adaptability: all invisible on paper.",
         },
         {
           icon: Wrench,
           title: 'Pre-screening with no structured output',
-          text: "Decisions relied on individual judgment and unstructured interviews, reducing predictive accuracy by 14%. No competency data before the interview.",
+          text: "Decisions relied on individual judgment and traditional interviews, something that can reduce predictive accuracy by up to 14% in comparison to structured interviews. No skill data was available before the interview.",
         },
         {
           icon: Users,
-          title: 'The competency model existed on paper, not in the process',
-          text: "Carrefour had defined critical behaviours for each role, but hiring could not always happen with a systematic evaluation against that framework.",
+          title: 'The skills model existed on paper, not in the process',
+          text: "Carrefour had defined critical behaviours for each role, but hiring was not always conducted with a systematic evaluation based on that framework.",
         },
       ],
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: 'What Needed to Change',
+      title: 'What needed to change',
       items: [
         { icon: Zap, text: "Scale pre-screening without sacrificing quality: handle 30,000 applications/year with 3 recruiters, reducing reliance on external headhunters and freeing time for in-depth evaluation and employer branding" },
-        { icon: CheckCircle, text: "Integrate the proprietary leadership model into selection: assess soft and hard skills aligned to the Carrefour framework, with structured output on every candidate before the first interview" },
-        { icon: Layers, text: "Cover a multi-format organization: a single adaptable tool for different profiles — HQ internships, operational roles across multiple store formats, leadership profiles — each with a specific competency mix" },
-        { icon: TrendingUp, text: "Build a bridge between selection and development: align competencies measured at hiring with those developed internally, creating the foundation for a skills-based model covering the entire talent lifecycle" },
+        { icon: CheckCircle, text: "Integrate the proprietary leadership model into hiring: assess soft and hard skills aligned to the Carrefour framework, with structured output on every candidate before the first interview" },
+        { icon: Layers, text: "Cover a multi-format organization: a single adaptable tool for different profiles — HQ internships, operational roles across multiple store formats, leadership profiles — each with a specific skill mix" },
+        { icon: TrendingUp, text: "Build a bridge between hiring and development: align skills measured at hiring with those developed internally, creating the foundation for a skills-based model covering the entire talent lifecycle" },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was integrated first into the selection process for junior profiles, then progressively extended to the internal workforce.",
+      intro: "Skillvue was integrated first into the hiring process for junior profiles, then progressively extended to the internal workforce.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Heart, label: "Soft skills aligned to the proprietary leadership model" },
@@ -263,38 +263,38 @@ const content = {
       methodology: [
         {
           title: "01 — Integration with the proprietary leadership model",
-          text: "Carrefour's leadership model was integrated into Skillvue assessments, calibrating content and observable behaviours. Every candidate receives a structured evaluation before their first interview, with the scalability and objectivity that only a science-backed assessment can guarantee.",
+          text: "Carrefour's leadership model was integrated into Skillvue assessments, calibrating content and observable behaviours. This way every candidate gets a structured evaluation before their first interview, with the scalability and objectivity that only a science-backed assessment can guarantee.",
         },
         {
           title: "02 — Multi-channel architecture, one process",
-          text: "Assessments configured for different profiles — HQ internships, operational roles, leadership — each with a specific mix of soft and hard skills. The recruiter receives a structured report with competency profile and role matching. One single standard across 4 formats and 1,200 stores.",
+          text: "Assessments configured for different profiles — HQ internships, operational roles, leadership — each with a specific mix of soft and hard skills. The recruiter receives a structured report with skill profile and role matching. One single standard across 4 formats and 1,200 stores.",
         },
         {
           title: "03 — From hiring to store network mapping",
-          text: "The value demonstrated in selection led to extending the model to the store network: 6,000 employees mapped on competencies in 1 month, replacing in-person observation. For the first time, a single language from selection to development.",
+          text: "The value demonstrated in hiring led to extending the model to the store network: 6,000 employees mapped on skills in 1 month, replacing in-person observation. For the first time, a single language from hiring to development.",
         },
       ],
     },
     results: {
       badge: 'RESULTS',
       title: 'Key Metrics & Impact',
-      subtitle: 'The measurable outcomes Carrefour Italia achieved through Skillvue across selection and internal skills mapping.',
+      subtitle: 'The measurable outcomes Carrefour Italia achieved through Skillvue across hiring and internal skills mapping.',
       metrics: [
         { value: '-35%', label: 'Time-to-hire' },
-        { value: '65% → 85%', label: 'Success rate of selections advanced by Hiring Managers' },
+        { value: '65% → 85%', label: 'Success rate of hires once handed over to Hiring Managers' },
         { value: '6,000', label: 'Employees mapped in 1 month' },
       ],
       qualitative: [
-        { icon: CheckCircle, title: 'Radically more qualified shortlists', text: "Candidates advanced in the process were more aligned to expectations, with a direct reduction in interviews that didn't lead to a hire. Across 30,000 applications/year, hundreds of mistakes avoided — each costing €3,000–6,600." },
-        { icon: Eye, title: 'Hidden talent discovered in the network', text: "Mapping 6,000 employees surfaced high-potential profiles where no visibility previously existed. In a market where developing internally costs 30–50% less than external hiring, knowing who you have is the first step to stop chasing demand on the market." },
-        { icon: Wrench, title: 'The leadership model came to life in practice', text: "The proprietary framework became a measurable selection criterion. Every candidate is evaluated with structured output: the model informs decisions, not just declared values." },
+        { icon: CheckCircle, title: 'Radically more qualified shortlists', text: "Candidates moving on to next steps in the process were more aligned to expectations, with a direct reduction in interviews that didn't lead to a hire. Across 30,000 applications/year, hundreds of mistakes avoided — each costing €3,000–6,600." },
+        { icon: Eye, title: 'Hidden talent discovered in the network', text: "Mapping 6,000 employees highlighted high-potential profiles where no visibility previously existed. In a market where developing internally costs 30–50% less than external hiring, knowing who you have is the first step to stop chasing demand on the market." },
+        { icon: Wrench, title: 'The leadership model came to life', text: "The proprietary framework became a measurable hiring criterion. Every candidate is evaluated and receives a structured output: the model informs decisions, not just declared values." },
       ],
     },
     related: {
       title: 'Related Stories',
       stories: [
         { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'How Europ Assistance hired 24% more with 18% fewer interviews.' },
-        { id: 'subdued', company: 'Subdued', tag: 'Retail Fashion · Hiring', headline: 'Subdued: building a single scalable selection standard for a network of 130+ stores' },
+        { id: 'subdued', company: 'Subdued', tag: 'Retail Fashion · Hiring', headline: 'Subdued: building a single scalable hiring standard for a network of 130+ stores' },
       ],
       cta: 'Read the story',
     },
@@ -487,7 +487,7 @@ export default function CarrefourStoryPage() {
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">

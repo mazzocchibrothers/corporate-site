@@ -61,7 +61,7 @@ const content = {
       title: 'Migliaia di candidati, un team HR di piccole dimensioni e tanti CV troppo uguali tra di loro.',
       intro: 'Il Progetto GRAPE ha generato oltre 3.000 candidature. Il team HR dedicato (1 manager + 2 figure operative) si è posto l\'obiettivo di raggiungere 80 candidati qualificati a settimana da portare avanti nelle fasi successive del processo.',
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Zap,
@@ -141,11 +141,11 @@ const content = {
     vision: {
       badge: 'EVOLUZIONE 2026',
       title: 'Da graduate program a Talent Acquisition strategy',
-      intro: 'Quando il Progetto GRAPE ha dimostrato che grazie al supporto di Skillvue era possibile gestire anche alti volumi di candidature in tempi ridotti con un\'esperienza candidato positiva, si è subito cominciato a ragionare sugli step successivi.',
-      objective: 'Estendere il pre-screening AI a tutti i processi di Talent Acquisition di Mediaset, in un gruppo che sta crescendo vertiginosamente in sei paesi con la sfida strutturale di attrarre competenze digitali in un mercato del lavoro in contrazione demografica.',
+      intro: 'Quando il Progetto GRAPE ha dimostrato che grazie al supporto di Skillvue era possibile gestire anche alti volumi di candidature in tempi ridotti con un\'esperienza candidato positiva, il passo successivo è diventato quasi naturale.',
+      objective: 'Estendere il pre-screening AI ai processi di Talent Acquisition di Mediaset, in un gruppo che sta crescendo vertiginosamente in sei paesi con la sfida strutturale di attrarre competenze digitali in un mercato del lavoro in contrazione demografica.',
       bullets: [
         'Mediaset ha già esteso Skillvue alla selezione di un Junior HR Business Partner per la sede centrale (1.500+ candidature)',
-        'Obiettivo 2026: estendere il pre-screening AI a tutti i processi di Talent Acquisition',
+        'Obiettivo 2026: estendere il pre-screening AI ai processi di Talent Acquisition',
         'In un gruppo che sta crescendo su 6 paesi, identificare talento su scala non è un nice-to-have: è la base per costruire una forza lavoro a prova di futuro',
       ],
     },
@@ -164,13 +164,13 @@ const content = {
     breadcrumb: 'Customers',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'How to select and grow talent at scale in a group that is ',
+      before: 'How to select and develop talent at scale in a group that is ',
       highlight1: 'tripling',
       middle: ' ',
       highlight2: 'in size',
       after: '',
     },
-    subtitle: 'With Skillvue, Mediaset turned 3,000 applications into 15 targeted hires of graduates and junior profiles in just 5 weeks. Soft skills became the first selection filter, and their objectification gave the HR team structured data on every person — useful for supporting their professional growth within a rapidly expanding organisation.',
+    subtitle: 'With Skillvue, Mediaset turned 3,000 applications into 15 targeted hires of graduates and junior profiles in just 5 weeks. Soft skills became the first hiring filter, and their objectification gave the HR team structured data on every person to support their professional growth within a rapidly expanding organisation.',
     heroMetrics: [
       { value: '3,000+', label: 'applications processed' },
       { value: '5 weeks', label: 'end-to-end management' },
@@ -190,9 +190,9 @@ const content = {
     },
     context: {
       badge: 'CONTEXT',
-      title: 'The Project Context',
+      title: 'The Company and The Context',
       paragraph: <>
-        Mediaset, part of the <strong className="text-[#1A1A2E]/80 font-semibold">MFE – MediaForEurope</strong> group, is Italy's leading private commercial broadcaster and is undergoing an unprecedented phase of evolution: with the acquisition of ProSiebenSat.1 and a stake in Impresa, MFE has become the first private free-to-air broadcaster to control operations across three major European markets, reaching <strong className="text-[#1A1A2E]/80 font-semibold">over 220 million people in six countries</strong>. The organisational leap is enormous: the workforce is growing from around <strong className="text-[#1A1A2E]/80 font-semibold">5,200 to over 12,000 people</strong>. It is in this context that <strong className="text-[#1A1A2E]/80 font-semibold">Progetto GRAPE</strong> (Graduate Program) was born: a selection programme for interns and junior profiles to be placed across various departments at Mediaset's Cologno Monzese headquarters. In a scenario of unprecedented expansion, the ability to identify and attract talent — especially high-potential junior profiles — becomes an indispensable strategic lever.
+        Mediaset, part of the <strong className="text-[#1A1A2E]/80 font-semibold">MFE – MediaForEurope</strong> group, is Italy's leading private commercial broadcaster and is undergoing an unprecedented phase of evolution: with the acquisition of ProSiebenSat.1 and a stake in Impresa, MFE has become the first private free-to-air broadcaster to control operations across three major European markets, reaching <strong className="text-[#1A1A2E]/80 font-semibold">over 220 million people in six countries</strong>. The organisational leap is enormous: the workforce is growing from around <strong className="text-[#1A1A2E]/80 font-semibold">5,200 to over 12,000 people</strong>. It is in this context that <strong className="text-[#1A1A2E]/80 font-semibold">Progetto GRAPE</strong> (Graduate Program) was born: a hiring programme for interns and junior profiles to be placed across various departments at Mediaset's Cologno Monzese headquarters. In a scenario of unprecedented expansion, <strong className="text-[#1A1A2E]/80 font-semibold">the ability to identify and attract talent</strong> — especially high-potential junior profiles — becomes an indispensable strategic lever.
       </>,
     },
     challenge: {
@@ -200,7 +200,7 @@ const content = {
       title: 'Thousands of candidates, a small HR team and CVs that all look the same.',
       intro: 'Progetto GRAPE generated over 3,000 applications. The dedicated HR team (1 manager + 2 operatives) set a target of 80 qualified candidates per week to advance to the next stages of the process.',
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Zap,
@@ -210,7 +210,7 @@ const content = {
         {
           icon: Shield,
           title: 'The first brand touchpoint had to be worthy of Mediaset',
-          text: 'Mediaset is one of Italy\'s most recognisable brands and competes with tech companies and digital platforms for the same profiles. The smoothness of the selection process cannot be underestimated.',
+          text: 'Mediaset is one of Italy\'s most recognisable brands and competes with tech companies and digital platforms for the same profiles. The smoothness of the hiring process cannot be underestimated.',
         },
       ],
       hrChallenges: [
@@ -222,24 +222,24 @@ const content = {
         {
           icon: Layers,
           title: 'A model integrable into a multi-phase ecosystem was needed',
-          text: 'From pre-screening to individual interviews to on-site group assessments. The initial evaluation tool had to produce auditable, comparable outputs usable in the subsequent stages.',
+          text: 'From pre-screening to individual interviews to on-site group assessments. The initial evaluation tool had to produce auditable, comparable outputs to be used in the subsequent stages.',
         },
       ],
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: 'What Needed to Change',
+      title: 'What needed to change',
       items: [
-        { icon: Zap, text: <><strong>Manage application volumes within business timelines</strong> — 80 high-potential candidates pre-screened per week to keep the selection process moving at pace</> },
-        { icon: Eye, text: <><strong>Make soft skills visible from the first step</strong> — create a ranking based on real competencies, producing objective data validated against the Mediaset model</> },
-        { icon: Shield, text: <><strong>Ensure a candidate experience worthy of the brand</strong> — first contact with Mediaset positive, intuitive and accessible even for those who have never used this format</> },
-        { icon: Layers, text: <><strong>Integrate the tool into the existing process</strong> — outputs compatible with the multi-phase flow and usable as a benchmark for future development of the tool</> },
+        { icon: Zap, text: <><strong>Manage application volumes within business timelines</strong> — 80 high-potential candidates pre-screened per week to keep the hiring process moving at pace</> },
+        { icon: Eye, text: <><strong>Make soft skills visible from the first step</strong> — create a ranking based on real skills, producing objective data validated against the Mediaset model</> },
+        { icon: Shield, text: <><strong>Ensure a candidate experience worthy of the brand</strong> — first touchpoint with Mediaset had to be positive, intuitive and accessible even for those who have never tried this assessment format</> },
+        { icon: Layers, text: <><strong>Integrate the tool into the existing process</strong> — outputs compatible with the multi-phase flow and to be used as a benchmark for future development of the tool</> },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Pre-screening with Skillvue',
-      intro: "Skillvue was integrated as the first filter of Progetto GRAPE, combining soft skills, logic tests and knowledge questions. The ranking is validated by the HR team on Mediaset\u2019s competency model; suitable profiles advance to the next stages.",
+      intro: "Skillvue was integrated as the first filter of Progetto GRAPE, combining soft skills, logic tests and knowledge questions. The ranking is validated by the HR team on Mediaset\u2019s leadership model; suitable profiles advance to the next stages.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: CheckCircle, label: 'Soft skills — calibrated to Mediaset model' },
@@ -254,7 +254,7 @@ const content = {
         },
         {
           title: 'Ranking validated against the Mediaset model',
-          text: "The ranking is reviewed and integrated with Mediaset's competency model. AI supports, the recruiter decides.",
+          text: "The ranking is reviewed and integrated with Mediaset's leadership model. AI supports, the recruiter decides.",
         },
         {
           title: 'Integrated into a multi-phase process',
@@ -274,17 +274,17 @@ const content = {
       qualitative: [
         { icon: Eye, title: 'For the first time, Mediaset has visibility into its skills database', text: 'Before Skillvue, decisions based on individual subjective assessment remained personal knowledge. Now the team works with shared, standardised parameters.' },
         { icon: Target, title: 'Qualified shortlists, with immediate resource savings', text: 'Individual interviews started from a solid information base, not a blank page. A more efficient funnel and more informed decisions at every step.' },
-        { icon: Users, title: 'Human-in-the-loop, always', text: 'The ranking produced by Skillvue was reviewed and validated by the Mediaset HR team against the company competency model. AI produced the data; people made the decisions.' },
+        { icon: Users, title: 'Human-in-the-loop, always', text: 'The ranking produced by Skillvue was reviewed and validated by the Mediaset HR team against the company leadership model. AI produced the data; people made the decisions.' },
       ],
     },
     vision: {
       badge: 'EVOLUTION 2026',
       title: 'From graduate program to Talent Acquisition strategy',
-      intro: 'Once Progetto GRAPE demonstrated that Skillvue could handle high application volumes in compressed timelines with a positive candidate experience, the next steps became obvious.',
-      objective: 'Extend AI pre-screening to all Mediaset Talent Acquisition processes — in a group growing rapidly across six countries, with the structural challenge of attracting digital talent in a demographically contracting labour market.',
+      intro: 'Once Progetto GRAPE demonstrated that Skillvue could handle high application volumes in compressed timelines with a positive candidate experience, the next step became quite natural.',
+      objective: 'Extend AI pre-screening to Mediaset Talent Acquisition processes — in a group growing rapidly across six countries, with the structural challenge of attracting digital talent in a demographically contracting labour market.',
       bullets: [
-        'Mediaset has already extended Skillvue to a Junior HR Business Partner selection at HQ (1,500+ applications)',
-        '2026 target: extend AI pre-screening to all Talent Acquisition processes',
+        'Mediaset has already extended Skillvue to a Junior HR Business Partner hire at HQ (1,500+ applications)',
+        '2026 target: extend AI pre-screening to Talent Acquisition processes',
         'In a group expanding across 6 countries, identifying talent at scale is not a nice-to-have — it is the foundation for building a future-proof workforce',
       ],
     },
@@ -485,7 +485,7 @@ export default function MediasetStoryPage() {
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
               {/* Key metrics */}
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
@@ -553,7 +553,7 @@ export default function MediasetStoryPage() {
                   {c.vision.badge}
                 </span>
                 <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4 leading-[1.3]">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8 max-w-3xl">{c.vision.intro}</p>
+                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8">{c.vision.intro}</p>
                 <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
                     <Target className="h-5 w-5" style={{ color: '#4b4df7' }} />

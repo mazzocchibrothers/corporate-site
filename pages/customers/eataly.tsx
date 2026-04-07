@@ -55,7 +55,7 @@ const content = {
         Eataly non è un operatore qualsiasi del food italiano. Con <strong className="text-[#1A1A2E]/80 font-semibold">€684M di ricavi, una crescita del 47% in tre anni</strong>, e una revenue per employee doppia rispetto alla media di settore, è l'unico brand italiano del food con una presenza internazionale reale in <strong className="text-[#1A1A2E]/80 font-semibold">16 Paesi</strong>. Dal 2022 sta accelerando su tutti i fronti: nuovi flagship in Nord America (dove si genera il <strong className="text-[#1A1A2E]/80 font-semibold">60% dei ricavi</strong>), nuovi format compatti — Eataly Caffè in hub urbani e Eataly Collection negli aeroporti —, un piano da <strong className="text-[#1A1A2E]/80 font-semibold">€100M per il Medio Oriente</strong>, e il primo Eataly at Sea con MSC Cruises.<br /><br />
         Questa crescita richiede figure manageriali capaci di incarnare i valori del brand in contesti multiculturali: Head Chef, Director of Store Operations, General Manager capaci di portare l'autenticità italiana a Philadelphia, Toronto e Miami. Ma il settore della ristorazione non produce sempre il talento che serve. Con <strong className="text-[#1A1A2E]/80 font-semibold">258.000 posti vacanti, un turnover operativo del 50–70% e un tempo medio di reperimento di 4,5 mesi</strong>, la carenza di figure qualificate è il vincolo più critico al piano di espansione. Nasce da qui il <strong className="text-[#1A1A2E]/80 font-semibold">Progetto Career Passport</strong>, per trasformare questo vincolo in un vantaggio competitivo.
       </>,
-      summary: "Il Career Passport è stato il primo capitolo per la costruzione di una talent strategy sempre più solida e innovativa, orientata a rendere il brand Eataly una piattaforma globale del Made in Italy.",
+      summary: "Il Career Passport è stato il primo capitolo per la costruzione di una talent strategy sempre più solida e innovativa attorno al concetto di mobilità internazionale e crescita, orientata a rendere il brand Eataly una piattaforma globale del Made in Italy.",
     },
     challenge: {
       badge: 'LA SFIDA',
@@ -100,7 +100,7 @@ const content = {
     },
     objectives: {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
-      title: 'Dare al piano di espansione lo strumento di assessment che merita.',
+      title: 'Cosa doveva cambiare',
       items: [
         { icon: Zap, text: "Processare 1.300+ candidature in settimane, non mesi: comprimere i tempi di pre-screening per stare al passo con un piano di aperture che non aspetta." },
         { icon: Eye, text: "Mappare tutti i fattori chiave gi\u00e0 al pre-screening: Leadership, gestione del personale, lingua inglese, aspirazione alla mobilit\u00e0 internazionale. Valutare tutto prima del primo colloquio umano, per concentrare l\u2019investimento di tempo sui candidati con il pi\u00f9 alto potenziale di successo." },
@@ -184,7 +184,7 @@ const content = {
         Eataly is no ordinary player in Italian food. With <strong className="text-[#1A1A2E]/80 font-semibold">€684M in revenue, 47% growth over three years</strong>, and revenue per employee double the industry average, it is the only Italian food brand with a truly international presence across <strong className="text-[#1A1A2E]/80 font-semibold">16 countries</strong>. Since 2022 it has been accelerating on all fronts: new flagships in North America (where <strong className="text-[#1A1A2E]/80 font-semibold">60% of revenues</strong> are generated), new compact formats — Eataly Caffè in urban hubs and Eataly Collection in airports —, a <strong className="text-[#1A1A2E]/80 font-semibold">€100M plan for the Middle East</strong>, and the first Eataly at Sea with MSC Cruises.<br /><br />
         This growth requires managerial talent capable of embodying the brand's values in multicultural contexts: Head Chefs, Directors of Store Operations, General Managers who can bring Italian authenticity to Philadelphia, Toronto and Miami. But the hospitality sector doesn't always produce the talent that is needed. With <strong className="text-[#1A1A2E]/80 font-semibold">258,000 vacancies, 50–70% operational turnover, and an average time-to-fill of 4.5 months</strong>, the shortage of qualified profiles is the most critical constraint on the expansion plan. This is the origin of the <strong className="text-[#1A1A2E]/80 font-semibold">Career Passport Project</strong> — to turn this constraint into a competitive advantage.
       </>,
-      summary: "The Career Passport was the first chapter in building an increasingly solid and innovative talent strategy, aimed at making the Eataly brand a global platform for Made in Italy.",
+      summary: "The Career Passport was the first chapter in building an increasingly solid and innovative talent strategy around the concept of international mobility and growth, aimed at making the Eataly brand a global platform for Made in Italy.",
     },
     challenge: {
       badge: 'THE CHALLENGE',
@@ -223,13 +223,13 @@ const content = {
         {
           icon: Heart,
           title: 'The hiring process as an employer branding lever',
-          text: "To attract the best, Eataly needed to communicate its brand value through the selection process itself: innovation, care for the individual, and the uniqueness of an international career opportunity.",
+          text: "To attract the best, Eataly needed to communicate its brand value through the hiring process itself: innovation, care for the individual, and the uniqueness of an international career opportunity.",
         },
       ],
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: 'Give the expansion plan the assessment tool it deserves.',
+      title: 'What needed to change',
       items: [
         { icon: Zap, text: "Process 1,300+ applications in weeks, not months: compress pre-screening timelines to keep pace with an opening plan that can\u2019t wait." },
         { icon: Eye, text: "Map all key factors at the pre-screening stage: Leadership, team management, English language, aspiration for international mobility. Assess everything before the first human interview, to focus time investment on the highest-potential candidates." },
@@ -260,13 +260,13 @@ const content = {
       qualitative: [
         { icon: CheckCircle, title: 'Clear results in a matter of weeks', text: "In a sector where finding a qualified manager takes an average of 4.5 months, Skillvue made it possible to process the entire volume of applications and reach an interview-ready shortlist in just a few weeks, enabling the opening plan without delays." },
         { icon: Users, title: 'Transfers already underway from Europe to North America', text: "From London to Boston, Stockholm to Philadelphia, Munich to West Palm Beach, Rome to Toronto \u2014 Eataly is building an international talent pipeline that brings Italian authenticity to new markets. A tangible result of the Career Passport." },
-        { icon: Heart, title: 'Employer branding recognised', text: "The project was recognised as exceptionally high-value in 2025, the year of its launch, which is why it is being continued into 2026. In a sector where competition for talent is structurally unfavourable to hospitality, Eataly has shown that an innovative selection process is itself a brand asset." },
+        { icon: Heart, title: 'Employer branding recognised', text: "The project was recognised as exceptionally high-value in 2025, the year of its launch, which is why it is being continued into 2026. In a sector where competition for talent is structurally unfavourable to hospitality, Eataly has shown that an innovative hiring process is itself a brand asset." },
       ],
     },
     vision: {
       badge: 'EVOLUTION 2026',
       title: 'The expansion continues. So does the talent acquisition machine.',
-      intro: "Eataly is in the midst of a transformation from a single-format brand to a global multi-format platform. The Career Passport was the first chapter in building an increasingly solid and innovative talent strategy, aimed at making the Eataly brand a global platform for Made in Italy.",
+      intro: "Eataly is in the midst of a transformation from a single-format brand to a global multi-format platform. The Career Passport was the first chapter in building an increasingly solid and innovative talent strategy around the concept of international mobility and growth, aimed at making the Eataly brand a global platform for Made in Italy.",
     },
     related: {
       title: 'Related Stories',

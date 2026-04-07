@@ -64,7 +64,7 @@ const content = {
       title: '30.000 candidature, 600+ filiali, profili junior indistinguibili da CV.',
       intro: "I migliori candidati rischiavano di andarsene prima che il processo si concludesse. In un mercato dove Credem compete con altre banche, fintech e tech company per gli stessi profili, ogni settimana di ritardo nel processo aumentava il rischio di perdere i candidati più ricercati.",
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: TrendingUp,
@@ -92,7 +92,7 @@ const content = {
     },
     objectives: {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
-      title: 'Trasformare lo screening da collo di bottiglia a vantaggio competitivo.',
+      title: 'Cosa doveva cambiare',
       items: [
         { icon: Target, text: "Rendere il primo filtro più selettivo e predittivo: intercettare i profili ad alto potenziale nascosti nelle 30.000 candidature, riducendo i falsi positivi" },
         { icon: Zap, text: "Ridurre il time-to-hire e ottimizzare le shortlist: rispondere ai candidati migliori prima della concorrenza e portare al colloquio solo candidati con competenze verificate" },
@@ -192,9 +192,9 @@ const content = {
     challenge: {
       badge: 'THE CHALLENGE',
       title: '30,000 applications, 600+ branches, junior profiles indistinguishable by CV.',
-      intro: "The best candidates risked leaving before the process concluded. In a market where Credem competes with other banks, fintechs and tech companies for the same profiles, every week of delay in the process increased the risk of losing the most sought-after candidates.",
+      intro: "The best candidates risked leaving before the process ended. In a market where Credem competes with other banks, fintechs and tech companies for the same profiles, every week of delay in the process increased the risk of losing the most sought-after candidates.",
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: TrendingUp,
@@ -216,16 +216,16 @@ const content = {
         {
           icon: Target,
           title: 'Selection quality was not consistent',
-          text: "Guaranteeing uniform screening standards across a network of 600+ branches in 19 regions was an operational and fairness challenge. Without a centralised, structured filter, selection quality could vary significantly.",
+          text: "Guaranteeing uniform screening standards across a network of 600+ branches in 19 regions was an operational and fairness challenge. Without a centralised, structured filter, hiring quality could vary significantly.",
         },
       ],
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: 'Turn screening from a bottleneck into a competitive advantage.',
+      title: 'What needed to change',
       items: [
         { icon: Target, text: "Make the first filter more selective and predictive: identify high-potential profiles hidden among the 30,000 applications, reducing false positives" },
-        { icon: Zap, text: "Reduce time-to-hire and optimise shortlists: respond to the best candidates before the competition and bring to interview only candidates with verified competencies" },
+        { icon: Zap, text: "Reduce time-to-hire and optimise shortlists: respond to the best candidates before the competition and bring to interview only candidates with verified skills" },
         { icon: Layers, text: "Guarantee consistent standards across the network: same level of evaluation across 600+ branches" },
         { icon: Heart, text: "Improve employer brand: a fast, inclusive and modern process, consistent with the Top Employer positioning" },
       ],
@@ -233,7 +233,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was integrated into the Progetto Giovani selection process with a gradual, data-driven approach: first validation on an initial perimeter, then progressive extension. The goal was to measure impact with real data before scaling.",
+      intro: "Skillvue was integrated into the Progetto Giovani hiring process with a gradual, data-driven approach: first validation on an initial perimeter, then progressive extension. The goal was to measure impact with real data before scaling.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Target, label: 'Resilienza' },
@@ -244,7 +244,7 @@ const content = {
       methodology: [
         {
           title: 'Application collection and AI Assessment',
-          text: "The HR team collects and shortlists applications. Every candidate completes an assessment on the key cross-functional competencies for client management in branch.",
+          text: "The HR team collects and shortlists applications. Every candidate completes an assessment on the key cross-functional skills for client management in branch.",
         },
         {
           title: 'Ranking and shortlist',
@@ -265,15 +265,15 @@ const content = {
         { value: '-15%', label: 'Misaligned interviews' },
       ],
       qualitative: [
-        { icon: Eye, title: 'More candidates get to demonstrate their value', text: "The assessment gave more people the opportunity to surface real competencies beyond the CV. High-potential profiles that previously got lost in the volume are now identified — exactly what a bank hiring 400 people a year and competing for the best needs." },
+        { icon: Eye, title: 'More candidates get to demonstrate their value', text: "The assessment gave more people the opportunity to surface real skills beyond the CV. High-potential profiles that previously got lost in the volume are now identified — exactly what a bank hiring 400 people a year and competing for the best needs." },
         { icon: CheckCircle, title: 'Radically improved interview quality', text: "The +50% fit-to-hire means the second step of the process has become more efficient: less time spent on low-yield interviews, more informed decisions, faster feedback cycles." },
-        { icon: Layers, title: 'Human-in-the-loop, always', text: "The assessment doesn't produce a verdict: it produces information. The ranking and competency profiles feed the recruiter's decision — they don't replace it. AI augments human analytical capacity, it doesn't replace it." },
+        { icon: Layers, title: 'Human-in-the-loop, always', text: "The assessment doesn't produce a verdict: it produces information. The ranking and skills profiles feed the recruiter's decision — they don't replace it. AI augments human analytical capacity, it doesn't replace it." },
       ],
     },
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'GDO Retail · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
         { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring', headline: 'How Europ Assistance hired 24% more with 18% fewer interviews.' },
       ],
       cta: 'Read the story',
