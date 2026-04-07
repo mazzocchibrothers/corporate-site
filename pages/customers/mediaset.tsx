@@ -25,11 +25,11 @@ const content = {
     breadcrumb: 'Clienti',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Come selezionare e far crescere il talento su scala in un gruppo che ',
-      highlight1: 'sta triplicando',
-      middle: ' ',
-      highlight2: 'le dimensioni',
-      after: '',
+      before: 'Da ',
+      highlight1: '3000 candidature',
+      middle: ' a ',
+      highlight2: '15 top talent',
+      after: ': come selezionare e far crescere il talento su scala',
     },
     subtitle: 'Con Skillvue, Mediaset ha trasformato 3.000 candidature in 15 assunzioni mirate di neolaureati e figure junior in sole 5 settimane. Le soft skill sono diventate il primo filtro di selezione e la loro oggettivizzazione ha permesso al team HR di avere a disposizione dati strutturati su ogni persona, utili per accompagnarne la crescita professionale all\'interno di una realtà in espansione.',
     heroMetrics: [
@@ -53,20 +53,21 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Mediaset, parte del gruppo <strong className="text-[#1A1A2E]/80 font-semibold">MFE (MediaForEurope)</strong>, è il principale broadcaster commerciale privato in Italia e sta vivendo una fase di evoluzione senza precedenti: con l'acquisizione di ProSiebenSat.1 e la partecipazione in Impresa, MFE è diventato il primo broadcaster privato free-to-air a controllare operazioni in tre grandi mercati europei, raggiungendo <strong className="text-[#1A1A2E]/80 font-semibold">oltre 220 milioni di persone in sei paesi</strong>. In termini organizzativi, il salto è enorme: la forza lavoro passa da circa <strong className="text-[#1A1A2E]/80 font-semibold">5.200 a oltre 12.000 persone</strong>. È in questo contesto che nasce il <strong className="text-[#1A1A2E]/80 font-semibold">Progetto GRAPE</strong> (Graduate Program): il programma di selezione di stagisti e profili junior da inserire in diverse funzioni aziendali della sede di Cologno Monzese. In uno scenario di espansione senza precedenti, la capacità di identificare e attrarre talento — soprattutto profili junior ad alto potenziale — diventa una leva strategica irrinunciabile.
+        Mediaset, parte del gruppo <strong className="text-[#1A1A2E]/80 font-semibold">MFE (MediaForEurope)</strong>, è il principale broadcaster commerciale privato in Italia e sta vivendo una fase di evoluzione senza precedenti: con l'acquisizione di ProSiebenSat.1 e la partecipazione in Impresa, MFE è diventato il primo broadcaster privato free-to-air a controllare operazioni in tre grandi mercati europei, raggiungendo <strong className="text-[#1A1A2E]/80 font-semibold">oltre 220 milioni di persone in sei paesi</strong>. In termini organizzativi, il salto è enorme: la forza lavoro passa da circa <strong className="text-[#1A1A2E]/80 font-semibold">5.200 a oltre 12.000 persone</strong>.<br /><br />
+        È in questo scenario di espansione senza precedenti che nasce il <strong className="text-[#1A1A2E]/80 font-semibold">Progetto GRAPE</strong> (Graduate Program): il programma di selezione di stagisti e profili junior da inserire in diverse funzioni aziendali della sede di Cologno Monzese. Identificare in maniera predittiva il talento — soprattutto <strong className="text-[#1A1A2E]/80 font-semibold">profili junior ad alto potenziale</strong> — diventa una leva strategica irrinunciabile. Ma come farlo quando si ricevono migliaia di candidature?
       </>,
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Migliaia di candidati, un team HR di piccole dimensioni e tanti CV troppo uguali tra di loro.',
-      intro: 'Il Progetto GRAPE ha generato oltre 3.000 candidature. Il team HR dedicato (1 manager + 2 figure operative) si è posto l\'obiettivo di raggiungere 80 candidati qualificati a settimana da portare avanti nelle fasi successive del processo.',
+      intro: 'Il Progetto GRAPE ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l\'obiettivo di raggiungere 80 candidati qualificati a settimana da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell\'assessment.',
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Zap,
-          title: 'Il volume rendeva impossibile lo screening manuale',
-          text: 'Per rispettare il ritmo desiderato dal business serviva un filtro strutturato capace di operare su scala senza sacrificare la qualità della valutazione o far passare sotto traccia profili ad alto potenziale.',
+          title: 'Le necessità di business si scontravano con il carico operativo HR',
+          text: 'Per rispettare il ritmo desiderato di profili valutati serviva un filtro diverso da quello manuale, capace di operare su scala senza sacrificare la qualità o far passare sotto traccia profili ad alto potenziale.',
         },
         {
           icon: Shield,
@@ -77,12 +78,12 @@ const content = {
       hrChallenges: [
         {
           icon: Users,
-          title: 'Per i profili junior, il CV è poco parlante',
+          title: 'Serviva un modello di valutazione realmente predittivo',
           text: 'Stagisti e neolaureati hanno curriculum poco differenzianti. Soft skill come problem solving, ragionamento logico e motivazione — le variabili che predicono il potenziale — sono invisibili sulla carta.',
         },
         {
           icon: Layers,
-          title: 'Serviva un modello integrabile in un ecosistema multi-fase',
+          title: 'Lo strumento scelto doveva adattarsi a un ecosistema multi-fase',
           text: 'Dal pre-screening a colloqui individuali ad assessment di gruppo in sede. Lo strumento di valutazione iniziale doveva produrre output auditabili, comparabili e utilizzabili nelle fasi successive.',
         },
       ],
@@ -128,9 +129,9 @@ const content = {
       title: 'Key Metrics & Impatto',
       subtitle: 'I risultati misurabili ottenuti da Mediaset attraverso Skillvue nel Progetto GRAPE.',
       metrics: [
-        { value: '79%', label: 'Conversion rate assessment' },
+        { value: '3.000 → 15', label: 'candidature → assunzioni finali' },
         { value: '4.1/5', label: 'Soddisfazione candidati' },
-        { value: '15', label: 'Assunzioni finali' },
+        { value: '79%', label: 'Conversion rate assessment' },
       ],
       qualitative: [
         { icon: Eye, title: 'Per la prima volta, Mediaset ha visibilità sul suo skills database', text: 'Prima di Skillvue, le decisioni fatte sulla base della valutazione soggettiva dei singoli rimanevano una conoscenza dei singoli recruiter; ora si ragiona in ottica condivisa e con parametri comuni e standardizzati.' },
@@ -152,8 +153,8 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring & Screening', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
-        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Mobility', headline: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi." },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring at Scale', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
+        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Mobilità Interna', headline: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi." },
       ],
       cta: 'Leggi la storia',
     },
@@ -164,11 +165,11 @@ const content = {
     breadcrumb: 'Customers',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'How to select and develop talent at scale in a group that is ',
-      highlight1: 'tripling',
-      middle: ' ',
-      highlight2: 'in size',
-      after: '',
+      before: 'From ',
+      highlight1: '3000 applications',
+      middle: ' to ',
+      highlight2: '15 top talents',
+      after: ': how to identify and develop talent at scale',
     },
     subtitle: 'With Skillvue, Mediaset turned 3,000 applications into 15 targeted hires of graduates and junior profiles in just 5 weeks. Soft skills became the first hiring filter, and their objectification gave the HR team structured data on every person to support their professional growth within a rapidly expanding organisation.',
     heroMetrics: [
@@ -192,20 +193,21 @@ const content = {
       badge: 'CONTEXT',
       title: 'The Company and The Context',
       paragraph: <>
-        Mediaset, part of the <strong className="text-[#1A1A2E]/80 font-semibold">MFE – MediaForEurope</strong> group, is Italy's leading private commercial broadcaster and is undergoing an unprecedented phase of evolution: with the acquisition of ProSiebenSat.1 and a stake in Impresa, MFE has become the first private free-to-air broadcaster to control operations across three major European markets, reaching <strong className="text-[#1A1A2E]/80 font-semibold">over 220 million people in six countries</strong>. The organisational leap is enormous: the workforce is growing from around <strong className="text-[#1A1A2E]/80 font-semibold">5,200 to over 12,000 people</strong>. It is in this context that <strong className="text-[#1A1A2E]/80 font-semibold">Progetto GRAPE</strong> (Graduate Program) was born: a hiring programme for interns and junior profiles to be placed across various departments at Mediaset's Cologno Monzese headquarters. In a scenario of unprecedented expansion, <strong className="text-[#1A1A2E]/80 font-semibold">the ability to identify and attract talent</strong> — especially high-potential junior profiles — becomes an indispensable strategic lever.
+        Mediaset, part of the <strong className="text-[#1A1A2E]/80 font-semibold">MFE – MediaForEurope</strong> group, is Italy's leading private commercial broadcaster and is undergoing an unprecedented phase of evolution: with the acquisition of ProSiebenSat.1 and a stake in Impresa, MFE has become the first private free-to-air broadcaster to control operations across three major European markets, reaching <strong className="text-[#1A1A2E]/80 font-semibold">over 220 million people in six countries</strong>. The organisational leap is enormous: the workforce is growing from around <strong className="text-[#1A1A2E]/80 font-semibold">5,200 to over 12,000 people</strong>.<br /><br />
+        It is in this unprecedented expansion scenario that <strong className="text-[#1A1A2E]/80 font-semibold">Progetto GRAPE</strong> (Graduate Program) was born: a hiring programme for interns and junior profiles to be placed across various departments at Mediaset's Cologno Monzese headquarters. Identifying talent predictively — especially <strong className="text-[#1A1A2E]/80 font-semibold">high-potential junior profiles</strong> — becomes an indispensable strategic lever. But how to do it when you're receiving thousands of applications?
       </>,
     },
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'Thousands of candidates, a small HR team and CVs that all look the same.',
-      intro: 'Progetto GRAPE generated over 3,000 applications. The dedicated HR team (1 manager + 2 operatives) set a target of 80 qualified candidates per week to advance to the next stages of the process.',
+      intro: 'Progetto GRAPE generated over 3,000 applications. The dedicated HR team set a target of 80 qualified candidates per week to advance to the next stages of the process, while maintaining a high level of candidate experience and without compromising the depth of the assessment.',
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Zap,
-          title: 'Volume made manual screening impossible',
-          text: 'To maintain the target pace, a structured filter was needed — capable of operating at scale without sacrificing evaluation quality or letting high-potential profiles slip through unnoticed.',
+          title: 'Business needs were colliding with HR operational capacity',
+          text: 'To maintain the target pace of evaluated profiles, a different filter from manual screening was needed — capable of operating at scale without sacrificing quality or letting high-potential profiles slip through unnoticed.',
         },
         {
           icon: Shield,
@@ -216,12 +218,12 @@ const content = {
       hrChallenges: [
         {
           icon: Users,
-          title: 'For junior profiles, the CV says very little',
+          title: 'A genuinely predictive evaluation model was needed',
           text: 'Interns and recent graduates have largely undifferentiated CVs. Soft skills like problem solving, logical reasoning and motivation — the variables that actually predict potential — are invisible on paper.',
         },
         {
           icon: Layers,
-          title: 'A model integrable into a multi-phase ecosystem was needed',
+          title: 'The chosen tool had to fit into a multi-phase ecosystem',
           text: 'From pre-screening to individual interviews to on-site group assessments. The initial evaluation tool had to produce auditable, comparable outputs to be used in the subsequent stages.',
         },
       ],
@@ -267,9 +269,9 @@ const content = {
       title: 'Key Metrics & Impact',
       subtitle: 'The measurable outcomes Mediaset achieved through Skillvue across Progetto GRAPE.',
       metrics: [
-        { value: '79%', label: 'Assessment conversion rate' },
+        { value: '3,000 → 15', label: 'applications → final hires' },
         { value: '4.1/5', label: 'Candidate satisfaction' },
-        { value: '15', label: 'Final hires' },
+        { value: '79%', label: 'Assessment conversion rate' },
       ],
       qualitative: [
         { icon: Eye, title: 'For the first time, Mediaset has visibility into its skills database', text: 'Before Skillvue, decisions based on individual subjective assessment remained personal knowledge. Now the team works with shared, standardised parameters.' },
@@ -291,7 +293,7 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring & Screening', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
         { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Mobility', headline: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a €9 billion plan.' },
       ],
       cta: 'Read the story',
@@ -490,39 +492,41 @@ export default function MediasetStoryPage() {
               {/* Key metrics */}
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* 79% circular progress */}
+                  {/* 3000 → 15 funnel */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-5">
-                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 40 * 0.79} ${2 * Math.PI * 40}`} />
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 60" className="w-16 h-16" fill="none">
+                        <path d="M4 6 L60 6 L44 26 L44 50 L20 50 L20 26 Z" fill="rgba(75,77,247,0.12)" stroke="#4b4df7" strokeWidth="2" strokeLinejoin="round"/>
+                        <line x1="10" y1="14" x2="54" y2="14" stroke="rgba(75,77,247,0.3)" strokeWidth="1.5" strokeLinecap="round"/>
+                        <line x1="16" y1="21" x2="48" y2="21" stroke="rgba(75,77,247,0.45)" strokeWidth="1.5" strokeLinecap="round"/>
+                        <circle cx="32" cy="56" r="4" fill="#4b4df7"/>
                       </svg>
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.1rem,2vw,1.5rem)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>{c.results.metrics[0].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
                   </div>
-                  {/* 4.1/5 — 5 columns, 4 filled */}
+                  {/* 4.1/5 — smiley + checkmark */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-end justify-center gap-2 pb-2">
-                      <div className="rounded-sm bg-[#4b4df7]" style={{ width: 12, height: 56 }} />
-                      <div className="rounded-sm bg-[#4b4df7]" style={{ width: 12, height: 56 }} />
-                      <div className="rounded-sm bg-[#4b4df7]" style={{ width: 12, height: 56 }} />
-                      <div className="rounded-sm bg-[#4b4df7]" style={{ width: 12, height: 56 }} />
-                      <div className="rounded-sm bg-white/15" style={{ width: 12, height: 56 }} />
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
+                        <circle cx="30" cy="33" r="22" fill="rgba(75,77,247,0.12)" stroke="#4b4df7" strokeWidth="2.5"/>
+                        <circle cx="23" cy="27" r="2.5" fill="#4b4df7"/>
+                        <circle cx="37" cy="27" r="2.5" fill="#4b4df7"/>
+                        <path d="M21 37 Q30 46 39 37" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                        <circle cx="51" cy="17" r="10" fill="#4b4df7"/>
+                        <path d="M45.5 17 L49.5 21.5 L57 12" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                      </svg>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
                   </div>
-                  {/* 15 — target/bullseye icon */}
+                  {/* 79% — circular progress ring */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <circle cx="32" cy="32" r="28" stroke="rgba(255,255,255,0.1)" strokeWidth="2.5"/>
-                        <circle cx="32" cy="32" r="18" stroke="rgba(75,77,247,0.4)" strokeWidth="2.5"/>
-                        <circle cx="32" cy="32" r="8" fill="#4b4df7" opacity="0.8"/>
-                        <line x1="32" y1="4" x2="32" y2="14" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeLinecap="round"/>
-                        <line x1="60" y1="32" x2="50" y2="32" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeLinecap="round"/>
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8"/>
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.79} ${2 * Math.PI * 40}`}/>
                       </svg>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>

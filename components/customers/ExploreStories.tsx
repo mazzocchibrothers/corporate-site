@@ -14,8 +14,8 @@ const allStories = [
   },
   {
     id: 'subdued', company: 'Subdued', industry: 'Retail', useCases: ['Hiring'],
-    headlineIt: 'Subdued: come creare uno standard di selezione unico e scalabile per l\'espansione di una rete di 130+ negozi',
-    headlineEn: 'Subdued: building a single scalable selection standard for a network of 130+ stores',
+    headlineIt: 'Subdued: come creare uno standard di selezione unico e scalabile per una rete internazionale di 130+ negozi',
+    headlineEn: 'Subdued: building a single scalable hiring standard for an international network of 130+ stores',
     bgImage: '/logos/subdued-bg.jpg',
   },
   {
@@ -38,8 +38,8 @@ const allStories = [
   },
   {
     id: 'mediaset', company: 'Mediaset', industry: 'Media & Telecom', useCases: ['Hiring'],
-    headlineIt: 'Mediaset: come selezionare e far crescere il talento su scala in un gruppo che sta triplicando le dimensioni',
-    headlineEn: 'Mediaset: how to select and develop talent at scale in a group that is tripling in size',
+    headlineIt: 'Mediaset: Da 3000 candidature a 15 top talent: come selezionare e far crescere il talento su scala',
+    headlineEn: 'Mediaset: From 3000 applications to 15 top talents: how to identify and develop talent at scale',
     bgImage: '/logos/mediaset-background-explore-stories (2).jpg',
   },
   {
@@ -56,8 +56,8 @@ const allStories = [
   },
   {
     id: 'eataly', company: 'Eataly', industry: 'Retail', useCases: ['Hiring', 'Internal Mobility'],
-    headlineIt: 'Eataly: come alimentare un piano di espansione globale selezionando i migliori talenti tra oltre 1.300 candidature',
-    headlineEn: 'Eataly: how to fuel a global expansion plan by selecting the best talent from over 1,300 applications',
+    headlineIt: 'Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti ad alto potenziale',
+    headlineEn: 'Eataly: how to fuel a global expansion plan by identifying and mobilising high-potential talent',
     bgImage: '/logos/eataly-explore-stories.jpg',
   },
   {
