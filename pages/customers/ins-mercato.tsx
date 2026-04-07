@@ -381,54 +381,133 @@ export default function InsMercatoStoryPage() {
                   : "Quantitative and qualitative outcomes of the Skillvue x In's Mercato project."
                 }
               </p>
-              <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* 900/1000 — circular ring at 90% */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-5">
-                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 40 * 0.90} ${2 * Math.PI * 40}`} />
-                      </svg>
-                    </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>900/1.000</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{lang === 'it' ? 'assessment completati' : 'assessments completed'}</span>
+              {/* ── DASHBOARD ── */}
+              <div className="mb-10 space-y-4">
+
+                {/* Talent Pipeline card */}
+                <div className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                  <div className="flex items-center gap-2 mb-6">
+                    <TrendingUp className="h-4 w-4" style={{ color: '#4b4df7' }} />
+                    <span className="text-[15px] font-bold text-[#1A1A2E]">Talent Pipeline</span>
                   </div>
-                  {/* ~90 top talent — people silhouettes */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 48" className="w-20 h-16" fill="none">
-                        <circle cx="12" cy="14" r="7" fill="rgba(75,77,247,0.25)" />
-                        <path d="M0 38c0-6.627 5.373-10 12-10s12 3.373 12 10" stroke="rgba(75,77,247,0.25)" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-                        <circle cx="32" cy="12" r="8" fill="#4b4df7" />
-                        <path d="M18 38c0-7.732 6.268-12 14-12s14 4.268 14 12" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-                        <circle cx="52" cy="14" r="7" fill="rgba(75,77,247,0.25)" />
-                        <path d="M40 38c0-6.627 5.373-10 12-10s12 3.373 12 10" stroke="rgba(75,77,247,0.25)" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-                      </svg>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-[1fr_40px_1fr_40px_1fr] gap-3 items-center mb-5">
+                    {/* Step 1 */}
+                    <div className="rounded-xl p-5" style={{ background: '#f1f5f9' }}>
+                      <span className="text-[10px] font-bold tracking-[0.12em] text-[#1A1A2E]/30 block mb-2">STEP 1</span>
+                      <span className="block font-black text-[#1A1A2E] leading-none mb-2" style={{ fontSize: 'clamp(2rem,3.5vw,2.8rem)', letterSpacing: '-0.03em' }}>900</span>
+                      <p className="text-[13px] font-semibold text-[#1A1A2E]/70 leading-[1.4]">{lang === 'it' ? 'Assessment AI completati' : 'AI Assessments completed'}</p>
+                      <p className="text-[12px] text-[#1A1A2E]/35 mt-1">{lang === 'it' ? 'su ~1.000 collaboratori coinvolti' : 'across ~1,000 employees involved'}</p>
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>~90</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{lang === 'it' ? 'Top Talent identificati' : 'Top Talent identified'}</span>
-                  </div>
-                  {/* 47% / 53% split bar */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex flex-col items-center justify-center gap-2">
-                      <div className="w-full rounded-full overflow-hidden" style={{ height: 10, background: 'rgba(255,255,255,0.08)' }}>
-                        <div className="h-full rounded-full bg-[#4b4df7]" style={{ width: '47%' }} />
-                      </div>
-                      <div className="flex justify-between w-full">
-                        <span className="text-[11px] text-[#4b4df7] font-bold">47%</span>
-                        <span className="text-[11px] text-white/30 font-bold">53%</span>
-                      </div>
-                      <div className="w-full rounded-full overflow-hidden" style={{ height: 10, background: 'rgba(255,255,255,0.08)' }}>
-                        <div className="h-full rounded-full bg-white/20" style={{ width: '53%' }} />
+
+                    {/* Arrow */}
+                    <div className="hidden lg:flex items-center justify-center">
+                      <div className="w-7 h-7 rounded-full border border-[#e2e8f0] bg-white flex items-center justify-center">
+                        <ArrowRight className="h-3 w-3 text-[#1A1A2E]/25" />
                       </div>
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>47% / 53%</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">Role-Ready / In Development</span>
+
+                    {/* Step 2 */}
+                    <div className="rounded-xl p-5" style={{ background: 'rgba(75,77,247,0.06)' }}>
+                      <span className="text-[10px] font-bold tracking-[0.12em] block mb-2" style={{ color: 'rgba(75,77,247,0.45)' }}>STEP 2</span>
+                      <span className="block font-black leading-none mb-2" style={{ fontSize: 'clamp(2rem,3.5vw,2.8rem)', letterSpacing: '-0.03em', color: '#4b4df7' }}>90</span>
+                      <p className="text-[13px] font-semibold text-[#1A1A2E]/70 leading-[1.4]">{lang === 'it' ? 'Top Talent identificati' : 'Top Talent identified'}</p>
+                      <p className="text-[12px] text-[#1A1A2E]/35 mt-1">{lang === 'it' ? "Top 10% emerso dall'assessment" : 'Top 10% emerging from assessment'}</p>
+                    </div>
+
+                    {/* Arrow */}
+                    <div className="hidden lg:flex items-center justify-center">
+                      <div className="w-7 h-7 rounded-full border border-[#e2e8f0] bg-white flex items-center justify-center">
+                        <ArrowRight className="h-3 w-3 text-[#1A1A2E]/25" />
+                      </div>
+                    </div>
+
+                    {/* Outcome split */}
+                    <div className="space-y-3">
+                      <div className="rounded-xl p-4 flex items-start justify-between gap-3" style={{ background: 'rgba(5,150,105,0.07)' }}>
+                        <div>
+                          <span className="block font-black leading-none mb-1" style={{ fontSize: '1.7rem', color: '#059669', letterSpacing: '-0.02em' }}>47%</span>
+                          <p className="text-[13px] font-semibold text-[#1A1A2E]/80">Role-Ready</p>
+                          <p className="text-[11px] text-[#1A1A2E]/35 mt-0.5">{lang === 'it' ? '~42 profili pronti al ruolo' : '~42 profiles ready for the role'}</p>
+                        </div>
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold shrink-0 mt-0.5" style={{ background: 'rgba(5,150,105,0.15)', color: '#059669' }}>
+                          ✓ READY
+                        </span>
+                      </div>
+                      <div className="rounded-xl p-4 flex items-start justify-between gap-3" style={{ background: 'rgba(217,119,6,0.07)' }}>
+                        <div>
+                          <span className="block font-black leading-none mb-1" style={{ fontSize: '1.7rem', color: '#d97706', letterSpacing: '-0.02em' }}>53%</span>
+                          <p className="text-[13px] font-semibold text-[#1A1A2E]/80">In Development</p>
+                          <p className="text-[11px] text-[#1A1A2E]/35 mt-0.5">{lang === 'it' ? '~48 profili in upskilling' : '~48 profiles in upskilling'}</p>
+                        </div>
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold shrink-0 mt-0.5" style={{ background: 'rgba(217,119,6,0.15)', color: '#d97706' }}>
+                          ↗ GROWING
+                        </span>
+                      </div>
+                    </div>
                   </div>
+
+                  {/* Footnote */}
+                  <p className="text-[11px] text-[#1A1A2E]/30 flex items-center gap-1.5">
+                    <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 7v4M8 5.5v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                    {lang === 'it' ? 'Il 47% e 53% si riferiscono ai 90 Top Talent identificati' : '47% and 53% refer to the 90 Top Talent identified'}
+                  </p>
+                </div>
+
+                {/* Bottom row: Completion Rate + Funnel */}
+                <div className="grid md:grid-cols-2 gap-4">
+
+                  {/* Completion Rate */}
+                  <div className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                    <p className="text-[14px] font-bold text-[#1A1A2E] mb-7">{lang === 'it' ? 'Tasso di completamento' : 'Completion Rate'}</p>
+                    <div className="flex flex-col items-center mb-6">
+                      <div className="relative w-32 h-32 mb-5">
+                        <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                          <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(75,77,247,0.1)" strokeWidth="9" />
+                          <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="9" strokeLinecap="round"
+                            strokeDasharray={`${2 * Math.PI * 40 * 0.95} ${2 * Math.PI * 40}`} />
+                        </svg>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="text-[1.6rem] font-black text-[#1A1A2E]" style={{ letterSpacing: '-0.03em' }}>95%</span>
+                        </div>
+                      </div>
+                      <p className="text-[13px] text-[#1A1A2E]/50 text-center leading-[1.6]">
+                        {lang === 'it' ? 'Completamento al netto delle cause esterne (dimissioni, malattia)' : 'Completion rate net of external causes (resignations, sick leave)'}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 text-[13px]" style={{ color: '#059669' }}>
+                      <CheckCircle className="h-4 w-4 shrink-0" />
+                      <span>{lang === 'it' ? '48 non terminate per cause esterne' : '48 not completed due to external causes'}</span>
+                    </div>
+                  </div>
+
+                  {/* Selection Funnel */}
+                  <div className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                    <p className="text-[14px] font-bold text-[#1A1A2E] mb-6">{lang === 'it' ? 'Il funnel di selezione' : 'The Selection Funnel'}</p>
+                    <div className="space-y-4">
+                      {[
+                        { labelIt: 'Coinvolti', labelEn: 'Involved', value: '~1000', pct: '100%', color: 'rgba(75,77,247,0.18)' },
+                        { labelIt: 'Assessment completati', labelEn: 'Assessments completed', value: '~900', pct: '90%', color: 'rgba(75,77,247,0.3)' },
+                        { labelIt: 'Top Talent identificati', labelEn: 'Top Talent identified', value: '~90', pct: '60%', color: 'rgba(75,77,247,0.55)' },
+                        { labelIt: 'Role-Ready (47%)', labelEn: 'Role-Ready (47%)', value: '~42', pct: '30%', color: '#4b4df7' },
+                        { labelIt: 'In Development (53%)', labelEn: 'In Development (53%)', value: '~48', pct: '34%', color: '#4b4df7' },
+                      ].map(item => (
+                        <div key={item.labelEn}>
+                          <div className="flex justify-between items-center mb-1.5">
+                            <span className="text-[12px] text-[#1A1A2E]/50">{lang === 'it' ? item.labelIt : item.labelEn}</span>
+                            <span className="text-[12px] font-semibold text-[#1A1A2E]/65">{item.value}</span>
+                          </div>
+                          <div className="h-[18px] rounded-full overflow-hidden" style={{ background: 'rgba(75,77,247,0.06)' }}>
+                            <div className="h-full rounded-full" style={{ width: item.pct, background: item.color }} />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                 </div>
               </div>
+              {/* ── END DASHBOARD ── */}
 
               {/* Quote */}
               <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-8 lg:p-10 mb-10">
@@ -526,7 +605,7 @@ export default function InsMercatoStoryPage() {
             <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 leading-[1.4] mb-12">{t('Related Stories')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {[
-                { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+                { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
                 { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: 'Subdued: building a single scalable hiring standard for a network of 130+ stores' },
               ].map(s => (
                 <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0,0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">

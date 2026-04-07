@@ -33,9 +33,9 @@ const content = {
     },
     subtitle: "Con Skillvue, Unicomm sta trasformando un'infrastruttura HR ancora poco digitalizzata in un sistema skills-based agile e capace di rispondere con efficacia alle necessità di selezione, conferme e sviluppo interno su tutta la rete.",
     heroMetrics: [
-      { value: '3', label: 'Filoni attivati in parallelo' },
-      { value: '4', label: "Livelli di ruolo coperti, dall'addetto vendita al gerente" },
-      { value: 'End-to-end', label: 'Talent lifecycle su 7 insegne e 7 regioni' },
+      { value: '270', label: 'punti vendita coinvolti' },
+      { value: '7', label: 'insegne' },
+      { value: '3', label: 'processi attivati in parallelo' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
@@ -127,9 +127,9 @@ const content = {
       badge: 'RISULTATI',
       title: 'Cosa sta cambiando.',
       metrics: [
-        { value: '3', label: 'Filoni attivati in parallelo' },
-        { value: '4', label: 'Livelli di ruolo coperti' },
-        { value: 'End-to-end', label: 'Talent lifecycle in costruzione' },
+        { value: '270', label: 'Punti vendita coinvolti' },
+        { value: '7', label: 'Insegne' },
+        { value: '3', label: 'Processi attivati in parallelo' },
       ],
       qualitative: [
         { icon: TrendingUp, title: "Da zero a sistema integrato", text: "Unicomm è passata dall'assenza totale di strumenti digitali HR a un talent lifecycle strutturato che copre selezione, conferme e sviluppo in un unico sistema. Non un'ottimizzazione incrementale, ma un salto di paradigma realizzato durante la fase di crescita più intensa del Gruppo." },
@@ -142,7 +142,7 @@ const content = {
       title: 'Storie correlate',
       stories: [
         { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "Come In's Mercato ha costruito una pipeline interna di Store Manager" },
-        { id: 'adr', company: 'Aeroporti di Roma', industry: 'Aviation', tag: 'Aviation · Sviluppo Interno', headline: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi." },
+        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Mobilità Interna', headline: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi." },
       ],
       cta: 'Leggi la storia',
     },
@@ -161,9 +161,9 @@ const content = {
     },
     subtitle: "With Skillvue, Unicomm is transforming a scarcely-digitized HR infrastructure into an agile, skills-based system capable of effectively responding to the needs of hiring, confirmations and internal development across its entire network.",
     heroMetrics: [
-      { value: '3', label: 'Streams activated in parallel' },
-      { value: '4', label: 'Role levels covered, from sales associate to store manager' },
-      { value: 'End-to-end', label: 'Talent lifecycle across 7 brands and 7 regions' },
+      { value: '270', label: 'included stores' },
+      { value: '7', label: 'brands' },
+      { value: '3', label: 'processes activated in parallel' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -255,9 +255,9 @@ const content = {
       badge: 'RESULTS',
       title: 'What is changing.',
       metrics: [
-        { value: '3', label: 'Streams activated in parallel' },
-        { value: '4', label: 'Role levels covered' },
-        { value: 'End-to-end', label: 'Talent lifecycle in progress' },
+        { value: '270', label: 'Included stores' },
+        { value: '7', label: 'Brands' },
+        { value: '3', label: 'Processes activated in parallel' },
       ],
       qualitative: [
         { icon: TrendingUp, title: "From zero to integrated system", text: "Unicomm has gone from the complete absence of digital HR tools to a structured talent lifecycle covering hiring, confirmations and development in a single system. Not an incremental optimization, but a paradigm shift achieved during the most intense growth phase of the Group." },
@@ -270,7 +270,7 @@ const content = {
       title: 'Related Stories',
       stories: [
         { id: 'ins-mercato', company: "In's Mercato", tag: "Large-scale distribution · Internal Mobility", headline: "How In's Mercato built an internal pipeline of Store Managers" },
-        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Development', headline: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a €9 billion plan.' },
+        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Mobility', headline: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a €9 billion plan.' },
       ],
       cta: 'Read the story',
     },
@@ -480,48 +480,67 @@ export default function UnicommStoryPage() {
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* Metric 0 — process/steps icon */}
+                  {/* Metric 0 — map / geographical expansion (270 stores) */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-center justify-center">
                       <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <circle cx="12" cy="32" r="8" fill="rgba(75,77,247,0.3)" stroke="#4b4df7" strokeWidth="2.5"/>
-                        <circle cx="32" cy="32" r="8" fill="rgba(75,77,247,0.5)" stroke="#4b4df7" strokeWidth="2.5"/>
-                        <circle cx="52" cy="32" r="8" fill="#4b4df7" stroke="#4b4df7" strokeWidth="2.5"/>
-                        <line x1="20" y1="32" x2="24" y2="32" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
-                        <line x1="40" y1="32" x2="44" y2="32" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
+                        {/* Organic territory outline */}
+                        <path d="M8 22 L14 12 L24 8 L36 9 L46 14 L54 22 L54 34 L48 44 L38 52 L26 54 L16 48 L8 38 Z" fill="rgba(75,77,247,0.1)" stroke="#4b4df7" strokeWidth="1.8" strokeLinejoin="round"/>
+                        {/* Store location dots */}
+                        <circle cx="22" cy="22" r="2.6" fill="rgba(75,77,247,0.55)"/>
+                        <circle cx="36" cy="18" r="2.6" fill="#4b4df7"/>
+                        <circle cx="46" cy="28" r="2.6" fill="rgba(75,77,247,0.7)"/>
+                        <circle cx="30" cy="32" r="3" fill="#4b4df7"/>
+                        <circle cx="18" cy="37" r="2.6" fill="rgba(75,77,247,0.6)"/>
+                        <circle cx="42" cy="40" r="2.6" fill="rgba(75,77,247,0.75)"/>
+                        <circle cx="28" cy="46" r="2.6" fill="rgba(75,77,247,0.5)"/>
+                        {/* Expansion pulse ring around central cluster */}
+                        <circle cx="30" cy="32" r="7" fill="none" stroke="rgba(75,77,247,0.22)" strokeWidth="1.2"/>
+                        <circle cx="30" cy="32" r="12" fill="none" stroke="rgba(75,77,247,0.1)" strokeWidth="1"/>
                       </svg>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
                   </div>
-                  {/* Metric 1 — 4 people icons */}
+                  {/* Metric 1 — 7 brands under 1 umbrella */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 80 64" className="w-20 h-16" fill="none">
-                        <circle cx="10" cy="20" r="7" fill="rgba(75,77,247,0.25)" stroke="#4b4df7" strokeWidth="2"/>
-                        <path d="M2 44c0-8 4-12 8-12s8 4 8 12" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
-                        <circle cx="30" cy="20" r="7" fill="rgba(75,77,247,0.4)" stroke="#4b4df7" strokeWidth="2"/>
-                        <path d="M22 44c0-8 4-12 8-12s8 4 8 12" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
-                        <circle cx="50" cy="20" r="7" fill="rgba(75,77,247,0.6)" stroke="#4b4df7" strokeWidth="2"/>
-                        <path d="M42 44c0-8 4-12 8-12s8 4 8 12" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
-                        <circle cx="70" cy="20" r="7" fill="#4b4df7" stroke="#4b4df7" strokeWidth="2"/>
-                        <path d="M62 44c0-8 4-12 8-12s8 4 8 12" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round"/>
+                      <svg viewBox="0 0 80 54" className="w-20 h-14" fill="none">
+                        <circle cx="40" cy="9" r="8" fill="#4b4df7"/>
+                        <line x1="40" y1="17" x2="40" y2="26" stroke="#4b4df7" strokeWidth="2"/>
+                        <line x1="10" y1="26" x2="70" y2="26" stroke="#4b4df7" strokeWidth="1.5"/>
+                        <line x1="10" y1="26" x2="10" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
+                        <line x1="20" y1="26" x2="20" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
+                        <line x1="30" y1="26" x2="30" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
+                        <line x1="40" y1="26" x2="40" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
+                        <line x1="50" y1="26" x2="50" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
+                        <line x1="60" y1="26" x2="60" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
+                        <line x1="70" y1="26" x2="70" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
+                        <circle cx="10" cy="43" r="4.5" fill="rgba(75,77,247,0.2)" stroke="#4b4df7" strokeWidth="1.5"/>
+                        <circle cx="20" cy="43" r="4.5" fill="rgba(75,77,247,0.3)" stroke="#4b4df7" strokeWidth="1.5"/>
+                        <circle cx="30" cy="43" r="4.5" fill="rgba(75,77,247,0.45)" stroke="#4b4df7" strokeWidth="1.5"/>
+                        <circle cx="40" cy="43" r="4.5" fill="rgba(75,77,247,0.6)" stroke="#4b4df7" strokeWidth="1.5"/>
+                        <circle cx="50" cy="43" r="4.5" fill="rgba(75,77,247,0.45)" stroke="#4b4df7" strokeWidth="1.5"/>
+                        <circle cx="60" cy="43" r="4.5" fill="rgba(75,77,247,0.3)" stroke="#4b4df7" strokeWidth="1.5"/>
+                        <circle cx="70" cy="43" r="4.5" fill="rgba(75,77,247,0.2)" stroke="#4b4df7" strokeWidth="1.5"/>
                       </svg>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
                   </div>
-                  {/* Metric 2 — 2 dots connected by arrow */}
+                  {/* Metric 2 — 3 parallel lines (3 processes) */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 32" className="w-16 h-8" fill="none">
-                        <circle cx="8" cy="16" r="7" fill="#4b4df7" stroke="#4b4df7" strokeWidth="2"/>
-                        <line x1="15" y1="16" x2="49" y2="16" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round"/>
-                        <path d="M44 10l8 6-8 6" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                        <circle cx="56" cy="16" r="7" fill="rgba(75,77,247,0.3)" stroke="#4b4df7" strokeWidth="2"/>
+                      <svg viewBox="0 0 64 44" className="w-16 h-11" fill="none">
+                        <line x1="6" y1="10" x2="50" y2="10" stroke="rgba(75,77,247,0.4)" strokeWidth="2.5" strokeLinecap="round"/>
+                        <path d="M47 6l10 4-10 4" stroke="rgba(75,77,247,0.4)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                        <line x1="6" y1="22" x2="50" y2="22" stroke="rgba(75,77,247,0.7)" strokeWidth="2.5" strokeLinecap="round"/>
+                        <path d="M47 18l10 4-10 4" stroke="rgba(75,77,247,0.7)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                        <line x1="6" y1="34" x2="50" y2="34" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round"/>
+                        <path d="M47 30l10 4-10 4" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                       </svg>
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.1rem,2vw,1.6rem)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>{c.results.metrics[2].value}</span>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
                   </div>
                 </div>

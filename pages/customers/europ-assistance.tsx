@@ -151,8 +151,8 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring at Scale', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
-        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'Come selezionare e far crescere il talento su scala in un gruppo che sta triplicando le dimensioni' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring at Scale', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
+        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'Da 3000 candidature a 15 top talent: come selezionare e far crescere il talento su scala' },
       ],
       cta: 'Leggi la storia',
     },
@@ -289,8 +289,8 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
-        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'How to select and develop talent at scale in a group that is tripling in size' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'From 3000 applications to 15 top talents: how to identify and develop talent at scale' },
       ],
       cta: 'Read the story',
     },

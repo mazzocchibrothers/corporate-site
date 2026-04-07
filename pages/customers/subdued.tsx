@@ -26,8 +26,8 @@ const content = {
     badge: 'CUSTOMER STORY',
     headline: {
       before: 'Subdued: come creare uno ',
-      highlight1: 'standard di selezione unico',
-      middle: ' e scalabile per l\'espansione di una rete di ',
+      highlight1: 'standard di selezione unico e scalabile',
+      middle: ' per una rete internazionale di ',
       highlight2: '130+ negozi',
       after: '',
     },
@@ -36,6 +36,7 @@ const content = {
       { value: '-40%', label: 'Time-to-hire' },
       { value: '-50%', label: 'Turnover' },
       { value: '80%', label: 'Candidati qualificati dopo lo skills screening' },
+      { value: '6', label: 'Paesi coperti' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
@@ -43,7 +44,7 @@ const content = {
       label: 'SCHEDA CLIENTE',
       facts: [
         { label: 'Settore', value: 'Retail' },
-        { label: 'Fatturato', value: '~50 mln €' },
+        { label: 'Paesi', value: 'Italia, Irlanda, UK, Paesi Bassi, Svezia, Francia' },
         { label: 'Dipendenti', value: '1.000+' },
         { label: 'Punti vendita', value: '130+ monomarca' },
         { label: 'Use Case', value: 'Hiring' },
@@ -68,26 +69,36 @@ const content = {
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
-          icon: Eye,
-          title: 'Andare oltre il CV per identificare le vere capacità di vendita',
-          text: 'Il 50% dei candidati che superavano il primo screening si rivelava privo delle soft skill necessarie per il lavoro in store. Comunicazione, vendita e predisposizione al cliente: invisibili sulla carta.',
+          icon: BarChart3,
+          title: 'Alta performance in store: la selezione è il punto di partenza',
+          text: 'Per scalare il business, non bastava assumere velocemente: servivano insight predittivi per identificare i candidati con più alto potenziale commerciale e garantire performance elevate fin dall\'ingresso in store.',
+        },
+        {
+          icon: TrendingUp,
+          title: 'Un turnover strutturalmente alto',
+          text: 'Nel fashion retail il turnover è fisiologicamente elevato. Per un brand dove l\'esperienza in negozio è parte della vendita, ogni assunzione sbagliata moltiplicava ulteriormente questo rischio.',
         },
         {
           icon: Scale,
-          title: 'Nessuno standard cross-country',
-          text: 'Ogni paese valutava con criteri diversi, in lingue diverse. Non esisteva un framework comune: "la persona giusta per Subdued" significava cose diverse a Milano e a Londra.',
+          title: 'Un brand, nessuno standard condiviso in Europa',
+          text: 'Ogni paese valutava con criteri diversi, in lingue diverse. Non esisteva un framework comune: "la persona giusta per Subdued" significava cose diverse a Milano e a Londra. Serviva un modello HR sostenibile e replicabile su tutta la rete commerciale europea.',
         },
       ],
       hrChallenges: [
         {
-          icon: Zap,
-          title: '10-15 ore a settimana di telefonate introduttive',
-          text: 'Senza un filtro strutturato, ogni candidato richiedeva un forte investimento di tempo anche solo per un pre-screening. 10-15 ore a settimana di screening telefonico e zero tempo per attività più strategiche.',
+          icon: Eye,
+          title: 'Il CV: uno strumento insufficiente',
+          text: 'Il 50% dei candidati che superavano il primo screening si rivelava privo delle soft skill necessarie per il lavoro in store. Comunicazione, vendita e predisposizione al cliente: invisibili sulla carta.',
         },
         {
-          icon: TrendingUp,
-          title: 'Il turnover era strutturalmente alto',
-          text: 'Nel fashion retail il turnover è fisiologicamente elevato. Per un brand dove l\'esperienza in negozio è parte della vendita, ogni assunzione sbagliata moltiplicava ulteriormente questo rischio.',
+          icon: Zap,
+          title: 'Lo screening manuale erode il tempo strategico',
+          text: 'Senza un filtro strutturato, ogni candidato richiedeva un forte investimento di tempo per il pre-screening — un carico che sottraeva risorse preziose ad attività più strategiche, dall\'employer branding allo sviluppo del team.',
+        },
+        {
+          icon: Heart,
+          title: 'Early turnover: segnale di un processo poco predittivo',
+          text: 'Un processo di selezione poco predittivo generava assunzioni sbagliate, con alto turnover nei primi mesi. Il costo di ogni errore era difficilmente sostenibile con una rete in rapida espansione.',
         },
       ],
     },
@@ -95,10 +106,10 @@ const content = {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
       title: 'Cosa doveva cambiare',
       items: [
-        { icon: Zap, text: 'Rendere visibili le competenze invisibili: valutare comunicazione, vendita e teamworking prima del colloquio, con dati oggettivi su ogni candidato' },
+        { icon: Zap, text: 'Mettere in luce competenze e potenziale su scala: valutare comunicazione, vendita e teamworking prima del colloquio, con dati oggettivi su ogni candidato' },
         { icon: Target, text: 'Liberare il team dall\'operatività: ridurre le ore di screening per recuperare tempo per attività strategiche, employer branding e sviluppo' },
-        { icon: Layers, text: 'Creare uno standard cross-country: stessi criteri di valutazione su tutti i mercati, adattati per lingua e ruolo, senza moltiplicare le risorse HR' },
-        { icon: Heart, text: 'Scalare al ritmo dell\'espansione: un\'infrastruttura di selezione che accompagni ogni nuova apertura senza gravare sull\'operatività HR' },
+        { icon: Layers, text: 'Creare uno standard cross-europe: stessi criteri di valutazione su Italia, Irlanda, UK, Paesi Bassi, Svezia e Francia, adattati per lingua e ruolo, senza moltiplicare le risorse HR' },
+        { icon: Heart, text: 'Trasformare HR in vero agente di cambiamento: creare un\'infrastruttura di selezione capace di supportare la crescita del business, rendendo HR un business partner a tutti gli effetti' },
       ],
     },
     solution: {
@@ -135,18 +146,19 @@ const content = {
         { value: '-70%', label: 'Ore di pre-screening' },
         { value: '80%', label: 'Candidati qualificati dopo lo skills screening' },
         { value: '-50%', label: 'Turnover' },
+        { value: '6', label: 'Paesi coperti' },
       ],
       qualitative: [
         { icon: Heart, title: 'L\'employer branding inatteso', text: 'Il risultato che nessuno aveva previsto: il processo di selezione innovativo è diventato esso stesso un elemento di attrazione, un vantaggio competitivo concreto nel mercato del lavoro retail.' },
         { icon: Users, title: 'Human-in-the-loop, sempre', text: 'Il primo colloquio in persona è ora più mirato e personalizzato, basato sui dati del report. Il recruiter arriva preparato. Il candidato si sente ascoltato. La connessione umana è preservata.' },
-        { icon: Layers, title: 'Espansione cross-country del progetto', text: 'I team HR localizzati in UK, Paesi Bassi, Belgio e Francia stanno ora applicando la stessa metodologia per raggiungere gli stessi risultati: più velocità e scalabilità, maggiore qualità della selezione, e candidati soddisfatti.' },
+        { icon: Layers, title: 'Consolidamento europeo del progetto', text: 'L\'Italia è stata il primo mercato a implementare l\'infrastruttura Skillvue, diventando il modello di riferimento per il gruppo e guidando i team HR di UK, Irlanda, Paesi Bassi, Svezia e Francia. Un esempio virtuoso di standardizzazione di processo a partire dal lavoro di un team "pilota".' },
       ],
     },
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
-        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'Come ottenere un tasso di successo delle assunzioni del 76% in un business fondato sulla componente umana' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring at Scale', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
+        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring', headline: 'Come ottenere un tasso di successo delle assunzioni del 76% in un business fondato sulla componente umana' },
       ],
       cta: 'Leggi la storia',
     },
@@ -159,7 +171,7 @@ const content = {
     headline: {
       before: 'Subdued: building a ',
       highlight1: 'single scalable hiring standard',
-      middle: ' for a network of ',
+      middle: ' for an international network of ',
       highlight2: '130+ stores',
       after: '',
     },
@@ -168,6 +180,7 @@ const content = {
       { value: '-40%', label: 'Time-to-hire' },
       { value: '-50%', label: 'Turnover' },
       { value: '80%', label: 'Qualified candidates after skills screening' },
+      { value: '6', label: 'Countries covered' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -175,7 +188,7 @@ const content = {
       label: 'CLIENT PROFILE',
       facts: [
         { label: 'Industry', value: 'Retail' },
-        { label: 'Revenue', value: '~€50M' },
+        { label: 'Countries', value: 'Italy, Ireland, UK, Netherlands, Sweden, France' },
         { label: 'Employees', value: '1,000+' },
         { label: 'Stores', value: '130+ mono-brand' },
         { label: 'Use Case', value: 'Hiring' },
@@ -200,26 +213,36 @@ const content = {
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
-          icon: Eye,
-          title: 'Going beyond the CV to identify true selling ability',
-          text: '50% of candidates who passed initial screening lacked the soft skills for daily store work. Communication, selling ability and customer orientation: all invisible on paper.',
+          icon: BarChart3,
+          title: 'High store performance starts with hiring',
+          text: 'Scaling the business was not just about hiring quickly: it required predictive insights to identify candidates with the highest commercial potential and ensure strong performance from day one in store.',
+        },
+        {
+          icon: TrendingUp,
+          title: 'A structurally high turnover rate',
+          text: 'Turnover in fashion retail is inherently elevated. For a brand where the in-store experience is a core part of the sale, every wrong hire amplified this risk further.',
         },
         {
           icon: Scale,
-          title: 'No cross-country evaluation standard',
-          text: 'Each country used different criteria, different languages, different cultural sensitivities. No common framework existed to ensure "the right person for Subdued" meant the same thing in Milan and in London.',
+          title: 'One brand, no shared standard across Europe',
+          text: 'Each country used different criteria, different languages, different cultural sensitivities. No common framework existed — a sustainable, replicable HR model for the entire commercial network was needed.',
         },
       ],
       hrChallenges: [
         {
-          icon: Zap,
-          title: '10–15 hours a week on introductory calls',
-          text: 'Without a structured filter, every candidate required a significant time investment just for pre-screening. 10–15 hours a week on calls and zero time for anything more strategic.',
+          icon: Eye,
+          title: 'The CV: an insufficient filter',
+          text: '50% of candidates who passed initial screening lacked the soft skills for daily store work. Communication, selling ability and customer orientation: all invisible on paper.',
         },
         {
-          icon: TrendingUp,
-          title: 'Turnover was structurally high',
-          text: 'Turnover in fashion retail is inherently elevated. For a brand where the in-store experience is a core part of the sale, every wrong hire amplified this risk further.',
+          icon: Zap,
+          title: 'Manual screening was eating into strategic time',
+          text: 'Without a structured filter, every candidate required a significant time investment just for pre-screening — operational load that crowded out time for more strategic activities, from employer branding to team development.',
+        },
+        {
+          icon: Heart,
+          title: 'Early turnover: a signal of a fragile process',
+          text: 'A low-predictability hiring process led to mismatched hires and high turnover in the first few months. The cost of every hiring mistake was hard to absorb in a rapidly expanding network.',
         },
       ],
     },
@@ -227,10 +250,10 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What needed to change',
       items: [
-        { icon: Zap, text: 'Make invisible skills visible: assess communication, selling and teamworking before the interview, with objective data on every candidate' },
+        { icon: Zap, text: 'Surface skills and potential at scale: assess communication, selling and teamworking before the interview, with objective data on every candidate' },
         { icon: Target, text: 'Free the team from operational work: reduce screening hours to recover time for strategic activities, employer branding and development' },
-        { icon: Layers, text: 'Create a cross-country standard: the same evaluation criteria across all markets, adapted by language and role, without multiplying HR resources' },
-        { icon: Heart, text: 'Scale at the pace of expansion: a hiring infrastructure that supports every new store opening without adding pressure to the HR team' },
+        { icon: Layers, text: 'Create a cross-Europe standard: the same evaluation criteria across Italy, Ireland, the UK, the Netherlands, Sweden and France, adapted by language and role, without multiplying HR resources' },
+        { icon: Heart, text: 'Transform HR into a real agent of change: build a hiring infrastructure capable of supporting business growth, making HR a true business partner' },
       ],
     },
     solution: {
@@ -267,18 +290,19 @@ const content = {
         { value: '-70%', label: 'Pre-screening hours' },
         { value: '80%', label: 'Qualified candidates after skills screening' },
         { value: '-50%', label: 'Turnover' },
+        { value: '6', label: 'Countries covered' },
       ],
       qualitative: [
         { icon: Heart, title: 'The unexpected employer branding effect', text: 'The result no one anticipated: the innovative hiring process itself became an attraction asset — a concrete competitive advantage in the retail labour market.' },
         { icon: Users, title: 'Human-in-the-loop, always', text: 'The first in-person interview is now more focused and personalised, grounded in report data. The recruiter arrives prepared. The candidate feels heard. The human connection is preserved.' },
-        { icon: Layers, title: 'Cross-country expansion of the project', text: 'HR teams in the UK, Netherlands, Belgium, and France are now applying the same methodology to achieve the same results: greater speed and scalability, higher hiring quality, and satisfied candidates.' },
+        { icon: Layers, title: 'European consolidation of the project', text: 'Italy was the first market to implement the Skillvue infrastructure, becoming the blueprint for the group and guiding the HR teams in the UK, Ireland, the Netherlands, Sweden and France. A virtuous example of process standardisation driven by a pilot team.' },
       ],
     },
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
-        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'How to achieve a 76% hiring success rate in a business built on human interaction' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring', headline: 'How to achieve a 76% hiring success rate in a business built on human interaction' },
       ],
       cta: 'Read the story',
     },
@@ -388,7 +412,7 @@ export default function SubduedStoryPage() {
 
               <div className="mb-10">
                 <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
@@ -403,7 +427,7 @@ export default function SubduedStoryPage() {
 
               <div>
                 <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
@@ -474,20 +498,30 @@ export default function SubduedStoryPage() {
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* -70% circular progress */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
+
+                  {/* -70% pre-screening: before/after bars 10h → 3h */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-5">
-                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 40 * 0.70} ${2 * Math.PI * 40}`} />
-                      </svg>
+                    <div className="w-24 h-24 mb-5 flex items-end justify-center gap-3 pb-1">
+                      <div className="flex flex-col items-center gap-1.5">
+                        <div className="w-9 rounded-t-md" style={{ height: '58px', background: 'rgba(255,255,255,0.15)' }} />
+                        <span className="text-[10px] text-white/35">10h</span>
+                      </div>
+                      <div className="flex items-center mb-5">
+                        <svg viewBox="0 0 16 10" className="w-4 h-3" fill="none">
+                          <path d="M1 5h14M10 1l4 4-4 4" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                      <div className="flex flex-col items-center gap-1.5">
+                        <div className="w-9 rounded-t-md" style={{ height: '17px', background: '#4b4df7' }} />
+                        <span className="text-[10px] text-white/35">3h</span>
+                      </div>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
                   </div>
-                  {/* 80% approval checkmark */}
+
+                  {/* 80% qualified: checkmark circle */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-center justify-center">
                       <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
@@ -498,18 +532,40 @@ export default function SubduedStoryPage() {
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
                   </div>
-                  {/* -50% circular progress */}
+
+                  {/* -50% turnover: declining bar chart */}
                   <div className="text-center flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-5">
-                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 40 * 0.50} ${2 * Math.PI * 40}`} />
-                      </svg>
+                    <div className="w-24 h-24 mb-5 flex flex-col justify-end items-center">
+                      <div className="flex items-end gap-1.5">
+                        {[64, 54, 44, 36, 32].map((h, i) => (
+                          <div key={i} className="w-[11px] rounded-t-sm" style={{
+                            height: `${h}px`,
+                            background: i === 4 ? '#4b4df7' : `rgba(75,77,247,${0.18 + i * 0.12})`,
+                          }} />
+                        ))}
+                      </div>
+                      <div className="w-full h-px mt-1" style={{ background: 'rgba(255,255,255,0.1)' }} />
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
                   </div>
+
+                  {/* 6 countries: location pins grid */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
+                      <div className="grid grid-cols-3 gap-x-2 gap-y-1">
+                        {[0,1,2,3,4,5].map(i => (
+                          <svg key={i} viewBox="0 0 20 26" className="w-5 h-6" fill="none">
+                            <path d="M10 1C6.13 1 3 4.13 3 8c0 5.25 7 16 7 16s7-10.75 7-16c0-3.87-3.13-7-7-7z" fill="rgba(75,77,247,0.25)" stroke="#4b4df7" strokeWidth="1.5"/>
+                            <circle cx="10" cy="8" r="2.5" fill="#4b4df7"/>
+                          </svg>
+                        ))}
+                      </div>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[3].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[3].label}</span>
+                  </div>
+
                 </div>
               </div>
 

@@ -25,8 +25,8 @@ const content = {
     breadcrumb: 'Clienti',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Eataly: come alimentare un piano di espansione globale selezionando i migliori talenti tra oltre ',
-      highlight1: '1.300 candidature',
+      before: 'Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti ',
+      highlight1: 'ad alto potenziale',
       middle: '',
       highlight2: '',
       after: '',
@@ -142,8 +142,8 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation \u00b7 Internal Mobility', headline: 'Aeroporti di Roma: come sviluppare un\u2019organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi' },
-        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO \u00b7 Mobilit\u00e0 Interna', headline: "In's Mercato: come ha costruito una pipeline interna di Store Manager" },
+        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Mobilità Interna', headline: 'Aeroporti di Roma: come sviluppare un\u2019organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi' },
+        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "In's Mercato: come ha costruito una pipeline interna di Store Manager" },
       ],
       cta: 'Leggi la storia',
     },
@@ -154,8 +154,8 @@ const content = {
     breadcrumb: 'Customers',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Eataly: how to fuel a global expansion plan by selecting the best talent from over ',
-      highlight1: '1,300 applications',
+      before: 'Eataly: how to fuel a global expansion plan by identifying and mobilising ',
+      highlight1: 'high-potential talent',
       middle: '',
       highlight2: '',
       after: '',
@@ -271,8 +271,8 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation \u00b7 Internal Mobility', headline: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a \u20ac9 billion plan' },
-        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO \u00b7 Internal Mobility', headline: "In's Mercato: how it built an internal pipeline of Store Managers" },
+        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Mobility', headline: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a \u20ac9 billion plan' },
+        { id: 'ins-mercato', company: "In's Mercato", tag: 'Large-scale distribution · Internal Mobility', headline: "In's Mercato: how it built an internal pipeline of Store Managers" },
       ],
       cta: 'Read the story',
     },
