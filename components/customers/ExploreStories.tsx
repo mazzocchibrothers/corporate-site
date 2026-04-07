@@ -39,7 +39,7 @@ const allStories = [
   {
     id: 'mediaset', company: 'Mediaset', industry: 'Media & Telecom', useCases: ['Hiring'],
     headlineIt: 'Mediaset: come selezionare e far crescere il talento su scala in un gruppo che sta triplicando le dimensioni',
-    headlineEn: 'Mediaset: how to select and grow talent at scale in a group that is tripling in size',
+    headlineEn: 'Mediaset: how to select and develop talent at scale in a group that is tripling in size',
     bgImage: '/logos/mediaset-background-explore-stories (2).jpg',
   },
   {

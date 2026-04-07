@@ -33,7 +33,7 @@ const content = {
     },
     subtitle: "Con Skillvue, Unicomm sta trasformando un'infrastruttura HR ancora poco digitalizzata in un sistema skills-based agile e capace di rispondere con efficacia alle necessità di selezione, conferme e sviluppo interno su tutta la rete.",
     heroMetrics: [
-      { value: '3', label: 'Filoni attivati in parallelo (hiring, conferme, sviluppo)' },
+      { value: '3', label: 'Filoni attivati in parallelo' },
       { value: '4', label: "Livelli di ruolo coperti, dall'addetto vendita al gerente" },
       { value: 'End-to-end', label: 'Talent lifecycle su 7 insegne e 7 regioni' },
     ],
@@ -62,7 +62,7 @@ const content = {
       title: 'Non bastava ottimizzare: serviva costruire dalle fondamenta.',
       intro: "Unicomm partiva da una infrastruttura HR ancora poco digitalizzata, e lo faceva nel momento di crescita più intensa della propria storia.",
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Layers,
@@ -90,7 +90,7 @@ const content = {
     },
     objectives: {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
-      title: "Costruire l'infrastruttura di talento che la crescita richiede.",
+      title: 'Cosa doveva cambiare',
       items: [
         { icon: Scale, text: "Standardizzare le valutazioni su tutta la rete: stessi criteri, stesso framework di competenze, indipendentemente dall'insegna, dal punto vendita o dal singolo responsabile" },
         { icon: CheckCircle, text: "Adottare un approccio skills-based completo: valutazioni calibrate per obiettivo (hiring, conferma, sviluppo) e per ruolo/reparto, con un mix di soft e hard skill" },
@@ -156,12 +156,12 @@ const content = {
       before: 'How Unicomm is building a new ',
       highlight1: 'talent management system',
       middle: ' across a network of ',
-      highlight2: '270 stores',
-      after: ' and growing',
+      highlight2: '270+ stores',
+      after: '',
     },
-    subtitle: "With Skillvue, Unicomm is transforming a barely-digitized HR infrastructure into an agile, skills-based system capable of effectively responding to the needs of hiring, confirmations and internal development across its entire network.",
+    subtitle: "With Skillvue, Unicomm is transforming a scarcely-digitized HR infrastructure into an agile, skills-based system capable of effectively responding to the needs of hiring, confirmations and internal development across its entire network.",
     heroMetrics: [
-      { value: '3', label: 'Streams activated in parallel (hiring, confirmations, development)' },
+      { value: '3', label: 'Streams activated in parallel' },
       { value: '4', label: 'Role levels covered, from sales associate to store manager' },
       { value: 'End-to-end', label: 'Talent lifecycle across 7 brands and 7 regions' },
     ],
@@ -170,7 +170,7 @@ const content = {
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
-        { label: 'Industry', value: 'GDO' },
+        { label: 'Industry', value: 'Large-scale distribution' },
         { label: 'Group', value: 'Unicomm Group' },
         { label: 'Revenue', value: '~€2B' },
         { label: 'Employees', value: '8,000+' },
@@ -182,15 +182,15 @@ const content = {
       badge: 'CONTEXT',
       title: 'A group that doubles revenue in three years needs people ready at the same speed.',
       paragraph: <>
-        <strong className="text-[#1A1A2E]/80 font-semibold">Gruppo Unicomm</strong>, part of <strong className="text-[#1A1A2E]/80 font-semibold">Selex Gruppo Commerciale</strong>, is one of Italy's leading <strong className="text-[#1A1A2E]/80 font-semibold">organized grocery retail</strong> groups. Over the past 3 years, the group has recorded <strong className="text-[#1A1A2E]/80 font-semibold">growth nearly double the sector average</strong>, with a declared objective to continue — through new store openings, strategic integration with <strong className="text-[#1A1A2E]/80 font-semibold">Etruria Retail</strong>, and new logistics infrastructure. In this context of accelerated expansion, the ability to hire, confirm and develop the right people becomes a priority for both HR and the business — especially given that in Italy's grocery retail labor market, <strong className="text-[#1A1A2E]/80 font-semibold">50% of positions</strong> are classified as "hard to fill" and a store manager requires an average of <strong className="text-[#1A1A2E]/80 font-semibold">90-120 days</strong> to recruit.
+        <strong className="text-[#1A1A2E]/80 font-semibold">Gruppo Unicomm</strong>, part of <strong className="text-[#1A1A2E]/80 font-semibold">Selex Gruppo Commerciale</strong>, is one of Italy's leading <strong className="text-[#1A1A2E]/80 font-semibold">organized grocery retail</strong> groups. Over the past 3 years, the group has recorded <strong className="text-[#1A1A2E]/80 font-semibold">growth nearly double the sector average</strong>, with a declared objective to continue — through new store openings, strategic integration with <strong className="text-[#1A1A2E]/80 font-semibold">Etruria Retail</strong>, and new logistics infrastructure. In this context of accelerated expansion, the ability to hire, confirm and develop the right people becomes a priority for both HR and the business, especially given that in Italy's grocery retail labor market, <strong className="text-[#1A1A2E]/80 font-semibold">50% of positions</strong> are classified as "hard to fill" and a store manager requires an average of <strong className="text-[#1A1A2E]/80 font-semibold">90-120 days</strong> to recruit.
       </>,
     },
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'Optimization was not enough: they needed to build from scratch.',
-      intro: "Unicomm was starting from a barely-digitized HR infrastructure, and doing so at the most intense growth phase in its history.",
+      intro: "Unicomm was starting from a scarcely-digitized HR infrastructure, and doing so at the most intense growth phase in its history.",
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Layers,
@@ -212,27 +212,27 @@ const content = {
         {
           icon: Heart,
           title: 'Change management with no digital precedents',
-          text: "Introducing digital assessments into an organization that had never used HR technology meant driving a deep transformation at every level of the organization.",
+          text: "Introducing digital assessments into an organization that had never used HR technology meant driving a deep transformation at every level of the organization: quite a big challenge to take on for a small HR team.",
         },
       ],
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: "Build the talent infrastructure that growth requires.",
+      title: 'What needed to change',
       items: [
-        { icon: Scale, text: "Standardize assessments across the entire network: same criteria, same competency framework, regardless of brand, store or individual manager" },
+        { icon: Scale, text: "Standardize assessments across the entire network: same criteria, same skills framework, regardless of brand, store or individual manager" },
         { icon: CheckCircle, text: "Adopt a complete skills-based approach: assessments calibrated by objective (hiring, confirmation, development) and by role/department, with a mix of soft and hard skills" },
-        { icon: Wrench, text: "Build sector-specific assessment capabilities: develop bespoke assessments where the Unicomm model required it" },
+        { icon: Wrench, text: "Build sector-specific assessment capabilities: develop selected assessments where the Unicomm model required it" },
         { icon: Users, text: "Lead real change management: transform the organization's HR culture, not just introduce a tool" },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI assessment across three parallel streams, calibrated on the Unicomm model.',
-      intro: "Skillvue was integrated as a partner for building Unicomm's talent lifecycle, working with the HR team led by Giuseppe Curci to align the platform to the company's competency model and the specifics of grocery retail.",
+      intro: "Skillvue was integrated as a partner for building Unicomm's talent lifecycle, working with the HR team led by Giuseppe Curci to align the platform to the company's leadership model and the specifics of grocery retail.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
-        { icon: Wrench, label: 'Grocery retail technical competencies — differentiated by department and level of responsibility (client-facing or not, from sales associate to store manager)' },
+        { icon: Wrench, label: 'Grocery retail technical skills — differentiated by department and level of responsibility (client-facing or not, from sales associate to store manager)' },
         { icon: Heart, label: 'Bespoke soft skills — developed ad hoc on the Unicomm model (e.g. service orientation in grocery retail contexts, team management across shifts)' },
       ],
       methodologyLabel: 'PROJECT STRUCTURE — THREE PARALLEL STREAMS',
@@ -247,7 +247,7 @@ const content = {
         },
         {
           title: 'Development',
-          text: "Two annual milestones for progression to department head or store manager, through an internal Academy based on objective competency data.",
+          text: "Two annual milestones for progression to department head or store manager, through an internal Academy based on objective skills data.",
         },
       ],
     },
@@ -261,7 +261,7 @@ const content = {
       ],
       qualitative: [
         { icon: TrendingUp, title: "From zero to integrated system", text: "Unicomm has gone from the complete absence of digital HR tools to a structured talent lifecycle covering hiring, confirmations and development in a single system. Not an incremental optimization, but a paradigm shift achieved during the most intense growth phase of the Group." },
-        { icon: Wrench, title: "Grocery retail competencies now measurable", text: "Sector-specific soft skills are now assessed with tools calibrated to the Unicomm model, not generic assessments. Measuring these competencies is a business lever, not just an HR exercise." },
+        { icon: Wrench, title: "Industry-relevant skills now measurable", text: "Sector-specific soft skills are now assessed with tools calibrated to the Unicomm model, not generic assessments. Measuring these skills is a business lever, not just an HR exercise." },
         { icon: BarChart3, title: "Decisions based on data, not impressions", text: "Assessments produce structured information that supports managerial decisions without replacing them. Managers decide with more data, and this raises the quality of the decision." },
         { icon: Users, title: "An ongoing change management journey", text: "The cultural transformation is still underway, but the foundations are solid: the system is live, the three streams are advancing in parallel, and the organization is building familiarity with a skills-based approach that did not exist before." },
       ],
@@ -269,7 +269,7 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'ins-mercato', company: "In's Mercato", tag: "Retail GDO · Internal Mobility", headline: "How In's Mercato built an internal pipeline of Store Managers" },
+        { id: 'ins-mercato', company: "In's Mercato", tag: "Large-scale distribution · Internal Mobility", headline: "How In's Mercato built an internal pipeline of Store Managers" },
         { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Internal Development', headline: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a €9 billion plan.' },
       ],
       cta: 'Read the story',

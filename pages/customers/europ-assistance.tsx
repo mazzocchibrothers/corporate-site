@@ -61,7 +61,7 @@ const content = {
       title: 'Migliaia di candidature, due picchi stagionali, 3 persone nel team recruiting.',
       intro: 'Le assunzioni di Europ Assistance Italia si concentrano in due picchi stagionali l\'anno, generando volumi nell\'ordine delle migliaia di candidature in pochi mesi. Per i ruoli di assistenza e customer care, le soft skill sono il primo predittore di successo — problem solving, orientamento al cliente, gestione dello stress — ma sono completamente invisibili nel CV.',
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Users,
@@ -169,7 +169,7 @@ const content = {
       highlight2: 'human interaction',
       after: '',
     },
-    subtitle: "With Skillvue, Europ Assistance transformed pre-screening from a bottleneck into a competitive advantage and is now extending the model to internal competency mapping to keep optimising the match between internal talent quality and the service delivered externally.",
+    subtitle: "With Skillvue, Europ Assistance transformed pre-screening from a bottleneck into a competitive advantage and is now extending the model to internal skills mapping to keep optimising the match between internal talent quality and the service delivered externally.",
     heroMetrics: [
       { value: '+24%', label: 'year-over-year hires' },
       { value: '-18%', label: 'interviews required' },
@@ -191,7 +191,7 @@ const content = {
       badge: 'CONTEXT',
       title: 'In a business built on human interaction, the quality of who you hire translates directly into the quality of the service.',
       paragraph: <>
-        Europ Assistance, part of the <strong className="text-[#1A1A2E]/80 font-semibold">Generali Group</strong>, is one of the world's leading providers of assistance and travel insurance services. Its growth is constant: operations are expanding into new markets and converging with Generali Care into an <strong className="text-[#1A1A2E]/80 font-semibold">integrated hub worth €5.3 billion</strong>.<br /><br />In Italy, it operates with a business model built on the quality of human interaction: 24/7 assistance, claims management, multilingual customer care. Hiring and developing the right people is a critical lever for the business to function and grow, especially given the instability of the insurance labour market — characterised by rising turnover rates and a salary gap with fintech and consulting that makes attracting top talent harder. In this context, every wrong hire costs more and every right person who stays is worth even more.
+        Europ Assistance, part of the <strong className="text-[#1A1A2E]/80 font-semibold">Generali Group</strong>, is one of the world's leading providers of assistance and travel insurance services. Its growth is constant: operations are expanding into new markets and converging with Generali Care into an <strong className="text-[#1A1A2E]/80 font-semibold">integrated hub worth €5.3 billion</strong>.<br /><br />In Italy, it operates with a business model built on the quality of human interaction: 24/7 assistance, claims management, multilingual customer care. <strong className="text-[#1A1A2E]/80 font-semibold">Hiring and developing the right people is a critical lever</strong> for the business to function and grow, especially given the instability of the insurance labour market — characterised by rising turnover rates and a salary gap with fintech and consulting that makes attracting top talent harder. In this context, every wrong hire costs more and every right person who stays is worth even more.
       </>,
     },
     challenge: {
@@ -199,17 +199,17 @@ const content = {
       title: 'Thousands of applications, two seasonal peaks, 3 people in the recruiting team.',
       intro: "Europ Assistance Italia's hires are concentrated in two seasonal peaks per year, generating volumes in the order of thousands of applications in just a few months. For assistance and customer care roles, soft skills are the top predictor of success — problem solving, customer orientation, stress management — but are completely invisible in a CV.",
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Users,
           title: 'Need to manage seasonal peaks',
-          text: "Hiring concentrates in two seasonal peaks per year, generating thousands of applications in just a few months — managed by a team of 3 people.",
+          text: "Hiring concentrates in two seasonal peaks per year, generating thousands of applications in just a few months that need to be managed by the same 3 people the HR team employs all year round.",
         },
         {
           icon: BarChart3,
           title: 'No visibility on growth potential',
-          text: "Selection only evaluated immediate fit. Europ Assistance was looking for more: identifying from the first step the soft skills predictive of future growth, to give line managers visibility on how a person could develop over time.",
+          text: "The old process only evaluated immediate fit. Europ Assistance was looking for more: identifying from the first step the soft skills predictive of future growth, to give line managers visibility on how a person could develop over time.",
         },
       ],
       hrChallenges: [
@@ -221,39 +221,39 @@ const content = {
         {
           icon: Zap,
           title: 'HR time was trapped in screening',
-          text: "Recruiters spent most of their hours on introductory calls and manual filtering. Yet half the candidates who passed the first filter lacked the necessary competencies.",
+          text: "Recruiters spent most of their hours on introductory calls and manual filtering. Yet half the candidates who passed the first filter lacked the necessary skills.",
         },
       ],
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: 'What Needed to Change',
+      title: 'What needed to change',
       items: [
         { icon: Zap, text: 'Scale pre-screening without scaling the team: manage thousands of applications with 3 FTE, freeing recruiters from screening to focus on interviews and potential evaluation' },
-        { icon: Eye, text: 'Make soft skills visible from the first step: objective data on cross-functional competencies and English language before any human interaction' },
+        { icon: Eye, text: 'Make soft skills visible from the first step: objective data on cross-functional skills and English language needed to be available before any human intervention in the process' },
         { icon: Shield, text: 'Build a fair and defensible process: AI as support to the recruiter, not a substitute — human-in-the-loop at every stage, bias reduction' },
-        { icon: Target, text: 'Select for potential, not just fit: identify candidates with competencies that make them employable for internal growth and future roles' },
+        { icon: Target, text: 'Select for potential, not just fit: identify candidates with skills that make them employable for internal growth and future roles' },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was integrated into Europ Assistance Italia's selection process as the first structured step of the funnel, managing pre-screening across multiple profiles and geographic locations. Deployment is recurring, tied primarily to the two annual seasonal peaks.",
+      intro: "Skillvue was integrated into Europ Assistance Italia's hiring process as the first structured step of the funnel, managing pre-screening across multiple profiles and geographic locations. Deployment is recurring, tied primarily to the two annual seasonal peaks.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Heart, label: 'Soft skills — problem solving, customer orientation, goal orientation, teamworking' },
-        { icon: Wrench, label: 'English language — B1/B2/C1 tests, a critical competency for a company operating in 39 countries with multilingual customer care' },
+        { icon: Wrench, label: 'English language — B1/B2/C1 tests, a critical skill for a company operating in 39 countries with multilingual customer care' },
         { icon: Layers, label: 'Role-specific hard skills — e.g. Compensation & Benefits for HR roles' },
       ],
       methodologyLabel: 'HOW IT WAS BUILT',
       methodology: [
         {
-          title: 'Assessment independently as the first step',
-          text: "After applying, every candidate completes the assessment from any device — phone or laptop.",
+          title: 'Assessment is done independently as the first step',
+          text: "After applying, every candidate completes the assessment from any device, phone or laptop.",
         },
         {
           title: 'Structured report for the recruiter',
-          text: "The HR team receives an objective, in-depth competency analysis. The first interview is based on data, not impressions.",
+          text: "The HR team receives an objective, in-depth skills analysis. The first interview is based on data, not impressions.",
         },
         {
           title: 'Human-in-the-loop at every stage',
@@ -279,18 +279,18 @@ const content = {
     vision: {
       badge: 'EVOLUTION 2026',
       title: 'From hiring tool to talent intelligence partner',
-      intro: "When the recruiting results proved that Skillvue could scale quality and speed simultaneously, the next steps in the talent lifecycle were immediately put on the table. In 2026, Europ Assistance is extending Skillvue to internal competency mapping.",
-      objective: 'Mapping against the "We IMPACT" leadership model — 5 leadership competencies assessed across 3 seniority levels (Line Manager, Manager of Managers, Senior Leader).',
+      intro: "When the recruiting results proved that Skillvue could scale quality and speed simultaneously, the next steps in the talent lifecycle were immediately put on the table. In 2026, Europ Assistance is extending Skillvue to internal skills mapping.",
+      objective: 'Mapping against the "We IMPACT" leadership model — 5 leadership skills assessed across 3 seniority levels (Line Manager, Manager of Managers, Senior Leader).',
       bullets: [
-        'Personalised assessments on the Europ Assistance model — calibrated to the specific competency framework, with psychometrically validated behavioural indicators',
-        'From selection to succession planning — competency data feeds individual development paths, career planning and succession readiness',
+        'Personalised assessments on the Europ Assistance model — calibrated to the specific skills framework, with psychometrically validated behavioural indicators',
+        'From hiring to succession planning — skills data feeds individual development paths, career planning and succession readiness',
       ],
     },
     related: {
       title: 'Related Stories',
       stories: [
         { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
-        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'How to select and grow talent at scale in a group that is tripling in size' },
+        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'How to select and develop talent at scale in a group that is tripling in size' },
       ],
       cta: 'Read the story',
     },
@@ -451,7 +451,7 @@ export default function EuropAssistanceStoryPage() {
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.solution.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.solution.intro}</p>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
 
               <div className="mb-12">
                 <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
@@ -483,7 +483,7 @@ export default function EuropAssistanceStoryPage() {
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
               {/* Key metrics */}
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
@@ -545,7 +545,7 @@ export default function EuropAssistanceStoryPage() {
                   {c.vision.badge}
                 </span>
                 <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4 leading-[1.3]">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8 max-w-3xl">{c.vision.intro}</p>
+                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8">{c.vision.intro}</p>
                 <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
                     <Target className="h-5 w-5" style={{ color: '#4b4df7' }} />

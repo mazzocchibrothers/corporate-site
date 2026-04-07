@@ -35,7 +35,7 @@ const content = {
     heroMetrics: [
       { value: '-40%', label: 'Time-to-hire' },
       { value: '-50%', label: 'Turnover' },
-      { value: '80%', label: 'Candidati qualificati al 2° step' },
+      { value: '80%', label: 'Candidati qualificati dopo lo skills screening' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
@@ -53,9 +53,11 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Subdued è un brand italiano di fashion retail. Fondato in Italia, oggi opera con oltre <strong className="text-[#1A1A2E]/80 font-semibold">130 negozi monomarca</strong> in continua espansione, <strong className="text-[#1A1A2E]/80 font-semibold">più di 1.000 dipendenti</strong> e una presenza in crescita su più continenti — inclusi USA, Medio Oriente, Sud-Est asiatico, Corea e Cina.
+        Subdued è un brand italiano di fashion retail. Fondato in Italia, oggi opera con oltre <strong className="text-[#1A1A2E]/80 font-semibold">130 negozi monomarca</strong> in continua espansione, <strong className="text-[#1A1A2E]/80 font-semibold">più di 1.000 dipendenti</strong> e una presenza in crescita su più continenti.
         <br /><br />
-        In questo scenario, la capacità di selezionare le persone giuste al ritmo delle aperture diventa il vincolo operativo numero uno. Ogni nuovo negozio richiede un team capace di rappresentare il brand e il suo DNA italiano davanti a un pubblico Gen Z in mercati culturalmente diversi, ma il team HR è composto da <strong className="text-[#1A1A2E]/80 font-semibold">1-3 persone per ciascuno dei paesi di attività</strong>. Con i metodi tradizionali, l'equazione non regge.
+        La traiettoria di crescita è eccezionale: il fatturato del brand è <strong className="text-[#1A1A2E]/80 font-semibold">quasi raddoppiato tra il 2022 e il 2024</strong> e più della metà dei ricavi arriva dai mercati internazionali, che danno ottimi segnali per il futuro con aperture in corso negli Stati Uniti, in Medio Oriente, nel Sud-Est asiatico, in Corea e in Cina.
+        <br /><br />
+        In questo scenario, la capacità di selezionare le persone giuste al ritmo delle aperture diventa <strong className="text-[#1A1A2E]/80 font-semibold">il vincolo operativo numero uno</strong>. Ogni nuovo negozio richiede un team formato capace di rappresentare il brand e il suo DNA italiano davanti a un pubblico Gen Z in mercati culturalmente diversi, ma il team HR è composto da <strong className="text-[#1A1A2E]/80 font-semibold">1-3 persone per ciascuno dei paesi di attività</strong>. Con i metodi tradizionali, l'equazione non regge.
       </>,
     },
     challenge: {
@@ -63,7 +65,7 @@ const content = {
       title: 'Il problema strutturale',
       intro: 'Tante figure chiave da selezionare, turnover alto e un team HR snello che non poteva scalare con l\'espansione senza un sistema strutturato.',
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Eye,
@@ -128,10 +130,10 @@ const content = {
     results: {
       badge: 'RISULTATI',
       title: 'Key Metrics & Impatto',
-      subtitle: 'I risultati misurabili ottenuti da Subdued attraverso l\'adozione di Skillvue nei processi di selezione su 6 paesi.',
+      subtitle: 'I risultati misurabili ottenuti da Subdued attraverso l\'adozione di Skillvue nei processi di selezione.',
       metrics: [
         { value: '-70%', label: 'Ore di pre-screening' },
-        { value: '80%', label: 'Candidati qualificati al 2° step' },
+        { value: '80%', label: 'Candidati qualificati dopo lo skills screening' },
         { value: '-50%', label: 'Turnover' },
       ],
       qualitative: [
@@ -156,16 +158,16 @@ const content = {
     badge: 'CUSTOMER STORY',
     headline: {
       before: 'Subdued: building a ',
-      highlight1: 'single scalable selection standard',
+      highlight1: 'single scalable hiring standard',
       middle: ' for a network of ',
       highlight2: '130+ stores',
       after: '',
     },
-    subtitle: 'With Skillvue, Subdued built a consistent, scalable evaluation process across multiple markets — allowing a lean HR team to apply the same selection rigour in every country while halving turnover.',
+    subtitle: 'With Skillvue, Subdued built a consistent, scalable evaluation process across multiple markets, allowing a lean HR team to apply the same hiring rigour in every country while halving turnover.',
     heroMetrics: [
       { value: '-40%', label: 'Time-to-hire' },
       { value: '-50%', label: 'Turnover' },
-      { value: '80%', label: 'Qualified candidates at 2nd step' },
+      { value: '80%', label: 'Qualified candidates after skills screening' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -181,11 +183,13 @@ const content = {
     },
     context: {
       badge: 'CONTEXT',
-      title: 'The Project Context',
+      title: 'The Company and The Context',
       paragraph: <>
-        Subdued is an Italian fashion retail brand. Founded in Italy, it now operates over <strong className="text-[#1A1A2E]/80 font-semibold">130 mono-brand stores</strong> in continuous expansion, <strong className="text-[#1A1A2E]/80 font-semibold">1,000+ employees</strong> and a growing presence across multiple continents — including the US, Middle East, South-East Asia, Korea and China.
+        Subdued is an Italian fashion retail brand. Founded in Italy, it now operates over <strong className="text-[#1A1A2E]/80 font-semibold">130 mono-brand stores</strong> in continuous expansion, <strong className="text-[#1A1A2E]/80 font-semibold">1,000+ employees</strong> and a growing presence across multiple continents.
         <br /><br />
-        In this context, the ability to hire the right people at the pace of new store openings becomes the number one operational constraint. Every new store requires a team capable of representing the brand and its Italian DNA to a Gen Z audience in culturally different markets — yet each country's HR team is just <strong className="text-[#1A1A2E]/80 font-semibold">1–3 people</strong>. With traditional methods, the equation simply does not work.
+        The growth trajectory is exceptional: the brand's revenue <strong className="text-[#1A1A2E]/80 font-semibold">nearly doubled between 2022 and 2024</strong>, and more than half of revenues come from international markets — which are showing strong signals for the future, with openings underway in the United States, the Middle East, South-East Asia, Korea and China.
+        <br /><br />
+        In this context, the ability to hire the right people at the pace of new store openings becomes <strong className="text-[#1A1A2E]/80 font-semibold">the number one operational constraint</strong>. Every new store requires a trained team capable of representing the brand and its Italian DNA to a Gen Z audience in culturally different markets — yet each country's HR team is just <strong className="text-[#1A1A2E]/80 font-semibold">1–3 people</strong>. With traditional methods, the equation simply does not work.
       </>,
     },
     challenge: {
@@ -193,7 +197,7 @@ const content = {
       title: 'The Structural Problem',
       intro: 'Key store roles to fill, structurally high turnover, and a lean HR team that could not scale with global expansion without a structured system.',
       businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR REALITY',
+      hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Eye,
@@ -221,9 +225,9 @@ const content = {
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: 'What Needed to Change',
+      title: 'What needed to change',
       items: [
-        { icon: Zap, text: 'Make invisible competencies visible: assess communication, selling and teamworking before the interview, with objective data on every candidate' },
+        { icon: Zap, text: 'Make invisible skills visible: assess communication, selling and teamworking before the interview, with objective data on every candidate' },
         { icon: Target, text: 'Free the team from operational work: reduce screening hours to recover time for strategic activities, employer branding and development' },
         { icon: Layers, text: 'Create a cross-country standard: the same evaluation criteria across all markets, adapted by language and role, without multiplying HR resources' },
         { icon: Heart, text: 'Scale at the pace of expansion: a hiring infrastructure that supports every new store opening without adding pressure to the HR team' },
@@ -251,21 +255,21 @@ const content = {
         },
         {
           title: 'Skillvue generates a detailed report',
-          text: 'Score per competency, overall fit, strengths, and development areas — used by HR to guide the in-person interview.',
+          text: 'Score per skill, overall fit, strengths, and development areas — used by HR to guide the in-person interview.',
         },
       ],
     },
     results: {
       badge: 'RESULTS',
       title: 'Key Metrics & Impact',
-      subtitle: 'The measurable outcomes Subdued achieved through Skillvue across its hiring processes in 6 countries.',
+      subtitle: 'The measurable outcomes Subdued achieved through Skillvue across its hiring processes.',
       metrics: [
         { value: '-70%', label: 'Pre-screening hours' },
-        { value: '80%', label: 'Qualified candidates at 2nd step' },
+        { value: '80%', label: 'Qualified candidates after skills screening' },
         { value: '-50%', label: 'Turnover' },
       ],
       qualitative: [
-        { icon: Heart, title: 'The unexpected employer branding effect', text: 'The result no one anticipated: the innovative selection process itself became an attraction asset — a concrete competitive advantage in the retail labour market.' },
+        { icon: Heart, title: 'The unexpected employer branding effect', text: 'The result no one anticipated: the innovative hiring process itself became an attraction asset — a concrete competitive advantage in the retail labour market.' },
         { icon: Users, title: 'Human-in-the-loop, always', text: 'The first in-person interview is now more focused and personalised, grounded in report data. The recruiter arrives prepared. The candidate feels heard. The human connection is preserved.' },
         { icon: Layers, title: 'Cross-country expansion of the project', text: 'HR teams in the UK, Netherlands, Belgium, and France are now applying the same methodology to achieve the same results: greater speed and scalability, higher hiring quality, and satisfied candidates.' },
       ],
@@ -273,7 +277,7 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Retail · Hiring', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
         { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring at Scale', headline: 'How to achieve a 76% hiring success rate in a business built on human interaction' },
       ],
       cta: 'Read the story',
@@ -467,7 +471,7 @@ export default function SubduedStoryPage() {
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">

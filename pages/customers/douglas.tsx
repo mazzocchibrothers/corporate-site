@@ -156,7 +156,7 @@ const content = {
       highlight2: '5 weeks',
       after: '',
     },
-    subtitle: "A retail network of 2,500 employees spread across nearly 400 stores, zero visibility on competencies, and the high turnover typical of beauty retail. With Skillvue, Douglas created the first-ever complete skills database of its entire workforce, closing the gap between HQ and the sales network and enabling data-driven career development.",
+    subtitle: "A retail network of 2,500 employees spread across nearly 400 stores, zero visibility on skills, and the high turnover typical of beauty retail. With Skillvue, Douglas created the first-ever complete skills database of its entire workforce, closing the gap between HQ and the sales network and enabling data-driven career development.",
     heroMetrics: [
       { value: '2K', label: 'people brought into HR\u2019s radar' },
       { value: '5 weeks', label: 'mapping timeframe' },
@@ -177,16 +177,16 @@ const content = {
     },
     context: {
       badge: 'CONTEXT',
-      title: 'The Project Context',
+      title: 'The Company and The Context',
       paragraph: <>
-        Douglas Group, with <strong className="text-[#1A1A2E]/80 font-semibold">1,972 stores across 22 countries</strong>, a European revenue of <strong className="text-[#1A1A2E]/80 font-semibold">€4.58 billion</strong>, and an expansion plan of <strong className="text-[#1A1A2E]/80 font-semibold">200 new openings and 400 renovations by end of 2026</strong>, is Europe\u2019s leading omnichannel beauty retailer. The quality of in-store advisory is the primary competitive advantage of physical retail over e-commerce \u2014 yet it is also the least measured and structured variable in the sector. In Italy, Douglas operates with over <strong className="text-[#1A1A2E]/80 font-semibold">370 stores</strong> and approximately <strong className="text-[#1A1A2E]/80 font-semibold">2,500 people</strong> in the commercial network, in a beauty market worth <strong className="text-[#1A1A2E]/80 font-semibold">€14.2 billion</strong> in domestic consumption.<br /><br />Despite a context of very solid growth, people-side gaps were emerging. The Italian HQ had <strong className="text-[#1A1A2E]/80 font-semibold">no objective data on the competencies</strong> of its sales network: the only source was feedback from store or area managers. In a sector where sales staff turnover ranges between <strong className="text-[#1A1A2E]/80 font-semibold">25% and 35%</strong> annually \u2014 and can be directly linked to opportunities for growth and development within the company \u2014 the need to adopt a more data-driven approach to talent management became clear.
+        Douglas Group, with <strong className="text-[#1A1A2E]/80 font-semibold">1,972 stores across 22 countries</strong>, a European revenue of <strong className="text-[#1A1A2E]/80 font-semibold">€4.58 billion</strong>, and an expansion plan of <strong className="text-[#1A1A2E]/80 font-semibold">200 new openings and 400 renovations by end of 2026</strong>, is Europe's leading omnichannel beauty retailer. The quality of in-store advisory is the primary competitive advantage of physical retail over e-commerce — yet it is also the least measured and structured variable in the sector. In Italy, Douglas operates with over <strong className="text-[#1A1A2E]/80 font-semibold">370 stores</strong> and approximately <strong className="text-[#1A1A2E]/80 font-semibold">2,500 people</strong> in the commercial network, in a beauty market worth <strong className="text-[#1A1A2E]/80 font-semibold">€14.2 billion</strong> in domestic consumption.<br /><br />Despite a context of very solid growth, people-side gaps were emerging. The Italian HQ had <strong className="text-[#1A1A2E]/80 font-semibold">no objective data on the skills</strong> of its sales network: the only source was feedback from store or area managers. In a sector where sales staff turnover ranges between <strong className="text-[#1A1A2E]/80 font-semibold">25% and 35%</strong> annually — and can be directly linked to opportunities for growth and development within the company — the need to adopt a more data-driven approach to talent management became clear.
       </>,
       summary: "The project transformed talent management from a model based on subjective feedback and in-person observation to a scalable, data-driven system — creating for the first time a complete and objective picture of skills across the entire sales network, both soft and hard skills, and enabling career development, internal mobility and customised training based on real data.",
     },
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'The Structural Problem',
-      intro: "Across 2,500 employees in nearly 400 stores, the HQ had no structured data on competencies. In a high-turnover sector, the absence of data meant losing talent, training poorly and being unable to plan internal mobility.",
+      intro: "Across 2,500 employees in nearly 400 stores, the HQ had no structured data on skills. In a high-turnover sector, the absence of data meant losing talent, training poorly and being unable to plan internal mobility.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
@@ -198,7 +198,7 @@ const content = {
         {
           icon: Users,
           title: 'A wide gap between HQ and the retail network',
-          text: "Employees had no way to surface their competencies and aspirations. Talent remained invisible, with direct impact on engagement and retention.",
+          text: "Employees had no way to surface their skills and aspirations. Talent remained invisible, with direct impact on engagement and retention.",
         },
         {
           icon: TrendingUp,
@@ -226,12 +226,12 @@ const content = {
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: 'What Needed to Change',
+      title: 'What needed to change',
       items: [
-        { icon: Eye, text: "Map the competencies of the entire retail network objectively and immediately: a standardised assessment across all roles (Beauty Advisor, Sales Assistant, Store Manager) and all seniority levels." },
-        { icon: Zap, text: "Optimise the time and cost of internal competency analysis: make it sustainable given turnover rates and the pace of the labour market, replacing in-person observation with a scalable system." },
+        { icon: Eye, text: "Map the skills of the entire retail network objectively and immediately: a standardised assessment across all roles (Beauty Advisor, Sales Assistant, Store Manager) and all seniority levels." },
+        { icon: Zap, text: "Optimise the time and cost of internal skills analysis: make it sustainable given turnover rates and the pace of the labour market, replacing in-person observation with a scalable system." },
         { icon: TrendingUp, text: "Promote internal career paths and reduce turnover: identify high-potential people and propensities for different roles to facilitate horizontal and vertical internal moves, reducing the need for external hiring." },
-        { icon: Target, text: "Work proactively on training and development: build a shared competency database to activate customised learning paths that close existing skill gaps and plan workforce development." },
+        { icon: Target, text: "Work proactively on training and development: build a shared skills database to activate customised learning paths that close existing skill gaps and plan workforce development." },
       ],
     },
     solution: {
@@ -254,7 +254,7 @@ const content = {
         { value: 'Only 3', label: 'People in the HR team' },
       ],
       qualitative: [
-        { icon: Eye, title: 'Skills finally visible', text: "For the first time, a clear and comparable view of the competencies of every person across the retail network \u2014 a picture directly actionable for decisions on growth, mobility and training." },
+        { icon: Eye, title: 'Skills finally visible', text: "For the first time, a clear and comparable view of the skills of every person across the retail network \u2014 a picture directly actionable for decisions on growth, mobility and training." },
         { icon: Target, title: 'Hidden talent and predictive potential', text: "The analysis identified predictive propensities for different roles, facilitating horizontal and vertical internal moves and revealing talent where no visibility previously existed." },
         { icon: CheckCircle, title: 'Customised training and skill gaps closed', text: "With the collected data, customised training paths were activated to close existing gaps and define internal redeployments more quickly. A key lever for optimising costs and performance." },
         { icon: Zap, title: 'Time and cost optimisation', text: "Analysis timelines optimised and the burden on managers reduced, freeing resources for higher-value development activities." },
@@ -263,8 +263,8 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'unicomm', company: 'Unicomm', tag: 'GDO Retail · Internal Development', headline: 'How Unicomm is building a new talent management system across a network of 270 stores and growing' },
-        { id: 'carrefour', company: 'Carrefour', tag: 'GDO Retail · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+        { id: 'unicomm', company: 'Unicomm', tag: 'Large-scale distribution · Internal Development', headline: 'How Unicomm is building a new talent management system across a network of 270 stores and growing' },
+        { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
       ],
       cta: 'Read the story',
     },

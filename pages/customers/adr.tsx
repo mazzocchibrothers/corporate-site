@@ -104,7 +104,7 @@ const content = {
     },
     objectives: {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
-      title: 'Costruire la capacità organizzativa che la crescita richiede.',
+      title: 'Cosa doveva cambiare',
       items: [
         { icon: Users, text: "Rendere visibile il potenziale su tutta la popolazione: assessment accessibile a tutti i 4.500+ dipendenti, non solo i 1.000 corporate. Includere per la prima volta gli operativi" },
         { icon: Target, text: 'Guidare le decisioni con un approccio science-based e auditabile: passare dalle segnalazioni soggettive a dati strutturati per ogni ruolo, con criteri chiari, feedback per ogni dipendente e piena compliance regolatoria' },
@@ -130,7 +130,7 @@ const content = {
       metrics: [
         { value: '-97%', label: 'Time-to-Process' },
         { value: 'fino a 4.000', label: 'operativi inclusi' },
-        { value: 'Giorni, non mesi', label: 'tempi di selezione interna' },
+        { value: 'Giorni, non mesi', label: 'dall\'application alla valutazione' },
       ],
       qualitative: [
         { icon: Eye, title: 'Talento nascosto, finalmente visibile', text: "Per la prima volta, ADR ha dati aggiornati su competenze, comportamenti, e potenziale della forza lavoro che fisicamente gestirà i nuovi terminal e le nuove infrastrutture. La pipeline di talento futuro si costruisce da qui." },
@@ -215,7 +215,7 @@ const content = {
         {
           icon: Users,
           title: 'The potential of nearly 4,000 people was not visible',
-          text: "Operational staff — the very people on whom to build the management of a growing airport — could not all be put through assessment: development opportunities started from nominations by direct line managers.",
+          text: "Operational staff — the very people on whom to build the management of a growing airport — could not all be invited to a structured assessment: development opportunities started from nominations by direct line managers.",
         },
         {
           icon: TrendingUp,
@@ -237,7 +237,7 @@ const content = {
         {
           icon: BarChart3,
           title: 'Democratisation of development at risk',
-          text: 'A possible perception of not entirely equal access to growth and professional development opportunities, with the risk that this affects employees\' sense of trust in the process.',
+          text: 'Possible perception of unequal access to growth and professional development opportunities could affect the employees\' sense of trust in the process.',
         },
         {
           icon: Shield,
@@ -248,21 +248,21 @@ const content = {
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: 'Building the organizational capacity that growth demands.',
+      title: 'What needed to change',
       items: [
         { icon: Users, text: "Make potential visible across the entire workforce: assessment accessible to all 4,500+ employees, not just the 1,000 corporate staff. Including operational employees for the first time" },
-        { icon: Target, text: 'Guide decisions with a science-based and auditable approach: move from subjective nominations to structured competency data for every role, with clear criteria, structured feedback for each employee, and full regulatory compliance' },
+        { icon: Target, text: 'Guide decisions with a science-based and auditable approach: move from subjective nominations to structured skills data for every role, with clear criteria, structured feedback for each employee, and full regulatory compliance' },
         { icon: Zap, text: 'Scale without adding operational burden or delays: process internal applications in days instead of months, while preserving the psychometric quality a public entity requires' },
-        { icon: Layers, text: "Build a human-in-the-loop model: the assessment must produce intelligence to support managerial decisions, not replace them. Data to decide better, not automated verdicts" },
+        { icon: Layers, text: "Build a human-in-the-loop model: the assessment must produce intelligence to support managerial decisions, not replace them. Data is used to decide better, not to automate verdicts" },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was integrated into ADR's existing People Strategy, which already included a leadership model and defined development paths. Skillvue's People Science team worked with ADR to align the platform with the company's competency model, ensuring every assessment measured what ADR considers relevant — not generic competencies.",
+      intro: "Skillvue was integrated into ADR's existing People Strategy, which already included a leadership model and defined development paths. Skillvue's People Science team worked with ADR to align the platform with the company's leadership model, ensuring every assessment measured what ADR considers relevant — not generic skills.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
-        { icon: Wrench, label: 'Technical competencies (role-specific, calibrated on ADR\'s model)' },
+        { icon: Wrench, label: 'Technical skills (role-specific, calibrated on ADR\'s model)' },
         { icon: Heart, label: 'Soft skills (for operational roles too, for the first time in ADR\'s history)' },
         { icon: CheckCircle, label: 'English language (critical for an international hub with 240 destinations and 100+ airlines)' },
       ],
@@ -274,7 +274,7 @@ const content = {
       metrics: [
         { value: '-97%', label: 'Time-to-Process' },
         { value: 'up to 4,000', label: 'operational staff included' },
-        { value: 'Days, not months', label: 'internal selection timeline' },
+        { value: 'Days, not months', label: 'application-to-screen timeline' },
       ],
       qualitative: [
         { icon: Eye, title: 'Hidden talent, finally visible', text: "ADR built a data set that simply didn't exist before: people who would have remained invisible under the old approach can now be identified, assessed, and placed into development pipelines." },
@@ -301,7 +301,7 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Internal Mobility', headline: "How In's Mercato built an internal pipeline of Store Managers" },
+        { id: 'ins-mercato', company: "In's Mercato", tag: 'Large-scale distribution · Internal Mobility', headline: "How In's Mercato built an internal pipeline of Store Managers" },
         { id: 'credem', company: 'Credem', tag: 'Banking & Finance · Development', headline: 'Credem: how to find the best talent at scale among 30,000 applications to fuel business growth' },
       ],
       cta: 'Read the story',
@@ -499,7 +499,7 @@ export default function ADRStoryPage() {
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12 max-w-3xl">{c.results.subtitle}</p>
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
               <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
@@ -583,7 +583,7 @@ export default function ADRStoryPage() {
                   {c.vision.badge}
                 </span>
                 <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4 leading-[1.3]">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8 max-w-3xl">{c.vision.intro}</p>
+                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8">{c.vision.intro}</p>
                 <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
                     <Target className="h-5 w-5" style={{ color: '#4b4df7' }} />

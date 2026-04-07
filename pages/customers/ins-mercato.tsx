@@ -30,7 +30,7 @@ const businessPains = [
   },
   {
     icon: Layers,
-    en: { title: 'Dependence on external hiring', desc: "Chasing demand through external recruitment means higher costs, longer onboarding times, and a real risk of cultural mismatch — in a sector where finding experienced profiles is increasingly difficult." },
+    en: { title: 'Dependence on external hiring', desc: "Chasing demand through external recruitment means higher costs, longer onboarding times, and a real risk of cultural mismatch, in a sector where finding experienced profiles is increasingly difficult." },
     it: { title: 'Dipendenza dal mercato esterno', desc: 'Rincorrere il fabbisogno con selezione esterna significa costi più alti, tempi di inserimento più lunghi e un rischio concreto di mismatch culturale, in un settore dove trovare profili formati è sempre più difficile.' },
   },
 ];
@@ -38,7 +38,7 @@ const businessPains = [
 const hrPains = [
   {
     icon: Eye,
-    en: { title: 'Invisible talent across the network', desc: 'No objective visibility into the competencies of thousands of sales associates distributed across 570+ stores: decisions on potential were based on sales numbers and subjective perceptions.' },
+    en: { title: 'Invisible talent across the network', desc: 'No objective visibility into the skills of thousands of sales associates distributed across 570+ stores: decisions on potential were based on sales numbers and subjective perceptions.' },
     it: { title: 'Invisibilità del talento in rete', desc: 'Nessuna visibilità oggettiva sulle competenze di migliaia di addetti vendita distribuiti su oltre 570 punti vendita: le decisioni sul potenziale si basavano su numeri di vendita e percezioni soggettive.' },
   },
   {
@@ -48,7 +48,7 @@ const hrPains = [
   },
   {
     icon: Zap,
-    en: { title: 'Reactive talent management, not predictive', desc: 'Without structured visibility on internal potential, every key position to fill turned into an external recruitment process. A double cost: time and investment to recruit, plus the risk of losing unrecognized talent already in the company.' },
+    en: { title: 'Reactive, not predictive talent management', desc: 'Without structured visibility on internal potential, every key position to fill turned into an external recruitment process. A double cost: time and investment to recruit, plus the risk of losing unrecognized talent already in the company.' },
     it: { title: 'Gestione reattiva del talento, non predittiva', desc: 'Senza visibilità strutturata sul potenziale interno, ogni posizione chiave da coprire si trasformava in un processo di selezione esterna. Un doppio costo: tempi e investimenti per reclutare, più il rischio di perdere talenti già in azienda non valorizzati.' },
   },
 ];
@@ -61,18 +61,18 @@ const objectives = [
   },
   {
     icon: Users,
-    en: 'Build an internal pipeline of ready Store Managers to support the opening plan without depending on an increasingly competitive and costly external market',
-    it: 'Costruire una pipeline interna di Store Manager pronti, per sostenere il piano di aperture senza dipendere da un mercato esterno sempre più competitivo e costoso',
+    en: 'Build an internal pipeline of ready Store Managers: to support the opening plan without depending on an increasingly competitive and costly external market',
+    it: 'Costruire una pipeline interna di Store Manager pronti: per sostenere il piano di aperture senza dipendere da un mercato esterno sempre più competitivo e costoso',
   },
   {
     icon: TrendingUp,
-    en: 'Maximize store performance and return on investment in new openings, ensuring every store is led by a qualified, culturally aligned Store Manager',
-    it: 'Massimizzare la performance dei punti vendita e il ritorno sugli investimenti in nuove aperture, garantendo che ogni store sia presidiato da uno Store Manager qualificato e allineato alla cultura aziendale',
+    en: 'Maximize store performance and return on investment in new openings: ensuring every store is led by a qualified, culturally aligned Store Manager',
+    it: 'Massimizzare la performance dei punti vendita e il ritorno sugli investimenti in nuove aperture: garantendo che ogni store sia presidiato da uno Store Manager qualificato e allineato alla cultura aziendale',
   },
   {
     icon: Target,
-    en: 'Anticipate key role needs months in advance, moving from an emergency-driven logic to a predictive talent planning capability',
-    it: 'Anticipare il fabbisogno di ruoli chiave con mesi di anticipo, passando da una logica emergenziale a una capacità predittiva di pianificazione del talento',
+    en: 'Anticipate key role needs months in advance: moving from an emergency-driven logic to a predictive talent planning capability',
+    it: 'Anticipare il fabbisogno di ruoli chiave con mesi di anticipo: passando da una logica emergenziale a una capacità predittiva di pianificazione del talento',
   },
 ];
 
@@ -94,7 +94,7 @@ const methodologyCards = [
 const impactCards = [
   {
     icon: Users,
-    en: { title: 'Internal pipeline built', text: "For the first time, In's has an objective map of potential across the network and can plan openings with the certainty of having qualified talent available." },
+    en: { title: 'Construction of internal talent pipeline', text: "For the first time, In's has an objective map of potential across the network and can plan openings with the certainty of having qualified talent available." },
     it: { title: 'Costruzione pipeline interna', text: "Per la prima volta, In's dispone di una mappatura oggettiva del potenziale sulla rete e può pianificare le aperture con la certezza di avere figure qualificate disponibili." },
   },
   {
@@ -129,7 +129,7 @@ const quote = {
 
 const visionBullets = {
   en: [
-    'Same criteria and competency framework from hiring to development: new hires are assessed from day one with the same logic used to develop them',
+    'Same criteria and skills framework from hiring to development: new hires are assessed from day one with the same logic used to develop them',
     'Assessment via WhatsApp: in grocery retail this isn\'t a convenience choice, it\'s a strategic one. It removes every barrier to access and drives completion rates that other tools can\'t match',
     'Extending assessment to current Store Managers to identify profiles ready for the Area Manager role',
     'Hiring, development, and training integrated into one continuous system. No longer separate processes, but a single talent strategy that works as a business asset',
@@ -192,7 +192,7 @@ export default function InsMercatoStoryPage() {
                   <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">
                     {lang === 'it'
                       ? "La crescita della rete dipende dalla capacità di avere figure manageriali formate nel momento in cui servono. Con Skillvue, In's ha trasformato la gestione del talento da reattiva a predittiva."
-                      : "Network growth depends on having trained managerial talent ready when it's needed. With Skillvue, In's transformed talent management from reactive to predictive."
+                      : "Network growth depends on having trained managerial talent ready when it's needed. With Skillvue, In's Mercato transformed talent management from reactive to predictive."
                     }
                   </p>
                   <div className="flex flex-wrap gap-4">
@@ -228,7 +228,7 @@ export default function InsMercatoStoryPage() {
                       { label: 'Punti vendita', value: '+570' },
                       { label: 'Use Case', value: 'Internal Mobility' },
                     ] : [
-                      { label: 'Industry', value: 'GDO - Hard Discount' },
+                      { label: 'Industry', value: 'Large-scale distribution - Hard Discount' },
                       { label: 'Revenue', value: '€1.5B' },
                       { label: 'Employees', value: '4,200+' },
                       { label: 'Stores', value: '570+' },
@@ -263,28 +263,20 @@ export default function InsMercatoStoryPage() {
             {/* Context */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'CONTESTO' : 'CONTEXT'}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{lang === 'it' ? 'Il contesto del progetto' : 'Project Background'}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{lang === 'it' ? 'Il contesto del progetto' : 'The Company and The Context'}</h2>
               <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-6">
                 {lang === 'it'
-                  ? <>In's Mercato è una delle principali insegne hard discount italiane, con un fatturato di <strong className="text-[#1A1A2E]/80 font-semibold">1,5 miliardi di euro</strong>, oltre <strong className="text-[#1A1A2E]/80 font-semibold">4.200 dipendenti</strong> e una rete di più di <strong className="text-[#1A1A2E]/80 font-semibold">570 punti vendita</strong>. L'azienda è in una fase di forte espansione immobiliare, con un piano di nuove aperture che pone un vincolo operativo preciso: senza Store Manager qualificati, pronti e pienamente allineati alla cultura aziendale, i nuovi negozi rischiano di sottoperformare. La crescita della rete dipende direttamente dalla capacità di avere figure manageriali formate nel momento in cui servono.</>
-                  : <>In's Mercato is one of Italy's leading hard discount grocery chains, with <strong className="text-[#1A1A2E]/80 font-semibold">€1.5 billion in revenue</strong>, over <strong className="text-[#1A1A2E]/80 font-semibold">4,200 employees</strong>, and a network of more than <strong className="text-[#1A1A2E]/80 font-semibold">570 stores</strong>. The company is in a phase of aggressive real estate expansion, with a new store opening plan that creates a clear operational constraint: without qualified Store Managers who are ready and fully aligned with the company culture, new stores risk underperforming. Network growth depends directly on having trained managerial talent available when it's needed.</>
+                  ? <>In's Mercato è una delle principali insegne hard discount italiane, con un fatturato di <strong className="text-[#1A1A2E]/80 font-semibold">1,5 miliardi di euro</strong>, oltre <strong className="text-[#1A1A2E]/80 font-semibold">4.200 dipendenti</strong> e una rete di più di <strong className="text-[#1A1A2E]/80 font-semibold">570 punti vendita</strong>. L'azienda è in una fase di forte <strong className="text-[#1A1A2E]/80 font-semibold">espansione immobiliare</strong>, con un piano di nuove aperture che pone un <strong className="text-[#1A1A2E]/80 font-semibold">vincolo operativo preciso</strong>: senza Store Manager qualificati, pronti e pienamente allineati alla cultura aziendale, i nuovi negozi rischiano di sottoperformare. La crescita della rete dipende direttamente dalla capacità di avere figure manageriali formate nel momento in cui servono.</>
+                  : <>In's Mercato is one of Italy's leading hard discount grocery chains, with <strong className="text-[#1A1A2E]/80 font-semibold">€1.5 billion in revenue</strong>, over <strong className="text-[#1A1A2E]/80 font-semibold">4,200 employees</strong>, and a network of more than <strong className="text-[#1A1A2E]/80 font-semibold">570 stores</strong>. The company is in a phase of aggressive <strong className="text-[#1A1A2E]/80 font-semibold">real estate expansion</strong>, with a new store opening plan that creates a clear <strong className="text-[#1A1A2E]/80 font-semibold">operational constraint</strong>: without qualified Store Managers who are ready and fully aligned with the company culture, new stores risk underperforming. Network growth depends directly on having trained managerial talent available when it's needed.</>
                 }
               </p>
-              <div className="rounded-xl border border-[#e2e8f0] bg-white px-8 py-6 shadow-sm">
-                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.7] italic">
-                  {lang === 'it'
-                    ? "Il progetto ha trasformato la gestione del talento da reattiva a predittiva, collegando direttamente la people strategy al piano di espansione: ogni nuova apertura può ora contare su una pipeline interna di figure pronte, invece di rincorrere il fabbisogno sul mercato esterno."
-                    : "The project transformed talent management from reactive to predictive, directly linking the people strategy to the expansion plan: every new opening can now count on an internal pipeline of ready talent, instead of chasing demand on the external market."
-                  }
-                </p>
-              </div>
             </Section>
 
             {/* Challenge */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'LA SFIDA' : 'THE CHALLENGE'}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{lang === 'it' ? 'Il problema strutturale' : 'The Structural Problem'}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14 max-w-3xl">
+              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14">
                 {lang === 'it'
                   ? "In's Mercato è un'azienda in forte crescita. Con oltre 570 punti vendita e un piano di sviluppo immobiliare attivo, il business aveva un vincolo operativo che precedeva qualsiasi considerazione HR."
                   : "In's Mercato is a fast-growing company. With over 570 stores and an active real estate development plan, the business faced an operational constraint that preceded any HR consideration."
@@ -514,7 +506,7 @@ export default function InsMercatoStoryPage() {
                   </div>
                   <div className="rounded-xl bg-[#4B4DF7]/[0.06] p-6 text-center">
                     <span className="block text-[#1A1A2E]" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>51%+</span>
-                    <span className="text-[13px] text-[#1A1A2E]/[0.65] mt-2 block">{t('Structured competency assessment')}<br />{t('predictive validity')}</span>
+                    <span className="text-[13px] text-[#1A1A2E]/[0.65] mt-2 block">{t('Structured skills assessment')}<br />{t('predictive validity')}</span>
                   </div>
                 </div>
                 <button onClick={() => { router.push('/science'); window.scrollTo(0,0); }} className="group inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
@@ -534,8 +526,8 @@ export default function InsMercatoStoryPage() {
             <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 leading-[1.4] mb-12">{t('Related Stories')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {[
-                { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
-                { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: 'Subdued: building a single scalable selection standard for a network of 130+ stores' },
+                { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+                { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: 'Subdued: building a single scalable hiring standard for a network of 130+ stores' },
               ].map(s => (
                 <button key={s.id} onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0,0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
                   <span className="text-[14px] text-white/40 mb-4 block">{t(s.tag)}</span>
