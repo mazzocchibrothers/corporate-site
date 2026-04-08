@@ -81,6 +81,7 @@ export default function BookMeetingPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

@@ -10,6 +10,7 @@ const pillars = [
     title: 'Talent Acquisition',
     desc: 'Replace gut-feel interviews with AI-powered assessments that predict on-the-job performance. Scalable from 10 to 10,000 candidates. same scientific rigor at every level.',
     link: 'Explore Talent Acquisition',
+    path: '/solutions/talent-acquisition',
   },
   {
     id: 'performance',
@@ -17,6 +18,7 @@ const pillars = [
     title: 'Performance Management',
     desc: 'Add an objective layer to performance cycles. Structured competency assessments reduce bias, improve calibration, and give managers a starting point grounded in data, not recency.',
     link: 'Explore Performance Management',
+    path: '/solutions/performance-management',
   },
   {
     id: 'learning',
@@ -24,6 +26,7 @@ const pillars = [
     title: 'Learning & Development',
     desc: 'Know exactly where the skill gaps are: at individual, team, and organization level. Fund programs based on evidence, measure progress with before-and-after precision.',
     link: 'Explore Learning & Development',
+    path: '/solutions/learning-development',
   },
   {
     id: 'mobility',
@@ -31,6 +34,7 @@ const pillars = [
     title: 'Internal Mobility & Succession',
     desc: 'See who is ready for a new role today, who can be developed in 6 months, and where critical knowledge is concentrated. Move from "we think she might be ready" to "we know."',
     link: 'Explore Internal Mobility',
+    path: '/solutions/internal-mobility',
   },
 ];
 
@@ -72,7 +76,7 @@ export default function WhatSkillvueDoes() {
                 <Icon className="h-6 w-6 text-[#4B4DF7]/40 mb-5" strokeWidth={1.5} />
                 <h3 className="text-[20px] font-bold text-[#1A1A2E] mb-4">{t(pillar.title)}</h3>
                 <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.75] mb-8 flex-1">{t(pillar.desc)}</p>
-                <a href="#" className="group/link inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
+                <a href={pillar.path} className="group/link inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
                   {t(pillar.link)}
                   <ArrowRight className="h-3.5 w-3.5 group-hover/link:translate-x-1 transition-transform duration-300" />
                 </a>

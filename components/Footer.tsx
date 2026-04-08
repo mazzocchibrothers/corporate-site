@@ -153,7 +153,7 @@ export default function Footer() {
                 href: 'https://cdn.prod.website-files.com/63eb9c5c0665608db409b4df/68711e6395c0cd387565988b_PoliticaDiSicurezzaDelleInformazioni.pdf',
               },
               {
-                label: 'Trattamento dati personali',
+                label: lang === 'it' ? 'Trattamento dati personali' : 'Personal Data Processing',
                 href: '/privacy-policy-algo',
               },
             ].map(({ label, href }) => (

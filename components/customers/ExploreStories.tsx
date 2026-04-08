@@ -24,48 +24,8 @@ const allStories = [
     headlineEn: "In's Mercato: how it built an internal pipeline of Store Managers",
     bgImage: '/logos/insmercato-bg.jpg',
   },
-  {
-    id: 'adr', company: 'Aeroporti di Roma', industry: 'Transportation & Logistics', useCases: ['Internal Mobility', 'Learning & Development'],
-    headlineIt: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi",
-    headlineEn: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a €9 billion plan',
-    bgImage: '/logos/adr-explore-stories.jpg',
-  },
-  {
-    id: 'unicomm', company: 'Unicomm', industry: 'GDO', useCases: ['Hiring', 'Learning & Development', 'Internal Mobility'],
-    headlineIt: 'Unicomm: come sta costruendo una nuova gestione del talento su una rete di 270 punti vendita in costante aumento',
-    headlineEn: 'Unicomm: how it is building a new talent management system across a network of 270 stores and growing',
-    bgImage: '/logos/unicomm-background-explore-stories.jpg',
-  },
-  {
-    id: 'mediaset', company: 'Mediaset', industry: 'Media & Telecom', useCases: ['Hiring'],
-    headlineIt: 'Mediaset: Da 3000 candidature a 15 top talent: come selezionare e far crescere il talento su scala',
-    headlineEn: 'Mediaset: From 3000 applications to 15 top talents: how to identify and develop talent at scale',
-    bgImage: '/logos/mediaset-background-explore-stories (2).jpg',
-  },
-  {
-    id: 'europ-assistance', company: 'Europ Assistance', industry: 'Financial Services', useCases: ['Hiring'],
-    headlineIt: 'Europ Assistance: come ottenere un tasso di successo delle assunzioni del 76% in un business fondato sulla componente umana',
-    headlineEn: 'Europ Assistance: how to achieve a 76% hiring success rate in a business built on human interaction',
-    bgImage: '/logos/europ-assistance-background-explore-stories.jpg',
-  },
-  {
-    id: 'douglas', company: 'Douglas', industry: 'Retail', useCases: ['Learning & Development', 'Internal Mobility'],
-    headlineIt: 'Douglas: come il primo beauty retailer europeo ha reso visibili le competenze di 2.200 persone su 370 store in 5 settimane',
-    headlineEn: 'Douglas: how Europe\u2019s leading beauty retailer made the skills of 2,200 people across 370 stores visible in 5 weeks',
-    bgImage: '/logos/douglas-background-explore-stories.jpg',
-  },
-  {
-    id: 'eataly', company: 'Eataly', industry: 'Retail', useCases: ['Hiring', 'Internal Mobility'],
-    headlineIt: 'Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti ad alto potenziale',
-    headlineEn: 'Eataly: how to fuel a global expansion plan by identifying and mobilising high-potential talent',
-    bgImage: '/logos/eataly-explore-stories.jpg',
-  },
-  {
-    id: 'credem', company: 'Credem', industry: 'Financial Services', useCases: ['Hiring'],
-    headlineIt: 'Credem: come scovare i migliori talenti su larga scala tra 30.000 candidature per nutrire la crescita del business',
-    headlineEn: 'Credem: how to find the best talent at scale among 30,000 applications to fuel business growth',
-    bgImage: '/logos/credem-background-explore-stories.jpg',
-  },
+  // Temporarily removed from listing pending approval (restore when ready):
+  // unicomm, credem, europ-assistance, mediaset, adr, douglas, eataly
 ];
 
 const filters = {
