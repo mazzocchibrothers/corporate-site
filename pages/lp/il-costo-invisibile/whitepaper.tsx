@@ -183,7 +183,7 @@ export default function IlCostoInvisibileWhitepaper() {
               </p>
               <div className="w-10 h-px mx-auto mb-5" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
               <p className="text-[13px] text-[#0D0D0D]/40">
-                <em>Settore:</em> Insurance · <em>Destinatari:</em> CHRO, Chief Distribution Officer, Head of Agency Network
+                <em>Settore:</em> Insurance
               </p>
               <p className="text-[13px] text-[#0D0D0D]/40 mt-1"><em>Lettura:</em> circa 7 minuti</p>
               <p className="text-[13px] text-[#0D0D0D]/40 mt-1">

@@ -116,7 +116,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.05}>
             <span className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8"
               style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>
-              WP-L2 · Retail Lusso · 2026
+              Retail Lusso · 2026
             </span>
           </motion.div>
 
@@ -138,9 +138,46 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             <span>A cura di <strong className="text-[#0D0D0D]/55">Skillvue</strong></span>
             <span className="w-px h-3 bg-[#0D0D0D]/15" />
             <span>~8 min read</span>
-            <span className="w-px h-3 bg-[#0D0D0D]/15" />
-            <span>CHRO · Head of Retail Operations · CFO</span>
           </motion.div>
+
+            {/* Logo marquee */}
+            {(() => {
+              const logos: { src: string; alt: string; keepColor?: boolean; w?: number; h?: number }[] = [
+                { src: '/logos/essilorluxottica.png', alt: 'EssilorLuxottica', w: 150, h: 40 },
+                { src: '/logos/eataly.png', alt: 'Eataly', w: 100, h: 40 },
+                { src: '/logos/nespresso.png', alt: 'Nespresso', w: 100, h: 52 },
+                { src: '/logos/miroglio.png', alt: 'Miroglio Group', keepColor: true, w: 130, h: 40 },
+                { src: '/logos/subdued-logo.png', alt: 'Subdued', w: 100, h: 40 },
+                { src: '/logos/douglas-logo.png', alt: 'Douglas', w: 130, h: 40 },
+              ];
+              const bwStyle = { filter: 'brightness(0)', opacity: 0.55 } as const;
+              const colorStyle = { filter: 'grayscale(1)', opacity: 0.55 } as const;
+              const LogoSet = ({ ariaHidden }: { ariaHidden?: boolean }) => (
+                <div className="shrink-0 flex items-center gap-12" aria-hidden={ariaHidden || undefined}>
+                  {logos.map((logo, i) => (
+                    <div key={i} className="shrink-0 flex items-center justify-center" style={{ width: logo.w, height: logo.h }}>
+                      <img src={logo.src} alt={ariaHidden ? '' : logo.alt} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', ...(logo.keepColor ? colorStyle : bwStyle) }} />
+                    </div>
+                  ))}
+                </div>
+              );
+              return (
+                <motion.div
+                  variants={fadeUp} initial="hidden" animate="visible" custom={0.27}
+                  className="relative overflow-hidden mb-10 mx-auto"
+                  style={{
+                    maxWidth: 700,
+                    maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                    WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                  }}
+                >
+                  <div className="lp-marquee flex items-center gap-12" style={{ width: 'max-content' }}>
+                    <LogoSet />
+                    <LogoSet ariaHidden />
+                  </div>
+                </motion.div>
+              );
+            })()}
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.3}>
             <button onClick={scrollToForm}
@@ -397,7 +434,7 @@ function WhitepaperLayer() {
           <div className="px-10 pt-12 pb-8 text-center border-b border-black/[0.06]">
             <span className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-7"
               style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>
-              WP-L2 · RETAIL LUSSO · 2026
+              RETAIL LUSSO · 2026
             </span>
             <h1 className="text-[2rem] font-bold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
               Il turnover nei negozi del lusso:
@@ -623,7 +660,7 @@ function WhitepaperLayer() {
             </div>
 
             <div className="border-t border-black/[0.07] pt-6 mt-8 flex items-center justify-between">
-              <span className="text-[11px] text-[#0D0D0D]/25">WP-L2 · Retail Lusso · 2026</span>
+              <span className="text-[11px] text-[#0D0D0D]/25">Retail Lusso · 2026</span>
               <div className="flex items-center gap-2">
                 <SkillvueIcon size={16} />
                 <span className="text-[11px] text-[#0D0D0D]/25">Skillvue</span>
