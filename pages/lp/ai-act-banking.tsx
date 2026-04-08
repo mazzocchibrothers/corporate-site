@@ -153,7 +153,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
               className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8"
               style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
             >
-              WP-B1 · Banking · 2026
+              Banking · 2026
             </span>
           </motion.div>
 
@@ -175,7 +175,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             className="text-[17px] text-[#0D0D0D]/55 leading-[1.7] mb-4"
             style={{ fontWeight: 300 }}
           >
-            Come trasformare la scadenza del 2 agosto 2026 in una decisione strategica concreta per CHRO e Chief Compliance Officer
+            Come trasformare la scadenza del 2 agosto 2026 in una decisione strategica concreta per il tuo istituto bancario
           </motion.p>
 
           <motion.div
@@ -185,9 +185,46 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             <span>A cura di <strong className="text-[#0D0D0D]/55">Skillvue</strong></span>
             <span className="w-px h-3 bg-[#0D0D0D]/15" />
             <span>~5 min read</span>
-            <span className="w-px h-3 bg-[#0D0D0D]/15" />
-            <span>CHRO · Chief Compliance Officer</span>
           </motion.div>
+
+            {/* Logo marquee */}
+            {(() => {
+              const logos: { src: string; alt: string; keepColor?: boolean; w?: number; h?: number }[] = [
+                { src: '/logos/intesa-sanpaolo.png', alt: 'Intesa Sanpaolo', w: 150, h: 40 },
+                { src: '/logos/webuild.svg', alt: 'Webuild', w: 120, h: 40 },
+                { src: '/logos/aeroporti-di-roma.svg', alt: 'Aeroporti di Roma', w: 140, h: 40 },
+                { src: '/logos/banca-di-asti.svg', alt: 'Banca di Asti', w: 140, h: 40 },
+                { src: '/logos/monte-paschi.png', alt: 'Monte dei Paschi di Siena', keepColor: true, w: 120, h: 52 },
+                { src: '/logos/unicredit.png', alt: 'UniCredit', keepColor: true, w: 150, h: 40 },
+              ];
+              const bwStyle = { filter: 'brightness(0)', opacity: 0.55 } as const;
+              const colorStyle = { filter: 'grayscale(1)', opacity: 0.55 } as const;
+              const LogoSet = ({ ariaHidden }: { ariaHidden?: boolean }) => (
+                <div className="shrink-0 flex items-center gap-12" aria-hidden={ariaHidden || undefined}>
+                  {logos.map((logo, i) => (
+                    <div key={i} className="shrink-0 flex items-center justify-center" style={{ width: logo.w, height: logo.h }}>
+                      <img src={logo.src} alt={ariaHidden ? '' : logo.alt} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', ...(logo.keepColor ? colorStyle : bwStyle) }} />
+                    </div>
+                  ))}
+                </div>
+              );
+              return (
+                <motion.div
+                  variants={fadeUp} initial="hidden" animate="visible" custom={0.27}
+                  className="relative overflow-hidden mb-10 mx-auto"
+                  style={{
+                    maxWidth: 700,
+                    maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                    WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                  }}
+                >
+                  <div className="lp-marquee flex items-center gap-12" style={{ width: 'max-content' }}>
+                    <LogoSet />
+                    <LogoSet ariaHidden />
+                  </div>
+                </motion.div>
+              );
+            })()}
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.3}>
             <button
@@ -241,7 +278,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
               Cosa troverai nel report
             </h2>
             <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
-              Una guida operativa per CHRO e Chief Compliance Officer che devono trasformare una scadenza regolamentare in una decisione strategica concreta.
+              Una guida operativa per trasformare una scadenza regolamentare in una decisione strategica concreta per il settore bancario.
             </p>
           </motion.div>
 
@@ -280,7 +317,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                   'La classificazione AI Act e gli obblighi reali per le banche deployer',
                   'Perché il rischio reputazionale pesa più della sanzione del 3%',
                   'I 3 criteri per valutare se un sistema AI è davvero conforme',
-                  'Come CHRO e Chief Compliance Officer devono collaborare',
+                  'Come HR e Compliance devono collaborare per essere conformi',
                   '3 domande strategiche per il tuo comitato di direzione',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-[14px] text-[#0D0D0D]/60 leading-snug">
@@ -580,7 +617,7 @@ function WhitepaperLayer() {
               className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-7"
               style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
             >
-              WP-B1 · BANKING · 2026
+              BANKING · 2026
             </span>
             <h1 className="text-[2rem] font-bold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
               AI Act-compliant nel Banking:
@@ -593,7 +630,7 @@ function WhitepaperLayer() {
             </h1>
             <div className="w-10 h-px mx-auto mb-5 mt-5" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
             <p className="text-[13px] text-[#0D0D0D]/40">
-              <em>Settore:</em> Banking · <em>Destinatari:</em> CHRO, Chief Compliance Officer
+              <em>Settore:</em> Banking · <em>Destinatari:</em> HR Leader, Compliance, Executive
             </p>
             <p className="text-[13px] text-[#0D0D0D]/40 mt-1"><em>Lettura:</em> circa 5 minuti</p>
             <p className="text-[13px] text-[#0D0D0D]/40 mt-1">
@@ -826,7 +863,7 @@ function WhitepaperLayer() {
               </p>
             </InfoBox>
 
-            <SectionHeading num="4" title="CHRO e Chief Compliance Officer: perché la sfida coinvolge entrambi" />
+            <SectionHeading num="4" title="HR e Compliance: perché la sfida coinvolge entrambi" />
             <Para>
               In molte banche europee, il progetto di adeguamento all'AI Act è partito dalla funzione
               Legal o Compliance, con il CHRO coinvolto in una fase successiva. Questo approccio ha
@@ -836,8 +873,8 @@ function WhitepaperLayer() {
             </Para>
             <Para>
               Il modello che si sta affermando nelle organizzazioni più avanzate prevede una{' '}
-              <strong className="text-[#0D0D0D]/80">co-governance strutturata tra le due funzioni</strong>. Il Chief Compliance Officer
-              garantisce la tenuta legale del processo e la gestione del rischio regolatorio. Il CHRO
+              <strong className="text-[#0D0D0D]/80">co-governance strutturata tra le due funzioni</strong>. La funzione Compliance
+              garantisce la tenuta legale del processo e la gestione del rischio regolatorio. La funzione HR
               garantisce che le misure di compliance non compromettano l'efficacia della selezione, anzi
               le utilizzi come leva per innalzarne la qualità complessiva.
             </Para>
@@ -1104,7 +1141,7 @@ export default function AIActBankingPage() {
         <title>AI Act-compliant nel Banking: da obbligo regolatorio a vantaggio competitivo | Skillvue</title>
         <meta
           name="description"
-          content="Come trasformare la scadenza del 2 agosto 2026 in una decisione strategica per CHRO e Chief Compliance Officer. Report gratuito di Skillvue."
+          content="Come trasformare la scadenza del 2 agosto 2026 in una decisione strategica per il settore bancario. Report gratuito di Skillvue."
         />
         <meta name="robots" content="noindex, nofollow" />
       </Head>

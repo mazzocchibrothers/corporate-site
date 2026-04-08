@@ -160,8 +160,6 @@ export default function CareerAspirationInsuranceVetrina() {
               <span>A cura di <strong className="text-[#0D0D0D]/55">Skillvue</strong></span>
               <span className="w-px h-3 bg-[#0D0D0D]/15" />
               <span>~6 min read</span>
-              <span className="w-px h-3 bg-[#0D0D0D]/15" />
-              <span>CHRO · Chief Talent Officer · Head of Leadership Development</span>
             </motion.div>
 
             {/* Logo marquee */}
@@ -171,7 +169,6 @@ export default function CareerAspirationInsuranceVetrina() {
                 { src: '/logos/reale-mutua.png', alt: 'Reale Mutua' },
                 { src: '/logos/unipol.svg', alt: 'Unipol' },
                 { src: '/logos/plenitude.png', alt: 'Plenitude', square: true },
-                { src: '/logos/mediaset-logo.png', alt: 'Mediaset' },
                 { src: '/logos/windtre.svg', alt: 'WindTre Business' },
               ];
               const logoStyle = { filter: 'brightness(0)', opacity: 0.55 } as const;
