@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React, { useRef } from 'react';
+import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion, useInView } from 'framer-motion';
@@ -23,6 +24,8 @@ const values = [
 export default function AboutPage() {
   const { t } = useLanguage();
   const router = useRouter();
+  const isIT = router.locale === 'it';
+  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/about`;
   const valuesRef = useRef(null);
   const valuesInView = useInView(valuesRef, { once: true, margin: '-100px' });
   const teamRef = useRef(null);
@@ -30,6 +33,14 @@ export default function AboutPage() {
 
   return (
     <>
+      <Head>
+        <title>{isIT ? 'Chi Siamo | Skillvue — Talent Science, Made in Europe' : 'About Us | Skillvue — Talent Science, Built in Europe'}</title>
+        <meta name="description" content={isIT
+          ? "Skillvue è una startup milanese che applica la scienza psicometrica e l'AI alle decisioni sul talento. €9M+ raccolti, 50+ clienti enterprise, 500K+ valutazioni."
+          : 'Skillvue is a Milan-based startup applying psychometric rigour and AI to talent decisions. €9M+ raised, 50+ enterprise clients, 500K+ assessments delivered.'
+        } />
+        <link rel="canonical" href={canonical} />
+      </Head>
       <Navbar />
       <main>
         {/* 1. Hero. Dark with blurred team photo background */}

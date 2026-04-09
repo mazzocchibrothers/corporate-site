@@ -6,6 +6,16 @@ const nextConfig: NextConfig = {
     locales: ['en', 'it'],
     defaultLocale: 'en',
   },
+  async rewrites() {
+    return [
+      { source: '/it/clienti', destination: '/it/customers', locale: false },
+    ];
+  },
+  async redirects() {
+    return [
+      { source: '/it/customers', destination: '/it/clienti', locale: false, permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -31,6 +31,7 @@ const navLinks = [
     label: 'Customers',
     labelIt: 'Clienti',
     href: '/customers',
+    hrefIt: '/clienti',
     items: null,
   },
   {
@@ -38,8 +39,8 @@ const navLinks = [
     labelIt: 'Risorse',
     href: '#',
     items: [
-      { name: 'White Papers', path: '/resources/whitepapers' },
-      { name: 'Blog', path: '/blog' },
+      { name: 'White Papers', path: '/resources/whitepapers', hideInIT: true },
+      { name: 'Blog', path: '/blog', hideInIT: true },
       { name: 'Press', path: '/resources/press' },
       { name: 'About', path: '/about' },
     ],
@@ -173,7 +174,7 @@ export default function Navbar() {
                 onMouseLeave={handleLeave}
               >
                 <a
-                  href={link.href}
+                  href={lang === 'it' && (link as any).hrefIt ? (link as any).hrefIt : link.href}
                   data-testid={`nav-link-${link.label.toLowerCase()}`}
                   className="text-[15px] font-light tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300"
                   style={{
@@ -182,11 +183,12 @@ export default function Navbar() {
                       : (openMenu === link.label ? textColor : textMuted),
                   }}
                   onClick={(e) => {
+                    const href = lang === 'it' && (link as any).hrefIt ? (link as any).hrefIt : link.href;
                     if (link.items) {
                       e.preventDefault();
-                    } else if (link.href.startsWith('/')) {
+                    } else if (href.startsWith('/')) {
                       e.preventDefault();
-                      navigateTo(link.href);
+                      navigateTo(href);
                     }
                   }}
                 >
@@ -276,7 +278,7 @@ export default function Navbar() {
         {activeItems && (
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-5">
             <div className="flex flex-wrap items-center justify-center gap-2">
-              {activeItems.map((item, idx) => (
+              {activeItems.filter(item => !(lang === 'it' && (item as any).hideInIT)).map((item, idx) => (
                 <a
                   key={item.name}
                   href={item.path}
@@ -326,7 +328,8 @@ export default function Navbar() {
                       if (link.items) {
                         setMobileExpanded(mobileExpanded === link.label ? null : link.label);
                       } else if (link.href.startsWith('/')) {
-                        navigateTo(link.href);
+                        const href = lang === 'it' && (link as any).hrefIt ? (link as any).hrefIt : link.href;
+                        navigateTo(href);
                       }
                     }}
                   >
@@ -345,7 +348,7 @@ export default function Navbar() {
                   {/* Expanded sub-items */}
                   {link.items && mobileExpanded === link.label && (
                     <div className="pl-4 pb-2">
-                      {link.items.map((item) => (
+                      {link.items.filter(item => !(lang === 'it' && (item as any).hideInIT)).map((item) => (
                         <button
                           key={item.name}
                           className="w-full text-left py-3 text-[16px] text-white/60 hover:text-white transition-colors duration-200"
