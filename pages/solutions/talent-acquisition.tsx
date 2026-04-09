@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -16,9 +17,20 @@ import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 
 export default function TalentAcquisitionPage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const isIT = lang === 'it';
+  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/solutions/talent-acquisition`;
+
   return (
     <>
+      <Head>
+        <title>{isIT ? 'Talent Acquisition | Valutazioni Predittive con AI | Skillvue' : 'Talent Acquisition | AI Hiring Assessments | Skillvue'}</title>
+        <meta name="description" content={isIT
+          ? "Sostituisci il recruiting basato sull'istinto con valutazioni AI predittive. Riduci il turnover precoce e rendi ogni decisione di assunzione difendibile."
+          : 'Replace gut-feel hiring with AI assessments that predict performance. Reduce early turnover and make every hiring decision defensible at scale.'
+        } />
+        <link rel="canonical" href={canonical} />
+      </Head>
       <Navbar />
       <main>
         <TAHero />

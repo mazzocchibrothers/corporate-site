@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -13,9 +14,20 @@ import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 
 export default function LearningDevelopmentPage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const isIT = lang === 'it';
+  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/solutions/learning-development`;
+
   return (
     <>
+      <Head>
+        <title>{isIT ? 'Learning & Development | Gap Analysis Competenze | Skillvue' : 'Learning & Development | Skill Gap Analysis | Skillvue'}</title>
+        <meta name="description" content={isIT
+          ? "Identifica i reali gap di competenze a livello individuale, di team e organizzativo. Concentra ogni investimento formativo dove ha il maggiore impatto."
+          : 'Identify real skill gaps at individual, team and org level. Target every training investment where it matters and measure impact on business outcomes.'
+        } />
+        <link rel="canonical" href={canonical} />
+      </Head>
       <Navbar />
       <main>
         <LDHero />

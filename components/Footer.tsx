@@ -28,15 +28,15 @@ const footerLinks = [
     title: 'Customers',
     titleIt: 'Clienti',
     links: [
-      { name: 'Customer Stories', nameIt: 'Customer Stories', href: '/customers' },
+      { name: 'Customer Stories', nameIt: 'Storie di Successo', href: '/customers', hrefIt: '/clienti' },
     ],
   },
   {
     title: 'Resources',
     titleIt: 'Risorse',
     links: [
-      { name: 'Blog', nameIt: 'Blog', href: '/blog' },
-      { name: 'White Papers', nameIt: 'White Papers', href: '/resources/whitepapers' },
+      { name: 'Blog', nameIt: 'Blog', href: '/blog', hideInIT: true },
+      { name: 'White Papers', nameIt: 'White Papers', href: '/resources/whitepapers', hideInIT: true },
       { name: 'About', nameIt: 'Chi siamo', href: '/about' },
       { name: 'Book a Meeting', nameIt: 'Prenota un Incontro', href: '/book-meeting', hrefIt: '/prenota-incontro' },
     ],
@@ -108,7 +108,7 @@ export default function Footer() {
                   {lang === 'it' ? group.titleIt : group.title}
                 </h4>
                 <ul className="space-y-5 lg:space-y-4">
-                  {group.links.map((link) => {
+                  {group.links.filter(link => !(lang === 'it' && (link as any).hideInIT)).map((link) => {
                     const href = lang === 'it' && (link as any).hrefIt ? (link as any).hrefIt : link.href;
                     const name = lang === 'it' ? (link as any).nameIt : link.name;
                     return (
