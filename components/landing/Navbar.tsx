@@ -69,11 +69,7 @@ export default function Navbar() {
           const currentY = window.scrollY;
           const heroThreshold = window.innerHeight * 0.6;
           setScrolled(currentY > 50);
-          if (currentY > heroThreshold) {
-            setHidden(currentY > lastScrollY.current);
-          } else {
-            setHidden(false);
-          }
+          setHidden(false);
           lastScrollY.current = currentY;
 
           const probeY = 82;

@@ -247,7 +247,7 @@ html {
 
 /* ===== GRADIENT TEXTS — hero keyword emphasis (primary→secondary) ===== */
 .gradient-text {
-  background: linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%);
+  background: linear-gradient(135deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   padding: 0.12em 0.15em 0.22em 0.08em;
   margin: -0.12em -0.15em -0.22em -0.08em;
@@ -258,19 +258,19 @@ html {
   font-feature-settings: 'liga' 0, 'clig' 0;
 }
 .gradient-text-warm {
-  background: linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%);
+  background: linear-gradient(135deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   font-family: 'Playfair Display', Georgia, serif;
 }
 .gradient-text-cool {
-  background: linear-gradient(135deg, #4B4DF7 0%, #7577F8 60%, #FF5F24 100%);
+  background: linear-gradient(135deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   font-family: 'Playfair Display', Georgia, serif;
 }
 
 /* ===== GRADIENT TEXTS — on light (breathe sections) ===== */
 .gradient-text-on-light {
-  background: linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%);
+  background: linear-gradient(135deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   padding: 0.12em 0.15em 0.22em 0;
   margin: -0.12em -0.15em -0.22em 0;
@@ -279,7 +279,7 @@ html {
   font-family: 'Playfair Display', Georgia, serif;
 }
 .gradient-text-warm-on-light {
-  background: linear-gradient(135deg, #3A3BD6 0%, #4B4DF7 50%, #FF5F24 100%);
+  background: linear-gradient(135deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   padding: 0.12em 0.15em 0.22em 0;
   margin: -0.12em -0.15em -0.22em 0;

@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
+import Head from 'next/head';
 
 function Section({ children, className = '' }) {
   const ref = useRef(null);
@@ -31,7 +32,7 @@ const content = {
       highlight2: '5 settimane',
       after: '',
     },
-    subtitle: "Una rete vendita di 2.500 dipendenti distribuita su quasi 400 punti vendita, nessuna visibilità sulle competenze e un turnover elevato tipico del beauty retail. Con Skillvue, Douglas ha creato per la prima volta un database completo di competenze dell'intera forza lavoro, accorciando la distanza tra HQ e rete vendita e abilitando percorsi di crescita basati sui dati.",
+    subtitle: "2.500 dipendenti su quasi 400 punti vendita, nessuna visibilità sulle competenze, turnover elevato. Con Skillvue, Douglas ha creato il primo database completo di competenze dell'intera forza lavoro.",
     heroMetrics: [
       { value: '2K', label: 'persone portate nel radar di HR' },
       { value: '5 sett.', label: 'tempo di mappatura' },
@@ -54,14 +55,14 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Douglas Group, con <strong className="text-[#1A1A2E]/80 font-semibold">1.972 punti vendita in 22 paesi</strong>, un fatturato di <strong className="text-[#1A1A2E]/80 font-semibold">€4,58 miliardi</strong> a livello europeo e un piano di espansione da <strong className="text-[#1A1A2E]/80 font-semibold">200 nuove aperture e 400 ristrutturazioni entro fine 2026</strong>, è il primo beauty retailer omnicanale in Europa. La qualità della consulenza in-store è il principale vantaggio competitivo del retail fisico rispetto all'e-commerce, ma è anche la variabile meno misurata e strutturata del settore. In Italia, Douglas opera con oltre <strong className="text-[#1A1A2E]/80 font-semibold">370 punti vendita</strong> e circa <strong className="text-[#1A1A2E]/80 font-semibold">2.500 persone</strong> nella rete commerciale, in un mercato beauty che traina i consumi interni per <strong className="text-[#1A1A2E]/80 font-semibold">€14,2 miliardi</strong>.<br /><br />Seppure in un contesto di crescita molto solida, dal punto di vista people emergevano delle lacune. L\u2019HQ italiano non disponeva di <strong className="text-[#1A1A2E]/80 font-semibold">alcun dato oggettivo sulle competenze</strong> distribuite nelle persone in rete vendita: l\u2019unica fonte erano i feedback dei responsabili di negozio o di area. In un settore dove il turnover del personale di vendita oscilla tra il <strong className="text-[#1A1A2E]/80 font-semibold">25% e il 35%</strong> annuo e può essere direttamente ricollegato alla possibilità di crescita e sviluppo all\u2019interno dell\u2019azienda, è diventata chiara la necessità di adottare un approccio più data-driven alla gestione del talento.
+        Douglas Group, con <strong className="text-[#1A1A2E]/80 font-semibold">1.972 punti vendita in 22 paesi</strong>, un fatturato di <strong className="text-[#1A1A2E]/80 font-semibold">€4,58 miliardi</strong> a livello europeo e un piano di espansione da <strong className="text-[#1A1A2E]/80 font-semibold">200 nuove aperture e 400 ristrutturazioni entro fine 2026</strong>, è il primo beauty retailer omnicanale in Europa. La qualità della consulenza in-store è il principale vantaggio competitivo del retail fisico rispetto all'e-commerce, ma è anche la variabile meno misurata e strutturata del settore. In Italia, Douglas opera con oltre <strong className="text-[#1A1A2E]/80 font-semibold">370 punti vendita</strong> e circa <strong className="text-[#1A1A2E]/80 font-semibold">2.500 persone</strong> nella rete commerciale, in un mercato beauty che traina i consumi interni per <strong className="text-[#1A1A2E]/80 font-semibold">€14,2 miliardi</strong>.<br /><br />Seppure in un contesto di crescita molto solida, dal punto di vista people emergevano delle lacune. L\’HQ italiano non disponeva di <strong className="text-[#1A1A2E]/80 font-semibold">alcun dato oggettivo sulle competenze</strong> distribuite nelle persone in rete vendita: l\’unica fonte erano i feedback dei responsabili di negozio o di area. In un settore dove il turnover del personale di vendita oscilla tra il <strong className="text-[#1A1A2E]/80 font-semibold">25% e il 35%</strong> annuo e può essere direttamente ricollegato alla possibilità di crescita e sviluppo all\’interno dell\’azienda, è diventata chiara la necessità di adottare un approccio più data-driven alla gestione del talento.
       </>,
       summary: "Il progetto ha trasformato la gestione del talento da un modello basato su feedback soggettivi e osservazione in presenza a un sistema scalabile e data-driven, creando per la prima volta una fotografia completa e oggettiva delle competenze dell'intera rete vendita — soft skill e hard skill — e abilitando percorsi di crescita, mobilità interna e formazione customizzata basati su dati reali.",
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Il problema strutturale',
-      intro: "Su 2.500 dipendenti in quasi 400 punti vendita, l\u2019HQ non disponeva di alcun dato strutturato sulle competenze. In un settore con turnover elevato, l\u2019assenza di dati significava perdere talento, formare male e non pianificare la mobilit\u00e0 interna.",
+      intro: "Su 2.500 dipendenti in quasi 400 punti vendita, l\’HQ non disponeva di alcun dato strutturato sulle competenze. In un settore con turnover elevato, l\’assenza di dati significava perdere talento, formare male e non pianificare la mobilit\à interna.",
       businessLabel: 'IMPATTO SUL BUSINESS',
       hrLabel: 'IMPATTO SU HR & PEOPLE',
       businessChallenges: [
@@ -78,24 +79,24 @@ const content = {
         {
           icon: TrendingUp,
           title: 'Turnover elevato e consulenza in-store a rischio',
-          text: "Con un turnover del 25-35% e la crescente complessit\u00e0 del prodotto beauty \u2013 skincare scientifica, fragranze di nicchia, clean beauty \u2013 trattenere e sviluppare i talenti interni \u00e8 un asset strategico non negoziabile.",
+          text: "Con un turnover del 25-35% e la crescente complessit\à del prodotto beauty \– skincare scientifica, fragranze di nicchia, clean beauty \– trattenere e sviluppare i talenti interni \è un asset strategico non negoziabile.",
         },
       ],
       hrChallenges: [
         {
           icon: Zap,
           title: 'Analisi delle competenze necessaria ma insostenibile',
-          text: "Su 2.500 persone distribuite sul territorio, l\u2019osservazione in presenza comportava tempi lunghi, costi elevati e risultati disomogenei.",
+          text: "Su 2.500 persone distribuite sul territorio, l\’osservazione in presenza comportava tempi lunghi, costi elevati e risultati disomogenei.",
         },
         {
           icon: Layers,
           title: 'Sviluppo riservato al 5-10% della popolazione',
-          text: "Mancava la capacit\u00e0 di offrire opportunit\u00e0 di crescita su scala, non solo ai pochi gi\u00e0 identificati.",
+          text: "Mancava la capacit\à di offrire opportunit\à di crescita su scala, non solo ai pochi gi\à identificati.",
         },
         {
           icon: BarChart3,
           title: 'Nessun feedback strutturato ai dipendenti',
-          text: "L\u2019assenza di una restituzione oggettiva lasciava l\u2019iniziativa di sviluppo nelle mani del singolo responsabile.",
+          text: "L\’assenza di una restituzione oggettiva lasciava l\’iniziativa di sviluppo nelle mani del singolo responsabile.",
         },
       ],
     },
@@ -103,9 +104,9 @@ const content = {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
       title: 'Cosa doveva cambiare',
       items: [
-        { icon: Eye, text: "Fotografare in maniera oggettiva e immediata le competenze dell'intera rete vendita: un\u2019analisi standardizzata su tutti i ruoli (Beauty Advisor, Sales Assistant, Store Manager) e su tutte le seniority." },
-        { icon: Zap, text: "Ottimizzare tempi e costi dell\u2019analisi delle competenze interne: renderli sostenibili per i tassi di turnover e la velocit\u00e0 del mercato del lavoro, sostituendo l\u2019osservazione in presenza con un sistema scalabile." },
-        { icon: TrendingUp, text: "Promuovere percorsi di crescita interna e ridurre il turnover: identificare persone ad alto potenziale e propensioni a ruoli diversi per agevolare spostamenti interni orizzontali e verticali, riducendo gli effort di selezione dall\u2019esterno." },
+        { icon: Eye, text: "Fotografare in maniera oggettiva e immediata le competenze dell'intera rete vendita: un\’analisi standardizzata su tutti i ruoli (Beauty Advisor, Sales Assistant, Store Manager) e su tutte le seniority." },
+        { icon: Zap, text: "Ottimizzare tempi e costi dell\’analisi delle competenze interne: renderli sostenibili per i tassi di turnover e la velocit\à del mercato del lavoro, sostituendo l\’osservazione in presenza con un sistema scalabile." },
+        { icon: TrendingUp, text: "Promuovere percorsi di crescita interna e ridurre il turnover: identificare persone ad alto potenziale e propensioni a ruoli diversi per agevolare spostamenti interni orizzontali e verticali, riducendo gli effort di selezione dall\’esterno." },
         { icon: Target, text: "Lavorare preventivamente su formazione e sviluppo: costruire un database di competenze condiviso che permetta di attivare percorsi formativi customizzati per colmare i gap esistenti e pianificare lo sviluppo della forza lavoro." },
       ],
     },
@@ -129,10 +130,10 @@ const content = {
         { value: 'Solo 3', label: 'Persone nel team HR' },
       ],
       qualitative: [
-        { icon: Eye, title: 'Competenze finalmente visibili', text: "Per la prima volta, una visione chiara e confrontabile delle competenze di oggi e di domani per ogni persona della rete vendita: un quadro direttamente azionabile per decisioni su crescita, mobilit\u00e0 e formazione." },
-        { icon: Target, title: 'Talento nascosto e potenziale predittivo', text: "L\u2019analisi ha individuato propensioni predittive a ruoli diversi, agevolando spostamenti interni orizzontali e verticali e scoprendo talento dove prima non esisteva visibilit\u00e0." },
-        { icon: CheckCircle, title: 'Formazione customizzata e skill gap colmati', text: "Con i dati raccolti sono stati attivati percorsi formativi customizzati per colmare i gap esistenti e definire pi\u00f9 rapidamente le ricollocazioni interne. Un altro punto cruciale per ottimizzare costi e performance." },
-        { icon: Zap, title: 'Ottimizzazione di tempi e costi', text: "Tempi di analisi ottimizzati e impegno dei responsabili ridotto, liberando risorse per attivit\u00e0 di sviluppo a maggior valore." },
+        { icon: Eye, title: 'Competenze finalmente visibili', text: "Per la prima volta, una visione chiara e confrontabile delle competenze di oggi e di domani per ogni persona della rete vendita: un quadro direttamente azionabile per decisioni su crescita, mobilit\à e formazione." },
+        { icon: Target, title: 'Talento nascosto e potenziale predittivo', text: "L\’analisi ha individuato propensioni predittive a ruoli diversi, agevolando spostamenti interni orizzontali e verticali e scoprendo talento dove prima non esisteva visibilit\à." },
+        { icon: CheckCircle, title: 'Formazione customizzata e skill gap colmati', text: "Con i dati raccolti sono stati attivati percorsi formativi customizzati per colmare i gap esistenti e definire pi\ù rapidamente le ricollocazioni interne. Un altro punto cruciale per ottimizzare costi e performance." },
+        { icon: Zap, title: 'Ottimizzazione di tempi e costi', text: "Tempi di analisi ottimizzati e impegno dei responsabili ridotto, liberando risorse per attivit\à di sviluppo a maggior valore." },
       ],
     },
     related: {
@@ -150,15 +151,15 @@ const content = {
     breadcrumb: 'Customers',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'How Europe\u2019s leading beauty retailer made the skills of ',
+      before: 'How Europe\’s leading beauty retailer made the skills of ',
       highlight1: '2,200 people',
       middle: ' across 370 stores visible in ',
       highlight2: '5 weeks',
       after: '',
     },
-    subtitle: "A retail network of 2,500 employees spread across nearly 400 stores, zero visibility on skills, and the high turnover typical of beauty retail. With Skillvue, Douglas created the first-ever complete skills database of its entire workforce, closing the gap between HQ and the sales network and enabling data-driven career development.",
+    subtitle: "2,500 employees across nearly 400 stores, zero visibility on skills, high turnover. With Skillvue, Douglas built the first complete skills database of its entire workforce.",
     heroMetrics: [
-      { value: '2K', label: 'people brought into HR\u2019s radar' },
+      { value: '2K', label: 'people brought into HR\’s radar' },
       { value: '5 weeks', label: 'mapping timeframe' },
       { value: '88%', label: 'completion rate' },
     ],
@@ -193,7 +194,7 @@ const content = {
         {
           icon: Eye,
           title: 'No visibility on high-potential profiles',
-          text: "The only information available was subjective feedback from managers \u2014 inconsistent and not comparable across locations.",
+          text: "The only information available was subjective feedback from managers \— inconsistent and not comparable across locations.",
         },
         {
           icon: Users,
@@ -203,7 +204,7 @@ const content = {
         {
           icon: TrendingUp,
           title: 'High turnover and in-store advisory at risk',
-          text: "With 25\u201335% turnover and the growing complexity of beauty products \u2014 scientific skincare, niche fragrances, clean beauty \u2014 retaining and developing internal talent is a non-negotiable strategic asset.",
+          text: "With 25\–35% turnover and the growing complexity of beauty products \— scientific skincare, niche fragrances, clean beauty \— retaining and developing internal talent is a non-negotiable strategic asset.",
         },
       ],
       hrChallenges: [
@@ -214,8 +215,8 @@ const content = {
         },
         {
           icon: Layers,
-          title: 'Development reserved for only 5\u201310% of the workforce',
-          text: "There was no capability to offer growth opportunities at scale \u2014 only to the few already identified.",
+          title: 'Development reserved for only 5\–10% of the workforce',
+          text: "There was no capability to offer growth opportunities at scale \— only to the few already identified.",
         },
         {
           icon: BarChart3,
@@ -237,7 +238,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "The Skillvue People Science team worked to align the assessments built on the platform with the company\u2019s leadership model, creating evaluations grounded in the real working situations of store employees.",
+      intro: "The Skillvue People Science team worked to align the assessments built on the platform with the company\’s leadership model, creating evaluations grounded in the real working situations of store employees.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Wrench, label: 'Industry-specific Hard Skills' },
@@ -254,7 +255,7 @@ const content = {
         { value: 'Only 3', label: 'People in the HR team' },
       ],
       qualitative: [
-        { icon: Eye, title: 'Skills finally visible', text: "For the first time, a clear and comparable view of the skills of every person across the retail network \u2014 a picture directly actionable for decisions on growth, mobility and training." },
+        { icon: Eye, title: 'Skills finally visible', text: "For the first time, a clear and comparable view of the skills of every person across the retail network \— a picture directly actionable for decisions on growth, mobility and training." },
         { icon: Target, title: 'Hidden talent and predictive potential', text: "The analysis identified predictive propensities for different roles, facilitating horizontal and vertical internal moves and revealing talent where no visibility previously existed." },
         { icon: CheckCircle, title: 'Customised training and skill gaps closed', text: "With the collected data, customised training paths were activated to close existing gaps and define internal redeployments more quickly. A key lever for optimising costs and performance." },
         { icon: Zap, title: 'Time and cost optimisation', text: "Analysis timelines optimised and the burden on managers reduced, freeing resources for higher-value development activities." },
@@ -278,9 +279,18 @@ export default function DouglasStoryPage() {
   const router = useRouter();
   const { lang } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
+  const metaTitle = `${c.headline.before}${c.headline.highlight1}${c.headline.middle || ''}${c.headline.highlight2 || ''}${c.headline.after || ''} | Skillvue`;
+  const metaDesc = c.subtitle.length > 160 ? c.subtitle.substring(0, 157) + '...' : c.subtitle;
 
   return (
     <>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDesc} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDesc} />
+        <meta property="og:type" content="article" />
+      </Head>
       <Navbar />
       <main>
 

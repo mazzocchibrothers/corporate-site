@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
+import Head from 'next/head';
 
 function Section({ children, className = '' }) {
   const ref = useRef(null);
@@ -31,7 +32,7 @@ const content = {
       highlight2: 'componente umana',
       after: '',
     },
-    subtitle: "Con Skillvue, Europ Assistance ha trasformato il pre-screening da collo di bottiglia a vantaggio competitivo e ora estende il modello alla mappatura delle competenze interne per continuare a ottimizzare il match tra qualità del talento interno e servizio offerto all'esterno.",
+    subtitle: "Con Skillvue, Europ Assistance ha trasformato il pre-screening da collo di bottiglia a vantaggio competitivo, estendendo il modello alla mappatura delle competenze interne.",
     heroMetrics: [
       { value: '+24%', label: 'assunzioni anno su anno' },
       { value: '-18%', label: 'colloqui necessari' },
@@ -169,7 +170,7 @@ const content = {
       highlight2: 'human interaction',
       after: '',
     },
-    subtitle: "With Skillvue, Europ Assistance transformed pre-screening from a bottleneck into a competitive advantage and is now extending the model to internal skills mapping to keep optimising the match between internal talent quality and the service delivered externally.",
+    subtitle: "With Skillvue, Europ Assistance transformed pre-screening from a bottleneck into a competitive advantage and is now extending the model to internal skills mapping.",
     heroMetrics: [
       { value: '+24%', label: 'year-over-year hires' },
       { value: '-18%', label: 'interviews required' },
@@ -304,9 +305,18 @@ export default function EuropAssistanceStoryPage() {
   const router = useRouter();
   const { lang, t } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
+  const metaTitle = `${c.headline.before}${c.headline.highlight1}${c.headline.middle || ''}${c.headline.highlight2 || ''}${c.headline.after || ''} | Skillvue`;
+  const metaDesc = c.subtitle.length > 160 ? c.subtitle.substring(0, 157) + '...' : c.subtitle;
 
   return (
     <>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDesc} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDesc} />
+        <meta property="og:type" content="article" />
+      </Head>
       <Navbar />
       <main>
 

@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
+import Head from 'next/head';
 
 function Section({ children, className = '' }) {
   const ref = useRef(null);
@@ -31,7 +32,7 @@ const content = {
       highlight2: '15 top talent',
       after: ': come selezionare e far crescere il talento su scala',
     },
-    subtitle: 'Con Skillvue, Mediaset ha trasformato 3.000 candidature in 15 assunzioni mirate di neolaureati e figure junior in sole 5 settimane. Le soft skill sono diventate il primo filtro di selezione e la loro oggettivizzazione ha permesso al team HR di avere a disposizione dati strutturati su ogni persona, utili per accompagnarne la crescita professionale all\'interno di una realtà in espansione.',
+    subtitle: "Con Skillvue, Mediaset ha trasformato 3.000 candidature in 15 assunzioni mirate in 5 settimane. Le soft skill come primo filtro, con dati strutturati su ogni candidato per supportarne la crescita.",
     heroMetrics: [
       { value: '3.000+', label: 'candidature processate' },
       { value: '5 settimane', label: 'gestione end-to-end' },
@@ -171,7 +172,7 @@ const content = {
       highlight2: '15 top talents',
       after: ': how to identify and develop talent at scale',
     },
-    subtitle: 'With Skillvue, Mediaset turned 3,000 applications into 15 targeted hires of graduates and junior profiles in just 5 weeks. Soft skills became the first hiring filter, and their objectification gave the HR team structured data on every person to support their professional growth within a rapidly expanding organisation.',
+    subtitle: "With Skillvue, Mediaset turned 3,000 applications into 15 targeted hires in just 5 weeks, using soft skills as the first filter and structured data on every candidate.",
     heroMetrics: [
       { value: '3,000+', label: 'applications processed' },
       { value: '5 weeks', label: 'end-to-end management' },
@@ -308,9 +309,18 @@ export default function MediasetStoryPage() {
   const router = useRouter();
   const { lang, t } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
+  const metaTitle = `${c.headline.before}${c.headline.highlight1}${c.headline.middle || ''}${c.headline.highlight2 || ''}${c.headline.after || ''} | Skillvue`;
+  const metaDesc = c.subtitle.length > 160 ? c.subtitle.substring(0, 157) + '...' : c.subtitle;
 
   return (
     <>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDesc} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDesc} />
+        <meta property="og:type" content="article" />
+      </Head>
       <Navbar />
       <main>
 

@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
+import Head from 'next/head';
 
 function Section({ children, className = '' }) {
   const ref = useRef(null);
@@ -31,7 +32,7 @@ const content = {
       highlight2: '270 punti vendita',
       after: ' in costante aumento',
     },
-    subtitle: "Con Skillvue, Unicomm sta trasformando un'infrastruttura HR ancora poco digitalizzata in un sistema skills-based agile e capace di rispondere con efficacia alle necessità di selezione, conferme e sviluppo interno su tutta la rete.",
+    subtitle: "Con Skillvue, Unicomm sta trasformando la propria infrastruttura HR in un sistema skills-based agile, capace di rispondere alle necessità di selezione, conferma e sviluppo su tutta la rete.",
     heroMetrics: [
       { value: '270', label: 'punti vendita coinvolti' },
       { value: '7', label: 'insegne' },
@@ -159,7 +160,7 @@ const content = {
       highlight2: '270+ stores',
       after: '',
     },
-    subtitle: "With Skillvue, Unicomm is transforming a scarcely-digitized HR infrastructure into an agile, skills-based system capable of effectively responding to the needs of hiring, confirmations and internal development across its entire network.",
+    subtitle: "With Skillvue, Unicomm is transforming its HR infrastructure into an agile, skills-based system that responds to hiring, confirmation and internal development needs across its entire network.",
     heroMetrics: [
       { value: '270', label: 'included stores' },
       { value: '7', label: 'brands' },
@@ -284,9 +285,18 @@ export default function UnicommStoryPage() {
   const router = useRouter();
   const { lang, t } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
+  const metaTitle = `${c.headline.before}${c.headline.highlight1}${c.headline.middle || ''}${c.headline.highlight2 || ''}${c.headline.after || ''} | Skillvue`;
+  const metaDesc = c.subtitle.length > 160 ? c.subtitle.substring(0, 157) + '...' : c.subtitle;
 
   return (
     <>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDesc} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDesc} />
+        <meta property="og:type" content="article" />
+      </Head>
       <Navbar />
       <main>
 
