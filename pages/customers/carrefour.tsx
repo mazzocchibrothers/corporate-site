@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
+import Head from 'next/head';
 
 function Section({ children, className = '' }) {
   const ref = useRef(null);
@@ -31,7 +32,7 @@ const content = {
       highlight2: 'KPI chiave del processo di selezione',
       after: '',
     },
-    subtitle: "In un settore dove il costo del lavoro è 3.4x l'utile operativo, Carrefour Italia ha trasformato la selezione in una vera e propria leva di profittabilità, grazie a dati chiari sulle persone e sulle loro competenze.",
+    subtitle: "In un settore dove il costo del lavoro è 3.4x l'utile operativo, Carrefour Italia ha trasformato la selezione in una leva di profittabilità grazie a dati oggettivi sulle competenze.",
     heroMetrics: [
       { value: '-35%', label: 'Time-to-Hire' },
       { value: '+20%', label: 'Successo assunzioni' },
@@ -308,9 +309,18 @@ export default function CarrefourStoryPage() {
   const router = useRouter();
   const { lang, t } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
+  const metaTitle = `${c.headline.before}${c.headline.highlight1}${c.headline.middle || ''}${c.headline.highlight2 || ''}${c.headline.after || ''} | Skillvue`;
+  const metaDesc = c.subtitle.length > 160 ? c.subtitle.substring(0, 157) + '...' : c.subtitle;
 
   return (
     <>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDesc} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDesc} />
+        <meta property="og:type" content="article" />
+      </Head>
       <Navbar />
       <main>
 

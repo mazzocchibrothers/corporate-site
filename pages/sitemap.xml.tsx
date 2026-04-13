@@ -12,14 +12,21 @@ const pages = [
   '/solutions/learning-development',
   '/solutions/internal-mobility',
   '/solutions/project-resourcing',
-  '/customers/carrefour',
-  '/customers/subdued',
-  '/customers/ins-mercato',
 ];
 
 // Pages with different IT slugs
 const translatedPages = [
   { en: '/customers', it: '/clienti' },
+  { en: '/customers/adr', it: '/clienti/adr' },
+  { en: '/customers/carrefour', it: '/clienti/carrefour' },
+  { en: '/customers/credem', it: '/clienti/credem' },
+  { en: '/customers/douglas', it: '/clienti/douglas' },
+  { en: '/customers/eataly', it: '/clienti/eataly' },
+  { en: '/customers/europ-assistance', it: '/clienti/europ-assistance' },
+  { en: '/customers/ins-mercato', it: '/clienti/ins-mercato' },
+  { en: '/customers/mediaset', it: '/clienti/mediaset' },
+  { en: '/customers/subdued', it: '/clienti/subdued' },
+  { en: '/customers/unicomm', it: '/clienti/unicomm' },
 ];
 
 function generateSitemap(): string {

@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
+import Head from 'next/head';
 
 const skills = [
   { icon: Heart, en: 'Customer Orientation', it: 'Orientamento all\'altro' },
@@ -156,9 +157,22 @@ export default function InsMercatoStoryPage() {
   const router = useRouter();
   const { t, lang } = useLanguage();
   const l = lang === 'it' ? 'it' : 'en';
+  const metaTitle = lang === 'it'
+    ? "Come In's Mercato ha costruito una pipeline interna di Store Manager | Skillvue"
+    : "How In's Mercato built an internal pipeline of Store Managers | Skillvue";
+  const metaDesc = lang === 'it'
+    ? "La crescita della rete dipende dalla capacità di avere figure manageriali formate nel momento in cui servono. Con Skillvue, In's ha trasformato la gestione del talento da reattiva a predittiva."
+    : "Network growth depends on having trained managerial talent ready when it's needed. With Skillvue, In's Mercato transformed talent management from reactive to predictive.";
 
   return (
     <>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDesc} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDesc} />
+        <meta property="og:type" content="article" />
+      </Head>
       <Navbar />
       <main>
         {/* Hero */}

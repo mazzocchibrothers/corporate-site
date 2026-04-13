@@ -9,16 +9,16 @@ import { whitepapers, filterLabels } from '@/data/whitepapers';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function WhitepapersPage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const router = useRouter();
-  const labels = filterLabels.en;
+  const labels = filterLabels[lang] ?? filterLabels.en;
 
   const [selIndustry, setSelIndustry] = useState(null);
   const [selTopic, setSelTopic] = useState(null);
   const [selProcess, setSelProcess] = useState(null);
 
   const published = whitepapers
-    .filter(w => w.published && w.languageAvailability.includes('en'))
+    .filter(w => w.published && w.languageAvailability.includes(lang))
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
 
   // Dynamic filter options from published papers
@@ -35,7 +35,7 @@ export default function WhitepapersPage() {
     });
   }, [published, selIndustry, selTopic, selProcess]);
 
-  const content = (w) => w.en;
+  const content = (w) => (lang === 'it' && w.it) ? w.it : w.en;
 
   const FilterPill = ({ label, active, onClick }) => (
     <button
@@ -125,12 +125,12 @@ export default function WhitepapersPage() {
                           <span key={tag} className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.04] tracking-wide h-fit">{tag}</span>
                         ))}
                         {w.topic.map(tag => (
-                          <span key={tag} className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold text-[#1A1A2E]/50 border border-[#1A1A2E]/[0.08] tracking-wide h-fit">{tag}</span>
+                          <span key={tag} className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold text-white/40 border border-white/[0.08] tracking-wide h-fit">{tag}</span>
                         ))}
                       </div>
 
                       {/* Description */}
-                      <p className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.7] line-clamp-3 mb-4">{c.shortDesc}</p>
+                      <p className="text-[15px] text-white/50 leading-[1.7] line-clamp-3 mb-4">{c.shortDesc}</p>
 
                       {/* CTA */}
                       <span className="text-[14px] font-semibold text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">

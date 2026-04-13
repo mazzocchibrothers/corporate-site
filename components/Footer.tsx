@@ -169,6 +169,13 @@ export default function Footer() {
             ))}
           </div>
         </div>
+
+        {/* Company info line */}
+        <div className="border-t border-white/[0.04] pt-4 mt-6">
+          <p className="text-[11px] text-white/20 text-center">
+            Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568
+          </p>
+        </div>
       </div>
     </footer>
   );

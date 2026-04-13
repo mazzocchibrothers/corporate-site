@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
+import Head from 'next/head';
 
 function Section({ children, className = '' }) {
   const ref = useRef(null);
@@ -31,7 +32,7 @@ const content = {
       highlight2: '',
       after: '',
     },
-    subtitle: "Eataly cresce a un ritmo 20 volte superiore alla media del settore e sta raddoppiando la presenza in Nord America. Con Skillvue, ha costruito un sistema di pre-screening AI-powered per il progetto Career Passport che ha permesso di valutare migliaia di candidature interne ed esterne in poche settimane, in un settore dove solitamente trovare un profilo qualificato richiede in media 4,5 mesi.",
+    subtitle: "Eataly continua a crescere a ritmi serrati, soprattutto con le nuove aperture in Nord America. Con Skillvue, ha valutato migliaia di candidati per la mobilità internazionale in poche settimane, abbattendo le tempistiche medie del settore.",
     heroMetrics: [
       { value: '1.300+', label: 'candidature processate via AI pre-screening' },
       { value: '22', label: 'risorse interne pronte a ricollocarsi' },
@@ -111,7 +112,7 @@ const content = {
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue per il progetto Career Passport',
-      intro: "Skillvue \u00e8 stato integrato nel processo di selezione esterna del progetto Eataly Career Passport \u2014 il programma di global mobility lanciato per supportare l\u2019espansione in Nord America. Dopo che una campagna omnichannel ha raccolto oltre 1.300 candidature, Skillvue ha gestito il pre-screening con un assessment basato su domande filtro e video interviste situazionali calibrate sui ruoli specifici (Head Chef, Director of Store Operations, General Manager of Restaurant).",
+      intro: "Skillvue \u00e8 stato integrato nel processo di selezione esterna del progetto Eataly Career Passport \u2014 il programma di global mobility lanciato per supportare l\u2019espansione in Nord America. Dopo che una campagna omnichannel ha raccolto oltre 1.300 candidature, Skillvue ha gestito il pre-screening con un assessment basato su domande filtro e domande situazionali calibrate sui ruoli specifici (Head Chef, Director of Store Operations, General Manager of Restaurant).",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Users, label: 'Leadership e gestione del personale' },
@@ -160,7 +161,7 @@ const content = {
       highlight2: '',
       after: '',
     },
-    subtitle: "Eataly grows 20 times faster than the industry average and is doubling its presence in North America. With Skillvue, it built an AI-powered pre-screening system for the Career Passport project that made it possible to evaluate thousands of internal and external applications in just a few weeks, in a sector where finding a qualified profile typically takes an average of 4.5 months.",
+    subtitle: "Eataly is growing fast, especially with new openings in North America. With Skillvue, it assessed thousands of candidates for international mobility in weeks, cutting through the sector's average timelines.",
     heroMetrics: [
       { value: '1,300+', label: 'applications processed via AI pre-screening' },
       { value: '22', label: 'internal resources ready to relocate' },
@@ -240,7 +241,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue for the Career Passport project',
-      intro: "Skillvue was integrated into the external hiring process of the Eataly Career Passport project \u2014 the global mobility programme launched to support expansion in North America. After an omnichannel campaign collected over 1,300 applications, Skillvue managed the pre-screening with an assessment combining filter questions and situational video interviews calibrated to specific roles (Head Chef, Director of Store Operations, General Manager of Restaurant).",
+      intro: "Skillvue was integrated into the external hiring process of the Eataly Career Passport project \u2014 the global mobility programme launched to support expansion in North America. After an omnichannel campaign collected over 1,300 applications, Skillvue managed the pre-screening with an assessment combining filter questions and situational questions calibrated to specific roles (Head Chef, Director of Store Operations, General Manager of Restaurant).",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Users, label: 'Leadership and people management' },
@@ -286,9 +287,18 @@ export default function EatalyStoryPage() {
   const router = useRouter();
   const { lang } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
+  const metaTitle = `${c.headline.before}${c.headline.highlight1}${c.headline.middle || ''}${c.headline.highlight2 || ''}${c.headline.after || ''} | Skillvue`;
+  const metaDesc = c.subtitle.length > 160 ? c.subtitle.substring(0, 157) + '...' : c.subtitle;
 
   return (
     <>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDesc} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDesc} />
+        <meta property="og:type" content="article" />
+      </Head>
       <Navbar />
       <main>
 

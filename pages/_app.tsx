@@ -12,8 +12,17 @@ const enToIt: Record<string, string> = { '/customers': '/clienti' };
 
 function HreflangTags() {
   const { asPath } = useRouter();
-  const enPath = itToEn[asPath] ?? asPath;
-  const itPath = enToIt[asPath] ?? asPath;
+
+  let enPath = itToEn[asPath] ?? asPath;
+  let itPath = enToIt[asPath] ?? asPath;
+
+  // Handle /customers/:slug <-> /clienti/:slug
+  if (asPath.startsWith('/customers/')) {
+    itPath = '/clienti/' + asPath.slice('/customers/'.length);
+  } else if (asPath.startsWith('/clienti/')) {
+    enPath = '/customers/' + asPath.slice('/clienti/'.length);
+  }
+
   const enUrl = `${BASE_URL}${enPath}`;
   const itUrl = itPath === '/' ? `${BASE_URL}/it` : `${BASE_URL}/it${itPath}`;
   return (

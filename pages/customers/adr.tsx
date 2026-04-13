@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { useLanguage } from '@/i18n/LanguageContext';
+import Head from 'next/head';
 
 function Section({ children, className = '' }) {
   const ref = useRef(null);
@@ -316,9 +317,18 @@ export default function ADRStoryPage() {
   const router = useRouter();
   const { lang, t } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
+  const metaTitle = `${c.headline.before}${c.headline.highlight1}${c.headline.middle || ''}${c.headline.highlight2 || ''}${c.headline.after || ''} | Skillvue`;
+  const metaDesc = c.subtitle.length > 160 ? c.subtitle.substring(0, 157) + '...' : c.subtitle;
 
   return (
     <>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDesc} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDesc} />
+        <meta property="og:type" content="article" />
+      </Head>
       <Navbar />
       <main>
 

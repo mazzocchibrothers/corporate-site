@@ -9,11 +9,13 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       { source: '/it/clienti', destination: '/it/customers', locale: false },
+      { source: '/it/clienti/:slug', destination: '/customers/:slug', locale: false },
     ];
   },
   async redirects() {
     return [
       { source: '/it/customers', destination: '/it/clienti', locale: false, permanent: true },
+      { source: '/it/customers/:slug', destination: '/it/clienti/:slug', locale: false, permanent: true },
     ];
   },
 };
