@@ -29,7 +29,7 @@ const stories = [
 ];
 
 export default function FeaturedStories() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
@@ -78,7 +78,7 @@ export default function FeaturedStories() {
                 )}
               </div>
               <div className="lg:col-span-4 flex items-end justify-end">
-                <button onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0,0); }} className="group/btn inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
+                <button onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0,0); }} className="group/btn inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
                   {t('Read the full story')}
                   <ArrowRight className="h-3.5 w-3.5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </button>

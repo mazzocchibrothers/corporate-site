@@ -29,8 +29,8 @@ const allStories = [
 ];
 
 const filters = {
-  industry: ['All', 'Retail', 'GDO', 'Transportation & Logistics', 'Media & Telecom', 'Financial Services'],
-  useCase: ['All', 'Hiring', 'Performance Management', 'Learning & Development', 'Internal Mobility', 'Project Resourcing'],
+  industry: ['All', ...Array.from(new Set(allStories.map(s => s.industry)))],
+  useCase: ['All', ...Array.from(new Set(allStories.flatMap(s => s.useCases)))],
 };
 
 export default function ExploreStories() {
@@ -93,7 +93,7 @@ export default function ExploreStories() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                onClick={() => { router.push(`/customers/${s.id}`); window.scrollTo(0, 0); }}
+                onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0, 0); }}
               >
                 {/* Card visual area */}
                 <div className="relative rounded-2xl border border-white/[0.08] hover:border-white/[0.14] transition-all duration-500 overflow-hidden" style={{ aspectRatio: '16/9' }}>
