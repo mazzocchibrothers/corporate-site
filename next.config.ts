@@ -7,11 +7,15 @@ const nextConfig: NextConfig = {
     defaultLocale: 'en',
   },
   async rewrites() {
-    return [
-      { source: '/it/clienti', destination: '/it/customers', locale: false },
-      { source: '/clienti/:slug', destination: '/customers/:slug', locale: false },
-      { source: '/it/clienti/:slug', destination: '/it/customers/:slug', locale: false },
-    ];
+    return {
+      beforeFiles: [
+        { source: '/clienti/:slug', destination: '/customers/:slug' },
+      ],
+      afterFiles: [
+        { source: '/it/clienti', destination: '/it/customers', locale: false },
+        { source: '/it/clienti/:slug', destination: '/it/customers/:slug', locale: false },
+      ],
+    };
   },
   async redirects() {
     return [
