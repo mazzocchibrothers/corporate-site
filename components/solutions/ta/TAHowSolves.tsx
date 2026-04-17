@@ -17,8 +17,8 @@ export default function TAHowSolves() {
 
   return (
     <section id="ta-how" data-testid="ta-how" className="section-breathe relative py-20 lg:py-24" ref={ref}>
-      <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
-        <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
+      <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
+        <motion.div className="mb-8 md:mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">
             {t('Skillvue adds value at every step of the')}{' '}
             <span className="italic font-bold gradient-text-on-light">{t('hiring funnel')}</span>
@@ -51,7 +51,7 @@ export default function TAHowSolves() {
         {/* Active stage detail */}
         <motion.div
           key={active}
-          className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-10 lg:p-14"
+          className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-5 md:p-10 lg:p-14"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35 }}

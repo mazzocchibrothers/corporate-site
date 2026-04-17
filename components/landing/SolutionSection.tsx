@@ -46,7 +46,7 @@ export default function SolutionSection() {
 
   return (
     <section id="solutions" data-testid="solution-section" className="relative py-20 lg:py-28" ref={ref}>
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         {/* Header */}
         <motion.div
           className="mb-16 lg:mb-20"
@@ -58,18 +58,18 @@ export default function SolutionSection() {
             {t('Skillvue brings people processes')}<br />
             <span className="italic font-bold gradient-text-warm">{t('to life.')}</span>
           </h2>
-          <p className="text-[18px] text-white/[0.65] leading-[1.7] mt-6 max-w-xl">
+          <p className="text-[15px] md:text-[18px] text-white/[0.65] leading-[1.7] mt-4 md:mt-6 max-w-xl">
             {t('One platform for every talent decision. hiring, performance, development, mobility. Objective. Scalable. Defensible.')}
           </p>
         </motion.div>
 
         {/* 2x2 Card grid */}
-        <div className="grid md:grid-cols-2 gap-4 lg:gap-5">
+        <div className="grid grid-cols-2 gap-3 md:gap-4 lg:gap-5">
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.id}
               data-testid={`solution-card-${pillar.id}`}
-              className="group relative rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-sm p-8 lg:p-10 transition-all duration-500 overflow-hidden"
+              className="group relative rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-sm p-4 md:p-8 lg:p-10 transition-all duration-500 overflow-hidden md:aspect-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1, ease: 'easeOut' }}
@@ -78,35 +78,27 @@ export default function SolutionSection() {
               <div className="absolute top-0 right-0 w-[200px] h-[200px] rounded-full bg-[#4B4DF7]/[0.04] blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
               <div className="relative">
-                {/* Icon */}
-                {(() => { const Icon = pillar.icon; return <Icon className="h-6 w-6 text-[#9B9DFB]/50 mb-5" strokeWidth={1.5} />; })()}
-
-                {/* Card label */}
-                <h3
-                  className="text-2xl font-semibold text-white/85 group-hover:text-white/95 transition-colors duration-500 mb-4"
-                >
-                  {t(pillar.label)}
-                </h3>
+                {/* Top: Icon + Label */}
+                <div>
+                  {(() => { const Icon = pillar.icon; return <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#9B9DFB]/50 mb-3 md:mb-5" strokeWidth={1.5} />; })()}
+                  <h3
+                    className="text-[13px] md:text-2xl font-semibold text-white/85 group-hover:text-white/95 transition-colors duration-500 leading-snug"
+                  >
+                    {t(pillar.label)}
+                  </h3>
+                </div>
 
                 {/* Description */}
-                <p className="text-[16px] text-white/[0.65] group-hover:text-white/[0.75] leading-[1.75] transition-colors duration-500 mb-8">
+                <p className="text-[11px] md:text-[16px] text-white/[0.55] md:text-white/[0.65] group-hover:text-white/[0.75] leading-[1.5] md:leading-[1.75] transition-colors duration-500 mb-4 md:mb-8 mt-2 md:mt-4">
                   {t(pillar.desc)}
                 </p>
 
                 {/* Stat */}
-                <div className="flex items-baseline gap-3">
-                  <span
-                    className="text-white/90"
-                    style={{
-                      fontSize: '1.8rem',
-                      fontWeight: 800,
-                      letterSpacing: '-0.03em',
-                      lineHeight: 1,
-                    }}
-                  >
+                <div className="flex items-baseline gap-2 md:gap-3">
+                  <span className="text-[18px] md:text-[1.8rem] text-white/90 font-extrabold tracking-tight leading-none">
                     {lang === 'it' && (pillar as any).statIt ? (pillar as any).statIt : pillar.stat}
                   </span>
-                  <span className="text-[13px] text-white/[0.65] font-medium tracking-wide">
+                  <span className="text-[9px] md:text-[13px] text-white/50 font-medium tracking-wide leading-tight">
                     {t(pillar.statLabel)}
                   </span>
                 </div>

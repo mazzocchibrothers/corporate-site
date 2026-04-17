@@ -11,17 +11,17 @@ export default function TACustomerStory() {
 
   return (
     <section id="ta-story" data-testid="ta-story" className="relative py-20 lg:py-28" ref={ref}>
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div
-          className="grid lg:grid-cols-12 gap-0 rounded-2xl overflow-hidden border border-white/[0.08]"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-2xl overflow-hidden border border-white/[0.08]"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
           {/* Left - Story content */}
-          <div className="lg:col-span-8 p-10 lg:p-14 bg-white/[0.04]">
+          <div className="lg:col-span-8 p-5 md:p-10 lg:p-14 bg-white/[0.04]">
             <span className="text-[12px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-6 block">{t('Customer Story')}</span>
-            <h3 className="text-[28px] font-bold text-white/90 mb-1">Loro Piana</h3>
+            <h3 className="text-[20px] md:text-[28px] font-bold text-white/90 mb-1">Loro Piana</h3>
             <p className="text-[14px] text-white/40 mb-8">{t('Luxury & Retail')}</p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-10">
@@ -42,7 +42,7 @@ export default function TACustomerStory() {
           </div>
 
           {/* Right - Big stat */}
-          <div className="lg:col-span-4 flex flex-col items-center justify-center p-10 lg:p-14 bg-white/[0.06] border-t lg:border-t-0 lg:border-l border-white/[0.06]">
+          <div className="lg:col-span-4 flex flex-col items-center justify-center p-5 md:p-10 lg:p-14 bg-white/[0.06] border-t lg:border-t-0 lg:border-l border-white/[0.06]">
             <span className="block text-white" style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>10K+</span>
             <p className="text-[14px] text-white/[0.65] mt-4 text-center">{t('candidates assessed')}<br />{t('per year')}</p>
             <div className="mt-6 flex items-center gap-2">
