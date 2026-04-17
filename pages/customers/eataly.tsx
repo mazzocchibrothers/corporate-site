@@ -53,8 +53,8 @@ const content = {
       badge: 'CONTESTO',
       title: 'Un brand che cresce 20 volte pi\u00f9 veloce del suo settore ha bisogno di trovare i talenti giusti alla stessa velocit\u00e0',
       paragraph: <>
-        Eataly non è un operatore qualsiasi del food italiano. Con <strong className="text-[#1A1A2E]/80 font-semibold">€684M di ricavi, una crescita del 47% in tre anni</strong>, e una revenue per employee doppia rispetto alla media di settore, è l'unico brand italiano del food con una presenza internazionale reale in <strong className="text-[#1A1A2E]/80 font-semibold">16 Paesi</strong>. Dal 2022 sta accelerando su tutti i fronti: nuovi flagship in Nord America (dove si genera il <strong className="text-[#1A1A2E]/80 font-semibold">60% dei ricavi</strong>), nuovi format compatti — Eataly Caffè in hub urbani e Eataly Collection negli aeroporti —, un piano da <strong className="text-[#1A1A2E]/80 font-semibold">€100M per il Medio Oriente</strong>, e il primo Eataly at Sea con MSC Cruises.<br /><br />
-        Questa crescita richiede figure manageriali capaci di incarnare i valori del brand in contesti multiculturali: Head Chef, Director of Store Operations, General Manager capaci di portare l'autenticità italiana a Philadelphia, Toronto e Miami. Ma il settore della ristorazione non produce sempre il talento che serve. Con <strong className="text-[#1A1A2E]/80 font-semibold">258.000 posti vacanti, un turnover operativo del 50–70% e un tempo medio di reperimento di 4,5 mesi</strong>, la carenza di figure qualificate è il vincolo più critico al piano di espansione. Nasce da qui il <strong className="text-[#1A1A2E]/80 font-semibold">Progetto Career Passport</strong>, per trasformare questo vincolo in un vantaggio competitivo.
+        Eataly non è un operatore qualsiasi del food italiano. Con <strong className="text-[#121212]/80 font-semibold">€684M di ricavi, una crescita del 47% in tre anni</strong>, e una revenue per employee doppia rispetto alla media di settore, è l'unico brand italiano del food con una presenza internazionale reale in <strong className="text-[#121212]/80 font-semibold">16 Paesi</strong>. Dal 2022 sta accelerando su tutti i fronti: nuovi flagship in Nord America (dove si genera il <strong className="text-[#121212]/80 font-semibold">60% dei ricavi</strong>), nuovi format compatti — Eataly Caffè in hub urbani e Eataly Collection negli aeroporti —, un piano da <strong className="text-[#121212]/80 font-semibold">€100M per il Medio Oriente</strong>, e il primo Eataly at Sea con MSC Cruises.<br /><br />
+        Questa crescita richiede figure manageriali capaci di incarnare i valori del brand in contesti multiculturali: Head Chef, Director of Store Operations, General Manager capaci di portare l'autenticità italiana a Philadelphia, Toronto e Miami. Ma il settore della ristorazione non produce sempre il talento che serve. Con <strong className="text-[#121212]/80 font-semibold">258.000 posti vacanti, un turnover operativo del 50–70% e un tempo medio di reperimento di 4,5 mesi</strong>, la carenza di figure qualificate è il vincolo più critico al piano di espansione. Nasce da qui il <strong className="text-[#121212]/80 font-semibold">Progetto Career Passport</strong>, per trasformare questo vincolo in un vantaggio competitivo.
       </>,
       summary: "Il Career Passport è stato il primo capitolo per la costruzione di una talent strategy sempre più solida e innovativa attorno al concetto di mobilità internazionale e crescita, orientata a rendere il brand Eataly una piattaforma globale del Made in Italy.",
     },
@@ -182,8 +182,8 @@ const content = {
       badge: 'CONTEXT',
       title: 'A brand growing 20 times faster than its sector needs to find the right talent at the same speed',
       paragraph: <>
-        Eataly is no ordinary player in Italian food. With <strong className="text-[#1A1A2E]/80 font-semibold">€684M in revenue, 47% growth over three years</strong>, and revenue per employee double the industry average, it is the only Italian food brand with a truly international presence across <strong className="text-[#1A1A2E]/80 font-semibold">16 countries</strong>. Since 2022 it has been accelerating on all fronts: new flagships in North America (where <strong className="text-[#1A1A2E]/80 font-semibold">60% of revenues</strong> are generated), new compact formats — Eataly Caffè in urban hubs and Eataly Collection in airports —, a <strong className="text-[#1A1A2E]/80 font-semibold">€100M plan for the Middle East</strong>, and the first Eataly at Sea with MSC Cruises.<br /><br />
-        This growth requires managerial talent capable of embodying the brand's values in multicultural contexts: Head Chefs, Directors of Store Operations, General Managers who can bring Italian authenticity to Philadelphia, Toronto and Miami. But the hospitality sector doesn't always produce the talent that is needed. With <strong className="text-[#1A1A2E]/80 font-semibold">258,000 vacancies, 50–70% operational turnover, and an average time-to-fill of 4.5 months</strong>, the shortage of qualified profiles is the most critical constraint on the expansion plan. This is the origin of the <strong className="text-[#1A1A2E]/80 font-semibold">Career Passport Project</strong> — to turn this constraint into a competitive advantage.
+        Eataly is no ordinary player in Italian food. With <strong className="text-[#121212]/80 font-semibold">€684M in revenue, 47% growth over three years</strong>, and revenue per employee double the industry average, it is the only Italian food brand with a truly international presence across <strong className="text-[#121212]/80 font-semibold">16 countries</strong>. Since 2022 it has been accelerating on all fronts: new flagships in North America (where <strong className="text-[#121212]/80 font-semibold">60% of revenues</strong> are generated), new compact formats — Eataly Caffè in urban hubs and Eataly Collection in airports —, a <strong className="text-[#121212]/80 font-semibold">€100M plan for the Middle East</strong>, and the first Eataly at Sea with MSC Cruises.<br /><br />
+        This growth requires managerial talent capable of embodying the brand's values in multicultural contexts: Head Chefs, Directors of Store Operations, General Managers who can bring Italian authenticity to Philadelphia, Toronto and Miami. But the hospitality sector doesn't always produce the talent that is needed. With <strong className="text-[#121212]/80 font-semibold">258,000 vacancies, 50–70% operational turnover, and an average time-to-fill of 4.5 months</strong>, the shortage of qualified profiles is the most critical constraint on the expansion plan. This is the origin of the <strong className="text-[#121212]/80 font-semibold">Career Passport Project</strong> — to turn this constraint into a competitive advantage.
       </>,
       summary: "The Career Passport was the first chapter in building an increasingly solid and innovative talent strategy around the concept of international mobility and growth, aimed at making the Eataly brand a global platform for Made in Italy.",
     },
@@ -374,48 +374,48 @@ export default function EatalyStoryPage() {
         </section>
 
         {/* ===== CONTENT SECTIONS ===== */}
-        <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#f8fafc' }}>
+        <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#F7F7F7' }}>
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
 
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6">{c.context.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85]">{c.context.summary}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-6">{c.context.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85]">{c.context.summary}</p>
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.challenge.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
@@ -425,15 +425,15 @@ export default function EatalyStoryPage() {
             {/* OBJECTIVES */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-10">{c.objectives.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {c.objectives.items.map((o, i) => (
                   <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <p className="text-[15px] text-[#1A1A2E]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#1A1A2E]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
+                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
+                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
                     </p>
                   </div>
                 ))}
@@ -443,15 +443,15 @@ export default function EatalyStoryPage() {
             {/* SOLUTION */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.solution.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.solution.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
               <div>
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
                 <div className="flex flex-wrap gap-3">
                   {c.solution.skills.map((s) => (
                     <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
                       <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#1A1A2E]/70">{s.label}</span>
+                      <span className="text-[14px] font-semibold text-[#121212]/70">{s.label}</span>
                     </div>
                   ))}
                 </div>
@@ -461,11 +461,11 @@ export default function EatalyStoryPage() {
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
               {/* Key metrics */}
-              <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
+              <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
                   {/* 1.300+ — stacked documents */}
                   <div className="text-center flex flex-col items-center">
@@ -516,8 +516,8 @@ export default function EatalyStoryPage() {
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <q.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{q.title}</h4>
-                    <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{q.text}</p>
+                    <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
+                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
                   </div>
                 ))}
               </div>
@@ -529,8 +529,8 @@ export default function EatalyStoryPage() {
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
                   {c.vision.badge}
                 </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8]">{c.vision.intro}</p>
+                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.vision.title}</h2>
+                <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8]">{c.vision.intro}</p>
               </div>
             </Section>
 

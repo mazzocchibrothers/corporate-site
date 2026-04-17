@@ -841,12 +841,32 @@ export const translations = {
   'Blog': 'Blog',
   'About': 'Chi Siamo',
 
+  // ===== WHITEPAPER DETAIL PAGE =====
+  'Back to White Papers': 'Torna ai White Paper',
+  'White Paper not found.': 'White Paper non trovato.',
+  'Download Free': 'Scarica Gratis',
+  "What's Inside": 'Cosa Contiene',
+  'Get the Full White Paper': 'Scarica il White Paper Completo',
+  "Fill the form below and we'll send it straight to your inbox.": 'Compila il modulo e te lo invieremo direttamente nella tua inbox.',
+  'More White Papers': 'Altri White Paper',
+  'Want to see the science in action?': 'Vuoi vedere la scienza in azione?',
+  'Book a meeting with our team and discover how Skillvue turns talent decisions into a competitive advantage.': 'Prenota un incontro con il nostro team e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.',
+
   // ===== BLOG PAGE =====
+  'Blog &': 'Blog &',
+  'Insights': 'Approfondimenti',
+  'All Articles': 'Tutti gli Articoli',
+  'Explore articles': 'Esplora gli articoli',
   'Insights, research, and perspectives on talent intelligence, AI in HR, and the future of people decisions.': 'Approfondimenti, ricerche e prospettive sulla talent intelligence, AI nelle risorse umane e il futuro delle decisioni sulle persone.',
   'Read more': 'Leggi di più',
   'Want to go deeper? Talk to our team.': 'Vuoi approfondire ulteriormente? Parla con il nostro team.',
+  'Book a meeting and discover how Skillvue turns talent decisions into a competitive advantage.': 'Prenota un incontro e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.',
 
   // ===== WHITEPAPERS PAGE =====
+  'Reports': 'Report',
+  'White Paper': 'White Paper',
+  'Research-backed insights to help you rethink how you hire, develop, and manage talent. Browse our library and download the resources that matter to you.': 'Ricerche e approfondimenti per ripensare il modo in cui selezioni, sviluppi e gestisci il talento. Esplora la nostra libreria e scarica le risorse che ti servono.',
+  'Explore the library': 'Esplora la libreria',
   'Deep-dive research and frameworks on talent intelligence, AI in HR, and evidence-based people decisions.': 'Ricerche approfondite e framework sulla talent intelligence, AI nelle risorse umane e decisioni sulle persone basate sulle evidenze.',
   'Download': 'Scarica',
 

@@ -68,24 +68,24 @@ export default function BlogArticle2() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'Se la risposta è sì, non significa che sei un recruiter superficiale: significa che sei umano e, proprio per questo, esposto ai bias di selezione.' : "If the answer is yes, it doesn't mean you're a superficial recruiter: it means you're human and, precisely for this reason, exposed to recruitment biases."}
               </p>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'Nel processo di selezione, molte decisioni si formano prima di quanto immaginiamo. Il resto del colloquio spesso diventa una ricerca di conferma. Questo accade perché il nostro cervello usa scorciatoie cognitive per semplificare la complessità: rapide, automatiche, apparentemente efficienti. Il problema è che non sono sempre accurate.' : "In the selection process, many decisions are formed earlier than we imagine. The rest of the interview often becomes a search for confirmation. This happens because our brain uses cognitive shortcuts to simplify complexity: fast, automatic, apparently efficient. The problem is they're not always accurate."}
               </p>
 
               <div className="rounded-xl border-l-4 border-[#4B4DF7] bg-[#4B4DF7]/[0.03] p-6 my-10">
-                <p className="text-[16px] text-[#1A1A2E]/[0.7] leading-[1.8] italic">
+                <p className="text-[16px] text-[#121212]/[0.7] leading-[1.8] italic">
                   {lang === 'it' ? 'La domanda a cui vogliamo rispondere in questa guida non è se i bias esistono. La domanda è: quanto impattano concretamente sulle tue decisioni?' : "The question we want to answer in this guide isn't whether biases exist. The question is: how much do they concretely impact your decisions?"}
                 </p>
               </div>
 
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">{lang === 'it' ? 'Cosa Sono i Bias Cognitivi?' : 'What Are Cognitive Biases?'}</h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">{lang === 'it' ? 'Cosa Sono i Bias Cognitivi?' : 'What Are Cognitive Biases?'}</h2>
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'I bias cognitivi sono scorciatoie mentali che usiamo per prendere decisioni più velocemente. Non sono errori intenzionali: sono meccanismi automatici del cervello che ci aiutano a semplificare la complessità. Il problema sorge quando queste scorciatoie entrano in gioco in situazioni che richiedono valutazioni strutturate, come la selezione del personale.' : "Cognitive biases are mental shortcuts we use to make decisions faster. They're not intentional errors: they're automatic brain mechanisms that help us simplify complexity. The problem arises when these shortcuts come into play in situations requiring structured evaluations, like recruitment."}
               </p>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'Nel processo di selezione, un bias può portarti a sovrastimare un candidato per una singola caratteristica positiva, a scartarlo per un dettaglio irrilevante, a cercare solo informazioni che confermano la tua prima impressione, o a preferire inconsciamente profili simili a te.' : "In the selection process, a bias can lead you to overestimate a candidate for a single positive characteristic, reject them for an irrelevant detail, seek only information confirming your first impression, or unconsciously prefer profiles similar to you."}
               </p>
             </motion.div>
@@ -95,10 +95,10 @@ export default function BlogArticle2() {
         {/* The 8 Biases — Minimal accordion */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
-            <motion.h2 className="text-[26px] font-bold text-[#1A1A2E] mb-4 tracking-[-0.02em] leading-[1.15]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <motion.h2 className="text-[26px] font-bold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               {lang === 'it' ? 'Gli 8 Bias di Selezione più Comuni' : 'The 8 Most Common Recruitment Biases'}
             </motion.h2>
-            <p className="text-[17px] text-[#1A1A2E]/[0.5] leading-[1.9] mb-12">
+            <p className="text-[17px] text-[#121212]/[0.5] leading-[1.9] mb-12">
               {lang === 'it' ? 'Raramente si manifestano come errori evidenti. Più spesso si travestono da esperienza, intuizione o "istinto."' : 'They rarely appear as obvious errors. More often, they disguise themselves as experience, intuition, or "gut feeling."'}
             </p>
 
@@ -106,7 +106,7 @@ export default function BlogArticle2() {
               {biases.map((b, i) => (
                 <motion.details
                   key={b.num}
-                  className="group border-b border-[#1A1A2E]/[0.06] last:border-b-0"
+                  className="group border-b border-[#121212]/[0.06] last:border-b-0"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -114,11 +114,11 @@ export default function BlogArticle2() {
                 >
                   <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                     <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">{b.num}</span>
-                    <span className="text-[17px] font-semibold text-[#1A1A2E]/80 flex-1">{b.title}</span>
+                    <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{b.title}</span>
                     <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                   </summary>
                   <div className="pl-12 pb-6">
-                    <p className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.8] mb-4">{b.desc}</p>
+                    <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8] mb-4">{b.desc}</p>
                     <div className="flex flex-wrap gap-2">
                       {b.mitigation.map((m, j) => (
                         <span key={j} className="inline-flex px-3 py-1.5 rounded-full text-[12px] text-[#4B4DF7]/70 border border-[#4B4DF7]/[0.1] bg-[#4B4DF7]/[0.03]">
@@ -137,8 +137,8 @@ export default function BlogArticle2() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em] leading-[1.15]">{lang === 'it' ? 'Come Ridurre i Bias nella Selezione' : 'How to Reduce Biases in Recruitment'}</h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">{lang === 'it' ? 'Come Ridurre i Bias nella Selezione' : 'How to Reduce Biases in Recruitment'}</h2>
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'La cattiva notizia: essendo umani, i bias non possono essere eliminati. La buona notizia: possono essere gestiti con metodo. Se vuoi ridurne l\'impatto, devi intervenire sul processo di selezione, rendendolo più strutturato e meno dipendente dalla percezione individuale.' : "The bad news: being human, biases cannot be eliminated. The good news: they can be managed with method. If you want to reduce their impact, you need to intervene on the selection process, making it more structured and less dependent on individual perception."}
               </p>
               <div className="space-y-3 my-8">
@@ -159,11 +159,11 @@ export default function BlogArticle2() {
                     <span className="w-6 h-6 rounded-full bg-[#4B4DF7]/[0.08] flex items-center justify-center shrink-0 mt-0.5">
                       <span className="text-[11px] font-bold text-[#4B4DF7]">{i + 1}</span>
                     </span>
-                    <p className="text-[15px] text-[#1A1A2E]/[0.6] leading-[1.7]">{item}</p>
+                    <p className="text-[15px] text-[#121212]/[0.6] leading-[1.7]">{item}</p>
                   </div>
                 ))}
               </div>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'Skillvue supporta HR e Talent Acquisition nella valutazione oggettiva delle competenze attraverso assessment basati sulla scienza psicometrica, domande situazionali e metodologia BEI. Questo consente di confrontare i candidati su criteri misurabili, riducendo il peso delle percezioni individuali.' : 'Skillvue supports HR and Talent Acquisition in objective competency evaluation through assessments based on psychometric science, situational questions, and BEI methodology. This allows comparing candidates on measurable criteria, reducing the weight of individual perceptions.'}
               </p>
             </motion.div>
@@ -176,7 +176,7 @@ export default function BlogArticle2() {
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}</span>
               <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
-                {lang === 'it' ? <>Rendi il tuo processo di selezione più strutturato, meno esposto ai <span className="italic gradient-text">bias.</span></> : <>Make your recruitment process more structured, less exposed to <span className="italic gradient-text">bias.</span></>}
+                {lang === 'it' ? <>Rendi il tuo processo di selezione più strutturato, meno esposto ai <span className="gradient-text">bias.</span></> : <>Make your recruitment process more structured, less exposed to <span className="gradient-text">bias.</span></>}
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {lang === 'it' ? 'Skillvue analizza le competenze di candidati e dipendenti in modo rapido, oggettivo e su larga scala grazie alla tecnologia AI proprietaria.' : 'Skillvue analyzes skills of candidates and employees quickly, objectively, and at scale using proprietary AI technology.'}

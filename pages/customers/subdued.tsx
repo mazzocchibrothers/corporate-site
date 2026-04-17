@@ -54,11 +54,11 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Subdued è un brand italiano di fashion retail. Fondato in Italia, oggi opera con oltre <strong className="text-[#1A1A2E]/80 font-semibold">130 negozi monomarca</strong> in continua espansione, <strong className="text-[#1A1A2E]/80 font-semibold">più di 1.000 dipendenti</strong> e una presenza in crescita su più continenti.
+        Subdued è un brand italiano di fashion retail. Fondato in Italia, oggi opera con oltre <strong className="text-[#121212]/80 font-semibold">130 negozi monomarca</strong> in continua espansione, <strong className="text-[#121212]/80 font-semibold">più di 1.000 dipendenti</strong> e una presenza in crescita su più continenti.
         <br /><br />
-        La traiettoria di crescita è eccezionale: il fatturato del brand è <strong className="text-[#1A1A2E]/80 font-semibold">quasi raddoppiato tra il 2022 e il 2024</strong> e più della metà dei ricavi arriva dai mercati internazionali, che danno ottimi segnali per il futuro con aperture in corso negli Stati Uniti, in Medio Oriente, nel Sud-Est asiatico, in Corea e in Cina.
+        La traiettoria di crescita è eccezionale: il fatturato del brand è <strong className="text-[#121212]/80 font-semibold">quasi raddoppiato tra il 2022 e il 2024</strong> e più della metà dei ricavi arriva dai mercati internazionali, che danno ottimi segnali per il futuro con aperture in corso negli Stati Uniti, in Medio Oriente, nel Sud-Est asiatico, in Corea e in Cina.
         <br /><br />
-        In questo scenario, la capacità di selezionare le persone giuste al ritmo delle aperture diventa <strong className="text-[#1A1A2E]/80 font-semibold">il vincolo operativo numero uno</strong>. Ogni nuovo negozio richiede un team formato capace di rappresentare il brand e il suo DNA italiano davanti a un pubblico Gen Z in mercati culturalmente diversi, ma il team HR è composto da <strong className="text-[#1A1A2E]/80 font-semibold">1-3 persone per ciascuno dei paesi di attività</strong>. Con i metodi tradizionali, l'equazione non regge.
+        In questo scenario, la capacità di selezionare le persone giuste al ritmo delle aperture diventa <strong className="text-[#121212]/80 font-semibold">il vincolo operativo numero uno</strong>. Ogni nuovo negozio richiede un team formato capace di rappresentare il brand e il suo DNA italiano davanti a un pubblico Gen Z in mercati culturalmente diversi, ma il team HR è composto da <strong className="text-[#121212]/80 font-semibold">1-3 persone per ciascuno dei paesi di attività</strong>. Con i metodi tradizionali, l'equazione non regge.
       </>,
     },
     challenge: {
@@ -197,11 +197,11 @@ const content = {
       badge: 'CONTEXT',
       title: 'The Company and The Context',
       paragraph: <>
-        Subdued is an Italian fashion retail brand. Founded in Italy, it now operates over <strong className="text-[#1A1A2E]/80 font-semibold">130 mono-brand stores</strong> in continuous expansion, <strong className="text-[#1A1A2E]/80 font-semibold">1,000+ employees</strong> and a growing presence across multiple continents.
+        Subdued is an Italian fashion retail brand. Founded in Italy, it now operates over <strong className="text-[#121212]/80 font-semibold">130 mono-brand stores</strong> in continuous expansion, <strong className="text-[#121212]/80 font-semibold">1,000+ employees</strong> and a growing presence across multiple continents.
         <br /><br />
-        The growth trajectory is exceptional: the brand's revenue <strong className="text-[#1A1A2E]/80 font-semibold">nearly doubled between 2022 and 2024</strong>, and more than half of revenues come from international markets — which are showing strong signals for the future, with openings underway in the United States, the Middle East, South-East Asia, Korea and China.
+        The growth trajectory is exceptional: the brand's revenue <strong className="text-[#121212]/80 font-semibold">nearly doubled between 2022 and 2024</strong>, and more than half of revenues come from international markets — which are showing strong signals for the future, with openings underway in the United States, the Middle East, South-East Asia, Korea and China.
         <br /><br />
-        In this context, the ability to hire the right people at the pace of new store openings becomes <strong className="text-[#1A1A2E]/80 font-semibold">the number one operational constraint</strong>. Every new store requires a trained team capable of representing the brand and its Italian DNA to a Gen Z audience in culturally different markets — yet each country's HR team is just <strong className="text-[#1A1A2E]/80 font-semibold">1–3 people</strong>. With traditional methods, the equation simply does not work.
+        In this context, the ability to hire the right people at the pace of new store openings becomes <strong className="text-[#121212]/80 font-semibold">the number one operational constraint</strong>. Every new store requires a trained team capable of representing the brand and its Italian DNA to a Gen Z audience in culturally different markets — yet each country's HR team is just <strong className="text-[#121212]/80 font-semibold">1–3 people</strong>. With traditional methods, the equation simply does not work.
       </>,
     },
     challenge: {
@@ -402,47 +402,47 @@ export default function SubduedStoryPage() {
         </section>
 
         {/* ===== CONTENT SECTIONS ===== */}
-        <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#f8fafc' }}>
+        <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#F7F7F7' }}>
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
 
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6">{c.context.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-6">{c.context.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.challenge.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
@@ -452,15 +452,15 @@ export default function SubduedStoryPage() {
             {/* OBJECTIVES */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-10">{c.objectives.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {c.objectives.items.map((o, i) => (
                   <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <p className="text-[15px] text-[#1A1A2E]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#1A1A2E]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
+                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
+                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
                     </p>
                   </div>
                 ))}
@@ -470,29 +470,29 @@ export default function SubduedStoryPage() {
             {/* SOLUTION */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.solution.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.solution.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
 
               <div className="mb-12">
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
                 <div className="flex flex-col sm:flex-row gap-3">
                   {c.solution.skills.map((s) => (
                     <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
                       <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#1A1A2E]/70">{s.label}</span>
+                      <span className="text-[14px] font-semibold text-[#121212]/70">{s.label}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.solution.methodology.map((m, i) => (
                     <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
                       <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4] relative">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65] relative">{m.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4] relative">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65] relative">{m.text}</p>
                     </div>
                   ))}
                 </div>
@@ -502,10 +502,10 @@ export default function SubduedStoryPage() {
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
-              <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
+              <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
 
                   {/* -70% pre-screening: before/after bars 10h → 3h */}
@@ -583,8 +583,8 @@ export default function SubduedStoryPage() {
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <q.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{q.title}</h4>
-                    <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{q.text}</p>
+                    <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
+                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
                   </div>
                 ))}
               </div>

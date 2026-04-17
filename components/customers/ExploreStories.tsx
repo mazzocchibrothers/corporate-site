@@ -59,7 +59,7 @@ export default function ExploreStories() {
         <motion.div className="mb-12" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">
             {t('Find your')}{' '}
-            <span className="italic font-bold gradient-text">{t('story.')}</span>
+            <span className="font-bold gradient-text">{t('story.')}</span>
           </h2>
           <p className="text-[20px] text-white/[0.65] leading-[1.75] max-w-2xl">
             {t('Every challenge is different. Every context is specific. Filter by what matters to you.')}

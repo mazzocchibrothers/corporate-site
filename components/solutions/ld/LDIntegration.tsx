@@ -21,7 +21,7 @@ export default function LDIntegration() {
         >
           <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold text-white/90 mb-6">
             {t('Skillvue enriches your')}{' '}
-            <span className="italic font-bold gradient-text">{t('learning ecosystem')}</span>
+            <span className="font-bold gradient-text">{t('learning ecosystem')}</span>
           </h2>
           <p className="text-[16px] text-white/[0.65] leading-[1.75] max-w-3xl mb-10">
             {t('Skillvue integrates natively with your LMS and LXP. feeding precise skill gap data into the systems where learning is delivered. The result: the right content reaches the right people based on verified needs, not generic assignments.')}

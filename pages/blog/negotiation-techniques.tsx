@@ -68,42 +68,42 @@ export default function BlogArticle3() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
                   ? 'Il problema è che le persone non sempre hanno gli strumenti per farlo in modo strutturato. Se lavori in HR, lo vedi chiaramente: molti conflitti organizzativi non nascono da differenze inconciliabili, ma da negoziazioni mal gestite. Posizioni irrigidite, interessi non espressi, decisioni prese per autorità invece che per allineamento.'
                   : 'The problem is that people don\'t always have the tools to do it in a structured way. If you work in HR, you see it clearly: many organizational conflicts don\'t arise from irreconcilable differences, but from poorly managed negotiations. Hardened positions, unexpressed interests, decisions made by authority instead of alignment.'}
               </p>
-              <p className="text-[17px] text-[#1A1A2E]/[0.75] leading-[1.9] mb-6 font-medium">
+              <p className="text-[17px] text-[#121212]/[0.75] leading-[1.9] mb-6 font-medium">
                 {lang === 'it'
                   ? 'La negoziazione non è una competenza "commerciale". È una competenza manageriale trasversale.'
                   : 'Negotiation is not a "commercial" skill. It\'s a cross-functional managerial competency.'}
               </p>
 
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
                 {lang === 'it' ? 'Perché la negoziazione è importante per le HR' : 'Why Negotiation Matters for HR'}
               </h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
                   ? 'La negoziazione entra costantemente nei momenti strategici delle HR: durante la selezione (definizione dell\'offerta, gestione delle aspettative), nella risoluzione dei conflitti (tensioni manager-dipendente), nella mobilità interna (ridefinizione del ruolo) e nella leadership (ogni volta che un manager assegna priorità o riallinea gli obiettivi).'
                   : 'Negotiation enters strategic HR moments constantly: during selection (offer definition, expectation management), conflict resolution (manager-employee tensions), internal mobility (role redefinition), and leadership (every time a manager assigns priorities or realigns objectives).'}
               </p>
 
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
                 {lang === 'it' ? 'Come si manifesta la negoziazione nel lavoro quotidiano' : 'What Negotiation Looks Like in Daily Work'}
               </h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
-                  ? <>Una negoziazione efficace tiene insieme tre dimensioni: <strong className="text-[#1A1A2E]/80">obiettivi</strong> (cosa vogliamo), <strong className="text-[#1A1A2E]/80">vincoli</strong> (budget, tempo, risorse, policy) e <strong className="text-[#1A1A2E]/80">relazioni</strong> (fiducia, equilibrio interno, reputazione).</>
-                  : <>Effective negotiation holds together three dimensions: <strong className="text-[#1A1A2E]/80">objectives</strong> (what we want), <strong className="text-[#1A1A2E]/80">constraints</strong> (budget, time, resources, policy), and <strong className="text-[#1A1A2E]/80">relationships</strong> (trust, internal balance, reputation).</>}
+                  ? <>Una negoziazione efficace tiene insieme tre dimensioni: <strong className="text-[#121212]/80">obiettivi</strong> (cosa vogliamo), <strong className="text-[#121212]/80">vincoli</strong> (budget, tempo, risorse, policy) e <strong className="text-[#121212]/80">relazioni</strong> (fiducia, equilibrio interno, reputazione).</>
+                  : <>Effective negotiation holds together three dimensions: <strong className="text-[#121212]/80">objectives</strong> (what we want), <strong className="text-[#121212]/80">constraints</strong> (budget, time, resources, policy), and <strong className="text-[#121212]/80">relationships</strong> (trust, internal balance, reputation).</>}
               </p>
               <div className="grid md:grid-cols-2 gap-4 my-8">
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white p-6">
-                  <h3 className="text-[15px] font-bold text-[#1A1A2E] mb-2">{lang === 'it' ? 'Distributiva' : 'Distributive'}</h3>
-                  <p className="text-[14px] text-[#1A1A2E]/[0.55] leading-[1.7]">{lang === 'it' ? 'Logica di scambio: se ottengo di più, tu ottieni di meno. Tipica per negoziazioni su budget o risorse limitate.' : 'Exchange logic: if I get more, you get less. Typical for budget or limited resource negotiations.'}</p>
+                  <h3 className="text-[15px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Distributiva' : 'Distributive'}</h3>
+                  <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Logica di scambio: se ottengo di più, tu ottieni di meno. Tipica per negoziazioni su budget o risorse limitate.' : 'Exchange logic: if I get more, you get less. Typical for budget or limited resource negotiations.'}</p>
                 </div>
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white p-6">
-                  <h3 className="text-[15px] font-bold text-[#1A1A2E] mb-2">{lang === 'it' ? 'Integrativa' : 'Integrative'}</h3>
-                  <p className="text-[14px] text-[#1A1A2E]/[0.55] leading-[1.7]">{lang === 'it' ? 'Analizza gli interessi sottostanti, non solo le posizioni dichiarate. Ridefinisce il perimetro del problema per trovare soluzioni per entrambe le parti.' : 'Analyzes underlying interests, not just declared positions. Redefines the problem perimeter to find solutions for both sides.'}</p>
+                  <h3 className="text-[15px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Integrativa' : 'Integrative'}</h3>
+                  <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Analizza gli interessi sottostanti, non solo le posizioni dichiarate. Ridefinisce il perimetro del problema per trovare soluzioni per entrambe le parti.' : 'Analyzes underlying interests, not just declared positions. Redefines the problem perimeter to find solutions for both sides.'}</p>
                 </div>
               </div>
             </motion.div>
@@ -113,10 +113,10 @@ export default function BlogArticle3() {
         {/* The 7 Techniques — Accordion */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
-            <motion.h2 className="text-[26px] font-bold text-[#1A1A2E] mb-4 tracking-[-0.02em] leading-[1.15]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <motion.h2 className="text-[26px] font-bold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               {lang === 'it' ? 'Le 7 tecniche' : 'The 7 Techniques'}
             </motion.h2>
-            <p className="text-[17px] text-[#1A1A2E]/[0.5] leading-[1.9] mb-10">
+            <p className="text-[17px] text-[#121212]/[0.5] leading-[1.9] mb-10">
               {lang === 'it'
                 ? 'Non sono "formule magiche". Sono leve operative per strutturare la conversazione, rendere espliciti gli interessi e costruire accordi sostenibili.'
                 : 'These aren\'t "magic formulas." They\'re operational levers to structure the conversation, make interests explicit, and build sustainable agreements.'}
@@ -128,7 +128,7 @@ export default function BlogArticle3() {
                 return (
                   <motion.details
                     key={t.num}
-                    className="group border-b border-[#1A1A2E]/[0.06] last:border-b-0"
+                    className="group border-b border-[#121212]/[0.06] last:border-b-0"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -136,14 +136,14 @@ export default function BlogArticle3() {
                   >
                     <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                       <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">{t.num}</span>
-                      <span className="text-[17px] font-semibold text-[#1A1A2E]/80 flex-1">{t.title}</span>
+                      <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{t.title}</span>
                       <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                     </summary>
                     <div className="pl-12 pb-6">
-                      <p className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.8] mb-4">{t.summary}</p>
-                      <div className="rounded-xl bg-[#1A1A2E]/[0.03] p-5 mt-3">
+                      <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8] mb-4">{t.summary}</p>
+                      <div className="rounded-xl bg-[#121212]/[0.03] p-5 mt-3">
                         <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.1em] uppercase mb-2 block">{lang === 'it' ? 'Esempio concreto' : 'Concrete example'}</span>
-                        <p className="text-[14px] text-[#1A1A2E]/[0.55] leading-[1.75] italic">{t.example}</p>
+                        <p className="text-[14px] text-[#121212]/[0.55] leading-[1.75] italic">{t.example}</p>
                       </div>
                     </div>
                   </motion.details>
@@ -157,15 +157,15 @@ export default function BlogArticle3() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">
                 {lang === 'it' ? 'Come valutare oggettivamente le competenze di negoziazione' : 'How to Objectively Evaluate Negotiation Skills'}
               </h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
                   ? 'La negoziazione tende a essere sovrastimata. Un professionista sicuro, fluente e articolato può sembrare un buon negoziatore. Ma la vera capacità negoziale si misura dalla qualità del processo: preparazione, gestione degli interessi, uso dei dati, capacità di formalizzare accordi sostenibili.'
                   : 'Negotiation tends to be overestimated. A professional who is confident, fluent, and articulate may seem like a good negotiator. But real negotiation ability is measured by the quality of the process: preparation, interest management, use of data, ability to formalize sustainable agreements.'}
               </p>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
                   ? 'In un CV potresti leggere "gestione di negoziazioni complesse". In realtà, non sai se la persona ha lavorato sugli interessi o solo sulle posizioni, se ha usato dati o leve relazionali, o se gli accordi erano sostenibili o solo momentaneamente vantaggiosi.'
                   : 'On a CV you might read "complex negotiation management." In reality, you don\'t know if the person worked on interests or just positions, used data or relational leverage, or if agreements were sustainable or just momentarily advantageous.'}
@@ -174,9 +174,9 @@ export default function BlogArticle3() {
               <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-10">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                  <h3 className="text-[16px] font-bold text-[#1A1A2E]">{lang === 'it' ? 'Punto chiave' : 'Key Takeaway'}</h3>
+                  <h3 className="text-[16px] font-bold text-[#121212]">{lang === 'it' ? 'Punto chiave' : 'Key Takeaway'}</h3>
                 </div>
-                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.8]">
+                <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
                     ? 'Ciò che conta non è solo il risultato, ma la struttura del processo decisionale. Attraverso skill assessment basati su scienza psicometrica, domande situazionali e metodologia BEI, Skillvue osserva come una persona gestisce scenari di negoziazione realistici, distinguendo tra stile comunicativo e reale capacità di gestire interessi divergenti.'
                     : 'What matters is not just the outcome, but the structure of the decision-making process. Through skill assessments based on psychometric science, situational questions, and BEI methodology, Skillvue observes how a person manages realistic negotiation scenarios, distinguishing between communication style and real ability to manage divergent interests.'}
@@ -193,8 +193,8 @@ export default function BlogArticle3() {
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}</span>
               <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
                 {lang === 'it'
-                  ? <>Valuta la negoziazione come <span className="italic gradient-text">competenza organizzativa,</span> non come percezione soggettiva.</>
-                  : <>Evaluate negotiation as an organizational <span className="italic gradient-text">competency,</span> not a subjective perception.</>}
+                  ? <>Valuta la negoziazione come <span className="gradient-text">competenza organizzativa,</span> non come percezione soggettiva.</>
+                  : <>Evaluate negotiation as an organizational <span className="gradient-text">competency,</span> not a subjective perception.</>}
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {lang === 'it'

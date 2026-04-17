@@ -75,21 +75,21 @@ export default function BlogArticle7() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? 'Cosa sono le competenze manageriali?' : 'What Are Managerial Skills?'}
               </h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
                   ? 'Le competenze manageriali riguardano il modo in cui una persona esercita la responsabilità sugli altri e sui risultati. Sono l\'insieme delle abilità che permettono di definire priorità chiare, prendere decisioni in condizioni di incertezza, gestire le dinamiche relazionali, sviluppare l\'autonomia nei collaboratori e mantenere l\'allineamento tra obiettivi individuali e organizzativi.'
                   : 'Managerial skills concern how a person exercises responsibility over others and over results. They are the set of abilities that enable someone to define clear priorities, make decisions under uncertainty, manage relational dynamics, develop autonomy in collaborators, and maintain alignment between individual and organizational objectives.'}
               </p>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
-                  ? <>Uno degli equivoci più frequenti è <strong className="text-[#1A1A2E]/80">confondere le attività con il valore generato</strong>. Un manager può organizzare molte riunioni e monitorare i task, ma questo non è di per sé un indicatore di competenza manageriale. La vera differenza si vede nell'impatto: il team è allineato? Le decisioni sono chiare? I conflitti vengono gestiti o evitati? Le persone crescono o rimangono dipendenti dal capo?</>
-                  : <>One of the most frequent misunderstandings is <strong className="text-[#1A1A2E]/80">confusing activities with generated value</strong>. A manager can organize many meetings and monitor tasks, but this isn't in itself an indicator of managerial competence. The real difference is seen in impact: is the team aligned? Are decisions clear? Are conflicts managed or avoided? Do people grow or remain dependent on the boss?</>}
+                  ? <>Uno degli equivoci più frequenti è <strong className="text-[#121212]/80">confondere le attività con il valore generato</strong>. Un manager può organizzare molte riunioni e monitorare i task, ma questo non è di per sé un indicatore di competenza manageriale. La vera differenza si vede nell'impatto: il team è allineato? Le decisioni sono chiare? I conflitti vengono gestiti o evitati? Le persone crescono o rimangono dipendenti dal capo?</>
+                  : <>One of the most frequent misunderstandings is <strong className="text-[#121212]/80">confusing activities with generated value</strong>. A manager can organize many meetings and monitor tasks, but this isn't in itself an indicator of managerial competence. The real difference is seen in impact: is the team aligned? Are decisions clear? Are conflicts managed or avoided? Do people grow or remain dependent on the boss?</>}
               </p>
               <div className="border-l-[3px] border-[#4B4DF7]/30 pl-6 my-10">
-                <p className="text-[17px] text-[#1A1A2E]/60 leading-[1.8] italic">
+                <p className="text-[17px] text-[#121212]/60 leading-[1.8] italic">
                   {lang === 'it'
                     ? '"Le competenze manageriali non riguardano solo ciò che una persona sa fare, ma ciò che sa far accadere attraverso il proprio ruolo."'
                     : '"Managerial skills don\'t concern only what a person can do, but what they can make happen through their role."'}
@@ -102,7 +102,7 @@ export default function BlogArticle7() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? 'Le 5 competenze manageriali chiave' : 'The 5 Key Managerial Skills'}
               </h2>
               <div className="space-y-0">
@@ -110,7 +110,7 @@ export default function BlogArticle7() {
                   return (
                     <motion.details
                       key={s.title}
-                      className="group border-b border-[#1A1A2E]/[0.06] last:border-b-0"
+                      className="group border-b border-[#121212]/[0.06] last:border-b-0"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
@@ -118,11 +118,11 @@ export default function BlogArticle7() {
                     >
                       <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                         <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">0{i + 1}</span>
-                        <span className="text-[17px] font-semibold text-[#1A1A2E]/80 flex-1">{s.title}</span>
+                        <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{s.title}</span>
                         <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                       </summary>
                       <div className="pl-12 pb-6">
-                        <p className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.8]">{s.desc}</p>
+                        <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8]">{s.desc}</p>
                       </div>
                     </motion.details>
                   );
@@ -135,10 +135,10 @@ export default function BlogArticle7() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? 'Come riconoscerle nel lavoro quotidiano' : 'How to Recognize Them in Daily Work'}
               </h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-8">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-8">
                 {lang === 'it'
                   ? 'Le competenze manageriali non si manifestano in modo spettacolare, ma sono visibili nei dettagli: come un manager conduce una riunione, prende una decisione scomoda, gestisce una priorità che cambia.'
                   : 'Managerial skills don\'t manifest spectacularly but are visible in the details: how a manager runs a meeting, makes an uncomfortable decision, handles a shifting priority.'}
@@ -146,7 +146,7 @@ export default function BlogArticle7() {
               {observables.map((obs, i) => (
                 <motion.details
                   key={i}
-                  className="group border-b border-[#1A1A2E]/[0.06] last:border-b-0"
+                  className="group border-b border-[#121212]/[0.06] last:border-b-0"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -154,13 +154,13 @@ export default function BlogArticle7() {
                 >
                   <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                     <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">0{i + 1}</span>
-                    <span className="text-[17px] font-semibold text-[#1A1A2E]/80 flex-1">{obs.context}</span>
+                    <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{obs.context}</span>
                     <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                   </summary>
                   <div className="pl-12 pb-6">
                     <ul className="space-y-2">
                       {obs.signs.map((sign, j) => (
-                        <li key={j} className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.7] flex items-start gap-2">
+                        <li key={j} className="text-[15px] text-[#121212]/[0.55] leading-[1.7] flex items-start gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#4B4DF7]/40 mt-2.5 shrink-0" />{sign}
                         </li>
                       ))}
@@ -172,9 +172,9 @@ export default function BlogArticle7() {
               <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-10">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                  <h3 className="text-[16px] font-bold text-[#1A1A2E]">{lang === 'it' ? 'Punto chiave' : 'Key Takeaway'}</h3>
+                  <h3 className="text-[16px] font-bold text-[#121212]">{lang === 'it' ? 'Punto chiave' : 'Key Takeaway'}</h3>
                 </div>
-                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.8]">
+                <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
                     ? 'Skillvue supporta HR e organizzazioni nella valutazione oggettiva delle competenze manageriali attraverso assessment basati su scienze psicometriche, domande situazionali e metodologia BEI. Invece di chiedere "che tipo di leader sei?", l\'assessment osserva come una persona ragiona e decide in scenari manageriali concreti.'
                     : 'Skillvue supports HR and organizations in the objective evaluation of managerial skills through assessments based on psychometric sciences, situational questions, and BEI methodology. Instead of asking "what kind of leader are you?", the assessment observes how a person reasons and decides in concrete managerial scenarios.'}
@@ -190,8 +190,8 @@ export default function BlogArticle7() {
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}</span>
               <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
                 {lang === 'it'
-                  ? <>Prendi decisioni di leadership basate su <span className="italic gradient-text">dati, non impressioni.</span></>
-                  : <>Make leadership decisions based on <span className="italic gradient-text">data, not impressions.</span></>}
+                  ? <>Prendi decisioni di leadership basate su <span className="gradient-text">dati, non impressioni.</span></>
+                  : <>Make leadership decisions based on <span className="gradient-text">data, not impressions.</span></>}
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {lang === 'it'

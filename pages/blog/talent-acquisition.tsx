@@ -77,15 +77,15 @@ export default function BlogArticle9() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Cos\'è il Talent Acquisition (e Perché Non è Solo Recruiting)' : "What Is Talent Acquisition (and Why It's Not Just Recruiting)"}</h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
-                {lang === 'it' ? <>Il talent acquisition è l'insieme di strategie e processi attraverso cui un'azienda identifica, attrae, valuta e sviluppa le persone di cui avrà bisogno non solo oggi, ma anche in futuro. La differenza rispetto al recruiting tradizionale risiede principalmente nel livello di <strong className="text-[#1A1A2E]/80">intenzionalità</strong>.</> : <>Talent acquisition is the set of strategies and processes through which a company identifies, attracts, evaluates, and develops the people it will need not only today, but also in the future. The difference from traditional recruiting lies primarily in the level of <strong className="text-[#1A1A2E]/80">intentionality</strong>.</>}
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Cos\'è il Talent Acquisition (e Perché Non è Solo Recruiting)' : "What Is Talent Acquisition (and Why It's Not Just Recruiting)"}</h2>
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+                {lang === 'it' ? <>Il talent acquisition è l'insieme di strategie e processi attraverso cui un'azienda identifica, attrae, valuta e sviluppa le persone di cui avrà bisogno non solo oggi, ma anche in futuro. La differenza rispetto al recruiting tradizionale risiede principalmente nel livello di <strong className="text-[#121212]/80">intenzionalità</strong>.</> : <>Talent acquisition is the set of strategies and processes through which a company identifies, attracts, evaluates, and develops the people it will need not only today, but also in the future. The difference from traditional recruiting lies primarily in the level of <strong className="text-[#121212]/80">intentionality</strong>.</>}
               </p>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'Il recruiting è spesso tattico: risponde a una posizione aperta, lavora su tempi e volumi. Il talent acquisition, invece, è strategico: parte dalla comprensione di quali competenze sono critiche per l\'organizzazione, quali lo diventeranno, e come costruire nel tempo un pool di persone in grado di sostenerle.' : "Recruiting is often tactical: it responds to an open vacancy, works on timing and volumes. Talent acquisition, instead, is strategic: it starts from understanding which competencies are critical for the organization, which will become so, and how to build over time a pool of people capable of sustaining them."}
               </p>
               <div className="border-l-[3px] border-[#4B4DF7]/30 pl-6 my-10">
-                <p className="text-[17px] text-[#1A1A2E]/60 leading-[1.8] italic">
+                <p className="text-[17px] text-[#121212]/60 leading-[1.8] italic">
                   {lang === 'it' ? '"L\'orizzonte non è la singola assunzione ma il medio-lungo termine. Le decisioni non si basano solo su ciò che serve oggi, ma su come un ruolo potrebbe evolversi e quale contributo una persona può dare nel tempo."' : '"The horizon is not the single hire but the medium-long term. Decisions aren\'t based only on what\'s needed today, but on how a role might evolve and what kind of contribution a person can make over time."'}
                 </p>
               </div>
@@ -96,22 +96,22 @@ export default function BlogArticle9() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Talent Acquisition vs Recruiting: Le Differenze' : 'Talent Acquisition vs Recruiting: The Differences'}</h2>
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Talent Acquisition vs Recruiting: Le Differenze' : 'Talent Acquisition vs Recruiting: The Differences'}</h2>
               <div className="overflow-x-auto my-8">
                 <table className="w-full text-left">
                   <thead>
-                    <tr className="border-b border-[#1A1A2E]/[0.08]">
-                      <th className="py-3 pr-4 text-[12px] font-bold text-[#1A1A2E]/40 tracking-[0.1em] uppercase">{lang === 'it' ? 'Dimensione' : 'Dimension'}</th>
-                      <th className="py-3 pr-4 text-[12px] font-bold text-[#1A1A2E]/40 tracking-[0.1em] uppercase">Recruiting</th>
+                    <tr className="border-b border-[#121212]/[0.08]">
+                      <th className="py-3 pr-4 text-[12px] font-bold text-[#121212]/40 tracking-[0.1em] uppercase">{lang === 'it' ? 'Dimensione' : 'Dimension'}</th>
+                      <th className="py-3 pr-4 text-[12px] font-bold text-[#121212]/40 tracking-[0.1em] uppercase">Recruiting</th>
                       <th className="py-3 text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.1em] uppercase">Talent Acquisition</th>
                     </tr>
                   </thead>
                   <tbody>
                     {differences.map((d, i) => (
-                      <tr key={i} className="border-b border-[#1A1A2E]/[0.04]">
-                        <td className="py-4 pr-4 text-[14px] font-semibold text-[#1A1A2E]/70">{d.dimension}</td>
-                        <td className="py-4 pr-4 text-[14px] text-[#1A1A2E]/[0.45]">{d.recruiting}</td>
-                        <td className="py-4 text-[14px] text-[#1A1A2E]/[0.65] font-medium">{d.ta}</td>
+                      <tr key={i} className="border-b border-[#121212]/[0.04]">
+                        <td className="py-4 pr-4 text-[14px] font-semibold text-[#121212]/70">{d.dimension}</td>
+                        <td className="py-4 pr-4 text-[14px] text-[#121212]/[0.45]">{d.recruiting}</td>
+                        <td className="py-4 text-[14px] text-[#121212]/[0.65] font-medium">{d.ta}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -124,13 +124,13 @@ export default function BlogArticle9() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Come Costruire una Strategia Efficace' : 'How to Build an Effective Strategy'}</h2>
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Come Costruire una Strategia Efficace' : 'How to Build an Effective Strategy'}</h2>
               <div className="space-y-0">
                 {strategySteps.map((s, i) => {
                   return (
                     <motion.details
                       key={s.title}
-                      className="group border-b border-[#1A1A2E]/[0.06] last:border-b-0"
+                      className="group border-b border-[#121212]/[0.06] last:border-b-0"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
@@ -138,11 +138,11 @@ export default function BlogArticle9() {
                     >
                       <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                         <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">0{i + 1}</span>
-                        <span className="text-[17px] font-semibold text-[#1A1A2E]/80 flex-1">{s.title}</span>
+                        <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{s.title}</span>
                         <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                       </summary>
                       <div className="pl-12 pb-6">
-                        <p className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.8]">{s.desc}</p>
+                        <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8]">{s.desc}</p>
                       </div>
                     </motion.details>
                   );
@@ -152,9 +152,9 @@ export default function BlogArticle9() {
               <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-10">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                  <h3 className="text-[16px] font-bold text-[#1A1A2E]">Key Takeaway</h3>
+                  <h3 className="text-[16px] font-bold text-[#121212]">Key Takeaway</h3>
                 </div>
-                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.8]">
+                <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it' ? 'Attraverso Skill Assessment rapidi e standardizzati, Skillvue ti aiuta a valutare i candidati su criteri chiari e comparabili usando domande situazionali basate sul BEI, test mirati di hard skill e indicatori su potenziale, autonomia e capacità di apprendimento. Sposta la selezione dal confronto di CV e impressioni a una valutazione strutturata di competenze, comportamenti e potenziale.' : 'Through rapid, standardized Skill Assessments, Skillvue helps you evaluate candidates on clear, comparable criteria using BEI-based situational questions, targeted hard skill tests, and indicators on potential, autonomy, and learning ability. Shift selection from a comparison of CVs and impressions to a structured evaluation of competencies, behaviors, and potential.'}
                 </p>
               </div>
@@ -167,7 +167,7 @@ export default function BlogArticle9() {
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}</span>
               <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
-                {lang === 'it' ? <>Costruisci una talent pipeline basata su <span className="italic gradient-text">competenze reali.</span></> : <>Build a talent pipeline based on <span className="italic gradient-text">real competencies.</span></>}
+                {lang === 'it' ? <>Costruisci una talent pipeline basata su <span className="gradient-text">competenze reali.</span></> : <>Build a talent pipeline based on <span className="gradient-text">real competencies.</span></>}
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {lang === 'it' ? 'Migliora la quality-of-hire con skill assessment strutturati e oggettivi.' : 'Improve quality-of-hire with structured, objective skill assessments.'}

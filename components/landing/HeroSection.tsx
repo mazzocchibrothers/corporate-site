@@ -61,14 +61,14 @@ export default function HeroSection() {
             {/* LEFT. Big headline */}
             <div className="lg:col-span-7">
               <motion.h1
-                className="text-[clamp(3rem,6vw,5.5rem)] font-bold tracking-[-0.03em] text-white"
-                style={{ lineHeight: 1.15, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
+                className="font-semibold tracking-[-0.03em] text-white"
+                style={{ fontSize: 'clamp(2.2rem,4.5vw,4rem)', lineHeight: 1.15, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
                 {t('Every talent')}<br />
-                {t('decision,')} <span className="italic font-bold gradient-text">{t('finally')}</span><br />
+                {t('decision,')} <span className="font-semibold gradient-text">{t('finally')}</span><br />
                 {t('backed by science.')}
               </motion.h1>
               <motion.p

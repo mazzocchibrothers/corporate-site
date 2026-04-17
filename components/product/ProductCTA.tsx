@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function ProductCTA() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -19,7 +19,7 @@ export default function ProductCTA() {
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90">
             {t('Ready to make every talent decision')}{' '}
-            <span className="italic font-bold gradient-text">{t('objective?')}</span>
+            <span className="font-bold gradient-text">{t('objective?')}</span>
           </h2>
         </motion.div>
 
@@ -34,7 +34,7 @@ export default function ProductCTA() {
             <h3 className="text-2xl font-bold text-white/90 mt-4 mb-3">{t('Book a Meeting')}</h3>
             <p className="text-[15px] text-white/[0.65] mb-8 max-w-md">{t('See Skillvue live with your specific use case')}</p>
             <a
-              href="/book-meeting"
+              href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
               data-testid="product-cta-book-demo"
               className="group/btn inline-flex items-center justify-between w-full max-w-sm px-8 py-5 text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
             >

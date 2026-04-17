@@ -102,13 +102,13 @@ function ServiceBlock({ item }) {
         <div className="w-10 h-10 rounded-xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.08] flex items-center justify-center shrink-0">
           <Icon className="h-4.5 w-4.5 text-[#4B4DF7]/50" />
         </div>
-        <h3 className="text-[16px] font-bold text-[#1A1A2E]">{item.title}</h3>
+        <h3 className="text-[16px] font-bold text-[#121212]">{item.title}</h3>
       </div>
       <div className="space-y-6 ml-[52px]">
         {item.services.map((svc, i) => (
           <div key={i}>
-            <p className="text-[15px] font-semibold text-[#1A1A2E]/75 mb-1.5">{svc.name}</p>
-            <p className="text-[14px] text-[#1A1A2E]/[0.4] leading-[1.75]">{svc.data}</p>
+            <p className="text-[15px] font-semibold text-[#121212]/75 mb-1.5">{svc.name}</p>
+            <p className="text-[14px] text-[#121212]/[0.4] leading-[1.75]">{svc.data}</p>
           </div>
         ))}
       </div>
@@ -147,7 +147,7 @@ export default function PrivacyPolicyPage() {
           <div className="max-w-[1000px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
 
             <motion.h2
-              className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-bold text-[#1A1A2E] mb-16 leading-[1.4]"
+              className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-bold text-[#121212] mb-16 leading-[1.4]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -161,7 +161,7 @@ export default function PrivacyPolicyPage() {
               {dataGroups.map((row, ri) => (
                 <motion.div
                   key={ri}
-                  className="grid md:grid-cols-2 gap-x-16 gap-y-10 py-12 border-b border-[#1A1A2E]/[0.06] last:border-b-0"
+                  className="grid md:grid-cols-2 gap-x-16 gap-y-10 py-12 border-b border-[#121212]/[0.06] last:border-b-0"
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -175,21 +175,21 @@ export default function PrivacyPolicyPage() {
             </div>
 
             {/* Ads opt-out */}
-            <div className="border-t border-[#1A1A2E]/[0.08] mt-16 pt-16">
+            <div className="border-t border-[#121212]/[0.08] mt-16 pt-16">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <h2 className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-bold text-[#1A1A2E] mb-6 leading-[1.3]">
+                <h2 className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-bold text-[#121212] mb-6 leading-[1.3]">
                   Informazioni su come disattivare gli annunci pubblicitari basati sugli interessi
                 </h2>
-                <p className="text-[15px] text-[#1A1A2E]/[0.5] leading-[1.85] max-w-3xl">
+                <p className="text-[15px] text-[#121212]/[0.5] leading-[1.85] max-w-3xl">
                   Oltre a qualsiasi funzione di opt-out fornita da uno qualsiasi dei servizi elencati in questo documento, gli Utenti possono leggere di più su come disattivare gli annunci pubblicitari basati sugli interessi nell'apposita sezione della Cookie Policy.
                 </p>
               </motion.div>
             </div>
 
             {/* Contact info */}
-            <div className="border-t border-[#1A1A2E]/[0.08] mt-16 pt-16">
+            <div className="border-t border-[#121212]/[0.08] mt-16 pt-16">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <h2 className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-bold text-[#1A1A2E] mb-8 leading-[1.3]">
+                <h2 className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-bold text-[#121212] mb-8 leading-[1.3]">
                   Informazioni di contatto
                 </h2>
                 <div className="flex items-start gap-4">
@@ -197,10 +197,10 @@ export default function PrivacyPolicyPage() {
                     <User className="h-4 w-4 text-[#4B4DF7]/50" />
                   </div>
                   <div>
-                    <p className="text-[15px] font-semibold text-[#1A1A2E]/75 mb-2">Titolare del Trattamento dei Dati</p>
-                    <p className="text-[14px] text-[#1A1A2E]/[0.5] leading-[1.75]">Algojob S.r.l. via Molino delle Armi 11, Milano (MI) 20123</p>
-                    <p className="text-[14px] text-[#1A1A2E]/[0.5] leading-[1.75] mt-4">
-                      <span className="font-semibold text-[#1A1A2E]/65">Indirizzo email del Titolare:</span>{' '}
+                    <p className="text-[15px] font-semibold text-[#121212]/75 mb-2">Titolare del Trattamento dei Dati</p>
+                    <p className="text-[14px] text-[#121212]/[0.5] leading-[1.75]">Algojob S.r.l. via Molino delle Armi 11, Milano (MI) 20123</p>
+                    <p className="text-[14px] text-[#121212]/[0.5] leading-[1.75] mt-4">
+                      <span className="font-semibold text-[#121212]/65">Indirizzo email del Titolare:</span>{' '}
                       <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7]/70 hover:text-[#4B4DF7] transition-colors duration-300">privacy@skillvue.ai</a>
                     </p>
                   </div>
@@ -209,11 +209,11 @@ export default function PrivacyPolicyPage() {
             </div>
 
             {/* Last modified */}
-            <div className="border-t border-[#1A1A2E]/[0.06] mt-16 pt-10">
-              <p className="text-[13px] text-[#1A1A2E]/[0.3] leading-[1.7]">
+            <div className="border-t border-[#121212]/[0.06] mt-16 pt-10">
+              <p className="text-[13px] text-[#121212]/[0.3] leading-[1.7]">
                 Ultima modifica: 13 febbraio 2025
               </p>
-              <p className="text-[13px] text-[#1A1A2E]/[0.3] leading-[1.7] mt-2">
+              <p className="text-[13px] text-[#121212]/[0.3] leading-[1.7] mt-2">
                 Questo documento è stato creato con il Generatore di Privacy e Cookie Policy di iubenda.
               </p>
             </div>

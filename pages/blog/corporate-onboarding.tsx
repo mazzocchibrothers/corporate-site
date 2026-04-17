@@ -66,16 +66,16 @@ export default function BlogArticle6() {
 
             {/* What Is Onboarding */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? "Che cos'è davvero l'onboarding?" : 'What Is Onboarding, Really?'}
               </h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
                   ? "L'onboarding è un processo di allineamento progressivo tra persona, ruolo e organizzazione. Costruisce chiarezza su tre dimensioni fondamentali: cosa è atteso nei primi mesi, come funzionano realmente i processi e le decisioni, e quali comportamenti generano valore in quel contesto specifico."
                   : 'Onboarding is a process of progressive alignment between person, role, and organization. It builds clarity on three fundamental dimensions: what is expected in the first months, how processes and decisions actually work, and which behaviors generate value in that specific context.'}
               </p>
               <div className="rounded-xl border-l-4 border-[#4B4DF7] bg-[#4B4DF7]/[0.03] p-6 mb-6">
-                <p className="text-[16px] text-[#1A1A2E]/[0.7] leading-[1.8] italic">
+                <p className="text-[16px] text-[#121212]/[0.7] leading-[1.8] italic">
                   {lang === 'it'
                     ? "Non confondere l'onboarding con il welcome. Il welcome riguarda l'esperienza iniziale. L'onboarding riguarda la capacità della persona di diventare autonoma, produttiva e integrata nel sistema organizzativo."
                     : "Don't confuse onboarding with welcome. Welcome concerns the initial experience. Onboarding concerns the person's ability to become autonomous, productive, and integrated into the organizational system."}
@@ -84,10 +84,10 @@ export default function BlogArticle6() {
             </motion.div>
 
             {/* The 5 Phases */}
-            <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-4 mt-12 tracking-[-0.02em]">
+            <h2 className="text-[26px] font-bold text-[#121212] mb-4 mt-12 tracking-[-0.02em]">
               {lang === 'it' ? "Le 5 fasi dell'onboarding" : 'The 5 Phases of Onboarding'}
             </h2>
-            <p className="text-[17px] text-[#1A1A2E]/[0.5] leading-[1.9] mb-8">
+            <p className="text-[17px] text-[#121212]/[0.5] leading-[1.9] mb-8">
               {lang === 'it'
                 ? 'Ogni fase risponde a una domanda specifica. Insieme formano un processo strutturato e misurabile.'
                 : 'Each phase answers a specific question. Together they form a structured, measurable process.'}
@@ -99,7 +99,7 @@ export default function BlogArticle6() {
                 return (
                   <motion.details
                     key={p.num}
-                    className="group border-b border-[#1A1A2E]/[0.06] last:border-b-0"
+                    className="group border-b border-[#121212]/[0.06] last:border-b-0"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -108,8 +108,8 @@ export default function BlogArticle6() {
                     <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                       <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">{p.num}</span>
                       <div className="flex-1">
-                        <span className="text-[17px] font-semibold text-[#1A1A2E]/80 block">{p.title}</span>
-                        <span className="text-[12px] text-[#1A1A2E]/30">{p.timing}</span>
+                        <span className="text-[17px] font-semibold text-[#121212]/80 block">{p.title}</span>
+                        <span className="text-[12px] text-[#121212]/30">{p.timing}</span>
                       </div>
                       <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                     </summary>
@@ -118,7 +118,7 @@ export default function BlogArticle6() {
                         {p.points.map((point, j) => (
                           <div key={j} className="flex items-start gap-2.5">
                             <CheckCircle className="h-3.5 w-3.5 text-[#4B4DF7]/40 mt-1 shrink-0" />
-                            <p className="text-[14px] text-[#1A1A2E]/[0.55] leading-[1.7]">{point}</p>
+                            <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{point}</p>
                           </div>
                         ))}
                       </div>
@@ -129,21 +129,21 @@ export default function BlogArticle6() {
             </div>
 
             {/* Onboarding as Field Assessment */}
-            <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 mt-12 tracking-[-0.02em]">
+            <h2 className="text-[26px] font-bold text-[#121212] mb-5 mt-12 tracking-[-0.02em]">
               {lang === 'it' ? "L'onboarding come assessment sul campo" : 'Onboarding as a Field Assessment'}
             </h2>
-            <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+            <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
               {lang === 'it'
-                ? <>Durante l'onboarding è possibile distinguere tre situazioni molto diverse: un <strong className="text-[#1A1A2E]/80">gap di competenza</strong> (richiede formazione mirata), un <strong className="text-[#1A1A2E]/80">disallineamento di ruolo</strong> (le competenze presenti non corrispondono alle reali esigenze del contesto), o un <strong className="text-[#1A1A2E]/80">problema di integrazione</strong> (le competenze tecniche ci sono, ma l'allineamento culturale è debole). Confondere queste situazioni porta a interventi inefficaci.</>
-                : <>During onboarding you can distinguish three very different situations: a <strong className="text-[#1A1A2E]/80">competency gap</strong> (needs targeted training), a <strong className="text-[#1A1A2E]/80">role mismatch</strong> (present skills don't match real context needs), or an <strong className="text-[#1A1A2E]/80">integration problem</strong> (technical skills are there but cultural alignment is weak). Confusing these leads to ineffective interventions.</>}
+                ? <>Durante l'onboarding è possibile distinguere tre situazioni molto diverse: un <strong className="text-[#121212]/80">gap di competenza</strong> (richiede formazione mirata), un <strong className="text-[#121212]/80">disallineamento di ruolo</strong> (le competenze presenti non corrispondono alle reali esigenze del contesto), o un <strong className="text-[#121212]/80">problema di integrazione</strong> (le competenze tecniche ci sono, ma l'allineamento culturale è debole). Confondere queste situazioni porta a interventi inefficaci.</>
+                : <>During onboarding you can distinguish three very different situations: a <strong className="text-[#121212]/80">competency gap</strong> (needs targeted training), a <strong className="text-[#121212]/80">role mismatch</strong> (present skills don't match real context needs), or an <strong className="text-[#121212]/80">integration problem</strong> (technical skills are there but cultural alignment is weak). Confusing these leads to ineffective interventions.</>}
             </p>
 
             <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 mt-8">
               <div className="flex items-center gap-3 mb-4">
                 <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                <h3 className="text-[16px] font-bold text-[#1A1A2E]">Key Takeaway</h3>
+                <h3 className="text-[16px] font-bold text-[#121212]">Key Takeaway</h3>
               </div>
-              <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.8]">
+              <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                 {lang === 'it'
                   ? "Integrare uno skill assessment all'inizio dell'onboarding permette di validare le competenze chiave rispetto al ruolo reale, identificare i gap prima che impattino la performance e costruire un piano di sviluppo personalizzato basato su evidenze, non percezioni. Skillvue supporta questo attraverso assessment psicometrici, domande situazionali e metodologia BEI."
                   : "Integrating a skill assessment at the start of onboarding lets you validate key competencies against the actual role, identify gaps before they impact performance, and build a personalized development plan based on evidence, not perceptions. Skillvue supports this through psychometric assessments, situational questions, and BEI methodology."}
@@ -162,8 +162,8 @@ export default function BlogArticle6() {
               </span>
               <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
                 {lang === 'it'
-                  ? <>Prendi decisioni di onboarding basate su <span className="italic gradient-text">competenze reali.</span></>
-                  : <>Make onboarding decisions based on real <span className="italic gradient-text">competencies.</span></>}
+                  ? <>Prendi decisioni di onboarding basate su <span className="gradient-text">competenze reali.</span></>
+                  : <>Make onboarding decisions based on real <span className="gradient-text">competencies.</span></>}
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {lang === 'it'

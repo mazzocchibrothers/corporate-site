@@ -32,7 +32,7 @@ const stories = [
 ];
 
 export default function CustomerStoriesSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
@@ -48,7 +48,7 @@ export default function CustomerStoriesSection() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-4">
-            {t('Proof, not')} <span className="italic font-bold gradient-text">{t('promises.')}</span>
+            {t('Proof, not')} <span className="font-bold gradient-text">{t('promises.')}</span>
           </h2>
           <p className="text-[18px] text-white/[0.65] leading-[1.75] max-w-2xl">
             {t('Leading Global enterprises make talent decisions with confidence.')}
@@ -95,14 +95,14 @@ export default function CustomerStoriesSection() {
         >
           <div className="flex items-center gap-6">
             <button
-              onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
+              onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
               className="group inline-flex items-center justify-between px-7 py-3.5 text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
             >
               <span>{t('Book a Meeting')}</span>
               <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
             </button>
             <button
-              onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
+              onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
               className="group inline-flex items-center gap-2.5 text-[13px] font-semibold text-white/[0.45] hover:text-white/80 transition-colors duration-300 tracking-wide"
             >
               {t('Join 50+ Global enterprises')}
@@ -119,7 +119,7 @@ export default function CustomerStoriesSection() {
           transition={{ duration: 0.6, delay: 0.7 }}
         >
           <h3 className="text-[20px] font-bold text-white/90 mb-4">
-            {t('Built')} <span className="italic font-bold gradient-text">{t('enterprise-ready')}</span>
+            {t('Built')} <span className="font-bold gradient-text">{t('enterprise-ready')}</span>
           </h3>
           <p className="text-[15px] text-white/[0.65] leading-[1.75] mb-6 max-w-3xl">
             {t('100+ native integrations (Oracle, SAP, Workday, Greenhouse + more). Fully customisable to your processes, on your terms.')}

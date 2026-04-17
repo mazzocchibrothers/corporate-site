@@ -43,7 +43,7 @@ export default function WhitepapersPage() {
       className={`px-4 py-2 rounded-full text-[13px] font-medium transition-all duration-300 border ${
         active
           ? 'bg-[#4B4DF7] text-white border-[#4B4DF7]'
-          : 'text-[#1A1A2E]/60 border-[#1A1A2E]/10 hover:border-[#4B4DF7]/30 hover:text-[#4B4DF7]'
+          : 'text-[#121212]/60 border-[#121212]/10 hover:border-[#4B4DF7]/30 hover:text-[#4B4DF7]'
       }`}
     >
       {label}
@@ -61,7 +61,7 @@ export default function WhitepapersPage() {
               <span className="text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.25em] uppercase mb-8 block">{t('Resources')}</span>
               <h1 className="font-bold text-white/95 mb-8" style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
                 {t('White Papers')}<br />
-                {t('&')} <span className="italic gradient-text">{t('Reports')}</span>
+                {t('&')} <span className="gradient-text">{t('Reports')}</span>
               </h1>
               <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>
                 {t('Research-backed insights to help you rethink how you hire, develop, and manage talent. Browse our library and download the resources that matter to you.')}
@@ -154,7 +154,7 @@ export default function WhitepapersPage() {
                 {t('Book a meeting with our team and discover how Skillvue turns talent decisions into a competitive advantage.')}
               </p>
               <button
-                onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
+                onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center justify-between px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
               >
                 <span>{t('Book a Meeting')}</span>

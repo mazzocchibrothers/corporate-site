@@ -36,7 +36,7 @@ export default function CustomersHero() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           {t('The decisions that define your organization. Finally backed by')}{' '}
-          <span className="italic font-bold gradient-text">{t('proof.')}</span>
+          <span className="font-bold gradient-text">{t('proof.')}</span>
         </motion.h1>
         <motion.p
           className="text-[18px] text-white/[0.65] leading-[1.75] max-w-2xl mb-16"

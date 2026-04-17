@@ -18,9 +18,9 @@ export default function PRProblem() {
     <section id="pr-problem" data-testid="pr-problem" className="section-breathe relative py-20 lg:py-24" ref={ref}>
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#121212]">
             {t('The blind spots in your')}{' '}
-            <span className="italic font-bold gradient-text-on-light">{t('project staffing')}</span>
+            <span className="font-bold gradient-text-on-light">{t('project staffing')}</span>
           </h2>
         </motion.div>
 
@@ -35,8 +35,8 @@ export default function PRProblem() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.12 }}
             >
-              <h3 className="text-[18px] font-bold text-[#1A1A2E] mb-3">{t(p.title)}</h3>
-              <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.75]">{t(p.desc)}</p>
+              <h3 className="text-[18px] font-bold text-[#121212] mb-3">{t(p.title)}</h3>
+              <p className="text-[15px] text-[#121212]/[0.65] leading-[1.75]">{t(p.desc)}</p>
             </motion.div>
           ))}
         </div>

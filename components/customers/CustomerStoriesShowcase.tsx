@@ -39,7 +39,7 @@ export default function CustomerStoriesShowcase() {
               style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
             >
               {t('See how')}<br />{t('they')}{' '}
-              <span className="italic gradient-text">{t('grow.')}</span>
+              <span className="gradient-text">{t('grow.')}</span>
             </h2>
 
             <p className="text-[18px] text-white/[0.5] leading-[1.75] max-w-md mb-12" style={{ fontWeight: 300 }}>
@@ -72,7 +72,7 @@ export default function CustomerStoriesShowcase() {
               style={{
                 aspectRatio: '3/4',
                 maxHeight: '680px',
-                background: '#111128',
+                background: '#0E0E0E',
                 border: '1px solid rgba(255,255,255,0.06)',
               }}
             >

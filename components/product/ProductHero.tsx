@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function ProductHero() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   return (
     <section id="product-hero" data-testid="product-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
@@ -18,7 +18,7 @@ export default function ProductHero() {
         >
           {t('One platform.')}<br />
           {t('Every talent decision.')}<br />
-          <span className="italic font-bold gradient-text">{t('Objective data.')}</span>
+          <span className="font-bold gradient-text">{t('Objective data.')}</span>
         </motion.h1>
 
         {/* Sub-headline + Book a Meeting on same row */}
@@ -36,7 +36,7 @@ export default function ProductHero() {
           </p>
 
           <a
-            href="/book-meeting"
+            href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
             data-testid="product-hero-book-demo"
             className="group inline-flex items-center justify-between w-full lg:w-auto lg:max-w-xl px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500 shrink-0"
           >

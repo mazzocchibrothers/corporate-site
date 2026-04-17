@@ -57,7 +57,7 @@ export default function BookMeetingPage() {
                 style={{ lineHeight: 1.1 }}
               >
                 {t("Let's talk about your")}{' '}
-                <span className="italic font-bold gradient-text">{t('talent strategy.')}</span>
+                <span className="font-bold gradient-text">{t('talent strategy.')}</span>
               </h1>
 
               <p className="text-[18px] text-white/[0.55] leading-[1.75] max-w-md" style={{ fontWeight: 300 }}>

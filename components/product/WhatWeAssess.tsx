@@ -25,11 +25,11 @@ export default function WhatWeAssess() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-6">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-6">
             {t('Five dimensions for')}{' '}
-            <span className="italic font-bold gradient-text-on-light">{t('objective evaluations')}</span>
+            <span className="font-bold gradient-text-on-light">{t('objective evaluations')}</span>
           </h2>
-          <p className="text-[18px] text-[#1A1A2E]/[0.65] leading-[1.75] max-w-2xl">
+          <p className="text-[18px] text-[#121212]/[0.65] leading-[1.75] max-w-2xl">
             {t("Every person evaluated through a structured, science-backed framework. whether they're a candidate or a 20-year veteran.")}
           </p>
         </motion.div>
@@ -39,14 +39,14 @@ export default function WhatWeAssess() {
             <motion.div
               key={dim.title}
               data-testid={`dimension-${dim.title.toLowerCase().replace(/\s+/g, '-')}`}
-              className="bg-[#F5F5FA] p-8 lg:p-8 flex flex-col"
+              className="bg-[#F7F7F7] p-8 lg:p-8 flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
             >
-              <h3 className="text-[17px] font-bold text-[#1A1A2E] mb-1">{t(dim.title)}</h3>
+              <h3 className="text-[17px] font-bold text-[#121212] mb-1">{t(dim.title)}</h3>
               <span className="text-[12px] text-[#4B4DF7]/[0.65] font-medium mb-4">{t(dim.subtitle)}</span>
-              <p className="text-[14px] text-[#1A1A2E]/[0.65] leading-[1.7]">{t(dim.desc)}</p>
+              <p className="text-[14px] text-[#121212]/[0.65] leading-[1.7]">{t(dim.desc)}</p>
             </motion.div>
           ))}
         </div>

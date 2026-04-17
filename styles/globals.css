@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-ExtraLight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-ExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-LightItalic.woff2') format('woff2'); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-MediumItalic.woff2') format('woff2'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-SemiBoldItalic.woff2') format('woff2'); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-BoldItalic.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-ExtraBoldItalic.woff2') format('woff2'); font-weight: 800; font-style: italic; font-display: swap; }
+
 #emergent-badge,
 [id="emergent-badge"],
 a[href*="emergent"] {
@@ -17,19 +32,19 @@ a[href*="emergent"] {
 
 body {
     margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
         sans-serif;
     font-size: 16px;
     line-height: 24px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #0d0d1f;
+    background: #040404;
 }
 
 
 code {
-    font-family: 'Inter', monospace;
+    font-family: 'Mona Sans', monospace;
 }
 
 @layer base {
@@ -118,7 +133,7 @@ html {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: #000000;
+  background: #040404;
   overflow: hidden;
 }
 
@@ -216,7 +231,7 @@ html {
 /* ===== BREATHE SECTIONS (solid light bg, hard edges) ===== */
 .section-breathe {
   position: relative;
-  background: #F5F5FA;
+  background: #F7F7F7;
   transform: translateZ(0);
   margin-top: -1px;
 }
@@ -243,7 +258,7 @@ html {
 .section-label-dark { color: rgba(75, 77, 247, 0.4); }
 .section-label-light { color: rgba(75, 77, 247, 0.45); }
 
-.mono { font-family: 'Inter', sans-serif; }
+.mono { font-family: 'Mona Sans', sans-serif; }
 
 /* ===== GRADIENT TEXTS — hero keyword emphasis (primary→secondary) ===== */
 .gradient-text {
@@ -253,19 +268,25 @@ html {
   margin: -0.12em -0.15em -0.22em -0.08em;
   display: inline-block;
   overflow: visible;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Mona Sans', sans-serif;
+  font-style: normal;
+  font-variation-settings: 'ital' 0;
   letter-spacing: 0.02em;
   font-feature-settings: 'liga' 0, 'clig' 0;
 }
 .gradient-text-warm {
   background: linear-gradient(135deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Mona Sans', sans-serif;
+  font-style: normal;
+  font-variation-settings: 'ital' 0;
 }
 .gradient-text-cool {
   background: linear-gradient(135deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Mona Sans', sans-serif;
+  font-style: normal;
+  font-variation-settings: 'ital' 0;
 }
 
 /* ===== GRADIENT TEXTS — on light (breathe sections) ===== */
@@ -276,7 +297,9 @@ html {
   margin: -0.12em -0.15em -0.22em 0;
   display: inline-block;
   overflow: visible;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Mona Sans', sans-serif;
+  font-style: normal;
+  font-variation-settings: 'ital' 0;
 }
 .gradient-text-warm-on-light {
   background: linear-gradient(135deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%);
@@ -285,7 +308,9 @@ html {
   margin: -0.12em -0.15em -0.22em 0;
   display: inline-block;
   overflow: visible;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Mona Sans', sans-serif;
+  font-style: normal;
+  font-variation-settings: 'ital' 0;
 }
 
 /* Separator on dark */

@@ -39,11 +39,11 @@ export default function LDImpact() {
 
         {/* Header */}
         <motion.div className="text-center mb-16 lg:mb-20" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-5">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">
             {t('Measurable impact on')}{' '}
-            <span className="italic font-bold gradient-text-on-light">{t('L&D outcomes')}</span>
+            <span className="font-bold gradient-text-on-light">{t('L&D outcomes')}</span>
           </h2>
-          <p className="text-[17px] text-[#1A1A2E]/[0.45] leading-[1.75] max-w-2xl mx-auto">
+          <p className="text-[17px] text-[#121212]/[0.45] leading-[1.75] max-w-2xl mx-auto">
             {t('When learning investments are driven by objective skill data, the results speak for themselves.')}
           </p>
         </motion.div>
@@ -55,7 +55,7 @@ export default function LDImpact() {
             return (
               <motion.div
                 key={k.value}
-                className="group rounded-2xl border border-[#1A1A2E]/[0.08] bg-white p-8 lg:p-10 hover:border-[#4B4DF7]/[0.18] hover:shadow-xl hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 flex flex-col"
+                className="group rounded-2xl border border-[#121212]/[0.08] bg-white p-8 lg:p-10 hover:border-[#4B4DF7]/[0.18] hover:shadow-xl hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 flex flex-col"
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
@@ -69,22 +69,22 @@ export default function LDImpact() {
 
                 {/* Big stat */}
                 <span
-                  className="block mb-2 text-[#1A1A2E]"
+                  className="block mb-2 text-[#121212]"
                   style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}
                 >
                   {t(k.value)}
                 </span>
 
                 {/* Label */}
-                <h3 className="text-[17px] font-semibold text-[#1A1A2E]/80 leading-snug mb-1.5">
-                  {t(k.label)} <span className="font-normal text-[#1A1A2E]/40">{t(k.sublabel)}</span>
+                <h3 className="text-[17px] font-semibold text-[#121212]/80 leading-snug mb-1.5">
+                  {t(k.label)} <span className="font-normal text-[#121212]/40">{t(k.sublabel)}</span>
                 </h3>
 
                 {/* Divider */}
                 <div className="w-12 h-px bg-[#4B4DF7]/[0.15] my-5" />
 
                 {/* Detail text */}
-                <p className="text-[14px] text-[#1A1A2E]/[0.45] leading-[1.75] flex-1">{t(k.detail)}</p>
+                <p className="text-[14px] text-[#121212]/[0.45] leading-[1.75] flex-1">{t(k.detail)}</p>
               </motion.div>
             );
           })}

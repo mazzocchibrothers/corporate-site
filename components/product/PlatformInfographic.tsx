@@ -16,10 +16,10 @@ export default function PlatformInfographic() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#1A1A2E] tracking-[-0.02em] mb-4">
+          <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#121212] tracking-[-0.02em] mb-4">
             {t('From signals to decisions. One connected flow.')}
           </h2>
-          <p className="text-[17px] text-[#1A1A2E]/[0.45] leading-[1.75] max-w-2xl mx-auto">
+          <p className="text-[17px] text-[#121212]/[0.45] leading-[1.75] max-w-2xl mx-auto">
             {t('Skillvue gathers signals from candidates, workforce, and market data, processes them through AI-powered skills intelligence, integrates with your core HR systems, and enables every talent decision with objective, defensible data.')}
           </p>
         </motion.div>

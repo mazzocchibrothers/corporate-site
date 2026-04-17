@@ -75,29 +75,29 @@ export default function BlogArticle5() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? 'Che cos\'è davvero il pensiero critico?' : 'What Is Critical Thinking, Really?'}
               </h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
-                  ? <>In filosofia, il pensiero critico nasce come capacità di mettere in discussione assunzioni, argomenti e sistemi di credenze. In pedagogia, è legato allo sviluppo del ragionamento autonomo. <strong className="text-[#1A1A2E]/80">In ambito aziendale, tuttavia, il pensiero critico diventa una competenza operativa.</strong></>
-                  : <>In philosophy, critical thinking originates as the ability to question assumptions, arguments, and belief systems. In pedagogy, it's linked to the development of autonomous reasoning. <strong className="text-[#1A1A2E]/80">In business, however, critical thinking becomes an operational competence.</strong></>}
+                  ? <>In filosofia, il pensiero critico nasce come capacità di mettere in discussione assunzioni, argomenti e sistemi di credenze. In pedagogia, è legato allo sviluppo del ragionamento autonomo. <strong className="text-[#121212]/80">In ambito aziendale, tuttavia, il pensiero critico diventa una competenza operativa.</strong></>
+                  : <>In philosophy, critical thinking originates as the ability to question assumptions, arguments, and belief systems. In pedagogy, it's linked to the development of autonomous reasoning. <strong className="text-[#121212]/80">In business, however, critical thinking becomes an operational competence.</strong></>}
               </p>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
                   ? 'Per pensiero critico intendiamo la capacità di analizzare le informazioni prima di agire, distinguere i fatti dalle opinioni, valutare le implicazioni e prendere decisioni coerenti con il contesto e gli obiettivi.'
                   : 'By critical thinking we mean the ability to analyze information before acting, distinguish facts from opinions, evaluate implications, and make decisions consistent with context and objectives.'}
               </p>
 
               <div className="border-l-[3px] border-[#4B4DF7]/30 pl-6 my-10">
-                <p className="text-[17px] text-[#1A1A2E]/60 leading-[1.8] italic">
+                <p className="text-[17px] text-[#121212]/60 leading-[1.8] italic">
                   {lang === 'it'
                     ? '"Il pensiero critico non è sinonimo di razionalità o spirito analitico. Include anche la capacità di mettere in discussione le proprie assunzioni, valutare le fonti e decidere quando i dati sono sufficienti per agire."'
                     : '"Critical thinking is not synonymous with rationality or analytical spirit. It also includes questioning one\'s own assumptions, evaluating sources, and the ability to decide when data is sufficient to act."'}
                 </p>
               </div>
 
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
                   ? 'Una persona con un pensiero critico solido non si limita a eseguire. Analizza dati e contesto, distingue i fatti dalle interpretazioni, mette in discussione le assunzioni implicite e valuta le conseguenze delle proprie decisioni. Una persona con un pensiero critico debole tende a reagire, a seguire schemi predefiniti o a delegare il ragionamento ad altri.'
                   : 'A person with solid critical thinking doesn\'t just execute. They analyze data and context, distinguish facts from interpretations, question implicit assumptions, and evaluate the consequences of their decisions. A person with weak critical thinking tends to react, follow predefined patterns, or delegate reasoning to others.'}
@@ -110,10 +110,10 @@ export default function BlogArticle5() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? 'Come identificare il pensiero critico nel lavoro quotidiano' : 'How to Identify Critical Thinking in Daily Work'}
               </h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-8">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-8">
                 {lang === 'it'
                   ? 'Il pensiero critico diventa utile solo quando è possibile osservarlo nei comportamenti. Se rimane una definizione astratta, finirà per essere valutato soggettivamente.'
                   : 'Critical thinking becomes useful only when you can observe it in behaviors. If it remains an abstract definition, it will end up being evaluated subjectively.'}
@@ -123,7 +123,7 @@ export default function BlogArticle5() {
                 {indicators.map((item, i) => (
                   <motion.details
                     key={i}
-                    className="group border-b border-[#1A1A2E]/[0.06] last:border-b-0"
+                    className="group border-b border-[#121212]/[0.06] last:border-b-0"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -131,11 +131,11 @@ export default function BlogArticle5() {
                   >
                     <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                       <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">0{i + 1}</span>
-                      <span className="text-[17px] font-semibold text-[#1A1A2E]/80 flex-1">{item.context}</span>
+                      <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{item.context}</span>
                       <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                     </summary>
                     <div className="pl-12 pb-6">
-                      <p className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.8]">{item.behavior}</p>
+                      <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8]">{item.behavior}</p>
                     </div>
                   </motion.details>
                 ))}
@@ -148,37 +148,37 @@ export default function BlogArticle5() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? 'Come valutare il pensiero critico' : 'How to Evaluate Critical Thinking'}
               </h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
                   ? 'I CV non bastano. Un curriculum può dire che una persona ha gestito progetti complessi, ma non come prende decisioni o come reagisce a dati incompleti. Anche le domande generiche in colloquio aiutano poco.'
                   : 'CVs aren\'t enough. A resume can tell you that a person has managed complex projects, but not how they make decisions or how they react to incomplete data. Generic interview questions help little either.'}
               </p>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
-                  ? <>Se vuoi valutare seriamente il pensiero critico, devi spostare l'attenzione su due elementi: <strong className="text-[#1A1A2E]/80">contesto e processo decisionale</strong>. Servono scenari realistici con dati parziali, priorità in conflitto e informazioni contraddittorie.</>
-                  : <>If you want to evaluate critical thinking seriously, you need to shift attention to two elements: <strong className="text-[#1A1A2E]/80">context and decision-making process</strong>. You'll need realistic scenarios with partial data, conflicting priorities, and contradictory information.</>}
+                  ? <>Se vuoi valutare seriamente il pensiero critico, devi spostare l'attenzione su due elementi: <strong className="text-[#121212]/80">contesto e processo decisionale</strong>. Servono scenari realistici con dati parziali, priorità in conflitto e informazioni contraddittorie.</>
+                  : <>If you want to evaluate critical thinking seriously, you need to shift attention to two elements: <strong className="text-[#121212]/80">context and decision-making process</strong>. You'll need realistic scenarios with partial data, conflicting priorities, and contradictory information.</>}
               </p>
 
               <div className="grid md:grid-cols-2 gap-4 my-8">
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.03] p-6">
-                  <h3 className="text-[15px] font-bold text-[#1A1A2E] mb-2">{lang === 'it' ? 'Domande situazionali' : 'Situational Questions'}</h3>
-                  <p className="text-[14px] text-[#1A1A2E]/[0.55] leading-[1.7]">{lang === 'it' ? 'Forzano il ragionamento su un caso concreto, non su un principio astratto. Si osserva la struttura del ragionamento, non solo la risposta finale.' : 'Force reasoning on a concrete case, not an abstract principle. Observe the structure of reasoning, not just the final answer.'}</p>
+                  <h3 className="text-[15px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Domande situazionali' : 'Situational Questions'}</h3>
+                  <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Forzano il ragionamento su un caso concreto, non su un principio astratto. Si osserva la struttura del ragionamento, non solo la risposta finale.' : 'Force reasoning on a concrete case, not an abstract principle. Observe the structure of reasoning, not just the final answer.'}</p>
                 </div>
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.03] p-6">
-                  <h3 className="text-[15px] font-bold text-[#1A1A2E] mb-2">{lang === 'it' ? 'Behavioral Event Interview' : 'Behavioral Event Interview'}</h3>
-                  <p className="text-[14px] text-[#1A1A2E]/[0.55] leading-[1.7]">{lang === 'it' ? 'Invece di chiedere cosa farebbero, si chiede cosa hanno fatto. Si analizza il percorso mentale: quali informazioni sono state considerate, quali alternative sono state valutate.' : 'Instead of asking what they would do, ask what they did. Analyze the mental path: what information was considered, what alternatives were evaluated.'}</p>
+                  <h3 className="text-[15px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Behavioral Event Interview' : 'Behavioral Event Interview'}</h3>
+                  <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Invece di chiedere cosa farebbero, si chiede cosa hanno fatto. Si analizza il percorso mentale: quali informazioni sono state considerate, quali alternative sono state valutate.' : 'Instead of asking what they would do, ask what they did. Analyze the mental path: what information was considered, what alternatives were evaluated.'}</p>
                 </div>
               </div>
 
               <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-10">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                  <h3 className="text-[16px] font-bold text-[#1A1A2E]">{lang === 'it' ? 'Punto chiave' : 'Key Takeaway'}</h3>
+                  <h3 className="text-[16px] font-bold text-[#121212]">{lang === 'it' ? 'Punto chiave' : 'Key Takeaway'}</h3>
                 </div>
-                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.8]">
+                <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
                     ? 'Skillvue ti permette di valutare il pensiero critico attraverso assessment basati su scenari realistici e metodologie psicometriche, osservando come una persona analizza le informazioni, identifica le variabili rilevanti e costruisce una decisione coerente. Il processo conta più della risposta finale.'
                     : 'Skillvue enables you to evaluate critical thinking through assessments based on realistic scenarios and psychometric methodologies, observing how a person analyzes information, identifies relevant variables, and builds a coherent decision. The process matters more than the final answer.'}
@@ -218,8 +218,8 @@ export default function BlogArticle5() {
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}</span>
               <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
                 {lang === 'it'
-                  ? <>Distingui la percezione dalla <span className="italic gradient-text">competenza reale.</span></>
-                  : <>Distinguish perception from real <span className="italic gradient-text">competency.</span></>}
+                  ? <>Distingui la percezione dalla <span className="gradient-text">competenza reale.</span></>
+                  : <>Distinguish perception from real <span className="gradient-text">competency.</span></>}
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {lang === 'it'

@@ -186,7 +186,7 @@ export default function PressPage() {
                 style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
               >
                 {t('Skillvue in')}<br />
-                <span className="italic gradient-text">{t('the News')}</span>
+                <span className="gradient-text">{t('the News')}</span>
               </h1>
               <p className="text-[18px] text-white/[0.45] leading-[1.8] max-w-lg mb-10" style={{ fontWeight: 300 }}>
                 {t("See how the world's leading publications are covering the rise of AI-powered talent intelligence.")}
@@ -215,7 +215,7 @@ export default function PressPage() {
               <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
                 {t('Press Coverage')}
               </span>
-              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#1A1A2E] tracking-[-0.02em]">
+              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#121212] tracking-[-0.02em]">
                 {t('Coverage from leading publications')}
               </h2>
             </motion.div>
@@ -227,7 +227,7 @@ export default function PressPage() {
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col justify-between rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500"
+                  className="group flex flex-col justify-between rounded-2xl border border-[#121212]/[0.06] bg-white p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -243,7 +243,7 @@ export default function PressPage() {
                       />
                     </div>
                     {/* Title */}
-                    <p className="text-[15px] font-medium text-[#1A1A2E]/80 leading-[1.65] group-hover:text-[#1A1A2E] transition-colors duration-300">
+                    <p className="text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
                       {article.title}
                     </p>
                   </div>
@@ -259,7 +259,7 @@ export default function PressPage() {
 
         {/* 2b. Italian Press Coverage — only shown in IT */}
         {lang === 'it' && (
-          <section className="section-breathe py-16 lg:py-20 border-t border-[#1A1A2E]/[0.04]">
+          <section className="section-breathe py-16 lg:py-20 border-t border-[#121212]/[0.04]">
             <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -271,7 +271,7 @@ export default function PressPage() {
                 <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
                   Stampa italiana
                 </span>
-                <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#1A1A2E] tracking-[-0.02em]">
+                <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#121212] tracking-[-0.02em]">
                   Skillvue sui media italiani
                 </h2>
               </motion.div>
@@ -283,7 +283,7 @@ export default function PressPage() {
                     href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col justify-between rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500"
+                    className="group flex flex-col justify-between rounded-2xl border border-[#121212]/[0.06] bg-white p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -295,7 +295,7 @@ export default function PressPage() {
                           {article.publication}
                         </span>
                       </div>
-                      <p className="text-[15px] font-medium text-[#1A1A2E]/80 leading-[1.65] group-hover:text-[#1A1A2E] transition-colors duration-300">
+                      <p className="text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
                         {article.title}
                       </p>
                     </div>
@@ -310,7 +310,7 @@ export default function PressPage() {
         )}
 
         {/* 3. Interviews */}
-        <section className="section-breathe py-16 lg:py-20 border-t border-[#1A1A2E]/[0.04]">
+        <section className="section-breathe py-16 lg:py-20 border-t border-[#121212]/[0.04]">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -322,7 +322,7 @@ export default function PressPage() {
               <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
                 {t('Interviews')}
               </span>
-              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#1A1A2E] tracking-[-0.02em]">
+              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#121212] tracking-[-0.02em]">
                 {t('In conversation')}
               </h2>
             </motion.div>
@@ -349,7 +349,7 @@ export default function PressPage() {
                         style={{ height: `${item.logoH}px`, maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' }}
                       />
                     </div>
-                    <p className="text-[15px] font-medium text-[#1A1A2E]/80 leading-[1.65] group-hover:text-[#1A1A2E] transition-colors duration-300">
+                    <p className="text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
                       {item.title}
                     </p>
                   </div>

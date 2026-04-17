@@ -4,7 +4,7 @@ import { ArrowRight, ShieldIcon, Languages, Globe } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function CTASection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -20,7 +20,7 @@ export default function CTASection() {
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.03em] text-white/90 max-w-4xl">
             {t('Ready to make talent decisions')}{' '}
-            <span className="italic font-bold gradient-text">{t('you can defend?')}</span>
+            <span className="font-bold gradient-text">{t('you can defend?')}</span>
           </h2>
         </motion.div>
 
@@ -45,7 +45,7 @@ export default function CTASection() {
                 {t('See Skillvue live with your specific use case')}
               </p>
               <a
-                href="/book-meeting"
+                href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
                 data-testid="cta-book-demo"
                 className="group/btn inline-flex items-center justify-between w-full max-w-sm px-8 py-5 text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
               >

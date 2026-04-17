@@ -52,7 +52,7 @@ export default function AssessmentFormats() {
         >
           <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.03em] text-white/90">
             {t('Assessment designed to surface')}{' '}
-            <span className="italic font-bold gradient-text">{t('verified capabilities')}</span>
+            <span className="font-bold gradient-text">{t('verified capabilities')}</span>
           </h2>
         </motion.div>
 

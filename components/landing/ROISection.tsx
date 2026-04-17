@@ -25,7 +25,7 @@ const stats = [
 ];
 
 export default function ROISection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -46,14 +46,14 @@ export default function ROISection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.6rem,3.5vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">
+          <h2 className="text-[clamp(1.6rem,3.5vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em] text-[#121212] max-w-4xl">
             {t('People are your biggest cost.')}{' '}
-            <span className="italic font-bold gradient-text-warm-on-light">
+            <span className="font-bold gradient-text-warm-on-light">
               {t('They can also be your biggest return.')}
             </span>
           </h2>
           <a
-            href="/book-meeting"
+            href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
             data-testid="roi-cta"
             className="group inline-flex items-center gap-3 px-7 py-3.5 text-[13px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:bg-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/30 transition-all duration-500 shrink-0 mt-2"
           >
@@ -68,14 +68,14 @@ export default function ROISection() {
             <motion.div
               key={stat.value}
               data-testid={`roi-stat-${stat.value}`}
-              className="group bg-[#F5F5FA] p-10 lg:p-12 flex flex-col"
+              className="group bg-[#F7F7F7] p-10 lg:p-12 flex flex-col"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 + i * 0.12, ease: 'easeOut' }}
             >
               {/* Stat number. Inter 800 */}
               <span
-                className="block mb-5 text-[#1A1A2E]"
+                className="block mb-5 text-[#121212]"
                 style={{
                   fontSize: 'clamp(2.8rem, 5vw, 4.2rem)',
                   fontWeight: 800,
@@ -88,13 +88,13 @@ export default function ROISection() {
 
               {/* Label + Sublabel on same line */}
               <h3
-                className="text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-4"
+                className="text-[18px] font-semibold text-[#121212]/80 leading-snug mb-4"
               >
-                {t(stat.label)} <span className="font-normal text-[#1A1A2E]/50">{t(stat.sublabel)}</span>
+                {t(stat.label)} <span className="font-normal text-[#121212]/50">{t(stat.sublabel)}</span>
               </h3>
 
               {/* Footnote */}
-              <p className="text-[15px] text-[#1A1A2E]/50 leading-relaxed">
+              <p className="text-[15px] text-[#121212]/50 leading-relaxed">
                 {t(stat.footnote)}
               </p>
             </motion.div>

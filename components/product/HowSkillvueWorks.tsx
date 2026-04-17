@@ -29,7 +29,7 @@ export default function HowSkillvueWorks() {
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-4xl mb-6">
             {t('From your context to actionable intelligence')}{' '}
-            <span className="italic font-bold gradient-text">{t('in six steps')}</span>
+            <span className="font-bold gradient-text">{t('in six steps')}</span>
           </h2>
           <p className="text-[18px] text-white/[0.65] leading-[1.75] max-w-2xl">
             {t("Skillvue doesn't ask you to change how you work. We start by learning your organization and deliver insights where your teams already operate.")}

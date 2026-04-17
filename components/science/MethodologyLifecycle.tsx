@@ -34,7 +34,7 @@ export default function MethodologyLifecycle() {
         <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">
             {t('A rigorous, end-to-end assessment')}{' '}
-            <span className="italic font-bold gradient-text">{t('lifecycle')}</span>
+            <span className="font-bold gradient-text">{t('lifecycle')}</span>
           </h2>
         </motion.div>
 

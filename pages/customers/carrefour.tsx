@@ -55,9 +55,9 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Carrefour Italia (oggi <strong className="text-[#1A1A2E]/80 font-semibold">Princes Retail S.p.A.</strong>) gestisce circa <strong className="text-[#1A1A2E]/80 font-semibold">1.200 punti vendita</strong> su 4 formati — Ipermercati, Market, Express, Cash &amp; Carry — con <strong className="text-[#1A1A2E]/80 font-semibold">13.000 dipendenti diretti</strong> e una rete franchising di 8.000 persone.
+        Carrefour Italia (oggi <strong className="text-[#121212]/80 font-semibold">Princes Retail S.p.A.</strong>) gestisce circa <strong className="text-[#121212]/80 font-semibold">1.200 punti vendita</strong> su 4 formati — Ipermercati, Market, Express, Cash &amp; Carry — con <strong className="text-[#121212]/80 font-semibold">13.000 dipendenti diretti</strong> e una rete franchising di 8.000 persone.
         <br /><br />
-        In un settore dove il costo del lavoro pesa per il <strong className="text-[#1A1A2E]/80 font-semibold">9.8% del fatturato</strong> (3.4 volte l'utile operativo), ogni decisione sulle persone diventa necessariamente anche una decisione sui margini. In questo scenario, la capacità di mettere la persona giusta nel ruolo giusto — a scala, con dati — non era un tema HR: era un prerequisito per proteggere la profittabilità. Carrefour riceveva fino a <strong className="text-[#1A1A2E]/80 font-semibold">30.000 candidature l'anno</strong>, che dovevano essere gestite da soli <strong className="text-[#1A1A2E]/80 font-semibold">3 recruiter</strong>, senza alcuno strumento in grado di distinguere, su 1.200 punti vendita, chi avrebbe performato rispetto a chi sarebbe uscito entro pochi mesi.
+        In un settore dove il costo del lavoro pesa per il <strong className="text-[#121212]/80 font-semibold">9.8% del fatturato</strong> (3.4 volte l'utile operativo), ogni decisione sulle persone diventa necessariamente anche una decisione sui margini. In questo scenario, la capacità di mettere la persona giusta nel ruolo giusto — a scala, con dati — non era un tema HR: era un prerequisito per proteggere la profittabilità. Carrefour riceveva fino a <strong className="text-[#121212]/80 font-semibold">30.000 candidature l'anno</strong>, che dovevano essere gestite da soli <strong className="text-[#121212]/80 font-semibold">3 recruiter</strong>, senza alcuno strumento in grado di distinguere, su 1.200 punti vendita, chi avrebbe performato rispetto a chi sarebbe uscito entro pochi mesi.
       </>,
     },
     challenge: {
@@ -195,9 +195,9 @@ const content = {
       badge: 'CONTEXT',
       title: 'The Company and The Context',
       paragraph: <>
-        Carrefour Italia (now <strong className="text-[#1A1A2E]/80 font-semibold">Princes Retail S.p.A.</strong>) operates approximately <strong className="text-[#1A1A2E]/80 font-semibold">1,200 stores</strong> across 4 formats (Hypermarkets, Market, Express, Cash &amp; Carry) with <strong className="text-[#1A1A2E]/80 font-semibold">13,000 direct employees</strong> and a franchise network of 8,000 people.
+        Carrefour Italia (now <strong className="text-[#121212]/80 font-semibold">Princes Retail S.p.A.</strong>) operates approximately <strong className="text-[#121212]/80 font-semibold">1,200 stores</strong> across 4 formats (Hypermarkets, Market, Express, Cash &amp; Carry) with <strong className="text-[#121212]/80 font-semibold">13,000 direct employees</strong> and a franchise network of 8,000 people.
         <br /><br />
-        In an industry where labour cost accounts for <strong className="text-[#1A1A2E]/80 font-semibold">9.8% of revenues</strong> (3.4 times the costs of operating profits), every people decision is inevitably also a decision that impacts margins. In this context, the ability to put the right person in the right role at scale, with data, was not just an HR issue: it was a prerequisite for protecting profitability. Carrefour received up to <strong className="text-[#1A1A2E]/80 font-semibold">30,000 applications per year</strong>, managed by just <strong className="text-[#1A1A2E]/80 font-semibold">3 recruiters</strong>, with no tool capable of distinguishing, across 1,200 stores, who would perform from who would leave within months.
+        In an industry where labour cost accounts for <strong className="text-[#121212]/80 font-semibold">9.8% of revenues</strong> (3.4 times the costs of operating profits), every people decision is inevitably also a decision that impacts margins. In this context, the ability to put the right person in the right role at scale, with data, was not just an HR issue: it was a prerequisite for protecting profitability. Carrefour received up to <strong className="text-[#121212]/80 font-semibold">30,000 applications per year</strong>, managed by just <strong className="text-[#121212]/80 font-semibold">3 recruiters</strong>, with no tool capable of distinguishing, across 1,200 stores, who would perform from who would leave within months.
       </>,
     },
     challenge: {
@@ -396,47 +396,47 @@ export default function CarrefourStoryPage() {
         </section>
 
         {/* ===== CONTENT SECTIONS ===== */}
-        <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#f8fafc' }}>
+        <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#F7F7F7' }}>
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
 
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6">{c.context.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-6">{c.context.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.challenge.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
@@ -446,15 +446,15 @@ export default function CarrefourStoryPage() {
             {/* OBJECTIVES */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-10">{c.objectives.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {c.objectives.items.map((o, i) => (
                   <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <p className="text-[15px] text-[#1A1A2E]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#1A1A2E]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
+                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
+                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
                     </p>
                   </div>
                 ))}
@@ -464,29 +464,29 @@ export default function CarrefourStoryPage() {
             {/* SOLUTION */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.solution.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.solution.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
 
               <div className="mb-12">
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
                 <div className="flex flex-col sm:flex-row gap-3">
                   {c.solution.skills.map((s) => (
                     <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
                       <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#1A1A2E]/70">{s.label}</span>
+                      <span className="text-[14px] font-semibold text-[#121212]/70">{s.label}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.solution.methodology.map((m, i) => (
                     <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
                       <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4] relative">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65] relative">{m.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4] relative">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65] relative">{m.text}</p>
                     </div>
                   ))}
                 </div>
@@ -496,10 +496,10 @@ export default function CarrefourStoryPage() {
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
-              <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
+              <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
                   {/* -35% circular progress */}
                   <div className="text-center flex flex-col items-center">
@@ -553,8 +553,8 @@ export default function CarrefourStoryPage() {
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <q.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{q.title}</h4>
-                    <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{q.text}</p>
+                    <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
+                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
                   </div>
                 ))}
               </div>

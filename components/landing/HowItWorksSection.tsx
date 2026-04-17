@@ -59,9 +59,9 @@ export default function HowItWorksSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#1A1A2E]">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#121212]">
             {t('From assessment to action')}{' '}
-            <span className="italic font-bold gradient-text-on-light">{t('in three steps')}</span>
+            <span className="font-bold gradient-text-on-light">{t('in three steps')}</span>
           </h2>
         </motion.div>
 

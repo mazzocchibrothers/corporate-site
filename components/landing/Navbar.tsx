@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { useRouter } from 'next/router';
-import SkillvueLogo from './SkillvueLogo';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 
@@ -111,7 +110,7 @@ export default function Navbar() {
 
   const isLight = onLightSection && scrolled && !menuActive;
 
-  const textColor = isLight ? '#1A1A2E' : '#ffffff';
+  const textColor = isLight ? '#121212' : '#ffffff';
   const textMuted = isLight ? 'rgba(26,26,46,0.7)' : 'rgba(255,255,255,0.7)';
   const btnBorder = isLight ? 'rgba(26,26,46,0.15)' : 'rgba(255,255,255,0.15)';
 
@@ -146,18 +145,12 @@ export default function Navbar() {
         }}
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between h-[80px] relative">
-          <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }} className="flex items-center gap-2.5 shrink-0" data-testid="nav-logo">
-            <SkillvueLogo
-              size={28}
-              className="transition-colors duration-300"
-              style={{ color: menuActive || mobileOpen ? '#ffffff' : textColor }}
+          <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }} className="flex items-center gap-2.5 shrink-0 outline-none" data-testid="nav-logo">
+            <img
+              src="/logos/Skillvue_logo_Gradient White (4).svg"
+              alt="Skillvue"
+              className="h-7 w-auto block border-0"
             />
-            <span
-              className="font-semibold text-[17px] tracking-tight transition-colors duration-300"
-              style={{ color: menuActive || mobileOpen ? '#ffffff' : textColor }}
-            >
-              Skillvue
-            </span>
           </a>
 
           {/* Desktop nav. absolutely centered */}
@@ -252,7 +245,7 @@ export default function Navbar() {
             {mobileOpen ? (
               <X className="h-6 w-6 text-white" />
             ) : (
-              <Menu className="h-6 w-6" style={{ color: isLight ? '#1A1A2E' : '#ffffff' }} />
+              <Menu className="h-6 w-6" style={{ color: isLight ? '#121212' : '#ffffff' }} />
             )}
           </button>
         </div>

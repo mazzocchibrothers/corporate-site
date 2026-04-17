@@ -56,7 +56,7 @@ export default function SolutionSection() {
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-3xl">
             {t('Skillvue brings people processes')}<br />
-            <span className="italic font-bold gradient-text-warm">{t('to life.')}</span>
+            <span className="font-bold gradient-text-warm">{t('to life.')}</span>
           </h2>
           <p className="text-[18px] text-white/[0.65] leading-[1.7] mt-6 max-w-xl">
             {t('One platform for every talent decision. hiring, performance, development, mobility. Objective. Scalable. Defensible.')}

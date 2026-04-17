@@ -21,7 +21,7 @@ export default function PRHowSolves() {
         <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90">
             {t('How Skillvue transforms')}{' '}
-            <span className="italic font-bold gradient-text">{t('project resourcing')}</span>
+            <span className="font-bold gradient-text">{t('project resourcing')}</span>
           </h2>
         </motion.div>
 

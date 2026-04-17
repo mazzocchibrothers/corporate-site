@@ -4,17 +4,19 @@ import Footer from '@/components/Footer';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
-import { ArrowRight, ArrowLeft, CheckCircle, FileText, Download, BookOpen, Users, Brain, Zap, TrendingUp } from 'lucide-react';
+import { ArrowRight, ArrowLeft, FileText, Download, BookOpen, Users, Brain, Zap, TrendingUp } from 'lucide-react';
 import { whitepapers } from '@/data/whitepapers';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function WhitepaperDetailPage() {
   const router = useRouter();
+  const { t, lang } = useLanguage();
   const slug = router.query.slug as string;
   const formRef = useRef(null);
 
   const wp = whitepapers.find(w => w.slug === slug);
-  const c = wp ? wp.en : null;
-  const formId = wp ? wp.hubspotFormEN : null;
+  const c = wp ? (lang === 'it' ? wp.it : wp.en) : null;
+  const formId = wp ? (lang === 'it' ? wp.hubspotFormIT : wp.hubspotFormEN) : null;
   const related = wp ? wp.relatedSlugs
     .map(s => whitepapers.find(w => w.slug === s))
     .filter(Boolean)
@@ -36,11 +38,11 @@ export default function WhitepaperDetailPage() {
   }, [formId]);
 
   if (!wp) {
-    return (<><Navbar /><div className="min-h-screen flex items-center justify-center"><p className="text-white/50 text-[18px]">White Paper not found.</p></div></>);
+    return (<><Navbar /><div className="min-h-screen flex items-center justify-center"><p className="text-white/50 text-[18px]">{t('White Paper not found.')}</p></div></>);
   }
 
-  // Chapter data for Beyond Skills
-  const chapters = slug === 'beyond-skills' ? [
+  // Chapter data — English
+  const chaptersEN = slug === 'beyond-skills' ? [
     { num: '01', title: 'The Myth of "Eternal" Skills', desc: 'Why technical skills expire in 12 to 18 months and what it means for hiring.', icon: Zap },
     { num: '02', title: 'The "M" Factor', desc: 'How intrinsic motivation, driven by Autonomy, Mastery, and Purpose, redefines long-term performance.', icon: Brain },
     { num: '03', title: 'Expert Interview', desc: 'Clinical Psychologist Letizia Spione on how to concretely identify and measure motivation.', icon: Users },
@@ -59,7 +61,30 @@ export default function WhitepaperDetailPage() {
     { num: '04', title: 'The Sales Growth Bonus', desc: '+1% turnover = -0.5% average net sales. The direct, traceable link between retention and commercial performance.', icon: TrendingUp },
   ];
 
-  const stats = slug === 'beyond-skills' ? [
+  // Chapter data — Italian
+  const chaptersIT = slug === 'beyond-skills' ? [
+    { num: '01', title: 'Il Mito delle Competenze "Eterne"', desc: 'Perché le competenze tecniche scadono in 12-18 mesi e cosa significa per la selezione.', icon: Zap },
+    { num: '02', title: 'Il Fattore "M"', desc: 'Come la motivazione intrinseca — guidata da Autonomia, Padronanza e Scopo — ridefinisce le performance a lungo termine.', icon: Brain },
+    { num: '03', title: 'Intervista all\'Esperta', desc: 'La Psicologa Clinica Letizia Spione spiega come identificare e misurare concretamente la motivazione.', icon: Users },
+    { num: '04', title: 'Si Può Analizzare la Motivazione?', desc: 'Dall\'intuizione all\'evidenza: strumenti e metodi affidabili per misurare ciò che i CV non mostrano.', icon: TrendingUp },
+    { num: '05', title: 'Case Study', desc: 'Come una grande compagnia assicurativa italiana ha usato Skillvue per mappare la motivazione dei dipendenti su larga scala.', icon: BookOpen },
+  ] : slug === 'future-leaders' ? [
+    { num: '01', title: 'Perché il Mercato del Lavoro Sta Cambiando?', desc: 'Le forze dietro l\'obsolescenza delle competenze: 5 anni per perdere metà del valore, 12-18 mesi per le competenze tecniche.', icon: Zap },
+    { num: '02', title: 'Il Ruolo dell\'AI nel Ridefinire il Lavoro', desc: 'Come l\'AI sta creando un\'ibridazione tra uomini e macchine, e cosa significa per le competenze che contano.', icon: Brain },
+    { num: '03', title: 'La Sfida Demografica', desc: 'Intervista con Martina Mauri (Politecnico di Milano) sul gap di 3,7 milioni di lavoratori in Italia entro il 2040 e come reagire.', icon: Users },
+    { num: '04', title: 'Oltre le Competenze: Valorizzare il Potenziale', desc: 'Perché valutare la Prossimità alle Competenze, la Proiezione Aspirazionale e l\'Agilità di Apprendimento è il nuovo vantaggio competitivo.', icon: TrendingUp },
+    { num: '05', title: 'La To-Do List HR', desc: 'Best practice per mappare le competenze dinamicamente, scoprire il potenziale nascosto, collegare i dati alle performance e costruire l\'apprendimento continuo.', icon: BookOpen },
+  ] : [
+    { num: '01', title: 'L\'Impatto Economico del Turnover', desc: 'Un\'uscita nel retail equivale a 9,4 giorni di vendite perse. Il 63% della perdita di produttività avviene prima che il dipendente se ne vada.', icon: Zap },
+    { num: '02', title: 'Perché il Turnover È Così Alto', desc: 'Insoddisfazione lavorativa, condizioni difficili, bassa motivazione: i tre fattori chiave che alimentano il turnover nelle reti commerciali.', icon: Brain },
+    { num: '03', title: 'Combattere il Turnover con i Dati', desc: 'Come gli assessment Skillvue trasformano il recruiting, la mobilità interna e lo sviluppo del talento per prevedere e prevenire il turnover.', icon: Users },
+    { num: '04', title: 'Il Bonus sulla Crescita delle Vendite', desc: '+1% di turnover = -0,5% di fatturato netto medio. Il legame diretto e tracciabile tra retention e performance commerciale.', icon: TrendingUp },
+  ];
+
+  const chapters = lang === 'it' ? chaptersIT : chaptersEN;
+
+  // Stats — English
+  const statsEN = slug === 'beyond-skills' ? [
     { value: '12-18', unit: 'months', label: 'Average lifespan of a technical skill before it becomes obsolete' },
     { value: '39%', unit: '', label: 'of current skills will be obsolete by 2030 according to the World Economic Forum' },
     { value: '1B+', unit: '', label: 'people worldwide will need to reskill in the next five years' },
@@ -72,6 +97,23 @@ export default function WhitepaperDetailPage() {
     { value: '9.4', unit: 'days', label: 'of sales lost for every single employee departure in retail' },
     { value: '63%', unit: '', label: 'of productivity losses happen before the employee actually leaves' },
   ];
+
+  // Stats — Italian
+  const statsIT = slug === 'beyond-skills' ? [
+    { value: '12-18', unit: 'mesi', label: 'Durata media di una competenza tecnica prima di diventare obsoleta' },
+    { value: '39%', unit: '', label: 'delle competenze attuali sarà obsoleta entro il 2030 secondo il World Economic Forum' },
+    { value: '1B+', unit: '', label: 'persone nel mondo dovranno riqualificarsi nei prossimi cinque anni' },
+  ] : slug === 'future-leaders' ? [
+    { value: '3,7M', unit: '', label: 'gap di lavoratori previsto in Italia entro il 2040 a causa del calo demografico' },
+    { value: '39%', unit: '', label: 'delle competenze attuali diventeranno obsolete entro il 2030, ridefinendo i requisiti della leadership' },
+    { value: '78%', unit: '', label: 'delle aziende fatica a reclutare, pur aspettandosi una crescita dell\'organico' },
+  ] : [
+    { value: '34%', unit: '', label: 'tasso di turnover complessivo in Italia, che sale al 47% nelle aziende di servizi' },
+    { value: '9,4', unit: 'giorni', label: 'di vendite perse per ogni singola uscita nel retail' },
+    { value: '63%', unit: '', label: 'delle perdite di produttività avvengono prima che il dipendente se ne vada effettivamente' },
+  ];
+
+  const stats = lang === 'it' ? statsIT : statsEN;
 
   return (
     <>
@@ -88,7 +130,7 @@ export default function WhitepaperDetailPage() {
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full pb-20 lg:pb-28 pt-32">
             <button onClick={() => { router.push('/resources/whitepapers'); window.scrollTo(0, 0); }} className="group inline-flex items-center gap-2 text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300 mb-12">
               <ArrowLeft className="h-3.5 w-3.5 group-hover:-translate-x-1 transition-transform duration-300" />
-              Back to White Papers
+              {t('Back to White Papers')}
             </button>
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
               <div className="lg:col-span-8">
@@ -112,8 +154,7 @@ export default function WhitepaperDetailPage() {
                   className="group flex items-center gap-4 px-7 py-5 rounded-2xl border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] hover:bg-[#4B4DF7]/[0.15] transition-all duration-500">
                   <Download className="h-6 w-6 text-[#4B4DF7] shrink-0" />
                   <div>
-                    <span className="text-[15px] font-semibold text-white/90 block">Download Free</span>
-                    <span className="text-[12px] text-white/35">PDF. 10 pages</span>
+                    <span className="text-[15px] font-semibold text-white/90 block">{t('Download Free')}</span>
                   </div>
                   <ArrowRight className="h-4 w-4 text-white/20 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300 ml-auto" />
                 </a>
@@ -142,10 +183,10 @@ export default function WhitepaperDetailPage() {
         <section className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
-              <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#1A1A2E] mb-4 tracking-[-0.02em]">
-                What's <span className="italic gradient-text-on-light">Inside</span>
+              <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#121212] mb-4 tracking-[-0.02em]">
+                {lang === 'it' ? <>Cosa <span className="gradient-text-on-light">Contiene</span></> : <>What's <span className="gradient-text-on-light">Inside</span></>}
               </h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.45] max-w-xl">{c.fullDesc}</p>
+              <p className="text-[16px] text-[#121212]/[0.45] max-w-xl">{c.fullDesc}</p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {chapters.map((ch, i) => {
@@ -159,8 +200,8 @@ export default function WhitepaperDetailPage() {
                       </div>
                       <span className="text-[12px] font-bold text-[#4B4DF7]/40 tracking-[0.15em]">{ch.num}</span>
                     </div>
-                    <h3 className="text-[17px] font-bold text-[#1A1A2E] mb-3 leading-tight">{ch.title}</h3>
-                    <p className="text-[14px] text-[#1A1A2E]/[0.5] leading-[1.7]">{ch.desc}</p>
+                    <h3 className="text-[17px] font-bold text-[#121212] mb-3 leading-tight">{ch.title}</h3>
+                    <p className="text-[14px] text-[#121212]/[0.5] leading-[1.7]">{ch.desc}</p>
                   </motion.div>
                 );
               })}
@@ -175,8 +216,8 @@ export default function WhitepaperDetailPage() {
               <div className="w-16 h-16 rounded-2xl bg-[#4B4DF7]/[0.12] border border-[#4B4DF7]/[0.15] flex items-center justify-center mx-auto mb-6">
                 <FileText className="h-7 w-7 text-[#4B4DF7]" />
               </div>
-              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white/90 mb-3">Get the Full White Paper</h2>
-              <p className="text-[15px] text-white/40">Fill the form below and we'll send it straight to your inbox.</p>
+              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white/90 mb-3">{t('Get the Full White Paper')}</h2>
+              <p className="text-[15px] text-white/40">{t("Fill the form below and we'll send it straight to your inbox.")}</p>
             </motion.div>
             <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10">
               <div id="wp-hubspot-form" ref={formRef} style={{ minHeight: '300px' }} />
@@ -188,10 +229,10 @@ export default function WhitepaperDetailPage() {
         {related.length > 0 && (
           <section className="relative pt-8 pb-2 lg:pt-10 lg:pb-2">
             <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white/90 mb-10">More White Papers</h2>
+              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white/90 mb-10">{t('More White Papers')}</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {related.map((rw, i) => {
-                  const rc = rw.en;
+                  const rc = lang === 'it' ? rw.it : rw.en;
                   return (
                     <motion.div key={rw.slug} className="group flex gap-6 items-center p-5 rounded-2xl border border-white/[0.05] hover:border-white/[0.12] hover:bg-white/[0.03] transition-all duration-500 cursor-pointer"
                       initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
@@ -220,14 +261,14 @@ export default function WhitepaperDetailPage() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">
-                Want to see the science in action?
+                {t('Want to see the science in action?')}
               </h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">
-                Book a meeting with our team and discover how Skillvue turns talent decisions into a competitive advantage.
+                {t('Book a meeting with our team and discover how Skillvue turns talent decisions into a competitive advantage.')}
               </p>
-              <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
+              <button onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center justify-between px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500">
-                <span>Book a Meeting</span>
+                <span>{t('Book a Meeting')}</span>
                 <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
               </button>
             </motion.div>

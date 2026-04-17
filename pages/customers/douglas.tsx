@@ -55,7 +55,7 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Douglas Group, con <strong className="text-[#1A1A2E]/80 font-semibold">1.972 punti vendita in 22 paesi</strong>, un fatturato di <strong className="text-[#1A1A2E]/80 font-semibold">€4,58 miliardi</strong> a livello europeo e un piano di espansione da <strong className="text-[#1A1A2E]/80 font-semibold">200 nuove aperture e 400 ristrutturazioni entro fine 2026</strong>, è il primo beauty retailer omnicanale in Europa. La qualità della consulenza in-store è il principale vantaggio competitivo del retail fisico rispetto all'e-commerce, ma è anche la variabile meno misurata e strutturata del settore. In Italia, Douglas opera con oltre <strong className="text-[#1A1A2E]/80 font-semibold">370 punti vendita</strong> e circa <strong className="text-[#1A1A2E]/80 font-semibold">2.500 persone</strong> nella rete commerciale, in un mercato beauty che traina i consumi interni per <strong className="text-[#1A1A2E]/80 font-semibold">€14,2 miliardi</strong>.<br /><br />Seppure in un contesto di crescita molto solida, dal punto di vista people emergevano delle lacune. L\’HQ italiano non disponeva di <strong className="text-[#1A1A2E]/80 font-semibold">alcun dato oggettivo sulle competenze</strong> distribuite nelle persone in rete vendita: l\’unica fonte erano i feedback dei responsabili di negozio o di area. In un settore dove il turnover del personale di vendita oscilla tra il <strong className="text-[#1A1A2E]/80 font-semibold">25% e il 35%</strong> annuo e può essere direttamente ricollegato alla possibilità di crescita e sviluppo all\’interno dell\’azienda, è diventata chiara la necessità di adottare un approccio più data-driven alla gestione del talento.
+        Douglas Group, con <strong className="text-[#121212]/80 font-semibold">1.972 punti vendita in 22 paesi</strong>, un fatturato di <strong className="text-[#121212]/80 font-semibold">€4,58 miliardi</strong> a livello europeo e un piano di espansione da <strong className="text-[#121212]/80 font-semibold">200 nuove aperture e 400 ristrutturazioni entro fine 2026</strong>, è il primo beauty retailer omnicanale in Europa. La qualità della consulenza in-store è il principale vantaggio competitivo del retail fisico rispetto all'e-commerce, ma è anche la variabile meno misurata e strutturata del settore. In Italia, Douglas opera con oltre <strong className="text-[#121212]/80 font-semibold">370 punti vendita</strong> e circa <strong className="text-[#121212]/80 font-semibold">2.500 persone</strong> nella rete commerciale, in un mercato beauty che traina i consumi interni per <strong className="text-[#121212]/80 font-semibold">€14,2 miliardi</strong>.<br /><br />Seppure in un contesto di crescita molto solida, dal punto di vista people emergevano delle lacune. L\’HQ italiano non disponeva di <strong className="text-[#121212]/80 font-semibold">alcun dato oggettivo sulle competenze</strong> distribuite nelle persone in rete vendita: l\’unica fonte erano i feedback dei responsabili di negozio o di area. In un settore dove il turnover del personale di vendita oscilla tra il <strong className="text-[#121212]/80 font-semibold">25% e il 35%</strong> annuo e può essere direttamente ricollegato alla possibilità di crescita e sviluppo all\’interno dell\’azienda, è diventata chiara la necessità di adottare un approccio più data-driven alla gestione del talento.
       </>,
       summary: "Il progetto ha trasformato la gestione del talento da un modello basato su feedback soggettivi e osservazione in presenza a un sistema scalabile e data-driven, creando per la prima volta una fotografia completa e oggettiva delle competenze dell'intera rete vendita — soft skill e hard skill — e abilitando percorsi di crescita, mobilità interna e formazione customizzata basati su dati reali.",
     },
@@ -180,7 +180,7 @@ const content = {
       badge: 'CONTEXT',
       title: 'The Company and The Context',
       paragraph: <>
-        Douglas Group, with <strong className="text-[#1A1A2E]/80 font-semibold">1,972 stores across 22 countries</strong>, a European revenue of <strong className="text-[#1A1A2E]/80 font-semibold">€4.58 billion</strong>, and an expansion plan of <strong className="text-[#1A1A2E]/80 font-semibold">200 new openings and 400 renovations by end of 2026</strong>, is Europe's leading omnichannel beauty retailer. The quality of in-store advisory is the primary competitive advantage of physical retail over e-commerce — yet it is also the least measured and structured variable in the sector. In Italy, Douglas operates with over <strong className="text-[#1A1A2E]/80 font-semibold">370 stores</strong> and approximately <strong className="text-[#1A1A2E]/80 font-semibold">2,500 people</strong> in the commercial network, in a beauty market worth <strong className="text-[#1A1A2E]/80 font-semibold">€14.2 billion</strong> in domestic consumption.<br /><br />Despite a context of very solid growth, people-side gaps were emerging. The Italian HQ had <strong className="text-[#1A1A2E]/80 font-semibold">no objective data on the skills</strong> of its sales network: the only source was feedback from store or area managers. In a sector where sales staff turnover ranges between <strong className="text-[#1A1A2E]/80 font-semibold">25% and 35%</strong> annually — and can be directly linked to opportunities for growth and development within the company — the need to adopt a more data-driven approach to talent management became clear.
+        Douglas Group, with <strong className="text-[#121212]/80 font-semibold">1,972 stores across 22 countries</strong>, a European revenue of <strong className="text-[#121212]/80 font-semibold">€4.58 billion</strong>, and an expansion plan of <strong className="text-[#121212]/80 font-semibold">200 new openings and 400 renovations by end of 2026</strong>, is Europe's leading omnichannel beauty retailer. The quality of in-store advisory is the primary competitive advantage of physical retail over e-commerce — yet it is also the least measured and structured variable in the sector. In Italy, Douglas operates with over <strong className="text-[#121212]/80 font-semibold">370 stores</strong> and approximately <strong className="text-[#121212]/80 font-semibold">2,500 people</strong> in the commercial network, in a beauty market worth <strong className="text-[#121212]/80 font-semibold">€14.2 billion</strong> in domestic consumption.<br /><br />Despite a context of very solid growth, people-side gaps were emerging. The Italian HQ had <strong className="text-[#121212]/80 font-semibold">no objective data on the skills</strong> of its sales network: the only source was feedback from store or area managers. In a sector where sales staff turnover ranges between <strong className="text-[#121212]/80 font-semibold">25% and 35%</strong> annually — and can be directly linked to opportunities for growth and development within the company — the need to adopt a more data-driven approach to talent management became clear.
       </>,
       summary: "The project transformed talent management from a model based on subjective feedback and in-person observation to a scalable, data-driven system — creating for the first time a complete and objective picture of skills across the entire sales network, both soft and hard skills, and enabling career development, internal mobility and customised training based on real data.",
     },
@@ -366,47 +366,47 @@ export default function DouglasStoryPage() {
         </section>
 
         {/* ===== CONTENT SECTIONS ===== */}
-        <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#f8fafc' }}>
+        <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#F7F7F7' }}>
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
 
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6">{c.context.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-6">{c.context.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.challenge.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
@@ -416,15 +416,15 @@ export default function DouglasStoryPage() {
             {/* OBJECTIVES */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-10">{c.objectives.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {c.objectives.items.map((o, i) => (
                   <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <p className="text-[15px] text-[#1A1A2E]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#1A1A2E]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
+                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
+                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
                     </p>
                   </div>
                 ))}
@@ -434,16 +434,16 @@ export default function DouglasStoryPage() {
             {/* SOLUTION */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.solution.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.solution.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
 
               <div className="mb-12">
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
                 <div className="flex flex-wrap gap-3">
                   {c.solution.skills.map((s) => (
                     <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
                       <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#1A1A2E]/70">{s.label}</span>
+                      <span className="text-[14px] font-semibold text-[#121212]/70">{s.label}</span>
                     </div>
                   ))}
                 </div>
@@ -454,11 +454,11 @@ export default function DouglasStoryPage() {
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
               {/* Key metrics */}
-              <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
+              <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
                   {/* 88% — circular ring */}
                   <div className="text-center flex flex-col items-center">
@@ -506,8 +506,8 @@ export default function DouglasStoryPage() {
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <q.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{q.title}</h4>
-                    <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{q.text}</p>
+                    <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
+                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
                   </div>
                 ))}
               </div>

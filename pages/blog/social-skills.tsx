@@ -70,15 +70,15 @@ export default function BlogArticle8() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Cosa Sono le Social Skills?' : 'What Are Social Skills?'}</h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Cosa Sono le Social Skills?' : 'What Are Social Skills?'}</h2>
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'Le social skill sono capacità osservabili che si manifestano nel modo in cui una persona interagisce con colleghi, stakeholder e manager, soprattutto quando il contesto richiede scelte, negoziazione e adattamento.' : 'Social skills are observable capabilities that manifest in how a person interacts with colleagues, stakeholders, and managers, especially when the context requires choices, negotiation, and adaptation.'}
               </p>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
-                {lang === 'it' ? <>L\'aspetto più critico è che le social skill vengono spesso trattate come un'etichetta. Si leggono frequentemente nei CV frasi come "buone capacità relazionali" o "ottima comunicazione," <strong className="text-[#1A1A2E]/80">senza mai chiarire quali comportamenti osservare</strong> e quali decisioni supportare.</> : <>The most critical aspect is that social skills are often treated as a label. We frequently read in CVs phrases like "good relational abilities" or "excellent communication," <strong className="text-[#1A1A2E]/80">without ever clarifying which behaviors to observe</strong> and which decisions to support.</>}
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+                {lang === 'it' ? <>L\'aspetto più critico è che le social skill vengono spesso trattate come un'etichetta. Si leggono frequentemente nei CV frasi come "buone capacità relazionali" o "ottima comunicazione," <strong className="text-[#121212]/80">senza mai chiarire quali comportamenti osservare</strong> e quali decisioni supportare.</> : <>The most critical aspect is that social skills are often treated as a label. We frequently read in CVs phrases like "good relational abilities" or "excellent communication," <strong className="text-[#121212]/80">without ever clarifying which behaviors to observe</strong> and which decisions to support.</>}
               </p>
               <div className="border-l-[3px] border-[#4B4DF7]/30 pl-6 my-10">
-                <p className="text-[17px] text-[#1A1A2E]/60 leading-[1.8] italic">
+                <p className="text-[17px] text-[#121212]/60 leading-[1.8] italic">
                   {lang === 'it' ? '"Le social skill rappresentano un sottoinsieme delle competenze trasversali che riguardano specificamente la gestione delle relazioni, delle dinamiche interpersonali e delle interazioni professionali."' : '"Social skills represent a subset of transversal competencies that specifically concern the management of relationships, interpersonal dynamics, and professional interactions."'}
                 </p>
               </div>
@@ -89,8 +89,8 @@ export default function BlogArticle8() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">{lang === 'it' ? '10 Social Skills Rilevanti per il Lavoro Oggi' : '10 Social Skills Relevant for Work Today'}</h2>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-8">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">{lang === 'it' ? '10 Social Skills Rilevanti per il Lavoro Oggi' : '10 Social Skills Relevant for Work Today'}</h2>
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-8">
                 {lang === 'it' ? 'Queste dimensioni non vengono misurate come etichette generiche, ma come costrutti validati scientificamente, osservabili nel lavoro quotidiano.' : 'These dimensions are not measured as generic labels but as scientifically validated constructs, observable in daily work.'}
               </p>
               <div className="space-y-0">
@@ -99,7 +99,7 @@ export default function BlogArticle8() {
                   return (
                     <motion.details
                       key={s.title}
-                      className="group border-b border-[#1A1A2E]/[0.06] last:border-b-0"
+                      className="group border-b border-[#121212]/[0.06] last:border-b-0"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
@@ -107,11 +107,11 @@ export default function BlogArticle8() {
                     >
                       <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                         <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">{String(i + 1).padStart(2, '0')}</span>
-                        <span className="text-[17px] font-semibold text-[#1A1A2E]/80 flex-1">{s.title}</span>
+                        <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{s.title}</span>
                         <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                       </summary>
                       <div className="pl-12 pb-6">
-                        <p className="text-[15px] text-[#1A1A2E]/[0.55] leading-[1.8]">{s.desc}</p>
+                        <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8]">{s.desc}</p>
                       </div>
                     </motion.details>
                   );
@@ -124,22 +124,22 @@ export default function BlogArticle8() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#1A1A2E] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Esempi Concreti nel Lavoro Quotidiano' : 'Concrete Examples in Daily Work'}</h2>
-              <h3 className="text-[17px] font-bold text-[#1A1A2E]/80 mb-4">{lang === 'it' ? 'Nelle riunioni' : 'In meetings'}</h3>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Esempi Concreti nel Lavoro Quotidiano' : 'Concrete Examples in Daily Work'}</h2>
+              <h3 className="text-[17px] font-bold text-[#121212]/80 mb-4">{lang === 'it' ? 'Nelle riunioni' : 'In meetings'}</h3>
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'Una social skill ben sviluppata si riconosce quando una persona chiarisce l\'obiettivo della riunione, riporta la conversazione in tema quando si disperde, dà spazio a posizioni diverse senza perdere il focus ed esplicita i disaccordi in modo funzionale senza bloccare la discussione.' : 'A well-developed social skill is recognized when a person clarifies the meeting objective, brings conversation back on point when it disperses, gives space to different positions without losing focus, and explicates disagreements functionally without blocking the discussion.'}
               </p>
-              <h3 className="text-[17px] font-bold text-[#1A1A2E]/80 mb-4">{lang === 'it' ? 'Nei momenti di tensione' : 'In moments of tension'}</h3>
-              <p className="text-[17px] text-[#1A1A2E]/[0.65] leading-[1.9] mb-6">
+              <h3 className="text-[17px] font-bold text-[#121212]/80 mb-4">{lang === 'it' ? 'Nei momenti di tensione' : 'In moments of tension'}</h3>
+              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'Le social skill si notano con maggiore chiarezza quando il contesto smette di essere lineare. Osserva se una persona chiede chiarimenti prima di reagire, rende espliciti i vincoli invece di spostare la responsabilità, affronta il disaccordo senza personalizzarlo e prende posizione anche senza una direzione chiara.' : "Social skills are noticed more clearly when context stops being linear. Observe whether a person asks for clarification before reacting, makes constraints explicit instead of shifting responsibility, addresses disagreement without personalizing it, and takes a position even without clear direction."}
               </p>
 
               <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-10">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                  <h3 className="text-[16px] font-bold text-[#1A1A2E]">Key Takeaway</h3>
+                  <h3 className="text-[16px] font-bold text-[#121212]">Key Takeaway</h3>
                 </div>
-                <p className="text-[15px] text-[#1A1A2E]/[0.65] leading-[1.8]">
+                <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it' ? 'Attraverso Skill Assessment basati su metodologie psicometriche accurate e domande situazionali ispirate al BEI, Skillvue ti consente di osservare come le persone si comportano nelle interazioni complesse: disaccordi con gli stakeholder, ambiguità di ruolo, richieste contrastanti, pressioni relazionali. Non come una persona si descrive, ma come ragiona e decide in situazioni sociali realistiche.' : 'Through Skill Assessments based on accurate psychometric methodologies and BEI-inspired situational questions, Skillvue lets you observe how people act in complex interactions: stakeholder disagreements, role ambiguity, conflicting requests, relational pressures. Not how a person describes themselves, but how they reason and decide in realistic social situations.'}
                 </p>
               </div>
@@ -152,7 +152,7 @@ export default function BlogArticle8() {
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}</span>
               <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
-                {lang === 'it' ? <>Valuta l'efficacia sociale reale, non la <span className="italic gradient-text">simpatia percepita.</span></> : <>Evaluate real social effectiveness, not <span className="italic gradient-text">perceived agreeableness.</span></>}
+                {lang === 'it' ? <>Valuta l'efficacia sociale reale, non la <span className="gradient-text">simpatia percepita.</span></> : <>Evaluate real social effectiveness, not <span className="gradient-text">perceived agreeableness.</span></>}
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {lang === 'it' ? 'Prendi decisioni basate su competenze sociali reali, non su impressioni.' : 'Make decisions based on real social competencies, not impressions.'}

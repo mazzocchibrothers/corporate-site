@@ -56,7 +56,7 @@ export default function AboutPage() {
               >
                 {t('Every talent decision,')}<br />
                 {t('finally backed by')}<br />
-                <span className="italic gradient-text">{t('science.')}</span>
+                <span className="gradient-text">{t('science.')}</span>
               </h1>
               <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-xl" style={{ fontWeight: 300 }}>
                 {t("We're building the intelligence layer that makes hiring, promotion, development, and transformation decisions objective, predictive, and defensible at enterprise scale.")}
@@ -74,15 +74,15 @@ export default function AboutPage() {
                 return (
                   <motion.div
                     key={s.label}
-                    className="rounded-2xl border border-[#1A1A2E]/[0.04] bg-white p-6 hover:border-[#4B4DF7]/[0.12] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.03] transition-all duration-500"
+                    className="rounded-2xl border border-[#121212]/[0.04] bg-white p-6 hover:border-[#4B4DF7]/[0.12] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.03] transition-all duration-500"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
                   >
                     <Icon className="h-5 w-5 text-[#4B4DF7]/50 mb-4" />
-                    <span className="block text-[#1A1A2E] font-bold text-[28px] tracking-[-0.03em] mb-1">{s.value}</span>
-                    <span className="text-[13px] text-[#1A1A2E]/35">{t(s.label)}</span>
+                    <span className="block text-[#121212] font-bold text-[28px] tracking-[-0.03em] mb-1">{s.value}</span>
+                    <span className="text-[13px] text-[#121212]/35">{t(s.label)}</span>
                   </motion.div>
                 );
               })}
@@ -97,23 +97,23 @@ export default function AboutPage() {
               <div className="grid lg:grid-cols-12 gap-16 lg:gap-20">
                 <div className="lg:col-span-5">
                   <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('Our Story')}</span>
-                  <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold text-[#1A1A2E] mb-8 tracking-[-0.02em] leading-[1.1]">
-                    {t('We believe talent decisions deserve the same rigour as')} <span className="italic gradient-text-on-light">{t('business decisions.')}</span>
+                  <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold text-[#121212] mb-8 tracking-[-0.02em] leading-[1.1]">
+                    {t('We believe talent decisions deserve the same rigour as')} <span className="gradient-text-on-light">{t('business decisions.')}</span>
                   </h2>
                   <div className="border-l-2 border-[#4B4DF7]/30 pl-6 my-10">
-                    <p className="text-[17px] text-[#1A1A2E]/60 leading-[1.8] italic">
+                    <p className="text-[17px] text-[#121212]/60 leading-[1.8] italic">
                       "{t('Organizations spend billions on talent yet still rely on gut feeling for their most important people decisions. We are changing that.')}"
                     </p>
                   </div>
                 </div>
                 <div className="lg:col-span-7">
-                  <p className="text-[17px] text-[#1A1A2E]/[0.55] leading-[1.85] mb-8">
+                  <p className="text-[17px] text-[#121212]/[0.55] leading-[1.85] mb-8">
                     {t('Skillvue is an AI-powered talent intelligence platform that adds a dynamic, objective dimension to HR data, transforming static information into predictive insights that drive better decisions across hiring, performance management, internal mobility, and learning & development.')}
                   </p>
-                  <p className="text-[17px] text-[#1A1A2E]/[0.55] leading-[1.85] mb-8">
+                  <p className="text-[17px] text-[#121212]/[0.55] leading-[1.85] mb-8">
                     {t("Founded in 2021, we've raised over €9 million from national and international investors to build a product that combines psychometric rigour with modern AI. Our team brings together experts in psychometrics, AI, product design, and enterprise go-to-market, operating out of Milan and London.")}
                   </p>
-                  <p className="text-[17px] text-[#1A1A2E]/[0.55] leading-[1.85]">
+                  <p className="text-[17px] text-[#121212]/[0.55] leading-[1.85]">
                     {t('Leading European enterprises across retail, financial services, pharma, and professional services already trust Skillvue to make their most critical talent decisions objective, scalable, and defensible.')}
                   </p>
                 </div>
@@ -186,7 +186,7 @@ export default function AboutPage() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-16 lg:py-20 w-full">
             <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} animate={valuesInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
               <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-5 block">{t('Our Values')}</span>
-              <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#1A1A2E] tracking-[-0.02em]">{t('What Drives Us')}</h2>
+              <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#121212] tracking-[-0.02em]">{t('What Drives Us')}</h2>
             </motion.div>
             <div className="grid lg:grid-cols-3 gap-6">
               {values.map((v, i) => {
@@ -202,8 +202,8 @@ export default function AboutPage() {
                     <div className="w-20 h-20 rounded-2xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.1] flex items-center justify-center mx-auto mb-10 group-hover:bg-[#4B4DF7]/[0.12] group-hover:border-[#4B4DF7]/[0.2] transition-all duration-500">
                       <Icon className="h-8 w-8 text-[#4B4DF7]/60 group-hover:text-[#4B4DF7] transition-colors duration-500" />
                     </div>
-                    <h3 className="text-[22px] font-bold text-[#1A1A2E] mb-5 leading-tight">{t(v.title)}</h3>
-                    <p className="text-[16px] text-[#1A1A2E]/[0.50] leading-[1.85]">{t(v.desc)}</p>
+                    <h3 className="text-[22px] font-bold text-[#121212] mb-5 leading-tight">{t(v.title)}</h3>
+                    <p className="text-[16px] text-[#121212]/[0.50] leading-[1.85]">{t(v.desc)}</p>
                   </motion.div>
                 );
               })}

@@ -54,11 +54,11 @@ const content = {
       badge: 'CONTESTO',
       title: "Un aeroporto che raddoppia ha bisogno di una people strategy che regga su scala",
       paragraph: <>
-        Aeroporti di Roma (ADR), parte del Gruppo Mundys, gestisce e sviluppa gli aeroporti di Fiumicino e Ciampino con oltre <strong className="text-[#1A1A2E]/80 font-semibold">4.500 dipendenti</strong> e con l'obiettivo di costruire "l'aeroporto del futuro" sulla base di un nuovo modello inclusivo.
+        Aeroporti di Roma (ADR), parte del Gruppo Mundys, gestisce e sviluppa gli aeroporti di Fiumicino e Ciampino con oltre <strong className="text-[#121212]/80 font-semibold">4.500 dipendenti</strong> e con l'obiettivo di costruire "l'aeroporto del futuro" sulla base di un nuovo modello inclusivo.
         <br /><br />
-        Al tempo stesso ADR è oggi al centro di un piano di trasformazione infrastrutturale senza precedenti. Il <strong className="text-[#1A1A2E]/80 font-semibold">Masterplan Fiumicino 2046</strong> prevede €9 miliardi di investimenti per portare la capacità dello scalo da 50 a 100 milioni di passeggeri l'anno, richiedendo una crescita organizzativa in grado di sostenere questa espansione.
+        Al tempo stesso ADR è oggi al centro di un piano di trasformazione infrastrutturale senza precedenti. Il <strong className="text-[#121212]/80 font-semibold">Masterplan Fiumicino 2046</strong> prevede €9 miliardi di investimenti per portare la capacità dello scalo da 50 a 100 milioni di passeggeri l'anno, richiedendo una crescita organizzativa in grado di sostenere questa espansione.
         <br /><br />
-        In questo scenario, la capacità dell'organizzazione di crescere alla velocità del business diventa una priorità strategica. Per ADR, sviluppare e mobilizzare il capitale umano interno significa poter pianificare con precisione la copertura dei ruoli critici, <strong className="text-[#1A1A2E]/80 font-semibold">accelerare la crescita verticale e orizzontale delle persone, e costruire una pipeline di talento visibile e misurabile.</strong>
+        In questo scenario, la capacità dell'organizzazione di crescere alla velocità del business diventa una priorità strategica. Per ADR, sviluppare e mobilizzare il capitale umano interno significa poter pianificare con precisione la copertura dei ruoli critici, <strong className="text-[#121212]/80 font-semibold">accelerare la crescita verticale e orizzontale delle persone, e costruire una pipeline di talento visibile e misurabile.</strong>
       </>,
       summary: "Il progetto ha trasformato lo sviluppo del talento da processo riservato a pochi a leva strategica per la crescita: per la prima volta, ADR ha una mappa oggettiva del potenziale su tutta la popolazione, operativi inclusi.",
     },
@@ -198,11 +198,11 @@ const content = {
       badge: 'CONTEXT',
       title: "An airport that doubles in size needs a people strategy that holds at scale",
       paragraph: <>
-        Aeroporti di Roma (ADR), part of Gruppo Mundys, manages and develops Fiumicino and Ciampino airports with over <strong className="text-[#1A1A2E]/80 font-semibold">4,500 employees</strong> and the ambition to build "the airport of the future" on the basis of a new inclusive model.
+        Aeroporti di Roma (ADR), part of Gruppo Mundys, manages and develops Fiumicino and Ciampino airports with over <strong className="text-[#121212]/80 font-semibold">4,500 employees</strong> and the ambition to build "the airport of the future" on the basis of a new inclusive model.
         <br /><br />
-        At the same time, ADR is at the center of an unprecedented infrastructure transformation. The <strong className="text-[#1A1A2E]/80 font-semibold">Masterplan Fiumicino 2046</strong> plans €9 billion in investments to grow the airport's capacity from 50 to 100 million passengers per year, requiring organizational growth capable of sustaining this expansion.
+        At the same time, ADR is at the center of an unprecedented infrastructure transformation. The <strong className="text-[#121212]/80 font-semibold">Masterplan Fiumicino 2046</strong> plans €9 billion in investments to grow the airport's capacity from 50 to 100 million passengers per year, requiring organizational growth capable of sustaining this expansion.
         <br /><br />
-        In this context, the organization's ability to grow at the speed of the business becomes a strategic priority. For ADR, developing and mobilizing internal human capital means being able to precisely plan coverage of critical roles, <strong className="text-[#1A1A2E]/80 font-semibold">accelerate vertical and horizontal growth, and build a visible, measurable talent pipeline.</strong>
+        In this context, the organization's ability to grow at the speed of the business becomes a strategic priority. For ADR, developing and mobilizing internal human capital means being able to precisely plan coverage of critical roles, <strong className="text-[#121212]/80 font-semibold">accelerate vertical and horizontal growth, and build a visible, measurable talent pipeline.</strong>
       </>,
       summary: "The project transformed talent development from a process reserved for the few into a strategic lever for growth: for the first time, ADR has an objective map of potential across the entire workforce, operational staff included.",
     },
@@ -405,47 +405,47 @@ export default function ADRStoryPage() {
         </section>
 
         {/* ===== CONTENT SECTIONS ===== */}
-        <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#f8fafc' }}>
+        <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#F7F7F7' }}>
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
 
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-6">{c.context.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-6">{c.context.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.challenge.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
                 </div>
@@ -455,15 +455,15 @@ export default function ADRStoryPage() {
             {/* OBJECTIVES */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-10">{c.objectives.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {c.objectives.items.map((o, i) => (
                   <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <p className="text-[15px] text-[#1A1A2E]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#1A1A2E]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
+                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
+                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
                     </p>
                   </div>
                 ))}
@@ -473,18 +473,18 @@ export default function ADRStoryPage() {
             {/* SOLUTION */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.solution.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.solution.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
 
               {c.solution.streams && (
                 <div className="mb-12">
-                  <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.streamsLabel}</span>
+                  <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.streamsLabel}</span>
                   <div className="grid md:grid-cols-2 gap-5">
                     {c.solution.streams.map((s, i) => (
                       <div key={s.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
                         <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
-                        <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4] relative">{s.title}</h4>
-                        <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65] relative">{s.text}</p>
+                        <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4] relative">{s.title}</h4>
+                        <p className="text-[14px] text-[#121212]/55 leading-[1.65] relative">{s.text}</p>
                       </div>
                     ))}
                   </div>
@@ -492,12 +492,12 @@ export default function ADRStoryPage() {
               )}
 
               <div className="mb-12">
-                <span className="text-[12px] font-bold text-[#1A1A2E]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
                 <div className="flex flex-col sm:flex-row gap-3">
                   {c.solution.skills.map((s) => (
                     <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
                       <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#1A1A2E]/70">{s.label}</span>
+                      <span className="text-[14px] font-semibold text-[#121212]/70">{s.label}</span>
                     </div>
                   ))}
                 </div>
@@ -508,10 +508,10 @@ export default function ADRStoryPage() {
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
-              <div className="rounded-2xl bg-[#111128] p-10 lg:p-14 mb-10">
+              <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
                   {/* -97% circular progress */}
                   <div className="text-center flex flex-col items-center">
@@ -560,14 +560,14 @@ export default function ADRStoryPage() {
 
               {c.results.quote && (
                 <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-8 lg:p-10 mb-10">
-                  <p className="text-[17px] text-[#1A1A2E]/75 leading-[1.75] italic mb-6">"{c.results.quote.text}"</p>
+                  <p className="text-[17px] text-[#121212]/75 leading-[1.75] italic mb-6">"{c.results.quote.text}"</p>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-[#4b4df7]/[0.15]">
                       <img src="/logos/adr-alberto.jpg" alt={c.results.quote.author} className="w-full h-full object-cover object-top" />
                     </div>
                     <div>
-                      <p className="text-[14px] font-semibold text-[#1A1A2E]/80">{c.results.quote.author}</p>
-                      <p className="text-[12px] text-[#1A1A2E]/40 leading-[1.5]">{c.results.quote.role}</p>
+                      <p className="text-[14px] font-semibold text-[#121212]/80">{c.results.quote.author}</p>
+                      <p className="text-[12px] text-[#121212]/40 leading-[1.5]">{c.results.quote.role}</p>
                     </div>
                   </div>
                 </div>
@@ -579,8 +579,8 @@ export default function ADRStoryPage() {
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <q.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <h4 className="text-[15px] font-bold text-[#1A1A2E] mb-3 leading-[1.4]">{q.title}</h4>
-                    <p className="text-[14px] text-[#1A1A2E]/55 leading-[1.65]">{q.text}</p>
+                    <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
+                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
                   </div>
                 ))}
               </div>
@@ -592,19 +592,19 @@ export default function ADRStoryPage() {
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
                   {c.vision.badge}
                 </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1A1A2E] leading-[1.4] mb-4 leading-[1.3]">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#1A1A2E]/[0.65] leading-[1.8] mb-8">{c.vision.intro}</p>
+                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4 leading-[1.3]">{c.vision.title}</h2>
+                <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-8">{c.vision.intro}</p>
                 <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
                     <Target className="h-5 w-5" style={{ color: '#4b4df7' }} />
                   </div>
-                  <p className="text-[15px] text-[#1A1A2E]/75 leading-[1.7]">{c.vision.objective}</p>
+                  <p className="text-[15px] text-[#121212]/75 leading-[1.7]">{c.vision.objective}</p>
                 </div>
                 <div className="space-y-4">
                   {c.vision.bullets.map((b, i) => (
                     <div key={i} className="flex items-start gap-4">
                       <ArrowRight className="h-4 w-4 mt-1 shrink-0" style={{ color: '#4b4df7' }} />
-                      <p className="text-[15px] text-[#1A1A2E]/65 leading-[1.65]">{b}</p>
+                      <p className="text-[15px] text-[#121212]/65 leading-[1.65]">{b}</p>
                     </div>
                   ))}
                 </div>

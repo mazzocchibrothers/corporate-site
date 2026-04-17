@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function SolutionFinalCTA({ headline, accentWord }) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -20,10 +20,10 @@ export default function SolutionFinalCTA({ headline, accentWord }) {
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">
             {headline}{' '}
-            <span className="italic font-bold gradient-text">{accentWord}</span>
+            <span className="font-bold gradient-text">{accentWord}</span>
           </h2>
           <a
-            href="/book-meeting"
+            href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
             className="group inline-flex items-center gap-4 px-10 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/15 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
           >
             <span>{t('Book a Meeting')}</span>

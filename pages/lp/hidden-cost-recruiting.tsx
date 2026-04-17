@@ -168,7 +168,7 @@ export default function HiddenCostRecruiting() {
               style={{ lineHeight: 1.1 }}
             >
               Hidden Cost of{' '}
-              <span className="italic gradient-text">Non-Predictive</span>
+              <span className="gradient-text">Non-Predictive</span>
               <br />Recruiting
             </motion.h1>
 
@@ -307,7 +307,7 @@ export default function HiddenCostRecruiting() {
             </p>
             <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold tracking-[-0.03em] text-white/95 leading-[1.15] max-w-[600px]">
               4 key behavioural{' '}
-              <span className="italic gradient-text">dimensions</span>
+              <span className="gradient-text">dimensions</span>
             </h2>
           </motion.div>
 
@@ -464,7 +464,7 @@ export default function HiddenCostRecruiting() {
               </p>
               <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold tracking-[-0.03em] text-white/95 leading-[1.15] mb-6">
                 AI-powered talent intelligence,{' '}
-                <span className="italic gradient-text">science-backed</span>
+                <span className="gradient-text">science-backed</span>
               </h2>
               <p className="text-[16px] text-white/50 leading-[1.8] mb-4" style={{ fontWeight: 300 }}>
                 Skillvue is a talent intelligence platform that blends psychometrics with modern LLMs to deliver customized, scalable behavioural assessments — aligned to each company's specific leadership model and skills framework.
