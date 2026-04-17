@@ -24,7 +24,7 @@ export default function SolutionCrossLinks({ currentPath }) {
 
   return (
     <section className="relative pt-20 pb-16 lg:pt-24 lg:pb-20" ref={ref}>
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           {/* Platform + Science links */}
           <div className="grid md:grid-cols-2 gap-4 mb-8">

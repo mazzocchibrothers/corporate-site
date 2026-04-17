@@ -22,8 +22,8 @@ const integrations = [
 function LogoItem({ item }: { item: { name: string; logo: string } }) {
   return (
     <div
-      className="flex items-center justify-center shrink-0 mx-8 lg:mx-12"
-      style={{ minWidth: '140px' }}
+      className="flex items-center justify-center shrink-0 mx-4 md:mx-8 lg:mx-12"
+      style={{ minWidth: '100px' }}
     >
       <img
         src={item.logo}
@@ -47,21 +47,21 @@ export default function IntegrationEcosystem() {
       className="section-breathe relative pt-16 pb-10 lg:pt-20 lg:pb-12"
       ref={ref}
     >
-      <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
+      <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div
-          className="mb-10"
+          className="mb-8 md:mb-10"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-4">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-3 md:mb-4">
             {t('Giving life to your')}{' '}
-            <span className="font-bold gradient-text-on-light">{t('core HR systems')}</span>
+            <span className="italic font-bold gradient-text-on-light">{t('core HR systems')}</span>
           </h2>
-          <p className="text-[18px] text-[#121212]/[0.65] leading-[1.75] max-w-2xl mb-6">
+          <p className="text-[14px] md:text-[18px] text-[#1A1A2E]/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl mb-4 md:mb-6">
             {t('Skillvue layers objective talent data into your existing stack, turning them from process gatekeepers into decision engines.')}
           </p>
-          <p className="text-[15px] text-[#121212]/[0.4] leading-[1.75]">
+          <p className="text-[15px] text-[#1A1A2E]/[0.4] leading-[1.75]">
             {lang === 'it' ? (
               <>Ci integriamo nativamente con 100+ tra i principali <span className="text-[#4B4DF7]/70 font-semibold">ATS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LXP</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">PMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">HRIS</span></>
             ) : (
@@ -79,8 +79,8 @@ export default function IntegrationEcosystem() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         {/* No fade edges needed */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 lg:w-40 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #F7F7F7, transparent)' }} />
-        <div className="absolute right-0 top-0 bottom-0 w-24 lg:w-40 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #F7F7F7, transparent)' }} />
+        <div className="absolute left-0 top-0 bottom-0 w-24 lg:w-40 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #F5F5FA, transparent)' }} />
+        <div className="absolute right-0 top-0 bottom-0 w-24 lg:w-40 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #F5F5FA, transparent)' }} />
 
         {/* Row 1 - scrolls left */}
         <div className="flex items-center py-5 marquee-track">
@@ -93,7 +93,7 @@ export default function IntegrationEcosystem() {
 
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.p
-          className="mt-8 text-[15px] text-[#121212]/40 font-semibold"
+          className="mt-8 text-[15px] text-[#1A1A2E]/40 font-semibold"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}

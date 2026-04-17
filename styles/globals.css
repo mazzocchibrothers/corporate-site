@@ -17,6 +17,20 @@
 @font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-BoldItalic.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-ExtraBoldItalic.woff2') format('woff2'); font-weight: 800; font-style: italic; font-display: swap; }
 
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar on horizontal scroll containers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 #emergent-badge,
 [id="emergent-badge"],
 a[href*="emergent"] {
@@ -203,9 +217,37 @@ html {
 
 @keyframes megaMenuFadeIn { 0% { opacity: 0; transform: translateY(6px); } 100% { opacity: 1; transform: translateY(0); } }
 
+/* ===== MOBILE HERO GRADIENT ===== */
+.hero-mobile-gradient {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    #2d1a6b 0%,
+    #3a1525 40%,
+    #0d0d1f 80%
+  );
+  background-size: 300% 300%;
+  animation: heroGradientShift 20s ease infinite;
+}
+@keyframes heroGradientShift {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 50% 100%; }
+  75% { background-position: 0% 50%; }
+  100% { background-position: 0% 0%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-mobile-gradient { animation: none; }
+}
+
 /* ===== INFINITE LOGO MARQUEE ===== */
 .marquee-track {
   animation: marqueeScroll 30s linear infinite;
+}
+/* Faster marquee on mobile */
+@media (max-width: 767px) {
+  .marquee-track {
+    animation: marqueeScroll 14s linear infinite;
+  }
 }
 .lp-marquee {
   animation: marqueeScroll 12s linear infinite;

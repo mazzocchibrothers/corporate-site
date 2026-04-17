@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Sparkles, Shield, RefreshCw } from 'lucide-react';
+import { Sparkles, Shield, RefreshCw, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const steps = [
@@ -23,26 +23,56 @@ const principles = [
 export default function MethodologyLifecycle() {
   const { t } = useLanguage();
   const [active, setActive] = useState(0);
+  const [activePrinciple, setActivePrinciple] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="methodology" data-testid="methodology" className="relative py-20 lg:py-28" ref={ref}>
-      <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
+    <section id="methodology" data-testid="methodology" className="relative py-16 md:py-20 lg:py-28" ref={ref}>
+      <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
 
         {/* Title */}
-        <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">
+        <motion.div className="mb-8 md:mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-4 md:mb-6">
             {t('A rigorous, end-to-end assessment')}{' '}
             <span className="font-bold gradient-text">{t('lifecycle')}</span>
           </h2>
         </motion.div>
 
-        {/* Steps interactive */}
-        <div className="grid lg:grid-cols-[320px_1fr] gap-8 lg:gap-16 mb-20">
-          <div className="space-y-1">
+        {/* Steps — accordion on mobile, sidebar + card on desktop */}
+
+        {/* Mobile: accordion */}
+        <div className="md:hidden space-y-0 mb-10">
+          {steps.map((s, i) => (
+            <div key={s.num}>
+              <button
+                onClick={() => setActive(i)}
+                data-testid={`lifecycle-${s.num}`}
+                className={`w-full flex items-center gap-3 py-3.5 border-b transition-all duration-300 ${i === active ? 'border-[#9B9DFB]/30 bg-white/[0.03]' : 'border-white/[0.04]'}`}
+              >
+                <span className={`text-[11px] font-bold w-6 ${i === active ? 'text-[#9B9DFB]' : 'text-white/15'}`}>{s.num}</span>
+                <span className={`text-[13px] flex-1 text-left ${i === active ? 'font-semibold text-white' : 'font-normal text-white/20'}`}>{t(s.title)}</span>
+                <span className={`text-[12px] transition-transform duration-300 ${i === active ? 'text-[#9B9DFB] rotate-90' : 'text-white/10'}`}>›</span>
+              </button>
+              {i === active && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  transition={{ duration: 0.25 }}
+                  className="overflow-hidden bg-white/[0.03]"
+                >
+                  <p className="text-[12px] text-white/[0.45] leading-[1.6] py-3 pl-9 pr-4">{t(s.desc)}</p>
+                </motion.div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: sidebar + card */}
+        <div className="hidden md:grid lg:grid-cols-[320px_1fr] gap-8 lg:gap-16 mb-20">
+          <div className="flex flex-col space-y-1">
             {steps.map((s, i) => (
-              <button key={s.num} onClick={() => setActive(i)} data-testid={`lifecycle-${s.num}`} className={`w-full text-left px-5 py-4 rounded-xl transition-all duration-400 flex items-center gap-4 ${i === active ? 'bg-white/[0.06] border border-white/[0.1]' : 'hover:bg-white/[0.03] border border-transparent'}`}>
+              <button key={s.num} onClick={() => setActive(i)} data-testid={`lifecycle-desktop-${s.num}`} className={`w-full text-left px-5 py-4 rounded-xl transition-all duration-400 flex items-center gap-4 ${i === active ? 'bg-white/[0.06] border border-white/[0.1]' : 'hover:bg-white/[0.03] border border-transparent'}`}>
                 <span className={`text-[12px] font-bold ${i === active ? 'text-[#9B9DFB]' : 'text-[#9B9DFB]/30'}`}>{s.num}</span>
                 <span className={`text-[15px] font-medium ${i === active ? 'text-white/90' : 'text-white/40'}`}>{t(s.title)}</span>
               </button>
@@ -56,8 +86,48 @@ export default function MethodologyLifecycle() {
           </motion.div>
         </div>
 
-        {/* 3 principle cards */}
-        <div className="grid lg:grid-cols-3 gap-5">
+        {/* 3 principle cards — single swipeable card on mobile, 3-col on desktop */}
+
+        {/* Mobile: single card with arrows */}
+        <div className="md:hidden">
+          {(() => {
+            const p = principles[activePrinciple];
+            const Icon = p.icon;
+            return (
+              <motion.div
+                key={activePrinciple}
+                className="rounded-xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 transition-all duration-300"
+                initial={{ opacity: 0, x: 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.25 }}
+              >
+                <Icon className="h-5 w-5 text-[#9B9DFB]/50 mb-3" strokeWidth={1.5} />
+                <h3 className="text-[16px] font-bold text-white/90 mb-2">{t(p.title)}</h3>
+                <p className="text-[12px] text-white/[0.6] leading-[1.6]">{t(p.desc)}</p>
+              </motion.div>
+            );
+          })()}
+          <div className="flex items-center justify-between mt-4">
+            <span className="text-[11px] text-white/25 font-medium">{activePrinciple + 1} / {principles.length}</span>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setActivePrinciple((p) => (p - 1 + principles.length) % principles.length)}
+                className="flex items-center justify-center h-8 w-8 rounded-full border border-white/10 text-white/40 active:text-white/80 transition-all"
+              >
+                <ChevronLeft className="h-3.5 w-3.5" />
+              </button>
+              <button
+                onClick={() => setActivePrinciple((p) => (p + 1) % principles.length)}
+                className="flex items-center justify-center h-8 w-8 rounded-full border border-white/15 text-white/60 active:text-white/90 transition-all"
+              >
+                <ChevronRight className="h-3.5 w-3.5" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop: 3-col grid */}
+        <div className="hidden md:grid md:grid-cols-3 gap-5">
           {principles.map((p, i) => {
             const Icon = p.icon;
             return (

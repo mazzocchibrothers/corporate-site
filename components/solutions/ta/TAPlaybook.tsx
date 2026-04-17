@@ -51,23 +51,23 @@ const rows = [
 ];
 
 export default function RecruitmentPlaybook() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
     <section className="section-breathe relative py-20 lg:py-28" ref={ref}>
-      <div className="max-w-[1100px] mx-auto px-8 lg:px-12">
+      <div className="max-w-[1100px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div className="text-center mb-12" initial={{ opacity: 0, y: 25 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#121212] tracking-[-0.02em] mb-3">
+          <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#1A1A2E] tracking-[-0.02em] mb-3">
             {t('Skillvue is a partner for the recruitment journey')}
           </h2>
-          <p className="text-[16px] text-[#121212]/[0.4]">{t('Skillvue playbook recruitment process')}</p>
+          <p className="text-[16px] text-[#1A1A2E]/[0.4]">{t('Skillvue playbook recruitment process')}</p>
         </motion.div>
 
         {/* Step headers */}
         <motion.div
-          className="grid grid-cols-[180px_1fr] gap-0 mb-2"
+          className="grid grid-cols-[100px_1fr] md:grid-cols-[180px_1fr] gap-0 mb-2"
           initial={{ opacity: 0, y: 15 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.15 }}
@@ -87,14 +87,14 @@ export default function RecruitmentPlaybook() {
           {rows.map((row, ri) => (
             <motion.div
               key={row.role}
-              className="grid grid-cols-[180px_1fr] gap-0 border-b border-[#121212]/[0.05] last:border-b-0"
+              className="grid grid-cols-[100px_1fr] md:grid-cols-[180px_1fr] gap-0 border-b border-[#1A1A2E]/[0.05] last:border-b-0"
               initial={{ opacity: 0, y: 12 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.25 + ri * 0.1 }}
             >
               {/* Role label */}
               <div className="flex items-center pr-6 py-8">
-                <h3 className="text-[18px] font-bold text-[#121212] leading-tight">{t(row.role)}</h3>
+                <h3 className="text-[18px] font-bold text-[#1A1A2E] leading-tight">{t(row.role)}</h3>
               </div>
 
               {/* Steps + bar + Skillvue */}
@@ -109,7 +109,7 @@ export default function RecruitmentPlaybook() {
                             <circle cx="12" cy="8" r="4" fill="#5E60F2" fillOpacity="0.35" />
                             <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#5E60F2" strokeOpacity="0.35" strokeWidth="2" strokeLinecap="round" />
                           </svg>
-                          <span className="text-[12px] text-[#121212]/50 text-center leading-tight">{t(step.label)}</span>
+                          <span className="text-[12px] text-[#1A1A2E]/50 text-center leading-tight">{t(step.label)}</span>
                         </>
                       ) : <div className="h-10" />}
                     </div>
@@ -130,7 +130,7 @@ export default function RecruitmentPlaybook() {
                       <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83" />
                     </svg>
                   </div>
-                  <span className="text-[13px] font-medium text-[#121212]/60">{t(row.skillvue)}</span>
+                  <span className="text-[13px] font-medium text-[#1A1A2E]/60">{t(row.skillvue)}</span>
                 </div>
               </div>
             </motion.div>
