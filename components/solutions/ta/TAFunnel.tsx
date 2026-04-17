@@ -99,7 +99,7 @@ function ColumnCard({ data, delay, t }) {
   const Icon = data.icon;
   return (
     <motion.div
-      className="rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-8 hover:border-[#4B4DF7]/[0.15] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500"
+      className="rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-4 md:p-8 hover:border-[#4B4DF7]/[0.15] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
@@ -160,11 +160,11 @@ export default function TAFunnel() {
 
   return (
     <section id="ta-funnel" data-testid="ta-funnel" className="section-breathe relative py-20 lg:py-28" ref={ref}>
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
 
         {/* Title */}
         <motion.div
-          className="mb-14"
+          className="mb-8 md:mb-14"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
