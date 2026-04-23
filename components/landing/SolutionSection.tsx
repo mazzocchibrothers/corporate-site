@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Target, TrendingUp, Award, Shield } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -43,6 +43,61 @@ export default function SolutionSection() {
   const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setScrollProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const renderCard = (pillar: typeof pillars[number], i: number) => (
+    <motion.div
+      key={pillar.id}
+      data-testid={`solution-card-${pillar.id}`}
+      className="group relative rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-sm p-5 md:p-8 lg:p-10 transition-all duration-500 overflow-hidden md:aspect-auto"
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: 0.1 + i * 0.1, ease: 'easeOut' }}
+    >
+      {/* Subtle hover glow */}
+      <div className="absolute top-0 right-0 w-[200px] h-[200px] rounded-full bg-[#4B4DF7]/[0.04] blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+      <div className="relative">
+        {/* Top: Icon + Label */}
+        <div>
+          {(() => { const Icon = pillar.icon; return <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#9B9DFB]/50 mb-3 md:mb-5" strokeWidth={1.5} />; })()}
+          <h3
+            className="text-[15px] md:text-2xl font-semibold text-white/85 group-hover:text-white/95 transition-colors duration-500 leading-snug"
+          >
+            {t(pillar.label)}
+          </h3>
+        </div>
+
+        {/* Description */}
+        <p className="text-[13px] md:text-[16px] text-white/[0.55] md:text-white/[0.65] group-hover:text-white/[0.75] leading-[1.5] md:leading-[1.75] transition-colors duration-500 mb-4 md:mb-8 mt-2 md:mt-4">
+          {t(pillar.desc)}
+        </p>
+
+        {/* Stat */}
+        <div className="flex items-baseline gap-2 md:gap-3">
+          <span className="text-[22px] md:text-[1.8rem] text-white/90 font-extrabold tracking-tight leading-none">
+            {lang === 'it' && (pillar as any).statIt ? (pillar as any).statIt : pillar.stat}
+          </span>
+          <span className="text-[11px] md:text-[13px] text-white/50 font-medium tracking-wide leading-tight">
+            {t(pillar.statLabel)}
+          </span>
+        </div>
+      </div>
+    </motion.div>
+  );
 
   return (
     <section id="solutions" data-testid="solution-section" className="relative py-20 lg:py-28" ref={ref}>
@@ -63,48 +118,29 @@ export default function SolutionSection() {
           </p>
         </motion.div>
 
-        {/* 2x2 Card grid */}
-        <div className="grid grid-cols-2 gap-3 md:gap-4 lg:gap-5">
+        {/* Mobile: horizontal scroll */}
+        <div
+          ref={scrollRef}
+          className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2 md:hidden"
+        >
           {pillars.map((pillar, i) => (
-            <motion.div
-              key={pillar.id}
-              data-testid={`solution-card-${pillar.id}`}
-              className="group relative rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-sm p-4 md:p-8 lg:p-10 transition-all duration-500 overflow-hidden md:aspect-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.1, ease: 'easeOut' }}
-            >
-              {/* Subtle hover glow */}
-              <div className="absolute top-0 right-0 w-[200px] h-[200px] rounded-full bg-[#4B4DF7]/[0.04] blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-
-              <div className="relative">
-                {/* Top: Icon + Label */}
-                <div>
-                  {(() => { const Icon = pillar.icon; return <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#9B9DFB]/50 mb-3 md:mb-5" strokeWidth={1.5} />; })()}
-                  <h3
-                    className="text-[13px] md:text-2xl font-semibold text-white/85 group-hover:text-white/95 transition-colors duration-500 leading-snug"
-                  >
-                    {t(pillar.label)}
-                  </h3>
-                </div>
-
-                {/* Description */}
-                <p className="text-[11px] md:text-[16px] text-white/[0.55] md:text-white/[0.65] group-hover:text-white/[0.75] leading-[1.5] md:leading-[1.75] transition-colors duration-500 mb-4 md:mb-8 mt-2 md:mt-4">
-                  {t(pillar.desc)}
-                </p>
-
-                {/* Stat */}
-                <div className="flex items-baseline gap-2 md:gap-3">
-                  <span className="text-[18px] md:text-[1.8rem] text-white/90 font-extrabold tracking-tight leading-none">
-                    {lang === 'it' && (pillar as any).statIt ? (pillar as any).statIt : pillar.stat}
-                  </span>
-                  <span className="text-[9px] md:text-[13px] text-white/50 font-medium tracking-wide leading-tight">
-                    {t(pillar.statLabel)}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
+            <div key={pillar.id} className="shrink-0 w-[80vw] snap-center">
+              {renderCard(pillar, i)}
+            </div>
           ))}
+        </div>
+
+        {/* Mobile scroll indicator — thumb-in-track (native scrollbar style) */}
+        <div className="md:hidden mx-auto mt-5 w-36 h-1 rounded-full bg-white/10 relative">
+          <div
+            className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill"
+            style={{ left: `${scrollProgress * 0.65}%`, transition: 'left 200ms ease-out' }}
+          />
+        </div>
+
+        {/* Desktop: 2x2 grid */}
+        <div className="hidden md:grid grid-cols-2 gap-3 md:gap-4 lg:gap-5">
+          {pillars.map((pillar, i) => renderCard(pillar, i))}
         </div>
       </div>
     </section>

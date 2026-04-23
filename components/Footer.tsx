@@ -93,7 +93,7 @@ export default function Footer() {
               })}
             </div>
 
-            <p className="text-[10px] md:text-[11px] text-white/25 leading-[1.5] text-center lg:text-left max-w-[180px]">
+            <p className="text-[12px] md:text-[11px] text-white/25 leading-[1.5] text-center lg:text-left max-w-[180px]">
               {lang === 'it'
                 ? "Partner della ricerca 2025/2026 dell'Osservatorio HR del Politecnico di Milano"
                 : 'Partner of the 2025/2026 research of Osservatorio HR Politecnico di Milano'}
@@ -104,7 +104,7 @@ export default function Footer() {
           <div className="flex flex-col gap-6 md:grid md:grid-cols-4 md:gap-8">
             {footerLinks.map((group) => (
               <div key={group.title}>
-                <h4 className="text-[13px] md:text-[16px] font-semibold text-white/85 mb-2 md:mb-7">
+                <h4 className="text-[15px] md:text-[16px] font-semibold text-white/85 mb-2 md:mb-7">
                   {lang === 'it' ? group.titleIt : group.title}
                 </h4>
                 <div className="flex flex-wrap gap-x-4 gap-y-1.5 md:block md:space-y-4">
@@ -116,7 +116,7 @@ export default function Footer() {
                         key={link.name}
                         href={href}
                         onClick={handleClick(href)}
-                        className="text-[12px] md:text-[15px] text-white/35 hover:text-white/65 transition-colors duration-300"
+                        className="inline md:block text-[14px] md:text-[15px] text-white/35 hover:text-white/65 transition-colors duration-300"
                       >
                         {name}
                       </a>
@@ -130,7 +130,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/[0.04] pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4">
-          <span className="text-[11px] md:text-[13px] text-white/20">
+          <span className="text-[12px] md:text-[13px] text-white/20">
             &copy; {new Date().getFullYear()} Skillvue. {t('All rights reserved.')}
           </span>
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 md:gap-6">
@@ -157,11 +157,11 @@ export default function Footer() {
               },
             ].map(({ label, href }) => (
               href.startsWith('http') ? (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[10px] md:text-[13px] text-white/20 hover:text-white/40 transition-colors duration-300">
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[12px] md:text-[13px] text-white/20 hover:text-white/40 transition-colors duration-300">
                   {label}
                 </a>
               ) : (
-                <a key={label} href={href} onClick={handleClick(href)} className="text-[10px] md:text-[13px] text-white/20 hover:text-white/40 transition-colors duration-300">
+                <a key={label} href={href} onClick={handleClick(href)} className="text-[12px] md:text-[13px] text-white/20 hover:text-white/40 transition-colors duration-300">
                   {label}
                 </a>
               )
@@ -171,7 +171,7 @@ export default function Footer() {
 
         {/* Company info line */}
         <div className="border-t border-white/[0.04] pt-4 mt-6">
-          <p className="text-[11px] text-white/20 text-center">
+          <p className="text-[12px] text-white/20 text-center">
             Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568
           </p>
         </div>

@@ -41,14 +41,14 @@ export default function CTASection() {
               <h3 className="text-[20px] md:text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/85 mt-3 md:mt-5 mb-2 md:mb-4 leading-tight">
                 {t('Book a 30-min Demo')}
               </h3>
-              <p className="text-[12px] md:text-[17px] text-white/[0.65] mb-0 md:mb-8 max-w-md leading-[1.5] md:leading-normal">
+              <p className="text-[14px] md:text-[17px] text-white/[0.65] mb-0 md:mb-8 max-w-md leading-[1.5] md:leading-normal">
                 {t('See Skillvue live with your specific use case')}
               </p>
             </div>
             <a
               href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
               data-testid="cta-book-demo"
-              className="relative group/btn inline-flex items-center justify-between w-full px-5 py-3 md:px-8 md:py-5 md:max-w-sm text-[12px] md:text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
+              className="relative group/btn inline-flex items-center justify-between w-full px-5 py-3 md:px-8 md:py-5 md:max-w-sm text-[14px] md:text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
             >
               <span>{t('Book a Meeting')}</span>
               <ArrowRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-white/30 group-hover/btn:text-[#9B9DFB] group-hover/btn:translate-x-1 transition-all duration-500" />

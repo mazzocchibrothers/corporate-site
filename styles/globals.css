@@ -31,6 +31,12 @@ html, body {
   display: none;
 }
 
+/* Skillvue-branded scroll progress bar fill */
+.skillvue-scroll-fill {
+  background: linear-gradient(90deg, #4B4DF7 0%, #7577F8 50%, #FF5F24 100%);
+  box-shadow: 0 0 8px rgba(75, 77, 247, 0.35);
+}
+
 #emergent-badge,
 [id="emergent-badge"],
 a[href*="emergent"] {

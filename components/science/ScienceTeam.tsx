@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Linkedin } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -23,6 +23,43 @@ export default function ScienceTeam() {
   const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
+
+  const scrollRef = useRef(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setScrollProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const renderMember = (m, i) => (
+    <motion.div
+      key={m.name}
+      data-testid={`team-${m.name.split(' ')[0]?.toLowerCase()}`}
+      className="group text-center"
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
+    >
+      <div className="rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white overflow-hidden mb-2 md:mb-4 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500">
+        <div className="w-full aspect-[3/4]">
+          <img src={m.photo} alt={m.name} className="w-full h-full object-cover" />
+        </div>
+      </div>
+      <h4 className="text-[13px] md:text-[15px] font-bold text-[#1A1A2E] mb-0.5 md:mb-1 leading-tight">
+        {m.name}
+      </h4>
+      <p className="text-[12px] md:text-[13px] text-[#1A1A2E]/45 leading-snug">
+        {t(m.role)}
+      </p>
+    </motion.div>
+  );
 
   return (
     <section id="science-team" data-testid="science-team" className="section-breathe relative py-16 lg:py-24" ref={ref}>
@@ -56,10 +93,10 @@ export default function ScienceTeam() {
               <h3 className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-[#1A1A2E] mb-1.5">
                 {lead.name}
               </h3>
-              <p className="text-[12px] md:text-[15px] font-semibold text-[#4B4DF7]/70 mb-3 md:mb-6">
+              <p className="text-[13px] md:text-[15px] font-semibold text-[#4B4DF7]/70 mb-3 md:mb-6">
                 {t(lead.role)}
               </p>
-              <p className="text-[12px] md:text-[15px] text-[#1A1A2E]/[0.55] leading-[1.6] md:leading-[1.8] max-w-2xl">
+              <p className="text-[14px] md:text-[15px] text-[#1A1A2E]/[0.55] leading-[1.6] md:leading-[1.8] max-w-2xl">
                 {t(lead.bio)}
               </p>
               <a
@@ -74,30 +111,22 @@ export default function ScienceTeam() {
           </div>
         </motion.div>
 
-        {/* Team members grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 lg:gap-6">
+        {/* Team members - Mobile: horizontal scroll */}
+        <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
           {members.map((m, i) => (
-            <motion.div
-              key={m.name}
-              data-testid={`team-${m.name.split(' ')[0]?.toLowerCase()}`}
-              className="group text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
-            >
-              <div className="rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white overflow-hidden mb-2 md:mb-4 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500">
-                <div className="w-full aspect-[3/4]">
-                  <img src={m.photo} alt={m.name} className="w-full h-full object-cover" />
-                </div>
-              </div>
-              <h4 className="text-[12px] md:text-[15px] font-bold text-[#1A1A2E] mb-0.5 md:mb-1 leading-tight">
-                {m.name}
-              </h4>
-              <p className="text-[10px] md:text-[13px] text-[#1A1A2E]/45 leading-snug">
-                {t(m.role)}
-              </p>
-            </motion.div>
+            <div key={m.name} className="shrink-0 w-[60vw] snap-center">
+              {renderMember(m, i)}
+            </div>
           ))}
+        </div>
+        {/* Progress bar */}
+        <div className="md:hidden mx-auto mt-4 w-36 h-1 rounded-full bg-[#1A1A2E]/10 relative">
+          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%`, transition: "left 200ms ease-out" }} />
+        </div>
+
+        {/* Team members - Desktop grid */}
+        <div className="hidden md:grid md:grid-cols-4 gap-3 md:gap-5 lg:gap-6">
+          {members.map((m, i) => renderMember(m, i))}
         </div>
 
         {/* 50+ collaborators */}
@@ -109,7 +138,7 @@ export default function ScienceTeam() {
         >
           <span className="text-[32px] md:text-[48px] font-bold text-[#1A1A2E] leading-none tracking-[-0.03em] shrink-0">50+</span>
           <div className="w-px h-10 bg-[#1A1A2E]/[0.08] hidden sm:block shrink-0" />
-          <p className="text-[13px] md:text-[16px] text-[#1A1A2E]/[0.5] leading-[1.5] md:leading-[1.7]">
+          <p className="text-[14px] md:text-[16px] text-[#1A1A2E]/[0.5] leading-[1.6] md:leading-[1.7]">
             {t('External collaborators from academic, HR consulting and corporate world')}
           </p>
         </motion.div>

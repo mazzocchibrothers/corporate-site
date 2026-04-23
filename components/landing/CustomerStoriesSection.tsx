@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
@@ -36,6 +36,20 @@ export default function CustomerStoriesSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setScrollProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <section id="customers" data-testid="customer-stories-section" className="relative py-16 md:py-20 lg:py-28" ref={ref}>
@@ -50,13 +64,13 @@ export default function CustomerStoriesSection() {
           <h2 className="text-[clamp(1.6rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-3 md:mb-4">
             {t('Proof, not')} <span className="italic font-bold gradient-text">{t('promises.')}</span>
           </h2>
-          <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">
+          <p className="text-[15px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">
             {t('Leading Global enterprises make talent decisions with confidence.')}
           </p>
         </motion.div>
 
         {/* Story cards — horizontal scroll on mobile, 2-col grid on desktop */}
-        <div className="md:grid md:grid-cols-2 md:gap-5 flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 mb-8 md:mb-10 scrollbar-hide">
+        <div ref={scrollRef} className="md:grid md:grid-cols-2 md:gap-5 flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 mb-8 md:mb-10 scrollbar-hide">
           {stories.map((s, i) => (
             <motion.div
               key={s.company}
@@ -69,20 +83,28 @@ export default function CustomerStoriesSection() {
             >
               {/* Company + industry */}
               <div>
-                <h3 className="text-[16px] md:text-[22px] font-bold text-white/90 mb-1">{t(s.company)}</h3>
-                <span className="text-[11px] md:text-[15px] text-white/40">{t(s.industry)}</span>
+                <h3 className="text-[17px] md:text-[22px] font-bold text-white/90 mb-1">{t(s.company)}</h3>
+                <span className="text-[13px] md:text-[15px] text-white/40">{t(s.industry)}</span>
               </div>
 
               {/* Quote */}
-              <p className="text-[13px] md:text-[17px] text-white/[0.65] italic leading-[1.6] md:leading-[1.7]">"{t(s.quote)}"</p>
+              <p className="text-[14px] md:text-[17px] text-white/[0.65] italic leading-[1.6] md:leading-[1.7]">"{t(s.quote)}"</p>
 
               {/* Author */}
               <div>
-                <span className="text-[12px] md:text-[15px] font-semibold text-white/60">{t(s.author)}</span>
-                <span className="text-[11px] md:text-[14px] text-white/35 ml-1.5 md:ml-2">{t(s.role)}</span>
+                <span className="text-[13px] md:text-[15px] font-semibold text-white/60">{t(s.author)}</span>
+                <span className="text-[13px] md:text-[14px] text-white/35 ml-1.5 md:ml-2">{t(s.role)}</span>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Progress bar — mobile only */}
+        <div className="md:hidden mx-auto -mt-4 mb-8 w-36 h-1 rounded-full bg-white/10 relative">
+          <div
+            className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill"
+            style={{ left: `${scrollProgress * 0.65}%`, transition: "left 200ms ease-out" }}
+          />
         </div>
 
         {/* Join CTA */}
@@ -95,14 +117,14 @@ export default function CustomerStoriesSection() {
           <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6">
             <button
               onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
-              className="group inline-flex items-center justify-between px-6 py-3 md:px-7 md:py-3.5 text-[13px] md:text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
+              className="group inline-flex items-center justify-between px-6 py-3 md:px-7 md:py-3.5 text-[14px] md:text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
             >
               <span>{t('Book a Meeting')}</span>
               <ArrowRight className="h-4 w-4 ml-4 md:ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
             </button>
             <button
               onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
-              className="group inline-flex items-center gap-2 md:gap-2.5 text-[12px] md:text-[13px] font-semibold text-white/[0.45] hover:text-white/80 transition-colors duration-300 tracking-wide"
+              className="group inline-flex items-center gap-2 md:gap-2.5 text-[13px] md:text-[13px] font-semibold text-white/[0.45] hover:text-white/80 transition-colors duration-300 tracking-wide"
             >
               {t('Join 50+ Global enterprises')}
               <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -117,15 +139,15 @@ export default function CustomerStoriesSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <h3 className="text-[17px] md:text-[20px] font-bold text-white/90 mb-3 md:mb-4">
+          <h3 className="text-[18px] md:text-[20px] font-bold text-white/90 mb-3 md:mb-4">
             {t('Built')} <span className="italic font-bold gradient-text">{t('enterprise-ready')}</span>
           </h3>
-          <p className="text-[12px] md:text-[15px] text-white/[0.65] leading-[1.6] md:leading-[1.75] mb-4 md:mb-6 max-w-3xl">
+          <p className="text-[14px] md:text-[15px] text-white/[0.65] leading-[1.6] md:leading-[1.75] mb-4 md:mb-6 max-w-3xl">
             {t('100+ native integrations (Oracle, SAP, Workday, Greenhouse + more). Fully customisable to your processes, on your terms.')}
           </p>
           <div className="flex flex-wrap gap-2 md:gap-3">
             {['ISO 27001', 'SOC 2', 'GDPR', 'EU AI Act'].map(b => (
-              <span key={b} className="inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[11px] md:text-[12px] font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03] tracking-wide">
+              <span key={b} className="inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[12px] md:text-[12px] font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03] tracking-wide">
                 {t(b)}
               </span>
             ))}

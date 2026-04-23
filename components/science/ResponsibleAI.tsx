@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Eye, Users, Activity, Scale, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -26,6 +26,31 @@ export default function ResponsibleAI() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
+  const scrollRef = useRef(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setScrollProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const renderPillar = (p, i) => {
+    const Icon = p.icon;
+    return (
+      <motion.div key={p.title} data-testid={`responsible-${p.title.toLowerCase().replace(/\s+/g, '-')}`} className="group rounded-xl md:rounded-2xl border border-[#4B4DF7]/[0.08] hover:border-[#4B4DF7]/[0.18] bg-white/60 hover:bg-white/80 p-5 md:p-10 transition-all duration-500 h-full" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}>
+        <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#4B4DF7]/40 mb-3 md:mb-5" strokeWidth={1.5} />
+        <h3 className="text-[15px] md:text-[18px] font-bold text-[#1A1A2E] mb-2 md:mb-3">{t(p.title)}</h3>
+        <p className="text-[12px] md:text-[15px] text-[#1A1A2E]/[0.65] leading-[1.5] md:leading-[1.75]">{t(p.desc)}</p>
+      </motion.div>
+    );
+  };
+
   return (
     <section id="responsible-ai" data-testid="responsible-ai" className="section-breathe relative py-16 md:py-20 lg:py-24" ref={ref}>
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
@@ -38,17 +63,22 @@ export default function ResponsibleAI() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-3 md:gap-5 mb-12 md:mb-20">
-          {pillars.map((p, i) => {
-            const Icon = p.icon;
-            return (
-              <motion.div key={p.title} data-testid={`responsible-${p.title.toLowerCase().replace(/\s+/g, '-')}`} className="group rounded-xl md:rounded-2xl border border-[#4B4DF7]/[0.08] hover:border-[#4B4DF7]/[0.18] bg-white/60 hover:bg-white/80 p-4 md:p-10 transition-all duration-500" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}>
-                <Icon className="h-4 w-4 md:h-6 md:w-6 text-[#4B4DF7]/40 mb-2 md:mb-5" strokeWidth={1.5} />
-                <h3 className="text-[13px] md:text-[18px] font-bold text-[#1A1A2E] mb-1.5 md:mb-3">{t(p.title)}</h3>
-                <p className="text-[10px] md:text-[15px] text-[#1A1A2E]/[0.65] leading-[1.4] md:leading-[1.75]">{t(p.desc)}</p>
-              </motion.div>
-            );
-          })}
+        {/* Mobile: horizontal scroll */}
+        <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
+          {pillars.map((p, i) => (
+            <div key={p.title} className="shrink-0 w-[80vw] snap-center">
+              {renderPillar(p, i)}
+            </div>
+          ))}
+        </div>
+        {/* Progress bar */}
+        <div className="md:hidden mx-auto mt-4 mb-12 w-36 h-1 rounded-full bg-[#1A1A2E]/10 relative">
+          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%`, transition: "left 200ms ease-out" }} />
+        </div>
+
+        {/* Desktop grid */}
+        <div className="hidden md:grid md:grid-cols-2 gap-3 md:gap-5 mb-12 md:mb-20">
+          {pillars.map((p, i) => renderPillar(p, i))}
         </div>
 
         {/* FAQ */}
@@ -63,13 +93,13 @@ export default function ResponsibleAI() {
           {faqs.map((faq, i) => (
             <motion.div key={i} className="border-b border-[#1A1A2E]/[0.08]" initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.1 + i * 0.06 }}>
               <button onClick={() => setOpenIdx(openIdx === i ? null : i)} data-testid={`faq-${i}`} className="w-full flex items-center justify-between py-4 md:py-6 text-left">
-                <span className="text-[14px] md:text-[16px] font-semibold text-[#1A1A2E]/85 pr-4 md:pr-8">{t(faq.q)}</span>
-                <ChevronDown className={`h-4 w-4 text-[#1A1A2E]/30 shrink-0 transition-transform duration-400 ${openIdx === i ? 'rotate-180' : ''}`} />
+                <span className="text-[15px] md:text-[16px] font-semibold text-[#1A1A2E]/85 pr-4 md:pr-8">{t(faq.q)}</span>
+                <ChevronDown className={`h-5 w-5 md:h-4 md:w-4 text-[#1A1A2E]/30 shrink-0 transition-transform duration-400 ${openIdx === i ? 'rotate-180' : ''}`} />
               </button>
               <AnimatePresence>
                 {openIdx === i && (
                   <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
-                    <p className="text-[13px] md:text-[15px] text-[#1A1A2E]/[0.55] leading-[1.6] md:leading-[1.75] pb-4 md:pb-6">{t(faq.a)}</p>
+                    <p className="text-[14px] md:text-[15px] text-[#1A1A2E]/[0.55] leading-[1.65] md:leading-[1.75] pb-4 md:pb-6">{t(faq.a)}</p>
                   </motion.div>
                 )}
               </AnimatePresence>
