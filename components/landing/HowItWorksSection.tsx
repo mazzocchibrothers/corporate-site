@@ -35,11 +35,25 @@ export default function HowItWorksSection() {
   const [active, setActive] = useState(0);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-80px' });
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   // Auto-advance every 5s
   useEffect(() => {
     const timer = setInterval(() => setActive(p => (p + 1) % 3), 5000);
     return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setScrollProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
@@ -65,7 +79,7 @@ export default function HowItWorksSection() {
         </motion.div>
 
         {/* 3 step cards — horizontal scroll on mobile, 3-col grid on desktop */}
-        <div className="md:grid md:grid-cols-3 md:gap-4 lg:gap-5 flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide">
+        <div ref={scrollRef} className="md:grid md:grid-cols-3 md:gap-4 lg:gap-5 flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide">
           {steps.map((step, i) => {
             const Icon = step.icon;
             const isActive = i === active;
@@ -136,7 +150,7 @@ export default function HowItWorksSection() {
                       </motion.h3>
 
                       <motion.p
-                        className="text-[12px] md:text-[15px] leading-[1.6] md:leading-[1.8] mb-3 md:mb-8"
+                        className="text-[13px] md:text-[15px] leading-[1.6] md:leading-[1.8] mb-3 md:mb-8"
                         animate={{ color: isActive ? 'rgba(255,255,255,0.5)' : 'rgba(26,26,46,0.55)' }}
                         transition={{ duration: 0.5 }}
                       >
@@ -148,7 +162,7 @@ export default function HowItWorksSection() {
                         {step.keywords.map(kw => (
                           <motion.span
                             key={kw}
-                            className="inline-flex px-2 py-1 md:px-3 md:py-1.5 rounded-full text-[9px] md:text-[11px] font-semibold tracking-wide"
+                            className="inline-flex px-2.5 py-1 md:px-3 md:py-1.5 rounded-full text-[11px] md:text-[11px] font-semibold tracking-wide"
                             animate={{
                               color: isActive ? 'rgba(155,157,251,0.7)' : 'rgba(75,77,247,0.5)',
                               backgroundColor: isActive ? 'rgba(75,77,247,0.12)' : 'rgba(75,77,247,0.04)',
@@ -167,6 +181,14 @@ export default function HowItWorksSection() {
               </motion.div>
             );
           })}
+        </div>
+
+        {/* Progress bar — mobile only */}
+        <div className="md:hidden mx-auto mt-4 w-36 h-1 rounded-full bg-[#1A1A2E]/10 relative">
+          <div
+            className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill"
+            style={{ left: `${scrollProgress * 0.65}%`, transition: "left 200ms ease-out" }}
+          />
         </div>
       </div>
     </section>

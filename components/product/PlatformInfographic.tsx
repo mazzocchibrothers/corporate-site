@@ -19,7 +19,7 @@ export default function PlatformInfographic() {
           <h2 className="text-[clamp(1.5rem,3.5vw,2.5rem)] font-bold text-[#1A1A2E] tracking-[-0.02em] mb-3 md:mb-4">
             {t('From signals to decisions. One connected flow.')}
           </h2>
-          <p className="text-[13px] md:text-[17px] text-[#1A1A2E]/[0.45] leading-[1.6] md:leading-[1.75] max-w-2xl mx-auto">
+          <p className="text-[14px] md:text-[17px] text-[#1A1A2E]/[0.45] leading-[1.6] md:leading-[1.75] max-w-2xl mx-auto">
             {t('Skillvue gathers signals from candidates, workforce, and market data, processes them through AI-powered skills intelligence, integrates with your core HR systems, and enables every talent decision with objective, defensible data.')}
           </p>
         </motion.div>

@@ -31,13 +31,13 @@ export default function ScienceHero() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <p
-            className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-md lg:max-w-lg font-normal md:font-light"
+            className="text-[15px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-md lg:max-w-lg font-normal md:font-light"
           >
             {t("Measuring people is hard. To make talent decisions you can trust, accuracy and reliability aren't optional. Skillvue is built on I/O psychology and psychometrics, ensuring every data point holds up to scrutiny.")}
           </p>
-          <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} className="group inline-flex items-center justify-between shrink-0 w-full lg:w-[480px] px-6 py-4 md:px-8 md:py-5 text-[13px] md:text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500">
+          <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} className="group inline-flex items-center justify-between shrink-0 w-full lg:w-[480px] px-6 py-4 md:px-8 md:py-5 text-[14px] md:text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500">
             <span>{t('Book a Meeting')}</span>
-            <ArrowRight className="h-4 w-4 md:h-5 md:w-5 ml-4 md:ml-8 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
+            <ArrowRight className="h-5 w-5 md:h-5 md:w-5 ml-4 md:ml-8 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
           </a>
         </motion.div>
       </div>

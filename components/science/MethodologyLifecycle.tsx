@@ -51,8 +51,8 @@ export default function MethodologyLifecycle() {
                 className={`w-full flex items-center gap-3 py-3.5 border-b transition-all duration-300 ${i === active ? 'border-[#9B9DFB]/30 bg-white/[0.03]' : 'border-white/[0.04]'}`}
               >
                 <span className={`text-[11px] font-bold w-6 ${i === active ? 'text-[#9B9DFB]' : 'text-white/15'}`}>{s.num}</span>
-                <span className={`text-[13px] flex-1 text-left ${i === active ? 'font-semibold text-white' : 'font-normal text-white/20'}`}>{t(s.title)}</span>
-                <span className={`text-[12px] transition-transform duration-300 ${i === active ? 'text-[#9B9DFB] rotate-90' : 'text-white/10'}`}>›</span>
+                <span className={`text-[14px] flex-1 text-left ${i === active ? 'font-semibold text-white' : 'font-normal text-white/20'}`}>{t(s.title)}</span>
+                <span className={`text-[14px] transition-transform duration-300 ${i === active ? 'text-[#9B9DFB] rotate-90' : 'text-white/10'}`}>›</span>
               </button>
               {i === active && (
                 <motion.div
@@ -61,7 +61,7 @@ export default function MethodologyLifecycle() {
                   transition={{ duration: 0.25 }}
                   className="overflow-hidden bg-white/[0.03]"
                 >
-                  <p className="text-[12px] text-white/[0.45] leading-[1.6] py-3 pl-9 pr-4">{t(s.desc)}</p>
+                  <p className="text-[13px] text-white/[0.55] leading-[1.65] py-3 pl-9 pr-4">{t(s.desc)}</p>
                 </motion.div>
               )}
             </div>
@@ -103,7 +103,7 @@ export default function MethodologyLifecycle() {
               >
                 <Icon className="h-5 w-5 text-[#9B9DFB]/50 mb-3" strokeWidth={1.5} />
                 <h3 className="text-[16px] font-bold text-white/90 mb-2">{t(p.title)}</h3>
-                <p className="text-[12px] text-white/[0.6] leading-[1.6]">{t(p.desc)}</p>
+                <p className="text-[14px] text-white/[0.6] leading-[1.65]">{t(p.desc)}</p>
               </motion.div>
             );
           })()}

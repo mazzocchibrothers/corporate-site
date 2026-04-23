@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Zap, BarChart3, Plug, FileText, Calendar, MessageSquare, Users, Filter, Trophy, Brain, Search, ArrowDown } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -107,9 +107,9 @@ function ColumnCard({ data, delay, t }) {
     >
       <div className="flex items-center gap-3 mb-6">
         <div className="w-9 h-9 rounded-lg bg-[#4B4DF7]/[0.12] flex items-center justify-center">
-          <Icon className="h-4.5 w-4.5 text-[#9B9DFB]" />
+          <Icon className="h-5 w-5 md:h-4.5 md:w-4.5 text-[#9B9DFB]" />
         </div>
-        <h4 className="text-[14px] font-bold text-[#1A1A2E]/70 tracking-wide">{t(data.title)}</h4>
+        <h4 className="text-[15px] md:text-[14px] font-bold text-[#1A1A2E]/70 tracking-wide">{t(data.title)}</h4>
       </div>
 
       {data.items ? (
@@ -118,11 +118,11 @@ function ColumnCard({ data, delay, t }) {
             const ItemIcon = item.icon;
             return (
               <div key={i} className="flex items-start gap-3">
-                <ItemIcon className="h-4 w-4 text-[#4B4DF7]/40 mt-0.5 shrink-0" />
+                <ItemIcon className="h-5 w-5 md:h-4 md:w-4 text-[#4B4DF7]/40 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-[14px] text-[#1A1A2E]/80 font-medium">{t(item.text)}</span>
                   {item.detail && (
-                    <span className="text-[12px] text-[#1A1A2E]/35 ml-1.5">({t(item.detail)})</span>
+                    <span className="text-[13px] md:text-[12px] text-[#1A1A2E]/35 ml-1.5">({t(item.detail)})</span>
                   )}
                 </div>
               </div>
@@ -131,7 +131,7 @@ function ColumnCard({ data, delay, t }) {
         </div>
       ) : (
         <div>
-          <p className="text-[14px] text-[#1A1A2E]/60 font-semibold mb-5">{t(data.text)}</p>
+          <p className="text-[14px] md:text-[14px] text-[#1A1A2E]/60 font-semibold mb-5">{t(data.text)}</p>
           <div className="grid grid-cols-3 gap-3">
             {data.logos.map((logo) => (
               <div key={logo} className="flex items-center justify-center h-8">
@@ -157,6 +157,19 @@ export default function TAFunnel() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   const stage = stages[active];
+  const scrollRef = useRef(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setScrollProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, [active]);
 
   return (
     <section id="ta-funnel" data-testid="ta-funnel" className="section-breathe relative py-20 lg:py-28" ref={ref}>
@@ -217,15 +230,34 @@ export default function TAFunnel() {
         <AnimatePresence mode="wait">
           <motion.div
             key={stage.id}
-            className="grid lg:grid-cols-3 gap-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <ColumnCard data={stage.automation} delay={0} t={t} />
-            <ColumnCard data={stage.reporting} delay={0.08} t={t} />
-            <ColumnCard data={stage.integration} delay={0.16} t={t} />
+            {/* Mobile: horizontal scroll */}
+            <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
+              <div className="shrink-0 w-[85vw] snap-center">
+                <ColumnCard data={stage.automation} delay={0} t={t} />
+              </div>
+              <div className="shrink-0 w-[85vw] snap-center">
+                <ColumnCard data={stage.reporting} delay={0.08} t={t} />
+              </div>
+              <div className="shrink-0 w-[85vw] snap-center">
+                <ColumnCard data={stage.integration} delay={0.16} t={t} />
+              </div>
+            </div>
+            {/* Progress bar */}
+            <div className="md:hidden mx-auto mt-4 w-36 h-1 rounded-full bg-white/10 relative">
+              <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%`, transition: "left 200ms ease-out" }} />
+            </div>
+
+            {/* Desktop */}
+            <div className="hidden md:grid lg:grid-cols-3 gap-5">
+              <ColumnCard data={stage.automation} delay={0} t={t} />
+              <ColumnCard data={stage.reporting} delay={0.08} t={t} />
+              <ColumnCard data={stage.integration} delay={0.16} t={t} />
+            </div>
           </motion.div>
         </AnimatePresence>
       </div>

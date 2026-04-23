@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -28,6 +28,20 @@ export default function ROISection() {
   const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setScrollProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <section
@@ -54,7 +68,7 @@ export default function ROISection() {
           <a
             href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
             data-testid="roi-cta"
-            className="group inline-flex items-center gap-3 px-6 py-3 md:px-7 md:py-3.5 text-[12px] md:text-[13px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:bg-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/30 transition-all duration-500 shrink-0"
+            className="group inline-flex items-center gap-3 px-6 py-3 md:px-7 md:py-3.5 text-[14px] md:text-[13px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:bg-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/30 transition-all duration-500 shrink-0"
           >
             {t('Book a Meeting')}
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -62,7 +76,7 @@ export default function ROISection() {
         </motion.div>
 
         {/* 3-column stat cards — horizontal scroll on mobile, 3-col grid on desktop */}
-        <div className="md:grid md:grid-cols-3 md:gap-px md:bg-[#4B4DF7]/[0.06] md:rounded-2xl md:overflow-hidden flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 mb-10 md:mb-16 scrollbar-hide">
+        <div ref={scrollRef} className="md:grid md:grid-cols-3 md:gap-px md:bg-[#4B4DF7]/[0.06] md:rounded-2xl md:overflow-hidden flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 mb-10 md:mb-16 scrollbar-hide">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.value}
@@ -87,16 +101,24 @@ export default function ROISection() {
               {/* Label + Sublabel + Footnote */}
               <div>
                 <h3
-                  className="text-[13px] md:text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-2 md:mb-4"
+                  className="text-[15px] md:text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-2 md:mb-4"
                 >
                   {t(stat.label)} <span className="font-normal text-[#1A1A2E]/50">{t(stat.sublabel)}</span>
                 </h3>
-                <p className="text-[11px] md:text-[15px] text-[#1A1A2E]/50 leading-[1.5] md:leading-relaxed">
+                <p className="text-[13px] md:text-[15px] text-[#1A1A2E]/50 leading-[1.5] md:leading-relaxed">
                   {t(stat.footnote)}
                 </p>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Progress bar — mobile only */}
+        <div className="md:hidden mx-auto -mt-6 mb-10 w-36 h-1 rounded-full bg-[#1A1A2E]/10 relative">
+          <div
+            className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill"
+            style={{ left: `${scrollProgress * 0.65}%`, transition: "left 200ms ease-out" }}
+          />
         </div>
       </div>
     </section>

@@ -74,9 +74,9 @@ export default function HeroSection() {
       {/* Hero content. layered above */}
       <div className="relative z-10 flex-1 flex items-start md:items-center pt-6 md:pt-0">
         <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full py-10 md:py-16 lg:py-0">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div className="grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-10 items-center">
             {/* LEFT. Big headline */}
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-5">
               <motion.h1
                 className="text-[clamp(2.5rem,10vw,3.75rem)] md:text-[clamp(3rem,6vw,5.5rem)] font-bold tracking-[-0.03em] text-white"
                 style={{ lineHeight: 1.1, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
@@ -99,7 +99,26 @@ export default function HeroSection() {
               </motion.p>
             </div>
 
-            {/* RIGHT. CTA */}
+            {/* RIGHT. Product video */}
+            <motion.div
+              className="lg:col-span-7"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+            >
+              <div
+                className="relative rounded-2xl overflow-hidden border border-white/10"
+                style={{ boxShadow: '0 20px 60px -15px rgba(75, 77, 247, 0.45), 0 0 0 1px rgba(255,255,255,0.05)' }}
+              >
+                <video
+                  src="/videos/video-skillvue.mp4"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-auto block"
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

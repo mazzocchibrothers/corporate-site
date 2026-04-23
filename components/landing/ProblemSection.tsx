@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 
@@ -40,6 +40,20 @@ export default function ProblemSection() {
   const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setScrollProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <section
@@ -68,7 +82,7 @@ export default function ProblemSection() {
         </AnimatedSection>
 
         {/* Pain cards — horizontal scroll on mobile, 3-col grid on desktop */}
-        <div ref={ref} className="md:grid md:grid-cols-3 md:gap-px md:bg-[#4B4DF7]/[0.06] md:rounded-2xl md:overflow-hidden flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide">
+        <div ref={(el) => { (ref as any).current = el; scrollRef.current = el; }} className="md:grid md:grid-cols-3 md:gap-px md:bg-[#4B4DF7]/[0.06] md:rounded-2xl md:overflow-hidden flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide">
           {painCards.map((card, i) => (
             <motion.div
               key={card.stat + i}
@@ -92,15 +106,23 @@ export default function ProblemSection() {
 
               {/* Title + Description */}
               <div>
-                <h3 className="text-[13px] md:text-[15px] lg:text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-2 md:mb-3 lg:mb-4">
+                <h3 className="text-[15px] md:text-[15px] lg:text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-2 md:mb-3 lg:mb-4">
                   {t(card.title)}
                 </h3>
-                <p className="text-[11px] md:text-[13px] lg:text-[15px] text-[#1A1A2E]/50 leading-[1.6] md:leading-[1.7] lg:leading-[1.75]">
+                <p className="text-[13px] md:text-[13px] lg:text-[15px] text-[#1A1A2E]/50 leading-[1.6] md:leading-[1.7] lg:leading-[1.75]">
                   {t(card.desc)}
                 </p>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Progress bar — mobile only */}
+        <div className="md:hidden mx-auto mt-4 w-36 h-1 rounded-full bg-[#1A1A2E]/10 relative">
+          <div
+            className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill"
+            style={{ left: `${scrollProgress * 0.65}%`, transition: "left 200ms ease-out" }}
+          />
         </div>
       </div>
     </section>

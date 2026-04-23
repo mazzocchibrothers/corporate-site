@@ -37,6 +37,9 @@ function HreflangTags() {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <LanguageProvider>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      </Head>
       <HreflangTags />
       <div className="min-h-screen">
         {/* Animated flowing background. fixed */}

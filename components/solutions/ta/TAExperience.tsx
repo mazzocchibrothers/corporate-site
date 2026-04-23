@@ -37,7 +37,7 @@ export default function TAExperience() {
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="w-10 h-10 rounded-full bg-white/[0.06] border border-white/[0.1] flex items-center justify-center">
-                <User className="h-4 w-4 text-[#9B9DFB]/70" strokeWidth={1.5} />
+                <User className="h-5 w-5 md:h-4 md:w-4 text-[#9B9DFB]/70" strokeWidth={1.5} />
               </div>
               <h3 className="text-[16px] md:text-[20px] font-bold text-white/90">{t('Candidate Experience')}</h3>
             </div>
@@ -61,7 +61,7 @@ export default function TAExperience() {
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="w-10 h-10 rounded-full bg-white/[0.06] border border-white/[0.1] flex items-center justify-center">
-                <Briefcase className="h-4 w-4 text-[#9B9DFB]/70" strokeWidth={1.5} />
+                <Briefcase className="h-5 w-5 md:h-4 md:w-4 text-[#9B9DFB]/70" strokeWidth={1.5} />
               </div>
               <h3 className="text-[16px] md:text-[20px] font-bold text-white/90">{t('HR Experience')}</h3>
             </div>
