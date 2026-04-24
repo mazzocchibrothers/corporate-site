@@ -10,12 +10,6 @@ const highlights = [
     metric: '-35%',
     metricLabel: 'time-to-hire',
   },
-  {
-    author: 'Loro Piana',
-    role: 'Luxury & Retail',
-    metric: '20x',
-    metricLabel: 'volume of assessments',
-  },
 ];
 
 export default function CustomerHighlights() {

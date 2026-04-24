@@ -13,7 +13,6 @@ const metrics = [
 const logoFiles = [
   { name: 'Unicredit', file: 'unicredit' },
   { name: 'Carrefour', file: 'carrefour_fixed' },
-  { name: 'Loro Piana', file: 'loropiana_fixed' },
   { name: 'Capgemini', file: 'capgemini_fixed' },
   { name: 'Fidia', file: 'fidia_fixed' },
   { name: 'Generali', file: 'generali' },
@@ -21,7 +20,7 @@ const logoFiles = [
   { name: 'Coop', file: 'coop' },
 ];
 
-const logos = ['Unicredit', 'Carrefour', 'Loro Piana', 'Capgemini', 'Credem', 'Luxottica', 'Fidia', 'NovaCoop', 'Douglas', 'Generali', 'Coop'];
+const logos = ['Unicredit', 'Carrefour', 'Capgemini', 'Credem', 'Luxottica', 'Fidia', 'NovaCoop', 'Douglas', 'Generali', 'Coop'];
 
 export default function CustomersHero() {
   const { t } = useLanguage();

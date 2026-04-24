@@ -7,11 +7,10 @@ import { useLanguage } from '@/i18n/LanguageContext';
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import scrollArrowsData from '../../public/animations/scroll-arrows.json';
 
-const trustLogos = ['Unicredit', 'Loro Piana', 'Carrefour', 'Fidia', 'Generali', 'Capgemini', 'Coop', 'Douglas'];
+const trustLogos = ['Unicredit', 'Carrefour', 'Fidia', 'Generali', 'Capgemini', 'Coop', 'Douglas'];
 
 const logoImages: Record<string, string> = {
   'Unicredit': '/logos/unicredit.png',
-  'Loro Piana': '/logos/loropiana_fixed.png',
   'Carrefour': '/logos/carrefour_fixed.png',
   'Fidia': '/logos/fidia_fixed.png',
   'Generali': '/logos/generali.png',
