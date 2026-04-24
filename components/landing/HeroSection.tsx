@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import GradientBlinds from '../backgrounds/GradientBlinds';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
@@ -21,65 +20,23 @@ const logoImages: Record<string, string> = {
 
 export default function HeroSection() {
   const { t, lang } = useLanguage();
-  const [isMobile, setIsMobile] = React.useState(false);
-  const [reducedMotion, setReducedMotion] = React.useState(false);
-
-  React.useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener('resize', check);
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setReducedMotion(mq.matches);
-    const onMotionChange = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
-    mq.addEventListener('change', onMotionChange);
-    return () => {
-      window.removeEventListener('resize', check);
-      mq.removeEventListener('change', onMotionChange);
-    };
-  }, []);
 
   return (
     <section
       id="hero"
       data-testid="hero-section"
       className="relative overflow-hidden flex flex-col justify-between pt-[80px]"
-      style={{ width: '100%', minHeight: '100vh' }}
+      style={{ width: '100%', minHeight: '100vh', background: '#0d0d1f' }}
     >
-      {/* GradientBlinds background — desktop only */}
-      {!isMobile && (
-        <div className="absolute inset-0 z-0">
-          <GradientBlinds
-            dpr={typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1}
-            gradientColors={["#4B4DF7", "#FF5F24", "#FF5F24"]}
-            angle={0}
-            noise={0.8}
-            blindCount={30}
-            blindMinWidth={70}
-            mouseDampening={0.15}
-            mirrorGradient={false}
-            spotlightRadius={0.5}
-            spotlightSoftness={1}
-            spotlightOpacity={1}
-            distortAmount={0}
-            shineDirection="left"
-            mixBlendMode="normal"
-            paused={reducedMotion}
-          />
-        </div>
-      )}
-
-      {/* Mobile: subtle animated gradient */}
-      <div className="absolute inset-0 z-0 md:hidden hero-mobile-gradient" />
-
       {/* Hero content. layered above */}
       <div className="relative z-10 flex-1 flex items-start md:items-center pt-6 md:pt-0">
         <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full py-10 md:py-16 lg:py-0">
-          <div className="grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-10 items-center">
+          <div className="grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-12 items-center">
             {/* LEFT. Big headline */}
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-6">
               <motion.h1
-                className="text-[clamp(2.5rem,10vw,3.75rem)] md:text-[clamp(3rem,6vw,5.5rem)] font-bold tracking-[-0.03em] text-white"
-                style={{ lineHeight: 1.1, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
+                className="text-[clamp(2.5rem,10vw,3.75rem)] md:text-[clamp(2.75rem,4.8vw,4.5rem)] font-bold tracking-[-0.025em] text-white"
+                style={{ lineHeight: 1.08, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -89,7 +46,7 @@ export default function HeroSection() {
                 {t('backed by science.')}
               </motion.h1>
               <motion.p
-                className="text-[15px] md:text-[18px] text-white/80 leading-[1.65] md:leading-[1.75] mt-5 md:mt-8 max-w-xl font-normal md:font-light"
+                className="text-[15px] md:text-[17px] text-white/75 leading-[1.65] md:leading-[1.65] mt-6 md:mt-8 max-w-lg font-normal md:font-light"
                 style={{ textShadow: '0 1px 8px rgba(0,0,0,0.2)' }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -99,9 +56,9 @@ export default function HeroSection() {
               </motion.p>
             </div>
 
-            {/* RIGHT. Product video */}
+            {/* RIGHT. Product video — balanced size */}
             <motion.div
-              className="lg:col-span-7"
+              className="lg:col-span-6"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
