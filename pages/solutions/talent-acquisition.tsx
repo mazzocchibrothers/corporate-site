@@ -12,7 +12,6 @@ import TAPlaybook from '@/components/solutions/ta/TAPlaybook';
 import TAExperience from '@/components/solutions/ta/TAExperience';
 import TAImpact from '@/components/solutions/ta/TAImpact';
 import TAFunnel from '@/components/solutions/ta/TAFunnel';
-import TACustomerStory from '@/components/solutions/ta/TACustomerStory';
 import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 
