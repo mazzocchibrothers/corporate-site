@@ -74,7 +74,7 @@ export default function CTASection() {
               ))}
             </div>
             <div className="flex justify-center gap-x-4 md:gap-x-10">
-              {['loropiana_fixed', 'fidia_fixed'].map((logo) => (
+              {['fidia_fixed'].map((logo) => (
                 <div key={logo} className="flex items-center justify-center h-8 md:h-12">
                   <img
                     src={`/logos/${logo}.png`}

@@ -20,6 +20,50 @@ const logoImages: Record<string, string> = {
 
 export default function HeroSection() {
   const { t, lang } = useLanguage();
+  const [videoPlaying, setVideoPlaying] = React.useState(true);
+  const [videoMuted, setVideoMuted] = React.useState(true);
+  const [videoScale, setVideoScale] = React.useState(1);
+  const iframeRef = React.useRef<HTMLIFrameElement>(null);
+  const videoWrapperRef = React.useRef<HTMLDivElement>(null);
+
+  // Render iframe at native 1920x1080 then scale down to fit container.
+  // This tricks YouTube into thinking the player is large → serves 1080p+ quality.
+  React.useEffect(() => {
+    const updateScale = () => {
+      const wrapper = videoWrapperRef.current;
+      if (!wrapper) return;
+      const w = wrapper.offsetWidth;
+      setVideoScale(w / 1920);
+    };
+    updateScale();
+    const ro = new ResizeObserver(updateScale);
+    if (videoWrapperRef.current) ro.observe(videoWrapperRef.current);
+    return () => ro.disconnect();
+  }, []);
+
+  const toggleVideoMute = () => {
+    const iframe = iframeRef.current;
+    if (!iframe || !iframe.contentWindow) return;
+    const cmd = videoMuted ? 'unMute' : 'mute';
+    iframe.contentWindow.postMessage(`{"event":"command","func":"${cmd}","args":""}`, '*');
+    setVideoMuted(!videoMuted);
+  };
+
+  const forceHighQuality = () => {
+    const iframe = iframeRef.current;
+    if (!iframe || !iframe.contentWindow) return;
+    // Force highest available quality via YouTube IFrame API
+    const trySetQuality = () => {
+      iframe.contentWindow?.postMessage(
+        '{"event":"command","func":"setPlaybackQuality","args":["hd2160"]}',
+        '*'
+      );
+    };
+    // Try multiple times because the player needs to be ready
+    setTimeout(trySetQuality, 800);
+    setTimeout(trySetQuality, 2000);
+    setTimeout(trySetQuality, 4000);
+  };
 
   return (
     <section
@@ -56,24 +100,93 @@ export default function HeroSection() {
               </motion.p>
             </div>
 
-            {/* RIGHT. Product video — balanced size */}
+            {/* RIGHT. Product video — slightly larger */}
             <motion.div
-              className="lg:col-span-6"
+              className="lg:col-span-6 lg:-mr-8"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
               <div
-                className="relative rounded-2xl overflow-hidden border border-white/10"
+                ref={videoWrapperRef}
+                className="relative rounded-2xl overflow-hidden border border-white/10 aspect-video bg-black"
                 style={{ boxShadow: '0 20px 60px -15px rgba(75, 77, 247, 0.45), 0 0 0 1px rgba(255,255,255,0.05)' }}
               >
-                <video
-                  src="/videos/video-skillvue.mp4"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-auto block"
-                />
+                {videoPlaying ? (
+                  <>
+                    <iframe
+                      ref={iframeRef}
+                      src="https://www.youtube-nocookie.com/embed/Y8Oo5HBVl-Q?autoplay=1&mute=1&loop=1&playlist=Y8Oo5HBVl-Q&controls=0&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&playsinline=1&vq=hd2160&hd=1&enablejsapi=1"
+                      title="Skillvue product video"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      onLoad={forceHighQuality}
+                      width={1920}
+                      height={1080}
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '1920px',
+                        height: '1080px',
+                        transformOrigin: 'top left',
+                        transform: `scale(${videoScale})`,
+                        pointerEvents: 'none',
+                      }}
+                    />
+                    {/* Click overlay — toggles audio mute/unmute */}
+                    <button
+                      type="button"
+                      onClick={toggleVideoMute}
+                      aria-label={videoMuted ? 'Activate sound' : 'Mute video'}
+                      className="absolute inset-0 z-10 group cursor-pointer"
+                    >
+                      {/* Audio indicator — bottom right */}
+                      <div className="absolute bottom-4 right-4 flex items-center gap-2 px-3 py-2 rounded-full bg-black/50 backdrop-blur-md border border-white/10 group-hover:bg-black/70 transition-all duration-300">
+                        {videoMuted ? (
+                          <>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                              <line x1="22" y1="9" x2="16" y2="15" />
+                              <line x1="16" y1="9" x2="22" y2="15" />
+                            </svg>
+                            <span className="text-[11px] font-medium text-white/90 tracking-wide">{t('Tap for sound')}</span>
+                          </>
+                        ) : (
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                          </svg>
+                        )}
+                      </div>
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setVideoPlaying(true)}
+                    aria-label="Play Skillvue product video"
+                    className="absolute inset-0 w-full h-full group cursor-pointer"
+                  >
+                    <img
+                      src="https://img.youtube.com/vi/Y8Oo5HBVl-Q/maxresdefault.jpg"
+                      alt="Skillvue product video"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    {/* Subtle dark overlay for readability of play button */}
+                    <div className="absolute inset-0 bg-black/15 group-hover:bg-black/25 transition-colors duration-300" />
+                    {/* Play button */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/95 group-hover:bg-white flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#0d0d1f" className="ml-1 md:w-7 md:h-7">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                )}
               </div>
             </motion.div>
           </div>
