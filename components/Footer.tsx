@@ -38,7 +38,7 @@ const footerLinks = [
       { name: 'Blog', nameIt: 'Blog', href: '/blog', hideInIT: true },
       { name: 'White Papers', nameIt: 'White Papers', href: '/resources/whitepapers', hideInIT: true },
       { name: 'About', nameIt: 'Chi siamo', href: '/about' },
-      { name: 'Book a Meeting', nameIt: 'Prenota un Incontro', href: '/book-meeting', hrefIt: '/prenota-incontro' },
+      { name: 'Book a Demo', nameIt: 'Prenota una Demo', href: '/book-meeting', hrefIt: '/prenota-incontro' },
     ],
   },
 ];

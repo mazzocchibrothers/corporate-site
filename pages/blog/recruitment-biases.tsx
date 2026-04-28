@@ -183,7 +183,7 @@ export default function BlogArticle2() {
               </p>
               <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center justify-between px-9 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500 mb-16">
-                <span>{lang === 'it' ? 'Prenota un incontro' : 'Book a Meeting'}</span>
+                <span>{lang === 'it' ? 'Prenota una demo' : 'Book a Demo'}</span>
                 <ArrowRight className="h-4 w-4 ml-8 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
               </button>
               <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">

@@ -232,7 +232,7 @@ export default function Navbar() {
               }}
               onClick={(e) => { e.preventDefault(); navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); }}
             >
-              {lang === 'it' ? 'Prenota un Incontro' : 'Book a Meeting'}
+              {lang === 'it' ? 'Prenota una Demo' : 'Book a Demo'}
             </a>
           </div>
 
@@ -376,7 +376,7 @@ export default function Navbar() {
                 onClick={() => navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting')}
                 className="w-full flex items-center justify-center py-4 text-[16px] font-semibold text-white rounded-full border border-white/15"
               >
-                {lang === 'it' ? 'Prenota un Incontro' : 'Book a Meeting'}
+                {lang === 'it' ? 'Prenota una Demo' : 'Book a Demo'}
               </button>
             </div>
           </div>

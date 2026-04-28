@@ -61,7 +61,7 @@ export default function BookMeetingPage() {
               </h1>
 
               <p className="text-[18px] text-white/[0.55] leading-[1.75] max-w-md" style={{ fontWeight: 300 }}>
-                {t('Book a meeting with our team to see how Skillvue can transform your hiring, performance, and development processes with science-backed talent intelligence.')}
+                {t('Book a demo with our team to see how Skillvue can transform your hiring, performance, and development processes with science-backed talent intelligence.')}
               </p>
             </div>
 

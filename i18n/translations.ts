@@ -13,7 +13,7 @@ export const translations = {
   'Development': 'Learning & Development',
   'Mobility': 'Mobilità Interna',
   'Project Resourcing': 'Project Resourcing',
-  'Book a Meeting': 'Prenota un Incontro',
+  'Book a Demo': 'Prenota una Demo',
   'Back': 'Indietro',
   'Skillvue': 'Skillvue',
 
@@ -288,7 +288,7 @@ export const translations = {
   // ===== BOOK MEETING PAGE =====
   "Let's talk about your": 'Parliamo della tua',
   'talent strategy.': 'strategia di talento.',
-  'Book a meeting with our team to see how Skillvue can transform your hiring, performance, and development processes with science-backed talent intelligence.': 'Prenota un incontro con il nostro team per scoprire come Skillvue può trasformare i tuoi processi di selezione, performance e sviluppo con la talent intelligence supportata dalla scienza.',
+  'Book a demo with our team to see how Skillvue can transform your hiring, performance, and development processes with science-backed talent intelligence.': 'Prenota una demo con il nostro team per scoprire come Skillvue può trasformare i tuoi processi di selezione, performance e sviluppo con la talent intelligence supportata dalla scienza.',
 
   // ===== CUSTOMER STORY SHARED =====
   'The Context': 'Il Contesto',
@@ -850,7 +850,7 @@ export const translations = {
   "Fill the form below and we'll send it straight to your inbox.": 'Compila il modulo e te lo invieremo direttamente nella tua inbox.',
   'More White Papers': 'Altri White Paper',
   'Want to see the science in action?': 'Vuoi vedere la scienza in azione?',
-  'Book a meeting with our team and discover how Skillvue turns talent decisions into a competitive advantage.': 'Prenota un incontro con il nostro team e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.',
+  'Book a demo with our team and discover how Skillvue turns talent decisions into a competitive advantage.': 'Prenota una demo con il nostro team e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.',
 
   // ===== BLOG PAGE =====
   'Blog &': 'Blog &',
@@ -860,7 +860,7 @@ export const translations = {
   'Insights, research, and perspectives on talent intelligence, AI in HR, and the future of people decisions.': 'Approfondimenti, ricerche e prospettive sulla talent intelligence, AI nelle risorse umane e il futuro delle decisioni sulle persone.',
   'Read more': 'Leggi di più',
   'Want to go deeper? Talk to our team.': 'Vuoi approfondire ulteriormente? Parla con il nostro team.',
-  'Book a meeting and discover how Skillvue turns talent decisions into a competitive advantage.': 'Prenota un incontro e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.',
+  'Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.': 'Prenota una demo e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.',
 
   // ===== WHITEPAPERS PAGE =====
   'Reports': 'Report',
@@ -1124,5 +1124,5 @@ export const translations = {
   'Built for European complexity': 'Pensato per la complessità europea',
   'GDPR, EU AI Act, multi-country operations, multi-language workforces. Designed for the regulatory and cultural complexity European enterprises face every day.': "Regolamento generale sulla protezione dei dati, normativa europea sull'intelligenza artificiale, operatività in più Paesi, forza lavoro multilingue. Skillvue è progettata per affrontare ogni giorno la complessità normativa e culturale delle imprese europee.",
   'Ready to make talent decisions you can defend?': 'Pronto a prendere decisioni sui talenti che puoi davvero difendere?',
-  'Book a meeting with our team and see how Skillvue can transform your hiring, performance, and development processes.': 'Prenota un incontro con il nostro team e scopri come Skillvue può trasformare i tuoi processi di assunzione, gestione delle prestazioni e sviluppo.',
+  'Book a demo with our team and see how Skillvue can transform your hiring, performance, and development processes.': 'Prenota una demo con il nostro team e scopri come Skillvue può trasformare i tuoi processi di assunzione, gestione delle prestazioni e sviluppo.',
 };

@@ -50,7 +50,7 @@ export default function CTASection() {
               data-testid="cta-book-demo"
               className="relative group/btn inline-flex items-center justify-between w-full px-5 py-3 md:px-8 md:py-5 md:max-w-sm text-[12px] md:text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
             >
-              <span>{t('Book a Meeting')}</span>
+              <span>{t('Book a Demo')}</span>
               <ArrowRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-white/30 group-hover/btn:text-[#9B9DFB] group-hover/btn:translate-x-1 transition-all duration-500" />
             </a>
           </div>

@@ -97,7 +97,7 @@ export default function CustomerStoriesSection() {
               onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
               className="group inline-flex items-center justify-between px-6 py-3 md:px-7 md:py-3.5 text-[13px] md:text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
             >
-              <span>{t('Book a Meeting')}</span>
+              <span>{t('Book a Demo')}</span>
               <ArrowRight className="h-4 w-4 ml-4 md:ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
             </button>
             <button
