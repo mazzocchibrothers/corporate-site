@@ -29,12 +29,12 @@ const content = {
       before: 'Come Unicomm sta costruendo una nuova ',
       highlight1: 'gestione del talento',
       middle: ' su una rete di ',
-      highlight2: '270 punti vendita',
+      highlight2: '250 punti vendita',
       after: ' in costante aumento',
     },
     subtitle: "Con Skillvue, Unicomm sta trasformando la propria infrastruttura HR in un sistema skills-based agile, capace di rispondere alle necessità di selezione, conferma e sviluppo su tutta la rete.",
     heroMetrics: [
-      { value: '270', label: 'punti vendita coinvolti' },
+      { value: '250', label: 'punti vendita coinvolti' },
       { value: '7', label: 'insegne' },
       { value: '3', label: 'processi attivati in parallelo' },
     ],
@@ -45,15 +45,15 @@ const content = {
       facts: [
         { label: 'Settore', value: 'GDO' },
         { label: 'Gruppo', value: 'Gruppo Unicomm' },
-        { label: 'Fatturato', value: '~2 mld €' },
+        { label: 'Fatturato', value: '+3,5 mld €' },
         { label: 'Dipendenti', value: '8.000+' },
-        { label: 'Punti vendita diretti', value: '270+' },
+        { label: 'Punti vendita diretti', value: '250+' },
         { label: 'Use Case', value: 'Hiring, Learning & Development, Internal Mobility' },
       ],
     },
     context: {
       badge: 'CONTESTO',
-      title: 'Un gruppo che raddoppia il fatturato in tre anni ha bisogno di persone pronte alla stessa velocità.',
+      title: 'Un gruppo in continua e forte crescita ha bisogno di persone pronte alla stessa velocità.',
       paragraph: <>
         <strong className="text-[#121212]/80 font-semibold">Gruppo Unicomm</strong>, parte di <strong className="text-[#121212]/80 font-semibold">Selex Gruppo Commerciale</strong>, è una delle principali realtà della <strong className="text-[#121212]/80 font-semibold">Grande Distribuzione Organizzata</strong> italiana. Negli ultimi 3 anni il gruppo ha registrato una <strong className="text-[#121212]/80 font-semibold">crescita quasi doppia</strong> rispetto alla media di settore, con l'obiettivo dichiarato di proseguire lavorando all'apertura di nuovi punti vendita, all'integrazione strategica con <strong className="text-[#121212]/80 font-semibold">Etruria Retail</strong> e alla realizzazione di nuove infrastrutture logistiche. In questo scenario di espansione accelerata, la capacità di selezionare, confermare e sviluppare le persone giuste diventa una priorità tanto per HR quanto per il business — soprattutto considerando che nel mercato del lavoro della GDO italiana il <strong className="text-[#121212]/80 font-semibold">50% delle posizioni</strong> è classificato come "difficile da chiudere" e uno store manager richiede in media <strong className="text-[#121212]/80 font-semibold">90-120 giorni</strong> di ricerca.
       </>,
@@ -80,7 +80,7 @@ const content = {
         {
           icon: Zap,
           title: 'Una digitalizzazione HR ancora agli inizi',
-          text: "Selezione, conferme del personale e percorsi di sviluppo venivano gestiti in modo manuale ed erano affidati alle capacità dei singoli responsabili di negozio o area. Non esisteva una visione d'insieme sul talento dei 7.000 dipendenti.",
+          text: "Selezione, conferme del personale e percorsi di sviluppo venivano gestiti in modo manuale ed erano affidati alle capacità dei singoli responsabili di negozio o area. Non esisteva una visione d'insieme sul talento degli oltre 8.000 dipendenti.",
         },
         {
           icon: Heart,
@@ -128,7 +128,7 @@ const content = {
       badge: 'RISULTATI',
       title: 'Cosa sta cambiando.',
       metrics: [
-        { value: '270', label: 'Punti vendita coinvolti' },
+        { value: '250', label: 'Punti vendita coinvolti' },
         { value: '7', label: 'Insegne' },
         { value: '3', label: 'Processi attivati in parallelo' },
       ],
@@ -157,12 +157,12 @@ const content = {
       before: 'How Unicomm is building a new ',
       highlight1: 'talent management system',
       middle: ' across a network of ',
-      highlight2: '270+ stores',
+      highlight2: '250+ stores',
       after: '',
     },
     subtitle: "With Skillvue, Unicomm is transforming its HR infrastructure into an agile, skills-based system that responds to hiring, confirmation and internal development needs across its entire network.",
     heroMetrics: [
-      { value: '270', label: 'included stores' },
+      { value: '250', label: 'included stores' },
       { value: '7', label: 'brands' },
       { value: '3', label: 'processes activated in parallel' },
     ],
@@ -173,15 +173,15 @@ const content = {
       facts: [
         { label: 'Industry', value: 'Large-scale distribution' },
         { label: 'Group', value: 'Unicomm Group' },
-        { label: 'Revenue', value: '~€2B' },
+        { label: 'Revenue', value: '+€3.5B' },
         { label: 'Employees', value: '8,000+' },
-        { label: 'Direct Stores', value: '270+' },
+        { label: 'Direct Stores', value: '250+' },
         { label: 'Use Case', value: 'Hiring, Learning & Development, Internal Mobility' },
       ],
     },
     context: {
       badge: 'CONTEXT',
-      title: 'A group that doubles revenue in three years needs people ready at the same speed.',
+      title: 'A group in continuous and strong growth needs people ready at the same speed.',
       paragraph: <>
         <strong className="text-[#121212]/80 font-semibold">Gruppo Unicomm</strong>, part of <strong className="text-[#121212]/80 font-semibold">Selex Gruppo Commerciale</strong>, is one of Italy's leading <strong className="text-[#121212]/80 font-semibold">organized grocery retail</strong> groups. Over the past 3 years, the group has recorded <strong className="text-[#121212]/80 font-semibold">growth nearly double the sector average</strong>, with a declared objective to continue — through new store openings, strategic integration with <strong className="text-[#121212]/80 font-semibold">Etruria Retail</strong>, and new logistics infrastructure. In this context of accelerated expansion, the ability to hire, confirm and develop the right people becomes a priority for both HR and the business, especially given that in Italy's grocery retail labor market, <strong className="text-[#121212]/80 font-semibold">50% of positions</strong> are classified as "hard to fill" and a store manager requires an average of <strong className="text-[#121212]/80 font-semibold">90-120 days</strong> to recruit.
       </>,
@@ -208,7 +208,7 @@ const content = {
         {
           icon: Zap,
           title: 'HR digitization still at zero',
-          text: "Hiring, confirmations and development paths were managed manually and relied on the individual capabilities of store or area managers. There was no overview of talent quality across 7,000 employees.",
+          text: "Hiring, confirmations and development paths were managed manually and relied on the individual capabilities of store or area managers. There was no overview of talent quality across over 8,000 employees.",
         },
         {
           icon: Heart,
@@ -256,7 +256,7 @@ const content = {
       badge: 'RESULTS',
       title: 'What is changing.',
       metrics: [
-        { value: '270', label: 'Included stores' },
+        { value: '250', label: 'Included stores' },
         { value: '7', label: 'Brands' },
         { value: '3', label: 'Processes activated in parallel' },
       ],
@@ -490,7 +490,7 @@ export default function UnicommStoryPage() {
 
               <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* Metric 0 — map / geographical expansion (270 stores) */}
+                  {/* Metric 0 — map / geographical expansion (250 stores) */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-center justify-center">
                       <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
