@@ -102,7 +102,7 @@ const content = {
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI su tre filoni in parallelo, calibrato sul modello Unicomm.',
-      intro: "Skillvue è stato integrato come partner per la costruzione del talent lifecycle di Unicomm, lavorando con il team HR guidato da Giuseppe Curci per allineare la piattaforma al modello di competenze aziendale e alle specificità della GDO.",
+      intro: "Skillvue è stato integrato come partner per la costruzione del talent lifecycle di Unicomm, lavorando con la Direzione Risorse Umane guidata da Giuseppe Curci, Direttore Risorse Umane Gruppo, per allineare la piattaforma al modello di competenze aziendale e alle specificità della GDO.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Wrench, label: 'Competenze tecniche GDO — differenziate per reparto e livello di responsabilità (ruolo client-facing o meno, livello da addetto vendita a gerente)' },
@@ -230,7 +230,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI assessment across three parallel streams, calibrated on the Unicomm model.',
-      intro: "Skillvue was integrated as a partner for building Unicomm's talent lifecycle, working with the HR team led by Giuseppe Curci to align the platform to the company's leadership model and the specifics of grocery retail.",
+      intro: "Skillvue was integrated as a partner for building Unicomm's talent lifecycle, working with the HR Division led by Giuseppe Curci, Group HR Director, to align the platform to the company's leadership model and the specifics of grocery retail.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Wrench, label: 'Grocery retail technical skills — differentiated by department and level of responsibility (client-facing or not, from sales associate to store manager)' },

@@ -24,8 +24,14 @@ const allStories = [
     headlineEn: "In's Mercato: how it built an internal pipeline of Store Managers",
     bgImage: '/logos/insmercato-bg.jpg',
   },
+  {
+    id: 'adr', company: 'Aeroporti di Roma', industry: 'Transportation & Logistics', useCases: ['Internal Mobility', 'Learning & Development'],
+    headlineIt: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone ripartendo dal potenziale interno",
+    headlineEn: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people starting from internal potential',
+    bgImage: '/logos/adr-explore-stories.jpg',
+  },
   // Temporarily removed from listing pending approval (restore when ready):
-  // unicomm, credem, europ-assistance, mediaset, adr, douglas, eataly
+  // unicomm, credem, europ-assistance, mediaset, douglas, eataly
 ];
 
 const filters = {
