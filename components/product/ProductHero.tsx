@@ -31,7 +31,7 @@ export default function ProductHero() {
           {/* Left: text + CTA */}
           <div>
             <motion.h1
-              className="text-[clamp(2rem,6vw,4rem)] md:text-[clamp(2.5rem,4.5vw,4rem)] font-bold tracking-[-0.03em] text-white/95 mb-6 md:mb-10"
+              className="text-[64px] font-bold tracking-[-0.03em] text-white/95 mb-6 md:mb-10"
               style={{ lineHeight: 1.1 }}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
