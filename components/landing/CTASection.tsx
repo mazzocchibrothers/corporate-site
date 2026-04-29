@@ -62,19 +62,7 @@ export default function CTASection() {
           >
             <span className="text-[11px] md:text-[15px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-0 md:mb-10 block">{t('Our Customers')}</span>
             {(() => {
-              const ctaLogos = lang === 'en'
-                ? [
-                    { name: 'Unicredit', src: '/logos/unicredit.png' },
-                    { name: 'Generali', src: '/logos/generali.png' },
-                    { name: 'Europ Assistance', src: '/logos/europ-assistance-logo.png' },
-                    { name: 'Nespresso', src: '/logos/nespresso.png' },
-                    { name: 'Moncler', src: '/logos/moncler.png' },
-                    { name: 'Stef', src: '/logos/stef.png' },
-                    { name: 'Avolta', src: '/logos/avolta.png' },
-                    { name: 'Lagardère', src: '/logos/lagardere.png' },
-                    { name: 'Tecnomat', src: '/logos/tecnomat.png' },
-                  ]
-                : [
+              const ctaLogos = [
                     { name: 'Unicredit', src: '/logos/unicredit.png' },
                     { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
                     { name: 'Generali', src: '/logos/generali.png' },

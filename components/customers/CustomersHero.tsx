@@ -10,7 +10,7 @@ const metrics = [
   { value: '85%+', label: 'hiring success rate' },
 ];
 
-const logoFilesIT = [
+const logoFiles = [
   { name: 'Unicredit', src: '/logos/unicredit.png' },
   { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
   { name: 'Fidia', src: '/logos/fidia_fixed.png' },
@@ -19,21 +19,8 @@ const logoFilesIT = [
   { name: 'Coop', src: '/logos/coop.png' },
 ];
 
-const logoFilesEN = [
-  { name: 'Unicredit', src: '/logos/unicredit.png' },
-  { name: 'Generali', src: '/logos/generali.png' },
-  { name: 'Europ Assistance', src: '/logos/europ-assistance-logo.png' },
-  { name: 'Nespresso', src: '/logos/nespresso.png' },
-  { name: 'Moncler', src: '/logos/moncler.png' },
-  { name: 'Stef', src: '/logos/stef.png' },
-  { name: 'Avolta', src: '/logos/avolta.png' },
-  { name: 'Lagardère', src: '/logos/lagardere.png' },
-  { name: 'Tecnomat', src: '/logos/tecnomat.png' },
-];
-
 export default function CustomersHero() {
   const { t, lang } = useLanguage();
-  const logoFiles = lang === 'en' ? logoFilesEN : logoFilesIT;
   return (
     <section id="customers-hero" data-testid="customers-hero" className="relative pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-24 lg:py-32">
