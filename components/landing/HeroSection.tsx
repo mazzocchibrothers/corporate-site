@@ -7,20 +7,30 @@ import { useLanguage } from '@/i18n/LanguageContext';
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import scrollArrowsData from '../../public/animations/scroll-arrows.json';
 
-const trustLogos = ['Unicredit', 'Carrefour', 'Fidia', 'Generali', 'Capgemini', 'Coop', 'Douglas'];
+const trustLogosIT = [
+  { name: 'Unicredit', src: '/logos/unicredit.png' },
+  { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
+  { name: 'Fidia', src: '/logos/fidia_fixed.png' },
+  { name: 'Generali', src: '/logos/generali.png' },
+  { name: 'Coop', src: '/logos/coop.png' },
+  { name: 'Douglas', src: '/logos/douglas.png' },
+];
 
-const logoImages: Record<string, string> = {
-  'Unicredit': '/logos/unicredit.png',
-  'Carrefour': '/logos/carrefour_fixed.png',
-  'Fidia': '/logos/fidia_fixed.png',
-  'Generali': '/logos/generali.png',
-  'Capgemini': '/logos/capgemini_fixed.png',
-  'Coop': '/logos/coop.png',
-  'Douglas': '/logos/douglas.png',
-};
+const trustLogosEN = [
+  { name: 'Unicredit', src: '/logos/unicredit.png' },
+  { name: 'Generali', src: '/logos/generali.png' },
+  { name: 'Europ Assistance', src: '/logos/europ-assistance-logo.png' },
+  { name: 'Nespresso', src: '/logos/nespresso.png' },
+  { name: 'Moncler', src: '/logos/moncler.png' },
+  { name: 'Stef', src: '/logos/stef.png' },
+  { name: 'Avolta', src: '/logos/avolta.png' },
+  { name: 'Lagardère', src: '/logos/lagardere.png' },
+  { name: 'Tecnomat', src: '/logos/tecnomat.png' },
+];
 
 export default function HeroSection() {
   const { t, lang } = useLanguage();
+  const trustLogos = lang === 'en' ? trustLogosEN : trustLogosIT;
   const [isMobile, setIsMobile] = React.useState(false);
   const [reducedMotion, setReducedMotion] = React.useState(false);
 
@@ -159,13 +169,13 @@ export default function HeroSection() {
               <div className="marquee-content flex items-center gap-8 md:gap-16 shrink-0 pr-8 md:pr-16">
                 {trustLogos.map((logo) => (
                   <div
-                    key={logo}
-                    data-testid={`trust-logo-${logo.toLowerCase().replace(/\s+/g, '-')}`}
+                    key={logo.name}
+                    data-testid={`trust-logo-${logo.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="shrink-0 opacity-[0.55]"
                   >
                     <img
-                      src={logoImages[logo]}
-                      alt={logo}
+                      src={logo.src}
+                      alt={logo.name}
                       className="h-6 md:h-8 w-auto object-contain max-w-[90px] md:max-w-[120px]"
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
@@ -175,9 +185,9 @@ export default function HeroSection() {
               {/* Duplicate for seamless loop */}
               <div className="marquee-content flex items-center gap-8 md:gap-16 shrink-0 pr-8 md:pr-16" aria-hidden="true">
                 {trustLogos.map((logo) => (
-                  <div key={`dup-${logo}`} className="shrink-0 opacity-[0.45]">
+                  <div key={`dup-${logo.name}`} className="shrink-0 opacity-[0.45]">
                     <img
-                      src={logoImages[logo]}
+                      src={logo.src}
                       alt=""
                       className="h-6 md:h-8 w-auto object-contain max-w-[90px] md:max-w-[120px]"
                       style={{ filter: 'brightness(0) invert(1)' }}

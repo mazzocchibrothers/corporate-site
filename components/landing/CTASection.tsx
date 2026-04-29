@@ -61,30 +61,42 @@ export default function CTASection() {
             className="col-span-2 md:col-span-1 lg:col-span-6 group relative rounded-2xl md:rounded-3xl border border-white/[0.04] hover:border-white/[0.08] bg-white/[0.01] backdrop-blur-sm transition-all duration-700 p-5 md:p-10 lg:p-12"
           >
             <span className="text-[11px] md:text-[15px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-0 md:mb-10 block">{t('Our Customers')}</span>
-            <div className="grid grid-cols-3 gap-x-4 gap-y-3 md:gap-x-10 md:gap-y-8 mb-3 md:mb-8">
-              {['unicredit', 'carrefour_fixed', 'generali', 'capgemini_fixed', 'douglas', 'coop'].map((logo) => (
-                <div key={logo} className="flex items-center justify-center h-8 md:h-12">
-                  <img
-                    src={`/logos/${logo}.png`}
-                    alt={logo}
-                    className="h-6 md:h-9 w-auto max-w-[80px] md:max-w-[120px] object-contain opacity-[0.45] hover:opacity-[0.75] transition-opacity duration-500"
-                    style={{ filter: 'brightness(0) invert(1)' }}
-                  />
+            {(() => {
+              const ctaLogos = lang === 'en'
+                ? [
+                    { name: 'Unicredit', src: '/logos/unicredit.png' },
+                    { name: 'Generali', src: '/logos/generali.png' },
+                    { name: 'Europ Assistance', src: '/logos/europ-assistance-logo.png' },
+                    { name: 'Nespresso', src: '/logos/nespresso.png' },
+                    { name: 'Moncler', src: '/logos/moncler.png' },
+                    { name: 'Stef', src: '/logos/stef.png' },
+                    { name: 'Avolta', src: '/logos/avolta.png' },
+                    { name: 'Lagardère', src: '/logos/lagardere.png' },
+                    { name: 'Tecnomat', src: '/logos/tecnomat.png' },
+                  ]
+                : [
+                    { name: 'Unicredit', src: '/logos/unicredit.png' },
+                    { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
+                    { name: 'Generali', src: '/logos/generali.png' },
+                    { name: 'Douglas', src: '/logos/douglas.png' },
+                    { name: 'Coop', src: '/logos/coop.png' },
+                    { name: 'Fidia', src: '/logos/fidia_fixed.png' },
+                  ];
+              return (
+                <div className="grid grid-cols-3 gap-x-4 gap-y-3 md:gap-x-10 md:gap-y-8 mb-3 md:mb-8">
+                  {ctaLogos.map((logo) => (
+                    <div key={logo.name} className="flex items-center justify-center h-8 md:h-12">
+                      <img
+                        src={logo.src}
+                        alt={logo.name}
+                        className="h-6 md:h-9 w-auto max-w-[80px] md:max-w-[120px] object-contain opacity-[0.45] hover:opacity-[0.75] transition-opacity duration-500"
+                        style={{ filter: 'brightness(0) invert(1)' }}
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            <div className="flex justify-center gap-x-4 md:gap-x-10">
-              {['loropiana_fixed', 'fidia_fixed'].map((logo) => (
-                <div key={logo} className="flex items-center justify-center h-8 md:h-12">
-                  <img
-                    src={`/logos/${logo}.png`}
-                    alt={logo}
-                    className="h-6 md:h-9 w-auto max-w-[80px] md:max-w-[120px] object-contain opacity-[0.45] hover:opacity-[0.75] transition-opacity duration-500"
-                    style={{ filter: 'brightness(0) invert(1)' }}
-                  />
-                </div>
-              ))}
-            </div>
+              );
+            })()}
           </div>
         </motion.div>
       </div>
