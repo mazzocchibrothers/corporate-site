@@ -32,7 +32,7 @@ const content = {
       highlight2: '15 top talent',
       after: ': come selezionare e far crescere il talento su scala',
     },
-    subtitle: "Con Skillvue, Mediaset ha trasformato 3.000 candidature in 15 assunzioni mirate in 5 settimane. Le soft skill come primo filtro, con dati strutturati su ogni candidato per supportarne la crescita.",
+    subtitle: "Con Skillvue Mediaset ha standardizzato lo step di pre-screening di migliaia di candidature. Le soft skill come primo filtro, con dati strutturati su ogni candidato per supportarne la crescita.",
     heroMetrics: [
       { value: '3.000+', label: 'candidature processate' },
       { value: '5 settimane', label: 'gestione end-to-end' },
@@ -45,8 +45,8 @@ const content = {
       facts: [
         { label: 'Settore', value: 'Media & Telecom' },
         { label: 'Gruppo', value: 'MFE – MediaForEurope' },
-        { label: 'Fatturato', value: '~2,5 mld €' },
-        { label: 'Dipendenti', value: '~5.000' },
+        { label: 'Fatturato', value: 'circa 4,03 miliardi €' },
+        { label: 'Dipendenti', value: 'Circa 12.000 dipendenti' },
         { label: 'Use Case', value: 'Hiring' },
       ],
     },
@@ -54,8 +54,8 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Mediaset, parte del gruppo <strong className="text-[#121212]/80 font-semibold">MFE (MediaForEurope)</strong>, è il principale broadcaster commerciale privato in Italia e sta vivendo una fase di evoluzione senza precedenti: con l'acquisizione di ProSiebenSat.1 e la partecipazione in Impresa, MFE è diventato il primo broadcaster privato free-to-air a controllare operazioni in tre grandi mercati europei, raggiungendo <strong className="text-[#121212]/80 font-semibold">oltre 220 milioni di persone in sei paesi</strong>. In termini organizzativi, il salto è enorme: la forza lavoro passa da circa <strong className="text-[#121212]/80 font-semibold">5.200 a oltre 12.000 persone</strong>.<br /><br />
-        È in questo scenario di espansione senza precedenti che nasce il <strong className="text-[#121212]/80 font-semibold">Progetto GRAPE</strong> (Graduate Program): il programma di selezione di stagisti e profili junior da inserire in diverse funzioni aziendali della sede di Cologno Monzese. Identificare in maniera predittiva il talento — soprattutto <strong className="text-[#121212]/80 font-semibold">profili junior ad alto potenziale</strong> — diventa una leva strategica irrinunciabile. Ma come farlo quando si ricevono migliaia di candidature?
+        Mediaset, parte del gruppo <strong className="text-[#121212]/80 font-semibold">MFE (MediaForEurope)</strong>, è il principale broadcaster commerciale privato in Italia e sta vivendo una fase di evoluzione senza precedenti: con l'acquisizione di ProSiebenSat.1 e la partecipazione in Impresa, MFE è diventato il primo broadcaster privato free-to-air a controllare operazioni in tre grandi mercati europei, raggiungendo <strong className="text-[#121212]/80 font-semibold">oltre 220 milioni di persone in sei paesi</strong>. Il salto è enorme: la forza lavoro sale a circa 12.000 considerando il perimetro esteso del gruppo (inclusa ProSiebenSat.1).<br /><br />
+        E' in questo scenario di innovazione e crescita senza precedenti che nasce il <strong className="text-[#121212]/80 font-semibold">progetto Grape</strong> (Graduate Program): il programma di selezione di neo laureati, stagisti e profili junior da inserire in diverse funzioni aziendali. Identificare in maniera predittiva il talento — soprattutto <strong className="text-[#121212]/80 font-semibold">profili junior ad alto potenziale</strong> — diventa una leva strategica irrinunciabile. Ma come farlo quando si ricevono migliaia di candidature?
       </>,
     },
     challenge: {
@@ -172,7 +172,7 @@ const content = {
       highlight2: '15 top talents',
       after: ': how to identify and develop talent at scale',
     },
-    subtitle: "With Skillvue, Mediaset turned 3,000 applications into 15 targeted hires in just 5 weeks, using soft skills as the first filter and structured data on every candidate.",
+    subtitle: "With Skillvue, Mediaset standardised the pre-screening step across thousands of applications. Soft skills as the first filter, with structured data on every candidate to support their growth.",
     heroMetrics: [
       { value: '3,000+', label: 'applications processed' },
       { value: '5 weeks', label: 'end-to-end management' },
@@ -185,8 +185,8 @@ const content = {
       facts: [
         { label: 'Industry', value: 'Media & Telecom' },
         { label: 'Group', value: 'MFE – MediaForEurope' },
-        { label: 'Revenue', value: '~€2.5B' },
-        { label: 'Employees', value: '~5,000' },
+        { label: 'Revenue', value: '~€4.03B' },
+        { label: 'Employees', value: '~12,000' },
         { label: 'Use Case', value: 'Hiring' },
       ],
     },
@@ -194,8 +194,8 @@ const content = {
       badge: 'CONTEXT',
       title: 'The Company and The Context',
       paragraph: <>
-        Mediaset, part of the <strong className="text-[#121212]/80 font-semibold">MFE – MediaForEurope</strong> group, is Italy's leading private commercial broadcaster and is undergoing an unprecedented phase of evolution: with the acquisition of ProSiebenSat.1 and a stake in Impresa, MFE has become the first private free-to-air broadcaster to control operations across three major European markets, reaching <strong className="text-[#121212]/80 font-semibold">over 220 million people in six countries</strong>. The organisational leap is enormous: the workforce is growing from around <strong className="text-[#121212]/80 font-semibold">5,200 to over 12,000 people</strong>.<br /><br />
-        It is in this unprecedented expansion scenario that <strong className="text-[#121212]/80 font-semibold">Progetto GRAPE</strong> (Graduate Program) was born: a hiring programme for interns and junior profiles to be placed across various departments at Mediaset's Cologno Monzese headquarters. Identifying talent predictively — especially <strong className="text-[#121212]/80 font-semibold">high-potential junior profiles</strong> — becomes an indispensable strategic lever. But how to do it when you're receiving thousands of applications?
+        Mediaset, part of the <strong className="text-[#121212]/80 font-semibold">MFE – MediaForEurope</strong> group, is Italy's leading private commercial broadcaster and is undergoing an unprecedented phase of evolution: with the acquisition of ProSiebenSat.1 and a stake in Impresa, MFE has become the first private free-to-air broadcaster to control operations across three major European markets, reaching <strong className="text-[#121212]/80 font-semibold">over 220 million people in six countries</strong>. The organisational leap is enormous: the workforce rises to around 12,000 considering the extended group perimeter (including ProSiebenSat.1).<br /><br />
+        It is in this scenario of unprecedented innovation and growth that <strong className="text-[#121212]/80 font-semibold">Progetto GRAPE</strong> (Graduate Program) was born: a hiring programme for recent graduates, interns and junior profiles to be placed across various departments. Identifying talent predictively — especially <strong className="text-[#121212]/80 font-semibold">high-potential junior profiles</strong> — becomes an indispensable strategic lever. But how to do it when you're receiving thousands of applications?
       </>,
     },
     challenge: {
