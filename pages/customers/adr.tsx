@@ -159,7 +159,6 @@ const content = {
       title: 'Storie correlate',
       stories: [
         { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "Come In's Mercato ha costruito una pipeline interna di Store Manager" },
-        { id: 'credem', company: 'Credem', tag: 'Banking & Finance · Sviluppo', headline: 'Credem: come scovare i migliori talenti su larga scala tra 30.000 candidature per nutrire la crescita del business' },
       ],
       cta: 'Leggi la storia',
     },
@@ -303,7 +302,6 @@ const content = {
       title: 'Related Stories',
       stories: [
         { id: 'ins-mercato', company: "In's Mercato", tag: 'Large-scale distribution · Internal Mobility', headline: "How In's Mercato built an internal pipeline of Store Managers" },
-        { id: 'credem', company: 'Credem', tag: 'Banking & Finance · Development', headline: 'Credem: how to find the best talent at scale among 30,000 applications to fuel business growth' },
       ],
       cta: 'Read the story',
     },
