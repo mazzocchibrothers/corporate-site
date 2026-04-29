@@ -29,7 +29,7 @@ export default function LDHero() {
             {t('Skillvue gives L&D leaders objective, measurable data on where the real skill gaps are, at individual, team, and organizational level, so every training investment is targeted, measurable, and aligned to business impact.')}
           </p>
           <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="ld-hero-cta" className="group inline-flex items-center justify-between w-full lg:w-auto lg:max-w-xl px-6 py-4 lg:px-8 lg:py-5 text-[14px] lg:text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500 shrink-0">
-            <span>{t('Book a Meeting')}</span>
+            <span>{t('Book a Demo')}</span>
             <ArrowRight className="h-5 w-5 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
           </a>
         </motion.div>

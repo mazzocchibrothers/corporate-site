@@ -70,7 +70,7 @@ export default function ROISection() {
             data-testid="roi-cta"
             className="group inline-flex items-center gap-3 px-6 py-3 md:px-7 md:py-3.5 text-[14px] md:text-[13px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:bg-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/30 transition-all duration-500 shrink-0"
           >
-            {t('Book a Meeting')}
+            {t('Book a Demo')}
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
         </motion.div>

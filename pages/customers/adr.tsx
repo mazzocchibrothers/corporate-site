@@ -26,9 +26,9 @@ const content = {
     breadcrumb: 'Clienti',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Aeroporti di Roma: come sviluppare un\'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi',
-      highlight1: '',
-      middle: '',
+      before: 'Aeroporti di Roma: come ',
+      highlight1: 'sviluppare un\'organizzazione da quasi 5.000 persone',
+      middle: ' ripartendo dal potenziale interno',
       highlight2: '',
       after: '',
     },
@@ -52,11 +52,11 @@ const content = {
     },
     context: {
       badge: 'CONTESTO',
-      title: "Un aeroporto che raddoppia ha bisogno di una people strategy che regga su scala",
+      title: "Un aeroporto in forte crescita di traffico ha bisogno di una people strategy che regga su scala",
       paragraph: <>
         Aeroporti di Roma (ADR), parte del Gruppo Mundys, gestisce e sviluppa gli aeroporti di Fiumicino e Ciampino con oltre <strong className="text-[#121212]/80 font-semibold">4.500 dipendenti</strong> e con l'obiettivo di costruire "l'aeroporto del futuro" sulla base di un nuovo modello inclusivo.
         <br /><br />
-        Al tempo stesso ADR è oggi al centro di un piano di trasformazione infrastrutturale senza precedenti. Il <strong className="text-[#121212]/80 font-semibold">Masterplan Fiumicino 2046</strong> prevede €9 miliardi di investimenti per portare la capacità dello scalo da 50 a 100 milioni di passeggeri l'anno, richiedendo una crescita organizzativa in grado di sostenere questa espansione.
+        ADR è oggi protagonista di una crescita sostenuta del traffico passeggeri, accompagnata da un progressivo adeguamento infrastrutturale, che richiede una crescita organizzativa in grado di sostenere questa espansione nel tempo.
         <br /><br />
         In questo scenario, la capacità dell'organizzazione di crescere alla velocità del business diventa una priorità strategica. Per ADR, sviluppare e mobilizzare il capitale umano interno significa poter pianificare con precisione la copertura dei ruoli critici, <strong className="text-[#121212]/80 font-semibold">accelerare la crescita verticale e orizzontale delle persone, e costruire una pipeline di talento visibile e misurabile.</strong>
       </>,
@@ -65,7 +65,7 @@ const content = {
     challenge: {
       badge: 'LA SFIDA',
       title: "Il modello precedente non poteva crescere alla velocità del business",
-      intro: "Con il Masterplan in esecuzione su Fiumicino e l'intera organizzazione in rapida espansione, il modello di sviluppo esistente mostrava alcuni limiti strutturali.",
+      intro: "Con l'intera organizzazione in rapida espansione, soprattutto, nella fase di ripresa post Covid, il modello di sviluppo esistente mostrava alcuni limiti strutturali.",
       businessLabel: 'IMPATTO SUL BUSINESS',
       hrLabel: 'IMPATTO SU HR & PEOPLE',
       businessChallenges: [
@@ -170,9 +170,9 @@ const content = {
     breadcrumb: 'Customers',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a €9 billion plan',
-      highlight1: '',
-      middle: '',
+      before: 'Aeroporti di Roma: how to ',
+      highlight1: 'develop an organisation of nearly 5,000 people',
+      middle: ' starting from internal potential',
       highlight2: '',
       after: '',
     },
@@ -196,11 +196,11 @@ const content = {
     },
     context: {
       badge: 'CONTEXT',
-      title: "An airport that doubles in size needs a people strategy that holds at scale",
+      title: "A rapidly growing airport needs a people strategy that holds at scale",
       paragraph: <>
         Aeroporti di Roma (ADR), part of Gruppo Mundys, manages and develops Fiumicino and Ciampino airports with over <strong className="text-[#121212]/80 font-semibold">4,500 employees</strong> and the ambition to build "the airport of the future" on the basis of a new inclusive model.
         <br /><br />
-        At the same time, ADR is at the center of an unprecedented infrastructure transformation. The <strong className="text-[#121212]/80 font-semibold">Masterplan Fiumicino 2046</strong> plans €9 billion in investments to grow the airport's capacity from 50 to 100 million passengers per year, requiring organizational growth capable of sustaining this expansion.
+        ADR is today on a path of sustained passenger traffic growth and progressive infrastructure adaptation, requiring organisational growth capable of sustaining this expansion over time.
         <br /><br />
         In this context, the organization's ability to grow at the speed of the business becomes a strategic priority. For ADR, developing and mobilizing internal human capital means being able to precisely plan coverage of critical roles, <strong className="text-[#121212]/80 font-semibold">accelerate vertical and horizontal growth, and build a visible, measurable talent pipeline.</strong>
       </>,
@@ -209,7 +209,7 @@ const content = {
     challenge: {
       badge: 'THE CHALLENGE',
       title: "The previous model couldn't grow at the speed of the business",
-      intro: "With the Masterplan underway at Fiumicino and the entire organization expanding rapidly, the existing development model was showing structural limitations.",
+      intro: "With the entire organisation in rapid expansion — especially during the post-Covid recovery phase — the existing development model was showing structural limitations.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [

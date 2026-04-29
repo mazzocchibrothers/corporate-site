@@ -162,13 +162,13 @@ export default function BlogPage() {
                 {t('Want to go deeper? Talk to our team.')}
               </h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">
-                {t('Book a meeting and discover how Skillvue turns talent decisions into a competitive advantage.')}
+                {t('Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.')}
               </p>
               <button
                 onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center justify-between px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
               >
-                <span>{t('Book a Meeting')}</span>
+                <span>{t('Book a Demo')}</span>
                 <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
               </button>
             </motion.div>

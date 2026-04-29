@@ -10,20 +10,30 @@ const metrics = [
   { value: '85%+', label: 'hiring success rate' },
 ];
 
-const logoFiles = [
-  { name: 'Unicredit', file: 'unicredit' },
-  { name: 'Carrefour', file: 'carrefour_fixed' },
-  { name: 'Capgemini', file: 'capgemini_fixed' },
-  { name: 'Fidia', file: 'fidia_fixed' },
-  { name: 'Generali', file: 'generali' },
-  { name: 'Douglas', file: 'douglas' },
-  { name: 'Coop', file: 'coop' },
+const logoFilesIT = [
+  { name: 'Unicredit', src: '/logos/unicredit.png' },
+  { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
+  { name: 'Fidia', src: '/logos/fidia_fixed.png' },
+  { name: 'Generali', src: '/logos/generali.png' },
+  { name: 'Douglas', src: '/logos/douglas.png' },
+  { name: 'Coop', src: '/logos/coop.png' },
 ];
 
-const logos = ['Unicredit', 'Carrefour', 'Capgemini', 'Credem', 'Luxottica', 'Fidia', 'NovaCoop', 'Douglas', 'Generali', 'Coop'];
+const logoFilesEN = [
+  { name: 'Unicredit', src: '/logos/unicredit.png' },
+  { name: 'Generali', src: '/logos/generali.png' },
+  { name: 'Europ Assistance', src: '/logos/europ-assistance-logo.png' },
+  { name: 'Nespresso', src: '/logos/nespresso.png' },
+  { name: 'Moncler', src: '/logos/moncler.png' },
+  { name: 'Stef', src: '/logos/stef.png' },
+  { name: 'Avolta', src: '/logos/avolta.png' },
+  { name: 'Lagardère', src: '/logos/lagardere.png' },
+  { name: 'Tecnomat', src: '/logos/tecnomat.png' },
+];
 
 export default function CustomersHero() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const logoFiles = lang === 'en' ? logoFilesEN : logoFilesIT;
   return (
     <section id="customers-hero" data-testid="customers-hero" className="relative pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-24 lg:py-32">
@@ -102,14 +112,14 @@ export default function CustomersHero() {
                 <div className="marquee-content flex items-center gap-16 shrink-0 pr-16">
                   {logoFiles.map((l) => (
                     <div key={l.name} className="shrink-0 opacity-[0.55]">
-                      <img src={`/logos/${l.file}.png`} alt={l.name} className="h-8 w-auto object-contain max-w-[120px]" style={{ filter: 'brightness(0) invert(1)' }} />
+                      <img src={l.src} alt={l.name} className="h-8 w-auto object-contain max-w-[120px]" style={{ filter: 'brightness(0) invert(1)' }} />
                     </div>
                   ))}
                 </div>
                 <div className="marquee-content flex items-center gap-16 shrink-0 pr-16" aria-hidden="true">
                   {logoFiles.map((l) => (
                     <div key={`d-${l.name}`} className="shrink-0 opacity-[0.55]">
-                      <img src={`/logos/${l.file}.png`} alt="" className="h-8 w-auto object-contain max-w-[120px]" style={{ filter: 'brightness(0) invert(1)' }} />
+                      <img src={l.src} alt="" className="h-8 w-auto object-contain max-w-[120px]" style={{ filter: 'brightness(0) invert(1)' }} />
                     </div>
                   ))}
                 </div>

@@ -247,6 +247,8 @@ html {
 
 /* ===== INFINITE LOGO MARQUEE ===== */
 .marquee-track {
+  display: flex;
+  width: max-content;
   animation: marqueeScroll 30s linear infinite;
 }
 /* Faster marquee on mobile */

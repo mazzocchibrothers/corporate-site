@@ -29,7 +29,7 @@ export default function PRHero() {
             {t('Skillvue gives project leaders and resourcing teams an objective view of who has the skills to deliver, replacing "who\'s free" with "who\'s fit." Reduce delivery risk, improve team composition, and stop staffing in the dark.')}
           </p>
           <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="pr-hero-cta" className="group inline-flex items-center justify-between w-full lg:w-auto lg:max-w-xl px-6 py-4 lg:px-8 lg:py-5 text-[14px] lg:text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500 shrink-0">
-            <span>{t('Book a Meeting')}</span>
+            <span>{t('Book a Demo')}</span>
             <ArrowRight className="h-5 w-5 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
           </a>
         </motion.div>

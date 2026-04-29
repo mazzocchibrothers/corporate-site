@@ -36,7 +36,7 @@ export default function CustomersROI() {
         <motion.div className="flex items-center justify-between" initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.5 }}>
           <p className="text-[15px] text-[#121212]/50">{t('Every other budget line has an ROI framework. These companies proved talent spend can too.')}</p>
           <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} className="group inline-flex items-center gap-3 px-7 py-3.5 text-[13px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:bg-[#4B4DF7]/[0.06] transition-all duration-500 shrink-0">
-            {t('Book a Meeting')}
+            {t('Book a Demo')}
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
         </motion.div>

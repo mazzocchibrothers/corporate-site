@@ -26,7 +26,7 @@ export default function SolutionFinalCTA({ headline, accentWord }) {
             href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
             className="group inline-flex items-center gap-3 px-6 py-4 md:gap-4 md:px-10 md:py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/15 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
           >
-            <span>{t('Book a Meeting')}</span>
+            <span>{t('Book a Demo')}</span>
             <ArrowRight className="h-5 w-5 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
           </a>
         </motion.div>

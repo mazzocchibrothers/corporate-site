@@ -24,8 +24,14 @@ const allStories = [
     headlineEn: "In's Mercato: how it built an internal pipeline of Store Managers",
     bgImage: '/logos/insmercato-bg.jpg',
   },
+  {
+    id: 'adr', company: 'Aeroporti di Roma', industry: 'Transportation & Logistics', useCases: ['Internal Mobility', 'Learning & Development'],
+    headlineIt: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone ripartendo dal potenziale interno",
+    headlineEn: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people starting from internal potential',
+    bgImage: '/logos/adr-explore-stories.jpg',
+  },
   // Temporarily removed from listing pending approval (restore when ready):
-  // unicomm, credem, europ-assistance, mediaset, adr, douglas, eataly
+  // unicomm, credem, europ-assistance, mediaset, douglas, eataly
 ];
 
 const filters = {
@@ -127,7 +133,7 @@ export default function ExploreStories() {
             <p className="text-[16px] text-white/50 mb-4">{t('No stories match these filters yet.')}</p>
             <p className="text-[14px] text-white/30">{t('We may have a relevant case to share privately.')}</p>
             <a href="#" className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full text-[13px] font-semibold text-white border border-white/15 hover:bg-white/[0.06] transition-all duration-400">
-              {t('Book a meeting')} <ArrowRight className="h-3.5 w-3.5" />
+              {t('Book a demo')} <ArrowRight className="h-3.5 w-3.5" />
             </a>
           </div>
         )}

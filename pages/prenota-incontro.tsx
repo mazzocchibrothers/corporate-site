@@ -59,7 +59,7 @@ export default function PrenotaUnIncontroPage() {
               </h1>
 
               <p className="text-[18px] text-white/[0.55] leading-[1.75] max-w-md" style={{ fontWeight: 300 }}>
-                Prenota un incontro con il nostro team per scoprire come Skillvue può trasformare i tuoi processi di selezione, performance e sviluppo grazie a dati chiari e oggettivi supportati dalla scienza.
+                Prenota una demo con il nostro team per scoprire come Skillvue può trasformare i tuoi processi di selezione, performance e sviluppo grazie a dati chiari e oggettivi supportati dalla scienza.
               </p>
             </div>
 
