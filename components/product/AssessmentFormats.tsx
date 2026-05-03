@@ -122,8 +122,8 @@ export default function AssessmentFormats() {
                 })}
               </div>
               {/* Progress bar */}
-              <div className="md:hidden mx-auto mt-4 w-36 h-1 rounded-full bg-white/10 relative">
-                <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgresses[i] * 0.65}%`, transition: "left 200ms ease-out" }} />
+              <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-white/20 relative">
+                <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgresses[i] * 0.65}%` }} />
               </div>
 
               {/* Desktop: existing grid */}

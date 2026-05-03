@@ -1,11 +1,36 @@
 // @ts-nocheck
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Download, Mail } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+
+function useScrollProgress() {
+  const ref = useRef(null);
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
+  return { ref, progress };
+}
+
+function ScrollBar({ progress }) {
+  return (
+    <div className="md:hidden mx-auto mt-5 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
+      <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${progress * 0.65}%` }} />
+    </div>
+  );
+}
 
 const pressArticles = [
   {
@@ -141,6 +166,8 @@ const investors = [
 export default function PressPage() {
   const router = useRouter();
   const { t, lang } = useLanguage();
+  const press = useScrollProgress();
+  const pressIt = useScrollProgress();
 
   return (
     <>
@@ -204,13 +231,13 @@ export default function PressPage() {
 
         {/* 2. Press Coverage */}
         <section className="section-breathe py-20 lg:py-28">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-12"
+              className="mb-8 md:mb-12"
             >
               <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
                 {t('Press Coverage')}
@@ -220,53 +247,68 @@ export default function PressPage() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {pressArticles.map((article, i) => (
+            {(() => {
+              const renderCard = (article, i) => (
                 <motion.a
                   key={article.publication}
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col justify-between rounded-2xl border border-[#121212]/[0.06] bg-white p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500"
+                  className="group flex flex-col justify-between rounded-2xl border border-[#121212]/[0.06] bg-white p-6 md:p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 h-full"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.07 }}
+                  transition={{ duration: 0.5, delay: Math.min(i * 0.07, 0.4) }}
                 >
                   <div>
-                    {/* Logo */}
-                    <div className="mb-6 h-10 flex items-center">
+                    <div className="mb-5 md:mb-6 h-10 flex items-center">
                       <img
                         src={article.logo}
                         alt={article.publication}
                         style={{ height: `${article.logoH}px`, maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' }}
                       />
                     </div>
-                    {/* Title */}
-                    <p className="text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
+                    <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
                       {article.title}
                     </p>
                   </div>
-                  {/* Arrow */}
-                  <div className="mt-6 flex items-center justify-end">
+                  <div className="mt-5 md:mt-6 flex items-center justify-end">
                     <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]/30 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                   </div>
                 </motion.a>
-              ))}
-            </div>
+              );
+              return (
+                <>
+                  {/* Mobile: horizontal scroll */}
+                  <div ref={press.ref} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
+                    {pressArticles.map((article, i) => (
+                      <div key={article.publication} className="shrink-0 w-[80vw] snap-center">
+                        {renderCard(article, i)}
+                      </div>
+                    ))}
+                  </div>
+                  <ScrollBar progress={press.progress} />
+
+                  {/* Desktop: grid */}
+                  <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {pressArticles.map((article, i) => renderCard(article, i))}
+                  </div>
+                </>
+              );
+            })()}
           </div>
         </section>
 
         {/* 2b. Italian Press Coverage — only shown in IT */}
         {lang === 'it' && (
           <section className="section-breathe py-16 lg:py-20 border-t border-[#121212]/[0.04]">
-            <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+            <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="mb-12"
+                className="mb-8 md:mb-12"
               >
                 <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
                   Stampa italiana
@@ -276,18 +318,18 @@ export default function PressPage() {
                 </h2>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {pressArticlesIt.map((article, i) => (
+              {(() => {
+                const renderCard = (article, i) => (
                   <motion.a
                     key={`${article.publication}-${i}`}
                     href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col justify-between rounded-2xl border border-[#121212]/[0.06] bg-white p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500"
+                    className="group flex flex-col justify-between rounded-2xl border border-[#121212]/[0.06] bg-white p-6 md:p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 h-full"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: i * 0.07 }}
+                    transition={{ duration: 0.5, delay: Math.min(i * 0.07, 0.4) }}
                   >
                     <div>
                       <div className="mb-4">
@@ -295,29 +337,47 @@ export default function PressPage() {
                           {article.publication}
                         </span>
                       </div>
-                      <p className="text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
+                      <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
                         {article.title}
                       </p>
                     </div>
-                    <div className="mt-6 flex items-center justify-end">
+                    <div className="mt-5 md:mt-6 flex items-center justify-end">
                       <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]/30 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                     </div>
                   </motion.a>
-                ))}
-              </div>
+                );
+                return (
+                  <>
+                    {/* Mobile: horizontal scroll */}
+                    <div ref={pressIt.ref} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
+                      {pressArticlesIt.map((article, i) => (
+                        <div key={`${article.publication}-${i}`} className="shrink-0 w-[80vw] snap-center">
+                          {renderCard(article, i)}
+                        </div>
+                      ))}
+                    </div>
+                    <ScrollBar progress={pressIt.progress} />
+
+                    {/* Desktop: grid */}
+                    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                      {pressArticlesIt.map((article, i) => renderCard(article, i))}
+                    </div>
+                  </>
+                );
+              })()}
             </div>
           </section>
         )}
 
         {/* 3. Interviews */}
         <section className="section-breathe py-16 lg:py-20 border-t border-[#121212]/[0.04]">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-12"
+              className="mb-8 md:mb-12"
             >
               <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
                 {t('Interviews')}
@@ -327,14 +387,14 @@ export default function PressPage() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl">
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-3 md:gap-5 md:max-w-3xl">
               {interviews.map((item, i) => (
                 <motion.a
                   key={item.publication}
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col justify-between rounded-2xl border border-[#4B4DF7]/[0.10] bg-white p-8 hover:border-[#4B4DF7]/[0.25] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.06] transition-all duration-500"
+                  className="group flex flex-col justify-between rounded-2xl border border-[#4B4DF7]/[0.10] bg-white p-6 md:p-8 hover:border-[#4B4DF7]/[0.25] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.06] transition-all duration-500"
                   style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f8f8ff 100%)' }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -342,18 +402,18 @@ export default function PressPage() {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                 >
                   <div>
-                    <div className="mb-6 h-10 flex items-center">
+                    <div className="mb-5 md:mb-6 h-10 flex items-center">
                       <img
                         src={item.logo}
                         alt={item.publication}
                         style={{ height: `${item.logoH}px`, maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' }}
                       />
                     </div>
-                    <p className="text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
+                    <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
                       {item.title}
                     </p>
                   </div>
-                  <div className="mt-6 flex items-center gap-2">
+                  <div className="mt-5 md:mt-6 flex items-center gap-2">
                     <span className="text-[12px] font-semibold text-[#4B4DF7]/50 tracking-[0.08em] uppercase group-hover:text-[#4B4DF7]/80 transition-colors duration-300">
                       {t('Read interview')}
                     </span>
@@ -367,13 +427,13 @@ export default function PressPage() {
 
         {/* 4. Press Releases — dark section */}
         <section className="relative py-20 lg:py-28 bg-black">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-12"
+              className="mb-8 md:mb-12"
             >
               <span className="text-[11px] font-bold text-[#4B4DF7]/40 tracking-[0.2em] uppercase mb-4 block">
                 {t('Press Releases')}
@@ -383,30 +443,30 @@ export default function PressPage() {
               </h2>
             </motion.div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3 md:gap-4">
               {pressReleases.map((release, i) => (
                 <motion.a
                   key={release.title}
                   href={lang === 'it' && release.urlIt ? release.urlIt : release.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-between gap-6 rounded-2xl border border-white/[0.06] hover:border-white/[0.14] hover:bg-white/[0.03] px-8 py-6 transition-all duration-300"
+                  className="group flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-6 rounded-2xl border border-white/[0.06] hover:border-white/[0.14] hover:bg-white/[0.03] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                 >
-                  <div className="flex items-start gap-8 min-w-0">
-                    <span className="text-[13px] text-white/25 shrink-0 mt-0.5 font-mono">{release.date}</span>
-                    <span className="text-[15px] font-medium text-white/70 group-hover:text-white/90 leading-[1.55] transition-colors duration-300">
+                  <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8 min-w-0 flex-1">
+                    <span className="text-[11px] md:text-[13px] text-[#4B4DF7]/60 md:text-white/25 shrink-0 md:mt-0.5 font-mono tracking-wider uppercase md:normal-case md:tracking-normal">{release.date}</span>
+                    <span className="text-[16px] md:text-[15px] font-semibold md:font-medium text-white/85 md:text-white/70 group-hover:text-white/95 md:group-hover:text-white/90 leading-snug md:leading-[1.55] transition-colors duration-300">
                       {lang === 'it' && release.titleIt ? release.titleIt : release.title}
                     </span>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
-                    <span className="text-[12px] font-semibold text-white/25 tracking-[0.08em] uppercase hidden sm:block group-hover:text-white/50 transition-colors duration-300">
+                    <Download className="h-4 w-4 text-[#4B4DF7]/70 md:text-white/20 group-hover:text-[#4B4DF7] md:group-hover:text-white/50 transition-colors duration-300" />
+                    <span className="text-[12px] font-semibold text-[#4B4DF7]/70 md:text-white/25 tracking-[0.08em] uppercase group-hover:text-[#4B4DF7] md:group-hover:text-white/50 transition-colors duration-300">
                       {t('Download')}
                     </span>
-                    <Download className="h-4 w-4 text-white/20 group-hover:text-white/50 transition-colors duration-300" />
                   </div>
                 </motion.a>
               ))}

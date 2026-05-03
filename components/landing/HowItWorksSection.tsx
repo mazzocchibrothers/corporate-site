@@ -184,10 +184,10 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Progress bar — mobile only */}
-        <div className="md:hidden mx-auto mt-4 w-36 h-1 rounded-full bg-[#1A1A2E]/10 relative">
+        <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
           <div
             className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill"
-            style={{ left: `${scrollProgress * 0.65}%`, transition: "left 200ms ease-out" }}
+            style={{ left: `${scrollProgress * 0.65}%` }}
           />
         </div>
       </div>

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Zap, BarChart3, Plug, FileText, Calendar, MessageSquare, Users, Filter, Trophy, Brain, Search, ArrowDown } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -157,19 +157,6 @@ export default function TAFunnel() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   const stage = stages[active];
-  const scrollRef = useRef(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, [active]);
 
   return (
     <section id="ta-funnel" data-testid="ta-funnel" className="section-breathe relative py-20 lg:py-28" ref={ref}>
@@ -188,9 +175,9 @@ export default function TAFunnel() {
           </h2>
         </motion.div>
 
-        {/* Stage selector — funnel visual */}
+        {/* Stage selector — compact pills on mobile, full cards on desktop */}
         <motion.div
-          className="flex flex-col sm:flex-row items-stretch gap-2 mb-12"
+          className="grid grid-cols-3 gap-2 md:flex md:items-stretch md:gap-2 mb-8 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -200,21 +187,21 @@ export default function TAFunnel() {
               key={s.id}
               onClick={() => setActive(i)}
               data-testid={`funnel-${s.id}`}
-              className={`flex-1 relative rounded-xl px-6 py-5 text-left transition-all duration-500 border ${
+              className={`md:flex-1 relative rounded-xl px-3 py-3 md:px-6 md:py-5 text-left transition-all duration-500 border ${
                 i === active
                   ? 'bg-[#1A1A2E] border-[#1A1A2E]'
                   : 'bg-white border-[#1A1A2E]/[0.06] hover:bg-[#1A1A2E]/[0.04] hover:border-[#1A1A2E]/[0.12]'
               }`}
             >
-              <span className={`text-[11px] font-bold tracking-[0.15em] uppercase block mb-1 ${i === active ? 'text-[#9B9DFB]' : 'text-[#1A1A2E]/25'}`}>
+              <span className={`text-[9px] md:text-[11px] font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase block mb-0.5 md:mb-1 ${i === active ? 'text-[#9B9DFB]' : 'text-[#1A1A2E]/25'}`}>
                 {t('Stage')} {s.number}
               </span>
-              <span className={`text-[18px] font-bold ${i === active ? 'text-white' : 'text-[#1A1A2E]/50'}`}>
+              <span className={`text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-white' : 'text-[#1A1A2E]/50'}`}>
                 {t(s.label)}
               </span>
               {i === active && (
                 <motion.div
-                  className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full"
+                  className="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
@@ -235,21 +222,11 @@ export default function TAFunnel() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {/* Mobile: horizontal scroll */}
-            <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-              <div className="shrink-0 w-[85vw] snap-center">
-                <ColumnCard data={stage.automation} delay={0} t={t} />
-              </div>
-              <div className="shrink-0 w-[85vw] snap-center">
-                <ColumnCard data={stage.reporting} delay={0.08} t={t} />
-              </div>
-              <div className="shrink-0 w-[85vw] snap-center">
-                <ColumnCard data={stage.integration} delay={0.16} t={t} />
-              </div>
-            </div>
-            {/* Progress bar */}
-            <div className="md:hidden mx-auto mt-4 w-36 h-1 rounded-full bg-white/10 relative">
-              <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%`, transition: "left 200ms ease-out" }} />
+            {/* Mobile: vertical stack */}
+            <div className="md:hidden flex flex-col gap-3">
+              <ColumnCard data={stage.automation} delay={0} t={t} />
+              <ColumnCard data={stage.reporting} delay={0.08} t={t} />
+              <ColumnCard data={stage.integration} delay={0.16} t={t} />
             </div>
 
             {/* Desktop */}

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
@@ -76,6 +76,53 @@ const articles = [
 export default function BlogPage() {
   const { t, lang } = useLanguage();
   const router = useRouter();
+  const scrollRef = useRef(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setScrollProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const renderArticle = (article, i) => {
+    const c = lang === 'it' ? article.it : article.en;
+    return (
+      <motion.article
+        key={article.id}
+        className="group rounded-2xl border border-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/[0.15] bg-white overflow-hidden transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] h-full flex flex-col"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: Math.min(i * 0.06, 0.4) }}
+        data-testid={`blog-article-${article.id}`}
+        onClick={() => { if (article.href) { router.push(article.href); window.scrollTo(0, 0); } }}
+      >
+        <div className="aspect-[16/10] overflow-hidden">
+          <img src={article.image} alt={c.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        </div>
+        <div className="p-5 md:p-7 flex-1 flex flex-col">
+          <div className="flex items-center gap-3 mb-3 md:mb-4">
+            <span className="inline-flex px-3 py-1 rounded-full text-[11px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.04] tracking-wide">
+              {c.tag}
+            </span>
+            <span className="text-[12px] text-[#121212]/30">{c.date}</span>
+          </div>
+          <h2 className="text-[16px] md:text-[18px] font-bold text-[#121212] leading-snug mb-3 md:mb-4 group-hover:text-[#4B4DF7] transition-colors duration-300">
+            {c.title}
+          </h2>
+          <span className="text-[13px] font-semibold text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+            {t('Read more')} <ArrowRight className="h-3.5 w-3.5" />
+          </span>
+        </div>
+      </motion.article>
+    );
+  };
 
   return (
     <>
@@ -112,44 +159,27 @@ export default function BlogPage() {
 
         {/* 2. Article Grid */}
         <section id="articles" className="section-breathe">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
-            <motion.div className="mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
+            <motion.div className="mb-8 md:mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#121212] tracking-[-0.02em]">{t('All Articles')}</h2>
             </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {articles.map((article, i) => {
-                const c = lang === 'it' ? article.it : article.en;
-                return (
-                  <motion.article
-                    key={article.id}
-                    className="group rounded-2xl border border-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/[0.15] bg-white overflow-hidden transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04]"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: i * 0.06 }}
-                    data-testid={`blog-article-${article.id}`}
-                    onClick={() => { if (article.href) { router.push(article.href); window.scrollTo(0, 0); } }}
-                  >
-                    <div className="aspect-[16/10] overflow-hidden">
-                      <img src={article.image} alt={c.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                    </div>
-                    <div className="p-7">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="inline-flex px-3 py-1 rounded-full text-[11px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.04] tracking-wide">
-                          {c.tag}
-                        </span>
-                        <span className="text-[12px] text-[#121212]/30">{c.date}</span>
-                      </div>
-                      <h2 className="text-[18px] font-bold text-[#121212] leading-snug mb-4 group-hover:text-[#4B4DF7] transition-colors duration-300">
-                        {c.title}
-                      </h2>
-                      <span className="text-[13px] font-semibold text-[#4B4DF7] flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        {t('Read more')} <ArrowRight className="h-3.5 w-3.5" />
-                      </span>
-                    </div>
-                  </motion.article>
-                );
-              })}
+
+            {/* Mobile: horizontal scroll */}
+            <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
+              {articles.map((article, i) => (
+                <div key={article.id} className="shrink-0 w-[80vw] snap-center">
+                  {renderArticle(article, i)}
+                </div>
+              ))}
+            </div>
+            {/* Progress bar */}
+            <div className="md:hidden mx-auto mt-5 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
+              <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
+            </div>
+
+            {/* Desktop: grid */}
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {articles.map((article, i) => renderArticle(article, i))}
             </div>
           </div>
         </section>
