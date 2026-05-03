@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
@@ -16,6 +16,19 @@ export default function WhitepapersPage() {
   const [selIndustry, setSelIndustry] = useState(null);
   const [selTopic, setSelTopic] = useState(null);
   const [selProcess, setSelProcess] = useState(null);
+  const scrollRef = useRef(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setScrollProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
 
   const published = whitepapers
     .filter(w => w.published && w.languageAvailability.includes(lang))
@@ -82,64 +95,85 @@ export default function WhitepapersPage() {
 
         {/* Grid */}
         <section id="wp-grid" className="section-breathe">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-24">
-            {/* Card Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {published.map((w, i) => {
-                  const c = content(w);
-                  return (
-                    <motion.div
-                      key={w.slug}
-                      className="group cursor-pointer flex flex-col"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: i * 0.1 }}
-                      onClick={() => { router.push(`/resources/whitepapers/${w.slug}`); window.scrollTo(0, 0); }}
-                    >
-                      {/* Cover image in a rounded container */}
-                      <div className="rounded-2xl overflow-hidden mb-5">                        {w.coverBg ? (
-                          <div className="aspect-[4/5] relative overflow-hidden">
-                            <img src={w.coverBg} alt="" className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-50" />
-                            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
-                            <div className="relative z-10 flex flex-col justify-between h-full p-8">
-                              <div>
-                                <div className="flex items-center gap-2.5 mb-8">
-                                  <img src="/logos/skillvue-logomark.svg" alt="Skillvue" className="h-7 w-7" style={{ filter: 'brightness(0) invert(1)' }} />
-                                  <span className="text-white/90 text-[15px] font-semibold">Skillvue</span>
-                                </div>
-                                <h3 className="text-[clamp(2rem,3vw,2.8rem)] font-bold text-white leading-[1.1] mb-5">{c.title}</h3>
+          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-24">
+            {(() => {
+              const renderCard = (w, i) => {
+                const c = content(w);
+                return (
+                  <motion.div
+                    key={w.slug}
+                    className="group cursor-pointer flex flex-col h-full"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    onClick={() => { router.push(`/resources/whitepapers/${w.slug}`); window.scrollTo(0, 0); }}
+                  >
+                    {/* Cover image in a rounded container */}
+                    <div className="rounded-2xl overflow-hidden mb-5">
+                      {w.coverBg ? (
+                        <div className="aspect-[4/5] relative overflow-hidden">
+                          <img src={w.coverBg} alt="" className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-50" />
+                          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+                          <div className="relative z-10 flex flex-col justify-between h-full p-6 md:p-8">
+                            <div>
+                              <div className="flex items-center gap-2.5 mb-6 md:mb-8">
+                                <img src="/logos/skillvue-logomark.svg" alt="Skillvue" className="h-7 w-7" style={{ filter: 'brightness(0) invert(1)' }} />
+                                <span className="text-white/90 text-[15px] font-semibold">Skillvue</span>
                               </div>
-                              <span className="text-[11px] text-white/35 font-semibold tracking-[0.15em] uppercase">{t('White Paper')}</span>
+                              <h3 className="text-[clamp(1.5rem,3vw,2.8rem)] font-bold text-white leading-[1.1] mb-5">{c.title}</h3>
                             </div>
+                            <span className="text-[11px] text-white/35 font-semibold tracking-[0.15em] uppercase">{t('White Paper')}</span>
                           </div>
-                        ) : (
-                          <div className="aspect-[4/5] overflow-hidden">
-                            <img src={w.coverImage} alt={c.title} className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700" />
-                          </div>
-                        )}
+                        </div>
+                      ) : (
+                        <div className="aspect-[4/5] overflow-hidden">
+                          <img src={w.coverImage} alt={c.title} className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700" />
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-1.5 mb-3 content-start">
+                      {w.industry.map(tag => (
+                        <span key={tag} className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.04] tracking-wide h-fit">{tag}</span>
+                      ))}
+                      {w.topic.map(tag => (
+                        <span key={tag} className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold text-[#121212]/55 border border-[#121212]/10 tracking-wide h-fit">{tag}</span>
+                      ))}
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-[14px] md:text-[15px] text-[#121212]/55 leading-[1.7] line-clamp-3 mb-4">{c.shortDesc}</p>
+
+                    {/* CTA */}
+                    <span className="text-[14px] font-semibold text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
+                      {labels.read} <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </motion.div>
+                );
+              };
+              return (
+                <>
+                  {/* Mobile: horizontal scroll */}
+                  <div ref={scrollRef} className="md:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
+                    {published.map((w, i) => (
+                      <div key={w.slug} className="shrink-0 w-[80vw] snap-center">
+                        {renderCard(w, i)}
                       </div>
+                    ))}
+                  </div>
+                  {/* Progress bar */}
+                  <div className="md:hidden mx-auto mt-5 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
+                    <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
+                  </div>
 
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-1.5 mb-3 content-start">
-                        {w.industry.map(tag => (
-                          <span key={tag} className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.04] tracking-wide h-fit">{tag}</span>
-                        ))}
-                        {w.topic.map(tag => (
-                          <span key={tag} className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold text-white/40 border border-white/[0.08] tracking-wide h-fit">{tag}</span>
-                        ))}
-                      </div>
-
-                      {/* Description */}
-                      <p className="text-[15px] text-white/50 leading-[1.7] line-clamp-3 mb-4">{c.shortDesc}</p>
-
-                      {/* CTA */}
-                      <span className="text-[14px] font-semibold text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
-                        {labels.read} <ArrowRight className="h-4 w-4" />
-                      </span>
-                    </motion.div>
-                  );
-                })}
-              </div>
+                  {/* Desktop: grid */}
+                  <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {published.map((w, i) => renderCard(w, i))}
+                  </div>
+                </>
+              );
+            })()}
           </div>
         </section>
 

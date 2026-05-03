@@ -28,7 +28,7 @@ export default function TAProblem() {
   }, []);
 
   return (
-    <section id="ta-problem" data-testid="ta-problem" className="section-breathe relative py-20 lg:py-24 flex items-center"  ref={ref}>
+    <section id="ta-problem" data-testid="ta-problem" className="section-breathe relative py-20 lg:py-24 md:flex md:items-center"  ref={ref}>
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div className="max-w-[900px] mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-8">
@@ -58,8 +58,8 @@ export default function TAProblem() {
           ))}
         </div>
         {/* Progress bar */}
-        <div className="md:hidden mx-auto mt-4 w-36 h-1 rounded-full bg-[#1A1A2E]/10 relative">
-          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%`, transition: "left 200ms ease-out" }} />
+        <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
+          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
         </div>
 
         {/* Desktop: Vertical stacked pain cards with large stat on left */}

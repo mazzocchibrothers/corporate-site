@@ -33,8 +33,29 @@ html, body {
 
 /* Skillvue-branded scroll progress bar fill */
 .skillvue-scroll-fill {
-  background: linear-gradient(90deg, #4B4DF7 0%, #7577F8 50%, #FF5F24 100%);
-  box-shadow: 0 0 8px rgba(75, 77, 247, 0.35);
+  background: linear-gradient(
+    90deg,
+    #4B4DF7 0%,
+    #7577F8 20%,
+    #B57BB0 40%,
+    #FF5F24 60%,
+    #B57BB0 80%,
+    #4B4DF7 100%
+  );
+  background-size: 200% 100%;
+  animation: skillvue-scroll-shimmer 3.5s linear infinite;
+  box-shadow:
+    0 0 10px rgba(75, 77, 247, 0.45),
+    0 0 22px rgba(117, 119, 248, 0.25),
+    0 0 32px rgba(255, 95, 36, 0.15);
+  will-change: transform, background-position;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@keyframes skillvue-scroll-shimmer {
+  from { background-position: 0% 50%; }
+  to { background-position: -200% 50%; }
 }
 
 #emergent-badge,

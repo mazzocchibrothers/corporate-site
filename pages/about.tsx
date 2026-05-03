@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -30,6 +30,19 @@ export default function AboutPage() {
   const valuesInView = useInView(valuesRef, { once: true, margin: '-100px' });
   const teamRef = useRef(null);
   const teamInView = useInView(teamRef, { once: true, margin: '-100px' });
+  const valuesScrollRef = useRef(null);
+  const [valuesScrollProgress, setValuesScrollProgress] = useState(0);
+  useEffect(() => {
+    const el = valuesScrollRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
+      setValuesScrollProgress(pct);
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <>
@@ -182,32 +195,53 @@ export default function AboutPage() {
         </section>
 
         {/* 6. What Drives Us */}
-        <section className="section-breathe" ref={valuesRef} style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-16 lg:py-20 w-full">
-            <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} animate={valuesInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
+        <section className="section-breathe md:flex md:items-center md:min-h-screen" ref={valuesRef}>
+          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-16 lg:py-20 w-full">
+            <motion.div className="text-center mb-10 md:mb-14" initial={{ opacity: 0, y: 20 }} animate={valuesInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
               <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-5 block">{t('Our Values')}</span>
               <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#121212] tracking-[-0.02em]">{t('What Drives Us')}</h2>
             </motion.div>
-            <div className="grid lg:grid-cols-3 gap-6">
-              {values.map((v, i) => {
+            {(() => {
+              const renderCard = (v, i) => {
                 const Icon = v.icon;
                 return (
                   <motion.div
                     key={v.title}
-                    className="group rounded-2xl border border-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/[0.15] bg-white p-12 lg:p-14 transition-all duration-500 text-center hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04]"
+                    className="group rounded-2xl border border-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/[0.15] bg-white p-8 md:p-12 lg:p-14 transition-all duration-500 text-center hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] h-full"
                     initial={{ opacity: 0, y: 20 }}
                     animate={valuesInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: i * 0.12 }}
                   >
-                    <div className="w-20 h-20 rounded-2xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.1] flex items-center justify-center mx-auto mb-10 group-hover:bg-[#4B4DF7]/[0.12] group-hover:border-[#4B4DF7]/[0.2] transition-all duration-500">
-                      <Icon className="h-8 w-8 text-[#4B4DF7]/60 group-hover:text-[#4B4DF7] transition-colors duration-500" />
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.1] flex items-center justify-center mx-auto mb-6 md:mb-10 group-hover:bg-[#4B4DF7]/[0.12] group-hover:border-[#4B4DF7]/[0.2] transition-all duration-500">
+                      <Icon className="h-7 w-7 md:h-8 md:w-8 text-[#4B4DF7]/60 group-hover:text-[#4B4DF7] transition-colors duration-500" />
                     </div>
-                    <h3 className="text-[22px] font-bold text-[#121212] mb-5 leading-tight">{t(v.title)}</h3>
-                    <p className="text-[16px] text-[#121212]/[0.50] leading-[1.85]">{t(v.desc)}</p>
+                    <h3 className="text-[18px] md:text-[22px] font-bold text-[#121212] mb-3 md:mb-5 leading-tight">{t(v.title)}</h3>
+                    <p className="text-[14px] md:text-[16px] text-[#121212]/[0.50] leading-[1.75] md:leading-[1.85]">{t(v.desc)}</p>
                   </motion.div>
                 );
-              })}
-            </div>
+              };
+              return (
+                <>
+                  {/* Mobile: horizontal scroll */}
+                  <div ref={valuesScrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
+                    {values.map((v, i) => (
+                      <div key={v.title} className="shrink-0 w-[80vw] snap-center">
+                        {renderCard(v, i)}
+                      </div>
+                    ))}
+                  </div>
+                  {/* Progress bar */}
+                  <div className="md:hidden mx-auto mt-5 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
+                    <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${valuesScrollProgress * 0.65}%` }} />
+                  </div>
+
+                  {/* Desktop: grid */}
+                  <div className="hidden md:grid lg:grid-cols-3 gap-6">
+                    {values.map((v, i) => renderCard(v, i))}
+                  </div>
+                </>
+              );
+            })()}
           </div>
         </section>
 
