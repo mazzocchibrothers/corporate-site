@@ -10,7 +10,7 @@ const metrics = [
   { value: '85%+', label: 'hiring success rate' },
 ];
 
-const logoFiles = [
+const logoFilesIt = [
   { name: 'Unicredit', src: '/logos/unicredit.png' },
   { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
   { name: 'Fidia', src: '/logos/fidia_fixed.png' },
@@ -19,8 +19,17 @@ const logoFiles = [
   { name: 'Coop', src: '/logos/coop.png' },
 ];
 
+const logoFilesEn = [
+  { name: 'Moncler', src: '/logos/moncler-en.png' },
+  { name: 'Lagardère', src: '/logos/lagardere-en.png' },
+  { name: 'Nespresso', src: '/logos/nespresso-en.png' },
+  { name: 'Tecnomat', src: '/logos/tecnomat-en.png' },
+  { name: 'Avolta', src: '/logos/avolta-en.png' },
+];
+
 export default function CustomersHero() {
   const { t, lang } = useLanguage();
+  const logoFiles = lang === 'en' ? logoFilesEn : logoFilesIt;
   return (
     <section id="customers-hero" data-testid="customers-hero" className="relative pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-24 lg:py-32">
