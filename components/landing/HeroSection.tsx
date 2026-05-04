@@ -25,7 +25,10 @@ const trustLogosEn = [
 
 export default function HeroSection() {
   const { t, lang } = useLanguage();
-  const trustLogos = lang === 'en' ? trustLogosEn : trustLogosIt;
+  const baseLogos = lang === 'en' ? trustLogosEn : trustLogosIt;
+  // Repeat the set so the marquee track is always wider than any viewport,
+  // eliminating any visible gap before the duplicate kicks in.
+  const trustLogos = [...baseLogos, ...baseLogos];
 
   return (
     <section
@@ -151,9 +154,9 @@ export default function HeroSection() {
             <div className="marquee-track flex items-center">
               {/* First set */}
               <div className="marquee-content flex items-center gap-8 md:gap-16 shrink-0 pr-8 md:pr-16">
-                {trustLogos.map((logo) => (
+                {trustLogos.map((logo, i) => (
                   <div
-                    key={logo.name}
+                    key={`a-${i}-${logo.name}`}
                     data-testid={`trust-logo-${logo.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="shrink-0 opacity-[0.55]"
                   >
@@ -168,8 +171,8 @@ export default function HeroSection() {
               </div>
               {/* Duplicate for seamless loop */}
               <div className="marquee-content flex items-center gap-8 md:gap-16 shrink-0 pr-8 md:pr-16" aria-hidden="true">
-                {trustLogos.map((logo) => (
-                  <div key={`dup-${logo.name}`} className="shrink-0 opacity-[0.45]">
+                {trustLogos.map((logo, i) => (
+                  <div key={`b-${i}-${logo.name}`} className="shrink-0 opacity-[0.45]">
                     <img
                       src={logo.src}
                       alt=""

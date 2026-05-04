@@ -29,7 +29,9 @@ const logoFilesEn = [
 
 export default function CustomersHero() {
   const { t, lang } = useLanguage();
-  const logoFiles = lang === 'en' ? logoFilesEn : logoFilesIt;
+  const baseLogos = lang === 'en' ? logoFilesEn : logoFilesIt;
+  // Repeat to keep the track wider than any viewport (no visible gap on wide screens)
+  const logoFiles = [...baseLogos, ...baseLogos];
   return (
     <section id="customers-hero" data-testid="customers-hero" className="relative pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-24 lg:py-32">
@@ -106,15 +108,15 @@ export default function CustomersHero() {
             >
               <div className="marquee-track flex items-center">
                 <div className="marquee-content flex items-center gap-16 shrink-0 pr-16">
-                  {logoFiles.map((l) => (
-                    <div key={l.name} className="shrink-0 opacity-[0.55]">
+                  {logoFiles.map((l, i) => (
+                    <div key={`a-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
                       <img src={l.src} alt={l.name} className="h-8 w-auto object-contain max-w-[120px]" style={{ filter: 'brightness(0) invert(1)' }} />
                     </div>
                   ))}
                 </div>
                 <div className="marquee-content flex items-center gap-16 shrink-0 pr-16" aria-hidden="true">
-                  {logoFiles.map((l) => (
-                    <div key={`d-${l.name}`} className="shrink-0 opacity-[0.55]">
+                  {logoFiles.map((l, i) => (
+                    <div key={`b-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
                       <img src={l.src} alt="" className="h-8 w-auto object-contain max-w-[120px]" style={{ filter: 'brightness(0) invert(1)' }} />
                     </div>
                   ))}
