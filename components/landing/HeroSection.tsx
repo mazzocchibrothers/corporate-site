@@ -6,7 +6,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import scrollArrowsData from '../../public/animations/scroll-arrows.json';
 
-const trustLogos = [
+const trustLogosIt = [
   { name: 'Unicredit', src: '/logos/unicredit.png' },
   { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
   { name: 'Fidia', src: '/logos/fidia_fixed.png' },
@@ -15,8 +15,17 @@ const trustLogos = [
   { name: 'Douglas', src: '/logos/douglas.png' },
 ];
 
+const trustLogosEn = [
+  { name: 'Moncler', src: '/logos/moncler-en.png' },
+  { name: 'Lagardère', src: '/logos/lagardere-en.png' },
+  { name: 'Nespresso', src: '/logos/nespresso-en.png' },
+  { name: 'Tecnomat', src: '/logos/tecnomat-en.png' },
+  { name: 'Avolta', src: '/logos/avolta-en.png' },
+];
+
 export default function HeroSection() {
   const { t, lang } = useLanguage();
+  const trustLogos = lang === 'en' ? trustLogosEn : trustLogosIt;
 
   return (
     <section
