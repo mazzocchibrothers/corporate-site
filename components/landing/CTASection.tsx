@@ -76,6 +76,9 @@ export default function CTASection() {
                     { name: 'Nespresso', src: '/logos/nespresso-en.png' },
                     { name: 'Tecnomat', src: '/logos/tecnomat-en.png' },
                     { name: 'Avolta', src: '/logos/avolta-en.png' },
+                    { name: 'Carrefour', src: '/logos/carrefour-en.png' },
+                    { name: 'Generali', src: '/logos/generali-en.png' },
+                    { name: 'Douglas', src: '/logos/douglas-en.png' },
                   ];
               const ctaLogos = lang === 'en' ? ctaLogosEn : ctaLogosIt;
               return (
