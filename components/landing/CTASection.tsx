@@ -79,6 +79,7 @@ export default function CTASection() {
                     { name: 'Carrefour', src: '/logos/carrefour-en.png' },
                     { name: 'Generali', src: '/logos/generali-en.png' },
                     { name: 'Douglas', src: '/logos/douglas-en.png' },
+                    { name: 'Europ Assistance', src: '/logos/europ-assistance-en.png' },
                   ];
               const ctaLogos = lang === 'en' ? ctaLogosEn : ctaLogosIt;
               return (
