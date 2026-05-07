@@ -6,7 +6,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import scrollArrowsData from '../../public/animations/scroll-arrows.json';
 
-const trustLogos = [
+const trustLogosIt = [
   { name: 'Unicredit', src: '/logos/unicredit.png' },
   { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
   { name: 'Fidia', src: '/logos/fidia_fixed.png' },
@@ -15,8 +15,24 @@ const trustLogos = [
   { name: 'Douglas', src: '/logos/douglas.png' },
 ];
 
+const trustLogosEn = [
+  { name: 'Moncler', src: '/logos/moncler-en.png' },
+  { name: 'Lagardère', src: '/logos/lagardere-en.png' },
+  { name: 'Nespresso', src: '/logos/nespresso-en.png' },
+  { name: 'Tecnomat', src: '/logos/tecnomat-en.png' },
+  { name: 'Avolta', src: '/logos/avolta-en.png' },
+  { name: 'Carrefour', src: '/logos/carrefour-en.png' },
+  { name: 'Generali', src: '/logos/generali-en.png' },
+  { name: 'Douglas', src: '/logos/douglas-en.png' },
+  { name: 'Europ Assistance', src: '/logos/europ-assistance-en.png' },
+];
+
 export default function HeroSection() {
   const { t, lang } = useLanguage();
+  const baseLogos = lang === 'en' ? trustLogosEn : trustLogosIt;
+  // Repeat the set so the marquee track is always wider than any viewport,
+  // eliminating any visible gap before the duplicate kicks in.
+  const trustLogos = [...baseLogos, ...baseLogos];
 
   return (
     <section
@@ -142,9 +158,9 @@ export default function HeroSection() {
             <div className="marquee-track flex items-center">
               {/* First set */}
               <div className="marquee-content flex items-center gap-8 md:gap-16 shrink-0 pr-8 md:pr-16">
-                {trustLogos.map((logo) => (
+                {trustLogos.map((logo, i) => (
                   <div
-                    key={logo.name}
+                    key={`a-${i}-${logo.name}`}
                     data-testid={`trust-logo-${logo.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="shrink-0 opacity-[0.55]"
                   >
@@ -159,8 +175,8 @@ export default function HeroSection() {
               </div>
               {/* Duplicate for seamless loop */}
               <div className="marquee-content flex items-center gap-8 md:gap-16 shrink-0 pr-8 md:pr-16" aria-hidden="true">
-                {trustLogos.map((logo) => (
-                  <div key={`dup-${logo.name}`} className="shrink-0 opacity-[0.45]">
+                {trustLogos.map((logo, i) => (
+                  <div key={`b-${i}-${logo.name}`} className="shrink-0 opacity-[0.45]">
                     <img
                       src={logo.src}
                       alt=""
