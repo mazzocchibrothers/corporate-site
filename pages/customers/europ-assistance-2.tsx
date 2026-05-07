@@ -165,13 +165,13 @@ const content = {
     breadcrumb: 'Customers',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'How to genuinely hire for ',
-      highlight1: 'long-term potential',
+      before: 'Europ Assistance: how to recognise the ',
+      highlight1: 'potential that stands the test of time',
       middle: ' in a business built on ',
       highlight2: 'human interaction',
       after: '',
     },
-    subtitle: "With Skillvue, Europ Assistance transformed candidate pre-screening into a precise, scalable process — identifying and developing cross-functional skills from the very first step of the selection journey.",
+    subtitle: "With Skillvue, Europ Assistance transformed candidate pre-screening into a scalable, strategic process for the entire talent lifecycle — developing cross-functional skills from the very first step of the recruitment journey.",
     heroMetrics: [
       { value: '10,000', label: 'centres in Italy\'s network' },
       { value: '900+', label: 'employees' },
@@ -189,49 +189,49 @@ const content = {
     },
     context: {
       badge: 'CONTEXT',
-      title: 'In a business built on human interaction, the quality of who you hire translates directly into the quality of the service.',
+      title: 'In a business built on human interaction, the quality of hiring cannot afford to compromise.',
       paragraph: <>
-        Europ Assistance, part of the <strong className="text-[#121212]/80 font-semibold">Generali Group</strong>, is one of the world's leading providers of assistance and travel insurance services. Its growth is constant: operations are expanding into new markets and converging with Generali Care into an <strong className="text-[#121212]/80 font-semibold">integrated assistance hub</strong>.<br /><br />In Italy, it operates with a business model built on the quality of human interaction: 24/7 assistance, claims management, multilingual customer care. <strong className="text-[#121212]/80 font-semibold">Hiring and developing the right people is a critical lever</strong> for the business to function and grow, especially given the instability of the insurance labour market — <strong className="text-[#121212]/80 font-semibold">a sector that doesn't always attract top talent</strong>, characterised by rising turnover rates and a salary gap with fintech and consulting. In this context, every wrong hire costs more and every right person who stays is worth even more.
+        Europ Assistance, part of the <strong className="text-[#121212]/80 font-semibold">Generali Group</strong>, is one of the world's leading providers of assistance and travel insurance services. Its growth is constant: operations are expanding into new markets and converging with Generali Care into an <strong className="text-[#121212]/80 font-semibold">integrated assistance hub</strong>.<br /><br />In Italy, it operates with a business model built on the quality of human interaction: <strong className="text-[#121212]/80 font-semibold">24/7 assistance, claims management, multilingual customer care</strong>. <strong className="text-[#121212]/80 font-semibold">Hiring and developing the right people</strong> is a critical lever for the business to function and grow, especially given the instability of the insurance sector — which <strong className="text-[#121212]/80 font-semibold">doesn't always attract top talent</strong> and at the same time demands <strong className="text-[#121212]/80 font-semibold">very specific professional profiles capable of evolving over time</strong>. In this context, every wrong hire costs more and every right person who stays is worth even more.
       </>,
     },
     challenge: {
       badge: 'THE CHALLENGE',
-      title: 'Thousands of applications, two seasonal peaks, 3 people in the recruiting team.',
-      intro: "Europ Assistance Italia's hires are concentrated in two seasonal peaks per year, generating volumes in the order of thousands of applications in just a few months. For assistance and customer care roles, soft skills are the top predictor of success — problem solving, customer orientation, stress management — but are completely invisible in a CV.",
+      title: 'Thousands of applications, 2 seasonal peaks, 3 people in the recruiting team.',
+      intro: "Europ Assistance Italia's hires are concentrated in 2 seasonal peaks per year, generating volumes in the order of thousands of applications in just a few months. For assistance and customer care roles, soft skills are the top predictor of success — problem solving, customer orientation, stress management — but are completely invisible in a CV.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
+          icon: TrendingUp,
+          title: 'Need to grow at the pace the business demands',
+          text: "Business needs were constantly increasing and the speed of response required was always higher. Being faster and more effective for HR in delivering expected results had become an operational necessity.",
+        },
+        {
           icon: Users,
-          title: 'Need to manage seasonal peaks',
-          text: "A team of three manages the entire hiring cycle, with peaks that compress thousands of applications into narrow time windows. There is no room for slow processes: every delay means open positions at precisely the moment the business needs them filled.",
+          title: 'Managing complexity at seasonal peaks',
+          text: "With high volumes concentrated in narrow time windows, there was no room for slow processes. Every delay meant open positions at precisely the moment the business needed them filled.",
         },
         {
           icon: BarChart3,
-          title: 'No visibility on growth potential',
-          text: "Traditional selection evaluated immediate fit, not potential. The goal was to identify predictive skills already at the pre-screening stage, giving line managers useful information to plan each person's development over time.",
-        },
-        {
-          icon: TrendingUp,
-          title: 'Growing at the pace the business demands',
-          text: "Business needs are constantly increasing and the speed of response required is always higher. Being faster and more effective in delivering expected results is no longer just a goal — it is an operational necessity.",
+          title: 'Need for greater foresight on future needs',
+          text: "Identifying predictive growth skills already at the pre-screening stage was key to building useful information for an internal talent pipeline.",
         },
       ],
       hrChallenges: [
         {
-          icon: CheckCircle,
-          title: 'Identifying who already has the right signals to grow',
-          text: "It wasn't enough to find someone who could cover a role immediately. The goal was to bring in people who already showed the right signals for future internal development — and recognising them without structured data was nearly impossible.",
+          icon: Zap,
+          title: 'Too much time trapped in screening',
+          text: "With thousands of applications to manage, manual screening absorbed most of the available resources, leaving little room for in-depth analysis and candidate relationship building.",
         },
         {
-          icon: Zap,
-          title: 'HR time was trapped in screening',
-          text: "Recruiters spent most of their hours on introductory calls and manual filtering, with little return in terms of quality. The result was a slower process and a selection based on impressions rather than objective data.",
+          icon: CheckCircle,
+          title: 'Difficulty identifying future potential',
+          text: "Bringing in people with the right potential for internal development paths required structured data that a CV alone was not able to provide.",
         },
         {
           icon: Target,
-          title: 'Technical and niche profiles hard to reach',
-          text: "Some strategic roles require very specific skills that are hard to assess from a CV. Without objective tools, selecting these profiles relies on individual recruiter experience — with high risk of error and extended time-to-close.",
+          title: 'Niche profiles hard to identify',
+          text: "Some strategic roles required very specific skills, difficult to assess from a CV. Without objective evaluation tools, the process slowed down and the risk of a poor match increased.",
         },
       ],
     },
@@ -241,8 +241,8 @@ const content = {
       items: [
         { icon: Zap, text: 'Scale pre-screening without scaling the team: manage thousands of applications with 3 FTE, freeing recruiters from screening to focus on interviews and potential evaluation' },
         { icon: Eye, text: 'Make soft skills visible from the first step: objective data on cross-functional skills and English language needed to be available before committing hours of the recruiting team\'s time' },
-        { icon: Shield, text: 'Build a fair and defensible process: AI as support to the recruiter, not a substitute: keeping human-in-the-loop at every stage, with full decision-making control at every step' },
-        { icon: Target, text: 'Select for potential, not just immediate performance: identify candidates with skills that make them employable for internal growth and future roles' },
+        { icon: Shield, text: 'Leverage AI as support to the recruiter: ensuring greater speed and decision-making effectiveness while maintaining full decision-making control at every step' },
+        { icon: Target, text: 'Select for potential, not just immediate performance: identify candidates with promising skills indicative of future growth within the organisation' },
       ],
     },
     solution: {
@@ -258,8 +258,8 @@ const content = {
       methodologyLabel: 'HOW IT WAS BUILT',
       methodology: [
         {
-          title: 'Assessment is done independently as the first step',
-          text: "After applying, every candidate completes the assessment independently from any device — phone, tablet or laptop — with no training or technical support required.",
+          title: 'Assessment is done independently as first step',
+          text: "After applying, every candidate completes the assessment independently from any device — phone, tablet or laptop.",
         },
         {
           title: 'Structured report for the recruiter',
@@ -275,18 +275,18 @@ const content = {
       badge: 'RESULTS',
       title: 'What is changing.',
       pillars: [
-        { icon: Target, value: 'Higher-quality candidates', label: 'less noise, more signals' },
-        { icon: Zap, value: 'More time for what matters', label: 'from bottleneck to value-added' },
-        { icon: TrendingUp, value: 'Active talent pipeline', label: 'hiring for potential, not just immediate fit' },
+        { icon: Target, value: <>Higher-quality<br />candidates</>, label: 'less noise, more concrete signals for the HR team' },
+        { icon: Zap, value: <>More time<br />for what matters</>, label: 'more personalised and targeted interviews, based on real data' },
+        { icon: TrendingUp, value: <>Talent pipeline<br />for the future</>, label: 'hiring with tomorrow already in mind, not just immediate fit' },
       ],
       qualitative: [
-        { icon: BarChart3, title: 'Visibility on potential from the first step', text: 'For the first time, HR and line managers have structured soft skill data on every candidate before the interview. Not just "hire/don\'t hire", but information on how a person can grow over time.' },
-        { icon: Scale, title: 'Recruiters freed for high-value work', text: 'The time recovered is invested in in-depth interviews, potential analysis and collaboration with line managers — activities that directly impact hiring quality and retention.' },
-        { icon: Heart, title: 'A candidate experience that goes beyond the CV', text: 'A more digital, more expressive experience than a CV alone. When given the chance to prove themselves, candidates respond well: demand for traditional screening turned out to be far lower than expected.' },
+        { icon: BarChart3, title: 'Visibility on true potential from the first step', text: 'HR and line managers have structured soft skill data on every candidate before the interview — not just immediate fit, but concrete signals of growth over time.' },
+        { icon: Scale, title: 'Recruiters free to do high-value work', text: 'Time saved in pre-screening is reinvested in more in-depth interviews and potential analysis — activities that directly impact hiring quality and retention.' },
+        { icon: Heart, title: 'Enhanced candidate experience', text: 'More room for self-expression: when given the chance to prove themselves, candidates respond positively and enthusiastically.' },
       ],
     },
     quote: {
-      text: 'When hiring and development speak the same language, the data collected today becomes the foundation for tomorrow\'s growth.',
+      text: 'I believe hiring and development must speak the same language: the data collected today becomes the foundation for tomorrow\'s growth.',
       author: 'Nicole Cerruti',
       role: 'Recruitment Manager, Europ Assistance Italia',
     },
