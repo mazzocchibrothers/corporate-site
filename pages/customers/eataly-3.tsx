@@ -26,13 +26,13 @@ const content = {
     breadcrumb: 'Clienti',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti ',
-      highlight1: 'ad alto potenziale',
-      middle: '',
+      before: 'Eataly: come Integrare ',
+      highlight1: 'Intelligenza Artificiale e Human Touch',
+      middle: ' per costruire processi di selezione più efficaci, inclusivi e consapevoli',
       highlight2: '',
       after: '',
     },
-    subtitle: "Insieme a Skillvue, Eataly ha avviato un percorso di digital transformation per integrare AI e human touch nel recruiting e sostenere così l'espansione del business.",
+    subtitle: "Con il supporto di Skillvue, Eataly ha ottimizzato la valutazione delle competenze in fase di pre-screening, gestendo oltre 1.000 candidature senza rinunciare alla qualità di valutazione, alla vicinanza alla persona e all'autenticità del brand in ogni fase del processo.",
     heroMetrics: [
       { value: '1.000+', label: 'candidature processate' },
       { value: '50', label: 'punti vendita diretti' },
@@ -51,69 +51,69 @@ const content = {
     },
     context: {
       badge: 'CONTESTO',
-      title: 'Un brand che cresce a ritmi serrati ha bisogno di trovare i talenti giusti alla stessa velocità',
+      title: "Crescere senza perdere l'anima del brand",
       paragraph: <>
-        Eataly non è un operatore qualsiasi del food italiano. Con una <strong className="text-[#121212]/80 font-semibold">crescita del 47% in tre anni</strong> e una presenza internazionale reale in <strong className="text-[#121212]/80 font-semibold">15 Paesi</strong>, è l'unico brand del food Made in Italy a operare su scala globale. Dal 2022 sta accelerando su tutti i fronti: <strong className="text-[#121212]/80 font-semibold">nuovi flagship in Nord America</strong>, nuovi format compatti in hub urbani e aeroporti, un piano di espansione in <strong className="text-[#121212]/80 font-semibold">Medio Oriente</strong> e la prima esperienza a bordo delle navi da crociera.<br /><br />
-        Questa crescita richiede figure professionali capaci di incarnare i valori del brand in contesti multiculturali — dai profili manageriali come <strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations e General Manager</strong>, fino ai profili più junior che rappresentano la <strong className="text-[#121212]/80 font-semibold">prossima generazione di talento Eataly</strong>. In uno scenario in cui il mondo del lavoro è diventato più <strong className="text-[#121212]/80 font-semibold">dinamico, digitale e in continua trasformazione</strong>, l'obiettivo era chiaro: semplificare e rendere più efficienti i processi di recruiting, senza perdere la <strong className="text-[#121212]/80 font-semibold">qualità, l'autenticità e l'attenzione alla persona</strong> che da sempre contraddistinguono il brand. Nasce da qui il <strong className="text-[#121212]/80 font-semibold">Progetto Career Passport</strong>, primo capitolo per la costruzione di una <strong className="text-[#121212]/80 font-semibold">talent strategy</strong> sempre più solida e innovativa, orientata a rendere Eataly una piattaforma globale del Made in Italy.
+        Eataly non è un operatore qualsiasi del food italiano. Con una <strong className="text-[#121212]/80 font-semibold">crescita del 47% in tre anni</strong> e una presenza internazionale reale in <strong className="text-[#121212]/80 font-semibold">15 Paesi</strong>, è l'unico brand del food Made in Italy a operare su scala globale. Dal 2022 sta accelerando su tutti i fronti: <strong className="text-[#121212]/80 font-semibold">nuovi flagship in Nord America</strong>, nuovi format compatti in hub urbani e aeroporti e un piano di espansione in <strong className="text-[#121212]/80 font-semibold">Medio Oriente</strong>.<br /><br />
+        Questa crescita richiede figure professionali capaci di incamerare i valori del brand in contesti multiculturali — dai profili manageriali come <strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations e General Manager</strong>, fino ai profili più junior che rappresentano la <strong className="text-[#121212]/80 font-semibold">prossima generazione di talento Eataly</strong>. In uno scenario in cui il mondo del lavoro è diventato più <strong className="text-[#121212]/80 font-semibold">dinamico, digitale e in continua trasformazione</strong>, l'obiettivo era chiaro: semplificare e rendere più efficienti i processi di recruiting, senza perdere la <strong className="text-[#121212]/80 font-semibold">qualità, l'autenticità e l'attenzione alla persona</strong> che da sempre contraddistinguono il brand. Nasce da qui il <strong className="text-[#121212]/80 font-semibold">Progetto Eataly Career Passport</strong>, primo capitolo per la costruzione di una <strong className="text-[#121212]/80 font-semibold">talent strategy</strong> sempre più solida e innovativa, orientata a rendere Eataly un riferimento globale del Made in Italy.
       </>,
       summary: '',
     },
     challenge: {
       badge: 'LA SFIDA',
-      title: "Crescere a questa velocità significa ripensare il modo di lavorare",
-      intro: "La campagna Career Passport ha generato oltre mille candidature per 3 posizioni chiave. Una scala che, per essere gestita, richiedeva non solo nuovi strumenti, ma un nuovo modo di lavorare.",
+      title: 'Crescere a questa velocità significa ripensare il modo di lavorare',
+      intro: "La campagna Eataly Career Passport ha generato oltre mille candidature per 3 posizioni chiave. Un volume che, per essere gestito, richiedeva non solo nuovi strumenti, ma anche un nuovo approccio.",
       businessLabel: 'IMPATTO SUL BUSINESS',
       hrLabel: 'IMPATTO SU HR & PEOPLE',
       businessChallenges: [
         {
           icon: Zap,
-          title: "La velocità dell'espansione supera la capacity di selezione",
-          text: "20+ nuovi store in pipeline in Nord America, aperture simultanee su più mercati, date fissate. Lo screening manuale non reggeva più i ritmi e il livello di profondità richiesti.",
+          title: 'La velocità di espansione richiedeva nuove strategie nel processo di selezione',
+          text: '10+ nuovi store in pipeline in Nord America, aperture simultanee su più mercati, date fissate. Andava potenziato lo screening per coniugare alti volumi e maggiore profondità di analisi.',
         },
         {
           icon: Layers,
-          title: 'Il profilo cercato è raro: artigianale + manageriale + internazionale',
-          text: "Eataly cerca chi sa replicare l'autenticità artigianale su scala globale. Leadership, gestione del personale, inglese fluente, mobilità internazionale: un profilo composito e difficile da trovare.",
+          title: 'La ricerca era sfidante: competenze operative, visione manageriale e respiro internazionale',
+          text: "Eataly cerca chi sa replicare l'autenticità della cultura enogastronomica italiana su scala globale: un profilo che combina leadership, gestione dei team, inglese fluente e mobilità internazionale.",
         },
         {
           icon: TrendingUp,
-          title: 'La crescita amplifica il peso specifico della selezione',
-          text: "Per un'azienda con aperture store su date fissate, ogni posizione scoperta è un problema operativo e di costi. A questa scala, la qualità della selezione è ancora più cruciale.",
+          title: 'La crescita richiedeva un impegno ancora maggiore rispetto a prima nella selezione',
+          text: "In un contesto di forte crescita, ogni inserimento ha un impatto diretto su operatività e costi: per questo la qualità della selezione diventa ancora più strategica.",
         },
       ],
       hrChallenges: [
         {
-          icon: Zap,
-          title: 'Servono nuovi modi di lavorare, più agili e data-driven',
-          text: "Gestire questi volumi richiedeva evolvere il team HR: da un approccio tradizionale a una mentalità agile, guidata dai dati e capace di adattarsi ai cambiamenti del business.",
+          icon: Eye,
+          title: 'Serviva un nuovo modo di lavorare, più data-driven',
+          text: "La gestione di questi volumi ha spinto il team HR a evolvere verso un approccio agile, guidato dai dati e allineato alla dinamicità del business.",
         },
         {
-          icon: Scale,
-          title: 'Ricerca di equità e oggettività su volumi mai gestiti prima',
-          text: "Senza uno strumento strutturato, il rischio era valutare in modo disomogeneo. Nel settore, il 38,1% dei mismatch deriva proprio da assessment non standardizzati.",
+          icon: CheckCircle,
+          title: 'Andava acceso il riflettore sulle soft skill fin da prima del colloquio',
+          text: "Proprio in virtù della specificità dei ruoli ricercati, l'analisi delle soft skill più rilevanti non poteva essere rimandata a una fase successiva.",
         },
         {
-          icon: Target,
-          title: 'Necessità di filtrare da subito i requisiti bloccanti',
-          text: "Disponibilità al trasferimento, range retributivo, esperienza internazionale: requisiti bloccanti da verificare al primo contatto, prima di investire tempo su candidati non idonei.",
+          icon: Heart,
+          title: 'Nonostante la velocità, andava preservato il momento di feedback ai candidati',
+          text: "Era fondamentale poter restituire a ciascun candidato un'analisi dettagliata rispetto al possesso di competenze chiave per il ruolo dopo il primo screening.",
         },
       ],
     },
     objectives: {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
-      title: 'Cosa doveva cambiare',
+      title: 'Obiettivi di collaborazione',
       items: [
-        { icon: Eye, text: "Mappare tutti i fattori chiave già al pre-screening: Leadership, gestione del personale, lingua inglese, aspirazione alla mobilità internazionale. Valutare tutto ancora prima del colloquio, per concentrare l'investimento di tempo successivo in una conversazione più mirata, personalizzata, e guidata da informazioni chiave." },
-        { icon: Scale, text: "Garantire equità e ridurre i bias in modo strutturale: ogni candidato valutato con lo stesso rigore e la stessa profondità, costruendo un processo difendibile e trasparente sia all'interno che all'esterno, grazie a strumenti psicometricamente validati." },
-        { icon: Heart, text: "Integrare AI e human touch senza mai perdere l'autenticità del brand: usare la tecnologia come abilitatore — non come sostituzione — del valore umano che da sempre contraddistingue Eataly, per processi più efficaci, inclusivi e consapevoli." },
-        { icon: Zap, text: "Processare le candidature in settimane, non mesi: comprimere i tempi di pre-screening per stare al passo con un piano di aperture che non aspetta, semplificando radicalmente il flusso di screening del team HR." },
+        { icon: Eye, text: "Mappare fin dal pre-screening tutti i fattori chiave: leadership, gestione del personale, conoscenza dell'inglese e disponibilità alla mobilità internazionale, per arrivare al colloquio con informazioni già strutturate e concentrare il tempo su una conversazione più mirata, personalizzata e di valore." },
+        { icon: Scale, text: "Mantenere alto lo standard di equità: l'equità per Eataly non è un obiettivo, è una garanzia. Ogni candidato doveva essere valutato attraverso strumenti psicometricamente validati, così da rendere il processo di selezione trasparente e libero da bias strutturali." },
+        { icon: Heart, text: "Integrare AI e human touch senza mai perdere l'autenticità del brand: usare la tecnologia come abilitatore — non come sostituzione del valore umano che da sempre contraddistingue Eataly, per processi più efficaci, inclusivi e consapevoli." },
+        { icon: Zap, text: "Processare le candidature in minor tempo senza comprimere la qualità: la velocità non deve essere il risultato di una semplificazione, ma di un'architettura progettata per scalare e mantenere al contempo profondità e qualità di analisi." },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue per il progetto Career Passport',
-      intro: "Skillvue è stato integrato nel processo di selezione esterna del progetto Eataly Career Passport — il programma di global mobility lanciato per supportare l'espansione in Nord America. Dopo che una campagna omnichannel ha raccolto oltre 1.000 candidature, Skillvue ha gestito il pre-screening con un assessment basato su domande filtro e domande situazionali calibrate sui ruoli specifici (Head Chef, Director of Store Operations, General Manager of Restaurant).",
-      intro2: "L'obiettivo non era sostituire il giudizio umano, ma potenziarlo: lasciare all'AI il lavoro di standardizzazione su larga scala e restituire al team HR tempo e dati di qualità per concentrarsi su ciò che conta davvero: il confronto umano successivo.",
+      intro: <>Skillvue è stato integrato nel processo di selezione di <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong>, il programma di global mobility lanciato per supportare l'<strong className="text-[#121212]/80 font-semibold">espansione in Nord America</strong>. Dopo una campagna omnichannel che <strong className="text-[#121212]/80 font-semibold">ha raccolto oltre 1.000 candidature</strong>, Skillvue ha gestito il pre-screening con un assessment basato su <strong className="text-[#121212]/80 font-semibold">domande filtro e domande situazionali</strong> calibrate sui ruoli specifici (<strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations, General Manager of Restaurant</strong>).</>,
+      intro2: <>L'obiettivo non era <strong className="text-[#121212]/80 font-semibold">sostituire il giudizio umano, ma liberarlo</strong>. All'AI il lavoro di standardizzazione su larga scala; al team HR i dati per concentrarsi su ciò che <strong className="text-[#121212]/80 font-semibold">nessun algoritmo può sostituire</strong>: la valutazione umana che segue.</>,
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Users, label: 'Leadership' },
@@ -138,9 +138,9 @@ const content = {
     },
     vision: {
       badge: 'EVOLUZIONE 2026',
-      title: "L'espansione continua. La macchina di talent acquisition anche.",
-      intro: "Il Career Passport è stato il primo capitolo per la costruzione di una talent strategy sempre più solida e innovativa, orientata a rendere il brand Eataly una piattaforma globale del Made in Italy.",
-      nextGen: "Nel 2026 la collaborazione prosegue con il progetto NextGen, focalizzato su candidati junior con 270+ profili già inclusi nell'assessment di lingua inglese (livello B2) e soft skill. Un segnale chiaro della volontà di Eataly di continuare a integrare AI e human touch come leva strutturale di una talent strategy consapevole, inclusiva e scalabile.",
+      title: 'Una collaborazione che cresce',
+      intro: <>Il programma <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong> ha rappresentato il primo tassello di un <strong className="text-[#121212]/80 font-semibold">percorso di mobilità internazionale</strong> dedicato ai profili manageriali. Nel 2026, la collaborazione si estende con <strong className="text-[#121212]/80 font-semibold">Eataly NextGen</strong>, rivolto ai profili junior: <strong className="text-[#121212]/80 font-semibold">270+ candidati</strong> valutati in un assessment strutturato di <strong className="text-[#121212]/80 font-semibold">lingua inglese (livello B2) e soft skill</strong>. Un segnale concreto della volontà di Eataly di consolidare l'integrazione tra <strong className="text-[#121212]/80 font-semibold">AI e human touch</strong> come fondamento di una <strong className="text-[#121212]/80 font-semibold">talent strategy inclusiva e scalabile</strong>.</>,
+      nextGen: '',
     },
     related: {
       title: 'Storie correlate',
@@ -157,13 +157,13 @@ const content = {
     breadcrumb: 'Customers',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Eataly: how to fuel a global expansion plan by identifying and mobilising ',
-      highlight1: 'high-potential talent',
-      middle: '',
+      before: 'Eataly: how to integrate ',
+      highlight1: 'Artificial Intelligence and Human Touch',
+      middle: ' to build more effective, inclusive and conscious hiring processes',
       highlight2: '',
       after: '',
     },
-    subtitle: "Eataly has embarked on a digital transformation journey to integrate AI and human touch in recruiting, supporting its global business expansion.",
+    subtitle: "With Skillvue's support, Eataly optimised skills assessment at the pre-screening stage, managing over 1,000 applications without compromising on evaluation quality, closeness to candidates, or brand authenticity at any stage of the process.",
     heroMetrics: [
       { value: '1,000+', label: 'applications processed' },
       { value: '50', label: 'direct stores' },
@@ -182,69 +182,69 @@ const content = {
     },
     context: {
       badge: 'CONTEXT',
-      title: 'A brand growing fast needs to find the right talent at the same speed',
+      title: "Growing without losing the soul of the brand",
       paragraph: <>
-        Eataly is no ordinary player in Italian food. With <strong className="text-[#121212]/80 font-semibold">47% growth over three years</strong> and a truly international presence across <strong className="text-[#121212]/80 font-semibold">15 countries</strong>, it is the only Italian food brand operating at global scale. Since 2022 it has been accelerating on all fronts: <strong className="text-[#121212]/80 font-semibold">new flagships in North America</strong>, new compact formats in urban hubs and airports, an expansion plan in the <strong className="text-[#121212]/80 font-semibold">Middle East</strong>, and the first at-sea experience on cruise ships.<br /><br />
-        This growth requires talent capable of embodying the brand's values in multicultural contexts — from managerial profiles like <strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations and General Manager</strong>, to more junior profiles representing the <strong className="text-[#121212]/80 font-semibold">next generation of Eataly talent</strong>. In a world of work that has become more <strong className="text-[#121212]/80 font-semibold">dynamic, digital and constantly evolving</strong>, the goal was clear: simplify and make recruiting processes more efficient, without losing the <strong className="text-[#121212]/80 font-semibold">quality, authenticity and care for people</strong> that have always defined the brand. This is the origin of the <strong className="text-[#121212]/80 font-semibold">Career Passport Project</strong> — the first chapter in building a <strong className="text-[#121212]/80 font-semibold">talent strategy</strong> that is increasingly solid, innovative and oriented towards making Eataly a global platform for Made in Italy.
+        Eataly is no ordinary player in Italian food. With <strong className="text-[#121212]/80 font-semibold">47% growth over three years</strong> and a truly international presence across <strong className="text-[#121212]/80 font-semibold">15 countries</strong>, it is the only Italian food brand operating at global scale. Since 2022 it has been accelerating on all fronts: <strong className="text-[#121212]/80 font-semibold">new flagships in North America</strong>, new compact formats in urban hubs and airports, and an expansion plan in the <strong className="text-[#121212]/80 font-semibold">Middle East</strong>.<br /><br />
+        This growth requires talent capable of embodying the brand's values in multicultural contexts — from managerial profiles like <strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations and General Manager</strong>, to more junior profiles representing the <strong className="text-[#121212]/80 font-semibold">next generation of Eataly talent</strong>. In a world of work that has become more <strong className="text-[#121212]/80 font-semibold">dynamic, digital and constantly evolving</strong>, the goal was clear: simplify and make recruiting processes more efficient, without losing the <strong className="text-[#121212]/80 font-semibold">quality, authenticity and care for people</strong> that have always defined the brand. This is the origin of the <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport Project</strong> — the first chapter in building an increasingly solid, innovative <strong className="text-[#121212]/80 font-semibold">talent strategy</strong> oriented towards making Eataly a global benchmark for Made in Italy.
       </>,
       summary: '',
     },
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'Growing at this pace means rethinking the way we work',
-      intro: "The Career Passport campaign generated over a thousand applications for 3 key roles. A scale that required not just new tools, but a new way of working.",
+      intro: "The Eataly Career Passport campaign generated over a thousand applications for 3 key roles. A volume that required not just new tools, but also a new approach.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Zap,
-          title: 'Expansion speed outpaces hiring capacity',
-          text: "20+ new stores in the pipeline in North America, simultaneous openings, fixed dates. Manual screening was no longer enough to sustain this pace with the depth of quality required.",
+          title: 'The pace of expansion demanded new strategies in the hiring process',
+          text: "10+ new stores in the pipeline in North America, simultaneous openings across multiple markets, fixed dates. Screening needed to be enhanced to combine high volumes with greater depth of analysis.",
         },
         {
           icon: Layers,
-          title: 'The profile is rare: artisanal + managerial + international',
-          text: "Eataly looks for people who can replicate Italian artisanal authenticity at global scale. Leadership, team management, fluent English, willingness to relocate: genuinely hard to find.",
+          title: 'The search was challenging: operational skills, managerial vision, international mindset',
+          text: "Eataly looks for people who can replicate the authenticity of Italian food and wine culture at global scale: a profile combining leadership, team management, fluent English and international mobility.",
         },
         {
           icon: TrendingUp,
-          title: 'Growth amplifies the weight of every hiring decision',
-          text: "For a company with fixed store opening dates, every unfilled role is an operational and financial problem. At this scale, hiring quality is more critical than ever.",
+          title: 'Growth demanded an even greater commitment to hiring than before',
+          text: "In a context of strong growth, every hire has a direct impact on operations and costs — which is why hiring quality becomes even more strategic.",
         },
       ],
       hrChallenges: [
         {
-          icon: Zap,
-          title: 'New, more agile and data-driven ways of working are needed',
-          text: "Managing these volumes required evolving how the HR team works: from a traditional approach to an agile, data-driven mindset capable of adapting to business changes.",
+          icon: Eye,
+          title: 'A new, more data-driven way of working was needed',
+          text: "Managing these volumes pushed the HR team to evolve towards an agile, data-driven approach aligned to the pace of the business.",
         },
         {
-          icon: Scale,
-          title: 'Fairness and objectivity at volumes never managed before',
-          text: "Without a structured tool, the risk was inconsistent evaluation. In the sector, 38.1% of mismatches come precisely from non-standardised assessments.",
+          icon: CheckCircle,
+          title: 'Soft skills had to be in the spotlight before the interview',
+          text: "Given the specificity of the roles involved, analysing the most relevant soft skills for each role could not be deferred to a later stage.",
         },
         {
-          icon: Target,
-          title: 'Filtering blocking requirements from the start',
-          text: "Relocation availability, salary range, international experience: blocking requirements to verify at the first touchpoint, before investing interview time on unsuitable candidates.",
+          icon: Heart,
+          title: 'Despite the pace, the feedback moment with candidates had to be preserved',
+          text: "Being able to provide each candidate with detailed analysis of their possession of key role competencies after the first screening was fundamental.",
         },
       ],
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: 'What needed to change',
+      title: 'Collaboration objectives',
       items: [
-        { icon: Eye, text: "Map all key factors at the pre-screening stage: Leadership, team management, English language, aspiration for international mobility. Assess everything before the first interview, to focus subsequent time investment on a more targeted, personalised conversation guided by key data." },
-        { icon: Scale, text: "Ensure fairness and reduce bias structurally: every candidate evaluated with the same rigour and depth, building a process that is defensible and transparent both internally and externally, using psychometrically validated tools." },
+        { icon: Eye, text: "Map all key factors at the pre-screening stage: leadership, people management, English proficiency and openness to international mobility — arriving at the interview with structured data to focus time on a more targeted, personalised and valuable conversation." },
+        { icon: Scale, text: "Maintaining a high standard of fairness: for Eataly, fairness is not a goal — it is a guarantee. Every candidate had to be assessed using psychometrically validated tools, making the hiring process transparent and free from structural bias." },
         { icon: Heart, text: "Integrate AI and human touch without ever losing the brand's authenticity: use technology as an enabler — not a replacement — of the human value that has always defined Eataly, for more effective, inclusive and conscious processes." },
-        { icon: Zap, text: "Process applications in weeks, not months: compress pre-screening timelines to keep pace with an opening plan that can't wait, radically simplifying the HR team's screening workflow." },
+        { icon: Zap, text: "Process applications in less time without compromising evaluation quality: speed should not be the result of simplification, but of an architecture designed to scale while maintaining depth and quality of analysis." },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue for the Career Passport project',
-      intro: "Skillvue was integrated into the external hiring process of the Eataly Career Passport project — the global mobility programme launched to support expansion in North America. After an omnichannel campaign collected over 1,000 applications, Skillvue managed the pre-screening with an assessment combining filter questions and situational questions calibrated to specific roles (Head Chef, Director of Store Operations, General Manager of Restaurant).",
-      intro2: "The goal was not to replace human judgement, but to enhance it: let AI handle standardisation at scale, and give the HR team back the time and quality data to focus on what truly matters — the human conversation that follows.",
+      intro: <>Skillvue was integrated into the hiring process as part of <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong>, the global mobility programme launched to support expansion in <strong className="text-[#121212]/80 font-semibold">North America</strong>. After an omnichannel campaign that <strong className="text-[#121212]/80 font-semibold">collected over 1,000 applications</strong>, Skillvue managed the pre-screening with an assessment combining <strong className="text-[#121212]/80 font-semibold">filter questions and situational questions</strong> calibrated to specific roles (<strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations, General Manager of Restaurant</strong>).</>,
+      intro2: <>The goal was not to <strong className="text-[#121212]/80 font-semibold">replace human judgement, but to free it</strong>. AI handled standardisation at scale; the HR team received the data to focus on what <strong className="text-[#121212]/80 font-semibold">no algorithm can replace</strong>: the human evaluation that follows.</>,
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Users, label: 'Leadership' },
@@ -269,9 +269,9 @@ const content = {
     },
     vision: {
       badge: 'EVOLUTION 2026',
-      title: 'The expansion continues. So does the talent acquisition machine.',
-      intro: "The Career Passport was the first chapter in building an increasingly solid and innovative talent strategy, aimed at making the Eataly brand a global platform for Made in Italy.",
-      nextGen: "In 2026, the collaboration continues with the NextGen project, focused on junior candidates with 270+ profiles already included in the English language (B2 level) and soft skills assessment. A clear signal of Eataly's commitment to integrating AI and human touch as a structural lever of a conscious, inclusive and scalable talent strategy.",
+      title: 'A collaboration that grows',
+      intro: <>The <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong> programme was the first step in an <strong className="text-[#121212]/80 font-semibold">international mobility journey</strong> dedicated to managerial profiles. In 2026, the collaboration expands with <strong className="text-[#121212]/80 font-semibold">Eataly NextGen</strong>, focused on junior profiles: <strong className="text-[#121212]/80 font-semibold">270+ candidates</strong> assessed in a structured <strong className="text-[#121212]/80 font-semibold">English language (B2 level) and soft skills</strong> assessment. A clear signal of Eataly's commitment to consolidating the integration of <strong className="text-[#121212]/80 font-semibold">AI and human touch</strong> as the foundation of an <strong className="text-[#121212]/80 font-semibold">inclusive and scalable talent strategy</strong>.</>,
+      nextGen: '',
     },
     related: {
       title: 'Related Stories',
@@ -325,18 +325,18 @@ export default function EatalyStoryPage() {
               {/* Main content */}
               <div className="lg:col-span-7">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-bold tracking-[0.12em] uppercase mb-8 block w-fit" style={{ background: 'rgba(75,77,247,0.15)', color: '#7b7df9', border: '1px solid rgba(75,77,247,0.2)' }}>
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.15)', color: '#7b7df9', border: '1px solid rgba(75,77,247,0.2)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
+                  <h1 className="text-[clamp(1.6rem,2.8vw,2.5rem)] font-bold tracking-[-0.03em] text-white/95 mb-6" style={{ lineHeight: 1.3 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}{c.headline.highlight2 && <span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>}{c.headline.after}
                   </h1>
-                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
-                  <div className="flex flex-wrap gap-4 mb-12">
+                  <p className="text-[16px] text-white/[0.60] leading-[1.75] mb-10 max-w-2xl">{c.subtitle}</p>
+                  <div className="grid grid-cols-3 gap-4 mb-10">
                     {c.heroMetrics.map(m => (
-                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
-                        <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[13px] text-white/[0.55] mt-1 block">{m.label}</span>
+                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-5 py-4">
+                        <span className="block text-white" style={{ fontSize: '1.5rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="text-[12px] text-white/[0.55] mt-1.5 block leading-[1.35]">{m.label}</span>
                       </div>
                     ))}
                   </div>
@@ -428,7 +428,6 @@ export default function EatalyStoryPage() {
 
             {/* OBJECTIVES */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {c.objectives.items.map((o, i) => (
