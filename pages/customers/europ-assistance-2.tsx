@@ -26,17 +26,16 @@ const content = {
     breadcrumb: 'Clienti',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Come selezionare davvero per il ',
-      highlight1: 'potenziale a lungo termine',
+      before: 'Europ Assistance: come riconoscere il ',
+      highlight1: 'potenziale che resiste alla prova del tempo',
       middle: ' in un business fondato sulla ',
       highlight2: 'componente umana',
       after: '',
     },
-    subtitle: "Con Skillvue, Europ Assistance ha trasformato il pre-screening dei candidati in un processo preciso e scalabile, lavorando sull'identificazione e valorizzazione delle competenze trasversali fin dal primo step della selezione.",
+    subtitle: "Con Skillvue, Europ Assistance ha trasformato il pre-screening dei candidati in un processo scalabile e strategico per l'intero talent lifecycle, lavorando sulla valorizzazione delle competenze trasversali fin dal primo step della selezione.",
     heroMetrics: [
       { value: '10.000', label: 'centri nella rete in Italia' },
       { value: '900+', label: 'dipendenti' },
-      { value: '~€400.000', label: 'raccolta premi' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
@@ -45,56 +44,55 @@ const content = {
       facts: [
         { label: 'Settore', value: 'Financial Services' },
         { label: 'Gruppo', value: 'Generali' },
-        { label: 'Raccolta premi', value: '~€400.000' },
         { label: 'Centri nella rete in Italia', value: '10.000' },
         { label: 'Use Case', value: 'Hiring' },
       ],
     },
     context: {
       badge: 'CONTESTO',
-      title: 'In un business fondato sull\'interazione umana, la qualità di chi assumi si traduce nella qualità del servizio.',
+      title: 'In un business fondato sull\'interazione umana, la qualità della selezione non può accettare compromessi.',
       paragraph: <>
-        Europ Assistance, parte del <strong className="text-[#121212]/80 font-semibold">Gruppo Generali</strong>, è uno dei leader mondiali nei servizi di assistenza e assicurazione viaggi. La sua è una crescita costante: è in corso infatti l'espansione delle operazioni in nuovi mercati e la convergenza con Generali Care in un <strong className="text-[#121212]/80 font-semibold">hub integrato di assistenza</strong>.<br /><br />In Italia, opera con un modello di business fondato sulla qualità dell'interazione umana: assistenza 24/7, gestione sinistri, customer care multilingue. La scelta e la crescita delle persone rappresenta un punto chiave per il corretto funzionamento e l'espansione del business, soprattutto vista l'instabilità del mercato del lavoro assicurativo: <strong className="text-[#121212]/80 font-semibold">un settore che non sempre riesce ad attrarre i profili più qualificati</strong>, con tassi di turnover in crescita e un divario retributivo rispetto a fintech e consulting. In questo contesto, ogni assunzione sbagliata costa di più e ogni persona giusta che resta vale ancora di più.
+        Europ Assistance, parte del <strong className="text-[#121212]/80 font-semibold">Gruppo Generali</strong>, è uno dei leader mondiali nei servizi di assistenza e assicurazione viaggi. La sua è una crescita costante: è in corso infatti l'espansione delle operazioni in nuovi mercati e la convergenza con Generali Care in un <strong className="text-[#121212]/80 font-semibold">hub integrato di assistenza</strong>.<br /><br />In Italia, opera con un modello di business fondato sulla qualità dell'interazione umana: <strong className="text-[#121212]/80 font-semibold">assistenza 24/7, gestione sinistri, customer care multilingue</strong>. <strong className="text-[#121212]/80 font-semibold">La scelta e la crescita delle persone</strong> rappresenta un punto chiave per il corretto funzionamento e l'espansione del business, soprattutto vista l'instabilità del settore assicurativo, che <strong className="text-[#121212]/80 font-semibold">non sempre riesce ad attrarre i profili più qualificati</strong> e al tempo stesso richiede <strong className="text-[#121212]/80 font-semibold">profili professionali molto specifici e capaci di evolvere nel tempo</strong>. In questo contesto, ogni assunzione sbagliata costa di più e ogni persona giusta che resta vale ancora di più.
       </>,
     },
     challenge: {
       badge: 'LA SFIDA',
-      title: 'Migliaia di candidature, due picchi stagionali, 3 persone nel team recruiting.',
+      title: 'Migliaia di candidature, 2 picchi stagionali, 3 persone nel team recruiting.',
       intro: 'Le assunzioni di Europ Assistance Italia si concentrano in due picchi stagionali l\'anno, generando volumi nell\'ordine delle migliaia di candidature in pochi mesi. Per i ruoli di assistenza e customer care, le soft skill sono il primo predittore di successo — problem solving, orientamento al cliente, gestione dello stress — ma sono completamente invisibili nel CV.',
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
+          icon: TrendingUp,
+          title: 'Necessità di crescere al ritmo del business',
+          text: 'Le esigenze crescevano costantemente e la velocità di risposta richiesta aumentava. Essere più veloci ed efficaci per HR nel raggiungere i risultati attesi era diventata una necessità operativa.',
+        },
+        {
           icon: Users,
-          title: 'Necessità di gestire i picchi stagionali',
-          text: 'Un team di tre persone gestisce l\'intero ciclo di selezione con picchi che concentrano migliaia di candidature in finestre temporali ristrette. Non c\'è margine per processi lenti: ogni ritardo si traduce in posizioni scoperte nel momento in cui il business ne ha più bisogno.',
+          title: 'Gestione complessa nei picchi stagionali',
+          text: 'Con volumi elevati concentrati in finestre temporali ristrette, non c\'era margine per processi lenti. Ogni ritardo si traduceva in posizioni scoperte nel momento in cui il business ne aveva più bisogno.',
         },
         {
           icon: BarChart3,
-          title: 'Nessuna visibilità sul potenziale di crescita',
-          text: 'La selezione tradizionale valutava il fit immediato, non il potenziale. L\'obiettivo era identificare già nel pre-screening le competenze predittive di crescita, fornendo ai line manager informazioni utili per pianificare lo sviluppo delle persone nel tempo.',
-        },
-        {
-          icon: TrendingUp,
-          title: 'Crescere al ritmo richiesto dal business',
-          text: 'Le esigenze del business sono in continuo aumento e la velocità di risposta richiesta è sempre maggiore. Essere più veloci ed efficaci nel raggiungere i risultati attesi non è più solo un obiettivo: è una necessità operativa.',
+          title: 'Richiesta di maggiore anticipo sui need futuri',
+          text: 'Identificare già nel pre-screening le competenze predittive di crescita era fondamentale per portarsi a casa informazioni utili alla costruzione di una pipeline di talento interna.',
         },
       ],
       hrChallenges: [
         {
-          icon: TrendingUp,
-          title: 'Identificare chi ha già i segnali giusti per crescere',
-          text: 'Non bastava trovare qualcuno in grado di coprire un ruolo nell\'immediato. Era necessario portare in azienda persone che mostrassero già i segnali giusti per percorsi di sviluppo interno — e riconoscerli senza dati strutturati era quasi impossibile.',
+          icon: Zap,
+          title: 'Troppo tempo intrappolato nello screening',
+          text: 'Con migliaia di candidature da gestire, lo screening manuale assorbiva la maggior parte delle risorse disponibili, lasciando poco spazio all\'analisi approfondita e alla relazione con i candidati.',
         },
         {
-          icon: Zap,
-          title: 'Il tempo HR era intrappolato nello screening',
-          text: 'I recruiter dedicavano la maggior parte delle ore a telefonate introduttive e filtri manuali, con scarso ritorno in termini di qualità. Il risultato era una selezione rallentata e basata su impressioni più che su dati oggettivi.',
+          icon: CheckCircle,
+          title: 'Difficoltà di individuazione del potenziale futuro',
+          text: 'Portare in azienda persone con il potenziale giusto per percorsi di sviluppo interno richiedeva dati strutturati che il CV da solo non era in grado di fornire.',
         },
         {
           icon: Target,
-          title: 'Profili tecnici e di nicchia difficili da intercettare',
-          text: 'Alcuni ruoli strategici richiedono competenze molto specifiche, difficili da valutare con un CV. Senza strumenti oggettivi, la selezione di questi profili si affida all\'esperienza del singolo recruiter — con alto rischio di errore e tempi di chiusura dilatati.',
+          title: 'Profili di nicchia difficili da intercettare',
+          text: 'Alcuni ruoli strategici richiedevano competenze molto specifiche, difficili da rilevare tramite CV. Senza strumenti di valutazione oggettivi, il processo si allungava e il rischio di mancato match aumentava.',
         },
       ],
     },
@@ -104,8 +102,8 @@ const content = {
       items: [
         { icon: Zap, text: 'Scalare il pre-screening senza scalare il team: gestire migliaia di candidature con 3 FTE, liberando i recruiter dallo screening per concentrarli su colloqui e valutazione del potenziale' },
         { icon: Eye, text: 'Rendere visibili le soft skill dal primo step: dati oggettivi su competenze trasversali e lingua inglese prima di impegnare ore di tempo del team recruiting' },
-        { icon: Shield, text: 'Costruire un processo equo e difendibile: AI come supporto al recruiter, non sostituto: mantenere l\'human-in-the-loop in ogni fase, con pieno controllo decisionale a ogni step' },
-        { icon: Target, text: 'Selezionare per il potenziale, non solo per la performance immediata: identificare candidati con competenze che li rendano impiegabili per crescita interna e ruoli futuri' },
+        { icon: Shield, text: 'Sfruttare l\'AI come supporto al recruiter: garantendo maggiore velocità ed efficacia decisionale e mantenendo pieno controllo decisionale in ogni step' },
+        { icon: Target, text: 'Selezionare per il potenziale, non solo per la performance immediata: identificare candidati con competenze promettenti e indicative di una futura crescita all\'interno dell\'organizzazione' },
       ],
     },
     solution: {
@@ -122,7 +120,7 @@ const content = {
       methodology: [
         {
           title: 'Assessment in autonomia come primo step',
-          text: 'Dopo la candidatura, ogni candidato completa l\'assessment in autonomia da qualsiasi dispositivo — telefono, tablet o laptop — senza necessità di formazione o supporto tecnico.',
+          text: 'Dopo la candidatura, ogni candidato completa l\'assessment in autonomia da qualsiasi dispositivo — telefono, tablet o laptop.',
         },
         {
           title: 'Report strutturato per il recruiter',
@@ -138,18 +136,18 @@ const content = {
       badge: 'RISULTATI',
       title: 'Cosa sta cambiando.',
       pillars: [
-        { icon: Target, value: 'Candidati più qualificati', label: 'meno rumore, più segnali' },
-        { icon: Zap, value: 'Più tempo per ciò che conta', label: 'da collo di bottiglia a valore aggiunto' },
-        { icon: TrendingUp, value: 'Pipeline di talento attiva', label: 'selezione per il potenziale, non solo il fit' },
+        { icon: Target, value: <>Candidati<br />più qualificati</>, label: 'meno rumore, più segnali concreti per il team HR' },
+        { icon: Zap, value: <>Più tempo<br />per ciò che conta</>, label: 'colloqui più personalizzati e mirati, basati su dati reali' },
+        { icon: TrendingUp, value: <>Pipeline di talento<br />per il futuro</>, label: 'si seleziona guardando già al domani, non solo al fit immediato' },
       ],
       qualitative: [
-        { icon: BarChart3, title: 'Visibilità sul potenziale fin dal primo step', text: 'Per la prima volta, HR e line manager dispongono di dati strutturati sulle soft skill di ogni candidato prima ancora del colloquio. Non solo "assumi/non assumere", ma informazioni su come una persona potrà crescere nel tempo.' },
-        { icon: Zap, title: 'Recruiter liberati per il lavoro ad alto valore', text: 'Il tempo recuperato è investito in colloqui approfonditi, analisi del potenziale e collaborazione con i line manager — attività che incidono direttamente sulla qualità delle assunzioni e sulla retention.' },
-        { icon: Heart, title: 'Una candidate experience che va oltre il curriculum', text: 'Un\'esperienza più digitale e più espressiva rispetto al solo CV. Quando viene data la possibilità di mettersi alla prova, i candidati rispondono bene: la domanda di screening tradizionale si è rivelata molto più bassa del previsto.' },
+        { icon: BarChart3, title: 'Visibilità sul potenziale fin dal primo step', text: 'HR e line manager dispongono di dati strutturati sulle soft skill di ogni candidato già prima del colloquio — non solo fit immediato, ma segnali concreti di crescita nel tempo.' },
+        { icon: Scale, title: 'Recruiter liberati per il lavoro ad alto valore', text: 'Il tempo recuperato è reinvestito in colloqui più approfonditi e analisi del potenziale — attività che incidono direttamente sulla qualità delle assunzioni e sulla retention.' },
+        { icon: Heart, title: 'Candidate experience ottimizzata', text: 'L\'assessment pre-colloquio offre un momento di maggiore espressione personale rispetto al solo invio di CV: quando viene data la possibilità di mettersi alla prova, i candidati rispondono positivamente.' },
       ],
     },
     quote: {
-      text: 'Quando selezione e sviluppo parlano la stessa lingua, il dato raccolto oggi diventa la base per lo sviluppo di domani.',
+      text: 'Credo che selezione e sviluppo debbano parlare la stessa lingua: il dato raccolto oggi diventa la base per lo sviluppo di domani.',
       author: 'Nicole Cerruti',
       role: 'Recruitment Manager, Europ Assistance Italia',
     },
@@ -157,7 +155,6 @@ const content = {
       title: 'Storie correlate',
       stories: [
         { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring at Scale', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
-        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'Da 3000 candidature a 15 top talent: come selezionare e far crescere il talento su scala' },
       ],
       cta: 'Leggi la storia',
     },
@@ -178,7 +175,6 @@ const content = {
     heroMetrics: [
       { value: '10,000', label: 'centres in Italy\'s network' },
       { value: '900+', label: 'employees' },
-      { value: '~€400K', label: 'premium collection' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -187,7 +183,6 @@ const content = {
       facts: [
         { label: 'Industry', value: 'Financial Services' },
         { label: 'Group', value: 'Generali' },
-        { label: 'Premium collection', value: '~€400K' },
         { label: 'Centres in Italy\'s network', value: '10,000' },
         { label: 'Use Case', value: 'Hiring' },
       ],
@@ -224,7 +219,7 @@ const content = {
       ],
       hrChallenges: [
         {
-          icon: TrendingUp,
+          icon: CheckCircle,
           title: 'Identifying who already has the right signals to grow',
           text: "It wasn't enough to find someone who could cover a role immediately. The goal was to bring in people who already showed the right signals for future internal development — and recognising them without structured data was nearly impossible.",
         },
@@ -286,7 +281,7 @@ const content = {
       ],
       qualitative: [
         { icon: BarChart3, title: 'Visibility on potential from the first step', text: 'For the first time, HR and line managers have structured soft skill data on every candidate before the interview. Not just "hire/don\'t hire", but information on how a person can grow over time.' },
-        { icon: Zap, title: 'Recruiters freed for high-value work', text: 'The time recovered is invested in in-depth interviews, potential analysis and collaboration with line managers — activities that directly impact hiring quality and retention.' },
+        { icon: Scale, title: 'Recruiters freed for high-value work', text: 'The time recovered is invested in in-depth interviews, potential analysis and collaboration with line managers — activities that directly impact hiring quality and retention.' },
         { icon: Heart, title: 'A candidate experience that goes beyond the CV', text: 'A more digital, more expressive experience than a CV alone. When given the chance to prove themselves, candidates respond well: demand for traditional screening turned out to be far lower than expected.' },
       ],
     },
@@ -299,7 +294,6 @@ const content = {
       title: 'Related Stories',
       stories: [
         { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
-        { id: 'mediaset', company: 'Mediaset', tag: 'Media & Telecom · Hiring', headline: 'From 3000 applications to 15 top talents: how to identify and develop talent at scale' },
       ],
       cta: 'Read the story',
     },
@@ -345,15 +339,15 @@ export default function EuropAssistance2StoryPage() {
 
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
               {/* Main content */}
-              <div className="lg:col-span-7">
-                <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
+              <div className="lg:col-span-7 flex flex-col">
+                <motion.div className="flex flex-col flex-1" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-bold tracking-[0.12em] uppercase mb-8 block w-fit" style={{ background: 'rgba(75,77,247,0.15)', color: '#7b7df9', border: '1px solid rgba(75,77,247,0.2)' }}>
                     {c.badge}
                   </span>
                   <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
-                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
+                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-10 max-w-2xl">{c.subtitle}</p>
                   <div className="flex flex-wrap gap-4">
                     <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300" style={{ background: '#4b4df7' }}>
                       {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
@@ -362,11 +356,20 @@ export default function EuropAssistance2StoryPage() {
                       {c.ctaSecondary} <ArrowRight className="h-4 w-4" />
                     </button>
                   </div>
+                  {/* Metrics — pinned to bottom, aligned with video */}
+                  <div className="mt-auto pt-10 grid grid-cols-2 gap-4">
+                    {c.heroMetrics.map(m => (
+                      <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-8 py-7">
+                        <span className="block text-white" style={{ fontSize: 'clamp(2rem,3.5vw,2.8rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="text-[14px] text-white/[0.55] mt-2.5 block leading-[1.4]">{m.label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </motion.div>
               </div>
 
               {/* Client card + video */}
-              <motion.div className="lg:col-span-5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
+              <motion.div className="lg:col-span-5 flex flex-col" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
                     <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center">
@@ -386,22 +389,19 @@ export default function EuropAssistance2StoryPage() {
                     ))}
                   </div>
                 </div>
-                {/* Video placeholder */}
-                <div className="mt-4 rounded-2xl border border-white/[0.08] bg-white/[0.04] overflow-hidden" style={{ aspectRatio: '16/9' }} />
+                {/* Video */}
+                <div className="mt-4 rounded-2xl border border-white/[0.08] overflow-hidden flex-1 min-h-0">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${lang === 'it' ? 'sPkKN_MED1c' : 'OYb81Qw3_IM'}?autoplay=1&mute=1`}
+                    title="Europ Assistance – Skillvue"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                    style={{ border: 0 }}
+                  />
+                </div>
               </motion.div>
             </div>
-
-            {/* Hero metrics — horizontal row */}
-            <motion.div className="mt-12" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }}>
-              <div className="grid grid-cols-3 gap-5">
-                {c.heroMetrics.map(m => (
-                  <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-5 text-center">
-                    <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                    <span className="text-[13px] text-white/[0.55] mt-2 block leading-[1.4]">{m.label}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
           </div>
         </section>
 
@@ -495,7 +495,7 @@ export default function EuropAssistance2StoryPage() {
                   {c.solution.methodology.map((m, i) => (
                     <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
                       <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
-                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4] relative">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
+                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4] relative">{m.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65] relative">{m.text}</p>
                     </div>
                   ))}
