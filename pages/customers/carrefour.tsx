@@ -154,7 +154,7 @@ const content = {
     related: {
       title: 'Storie correlate',
       stories: [
-        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring', headline: 'Come Europ Assistance ha assunto il 24% in più con il 18% di colloqui in meno.' },
+        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring', headline: 'Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana' },
         { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: "Subdued: come creare uno standard di selezione unico e scalabile per l'espansione di una rete di 130+ negozi" },
       ],
       cta: 'Leggi la storia',
@@ -294,7 +294,7 @@ const content = {
     related: {
       title: 'Related Stories',
       stories: [
-        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring', headline: 'How Europ Assistance hired 24% more with 18% fewer interviews.' },
+        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring', headline: 'Europ Assistance: how to recognise the potential that stands the test of time in a business built on human interaction' },
         { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: 'Subdued: building a single scalable hiring standard for a network of 130+ stores' },
       ],
       cta: 'Read the story',

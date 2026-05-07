@@ -30,8 +30,14 @@ const allStories = [
     headlineEn: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people starting from internal potential',
     bgImage: '/logos/adr-explore-stories.jpg',
   },
+  {
+    id: 'europ-assistance', company: 'Europ Assistance', industry: 'Financial Services', useCases: ['Hiring'],
+    headlineIt: 'Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana',
+    headlineEn: 'Europ Assistance: how to recognise the potential that stands the test of time in a business built on human interaction',
+    bgImage: '/logos/europ-assistance-background-explore-stories.jpg',
+  },
   // Temporarily removed from listing pending approval (restore when ready):
-  // unicomm, credem, europ-assistance, mediaset, douglas, eataly
+  // unicomm, credem, mediaset, douglas, eataly
 ];
 
 const filters = {
