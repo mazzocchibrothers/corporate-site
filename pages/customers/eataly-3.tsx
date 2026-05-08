@@ -27,7 +27,7 @@ const content = {
     badge: 'CUSTOMER STORY',
     headline: {
       before: 'Eataly: come Integrare ',
-      highlight1: 'Intelligenza Artificiale e Human Touch',
+      highlight1: 'Intelligenza Artificiale e tocco umano',
       middle: ' per costruire processi di selezione più efficaci, inclusivi e consapevoli',
       highlight2: '',
       after: '',
@@ -51,7 +51,7 @@ const content = {
     },
     context: {
       badge: 'CONTESTO',
-      title: "Crescere senza perdere l'anima del brand",
+      title: "Un brand di respiro globale che non rinuncia alla sua identità",
       paragraph: <>
         Eataly non è un operatore qualsiasi del food italiano. Con una <strong className="text-[#121212]/80 font-semibold">crescita del 47% in tre anni</strong> e una presenza internazionale reale in <strong className="text-[#121212]/80 font-semibold">15 Paesi</strong>, è l'unico brand del food Made in Italy a operare su scala globale. Dal 2022 sta accelerando su tutti i fronti: <strong className="text-[#121212]/80 font-semibold">nuovi flagship in Nord America</strong>, nuovi format compatti in hub urbani e aeroporti e un piano di espansione in <strong className="text-[#121212]/80 font-semibold">Medio Oriente</strong>.<br /><br />
         Questa crescita richiede figure professionali capaci di incamerare i valori del brand in contesti multiculturali — dai profili manageriali come <strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations e General Manager</strong>, fino ai profili più junior che rappresentano la <strong className="text-[#121212]/80 font-semibold">prossima generazione di talento Eataly</strong>. In uno scenario in cui il mondo del lavoro è diventato più <strong className="text-[#121212]/80 font-semibold">dinamico, digitale e in continua trasformazione</strong>, l'obiettivo era chiaro: semplificare e rendere più efficienti i processi di recruiting, senza perdere la <strong className="text-[#121212]/80 font-semibold">qualità, l'autenticità e l'attenzione alla persona</strong> che da sempre contraddistinguono il brand. Nasce da qui il <strong className="text-[#121212]/80 font-semibold">Progetto Eataly Career Passport</strong>, primo capitolo per la costruzione di una <strong className="text-[#121212]/80 font-semibold">talent strategy</strong> sempre più solida e innovativa, orientata a rendere Eataly un riferimento globale del Made in Italy.
@@ -182,7 +182,7 @@ const content = {
     },
     context: {
       badge: 'CONTEXT',
-      title: "Growing without losing the soul of the brand",
+      title: "A truly global brand that never compromises on its identity",
       paragraph: <>
         Eataly is no ordinary player in Italian food. With <strong className="text-[#121212]/80 font-semibold">47% growth over three years</strong> and a truly international presence across <strong className="text-[#121212]/80 font-semibold">15 countries</strong>, it is the only Italian food brand operating at global scale. Since 2022 it has been accelerating on all fronts: <strong className="text-[#121212]/80 font-semibold">new flagships in North America</strong>, new compact formats in urban hubs and airports, and an expansion plan in the <strong className="text-[#121212]/80 font-semibold">Middle East</strong>.<br /><br />
         This growth requires talent capable of embodying the brand's values in multicultural contexts — from managerial profiles like <strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations and General Manager</strong>, to more junior profiles representing the <strong className="text-[#121212]/80 font-semibold">next generation of Eataly talent</strong>. In a world of work that has become more <strong className="text-[#121212]/80 font-semibold">dynamic, digital and constantly evolving</strong>, the goal was clear: simplify and make recruiting processes more efficient, without losing the <strong className="text-[#121212]/80 font-semibold">quality, authenticity and care for people</strong> that have always defined the brand. This is the origin of the <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport Project</strong> — the first chapter in building an increasingly solid, innovative <strong className="text-[#121212]/80 font-semibold">talent strategy</strong> oriented towards making Eataly a global benchmark for Made in Italy.
