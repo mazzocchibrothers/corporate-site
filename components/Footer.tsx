@@ -144,14 +144,6 @@ export default function Footer() {
                 href: lang === 'it' ? 'https://www.iubenda.com/privacy-policy/75783964/cookie-policy' : 'https://www.iubenda.com/privacy-policy/45750674/cookie-policy',
               },
               {
-                label: lang === 'it' ? 'Politica dei Sistemi di Gestione' : 'Management System Policy',
-                href: 'https://cdn.prod.website-files.com/63eb9c5c0665608db409b4df/68711dddeb1206d0f80e3194_PoliticaDeiSistemiDiGestione.pdf',
-              },
-              {
-                label: lang === 'it' ? 'Politica di Sicurezza delle Informazioni' : 'Information Security Policy',
-                href: 'https://cdn.prod.website-files.com/63eb9c5c0665608db409b4df/68711e6395c0cd387565988b_PoliticaDiSicurezzaDelleInformazioni.pdf',
-              },
-              {
                 label: lang === 'it' ? 'Trattamento dati personali' : 'Personal Data Processing',
                 href: '/privacy-policy-algo',
               },
