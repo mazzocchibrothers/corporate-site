@@ -36,8 +36,14 @@ const allStories = [
     headlineEn: 'Europ Assistance: how to recognise the potential that stands the test of time in a business built on human interaction',
     bgImage: '/logos/europ-assistance-background-explore-stories.jpg',
   },
+  {
+    id: 'unicomm', company: 'Unicomm', industry: 'GDO', useCases: ['Hiring', 'Internal Mobility', 'Learning & Development'],
+    headlineIt: 'Come Unicomm sta costruendo una nuova gestione del talento su una rete di 250 punti vendita in costante aumento',
+    headlineEn: 'How Unicomm is building a new talent management system across a network of 250 stores and growing',
+    bgImage: '/logos/unicomm-background-explore-stories.jpg',
+  },
   // Temporarily removed from listing pending approval (restore when ready):
-  // unicomm, credem, mediaset, douglas, eataly
+  // credem, mediaset, douglas, eataly
 ];
 
 const filters = {
