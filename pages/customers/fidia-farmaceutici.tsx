@@ -26,107 +26,95 @@ const content = {
     breadcrumb: 'Clienti',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Fidia Farmaceutici: come fotografare su scala globale le ',
-      highlight1: 'reali competenze della rete vendita',
-      middle: '',
-      highlight2: '',
+      before: 'Fidia Farmaceutici: ',
+      highlight1: 'come fotografare su scala globale',
+      middle: ' le reali competenze della rete vendita per ',
+      highlight2: 'supportare la crescita',
       after: '',
     },
     subtitle: "Con Skillvue, Fidia sta trasformando la propria infrastruttura HR in un sistema di talent intelligence globale, capace di mappare le competenze di centinaia di Medical Sales Representative in 12 lingue e tradurle in piani di sviluppo e decisioni di talent management basate sui dati.",
     heroMetrics: [
-      { value: '12+', label: 'lingue di assessment' },
-      { value: '120+', label: 'Paesi coperti' },
-      { value: '400+', label: 'MSR solo in Italia' },
+      { value: '1.700', label: 'dipendenti' },
+      { value: '12', label: 'Paesi' },
+      { value: '400+', label: 'dipendenti già inclusi in assessment' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
     clientCard: {
       label: 'SCHEDA CLIENTE',
       facts: [
-        { label: 'Settore', value: 'Farmaceutico — Specialty Pharma' },
-        { label: 'Fatturato', value: '€538M (FY2025)' },
-        { label: 'Dipendenti', value: '1.708' },
-        { label: 'Paesi', value: '120+' },
-        { label: 'Use Case', value: 'Learning & Development, Internal Mobility' },
+        { label: 'Settore', value: 'Farmaceutico' },
+        { label: 'Fatturato', value: '>500M€' },
+        { label: 'Dipendenti', value: '1.700' },
+        { label: 'Paesi', value: '120' },
+        { label: 'Use Case', value: 'Learning & Development' },
       ],
     },
     context: {
       badge: 'CONTESTO',
-      title: "Un leader mondiale dell'innovazione farmaceutica con una rete vendita da conoscere a fondo.",
+      title: "Un leader mondiale dell'innovazione farmaceutica con una rete vendita da conoscere a fondo",
       paragraph: <>
-        Fidia Farmaceutici è la multinazionale italiana <strong className="text-[#121212]/80 font-semibold">leader mondiale nella viscosupplementazione con acido ialuronico</strong>. Fondata ad Abano Terme, ha costruito in oltre sessant'anni di ricerca una posizione unica nella riparazione tissutale e nel trattamento dell'osteoartrosi — con <strong className="text-[#121212]/80 font-semibold">€538 milioni di ricavi nel 2025</strong>, un <strong className="text-[#121212]/80 font-semibold">CAGR dell'11%</strong> nel quinquennio precedente, <strong className="text-[#121212]/80 font-semibold">1.522 brevetti globali</strong> e <strong className="text-[#121212]/80 font-semibold">produzione 100% in Italia</strong> su quattro stabilimenti.<br /><br />
-        La sua rete commerciale è altrettanto articolata: centinaia di Medical Sales Representative distribuiti in <strong className="text-[#121212]/80 font-semibold">120+ Paesi</strong>, dall'Italia all'Europa, dagli USA al Medio Oriente, operativi in <strong className="text-[#121212]/80 font-semibold">dodici lingue diverse</strong>. Sono il punto di contatto tra la scienza di Fidia e il medico prescrittore. In un momento di forte espansione internazionale — <strong className="text-[#121212]/80 font-semibold">acquisizioni, approvazione FDA, avanzamento del programma oncologico</strong> — conoscere le competenze di questa rete in modo strutturato è diventato un <strong className="text-[#121212]/80 font-semibold">prerequisito strategico</strong>.
+        Fidia Farmaceutici è la multinazionale italiana che si distingue a livello mondiale per la qualità dei suoi <strong className="text-[#121212]/80 font-semibold">prodotti a base di acido ialuronico</strong>, realizzati <strong className="text-[#121212]/80 font-semibold">al 100% in Italia</strong>. Fondata ad Abano Terme, ha costruito <strong className="text-[#121212]/80 font-semibold">fin dagli anni '50</strong> una posizione unica in questo campo, diventando una <strong className="text-[#121212]/80 font-semibold">"fully integrated company"</strong> che si occupa di ogni fase di vita del prodotto, dalla ricerca alla commercializzazione, e arrivando a produrre <strong className="text-[#121212]/80 font-semibold">oltre 1.500 brevetti globali</strong>.<br /><br />
+        La sua rete commerciale è altrettanto articolata: è infatti composta da centinaia di <strong className="text-[#121212]/80 font-semibold">Medical Sales Representative</strong> distribuiti non solo al di fuori dei confini nazionali, in <strong className="text-[#121212]/80 font-semibold">Europa</strong>, ma anche in <strong className="text-[#121212]/80 font-semibold">USA e Medio Oriente</strong>. Questi professionisti sono il punto di contatto tra la scienza di Fidia e l'utenza finale, e in un momento di <strong className="text-[#121212]/80 font-semibold">forte crescita ed espansione internazionale</strong> dell'organizzazione, conoscerne le competenze in modo strutturato diventava sempre più un <strong className="text-[#121212]/80 font-semibold">prerequisito strategico</strong> per poter direzionare al meglio le evoluzioni del modello commerciale.
       </>,
       summary: '',
     },
     challenge: {
       badge: 'LA SFIDA',
-      title: 'Non bastava valutare meglio: serviva uno strumento che prima non esisteva.',
-      intro: "Fidia partiva da una realtà comune a molte multinazionali in forte crescita: una rete vendita capace e distribuita, ma valutata in modo frammentato, senza un framework condiviso e senza i dati per prendere decisioni di talent management su scala globale.",
+      title: 'La transizione commerciale doveva andare di pari passo con una trasformazione in ottica skills-based',
+      intro: "Fidia partiva da una realtà comune a molte multinazionali: una rete vendita capace e distribuita, ma valutata per forza di cose in modo frammentato, e molto complicata da gestire nel momento in cui erano necessari aggiornamenti radicali nel modello di vendita. Serviva uno shift nell'approccio alla gestione delle competenze, che permettesse di creare una base dati utile a prendere decisioni di talent management su scala globale.",
       businessLabel: 'IMPATTO SUL BUSINESS',
       hrLabel: 'IMPATTO SU HR & PEOPLE',
       businessChallenges: [
         {
-          icon: Eye,
-          title: 'Una rete senza fotografia oggettiva',
-          text: "Con centinaia di MSR distribuiti in 12+ Paesi, le valutazioni erano affidate ai singoli manager di zona — utili, ma non confrontabili tra mercati diversi e non ancorate a un framework comune.",
-        },
-        {
-          icon: Target,
-          title: 'Talent management impossibile senza dati strutturati',
-          text: "Identificare i profili ad alto potenziale per ruoli di area manager, mobilità internazionale o crescita interna richiedeva uno strumento che non esisteva. L'alternativa esterna era economicamente insostenibile su questa scala.",
-        },
-        {
           icon: TrendingUp,
-          title: 'Una transizione commerciale da supportare con i dati',
-          text: "Il passaggio verso un approccio sempre più orientato al valore scientifico del prodotto richiede rappresentanti con competenze consultive solide. Senza una baseline oggettiva, costruire piani di sviluppo mirati era impossibile.",
+          title: "Lo sviluppo della rete richiedeva più dati",
+          text: "Accompagnare la rete verso una crescita delle proprie capacità, cruciali per un aggiornamento del modello commerciale, richiedeva dati strutturati sulle competenze reali di ogni professionista.",
+        },
+        {
+          icon: Layers,
+          title: 'Mancava un sistema di gestione cross-country',
+          text: "Valutare una rete in 12 lingue senza distorsioni richiedeva più di strumenti condivisi. Bisognava garantire la stessa qualità di misurazione in ogni mercato, con criteri uniformi e risultati confrontabili.",
+        },
+        {
+          icon: Shield,
+          title: "Serviva un'infrastruttura scalabile",
+          text: "Era importante instaurare un sistema di misurazione e valorizzazione del capitale umano replicabile su ruoli e regioni diverse, senza dover ripartire da zero ogni volta.",
         },
       ],
       hrChallenges: [
         {
-          icon: Layers,
-          title: 'La barriera linguistica come distorsione sistematica',
-          text: "Un assessment in inglese su una rete che parla 12 lingue avrebbe prodotto dati falsati dalla competenza linguistica, non dalla competenza professionale. Il rischio era misurare la lingua, non la persona.",
+          icon: Eye,
+          title: 'Le skill andavano misurate con oggettività',
+          text: "In una realtà delle dimensioni di Fidia era fondamentale sfruttare la tecnologia per raggiungere ogni persona con uguale rigore. Servivano dati strutturati, confrontabili e scalabili su tutta la rete.",
+        },
+        {
+          icon: Target,
+          title: "La predittività era diventata centrale",
+          text: "Riconoscere i profili ad alto potenziale non poteva dipendere dai singoli responsabili. Servivano modelli psicometrici avanzati per predire con accuratezza le future performance di ciascuna persona.",
         },
         {
           icon: CheckCircle,
-          title: 'Sviluppo e formazione non collegati',
-          text: "I risultati delle valutazioni esistenti non dialogavano con la piattaforma formativa Learning Lab, rendendo impossibile tradurre i gap di competenza in percorsi di sviluppo individuali coerenti.",
-        },
-        {
-          icon: Shield,
-          title: 'Governance multilivello senza una visione condivisa',
-          text: "Manager di zona, Country Manager, HRBP e HR centrale operavano su basi informative diverse, senza un framework condiviso né una dashboard comune per leggere il talento della rete.",
+          title: 'Valutazione e formazione andavano integrate',
+          text: "I risultati dell'assessment dovevano alimentare i sistemi di formazione interni. Ogni gap andava tradotto in un'azione formativa concreta, misurabile e allineata alle priorità di sviluppo.",
         },
       ],
     },
     objectives: {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
-      title: 'Cosa doveva cambiare.',
+      title: 'Gli obiettivi della collaborazione',
       items: [
-        { icon: Eye, text: "Ottenere una fotografia oggettiva, standardizzata e confrontabile delle competenze di tutti gli MSR globali, con gli stessi criteri indipendentemente dal Paese." },
-        { icon: Target, text: "Identificare i profili ad alto potenziale da inserire in percorsi di talent management e mobilità interna — alternativa scalabile alle valutazioni esterne." },
-        { icon: Layers, text: "Gestire la complessità multilingue (12+ lingue) garantendo equità e comparabilità dei risultati senza sacrificare l'autenticità delle risposte." },
-        { icon: CheckCircle, text: "Creare un collegamento diretto tra i risultati dell'assessment e i piani formativi individuali su Fidia Learning Lab." },
-        { icon: Zap, text: "Costruire un'infrastruttura scalabile che si estenda, dopo il roll-out MSR, ad altri ruoli e alla funzione Hiring." },
+        { icon: Eye, text: <><strong className="font-bold text-[#121212]/90">Ottenere</strong> una fotografia oggettiva, standardizzata e confrontabile delle competenze di tutti gli MSR, indipendentemente dal Paese.</> },
+        { icon: Target, text: <><strong className="font-bold text-[#121212]/90">Identificare</strong> i profili ad alto potenziale da inserire in percorsi di talent management e mobilità interna.</> },
+        { icon: Layers, text: <><strong className="font-bold text-[#121212]/90">Gestire</strong> la complessità dell'assessment multilingue garantendo equità e comparabilità dei risultati senza sacrificare l'autenticità delle risposte.</> },
+        { icon: CheckCircle, text: <><strong className="font-bold text-[#121212]/90">Creare</strong> un collegamento diretto tra i risultati dell'assessment e i piani formativi individuali portati avanti da Fidia.</> },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Assessment AI su due obiettivi in parallelo, costruito sul modello Fidia.',
-      intro: <>Skillvue ha lavorato con il team HR di Fidia — guidato da <strong className="text-[#121212]/80 font-semibold">Gianluca Magnani, Corporate HRD</strong> — per costruire un sistema di assessment che partisse dal business reale: le situazioni concrete che un MSR Fidia affronta ogni giorno, in ogni mercato. Il risultato è un'<strong className="text-[#121212]/80 font-semibold">intervista comportamentale strutturata (BEI) asincrona</strong>, da mobile/PC/tablet, di circa <strong className="text-[#121212]/80 font-semibold">25 minuti</strong>. Le risposte audio vengono trascritte e valutate dall'AI di Skillvue su un <strong className="text-[#121212]/80 font-semibold">modello di competenze costruito su misura</strong>.</>,
-      solutionObjectives: [
-        {
-          number: '01',
-          label: 'Learning & Development',
-          text: "Valutazione delle competenze attuali di ogni MSR come base per piani di sviluppo individuali mirati, collegati alla piattaforma Fidia Learning Lab. Per ogni profilo: dove si è forti, dove c'è spazio di crescita, su cosa lavorare.",
-        },
-        {
-          number: '02',
-          label: 'Talent Management',
-          text: "Identificazione dei profili ad alto potenziale da considerare per percorsi di crescita interna, ruoli di area e district manager, e mobilità internazionale. Un sistema scalabile che sostituisce i processi di assessment esterni su tutta la rete globale.",
-        },
-      ],
+      title: 'Assessment AI per la formazione e lo sviluppo, costruito ad hoc sul modello Fidia',
+      intro: <>Il team di Fidia e quello di Skillvue hanno lavorato insieme per costruire un sistema di assessment che partisse dal business reale: le situazioni concrete che un MSR Fidia affronta ogni giorno, in ogni mercato.</>,
+      solutionObjectives: [],
       skillsLabel: 'COMPETENZE VALUTATE',
       skillsNote: "Il modello è strutturato su tre layer sovrapposti, dal più trasversale al più specifico per ruolo — ancorato al framework VOLA (Vision, Ownership, Leadership, Accountability) già in uso in Fidia.",
       skills: [
@@ -134,41 +122,20 @@ const content = {
         { icon: Shield, label: 'Medical Scientific Competencies', sublabel: 'Layer 2 — Competenze scientifico-mediche per MSR in specialty pharma' },
         { icon: Target, label: 'Sales System Skills', sublabel: 'Layer 3 — Competenze di sistema commerciale su misura Fidia' },
       ],
-      multilingualLabel: 'MULTILINGUA: 12 LINGUE',
-      multilingualItems: [
-        {
-          title: 'Risposta nella lingua madre, report in inglese',
-          text: "Ogni partecipante risponde nella propria lingua — italiano, tedesco, spagnolo, francese, polacco, ceco, rumeno, bulgaro, russo, turco o arabo. Le risposte vengono tradotte in inglese per il reporting del management.",
-        },
-        {
-          title: "L'inglese come segnale di readiness internazionale",
-          text: "Ogni partecipante può scegliere di rispondere in inglese invece che nella propria lingua madre. Chi lo fa fornisce un segnale concreto di international readiness, registrato dal sistema come dato aggiuntivo di talent intelligence.",
-        },
-      ],
+      multilingualLabel: '',
+      multilingualItems: [],
     },
     results: {
       badge: 'RISULTATI',
-      title: 'Cosa sta cambiando.',
-      subtitle: 'I risultati del progetto Skillvue × Fidia Farmaceutici.',
-      metrics: [
-        { value: '12+', label: 'lingue di assessment' },
-        { value: '120+', label: 'Paesi coperti' },
-        { value: '400+', label: 'MSR solo in Italia' },
-      ],
+      title: 'Dove stiamo andando',
+      subtitle: 'I risultati attesi del progetto Skillvue × Fidia Farmaceutici.',
+      metrics: [],
       qualitative: [
         { icon: Eye, title: 'La prima fotografia oggettiva della rete vendita globale', text: "Per la prima volta, Fidia avrà una visione strutturata e confrontabile delle competenze di tutti i suoi MSR nel mondo — costruita con gli stessi criteri in ogni Paese, indipendentemente dalla lingua o dalla cultura commerciale locale." },
-        { icon: Target, title: 'Talent management scalabile senza dipendere da esterni', text: "I profili ad alto potenziale emergono dai dati, non dal giudizio soggettivo di singoli manager o da costose valutazioni individuali affidate a società esterne. Un sistema che scala con la rete." },
-        { icon: Layers, title: 'Competenze MSR finalmente misurabili in 12 lingue', text: "Le competenze comportamentali emergono nella lingua più autentica per ogni individuo. Il dato prodotto è comparabile su tutta la rete e diventa input diretto per i piani di sviluppo su Learning Lab." },
-        { icon: TrendingUp, title: 'Una transizione verso il valore supportata dai dati', text: "Il passaggio da un approccio orientato allo sconto a un modello consultivo basato sul valore scientifico del prodotto richiede competenze specifiche. Ora Fidia sa dove lavorare, su chi, e con quali priorità." },
-        { icon: CheckCircle, title: 'Sviluppo e formazione finalmente collegati', text: "I gap rilevati dall'assessment dialogano direttamente con Fidia Learning Lab. La connessione tra valutazione e percorso formativo chiude un loop che prima restava aperto." },
-        { icon: Zap, title: 'Le fondamenta per una people strategy verso il miliardo', text: "Il mapping MSR è il primo capitolo. Il progetto Hiring e l'espansione ad altri ruoli — Area Manager, KAM, Marketing — costruiranno su questa infrastruttura una people strategy integrata per accompagnare Fidia nella sua crescita globale." },
+        { icon: Layers, title: 'Competenze MSR finalmente misurabili in 12 lingue', text: "Le competenze comportamentali emergeranno nella lingua più autentica per ogni individuo. Il dato prodotto sarà comparabile su tutta la rete e diventerà input diretto per i piani di sviluppo sui sistemi di formazione interni." },
+        { icon: TrendingUp, title: 'Una transizione verso il valore supportata dai dati', text: "L'evoluzione del business e del modello commerciale, per potersi realizzare appieno, richiederà persone con competenze specifiche. Fidia saprà dove lavorare, su chi, e con quali priorità." },
+        { icon: CheckCircle, title: 'Sviluppo e formazione finalmente collegati', text: "I gap rilevati dall'assessment dialogheranno direttamente con i sistemi di formazione interni. La connessione tra valutazione e percorso formativo chiuderà un loop che prima restava aperto." },
       ],
-    },
-    vision: {
-      badge: 'PROSSIMI PASSI',
-      title: 'Le fondamenta per una people strategy verso il miliardo.',
-      intro: <>Il mapping MSR è il primo capitolo. Il <strong className="text-[#121212]/80 font-semibold">progetto Hiring</strong> e l'espansione ad altri ruoli — <strong className="text-[#121212]/80 font-semibold">Area Manager, KAM, Marketing</strong> — costruiranno su questa infrastruttura una <strong className="text-[#121212]/80 font-semibold">people strategy integrata</strong> per accompagnare Fidia nella sua crescita globale. Un sistema pensato per scalare insieme al business, capitolo dopo capitolo.</>,
-      nextGen: '',
     },
     related: {
       title: 'Storie correlate',
@@ -185,42 +152,42 @@ const content = {
     breadcrumb: 'Customers',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Fidia Farmaceutici: how to map, at global scale, the ',
-      highlight1: 'real competencies of the sales network',
+      before: 'Fidia Farmaceutici: how to map the ',
+      highlight1: 'real competencies of a global sales network',
       middle: '',
       highlight2: '',
-      after: '',
+      after: ' to drive growth',
     },
     subtitle: "With Skillvue, Fidia is transforming its HR infrastructure into a global talent intelligence system, capable of mapping the competencies of hundreds of Medical Sales Representatives in 12 languages and translating them into development plans and data-driven talent management decisions.",
     heroMetrics: [
-      { value: '12+', label: 'assessment languages' },
-      { value: '120+', label: 'countries covered' },
-      { value: '400+', label: 'MSRs in Italy alone' },
+      { value: '1,700', label: 'employees' },
+      { value: '12', label: 'countries' },
+      { value: '400+', label: 'employees already included in assessment' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
     clientCard: {
       label: 'CLIENT PROFILE',
       facts: [
-        { label: 'Industry', value: 'Pharmaceutical — Specialty Pharma' },
-        { label: 'Revenue', value: '€538M (FY2025)' },
-        { label: 'Employees', value: '1,708' },
-        { label: 'Countries', value: '120+' },
-        { label: 'Use Case', value: 'Learning & Development, Internal Mobility' },
+        { label: 'Industry', value: 'Pharmaceutical' },
+        { label: 'Revenue', value: '>500M€' },
+        { label: 'Employees', value: '1,700' },
+        { label: 'Countries', value: '120' },
+        { label: 'Use Case', value: 'Learning & Development' },
       ],
     },
     context: {
       badge: 'CONTEXT',
-      title: "A world leader in pharmaceutical innovation, with a sales network to understand in depth.",
+      title: "A world leader in pharmaceutical innovation, with a sales network to understand in depth",
       paragraph: <>
-        Fidia Farmaceutici is the Italian multinational and <strong className="text-[#121212]/80 font-semibold">world leader in viscosupplementation with hyaluronic acid</strong>. Founded in Abano Terme, over more than sixty years of research it has built a unique position in tissue repair and osteoarthritis treatment — with <strong className="text-[#121212]/80 font-semibold">€538 million in revenues in 2025</strong>, an <strong className="text-[#121212]/80 font-semibold">11% CAGR</strong> over the preceding five years, <strong className="text-[#121212]/80 font-semibold">1,522 global patents</strong> and <strong className="text-[#121212]/80 font-semibold">100% Italian production</strong> across four plants.<br /><br />
-        Its commercial network is equally extensive: hundreds of Medical Sales Representatives distributed across <strong className="text-[#121212]/80 font-semibold">120+ countries</strong>, from Italy to Europe, from the USA to the Middle East, operating in <strong className="text-[#121212]/80 font-semibold">twelve different languages</strong>. They are the point of contact between Fidia's science and the prescribing physician. At a time of strong international expansion — <strong className="text-[#121212]/80 font-semibold">acquisitions, FDA approval, advancement of the oncology programme</strong> — understanding the competencies of this network in a structured way has become a <strong className="text-[#121212]/80 font-semibold">strategic prerequisite</strong>.
+        Fidia Farmaceutici is the Italian multinational that stands out worldwide for the quality of its <strong className="text-[#121212]/80 font-semibold">hyaluronic acid-based products</strong>, manufactured <strong className="text-[#121212]/80 font-semibold">100% in Italy</strong>. Founded in Abano Terme, it has built a unique position in this field <strong className="text-[#121212]/80 font-semibold">since the 1950s</strong>, becoming a <strong className="text-[#121212]/80 font-semibold">"fully integrated company"</strong> that handles every stage of the product lifecycle, from research to commercialisation, producing <strong className="text-[#121212]/80 font-semibold">over 1,500 global patents</strong>.<br /><br />
+        Its commercial network is equally extensive: it is made up of hundreds of <strong className="text-[#121212]/80 font-semibold">Medical Sales Representatives</strong> distributed not only beyond national borders, across <strong className="text-[#121212]/80 font-semibold">Europe</strong>, but also in the <strong className="text-[#121212]/80 font-semibold">USA and Middle East</strong>. These professionals are the point of contact between Fidia's science and end users, and in a period of strong growth and international expansion, understanding their competencies in a structured way was becoming an increasingly <strong className="text-[#121212]/80 font-semibold">strategic prerequisite</strong>.
       </>,
       summary: '',
     },
     challenge: {
       badge: 'THE CHALLENGE',
-      title: "Better evaluation wasn't enough — a tool that simply didn't exist before was needed.",
+      title: "Better evaluation wasn't enough — a tool that simply didn't exist before was needed",
       intro: "Fidia was starting from a reality common to many fast-growing multinationals: a capable, distributed sales network, but one evaluated in a fragmented way, without a shared framework and without the data to make talent management decisions at global scale.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
@@ -228,64 +195,52 @@ const content = {
         {
           icon: Eye,
           title: 'A network without an objective picture',
-          text: "With hundreds of MSRs distributed across 12+ countries, assessments were left to individual area managers — useful, but not comparable across markets and not anchored to a common framework.",
+          text: "With hundreds of MSRs across 12+ countries, assessments were left to individual area managers — useful, but not comparable across markets and not anchored to a common framework.",
         },
         {
           icon: Target,
-          title: 'Talent management impossible without structured data',
-          text: "Identifying high-potential profiles for area manager roles, international mobility or internal growth required a tool that simply didn't exist. External alternatives were economically unsustainable at this scale.",
+          title: 'No data to drive talent management decisions',
+          text: "Identifying high-potential profiles for area manager roles or international mobility required a tool that didn't exist. External alternatives were economically unsustainable at this scale.",
         },
         {
           icon: TrendingUp,
-          title: 'A commercial transition that needed data support',
-          text: "The shift towards an increasingly value-based, scientifically-driven approach requires representatives with solid consultative skills. Without an objective baseline, building targeted development plans was impossible.",
+          title: 'A transition without an objective baseline',
+          text: "The shift towards a value-based, scientifically-driven approach requires specific competencies. Without a shared baseline, building targeted development plans at global scale was impossible.",
         },
       ],
       hrChallenges: [
         {
           icon: Layers,
-          title: 'The language barrier as a systematic distortion',
-          text: "An English-only assessment for a network speaking 12 languages would have produced data skewed by language proficiency, not professional competence. The risk was measuring language, not the person.",
+          title: 'Language as a systematic distortion',
+          text: "An English-only assessment for a network speaking 12 languages would have skewed results by language proficiency, not professional competence. The concrete risk was measuring language, not the person.",
         },
         {
           icon: CheckCircle,
           title: 'Development and training not connected',
-          text: "The results of existing assessments didn't connect with the Learning Lab training platform, making it impossible to translate competency gaps into coherent individual development paths.",
+          text: "Existing assessment results didn't connect with internal training systems, making it impossible to translate competency gaps into coherent individual development paths across the global network.",
         },
         {
           icon: Shield,
-          title: 'Multi-level governance without a shared view',
-          text: "Area managers, Country Managers, HRBPs and central HR operated on different information bases, with no shared framework or common dashboard to read the network's talent.",
+          title: 'Fragmented governance, no shared talent view',
+          text: "Area managers, Country Managers, HRBPs and central HR all operated on different information bases, with no shared framework or dashboard to read the network's talent.",
         },
       ],
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
-      title: 'What needed to change.',
+      title: 'What needed to change',
       items: [
         { icon: Eye, text: "Obtain an objective, standardised and comparable picture of all global MSRs' competencies, applying the same criteria regardless of country." },
         { icon: Target, text: "Identify high-potential profiles for talent management and internal mobility pathways — a scalable alternative to external assessments." },
         { icon: Layers, text: "Manage multilingual complexity (12+ languages), ensuring fairness and comparability of results without sacrificing authenticity of responses." },
-        { icon: CheckCircle, text: "Create a direct link between assessment results and individual development plans on Fidia Learning Lab." },
-        { icon: Zap, text: "Build a scalable infrastructure that extends, after the MSR roll-out, to other roles and to the Hiring function." },
+        { icon: CheckCircle, text: "Create a direct link between assessment results and individual development plans within internal training systems." },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment against two parallel objectives, built on the Fidia model.',
-      intro: <>Skillvue worked with Fidia's HR team — led by <strong className="text-[#121212]/80 font-semibold">Gianluca Magnani, Corporate HRD</strong> — to build an assessment system rooted in real business situations: the concrete scenarios an MSR faces every day, in every market. The result is an <strong className="text-[#121212]/80 font-semibold">asynchronous structured behavioural interview (BEI)</strong>, accessible from mobile/PC/tablet, lasting approximately <strong className="text-[#121212]/80 font-semibold">25 minutes</strong>. Audio responses are transcribed and evaluated by Skillvue's AI against a <strong className="text-[#121212]/80 font-semibold">bespoke competency model</strong>.</>,
-      solutionObjectives: [
-        {
-          number: '01',
-          label: 'Learning & Development',
-          text: "Assessment of each MSR's current competencies as the basis for targeted individual development plans, linked to the Fidia Learning Lab platform. For every profile: strengths, areas for growth, and what to focus on.",
-        },
-        {
-          number: '02',
-          label: 'Talent Management',
-          text: "Identification of high-potential profiles to be considered for internal growth paths, area and district manager roles, and international mobility. A scalable system that replaces external assessment processes across the entire global network.",
-        },
-      ],
+      title: 'AI Assessment for learning and development, built ad hoc on the Fidia model',
+      intro: <>The Fidia and Skillvue teams worked together to build an assessment system rooted in real business situations: the concrete scenarios an MSR faces every day, in every market. The result is an <strong className="text-[#121212]/80 font-semibold">asynchronous structured behavioural interview (BEI)</strong> lasting approximately <strong className="text-[#121212]/80 font-semibold">25 minutes</strong>. Audio responses are transcribed and evaluated by <strong className="text-[#121212]/80 font-semibold">Skillvue's AI</strong> against a <strong className="text-[#121212]/80 font-semibold">bespoke competency model</strong>.</>,
+      solutionObjectives: [],
       skillsLabel: 'SKILLS ASSESSED',
       skillsNote: "The competency model is structured across three overlapping layers, from the most transversal to the most role-specific — anchored to the VOLA framework (Vision, Ownership, Leadership, Accountability) already in use at Fidia.",
       skills: [
@@ -307,27 +262,15 @@ const content = {
     },
     results: {
       badge: 'RESULTS',
-      title: 'What is changing.',
-      subtitle: 'Outcomes of the Skillvue × Fidia Farmaceutici project.',
-      metrics: [
-        { value: '12+', label: 'assessment languages' },
-        { value: '120+', label: 'countries covered' },
-        { value: '400+', label: 'MSRs in Italy alone' },
-      ],
+      title: 'The vision and the impact',
+      subtitle: 'Expected outcomes of the Skillvue × Fidia Farmaceutici project.',
+      metrics: [],
       qualitative: [
         { icon: Eye, title: 'The first objective picture of the global sales network', text: "For the first time, Fidia will have a structured, comparable view of all its MSRs' competencies worldwide — built with the same criteria in every country, regardless of language or local commercial culture." },
-        { icon: Target, title: 'Scalable talent management without depending on external providers', text: "High-potential profiles emerge from data, not from the subjective judgement of individual managers or costly individual assessments outsourced to external firms. A system that scales with the network." },
-        { icon: Layers, title: 'MSR competencies now measurable in 12 languages', text: "Behavioural competencies emerge in the most authentic language for each individual. The data produced is comparable across the entire network and becomes a direct input to development plans on Learning Lab." },
+        { icon: Layers, title: 'MSR competencies now measurable in 12 languages', text: "Behavioural competencies emerge in the most authentic language for each individual. The data produced is comparable across the entire network and becomes a direct input to development plans within internal training systems." },
         { icon: TrendingUp, title: 'A value-based transition supported by data', text: "The shift from a discount-driven approach to a consultative model based on scientific product value requires specific competencies. Now Fidia knows where to focus, on whom, and with what priorities." },
-        { icon: CheckCircle, title: 'Development and training finally connected', text: "The gaps identified by the assessment connect directly with Fidia Learning Lab. The link between evaluation and development path closes a loop that was previously left open." },
-        { icon: Zap, title: 'The foundations for a people strategy towards one billion', text: "The MSR mapping is the first chapter. The Hiring project and expansion to other roles — Area Manager, KAM, Marketing — will build on this infrastructure an integrated people strategy to accompany Fidia's global growth." },
+        { icon: CheckCircle, title: 'Development and training finally connected', text: "The gaps identified by the assessment connect directly with internal training systems. The link between evaluation and development path closes a loop that was previously left open." },
       ],
-    },
-    vision: {
-      badge: 'NEXT STEPS',
-      title: 'The foundations for a people strategy towards one billion.',
-      intro: <>The MSR mapping is the first chapter. The <strong className="text-[#121212]/80 font-semibold">Hiring project</strong> and expansion to other roles — <strong className="text-[#121212]/80 font-semibold">Area Manager, KAM, Marketing</strong> — will build on this infrastructure an <strong className="text-[#121212]/80 font-semibold">integrated people strategy</strong> to accompany Fidia in its global growth journey. A system designed to scale with the business, chapter by chapter.</>,
-      nextGen: '',
     },
     related: {
       title: 'Related Stories',
@@ -376,23 +319,15 @@ export default function FidiaFarmaceuticiStoryPage() {
 
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
               {/* Main content */}
-              <div className="lg:col-span-7">
-                <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.15)', color: '#7b7df9', border: '1px solid rgba(75,77,247,0.2)' }}>
+              <div className="lg:col-span-7 flex flex-col">
+                <motion.div className="flex flex-col flex-1" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-bold tracking-[0.12em] uppercase mb-8 block w-fit" style={{ background: 'rgba(75,77,247,0.15)', color: '#7b7df9', border: '1px solid rgba(75,77,247,0.2)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(1.6rem,2.8vw,2.5rem)] font-bold tracking-[-0.03em] text-white/95 mb-6" style={{ lineHeight: 1.3 }}>
+                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}{c.headline.highlight2 && <span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>}{c.headline.after}
                   </h1>
-                  <p className="text-[16px] text-white/[0.60] leading-[1.75] mb-10 max-w-2xl">{c.subtitle}</p>
-                  <div className="grid grid-cols-3 gap-4 mb-10">
-                    {c.heroMetrics.map(m => (
-                      <div key={m.label} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-5 py-4">
-                        <span className="block text-white" style={{ fontSize: '1.5rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[12px] text-white/[0.55] mt-1.5 block leading-[1.35]">{m.label}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-10 max-w-2xl">{c.subtitle}</p>
                   <div className="flex flex-wrap gap-4">
                     <button onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300" style={{ background: '#4b4df7' }}>
                       {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
@@ -401,11 +336,20 @@ export default function FidiaFarmaceuticiStoryPage() {
                       {c.ctaSecondary} <ArrowRight className="h-4 w-4" />
                     </button>
                   </div>
+                  {/* Metrics — pinned to bottom */}
+                  <div className="mt-auto pt-10 grid grid-cols-3 gap-4">
+                    {c.heroMetrics.map(m => (
+                      <div key={m.label} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-6 py-6">
+                        <span className="block text-white" style={{ fontSize: 'clamp(1.6rem,3vw,2.2rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="text-[13px] text-white/[0.55] mt-2 block leading-[1.4]">{m.label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </motion.div>
               </div>
 
-              {/* Client card */}
-              <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
+              {/* Client card + video placeholder */}
+              <motion.div className="lg:col-span-5 flex flex-col" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
                     <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 flex items-center justify-center bg-white">
@@ -425,6 +369,8 @@ export default function FidiaFarmaceuticiStoryPage() {
                     ))}
                   </div>
                 </div>
+                {/* Video placeholder */}
+                <div className="mt-4 rounded-2xl border border-white/[0.08] bg-white/[0.04] flex-1 min-h-0" />
               </motion.div>
             </div>
           </div>
@@ -489,7 +435,7 @@ export default function FidiaFarmaceuticiStoryPage() {
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
                     <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
+                      {typeof o.text === 'string' && o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
                     </p>
                   </div>
                 ))}
@@ -503,15 +449,17 @@ export default function FidiaFarmaceuticiStoryPage() {
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-10">{c.solution.intro}</p>
 
               {/* Two parallel objectives */}
-              <div className="grid md:grid-cols-2 gap-5 mb-12">
-                {c.solution.solutionObjectives.map((obj) => (
-                  <div key={obj.number} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-3" style={{ color: '#4b4df7' }}>{obj.number}</span>
-                    <h4 className="text-[16px] font-bold text-[#121212] mb-3 leading-[1.4]">{obj.label}</h4>
-                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{obj.text}</p>
-                  </div>
-                ))}
-              </div>
+              {c.solution.solutionObjectives.length > 0 && (
+                <div className="grid md:grid-cols-2 gap-5 mb-12">
+                  {c.solution.solutionObjectives.map((obj) => (
+                    <div key={obj.number} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-3" style={{ color: '#4b4df7' }}>{obj.number}</span>
+                      <h4 className="text-[16px] font-bold text-[#121212] mb-3 leading-[1.4]">{obj.label}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{obj.text}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {/* Competency layers */}
               <div className="mb-10">
@@ -552,16 +500,18 @@ export default function FidiaFarmaceuticiStoryPage() {
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
 
-              <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-3 gap-10 max-w-2xl mx-auto">
-                  {c.results.metrics.map((m) => (
-                    <div key={m.label} className="text-center">
-                      <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.6rem,3vw,2.2rem)', letterSpacing: '-0.03em' }}>{m.value}</span>
-                      <span className="text-[12px] text-white/[0.55] leading-[1.4]">{m.label}</span>
-                    </div>
-                  ))}
+              {c.results.metrics.length > 0 && (
+                <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
+                  <div className="grid grid-cols-3 gap-10 max-w-2xl mx-auto">
+                    {c.results.metrics.map((m) => (
+                      <div key={m.label} className="text-center">
+                        <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.6rem,3vw,2.2rem)', letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="text-[12px] text-white/[0.55] leading-[1.4]">{m.label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               <div className="grid md:grid-cols-2 gap-5">
                 {c.results.qualitative.map((q) => (
@@ -573,17 +523,6 @@ export default function FidiaFarmaceuticiStoryPage() {
                     <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
                   </div>
                 ))}
-              </div>
-            </Section>
-
-            {/* NEXT STEPS */}
-            <Section>
-              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10 lg:p-14">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
-                  {c.vision.badge}
-                </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8]">{c.vision.intro}</p>
               </div>
             </Section>
 

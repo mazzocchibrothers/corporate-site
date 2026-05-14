@@ -22,7 +22,7 @@ export const translations = {
   'decision,': 'sul talento,',
   'finally': 'finalmente',
   'backed by science.': 'supportata dalla scienza.',
-  'Skillvue combines psychometric rigour with modern AI to assess skills, predict performance, and guide every talent decision, from hiring to promotion to transformation readiness.': 'Skillvue combina il rigore psicometrico con l\'intelligenza artificiale moderna per valutare le competenze, prevedere le performance e guidare ogni decisione sul talento, dalla selezione alle promozioni fino alla prontezza alla trasformazione.',
+  'Skillvue combines psychometric rigour with modern AI to assess skills, predict performance, and guide every talent decision, from hiring to promotion to transformation readiness.': 'Skillvue combina il rigore psicometrico con l\'intelligenza artificiale per valutare le competenze, prevedere le performance e guidare ogni decisione sul talento, dalla selezione fino alla mobilità, alla formazione e allo sviluppo.',
   'Our Customers': 'I Nostri Clienti',
 
   // ===== PROBLEM SECTION =====
