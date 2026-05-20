@@ -63,31 +63,41 @@ const content = {
     challenge: {
       badge: 'LA SFIDA',
       title: '30.000 candidature, 600+ filiali, profili junior indistinguibili da CV.',
-      intro: "I migliori candidati rischiavano di andarsene prima che il processo si concludesse. In un mercato dove Credem compete con altre banche, fintech e tech company per gli stessi profili, ogni settimana di ritardo nel processo aumentava il rischio di perdere i candidati più ricercati.",
+      intro: "In un mercato dove Credem compete con banche, fintech e tech company per gli stessi profili junior, la velocità del processo di selezione è diventata una leva competitiva: i migliori candidati ricevono più proposte in parallelo, e ogni settimana conta.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: TrendingUp,
           title: 'I giovani ad alto potenziale non erano immediatamente visibili',
-          text: "Lo screening basato sul CV non era in grado di differenziare i profili junior. Le soft skill davvero importanti per questi ruoli erano completamente invisibili nel primo step. Il risultato: troppi falsi positivi in colloquio, troppi profili ad alto potenziale non individuati.",
+          text: "Lo screening basato sul CV non riusciva a differenziare i profili junior: le soft skill decisive per questi ruoli erano invisibili nel primo step. Il risultato erano troppi falsi positivi in colloquio e troppi talenti non intercettati.",
         },
         {
           icon: Heart,
-          title: "Il processo non rispecchiava gli effort di Employer Brand",
-          text: "Per una banca certificata Top Employer per 10 anni consecutivi ed Equal Salary per 5, un processo percepito come lungo o poco snello creava una dissonanza in termini di posizionamento. I candidati più giovani si aspettano un'esperienza rapida, moderna e inclusiva.",
+          title: "L'esperienza candidato doveva essere all'altezza del brand",
+          text: "Per una banca certificata Top Employer per 10 anni consecutivi ed Equal Salary per 5, ogni punto di contatto con il candidato è parte del posizionamento. Un processo moderno, rapido e inclusivo non era un dettaglio operativo: era coerenza con i valori che Credem porta avanti.",
+        },
+        {
+          icon: Zap,
+          title: "Serviva l'AI per stare al passo con i volumi",
+          text: "Gestire 30.000 candidature con strumenti tradizionali significava scegliere tra velocità e qualità. Serviva un sistema in grado di potenziare il processo — accelerando le fasi operative e mantenendo il giudizio umano al centro delle decisioni.",
         },
       ],
       hrChallenges: [
         {
           icon: Users,
           title: 'Il time-to-hire rischiava di far perdere i candidati migliori',
-          text: "In un mercato dove Credem compete con altre banche, fintech e tech company per gli stessi profili, ogni settimana di ritardo nel processo aumentava il rischio di perdere i candidati più ricercati.",
+          text: "La velocità del processo era una leva competitiva in un mercato dove i migliori profili junior ricevono più proposte in parallelo. Ogni settimana in più aumentava concretamente il rischio di perderli a favore della concorrenza.",
         },
         {
           icon: Target,
-          title: 'La qualità della selezione non era omogenea',
-          text: "Garantire standard di screening uniformi su una rete di oltre 600 filiali distribuite in 19 regioni era una sfida operativa e di equità. Senza un filtro centralizzato e strutturato, il livello di selezione poteva subire grosse variazioni.",
+          title: 'La qualità della selezione doveva essere omogenea',
+          text: "Garantire standard di screening uniformi su oltre 600 filiali in 19 regioni era una sfida operativa e di equità. Senza un filtro centralizzato e strutturato, il livello di selezione poteva variare significativamente da area ad area.",
+        },
+        {
+          icon: BarChart3,
+          title: 'Bisognava dare a ogni candidato la possibilità di farsi conoscere',
+          text: "Con 30.000 candidature l'anno, non è fisicamente possibile dare a ogni candidato uno spazio autentico per esprimersi con gli strumenti tradizionali. Senza un canale strutturato, i profili più motivati e ad alto potenziale rischiavano di restare invisibili.",
         },
       ],
     },
@@ -98,13 +108,13 @@ const content = {
         { icon: Target, text: "Rendere il primo filtro più selettivo e predittivo: intercettare i profili ad alto potenziale nascosti nelle 30.000 candidature, riducendo i falsi positivi" },
         { icon: Zap, text: "Ridurre il time-to-hire e ottimizzare le shortlist: rispondere ai candidati migliori prima della concorrenza e portare al colloquio solo candidati con competenze verificate" },
         { icon: Layers, text: "Garantire standard omogenei su tutta la rete: stesso livello di valutazione su 600+ filiali" },
-        { icon: Heart, text: "Migliorare l'employer brand: processo rapido, inclusivo e moderno, coerente con il posizionamento Top Employer" },
+        { icon: Heart, text: "Migliorare l'employer brand: un'esperienza di selezione accessibile, rapida ed equa per ogni candidato — non un ostacolo, ma un'opportunità autentica di farsi conoscere, coerente con il posizionamento Top Employer" },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI con Skillvue',
-      intro: "Skillvue è stato integrato nel processo di selezione del Progetto Giovani con un approccio graduale e data-driven: prima la validazione su un perimetro iniziale, poi l'estensione progressiva. L'obiettivo era misurare l'impatto con dati reali prima di scalare.",
+      intro: "Skillvue è stato integrato nel processo di selezione del Progetto Giovani con un approccio graduale e data-driven: prima la validazione su un perimetro iniziale, poi l'estensione progressiva.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Target, label: 'Resilienza' },
@@ -193,31 +203,41 @@ const content = {
     challenge: {
       badge: 'THE CHALLENGE',
       title: '30,000 applications, 600+ branches, junior profiles indistinguishable by CV.',
-      intro: "The best candidates risked leaving before the process ended. In a market where Credem competes with other banks, fintechs and tech companies for the same profiles, every week of delay in the process increased the risk of losing the most sought-after candidates.",
+      intro: "In a market where Credem competes with banks, fintechs and tech companies for the same junior profiles, the speed of the selection process had become a competitive lever: the best candidates receive multiple offers at the same time, and every week matters.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: TrendingUp,
           title: 'High-potential young talent was not immediately visible',
-          text: "CV-based screening could not differentiate junior profiles. The soft skills that truly matter for these roles were completely invisible at the first step. The result: too many false positives in interviews, too many high-potential profiles missed.",
+          text: "CV-based screening could not differentiate junior profiles: the soft skills that truly matter for these roles were invisible at the first step. The result was too many false positives in interviews and too many talented candidates missed.",
         },
         {
           icon: Heart,
-          title: "The process didn't reflect the Employer Brand investment",
-          text: "For a bank certified Top Employer for 10 consecutive years and Equal Salary for 5, a process perceived as slow or cumbersome created a positioning dissonance. The youngest candidates expect a fast, modern and inclusive experience.",
+          title: "The candidate experience had to match the brand",
+          text: "For a bank certified Top Employer for 10 consecutive years and Equal Salary for 5, every candidate touchpoint is part of the positioning. A modern, fast and inclusive hiring process wasn't an operational detail: it was consistency with the values Credem stands for.",
+        },
+        {
+          icon: Zap,
+          title: 'AI was needed to keep pace with the volume',
+          text: "Managing 30,000 applications with traditional tools meant choosing between speed and quality. A system was needed to empower the process — accelerating operational steps while keeping human judgement at the centre of every decision.",
         },
       ],
       hrChallenges: [
         {
           icon: Users,
           title: 'Time-to-hire risked losing the best candidates',
-          text: "In a market where Credem competes with other banks, fintechs and tech companies for the same profiles, every week of delay increased the risk of losing the most in-demand candidates.",
+          text: "Process speed was a competitive lever in a market where the best junior profiles receive multiple offers at the same time. Every extra week in the hiring process increased the real risk of losing them to the competition.",
         },
         {
           icon: Target,
-          title: 'Selection quality was not consistent',
-          text: "Guaranteeing uniform screening standards across a network of 600+ branches in 19 regions was an operational and fairness challenge. Without a centralised, structured filter, hiring quality could vary significantly.",
+          title: 'Selection quality needed to be consistent',
+          text: "Guaranteeing uniform screening standards across 600+ branches in 19 regions was both an operational and a fairness challenge. Without a centralised, structured filter, hiring quality could vary significantly from one area to the next.",
+        },
+        {
+          icon: BarChart3,
+          title: 'Giving every candidate a real chance to be heard',
+          text: "At 30,000 applications a year, it is not physically possible to give every candidate an authentic space to demonstrate who they are using traditional tools. Without a structured channel, the most motivated and high-potential profiles risked going unheard.",
         },
       ],
     },
@@ -228,13 +248,13 @@ const content = {
         { icon: Target, text: "Make the first filter more selective and predictive: identify high-potential profiles hidden among the 30,000 applications, reducing false positives" },
         { icon: Zap, text: "Reduce time-to-hire and optimise shortlists: respond to the best candidates before the competition and bring to interview only candidates with verified skills" },
         { icon: Layers, text: "Guarantee consistent standards across the network: same level of evaluation across 600+ branches" },
-        { icon: Heart, text: "Improve employer brand: a fast, inclusive and modern process, consistent with the Top Employer positioning" },
+        { icon: Heart, text: "Improve employer brand: an assessment experience that is accessible, fast and fair for every candidate — not a hurdle, but a genuine opportunity to be heard, consistent with the Top Employer positioning" },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was integrated into the Progetto Giovani hiring process with a gradual, data-driven approach: first validation on an initial perimeter, then progressive extension. The goal was to measure impact with real data before scaling.",
+      intro: "Skillvue was integrated into the Progetto Giovani hiring process with a gradual, data-driven approach: first validation on an initial perimeter, then progressive extension.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Target, label: 'Resilienza' },
@@ -394,7 +414,7 @@ export default function CredemStoryPage() {
 
               <div className="mb-10">
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
@@ -409,7 +429,7 @@ export default function CredemStoryPage() {
 
               <div>
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
