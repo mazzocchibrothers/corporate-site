@@ -139,9 +139,12 @@ export default function Navbar() {
             ? '#000000'
             : isLight
               ? 'rgba(245,245,250,0.92)'
-              : 'transparent',
-          backdropFilter: menuActive || isLight || mobileOpen ? 'blur(40px) saturate(1.2)' : 'none',
-          WebkitBackdropFilter: menuActive || isLight || mobileOpen ? 'blur(40px) saturate(1.2)' : 'none',
+              : scrolled
+                ? 'rgba(13,13,31,0.78)'
+                : 'transparent',
+          backdropFilter: (menuActive || isLight || mobileOpen || scrolled) ? 'blur(40px) saturate(1.2)' : 'none',
+          WebkitBackdropFilter: (menuActive || isLight || mobileOpen || scrolled) ? 'blur(40px) saturate(1.2)' : 'none',
+          borderBottom: scrolled && !menuActive && !mobileOpen ? `1px solid ${isLight ? 'rgba(26,26,46,0.06)' : 'rgba(255,255,255,0.06)'}` : '1px solid transparent',
         }}
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between h-[80px] relative">
