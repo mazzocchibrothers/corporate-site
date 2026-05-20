@@ -32,7 +32,7 @@ const content = {
       highlight2: 'supportare la crescita',
       after: '',
     },
-    subtitle: "Con Skillvue, Fidia sta trasformando la propria infrastruttura HR in un sistema di talent intelligence globale, capace di mappare le competenze di centinaia di Medical Sales Representative in 12 lingue e tradurle in piani di sviluppo e decisioni di talent management basate sui dati.",
+    subtitle: "Con Skillvue, Fidia sta trasformando la propria infrastruttura HR in un sistema di talent intelligence globale, capace di mappare le competenze di centinaia di Medical Representative in 12 lingue e tradurle in piani di sviluppo e decisioni di talent management basate sui dati.",
     heroMetrics: [
       { value: '1.700', label: 'dipendenti' },
       { value: '12', label: 'Paesi' },
@@ -46,7 +46,7 @@ const content = {
         { label: 'Settore', value: 'Farmaceutico' },
         { label: 'Fatturato', value: '>500M€' },
         { label: 'Dipendenti', value: '1.700' },
-        { label: 'Paesi', value: '120' },
+        { label: 'Paesi', value: '17' },
         { label: 'Use Case', value: 'Learning & Development' },
       ],
     },
@@ -55,7 +55,7 @@ const content = {
       title: "Un leader mondiale dell'innovazione farmaceutica con una rete vendita da conoscere a fondo",
       paragraph: <>
         Fidia Farmaceutici è la multinazionale italiana che si distingue a livello mondiale per la qualità dei suoi <strong className="text-[#121212]/80 font-semibold">prodotti a base di acido ialuronico</strong>, realizzati <strong className="text-[#121212]/80 font-semibold">al 100% in Italia</strong>. Fondata ad Abano Terme, ha costruito <strong className="text-[#121212]/80 font-semibold">fin dagli anni '50</strong> una posizione unica in questo campo, diventando una <strong className="text-[#121212]/80 font-semibold">"fully integrated company"</strong> che si occupa di ogni fase di vita del prodotto, dalla ricerca alla commercializzazione, e arrivando a produrre <strong className="text-[#121212]/80 font-semibold">oltre 1.500 brevetti globali</strong>.<br /><br />
-        La sua rete commerciale è altrettanto articolata: è infatti composta da centinaia di <strong className="text-[#121212]/80 font-semibold">Medical Sales Representative</strong> distribuiti non solo al di fuori dei confini nazionali, in <strong className="text-[#121212]/80 font-semibold">Europa</strong>, ma anche in <strong className="text-[#121212]/80 font-semibold">USA e Medio Oriente</strong>. Questi professionisti sono il punto di contatto tra la scienza di Fidia e l'utenza finale, e in un momento di <strong className="text-[#121212]/80 font-semibold">forte crescita ed espansione internazionale</strong> dell'organizzazione, conoscerne le competenze in modo strutturato diventava sempre più un <strong className="text-[#121212]/80 font-semibold">prerequisito strategico</strong> per poter direzionare al meglio le evoluzioni del modello commerciale.
+        La sua rete commerciale è altrettanto articolata: è infatti composta da centinaia di <strong className="text-[#121212]/80 font-semibold">Medical Representative</strong> distribuiti non solo al di fuori dei confini nazionali, in <strong className="text-[#121212]/80 font-semibold">Europa</strong>, ma anche in <strong className="text-[#121212]/80 font-semibold">USA e Medio Oriente</strong>. Questi professionisti sono il punto di contatto tra la scienza di Fidia e l'utenza finale, e in un momento di <strong className="text-[#121212]/80 font-semibold">forte crescita ed espansione internazionale</strong> dell'organizzazione, conoscerne le competenze in modo strutturato diventava sempre più un <strong className="text-[#121212]/80 font-semibold">prerequisito strategico</strong> per poter direzionare al meglio le evoluzioni del modello commerciale.
       </>,
       summary: '',
     },
@@ -104,7 +104,7 @@ const content = {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
       title: 'Gli obiettivi della collaborazione',
       items: [
-        { icon: Eye, text: <><strong className="font-bold text-[#121212]/90">Ottenere</strong> una fotografia oggettiva, standardizzata e confrontabile delle competenze di tutti gli MSR, indipendentemente dal Paese.</> },
+        { icon: Eye, text: <><strong className="font-bold text-[#121212]/90">Ottenere</strong> una fotografia oggettiva, standardizzata e confrontabile delle competenze di tutti gli MR, indipendentemente dal Paese.</> },
         { icon: Target, text: <><strong className="font-bold text-[#121212]/90">Identificare</strong> i profili ad alto potenziale da inserire in percorsi di talent management e mobilità interna.</> },
         { icon: Layers, text: <><strong className="font-bold text-[#121212]/90">Gestire</strong> la complessità dell'assessment multilingue garantendo equità e comparabilità dei risultati senza sacrificare l'autenticità delle risposte.</> },
         { icon: CheckCircle, text: <><strong className="font-bold text-[#121212]/90">Creare</strong> un collegamento diretto tra i risultati dell'assessment e i piani formativi individuali portati avanti da Fidia.</> },
@@ -113,13 +113,13 @@ const content = {
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'Assessment AI per la formazione e lo sviluppo, costruito ad hoc sul modello Fidia',
-      intro: <>Il team di Fidia e quello di Skillvue hanno lavorato insieme per costruire un sistema di assessment che partisse dal business reale: le situazioni concrete che un MSR Fidia affronta ogni giorno, in ogni mercato.</>,
+      intro: <>Il team di Fidia e quello di Skillvue hanno lavorato insieme per costruire un sistema di assessment che partisse dal business reale: le situazioni concrete che un MR Fidia affronta ogni giorno, in ogni mercato.</>,
       solutionObjectives: [],
       skillsLabel: 'COMPETENZE VALUTATE',
       skillsNote: "Il modello è strutturato su tre layer sovrapposti, dal più trasversale al più specifico per ruolo — ancorato al framework VOLA (Vision, Ownership, Leadership, Accountability) già in uso in Fidia.",
       skills: [
         { icon: Users, label: 'Foundation Behavioral Layer', sublabel: 'Layer 1 — Base comportamentale trasversale, framework VOLA' },
-        { icon: Shield, label: 'Medical Scientific Competencies', sublabel: 'Layer 2 — Competenze scientifico-mediche per MSR in specialty pharma' },
+        { icon: Shield, label: 'Medical Scientific Competencies', sublabel: 'Layer 2 — Competenze scientifico-mediche per MR in specialty pharma' },
         { icon: Target, label: 'Sales System Skills', sublabel: 'Layer 3 — Competenze di sistema commerciale su misura Fidia' },
       ],
       multilingualLabel: '',
@@ -131,8 +131,8 @@ const content = {
       subtitle: 'I risultati attesi del progetto Skillvue × Fidia Farmaceutici.',
       metrics: [],
       qualitative: [
-        { icon: Eye, title: 'La prima fotografia oggettiva della rete vendita globale', text: "Per la prima volta, Fidia avrà una visione strutturata e confrontabile delle competenze di tutti i suoi MSR nel mondo — costruita con gli stessi criteri in ogni Paese, indipendentemente dalla lingua o dalla cultura commerciale locale." },
-        { icon: Layers, title: 'Competenze MSR finalmente misurabili in 12 lingue', text: "Le competenze comportamentali emergeranno nella lingua più autentica per ogni individuo. Il dato prodotto sarà comparabile su tutta la rete e diventerà input diretto per i piani di sviluppo sui sistemi di formazione interni." },
+        { icon: Eye, title: 'La prima fotografia oggettiva della rete vendita globale', text: "Per la prima volta, Fidia avrà una visione strutturata e confrontabile delle competenze di tutti i suoi MR nel mondo — costruita con gli stessi criteri in ogni Paese, indipendentemente dalla lingua o dalla cultura commerciale locale." },
+        { icon: Layers, title: 'Competenze MR finalmente misurabili in 12 lingue', text: "Le competenze comportamentali emergeranno nella lingua più autentica per ogni individuo. Il dato prodotto sarà comparabile su tutta la rete e diventerà input diretto per i piani di sviluppo sui sistemi di formazione interni." },
         { icon: TrendingUp, title: 'Una transizione verso il valore supportata dai dati', text: "L'evoluzione del business e del modello commerciale, per potersi realizzare appieno, richiederà persone con competenze specifiche. Fidia saprà dove lavorare, su chi, e con quali priorità." },
         { icon: CheckCircle, title: 'Sviluppo e formazione finalmente collegati', text: "I gap rilevati dall'assessment dialogheranno direttamente con i sistemi di formazione interni. La connessione tra valutazione e percorso formativo chiuderà un loop che prima restava aperto." },
       ],
@@ -158,7 +158,7 @@ const content = {
       highlight2: '',
       after: ' to drive growth',
     },
-    subtitle: "With Skillvue, Fidia is transforming its HR infrastructure into a global talent intelligence system, capable of mapping the competencies of hundreds of Medical Sales Representatives in 12 languages and translating them into development plans and data-driven talent management decisions.",
+    subtitle: "With Skillvue, Fidia is transforming its HR infrastructure into a global talent intelligence system, capable of mapping the competencies of hundreds of Medical Representatives in 12 languages and translating them into development plans and data-driven talent management decisions.",
     heroMetrics: [
       { value: '1,700', label: 'employees' },
       { value: '12', label: 'countries' },
@@ -172,7 +172,7 @@ const content = {
         { label: 'Industry', value: 'Pharmaceutical' },
         { label: 'Revenue', value: '>500M€' },
         { label: 'Employees', value: '1,700' },
-        { label: 'Countries', value: '120' },
+        { label: 'Countries', value: '17' },
         { label: 'Use Case', value: 'Learning & Development' },
       ],
     },
@@ -181,7 +181,7 @@ const content = {
       title: "A world leader in pharmaceutical innovation, with a sales network to understand in depth",
       paragraph: <>
         Fidia Farmaceutici is the Italian multinational that stands out worldwide for the quality of its <strong className="text-[#121212]/80 font-semibold">hyaluronic acid-based products</strong>, manufactured <strong className="text-[#121212]/80 font-semibold">100% in Italy</strong>. Founded in Abano Terme, it has built a unique position in this field <strong className="text-[#121212]/80 font-semibold">since the 1950s</strong>, becoming a <strong className="text-[#121212]/80 font-semibold">"fully integrated company"</strong> that handles every stage of the product lifecycle, from research to commercialisation, producing <strong className="text-[#121212]/80 font-semibold">over 1,500 global patents</strong>.<br /><br />
-        Its commercial network is equally extensive: it is made up of hundreds of <strong className="text-[#121212]/80 font-semibold">Medical Sales Representatives</strong> distributed not only beyond national borders, across <strong className="text-[#121212]/80 font-semibold">Europe</strong>, but also in the <strong className="text-[#121212]/80 font-semibold">USA and Middle East</strong>. These professionals are the point of contact between Fidia's science and end users, and in a period of strong growth and international expansion, understanding their competencies in a structured way was becoming an increasingly <strong className="text-[#121212]/80 font-semibold">strategic prerequisite</strong>.
+        Its commercial network is equally extensive: it is made up of hundreds of <strong className="text-[#121212]/80 font-semibold">Medical Representatives</strong> distributed not only beyond national borders, across <strong className="text-[#121212]/80 font-semibold">Europe</strong>, but also in the <strong className="text-[#121212]/80 font-semibold">USA and Middle East</strong>. These professionals are the point of contact between Fidia's science and end users, and in a period of strong growth and international expansion, understanding their competencies in a structured way was becoming an increasingly <strong className="text-[#121212]/80 font-semibold">strategic prerequisite</strong>.
       </>,
       summary: '',
     },
@@ -195,7 +195,7 @@ const content = {
         {
           icon: Eye,
           title: 'A network without an objective picture',
-          text: "With hundreds of MSRs across 12+ countries, assessments were left to individual area managers — useful, but not comparable across markets and not anchored to a common framework.",
+          text: "With hundreds of MRs across 12+ countries, assessments were left to individual area managers — useful, but not comparable across markets and not anchored to a common framework.",
         },
         {
           icon: Target,
@@ -230,7 +230,7 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What needed to change',
       items: [
-        { icon: Eye, text: "Obtain an objective, standardised and comparable picture of all global MSRs' competencies, applying the same criteria regardless of country." },
+        { icon: Eye, text: "Obtain an objective, standardised and comparable picture of all global MRs' competencies, applying the same criteria regardless of country." },
         { icon: Target, text: "Identify high-potential profiles for talent management and internal mobility pathways — a scalable alternative to external assessments." },
         { icon: Layers, text: "Manage multilingual complexity (12+ languages), ensuring fairness and comparability of results without sacrificing authenticity of responses." },
         { icon: CheckCircle, text: "Create a direct link between assessment results and individual development plans within internal training systems." },
@@ -239,13 +239,13 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Assessment for learning and development, built ad hoc on the Fidia model',
-      intro: <>The Fidia and Skillvue teams worked together to build an assessment system rooted in real business situations: the concrete scenarios an MSR faces every day, in every market. The result is an <strong className="text-[#121212]/80 font-semibold">asynchronous structured behavioural interview (BEI)</strong> lasting approximately <strong className="text-[#121212]/80 font-semibold">25 minutes</strong>. Audio responses are transcribed and evaluated by <strong className="text-[#121212]/80 font-semibold">Skillvue's AI</strong> against a <strong className="text-[#121212]/80 font-semibold">bespoke competency model</strong>.</>,
+      intro: <>The Fidia and Skillvue teams worked together to build an assessment system rooted in real business situations: the concrete scenarios an MR faces every day, in every market. The result is an <strong className="text-[#121212]/80 font-semibold">asynchronous structured behavioural interview (BEI)</strong> lasting approximately <strong className="text-[#121212]/80 font-semibold">25 minutes</strong>. Audio responses are transcribed and evaluated by <strong className="text-[#121212]/80 font-semibold">Skillvue's AI</strong> against a <strong className="text-[#121212]/80 font-semibold">bespoke competency model</strong>.</>,
       solutionObjectives: [],
       skillsLabel: 'SKILLS ASSESSED',
       skillsNote: "The competency model is structured across three overlapping layers, from the most transversal to the most role-specific — anchored to the VOLA framework (Vision, Ownership, Leadership, Accountability) already in use at Fidia.",
       skills: [
         { icon: Users, label: 'Foundation Behavioral Layer', sublabel: 'Layer 1 — Transversal behavioural foundation, VOLA framework' },
-        { icon: Shield, label: 'Medical Scientific Competencies', sublabel: 'Layer 2 — Scientific-medical skills specific to the MSR role in specialty pharma' },
+        { icon: Shield, label: 'Medical Scientific Competencies', sublabel: 'Layer 2 — Scientific-medical skills specific to the MR role in specialty pharma' },
         { icon: Target, label: 'Sales System Skills', sublabel: 'Layer 3 — Fidia-specific commercial system competencies' },
       ],
       multilingualLabel: 'MULTILINGUAL: 12 LANGUAGES',
@@ -266,8 +266,8 @@ const content = {
       subtitle: 'Expected outcomes of the Skillvue × Fidia Farmaceutici project.',
       metrics: [],
       qualitative: [
-        { icon: Eye, title: 'The first objective picture of the global sales network', text: "For the first time, Fidia will have a structured, comparable view of all its MSRs' competencies worldwide — built with the same criteria in every country, regardless of language or local commercial culture." },
-        { icon: Layers, title: 'MSR competencies now measurable in 12 languages', text: "Behavioural competencies emerge in the most authentic language for each individual. The data produced is comparable across the entire network and becomes a direct input to development plans within internal training systems." },
+        { icon: Eye, title: 'The first objective picture of the global sales network', text: "For the first time, Fidia will have a structured, comparable view of all its MRs' competencies worldwide — built with the same criteria in every country, regardless of language or local commercial culture." },
+        { icon: Layers, title: 'MR competencies now measurable in 12 languages', text: "Behavioural competencies emerge in the most authentic language for each individual. The data produced is comparable across the entire network and becomes a direct input to development plans within internal training systems." },
         { icon: TrendingUp, title: 'A value-based transition supported by data', text: "The shift from a discount-driven approach to a consultative model based on scientific product value requires specific competencies. Now Fidia knows where to focus, on whom, and with what priorities." },
         { icon: CheckCircle, title: 'Development and training finally connected', text: "The gaps identified by the assessment connect directly with internal training systems. The link between evaluation and development path closes a loop that was previously left open." },
       ],
