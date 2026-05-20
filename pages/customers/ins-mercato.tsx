@@ -194,7 +194,7 @@ export default function InsMercatoStoryPage() {
               {/* Main content */}
               <div className="lg:col-span-7">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[12px] font-bold tracking-[0.12em] uppercase mb-8 block w-fit" style={{ background: 'rgba(75,77,247,0.15)', color: '#7b7df9', border: '1px solid rgba(75,77,247,0.2)' }}>
+                  <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-8 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     CUSTOMER STORY
                   </span>
                   <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
@@ -258,7 +258,7 @@ export default function InsMercatoStoryPage() {
                 <div className="mt-4 rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
                   <iframe
                     className="w-full h-full"
-                    src={lang === 'it' ? 'https://www.youtube.com/embed/GE_fLi5IeyU?autoplay=1&mute=1' : 'https://www.youtube.com/embed/nQhV9xScwOg?autoplay=1&mute=1'}
+                    src={lang === 'it' ? 'https://www.youtube.com/embed/GE_fLi5IeyU?autoplay=1&mute=1&rel=0&modestbranding=1' : 'https://www.youtube.com/embed/nQhV9xScwOg?autoplay=1&mute=1&rel=0&modestbranding=1'}
                     title="In's Mercato interview"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

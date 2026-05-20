@@ -44,28 +44,50 @@ export default function HeroSection() {
       {/* Hero content. layered above */}
       <div className="relative z-10 flex-1 flex items-start md:items-center pt-6 md:pt-0">
         <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full py-10 md:py-16 lg:py-0">
-          <div className="grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-10 items-center">
             {/* LEFT. Big headline */}
-            <div className="lg:col-span-6">
+            <div className="lg:col-span-6 relative">
+              {/* Soft gradient glow behind headline */}
+              <div
+                aria-hidden="true"
+                className="absolute -top-10 -left-10 w-[320px] h-[320px] pointer-events-none opacity-60"
+                style={{
+                  background: 'radial-gradient(circle, rgba(75,77,247,0.22) 0%, rgba(255,86,86,0.08) 40%, transparent 70%)',
+                  filter: 'blur(40px)',
+                }}
+              />
+
               <motion.h1
-                className="text-[clamp(2.5rem,10vw,3.75rem)] md:text-[clamp(2.75rem,4.8vw,4.5rem)] font-bold tracking-[-0.025em] text-white"
+                className="relative text-[clamp(1.75rem,7vw,2.4rem)] md:text-[clamp(2.5rem,4.4vw,3.9rem)] font-bold tracking-[-0.028em] text-white"
                 style={{ lineHeight: 1.08, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                {t('Every talent')}<br />
-                {t('decision,')} <span className="italic font-bold gradient-text">{t('finally')}</span><br />
-                {t('backed by science.')}
+                {lang === 'en' ? (
+                  <>
+                    <span className="whitespace-nowrap">The Skills</span><br />
+                    <span className="italic font-bold gradient-text whitespace-nowrap">Operating System</span><br />
+                    <span className="whitespace-nowrap">for your organization</span>
+                  </>
+                ) : (
+                  <>
+                    {t('Every talent')}<br />
+                    {t('decision,')} <span className="italic font-bold gradient-text">{t('finally')}</span><br />
+                    {t('backed by science.')}
+                  </>
+                )}
               </motion.h1>
               <motion.p
-                className="text-[15px] md:text-[17px] text-white/75 leading-[1.65] md:leading-[1.65] mt-6 md:mt-8 max-w-lg font-normal md:font-light"
+                className="relative text-[15px] md:text-[17px] text-white/75 leading-[1.65] mt-6 md:mt-8 max-w-lg md:max-w-xl font-normal md:font-light"
                 style={{ textShadow: '0 1px 8px rgba(0,0,0,0.2)' }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                {t('Skillvue combines psychometric rigour with modern AI to assess skills, predict performance, and guide every talent decision, from hiring to promotion to transformation readiness.')}
+                {lang === 'en'
+                  ? 'Skillvue is the objective skills data layer for your enterprise, bespoke to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run, so every talent decision, from hiring to transformation, is finally the right one.'
+                  : t('Skillvue combines psychometric rigour with modern AI to assess skills, predict performance, and guide every talent decision, from hiring to promotion to transformation readiness.')}
               </motion.p>
             </div>
 

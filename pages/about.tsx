@@ -11,7 +11,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 const stats = [
   { value: '€9M+', label: 'Raised', icon: Award },
   { value: '50+', label: 'Enterprise Clients', icon: Users },
-  { value: '50+', label: 'Languages', icon: Globe },
+  { value: '30+', label: 'Languages', icon: Globe },
   { value: '500K+', label: 'Assessments Delivered', icon: Brain },
 ];
 
@@ -22,7 +22,7 @@ const values = [
 ];
 
 export default function AboutPage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const router = useRouter();
   const isIT = router.locale === 'it';
   const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/about`;
@@ -62,17 +62,40 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/40" />
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-4xl">
-              <span className="text-[14px] font-semibold text-[#4B4DF7]/60 tracking-[0.2em] uppercase mb-8 block">{t('About Us')}</span>
+              <div
+                className="inline-flex items-center mb-6 md:mb-8 px-3.5 py-1.5 rounded-full border border-white/15"
+                style={{
+                  background: 'rgba(255,255,255,0.04)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                }}
+              >
+                <span className="text-[12px] md:text-[13px] font-medium tracking-[0.08em] text-white/85">
+                  {t('About Us')}
+                </span>
+              </div>
               <h1
                 className="font-bold text-white/95 mb-8"
-                style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
+                style={{ fontSize: 'clamp(2rem, 5.4vw, 4.8rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
               >
-                {t('Every talent decision,')}<br />
-                {t('finally backed by')}<br />
-                <span className="gradient-text">{t('science.')}</span>
+                {lang === 'en' ? (
+                  <>
+                    <span className="whitespace-nowrap">The Skills</span><br />
+                    <span className="italic font-bold gradient-text whitespace-nowrap">Operating System</span><br />
+                    <span className="whitespace-nowrap">for your organization</span>
+                  </>
+                ) : (
+                  <>
+                    {t('Every talent decision,')}<br />
+                    {t('finally backed by')}<br />
+                    <span className="gradient-text">{t('science.')}</span>
+                  </>
+                )}
               </h1>
-              <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-xl" style={{ fontWeight: 300 }}>
-                {t("We're building the intelligence layer that makes hiring, promotion, development, and transformation decisions objective, predictive, and defensible at enterprise scale.")}
+              <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-2xl" style={{ fontWeight: 300 }}>
+                {lang === 'en'
+                  ? 'Skillvue is the objective skills data layer for your enterprise, bespoke to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run, so every talent decision, from hiring to transformation, is finally the right one.'
+                  : t("We're building the intelligence layer that makes hiring, promotion, development, and transformation decisions objective, predictive, and defensible at enterprise scale.")}
               </p>
             </motion.div>
           </div>
