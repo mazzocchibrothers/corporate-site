@@ -72,9 +72,8 @@ export default function HeroSection() {
                   </>
                 ) : (
                   <>
-                    {t('Every talent')}<br />
-                    {t('decision,')} <span className="italic font-bold gradient-text">{t('finally')}</span><br />
-                    {t('backed by science.')}
+                    Lo <span className="italic font-bold gradient-text">Skills OS</span><br />
+                    della tua organizzazione
                   </>
                 )}
               </motion.h1>
@@ -87,7 +86,7 @@ export default function HeroSection() {
               >
                 {lang === 'en'
                   ? 'Skillvue is the objective skills data layer for your enterprise, bespoke to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run, so every talent decision, from hiring to transformation, is finally the right one.'
-                  : t('Skillvue combines psychometric rigour with modern AI to assess skills, predict performance, and guide every talent decision, from hiring to promotion to transformation readiness.')}
+                  : 'Skillvue mappa, misura e riporta dati oggettivi sulle competenze: costruito sul tuo framework interno, fondato sulla scienza, potenziato dall’AI e integrato nei sistemi HR che già utilizzi, per trasformare ogni decisione sul talento, dall’assunzione allo sviluppo.'}
               </motion.p>
             </div>
 
@@ -103,7 +102,7 @@ export default function HeroSection() {
                 style={{ boxShadow: '0 20px 60px -15px rgba(75, 77, 247, 0.45), 0 0 0 1px rgba(255,255,255,0.05)' }}
               >
                 <iframe
-                  src="https://www.youtube-nocookie.com/embed/Y8Oo5HBVl-Q?autoplay=1&mute=1&loop=1&playlist=Y8Oo5HBVl-Q&rel=0&modestbranding=1&vq=hd2160&hd=1&playsinline=1&enablejsapi=1"
+                  src="https://www.youtube-nocookie.com/embed/g2Ju7COKZrM?autoplay=1&mute=1&loop=1&playlist=g2Ju7COKZrM&rel=0&modestbranding=1&vq=hd2160&hd=1&playsinline=1&enablejsapi=1"
                   title="Skillvue product video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen

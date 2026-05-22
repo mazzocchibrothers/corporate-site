@@ -390,6 +390,15 @@ export default function MediasetStoryPage() {
                     ))}
                   </div>
                 </div>
+                <div className="mt-4 rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/AAnpWEHhWuE?autoplay=1&mute=1&rel=0&modestbranding=1"
+                    title="Mediaset interview"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
               </motion.div>
             </div>
           </div>

@@ -42,8 +42,14 @@ const allStories = [
     headlineEn: 'How Unicomm is building a new talent management system across a network of 250 stores and growing',
     bgImage: '/logos/unicomm-background-explore-stories.jpg',
   },
+  {
+    id: 'mediaset', company: 'Mediaset', industry: 'Media & Telecom', useCases: ['Hiring'],
+    headlineIt: 'Mediaset: da 3.000 candidature a 15 top talent, come selezionare e far crescere il talento su scala',
+    headlineEn: 'Mediaset: from 3,000 applications to 15 top talents, how to identify and develop talent at scale',
+    bgImage: '/logos/mediaset-background-explore-stories.jpg',
+  },
   // Temporarily removed from listing pending approval (restore when ready):
-  // credem, mediaset, douglas, eataly
+  // credem, douglas, eataly
 ];
 
 const filters = {
