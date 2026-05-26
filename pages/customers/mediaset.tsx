@@ -60,20 +60,25 @@ const content = {
     },
     challenge: {
       badge: 'LA SFIDA',
-      title: 'Migliaia di candidati, un team HR di piccole dimensioni e tanti CV troppo uguali tra di loro.',
+      title: 'Migliaia di candidati, un team HR di piccole dimensioni e tanti CV troppo simili tra di loro.',
       intro: 'Il Progetto GRAPE ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l\'obiettivo di raggiungere 80 candidati qualificati a settimana da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell\'assessment.',
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Zap,
-          title: 'Le necessità di business si scontravano con il carico operativo HR',
+          title: 'Le necessità di business rischivano di scontrarsi con il carico operativo HR',
           text: 'Per rispettare il ritmo desiderato di profili valutati serviva un filtro diverso da quello manuale, capace di operare su scala senza sacrificare la qualità o far passare sotto traccia profili ad alto potenziale.',
         },
         {
           icon: Shield,
           title: 'Il primo contatto con il brand doveva essere all\'altezza',
           text: 'Mediaset è uno dei brand più riconoscibili d\'Italia e compete con tech company e piattaforme digitali per gli stessi profili. La fluidità del processo di selezione non va sottovalutata.',
+        },
+        {
+          icon: TrendingUp,
+          title: 'La crescita europea del gruppo rendeva urgente costruire una pipeline di talento',
+          text: "MFE – MediaForEurope stava espandendo il proprio perimetro su scala europea. GRAPE non era solo un programma di assunzione: era il primo mattone per costruire una pipeline di profili junior capaci di crescere con il gruppo e rispondere alle sue esigenze future.",
         },
       ],
       hrChallenges: [
@@ -87,16 +92,21 @@ const content = {
           title: 'Lo strumento scelto doveva adattarsi a un ecosistema multi-fase',
           text: 'Dal pre-screening a colloqui individuali ad assessment di gruppo in sede. Lo strumento di valutazione iniziale doveva produrre output auditabili, comparabili e utilizzabili nelle fasi successive.',
         },
+        {
+          icon: Scale,
+          title: 'Un cambiamento culturale da guidare con risorse limitate',
+          text: "Il cambio culturale dell'organizzazione parte da Talent Attraction e Acquisition: portare a bordo le persone giuste è una leva strategica. Ma gestire questa responsabilità su migliaia di candidature con un team HR di dimensioni ridotte amplificava notevolmente la complessità operativa.",
+        },
       ],
     },
     objectives: {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
       title: 'Cosa doveva cambiare',
       items: [
-        { icon: Zap, text: <><strong>Gestire il volume di candidature nei tempi dettati dal business</strong> — Selezione di 80 candidati ad alto potenziale a settimana per dare linfa costante al processo di selezione</> },
-        { icon: Eye, text: <><strong>Rendere visibili le soft skill dal primo step</strong> — creare un ranking basato su competenze reali, producendo dati oggettivi e validato sul modello Mediaset</> },
-        { icon: Shield, text: <><strong>Garantire un&apos;esperienza candidato all&apos;altezza del brand</strong> — primo contatto con Mediaset positivo, intuitivo e accessibile anche per chi non ha mai usato questo formato</> },
-        { icon: Layers, text: <><strong>Integrare lo strumento nel processo esistente</strong> — output compatibili con il flusso multi-fase e utilizzabili come benchmark per sviluppi futuri nell&apos;utilizzo dello strumento</> },
+        { icon: Zap, text: <><strong>Gestire il volume di candidature nei tempi dettati dal business</strong> — l&apos;obiettivo era portare 80 candidati ad alto potenziale a settimana nelle fasi successive del processo, senza perdere qualità nella valutazione.</> },
+        { icon: Eye, text: <><strong>Rendere visibili le soft skill dal primo step</strong> — costruire un ranking basato su competenze reali, con dati oggettivi prodotti dall&apos;AI e validati sul modello Mediaset.</> },
+        { icon: Shield, text: <><strong>Garantire un&apos;esperienza candidato all&apos;altezza del brand</strong> — il primo contatto con Mediaset doveva essere positivo, intuitivo e accessibile anche per chi non aveva mai usato questo formato di assessment.</> },
+        { icon: Layers, text: <><strong>Integrare lo strumento nel processo esistente</strong> — gli output dovevano essere compatibili con il flusso multi-fase e utilizzabili come benchmark per sviluppi futuri della strategia di selezione.</> },
       ],
     },
     solution: {
@@ -138,17 +148,6 @@ const content = {
         { icon: Eye, title: 'Per la prima volta, Mediaset ha visibilità sul suo skills database', text: 'Prima di Skillvue, le decisioni fatte sulla base della valutazione soggettiva dei singoli rimanevano una conoscenza dei singoli recruiter; ora si ragiona in ottica condivisa e con parametri comuni e standardizzati.' },
         { icon: Target, title: 'Shortlist qualificate, con risparmio immediato di risorse', text: 'I colloqui individuali sono partiti da una base informativa solida, non da un foglio bianco. Il risultato: un funnel più efficiente e decisioni più consapevoli a ogni step.' },
         { icon: Users, title: 'Human-in-the-loop, sempre', text: "Il ranking prodotto da Skillvue è stato rivisto e validato dal team HR di Mediaset sul modello di competenze aziendale. L'AI ha prodotto i dati; le persone hanno preso le decisioni." },
-      ],
-    },
-    vision: {
-      badge: 'EVOLUZIONE 2026',
-      title: 'Da graduate program a Talent Acquisition strategy',
-      intro: 'Quando il Progetto GRAPE ha dimostrato che grazie al supporto di Skillvue era possibile gestire anche alti volumi di candidature in tempi ridotti con un\'esperienza candidato positiva, il passo successivo è diventato quasi naturale.',
-      objective: 'Estendere il pre-screening AI ai processi di Talent Acquisition di Mediaset, in un gruppo che sta crescendo vertiginosamente in sei paesi con la sfida strutturale di attrarre competenze digitali in un mercato del lavoro in contrazione demografica.',
-      bullets: [
-        'Mediaset ha già esteso Skillvue alla selezione di un Junior HR Business Partner per la sede centrale (1.500+ candidature)',
-        'Obiettivo 2026: estendere il pre-screening AI ai processi di Talent Acquisition',
-        'In un gruppo che sta crescendo su 6 paesi, identificare talento su scala non è un nice-to-have: è la base per costruire una forza lavoro a prova di futuro',
       ],
     },
     related: {
@@ -215,6 +214,11 @@ const content = {
           title: 'The first brand touchpoint had to be worthy of Mediaset',
           text: 'Mediaset is one of Italy\'s most recognisable brands and competes with tech companies and digital platforms for the same profiles. The smoothness of the hiring process cannot be underestimated.',
         },
+        {
+          icon: TrendingUp,
+          title: 'European group expansion made building a talent pipeline urgent',
+          text: "MFE – MediaForEurope was rapidly expanding its footprint across Europe. GRAPE was more than a hiring programme: it was the first building block for a pipeline of junior profiles capable of growing with the group and responding to its future needs.",
+        },
       ],
       hrChallenges: [
         {
@@ -227,16 +231,21 @@ const content = {
           title: 'The chosen tool had to fit into a multi-phase ecosystem',
           text: 'From pre-screening to individual interviews to on-site group assessments. The initial evaluation tool had to produce auditable, comparable outputs to be used in the subsequent stages.',
         },
+        {
+          icon: Scale,
+          title: 'Cultural change to drive with limited resources',
+          text: "Organisational cultural change starts at Talent Attraction and Acquisition — onboarding the right people is a strategic lever. But managing this responsibility across thousands of applications with a small HR team significantly amplified the operational complexity.",
+        },
       ],
     },
     objectives: {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What needed to change',
       items: [
-        { icon: Zap, text: <><strong>Manage application volumes within business timelines</strong> — 80 high-potential candidates pre-screened per week to keep the hiring process moving at pace</> },
-        { icon: Eye, text: <><strong>Make soft skills visible from the first step</strong> — create a ranking based on real skills, producing objective data validated against the Mediaset model</> },
-        { icon: Shield, text: <><strong>Ensure a candidate experience worthy of the brand</strong> — first touchpoint with Mediaset had to be positive, intuitive and accessible even for those who have never tried this assessment format</> },
-        { icon: Layers, text: <><strong>Integrate the tool into the existing process</strong> — outputs compatible with the multi-phase flow and to be used as a benchmark for future development of the tool</> },
+        { icon: Zap, text: <><strong>Manage application volumes within business timelines</strong> — the target was to move 80 high-potential candidates per week into the next stages, without losing quality in the evaluation.</> },
+        { icon: Eye, text: <><strong>Make soft skills visible from the first step</strong> — build a ranking based on real skills, with objective data produced by AI and validated against the Mediaset model.</> },
+        { icon: Shield, text: <><strong>Ensure a candidate experience worthy of the brand</strong> — the first touchpoint with Mediaset had to be positive, intuitive and accessible, even for candidates who had never used this assessment format before.</> },
+        { icon: Layers, text: <><strong>Integrate the tool into the existing process</strong> — outputs had to be compatible with the multi-phase flow and usable as a benchmark for future development of the hiring strategy.</> },
       ],
     },
     solution: {
@@ -278,17 +287,6 @@ const content = {
         { icon: Eye, title: 'For the first time, Mediaset has visibility into its skills database', text: 'Before Skillvue, decisions based on individual subjective assessment remained personal knowledge. Now the team works with shared, standardised parameters.' },
         { icon: Target, title: 'Qualified shortlists, with immediate resource savings', text: 'Individual interviews started from a solid information base, not a blank page. A more efficient funnel and more informed decisions at every step.' },
         { icon: Users, title: 'Human-in-the-loop, always', text: 'The ranking produced by Skillvue was reviewed and validated by the Mediaset HR team against the company leadership model. AI produced the data; people made the decisions.' },
-      ],
-    },
-    vision: {
-      badge: 'EVOLUTION 2026',
-      title: 'From graduate program to Talent Acquisition strategy',
-      intro: 'Once Progetto GRAPE demonstrated that Skillvue could handle high application volumes in compressed timelines with a positive candidate experience, the next step became quite natural.',
-      objective: 'Extend AI pre-screening to Mediaset Talent Acquisition processes — in a group growing rapidly across six countries, with the structural challenge of attracting digital talent in a demographically contracting labour market.',
-      bullets: [
-        'Mediaset has already extended Skillvue to a Junior HR Business Partner hire at HQ (1,500+ applications)',
-        '2026 target: extend AI pre-screening to Talent Acquisition processes',
-        'In a group expanding across 6 countries, identifying talent at scale is not a nice-to-have — it is the foundation for building a future-proof workforce',
       ],
     },
     related: {
@@ -349,15 +347,7 @@ export default function MediasetStoryPage() {
                   <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
-                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
-                  <div className="flex flex-wrap gap-4 mb-12">
-                    {c.heroMetrics.map(m => (
-                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
-                        <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[13px] text-white/[0.55] mt-1 block">{m.label}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-10 max-w-2xl">{c.subtitle}</p>
                   <div className="flex flex-wrap gap-4">
                     <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300" style={{ background: '#4b4df7' }}>
                       {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
@@ -370,22 +360,22 @@ export default function MediasetStoryPage() {
               </div>
 
               {/* Client card */}
-              <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
-                  <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
+              <motion.div className="lg:col-span-5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-6">
+                  <div className="flex items-center gap-4 mb-4 pb-4 border-b border-white/[0.08]">
+                    <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
                       <img src="/logos/mediaset-logo.png" alt="Mediaset logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>
-                      <p className="text-[18px] font-bold text-white/90">Mediaset</p>
+                      <p className="text-[16px] font-bold text-white/90">Mediaset</p>
                     </div>
                   </div>
-                  <div className="divide-y divide-white/[0.08]">
+                  <div className="grid grid-cols-2 gap-x-6 gap-y-4">
                     {c.clientCard.facts.map(s => (
-                      <div key={s.label} className="py-4 first:pt-0 last:pb-0">
+                      <div key={s.label}>
                         <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
-                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{s.value}</p>
+                        <p className="text-[13px] text-white/[0.65] leading-[1.5]">{s.value}</p>
                       </div>
                     ))}
                   </div>
@@ -393,14 +383,26 @@ export default function MediasetStoryPage() {
                 <div className="mt-4 rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
                   <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/AAnpWEHhWuE?autoplay=1&mute=1&rel=0&modestbranding=1"
-                    title="Mediaset interview"
+                    src={lang === 'it' ? 'https://www.youtube.com/embed/ebrDp8CaVJU?autoplay=1&mute=1' : 'https://www.youtube.com/embed/j51Hqkr9kaw?autoplay=1&mute=1'}
+                    title="Mediaset – Skillvue"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
                 </div>
               </motion.div>
             </div>
+
+            {/* Hero metrics — horizontal row */}
+            <motion.div className="mt-12" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }}>
+              <div className="grid grid-cols-3 gap-5">
+                {c.heroMetrics.map(m => (
+                  <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-5 text-center">
+                    <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                    <span className="text-[13px] text-white/[0.55] mt-2 block leading-[1.4]">{m.label}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -423,7 +425,7 @@ export default function MediasetStoryPage() {
 
               <div className="mb-10">
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
@@ -438,7 +440,7 @@ export default function MediasetStoryPage() {
 
               <div>
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
@@ -566,31 +568,6 @@ export default function MediasetStoryPage() {
                     <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
                   </div>
                 ))}
-              </div>
-            </Section>
-
-            {/* FUTURE VISION */}
-            <Section>
-              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10 lg:p-14">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
-                  {c.vision.badge}
-                </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4 leading-[1.3]">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-8">{c.vision.intro}</p>
-                <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
-                    <Target className="h-5 w-5" style={{ color: '#4b4df7' }} />
-                  </div>
-                  <p className="text-[15px] text-[#121212]/75 leading-[1.7]">{c.vision.objective}</p>
-                </div>
-                <div className="space-y-4">
-                  {c.vision.bullets.map((b, i) => (
-                    <div key={i} className="flex items-start gap-4">
-                      <ArrowRight className="h-4 w-4 mt-1 shrink-0" style={{ color: '#4b4df7' }} />
-                      <p className="text-[15px] text-[#121212]/65 leading-[1.65]">{b}</p>
-                    </div>
-                  ))}
-                </div>
               </div>
             </Section>
 
