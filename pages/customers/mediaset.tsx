@@ -98,6 +98,11 @@ const content = {
           title: 'Il primo contatto con il brand doveva rispecchiarne identità e valori',
           text: 'Mediaset è uno dei brand più riconoscibili d\'Italia e, in un mercato caratterizzato dalla forte competizione con tech company e piattaforme digitali per gli stessi profili, pone molta attenzione agli aspetti di employer branding anche in fase di attrazione e selezione.',
         },
+        {
+          icon: Scale,
+          title: 'Un cambiamento culturale da guidare con risorse limitate',
+          text: "Il cambio culturale dell'organizzazione parte da Talent Attraction e Acquisition: portare a bordo le persone giuste è una leva strategica. Ma gestire questa responsabilità su migliaia di candidature con un team HR di dimensioni ridotte amplificava notevolmente la complessità operativa.",
+        },
       ],
     },
     objectives: {
@@ -227,6 +232,11 @@ const content = {
           icon: Shield,
           title: 'The first brand touchpoint had to reflect its identity and values',
           text: 'Mediaset is one of Italy\'s most recognisable brands and, in a market defined by intense competition with tech companies and digital platforms for the same profiles, places strong emphasis on employer branding throughout the attraction and hiring process.',
+        },
+        {
+          icon: Scale,
+          title: 'Cultural change to drive with limited resources',
+          text: "Organisational cultural change starts at Talent Attraction and Acquisition — onboarding the right people is a strategic lever. But managing this responsibility across thousands of applications with a small HR team significantly amplified the operational complexity.",
         },
       ],
     },
@@ -556,6 +566,7 @@ export default function MediasetStoryPage() {
                 </div>
               </div>
             </Section>
+
 
           </div>
         </section>
