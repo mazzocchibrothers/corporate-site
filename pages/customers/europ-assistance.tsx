@@ -41,6 +41,7 @@ const content = {
     ctaSecondary: 'Scopri di più',
     clientCard: {
       label: 'SCHEDA CLIENTE',
+      companyName: 'Europ Assistance (ora Redion)',
       facts: [
         { label: 'Settore', value: 'Financial Services' },
         { label: 'Gruppo', value: 'Generali' },
@@ -52,7 +53,7 @@ const content = {
       badge: 'CONTESTO',
       title: 'In un business fondato sull\'interazione umana, la qualità della selezione non può accettare compromessi.',
       paragraph: <>
-        Europ Assistance, parte del <strong className="text-[#121212]/80 font-semibold">Gruppo Generali</strong>, è uno dei leader mondiali nei servizi di assistenza e assicurazione viaggi. La sua è una crescita costante: è in corso infatti l'espansione delle operazioni in nuovi mercati e la convergenza con Generali Care in un <strong className="text-[#121212]/80 font-semibold">hub integrato di assistenza</strong>.<br /><br />In Italia, opera con un modello di business fondato sulla qualità dell'interazione umana: <strong className="text-[#121212]/80 font-semibold">assistenza 24/7, gestione sinistri, customer care multilingue</strong>. <strong className="text-[#121212]/80 font-semibold">La scelta e la crescita delle persone</strong> rappresenta un punto chiave per il corretto funzionamento e l'espansione del business, soprattutto vista l'instabilità del settore assicurativo, che <strong className="text-[#121212]/80 font-semibold">non sempre riesce ad attrarre i profili più qualificati</strong> e al tempo stesso richiede <strong className="text-[#121212]/80 font-semibold">profili professionali molto specifici e capaci di evolvere nel tempo</strong>. In questo contesto, ogni assunzione sbagliata costa di più e ogni persona giusta che resta vale ancora di più.
+        Europ Assistance, parte del <strong className="text-[#121212]/80 font-semibold">Gruppo Generali</strong> e da pochissimo rientrata insieme a Generali Employee Benefits sotto il nuovo brand di global care <strong className="text-[#121212]/80 font-semibold">Redion</strong>, è uno dei leader mondiali nei servizi di assistenza e assicurazione viaggi. La sua è una crescita costante: è in corso infatti l'espansione delle operazioni in nuovi mercati e la convergenza con Generali Care in un <strong className="text-[#121212]/80 font-semibold">hub integrato di assistenza</strong>.<br /><br />In Italia, opera con un modello di business fondato sulla qualità dell'interazione umana: <strong className="text-[#121212]/80 font-semibold">assistenza 24/7, gestione sinistri, customer care multilingue</strong>. <strong className="text-[#121212]/80 font-semibold">La scelta e la crescita delle persone</strong> rappresenta un punto chiave per il corretto funzionamento e l'espansione del business, soprattutto vista l'instabilità del settore assicurativo, che <strong className="text-[#121212]/80 font-semibold">non sempre riesce ad attrarre i profili più qualificati</strong> e al tempo stesso richiede <strong className="text-[#121212]/80 font-semibold">profili professionali molto specifici e capaci di evolvere nel tempo</strong>. In questo contesto, ogni assunzione sbagliata costa di più e ogni persona giusta che resta vale ancora di più.
       </>,
     },
     challenge: {
@@ -180,6 +181,7 @@ const content = {
     ctaSecondary: 'Learn More',
     clientCard: {
       label: 'CLIENT PROFILE',
+      companyName: 'Europ Assistance (now Redion)',
       facts: [
         { label: 'Industry', value: 'Financial Services' },
         { label: 'Group', value: 'Generali' },
@@ -191,7 +193,7 @@ const content = {
       badge: 'CONTEXT',
       title: 'In a business built on human interaction, the quality of hiring cannot afford to compromise.',
       paragraph: <>
-        Europ Assistance, part of the <strong className="text-[#121212]/80 font-semibold">Generali Group</strong>, is one of the world's leading providers of assistance and travel insurance services. Its growth is constant: operations are expanding into new markets and converging with Generali Care into an <strong className="text-[#121212]/80 font-semibold">integrated assistance hub</strong>.<br /><br />In Italy, it operates with a business model built on the quality of human interaction: <strong className="text-[#121212]/80 font-semibold">24/7 assistance, claims management, multilingual customer care</strong>. <strong className="text-[#121212]/80 font-semibold">Hiring and developing the right people</strong> is a critical lever for the business to function and grow, especially given the instability of the insurance sector — which <strong className="text-[#121212]/80 font-semibold">doesn't always attract top talent</strong> and at the same time demands <strong className="text-[#121212]/80 font-semibold">very specific professional profiles capable of evolving over time</strong>. In this context, every wrong hire costs more and every right person who stays is worth even more.
+        Europ Assistance, part of the <strong className="text-[#121212]/80 font-semibold">Generali Group</strong> and recently rebranded alongside Generali Employee Benefits under the new global care brand <strong className="text-[#121212]/80 font-semibold">Redion</strong>, is one of the world's leading providers of assistance and travel insurance services. Its growth is constant: operations are expanding into new markets and converging with Generali Care into an <strong className="text-[#121212]/80 font-semibold">integrated assistance hub</strong>.<br /><br />In Italy, it operates with a business model built on the quality of human interaction: <strong className="text-[#121212]/80 font-semibold">24/7 assistance, claims management, multilingual customer care</strong>. <strong className="text-[#121212]/80 font-semibold">Hiring and developing the right people</strong> is a critical lever for the business to function and grow, especially given the instability of the insurance sector — which <strong className="text-[#121212]/80 font-semibold">doesn't always attract top talent</strong> and at the same time demands <strong className="text-[#121212]/80 font-semibold">very specific professional profiles capable of evolving over time</strong>. In this context, every wrong hire costs more and every right person who stays is worth even more.
       </>,
     },
     challenge: {
@@ -377,7 +379,7 @@ export default function EuropAssistanceStoryPage() {
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>
-                      <p className="text-[18px] font-bold text-white/90">Europ Assistance</p>
+                      <p className="text-[18px] font-bold text-white/90">{c.clientCard.companyName || 'Europ Assistance'}</p>
                     </div>
                   </div>
                   <div className="divide-y divide-white/[0.08]">
