@@ -112,7 +112,7 @@ const content = {
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'AI Pre-screening con Skillvue',
-      intro: 'Skillvue \u00e8 stato integrato come primo filtro del Progetto GRAPE, combinando l\'analisi di soft skill, ragionamento logico e domande di conoscenza generale. Il ranking viene validato dal team HR sul modello di competenze Mediaset; i profili idonei avanzano alle fasi successive.',
+      intro: 'Skillvue è stato integrato come primo filtro del Progetto GRAPE, combinando l\'analisi di soft skill, ragionamento logico e domande di conoscenza generale. Il ranking viene validato dal team HR sul modello di competenze Mediaset; i profili idonei avanzano alle fasi successive.',
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: CheckCircle, label: 'Soft skill — calibrate sul modello Mediaset' },
@@ -196,13 +196,13 @@ const content = {
       businessChallenges: [
         {
           icon: TrendingUp,
-          title: 'European group expansion makes building a talent pipeline urgent',
+          title: 'The group\'s expansion made building a talent pipeline urgent',
           text: "MEDIAFOREUROPE is expanding its footprint across Europe. GRAPE is more than a hiring programme: it is a significant building block intended to contribute to identifying junior profiles who can grow with the Group and respond to its future needs.",
         },
         {
           icon: Zap,
           title: 'Business needs were colliding with HR operational capacity',
-          text: 'To maintain the target pace of evaluated profiles and keep up with onboarding timelines, a different filter from manual screening was needed — capable of operating at scale without sacrificing quality or letting high-potential profiles slip through unnoticed.',
+          text: 'To maintain the target pace of evaluated profiles and keep up with onboarding timelines, a different type of filter, capable of operating at scale without sacrificing quality or letting high-potential profiles slip through unnoticed, was needed.',
         },
         {
           icon: Layers,
@@ -219,7 +219,7 @@ const content = {
         {
           icon: Users,
           title: 'An evaluation model built around predictiveness was needed',
-          text: 'Junior profiles placed in programmes like this often have largely undifferentiated CVs. Soft skills like problem solving, logical reasoning and motivation — the variables that predict true potential — needed to surface beyond the CV alone.',
+          text: 'Junior profiles placed in programmes like this often have largely similar CVs. Soft skills like problem solving, logical reasoning and motivation — the variables that predict true potential — needed to surface beyond the CV alone.',
         },
         {
           icon: Shield,
@@ -241,7 +241,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Pre-screening with Skillvue',
-      intro: "Skillvue was integrated as the first filter of Progetto GRAPE, combining soft skill analysis, logical reasoning and general knowledge questions. The ranking is validated by the HR team on Mediaset\u2019s leadership model; suitable profiles advance to the next stages.",
+      intro: "Skillvue was integrated as the first filter of Progetto GRAPE, combining soft skill analysis, logical reasoning and general knowledge questions. The ranking is validated by the HR team on Mediaset’s leadership model; suitable profiles advance to the next stages.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: CheckCircle, label: 'Soft skills — calibrated to Mediaset model' },
@@ -265,7 +265,7 @@ const content = {
       ],
     },
     quote: {
-      text: 'Skillvue\'s support ensured we could gather additional information — especially on behavioural style and the way people approach different types of situations.',
+      text: 'Skillvue\'s support ensured we could gather additional information, especially on behavioural style and the way people approach different types of situations.',
       author: 'Luca Villari',
       role: 'Head of Talent Acquisition and Talent Development, Mediaset',
     },
@@ -283,7 +283,7 @@ const content = {
 
 // ─── PAGE COMPONENT ───────────────────────────────────────────────────────────
 
-export default function MediasetStoryPage() {
+export default function Mediaset1StoryPage() {
   const router = useRouter();
   const { lang, t } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
@@ -298,6 +298,7 @@ export default function MediasetStoryPage() {
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDesc} />
         <meta property="og:type" content="article" />
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Navbar />
       <main>
@@ -319,12 +320,12 @@ export default function MediasetStoryPage() {
 
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
               {/* Main content */}
-              <div className="lg:col-span-7">
+              <div className="lg:col-span-6">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-8 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
+                  <h1 className="text-[clamp(1.7rem,3vw,2.7rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}{c.headline.highlight3 && <span style={{ color: '#7b7df9' }}>{c.headline.highlight3}</span>}
                   </h1>
                   <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-10 max-w-2xl">{c.subtitle}</p>
@@ -339,8 +340,8 @@ export default function MediasetStoryPage() {
                 </motion.div>
               </div>
 
-              {/* Client card */}
-              <motion.div className="lg:col-span-5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
+              {/* Client card + quote + video */}
+              <motion.div className="lg:col-span-5 lg:col-start-8 lg:pt-20" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-6">
                   <div className="flex items-center gap-4 mb-4 pb-4 border-b border-white/[0.08]">
                     <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
@@ -360,10 +361,10 @@ export default function MediasetStoryPage() {
                     ))}
                   </div>
                 </div>
-                <div className="mt-4 rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                <div className="mt-8 rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
                   <iframe
                     className="w-full h-full"
-                    src={lang === 'it' ? 'https://www.youtube.com/embed/ebrDp8CaVJU?autoplay=1&mute=1' : 'https://www.youtube.com/embed/j51Hqkr9kaw?autoplay=1&mute=1'}
+                    src={lang === 'it' ? 'https://www.youtube.com/embed/sE-66pxiEv0?autoplay=1&mute=1' : 'https://www.youtube.com/embed/NA8aLA4BjgI?autoplay=1&mute=1'}
                     title="Mediaset – Skillvue"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -481,7 +482,6 @@ export default function MediasetStoryPage() {
               {/* Key metrics */}
               <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* 3000 → 15 funnel */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-center justify-center">
                       <svg viewBox="0 0 64 60" className="w-16 h-16" fill="none">
@@ -494,7 +494,6 @@ export default function MediasetStoryPage() {
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.1rem,2vw,1.5rem)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>{c.results.metrics[0].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
                   </div>
-                  {/* 4/5 — smiley + checkmark */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-center justify-center">
                       <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
@@ -509,7 +508,6 @@ export default function MediasetStoryPage() {
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
                   </div>
-                  {/* 79% — circular progress ring */}
                   <div className="text-center flex flex-col items-center">
                     <div className="relative w-24 h-24 mb-5">
                       <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
@@ -524,7 +522,6 @@ export default function MediasetStoryPage() {
                 </div>
               </div>
 
-
               {/* Qualitative impact */}
               <div className="grid md:grid-cols-3 gap-5">
                 {c.results.qualitative.map((q) => (
@@ -538,23 +535,6 @@ export default function MediasetStoryPage() {
                 ))}
               </div>
             </Section>
-
-            {/* QUOTE */}
-            <Section className="mt-10">
-              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-8 lg:p-10">
-                <p className="text-[17px] text-[#121212]/75 leading-[1.75] italic mb-6">"{c.quote.text}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full shrink-0 border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.08] flex items-center justify-center">
-                    <span className="text-[14px] font-bold text-[#4b4df7]">LV</span>
-                  </div>
-                  <div>
-                    <p className="text-[14px] font-semibold text-[#121212]/80">{c.quote.author}</p>
-                    <p className="text-[12px] text-[#121212]/40 leading-[1.5]">{c.quote.role}</p>
-                  </div>
-                </div>
-              </div>
-            </Section>
-
 
           </div>
         </section>
