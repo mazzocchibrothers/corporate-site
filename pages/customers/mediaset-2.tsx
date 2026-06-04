@@ -45,7 +45,7 @@ const content = {
       label: 'SCHEDA CLIENTE',
       facts: [
         { label: 'Settore', value: 'Media & Telecom' },
-        { label: 'Gruppo', value: 'MFE-MEDIAFOREUROPE' },
+        { label: 'Gruppo', value: 'MEDIAFOREUROPE' },
         { label: 'Fatturato', value: 'circa 4,03 miliardi €' },
         { label: 'Use Case', value: 'Hiring' },
       ],
@@ -54,21 +54,21 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Mediaset, parte del gruppo <strong className="text-[#121212]/80 font-semibold">MFE-MEDIAFOREUROPE</strong>, è il principale broadcaster commerciale privato in Italia e sta vivendo una fase di evoluzione senza precedenti. Con l&apos;acquisizione di ProSiebenSat.1 e la partecipazione in Impresa, <strong className="text-[#121212]/80 font-semibold">MFE-MEDIAFOREUROPE</strong> è diventato il primo broadcaster privato a controllare operazioni in tre grandi mercati europei, raggiungendo <strong className="text-[#121212]/80 font-semibold">oltre 220 milioni di persone in sei paesi</strong>.<br /><br />
+        Mediaset, parte del gruppo <strong className="text-[#121212]/80 font-semibold">MFE (MEDIAFOREUROPE)</strong>, è il principale broadcaster commerciale privato in Italia e sta vivendo una fase di evoluzione senza precedenti. Con l&apos;acquisizione di ProSiebenSat.1 e la partecipazione in Impresa, <strong className="text-[#121212]/80 font-semibold">MEDIAFOREUROPE</strong> è diventato il primo broadcaster privato a controllare operazioni in tre grandi mercati europei, raggiungendo <strong className="text-[#121212]/80 font-semibold">oltre 220 milioni di persone in sei paesi</strong>.<br /><br />
         È in questo scenario di innovazione e crescita che nasce il <strong className="text-[#121212]/80 font-semibold">progetto Grape</strong>{' '}(Graduate Program Experience): il programma di selezione di neo laureati e profili junior da inserire in diverse funzioni aziendali. In contesti come questo, identificare in maniera predittiva il talento diventa una leva strategica davvero irrinunciabile per garantire una buona riuscita del progetto. Ma come farlo quando si ricevono migliaia di candidature?
       </>,
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Migliaia di candidati e tanti CV che da soli non rivelavano il potenziale nascosto',
-      intro: 'Il Progetto Grape ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l\'obiettivo di individuare in sei settimane un numero significativo di candidati qualificati da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell\'verification.',
+      intro: 'Il Progetto Grape ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l\'obiettivo di individuare in sei settimane un numero significativo di candidati qualificati da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell\'assessment.',
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: TrendingUp,
           title: 'La crescita europea del Gruppo rende urgente costruire una pipeline di talento',
-          text: "MFE-MEDIAFOREUROPE sta espandendo il proprio perimetro su scala europea. Grape non è solo un programma di assunzione: è un significativo tassello che intende contribuire all'identificazione di profili junior che possano crescere con il Gruppo rispondendo alle sue esigenze future.",
+          text: "MEDIAFOREUROPE sta espandendo il proprio perimetro su scala europea. Grape non è solo un programma di assunzione: è un significativo tassello che intende contribuire all'identificazione di profili junior che possano crescere con il Gruppo rispondendo alle sue esigenze future.",
         },
         {
           icon: Zap,
@@ -105,7 +105,7 @@ const content = {
       items: [
         { icon: Zap, text: <><strong>Gestire il volume di candidature nei tempi dettati dal business</strong> — l&apos;obiettivo era individuare ogni settimana un considerevole numero di candidati ad alto potenziale, senza perdere qualità nella valutazione.</> },
         { icon: Eye, text: <><strong>Rendere visibili le soft skill dal primo step</strong> — realizzare una mappatura affidabile dei profili dei candidati, con dati oggettivi prodotti dall&apos;AI e validati sul modello Mediaset.</> },
-        { icon: Shield, text: <><strong>Garantire un&apos;esperienza candidato all&apos;altezza del brand</strong> — il primo contatto con Mediaset doveva essere positivo, intuitivo e accessibile anche per chi non aveva mai usato questo formato di verification.</> },
+        { icon: Shield, text: <><strong>Garantire un&apos;esperienza candidato all&apos;altezza del brand</strong> — il primo contatto con Mediaset doveva essere positivo, intuitivo e accessibile anche per chi non aveva mai usato questo formato di assessment.</> },
         { icon: Layers, text: <><strong>Integrare lo strumento nel processo esistente</strong> — gli output dovevano essere compatibili con il flusso multi-fase e utilizzabili come benchmark per sviluppi futuri della strategia di selezione.</> },
       ],
     },
@@ -127,12 +127,12 @@ const content = {
       metrics: [
         { value: '3.000+', label: 'candidature processate' },
         { value: '4/5', label: 'Soddisfazione candidati' },
-        { value: '79%', label: 'Conversion rate verification' },
+        { value: '79%', label: 'Conversion rate assessment' },
       ],
       qualitative: [
         { icon: Eye, title: 'Visibilità sul potenziale dei profili junior in ingresso', text: 'Prima di Skillvue, le decisioni venivano prese sulla base della valutazione soggettiva dei singoli recruiter; ora si ragiona in ottica condivisa e con parametri comuni e standardizzati.' },
         { icon: Target, title: 'Un processo di selezione più efficiente, con shortlist qualificate', text: 'Le fasi successive del processo di selezione partono da una base informativa solida. Il risultato: un funnel più efficiente e decisioni più consapevoli e data-driven ad ogni step.' },
-        { icon: Users, title: 'Verification customizzati sulle reali esigenze di Mediaset', text: "Instaurando un rapporto collaborativo fin dall'inizio, Skillvue e Mediaset hanno proposto ai candidati degli verification validati dal team HR e aderenti alle aspettative di Mediaset." },
+        { icon: Users, title: 'Assessment customizzati sulle reali esigenze di Mediaset', text: "Instaurando un rapporto collaborativo fin dall'inizio, Skillvue e Mediaset hanno proposto ai candidati degli assessment validati dal team HR e aderenti alle aspettative di Mediaset." },
       ],
     },
     quote: {
@@ -174,7 +174,7 @@ const content = {
       label: 'CLIENT PROFILE',
       facts: [
         { label: 'Industry', value: 'Media & Telecom' },
-        { label: 'Group', value: 'MFE-MEDIAFOREUROPE' },
+        { label: 'Group', value: 'MEDIAFOREUROPE' },
         { label: 'Revenue', value: '~€4.03B' },
         { label: 'Use Case', value: 'Hiring' },
       ],
@@ -183,21 +183,21 @@ const content = {
       badge: 'CONTEXT',
       title: 'The Company and The Context',
       paragraph: <>
-        Mediaset, part of the <strong className="text-[#121212]/80 font-semibold">MFE-MEDIAFOREUROPE</strong> group, is Italy&apos;s leading private commercial broadcaster and is undergoing an unprecedented phase of evolution. With the acquisition of ProSiebenSat.1 and a stake in Impresa, <strong className="text-[#121212]/80 font-semibold">MFE-MEDIAFOREUROPE</strong> has become the first private broadcaster to control operations across three major European markets, reaching <strong className="text-[#121212]/80 font-semibold">over 220 million people in six countries</strong>.<br /><br />
+        Mediaset, part of the <strong className="text-[#121212]/80 font-semibold">MFE (MEDIAFOREUROPE)</strong> group, is Italy&apos;s leading private commercial broadcaster and is undergoing an unprecedented phase of evolution. With the acquisition of ProSiebenSat.1 and a stake in Impresa, <strong className="text-[#121212]/80 font-semibold">MEDIAFOREUROPE</strong> has become the first private broadcaster to control operations across three major European markets, reaching <strong className="text-[#121212]/80 font-semibold">over 220 million people in six countries</strong>.<br /><br />
         It is in this scenario of innovation and growth that <strong className="text-[#121212]/80 font-semibold">Progetto GRAPE</strong>{' '}(Graduate Program Experience) was born: a hiring programme for recent graduates and junior profiles to be placed across various departments. In contexts like this, identifying talent predictively becomes a truly indispensable strategic lever for ensuring the success of the programme. But how to do it when you&apos;re receiving thousands of applications?
       </>,
     },
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'Thousands of candidates and CVs that alone revealed nothing about hidden potential',
-      intro: 'Progetto GRAPE generated over 3,000 applications. The dedicated HR team set a target of identifying, within six weeks, a significant number of qualified candidates to advance to the next stages of the process, while maintaining a high level of candidate experience and without compromising the depth of the verification.',
+      intro: 'Progetto GRAPE generated over 3,000 applications. The dedicated HR team set a target of identifying, within six weeks, a significant number of qualified candidates to advance to the next stages of the process, while maintaining a high level of candidate experience and without compromising the depth of the assessment.',
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: TrendingUp,
           title: 'The group\'s expansion made building a talent pipeline urgent',
-          text: "MFE-MEDIAFOREUROPE is expanding its footprint across Europe. GRAPE is more than a hiring programme: it is a significant building block intended to contribute to identifying junior profiles who can grow with the Group and respond to its future needs.",
+          text: "MEDIAFOREUROPE is expanding its footprint across Europe. GRAPE is more than a hiring programme: it is a significant building block intended to contribute to identifying junior profiles who can grow with the Group and respond to its future needs.",
         },
         {
           icon: Zap,
@@ -234,7 +234,7 @@ const content = {
       items: [
         { icon: Zap, text: <><strong>Manage application volumes within business timelines</strong> — the goal was to identify, every week, a significant number of high-potential candidates, without losing quality in the evaluation.</> },
         { icon: Eye, text: <><strong>Make soft skills visible from the first step</strong> — build a reliable mapping of candidate profiles, with objective data produced by AI and validated against the Mediaset model.</> },
-        { icon: Shield, text: <><strong>Ensure a candidate experience worthy of the brand</strong> — the first touchpoint with Mediaset had to be positive, intuitive and accessible, even for candidates who had never used this verification format before.</> },
+        { icon: Shield, text: <><strong>Ensure a candidate experience worthy of the brand</strong> — the first touchpoint with Mediaset had to be positive, intuitive and accessible, even for candidates who had never used this assessment format before.</> },
         { icon: Layers, text: <><strong>Integrate the tool into the existing process</strong> — outputs had to be compatible with the multi-phase flow and usable as a benchmark for future development of the hiring strategy.</> },
       ],
     },
@@ -256,12 +256,12 @@ const content = {
       metrics: [
         { value: '3,000+', label: 'applications processed' },
         { value: '4/5', label: 'Candidate satisfaction' },
-        { value: '79%', label: 'Verification conversion rate' },
+        { value: '79%', label: 'Assessment conversion rate' },
       ],
       qualitative: [
-        { icon: Eye, title: 'Visibility into the potential of incoming junior profiles', text: 'Before Skillvue, decisions were based on the subjective verification of individual recruiters; now the team works with shared, standardised parameters.' },
+        { icon: Eye, title: 'Visibility into the potential of incoming junior profiles', text: 'Before Skillvue, decisions were based on the subjective assessment of individual recruiters; now the team works with shared, standardised parameters.' },
         { icon: Target, title: 'A more efficient hiring process, with qualified shortlists', text: 'The subsequent stages of the hiring process start from a solid information base. The result: a more efficient funnel and more informed, data-driven decisions at every step.' },
-        { icon: Users, title: 'Verifications customised to Mediaset\'s actual needs', text: 'By building a collaborative relationship from the outset, Skillvue and Mediaset offered candidates verifications validated by the HR team and aligned with Mediaset\'s expectations.' },
+        { icon: Users, title: 'Assessments customised to Mediaset\'s actual needs', text: 'By building a collaborative relationship from the outset, Skillvue and Mediaset offered candidates assessments validated by the HR team and aligned with Mediaset\'s expectations.' },
       ],
     },
     quote: {
