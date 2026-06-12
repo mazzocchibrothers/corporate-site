@@ -86,8 +86,8 @@ const content = {
       hrChallenges: [
         {
           icon: Target,
-          title: 'La retention andava ottimizzata',
-          text: "Servivano modelli psicometrici avanzati per riconoscere i profili ad alto potenziale, predire con accuratezza e oggettività i loro need futuri e garantirne una reale crescita all'interno dell'azienda.",
+          title: 'Retention e sviluppo',
+          text: "Riconoscere i profili ad alto potenziale non poteva dipendere dai singoli responsabili. Servivano modelli psicometrici avanzati per predire con accuratezza e oggettività le future performance di ciascuna persona, e per sviluppare molte più persone rispetto a prima.",
         },
         {
           icon: CheckCircle,
@@ -99,6 +99,11 @@ const content = {
           title: "Bisognava lavorare d'anticipo sul mercato",
           text: "La funzione HR doveva lavorare proattivamente per prepararsi alle trasformazioni in corso nel mercato del lavoro, assicurando che l'organizzazione disponesse di tutte le competenze necessarie allo sviluppo futuro.",
         },
+        {
+          icon: Zap,
+          title: 'Prepararsi al cambiamento del lavoro',
+          text: "HR doveva lavorare proattivamente per prepararsi al cambiamento del mondo del lavoro, assicurando che l'organizzazione disponesse già da adesso di tutte le competenze necessarie al proprio sviluppo futuro.",
+        },
       ],
     },
     objectives: {
@@ -107,14 +112,14 @@ const content = {
       items: [
         { icon: Eye, text: <><strong className="font-bold text-[#121212]/90">Ottenere</strong> una fotografia oggettiva, standardizzata e confrontabile delle competenze di tutti i MR, indipendentemente dal Paese.</> },
         { icon: Target, text: <><strong className="font-bold text-[#121212]/90">Identificare</strong> i profili ad alto potenziale da inserire in percorsi di crescita e sviluppo.</> },
-        { icon: Layers, text: <><strong className="font-bold text-[#121212]/90">Gestire</strong> la complessità dell'verification multilingue garantendo equità e comparabilità dei risultati senza sacrificare l'autenticità delle risposte.</> },
-        { icon: CheckCircle, text: <><strong className="font-bold text-[#121212]/90">Creare</strong> un collegamento diretto tra i risultati dell'verification e i piani formativi individuali portati avanti da Fidia.</> },
+        { icon: Layers, text: <><strong className="font-bold text-[#121212]/90">Gestire</strong> la complessità dell'assessment multilingue garantendo equità e comparabilità dei risultati senza sacrificare l'autenticità delle risposte.</> },
+        { icon: CheckCircle, text: <><strong className="font-bold text-[#121212]/90">Creare</strong> un collegamento diretto tra i risultati dell'assessment e i piani formativi individuali portati avanti da Fidia.</> },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Verification AI costruito ad hoc sul modello Fidia',
-      intro: <>Il team di Fidia e quello di Skillvue hanno lavorato insieme per costruire un sistema di verification che partisse dal business reale: le situazioni concrete che un MR Fidia affronta ogni giorno, in ogni mercato.</>,
+      title: 'Assessment AI costruito ad hoc sul modello Fidia',
+      intro: <>Il team di Fidia e quello di Skillvue hanno lavorato insieme per costruire un sistema di assessment che partisse dal business reale: le situazioni concrete che un MR Fidia affronta ogni giorno, in ogni mercato.</>,
       solutionObjectives: [],
       skillsLabel: 'COMPETENZE VALUTATE',
       skillsNote: "Il modello è strutturato su tre layer sovrapposti, dal più trasversale al più specifico per ruolo, ancorato al framework VOLA (Vision, Ownership, Leadership, Accountability) già in uso in Fidia.",
@@ -132,10 +137,10 @@ const content = {
       subtitle: 'I risultati attesi del progetto Skillvue × Fidia Farmaceutici.',
       metrics: [],
       qualitative: [
-        { icon: Eye, title: 'La prima fotografia oggettiva della rete vendita globale in 12 lingue', text: "Per la prima volta, Fidia avrà una visione strutturata e confrontabile delle competenze di tutti i suoi MR nel mondo — costruita con gli stessi criteri in ogni Paese, indipendentemente dalla lingua o dalla cultura commerciale locale." },
-        { icon: TrendingUp, title: 'Una transizione supportata dai dati', text: "Fidia saprà su quali figure lavorare, con quali percorsi e con quali priorità per assicurare che l'evoluzione del business e del modello commerciale siano supportate dalla presenza in azienda dei migliori professionisti." },
-        { icon: CheckCircle, title: 'Sviluppo e formazione finalmente collegati', text: "I gap rilevati dall'verification dialogheranno direttamente con i sistemi di formazione interni. La connessione tra valutazione e percorso formativo chiuderà un loop che prima restava aperto." },
-        { icon: Layers, title: 'Preparazione al futuro, per le persone e per l\'azienda', text: "Il lavoro avviato costruirà le basi per l'impostazione di un modello di sviluppo costante del talento, orientato a garantire una piena realizzazione di ogni persona, maggiore employability e maggiore responsività alle trasformazioni del mercato." },
+        { icon: Eye, title: 'La prima fotografia oggettiva della rete vendita globale', text: "Per la prima volta, Fidia avrà una visione strutturata e confrontabile delle competenze di tutti i suoi MR nel mondo — costruita con gli stessi criteri in ogni Paese, indipendentemente dalla lingua o dalla cultura commerciale locale." },
+        { icon: Layers, title: 'Competenze MR finalmente misurabili in 12 lingue', text: "Le competenze comportamentali emergeranno nella lingua più autentica per ogni individuo. Il dato prodotto sarà comparabile su tutta la rete e diventerà input diretto per i piani di sviluppo sui sistemi di formazione interni." },
+        { icon: TrendingUp, title: 'Una transizione verso il valore supportata dai dati', text: "Fidia saprà su quali figure lavorare e con quali priorità per assicurare che l'evoluzione del business e del modello commerciale siano supportate dalla presenza dei migliori professionisti." },
+        { icon: CheckCircle, title: 'Sviluppo e formazione finalmente collegati', text: "I gap rilevati dall'assessment dialogheranno direttamente con i sistemi di formazione interni. La connessione tra valutazione e percorso formativo chiuderà un loop che prima restava aperto." },
       ],
     },
     related: {
