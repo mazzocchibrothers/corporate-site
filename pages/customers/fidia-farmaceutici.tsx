@@ -32,7 +32,7 @@ const content = {
       highlight2: 'crescita futura',
       after: '',
     },
-    subtitle: "Con Skillvue, Fidia sta trasformando la propria infrastruttura HR in un sistema di talent intelligence globale, capace di mappare le competenze di centinaia di Medical Representative in 12 lingue e tradurle in piani di sviluppo e decisioni di talent management basate sui dati.",
+    subtitle: "Con Skillvue, Fidia sta trasformando la propria infrastruttura HR in un sistema di talent intelligence globale, capace di mappare le competenze di centinaia di Medical Representative e tradurle in piani di sviluppo e decisioni di talent management basate sui dati.",
     heroMetrics: [
       { value: '1.700', label: 'dipendenti' },
       { value: '120+', label: 'Paesi' },
@@ -56,7 +56,7 @@ const content = {
       title: "Un leader mondiale dell'innovazione farmaceutica con una rete vendita da conoscere a fondo",
       paragraph: <>
         Fidia Farmaceutici è un&apos;azienda italiana con <strong className="text-[#121212]/80 font-semibold">80 anni di competenza scientifica</strong>, leader mondiale nella ricerca, sviluppo, produzione e commercializzazione di prodotti innovativi a base di <strong className="text-[#121212]/80 font-semibold">acido ialuronico e suoi derivati</strong> (<strong className="text-[#121212]/80 font-semibold">1.250+ brevetti</strong>) in aree strategiche quali joint care, skin care, eye care, specialty care e health&amp;wellness care. Fidia distribuisce i propri prodotti in <strong className="text-[#121212]/80 font-semibold">120+ paesi nel mondo</strong>, grazie a un consolidato network di partner e distributori e filiali commerciali in mercati strategici.<br /><br />
-        La sua rete commerciale è altrettanto articolata: è infatti composta da centinaia di <strong className="text-[#121212]/80 font-semibold">Medical Representative</strong> distribuiti non solo al di fuori dei confini nazionali, in <strong className="text-[#121212]/80 font-semibold">Europa</strong>, ma anche in <strong className="text-[#121212]/80 font-semibold">USA e Medio Oriente</strong>. Questi professionisti sono il punto di contatto tra la scienza di Fidia e l'utenza finale, e in un momento di <strong className="text-[#121212]/80 font-semibold">forte crescita ed espansione internazionale</strong> dell'organizzazione, conoscerne le competenze in modo strutturato diventava sempre più un <strong className="text-[#121212]/80 font-semibold">prerequisito strategico</strong> per poter direzionare al meglio le evoluzioni del modello commerciale.
+        La sua rete commerciale è altrettanto articolata: è infatti composta da centinaia di <strong className="text-[#121212]/80 font-semibold">Medical Representative</strong> distribuiti non solo al di fuori dei confini nazionali, in <strong className="text-[#121212]/80 font-semibold">Europa</strong>, ma anche in <strong className="text-[#121212]/80 font-semibold">USA e Medio Oriente</strong>. Questi professionisti sono il punto di contatto tra la scienza di Fidia e l'utenza finale, e in un momento caratterizzato da una parte dalla <strong className="text-[#121212]/80 font-semibold">forte crescita ed espansione internazionale</strong> dell'organizzazione e dall'altra dall'<strong className="text-[#121212]/80 font-semibold">evoluzione delle competenze</strong> richieste dal mercato del lavoro, conoscerne le capacità in modo strutturato diventava sempre più un <strong className="text-[#121212]/80 font-semibold">prerequisito strategico</strong> per poter direzionare al meglio le evoluzioni del modello commerciale.
       </>,
       summary: '',
     },
@@ -86,8 +86,8 @@ const content = {
       hrChallenges: [
         {
           icon: Target,
-          title: 'Retention e sviluppo',
-          text: "Riconoscere i profili ad alto potenziale non poteva dipendere dai singoli responsabili. Servivano modelli psicometrici avanzati per predire con accuratezza e oggettività le future performance di ciascuna persona, e per sviluppare molte più persone rispetto a prima.",
+          title: 'La retention andava ottimizzata',
+          text: "Servivano modelli psicometrici avanzati per riconoscere i profili ad alto potenziale, predire con accuratezza e oggettività i loro need futuri e garantirne una reale crescita all'interno dell'azienda.",
         },
         {
           icon: CheckCircle,
@@ -96,8 +96,8 @@ const content = {
         },
         {
           icon: Zap,
-          title: 'Prepararsi al cambiamento del lavoro',
-          text: "HR doveva lavorare proattivamente per prepararsi al cambiamento del mondo del lavoro, assicurando che l'organizzazione disponesse già da adesso di tutte le competenze necessarie al proprio sviluppo futuro.",
+          title: "Bisognava lavorare d'anticipo sul mercato",
+          text: "La funzione HR doveva lavorare proattivamente per prepararsi alle trasformazioni in corso nel mercato del lavoro, assicurando che l'organizzazione disponesse di tutte le competenze necessarie allo sviluppo futuro.",
         },
       ],
     },
@@ -117,7 +117,7 @@ const content = {
       intro: <>Il team di Fidia e quello di Skillvue hanno lavorato insieme per costruire un sistema di assessment che partisse dal business reale: le situazioni concrete che un MR Fidia affronta ogni giorno, in ogni mercato.</>,
       solutionObjectives: [],
       skillsLabel: 'COMPETENZE VALUTATE',
-      skillsNote: "Il modello è strutturato su tre layer sovrapposti, dal più trasversale al più specifico per ruolo — ancorato al framework VOLA (Vision, Ownership, Leadership, Accountability) già in uso in Fidia.",
+      skillsNote: "Il modello è strutturato su tre layer sovrapposti, dal più trasversale al più specifico per ruolo, ancorato al framework VOLA (Vision, Ownership, Leadership, Accountability) già in uso in Fidia.",
       skills: [
         { icon: Users, label: 'Foundation Behavioral Layer', sublabel: 'Layer 1 — Base comportamentale trasversale, framework VOLA' },
         { icon: Shield, label: 'Medical Scientific Skills', sublabel: 'Layer 2 — Competenze scientifico-mediche per MR in specialty pharma' },
@@ -132,10 +132,10 @@ const content = {
       subtitle: 'I risultati attesi del progetto Skillvue × Fidia Farmaceutici.',
       metrics: [],
       qualitative: [
-        { icon: Eye, title: 'La prima fotografia oggettiva della rete vendita globale', text: "Per la prima volta, Fidia avrà una visione strutturata e confrontabile delle competenze di tutti i suoi MR nel mondo — costruita con gli stessi criteri in ogni Paese, indipendentemente dalla lingua o dalla cultura commerciale locale." },
-        { icon: Layers, title: 'Competenze MR finalmente misurabili in 12 lingue', text: "Le competenze comportamentali emergeranno nella lingua più autentica per ogni individuo. Il dato prodotto sarà comparabile su tutta la rete e diventerà input diretto per i piani di sviluppo sui sistemi di formazione interni." },
-        { icon: TrendingUp, title: 'Una transizione verso il valore supportata dai dati', text: "Fidia saprà su quali figure lavorare e con quali priorità per assicurare che l'evoluzione del business e del modello commerciale siano supportate dalla presenza dei migliori professionisti." },
+        { icon: Eye, title: 'La prima fotografia oggettiva della rete vendita globale in 12 lingue', text: "Per la prima volta, Fidia avrà una visione strutturata e confrontabile delle competenze di tutti i suoi MR nel mondo — costruita con gli stessi criteri in ogni Paese, indipendentemente dalla lingua o dalla cultura commerciale locale." },
+        { icon: TrendingUp, title: 'Una transizione supportata dai dati', text: "Fidia saprà su quali figure lavorare, con quali percorsi e con quali priorità per assicurare che l'evoluzione del business e del modello commerciale siano supportate dalla presenza in azienda dei migliori professionisti." },
         { icon: CheckCircle, title: 'Sviluppo e formazione finalmente collegati', text: "I gap rilevati dall'assessment dialogheranno direttamente con i sistemi di formazione interni. La connessione tra valutazione e percorso formativo chiuderà un loop che prima restava aperto." },
+        { icon: Layers, title: 'Preparazione al futuro, per le persone e per l\'azienda', text: "Il lavoro avviato costruirà le basi per l'impostazione di un modello di sviluppo costante del talento, orientato a garantire una piena realizzazione di ogni persona, maggiore employability e maggiore responsività alle trasformazioni del mercato." },
       ],
     },
     related: {
@@ -180,51 +180,51 @@ const content = {
     },
     context: {
       badge: 'CONTEXT',
-      title: "A world leader in pharmaceutical innovation, with a sales network to understand in depth",
+      title: "A world leader in pharmaceutical innovation, with a sales network to know in depth",
       paragraph: <>
         Italian multinational company with <strong className="text-[#121212]/80 font-semibold">80 years of scientific expertise</strong>, with R&amp;D, manufacturing and sales capabilities, and an extensive product portfolio mainly based on natural and functionalized <strong className="text-[#121212]/80 font-semibold">hyaluronic acid</strong> (<strong className="text-[#121212]/80 font-semibold">1,250+ patents</strong>), in joint care, skin care, eye care, care, specialty care and health&amp;wellness care. With research and development laboratories located in Italy, the company extends its global reach through wholly owned subsidiaries and commercial partners in <strong className="text-[#121212]/80 font-semibold">120+ countries worldwide</strong>.<br /><br />
-        Its commercial network is equally extensive: it is made up of hundreds of <strong className="text-[#121212]/80 font-semibold">Medical Representatives</strong> distributed not only beyond national borders, across <strong className="text-[#121212]/80 font-semibold">Europe</strong>, but also in the <strong className="text-[#121212]/80 font-semibold">USA and Middle East</strong>. These professionals are the point of contact between Fidia's science and end users, and in a period of strong growth and international expansion, understanding their skills in a structured way was becoming an increasingly <strong className="text-[#121212]/80 font-semibold">strategic prerequisite</strong>.
+        Its commercial network is equally extensive: it is made up of hundreds of <strong className="text-[#121212]/80 font-semibold">Medical Representatives</strong> distributed not only beyond national borders, across <strong className="text-[#121212]/80 font-semibold">Europe</strong>, but also in the <strong className="text-[#121212]/80 font-semibold">USA and Middle East</strong>. These professionals are the point of contact between Fidia's science and end users, and in a period characterised on one hand by <strong className="text-[#121212]/80 font-semibold">strong growth and international expansion</strong> and on the other by the <strong className="text-[#121212]/80 font-semibold">evolution of skills</strong> demanded by the labour market, understanding their capabilities in a structured way was becoming an increasingly <strong className="text-[#121212]/80 font-semibold">strategic prerequisite</strong>.
       </>,
       summary: '',
     },
     challenge: {
       badge: 'THE CHALLENGE',
-      title: "Better evaluation wasn't enough — a tool that simply didn't exist before was needed",
-      intro: "Fidia was starting from a reality common to many fast-growing multinationals: a capable, distributed sales network, but one evaluated in a fragmented way, without a shared framework and without the data to make talent management decisions at global scale.",
+      title: "The commercial transition needed to go hand in hand with a skills-based transformation",
+      intro: "Fidia was starting from a reality common to many fast-growing multinationals: a capable, distributed sales network, but one evaluated in a fragmented way, very difficult to manage when radical updates to the commercial model were needed. A shift in the approach to skills management was needed — one that could create a data foundation for making strategic, future-focused talent management decisions at global scale.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
-          icon: Eye,
-          title: 'A network without an objective picture',
-          text: "With hundreds of MRs across 12+ countries, assessments were left to individual area managers — useful, but not comparable across markets and not anchored to a common framework.",
-        },
-        {
-          icon: Target,
-          title: 'No data to drive talent management decisions',
-          text: "Identifying high-potential profiles for area manager roles or international mobility required a tool that didn't exist. External alternatives were economically unsustainable at this scale.",
-        },
-        {
           icon: TrendingUp,
-          title: 'A transition without an objective baseline',
-          text: "The shift towards a value-based, scientifically-driven approach requires specific skills. Without a shared baseline, building targeted development plans at global scale was impossible.",
+          title: 'Network development required more data',
+          text: "Supporting the network towards real personal growth — crucial for the evolution of the commercial model and for future employability — required structured data on each professional's real skills.",
+        },
+        {
+          icon: Layers,
+          title: 'There was no cross-country management system',
+          text: "Evaluating a multilingual network without bias can be complex. The same measurement quality had to be guaranteed across every market, with uniform criteria and comparable results.",
+        },
+        {
+          icon: Shield,
+          title: 'A scalable infrastructure was needed',
+          text: "A scalable assessment system, replicable across roles and regions, was needed to lay the foundations for extending the project to Fidia's entire workforce and other phases of the talent lifecycle, without starting from scratch each time.",
         },
       ],
       hrChallenges: [
         {
-          icon: Layers,
-          title: 'Language as a systematic distortion',
-          text: "An English-only assessment for a network speaking 12 languages would have skewed results by language proficiency, not professional competence. The concrete risk was measuring language, not the person.",
+          icon: Target,
+          title: 'Retention needed to be optimised',
+          text: "Advanced psychometric models were needed to identify high-potential profiles, predict their future needs with accuracy and objectivity, and ensure their real growth within the organisation.",
         },
         {
           icon: CheckCircle,
-          title: 'Development and training not connected',
-          text: "Existing assessment results didn't connect with internal training systems, making it impossible to translate skill gaps into coherent individual development paths across the global network.",
+          title: 'Assessment and training needed to be connected',
+          text: "Assessment results had to feed internal training systems. Every gap needed to be translated into a concrete, measurable development action aligned with the organisation's priorities.",
         },
         {
-          icon: Shield,
-          title: 'Fragmented governance, no shared talent view',
-          text: "Area managers, Country Managers, HRBPs and central HR all operated on different information bases, with no shared framework or dashboard to read the network's talent.",
+          icon: Zap,
+          title: 'Getting ahead of the market',
+          text: "The HR function needed to work proactively to prepare for the ongoing transformations in the labour market, ensuring the organisation already had all the capabilities needed for its future development.",
         },
       ],
     },
@@ -232,46 +232,37 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What needed to change',
       items: [
-        { icon: Eye, text: "Obtain an objective, standardised and comparable picture of all global MRs' skills, applying the same criteria regardless of country." },
-        { icon: Target, text: "Identify high-potential profiles for talent management and internal mobility pathways — a scalable alternative to external assessments." },
-        { icon: Layers, text: "Manage multilingual complexity (12+ languages), ensuring fairness and comparability of results without sacrificing authenticity of responses." },
-        { icon: CheckCircle, text: "Create a direct link between assessment results and individual development plans within internal training systems." },
+        { icon: Eye, text: <><strong className="font-bold text-[#121212]/90">Obtain</strong> an objective, standardised and comparable picture of all global MRs' skills, applying the same criteria regardless of country.</> },
+        { icon: Target, text: <><strong className="font-bold text-[#121212]/90">Identify</strong> high-potential profiles to place in growth and development pathways — a scalable alternative to external assessments.</> },
+        { icon: Layers, text: <><strong className="font-bold text-[#121212]/90">Manage</strong> multilingual complexity (12+ languages), ensuring fairness and comparability of results without sacrificing authenticity of responses.</> },
+        { icon: CheckCircle, text: <><strong className="font-bold text-[#121212]/90">Create</strong> a direct link between assessment results and individual development plans within internal training systems.</> },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment for learning and development, built ad hoc on the Fidia model',
-      intro: <>The Fidia and Skillvue teams worked together to build an assessment system rooted in real business situations: the concrete scenarios an MR faces every day, in every market. The result is an <strong className="text-[#121212]/80 font-semibold">asynchronous structured behavioural interview (BEI)</strong> lasting approximately <strong className="text-[#121212]/80 font-semibold">25 minutes</strong>. Audio responses are transcribed and evaluated by <strong className="text-[#121212]/80 font-semibold">Skillvue's AI</strong> against a <strong className="text-[#121212]/80 font-semibold">bespoke skill model</strong>.</>,
+      title: 'AI Assessment built ad hoc on the Fidia model',
+      intro: <>The Fidia and Skillvue teams worked together to build an assessment system rooted in real business situations: the concrete scenarios a Fidia MR faces every day, in every market.</>,
       solutionObjectives: [],
       skillsLabel: 'SKILLS ASSESSED',
-      skillsNote: "The skill model is structured across three overlapping layers, from the most transversal to the most role-specific — anchored to the VOLA framework (Vision, Ownership, Leadership, Accountability) already in use at Fidia.",
+      skillsNote: "The skill model is structured across three overlapping layers, from the most transversal to the most role-specific, anchored to the VOLA framework (Vision, Ownership, Leadership, Accountability) already in use at Fidia.",
       skills: [
         { icon: Users, label: 'Foundation Behavioral Layer', sublabel: 'Layer 1 — Transversal behavioural foundation, VOLA framework' },
         { icon: Shield, label: 'Medical Scientific Skills', sublabel: 'Layer 2 — Scientific-medical skills specific to the MR role in specialty pharma' },
         { icon: Target, label: 'Sales System Skills', sublabel: 'Layer 3 — Fidia-specific commercial system skills' },
       ],
-      multilingualLabel: 'MULTILINGUAL: 12 LANGUAGES',
-      multilingualItems: [
-        {
-          title: 'Respond in your native language, report in English',
-          text: "Every participant answers in their own language — Italian, German, Spanish, French, Polish, Czech, Romanian, Bulgarian, Russian, Turkish or Arabic. Responses are translated into English for management reporting.",
-        },
-        {
-          title: 'English as an international readiness signal',
-          text: "Every participant may choose to respond in English rather than their native language. Those who do provide a concrete signal of international readiness, which the system records as an additional talent intelligence data point.",
-        },
-      ],
+      multilingualLabel: '',
+      multilingualItems: [],
     },
     results: {
       badge: 'RESULTS',
-      title: 'The vision and the impact',
+      title: 'Where we are headed',
       subtitle: 'Expected outcomes of the Skillvue × Fidia Farmaceutici project.',
       metrics: [],
       qualitative: [
-        { icon: Eye, title: 'The first objective picture of the global sales network', text: "For the first time, Fidia will have a structured, comparable view of all its MRs' skills worldwide — built with the same criteria in every country, regardless of language or local commercial culture." },
-        { icon: Layers, title: 'MR skills now measurable in 12 languages', text: "Behavioural skills emerge in the most authentic language for each individual. The data produced is comparable across the entire network and becomes a direct input to development plans within internal training systems." },
-        { icon: TrendingUp, title: 'A value-based transition supported by data', text: "The shift from a discount-driven approach to a consultative model based on scientific product value requires specific skills. Now Fidia knows where to focus, on whom, and with what priorities." },
+        { icon: Eye, title: 'The first objective picture of the global sales network, in 12 languages', text: "For the first time, Fidia will have a structured, comparable view of all its MRs' skills worldwide, built with the same criteria in every country, regardless of language or local commercial culture." },
+        { icon: TrendingUp, title: 'A transition supported by data', text: "Fidia will know which profiles to develop, how and with which priority, to ensure that the evolution of the business and commercial model is backed by the right people in the organisation." },
         { icon: CheckCircle, title: 'Development and training finally connected', text: "The gaps identified by the assessment connect directly with internal training systems. The link between evaluation and development path closes a loop that was previously left open." },
+        { icon: Layers, title: 'Building for the future both for people and for the organisation', text: "This project will lay the foundations for a continuous talent development model, designed to ensure the full realisation of every person, greater employability and greater responsiveness to labour market transformations." },
       ],
     },
     related: {
