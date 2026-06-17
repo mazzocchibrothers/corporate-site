@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return {
       beforeFiles: [
+        { source: '/customers/mediaset', destination: '/customers/mediaset-2' },
+        { source: '/clienti/mediaset', destination: '/customers/mediaset-2' },
         { source: '/clienti/:slug', destination: '/customers/:slug' },
       ],
       afterFiles: [
