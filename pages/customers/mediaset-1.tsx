@@ -45,7 +45,7 @@ const content = {
       label: 'SCHEDA CLIENTE',
       facts: [
         { label: 'Settore', value: 'Media & Telecom' },
-        { label: 'Gruppo', value: 'MEDIAFOREUROPE' },
+        { label: 'Gruppo', value: 'MFE-MEDIAFOREUROPE' },
         { label: 'Fatturato', value: 'circa 4,03 miliardi €' },
         { label: 'Use Case', value: 'Hiring' },
       ],
@@ -54,7 +54,7 @@ const content = {
       badge: 'CONTESTO',
       title: 'Il contesto del progetto',
       paragraph: <>
-        Mediaset, parte del gruppo <strong className="text-[#121212]/80 font-semibold">MFE (MEDIAFOREUROPE)</strong>, è il principale broadcaster commerciale privato in Italia e sta vivendo una fase di evoluzione senza precedenti. Con l&apos;acquisizione di ProSiebenSat.1 e la partecipazione in Impresa, <strong className="text-[#121212]/80 font-semibold">MEDIAFOREUROPE</strong> è diventato il primo broadcaster privato a controllare operazioni in tre grandi mercati europei, raggiungendo <strong className="text-[#121212]/80 font-semibold">oltre 220 milioni di persone in sei paesi</strong>.<br /><br />
+        Mediaset, parte del gruppo <strong className="text-[#121212]/80 font-semibold">MFE-MEDIAFOREUROPE</strong>, è il principale broadcaster commerciale privato in Italia e sta vivendo una fase di evoluzione senza precedenti. Con l&apos;acquisizione di ProSiebenSat.1 e la partecipazione in Impresa, <strong className="text-[#121212]/80 font-semibold">MFE-MEDIAFOREUROPE</strong> è diventato il primo broadcaster privato a controllare operazioni in tre grandi mercati europei, raggiungendo <strong className="text-[#121212]/80 font-semibold">oltre 220 milioni di persone in sei paesi</strong>.<br /><br />
         È in questo scenario di innovazione e crescita che nasce il <strong className="text-[#121212]/80 font-semibold">progetto Grape</strong>{' '}(Graduate Program Experience): il programma di selezione di neo laureati e profili junior da inserire in diverse funzioni aziendali. In contesti come questo, identificare in maniera predittiva il talento diventa una leva strategica davvero irrinunciabile per garantire una buona riuscita del progetto. Ma come farlo quando si ricevono migliaia di candidature?
       </>,
     },
@@ -68,7 +68,7 @@ const content = {
         {
           icon: TrendingUp,
           title: 'La crescita europea del Gruppo rende urgente costruire una pipeline di talento',
-          text: "MEDIAFOREUROPE sta espandendo il proprio perimetro su scala europea. Grape non è solo un programma di assunzione: è un significativo tassello che intende contribuire all'identificazione di profili junior che possano crescere con il Gruppo rispondendo alle sue esigenze future.",
+          text: "MFE-MEDIAFOREUROPE sta espandendo il proprio perimetro su scala europea. Grape non è solo un programma di assunzione: è un significativo tassello che intende contribuire all'identificazione di profili junior che possano crescere con il Gruppo rispondendo alle sue esigenze future.",
         },
         {
           icon: Zap,
@@ -174,7 +174,7 @@ const content = {
       label: 'CLIENT PROFILE',
       facts: [
         { label: 'Industry', value: 'Media & Telecom' },
-        { label: 'Group', value: 'MEDIAFOREUROPE' },
+        { label: 'Group', value: 'MFE-MEDIAFOREUROPE' },
         { label: 'Revenue', value: '~€4.03B' },
         { label: 'Use Case', value: 'Hiring' },
       ],
@@ -183,7 +183,7 @@ const content = {
       badge: 'CONTEXT',
       title: 'The Company and The Context',
       paragraph: <>
-        Mediaset, part of the <strong className="text-[#121212]/80 font-semibold">MFE (MEDIAFOREUROPE)</strong> group, is Italy&apos;s leading private commercial broadcaster and is undergoing an unprecedented phase of evolution. With the acquisition of ProSiebenSat.1 and a stake in Impresa, <strong className="text-[#121212]/80 font-semibold">MEDIAFOREUROPE</strong> has become the first private broadcaster to control operations across three major European markets, reaching <strong className="text-[#121212]/80 font-semibold">over 220 million people in six countries</strong>.<br /><br />
+        Mediaset, part of the <strong className="text-[#121212]/80 font-semibold">MFE-MEDIAFOREUROPE</strong> group, is Italy&apos;s leading private commercial broadcaster and is undergoing an unprecedented phase of evolution. With the acquisition of ProSiebenSat.1 and a stake in Impresa, <strong className="text-[#121212]/80 font-semibold">MFE-MEDIAFOREUROPE</strong> has become the first private broadcaster to control operations across three major European markets, reaching <strong className="text-[#121212]/80 font-semibold">over 220 million people in six countries</strong>.<br /><br />
         It is in this scenario of innovation and growth that <strong className="text-[#121212]/80 font-semibold">Progetto GRAPE</strong>{' '}(Graduate Program Experience) was born: a hiring programme for recent graduates and junior profiles to be placed across various departments. In contexts like this, identifying talent predictively becomes a truly indispensable strategic lever for ensuring the success of the programme. But how to do it when you&apos;re receiving thousands of applications?
       </>,
     },
@@ -197,7 +197,7 @@ const content = {
         {
           icon: TrendingUp,
           title: 'The group\'s expansion made building a talent pipeline urgent',
-          text: "MEDIAFOREUROPE is expanding its footprint across Europe. GRAPE is more than a hiring programme: it is a significant building block intended to contribute to identifying junior profiles who can grow with the Group and respond to its future needs.",
+          text: "MFE-MEDIAFOREUROPE is expanding its footprint across Europe. GRAPE is more than a hiring programme: it is a significant building block intended to contribute to identifying junior profiles who can grow with the Group and respond to its future needs.",
         },
         {
           icon: Zap,
