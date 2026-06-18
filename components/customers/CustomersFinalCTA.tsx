@@ -33,7 +33,7 @@ export default function CustomersFinalCTA() {
           </div>
         </motion.div>
 
-        <motion.div className="flex flex-wrap gap-x-6 gap-y-2" initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.4 }}>
+        <motion.div className="flex flex-wrap justify-end gap-x-6 gap-y-2" initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.4 }}>
           {badges.map(b => (
             <span key={b} className="text-[11px] text-white/[0.65] font-medium">{t(b)}</span>
           ))}
