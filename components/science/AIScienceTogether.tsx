@@ -6,7 +6,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 
 const principles = [
   { icon: Sparkles, title: 'Better evidence', desc: 'AI unlocks richer, more direct evidence of skill through realistic scenarios, interactive tasks, and multiple response modalities that reflect how work is actually done.' },
-  { icon: Shield, title: 'Rigor at scale', desc: 'We embed assessment science into the product so rigor scales with the system. Clear constructs, evidence-centered design, and governed scoring prevent AI from introducing noise.' },
+  { icon: Shield, title: 'Rigor at scale', desc: 'We embed verification science into the product so rigor scales with the system. Clear constructs, evidence-centered design, and governed scoring prevent AI from introducing noise.' },
   { icon: RefreshCw, title: 'Continuous evolution', desc: 'Because skills and roles evolve quickly, measurement must evolve with them. Continuous monitoring and scientist-led iteration keep signals accurate and defensible.' },
 ];
 

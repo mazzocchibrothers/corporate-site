@@ -112,8 +112,8 @@ const content = {
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Assessment AI con Skillvue',
-      intro: "Il team People Science Skillvue ha lavorato per allineare gli assessment costruiti in piattaforma con il modello di leadership aziendale e creato valutazioni calate sulle reali situazioni lavorative dei punti vendita.",
+      title: 'Verification AI con Skillvue',
+      intro: "Il team People Science Skillvue ha lavorato per allineare gli verification costruiti in piattaforma con il modello di leadership aziendale e creato valutazioni calate sulle reali situazioni lavorative dei punti vendita.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Wrench, label: 'Hard Skill industry-specific' },
@@ -229,7 +229,7 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What needed to change',
       items: [
-        { icon: Eye, text: "Map the skills of the entire retail network objectively and immediately: a standardised assessment across all roles (Beauty Advisor, Sales Assistant, Store Manager) and all seniority levels." },
+        { icon: Eye, text: "Map the skills of the entire retail network objectively and immediately: a standardised verification across all roles (Beauty Advisor, Sales Assistant, Store Manager) and all seniority levels." },
         { icon: Zap, text: "Optimise the time and cost of internal skills analysis: make it sustainable given turnover rates and the pace of the labour market, replacing in-person observation with a scalable system." },
         { icon: TrendingUp, text: "Promote internal career paths and reduce turnover: identify high-potential people and propensities for different roles to facilitate horizontal and vertical internal moves, reducing the need for external hiring." },
         { icon: Target, text: "Work proactively on training and development: build a shared skills database to activate customised learning paths that close existing skill gaps and plan workforce development." },
@@ -237,8 +237,8 @@ const content = {
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment with Skillvue',
-      intro: "The Skillvue People Science team worked to align the assessments built on the platform with the company\’s leadership model, creating evaluations grounded in the real working situations of store employees.",
+      title: 'AI Verification with Skillvue',
+      intro: "The Skillvue People Science team worked to align the verifications built on the platform with the company\’s leadership model, creating evaluations grounded in the real working situations of store employees.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Wrench, label: 'Industry-specific Hard Skills' },

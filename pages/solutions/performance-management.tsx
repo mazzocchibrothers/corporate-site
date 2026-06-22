@@ -23,7 +23,7 @@ export default function PerformanceManagementPage() {
         <title>{isIT ? 'Performance Management | Valutazioni Obiettive | Skillvue' : 'Performance Management | Data-Backed Reviews | Skillvue'}</title>
         <meta name="description" content={isIT
           ? "Integra valutazioni oggettive nei tuoi cicli di performance. Riduci i bias e dai a ogni manager un punto di partenza basato sui dati."
-          : 'Add objective skill assessments to your performance cycles. Reduce bias, improve calibration and give every manager a data-backed starting point.'
+          : 'Add objective skill verifications to your performance cycles. Reduce bias, improve calibration and give every manager a data-backed starting point.'
         } />
         <link rel="canonical" href={canonical} />
       </Head>

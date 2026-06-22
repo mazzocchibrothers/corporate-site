@@ -20,7 +20,7 @@ export default function CustomersPage() {
         <title>{isIT ? 'Storie di Successo | Skillvue' : 'Customer Stories | Skillvue'}</title>
         <meta name="description" content={isIT
           ? "Scopri come 50+ aziende europee come Unicredit e Carrefour hanno sostituito le decisioni intuitive sul talento con valutazioni AI obiettive. ROI 10–30x."
-          : 'See how 50+ European enterprises like Unicredit and Carrefour replaced gut-feel talent decisions with objective AI assessments. 10–30x ROI.'
+          : 'See how 50+ European enterprises like Unicredit and Carrefour replaced gut-feel talent decisions with objective AI verifications. 10–30x ROI.'
         } />
         <link rel="canonical" href={canonical} />
       </Head>

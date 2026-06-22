@@ -23,10 +23,10 @@ export default function TalentAcquisitionPage() {
   return (
     <>
       <Head>
-        <title>{isIT ? 'Talent Acquisition | Valutazioni Predittive con AI | Skillvue' : 'Talent Acquisition | AI Hiring Assessments | Skillvue'}</title>
+        <title>{isIT ? 'Talent Acquisition | Valutazioni Predittive con AI | Skillvue' : 'Talent Acquisition | AI Hiring Verifications | Skillvue'}</title>
         <meta name="description" content={isIT
           ? "Sostituisci il recruiting basato sull'istinto con valutazioni AI predittive. Riduci il turnover precoce e rendi ogni decisione di assunzione difendibile."
-          : 'Replace gut-feel hiring with AI assessments that predict performance. Reduce early turnover and make every hiring decision defensible at scale.'
+          : 'Replace gut-feel hiring with AI verifications that predict performance. Reduce early turnover and make every hiring decision defensible at scale.'
         } />
         <link rel="canonical" href={canonical} />
       </Head>

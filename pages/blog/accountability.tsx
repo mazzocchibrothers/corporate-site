@@ -205,8 +205,8 @@ export default function BlogArticle4() {
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
-                    ? "Attraverso assessment sulle competenze basati su scienza psicometrica, domande situazionali e metodologia BEI, Skillvue osserva come una persona ragiona e decide in scenari organizzativi realistici, distinguendo tra responsabilità dichiarata e accountability reale."
-                    : "Through skill assessments based on psychometric science, situational questions, and BEI methodology, Skillvue observes how a person reasons and decides in realistic organizational scenarios, distinguishing between declared responsibility and real accountability."}
+                    ? "Attraverso verification sulle competenze basati su scienza psicometrica, domande situazionali e metodologia BEI, Skillvue osserva come una persona ragiona e decide in scenari organizzativi realistici, distinguendo tra responsabilità dichiarata e accountability reale."
+                    : "Through skill verifications based on psychometric science, situational questions, and BEI methodology, Skillvue observes how a person reasons and decides in realistic organizational scenarios, distinguishing between declared responsibility and real accountability."}
                 </p>
               </div>
             </motion.div>
@@ -228,7 +228,7 @@ export default function BlogArticle4() {
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {lang === 'it'
                   ? "Integra la valutazione delle competenze nel tuo processo di valutazione per decisioni più solide e sostenibili."
-                  : "Integrate skill assessment into your evaluation process for more solid and sustainable decisions."}
+                  : "Integrate skill verification into your evaluation process for more solid and sustainable decisions."}
               </p>
               <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center justify-between px-9 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500">

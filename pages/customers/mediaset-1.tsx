@@ -61,7 +61,7 @@ const content = {
     challenge: {
       badge: 'LA SFIDA',
       title: 'Migliaia di candidati e tanti CV che da soli non rivelavano il potenziale nascosto',
-      intro: 'Il Progetto Grape ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l\'obiettivo di individuare in sei settimane un numero significativo di candidati qualificati da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell\'assessment.',
+      intro: 'Il Progetto Grape ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l\'obiettivo di individuare in sei settimane un numero significativo di candidati qualificati da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell\'verification.',
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
@@ -105,7 +105,7 @@ const content = {
       items: [
         { icon: Zap, text: <><strong>Gestire il volume di candidature nei tempi dettati dal business</strong> — l&apos;obiettivo era individuare ogni settimana un considerevole numero di candidati ad alto potenziale, senza perdere qualità nella valutazione.</> },
         { icon: Eye, text: <><strong>Rendere visibili le soft skill dal primo step</strong> — realizzare una mappatura affidabile dei profili dei candidati, con dati oggettivi prodotti dall&apos;AI e validati sul modello Mediaset.</> },
-        { icon: Shield, text: <><strong>Garantire un&apos;esperienza candidato all&apos;altezza del brand</strong> — il primo contatto con Mediaset doveva essere positivo, intuitivo e accessibile anche per chi non aveva mai usato questo formato di assessment.</> },
+        { icon: Shield, text: <><strong>Garantire un&apos;esperienza candidato all&apos;altezza del brand</strong> — il primo contatto con Mediaset doveva essere positivo, intuitivo e accessibile anche per chi non aveva mai usato questo formato di verification.</> },
         { icon: Layers, text: <><strong>Integrare lo strumento nel processo esistente</strong> — gli output dovevano essere compatibili con il flusso multi-fase e utilizzabili come benchmark per sviluppi futuri della strategia di selezione.</> },
       ],
     },
@@ -127,12 +127,12 @@ const content = {
       metrics: [
         { value: '3.000+', label: 'candidature processate' },
         { value: '4/5', label: 'Soddisfazione candidati' },
-        { value: '79%', label: 'Conversion rate assessment' },
+        { value: '79%', label: 'Conversion rate verification' },
       ],
       qualitative: [
         { icon: Eye, title: 'Visibilità sul potenziale dei profili junior in ingresso', text: 'Prima di Skillvue, le decisioni venivano prese sulla base della valutazione soggettiva dei singoli recruiter; ora si ragiona in ottica condivisa e con parametri comuni e standardizzati.' },
         { icon: Target, title: 'Un processo di selezione più efficiente, con shortlist qualificate', text: 'Le fasi successive del processo di selezione partono da una base informativa solida. Il risultato: un funnel più efficiente e decisioni più consapevoli e data-driven ad ogni step.' },
-        { icon: Users, title: 'Assessment customizzati sulle reali esigenze di Mediaset', text: "Instaurando un rapporto collaborativo fin dall'inizio, Skillvue e Mediaset hanno proposto ai candidati degli assessment validati dal team HR e aderenti alle aspettative di Mediaset." },
+        { icon: Users, title: 'Verification customizzati sulle reali esigenze di Mediaset', text: "Instaurando un rapporto collaborativo fin dall'inizio, Skillvue e Mediaset hanno proposto ai candidati degli verification validati dal team HR e aderenti alle aspettative di Mediaset." },
       ],
     },
     quote: {
@@ -190,7 +190,7 @@ const content = {
     challenge: {
       badge: 'THE CHALLENGE',
       title: 'Thousands of candidates and CVs that alone revealed nothing about hidden potential',
-      intro: 'Progetto GRAPE generated over 3,000 applications. The dedicated HR team set a target of identifying, within six weeks, a significant number of qualified candidates to advance to the next stages of the process, while maintaining a high level of candidate experience and without compromising the depth of the assessment.',
+      intro: 'Progetto GRAPE generated over 3,000 applications. The dedicated HR team set a target of identifying, within six weeks, a significant number of qualified candidates to advance to the next stages of the process, while maintaining a high level of candidate experience and without compromising the depth of the verification.',
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
@@ -234,7 +234,7 @@ const content = {
       items: [
         { icon: Zap, text: <><strong>Manage application volumes within business timelines</strong> — the goal was to identify, every week, a significant number of high-potential candidates, without losing quality in the evaluation.</> },
         { icon: Eye, text: <><strong>Make soft skills visible from the first step</strong> — build a reliable mapping of candidate profiles, with objective data produced by AI and validated against the Mediaset model.</> },
-        { icon: Shield, text: <><strong>Ensure a candidate experience worthy of the brand</strong> — the first touchpoint with Mediaset had to be positive, intuitive and accessible, even for candidates who had never used this assessment format before.</> },
+        { icon: Shield, text: <><strong>Ensure a candidate experience worthy of the brand</strong> — the first touchpoint with Mediaset had to be positive, intuitive and accessible, even for candidates who had never used this verification format before.</> },
         { icon: Layers, text: <><strong>Integrate the tool into the existing process</strong> — outputs had to be compatible with the multi-phase flow and usable as a benchmark for future development of the hiring strategy.</> },
       ],
     },
@@ -256,12 +256,12 @@ const content = {
       metrics: [
         { value: '3,000+', label: 'applications processed' },
         { value: '4/5', label: 'Candidate satisfaction' },
-        { value: '79%', label: 'Assessment conversion rate' },
+        { value: '79%', label: 'Verification conversion rate' },
       ],
       qualitative: [
-        { icon: Eye, title: 'Visibility into the potential of incoming junior profiles', text: 'Before Skillvue, decisions were based on the subjective assessment of individual recruiters; now the team works with shared, standardised parameters.' },
+        { icon: Eye, title: 'Visibility into the potential of incoming junior profiles', text: 'Before Skillvue, decisions were based on the subjective verification of individual recruiters; now the team works with shared, standardised parameters.' },
         { icon: Target, title: 'A more efficient hiring process, with qualified shortlists', text: 'The subsequent stages of the hiring process start from a solid information base. The result: a more efficient funnel and more informed, data-driven decisions at every step.' },
-        { icon: Users, title: 'Assessments customised to Mediaset\'s actual needs', text: 'By building a collaborative relationship from the outset, Skillvue and Mediaset offered candidates assessments validated by the HR team and aligned with Mediaset\'s expectations.' },
+        { icon: Users, title: 'Verifications customised to Mediaset\'s actual needs', text: 'By building a collaborative relationship from the outset, Skillvue and Mediaset offered candidates verifications validated by the HR team and aligned with Mediaset\'s expectations.' },
       ],
     },
     quote: {
