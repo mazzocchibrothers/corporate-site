@@ -111,8 +111,8 @@ const content = {
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Assessment AI con Skillvue per il progetto Career Passport',
-      intro: <>Skillvue è stato integrato nel processo di selezione di <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong>, il programma di global mobility lanciato per supportare l'<strong className="text-[#121212]/80 font-semibold">espansione in Nord America</strong>. Dopo una campagna omnichannel che <strong className="text-[#121212]/80 font-semibold">ha raccolto oltre 1.000 candidature</strong>, Skillvue ha gestito il pre-screening con un assessment basato su <strong className="text-[#121212]/80 font-semibold">domande filtro e domande situazionali</strong> calibrate sui ruoli specifici (<strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations, General Manager of Restaurant</strong>).</>,
+      title: 'Verification AI con Skillvue per il progetto Career Passport',
+      intro: <>Skillvue è stato integrato nel processo di selezione di <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong>, il programma di global mobility lanciato per supportare l'<strong className="text-[#121212]/80 font-semibold">espansione in Nord America</strong>. Dopo una campagna omnichannel che <strong className="text-[#121212]/80 font-semibold">ha raccolto oltre 1.000 candidature</strong>, Skillvue ha gestito il pre-screening con un verification basato su <strong className="text-[#121212]/80 font-semibold">domande filtro e domande situazionali</strong> calibrate sui ruoli specifici (<strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations, General Manager of Restaurant</strong>).</>,
       intro2: <>L'obiettivo non era <strong className="text-[#121212]/80 font-semibold">sostituire il giudizio umano, ma liberarlo</strong>. All'AI il lavoro di standardizzazione su larga scala; al team HR i dati per concentrarsi su ciò che <strong className="text-[#121212]/80 font-semibold">nessun algoritmo può sostituire</strong>: la valutazione umana che segue.</>,
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
@@ -139,7 +139,7 @@ const content = {
     vision: {
       badge: 'EVOLUZIONE 2026',
       title: 'Una collaborazione che cresce',
-      intro: <>Il programma <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong> ha rappresentato il primo tassello di un <strong className="text-[#121212]/80 font-semibold">percorso di mobilità internazionale</strong> dedicato ai profili manageriali. Nel 2026, la collaborazione si estende con <strong className="text-[#121212]/80 font-semibold">Eataly NextGen</strong>, rivolto ai profili junior: <strong className="text-[#121212]/80 font-semibold">270+ candidati</strong> valutati in un assessment strutturato di <strong className="text-[#121212]/80 font-semibold">lingua inglese (livello B2) e soft skill</strong>. Un segnale concreto della volontà di Eataly di consolidare l'integrazione tra <strong className="text-[#121212]/80 font-semibold">AI e human touch</strong> come fondamento di una <strong className="text-[#121212]/80 font-semibold">talent strategy inclusiva e scalabile</strong>.</>,
+      intro: <>Il programma <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong> ha rappresentato il primo tassello di un <strong className="text-[#121212]/80 font-semibold">percorso di mobilità internazionale</strong> dedicato ai profili manageriali. Nel 2026, la collaborazione si estende con <strong className="text-[#121212]/80 font-semibold">Eataly NextGen</strong>, rivolto ai profili junior: <strong className="text-[#121212]/80 font-semibold">270+ candidati</strong> valutati in un verification strutturato di <strong className="text-[#121212]/80 font-semibold">lingua inglese (livello B2) e soft skill</strong>. Un segnale concreto della volontà di Eataly di consolidare l'integrazione tra <strong className="text-[#121212]/80 font-semibold">AI e human touch</strong> come fondamento di una <strong className="text-[#121212]/80 font-semibold">talent strategy inclusiva e scalabile</strong>.</>,
       nextGen: '',
     },
     related: {
@@ -163,7 +163,7 @@ const content = {
       highlight2: '',
       after: '',
     },
-    subtitle: "With Skillvue's support, Eataly optimised skills assessment at the pre-screening stage, managing over 1,000 applications without compromising on evaluation quality, closeness to candidates, or brand authenticity at any stage of the process.",
+    subtitle: "With Skillvue's support, Eataly optimised skills verification at the pre-screening stage, managing over 1,000 applications without compromising on evaluation quality, closeness to candidates, or brand authenticity at any stage of the process.",
     heroMetrics: [
       { value: '1,000+', label: 'applications processed' },
       { value: '50', label: 'direct stores' },
@@ -235,15 +235,15 @@ const content = {
       title: 'Collaboration objectives',
       items: [
         { icon: Eye, text: "Map all key factors at the pre-screening stage: leadership, people management, English proficiency and openness to international mobility — arriving at the interview with structured data to focus time on a more targeted, personalised and valuable conversation." },
-        { icon: Scale, text: "Maintaining a high standard of fairness: for Eataly, fairness is not a goal — it is a guarantee. Every candidate had to be assessed using psychometrically validated tools, making the hiring process transparent and free from structural bias." },
+        { icon: Scale, text: "Maintaining a high standard of fairness: for Eataly, fairness is not a goal — it is a guarantee. Every candidate had to be verified using psychometrically validated tools, making the hiring process transparent and free from structural bias." },
         { icon: Heart, text: "Integrate AI and human touch without ever losing the brand's authenticity: use technology as an enabler — not a replacement — of the human value that has always defined Eataly, for more effective, inclusive and conscious processes." },
         { icon: Zap, text: "Process applications in less time without compromising evaluation quality: speed should not be the result of simplification, but of an architecture designed to scale while maintaining depth and quality of analysis." },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment with Skillvue for the Career Passport project',
-      intro: <>Skillvue was integrated into the hiring process as part of <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong>, the global mobility programme launched to support expansion in <strong className="text-[#121212]/80 font-semibold">North America</strong>. After an omnichannel campaign that <strong className="text-[#121212]/80 font-semibold">collected over 1,000 applications</strong>, Skillvue managed the pre-screening with an assessment combining <strong className="text-[#121212]/80 font-semibold">filter questions and situational questions</strong> calibrated to specific roles (<strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations, General Manager of Restaurant</strong>).</>,
+      title: 'AI Verification with Skillvue for the Career Passport project',
+      intro: <>Skillvue was integrated into the hiring process as part of <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong>, the global mobility programme launched to support expansion in <strong className="text-[#121212]/80 font-semibold">North America</strong>. After an omnichannel campaign that <strong className="text-[#121212]/80 font-semibold">collected over 1,000 applications</strong>, Skillvue managed the pre-screening with an verification combining <strong className="text-[#121212]/80 font-semibold">filter questions and situational questions</strong> calibrated to specific roles (<strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations, General Manager of Restaurant</strong>).</>,
       intro2: <>The goal was not to <strong className="text-[#121212]/80 font-semibold">replace human judgement, but to free it</strong>. AI handled standardisation at scale; the HR team received the data to focus on what <strong className="text-[#121212]/80 font-semibold">no algorithm can replace</strong>: the human evaluation that follows.</>,
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
@@ -262,15 +262,15 @@ const content = {
         { value: 'More data available', label: 'for the decisions that matter most' },
       ],
       qualitative: [
-        { icon: TrendingUp, title: 'HR team productivity increased', text: "Freed from manual screening, the Talent Acquisition team dedicated more time to high-value stages: interviews, final assessments, and candidate relationships." },
-        { icon: Scale, title: 'Significant reduction in hiring bias', text: "Psychometrically validated tools reduced the weight of cognitive bias, ensuring consistent assessment standards across all candidates regardless of evaluator." },
+        { icon: TrendingUp, title: 'HR team productivity increased', text: "Freed from manual screening, the Talent Acquisition team dedicated more time to high-value stages: interviews, final verifications, and candidate relationships." },
+        { icon: Scale, title: 'Significant reduction in hiring bias', text: "Psychometrically validated tools reduced the weight of cognitive bias, ensuring consistent verification standards across all candidates regardless of evaluator." },
         { icon: Heart, title: 'The authenticity of the human touch remained intact', text: "AI handled standardisation and scale; people managed relationship, context and reading of potential. A more efficient process that never felt impersonal." },
       ],
     },
     vision: {
       badge: 'EVOLUTION 2026',
       title: 'A collaboration that grows',
-      intro: <>The <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong> programme was the first step in an <strong className="text-[#121212]/80 font-semibold">international mobility journey</strong> dedicated to managerial profiles. In 2026, the collaboration expands with <strong className="text-[#121212]/80 font-semibold">Eataly NextGen</strong>, focused on junior profiles: <strong className="text-[#121212]/80 font-semibold">270+ candidates</strong> assessed in a structured <strong className="text-[#121212]/80 font-semibold">English language (B2 level) and soft skills</strong> assessment. A clear signal of Eataly's commitment to consolidating the integration of <strong className="text-[#121212]/80 font-semibold">AI and human touch</strong> as the foundation of an <strong className="text-[#121212]/80 font-semibold">inclusive and scalable talent strategy</strong>.</>,
+      intro: <>The <strong className="text-[#121212]/80 font-semibold">Eataly Career Passport</strong> programme was the first step in an <strong className="text-[#121212]/80 font-semibold">international mobility journey</strong> dedicated to managerial profiles. In 2026, the collaboration expands with <strong className="text-[#121212]/80 font-semibold">Eataly NextGen</strong>, focused on junior profiles: <strong className="text-[#121212]/80 font-semibold">270+ candidates</strong> verified in a structured <strong className="text-[#121212]/80 font-semibold">English language (B2 level) and soft skills</strong> verification. A clear signal of Eataly's commitment to consolidating the integration of <strong className="text-[#121212]/80 font-semibold">AI and human touch</strong> as the foundation of an <strong className="text-[#121212]/80 font-semibold">inclusive and scalable talent strategy</strong>.</>,
       nextGen: '',
     },
     related: {

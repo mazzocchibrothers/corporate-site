@@ -128,9 +128,9 @@ export default function BlogArticle6() {
               })}
             </div>
 
-            {/* Onboarding as Field Assessment */}
+            {/* Onboarding as Field Verification */}
             <h2 className="text-[26px] font-bold text-[#121212] mb-5 mt-12 tracking-[-0.02em]">
-              {lang === 'it' ? "L'onboarding come assessment sul campo" : 'Onboarding as a Field Assessment'}
+              {lang === 'it' ? "L'onboarding come verification sul campo" : 'Onboarding as a Field Verification'}
             </h2>
             <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
               {lang === 'it'
@@ -145,8 +145,8 @@ export default function BlogArticle6() {
               </div>
               <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                 {lang === 'it'
-                  ? "Integrare uno skill assessment all'inizio dell'onboarding permette di validare le competenze chiave rispetto al ruolo reale, identificare i gap prima che impattino la performance e costruire un piano di sviluppo personalizzato basato su evidenze, non percezioni. Skillvue supporta questo attraverso assessment psicometrici, domande situazionali e metodologia BEI."
-                  : "Integrating a skill assessment at the start of onboarding lets you validate key competencies against the actual role, identify gaps before they impact performance, and build a personalized development plan based on evidence, not perceptions. Skillvue supports this through psychometric assessments, situational questions, and BEI methodology."}
+                  ? "Integrare uno skill verification all'inizio dell'onboarding permette di validare le competenze chiave rispetto al ruolo reale, identificare i gap prima che impattino la performance e costruire un piano di sviluppo personalizzato basato su evidenze, non percezioni. Skillvue supporta questo attraverso verification psicometrici, domande situazionali e metodologia BEI."
+                  : "Integrating a skill verification at the start of onboarding lets you validate key competencies against the actual role, identify gaps before they impact performance, and build a personalized development plan based on evidence, not perceptions. Skillvue supports this through psychometric verifications, situational questions, and BEI methodology."}
               </p>
             </div>
 

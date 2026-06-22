@@ -52,12 +52,12 @@ export default function WhitepaperDetailPage() {
     { num: '01', title: 'Why Is the Job Market Changing?', desc: 'The forces behind skills obsolescence: 5 years for a skill to lose half its value, 12 to 18 months for technical skills.', icon: Zap },
     { num: '02', title: "AI's Role in Redefining Work", desc: 'How AI is creating a hybridisation of humans and machines, and what it means for the skills that matter.', icon: Brain },
     { num: '03', title: 'The Demographic Challenge', desc: "Interview with Martina Mauri (Politecnico di Milano) on Italy's 3.7 million worker gap by 2040 and how to react.", icon: Users },
-    { num: '04', title: 'Beyond Skills: Leveraging Potential', desc: 'Why assessing Skill Proximity, Aspirational Outlook, and Learning Agility is the new competitive advantage.', icon: TrendingUp },
+    { num: '04', title: 'Beyond Skills: Leveraging Potential', desc: 'Why verifying Skill Proximity, Aspirational Outlook, and Learning Agility is the new competitive advantage.', icon: TrendingUp },
     { num: '05', title: 'Your HR To-Do List', desc: 'Best practices to map skills dynamically, uncover hidden potential, connect data with performance, and build lifelong learning.', icon: BookOpen },
   ] : [
     { num: '01', title: 'The Economic Impact of Turnover', desc: 'One departure in retail equals 9.4 lost days of sales. 63% of productivity loss happens before the employee even leaves.', icon: Zap },
     { num: '02', title: 'Why Turnover Is So High', desc: 'Job dissatisfaction, harsh conditions, low motivation: the three key factors driving sales network churn.', icon: Brain },
-    { num: '03', title: 'Fighting Turnover with Data', desc: 'How Skillvue assessments transform recruitment, internal mobility, and talent development to predict and prevent turnover.', icon: Users },
+    { num: '03', title: 'Fighting Turnover with Data', desc: 'How Skillvue verifications transform recruitment, internal mobility, and talent development to predict and prevent turnover.', icon: Users },
     { num: '04', title: 'The Sales Growth Bonus', desc: '+1% turnover = -0.5% average net sales. The direct, traceable link between retention and commercial performance.', icon: TrendingUp },
   ];
 
@@ -77,7 +77,7 @@ export default function WhitepaperDetailPage() {
   ] : [
     { num: '01', title: 'L\'Impatto Economico del Turnover', desc: 'Un\'uscita nel retail equivale a 9,4 giorni di vendite perse. Il 63% della perdita di produttività avviene prima che il dipendente se ne vada.', icon: Zap },
     { num: '02', title: 'Perché il Turnover È Così Alto', desc: 'Insoddisfazione lavorativa, condizioni difficili, bassa motivazione: i tre fattori chiave che alimentano il turnover nelle reti commerciali.', icon: Brain },
-    { num: '03', title: 'Combattere il Turnover con i Dati', desc: 'Come gli assessment Skillvue trasformano il recruiting, la mobilità interna e lo sviluppo del talento per prevedere e prevenire il turnover.', icon: Users },
+    { num: '03', title: 'Combattere il Turnover con i Dati', desc: 'Come gli verification Skillvue trasformano il recruiting, la mobilità interna e lo sviluppo del talento per prevedere e prevenire il turnover.', icon: Users },
     { num: '04', title: 'Il Bonus sulla Crescita delle Vendite', desc: '+1% di turnover = -0,5% di fatturato netto medio. Il legame diretto e tracciabile tra retention e performance commerciale.', icon: TrendingUp },
   ];
 

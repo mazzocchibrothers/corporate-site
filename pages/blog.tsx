@@ -40,7 +40,7 @@ const articles = [
     id: 5,
     image: 'https://images.unsplash.com/photo-1685541088069-66baf0b2d753?w=600&h=400&fit=crop',
     href: '/blog/critical-thinking',
-    en: { title: 'What Is Critical Thinking and How to Assess This Skill', date: 'February 25, 2026', tag: 'Science' },
+    en: { title: 'What Is Critical Thinking and How to Verify This Skill', date: 'February 25, 2026', tag: 'Science' },
     it: { title: 'Cos\'è il Critical Thinking e Come Valutare questa Competenza', date: '25 Febbraio 2026', tag: 'Scienza' },
   },
   {

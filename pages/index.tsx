@@ -22,7 +22,7 @@ export default function HomePage() {
         <title>{isIT ? 'Skillvue | Piattaforma di Talent Intelligence con AI' : 'Skillvue | AI Talent Intelligence Platform'}</title>
         <meta name="description" content={isIT
           ? "Valuta le competenze, prevedi le performance e rendi ogni decisione di hiring e promozione difendibile. Skillvue combina la scienza psicometrica con l'AI per le aziende europee."
-          : 'Assess skills, predict performance and make every hiring and promotion decision defensible. Skillvue combines psychometric rigour with AI for European enterprises.'
+          : 'Verify skills, predict performance and make every hiring and promotion decision defensible. Skillvue combines psychometric rigour with AI for European enterprises.'
         } />
         <link rel="canonical" href={canonical} />
       </Head>

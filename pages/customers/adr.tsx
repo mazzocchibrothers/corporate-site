@@ -107,16 +107,16 @@ const content = {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
       title: 'Cosa doveva cambiare',
       items: [
-        { icon: Users, text: "Rendere visibile il potenziale su tutta la popolazione: assessment accessibile a tutti i 4.500+ dipendenti, non solo i 1.000 corporate. Includere per la prima volta gli operativi" },
+        { icon: Users, text: "Rendere visibile il potenziale su tutta la popolazione: verification accessibile a tutti i 4.500+ dipendenti, non solo i 1.000 corporate. Includere per la prima volta gli operativi" },
         { icon: Target, text: 'Guidare le decisioni con un approccio science-based e auditabile: passare dalle segnalazioni soggettive a dati strutturati per ogni ruolo, con criteri chiari, feedback per ogni dipendente e piena compliance regolatoria' },
         { icon: Zap, text: 'Scalare senza appesantire carico operativo e tempistiche: processare le candidature interne in giorni anziché mesi, mantenendo la qualità psicometrica che una realtà pubblica richiede' },
-        { icon: Layers, text: "Costruire un modello human-in-the-loop: l'assessment deve produrre intelligenza a supporto delle decisioni manageriali, non sostituirle. Dati per decidere meglio, non verdetti automatici" },
+        { icon: Layers, text: "Costruire un modello human-in-the-loop: l'verification deve produrre intelligenza a supporto delle decisioni manageriali, non sostituirle. Dati per decidere meglio, non verdetti automatici" },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Assessment AI con Skillvue',
-      intro: "Skillvue è stato integrato nella People Strategy esistente di ADR, che già includeva un modello di leadership e percorsi di sviluppo definiti. Il team People Science di Skillvue ha lavorato con ADR per allineare la piattaforma al modello di competenze aziendale, garantendo che ogni assessment misurasse ciò che ADR considera rilevante, non competenze generiche.",
+      title: 'Verification AI con Skillvue',
+      intro: "Skillvue è stato integrato nella People Strategy esistente di ADR, che già includeva un modello di leadership e percorsi di sviluppo definiti. Il team People Science di Skillvue ha lavorato con ADR per allineare la piattaforma al modello di competenze aziendale, garantendo che ogni verification misurasse ciò che ADR considera rilevante, non competenze generiche.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Wrench, label: 'Competenze tecniche (role-specific, calibrate sul modello ADR)' },
@@ -136,11 +136,11 @@ const content = {
       qualitative: [
         { icon: Eye, title: 'Talento nascosto, finalmente visibile', text: "Per la prima volta, ADR ha dati aggiornati su competenze, comportamenti, e potenziale della forza lavoro che fisicamente gestirà i nuovi terminal e le nuove infrastrutture. La pipeline di talento futuro si costruisce da qui." },
         { icon: Zap, title: 'Velocità estrema per un approccio più strategico', text: "Quello che prima si svolgeva in mesi, per garantire equo trattamento e accuratezza di ogni application, oggi si può svolgere in giorni. Rimane la profondità dell'analisi, ma si libera tempo prezioso per gli aspetti di gestione strategica dei processi HR." },
-        { icon: Layers, title: 'Human-in-the-loop: più dati, più responsabilità', text: "L'assessment non produce una lista di profili approvati, ma informazioni strutturate che alimentano una decisione manageriale consapevole. Lo sforzo cognitivo rimane chiave perché ora va presa e interpretata una base dati che prima non esisteva." },
+        { icon: Layers, title: 'Human-in-the-loop: più dati, più responsabilità', text: "L'verification non produce una lista di profili approvati, ma informazioni strutturate che alimentano una decisione manageriale consapevole. Lo sforzo cognitivo rimane chiave perché ora va presa e interpretata una base dati che prima non esisteva." },
         { icon: TrendingUp, title: 'Impatto concreto su employee experience e retention', text: "I dipendenti hanno visibilità sui criteri utilizzati per le valutazioni e ricevono feedback strutturati sul proprio percorso. Fattori chiave in un contesto dove la competizione per il talento è intensa e minaccia la continuità operativa." },
       ],
       quote: {
-        text: "L'Assessment non è più visto soltanto come uno step necessario per una promozione: è parte di un sistema integrato di sviluppo che permette la costruzione di percorsi di crescita personalizzati.",
+        text: "L'Verification non è più visto soltanto come uno step necessario per una promozione: è parte di un sistema integrato di sviluppo che permette la costruzione di percorsi di crescita personalizzati.",
         author: 'Alberto Valenza',
         role: 'SVP Human Capital, Organization & Procurement — Aeroporti di Roma',
       },
@@ -215,7 +215,7 @@ const content = {
         {
           icon: Users,
           title: 'The potential of nearly 4,000 people was not visible',
-          text: "Operational staff — the very people on whom to build the management of a growing airport — could not all be invited to a structured assessment: development opportunities started from nominations by direct line managers.",
+          text: "Operational staff — the very people on whom to build the management of a growing airport — could not all be invited to a structured verification: development opportunities started from nominations by direct line managers.",
         },
         {
           icon: TrendingUp,
@@ -232,7 +232,7 @@ const content = {
         {
           icon: Eye,
           title: 'Top-down approach to development',
-          text: 'Decisions on who to bring into deeper assessment and develop depended on direct manager nominations, not on a uniform data foundation. Unrecognised potential remained invisible.',
+          text: 'Decisions on who to bring into deeper verification and develop depended on direct manager nominations, not on a uniform data foundation. Unrecognised potential remained invisible.',
         },
         {
           icon: BarChart3,
@@ -250,16 +250,16 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What needed to change',
       items: [
-        { icon: Users, text: "Make potential visible across the entire workforce: assessment accessible to all 4,500+ employees, not just the 1,000 corporate staff. Including operational employees for the first time" },
+        { icon: Users, text: "Make potential visible across the entire workforce: verification accessible to all 4,500+ employees, not just the 1,000 corporate staff. Including operational employees for the first time" },
         { icon: Target, text: 'Guide decisions with a science-based and auditable approach: move from subjective nominations to structured skills data for every role, with clear criteria, structured feedback for each employee, and full regulatory compliance' },
         { icon: Zap, text: 'Scale without adding operational burden or delays: process internal applications in days instead of months, while preserving the psychometric quality a public entity requires' },
-        { icon: Layers, text: "Build a human-in-the-loop model: the assessment must produce intelligence to support managerial decisions, not replace them. Data is used to decide better, not to automate verdicts" },
+        { icon: Layers, text: "Build a human-in-the-loop model: the verification must produce intelligence to support managerial decisions, not replace them. Data is used to decide better, not to automate verdicts" },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment with Skillvue',
-      intro: "Skillvue was integrated into ADR's existing People Strategy, which already included a leadership model and defined development paths. Skillvue's People Science team worked with ADR to align the platform with the company's leadership model, ensuring every assessment measured what ADR considers relevant — not generic skills.",
+      title: 'AI Verification with Skillvue',
+      intro: "Skillvue was integrated into ADR's existing People Strategy, which already included a leadership model and defined development paths. Skillvue's People Science team worked with ADR to align the platform with the company's leadership model, ensuring every verification measured what ADR considers relevant — not generic skills.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Wrench, label: 'Technical skills (role-specific, calibrated on ADR\'s model)' },
@@ -277,13 +277,13 @@ const content = {
         { value: 'Days, not months', label: 'application-to-screen timeline' },
       ],
       qualitative: [
-        { icon: Eye, title: 'Hidden talent, finally visible', text: "ADR built a data set that simply didn't exist before: people who would have remained invisible under the old approach can now be identified, assessed, and placed into development pipelines." },
+        { icon: Eye, title: 'Hidden talent, finally visible', text: "ADR built a data set that simply didn't exist before: people who would have remained invisible under the old approach can now be identified, verified, and placed into development pipelines." },
         { icon: Zap, title: 'Extreme speed for a more strategic approach', text: "What previously took months — to guarantee fair treatment and accuracy for every application — can now be done in days. The depth of analysis remains, but precious time is freed up for the strategic management of HR processes." },
-        { icon: Layers, title: 'Human-in-the-loop: more data, more accountability', text: "The assessment doesn't produce a list of approved profiles, but structured information that feeds a conscious managerial decision. Cognitive effort remains key because a data foundation that didn't exist before now needs to be read and interpreted." },
-        { icon: TrendingUp, title: 'Concrete impact on employee experience and retention', text: "Employees have visibility into the criteria used for assessments and receive structured feedback on their development path. Key factors in a context where competition for talent is intense and threatens operational continuity." },
+        { icon: Layers, title: 'Human-in-the-loop: more data, more accountability', text: "The verification doesn't produce a list of approved profiles, but structured information that feeds a conscious managerial decision. Cognitive effort remains key because a data foundation that didn't exist before now needs to be read and interpreted." },
+        { icon: TrendingUp, title: 'Concrete impact on employee experience and retention', text: "Employees have visibility into the criteria used for verifications and receive structured feedback on their development path. Key factors in a context where competition for talent is intense and threatens operational continuity." },
       ],
       quote: {
-        text: "Assessment is no longer seen merely as a necessary step for a promotion: it is part of an integrated development system that enables the construction of personalised growth paths.",
+        text: "Verification is no longer seen merely as a necessary step for a promotion: it is part of an integrated development system that enables the construction of personalised growth paths.",
         author: 'Alberto Valenza',
         role: 'SVP Human Capital, Organization & Procurement — Aeroporti di Roma',
       },
@@ -291,8 +291,8 @@ const content = {
     vision: {
       badge: 'EVOLUTION 2026',
       title: 'From internal development to an integrated talent strategy.',
-      intro: "When the model tested with Skillvue proved it could hold at scale, the next question was natural: does it make sense to assess new hires with different criteria than those used to develop existing employees? The answer was no.",
-      objective: "Build a single coherent cycle where every person, from day one, is assessed, guided, and developed with the same logic.",
+      intro: "When the model tested with Skillvue proved it could hold at scale, the next question was natural: does it make sense to verify new hires with different criteria than those used to develop existing employees? The answer was no.",
+      objective: "Build a single coherent cycle where every person, from day one, is verified, guided, and developed with the same logic.",
       bullets: [
         'Continuation of the development model already underway internally',
         'Integration into external Talent Acquisition',

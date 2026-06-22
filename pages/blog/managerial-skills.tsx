@@ -176,8 +176,8 @@ export default function BlogArticle7() {
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
-                    ? 'Skillvue supporta HR e organizzazioni nella valutazione oggettiva delle competenze manageriali attraverso assessment basati su scienze psicometriche, domande situazionali e metodologia BEI. Invece di chiedere "che tipo di leader sei?", l\'assessment osserva come una persona ragiona e decide in scenari manageriali concreti.'
-                    : 'Skillvue supports HR and organizations in the objective evaluation of managerial skills through assessments based on psychometric sciences, situational questions, and BEI methodology. Instead of asking "what kind of leader are you?", the assessment observes how a person reasons and decides in concrete managerial scenarios.'}
+                    ? 'Skillvue supporta HR e organizzazioni nella valutazione oggettiva delle competenze manageriali attraverso verification basati su scienze psicometriche, domande situazionali e metodologia BEI. Invece di chiedere "che tipo di leader sei?", l\'verification osserva come una persona ragiona e decide in scenari manageriali concreti.'
+                    : 'Skillvue supports HR and organizations in the objective evaluation of managerial skills through verifications based on psychometric sciences, situational questions, and BEI methodology. Instead of asking "what kind of leader are you?", the verification observes how a person reasons and decides in concrete managerial scenarios.'}
                 </p>
               </div>
             </motion.div>
@@ -195,8 +195,8 @@ export default function BlogArticle7() {
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {lang === 'it'
-                  ? 'Valuta il potenziale manageriale con assessment strutturati basati su evidenze comportamentali.'
-                  : 'Evaluate managerial potential with structured assessments based on behavioral evidence.'}
+                  ? 'Valuta il potenziale manageriale con verification strutturati basati su evidenze comportamentali.'
+                  : 'Evaluate managerial potential with structured verifications based on behavioral evidence.'}
               </p>
               <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center justify-between px-9 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500">

@@ -9,7 +9,7 @@ const steps = [
     title: 'Map',
     icon: Map,
     accent: '#4B4DF7',
-    desc: 'Assess skills, mindset, and readiness across candidates and employees using AI-powered psychometric assessments, customized to your leadership model and deployable at scale across 50+ languages.',
+    desc: 'Verify skills, mindset, and readiness across candidates and employees using AI-powered psychometric verifications, customized to your leadership model and deployable at scale across 50+ languages.',
     keywords: ['Skills', 'Mindset', 'Readiness', '50+ languages'],
   },
   {
@@ -73,7 +73,7 @@ export default function HowItWorksSection() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.6rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#1A1A2E]">
-            {t('From assessment to action')}{' '}
+            {t('From verification to action')}{' '}
             <span className="italic font-bold gradient-text-on-light">{t('in three steps')}</span>
           </h2>
         </motion.div>

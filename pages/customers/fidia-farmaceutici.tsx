@@ -36,7 +36,7 @@ const content = {
     heroMetrics: [
       { value: '1.700', label: 'dipendenti' },
       { value: '120+', label: 'Paesi' },
-      { value: '400+', label: 'dipendenti già inclusi in assessment' },
+      { value: '400+', label: 'dipendenti già inclusi in verification' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
@@ -92,7 +92,7 @@ const content = {
         {
           icon: CheckCircle,
           title: 'Valutazione e formazione andavano integrate',
-          text: "I risultati dell'assessment dovevano alimentare i sistemi di formazione interni. Ogni gap andava tradotto in un'azione formativa concreta, misurabile e allineata alle priorità di sviluppo.",
+          text: "I risultati dell'verification dovevano alimentare i sistemi di formazione interni. Ogni gap andava tradotto in un'azione formativa concreta, misurabile e allineata alle priorità di sviluppo.",
         },
         {
           icon: Zap,
@@ -107,14 +107,14 @@ const content = {
       items: [
         { icon: Eye, text: <><strong className="font-bold text-[#121212]/90">Ottenere</strong> una fotografia oggettiva, standardizzata e confrontabile delle competenze di tutti i MR, indipendentemente dal Paese.</> },
         { icon: Target, text: <><strong className="font-bold text-[#121212]/90">Identificare</strong> i profili ad alto potenziale da inserire in percorsi di crescita e sviluppo.</> },
-        { icon: Layers, text: <><strong className="font-bold text-[#121212]/90">Gestire</strong> la complessità dell'assessment multilingue garantendo equità e comparabilità dei risultati senza sacrificare l'autenticità delle risposte.</> },
-        { icon: CheckCircle, text: <><strong className="font-bold text-[#121212]/90">Creare</strong> un collegamento diretto tra i risultati dell'assessment e i piani formativi individuali portati avanti da Fidia.</> },
+        { icon: Layers, text: <><strong className="font-bold text-[#121212]/90">Gestire</strong> la complessità dell'verification multilingue garantendo equità e comparabilità dei risultati senza sacrificare l'autenticità delle risposte.</> },
+        { icon: CheckCircle, text: <><strong className="font-bold text-[#121212]/90">Creare</strong> un collegamento diretto tra i risultati dell'verification e i piani formativi individuali portati avanti da Fidia.</> },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Assessment AI costruito ad hoc sul modello Fidia',
-      intro: <>Il team di Fidia e quello di Skillvue hanno lavorato insieme per costruire un sistema di assessment che partisse dal business reale: le situazioni concrete che un MR Fidia affronta ogni giorno, in ogni mercato.</>,
+      title: 'Verification AI costruito ad hoc sul modello Fidia',
+      intro: <>Il team di Fidia e quello di Skillvue hanno lavorato insieme per costruire un sistema di verification che partisse dal business reale: le situazioni concrete che un MR Fidia affronta ogni giorno, in ogni mercato.</>,
       solutionObjectives: [],
       skillsLabel: 'COMPETENZE VALUTATE',
       skillsNote: "Il modello è strutturato su tre layer sovrapposti, dal più trasversale al più specifico per ruolo, ancorato al framework VOLA (Vision, Ownership, Leadership, Accountability) già in uso in Fidia.",
@@ -134,7 +134,7 @@ const content = {
       qualitative: [
         { icon: Eye, title: 'La prima fotografia oggettiva della rete vendita globale in 12 lingue', text: "Per la prima volta, Fidia avrà una visione strutturata e confrontabile delle competenze di tutti i suoi MR nel mondo — costruita con gli stessi criteri in ogni Paese, indipendentemente dalla lingua o dalla cultura commerciale locale." },
         { icon: TrendingUp, title: 'Una transizione supportata dai dati', text: "Fidia saprà su quali figure lavorare, con quali percorsi e con quali priorità per assicurare che l'evoluzione del business e del modello commerciale siano supportate dalla presenza in azienda dei migliori professionisti." },
-        { icon: CheckCircle, title: 'Sviluppo e formazione finalmente collegati', text: "I gap rilevati dall'assessment dialogheranno direttamente con i sistemi di formazione interni. La connessione tra valutazione e percorso formativo chiuderà un loop che prima restava aperto." },
+        { icon: CheckCircle, title: 'Sviluppo e formazione finalmente collegati', text: "I gap rilevati dall'verification dialogheranno direttamente con i sistemi di formazione interni. La connessione tra valutazione e percorso formativo chiuderà un loop che prima restava aperto." },
         { icon: Layers, title: 'Preparazione al futuro, per le persone e per l\'azienda', text: "Il lavoro avviato costruirà le basi per l'impostazione di un modello di sviluppo costante del talento, orientato a garantire una piena realizzazione di ogni persona, maggiore employability e maggiore responsività alle trasformazioni del mercato." },
       ],
     },
@@ -163,7 +163,7 @@ const content = {
     heroMetrics: [
       { value: '1,700', label: 'employees' },
       { value: '120+', label: 'countries' },
-      { value: '400+', label: 'employees already included in assessment' },
+      { value: '400+', label: 'employees already included in verification' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -207,7 +207,7 @@ const content = {
         {
           icon: Shield,
           title: 'A scalable infrastructure was needed',
-          text: "A scalable assessment system, replicable across roles and regions, was needed to lay the foundations for extending the project to Fidia's entire workforce and other phases of the talent lifecycle, without starting from scratch each time.",
+          text: "A scalable verification system, replicable across roles and regions, was needed to lay the foundations for extending the project to Fidia's entire workforce and other phases of the talent lifecycle, without starting from scratch each time.",
         },
       ],
       hrChallenges: [
@@ -218,8 +218,8 @@ const content = {
         },
         {
           icon: CheckCircle,
-          title: 'Assessment and training needed to be connected',
-          text: "Assessment results had to feed internal training systems. Every gap needed to be translated into a concrete, measurable development action aligned with the organisation's priorities.",
+          title: 'Verification and training needed to be connected',
+          text: "Verification results had to feed internal training systems. Every gap needed to be translated into a concrete, measurable development action aligned with the organisation's priorities.",
         },
         {
           icon: Zap,
@@ -233,15 +233,15 @@ const content = {
       title: 'What needed to change',
       items: [
         { icon: Eye, text: <><strong className="font-bold text-[#121212]/90">Obtain</strong> an objective, standardised and comparable picture of all global MRs' skills, applying the same criteria regardless of country.</> },
-        { icon: Target, text: <><strong className="font-bold text-[#121212]/90">Identify</strong> high-potential profiles to place in growth and development pathways — a scalable alternative to external assessments.</> },
+        { icon: Target, text: <><strong className="font-bold text-[#121212]/90">Identify</strong> high-potential profiles to place in growth and development pathways — a scalable alternative to external verifications.</> },
         { icon: Layers, text: <><strong className="font-bold text-[#121212]/90">Manage</strong> multilingual complexity (12+ languages), ensuring fairness and comparability of results without sacrificing authenticity of responses.</> },
-        { icon: CheckCircle, text: <><strong className="font-bold text-[#121212]/90">Create</strong> a direct link between assessment results and individual development plans within internal training systems.</> },
+        { icon: CheckCircle, text: <><strong className="font-bold text-[#121212]/90">Create</strong> a direct link between verification results and individual development plans within internal training systems.</> },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment built ad hoc on the Fidia model',
-      intro: <>The Fidia and Skillvue teams worked together to build an assessment system rooted in real business situations: the concrete scenarios a Fidia MR faces every day, in every market.</>,
+      title: 'AI Verification built ad hoc on the Fidia model',
+      intro: <>The Fidia and Skillvue teams worked together to build an verification system rooted in real business situations: the concrete scenarios a Fidia MR faces every day, in every market.</>,
       solutionObjectives: [],
       skillsLabel: 'SKILLS ASSESSED',
       skillsNote: "The skill model is structured across three overlapping layers, from the most transversal to the most role-specific, anchored to the VOLA framework (Vision, Ownership, Leadership, Accountability) already in use at Fidia.",
@@ -261,7 +261,7 @@ const content = {
       qualitative: [
         { icon: Eye, title: 'The first objective picture of the global sales network, in 12 languages', text: "For the first time, Fidia will have a structured, comparable view of all its MRs' skills worldwide, built with the same criteria in every country, regardless of language or local commercial culture." },
         { icon: TrendingUp, title: 'A transition supported by data', text: "Fidia will know which profiles to develop, how and with which priority, to ensure that the evolution of the business and commercial model is backed by the right people in the organisation." },
-        { icon: CheckCircle, title: 'Development and training finally connected', text: "The gaps identified by the assessment connect directly with internal training systems. The link between evaluation and development path closes a loop that was previously left open." },
+        { icon: CheckCircle, title: 'Development and training finally connected', text: "The gaps identified by the verification connect directly with internal training systems. The link between evaluation and development path closes a loop that was previously left open." },
         { icon: Layers, title: 'Building for the future both for people and for the organisation', text: "This project will lay the foundations for a continuous talent development model, designed to ensure the full realisation of every person, greater employability and greater responsiveness to labour market transformations." },
       ],
     },

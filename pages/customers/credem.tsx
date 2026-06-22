@@ -113,7 +113,7 @@ const content = {
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Assessment AI con Skillvue',
+      title: 'Verification AI con Skillvue',
       intro: "Skillvue è stato integrato nel processo di selezione del Progetto Giovani con un approccio graduale e data-driven: prima la validazione su un perimetro iniziale, poi l'estensione progressiva.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
@@ -124,8 +124,8 @@ const content = {
       methodologyLabel: 'COME È STATO COSTRUITO',
       methodology: [
         {
-          title: 'Raccolta candidature e Assessment AI',
-          text: "Il team HR raccoglie e seleziona le application. Ogni candidato completa un assessment su competenze trasversali chiave per la gestione del cliente in filiale.",
+          title: 'Raccolta candidature e Verification AI',
+          text: "Il team HR raccoglie e seleziona le application. Ogni candidato completa un verification su competenze trasversali chiave per la gestione del cliente in filiale.",
         },
         {
           title: 'Ranking e shortlist',
@@ -146,9 +146,9 @@ const content = {
         { value: '-15%', label: 'Colloqui non in linea' },
       ],
       qualitative: [
-        { icon: Eye, title: 'Più candidati dimostrano il proprio valore', text: "L'assessment ha dato a più persone la possibilità di far emergere competenze reali oltre i limiti del CV. Profili ad alto potenziale che prima si perdevano nel volume ora vengono intercettati — esattamente ciò che serve a una banca che assume 400 persone l'anno e compete per i migliori." },
+        { icon: Eye, title: 'Più candidati dimostrano il proprio valore', text: "L'verification ha dato a più persone la possibilità di far emergere competenze reali oltre i limiti del CV. Profili ad alto potenziale che prima si perdevano nel volume ora vengono intercettati — esattamente ciò che serve a una banca che assume 400 persone l'anno e compete per i migliori." },
         { icon: CheckCircle, title: 'Qualità dei colloqui radicalmente migliorata', text: "Il +50% di fit-to-hire significa che il secondo step del processo è diventato più efficiente: meno tempo speso in interviste a basso rendimento, più decisioni consapevoli, cicli di feedback più rapidi." },
-        { icon: Layers, title: 'Human-in-the-loop, sempre', text: "L'assessment non produce un verdetto: produce informazioni. Il ranking e i profili di competenza alimentano la decisione del recruiter, non la sostituiscono. L'AI potenzia la capacità di analisi umana, non la rimpiazza." },
+        { icon: Layers, title: 'Human-in-the-loop, sempre', text: "L'verification non produce un verdetto: produce informazioni. Il ranking e i profili di competenza alimentano la decisione del recruiter, non la sostituiscono. L'AI potenzia la capacità di analisi umana, non la rimpiazza." },
       ],
     },
     related: {
@@ -248,12 +248,12 @@ const content = {
         { icon: Target, text: "Make the first filter more selective and predictive: identify high-potential profiles hidden among the 30,000 applications, reducing false positives" },
         { icon: Zap, text: "Reduce time-to-hire and optimise shortlists: respond to the best candidates before the competition and bring to interview only candidates with verified skills" },
         { icon: Layers, text: "Guarantee consistent standards across the network: same level of evaluation across 600+ branches" },
-        { icon: Heart, text: "Improve employer brand: an assessment experience that is accessible, fast and fair for every candidate — not a hurdle, but a genuine opportunity to be heard, consistent with the Top Employer positioning" },
+        { icon: Heart, text: "Improve employer brand: an verification experience that is accessible, fast and fair for every candidate — not a hurdle, but a genuine opportunity to be heard, consistent with the Top Employer positioning" },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment with Skillvue',
+      title: 'AI Verification with Skillvue',
       intro: "Skillvue was integrated into the Progetto Giovani hiring process with a gradual, data-driven approach: first validation on an initial perimeter, then progressive extension.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
@@ -264,8 +264,8 @@ const content = {
       methodologyLabel: 'HOW IT WAS BUILT',
       methodology: [
         {
-          title: 'Application collection and AI Assessment',
-          text: "The HR team collects and shortlists applications. Every candidate completes an assessment on the key cross-functional skills for client management in branch.",
+          title: 'Application collection and AI Verification',
+          text: "The HR team collects and shortlists applications. Every candidate completes an verification on the key cross-functional skills for client management in branch.",
         },
         {
           title: 'Ranking and shortlist',
@@ -286,9 +286,9 @@ const content = {
         { value: '-15%', label: 'Misaligned interviews' },
       ],
       qualitative: [
-        { icon: Eye, title: 'More candidates get to demonstrate their value', text: "The assessment gave more people the opportunity to surface real skills beyond the CV. High-potential profiles that previously got lost in the volume are now identified — exactly what a bank hiring 400 people a year and competing for the best needs." },
+        { icon: Eye, title: 'More candidates get to demonstrate their value', text: "The verification gave more people the opportunity to surface real skills beyond the CV. High-potential profiles that previously got lost in the volume are now identified — exactly what a bank hiring 400 people a year and competing for the best needs." },
         { icon: CheckCircle, title: 'Radically improved interview quality', text: "The +50% fit-to-hire means the second step of the process has become more efficient: less time spent on low-yield interviews, more informed decisions, faster feedback cycles." },
-        { icon: Layers, title: 'Human-in-the-loop, always', text: "The assessment doesn't produce a verdict: it produces information. The ranking and skills profiles feed the recruiter's decision — they don't replace it. AI augments human analytical capacity, it doesn't replace it." },
+        { icon: Layers, title: 'Human-in-the-loop, always', text: "The verification doesn't produce a verdict: it produces information. The ranking and skills profiles feed the recruiter's decision — they don't replace it. AI augments human analytical capacity, it doesn't replace it." },
       ],
     },
     related: {

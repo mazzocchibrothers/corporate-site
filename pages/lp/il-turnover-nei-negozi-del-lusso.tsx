@@ -25,7 +25,7 @@ const heroStats = [
   { value: '30–40%', label: 'Turnover del personale di front line entro 12 mesi' },
   { value: '1,5–2x', label: 'Costo di sostituzione rispetto allo stipendio annuo' },
   { value: '51%', label: 'Advisor che considera di lasciare il lavoro (CXG, 2024)' },
-  { value: '0,58', label: "Validità predittiva dell'assessment comportamentale" },
+  { value: '0,58', label: "Validità predittiva dell'verification comportamentale" },
 ];
 
 const featureCards = [
@@ -42,7 +42,7 @@ const featureCards = [
   {
     icon: <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>,
     title: 'Selezione predittiva e retention',
-    desc: "Il colloquio non strutturato ha una validità di 0,38. L'assessment comportamentale arriva a 0,58. Le aziende che lo adottano registrano un turnover inferiore del 39%. Il massimo ROI si colloca prima della firma del contratto.",
+    desc: "Il colloquio non strutturato ha una validità di 0,38. L'verification comportamentale arriva a 0,58. Le aziende che lo adottano registrano un turnover inferiore del 39%. Il massimo ROI si colloca prima della firma del contratto.",
   },
 ];
 
@@ -526,7 +526,7 @@ function WhitepaperLayer() {
 
             <SectionHeading num="3" title="L'equazione nascosta: selezione predittiva e retention" />
             <Para>La maggior parte delle strategie di retention nel luxury retail si concentra a valle del problema: programmi di engagement, percorsi di carriera, incentivi economici. Interventi necessari, ma che agiscono su un bacino già contaminato da <strong className="text-[#0D0D0D]/80">errori di selezione che avrebbero potuto essere evitati</strong> con sistemi di valutazione strutturati.</Para>
-            <Para>La meta-analisi di Schmidt e Hunter quantifica la capacità predittiva di ciascun metodo. Il <strong className="text-[#0D0D0D]/80">colloquio non strutturato</strong> — ancora lo strumento dominante nella selezione del lusso — ha una <strong className="text-[#0D0D0D]/80">validità di 0,38 su una scala da 0 a 1</strong>. Il colloquio strutturato migliora a 0,51. Ma è la combinazione di <strong className="text-[#0D0D0D]/80">assessment comportamentali e colloquio strutturato</strong> a raggiungere valori compositi che <strong className="text-[#0D0D0D]/80">superano 0,58</strong>.</Para>
+            <Para>La meta-analisi di Schmidt e Hunter quantifica la capacità predittiva di ciascun metodo. Il <strong className="text-[#0D0D0D]/80">colloquio non strutturato</strong> — ancora lo strumento dominante nella selezione del lusso — ha una <strong className="text-[#0D0D0D]/80">validità di 0,38 su una scala da 0 a 1</strong>. Il colloquio strutturato migliora a 0,51. Ma è la combinazione di <strong className="text-[#0D0D0D]/80">verification comportamentali e colloquio strutturato</strong> a raggiungere valori compositi che <strong className="text-[#0D0D0D]/80">superano 0,58</strong>.</Para>
 
             <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-6">
               <p className="text-[12px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">Validità predittiva</p>
@@ -535,7 +535,7 @@ function WhitepaperLayer() {
                 {[
                   { label: 'Colloquio non strutturato', val: 0.38, pct: 38, color: '#EF4444' },
                   { label: 'Colloquio strutturato', val: 0.51, pct: 51, color: '#FFB74B' },
-                  { label: 'Assessment comportamentale', val: 0.58, pct: 58, gradient: 'linear-gradient(90deg, #4B4DF7, #7B4DFF)', color: '#4B4DF7' },
+                  { label: 'Verification comportamentale', val: 0.58, pct: 58, gradient: 'linear-gradient(90deg, #4B4DF7, #7B4DFF)', color: '#4B4DF7' },
                 ].map((item, i) => (
                   <div key={i}>
                     <div className="flex justify-between text-[12px] mb-1.5">
@@ -554,7 +554,7 @@ function WhitepaperLayer() {
               <p className="text-[11px] text-[#0D0D0D]/30 italic mt-4">Fonte: Schmidt & Hunter, 1998; Campion et al., 1997</p>
             </div>
 
-            <Para>I dati sul campo confermano la teoria. Le aziende che utilizzano assessment comportamentale strutturato pre-assunzione registrano un <strong className="text-[#0D0D0D]/80">turnover inferiore del 39%</strong> rispetto a quelle che non li adottano. Hogan Assessments documenta riduzioni del turnover nel retail <strong className="text-[#0D0D0D]/80">fino al 61%</strong> con l'introduzione di assessment strutturati. Il colloquio, anche ben condotto, è vulnerabile al <strong className="text-[#0D0D0D]/80">faking behavior</strong>: nel lusso, dove i candidati conoscono perfettamente i codici del settore, questo rischio è massimo.</Para>
+            <Para>I dati sul campo confermano la teoria. Le aziende che utilizzano verification comportamentale strutturato pre-assunzione registrano un <strong className="text-[#0D0D0D]/80">turnover inferiore del 39%</strong> rispetto a quelle che non li adottano. Hogan Verifications documenta riduzioni del turnover nel retail <strong className="text-[#0D0D0D]/80">fino al 61%</strong> con l'introduzione di verification strutturati. Il colloquio, anche ben condotto, è vulnerabile al <strong className="text-[#0D0D0D]/80">faking behavior</strong>: nel lusso, dove i candidati conoscono perfettamente i codici del settore, questo rischio è massimo.</Para>
 
             <InfoBox title="Caso anonimo: chi investe in formazione dimezza il turnover" accent>
               <p>Un <strong className="text-[#0D0D0D]/80">gruppo del lusso europeo</strong> con oltre <strong className="text-[#0D0D0D]/80">8.000 dipendenti</strong> e circa <strong className="text-[#0D0D0D]/80">280 negozi diretti</strong> ha ridotto il turnover volontario dal <strong className="text-[#0D0D0D]/80">13,4% al 10,1% in due anni</strong>, portandolo a meno di un terzo della media di settore (30–35%). Il programma interno di brand academy — che combina formazione sul prodotto, coaching sul clienteling e mentorship con advisor senior — ha prodotto un <strong className="text-[#0D0D0D]/80">tasso di uscita inferiore di 8 punti percentuali</strong> tra chi vi ha partecipato. L'investimento in formazione è cresciuto del <strong className="text-[#0D0D0D]/80">48% in un solo anno</strong>, con oltre 35 ore medie erogate per persona.</p>
@@ -633,7 +633,7 @@ function WhitepaperLayer() {
             <div className="border-t border-black/[0.07] pt-8 mt-8">
               <h3 className="text-[1.1rem] font-bold text-[#0D0D0D] mb-4">About Skillvue</h3>
               <Para>Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di <strong className="text-[#0D0D0D]/80">talent intelligence</strong> basata sull'AI che aggiunge una dimensione dinamica e oggettiva ai dati HR: trasformiamo informazioni statiche in <strong className="text-[#0D0D0D]/80">insight predittivi</strong> che permettono di prendere decisioni migliori nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.</Para>
-              <Para>A differenza delle suite HR generiche o degli strumenti di assessment unidimensionali, Skillvue <strong className="text-[#0D0D0D]/80">combina la solidità della scienza psicometrica con la potenza dei moderni LLM</strong> per creare un <strong className="text-[#0D0D0D]/80">co-pilota AI scientificamente fondato</strong>, allineato al modello di leadership e al quadro di competenze specifico di ciascuna azienda.</Para>
+              <Para>A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue <strong className="text-[#0D0D0D]/80">combina la solidità della scienza psicometrica con la potenza dei moderni LLM</strong> per creare un <strong className="text-[#0D0D0D]/80">co-pilota AI scientificamente fondato</strong>, allineato al modello di leadership e al quadro di competenze specifico di ciascuna azienda.</Para>
             </div>
 
             <div className="border-t border-black/[0.07] pt-8 mt-8">
@@ -650,7 +650,7 @@ function WhitepaperLayer() {
                   'Work Institute, Retention Report 2024.',
                   'SHRM, Human Capital Benchmarking Report 2023.',
                   'Schmidt F.L., Oh I-S., The Validity and Utility of Selection Methods: 100 Years of Research. Working Paper, 2016.',
-                  'Hogan Assessments, Retail Personality Assessments e Success Stories (2021).',
+                  'Hogan Verifications, Retail Personality Verifications e Success Stories (2021).',
                   'Regolamento (UE) 2024/1689, Artificial Intelligence Act, luglio 2024.',
                   'Direttiva (UE) 2023/970, Trasparenza Retributiva, maggio 2023.',
                 ].map((ref, i) => (

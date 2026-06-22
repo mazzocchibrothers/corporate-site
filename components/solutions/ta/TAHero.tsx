@@ -27,7 +27,7 @@ export default function TAHero() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <p className="text-[14px] md:text-[16px] lg:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-xl font-normal md:font-light">
-            {t('Skillvue replaces guesswork with science at scale. AI-powered assessments customized to your roles and leadership model surface top candidates, cut early turnover, and make every hiring decision defensible.')}
+            {t('Skillvue replaces guesswork with science at scale. AI-powered verifications customized to your roles and leadership model surface top candidates, cut early turnover, and make every hiring decision defensible.')}
           </p>
           <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="ta-hero-cta" className="group inline-flex items-center justify-between w-full lg:w-auto lg:max-w-xl px-6 py-4 lg:px-8 lg:py-5 text-[14px] lg:text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500 shrink-0">
             <span>{t('Book a Demo')}</span>

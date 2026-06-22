@@ -22,10 +22,10 @@ export default function ProductOverviewPage() {
   return (
     <>
       <Head>
-        <title>{isIT ? 'Piattaforma | Valutazioni Talent con AI | Skillvue' : 'Platform | AI-Powered Talent Assessments | Skillvue'}</title>
+        <title>{isIT ? 'Piattaforma | Valutazioni Talent con AI | Skillvue' : 'Platform | AI-Powered Talent Verifications | Skillvue'}</title>
         <meta name="description" content={isIT
           ? "Un'unica piattaforma per selezione, performance, L&D e successione. Valutazioni AI con scienza psicometrica e 100+ integrazioni con SAP, Workday e Oracle."
-          : 'One platform for hiring, performance, L&D and succession planning. AI-powered assessments with psychometric science and 100+ integrations with SAP, Workday and Oracle.'
+          : 'One platform for hiring, performance, L&D and succession planning. AI-powered verifications with psychometric science and 100+ integrations with SAP, Workday and Oracle.'
         } />
         <link rel="canonical" href={canonical} />
       </Head>

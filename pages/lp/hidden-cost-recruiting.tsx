@@ -21,7 +21,7 @@ const stats = [
   { value: '€15–25M', label: 'Non-predictive selection cost / year' },
   { value: '2,000', label: 'Agents in the reference network' },
   { value: '20–25%', label: 'Annual agency network turnover' },
-  { value: '0.54', label: 'Predictive validity of assessment' },
+  { value: '0.54', label: 'Predictive validity of verification' },
 ];
 
 const chapters = [
@@ -42,12 +42,12 @@ const chapters = [
   },
   {
     num: '04',
-    title: 'Measuring Talent Through Structured Assessment',
+    title: 'Measuring Talent Through Structured Verification',
     desc: 'How behavioural event interviews and situational judgment tests surface real potential.',
   },
   {
     num: '05',
-    title: 'From Assessment to Impact',
+    title: 'From Verification to Impact',
     desc: 'Expected ROI: improved selection quality, network productivity, and cross-market consistency.',
   },
 ];
@@ -83,7 +83,7 @@ const economics = [
   { value: '€35–50k', label: 'Cost of a failed hire' },
   { value: '25–40%', label: 'Reduction in mis-hire rate' },
   { value: '3–5×', label: 'Top vs. low performer differential' },
-  { value: '0.54', label: 'Predictive validity of structured assessment' },
+  { value: '0.54', label: 'Predictive validity of structured verification' },
 ];
 
 export default function HiddenCostRecruiting() {
@@ -405,7 +405,7 @@ export default function HiddenCostRecruiting() {
                   {[
                     'Why unstructured interviews have a predictive validity of only 0.38',
                     'The 4 behavioural dimensions that predict top-performer insurance agents',
-                    'How structured assessment reduces mis-hire rates by 25–40%',
+                    'How structured verification reduces mis-hire rates by 25–40%',
                     'The EU AI Act regulatory framework as a competitive advantage',
                     '3 strategic questions for your executive committee',
                   ].map((item, i) => (
@@ -467,7 +467,7 @@ export default function HiddenCostRecruiting() {
                 <span className="gradient-text">science-backed</span>
               </h2>
               <p className="text-[16px] text-white/50 leading-[1.8] mb-4" style={{ fontWeight: 300 }}>
-                Skillvue is a talent intelligence platform that blends psychometrics with modern LLMs to deliver customized, scalable behavioural assessments — aligned to each company's specific leadership model and skills framework.
+                Skillvue is a talent intelligence platform that blends psychometrics with modern LLMs to deliver customized, scalable behavioural verifications — aligned to each company's specific leadership model and skills framework.
               </p>
               <p className="text-[16px] text-white/50 leading-[1.8]" style={{ fontWeight: 300 }}>
                 We serve mid-to-large enterprises across Europe where talent decisions are high-stakes. Our platform works across the full talent lifecycle — from candidate screening to organizational transformation readiness — fully compliant with the EU AI Act.
