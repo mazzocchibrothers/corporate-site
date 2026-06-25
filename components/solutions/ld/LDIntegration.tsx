@@ -19,7 +19,7 @@ export default function LDIntegration() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold text-white/90 mb-6">
+          <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-semibold text-white/90 mb-6">
             {t('Skillvue enriches your')}{' '}
             <span className="font-bold gradient-text">{t('learning ecosystem')}</span>
           </h2>

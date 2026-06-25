@@ -134,7 +134,7 @@ export default function CareerAspirationInsuranceVetrina() {
 
             <motion.h1
               variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
-              className="text-[clamp(2.4rem,5vw,4rem)] font-bold tracking-[-0.03em] text-[#0D0D0D] leading-[1.1] mb-6"
+              className="text-[clamp(2.4rem,5vw,4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.1] mb-6"
             >
               Career Aspiration Intelligence{' '}
               <span
@@ -247,7 +247,7 @@ export default function CareerAspirationInsuranceVetrina() {
               variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold tracking-[-0.025em] text-[#0D0D0D] mb-3">
+              <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.025em] text-[#0D0D0D] mb-3">
                 Cosa troverai nel report
               </h2>
               <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
@@ -282,7 +282,7 @@ export default function CareerAspirationInsuranceVetrina() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Left */}
               <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-bold tracking-[-0.025em] text-[#0D0D0D] leading-[1.15] mb-6">
+                <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.15] mb-6">
                   Scarica il report completo
                 </h2>
                 <ul className="space-y-3 mb-8">
@@ -321,7 +321,7 @@ export default function CareerAspirationInsuranceVetrina() {
                 className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10"
                 style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}
               >
-                <h3 className="text-[17px] font-bold text-[#0D0D0D] mb-1">Compila per scaricare il PDF</h3>
+                <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">Compila per scaricare il PDF</h3>
                 <p className="text-[13px] text-[#0D0D0D]/35 mb-7">Gratuito · Accesso immediato</p>
 
                 <div id="hs-form-container" />

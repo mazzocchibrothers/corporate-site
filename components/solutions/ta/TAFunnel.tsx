@@ -109,7 +109,7 @@ function ColumnCard({ data, delay, t }) {
         <div className="w-9 h-9 rounded-lg bg-[#4B4DF7]/[0.12] flex items-center justify-center">
           <Icon className="h-5 w-5 md:h-4.5 md:w-4.5 text-[#9B9DFB]" />
         </div>
-        <h4 className="text-[15px] md:text-[14px] font-bold text-[#1A1A2E]/70 tracking-wide">{t(data.title)}</h4>
+        <h4 className="text-[15px] md:text-[14px] font-semibold text-[#1A1A2E]/70 tracking-wide">{t(data.title)}</h4>
       </div>
 
       {data.items ? (
@@ -122,7 +122,7 @@ function ColumnCard({ data, delay, t }) {
                 <div>
                   <span className="text-[14px] text-[#1A1A2E]/80 font-medium">{t(item.text)}</span>
                   {item.detail && (
-                    <span className="text-[13px] md:text-[12px] text-[#1A1A2E]/35 ml-1.5">({t(item.detail)})</span>
+                    <span className="text-[13px] md:text-[12px] text-[#7A7A7A] ml-1.5">({t(item.detail)})</span>
                   )}
                 </div>
               </div>
@@ -169,7 +169,7 @@ export default function TAFunnel() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">
             {t('From automation to insight, what your team gets at')}{' '}
             <span className="italic font-bold gradient-text-on-light">{t('every stage of the funnel')}</span>
           </h2>
@@ -196,7 +196,7 @@ export default function TAFunnel() {
               <span className={`text-[9px] md:text-[11px] font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase block mb-0.5 md:mb-1 ${i === active ? 'text-[#9B9DFB]' : 'text-[#1A1A2E]/25'}`}>
                 {t('Stage')} {s.number}
               </span>
-              <span className={`text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-white' : 'text-[#1A1A2E]/50'}`}>
+              <span className={`text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-white' : 'text-[#7A7A7A]'}`}>
                 {t(s.label)}
               </span>
               {i === active && (

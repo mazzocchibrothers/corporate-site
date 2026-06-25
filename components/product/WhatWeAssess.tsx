@@ -38,11 +38,11 @@ export default function WhatWeAssess() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-4 md:mb-6">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-4 md:mb-6">
             {t('Five dimensions for')}{' '}
             <span className="italic font-bold gradient-text-on-light">{t('objective evaluations')}</span>
           </h2>
-          <p className="text-[14px] md:text-[18px] text-[#1A1A2E]/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">
+          <p className="text-[14px] md:text-[18px] text-[#7A7A7A] leading-[1.6] md:leading-[1.75] max-w-2xl">
             {t("Every person evaluated through a structured, science-backed framework. whether they're a candidate or a 20-year veteran.")}
           </p>
         </motion.div>
@@ -53,14 +53,14 @@ export default function WhatWeAssess() {
             <motion.div
               key={dim.title}
               data-testid={`dimension-${dim.title.toLowerCase().replace(/\s+/g, '-')}`}
-              className="shrink-0 w-[80vw] snap-center bg-[#F5F5FA] rounded-xl p-4 flex flex-col"
+              className="shrink-0 w-[80vw] snap-center bg-white border border-[#E5E7EB] rounded-xl p-4 flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
             >
-              <h3 className="text-[15px] font-bold text-[#1A1A2E] mb-0.5">{t(dim.title)}</h3>
+              <h3 className="text-[15px] font-semibold text-[#1A1A2E] mb-0.5">{t(dim.title)}</h3>
               <span className="text-[12px] text-[#4B4DF7]/[0.65] font-medium mb-2">{t(dim.subtitle)}</span>
-              <p className="text-[12px] text-[#1A1A2E]/[0.55] leading-[1.5]">{t(dim.desc)}</p>
+              <p className="text-[12px] text-[#7A7A7A] leading-[1.5]">{t(dim.desc)}</p>
             </motion.div>
           ))}
         </div>
@@ -70,19 +70,19 @@ export default function WhatWeAssess() {
         </div>
 
         {/* Desktop: existing grid */}
-        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-px md:bg-[#4B4DF7]/[0.06] md:rounded-2xl md:overflow-hidden mb-8 md:mb-10">
+        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-3 lg:gap-4 mb-8 md:mb-10">
           {dimensions.map((dim, i) => (
             <motion.div
               key={dim.title}
               data-testid={`dimension-${dim.title.toLowerCase().replace(/\s+/g, '-')}`}
-              className="bg-[#F5F5FA] md:rounded-none p-4 md:p-8 flex flex-col"
+              className="bg-white border border-[#E5E7EB] rounded-2xl p-4 md:p-8 flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
             >
-              <h3 className="text-[15px] md:text-[17px] font-bold text-[#1A1A2E] mb-0.5 md:mb-1">{t(dim.title)}</h3>
+              <h3 className="text-[15px] md:text-[17px] font-semibold text-[#1A1A2E] mb-0.5 md:mb-1">{t(dim.title)}</h3>
               <span className="text-[12px] md:text-[12px] text-[#4B4DF7]/[0.65] font-medium mb-2 md:mb-4">{t(dim.subtitle)}</span>
-              <p className="text-[12px] md:text-[14px] text-[#1A1A2E]/[0.55] leading-[1.5] md:leading-[1.7]">{t(dim.desc)}</p>
+              <p className="text-[12px] md:text-[14px] text-[#7A7A7A] leading-[1.5] md:leading-[1.7]">{t(dim.desc)}</p>
             </motion.div>
           ))}
         </div>

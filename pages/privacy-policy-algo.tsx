@@ -19,7 +19,7 @@ export default function PrivacyPolicyAlgo() {
               <span className="text-[11px] font-bold text-[#4B4DF7]/60 tracking-[0.2em] uppercase mb-6 block">
                 Legal
               </span>
-              <h1 className="font-bold text-white/95 mb-4" style={{ fontSize: 'clamp(2rem,4vw,3rem)', lineHeight: 1.1, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-4" style={{ fontSize: 'clamp(2rem,4vw,3rem)', lineHeight: 1.1, letterSpacing: '-0.03em' }}>
                 Trattamento dati personali
               </h1>
               <p className="text-[16px] text-white/40 leading-[1.7]">
@@ -45,7 +45,7 @@ export default function PrivacyPolicyAlgo() {
                   Versione italiana
                 </div>
 
-                <h2 className="text-[clamp(1.4rem,2.5vw,1.9rem)] font-bold text-[#121212] mb-8 leading-[1.3]">
+                <h2 className="text-[clamp(1.4rem,2.5vw,1.9rem)] font-semibold text-[#121212] mb-8 leading-[1.3]">
                   Informativa sul trattamento di dati personali svolto tramite il software Skillvue
                 </h2>
 
@@ -122,7 +122,7 @@ export default function PrivacyPolicyAlgo() {
                   English version
                 </div>
 
-                <h2 className="text-[clamp(1.4rem,2.5vw,1.9rem)] font-bold text-[#121212] mb-8 leading-[1.3]">
+                <h2 className="text-[clamp(1.4rem,2.5vw,1.9rem)] font-semibold text-[#121212] mb-8 leading-[1.3]">
                   Information on the processing of personal data carried out through the Skillvue software
                 </h2>
 
@@ -205,7 +205,7 @@ export default function PrivacyPolicyAlgo() {
 function PolicySection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mb-10">
-      <h3 className="text-[17px] font-bold text-[#121212] mb-4 pb-3 border-b border-[#121212]/[0.07]">
+      <h3 className="text-[17px] font-semibold text-[#121212] mb-4 pb-3 border-b border-[#121212]/[0.07]">
         {title}
       </h3>
       <div className="text-[15px] text-[#121212]/65 leading-[1.8] space-y-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_ul]:mt-2">

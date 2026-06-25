@@ -35,7 +35,7 @@ export default function CustomerStoriesShowcase() {
             </span>
 
             <h2
-              className="font-bold text-white/95 mb-8"
+              className="font-semibold text-white/95 mb-8"
               style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
             >
               {t('See how')}<br />{t('they')}{' '}
@@ -91,7 +91,8 @@ export default function CustomerStoriesShowcase() {
               <div className="absolute top-0 left-0 right-0 z-10 p-6 flex items-center gap-5" style={{ paddingRight: '24px' }}>
                 <button
                   onClick={toggleMute}
-                  className="w-14 h-14 rounded-full border border-white/15 flex items-center justify-center hover:bg-white/10 transition-all duration-300 shrink-0"
+                  aria-label={muted ? 'Unmute video' : 'Mute video'}
+                  className="w-14 h-14 rounded-full border border-white/15 flex items-center justify-center hover:bg-white/10 transition-all duration-300 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
                 >
                   {muted ? (
                     <VolumeX className="h-5 w-5 text-white/80" />

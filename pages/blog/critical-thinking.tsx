@@ -75,7 +75,7 @@ export default function BlogArticle5() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? 'Che cos\'è davvero il pensiero critico?' : 'What Is Critical Thinking, Really?'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
@@ -110,7 +110,7 @@ export default function BlogArticle5() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? 'Come identificare il pensiero critico nel lavoro quotidiano' : 'How to Identify Critical Thinking in Daily Work'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-8">
@@ -148,7 +148,7 @@ export default function BlogArticle5() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? 'Come valutare il pensiero critico' : 'How to Evaluate Critical Thinking'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
@@ -164,11 +164,11 @@ export default function BlogArticle5() {
 
               <div className="grid md:grid-cols-2 gap-4 my-8">
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.03] p-6">
-                  <h3 className="text-[15px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Domande situazionali' : 'Situational Questions'}</h3>
+                  <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{lang === 'it' ? 'Domande situazionali' : 'Situational Questions'}</h3>
                   <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Forzano il ragionamento su un caso concreto, non su un principio astratto. Si osserva la struttura del ragionamento, non solo la risposta finale.' : 'Force reasoning on a concrete case, not an abstract principle. Observe the structure of reasoning, not just the final answer.'}</p>
                 </div>
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.03] p-6">
-                  <h3 className="text-[15px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Behavioral Event Interview' : 'Behavioral Event Interview'}</h3>
+                  <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{lang === 'it' ? 'Behavioral Event Interview' : 'Behavioral Event Interview'}</h3>
                   <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Invece di chiedere cosa farebbero, si chiede cosa hanno fatto. Si analizza il percorso mentale: quali informazioni sono state considerate, quali alternative sono state valutate.' : 'Instead of asking what they would do, ask what they did. Analyze the mental path: what information was considered, what alternatives were evaluated.'}</p>
                 </div>
               </div>
@@ -176,7 +176,7 @@ export default function BlogArticle5() {
               <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-10">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                  <h3 className="text-[16px] font-bold text-[#121212]">{lang === 'it' ? 'Punto chiave' : 'Key Takeaway'}</h3>
+                  <h3 className="text-[16px] font-semibold text-[#121212]">{lang === 'it' ? 'Punto chiave' : 'Key Takeaway'}</h3>
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
@@ -191,7 +191,7 @@ export default function BlogArticle5() {
         {/* FAQ */}
         <section className="relative py-20 lg:py-28">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12">
-            <motion.h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white/90 mb-10 tracking-[-0.02em]"
+            <motion.h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]"
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               {lang === 'it' ? 'Domande frequenti' : 'Frequently Asked Questions'}
             </motion.h2>
@@ -216,7 +216,7 @@ export default function BlogArticle5() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}</span>
-              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
+              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
                 {lang === 'it'
                   ? <>Distingui la percezione dalla <span className="gradient-text">competenza reale.</span></>
                   : <>Distinguish perception from real <span className="gradient-text">competency.</span></>}

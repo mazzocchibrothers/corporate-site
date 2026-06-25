@@ -31,7 +31,7 @@ export default function TAImpact() {
     <section id="ta-impact" data-testid="ta-impact" className="relative pb-20 lg:pb-24" style={{ background: '#F5F5FA' }} ref={ref}>
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div className="mb-8 md:mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">
             {t('Measurable impact on every hiring metric that')}{' '}
             <span className="italic font-bold gradient-text-on-light">{t('matters')}</span>
           </h2>
@@ -41,13 +41,13 @@ export default function TAImpact() {
           {kpis.map((k, i) => (
             <motion.div
               key={k.value}
-              className="shrink-0 w-[80vw] snap-center rounded-2xl border border-[#4B4DF7]/[0.06] bg-white/70 p-5"
+              className="shrink-0 w-[80vw] snap-center rounded-2xl border border-[#E5E7EB] bg-white p-5"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
             >
-              <span className="block mb-5 text-[#1A1A2E]" style={{ fontSize: 'clamp(2.8rem, 5vw, 4.2rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{k.value}</span>
-              <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-4">{t(k.label)} <span className="font-normal text-[#1A1A2E]/50">{t(k.sublabel)}</span></h3>
+              <span className="block mb-6 md:mb-10 text-[#1A1A2E] font-semibold" style={{ fontSize: '64px', lineHeight: 1, letterSpacing: '-0.03em' }}>{k.value}</span>
+              <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-4">{t(k.label)} <span className="font-normal text-[#7A7A7A]">{t(k.sublabel)}</span></h3>
             </motion.div>
           ))}
         </div>
@@ -57,11 +57,11 @@ export default function TAImpact() {
         </div>
 
         {/* Desktop */}
-        <div className="hidden md:grid lg:grid-cols-3 gap-px bg-[#4B4DF7]/[0.06] rounded-2xl overflow-hidden">
+        <div className="hidden md:grid lg:grid-cols-3 gap-4 lg:gap-5">
           {kpis.map((k, i) => (
-            <motion.div key={k.value} className="bg-[#F5F5FA] p-5 md:p-10 lg:p-12" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}>
-              <span className="block mb-5 text-[#1A1A2E]" style={{ fontSize: 'clamp(2.8rem, 5vw, 4.2rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{k.value}</span>
-              <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-4">{t(k.label)} <span className="font-normal text-[#1A1A2E]/50">{t(k.sublabel)}</span></h3>
+            <motion.div key={k.value} className="bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-10 lg:p-12" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}>
+              <span className="block mb-6 md:mb-10 text-[#1A1A2E] font-semibold" style={{ fontSize: '64px', lineHeight: 1, letterSpacing: '-0.03em' }}>{k.value}</span>
+              <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-4">{t(k.label)} <span className="font-normal text-[#7A7A7A]">{t(k.sublabel)}</span></h3>
             </motion.div>
           ))}
         </div>

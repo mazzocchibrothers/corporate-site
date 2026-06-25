@@ -39,7 +39,7 @@ export default function HeroSection() {
       id="hero"
       data-testid="hero-section"
       className="relative overflow-hidden flex flex-col justify-between pt-[80px]"
-      style={{ width: '100%', minHeight: '100vh', background: '#0d0d1f' }}
+      style={{ width: '100%', minHeight: '100vh' }}
     >
       {/* Hero content. layered above */}
       <div className="relative z-10 flex-1 flex items-start md:items-center pt-6 md:pt-0">
@@ -52,13 +52,13 @@ export default function HeroSection() {
                 aria-hidden="true"
                 className="absolute -top-10 -left-10 w-[320px] h-[320px] pointer-events-none opacity-60"
                 style={{
-                  background: 'radial-gradient(circle, rgba(75,77,247,0.22) 0%, rgba(255,86,86,0.08) 40%, transparent 70%)',
+                  background: 'radial-gradient(circle, rgba(255,155,70,0.14) 0%, rgba(75,77,247,0.05) 50%, transparent 75%)',
                   filter: 'blur(40px)',
                 }}
               />
 
               <motion.h1
-                className="relative text-[clamp(1.75rem,7vw,2.4rem)] md:text-[clamp(2.5rem,4.4vw,3.9rem)] font-bold tracking-[-0.028em] text-white"
+                className="relative text-[clamp(1.75rem,7vw,2.4rem)] md:text-[clamp(2.5rem,4.4vw,3.9rem)] font-semibold tracking-[-0.028em] text-white"
                 style={{ lineHeight: 1.08, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}

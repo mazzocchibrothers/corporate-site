@@ -38,9 +38,9 @@ export default function CustomersHero() {
   const logoFiles = [...baseLogos, ...baseLogos];
   return (
     <section id="customers-hero" data-testid="customers-hero" className="relative pt-[80px]">
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-24 lg:py-32">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-24 lg:py-32">
         <motion.h1
-          className="text-[clamp(2.8rem,5.5vw,5rem)] font-bold tracking-[-0.03em] text-white/95 mb-8 max-w-5xl"
+          className="text-[clamp(2.8rem,5.5vw,5rem)] font-semibold tracking-[-0.03em] text-white/95 mb-8 max-w-5xl"
           style={{ lineHeight: 1.15 }}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export default function CustomersHero() {
 
         {/* Live metrics bar */}
         <motion.div
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}

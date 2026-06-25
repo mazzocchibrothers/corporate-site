@@ -113,9 +113,9 @@ export default function BlogPage() {
             </span>
             <span className="text-[12px] text-[#121212]/30">{c.date}</span>
           </div>
-          <h2 className="text-[16px] md:text-[18px] font-bold text-[#121212] leading-snug mb-3 md:mb-4 group-hover:text-[#4B4DF7] transition-colors duration-300">
+          <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212] leading-snug mb-3 md:mb-4 group-hover:text-[#4B4DF7] transition-colors duration-300">
             {c.title}
-          </h2>
+          </h3>
           <span className="text-[13px] font-semibold text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
             {t('Read more')} <ArrowRight className="h-3.5 w-3.5" />
           </span>
@@ -134,7 +134,7 @@ export default function BlogPage() {
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <span className="text-[14px] font-semibold text-[#4B4DF7]/60 tracking-[0.2em] uppercase mb-8 block">{t('Resources')}</span>
               <h1
-                className="font-bold text-white/95 mb-8"
+                className="font-semibold text-white/95 mb-8"
                 style={{ fontSize: 'clamp(3.5rem, 7vw, 6rem)', lineHeight: 1.05, letterSpacing: '-0.04em' }}
               >
                 {t('Blog &')}<br />
@@ -161,7 +161,7 @@ export default function BlogPage() {
         <section id="articles" className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
             <motion.div className="mb-8 md:mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#121212] tracking-[-0.02em]">{t('All Articles')}</h2>
+              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('All Articles')}</h2>
             </motion.div>
 
             {/* Mobile: horizontal scroll */}
@@ -188,7 +188,7 @@ export default function BlogPage() {
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">
+              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">
                 {t('Want to go deeper? Talk to our team.')}
               </h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">

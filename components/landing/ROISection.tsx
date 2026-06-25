@@ -59,7 +59,7 @@ export default function ROISection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">
             {t('People are your biggest cost.')}{' '}
             <span className="italic font-bold gradient-text-warm-on-light">
               {t('They can also be your biggest return.')}
@@ -76,21 +76,20 @@ export default function ROISection() {
         </motion.div>
 
         {/* 3-column stat cards — horizontal scroll on mobile, 3-col grid on desktop */}
-        <div ref={scrollRef} className="md:grid md:grid-cols-3 md:gap-px md:bg-[#4B4DF7]/[0.06] md:rounded-2xl md:overflow-hidden flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 mb-10 md:mb-16 scrollbar-hide">
+        <div ref={scrollRef} className="md:grid md:grid-cols-3 md:gap-4 lg:gap-5 flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 mb-10 md:mb-16 scrollbar-hide">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.value}
               data-testid={`roi-stat-${stat.value}`}
-              className="group bg-[#F5F5FA] shrink-0 w-[70vw] md:w-auto snap-center rounded-2xl md:rounded-none p-5 md:p-10 lg:p-12 flex flex-col justify-between min-h-[240px] md:min-h-0"
+              className="group bg-white border border-[#E5E7EB] shrink-0 w-[70vw] md:w-auto snap-center rounded-2xl p-5 md:p-10 lg:p-12 flex flex-col min-h-[240px] md:min-h-0"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 + i * 0.12, ease: 'easeOut' }}
             >
               {/* Stat number */}
               <span
-                className="block text-[#1A1A2E] text-[2.5rem] md:text-[clamp(2.8rem,5vw,4.2rem)]"
+                className="block text-[#1A1A2E] text-[64px] font-semibold mb-6 md:mb-10"
                 style={{
-                  fontWeight: 800,
                   lineHeight: 1,
                   letterSpacing: '-0.03em',
                 }}
@@ -103,9 +102,9 @@ export default function ROISection() {
                 <h3
                   className="text-[15px] md:text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-2 md:mb-4"
                 >
-                  {t(stat.label)} <span className="font-normal text-[#1A1A2E]/50">{t(stat.sublabel)}</span>
+                  {t(stat.label)} <span className="font-normal text-[#7A7A7A]">{t(stat.sublabel)}</span>
                 </h3>
-                <p className="text-[13px] md:text-[15px] text-[#1A1A2E]/50 leading-[1.5] md:leading-relaxed">
+                <p className="text-[13px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-relaxed">
                   {t(stat.footnote)}
                 </p>
               </div>

@@ -44,7 +44,7 @@ function SectionHeading({ num, title }: { num?: string; title: string }) {
   return (
     <div className="mt-12 mb-5">
       <div className="w-8 h-0.5 rounded mb-3" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-      <h2 className="text-[1.5rem] font-bold tracking-[-0.02em] text-[#0D0D0D]">
+      <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D]">
         {num && <span className="mr-1">{num}.</span>}{title}
       </h2>
     </div>
@@ -54,7 +54,7 @@ function SectionHeading({ num, title }: { num?: string; title: string }) {
 function SubHeading({ title }: { title: string }) {
   return (
     <h3
-      className="text-[14px] font-bold mb-2 mt-6 flex items-center gap-2"
+      className="text-[14px] font-semibold mb-2 mt-6 flex items-center gap-2"
       style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
     >
       {title}
@@ -169,7 +169,7 @@ export default function IlCostoInvisibileWhitepaper() {
               >
                 INSURANCE · 2026
               </span>
-              <h1 className="text-[2rem] font-bold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
+              <h1 className="text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
                 Il costo invisibile
                 <span
                   className="block"
@@ -599,7 +599,7 @@ export default function IlCostoInvisibileWhitepaper() {
               {/* Next step */}
               <div className="mt-10 mb-8">
                 <div className="w-8 h-0.5 rounded mb-3" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-                <h2 className="text-[1.5rem] font-bold tracking-[-0.02em] text-[#0D0D0D] mb-4">Next step</h2>
+                <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D] mb-4">Next step</h2>
               </div>
               <Para>
                 Se la tua organizzazione sta ripensando il modello di selezione della rete agenziale, o se desidera mappare il
@@ -634,7 +634,7 @@ export default function IlCostoInvisibileWhitepaper() {
               {/* About Skillvue */}
               <div className="border-t border-black/[0.07] pt-10 mt-10">
                 <div className="w-8 h-0.5 rounded mb-4" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-                <h3 className="text-[1.1rem] font-bold text-[#0D0D0D] mb-4">About Skillvue</h3>
+                <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">About Skillvue</h3>
                 <Para>
                   Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di{' '}
                   <strong className="text-[#0D0D0D]/80">talent intelligence</strong> basata sull'AI che aggiunge una dimensione
@@ -652,7 +652,7 @@ export default function IlCostoInvisibileWhitepaper() {
 
               {/* References */}
               <div className="border-t border-black/[0.07] pt-8 mt-8">
-                <h3 className="text-[1rem] font-bold text-[#0D0D0D] mb-4">Fonti e riferimenti</h3>
+                <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-4">Fonti e riferimenti</h3>
                 <ul className="space-y-2">
                   {[
                     'McKinsey & Company (2023). The future of work in financial services: automation, reskilling, and redistribution.',

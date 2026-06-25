@@ -164,7 +164,7 @@ export default function HiddenCostRecruiting() {
             {/* Title */}
             <motion.h1
               variants={fadeUp} initial="hidden" animate="visible" custom={0.2}
-              className="text-[clamp(2.8rem,5.5vw,4.8rem)] font-bold tracking-[-0.03em] text-white/95 mb-6"
+              className="text-[clamp(2.8rem,5.5vw,4.8rem)] font-semibold tracking-[-0.03em] text-white/95 mb-6"
               style={{ lineHeight: 1.1 }}
             >
               Hidden Cost of{' '}
@@ -269,7 +269,7 @@ export default function HiddenCostRecruiting() {
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Inside the Whitepaper
             </p>
-            <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15]">
+            <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15]">
               What you'll discover
             </h2>
           </motion.div>
@@ -305,7 +305,7 @@ export default function HiddenCostRecruiting() {
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Research-Backed Framework
             </p>
-            <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-bold tracking-[-0.03em] text-white/95 leading-[1.15] max-w-[600px]">
+            <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-semibold tracking-[-0.03em] text-white/95 leading-[1.15] max-w-[600px]">
               4 key behavioural{' '}
               <span className="gradient-text">dimensions</span>
             </h2>
@@ -392,7 +392,7 @@ export default function HiddenCostRecruiting() {
                   style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                   Free Download
                 </p>
-                <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
+                <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
                   Get your free copy of the{' '}
                   <span className="italic" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                     whitepaper
@@ -431,7 +431,7 @@ export default function HiddenCostRecruiting() {
                 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0.15}
                 className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-12 shadow-sm"
               >
-                <h3 className="text-[18px] font-bold text-[#0D0D0D] mb-2">Download the Whitepaper</h3>
+                <h3 className="text-[18px] font-semibold text-[#0D0D0D] mb-2">Download the Whitepaper</h3>
                 <p className="text-[13px] text-[#0D0D0D]/45 mb-8">Free · No credit card required · Instant access</p>
                 <div
                   id="lp-hubspot-form"
@@ -462,7 +462,7 @@ export default function HiddenCostRecruiting() {
                 style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 About Skillvue
               </p>
-              <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold tracking-[-0.03em] text-white/95 leading-[1.15] mb-6">
+              <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-white/95 leading-[1.15] mb-6">
                 AI-powered talent intelligence,{' '}
                 <span className="gradient-text">science-backed</span>
               </h2>
