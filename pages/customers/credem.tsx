@@ -113,7 +113,7 @@ const content = {
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Verification AI con Skillvue',
+      title: 'Assessment AI con Skillvue',
       intro: "Skillvue è stato integrato nel processo di selezione del Progetto Giovani con un approccio graduale e data-driven: prima la validazione su un perimetro iniziale, poi l'estensione progressiva.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
@@ -238,7 +238,7 @@ const content = {
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Verification with Skillvue',
+      title: 'AI Assessment with Skillvue',
       intro: "Skillvue was integrated into the Progetto Giovani hiring process with a gradual, data-driven approach: first validation on an initial perimeter, then progressive extension.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
