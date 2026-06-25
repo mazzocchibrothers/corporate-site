@@ -164,7 +164,7 @@ export default function BlogArticle2() {
                 ))}
               </div>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
-                {lang === 'it' ? 'Skillvue supporta HR e Talent Acquisition nella valutazione oggettiva delle competenze attraverso assessment basati sulla scienza psicometrica, domande situazionali e metodologia BEI. Questo consente di confrontare i candidati su criteri misurabili, riducendo il peso delle percezioni individuali.' : 'Skillvue supports HR and Talent Acquisition in objective competency evaluation through assessments based on psychometric science, situational questions, and BEI methodology. This allows comparing candidates on measurable criteria, reducing the weight of individual perceptions.'}
+                {lang === 'it' ? 'Skillvue supporta HR e Talent Acquisition nella valutazione oggettiva delle competenze attraverso verification basati sulla scienza psicometrica, domande situazionali e metodologia BEI. Questo consente di confrontare i candidati su criteri misurabili, riducendo il peso delle percezioni individuali.' : 'Skillvue supports HR and Talent Acquisition in objective competency evaluation through verifications based on psychometric science, situational questions, and BEI methodology. This allows comparing candidates on measurable criteria, reducing the weight of individual perceptions.'}
               </p>
             </motion.div>
           </div>

@@ -216,7 +216,7 @@ export default function IlCostoInvisibileWhitepaper() {
                 <StatBox value="€15-25M" label="Costo selezione non predittiva / anno" />
                 <StatBox value="2.000" label="Agenti nella rete di riferimento" />
                 <StatBox value="20-25%" label="Turnover annuo rete agenziale" />
-                <StatBox value="0,54" label="Validità predittiva assessment" />
+                <StatBox value="0,54" label="Validità predittiva verification" />
               </div>
 
               {/* Cost breakdown */}
@@ -447,7 +447,7 @@ export default function IlCostoInvisibileWhitepaper() {
               {/* Section 4 */}
               <SectionHeading num="4" title="La misurazione del talento mediante una valutazione comportamentale strutturata" />
               <Para>
-                Le metodologie di <strong className="text-[#0D0D0D]/80">behavioral assessment</strong> hanno raggiunto oggi una
+                Le metodologie di <strong className="text-[#0D0D0D]/80">behavioral verification</strong> hanno raggiunto oggi una
                 maturità tale da poter essere applicate su larga scala. Il cuore di questo approccio risiede nel passaggio
                 fondamentale dalla valutazione dichiarativa ("cosa farebbe?") alla{' '}
                 <strong className="text-[#0D0D0D]/80">valutazione osservazionale</strong> ("come agisce effettivamente?").
@@ -512,7 +512,7 @@ export default function IlCostoInvisibileWhitepaper() {
               </Quote>
 
               {/* Section 5 */}
-              <SectionHeading num="5" title="Dall'assessment all'impatto: risultati attesi" />
+              <SectionHeading num="5" title="Dall'verification all'impatto: risultati attesi" />
               <Para>
                 L'adozione della <strong className="text-[#0D0D0D]/80">valutazione comportamentale strutturata</strong> nelle reti
                 agenziali produce effetti misurabili su tre dimensioni:
@@ -604,7 +604,7 @@ export default function IlCostoInvisibileWhitepaper() {
               <Para>
                 Se la tua organizzazione sta ripensando il modello di selezione della rete agenziale, o se desidera mappare il
                 profilo comportamentale degli agenti rispetto al modello ibrido, Skillvue può supportarti con{' '}
-                <strong className="text-[#0D0D0D]/80">assessment comportamentali predittivi</strong>, scalabili e pienamente
+                <strong className="text-[#0D0D0D]/80">verification comportamentali predittivi</strong>, scalabili e pienamente
                 conformi all'EU AI Act, personalizzati sulle specificità del tuo contesto assicurativo.
               </Para>
               <p className="text-[14px] text-[#0D0D0D]/50 mb-8">
@@ -643,7 +643,7 @@ export default function IlCostoInvisibileWhitepaper() {
                   nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.
                 </Para>
                 <Para>
-                  A differenza delle suite HR generiche o degli strumenti di assessment unidimensionali, Skillvue{' '}
+                  A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue{' '}
                   <strong className="text-[#0D0D0D]/80">combina la solidità della scienza psicometrica con la potenza dei moderni
                   LLM</strong> per creare un <strong className="text-[#0D0D0D]/80">copilota AI scientificamente fondato</strong>,
                   allineato al modello di leadership e al quadro di competenze specifico di ciascuna azienda.

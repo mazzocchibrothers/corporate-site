@@ -244,19 +244,19 @@ export default function BlogArticle1() {
           </div>
         </section>
 
-        {/* Skill Assessment */}
+        {/* Skill Verification */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">
                 {lang === 'it'
-                  ? 'Perché lo skill assessment ti aiuta a distinguere attitudine e competenza'
-                  : 'Why Skill Assessment Helps You Distinguish Attitude and Competence'}
+                  ? 'Perché lo skill verification ti aiuta a distinguere attitudine e competenza'
+                  : 'Why Skill Verification Helps You Distinguish Attitude and Competence'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it'
-                  ? 'Distinguere attitudine e competenza richiede più di una buona intervista. Un assessment strutturato delle competenze ti permette di lavorare su due livelli distinti:'
-                  : 'Distinguishing between attitude and competence requires more than a good interview. A structured skill assessment allows you to work on two distinct levels:'}
+                  ? 'Distinguere attitudine e competenza richiede più di una buona intervista. Un verification strutturato delle competenze ti permette di lavorare su due livelli distinti:'
+                  : 'Distinguishing between attitude and competence requires more than a good interview. A structured skill verification allows you to work on two distinct levels:'}
               </p>
               <div className="grid md:grid-cols-2 gap-4 my-8">
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.03] p-6">
@@ -281,8 +281,8 @@ export default function BlogArticle1() {
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
-                    ? 'Attraverso assessment basati su scienza psicometrica, domande situazionali e metodologia BEI, Skillvue ti aiuta a distinguere tra chi ha già sviluppato una competenza e chi mostra un potenziale coerente con il ruolo. Decisioni basate su evidenze, non impressioni.'
-                    : 'Through assessments based on psychometric science, situational questions, and BEI methodology, Skillvue helps you distinguish between those who have already developed a competence and those who show potential consistent with the role. Decisions based on evidence, not impressions.'}
+                    ? 'Attraverso verification basati su scienza psicometrica, domande situazionali e metodologia BEI, Skillvue ti aiuta a distinguere tra chi ha già sviluppato una competenza e chi mostra un potenziale coerente con il ruolo. Decisioni basate su evidenze, non impressioni.'
+                    : 'Through verifications based on psychometric science, situational questions, and BEI methodology, Skillvue helps you distinguish between those who have already developed a competence and those who show potential consistent with the role. Decisions based on evidence, not impressions.'}
                 </p>
               </div>
             </motion.div>

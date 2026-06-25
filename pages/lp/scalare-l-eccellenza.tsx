@@ -61,8 +61,8 @@ const featureCards = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    title: 'La promessa dell\'assessment intelligente',
-    desc: 'Come processare centinaia di candidature stagionali senza abbassare la soglia di eccellenza del brand: la distinzione tra automazione e augmentation, e perché l\'assessment comportamentale strutturato (0,58 di validità predittiva) è l\'unico strumento scalabile.',
+    title: 'La promessa dell\'verification intelligente',
+    desc: 'Come processare centinaia di candidature stagionali senza abbassare la soglia di eccellenza del brand: la distinzione tra automazione e augmentation, e perché l\'verification comportamentale strutturato (0,58 di validità predittiva) è l\'unico strumento scalabile.',
   },
 ];
 
@@ -175,7 +175,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             className="text-[17px] text-[#0D0D0D]/55 leading-[1.7] mb-4"
             style={{ fontWeight: 300 }}
           >
-            AI assessment per la selezione stagionale ad alto volume nel lusso
+            AI verification per la selezione stagionale ad alto volume nel lusso
           </motion.p>
 
           <motion.div
@@ -317,7 +317,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                   'Il paradosso tra volume di hiring e identità di brand nel luxury retail',
                   'Perché il 68% dei VIC seguirebbe il proprio advisor presso la concorrenza',
                   'L\'equazione impossibile: velocità, scala e sensibilità del brand',
-                  'Come l\'AI assessment garantisce standard uniformi dal primo al millesimo candidato',
+                  'Come l\'AI verification garantisce standard uniformi dal primo al millesimo candidato',
                   'Tre implicazioni operative per la strategia di selezione ad alto volume',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-[14px] text-[#0D0D0D]/60 leading-snug">
@@ -629,7 +629,7 @@ function WhitepaperLayer() {
               </span>
             </h1>
             <p className="text-[15px] text-[#0D0D0D]/45 italic mt-3 mb-6">
-              AI assessment per la selezione stagionale ad alto volume nel lusso
+              AI verification per la selezione stagionale ad alto volume nel lusso
             </p>
             <div className="w-10 h-px mx-auto mb-5" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
             <p className="text-[13px] text-[#0D0D0D]/40">
@@ -657,7 +657,7 @@ function WhitepaperLayer() {
                 che <strong className="text-[#0D0D0D]/80">l'integrità del brand non può permettersi</strong>.
               </p>
               <p className="mt-3">
-                Questo documento esplora come la tecnologia di assessment basata sulla scienza psicometrica e potenziata
+                Questo documento esplora come la tecnologia di verification basata sulla scienza psicometrica e potenziata
                 dall'intelligenza artificiale possa consentire alle maison di{' '}
                 <strong className="text-[#0D0D0D]/80">processare volumi elevati di candidature senza mai abbassare
                 la soglia di eccellenza</strong> che il brand richiede.
@@ -838,14 +838,14 @@ function WhitepaperLayer() {
               successo in boutique</strong>. La letteratura scientifica sulla validità predittiva degli strumenti di
               selezione è chiara: Frank Schmidt e John Hunter, nella loro meta-analisi che ha sintetizzato 85 anni di
               ricerca, hanno dimostrato che il colloquio non strutturato ha una validità predittiva di 0,38, mentre
-              gli assessment comportamentali strutturati 0,58. In un contesto dove le competenze da misurare sono
+              gli verification comportamentali strutturati 0,58. In un contesto dove le competenze da misurare sono
               prevalentemente comportamentali e relazionali,{' '}
-              <strong className="text-[#0D0D0D]/80">l'assessment comportamentale strutturato diventa lo strumento
+              <strong className="text-[#0D0D0D]/80">l'verification comportamentale strutturato diventa lo strumento
               più efficace che sia anche scalabile.</strong>
             </Para>
 
             {/* Section 4 */}
-            <SectionHeading num="4" title="Scalare senza diluire: la promessa dell'assessment intelligente" />
+            <SectionHeading num="4" title="Scalare senza diluire: la promessa dell'verification intelligente" />
 
             <Para>
               L'intelligenza artificiale applicata alla selezione non è una novità, ma il suo utilizzo nel lusso
@@ -853,7 +853,7 @@ function WhitepaperLayer() {
               l'eleganza relazionale, la sensibilità culturale, la capacità di leggere le emozioni inespresse di un
               cliente? La risposta sta nella{' '}
               <strong className="text-[#0D0D0D]/80">distinzione tra automazione e augmentation</strong>. I sistemi di
-              assessment di nuova generazione basati su modelli linguistici di grandi dimensioni (LLM) non
+              verification di nuova generazione basati su modelli linguistici di grandi dimensioni (LLM) non
               sostituiscono il giudizio umano, ma{' '}
               <strong className="text-[#0D0D0D]/80">lo informano restituendo gli insight oggettivi</strong>{' '}
               fondamentali per prendere le decisioni strategiche.
@@ -861,7 +861,7 @@ function WhitepaperLayer() {
 
             <div className="grid grid-cols-2 gap-4 my-8">
               <StatBox value="0,38" label="Validità predittiva del colloquio non strutturato (Schmidt & Hunter)" />
-              <StatBox value="0,58" label="Validità predittiva dell'assessment comportamentale strutturato" />
+              <StatBox value="0,58" label="Validità predittiva dell'verification comportamentale strutturato" />
             </div>
 
             <Para>
@@ -875,7 +875,7 @@ function WhitepaperLayer() {
             <SectionHeading num="5" title="Oltre il picco: costruire un'infrastruttura di selezione permanente" />
 
             <Para>
-              Sarebbe riduttivo inquadrare l'AI assessment come una soluzione per il picco stagionale. Il vero
+              Sarebbe riduttivo inquadrare l'AI verification come una soluzione per il picco stagionale. Il vero
               valore emerge quando lo strumento{' '}
               <strong className="text-[#0D0D0D]/80">diventa parte integrante dell'infrastruttura di selezione
               del brand</strong>, operativo 365 giorni l'anno. In questa configurazione, ogni candidatura, che
@@ -894,7 +894,7 @@ function WhitepaperLayer() {
 
             <InfoBox title="Caso anonimo: metriche di volume e qualità nel picco stagionale">
               <p>
-                Un gruppo europeo del lusso con oltre 8.000 dipendenti ha introdotto un sistema di AI assessment per
+                Un gruppo europeo del lusso con oltre 8.000 dipendenti ha introdotto un sistema di AI verification per
                 gestire le candidature stagionali. Il volume processato è cresciuto significativamente senza incremento
                 proporzionale delle risorse HR dedicate, mentre gli indicatori di qualità delle assunzioni (retention
                 a 6 mesi, valutazione del supervisore diretto, punteggio NPS interno) sono rimasti{' '}
@@ -912,7 +912,7 @@ function WhitepaperLayer() {
               ad alto rischio, imponendo{' '}
               <strong className="text-[#0D0D0D]/80">requisiti di trasparenza, documentazione tecnica, supervisione
               umana e audit periodici</strong>. Questo significa che le maison che adottano strumenti di AI
-              assessment devono scegliere piattaforme progettate per essere conformi by design:{' '}
+              verification devono scegliere piattaforme progettate per essere conformi by design:{' '}
               <strong className="text-[#0D0D0D]/80">un vincolo che, in realtà, è anche una garanzia di qualità
               del processo decisionale.</strong>
             </Para>
@@ -934,14 +934,14 @@ function WhitepaperLayer() {
               Il turnover nel lusso non è solo un costo amministrativo (pari al 30% della RAL secondo lo U.S. Dept.
               of Labor), ma un rischio reputazionale. Un Client Advisor stagionale privo del giusto DNA di brand
               mette a rischio il patrimonio più grande: la relazione con i VIC. Se il 68% dei clienti è pronto a
-              seguire l'advisor presso la concorrenza, l'assessment comportamentale non è più un costo, ma{' '}
+              seguire l'advisor presso la concorrenza, l'verification comportamentale non è più un costo, ma{' '}
               <strong className="text-[#0D0D0D]/80">l'unica assicurazione sostenibile contro assunzioni errate</strong>.
             </NumberedItem>
 
             <NumberedItem n={2} title="La coerenza dei criteri di selezione è un vantaggio competitivo">
               Con il 93% delle maison che fatica a reperire profili manageriali (Comité Colbert/MAD, 2025), lo Store
               Manager sovraccarico rischia di scivolare verso criteri di selezione puramente discrezionali. Un sistema
-              di assessment che garantisce standard oggettivi non è solo una scelta di equità, ma è{' '}
+              di verification che garantisce standard oggettivi non è solo una scelta di equità, ma è{' '}
               <strong className="text-[#0D0D0D]/80">lo strumento per proteggere la promessa del brand durante
               l'espansione</strong>. Come confermato dalla meta-analisi di Schmidt e Hunter, gli strumenti strutturati
               hanno un potere predittivo sulla performance futura nettamente superiore ai colloqui informali.
@@ -971,7 +971,7 @@ function WhitepaperLayer() {
                 {
                   n: '1',
                   q: 'Quante candidature stagionali ha processato la tua organizzazione durante l\'ultimo picco, e quante di queste hanno ricevuto una valutazione comportamentale strutturata?',
-                  a: 'In assenza di assessment strutturati, la decisione finale ricade sugli store manager, che nel lusso sono già sovraccarichi: il 93% delle maison riporta difficoltà nel trovare profili manageriali adeguati. In un contesto di forte pressione operativa, quali criteri stanno guidando realmente le tue assunzioni ad alto volume?',
+                  a: 'In assenza di verification strutturati, la decisione finale ricade sugli store manager, che nel lusso sono già sovraccarichi: il 93% delle maison riporta difficoltà nel trovare profili manageriali adeguati. In un contesto di forte pressione operativa, quali criteri stanno guidando realmente le tue assunzioni ad alto volume?',
                 },
                 {
                   n: '2',
@@ -1015,7 +1015,7 @@ function WhitepaperLayer() {
               <p className="text-[14px] text-[#0D0D0D]/65 leading-[1.7] mb-4">
                 Se la tua organizzazione sta affrontando tassi di turnover elevati nei flagship store o sta ripensando
                 il modello di selezione per i ruoli retail, e desidera esplorare come mantenere standard qualitativi
-                costanti anche durante i picchi di hiring stagionale, Skillvue può supportarti con assessment
+                costanti anche durante i picchi di hiring stagionale, Skillvue può supportarti con verification
                 comportamentali predittivi e scalabili,{' '}
                 <strong className="text-[#0D0D0D]/80">pienamente conformi agli obblighi normativi e personalizzati
                 sulle specificità del tuo brand</strong>, per identificare cosa sia realmente misurabile e dove il
@@ -1053,7 +1053,7 @@ function WhitepaperLayer() {
                 formazione e sviluppo.
               </p>
               <p className="text-[13.5px] text-[#0D0D0D]/60 leading-[1.7]">
-                A differenza delle suite HR generiche o degli strumenti di assessment unidimensionali, Skillvue
+                A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue
                 combina la solidità della scienza psicometrica con la potenza dei moderni LLM per creare un{' '}
                 <strong className="text-[#0D0D0D]/80">co-pilota AI scientificamente fondato</strong>, in grado di
                 fornire valutazioni personalizzate e scalabili, allineate al modello di leadership e al quadro di
@@ -1130,7 +1130,7 @@ export default function ScalareEccellenzaPage() {
         <title>Scalare l'eccellenza senza perdere l'esclusività — Skillvue</title>
         <meta
           name="description"
-          content="AI assessment per la selezione stagionale ad alto volume nel lusso. Come processare centinaia di candidature senza abbassare la soglia di eccellenza del brand."
+          content="AI verification per la selezione stagionale ad alto volume nel lusso. Come processare centinaia di candidature senza abbassare la soglia di eccellenza del brand."
         />
         <meta name="robots" content="noindex, nofollow" />
       </Head>

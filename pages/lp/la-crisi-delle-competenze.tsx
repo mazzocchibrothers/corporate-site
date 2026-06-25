@@ -316,7 +316,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 {[
                   'Perché il 59% della forza lavoro bancaria ha bisogno di reskilling immediato o profondo',
                   'Come le competenze comportamentali (learning agility, gestione dell\'incertezza) predicono il valore futuro',
-                  'Assessment episodico vs. talent intelligence ricorrente: le 6 dimensioni a confronto',
+                  'Verification episodico vs. talent intelligence ricorrente: le 6 dimensioni a confronto',
                   'I requisiti EU AI Act per i sistemi HR ad alto rischio nel banking',
                   '3 domande strategiche per il tuo comitato di direzione',
                 ].map((item, i) => (
@@ -878,7 +878,7 @@ function WhitepaperLayer() {
             <SectionHeading num="4" title="Verso una talent intelligence ricorrente: cosa significa in pratica" />
 
             <Para>
-              L'approccio che si sta affermando tra i grandi gruppi bancari internazionali non consiste nel fare assessment
+              L'approccio che si sta affermando tra i grandi gruppi bancari internazionali non consiste nel fare verification
               più frequenti o formare di più:{' '}
               <strong className="text-[#0D0D0D]/80">consiste nel costruire un sistema di intelligence sul capitale umano</strong>{' '}
               che sia continuo, integrato e azionabile.
@@ -925,7 +925,7 @@ function WhitepaperLayer() {
             </div>
 
             {/* Episodic vs Recurrent table */}
-            <InfoBox title="Assessment episodico vs. Talent Intelligence Ricorrente">
+            <InfoBox title="Verification episodico vs. Talent Intelligence Ricorrente">
               <p className="text-[12px] text-[#0D0D0D]/45 mb-4">Confronto su dimensioni operative chiave</p>
               <div className="overflow-x-auto">
                 <table className="w-full text-[12px]">
@@ -974,7 +974,7 @@ function WhitepaperLayer() {
               <strong className="text-[#0D0D0D]/80">utilizzi componenti di intelligenza artificiale</strong> nel contesto
               bancario europeo si confronta oggi con un quadro normativo particolarmente esigente. L'EU AI Act classifica i
               sistemi AI utilizzati per decisioni relative al{' '}
-              <strong className="text-[#0D0D0D]/80">talent management</strong>, inclusi assessment, scoring di competenze e
+              <strong className="text-[#0D0D0D]/80">talent management</strong>, inclusi verification, scoring di competenze e
               sistemi di valutazione del potenziale, come{' '}
               <strong className="text-[#0D0D0D]/80">sistemi ad alto rischio</strong> (Articolo 6, Allegato III).
             </Para>
@@ -989,7 +989,7 @@ function WhitepaperLayer() {
 
             <InfoBox title="Implicazione operativa diretta" accent>
               <p>
-                Soluzioni di assessment che operano come black box, producono score ma non forniscono giustificazioni
+                Soluzioni di verification che operano come black box, producono score ma non forniscono giustificazioni
                 comprensibili per ogni valutazione individuale, e di conseguenza{' '}
                 <strong className="text-[#0D0D0D]/75">non sono compatibili con il contesto regolatorio europeo</strong>. Sono
                 esposte a rischi di contestazione da parte sia dei collaboratori che degli organi di supervisione.{' '}
@@ -1012,7 +1012,7 @@ function WhitepaperLayer() {
             <SectionHeading num="6" title="Tre criteri per valutare un sistema di talent intelligence nel banking" />
 
             <Para>
-              Quando si valuta un sistema di assessment AI per contesti bancari, tre dimensioni si rivelano determinanti sia
+              Quando si valuta un sistema di verification AI per contesti bancari, tre dimensioni si rivelano determinanti sia
               rispetto ai requisiti dell'AI Act sia rispetto alla qualità delle decisioni sul capitale umano:
             </Para>
 
@@ -1034,7 +1034,7 @@ function WhitepaperLayer() {
             </NumberedItem>
 
             <NumberedItem n={3} title="Audit trail completo e verificabile">
-              Ogni assessment deve produrre un log verificabile: quando è stato condotto, su quale versione del sistema, con
+              Ogni verification deve produrre un log verificabile: quando è stato condotto, su quale versione del sistema, con
               quali parametri, con quale output, con quale eventuale attivazione della soglia di incertezza e con quale
               conferma di supervisione umana. Questo log serve per rispondere a un audit esterno, ma soprattutto per{' '}
               <strong className="text-[#0D0D0D]/80">monitorare la consistenza del sistema nel tempo</strong> e documentare
@@ -1128,7 +1128,7 @@ function WhitepaperLayer() {
               <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-3">Next step</h3>
               <p className="text-[14px] text-[#0D0D0D]/60 leading-[1.7] mb-6 max-w-[500px] mx-auto">
                 Se la tua organizzazione sta valutando come strutturare un sistema di talent intelligence continua, conforme
-                all'AI Act e calibrato sulle specificità del settore bancario, Skillvue può supportarti con skill assessment
+                all'AI Act e calibrato sulle specificità del settore bancario, Skillvue può supportarti con skill verification
                 predittivi, scalabili e certificati, conformi alla normativa, al GDPR e allo standard ISO 27001,
                 personalizzati sulle specificità del tuo contesto bancario.
               </p>
@@ -1157,7 +1157,7 @@ function WhitepaperLayer() {
                 nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.
               </Para>
               <Para>
-                A differenza delle suite HR generiche o degli strumenti di assessment unidimensionali, Skillvue{' '}
+                A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue{' '}
                 <strong className="text-[#0D0D0D]/80">combina la solidità della scienza psicometrica con la potenza dei moderni
                 LLM</strong> per creare un <strong className="text-[#0D0D0D]/80">copilota AI scientificamente fondato</strong>,
                 allineato al modello di leadership e al quadro di competenze specifico di ciascuna azienda.
@@ -1175,7 +1175,7 @@ function WhitepaperLayer() {
                   'DORA — Digital Operational Resilience Act (Reg. UE 2022/2554).',
                   'EU AI Act — Regolamento UE 2024/1689. In vigore dal 1° agosto 2024; applicazione progressiva fino al 2 agosto 2026 per i sistemi ad alto rischio (Allegato III).',
                   'McKinsey Global Institute — The State of AI in 2024: Generative AI\'s Breakout Year. McKinsey & Company, 2024.',
-                  'EBA — Guidelines on the assessment of the suitability of members of the management body and key function holders (EBA/GL/2021/06). European Banking Authority, 2021.',
+                  'EBA — Guidelines on the verification of the suitability of members of the management body and key function holders (EBA/GL/2021/06). European Banking Authority, 2021.',
                   'Schmidt, F.L. & Hunter, J.E. (1998, aggiornata 2016). The validity and utility of selection methods in personnel psychology. Psychological Bulletin.',
                   'World Economic Forum — Future of Jobs Report 2023 e 2025.',
                 ].map((ref, i) => (

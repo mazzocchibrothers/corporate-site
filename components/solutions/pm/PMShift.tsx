@@ -15,7 +15,7 @@ const newItems = [
   'Reviews informed by objective skill data as a calibrated starting point',
   'One framework applied consistently across the entire organization',
   'Promotion decisions based on validated competency data',
-  'Skill assessments embedded in performance reviews with the same objectivity as business metrics',
+  'Skill verifications embedded in performance reviews with the same objectivity as business metrics',
 ];
 
 export default function PMShift() {

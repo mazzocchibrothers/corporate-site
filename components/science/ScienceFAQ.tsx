@@ -5,12 +5,12 @@ import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const faqs = [
-  { q: 'How does Skillvue ensure assessment validity?', a: 'Every assessment is built on validated I-O psychology constructs, reviewed by subject-matter experts, piloted with real participants, and continuously monitored for reliability and fairness. We publish internal validity reports for every deployment.' },
-  { q: 'What role does AI play in assessment design and scoring?', a: 'AI generates contextualized assessment items, scores responses with transparent evidence, and surfaces patterns at scale. But every AI output is governed by psychometric constraints and subject to human review.' },
-  { q: 'How does Skillvue handle bias in assessments?', a: 'Bias evaluation is embedded at every stage: item design, pilot testing, scoring validation, and ongoing monitoring. We test for differential item functioning across demographics and adjust items that show systematic bias.' },
-  { q: 'What languages are supported?', a: 'Skillvue assessments are available in 50+ languages, with cultural adaptation built into the item design process to ensure measurement consistency across regions.' },
+  { q: 'How does Skillvue ensure verification validity?', a: 'Every verification is built on validated I-O psychology constructs, reviewed by subject-matter experts, piloted with real participants, and continuously monitored for reliability and fairness. We publish internal validity reports for every deployment.' },
+  { q: 'What role does AI play in verification design and scoring?', a: 'AI generates contextualized verification items, scores responses with transparent evidence, and surfaces patterns at scale. But every AI output is governed by psychometric constraints and subject to human review.' },
+  { q: 'How does Skillvue handle bias in verifications?', a: 'Bias evaluation is embedded at every stage: item design, pilot testing, scoring validation, and ongoing monitoring. We test for differential item functioning across demographics and adjust items that show systematic bias.' },
+  { q: 'What languages are supported?', a: 'Skillvue verifications are available in 50+ languages, with cultural adaptation built into the item design process to ensure measurement consistency across regions.' },
   { q: 'How does Skillvue comply with the EU AI Act?', a: 'Skillvue is designed from the ground up for EU AI Act compliance: transparent scoring, human oversight, continuous monitoring, and full auditability. We maintain documentation and governance processes that meet high-risk AI system requirements.' },
-  { q: 'Can assessments be customized to our competency framework?', a: 'Yes. Every deployment starts with your competency model. We map your framework to validated constructs, generate contextualized items, and validate them against your population before going live.' },
+  { q: 'Can verifications be customized to our competency framework?', a: 'Yes. Every deployment starts with your competency model. We map your framework to validated constructs, generate contextualized items, and validate them against your population before going live.' },
 ];
 
 export default function ScienceFAQ() {

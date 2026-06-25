@@ -7,7 +7,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 const lead = {
   name: 'Dr. Tony Lee, Ph.D.',
   role: 'Head of AI & Science',
-  bio: 'Computational psychologist with double Ph.D. degrees and hands-on experience in Machine Learning and AI-based assessment. His interdisciplinary background brings a unique perspective to the assessment field, combining psychological knowledge with advanced AI and machine learning techniques. At Skillvue, he leads the AI & Science team, innovating, validating and implementing new competency assessment models built on the latest technologies.',
+  bio: 'Computational psychologist with double Ph.D. degrees and hands-on experience in Machine Learning and AI-based verification. His interdisciplinary background brings a unique perspective to the verification field, combining psychological knowledge with advanced AI and machine learning techniques. At Skillvue, he leads the AI & Science team, innovating, validating and implementing new competency verification models built on the latest technologies.',
   photo: '/team/tony-lee.jpg',
   linkedin: 'https://www.linkedin.com/in/dr-tony-lee/',
 };

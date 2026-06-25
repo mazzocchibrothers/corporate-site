@@ -37,7 +37,7 @@ const pressArticles = [
     publication: 'Tech.eu',
     logo: '/logos/press-techeu.svg',
     logoH: 28,
-    title: 'Skillvue secures $6.3M to develop comprehensive skills assessment agents',
+    title: 'Skillvue secures $6.3M to develop comprehensive skills verification agents',
     url: 'https://tech.eu/2025/05/05/skillvue-secures-6-3m-to-develop-comprehensive-skills-assessment-agents/',
   },
   {
@@ -140,7 +140,7 @@ const interviews = [
 const pressReleases = [
   {
     date: 'May 5, 2025',
-    title: 'Skillvue raises €5.5M seed round to transform skills assessment with AI',
+    title: 'Skillvue raises €5.5M seed round to transform skills verification with AI',
     titleIt: "Round Seed di 5 milioni per Skillvue, la startup che sta cambiando la valutazione delle competenze con l'AI",
     url: 'https://drive.google.com/file/d/1gLVJF8SDxvNA4kG3gWfzmuS-IW_RVneu/view',
     urlIt: 'https://drive.google.com/file/d/1vX3y93J-tVmDDyUTVtzmIITEkBfDA0TR/view?usp=sharing',

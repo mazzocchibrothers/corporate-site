@@ -178,8 +178,8 @@ export default function BlogArticle3() {
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
-                    ? 'Ciò che conta non è solo il risultato, ma la struttura del processo decisionale. Attraverso skill assessment basati su scienza psicometrica, domande situazionali e metodologia BEI, Skillvue osserva come una persona gestisce scenari di negoziazione realistici, distinguendo tra stile comunicativo e reale capacità di gestire interessi divergenti.'
-                    : 'What matters is not just the outcome, but the structure of the decision-making process. Through skill assessments based on psychometric science, situational questions, and BEI methodology, Skillvue observes how a person manages realistic negotiation scenarios, distinguishing between communication style and real ability to manage divergent interests.'}
+                    ? 'Ciò che conta non è solo il risultato, ma la struttura del processo decisionale. Attraverso skill verification basati su scienza psicometrica, domande situazionali e metodologia BEI, Skillvue osserva come una persona gestisce scenari di negoziazione realistici, distinguendo tra stile comunicativo e reale capacità di gestire interessi divergenti.'
+                    : 'What matters is not just the outcome, but the structure of the decision-making process. Through skill verifications based on psychometric science, situational questions, and BEI methodology, Skillvue observes how a person manages realistic negotiation scenarios, distinguishing between communication style and real ability to manage divergent interests.'}
                 </p>
               </div>
             </motion.div>

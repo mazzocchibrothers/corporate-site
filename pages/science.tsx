@@ -23,7 +23,7 @@ export default function SciencePage() {
         <title>{isIT ? 'La Scienza di Skillvue | Psicometria e AI per il Talent' : 'The Science Behind Skillvue | Psychometrics & AI'}</title>
         <meta name="description" content={isIT
           ? "Skillvue è costruita sulla psicologia I/O e la psicometria. Ogni valutazione è accurata, affidabile e progettata per resistere al vaglio scientifico."
-          : 'Skillvue is built on I/O psychology and psychometrics. Every assessment is accurate, reliable and defensible — designed to hold up to scientific scrutiny.'
+          : 'Skillvue is built on I/O psychology and psychometrics. Every verification is accurate, reliable and defensible — designed to hold up to scientific scrutiny.'
         } />
         <link rel="canonical" href={canonical} />
       </Head>

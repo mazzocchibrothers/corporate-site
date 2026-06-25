@@ -43,7 +43,7 @@ const stages = [
       title: 'Process automation',
       icon: Zap,
       items: [
-        { icon: Brain, text: 'AI-powered skill assessment', detail: 'Audio, video, written' },
+        { icon: Brain, text: 'AI-powered skill verification', detail: 'Audio, video, written' },
         { icon: Calendar, text: 'Automated scheduling' },
         { icon: MessageSquare, text: 'Real-time candidate feedback' },
       ],

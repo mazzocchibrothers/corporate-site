@@ -4,10 +4,10 @@ import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const dimensions = [
-  { title: 'Suitability', subtitle: 'Person-job fit', desc: 'Evaluates objective eligibility: qualifications, availability, logistics, baseline requirements. A structured screening layer before deeper assessment.' },
+  { title: 'Suitability', subtitle: 'Person-job fit', desc: 'Evaluates objective eligibility: qualifications, availability, logistics, baseline requirements. A structured screening layer before deeper verification.' },
   { title: 'Soft Skills', subtitle: 'Behavioral competencies', desc: 'Communication, collaboration, problem-solving, leadership. Observable through action, rooted in stable behavioral patterns, and among the strongest predictors of long-term performance.' },
   { title: 'Hard Skills', subtitle: 'Technical proficiency', desc: 'Domain-specific knowledge measured against defined proficiency levels, grounded in structured knowledge taxonomies relevant to the role.' },
-  { title: 'Potential', subtitle: 'Capacity to grow', desc: 'Predicts capacity to grow, adapt, and take on greater complexity. Assessed through three validated dimensions: learning agility, intrinsic motivation, and career aspiration.' },
+  { title: 'Potential', subtitle: 'Capacity to grow', desc: 'Predicts capacity to grow, adapt, and take on greater complexity. Verified through three validated dimensions: learning agility, intrinsic motivation, and career aspiration.' },
   { title: 'Traits', subtitle: 'Dispositional patterns', desc: 'Stable personality traits. openness, conscientiousness, resilience. that shape cultural fit and sustained performance. Grounded in Big Five personality science.' },
 ];
 
@@ -30,7 +30,7 @@ export default function WhatWeAssess() {
   }, []);
 
   return (
-    <section id="what-we-assess" data-testid="what-we-assess" className="section-breathe relative py-16 md:py-20 lg:py-24" ref={ref}>
+    <section id="what-we-verify" data-testid="what-we-verify" className="section-breathe relative py-16 md:py-20 lg:py-24" ref={ref}>
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div
           className="mb-8 md:mb-16"

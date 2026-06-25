@@ -49,7 +49,7 @@ export default function ProductHero() {
               transition={{ duration: 0.8, delay: 0.5 }}
             >
               <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-xl font-normal md:font-light">
-                {t('Skillvue is the AI-powered talent intelligence platform that turns static HR processes into predictive, objective insights. Assess skills, predict potential, and make every people decision defensible.')}
+                {t('Skillvue is the AI-powered talent intelligence platform that turns static HR processes into predictive, objective insights. Verify skills, predict potential, and make every people decision defensible.')}
               </p>
 
               <a

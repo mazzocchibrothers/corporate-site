@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -234,7 +234,7 @@ const content = {
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Wrench, label: 'Grocery retail technical skills — differentiated by department and level of responsibility (client-facing or not, from sales associate to store manager)' },
-        { icon: Heart, label: 'Bespoke soft skills — developed ad hoc on the Unicomm model (e.g. service orientation in grocery retail contexts, team management across shifts)' },
+        { icon: Heart, label: 'Tailored soft skills — developed ad hoc on the Unicomm model (e.g. service orientation in grocery retail contexts, team management across shifts)' },
       ],
       methodologyLabel: 'PROJECT STRUCTURE — THREE PARALLEL STREAMS',
       methodology: [

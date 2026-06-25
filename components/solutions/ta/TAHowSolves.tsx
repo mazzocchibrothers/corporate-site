@@ -4,9 +4,9 @@ import { motion, useInView } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const stages = [
-  { num: '01', title: 'Pre-screening', subtitle: 'Top of funnel', desc: 'Short assessments on suitability and killer skills via web app or WhatsApp. Reduce manual effort, accelerate pre-selection, filter for objective eligibility before deeper assessment.', color: '#9B9DFB' },
-  { num: '02', title: 'Screening', subtitle: 'Mid funnel', desc: 'Assessments on soft skills, hard skills, potential, and traits. Standardized evaluation that removes bias and produces comparable, predictive shortlists.', color: '#7577F8' },
-  { num: '03', title: 'In-depth', subtitle: 'Late funnel', desc: 'Deep assessments on potential, traits, and skills for professional+ roles. Cross-job insights, detailed candidate profiles, and in-person interview support packages.', color: '#4B4DF7' },
+  { num: '01', title: 'Pre-screening', subtitle: 'Top of funnel', desc: 'Short verifications on suitability and killer skills via web app or WhatsApp. Reduce manual effort, accelerate pre-selection, filter for objective eligibility before deeper verification.', color: '#9B9DFB' },
+  { num: '02', title: 'Screening', subtitle: 'Mid funnel', desc: 'Verifications on soft skills, hard skills, potential, and traits. Standardized evaluation that removes bias and produces comparable, predictive shortlists.', color: '#7577F8' },
+  { num: '03', title: 'In-depth', subtitle: 'Late funnel', desc: 'Deep verifications on potential, traits, and skills for professional+ roles. Cross-job insights, detailed candidate profiles, and in-person interview support packages.', color: '#4B4DF7' },
 ];
 
 export default function TAHowSolves() {

@@ -25,7 +25,7 @@ const pillars = [
     num: '03',
     icon: TrendingUp,
     title: 'Measurable ROI',
-    desc: 'Pre/post assessment comparison. Objective tracking of progress and concrete impact on performance.',
+    desc: 'Pre/post verification comparison. Objective tracking of progress and concrete impact on performance.',
     stat: '2-4x',
     statLabel: 'faster skill development with targeted interventions',
   },

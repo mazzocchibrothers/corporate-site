@@ -6,8 +6,8 @@ import { useLanguage } from '@/i18n/LanguageContext';
 const steps = [
   { num: '01', title: 'Information Gathering', what: 'We learn your organization: competency frameworks, HR processes, systems, documentation.', capability: 'Context, process, and data ingestion' },
   { num: '02', title: 'Jobs-People-Skills Mapping', what: 'We digest your organizational landscape into a dynamic skill taxonomy.', capability: 'Skill taxonomy generation, talent demand-supply mapping, market & AI impact view' },
-  { num: '03', title: 'Assessment Generation', what: 'We create assessments skill by skill. deeply contextualized to your roles and framework.', capability: 'AI-generated items, expert validation, continuous adaptation' },
-  { num: '04', title: 'Assessment Delivery', what: 'We meet people where they are, through the channels where adoption is highest.', capability: 'Web apps, WhatsApp, MS Teams, Slack. audio, video, written, MCQs' },
+  { num: '03', title: 'Verification Generation', what: 'We create verifications skill by skill. deeply contextualized to your roles and framework.', capability: 'AI-generated items, expert validation, continuous adaptation' },
+  { num: '04', title: 'Verification Delivery', what: 'We meet people where they are, through the channels where adoption is highest.', capability: 'Web apps, WhatsApp, MS Teams, Slack. audio, video, written, MCQs' },
   { num: '05', title: 'Evaluation & Scoring', what: 'AI agents recommend scores rooted in science. Humans keep control over the final decision.', capability: 'Scoring explainability, human-in-the-loop review' },
   { num: '06', title: 'Reporting & Insights', what: 'Ready-to-use analytics for immediate consumption; integrations with core HR for full potential.', capability: 'Skillvue reporting platform + native integrations (ATS, LMS, HRIS, PMS)' },
 ];

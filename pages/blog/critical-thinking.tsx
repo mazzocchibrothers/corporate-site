@@ -60,7 +60,7 @@ export default function BlogArticle5() {
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '10 min di lettura' : '10 min read'}</span>
               </div>
               <h1 className="font-bold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
-                {lang === 'it' ? 'Che cos\'è il pensiero critico e come valutare questa competenza' : 'What Is Critical Thinking and How to Assess This Skill'}
+                {lang === 'it' ? 'Che cos\'è il pensiero critico e come valutare questa competenza' : 'What Is Critical Thinking and How to Verify This Skill'}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
                 {lang === 'it'
@@ -180,8 +180,8 @@ export default function BlogArticle5() {
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
-                    ? 'Skillvue ti permette di valutare il pensiero critico attraverso assessment basati su scenari realistici e metodologie psicometriche, osservando come una persona analizza le informazioni, identifica le variabili rilevanti e costruisce una decisione coerente. Il processo conta più della risposta finale.'
-                    : 'Skillvue enables you to evaluate critical thinking through assessments based on realistic scenarios and psychometric methodologies, observing how a person analyzes information, identifies relevant variables, and builds a coherent decision. The process matters more than the final answer.'}
+                    ? 'Skillvue ti permette di valutare il pensiero critico attraverso verification basati su scenari realistici e metodologie psicometriche, osservando come una persona analizza le informazioni, identifica le variabili rilevanti e costruisce una decisione coerente. Il processo conta più della risposta finale.'
+                    : 'Skillvue enables you to evaluate critical thinking through verifications based on realistic scenarios and psychometric methodologies, observing how a person analyzes information, identifies relevant variables, and builds a coherent decision. The process matters more than the final answer.'}
                 </p>
               </div>
             </motion.div>
@@ -224,7 +224,7 @@ export default function BlogArticle5() {
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {lang === 'it'
                   ? 'Integra la valutazione delle competenze per decisioni organizzative più obiettive e sostenibili.'
-                  : 'Integrate skill assessment for more objective and sustainable organizational decisions.'}
+                  : 'Integrate skill verification for more objective and sustainable organizational decisions.'}
               </p>
               <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center justify-between px-9 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500">
