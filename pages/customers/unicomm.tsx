@@ -307,7 +307,7 @@ export default function UnicommStoryPage() {
             <div className="absolute inset-0 bg-black/40" />
           </div>
 
-          <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
+          <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
             {/* Breadcrumb */}
             <motion.div className="mb-10 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
               <button onClick={() => { router.push(lang === 'it' ? '/clienti' : '/customers'); window.scrollTo(0, 0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">{c.breadcrumb}</button>
@@ -322,7 +322,7 @@ export default function UnicommStoryPage() {
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-8 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
+                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-semibold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
                   <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
@@ -373,7 +373,7 @@ export default function UnicommStoryPage() {
 
             {/* Hero metrics — horizontal row */}
             <motion.div className="mt-12" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }}>
-              <div className="grid grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                 {c.heroMetrics.map(m => (
                   <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-5 text-center">
                     <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
@@ -387,19 +387,19 @@ export default function UnicommStoryPage() {
 
         {/* ===== CONTENT SECTIONS ===== */}
         <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#F7F7F7' }}>
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
 
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-6">{c.context.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-6">{c.context.title}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
               <div className="mb-10">
@@ -410,7 +410,7 @@ export default function UnicommStoryPage() {
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
@@ -425,7 +425,7 @@ export default function UnicommStoryPage() {
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
                     </div>
                   ))}
@@ -436,7 +436,7 @@ export default function UnicommStoryPage() {
             {/* OBJECTIVES */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {c.objectives.items.map((o, i) => (
                   <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -454,7 +454,7 @@ export default function UnicommStoryPage() {
             {/* SOLUTION */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{c.solution.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.solution.title}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
 
               <div className="mb-12">
@@ -475,7 +475,7 @@ export default function UnicommStoryPage() {
                   {c.solution.methodology.map((m, i) => (
                     <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
                       <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
-                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4] relative">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4] relative">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65] relative">{m.text}</p>
                     </div>
                   ))}
@@ -486,7 +486,7 @@ export default function UnicommStoryPage() {
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-10">{c.results.title}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.results.title}</h2>
 
               <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
@@ -562,7 +562,7 @@ export default function UnicommStoryPage() {
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <q.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
+                    <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
                     <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
                   </div>
                 ))}
@@ -576,13 +576,13 @@ export default function UnicommStoryPage() {
 
         {/* RELATED STORIES */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 leading-[1.4] mb-12">{c.related.title}</h3>
+          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{c.related.title}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {c.related.stories.map(s => (
                 <button key={s.id} onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
                   <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
-                  <h4 className="text-[24px] font-bold text-white/90 mb-4">{s.company}</h4>
+                  <h4 className="text-[24px] font-semibold text-white/90 mb-4">{s.company}</h4>
                   <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
                   <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
                     {c.related.cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />

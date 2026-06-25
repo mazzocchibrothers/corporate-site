@@ -33,7 +33,7 @@ export default function MethodologyLifecycle() {
 
         {/* Title */}
         <motion.div className="mb-8 md:mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-4 md:mb-6">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-4 md:mb-6">
             {t('A rigorous, end-to-end assessment')}{' '}
             <span className="font-bold gradient-text">{t('lifecycle')}</span>
           </h2>
@@ -81,7 +81,7 @@ export default function MethodologyLifecycle() {
 
           <motion.div key={active} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-10 lg:p-14" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
             <span className="text-[12px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-4 block">{t('Step')} {steps[active].num}</span>
-            <h3 className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-white/90 mb-5">{t(steps[active].title)}</h3>
+            <h3 className="text-[clamp(1.5rem,2.5vw,2rem)] font-semibold text-white/90 mb-5">{t(steps[active].title)}</h3>
             <p className="text-[16px] text-white/[0.55] leading-[1.75]">{t(steps[active].desc)}</p>
           </motion.div>
         </div>
@@ -102,7 +102,7 @@ export default function MethodologyLifecycle() {
                 transition={{ duration: 0.25 }}
               >
                 <Icon className="h-5 w-5 text-[#9B9DFB]/50 mb-3" strokeWidth={1.5} />
-                <h3 className="text-[16px] font-bold text-white/90 mb-2">{t(p.title)}</h3>
+                <h3 className="text-[16px] font-semibold text-white/90 mb-2">{t(p.title)}</h3>
                 <p className="text-[14px] text-white/[0.6] leading-[1.65]">{t(p.desc)}</p>
               </motion.div>
             );
@@ -112,13 +112,15 @@ export default function MethodologyLifecycle() {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setActivePrinciple((p) => (p - 1 + principles.length) % principles.length)}
-                className="flex items-center justify-center h-8 w-8 rounded-full border border-white/10 text-white/40 active:text-white/80 transition-all"
+                aria-label="Previous principle"
+                className="flex items-center justify-center h-8 w-8 rounded-full border border-white/10 text-white/40 active:text-white/80 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
               >
                 <ChevronLeft className="h-3.5 w-3.5" />
               </button>
               <button
                 onClick={() => setActivePrinciple((p) => (p + 1) % principles.length)}
-                className="flex items-center justify-center h-8 w-8 rounded-full border border-white/15 text-white/60 active:text-white/90 transition-all"
+                aria-label="Next principle"
+                className="flex items-center justify-center h-8 w-8 rounded-full border border-white/15 text-white/60 active:text-white/90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
               >
                 <ChevronRight className="h-3.5 w-3.5" />
               </button>
@@ -133,7 +135,7 @@ export default function MethodologyLifecycle() {
             return (
               <motion.div key={p.title} className="group rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}>
                 <Icon className="h-6 w-6 text-[#9B9DFB]/50 mb-5" strokeWidth={1.5} />
-                <h3 className="text-[20px] font-bold text-white/90 mb-4">{t(p.title)}</h3>
+                <h3 className="text-[20px] font-semibold text-white/90 mb-4">{t(p.title)}</h3>
                 <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t(p.desc)}</p>
               </motion.div>
             );

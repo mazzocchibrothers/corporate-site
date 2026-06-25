@@ -1,6 +1,5 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import SkillvueLogo from './landing/SkillvueLogo';
 import { Instagram, Facebook, Linkedin } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
@@ -70,9 +69,12 @@ export default function Footer() {
 
           {/* Left: logo + socials */}
           <div className="flex flex-col items-center lg:items-start">
-            <a href="/" onClick={handleClick('/')} className="flex items-center gap-2.5 md:gap-3 mb-5 md:mb-8">
-              <SkillvueLogo size={32} style={{ color: '#ffffff' }} />
-              <span className="font-semibold text-[20px] md:text-[24px] tracking-tight text-white">Skillvue</span>
+            <a href="/" onClick={handleClick('/')} className="flex items-center mb-5 md:mb-8">
+              <img
+                src="/logos/Skillvue_logo_solid_white.svg"
+                alt="Skillvue"
+                className="h-6 w-auto block border-0"
+              />
             </a>
 
             <div className="flex items-center gap-2.5 md:gap-3 mb-5 md:mb-8">
@@ -93,7 +95,7 @@ export default function Footer() {
               })}
             </div>
 
-            <p className="text-[12px] md:text-[11px] text-white/25 leading-[1.5] text-center lg:text-left max-w-[180px]">
+            <p className="text-[12px] md:text-[11px] text-white/45 leading-[1.5] text-center lg:text-left max-w-[180px]">
               {lang === 'it'
                 ? "Partner della ricerca 2025/2026 dell'Osservatorio HR del Politecnico di Milano"
                 : 'Partner of the 2025/2026 research of Osservatorio HR Politecnico di Milano'}
@@ -116,7 +118,7 @@ export default function Footer() {
                         key={link.name}
                         href={href}
                         onClick={handleClick(href)}
-                        className="inline md:block text-[14px] md:text-[15px] text-white/35 hover:text-white/65 transition-colors duration-300"
+                        className="inline md:block text-[14px] md:text-[15px] text-white/55 hover:text-white/65 transition-colors duration-300"
                       >
                         {name}
                       </a>
@@ -130,7 +132,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/[0.04] pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4">
-          <span className="text-[12px] md:text-[13px] text-white/20">
+          <span className="text-[12px] md:text-[13px] text-white/40">
             &copy; {new Date().getFullYear()} Skillvue. {t('All rights reserved.')}
           </span>
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 md:gap-6">
@@ -149,11 +151,11 @@ export default function Footer() {
               },
             ].map(({ label, href }) => (
               href.startsWith('http') ? (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[12px] md:text-[13px] text-white/20 hover:text-white/40 transition-colors duration-300">
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300">
                   {label}
                 </a>
               ) : (
-                <a key={label} href={href} onClick={handleClick(href)} className="text-[12px] md:text-[13px] text-white/20 hover:text-white/40 transition-colors duration-300">
+                <a key={label} href={href} onClick={handleClick(href)} className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300">
                   {label}
                 </a>
               )
@@ -163,7 +165,7 @@ export default function Footer() {
 
         {/* Company info line */}
         <div className="border-t border-white/[0.04] pt-4 mt-6">
-          <p className="text-[12px] text-white/20 text-center">
+          <p className="text-[12px] text-white/40 text-center">
             Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568
           </p>
         </div>
