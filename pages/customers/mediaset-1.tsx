@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';

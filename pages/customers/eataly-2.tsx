@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -90,7 +90,7 @@ const content = {
         {
           icon: Scale,
           title: 'Ricerca di equità e oggettività su volumi mai gestiti prima',
-          text: "Senza uno strumento strutturato, il rischio era valutare in modo disomogeneo. Nel settore, il 38,1% dei mismatch deriva proprio da verification non standardizzati.",
+          text: "Senza uno strumento strutturato, il rischio era valutare in modo disomogeneo. Nel settore, il 38,1% dei mismatch deriva proprio da assessment non standardizzati.",
         },
         {
           icon: Target,
@@ -111,8 +111,8 @@ const content = {
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Verification AI con Skillvue per il progetto Career Passport',
-      intro: "Skillvue è stato integrato nel processo di selezione esterna del progetto Eataly Career Passport — il programma di global mobility lanciato per supportare l'espansione in Nord America. Dopo che una campagna omnichannel ha raccolto oltre 1.000 candidature, Skillvue ha gestito il pre-screening con un verification basato su domande filtro e domande situazionali calibrate sui ruoli specifici (Head Chef, Director of Store Operations, General Manager of Restaurant).",
+      title: 'Assessment AI con Skillvue per il progetto Career Passport',
+      intro: "Skillvue è stato integrato nel processo di selezione esterna del progetto Eataly Career Passport — il programma di global mobility lanciato per supportare l'espansione in Nord America. Dopo che una campagna omnichannel ha raccolto oltre 1.000 candidature, Skillvue ha gestito il pre-screening con un assessment basato su domande filtro e domande situazionali calibrate sui ruoli specifici (Head Chef, Director of Store Operations, General Manager of Restaurant).",
       intro2: "L'obiettivo non era sostituire il giudizio umano, ma potenziarlo: lasciare all'AI il lavoro di standardizzazione su larga scala e restituire al team HR tempo e dati di qualità per concentrarsi su ciò che conta davvero: il confronto umano successivo.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
@@ -140,7 +140,7 @@ const content = {
       badge: 'EVOLUZIONE 2026',
       title: "L'espansione continua. La macchina di talent acquisition anche.",
       intro: "Il Career Passport è stato il primo capitolo per la costruzione di una talent strategy sempre più solida e innovativa, orientata a rendere il brand Eataly una piattaforma globale del Made in Italy.",
-      nextGen: "Nel 2026 la collaborazione prosegue con il progetto NextGen, focalizzato su candidati junior con 270+ profili già inclusi nell'verification di lingua inglese (livello B2) e soft skill. Un segnale chiaro della volontà di Eataly di continuare a integrare AI e human touch come leva strutturale di una talent strategy consapevole, inclusiva e scalabile.",
+      nextGen: "Nel 2026 la collaborazione prosegue con il progetto NextGen, focalizzato su candidati junior con 270+ profili già inclusi nell'assessment di lingua inglese (livello B2) e soft skill. Un segnale chiaro della volontà di Eataly di continuare a integrare AI e human touch come leva strutturale di una talent strategy consapevole, inclusiva e scalabile.",
     },
     related: {
       title: 'Storie correlate',
@@ -221,12 +221,12 @@ const content = {
         {
           icon: Scale,
           title: 'Fairness and objectivity at volumes never managed before',
-          text: "Without a structured tool, the risk was inconsistent evaluation. In the sector, 38.1% of mismatches come precisely from non-standardised verifications.",
+          text: "Without a structured tool, the risk was inconsistent evaluation. In the sector, 38.1% of mismatches come precisely from non-standardised assessments.",
         },
         {
           icon: Target,
           title: 'Filtering blocking requirements from the start',
-          text: "Relocation availability, salary range, international experience: blocking requirements to verify at the first touchpoint, before investing interview time on unsuitable candidates.",
+          text: "Relocation availability, salary range, international experience: blocking requirements to assess at the first touchpoint, before investing interview time on unsuitable candidates.",
         },
       ],
     },
@@ -234,7 +234,7 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What needed to change',
       items: [
-        { icon: Eye, text: "Map all key factors at the pre-screening stage: Leadership, team management, English language, aspiration for international mobility. Verify everything before the first interview, to focus subsequent time investment on a more targeted, personalised conversation guided by key data." },
+        { icon: Eye, text: "Map all key factors at the pre-screening stage: Leadership, team management, English language, aspiration for international mobility. Assess everything before the first interview, to focus subsequent time investment on a more targeted, personalised conversation guided by key data." },
         { icon: Scale, text: "Ensure fairness and reduce bias structurally: every candidate evaluated with the same rigour and depth, building a process that is defensible and transparent both internally and externally, using psychometrically validated tools." },
         { icon: Heart, text: "Integrate AI and human touch without ever losing the brand's authenticity: use technology as an enabler — not a replacement — of the human value that has always defined Eataly, for more effective, inclusive and conscious processes." },
         { icon: Zap, text: "Process applications in weeks, not months: compress pre-screening timelines to keep pace with an opening plan that can't wait, radically simplifying the HR team's screening workflow." },
@@ -242,8 +242,8 @@ const content = {
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Verification with Skillvue for the Career Passport project',
-      intro: "Skillvue was integrated into the external hiring process of the Eataly Career Passport project — the global mobility programme launched to support expansion in North America. After an omnichannel campaign collected over 1,000 applications, Skillvue managed the pre-screening with an verification combining filter questions and situational questions calibrated to specific roles (Head Chef, Director of Store Operations, General Manager of Restaurant).",
+      title: 'AI Assessment with Skillvue for the Career Passport project',
+      intro: "Skillvue was integrated into the external hiring process of the Eataly Career Passport project — the global mobility programme launched to support expansion in North America. After an omnichannel campaign collected over 1,000 applications, Skillvue managed the pre-screening with an assessment combining filter questions and situational questions calibrated to specific roles (Head Chef, Director of Store Operations, General Manager of Restaurant).",
       intro2: "The goal was not to replace human judgement, but to enhance it: let AI handle standardisation at scale, and give the HR team back the time and quality data to focus on what truly matters — the human conversation that follows.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
@@ -262,8 +262,8 @@ const content = {
         { value: 'More data available', label: 'for the decisions that matter most' },
       ],
       qualitative: [
-        { icon: TrendingUp, title: 'HR team productivity increased', text: "Freed from manual screening, the Talent Acquisition team dedicated more time to high-value stages: interviews, final verifications, and candidate relationships." },
-        { icon: Scale, title: 'Significant reduction in hiring bias', text: "Psychometrically validated tools reduced the weight of cognitive bias, ensuring consistent verification standards across all candidates regardless of evaluator." },
+        { icon: TrendingUp, title: 'HR team productivity increased', text: "Freed from manual screening, the Talent Acquisition team dedicated more time to high-value stages: interviews, final assessments, and candidate relationships." },
+        { icon: Scale, title: 'Significant reduction in hiring bias', text: "Psychometrically validated tools reduced the weight of cognitive bias, ensuring consistent assessment standards across all candidates regardless of evaluator." },
         { icon: Heart, title: 'The authenticity of the human touch remained intact', text: "AI handled standardisation and scale; people managed relationship, context and reading of potential. A more efficient process that never felt impersonal." },
       ],
     },
@@ -271,7 +271,7 @@ const content = {
       badge: 'EVOLUTION 2026',
       title: 'The expansion continues. So does the talent acquisition machine.',
       intro: "The Career Passport was the first chapter in building an increasingly solid and innovative talent strategy, aimed at making the Eataly brand a global platform for Made in Italy.",
-      nextGen: "In 2026, the collaboration continues with the NextGen project, focused on junior candidates with 270+ profiles already included in the English language (B2 level) and soft skills verification. A clear signal of Eataly's commitment to integrating AI and human touch as a structural lever of a conscious, inclusive and scalable talent strategy.",
+      nextGen: "In 2026, the collaboration continues with the NextGen project, focused on junior candidates with 270+ profiles already included in the English language (B2 level) and soft skills assessment. A clear signal of Eataly's commitment to integrating AI and human touch as a structural lever of a conscious, inclusive and scalable talent strategy.",
     },
     related: {
       title: 'Related Stories',

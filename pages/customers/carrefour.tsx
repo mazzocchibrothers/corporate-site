@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -113,7 +113,7 @@ const content = {
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Verification AI con Skillvue',
+      title: 'Assessment AI con Skillvue',
       intro: "Skillvue è stato integrato come prima cosa nel processo di selezione dei profili junior, per poi essere progressivamente esteso anche alla popolazione interna.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
@@ -124,11 +124,11 @@ const content = {
       methodology: [
         {
           title: "01 — Integrazione con il modello di leadership proprietario",
-          text: "Il modello di leadership Carrefour è stato integrato negli verification Skillvue, calibrando contenuti e comportamenti osservabili. Ogni candidato riceve una valutazione strutturata prima ancora del primo colloquio, con la scalabilità e l'oggettività che solo un verification science-backed può garantire.",
+          text: "Il modello di leadership Carrefour è stato integrato negli assessment Skillvue, calibrando contenuti e comportamenti osservabili. Ogni candidato riceve una valutazione strutturata prima ancora del primo colloquio, con la scalabilità e l'oggettività che solo un assessment science-backed può garantire.",
         },
         {
           title: "02 — Architettura multi-canale, processo unico",
-          text: "Verification configurati per profili diversi — stage HQ, ruoli operativi, leadership — ciascuno con mix specifico di soft e hard skill. Il recruiter riceve un report strutturato con profilo di competenze e matching rispetto al ruolo. Un unico standard su 4 formati e 1.200 punti vendita.",
+          text: "Assessment configurati per profili diversi — stage HQ, ruoli operativi, leadership — ciascuno con mix specifico di soft e hard skill. Il recruiter riceve un report strutturato con profilo di competenze e matching rispetto al ruolo. Un unico standard su 4 formati e 1.200 punti vendita.",
         },
         {
           title: "03 — Da hiring alla mappatura della rete vendita",
@@ -176,7 +176,7 @@ const content = {
     heroMetrics: [
       { value: '-35%', label: 'Time-to-Hire' },
       { value: '+20%', label: 'Hiring success rate' },
-      { value: 'Up to 6,000', label: 'People verified in 1 month' },
+      { value: 'Up to 6,000', label: 'People assessed in 1 month' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -246,14 +246,14 @@ const content = {
       title: 'What needed to change',
       items: [
         { icon: Zap, text: "Scale pre-screening without sacrificing quality: handle 30,000 applications/year with 3 recruiters, reducing reliance on external headhunters and freeing time for in-depth evaluation and employer branding" },
-        { icon: CheckCircle, text: "Integrate the proprietary leadership model into hiring: verify soft and hard skills aligned to the Carrefour framework, with structured output on every candidate before the first interview" },
+        { icon: CheckCircle, text: "Integrate the proprietary leadership model into hiring: assess soft and hard skills aligned to the Carrefour framework, with structured output on every candidate before the first interview" },
         { icon: Layers, text: "Cover a multi-format organization: a single adaptable tool for different profiles — HQ internships, operational roles across multiple store formats, leadership profiles — each with a specific skill mix" },
         { icon: TrendingUp, text: "Build a bridge between hiring and development: align skills measured at hiring with those developed internally, creating the foundation for a skills-based model covering the entire talent lifecycle" },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Verification with Skillvue',
+      title: 'AI Assessment with Skillvue',
       intro: "Skillvue was integrated first into the hiring process for junior profiles, then progressively extended to the internal workforce.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
@@ -264,11 +264,11 @@ const content = {
       methodology: [
         {
           title: "01 — Integration with the proprietary leadership model",
-          text: "Carrefour's leadership model was integrated into Skillvue verifications, calibrating content and observable behaviours. This way every candidate gets a structured evaluation before their first interview, with the scalability and objectivity that only a science-backed verification can guarantee.",
+          text: "Carrefour's leadership model was integrated into Skillvue assessments, calibrating content and observable behaviours. This way every candidate gets a structured evaluation before their first interview, with the scalability and objectivity that only a science-backed assessment can guarantee.",
         },
         {
           title: "02 — Multi-channel architecture, one process",
-          text: "Verifications configured for different profiles — HQ internships, operational roles, leadership — each with a specific mix of soft and hard skills. The recruiter receives a structured report with skill profile and role matching. One single standard across 4 formats and 1,200 stores.",
+          text: "Assessments configured for different profiles — HQ internships, operational roles, leadership — each with a specific mix of soft and hard skills. The recruiter receives a structured report with skill profile and role matching. One single standard across 4 formats and 1,200 stores.",
         },
         {
           title: "03 — From hiring to store network mapping",

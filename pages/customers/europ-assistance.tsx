@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -109,7 +109,7 @@ const content = {
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Verification AI con Skillvue',
+      title: 'Assessment AI con Skillvue',
       intro: "Skillvue è stato integrato nel processo di selezione di Europ Assistance Italia come primo step strutturato del funnel, gestendo il pre-screening su più profili e su più sedi geografiche. Il deployment è ricorrente, legato soprattutto ai due picchi stagionali annuali.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
@@ -120,8 +120,8 @@ const content = {
       methodologyLabel: 'COME È STATO COSTRUITO',
       methodology: [
         {
-          title: 'Verification in autonomia come primo step',
-          text: 'Dopo la candidatura, ogni candidato completa l\'verification in autonomia da qualsiasi dispositivo — telefono, tablet o laptop.',
+          title: 'Assessment in autonomia come primo step',
+          text: 'Dopo la candidatura, ogni candidato completa l\'assessment in autonomia da qualsiasi dispositivo — telefono, tablet o laptop.',
         },
         {
           title: 'Report strutturato per il recruiter',
@@ -144,7 +144,7 @@ const content = {
       qualitative: [
         { icon: BarChart3, title: 'Visibilità sul potenziale fin dal primo step', text: 'HR e line manager dispongono di dati strutturati sulle soft skill di ogni candidato già prima del colloquio — non solo fit immediato, ma segnali concreti di crescita nel tempo.' },
         { icon: Scale, title: 'Recruiter liberati per il lavoro ad alto valore', text: 'Il tempo recuperato è reinvestito in colloqui più approfonditi e analisi del potenziale — attività che incidono direttamente sulla qualità delle assunzioni e sulla retention.' },
-        { icon: Heart, title: 'Candidate experience ottimizzata', text: 'L\'verification pre-colloquio offre un momento di maggiore espressione personale rispetto al solo invio di CV: quando viene data la possibilità di mettersi alla prova, i candidati rispondono positivamente.' },
+        { icon: Heart, title: 'Candidate experience ottimizzata', text: 'L\'assessment pre-colloquio offre un momento di maggiore espressione personale rispetto al solo invio di CV: quando viene data la possibilità di mettersi alla prova, i candidati rispondono positivamente.' },
       ],
     },
     quote: {
@@ -233,7 +233,7 @@ const content = {
         {
           icon: Target,
           title: 'Niche profiles hard to identify',
-          text: "Some strategic roles required very specific skills, difficult to verify from a CV. Without objective evaluation tools, the process slowed down and the risk of a poor match increased.",
+          text: "Some strategic roles required very specific skills, difficult to assess from a CV. Without objective evaluation tools, the process slowed down and the risk of a poor match increased.",
         },
       ],
     },
@@ -249,7 +249,7 @@ const content = {
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Verification with Skillvue',
+      title: 'AI Assessment with Skillvue',
       intro: "Skillvue was integrated into Europ Assistance Italia's hiring process as the first structured step of the funnel, managing pre-screening across multiple profiles and geographic locations. Deployment is recurring, tied primarily to the two annual seasonal peaks.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
@@ -260,8 +260,8 @@ const content = {
       methodologyLabel: 'HOW IT WAS BUILT',
       methodology: [
         {
-          title: 'Verification is done independently as first step',
-          text: "After applying, every candidate completes the verification independently from any device — phone, tablet or laptop.",
+          title: 'Assessment is done independently as first step',
+          text: "After applying, every candidate completes the assessment independently from any device — phone, tablet or laptop.",
         },
         {
           title: 'Structured report for the recruiter',

@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -44,7 +44,7 @@ const hrPains = [
   },
   {
     icon: Scale,
-    en: { title: 'Fragmented and non-comparable evaluations', desc: 'Each store manager verified with their own criteria, each area operated with different standards: two people with the same potential could have completely different career paths — not based on merit, but on geographic luck.' },
+    en: { title: 'Fragmented and non-comparable evaluations', desc: 'Each store manager assessed with their own criteria, each area operated with different standards: two people with the same potential could have completely different career paths — not based on merit, but on geographic luck.' },
     it: { title: 'Valutazioni frammentate e non confrontabili', desc: 'Ogni manager di negozio valutava con criteri propri, ogni area funzionava con logiche diverse: due persone con lo stesso potenziale potevano avere percorsi completamente diversi, non per merito ma per fortuna geografica.' },
   },
   {
@@ -79,8 +79,8 @@ const objectives = [
 
 const methodologyCards = [
   {
-    en: { title: 'Mobile-first verification', text: '~30 minutes from a smartphone, completed during paid working hours. 1,000 people involved across 570 stores.' },
-    it: { title: 'Verification da mobile', text: '~30 minuti da cellulare, svolto durante l\'orario di lavoro come attività retribuita. 1.000 persone coinvolte su 570 punti vendita.' },
+    en: { title: 'Mobile-first assessment', text: '~30 minutes from a smartphone, completed during paid working hours. 1,000 people involved across 570 stores.' },
+    it: { title: 'Assessment da mobile', text: '~30 minuti da cellulare, svolto durante l\'orario di lavoro come attività retribuita. 1.000 persone coinvolte su 570 punti vendita.' },
   },
   {
     en: { title: 'Neutral baseline', text: 'Target population selected without prior high-potential nominations: sales associates with 18–48 months of tenure. An objective snapshot of real talent, not a confirmation of existing impressions.' },
@@ -130,14 +130,14 @@ const quote = {
 
 const visionBullets = {
   en: [
-    'Same criteria and skills framework from hiring to development: new hires are verified from day one with the same logic used to develop them',
-    'Verification via WhatsApp: in grocery retail this isn\'t a convenience choice, it\'s a strategic one. It removes every barrier to access and drives completion rates that other tools can\'t match',
-    'Extending verification to current Store Managers to identify profiles ready for the Area Manager role',
+    'Same criteria and skills framework from hiring to development: new hires are assessed from day one with the same logic used to develop them',
+    'Assessment via WhatsApp: in grocery retail this isn\'t a convenience choice, it\'s a strategic one. It removes every barrier to access and drives completion rates that other tools can\'t match',
+    'Extending assessment to current Store Managers to identify profiles ready for the Area Manager role',
     'Hiring, development, and training integrated into one continuous system. No longer separate processes, but a single talent strategy that works as a business asset',
   ],
   it: [
     'Stessi criteri e stesso framework di competenze dalla selezione allo sviluppo: chi entra viene già valutato con la logica con cui verrà accompagnato domani',
-    'Verification via WhatsApp: nella GDO non è una scelta di comodo, è una scelta strategica. Abbatte ogni barriera di accesso e porta i tassi di completamento a livelli che altri strumenti non raggiungono',
+    'Assessment via WhatsApp: nella GDO non è una scelta di comodo, è una scelta strategica. Abbatte ogni barriera di accesso e porta i tassi di completamento a livelli che altri strumenti non raggiungono',
     'Estensione della valutazione agli Store Manager in carica, per identificare i profili pronti al ruolo di Area Manager',
     'Selezione, sviluppo e formazione integrati in un sistema continuo. Non più processi separati, ma un\'unica talent strategy che funziona come asset di business',
   ],
@@ -347,11 +347,11 @@ export default function InsMercatoStoryPage() {
             {/* Solution */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'LA SOLUZIONE' : 'THE SOLUTION'}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{lang === 'it' ? 'Verification AI con Skillvue' : 'AI Verification with Skillvue'}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{lang === 'it' ? 'Assessment AI con Skillvue' : 'AI Assessment with Skillvue'}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">
                 {lang === 'it'
-                  ? "Skillvue ha abilitato un verification strutturato, basato sul framework di soft skill che In's aveva già costruito internamente per il profilo di Store Manager."
-                  : "Skillvue enabled a structured verification based on the soft skill framework that In's had already built internally for the Store Manager profile."
+                  ? "Skillvue ha abilitato un assessment strutturato, basato sul framework di soft skill che In's aveva già costruito internamente per il profilo di Store Manager."
+                  : "Skillvue enabled a structured assessment based on the soft skill framework that In's had already built internally for the Store Manager profile."
                 }
               </p>
               <div className="mb-10">
@@ -410,7 +410,7 @@ export default function InsMercatoStoryPage() {
                     <div className="rounded-xl p-5" style={{ background: '#f1f5f9' }}>
                       <span className="text-[10px] font-bold tracking-[0.12em] text-[#121212]/30 block mb-2">STEP 1</span>
                       <span className="block font-black text-[#121212] leading-none mb-2" style={{ fontSize: 'clamp(2rem,3.5vw,2.8rem)', letterSpacing: '-0.03em' }}>900</span>
-                      <p className="text-[13px] font-semibold text-[#121212]/70 leading-[1.4]">{lang === 'it' ? 'Verification AI completati' : 'AI Verifications completed'}</p>
+                      <p className="text-[13px] font-semibold text-[#121212]/70 leading-[1.4]">{lang === 'it' ? 'Assessment AI completati' : 'AI Assessments completed'}</p>
                       <p className="text-[12px] text-[#121212]/35 mt-1">{lang === 'it' ? 'su ~1.000 collaboratori coinvolti' : 'across ~1,000 employees involved'}</p>
                     </div>
 
@@ -426,7 +426,7 @@ export default function InsMercatoStoryPage() {
                       <span className="text-[10px] font-bold tracking-[0.12em] block mb-2" style={{ color: 'rgba(75,77,247,0.45)' }}>STEP 2</span>
                       <span className="block font-black leading-none mb-2" style={{ fontSize: 'clamp(2rem,3.5vw,2.8rem)', letterSpacing: '-0.03em', color: '#4b4df7' }}>90</span>
                       <p className="text-[13px] font-semibold text-[#121212]/70 leading-[1.4]">{lang === 'it' ? 'Top Talent identificati' : 'Top Talent identified'}</p>
-                      <p className="text-[12px] text-[#121212]/35 mt-1">{lang === 'it' ? "Top 10% emerso dall'verification" : 'Top 10% emerging from verification'}</p>
+                      <p className="text-[12px] text-[#121212]/35 mt-1">{lang === 'it' ? "Top 10% emerso dall'assessment" : 'Top 10% emerging from assessment'}</p>
                     </div>
 
                     {/* Arrow */}
@@ -501,7 +501,7 @@ export default function InsMercatoStoryPage() {
                     <div className="space-y-4">
                       {[
                         { labelIt: 'Coinvolti', labelEn: 'Involved', value: '~1000', pct: '100%', color: 'rgba(75,77,247,0.18)' },
-                        { labelIt: 'Verification completati', labelEn: 'Verifications completed', value: '~900', pct: '90%', color: 'rgba(75,77,247,0.3)' },
+                        { labelIt: 'Assessment completati', labelEn: 'Assessments completed', value: '~900', pct: '90%', color: 'rgba(75,77,247,0.3)' },
                         { labelIt: 'Top Talent identificati', labelEn: 'Top Talent identified', value: '~90', pct: '60%', color: 'rgba(75,77,247,0.55)' },
                         { labelIt: 'Role-Ready (47%)', labelEn: 'Role-Ready (47%)', value: '~42', pct: '30%', color: '#4b4df7' },
                         { labelIt: 'In Development (53%)', labelEn: 'In Development (53%)', value: '~48', pct: '34%', color: '#4b4df7' },
@@ -562,8 +562,8 @@ export default function InsMercatoStoryPage() {
                 </h2>
                 <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-8">
                   {lang === 'it'
-                    ? "Quando l'verification sullo sviluppo interno ha iniziato a produrre risultati concreti e scalabili, la scelta naturale è stata estenderlo anche alla selezione esterna, eliminando la discontinuità tra \"chi cerchiamo\" e \"come lo facciamo crescere\"."
-                    : "When the internal development verification began delivering concrete, scalable results, the natural next step was extending it to external hiring — eliminating the gap between \"who we're looking for\" and \"how we develop them.\""
+                    ? "Quando l'assessment sullo sviluppo interno ha iniziato a produrre risultati concreti e scalabili, la scelta naturale è stata estenderlo anche alla selezione esterna, eliminando la discontinuità tra \"chi cerchiamo\" e \"come lo facciamo crescere\"."
+                    : "When the internal development assessment began delivering concrete, scalable results, the natural next step was extending it to external hiring — eliminating the gap between \"who we're looking for\" and \"how we develop them.\""
                   }
                 </p>
                 <div className="rounded-xl border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.05] p-6 mb-8 flex items-start gap-4">
@@ -573,7 +573,7 @@ export default function InsMercatoStoryPage() {
                   <p className="text-[15px] text-[#121212]/75 leading-[1.7]">
                     {lang === 'it'
                       ? "Costruire un ciclo unico e coerente in cui ogni persona, dal primo giorno, viene valutata, orientata e accompagnata con la stessa logica."
-                      : "Build a single, coherent cycle where every person, from day one, is verified, guided, and developed with the same logic."
+                      : "Build a single, coherent cycle where every person, from day one, is assessed, guided, and developed with the same logic."
                     }
                   </p>
                 </div>
@@ -599,7 +599,7 @@ export default function InsMercatoStoryPage() {
                   </div>
                   <div className="rounded-xl bg-[#4B4DF7]/[0.06] p-6 text-center">
                     <span className="block text-[#121212]" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>51%+</span>
-                    <span className="text-[13px] text-[#121212]/[0.65] mt-2 block">{t('Structured skills verification')}<br />{t('predictive validity')}</span>
+                    <span className="text-[13px] text-[#121212]/[0.65] mt-2 block">{t('Structured skills assessment')}<br />{t('predictive validity')}</span>
                   </div>
                 </div>
                 <button onClick={() => { router.push('/science'); window.scrollTo(0,0); }} className="group inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">

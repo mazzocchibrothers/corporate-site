@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -100,7 +100,7 @@ const content = {
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Verification AI con Skillvue',
+      title: 'Assessment AI con Skillvue',
       intro: "Skillvue è stato integrato nel processo di selezione di Europ Assistance Italia come primo step strutturato del funnel, gestendo il pre-screening su più profili e su più sedi geografiche. Il deployment è ricorrente, legato soprattutto ai due picchi stagionali annuali.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
@@ -111,8 +111,8 @@ const content = {
       methodologyLabel: 'COME È STATO COSTRUITO',
       methodology: [
         {
-          title: 'Verification in autonomia come primo step',
-          text: 'Dopo la candidatura, ogni candidato completa l\'verification da qualsiasi dispositivo, telefono o laptop.',
+          title: 'Assessment in autonomia come primo step',
+          text: 'Dopo la candidatura, ogni candidato completa l\'assessment da qualsiasi dispositivo, telefono o laptop.',
         },
         {
           title: 'Report strutturato per il recruiter',
@@ -145,7 +145,7 @@ const content = {
       intro: "Quando i risultati sul recruiting hanno dimostrato che Skillvue poteva scalare qualità e velocità contemporaneamente, si è passati subito a valutare una fase di espansione sugli step successivi del talent lifecycle. Nel 2026, Europ Assistance estende Skillvue alla mappatura delle competenze interne.",
       objective: 'Mappatura sul modello di leadership "We IMPACT" — 5 competenze di leadership valutate su 3 livelli di seniority (Line Manager, Manager of Managers, Senior Leader).',
       bullets: [
-        'Verification personalizzati sul modello Europ Assistance — calibrati sul modello di competenze specifico, con indicatori comportamentali validati psicometricamente',
+        'Assessment personalizzati sul modello Europ Assistance — calibrati sul modello di competenze specifico, con indicatori comportamentali validati psicometricamente',
         'Da selezione a pianificazione della successione — i dati di competenza alimentano percorsi di sviluppo individuali, career planning e succession readiness',
       ],
     },
@@ -238,7 +238,7 @@ const content = {
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Verification with Skillvue',
+      title: 'AI Assessment with Skillvue',
       intro: "Skillvue was integrated into Europ Assistance Italia's hiring process as the first structured step of the funnel, managing pre-screening across multiple profiles and geographic locations. Deployment is recurring, tied primarily to the two annual seasonal peaks.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
@@ -249,8 +249,8 @@ const content = {
       methodologyLabel: 'HOW IT WAS BUILT',
       methodology: [
         {
-          title: 'Verification is done independently as the first step',
-          text: "After applying, every candidate completes the verification from any device, phone or laptop.",
+          title: 'Assessment is done independently as the first step',
+          text: "After applying, every candidate completes the assessment from any device, phone or laptop.",
         },
         {
           title: 'Structured report for the recruiter',
@@ -281,9 +281,9 @@ const content = {
       badge: 'EVOLUTION 2026',
       title: 'From hiring tool to talent intelligence partner',
       intro: "When the recruiting results proved that Skillvue could scale quality and speed simultaneously, the next steps in the talent lifecycle were immediately put on the table. In 2026, Europ Assistance is extending Skillvue to internal skills mapping.",
-      objective: 'Mapping against the "We IMPACT" leadership model — 5 leadership skills verified across 3 seniority levels (Line Manager, Manager of Managers, Senior Leader).',
+      objective: 'Mapping against the "We IMPACT" leadership model — 5 leadership skills assessed across 3 seniority levels (Line Manager, Manager of Managers, Senior Leader).',
       bullets: [
-        'Personalised verifications on the Europ Assistance model — calibrated to the specific skills framework, with psychometrically validated behavioural indicators',
+        'Personalised assessments on the Europ Assistance model — calibrated to the specific skills framework, with psychometrically validated behavioural indicators',
         'From hiring to succession planning — skills data feeds individual development paths, career planning and succession readiness',
       ],
     },

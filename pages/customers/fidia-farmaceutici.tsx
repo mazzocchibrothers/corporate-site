@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -36,7 +36,7 @@ const content = {
     heroMetrics: [
       { value: '1.700', label: 'dipendenti' },
       { value: '120+', label: 'Paesi' },
-      { value: '400+', label: 'dipendenti già inclusi in verification' },
+      { value: '400+', label: 'dipendenti già inclusi in assessment' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
@@ -92,7 +92,7 @@ const content = {
         {
           icon: CheckCircle,
           title: 'Valutazione e formazione andavano integrate',
-          text: "I risultati dell'verification dovevano alimentare i sistemi di formazione interni. Ogni gap andava tradotto in un'azione formativa concreta, misurabile e allineata alle priorità di sviluppo.",
+          text: "I risultati dell'assessment dovevano alimentare i sistemi di formazione interni. Ogni gap andava tradotto in un'azione formativa concreta, misurabile e allineata alle priorità di sviluppo.",
         },
         {
           icon: Zap,
@@ -168,7 +168,7 @@ const content = {
     heroMetrics: [
       { value: '1,700', label: 'employees' },
       { value: '120+', label: 'countries' },
-      { value: '400+', label: 'employees already included in verification' },
+      { value: '400+', label: 'employees already included in assessment' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',

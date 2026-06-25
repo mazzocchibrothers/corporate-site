@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -127,7 +127,7 @@ const content = {
       metrics: [
         { value: '3.000+', label: 'candidature processate' },
         { value: '4/5', label: 'Soddisfazione candidati' },
-        { value: '79%', label: 'Conversion rate verification' },
+        { value: '79%', label: 'Conversion rate assessment' },
       ],
       qualitative: [
         { icon: Eye, title: 'Visibilità sul potenziale dei profili junior in ingresso', text: 'Prima di Skillvue, le decisioni venivano prese sulla base della valutazione soggettiva dei singoli recruiter; ora si ragiona in ottica condivisa e con parametri comuni e standardizzati.' },
@@ -256,7 +256,7 @@ const content = {
       metrics: [
         { value: '3,000+', label: 'applications processed' },
         { value: '4/5', label: 'Candidate satisfaction' },
-        { value: '79%', label: 'Verification conversion rate' },
+        { value: '79%', label: 'Assessment conversion rate' },
       ],
       qualitative: [
         { icon: Eye, title: 'Visibility into the potential of incoming junior profiles', text: 'Before Skillvue, decisions were based on the subjective assessment of individual recruiters; now the team works with shared, standardised parameters.' },
