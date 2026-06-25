@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -85,7 +85,7 @@ const content = {
         {
           icon: Scale,
           title: 'Ricerca di equit\u00e0 su volumi mai gestiti prima',
-          text: "Migliaia di candidature da canali interni ed esterni da processare. Senza uno strumento strutturato, il rischio era valutare in modo disomogeneo: nel settore il 38,1% dei mismatch deriva proprio da verification non standardizzati.",
+          text: "Migliaia di candidature da canali interni ed esterni da processare. Senza uno strumento strutturato, il rischio era valutare in modo disomogeneo: nel settore il 38,1% dei mismatch deriva proprio da assessment non standardizzati.",
         },
         {
           icon: Target,
@@ -111,8 +111,8 @@ const content = {
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Verification AI con Skillvue per il progetto Career Passport',
-      intro: "Skillvue \u00e8 stato integrato nel processo di selezione esterna del progetto Eataly Career Passport \u2014 il programma di global mobility lanciato per supportare l\u2019espansione in Nord America. Dopo che una campagna omnichannel ha raccolto oltre 1.300 candidature, Skillvue ha gestito il pre-screening con un verification basato su domande filtro e domande situazionali calibrate sui ruoli specifici (Head Chef, Director of Store Operations, General Manager of Restaurant).",
+      title: 'Assessment AI con Skillvue per il progetto Career Passport',
+      intro: "Skillvue \u00e8 stato integrato nel processo di selezione esterna del progetto Eataly Career Passport \u2014 il programma di global mobility lanciato per supportare l\u2019espansione in Nord America. Dopo che una campagna omnichannel ha raccolto oltre 1.300 candidature, Skillvue ha gestito il pre-screening con un assessment basato su domande filtro e domande situazionali calibrate sui ruoli specifici (Head Chef, Director of Store Operations, General Manager of Restaurant).",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: Users, label: 'Leadership e gestione del personale' },
@@ -161,7 +161,7 @@ const content = {
       highlight2: '',
       after: '',
     },
-    subtitle: "Eataly is growing fast, especially with new openings in North America. With Skillvue, it verified thousands of candidates for international mobility in weeks, cutting through the sector's average timelines.",
+    subtitle: "Eataly is growing fast, especially with new openings in North America. With Skillvue, it assessed thousands of candidates for international mobility in weeks, cutting through the sector's average timelines.",
     heroMetrics: [
       { value: '1,300+', label: 'applications processed via AI pre-screening' },
       { value: '22', label: 'internal resources ready to relocate' },
@@ -214,7 +214,7 @@ const content = {
         {
           icon: Scale,
           title: 'Fairness at volumes never managed before',
-          text: "Thousands of applications from internal and external channels to process. Without a structured tool, the risk was inconsistent evaluation: in the sector, 38.1% of mismatches come precisely from non-standardised verifications.",
+          text: "Thousands of applications from internal and external channels to process. Without a structured tool, the risk was inconsistent evaluation: in the sector, 38.1% of mismatches come precisely from non-standardised assessments.",
         },
         {
           icon: Target,
@@ -233,15 +233,15 @@ const content = {
       title: 'What needed to change',
       items: [
         { icon: Zap, text: "Process 1,300+ applications in weeks, not months: compress pre-screening timelines to keep pace with an opening plan that can\u2019t wait." },
-        { icon: Eye, text: "Map all key factors at the pre-screening stage: Leadership, team management, English language, aspiration for international mobility. Verify everything before the first human interview, to focus time investment on the highest-potential candidates." },
+        { icon: Eye, text: "Map all key factors at the pre-screening stage: Leadership, team management, English language, aspiration for international mobility. Assess everything before the first human interview, to focus time investment on the highest-potential candidates." },
         { icon: Scale, text: "Ensure fairness and growth opportunity at scale: every candidate evaluated with the same rigour and depth, building a process that is defensible and transparent both internally and externally." },
         { icon: TrendingUp, text: "Turn hiring into an accelerator of expansion: not just finding people, but building a talent acquisition engine that can support the scale of a brand doubling its North America presence and targeting 40 new stores in the Middle East." },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Verification with Skillvue for the Career Passport project',
-      intro: "Skillvue was integrated into the external hiring process of the Eataly Career Passport project \u2014 the global mobility programme launched to support expansion in North America. After an omnichannel campaign collected over 1,300 applications, Skillvue managed the pre-screening with an verification combining filter questions and situational questions calibrated to specific roles (Head Chef, Director of Store Operations, General Manager of Restaurant).",
+      title: 'AI Assessment with Skillvue for the Career Passport project',
+      intro: "Skillvue was integrated into the external hiring process of the Eataly Career Passport project \u2014 the global mobility programme launched to support expansion in North America. After an omnichannel campaign collected over 1,300 applications, Skillvue managed the pre-screening with an assessment combining filter questions and situational questions calibrated to specific roles (Head Chef, Director of Store Operations, General Manager of Restaurant).",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: Users, label: 'Leadership and people management' },

@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -85,7 +85,7 @@ const content = {
         {
           icon: Heart,
           title: 'Change management senza precedenti digitali',
-          text: "Introdurre verification digitali in un'organizzazione che non aveva mai utilizzato strumenti tecnologici per la gestione delle persone significava dover promuovere una trasformazione profonda, a tutti i livelli.",
+          text: "Introdurre assessment digitali in un'organizzazione che non aveva mai utilizzato strumenti tecnologici per la gestione delle persone significava dover promuovere una trasformazione profonda, a tutti i livelli.",
         },
       ],
     },
@@ -95,13 +95,13 @@ const content = {
       items: [
         { icon: Scale, text: "Standardizzare le valutazioni su tutta la rete: stessi criteri, stesso framework di competenze, indipendentemente dall'insegna, dal punto vendita o dal singolo responsabile" },
         { icon: CheckCircle, text: "Adottare un approccio skills-based completo: valutazioni calibrate per obiettivo (hiring, conferma, sviluppo) e per ruolo/reparto, con un mix di soft e hard skill" },
-        { icon: Wrench, text: "Costruire competenze di valutazione specifiche per la GDO: sviluppare verification ad hoc laddove il modello Unicomm lo richiedeva" },
+        { icon: Wrench, text: "Costruire competenze di valutazione specifiche per la GDO: sviluppare assessment ad hoc laddove il modello Unicomm lo richiedeva" },
         { icon: Users, text: "Guidare un change management reale: trasformare la cultura HR dell'organizzazione, non solo introdurre uno strumento" },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Verification AI su tre filoni in parallelo, calibrato sul modello Unicomm.',
+      title: 'Assessment AI su tre filoni in parallelo, calibrato sul modello Unicomm.',
       intro: "Skillvue è stato integrato come partner per la costruzione del talent lifecycle di Unicomm, lavorando con la Direzione Risorse Umane guidata da Giuseppe Curci, Direttore Risorse Umane Gruppo, per allineare la piattaforma al modello di competenze aziendale e alle specificità della GDO.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
@@ -112,7 +112,7 @@ const content = {
       methodology: [
         {
           title: 'Hiring',
-          text: "Selezione per le posizioni aperte sulle diverse insegne del Gruppo, con verification calibrati sul ruolo specifico.",
+          text: "Selezione per le posizioni aperte sulle diverse insegne del Gruppo, con assessment calibrati sul ruolo specifico.",
         },
         {
           title: 'Conferme',
@@ -134,8 +134,8 @@ const content = {
       ],
       qualitative: [
         { icon: TrendingUp, title: "Da zero a sistema integrato", text: "Unicomm è passata dall'assenza totale di strumenti digitali HR a un talent lifecycle strutturato che copre selezione, conferme e sviluppo in un unico sistema. Non un'ottimizzazione incrementale, ma un salto di paradigma realizzato durante la fase di crescita più intensa del Gruppo." },
-        { icon: Wrench, title: "Competenze GDO finalmente misurabili", text: "Le soft skill specifiche del settore vengono ora valutate con strumenti calibrati sul modello Unicomm, non con verification generici. Misurare queste competenze è una leva di business, non un mero esercizio HR." },
-        { icon: BarChart3, title: "Decisioni basate su dati, non su impressioni", text: "Gli verification producono informazioni strutturate che supportano le decisioni manageriali senza sostituirle. I manager decidono con più dati, e questo alza il livello della decisione." },
+        { icon: Wrench, title: "Competenze GDO finalmente misurabili", text: "Le soft skill specifiche del settore vengono ora valutate con strumenti calibrati sul modello Unicomm, non con assessment generici. Misurare queste competenze è una leva di business, non un mero esercizio HR." },
+        { icon: BarChart3, title: "Decisioni basate su dati, non su impressioni", text: "Gli assessment producono informazioni strutturate che supportano le decisioni manageriali senza sostituirle. I manager decidono con più dati, e questo alza il livello della decisione." },
         { icon: Users, title: "Un percorso di change management in corso", text: "La trasformazione culturale è ancora in atto, ma le fondamenta sono solide: il sistema è operativo, i tre filoni avanzano in parallelo, e l'organizzazione sta costruendo la familiarità con un approccio skills-based che prima non esisteva." },
       ],
     },
@@ -213,7 +213,7 @@ const content = {
         {
           icon: Heart,
           title: 'Change management with no digital precedents',
-          text: "Introducing digital verifications into an organization that had never used HR technology meant driving a deep transformation at every level of the organization: quite a big challenge to take on for a small HR team.",
+          text: "Introducing digital assessments into an organization that had never used HR technology meant driving a deep transformation at every level of the organization: quite a big challenge to take on for a small HR team.",
         },
       ],
     },
@@ -221,15 +221,15 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What needed to change',
       items: [
-        { icon: Scale, text: "Standardize verifications across the entire network: same criteria, same skills framework, regardless of brand, store or individual manager" },
-        { icon: CheckCircle, text: "Adopt a complete skills-based approach: verifications calibrated by objective (hiring, confirmation, development) and by role/department, with a mix of soft and hard skills" },
-        { icon: Wrench, text: "Build sector-specific verification capabilities: develop selected verifications where the Unicomm model required it" },
+        { icon: Scale, text: "Standardize assessments across the entire network: same criteria, same skills framework, regardless of brand, store or individual manager" },
+        { icon: CheckCircle, text: "Adopt a complete skills-based approach: assessments calibrated by objective (hiring, confirmation, development) and by role/department, with a mix of soft and hard skills" },
+        { icon: Wrench, text: "Build sector-specific assessment capabilities: develop selected assessments where the Unicomm model required it" },
         { icon: Users, text: "Lead real change management: transform the organization's HR culture, not just introduce a tool" },
       ],
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI verification across three parallel streams, calibrated on the Unicomm model.',
+      title: 'AI assessment across three parallel streams, calibrated on the Unicomm model.',
       intro: "Skillvue was integrated as a partner for building Unicomm's talent lifecycle, working with the HR Division led by Giuseppe Curci, Group HR Director, to align the platform to the company's leadership model and the specifics of grocery retail.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
@@ -240,11 +240,11 @@ const content = {
       methodology: [
         {
           title: 'Hiring',
-          text: "Selection for open positions across the Group's different brands, with verifications calibrated to the specific role.",
+          text: "Selection for open positions across the Group's different brands, with assessments calibrated to the specific role.",
         },
         {
           title: 'Confirmations',
-          text: "Dozens of employees per month verified for confirmation to permanent contract, with structured and traceable criteria.",
+          text: "Dozens of employees per month assessed for confirmation to permanent contract, with structured and traceable criteria.",
         },
         {
           title: 'Development',
@@ -262,8 +262,8 @@ const content = {
       ],
       qualitative: [
         { icon: TrendingUp, title: "From zero to integrated system", text: "Unicomm has gone from the complete absence of digital HR tools to a structured talent lifecycle covering hiring, confirmations and development in a single system. Not an incremental optimization, but a paradigm shift achieved during the most intense growth phase of the Group." },
-        { icon: Wrench, title: "Industry-relevant skills now measurable", text: "Sector-specific soft skills are now verified with tools calibrated to the Unicomm model, not generic verifications. Measuring these skills is a business lever, not just an HR exercise." },
-        { icon: BarChart3, title: "Decisions based on data, not impressions", text: "Verifications produce structured information that supports managerial decisions without replacing them. Managers decide with more data, and this raises the quality of the decision." },
+        { icon: Wrench, title: "Industry-relevant skills now measurable", text: "Sector-specific soft skills are now assessed with tools calibrated to the Unicomm model, not generic assessments. Measuring these skills is a business lever, not just an HR exercise." },
+        { icon: BarChart3, title: "Decisions based on data, not impressions", text: "Assessments produce structured information that supports managerial decisions without replacing them. Managers decide with more data, and this raises the quality of the decision." },
         { icon: Users, title: "An ongoing change management journey", text: "The cultural transformation is still underway, but the foundations are solid: the system is live, the three streams are advancing in parallel, and the organization is building familiarity with a skills-based approach that did not exist before." },
       ],
     },

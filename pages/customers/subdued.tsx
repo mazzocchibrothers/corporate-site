@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -114,8 +114,8 @@ const content = {
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Verification AI con Skillvue',
-      intro: 'Il team HR di Subdued ha lavorato direttamente con Skillvue per selezionare le skill più rilevanti per i profili di store e costruire un verification strutturato, erogato via WhatsApp — una scelta progettuale chiave per garantire un\'esperienza frictionless e un buon tasso di completamento.',
+      title: 'Assessment AI con Skillvue',
+      intro: 'Il team HR di Subdued ha lavorato direttamente con Skillvue per selezionare le skill più rilevanti per i profili di store e costruire un assessment strutturato, erogato via WhatsApp — una scelta progettuale chiave per garantire un\'esperienza frictionless e un buon tasso di completamento.',
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: CheckCircle, label: 'Comunicazione' },
@@ -125,11 +125,11 @@ const content = {
       methodologyLabel: 'COME È STATO COSTRUITO',
       methodology: [
         {
-          title: 'Invio del link all\'verification Skillvue via WhatsApp',
+          title: 'Invio del link all\'assessment Skillvue via WhatsApp',
           text: 'Una scelta progettuale chiave per garantire un\'esperienza frictionless e un buon tasso di completamento.',
         },
         {
-          title: 'Il candidato completa l\'verification',
+          title: 'Il candidato completa l\'assessment',
           text: 'Video presentation + domande comportamentali strutturate su comunicazione, vendita e teamwork. Massimo 15 minuti, da qualunque device, entro una deadline definita.',
         },
         {
@@ -249,7 +249,7 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What needed to change',
       items: [
-        { icon: Zap, text: 'Surface skills and potential at scale: verify communication, selling and teamworking before the interview, with objective data on every candidate' },
+        { icon: Zap, text: 'Surface skills and potential at scale: assess communication, selling and teamworking before the interview, with objective data on every candidate' },
         { icon: Target, text: 'Free the team from operational work: reduce screening hours to recover time for strategic activities, employer branding and development' },
         { icon: Layers, text: 'Create a cross-Europe standard: the same evaluation criteria across Italy, Ireland, the UK, the Netherlands, Sweden and France, adapted by language and role, without multiplying HR resources' },
         { icon: Heart, text: 'Transform HR into a real agent of change: build a hiring infrastructure capable of supporting business growth, making HR a true business partner' },
@@ -257,8 +257,8 @@ const content = {
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Verification with Skillvue',
-      intro: 'The Subdued HR team worked directly with Skillvue to select the most relevant skills for store profiles and build a structured verification — delivered via WhatsApp, a deliberate design choice to ensure a frictionless experience and strong completion rates.',
+      title: 'AI Assessment with Skillvue',
+      intro: 'The Subdued HR team worked directly with Skillvue to select the most relevant skills for store profiles and build a structured assessment — delivered via WhatsApp, a deliberate design choice to ensure a frictionless experience and strong completion rates.',
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: CheckCircle, label: 'Communication' },
@@ -268,11 +268,11 @@ const content = {
       methodologyLabel: 'HOW IT WAS BUILT',
       methodology: [
         {
-          title: 'Skillvue verification link sent via WhatsApp',
+          title: 'Skillvue assessment link sent via WhatsApp',
           text: 'A deliberate design choice to ensure a frictionless experience and strong completion rates.',
         },
         {
-          title: 'Candidate completes the verification',
+          title: 'Candidate completes the assessment',
           text: 'Video presentation + structured behavioural questions on communication, sales, and teamwork. Max 15 minutes, any device, within a set deadline.',
         },
         {
