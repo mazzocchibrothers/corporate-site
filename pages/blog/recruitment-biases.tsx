@@ -54,7 +54,7 @@ export default function BlogArticle2() {
                 <span className="text-[13px] text-white/35">{lang === 'it' ? '10 marzo 2026' : 'March 10, 2026'}</span>
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '12 min di lettura' : '12 min read'}</span>
               </div>
-              <h1 className="font-bold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
                 {lang === 'it' ? 'Gli 8 bias di selezione più comuni (e come evitarli)' : 'The 8 Most Common Recruitment Biases (and How to Avoid Them)'}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
@@ -81,7 +81,7 @@ export default function BlogArticle2() {
                 </p>
               </div>
 
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">{lang === 'it' ? 'Cosa Sono i Bias Cognitivi?' : 'What Are Cognitive Biases?'}</h2>
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">{lang === 'it' ? 'Cosa Sono i Bias Cognitivi?' : 'What Are Cognitive Biases?'}</h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'I bias cognitivi sono scorciatoie mentali che usiamo per prendere decisioni più velocemente. Non sono errori intenzionali: sono meccanismi automatici del cervello che ci aiutano a semplificare la complessità. Il problema sorge quando queste scorciatoie entrano in gioco in situazioni che richiedono valutazioni strutturate, come la selezione del personale.' : "Cognitive biases are mental shortcuts we use to make decisions faster. They're not intentional errors: they're automatic brain mechanisms that help us simplify complexity. The problem arises when these shortcuts come into play in situations requiring structured evaluations, like recruitment."}
               </p>
@@ -95,7 +95,7 @@ export default function BlogArticle2() {
         {/* The 8 Biases — Minimal accordion */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
-            <motion.h2 className="text-[26px] font-bold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <motion.h2 className="text-[26px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               {lang === 'it' ? 'Gli 8 Bias di Selezione più Comuni' : 'The 8 Most Common Recruitment Biases'}
             </motion.h2>
             <p className="text-[17px] text-[#121212]/[0.5] leading-[1.9] mb-12">
@@ -137,7 +137,7 @@ export default function BlogArticle2() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">{lang === 'it' ? 'Come Ridurre i Bias nella Selezione' : 'How to Reduce Biases in Recruitment'}</h2>
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">{lang === 'it' ? 'Come Ridurre i Bias nella Selezione' : 'How to Reduce Biases in Recruitment'}</h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {lang === 'it' ? 'La cattiva notizia: essendo umani, i bias non possono essere eliminati. La buona notizia: possono essere gestiti con metodo. Se vuoi ridurne l\'impatto, devi intervenire sul processo di selezione, rendendolo più strutturato e meno dipendente dalla percezione individuale.' : "The bad news: being human, biases cannot be eliminated. The good news: they can be managed with method. If you want to reduce their impact, you need to intervene on the selection process, making it more structured and less dependent on individual perception."}
               </p>
@@ -175,7 +175,7 @@ export default function BlogArticle2() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}</span>
-              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
+              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
                 {lang === 'it' ? <>Rendi il tuo processo di selezione più strutturato, meno esposto ai <span className="gradient-text">bias.</span></> : <>Make your recruitment process more structured, less exposed to <span className="gradient-text">bias.</span></>}
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">

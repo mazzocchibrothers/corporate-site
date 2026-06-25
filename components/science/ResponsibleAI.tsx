@@ -45,8 +45,8 @@ export default function ResponsibleAI() {
     return (
       <motion.div key={p.title} data-testid={`responsible-${p.title.toLowerCase().replace(/\s+/g, '-')}`} className="group rounded-xl md:rounded-2xl border border-[#4B4DF7]/[0.08] hover:border-[#4B4DF7]/[0.18] bg-white/60 hover:bg-white/80 p-5 md:p-10 transition-all duration-500 h-full" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}>
         <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#4B4DF7]/40 mb-3 md:mb-5" strokeWidth={1.5} />
-        <h3 className="text-[15px] md:text-[18px] font-bold text-[#1A1A2E] mb-2 md:mb-3">{t(p.title)}</h3>
-        <p className="text-[12px] md:text-[15px] text-[#1A1A2E]/[0.65] leading-[1.5] md:leading-[1.75]">{t(p.desc)}</p>
+        <h3 className="text-[15px] md:text-[18px] font-semibold text-[#1A1A2E] mb-2 md:mb-3">{t(p.title)}</h3>
+        <p className="text-[12px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-[1.75]">{t(p.desc)}</p>
       </motion.div>
     );
   };
@@ -57,7 +57,7 @@ export default function ResponsibleAI() {
 
         {/* Responsible AI */}
         <motion.div className="mb-8 md:mb-12" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">
             {t('Responsible AI built for')}{' '}
             <span className="italic font-bold gradient-text-on-light">{t('high-stakes talent decisions')}</span>
           </h2>
@@ -83,7 +83,7 @@ export default function ResponsibleAI() {
 
         {/* FAQ */}
         <motion.div className="mb-6 md:mb-10" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">
             {t('Frequently asked')}{' '}
             <span className="italic font-bold gradient-text-on-light">{t('questions')}</span>
           </h2>
@@ -99,7 +99,7 @@ export default function ResponsibleAI() {
               <AnimatePresence>
                 {openIdx === i && (
                   <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
-                    <p className="text-[14px] md:text-[15px] text-[#1A1A2E]/[0.55] leading-[1.65] md:leading-[1.75] pb-4 md:pb-6">{t(faq.a)}</p>
+                    <p className="text-[14px] md:text-[15px] text-[#7A7A7A] leading-[1.65] md:leading-[1.75] pb-4 md:pb-6">{t(faq.a)}</p>
                   </motion.div>
                 )}
               </AnimatePresence>

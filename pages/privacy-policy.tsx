@@ -102,7 +102,7 @@ function ServiceBlock({ item }) {
         <div className="w-10 h-10 rounded-xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.08] flex items-center justify-center shrink-0">
           <Icon className="h-4.5 w-4.5 text-[#4B4DF7]/50" />
         </div>
-        <h3 className="text-[16px] font-bold text-[#121212]">{item.title}</h3>
+        <h3 className="text-[16px] font-semibold text-[#121212]">{item.title}</h3>
       </div>
       <div className="space-y-6 ml-[52px]">
         {item.services.map((svc, i) => (
@@ -132,7 +132,7 @@ export default function PrivacyPolicyPage() {
               {t('Back')}
             </button>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-bold text-white/95 mb-4 tracking-[-0.03em] leading-[1.1]">
+              <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-semibold text-white/95 mb-4 tracking-[-0.03em] leading-[1.1]">
                 Privacy Policy di Skillvue
               </h1>
               <p className="text-[18px] text-white/[0.45] leading-[1.75] max-w-2xl" style={{ fontWeight: 300 }}>
@@ -147,7 +147,7 @@ export default function PrivacyPolicyPage() {
           <div className="max-w-[1000px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
 
             <motion.h2
-              className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-bold text-[#121212] mb-16 leading-[1.4]"
+              className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-semibold text-[#121212] mb-16 leading-[1.4]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -177,7 +177,7 @@ export default function PrivacyPolicyPage() {
             {/* Ads opt-out */}
             <div className="border-t border-[#121212]/[0.08] mt-16 pt-16">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <h2 className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-bold text-[#121212] mb-6 leading-[1.3]">
+                <h2 className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-semibold text-[#121212] mb-6 leading-[1.3]">
                   Informazioni su come disattivare gli annunci pubblicitari basati sugli interessi
                 </h2>
                 <p className="text-[15px] text-[#121212]/[0.5] leading-[1.85] max-w-3xl">
@@ -189,7 +189,7 @@ export default function PrivacyPolicyPage() {
             {/* Contact info */}
             <div className="border-t border-[#121212]/[0.08] mt-16 pt-16">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <h2 className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-bold text-[#121212] mb-8 leading-[1.3]">
+                <h2 className="text-[clamp(1.3rem,2.5vw,1.6rem)] font-semibold text-[#121212] mb-8 leading-[1.3]">
                   Informazioni di contatto
                 </h2>
                 <div className="flex items-start gap-4">

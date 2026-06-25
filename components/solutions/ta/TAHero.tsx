@@ -10,7 +10,7 @@ export default function TAHero() {
     <section id="ta-hero" data-testid="ta-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full py-10 md:py-16 lg:py-0">
         <motion.h1
-          className="text-[clamp(2.2rem,8vw,5.5rem)] md:text-[clamp(3rem,6vw,5.5rem)] font-bold tracking-[-0.03em] text-white/95 mb-6 md:mb-10"
+          className="text-[clamp(2.2rem,8vw,5.5rem)] md:text-[clamp(3rem,6vw,5.5rem)] font-semibold tracking-[-0.03em] text-white/95 mb-6 md:mb-10"
           style={{ lineHeight: 1.1 }}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

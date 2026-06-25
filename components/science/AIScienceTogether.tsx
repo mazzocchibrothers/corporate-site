@@ -26,7 +26,7 @@ export default function AIScienceTogether() {
             return (
               <motion.div key={p.title} className="group rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}>
                 <Icon className="h-6 w-6 text-[#9B9DFB]/50 mb-5" strokeWidth={1.5} />
-                <h3 className="text-[20px] font-bold text-white/90 mb-4">{t(p.title)}</h3>
+                <h3 className="text-[20px] font-semibold text-white/90 mb-4">{t(p.title)}</h3>
                 <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t(p.desc)}</p>
               </motion.div>
             );

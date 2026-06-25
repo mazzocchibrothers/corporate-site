@@ -18,7 +18,7 @@ export default function LDProblem() {
     <section id="ld-problem" data-testid="ld-problem" className="section-breathe relative py-20 lg:py-24" ref={ref}>
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#121212]">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212]">
             {t('The blind spots in your')}{' '}
             <span className="font-bold gradient-text-on-light">{t('L&D investments')}</span>
           </h2>
@@ -37,8 +37,8 @@ export default function LDProblem() {
             >
               <span className="text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-[#4B4DF7]/[0.12] leading-none shrink-0 w-20">{p.num}</span>
               <div>
-                <h3 className="text-[20px] font-bold text-[#121212] mb-3">{t(p.title)}</h3>
-                <p className="text-[16px] text-[#121212]/[0.65] leading-[1.75] max-w-2xl">{t(p.desc)}</p>
+                <h3 className="text-[20px] font-semibold text-[#121212] mb-3">{t(p.title)}</h3>
+                <p className="text-[16px] text-[#7A7A7A] leading-[1.75] max-w-2xl">{t(p.desc)}</p>
               </div>
             </motion.div>
           ))}

@@ -66,12 +66,12 @@ export default function PRConsulting() {
           </div>
         </div>
 
-        <h3 className="text-[18px] md:text-[20px] font-bold text-[#121212] mb-2 md:mb-3 leading-tight">{t(p.title)}</h3>
-        <p className="text-[14px] md:text-[15px] text-[#121212]/[0.5] leading-[1.7] mb-5 md:mb-8 flex-1">{t(p.desc)}</p>
+        <h3 className="text-[18px] md:text-[20px] font-semibold text-[#121212] mb-2 md:mb-3 leading-tight">{t(p.title)}</h3>
+        <p className="text-[14px] md:text-[15px] text-[#7A7A7A] leading-[1.7] mb-5 md:mb-8 flex-1">{t(p.desc)}</p>
 
         <div className="rounded-xl bg-[#F7F7F7] border border-[#121212]/[0.06] p-4 md:p-5">
           <span className="text-[24px] md:text-[28px] font-bold text-[#121212] leading-none tracking-[-0.02em] block mb-1.5">{p.stat}</span>
-          <span className="text-[12px] text-[#121212]/[0.4] leading-[1.5]">{t(p.statLabel)}</span>
+          <span className="text-[12px] text-[#7A7A7A] leading-[1.5]">{t(p.statLabel)}</span>
         </div>
       </motion.div>
     );
@@ -83,11 +83,11 @@ export default function PRConsulting() {
 
         {/* Header */}
         <motion.div className="max-w-3xl mb-12 md:mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">
             {t('Built for organizations where people are')}{' '}
             <span className="font-bold gradient-text-on-light">{t('the product')}</span>
           </h2>
-          <p className="text-[15px] md:text-[17px] text-[#121212]/[0.45] leading-[1.75] max-w-2xl">
+          <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.75] max-w-2xl">
             {t('In consulting, professional services, and project-driven organizations, the quality of every engagement depends on the quality of the team. Skillvue gives you objective skills data to staff smarter.')}
           </p>
         </motion.div>

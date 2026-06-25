@@ -116,11 +116,11 @@ export default function HowItWorksSection() {
                     )}
                   </div>
 
-                  <div className="p-5 md:p-8 lg:p-10 flex flex-col justify-between flex-1">
+                  <div className="p-5 md:p-8 lg:p-10 flex flex-col flex-1">
                     {/* Top: Number + Icon */}
-                    <div className="flex items-center justify-between mb-auto">
+                    <div className="flex items-center justify-between mb-6 md:mb-8 lg:mb-10">
                       <motion.span
-                        className="text-[32px] md:text-[48px] lg:text-[56px] font-bold leading-none tracking-[-0.04em]"
+                        className="text-[32px] md:text-[48px] lg:text-[56px] font-light leading-none tracking-[-0.04em]"
                         animate={{ color: isActive ? 'rgba(155,157,251,0.3)' : 'rgba(26,26,46,0.12)' }}
                         transition={{ duration: 0.5 }}
                       >
@@ -139,10 +139,9 @@ export default function HowItWorksSection() {
                       </motion.div>
                     </div>
 
-                    {/* Bottom: Title + Description + Tags */}
-                    <div>
-                      <motion.h3
-                        className="text-[18px] md:text-[28px] lg:text-[32px] font-bold mb-2 md:mb-4 leading-tight tracking-[-0.02em]"
+                    {/* Title + Description + Tags */}
+                    <motion.h3
+                        className="text-[18px] md:text-[28px] lg:text-[32px] font-semibold mb-2 md:mb-4 leading-tight tracking-[-0.02em]"
                         animate={{ color: isActive ? 'rgba(255,255,255,0.95)' : 'rgba(26,26,46,0.85)' }}
                         transition={{ duration: 0.5 }}
                       >
@@ -151,30 +150,29 @@ export default function HowItWorksSection() {
 
                       <motion.p
                         className="text-[13px] md:text-[15px] leading-[1.6] md:leading-[1.8] mb-3 md:mb-8"
-                        animate={{ color: isActive ? 'rgba(255,255,255,0.5)' : 'rgba(26,26,46,0.55)' }}
+                        animate={{ color: isActive ? 'rgba(255,255,255,0.5)' : '#7A7A7A' }}
                         transition={{ duration: 0.5 }}
                       >
                         {t(step.desc)}
                       </motion.p>
 
-                      {/* Keyword tags */}
-                      <div className="flex flex-wrap gap-1.5 md:gap-2">
-                        {step.keywords.map(kw => (
-                          <motion.span
-                            key={kw}
-                            className="inline-flex px-2.5 py-1 md:px-3 md:py-1.5 rounded-full text-[11px] md:text-[11px] font-semibold tracking-wide"
-                            animate={{
-                              color: isActive ? 'rgba(155,157,251,0.7)' : 'rgba(75,77,247,0.5)',
-                              backgroundColor: isActive ? 'rgba(75,77,247,0.12)' : 'rgba(75,77,247,0.04)',
-                              borderColor: isActive ? 'rgba(75,77,247,0.2)' : 'rgba(75,77,247,0.08)',
-                            }}
-                            transition={{ duration: 0.5 }}
-                            style={{ border: '1px solid' }}
-                          >
-                            {t(kw)}
-                          </motion.span>
-                        ))}
-                      </div>
+                    {/* Keyword tags */}
+                    <div className="flex flex-wrap gap-1.5 md:gap-2">
+                      {step.keywords.map(kw => (
+                        <motion.span
+                          key={kw}
+                          className="inline-flex px-2.5 py-1 md:px-3 md:py-1.5 rounded-full text-[11px] md:text-[11px] font-semibold tracking-wide"
+                          animate={{
+                            color: isActive ? 'rgba(155,157,251,0.7)' : 'rgba(75,77,247,1.0)',
+                            backgroundColor: isActive ? 'rgba(75,77,247,0.12)' : 'rgba(75,77,247,0.04)',
+                            borderColor: isActive ? 'rgba(75,77,247,0.2)' : 'rgba(75,77,247,0.08)',
+                          }}
+                          transition={{ duration: 0.5 }}
+                          style={{ border: '1px solid' }}
+                        >
+                          {t(kw)}
+                        </motion.span>
+                      ))}
                     </div>
                   </div>
                 </motion.div>

@@ -48,7 +48,7 @@ export default function BlogArticle6() {
                 <span className="text-[13px] text-white/35">{lang === 'it' ? '23 febbraio 2026' : 'February 23, 2026'}</span>
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '15 min di lettura' : '15 min read'}</span>
               </div>
-              <h1 className="font-bold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
                 {lang === 'it' ? 'Corporate Onboarding: guida completa al processo' : 'Corporate Onboarding: A Complete Process Guide'}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
@@ -66,7 +66,7 @@ export default function BlogArticle6() {
 
             {/* What Is Onboarding */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? "Che cos'è davvero l'onboarding?" : 'What Is Onboarding, Really?'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
@@ -84,7 +84,7 @@ export default function BlogArticle6() {
             </motion.div>
 
             {/* The 5 Phases */}
-            <h2 className="text-[26px] font-bold text-[#121212] mb-4 mt-12 tracking-[-0.02em]">
+            <h2 className="text-[26px] font-semibold text-[#121212] mb-4 mt-12 tracking-[-0.02em]">
               {lang === 'it' ? "Le 5 fasi dell'onboarding" : 'The 5 Phases of Onboarding'}
             </h2>
             <p className="text-[17px] text-[#121212]/[0.5] leading-[1.9] mb-8">
@@ -141,7 +141,7 @@ export default function BlogArticle6() {
             <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 mt-8">
               <div className="flex items-center gap-3 mb-4">
                 <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                <h3 className="text-[16px] font-bold text-[#121212]">Key Takeaway</h3>
+                <h3 className="text-[16px] font-semibold text-[#121212]">Key Takeaway</h3>
               </div>
               <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                 {lang === 'it'
@@ -160,7 +160,7 @@ export default function BlogArticle6() {
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">
                 {lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}
               </span>
-              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
+              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
                 {lang === 'it'
                   ? <>Prendi decisioni di onboarding basate su <span className="gradient-text">competenze reali.</span></>
                   : <>Make onboarding decisions based on real <span className="gradient-text">competencies.</span></>}

@@ -141,7 +141,7 @@ export default function WhitepaperDetailPage() {
                     ))}
                     <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-white/40 border border-white/[0.08] tracking-wide">White Paper</span>
                   </div>
-                  <h1 className="font-bold text-white/95 mb-6" style={{ fontSize: 'clamp(2.8rem, 5.5vw, 4.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
+                  <h1 className="font-semibold text-white/95 mb-6" style={{ fontSize: 'clamp(2.8rem, 5.5vw, 4.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
                     {c.title}
                   </h1>
                   <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-2xl" style={{ fontWeight: 300 }}>
@@ -183,7 +183,7 @@ export default function WhitepaperDetailPage() {
         <section className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
-              <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#121212] mb-4 tracking-[-0.02em]">
+              <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-semibold text-[#121212] mb-4 tracking-[-0.02em]">
                 {lang === 'it' ? <>Cosa <span className="gradient-text-on-light">Contiene</span></> : <>What's <span className="gradient-text-on-light">Inside</span></>}
               </h2>
               <p className="text-[16px] text-[#121212]/[0.45] max-w-xl">{c.fullDesc}</p>
@@ -200,7 +200,7 @@ export default function WhitepaperDetailPage() {
                       </div>
                       <span className="text-[12px] font-bold text-[#4B4DF7]/40 tracking-[0.15em]">{ch.num}</span>
                     </div>
-                    <h3 className="text-[17px] font-bold text-[#121212] mb-3 leading-tight">{ch.title}</h3>
+                    <h3 className="text-[17px] font-semibold text-[#121212] mb-3 leading-tight">{ch.title}</h3>
                     <p className="text-[14px] text-[#121212]/[0.5] leading-[1.7]">{ch.desc}</p>
                   </motion.div>
                 );
@@ -216,7 +216,7 @@ export default function WhitepaperDetailPage() {
               <div className="w-16 h-16 rounded-2xl bg-[#4B4DF7]/[0.12] border border-[#4B4DF7]/[0.15] flex items-center justify-center mx-auto mb-6">
                 <FileText className="h-7 w-7 text-[#4B4DF7]" />
               </div>
-              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white/90 mb-3">{t('Get the Full White Paper')}</h2>
+              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-white/90 mb-3">{t('Get the Full White Paper')}</h2>
               <p className="text-[15px] text-white/40">{t("Fill the form below and we'll send it straight to your inbox.")}</p>
             </motion.div>
             <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10">
@@ -229,7 +229,7 @@ export default function WhitepaperDetailPage() {
         {related.length > 0 && (
           <section className="relative pt-8 pb-2 lg:pt-10 lg:pb-2">
             <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white/90 mb-10">{t('More White Papers')}</h2>
+              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-white/90 mb-10">{t('More White Papers')}</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {related.map((rw, i) => {
                   const rc = lang === 'it' ? rw.it : rw.en;
@@ -244,7 +244,7 @@ export default function WhitepaperDetailPage() {
                         </div>
                       )}
                       <div className="flex-1">
-                        <h3 className="text-[16px] font-bold text-white/80 group-hover:text-white transition-colors duration-300 mb-1">{rc.title}</h3>
+                        <h3 className="text-[16px] font-semibold text-white/80 group-hover:text-white transition-colors duration-300 mb-1">{rc.title}</h3>
                         <p className="text-[13px] text-white/35 line-clamp-1">{rc.shortDesc}</p>
                       </div>
                       <ArrowRight className="h-4 w-4 text-white/15 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300 shrink-0" />
@@ -260,7 +260,7 @@ export default function WhitepaperDetailPage() {
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">
+              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">
                 {t('Want to see the science in action?')}
               </h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">

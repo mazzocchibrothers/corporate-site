@@ -1,28 +1,13 @@
 // @ts-nocheck
 import React from 'react';
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
 import { ArrowRight, Download } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
-
-const ScienceHeroCanvas = dynamic(() => import('./ScienceHeroCanvas'), { ssr: false });
 
 export default function ScienceHero() {
   const { t, lang } = useLanguage();
   return (
     <section id="science-hero" data-testid="science-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px] overflow-hidden">
-      {/* WebGL bell-curve background */}
-      <ScienceHeroCanvas />
-      {/* Radial glow — periwinkle right, peach bottom-right */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[1]"
-        style={{
-          background:
-            'radial-gradient(56% 50% at 74% 50%, rgba(115,118,255,0.18) 0%, transparent 62%),' +
-            'radial-gradient(44% 42% at 70% 78%, rgba(255,135,102,0.11) 0%, transparent 64%)',
-        }}
-      />
       <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full py-10 md:py-16 lg:py-0">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="lg:col-span-7 flex flex-col gap-8 md:gap-10">

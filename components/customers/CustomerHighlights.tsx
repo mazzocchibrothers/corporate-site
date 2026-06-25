@@ -26,11 +26,11 @@ export default function CustomerHighlights() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-4">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-4">
             {t('Proof, not')}{' '}
             <span className="font-bold gradient-text-on-light">{t('promises.')}</span>
           </h2>
-          <p className="text-[18px] text-[#121212]/[0.65] leading-[1.75] max-w-2xl">
+          <p className="text-[18px] text-[#7A7A7A] leading-[1.75] max-w-2xl">
             {t('See how leading European enterprises are making talent decisions with confidence.')}
           </p>
         </motion.div>
@@ -49,13 +49,13 @@ export default function CustomerHighlights() {
                 <span className="text-[#121212]" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>
                   {h.metric}
                 </span>
-                <span className="text-[13px] text-[#121212]/[0.55] font-medium">{t(h.metricLabel)}</span>
+                <span className="text-[13px] text-[#7A7A7A] font-medium">{t(h.metricLabel)}</span>
               </div>
 
               {/* Author */}
               <div>
                 <p className="text-[14px] font-semibold text-[#121212]/70">{h.author}</p>
-                <p className="text-[12px] text-[#121212]/40">{t(h.role)}</p>
+                <p className="text-[12px] text-[#7A7A7A]">{t(h.role)}</p>
               </div>
             </motion.div>
           ))}

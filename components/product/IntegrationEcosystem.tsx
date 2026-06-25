@@ -54,14 +54,14 @@ export default function IntegrationEcosystem() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-3 md:mb-4">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-3 md:mb-4">
             {t('Giving life to your')}{' '}
             <span className="italic font-bold gradient-text-on-light">{t('core HR systems')}</span>
           </h2>
-          <p className="text-[14px] md:text-[18px] text-[#1A1A2E]/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl mb-4 md:mb-6">
+          <p className="text-[14px] md:text-[18px] text-[#7A7A7A] leading-[1.6] md:leading-[1.75] max-w-2xl mb-4 md:mb-6">
             {t('Skillvue layers objective talent data into your existing stack, turning them from process gatekeepers into decision engines.')}
           </p>
-          <p className="text-[15px] text-[#1A1A2E]/[0.4] leading-[1.75]">
+          <p className="text-[15px] text-[#7A7A7A] leading-[1.75]">
             {lang === 'it' ? (
               <>Ci integriamo nativamente con 100+ tra i principali <span className="text-[#4B4DF7]/70 font-semibold">ATS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LXP</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">PMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">HRIS</span></>
             ) : (
@@ -93,7 +93,7 @@ export default function IntegrationEcosystem() {
 
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.p
-          className="mt-8 text-[15px] text-[#1A1A2E]/40 font-semibold"
+          className="mt-8 text-[15px] text-[#7A7A7A] font-semibold"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
