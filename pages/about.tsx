@@ -12,12 +12,12 @@ const stats = [
   { value: '€9M+', label: 'Raised', icon: Award },
   { value: '50+', label: 'Enterprise Clients', icon: Users },
   { value: '30+', label: 'Languages', icon: Globe },
-  { value: '500K+', label: 'Assessments Delivered', icon: Brain },
+  { value: '500K+', label: 'Verifications Delivered', icon: Brain },
 ];
 
 const values = [
-  { icon: Brain, title: 'Science, not gut feel', desc: 'Every assessment is grounded in psychometric science. Validated methodologies that predict real-world performance, not just test-taking ability.' },
-  { icon: Cpu, title: 'AI that amplifies, not replaces', desc: 'We combine the rigour of psychometrics with the power of modern AI to deliver assessments that are personalised, scalable, and continuously improving.' },
+  { icon: Brain, title: 'Science, not gut feel', desc: 'Every verification is grounded in psychometric science. Validated methodologies that predict real-world performance, not just test-taking ability.' },
+  { icon: Cpu, title: 'AI that amplifies, not replaces', desc: 'We combine the rigour of psychometrics with the power of modern AI to deliver verifications that are personalised, scalable, and continuously improving.' },
   { icon: Shield, title: 'Built for European complexity', desc: 'GDPR, EU AI Act, multi-country operations, multi-language workforces. Designed for the regulatory and cultural complexity European enterprises face every day.' },
 ];
 
@@ -50,7 +50,7 @@ export default function AboutPage() {
         <title>{isIT ? 'Chi Siamo | Skillvue — Talent Science, Made in Europe' : 'About Us | Skillvue — Talent Science, Built in Europe'}</title>
         <meta name="description" content={isIT
           ? "Skillvue è una startup milanese che applica la scienza psicometrica e l'AI alle decisioni sul talento. €9M+ raccolti, 50+ clienti enterprise, 500K+ valutazioni."
-          : 'Skillvue is a Milan-based startup applying psychometric rigour and AI to talent decisions. €9M+ raised, 50+ enterprise clients, 500K+ assessments delivered.'
+          : 'Skillvue is a Milan-based startup applying psychometric rigour and AI to talent decisions. €9M+ raised, 50+ enterprise clients, 500K+ verifications delivered.'
         } />
         <link rel="canonical" href={canonical} />
       </Head>
@@ -94,7 +94,7 @@ export default function AboutPage() {
               </h1>
               <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-2xl" style={{ fontWeight: 300 }}>
                 {lang === 'en'
-                  ? 'Skillvue is the objective skills data layer for your enterprise, bespoke to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run, so every talent decision, from hiring to transformation, is finally the right one.'
+                  ? 'Skillvue is the objective skills data layer for your enterprise, tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run, so every talent decision, from hiring to transformation, is finally the right one.'
                   : t("We're building the intelligence layer that makes hiring, promotion, development, and transformation decisions objective, predictive, and defensible at enterprise scale.")}
               </p>
             </motion.div>

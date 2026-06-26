@@ -738,7 +738,7 @@ function WhitepaperLayer() {
               che le banche europee cercano di attrarre con crescente urgenza, sono sempre più attenti
               a come le organizzazioni gestiscono i loro dati e a quanto siano trasparenti nei processi di
               valutazione. Un'organizzazione che sa comunicare chiaramente come funziona il suo
-              sistema di assessment AI, perché prende certe decisioni e come garantisce equità,{' '}
+              sistema di verification AI, perché prende certe decisioni e come garantisce equità,{' '}
               <strong className="text-[#0D0D0D]/80">costruisce un vantaggio nella talent attraction</strong> che non è facilmente
               quantificabile ma è reale e persistente.
             </Para>
@@ -893,7 +893,7 @@ function WhitepaperLayer() {
 
             <SectionHeading num="5" title="Tre criteri per valutare un sistema di selezione AI nel banking" />
             <Para>
-              Quando si valuta un fornitore di assessment AI per contesti bancari, tre dimensioni si
+              Quando si valuta un fornitore di verification AI per contesti bancari, tre dimensioni si
               rivelano determinanti sia rispetto ai requisiti dell'AI Act sia rispetto alla qualità delle
               decisioni di selezione:
             </Para>
@@ -915,7 +915,7 @@ function WhitepaperLayer() {
             </NumberedItem>
 
             <NumberedItem n={3} title="Audit trail completo e verificabile">
-              Ogni assessment deve produrre un log verificabile:{' '}
+              Ogni verification deve produrre un log verificabile:{' '}
               <strong className="text-[#0D0D0D]/80">quando è stato condotto, su quale versione del sistema, con quali parametri,
               con quale output, con quale eventuale attivazione della soglia di incertezza e con quale
               conferma di supervisione umana</strong>. Un sistema che non lo produce non può essere
@@ -996,7 +996,7 @@ function WhitepaperLayer() {
 
             <Para>
               <strong className="text-[#0D0D0D]/80">La conformità normativa diventa così il punto di ingresso verso una domanda più
-              profonda:</strong> i nostri strumenti di assessment sono in grado di misurare ciò che conta
+              profonda:</strong> i nostri strumenti di verification sono in grado di misurare ciò che conta
               davvero, in modo oggettivo, spiegabile e ripetibile?
             </Para>
             <Para>
@@ -1018,7 +1018,7 @@ function WhitepaperLayer() {
                 <li><strong className="text-[#0D0D0D]/80">Priorità strategica AI governance HR per CHRO europei:</strong>{' '}<span style={{ color: '#4B4DF7', fontWeight: 700 }}>68%</span></li>
                 <li><strong className="text-[#0D0D0D]/80">Sanzione massima per deployer non conformi:</strong>{' '}<span style={{ color: '#FF6550', fontWeight: 700 }}>fino al 3%</span> (del fatturato globale annuo o 15 milioni di euro, il maggiore tra i due)</li>
                 <li><strong className="text-[#0D0D0D]/80">Scadenza sistemi ad alto rischio (Allegato III):</strong>{' '}<span style={{ color: '#FF6550', fontWeight: 700 }}>2 agosto 2026</span></li>
-                <li><strong className="text-[#0D0D0D]/80">Validità predittiva del colloquio non strutturato:</strong>{' '}<span style={{ color: '#FF6550', fontWeight: 700 }}>0,38</span> (su scala 0-1) vs. assessment comportamentali strutturati con validità 0,54</li>
+                <li><strong className="text-[#0D0D0D]/80">Validità predittiva del colloquio non strutturato:</strong>{' '}<span style={{ color: '#FF6550', fontWeight: 700 }}>0,38</span> (su scala 0-1) vs. verification comportamentali strutturati con validità 0,54</li>
               </ul>
             </div>
 
@@ -1033,7 +1033,7 @@ function WhitepaperLayer() {
             <NumberedItem n={1} title="I sistemi AI che sta usando la tua banca oggi sopravviverebbero a un audit?">
               Non un audit ipotetico, ma una{' '}
               <strong className="text-[#0D0D0D]/80">richiesta concreta di documentazione da parte dell'autorità di vigilanza
-              nazionale</strong>. Cosa produrrebbe il tuo team domani mattina? Il log di ogni assessment
+              nazionale</strong>. Cosa produrrebbe il tuo team domani mattina? Il log di ogni verification
               condotto, la versione del modello usata, la giustificazione per ogni candidato escluso, la
               conferma della supervisione umana.{' '}
               <strong className="text-[#0D0D0D]/80">Se la risposta a questa domanda richiede più di 24 ore di ricerca interna</strong>, il
@@ -1045,7 +1045,7 @@ function WhitepaperLayer() {
               costo per assunzione. Non misurano la qualità predittiva del processo. Quanti candidati
               selezionati negli ultimi tre anni sono ancora in azienda a 18 mesi? Qual è il tasso di
               mis-hire nelle posizioni critiche? Senza questi dati,{' '}
-              <strong className="text-[#0D0D0D]/80">è impossibile valutare se un investimento in assessment AI stia producendo
+              <strong className="text-[#0D0D0D]/80">è impossibile valutare se un investimento in verification AI stia producendo
               valore reale</strong> o semplicemente velocità.
             </NumberedItem>
 
@@ -1070,7 +1070,7 @@ function WhitepaperLayer() {
               <h3 className="text-[1rem] font-bold text-[#0D0D0D] mb-3">Next step</h3>
               <Para>
                 Se la tua organizzazione sta valutando come adeguare i processi di selezione e talent
-                management all'AI Act, Skillvue può supportarti con skill assessment predittivi, scalabili e
+                management all'AI Act, Skillvue può supportarti con skill verification predittivi, scalabili e
                 certificati, conformi alla normativa, al GDPR e allo standard internazionale ISO 27001,
                 personalizzati sulle specificità del tuo contesto bancario.
               </Para>
@@ -1095,7 +1095,7 @@ function WhitepaperLayer() {
                 <li>EU AI Act — Regolamento UE 2024/1689. Gazzetta Ufficiale UE, 12 luglio 2024. In vigore dal 1° agosto 2024; applicazione progressiva fino al 2 agosto 2026 per i sistemi ad alto rischio (Allegato III). Sanzioni art. 99, c. 3.</li>
                 <li>McKinsey Global Institute — The State of AI in 2024: Generative AI's Breakout Year. McKinsey & Company, 2024.</li>
                 <li>Deloitte — Global Human Capital Trends 2025. Deloitte Insights, 2025.</li>
-                <li>EBA — Guidelines on the assessment of the suitability of members of the management body and key function holders (EBA/GL/2021/06). European Banking Authority, 2021.</li>
+                <li>EBA — Guidelines on the verification of the suitability of members of the management body and key function holders (EBA/GL/2021/06). European Banking Authority, 2021.</li>
                 <li>BCE — Supervisory Priorities 2024–2026. Banca Centrale Europea, dicembre 2023.</li>
                 <li>Schmidt, F.L. & Hunter, J.E. (1998, aggiornata 2016). The validity and utility of selection methods in personnel psychology. Psychological Bulletin.</li>
               </ul>

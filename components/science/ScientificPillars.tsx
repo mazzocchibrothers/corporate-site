@@ -9,13 +9,13 @@ const pillars = [
     icon: Brain,
     title: 'I-O Psychology',
     subtitle: 'Defining what to measure and why it matters',
-    desc: 'I/O psychology grounds our platform in decades of research on human performance at work, ensuring we map the right skills, select the right constructs, and use the right mix of assessment types for each talent decision.',
+    desc: 'I/O psychology grounds our platform in decades of research on human performance at work, ensuring we map the right skills, select the right constructs, and use the right mix of verification types for each talent decision.',
   },
   {
     icon: Ruler,
     title: 'Psychometrics',
     subtitle: 'Defining how to measure it right',
-    desc: 'Psychometrics governs the design of every assessment we build: which format, which scale, which scoring model. The goal is simple: maximize accuracy, minimize noise, and make sure results mean what they claim to mean.',
+    desc: 'Psychometrics governs the design of every verification we build: which format, which scale, which scoring model. The goal is simple: maximize accuracy, minimize noise, and make sure results mean what they claim to mean.',
   },
 ];
 

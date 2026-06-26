@@ -16,7 +16,7 @@ const stories = [
   {
     company: "In's Mercato",
     industry: 'Large-Scale Retail',
-    quote: 'Having a consistent skills assessment, from external hiring to internal growth, meant delivering concrete solutions to our real challenges.',
+    quote: 'Having a consistent skills verification, from external hiring to internal growth, meant delivering concrete solutions to our real challenges.',
     author: 'Mirko',
     role: 'HR Director',
     path: '/customers/ins-mercato',

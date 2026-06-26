@@ -468,7 +468,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
                 </p>
                 <div className="grid grid-cols-4 gap-3">
                   {[
-                    { num: '01', title: 'Assessment conversazionale', sub: 'Agentic-AI, domande aperte' },
+                    { num: '01', title: 'Verification conversazionale', sub: 'Agentic-AI, domande aperte' },
                     { num: '02', title: 'Analisi dei risultati', sub: 'Pattern aspirazionali nascoste' },
                     { num: '03', title: 'Risk map aspirazionale', sub: 'Segmenti a rischio vs alto potenziale' },
                     { num: '04', title: 'Intervento HR mirato', sub: 'Sviluppo, planning, conversazioni' },
@@ -553,7 +553,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
               <Para>
                 Se la vostra organizzazione sta ripensando i processi di talent management, o se volete esplorare come{' '}
                 <strong className="text-[#0D0D0D]/80">mappare le aspirazioni di carriera del vostro middle management</strong> rispetto
-                alle traiettorie di sviluppo effettivamente disponibili, Skillvue può supportarvi con un assessment scalabile e
+                alle traiettorie di sviluppo effettivamente disponibili, Skillvue può supportarvi con un verification scalabile e
                 pienamente conforme all'EU AI Act, progettato sulle specificità del vostro contesto assicurativo.
               </Para>
               <p className="text-[14px] text-[#0D0D0D]/50 mb-8">
@@ -589,7 +589,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
                 <Para>
                   Assistiamo aziende di medie e grandi dimensioni in tutta Europa, realtà dove le decisioni sui talenti hanno un
                   impatto strategico elevato e costi molto significativi. A differenza delle suite HR generiche o degli strumenti
-                  di assessment unidimensionali, Skillvue{' '}
+                  di verification unidimensionali, Skillvue{' '}
                   <strong className="text-[#0D0D0D]/80">combina la solidità della scienza psicometrica con la potenza dei moderni
                   LLM</strong> per creare un <strong className="text-[#0D0D0D]/80">copilota AI scientificamente fondato</strong>,
                   in grado di fornire valutazioni personalizzate e scalabili, allineate al modello di leadership e al quadro di

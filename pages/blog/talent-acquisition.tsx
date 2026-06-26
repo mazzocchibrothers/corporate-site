@@ -155,7 +155,7 @@ export default function BlogArticle9() {
                   <h3 className="text-[16px] font-bold text-[#121212]">Key Takeaway</h3>
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
-                  {lang === 'it' ? 'Attraverso Skill Assessment rapidi e standardizzati, Skillvue ti aiuta a valutare i candidati su criteri chiari e comparabili usando domande situazionali basate sul BEI, test mirati di hard skill e indicatori su potenziale, autonomia e capacità di apprendimento. Sposta la selezione dal confronto di CV e impressioni a una valutazione strutturata di competenze, comportamenti e potenziale.' : 'Through rapid, standardized Skill Assessments, Skillvue helps you evaluate candidates on clear, comparable criteria using BEI-based situational questions, targeted hard skill tests, and indicators on potential, autonomy, and learning ability. Shift selection from a comparison of CVs and impressions to a structured evaluation of competencies, behaviors, and potential.'}
+                  {lang === 'it' ? 'Attraverso Skill Verification rapidi e standardizzati, Skillvue ti aiuta a valutare i candidati su criteri chiari e comparabili usando domande situazionali basate sul BEI, test mirati di hard skill e indicatori su potenziale, autonomia e capacità di apprendimento. Sposta la selezione dal confronto di CV e impressioni a una valutazione strutturata di competenze, comportamenti e potenziale.' : 'Through rapid, standardized Skill Verifications, Skillvue helps you evaluate candidates on clear, comparable criteria using BEI-based situational questions, targeted hard skill tests, and indicators on potential, autonomy, and learning ability. Shift selection from a comparison of CVs and impressions to a structured evaluation of competencies, behaviors, and potential.'}
                 </p>
               </div>
             </motion.div>
@@ -170,7 +170,7 @@ export default function BlogArticle9() {
                 {lang === 'it' ? <>Costruisci una talent pipeline basata su <span className="gradient-text">competenze reali.</span></> : <>Build a talent pipeline based on <span className="gradient-text">real competencies.</span></>}
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
-                {lang === 'it' ? 'Migliora la quality-of-hire con skill assessment strutturati e oggettivi.' : 'Improve quality-of-hire with structured, objective skill assessments.'}
+                {lang === 'it' ? 'Migliora la quality-of-hire con skill verification strutturati e oggettivi.' : 'Improve quality-of-hire with structured, objective skill verifications.'}
               </p>
               <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center justify-between px-9 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500">

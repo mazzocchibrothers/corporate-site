@@ -6,7 +6,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 const layers = [
   {
     title: 'INTERACTION FORMAT',
-    subtitle: 'How is the assessment delivered',
+    subtitle: 'How is the verification delivered',
     items: [
       { icon: MessageSquare, name: 'Structured interviews', desc: 'Standardized question set for fair comparable evaluation' },
       { icon: MonitorSmartphone, name: 'Conversation flows', desc: 'AI-driven dialogues that adapt in real time' },
@@ -26,11 +26,11 @@ const layers = [
   },
   {
     title: 'RESPONSE FORMAT',
-    subtitle: 'How is the assessment delivered',
+    subtitle: 'How is the verification delivered',
     items: [
       { icon: Mic, name: 'Audio', desc: 'Spoken responses for delivering a quick and effective interview experience' },
       { icon: Video, name: 'Video', desc: "Multimodal input for viewing participants' performance" },
-      { icon: PenLine, name: 'Written', desc: 'Free-text responses for handling writing-heavy skills or allowing in-room assessments' },
+      { icon: PenLine, name: 'Written', desc: 'Free-text responses for handling writing-heavy skills or allowing in-room verifications' },
       { icon: CheckSquare, name: 'SCQs / MCQs', desc: 'Structured choice for scalable objective scoring' },
     ],
   },
@@ -72,7 +72,7 @@ export default function AssessmentFormats() {
   const scrollProgresses = [scrollProgress1, scrollProgress2, scrollProgress3];
 
   return (
-    <section id="assessment-formats" data-testid="assessment-formats" className="relative py-16 md:py-20 lg:py-28" ref={ref}>
+    <section id="verification-formats" data-testid="verification-formats" className="relative py-16 md:py-20 lg:py-28" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div
           className="mb-14"
@@ -81,7 +81,7 @@ export default function AssessmentFormats() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.03em] text-white/90">
-            {t('Assessment designed to surface')}{' '}
+            {t('Verification designed to surface')}{' '}
             <span className="font-bold gradient-text">{t('verified capabilities')}</span>
           </h2>
         </motion.div>

@@ -85,7 +85,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
                 {lang === 'en'
-                  ? 'Skillvue is the objective skills data layer for your enterprise, bespoke to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run, so every talent decision, from hiring to transformation, is finally the right one.'
+                  ? 'Skillvue is the objective skills data layer for your enterprise, tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run, so every talent decision, from hiring to transformation, is finally the right one.'
                   : 'Skillvue mappa, misura e riporta dati oggettivi sulle competenze: costruito sul tuo framework interno, fondato sulla scienza, potenziato dall’AI e integrato nei sistemi HR che già utilizzi, per trasformare ogni decisione sul talento, dall’assunzione allo sviluppo.'}
               </motion.p>
             </div>

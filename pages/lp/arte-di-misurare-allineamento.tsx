@@ -32,7 +32,7 @@ const fadeUp = {
 const heroStats = [
   { value: '30-40%', label: 'Turnover front-line entro 12 mesi nei flagship store europei' },
   { value: '€358 mld', label: 'Mercato globale lusso 2025' },
-  { value: '0,58', label: 'Validità predittiva dell\'assessment comportamentale' },
+  { value: '0,58', label: 'Validità predittiva dell\'verification comportamentale' },
   { value: '1,5x', label: 'Costo di sostituzione di un front-liner rispetto allo stipendio annuo' },
 ];
 
@@ -53,7 +53,7 @@ const featureCards = [
       </svg>
     ),
     title: 'Perché il colloquio non basta',
-    desc: 'Il colloquio strutturato raggiunge una validità di 0,51. L\'assessment comportamentale situazionale arriva a 0,58 per i ruoli ad alta componente relazionale. Nel lusso, dove il costo del falso positivo è strutturalmente più alto, il margine conta.',
+    desc: 'Il colloquio strutturato raggiunge una validità di 0,51. L\'verification comportamentale situazionale arriva a 0,58 per i ruoli ad alta componente relazionale. Nel lusso, dove il costo del falso positivo è strutturalmente più alto, il margine conta.',
   },
   {
     icon: (
@@ -846,7 +846,7 @@ function WhitepaperLayer() {
               La meta-analisi di <strong className="text-[#0D0D0D]/80">Schmidt e Hunter</strong> attribuisce al colloquio
               non strutturato una validità di appena <strong className="text-[#0D0D0D]/80">0,38</strong>. Il colloquio
               strutturato eleva il parametro a <strong className="text-[#0D0D0D]/80">0,51</strong>, mentre gli{' '}
-              <strong className="text-[#0D0D0D]/80">assessment comportamentali situazionali</strong> raggiungono picchi tra{' '}
+              <strong className="text-[#0D0D0D]/80">verification comportamentali situazionali</strong> raggiungono picchi tra{' '}
               <strong className="text-[#0D0D0D]/80">0,40 e 0,58</strong> per le posizioni ad alta componente relazionale.
             </Para>
 
@@ -858,7 +858,7 @@ function WhitepaperLayer() {
                 {[
                   { label: 'Colloquio non strutturato', value: 0.38, pct: 38, color: '#EF4444' },
                   { label: 'Colloquio strutturato', value: 0.51, pct: 51, color: '#FF8C00' },
-                  { label: 'Assessment comportamentale', value: 0.58, pct: 58, gradStart: '#4B4DF7', gradEnd: '#FF5F24' },
+                  { label: 'Verification comportamentale', value: 0.58, pct: 58, gradStart: '#4B4DF7', gradEnd: '#FF5F24' },
                 ].map((item, i) => (
                   <div key={i}>
                     <div className="flex justify-between text-[12px] mb-1.5">
@@ -892,7 +892,7 @@ function WhitepaperLayer() {
               questo rischio è massimo.
             </Para>
             <Para>
-              Gli <strong className="text-[#0D0D0D]/80">assessment comportamentali strutturati</strong>, basati su scenari
+              Gli <strong className="text-[#0D0D0D]/80">verification comportamentali strutturati</strong>, basati su scenari
               situazionali ancorati a comportamenti passati verificabili, riducono drasticamente lo spazio per la simulazione
               strategica, rendendo estremamente complesso costruire una maschera professionale non autentica.
             </Para>
@@ -918,7 +918,7 @@ function WhitepaperLayer() {
             <SubHeading title="2. Il colloquio come fase finale, non come filtro iniziale" />
             <Para>
               Invertire la sequenza del processo di selezione ottimizza la qualità dell'output.{' '}
-              <strong className="text-[#0D0D0D]/80">Utilizzare l'assessment comportamentale come screening iniziale</strong>{' '}
+              <strong className="text-[#0D0D0D]/80">Utilizzare l'verification comportamentale come screening iniziale</strong>{' '}
               permette di riservare il colloquio ai soli candidati già profilati. Il giudizio umano si concentra dove è più
               prezioso: la valutazione delle sfumature relazionali su una{' '}
               <strong className="text-[#0D0D0D]/80">short list qualificata</strong>. Il responsabile di store cessa di essere
@@ -984,7 +984,7 @@ function WhitepaperLayer() {
               </p>
               <p className="text-[14px] text-[#0D0D0D]/65 leading-[1.7] mb-5">
                 Skillvue può supportarti con gli{' '}
-                <strong className="text-[#0D0D0D]/80">assessment comportamentali predittivi e scalabili</strong>, pienamente
+                <strong className="text-[#0D0D0D]/80">verification comportamentali predittivi e scalabili</strong>, pienamente
                 conformi all'EU AI Act, personalizzati sulle specificità del contesto del tuo brand.
               </p>
               <a

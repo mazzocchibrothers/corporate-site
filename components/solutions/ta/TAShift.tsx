@@ -13,9 +13,9 @@ const oldItems = [
 ];
 
 const newItems = [
-  'AI-powered skill assessments from the top of the funnel',
+  'AI-powered skill verifications from the top of the funnel',
   'Structured, psychometrically validated evaluations across every candidate',
-  'Same scientific rigor whether you assess 10 or 10,000 candidates',
+  'Same scientific rigor whether you verify 10 or 10,000 candidates',
   'Hiring decisions backed by objective scores, evidence, and explainable recommendations',
   'Predictive matching that reduces mismatch from day one',
 ];

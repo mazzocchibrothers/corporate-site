@@ -123,7 +123,7 @@ export default function RecruitmentPlaybook() {
                   </div>
                 </div>
 
-                {/* Skillvue assessment pill */}
+                {/* Skillvue verification pill */}
                 <div className="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl" style={{ backgroundColor: '#F0EFFF', border: '1px solid rgba(94,96,242,0.1)' }}>
                   <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0" style={{ background: 'linear-gradient(135deg, #FF5F24, #5E60F2)' }}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">

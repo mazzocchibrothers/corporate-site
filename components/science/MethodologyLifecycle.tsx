@@ -6,17 +6,17 @@ import { useLanguage } from '@/i18n/LanguageContext';
 
 const steps = [
   { num: '01', title: 'Define constructs', desc: 'Identify what to measure, grounded in I-O psychology research and the client\'s competency model.' },
-  { num: '02', title: 'Design assessment items', desc: 'AI generates deeply contextualized items; format, scale, and scoring model selected based on psychometric best practice.' },
+  { num: '02', title: 'Design verification items', desc: 'AI generates deeply contextualized items; format, scale, and scoring model selected based on psychometric best practice.' },
   { num: '03', title: 'Expert validation', desc: 'Human-in-the-loop validation by subject-matter experts and psychometricians. Calibration against proprietary benchmark data.' },
   { num: '04', title: 'Pilot and refine', desc: 'Items tested with real participants, analyzed for reliability, discrimination, and fairness. Bias evaluation across demographics.' },
-  { num: '05', title: 'Deploy at scale', desc: 'Assessments delivered via web, WhatsApp, Teams, Slack — in 50+ languages with consistent measurement quality.' },
+  { num: '05', title: 'Deploy at scale', desc: 'Verifications delivered via web, WhatsApp, Teams, Slack — in 50+ languages with consistent measurement quality.' },
   { num: '06', title: 'Score with explainability', desc: 'Every response scored with transparent evidence: answer, justification, and behavioral anchor. AI recommends; humans decide.' },
   { num: '07', title: 'Monitor and evolve', desc: 'Continuous item analysis, reliability tracking, and construct stability monitoring as populations and roles change over time.' },
 ];
 
 const principles = [
   { icon: Sparkles, title: 'Better evidence', desc: 'AI unlocks richer, more direct evidence of skill through realistic scenarios, interactive tasks, and multiple response modalities that reflect how work is actually done.' },
-  { icon: Shield, title: 'Rigor at scale', desc: 'We embed assessment science into the product so rigor scales with the system. Clear constructs, evidence-centered design, and governed scoring prevent AI from introducing noise.' },
+  { icon: Shield, title: 'Rigor at scale', desc: 'We embed verification science into the product so rigor scales with the system. Clear constructs, evidence-centered design, and governed scoring prevent AI from introducing noise.' },
   { icon: RefreshCw, title: 'Continuous evolution', desc: 'Because skills and roles evolve quickly, measurement must evolve with them. Continuous monitoring and scientist-led iteration keep signals accurate and defensible.' },
 ];
 
@@ -34,7 +34,7 @@ export default function MethodologyLifecycle() {
         {/* Title */}
         <motion.div className="mb-8 md:mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
           <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-4 md:mb-6">
-            {t('A rigorous, end-to-end assessment')}{' '}
+            {t('A rigorous, end-to-end verification')}{' '}
             <span className="font-bold gradient-text">{t('lifecycle')}</span>
           </h2>
         </motion.div>

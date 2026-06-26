@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
@@ -226,7 +226,7 @@ const content = {
         {
           icon: Target,
           title: 'Filtering blocking requirements from the start',
-          text: "Relocation availability, salary range, international experience: blocking requirements to verify at the first touchpoint, before investing interview time on unsuitable candidates.",
+          text: "Relocation availability, salary range, international experience: blocking requirements to assess at the first touchpoint, before investing interview time on unsuitable candidates.",
         },
       ],
     },

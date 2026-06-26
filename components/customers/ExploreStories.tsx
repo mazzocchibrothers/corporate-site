@@ -43,10 +43,16 @@ const allStories = [
     bgImage: '/logos/unicomm-background-explore-stories.jpg',
   },
   {
-    id: 'mediaset', company: 'Mediaset', industry: 'Media & Telecom', useCases: ['Hiring'],
-    headlineIt: 'Mediaset: da 3.000 candidature a 15 top talent, come selezionare e far crescere il talento su scala',
-    headlineEn: 'Mediaset: from 3,000 applications to 15 top talents, how to identify and develop talent at scale',
-    bgImage: '/logos/mediaset-background-explore-stories.jpg',
+    id: 'mediaset', company: 'Mediaset', industry: 'Media & Broadcasting', useCases: ['Hiring'],
+    headlineIt: 'GRAPE, la Graduate Program Experience di Mediaset: come selezionare e accompagnare giovani di valore guardando al potenziale futuro',
+    headlineEn: "GRAPE, Mediaset's Graduate Program Experience: how to identify and develop talented young people with an eye on future potential",
+    bgImage: '/logos/mediaset-background-explore-stories (2).jpg',
+  },
+  {
+    id: 'fidia-farmaceutici', company: 'Fidia Farmaceutici', industry: 'Pharmaceutical', useCases: ['Learning & Development'],
+    headlineIt: 'Fidia Farmaceutici: come fotografare su scala globale le reali competenze della rete vendita per supportare la crescita futura',
+    headlineEn: 'Fidia Farmaceutici: how to map the real skills of the sales network to drive future growth',
+    bgImage: '/logos/fidia-farmaceutici explore stories.jpg',
   },
   // Temporarily removed from listing pending approval (restore when ready):
   // credem, douglas, eataly
@@ -68,6 +74,9 @@ export default function ExploreStories() {
   const industryLabel = (f: string) => {
     if (f === 'GDO' && lang === 'en') return 'Large scale distribution';
     if (f === 'Transportation & Logistics' && lang === 'it') return 'Trasporti e Logistica';
+    if (f === 'Media & Broadcasting' && lang === 'it') return 'Media & Broadcasting';
+    if (f === 'Pharmaceutical' && lang === 'it') return 'Farmaceutico';
+    if (f === 'Pharmaceutical' && lang === 'en') return 'Pharmaceutical';
     return f;
   };
 

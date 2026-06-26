@@ -27,11 +27,11 @@ export default function PMImpact() {
               <div className="grid md:grid-cols-2 gap-8 mb-10">
                 <div>
                   <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase mb-3 block">{t('Challenge')}</span>
-                  <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('Introducing objective competency assessment into performance cycles across multiple countries and business units.')}</p>
+                  <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('Introducing objective competency verification into performance cycles across multiple countries and business units.')}</p>
                 </div>
                 <div>
                   <span className="text-[11px] font-bold text-[#9B9DFB]/50 tracking-[0.1em] uppercase mb-3 block">{t('Result')}</span>
-                  <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('A unified talent language across hiring, performance, and development for the first time. Assessments now inform decisions from screening to succession.')}</p>
+                  <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('A unified talent language across hiring, performance, and development for the first time. Verifications now inform decisions from screening to succession.')}</p>
                 </div>
               </div>
               <a href="#" className="group/btn inline-flex items-center gap-2.5 px-6 py-3 text-[13px] font-semibold tracking-wide rounded-full border border-white/[0.15] text-white/[0.65] hover:text-white/90 hover:border-white/25 hover:bg-white/[0.05] transition-all duration-500">

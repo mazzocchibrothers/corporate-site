@@ -112,7 +112,7 @@ const content = {
     solution: {
       badge: 'LA SOLUZIONE',
       title: 'AI Pre-screening con Skillvue',
-      intro: 'Skillvue \u00e8 stato integrato come primo filtro del Progetto GRAPE, combinando l\'analisi di soft skill, ragionamento logico e domande di conoscenza generale. Il ranking viene validato dal team HR sul modello di competenze Mediaset; i profili idonei avanzano alle fasi successive.',
+      intro: 'Skillvue è stato integrato come primo filtro del Progetto GRAPE, combinando l\'analisi di soft skill, ragionamento logico e domande di conoscenza generale. Il ranking viene validato dal team HR sul modello di competenze Mediaset; i profili idonei avanzano alle fasi successive.',
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
         { icon: CheckCircle, label: 'Soft skill — calibrate sul modello Mediaset' },
@@ -196,13 +196,13 @@ const content = {
       businessChallenges: [
         {
           icon: TrendingUp,
-          title: 'European group expansion makes building a talent pipeline urgent',
+          title: 'The group\'s expansion made building a talent pipeline urgent',
           text: "MFE-MEDIAFOREUROPE is expanding its footprint across Europe. GRAPE is more than a hiring programme: it is a significant building block intended to contribute to identifying junior profiles who can grow with the Group and respond to its future needs.",
         },
         {
           icon: Zap,
           title: 'Business needs were colliding with HR operational capacity',
-          text: 'To maintain the target pace of evaluated profiles and keep up with onboarding timelines, a different filter from manual screening was needed — capable of operating at scale without sacrificing quality or letting high-potential profiles slip through unnoticed.',
+          text: 'To maintain the target pace of evaluated profiles and keep up with onboarding timelines, a different type of filter, capable of operating at scale without sacrificing quality or letting high-potential profiles slip through unnoticed, was needed.',
         },
         {
           icon: Layers,
@@ -219,7 +219,7 @@ const content = {
         {
           icon: Users,
           title: 'An evaluation model built around predictiveness was needed',
-          text: 'Junior profiles placed in programmes like this often have largely undifferentiated CVs. Soft skills like problem solving, logical reasoning and motivation — the variables that predict true potential — needed to surface beyond the CV alone.',
+          text: 'Junior profiles placed in programmes like this often have largely similar CVs. Soft skills like problem solving, logical reasoning and motivation — the variables that predict true potential — needed to surface beyond the CV alone.',
         },
         {
           icon: Shield,
@@ -241,7 +241,7 @@ const content = {
     solution: {
       badge: 'THE SOLUTION',
       title: 'AI Pre-screening with Skillvue',
-      intro: "Skillvue was integrated as the first filter of Progetto GRAPE, combining soft skill analysis, logical reasoning and general knowledge questions. The ranking is validated by the HR team on Mediaset\u2019s leadership model; suitable profiles advance to the next stages.",
+      intro: "Skillvue was integrated as the first filter of Progetto GRAPE, combining soft skill analysis, logical reasoning and general knowledge questions. The ranking is validated by the HR team on Mediaset's leadership model; suitable profiles advance to the next stages.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
         { icon: CheckCircle, label: 'Soft skills — calibrated to Mediaset model' },
@@ -265,7 +265,7 @@ const content = {
       ],
     },
     quote: {
-      text: 'Skillvue\'s support ensured we could gather additional information — especially on behavioural style and the way people approach different types of situations.',
+      text: 'Skillvue\'s support ensured we could gather additional information, especially on behavioural style and the way people approach different types of situations.',
       author: 'Luca Villari',
       role: 'Head of Talent Acquisition and Talent Development, Mediaset',
     },
@@ -283,7 +283,7 @@ const content = {
 
 // ─── PAGE COMPONENT ───────────────────────────────────────────────────────────
 
-export default function MediasetStoryPage() {
+export default function Mediaset2StoryPage() {
   const router = useRouter();
   const { lang, t } = useLanguage();
   const c = lang === 'it' ? content.it : content.en;
@@ -298,6 +298,7 @@ export default function MediasetStoryPage() {
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDesc} />
         <meta property="og:type" content="article" />
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Navbar />
       <main>
@@ -319,7 +320,7 @@ export default function MediasetStoryPage() {
 
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
               {/* Main content */}
-              <div className="lg:col-span-7">
+              <div className="lg:col-span-8">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-8 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     {c.badge}
@@ -339,8 +340,8 @@ export default function MediasetStoryPage() {
                 </motion.div>
               </div>
 
-              {/* Client card */}
-              <motion.div className="lg:col-span-5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
+              {/* Client card + quote — no video */}
+              <motion.div className="lg:col-span-4 lg:pt-16" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-6">
                   <div className="flex items-center gap-4 mb-4 pb-4 border-b border-white/[0.08]">
                     <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
@@ -360,14 +361,18 @@ export default function MediasetStoryPage() {
                     ))}
                   </div>
                 </div>
-                <div className="mt-4 rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                  <iframe
-                    className="w-full h-full"
-                    src={lang === 'it' ? 'https://www.youtube.com/embed/ebrDp8CaVJU?autoplay=1&mute=1' : 'https://www.youtube.com/embed/j51Hqkr9kaw?autoplay=1&mute=1'}
-                    title="Mediaset – Skillvue"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                {/* Quote */}
+                <div className="mt-4 rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm px-6 py-5">
+                  <p className="text-[13px] text-white/[0.65] leading-[1.7] italic mb-4">"{c.quote.text}"</p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full shrink-0 border border-white/[0.15] bg-white/[0.08] flex items-center justify-center">
+                      <span className="text-[11px] font-bold text-white/60">LV</span>
+                    </div>
+                    <div>
+                      <p className="text-[12px] font-semibold text-white/70">{c.quote.author}</p>
+                      <p className="text-[11px] text-white/35 leading-[1.4]">{c.quote.role}</p>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -481,7 +486,6 @@ export default function MediasetStoryPage() {
               {/* Key metrics */}
               <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* 3000 → 15 funnel */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-center justify-center">
                       <svg viewBox="0 0 64 60" className="w-16 h-16" fill="none">
@@ -494,7 +498,6 @@ export default function MediasetStoryPage() {
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.1rem,2vw,1.5rem)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>{c.results.metrics[0].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
                   </div>
-                  {/* 4/5 — smiley + checkmark */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-center justify-center">
                       <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
@@ -509,7 +512,6 @@ export default function MediasetStoryPage() {
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
                   </div>
-                  {/* 79% — circular progress ring */}
                   <div className="text-center flex flex-col items-center">
                     <div className="relative w-24 h-24 mb-5">
                       <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
@@ -523,7 +525,6 @@ export default function MediasetStoryPage() {
                   </div>
                 </div>
               </div>
-
 
               {/* Qualitative impact */}
               <div className="grid md:grid-cols-3 gap-5">
@@ -554,7 +555,6 @@ export default function MediasetStoryPage() {
                 </div>
               </div>
             </Section>
-
 
           </div>
         </section>

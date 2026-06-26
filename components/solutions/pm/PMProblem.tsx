@@ -19,7 +19,7 @@ const pains = [
     title: "Evaluations aren't comparable",
     desc: 'Team A in London uses different standards than Team B in New York. No way to benchmark or calibrate across the organization.',
     stat: '0',
-    statLabel: 'cross-team comparability without structured assessment',
+    statLabel: 'cross-team comparability without structured verification',
   },
   {
     num: '03',

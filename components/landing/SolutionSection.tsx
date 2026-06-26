@@ -8,7 +8,7 @@ const pillars = [
     id: 'hire',
     icon: Target,
     label: 'Hire right',
-    desc: 'AI-powered assessments predict on-the-job performance before you make an offer. Stop gambling on interviews.',
+    desc: 'AI-powered verifications predict on-the-job performance before you make an offer. Stop gambling on interviews.',
     stat: '85%+',
     statLabel: 'hiring success rate',
   },
