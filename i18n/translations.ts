@@ -1125,4 +1125,11 @@ export const translations = {
   'GDPR, EU AI Act, multi-country operations, multi-language workforces. Designed for the regulatory and cultural complexity European enterprises face every day.': "Regolamento generale sulla protezione dei dati, normativa europea sull'intelligenza artificiale, operatività in più Paesi, forza lavoro multilingue. Skillvue è progettata per affrontare ogni giorno la complessità normativa e culturale delle imprese europee.",
   'Ready to make talent decisions you can defend?': 'Pronto a prendere decisioni sui talenti che puoi davvero difendere?',
   'Book a demo with our team and see how Skillvue can transform your hiring, performance, and development processes.': 'Prenota una demo con il nostro team e scopri come Skillvue può trasformare i tuoi processi di assunzione, gestione delle prestazioni e sviluppo.',
+
+  // ===== FOOD RETAIL ONE-PAGER =====
+  'Get the one-pager for': 'Scarica il one pager per',
+  'food retail HR.': "l'HR del food retail",
+  'How an objective read of skills sharpens hiring, promotion, and development decisions.': 'Scopri come una valutazione oggettiva delle competenze rende più efficaci le decisioni di selezione, promozione e sviluppo del personale.',
+  'One standard across every store, the same for new hires and the people you grow from within.': "Un unico standard per tutti i punti vendita, valido sia per i nuovi assunti sia per le persone che crescono all'interno dell'azienda.",
+  'Fill in the form to download it.': 'Compila il modulo per scaricare la guida.',
 };
