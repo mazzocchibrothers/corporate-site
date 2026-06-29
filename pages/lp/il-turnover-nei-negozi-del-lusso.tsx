@@ -121,7 +121,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
           </motion.div>
 
           <motion.h1 variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
-            className="text-[clamp(2.4rem,5vw,4rem)] font-bold tracking-[-0.03em] text-[#0D0D0D] leading-[1.1] mb-6">
+            className="text-[clamp(2.4rem,5vw,4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.1] mb-6">
             Il turnover nei negozi del lusso:{' '}
             <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               il costo nascosto
@@ -211,7 +211,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
       <section className="py-16 px-6 lg:px-10 bg-white">
         <div className="max-w-[1100px] mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-12">
-            <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold tracking-[-0.025em] text-[#0D0D0D] mb-3">Cosa troverai nel report</h2>
+            <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.025em] text-[#0D0D0D] mb-3">Cosa troverai nel report</h2>
             <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
               Un'analisi operativa della struttura economica del turnover nei flagship store e degli strumenti predittivi per ridurre l'errore di hiring nella sua fase più critica.
             </p>
@@ -234,7 +234,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
         <div className="max-w-[1100px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-bold tracking-[-0.025em] text-[#0D0D0D] leading-[1.15] mb-6">
+              <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.15] mb-6">
                 Scarica il report completo
               </h2>
               <ul className="space-y-3 mb-8">
@@ -263,7 +263,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             <motion.div ref={formRef} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0.1}
               className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10"
               style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}>
-              <h3 className="text-[17px] font-bold text-[#0D0D0D] mb-1">Compila per scaricare il PDF</h3>
+              <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">Compila per scaricare il PDF</h3>
               <p className="text-[13px] text-[#0D0D0D]/35 mb-7">Gratuito · Accesso immediato</p>
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-10 text-center gap-4">
@@ -294,7 +294,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                       </label>
                       <input type={type} placeholder={placeholder} value={form[key]}
                         onChange={e => { setForm(f => ({ ...f, [key]: e.target.value })); setErrors(er => ({ ...er, [key]: '' })); }}
-                        className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none transition-all"
+                        className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none focus-visible:ring-2 focus-visible:ring-[#4B4DF7]/60 focus-visible:border-[#4B4DF7] transition-all"
                         style={{ borderColor: errors[key] ? '#EF4444' : 'rgba(0,0,0,0.12)', background: '#FAFAFA' }} />
                       {errors[key] && <p className="text-[11px] text-red-500 mt-1">{errors[key]}</p>}
                       {key === 'email' && !errors.email && <p className="text-[11px] text-[#0D0D0D]/25 mt-1">Richiesta email aziendale (non personale)</p>}
@@ -359,7 +359,7 @@ function SectionHeading({ num, title }: { num?: string; title: string }) {
   return (
     <div className="mt-12 mb-5">
       <div className="w-8 h-0.5 rounded mb-3" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-      <h2 className="text-[1.5rem] font-bold tracking-[-0.02em] text-[#0D0D0D]">
+      <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D]">
         {num && <span className="mr-1">{num}.</span>}{title}
       </h2>
     </div>
@@ -436,7 +436,7 @@ function WhitepaperLayer() {
               style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>
               RETAIL LUSSO · 2026
             </span>
-            <h1 className="text-[2rem] font-bold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
+            <h1 className="text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
               Il turnover nei negozi del lusso:
               <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 il costo nascosto
@@ -620,7 +620,7 @@ function WhitepaperLayer() {
             <Quote>"La domanda non è se la scienza supportata dall'AI cambierà il modo in cui selezioniamo le persone. La domanda è chi sarà in grado di usarla per prendere decisioni migliori di quelle che prenderebbe senza di essa".</Quote>
 
             <div className="border-t border-black/[0.07] pt-8 mt-8">
-              <h3 className="text-[1.1rem] font-bold text-[#0D0D0D] mb-4">Next step</h3>
+              <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">Next step</h3>
               <Para>Se la tua organizzazione sta affrontando <strong className="text-[#0D0D0D]/80">tassi di turnover elevati nei flagship store</strong> o sta ripensando il modello di selezione per i ruoli retail, il punto di partenza più utile è una conversazione basata sui dati che già possiedi: quanto incide oggi il turnover del primo anno? Qual è il <strong className="text-[#0D0D0D]/80">costo reale per sostituzione</strong>, includendo la perdita di relazioni con i clienti VIP? Quali sono i comportamenti misurabili che distinguono <strong className="text-[#0D0D0D]/80">i tuoi top performer</strong> da chi abbandona entro 12 mesi?</Para>
               <a href="https://www.skillvue.ai/contact-us" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-[13px] font-semibold text-white transition-all hover:opacity-90 mt-2"
@@ -631,13 +631,13 @@ function WhitepaperLayer() {
             </div>
 
             <div className="border-t border-black/[0.07] pt-8 mt-8">
-              <h3 className="text-[1.1rem] font-bold text-[#0D0D0D] mb-4">About Skillvue</h3>
+              <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">About Skillvue</h3>
               <Para>Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di <strong className="text-[#0D0D0D]/80">talent intelligence</strong> basata sull'AI che aggiunge una dimensione dinamica e oggettiva ai dati HR: trasformiamo informazioni statiche in <strong className="text-[#0D0D0D]/80">insight predittivi</strong> che permettono di prendere decisioni migliori nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.</Para>
               <Para>A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue <strong className="text-[#0D0D0D]/80">combina la solidità della scienza psicometrica con la potenza dei moderni LLM</strong> per creare un <strong className="text-[#0D0D0D]/80">co-pilota AI scientificamente fondato</strong>, allineato al modello di leadership e al quadro di competenze specifico di ciascuna azienda.</Para>
             </div>
 
             <div className="border-t border-black/[0.07] pt-8 mt-8">
-              <h3 className="text-[1rem] font-bold text-[#0D0D0D] mb-4">Fonti e riferimenti</h3>
+              <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-4">Fonti e riferimenti</h3>
               <ul className="space-y-2">
                 {[
                   'Bain & Company / Altagamma, Luxury Study 2024 e 2025: "Finding a New Longevity for Luxury".',

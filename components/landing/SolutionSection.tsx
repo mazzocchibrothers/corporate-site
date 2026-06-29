@@ -73,7 +73,14 @@ export default function SolutionSection() {
       <div className="relative">
         {/* Top: Icon + Label */}
         <div>
-          {(() => { const Icon = pillar.icon; return <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#9B9DFB]/50 mb-3 md:mb-5" strokeWidth={1.5} />; })()}
+          {(() => {
+            const Icon = pillar.icon;
+            return (
+              <div className="w-9 h-9 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-3 md:mb-5" style={{ backgroundColor: 'rgba(75,77,247,0.08)', border: '1px solid rgba(75,77,247,0.15)' }}>
+                <Icon className="h-4 w-4 md:h-5 md:w-5 text-[#9B9DFB]/70" strokeWidth={1.5} />
+              </div>
+            );
+          })()}
           <h3
             className="text-[15px] md:text-2xl font-semibold text-white/85 group-hover:text-white/95 transition-colors duration-500 leading-snug"
           >
@@ -88,7 +95,7 @@ export default function SolutionSection() {
 
         {/* Stat */}
         <div className="flex items-baseline gap-2 md:gap-3">
-          <span className="text-[22px] md:text-[1.8rem] text-white/90 font-extrabold tracking-tight leading-none">
+          <span className="text-[22px] md:text-[1.8rem] text-[#9B9DFB] font-semibold tracking-tight leading-none">
             {lang === 'it' && (pillar as any).statIt ? (pillar as any).statIt : pillar.stat}
           </span>
           <span className="text-[11px] md:text-[13px] text-white/50 font-medium tracking-wide leading-tight">
@@ -109,7 +116,7 @@ export default function SolutionSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-3xl">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-3xl">
             {t('Skillvue brings people processes')}<br />
             <span className="font-bold gradient-text-warm">{t('to life.')}</span>
           </h2>

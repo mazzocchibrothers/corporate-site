@@ -15,7 +15,7 @@ export default function CustomersFinalCTA() {
     <section id="customers-cta" data-testid="customers-cta" className="relative pt-12 pb-20 lg:pt-16 lg:pb-24" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.div className="mb-8" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">
             {t('Ready to see what Skillvue can do for your')}{' '}
             <span className="font-bold gradient-text">{t('organization?')}</span>
           </h2>

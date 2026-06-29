@@ -31,7 +31,7 @@ export default function ProductHero() {
           {/* Left: text + CTA */}
           <div>
             <motion.h1
-              className="text-[64px] font-bold tracking-[-0.03em] text-white/95 mb-6 md:mb-10"
+              className="text-[64px] font-semibold tracking-[-0.03em] text-white/95 mb-6 md:mb-10"
               style={{ lineHeight: 1.1 }}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -75,6 +75,7 @@ export default function ProductHero() {
             ) : useFallback ? (
               <iframe
                 src={lang === 'it' ? EMBED_IT : EMBED_EN}
+                title="Skillvue product demo"
                 className="w-full aspect-square border-0"
                 allowFullScreen
               />

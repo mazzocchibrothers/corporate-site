@@ -209,7 +209,7 @@ export default function PressPage() {
                 {t('Press')}
               </span>
               <h1
-                className="font-bold text-white/95 mb-6"
+                className="font-semibold text-white/95 mb-6"
                 style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
               >
                 {t('Skillvue in')}<br />
@@ -242,7 +242,7 @@ export default function PressPage() {
               <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
                 {t('Press Coverage')}
               </span>
-              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#121212] tracking-[-0.02em]">
+              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
                 {t('Coverage from leading publications')}
               </h2>
             </motion.div>
@@ -313,7 +313,7 @@ export default function PressPage() {
                 <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
                   Stampa italiana
                 </span>
-                <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#121212] tracking-[-0.02em]">
+                <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
                   Skillvue sui media italiani
                 </h2>
               </motion.div>
@@ -382,7 +382,7 @@ export default function PressPage() {
               <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
                 {t('Interviews')}
               </span>
-              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[#121212] tracking-[-0.02em]">
+              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
                 {t('In conversation')}
               </h2>
             </motion.div>
@@ -438,7 +438,7 @@ export default function PressPage() {
               <span className="text-[11px] font-bold text-[#4B4DF7]/40 tracking-[0.2em] uppercase mb-4 block">
                 {t('Press Releases')}
               </span>
-              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-white/90 tracking-[-0.02em]">
+              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-white/90 tracking-[-0.02em]">
                 {t('Official announcements')}
               </h2>
             </motion.div>
@@ -521,7 +521,7 @@ export default function PressPage() {
               transition={{ duration: 0.7 }}
             >
               <h2
-                className="font-bold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]"
+                className="font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]"
                 style={{ fontSize: 'clamp(1.8rem,3.5vw,3rem)' }}
               >
                 {t('Want to learn more?')}

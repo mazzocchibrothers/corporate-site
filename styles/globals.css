@@ -186,48 +186,48 @@ html {
 
 .animated-bg .orb-1 {
   width: 70vw; height: 70vw; max-width: 1000px; max-height: 1000px;
-  background: radial-gradient(circle, rgba(75,77,247,0.18) 0%, rgba(75,77,247,0.10) 30%, rgba(75,77,247,0.04) 60%, transparent 75%);
+  background: radial-gradient(circle, rgba(255,155,70,0.13) 0%, rgba(75,77,247,0.05) 45%, transparent 70%);
   filter: blur(80px); top: -15%; left: -5%;
   animation: drift1 25s ease-in-out infinite;
 }
 .animated-bg .orb-2 {
   width: 55vw; height: 55vw; max-width: 800px; max-height: 800px;
-  background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, rgba(75,77,247,0.10) 30%, rgba(75,77,247,0.04) 60%, transparent 75%);
+  background: radial-gradient(circle, rgba(255,170,90,0.09) 0%, rgba(75,77,247,0.04) 45%, transparent 70%);
   filter: blur(90px); top: 15%; right: -10%;
   animation: drift2 30s ease-in-out infinite;
 }
 .animated-bg .orb-3 {
   width: 80vw; height: 80vw; max-width: 1200px; max-height: 1200px;
-  background: radial-gradient(circle, rgba(255,255,255,0.10) 0%, rgba(75,77,247,0.08) 30%, rgba(75,77,247,0.03) 55%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,155,70,0.08) 0%, rgba(75,77,247,0.04) 45%, transparent 70%);
   filter: blur(100px); top: 35%; left: 5%;
   animation: drift3 35s ease-in-out infinite;
 }
 .animated-bg .orb-4 {
   width: 50vw; height: 50vw; max-width: 700px; max-height: 700px;
-  background: radial-gradient(circle, rgba(75,77,247,0.20) 0%, rgba(75,77,247,0.10) 35%, rgba(75,77,247,0.03) 60%, transparent 75%);
+  background: radial-gradient(circle, rgba(255,155,70,0.14) 0%, rgba(75,77,247,0.05) 45%, transparent 70%);
   filter: blur(80px); bottom: 5%; right: 0%;
   animation: drift4 28s ease-in-out infinite;
 }
 .animated-bg .orb-5 {
   width: 60vw; height: 60vw; max-width: 850px; max-height: 850px;
-  background: radial-gradient(circle, rgba(255,255,255,0.10) 0%, rgba(75,77,247,0.08) 30%, rgba(75,77,247,0.03) 55%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,160,75,0.08) 0%, rgba(75,77,247,0.04) 45%, transparent 70%);
   filter: blur(90px); top: 55%; left: -10%;
   animation: drift5 32s ease-in-out infinite;
 }
 .animated-bg .orb-6 {
   width: 45vw; height: 45vw; max-width: 650px; max-height: 650px;
-  background: radial-gradient(circle, rgba(75,77,247,0.18) 0%, rgba(75,77,247,0.10) 35%, rgba(75,77,247,0.03) 60%, transparent 75%);
+  background: radial-gradient(circle, rgba(255,155,70,0.11) 0%, rgba(75,77,247,0.04) 40%, transparent 70%);
   filter: blur(70px); bottom: 25%; left: 35%;
   animation: drift6 22s ease-in-out infinite;
 }
 
 .animated-bg .side-left {
   position: absolute; top: 0; left: -5%; width: 40%; height: 100%;
-  background: linear-gradient(90deg, rgba(75,77,247,0.10) 0%, rgba(75,77,247,0.04) 40%, transparent 100%);
+  background: linear-gradient(90deg, rgba(255,155,70,0.06) 0%, rgba(75,77,247,0.02) 40%, transparent 100%);
 }
 .animated-bg .side-right {
   position: absolute; top: 0; right: -5%; width: 40%; height: 100%;
-  background: linear-gradient(270deg, rgba(75,77,247,0.10) 0%, rgba(75,77,247,0.04) 40%, transparent 100%);
+  background: linear-gradient(270deg, rgba(255,155,70,0.06) 0%, rgba(75,77,247,0.02) 40%, transparent 100%);
 }
 
 .animated-bg .shimmer {
@@ -419,4 +419,10 @@ html {
 .marquee-track:hover .animate-marquee-left,
 .marquee-track:hover .animate-marquee-right {
   animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right { animation: none !important; }
+  .skillvue-scroll-fill { animation: none !important; }
 }

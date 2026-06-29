@@ -53,7 +53,7 @@ export default function PrenotaUnIncontroPage() {
               </button>
 
               <h1
-                className="text-[clamp(2.25rem,4.2vw,3.5rem)] font-bold tracking-[-0.03em] text-white/95 mb-4"
+                className="text-[clamp(2.25rem,4.2vw,3.5rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4"
                 style={{ lineHeight: 1.1 }}
               >
                 Parliamo della tua{' '}

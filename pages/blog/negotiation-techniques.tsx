@@ -52,7 +52,7 @@ export default function BlogArticle3() {
                 <span className="text-[13px] text-white/35">{lang === 'it' ? '4 marzo 2026' : 'March 4, 2026'}</span>
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '14 min di lettura' : '14 min read'}</span>
               </div>
-              <h1 className="font-bold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
                 {lang === 'it' ? 'Le 7 tecniche di negoziazione più efficaci al lavoro' : 'The 7 Most Effective Negotiation Techniques at Work'}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
@@ -79,7 +79,7 @@ export default function BlogArticle3() {
                   : 'Negotiation is not a "commercial" skill. It\'s a cross-functional managerial competency.'}
               </p>
 
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
                 {lang === 'it' ? 'Perché la negoziazione è importante per le HR' : 'Why Negotiation Matters for HR'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
@@ -88,7 +88,7 @@ export default function BlogArticle3() {
                   : 'Negotiation enters strategic HR moments constantly: during selection (offer definition, expectation management), conflict resolution (manager-employee tensions), internal mobility (role redefinition), and leadership (every time a manager assigns priorities or realigns objectives).'}
               </p>
 
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
                 {lang === 'it' ? 'Come si manifesta la negoziazione nel lavoro quotidiano' : 'What Negotiation Looks Like in Daily Work'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
@@ -98,11 +98,11 @@ export default function BlogArticle3() {
               </p>
               <div className="grid md:grid-cols-2 gap-4 my-8">
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white p-6">
-                  <h3 className="text-[15px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Distributiva' : 'Distributive'}</h3>
+                  <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{lang === 'it' ? 'Distributiva' : 'Distributive'}</h3>
                   <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Logica di scambio: se ottengo di più, tu ottieni di meno. Tipica per negoziazioni su budget o risorse limitate.' : 'Exchange logic: if I get more, you get less. Typical for budget or limited resource negotiations.'}</p>
                 </div>
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white p-6">
-                  <h3 className="text-[15px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Integrativa' : 'Integrative'}</h3>
+                  <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{lang === 'it' ? 'Integrativa' : 'Integrative'}</h3>
                   <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Analizza gli interessi sottostanti, non solo le posizioni dichiarate. Ridefinisce il perimetro del problema per trovare soluzioni per entrambe le parti.' : 'Analyzes underlying interests, not just declared positions. Redefines the problem perimeter to find solutions for both sides.'}</p>
                 </div>
               </div>
@@ -113,7 +113,7 @@ export default function BlogArticle3() {
         {/* The 7 Techniques — Accordion */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
-            <motion.h2 className="text-[26px] font-bold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <motion.h2 className="text-[26px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               {lang === 'it' ? 'Le 7 tecniche' : 'The 7 Techniques'}
             </motion.h2>
             <p className="text-[17px] text-[#121212]/[0.5] leading-[1.9] mb-10">
@@ -157,7 +157,7 @@ export default function BlogArticle3() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">
                 {lang === 'it' ? 'Come valutare oggettivamente le competenze di negoziazione' : 'How to Objectively Evaluate Negotiation Skills'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
@@ -174,7 +174,7 @@ export default function BlogArticle3() {
               <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-10">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                  <h3 className="text-[16px] font-bold text-[#121212]">{lang === 'it' ? 'Punto chiave' : 'Key Takeaway'}</h3>
+                  <h3 className="text-[16px] font-semibold text-[#121212]">{lang === 'it' ? 'Punto chiave' : 'Key Takeaway'}</h3>
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
@@ -191,7 +191,7 @@ export default function BlogArticle3() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}</span>
-              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
+              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
                 {lang === 'it'
                   ? <>Valuta la negoziazione come <span className="gradient-text">competenza organizzativa,</span> non come percezione soggettiva.</>
                   : <>Evaluate negotiation as an organizational <span className="gradient-text">competency,</span> not a subjective perception.</>}

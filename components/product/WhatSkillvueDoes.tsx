@@ -65,11 +65,11 @@ export default function WhatSkillvueDoes() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl mb-4 md:mb-6">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl mb-4 md:mb-6">
             {t('From screening to succession. every talent decision,')}{' '}
             <span className="italic font-bold gradient-text-on-light">{t('connected.')}</span>
           </h2>
-          <p className="text-[14px] md:text-[18px] text-[#1A1A2E]/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">
+          <p className="text-[14px] md:text-[18px] text-[#7A7A7A] leading-[1.6] md:leading-[1.75] max-w-2xl">
             {t('Most organizations run hiring, performance, L&D, and mobility on disconnected tools with different frameworks. Skillvue connects them through one skills language and one data layer so every decision compounds.')}
           </p>
         </motion.div>
@@ -89,8 +89,8 @@ export default function WhatSkillvueDoes() {
               >
                 <div className="flex-1">
                   <Icon className="h-5 w-5 text-[#4B4DF7]/40 mb-2" strokeWidth={1.5} />
-                  <h3 className="text-[15px] font-bold text-[#1A1A2E] mb-1.5 leading-snug">{t(pillar.title)}</h3>
-                  <p className="text-[12px] text-[#1A1A2E]/[0.5] leading-[1.4]">{t(pillar.desc)}</p>
+                  <h3 className="text-[15px] font-semibold text-[#1A1A2E] mb-1.5 leading-snug">{t(pillar.title)}</h3>
+                  <p className="text-[12px] text-[#7A7A7A] leading-[1.4]">{t(pillar.desc)}</p>
                 </div>
                 <a href={pillar.path} className="group/link inline-flex items-center gap-1 text-[12px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300 mt-3">
                   {t(pillar.link)}
@@ -121,8 +121,8 @@ export default function WhatSkillvueDoes() {
                 {/* Top content */}
                 <div className="flex-1">
                   <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#4B4DF7]/40 mb-2 md:mb-5" strokeWidth={1.5} />
-                  <h3 className="text-[15px] md:text-[20px] font-bold text-[#1A1A2E] mb-1.5 md:mb-4 leading-snug">{t(pillar.title)}</h3>
-                  <p className="text-[12px] md:text-[15px] text-[#1A1A2E]/[0.5] leading-[1.4] md:leading-[1.75]">{t(pillar.desc)}</p>
+                  <h3 className="text-[15px] md:text-[20px] font-semibold text-[#1A1A2E] mb-1.5 md:mb-4 leading-snug">{t(pillar.title)}</h3>
+                  <p className="text-[12px] md:text-[15px] text-[#7A7A7A] leading-[1.4] md:leading-[1.75]">{t(pillar.desc)}</p>
                 </div>
                 {/* Link — always anchored at bottom */}
                 <a href={pillar.path} className="group/link inline-flex items-center gap-1 md:gap-2 text-[12px] md:text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300 mt-3 md:mt-8">

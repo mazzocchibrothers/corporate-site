@@ -10,7 +10,7 @@ export default function PMHero() {
     <section id="pm-hero" data-testid="pm-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
         <motion.h1
-          className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold tracking-[-0.03em] text-white/95 mb-10 max-w-5xl"
+          className="text-[clamp(2.5rem,5vw,4.5rem)] font-semibold tracking-[-0.03em] text-white/95 mb-10 max-w-5xl"
           style={{ lineHeight: 1.15 }}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

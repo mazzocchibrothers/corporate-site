@@ -19,7 +19,7 @@ export default function PRHowSolves() {
     <section id="pr-how" data-testid="pr-how" className="relative py-20 lg:py-28" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">
             {t('How Skillvue transforms')}{' '}
             <span className="font-bold gradient-text">{t('project resourcing')}</span>
           </h2>
@@ -37,7 +37,7 @@ export default function PRHowSolves() {
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
               >
                 <Icon className="h-6 w-6 text-[#9B9DFB]/50 mb-5" strokeWidth={1.5} />
-                <h3 className="text-[20px] font-bold text-white/90 mb-4">{t(p.title)}</h3>
+                <h3 className="text-[20px] font-semibold text-white/90 mb-4">{t(p.title)}</h3>
                 <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t(p.desc)}</p>
               </motion.div>
             );

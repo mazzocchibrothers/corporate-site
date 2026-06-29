@@ -18,7 +18,7 @@ export default function SolutionFinalCTA({ headline, accentWord }) {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">
             {headline}{' '}
             <span className="italic font-bold gradient-text">{accentWord}</span>
           </h2>

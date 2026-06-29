@@ -26,7 +26,7 @@ export default function IMHowSolves() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.08] tracking-[-0.02em] text-[#121212]">
+            <h2 className="text-[clamp(2rem,3.5vw,3.2rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-[#121212]">
               {t('Three pillars of')}{' '}
               <span className="font-bold gradient-text-on-light">{t('intelligent mobility')}</span>
             </h2>
@@ -57,8 +57,8 @@ export default function IMHowSolves() {
                   {/* Right: content */}
                   <div className="pb-10">
                     <span className="text-[12px] font-bold text-[#4B4DF7]/30 tracking-[0.1em] mb-3 block">{p.num}</span>
-                    <h3 className="text-[20px] font-bold text-[#121212] mb-3">{t(p.title)}</h3>
-                    <p className="text-[16px] text-[#121212]/[0.65] leading-[1.75] max-w-lg">{t(p.desc)}</p>
+                    <h3 className="text-[20px] font-semibold text-[#121212] mb-3">{t(p.title)}</h3>
+                    <p className="text-[16px] text-[#7A7A7A] leading-[1.75] max-w-lg">{t(p.desc)}</p>
                   </div>
                 </motion.div>
               );
