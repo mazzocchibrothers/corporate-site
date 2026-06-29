@@ -70,7 +70,7 @@ const content = {
         {
           icon: Zap,
           title: "Serviva un'infrastruttura capace di lavorare su grandi volumi per seguire la crescita del Gruppo",
-          text: "Gestire 30.000 candidature con strumenti tradizionali significava dover scegliere tra velocità e qualità. Era necessario potenziare il processo accelerando le fasi operative e mantenendo il giudizio umano al centro delle decisioni.",
+          text: "Gestire 30.000 candidature senza un supporto tecnologico non era più possibile. Era necessario potenziare il processo accelerando le fasi operative e mantenendo il giudizio umano al centro delle decisioni.",
         },
         {
           icon: Heart,
@@ -79,8 +79,8 @@ const content = {
         },
         {
           icon: TrendingUp,
-          title: 'I giovani ad alto potenziale dovevano aver modo di emergere ed essere inseriti',
-          text: "Lo screening basato sul CV non riusciva a differenziare i profili junior: le soft skill decisive per questi ruoli erano invisibili nel primo step. Il risultato erano troppi falsi positivi in colloquio e troppi talenti non intercettati.",
+          title: 'Il potenziale inespresso andava intercettato e capitalizzato',
+          text: "Lo screening basato sul CV non permetteva di differenziare davvero i profili, essendo junior: le soft skill decisive per questi ruoli erano invisibili su carta, e il rischio era quello di non riuscire a intercettare i talenti più in linea con quello che Gruppo Credem stava cercando.",
         },
       ],
       hrChallenges: [
@@ -195,7 +195,7 @@ const content = {
         {
           icon: Zap,
           title: 'An infrastructure capable of handling high volumes to support the Group\'s growth',
-          text: "Managing 30,000 applications with traditional tools meant having to choose between speed and quality. It was necessary to strengthen the process by accelerating operational steps while keeping human judgement at the centre of every decision.",
+          text: "Managing 30,000 applications without technological support was no longer possible. It was necessary to strengthen the process by accelerating operational steps while keeping human judgement at the centre of every decision.",
         },
         {
           icon: Heart,
@@ -204,8 +204,8 @@ const content = {
         },
         {
           icon: TrendingUp,
-          title: 'High-potential young talent needed a way to stand out and be hired',
-          text: "CV-based screening could not differentiate junior profiles: the soft skills that truly matter for these roles were invisible at the first step. The result was too many false positives in interviews and too many talented candidates missed.",
+          title: 'Unexpressed potential needed to be identified and capitalised on',
+          text: "CV-based screening could not truly differentiate profiles at the junior level: the soft skills that really matter for these roles were invisible on paper, and the risk was failing to identify the talent most aligned with what Gruppo Credem was looking for.",
         },
       ],
       hrChallenges: [
