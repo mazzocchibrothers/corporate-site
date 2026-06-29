@@ -10,38 +10,16 @@ const FORM_IDS = {
   it: '174b15c8-58eb-497d-bed1-0506bcbfda5c',
 };
 
-// Each title is an array of lines; each line is an array of segments.
-// A segment with `gradient: true` renders in the gradient style.
-const COPY = {
-  en: {
-    titleLines: [
-      [{ text: 'Get the one-pager for ' }, { text: 'food retail HR.', gradient: true }],
-    ],
-    paragraphs: [
-      'How an objective read of skills sharpens hiring, promotion, and development decisions.',
-      'One standard across every store, the same for new hires and the people you grow from within.',
-      'Fill in the form to download it.',
-    ],
-  },
-  it: {
-    titleLines: [
-      [{ text: 'Scarica il one pager' }],
-      [{ text: 'per ' }, { text: "l'HR", gradient: true }],
-      [{ text: 'del food retail', gradient: true }],
-    ],
-    paragraphs: [
-      'Scopri come una valutazione oggettiva delle competenze rende più efficaci le decisioni di selezione, promozione e sviluppo del personale.',
-      "Un unico standard per tutti i punti vendita, valido sia per i nuovi assunti sia per le persone che crescono all'interno dell'azienda.",
-      'Compila il modulo per scaricare la guida.',
-    ],
-  },
-};
+const PARAGRAPHS = [
+  'How an objective read of skills sharpens hiring, promotion, and development decisions.',
+  'One standard across every store, the same for new hires and the people you grow from within.',
+  'Fill in the form to download it.',
+];
 
 export default function FoodRetailPage() {
-  const { lang } = useLanguage();
+  const { t, lang } = useLanguage();
   const formRef = useRef(null);
   const isIt = lang === 'it';
-  const copy = isIt ? COPY.it : COPY.en;
 
   useEffect(() => {
     const formId = isIt ? FORM_IDS.it : FORM_IDS.en;
@@ -79,6 +57,40 @@ export default function FoodRetailPage() {
     };
   }, [isIt]);
 
+  // Title strings come from the shared translation dictionary.
+  const titleLead = t('Get the one-pager for');
+  const titleHighlight = t('food retail HR.');
+
+  // IT is laid out on three fixed lines; EN wraps naturally on one line.
+  const renderTitle = () => {
+    if (!isIt) {
+      return (
+        <>
+          {titleLead}{' '}
+          <span className="font-bold gradient-text">{titleHighlight}</span>
+        </>
+      );
+    }
+
+    const leadWords = titleLead.split(' ');
+    const leadFirst = leadWords.slice(0, -1).join(' ');
+    const leadLast = leadWords[leadWords.length - 1];
+    const hlWords = titleHighlight.split(' ');
+    const hlFirst = hlWords[0];
+    const hlRest = hlWords.slice(1).join(' ');
+
+    return (
+      <>
+        <span className="block whitespace-nowrap">{leadFirst}</span>
+        <span className="block whitespace-nowrap">
+          {leadLast}{' '}
+          <span className="font-bold gradient-text">{hlFirst}</span>
+        </span>
+        <span className="block whitespace-nowrap font-bold gradient-text">{hlRest}</span>
+      </>
+    );
+  };
+
   return (
     <>
       <Navbar />
@@ -92,27 +104,16 @@ export default function FoodRetailPage() {
                   className="text-[clamp(1.75rem,4.2vw,3.5rem)] font-bold tracking-[-0.03em] text-white/95 mb-4"
                   style={{ lineHeight: 1.1 }}
                 >
-                  {copy.titleLines.map((line, li) => (
-                    <span
-                      key={li}
-                      className={copy.titleLines.length > 1 ? 'block whitespace-nowrap' : 'block'}
-                    >
-                      {line.map((seg, si) => (
-                        <span key={si} className={seg.gradient ? 'font-bold gradient-text' : undefined}>
-                          {seg.text}
-                        </span>
-                      ))}
-                    </span>
-                  ))}
+                  {renderTitle()}
                 </h1>
 
-                {copy.paragraphs.map((text, i) => (
+                {PARAGRAPHS.map((text, i) => (
                   <p
                     key={i}
                     className={`text-[18px] text-white/95 leading-[1.65] max-w-md${i > 0 ? ' mt-4' : ''}`}
                     style={{ fontWeight: 300 }}
                   >
-                    {text}
+                    {t(text)}
                   </p>
                 ))}
               </div>
