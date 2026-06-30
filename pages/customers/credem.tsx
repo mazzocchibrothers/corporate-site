@@ -28,7 +28,7 @@ const content = {
     headline: {
       before: 'Gruppo Credem: come scovare i migliori talenti tra ',
       highlight1: '30.000 candidature',
-      middle: ' per nutrire la ',
+      middle: ' per seguire la ',
       highlight2: 'crescita del business',
       after: '',
     },
@@ -55,39 +55,39 @@ const content = {
       badge: 'CONTESTO',
       title: 'Una banca in crescita costante ha bisogno di selezionare talento alla velocità del business',
       paragraph: <>
-        Gruppo Credem (Credito Emiliano) è uno dei gruppi bancari privati più accreditati d'Italia e d'Europa. Con un utile netto di <strong className="text-[#121212]/80 font-semibold">€620 milioni nel 2025</strong>, è riconosciuta come una delle realtà più solide per qualità degli attivi e gestione del rischio. Al tempo stesso è anche, e soprattutto, una banca che cresce: mentre il settore bancario italiano chiude sportelli e riduce l'organico, Credem fa il contrario: dal 2020 ha creato oltre <strong className="text-[#121212]/80 font-semibold">1.400 nuovi posti di lavoro</strong>.
+        Gruppo Credem (Credito Emiliano) è uno dei gruppi bancari privati più accreditati d'Italia e d'Europa. Con un utile netto di <strong className="text-[#121212]/80 font-semibold">+620 milioni di euro nel 2025</strong>, è riconosciuta come una delle realtà più solide per qualità degli attivi e gestione del rischio. Al tempo stesso è anche, e soprattutto, una banca che cresce: mentre il settore bancario italiano chiude sportelli e riduce l'organico, Credem fa il contrario: dal 2020 ha creato oltre <strong className="text-[#121212]/80 font-semibold">1.400 nuovi posti di lavoro</strong>.
         <br /><br />
-        Questa crescita genera un nodo cruciale per HR: ogni anno Credem riceve e si ritrova a gestire circa <strong className="text-[#121212]/80 font-semibold">30.000 candidature</strong>, in larga parte da profili junior, diplomati e neolaureati che si candidano attraverso il <strong className="text-[#121212]/80 font-semibold">Progetto Giovani</strong>, il principale canale di ingresso del gruppo. In un settore dove l'età media dei dipendenti è di oltre <strong className="text-[#121212]/80 font-semibold">48 anni</strong> e il <strong className="text-[#121212]/80 font-semibold">20-25%</strong> della forza lavoro raggiungerà il pensionamento entro il 2035, la capacità di identificare e inserire giovani ad alto potenziale è fondamentale per poter supportare la crescita del business.
+        Questa crescita genera un nodo cruciale per HR: ogni anno Credem riceve e si ritrova a gestire circa <strong className="text-[#121212]/80 font-semibold">30.000 candidature</strong>, in larga parte da profili junior, diplomati e neolaureati che si candidano attraverso il <strong className="text-[#121212]/80 font-semibold">Progetto Giovani</strong>, il principale canale di ingresso del gruppo. In un settore dove l'età media dei dipendenti è di oltre <strong className="text-[#121212]/80 font-semibold">48 anni</strong> e il <strong className="text-[#121212]/80 font-semibold">20-25%</strong> della forza lavoro raggiungerà il pensionamento entro il 2035, la capacità di <strong className="text-[#121212]/80 font-semibold">identificare e inserire velocemente giovani ad alto potenziale</strong> è fondamentale per poter supportare la crescita del business.
       </>,
     },
     challenge: {
       badge: 'LA SFIDA',
       title: '30.000 candidature e tanti profili junior poco valorizzati dal semplice CV',
-      intro: "In un mercato dove banche, fintech e tech company competono per gli stessi profili junior, la velocità e la qualità del processo di selezione sono diventate leve competitive ed elementi imprescindibili per l'ottenimento di una Candidate Experience all'altezza delle aspettative.",
+      intro: "In un mercato dove banche, fintech e tech company spesso competono per gli stessi profili junior, la velocità e la qualità del processo di selezione sono diventate leve competitive ed elementi imprescindibili per l'ottenimento di una Candidate Experience all'altezza delle aspettative.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Zap,
           title: "Serviva un'infrastruttura capace di lavorare su grandi volumi per seguire la crescita del Gruppo",
-          text: "Gestire 30.000 candidature con strumenti tradizionali significava dover scegliere tra velocità e qualità. Era necessario potenziare il processo accelerando le fasi operative e mantenendo il giudizio umano al centro delle decisioni.",
+          text: "Gestire 30.000 candidature senza un supporto tecnologico non era più possibile. Era necessario potenziare il processo accelerando le fasi operative e mantenendo il giudizio umano al centro delle decisioni.",
         },
         {
           icon: Heart,
-          title: "L'esperienza candidato doveva essere all'altezza del brand",
-          text: "Per una banca certificata Top Employer per 10 anni consecutivi ed Equal Salary per 5, ogni punto di contatto con i candidati è fondamentale. Un processo di selezione moderno, rapido, inclusivo e allineato ai valori del Gruppo era fondamentale.",
+          title: "L'esperienza candidato doveva essere all'altezza del brand di Gruppo Credem",
+          text: "Per una banca certificata Top Employer per 10 anni consecutivi ed Equal Salary per 5, ogni punto di contatto con i candidati è fondamentale. Un processo di selezione moderno e allineato ai valori del Gruppo era fondamentale.",
         },
         {
           icon: TrendingUp,
-          title: 'I giovani ad alto potenziale dovevano aver modo di emergere ed essere inseriti',
-          text: "Lo screening basato sul CV non riusciva a differenziare i profili junior: le soft skill decisive per questi ruoli erano invisibili nel primo step. Il risultato erano troppi falsi positivi in colloquio e troppi talenti non intercettati.",
+          title: 'Intercettare il potenziale inespresso era tanto importante per HR quanto per il business',
+          text: "Su profili così junior, lo screening basato sul CV non permetteva di differenziare i profili: le soft skill decisive per lo sviluppo di queste figure erano invisibili su carta, e il rischio era quello di non riuscire a intercettare talenti in linea con Gruppo Credem.",
         },
       ],
       hrChallenges: [
         {
           icon: BarChart3,
-          title: 'Bisognava dare a ogni candidato la possibilità di farsi conoscere',
-          text: "Con 30.000 candidature l'anno, non è fisicamente possibile dare a ogni candidato uno spazio autentico per esprimersi con gli strumenti tradizionali. Senza un canale strutturato, i profili più motivati e ad alto potenziale rischiavano di restare invisibili.",
+          title: 'Bisognava ampliare la Talent Pool e dare a ogni candidato la possibilità di farsi conoscere',
+          text: "Con 30.000 candidature l'anno e strumenti di selezione tradizionali, non è possibile dare a tutti uno spazio autentico per esprimersi. Senza un supporto tecnologico, i profili più motivati e ad alto potenziale rischiavano di restare invisibili.",
         },
         {
           icon: Users,
@@ -97,7 +97,7 @@ const content = {
         {
           icon: Target,
           title: 'La qualità della selezione doveva essere il più possibile omogenea per tutto il Gruppo',
-          text: "Garantire standard di screening uniformi per un Gruppo che è distribuito su oltre 600 filiali in 19 regioni era una sfida operativa e di equità. Senza un filtro centralizzato e strutturato, la qualità della selezione poteva variare molto.",
+          text: "Garantire standard di screening uniformi per un Gruppo che è distribuito su oltre 600 filiali in 19 regioni era una sfida operativa e di equità. Senza un filtro centralizzato e strutturato, la qualità della selezione rischiava di variare.",
         },
       ],
     },
@@ -105,10 +105,10 @@ const content = {
       badge: 'OBIETTIVI DI COLLABORAZIONE',
       title: 'Cosa doveva cambiare',
       items: [
-        { icon: Target, text: "Rendere il primo filtro più selettivo e predittivo: intercettare i profili ad alto potenziale nascosti nelle 30.000 candidature ricevute annualmente, riducendo il margine di errore" },
-        { icon: Zap, text: "Ridurre il time-to-hire e ottimizzare le shortlist: rispondere più rapidamente ai candidati che risultano in linea con i valori del Gruppo e con le posizioni aperte per portarli a colloquio" },
+        { icon: Target, text: "Rendere il primo filtro più selettivo e predittivo: intercettare i profili ad alto potenziale nascosti nelle 30.000 candidature ricevute annualmente, riducendo il margine di errore." },
+        { icon: Zap, text: "Ridurre il time-to-hire e ottimizzare le shortlist: rispondere più rapidamente ai candidati che risultano in linea con i valori del Gruppo e con le posizioni aperte per portarli a colloquio." },
         { icon: Layers, text: "Garantire standard di selezione omogenei: mantenere lo stesso livello di profondità e qualità della valutazione per tutti i candidati a prescindere dal momento o dal luogo di candidatura." },
-        { icon: Heart, text: "Migliorare la Candidate Experience: rendere l'intero processo accessibile, rapido ed equo - un'opportunità autentica di farsi conoscere, coerente con il posizionamento Top Employer di Gruppo Credem" },
+        { icon: Heart, text: "Migliorare la Candidate Experience: rendere l'intero processo accessibile, rapido ed equo - un'opportunità autentica di farsi conoscere, coerente con il posizionamento Top Employer di Gruppo Credem." },
       ],
     },
     solution: {
@@ -131,9 +131,9 @@ const content = {
         { value: '-15%', label: 'Colloqui non in linea' },
       ],
       qualitative: [
-        { icon: Eye, title: 'Più candidati dimostrano il proprio valore', text: "L'assessment ha dato a più persone la possibilità di far emergere competenze reali oltre i limiti del CV. Profili ad alto potenziale che prima si perdevano nel volume ora vengono intercettati efficacemente e rapidamente." },
+        { icon: Eye, title: 'Più candidati dimostrano il proprio valore', text: "L'assessment ha dato a più persone la possibilità di far emergere competenze reali oltre i limiti del CV. Profili ad alto potenziale che prima rischiavano di perdersi nel volume ora vengono intercettati efficacemente e rapidamente." },
         { icon: CheckCircle, title: 'Qualità dei colloqui radicalmente migliorata', text: "Il +50% di fit-to-hire significa che il secondo step del processo è diventato più efficiente: meno tempo speso in interviste a basso rendimento, più decisioni consapevoli, cicli di feedback più rapidi." },
-        { icon: Layers, title: 'Human-in-the-loop, sempre', text: "L'assessment non produce un verdetto: produce informazioni utili a rendere il decision-making più consapevole ed efficace. I dati prodotti dall'AI di Skillvue alimentano la decisione che rimane però sempre in mano ai recruiter." },
+        { icon: Layers, title: 'Human-in-the-loop, sempre', text: "L'assessment produce informazioni utili a rendere il decision-making più consapevole ed efficace. I dati prodotti dall'AI di Skillvue alimentano la decisione, che rimane però sempre in mano ai recruiter." },
       ],
     },
     related: {
@@ -153,7 +153,7 @@ const content = {
     headline: {
       before: 'Gruppo Credem: how to find the best talent among ',
       highlight1: '30,000 applications',
-      middle: ' to fuel ',
+      middle: ' to support ',
       highlight2: 'business growth',
       after: '',
     },
@@ -161,7 +161,7 @@ const content = {
     heroMetrics: [
       { value: '-50%', label: 'Time-to-hire' },
       { value: '+50%', label: 'Fit-to-hire in interviews' },
-      { value: '-15%', label: 'Reduction in misaligned interviews' },
+      { value: '-15%', label: 'Reduction in unsuccessful interviews' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -180,49 +180,49 @@ const content = {
       badge: 'CONTEXT',
       title: 'A bank in sustained growth needs to hire talent at the speed of the business',
       paragraph: <>
-        Gruppo Credem (Credito Emiliano) is one of Italy's and Europe's most respected private banking groups. With a net profit of <strong className="text-[#121212]/80 font-semibold">€620 million in 2025</strong>, it is recognised as one of the most solid institutions for asset quality and risk management. It is also, and above all, a bank that grows: while the Italian banking sector closes branches and reduces headcount, Credem does the opposite: since 2020 it has created over <strong className="text-[#121212]/80 font-semibold">1,400 new jobs</strong>.
+        Gruppo Credem (Credito Emiliano) is one of Italy's and Europe's most respected private banking groups. With a net profit of <strong className="text-[#121212]/80 font-semibold">+620 million euros in 2025</strong>, it is recognised as one of the most solid institutions for asset quality and risk management. It is also, and above all, a bank that grows: while the Italian banking sector closes branches and reduces headcount, Credem does the opposite: since 2020 it has created over <strong className="text-[#121212]/80 font-semibold">1,400 new jobs</strong>.
         <br /><br />
-        This growth creates a critical challenge for HR: every year Credem receives and manages around <strong className="text-[#121212]/80 font-semibold">30,000 applications</strong>, largely from junior profiles, school leavers and recent graduates applying through the <strong className="text-[#121212]/80 font-semibold">Progetto Giovani</strong>, the group's main entry channel. In a sector where the average employee age exceeds <strong className="text-[#121212]/80 font-semibold">48</strong> and <strong className="text-[#121212]/80 font-semibold">20–25%</strong> of the workforce will reach retirement by 2035, the ability to identify and onboard high-potential young talent is fundamental to supporting the growth of the business.
+        This growth creates a critical challenge for HR: every year Credem receives and manages around <strong className="text-[#121212]/80 font-semibold">30,000 applications</strong>, largely from junior profiles, school leavers and recent graduates applying through the <strong className="text-[#121212]/80 font-semibold">Progetto Giovani</strong>, the group's main entry channel. In a sector where the average employee age exceeds <strong className="text-[#121212]/80 font-semibold">48</strong> and <strong className="text-[#121212]/80 font-semibold">20–25%</strong> of the workforce will reach retirement by 2035, the ability to <strong className="text-[#121212]/80 font-semibold">quickly identify and onboard high-potential young talent</strong> is fundamental to supporting the growth of the business.
       </>,
     },
     challenge: {
       badge: 'THE CHALLENGE',
-      title: '30,000 applications and many junior profiles underserved by a simple CV',
-      intro: "In a market where banks, fintechs and tech companies compete for the same junior profiles, the speed and quality of the selection process have become competitive levers and essential elements in delivering a Candidate Experience that meets expectations.",
+      title: '30,000 applications and many junior profiles the CV could not really depict',
+      intro: "In a market where banks, fintechs and tech companies often compete for the same junior profiles, the speed and quality of the hiring process have become competitive levers and essential elements in delivering a Candidate Experience that meets expectations.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Zap,
           title: 'An infrastructure capable of handling high volumes to support the Group\'s growth',
-          text: "Managing 30,000 applications with traditional tools meant having to choose between speed and quality. It was necessary to strengthen the process by accelerating operational steps while keeping human judgement at the centre of every decision.",
+          text: "Managing 30,000 applications without technological support was no longer possible. It was necessary to strengthen the process by accelerating operational steps while keeping human judgement at the centre of every decision.",
         },
         {
           icon: Heart,
-          title: "The candidate experience had to match the brand",
-          text: "For a bank certified Top Employer for 10 consecutive years and Equal Salary for 5, every candidate touchpoint is fundamental. A modern, fast, inclusive hiring process aligned with the Group's values was essential.",
+          title: "The candidate experience had to match the Gruppo Credem brand",
+          text: "For a bank certified as Top Employer for 10 consecutive years and Equal Salary for 5, every candidate touchpoint is fundamental. A modern hiring process, aligned with the Group's values, was essential.",
         },
         {
           icon: TrendingUp,
-          title: 'High-potential young talent needed a way to stand out and be hired',
-          text: "CV-based screening could not differentiate junior profiles: the soft skills that truly matter for these roles were invisible at the first step. The result was too many false positives in interviews and too many talented candidates missed.",
+          title: 'Identifying unexpressed potential was as important for HR as for the business',
+          text: "At such a junior level, CV-based screening could not truly differentiate profiles: the soft skills decisive for the development of these roles were invisible on paper, and the risk was failing to identify talent aligned with Gruppo Credem.",
         },
       ],
       hrChallenges: [
         {
           icon: BarChart3,
-          title: 'Every candidate needed a real chance to be heard',
-          text: "At 30,000 applications a year, it is not physically possible to give every candidate an authentic space to demonstrate who they are using traditional tools. Without a structured channel, the most motivated and high-potential profiles risked going unheard.",
+          title: 'The Talent Pool needed to be expanded and every candidate given a real chance to be heard',
+          text: "With 30,000 applications a year and traditional hiring tools, it is not possible to give everyone an authentic space to express themselves. Without technological support, the most motivated and high-potential profiles risked going unnoticed.",
         },
         {
           icon: Users,
           title: 'Time-to-hire needed to be optimised to avoid losing the best candidates',
-          text: "Process speed was one of the most important competitive levers to work on to ensure an optimal selection experience and avoid losing any of the most promising candidates.",
+          text: "Process speed was one of the most important competitive levers to work on to ensure an optimal hiring experience and avoid losing any of the most promising candidates.",
         },
         {
           icon: Target,
           title: 'Selection quality needed to be as consistent as possible across the Group',
-          text: "Guaranteeing uniform screening standards for a Group distributed across 600+ branches in 19 regions was both an operational and a fairness challenge. Without a centralised, structured filter, hiring quality could vary significantly.",
+          text: "Guaranteeing uniform screening standards for a Group distributed across 600+ branches in 19 regions was both an operational and a fairness challenge. Without a centralised, structured filter, hiring quality risked becoming inconsistent.",
         },
       ],
     },
@@ -230,10 +230,10 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What needed to change',
       items: [
-        { icon: Target, text: "Make the first filter more selective and predictive: identify high-potential profiles hidden among the 30,000 applications received annually, reducing the margin of error" },
-        { icon: Zap, text: "Reduce time-to-hire and optimise shortlists: respond more quickly to candidates aligned with the Group's values and open roles to bring them to interview" },
-        { icon: Layers, text: "Guarantee consistent selection standards: maintain the same depth and quality of evaluation for all candidates regardless of when or where they applied." },
-        { icon: Heart, text: "Improve the Candidate Experience: make the entire process accessible, fast and fair - a genuine opportunity to be heard, consistent with Gruppo Credem's Top Employer positioning" },
+        { icon: Target, text: "Make the first filter more selective and predictive: identify high-potential profiles hidden among the 30,000 applications received annually, reducing the margin of error." },
+        { icon: Zap, text: "Reduce time-to-hire and optimise shortlists: respond more quickly to candidates aligned with the Group's values and open roles to bring them to interview." },
+        { icon: Layers, text: "Guarantee consistent hiring standards: maintain the same depth and quality of evaluation for all candidates regardless of when or where they applied." },
+        { icon: Heart, text: "Improve the Candidate Experience: make the entire process accessible, fast and fair - a genuine opportunity to be heard, consistent with Gruppo Credem's Top Employer positioning." },
       ],
     },
     solution: {
@@ -253,12 +253,12 @@ const content = {
       metrics: [
         { value: '-50%', label: 'Time-to-hire' },
         { value: '+50%', label: 'Fit-to-hire in interviews' },
-        { value: '-15%', label: 'Misaligned interviews' },
+        { value: '-15%', label: 'Unsuccessful interviews' },
       ],
       qualitative: [
-        { icon: Eye, title: 'More candidates get to demonstrate their value', text: "The assessment gave more people the opportunity to surface real skills beyond the CV. High-potential profiles that previously got lost in the volume are now identified effectively and quickly." },
+        { icon: Eye, title: 'More candidates get to demonstrate their value', text: "The assessment gave more people the opportunity to surface real skills beyond the CV. High-potential profiles that previously risked getting lost in the volume are now identified effectively and quickly." },
         { icon: CheckCircle, title: 'Radically improved interview quality', text: "The +50% fit-to-hire means the second step of the process has become more efficient: less time spent on low-yield interviews, more informed decisions, faster feedback cycles." },
-        { icon: Layers, title: 'Human-in-the-loop, always', text: "The assessment doesn't produce a verdict: it produces information that makes decision-making more informed and effective. The data produced by Skillvue's AI feeds the decision, which always remains in the hands of the recruiters." },
+        { icon: Layers, title: 'Human-in-the-loop, always', text: "The assessment produces information that makes decision-making more informed and effective. The data produced by Skillvue's AI feeds the decision, which always remains in the hands of the recruiters." },
       ],
     },
     related: {
@@ -339,26 +339,35 @@ export default function CredemStoryPage() {
                 </motion.div>
               </div>
 
-              {/* Client card */}
-              <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
-                  <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
+              {/* Client card + video */}
+              <motion.div className="lg:col-span-5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-6">
+                  <div className="flex items-center gap-4 mb-4 pb-4 border-b border-white/[0.08]">
+                    <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
                       <img src="/logos/credem-logo (2).png" alt="Gruppo Credem logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>
-                      <p className="text-[18px] font-bold text-white/90">Gruppo Credem</p>
+                      <p className="text-[16px] font-bold text-white/90">Gruppo Credem</p>
                     </div>
                   </div>
-                  <div className="divide-y divide-white/[0.08]">
+                  <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                     {c.clientCard.facts.map(s => (
-                      <div key={s.label} className="py-4 first:pt-0 last:pb-0">
+                      <div key={s.label}>
                         <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
-                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{s.value}</p>
+                        <p className="text-[13px] text-white/[0.65] leading-[1.5]">{s.value}</p>
                       </div>
                     ))}
                   </div>
+                </div>
+                <div className="mt-4 rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                  <iframe
+                    className="w-full h-full"
+                    src={lang === 'it' ? 'https://www.youtube.com/embed/sy7ycBPP-XM?autoplay=1&mute=1&rel=0&modestbranding=1' : 'https://www.youtube.com/embed/nWCKHRa9cig?autoplay=1&mute=1&rel=0&modestbranding=1'}
+                    title="Gruppo Credem – Skillvue"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
               </motion.div>
             </div>
