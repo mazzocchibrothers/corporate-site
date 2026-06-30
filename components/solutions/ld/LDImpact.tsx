@@ -64,18 +64,18 @@ export default function LDImpact() {
 
         <span
           className="block mb-2 text-[#121212]"
-          style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}
+          style={{ fontSize: '64px', fontWeight: 600, lineHeight: 1, letterSpacing: '-0.03em' }}
         >
           {t(k.value)}
         </span>
 
         <h3 className="text-[15px] md:text-[17px] font-semibold text-[#121212]/80 leading-snug mb-1.5">
-          {t(k.label)} <span className="font-normal text-[#121212]/40">{t(k.sublabel)}</span>
+          {t(k.label)} <span className="font-normal text-[#7A7A7A]">{t(k.sublabel)}</span>
         </h3>
 
         <div className="w-12 h-px bg-[#4B4DF7]/[0.15] my-4 md:my-5" />
 
-        <p className="text-[14px] text-[#121212]/[0.45] leading-[1.75] flex-1">{t(k.detail)}</p>
+        <p className="text-[14px] text-[#7A7A7A] leading-[1.75] flex-1">{t(k.detail)}</p>
       </motion.div>
     );
   };
@@ -86,11 +86,11 @@ export default function LDImpact() {
 
         {/* Header */}
         <motion.div className="text-center mb-12 md:mb-16 lg:mb-20" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">
             {t('Measurable impact on')}{' '}
             <span className="font-bold gradient-text-on-light">{t('L&D outcomes')}</span>
           </h2>
-          <p className="text-[15px] md:text-[17px] text-[#121212]/[0.45] leading-[1.75] max-w-2xl mx-auto">
+          <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.75] max-w-2xl mx-auto">
             {t('When learning investments are driven by objective skill data, the results speak for themselves.')}
           </p>
         </motion.div>

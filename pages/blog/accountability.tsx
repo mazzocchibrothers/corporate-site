@@ -61,7 +61,7 @@ export default function BlogArticle4() {
                 <span className="text-[13px] text-white/35">{lang === 'it' ? '27 febbraio 2026' : 'February 27, 2026'}</span>
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '11 min di lettura' : '11 min read'}</span>
               </div>
-              <h1 className="font-bold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
                 {lang === 'it' ? "Che cos'è l'accountability e perché migliora le performance lavorative" : 'What Is Accountability and Why It Improves Work Performance'}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
@@ -77,7 +77,7 @@ export default function BlogArticle4() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? "Che cos'è davvero l'accountability?" : 'What Is Accountability, Really?'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
@@ -88,20 +88,20 @@ export default function BlogArticle4() {
 
               <div className="grid md:grid-cols-3 gap-3 my-8">
                 <div className="rounded-xl border border-[#4B4DF7]/[0.06] bg-white p-5 text-center">
-                  <h3 className="text-[14px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Delega' : 'Delegation'}</h3>
+                  <h3 className="text-[14px] font-semibold text-[#121212] mb-2">{lang === 'it' ? 'Delega' : 'Delegation'}</h3>
                   <p className="text-[13px] text-[#121212]/[0.45] leading-[1.6]">{lang === 'it' ? 'Trasferimento di un compito a un\'altra persona' : 'Transfer of a task to another person'}</p>
                 </div>
                 <div className="rounded-xl border border-[#4B4DF7]/[0.06] bg-white p-5 text-center">
-                  <h3 className="text-[14px] font-bold text-[#121212] mb-2">Ownership</h3>
+                  <h3 className="text-[14px] font-semibold text-[#121212] mb-2">Ownership</h3>
                   <p className="text-[13px] text-[#121212]/[0.45] leading-[1.6]">{lang === 'it' ? 'Senso di appartenenza verso un progetto o risultato' : 'Sense of ownership over a project or result'}</p>
                 </div>
                 <div className="rounded-xl border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.03] p-5 text-center">
-                  <h3 className="text-[14px] font-bold text-[#4B4DF7]">Accountability</h3>
+                  <h3 className="text-[14px] font-semibold text-[#4B4DF7]">Accountability</h3>
                   <p className="text-[13px] text-[#121212]/[0.55] leading-[1.6]">{lang === 'it' ? 'Piena titolarità di decisioni e conseguenze, anche nell\'ambiguità' : 'Full ownership of decisions and consequences, even in ambiguity'}</p>
                 </div>
               </div>
 
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 mt-14 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 mt-14 tracking-[-0.02em]">
                 {lang === 'it' ? 'Il legame con la performance' : 'The Link to Performance'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
@@ -124,7 +124,7 @@ export default function BlogArticle4() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-4 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-4 tracking-[-0.02em]">
                 {lang === 'it' ? "Riconoscere l'accountability nel lavoro quotidiano" : 'Recognizing Accountability in Daily Work'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.5] leading-[1.9] mb-10">
@@ -173,7 +173,7 @@ export default function BlogArticle4() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">
                 {lang === 'it' ? "Come sviluppare l'accountability" : 'How to Develop Accountability'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-8">
@@ -190,7 +190,7 @@ export default function BlogArticle4() {
                         <Icon className="h-4 w-4 text-[#4B4DF7]/60" />
                       </div>
                       <div>
-                        <h3 className="text-[15px] font-bold text-[#121212] mb-1.5">{l.title}</h3>
+                        <h3 className="text-[15px] font-semibold text-[#121212] mb-1.5">{l.title}</h3>
                         <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{l.desc}</p>
                       </div>
                     </div>
@@ -201,7 +201,7 @@ export default function BlogArticle4() {
               <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-12">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                  <h3 className="text-[16px] font-bold text-[#121212]">Key Takeaway</h3>
+                  <h3 className="text-[16px] font-semibold text-[#121212]">Key Takeaway</h3>
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
@@ -220,7 +220,7 @@ export default function BlogArticle4() {
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">
                 {lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}
               </span>
-              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
+              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
                 {lang === 'it'
                   ? <>Riduci il rischio di promuovere sulla base di <span className="gradient-text">impressioni.</span></>
                   : <>Reduce the risk of promoting based on <span className="gradient-text">impressions.</span></>}

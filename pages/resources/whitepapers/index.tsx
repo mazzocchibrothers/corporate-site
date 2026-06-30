@@ -72,7 +72,7 @@ export default function WhitepapersPage() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.25em] uppercase mb-8 block">{t('Resources')}</span>
-              <h1 className="font-bold text-white/95 mb-8" style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-8" style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
                 {t('White Papers')}<br />
                 {t('&')} <span className="gradient-text">{t('Reports')}</span>
               </h1>
@@ -120,7 +120,7 @@ export default function WhitepapersPage() {
                                 <img src="/logos/skillvue-logomark.svg" alt="Skillvue" className="h-7 w-7" style={{ filter: 'brightness(0) invert(1)' }} />
                                 <span className="text-white/90 text-[15px] font-semibold">Skillvue</span>
                               </div>
-                              <h3 className="text-[clamp(1.5rem,3vw,2.8rem)] font-bold text-white leading-[1.1] mb-5">{c.title}</h3>
+                              <h3 className="text-[clamp(1.5rem,3vw,2.8rem)] font-semibold text-white leading-[1.1] mb-5">{c.title}</h3>
                             </div>
                             <span className="text-[11px] text-white/35 font-semibold tracking-[0.15em] uppercase">{t('White Paper')}</span>
                           </div>
@@ -181,7 +181,7 @@ export default function WhitepapersPage() {
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-white/90 mb-4 leading-[1.2] max-w-2xl mx-auto">
+              <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-semibold text-white/90 mb-4 leading-[1.2] max-w-2xl mx-auto">
                 {t('Want to see the science in action?')}
               </h2>
               <p className="text-[16px] text-white/[0.45] mb-8 max-w-xl mx-auto">

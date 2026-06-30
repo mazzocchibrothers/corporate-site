@@ -61,7 +61,7 @@ export default function CustomerStoriesSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.6rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-3 md:mb-4">
+          <h2 className="text-[clamp(1.6rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-3 md:mb-4">
             {t('Proof, not')} <span className="italic font-bold gradient-text">{t('promises.')}</span>
           </h2>
           <p className="text-[15px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">
@@ -83,7 +83,7 @@ export default function CustomerStoriesSection() {
             >
               {/* Company + industry */}
               <div>
-                <h3 className="text-[17px] md:text-[22px] font-bold text-white/90 mb-1">{t(s.company)}</h3>
+                <h3 className="text-[17px] md:text-[22px] font-semibold text-white/90 mb-1">{t(s.company)}</h3>
                 <span className="text-[13px] md:text-[15px] text-white/40">{t(s.industry)}</span>
               </div>
 
@@ -139,7 +139,7 @@ export default function CustomerStoriesSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <h3 className="text-[18px] md:text-[20px] font-bold text-white/90 mb-3 md:mb-4">
+          <h3 className="text-[18px] md:text-[20px] font-semibold text-white/90 mb-3 md:mb-4">
             {t('Built')} <span className="italic font-bold gradient-text">{t('enterprise-ready')}</span>
           </h3>
           <p className="text-[14px] md:text-[15px] text-white/[0.65] leading-[1.6] md:leading-[1.75] mb-4 md:mb-6 max-w-3xl">

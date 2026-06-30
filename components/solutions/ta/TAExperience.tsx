@@ -39,7 +39,7 @@ export default function TAExperience() {
               <div className="w-10 h-10 rounded-full bg-white/[0.06] border border-white/[0.1] flex items-center justify-center">
                 <User className="h-5 w-5 md:h-4 md:w-4 text-[#9B9DFB]/70" strokeWidth={1.5} />
               </div>
-              <h3 className="text-[16px] md:text-[20px] font-bold text-white/90">{t('Candidate Experience')}</h3>
+              <h3 className="text-[16px] md:text-[20px] font-semibold text-white/90">{t('Candidate Experience')}</h3>
             </div>
             <p className="text-[15px] text-white/[0.65] font-medium mb-8">{t('Fast, frictionless, and designed to meet people where they are.')}</p>
             <div className="space-y-4">
@@ -63,7 +63,7 @@ export default function TAExperience() {
               <div className="w-10 h-10 rounded-full bg-white/[0.06] border border-white/[0.1] flex items-center justify-center">
                 <Briefcase className="h-5 w-5 md:h-4 md:w-4 text-[#9B9DFB]/70" strokeWidth={1.5} />
               </div>
-              <h3 className="text-[16px] md:text-[20px] font-bold text-white/90">{t('HR Experience')}</h3>
+              <h3 className="text-[16px] md:text-[20px] font-semibold text-white/90">{t('HR Experience')}</h3>
             </div>
             <p className="text-[15px] text-white/[0.65] font-medium mb-8">{t('From automation to insight.')}</p>
             <div className="space-y-4">

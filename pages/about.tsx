@@ -75,7 +75,7 @@ export default function AboutPage() {
                 </span>
               </div>
               <h1
-                className="font-bold text-white/95 mb-8"
+                className="font-semibold text-white/95 mb-8"
                 style={{ fontSize: 'clamp(2rem, 5.4vw, 4.8rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
               >
                 {lang === 'en' ? (
@@ -133,7 +133,7 @@ export default function AboutPage() {
               <div className="grid lg:grid-cols-12 gap-16 lg:gap-20">
                 <div className="lg:col-span-5">
                   <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('Our Story')}</span>
-                  <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold text-[#121212] mb-8 tracking-[-0.02em] leading-[1.1]">
+                  <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold text-[#121212] mb-8 tracking-[-0.02em] leading-[1.1]">
                     {t('We believe talent decisions deserve the same rigour as')} <span className="gradient-text-on-light">{t('business decisions.')}</span>
                   </h2>
                   <div className="border-l-2 border-[#4B4DF7]/30 pl-6 my-10">
@@ -162,7 +162,7 @@ export default function AboutPage() {
         <section className="relative py-24 lg:py-32" ref={teamRef}>
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
             <motion.div className="mb-12" initial={{ opacity: 0, y: 20 }} animate={teamInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-              <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold text-white/95 mb-3 tracking-[-0.02em]">{t('Our Team')}</h2>
+              <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold text-white/95 mb-3 tracking-[-0.02em]">{t('Our Team')}</h2>
               <p className="text-[16px] text-white/[0.35] max-w-lg">{t('Psychometricians, AI engineers, designers, and product managers, united by one mission.')}</p>
             </motion.div>
 
@@ -222,7 +222,7 @@ export default function AboutPage() {
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-16 lg:py-20 w-full">
             <motion.div className="text-center mb-10 md:mb-14" initial={{ opacity: 0, y: 20 }} animate={valuesInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
               <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-5 block">{t('Our Values')}</span>
-              <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-bold text-[#121212] tracking-[-0.02em]">{t('What Drives Us')}</h2>
+              <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('What Drives Us')}</h2>
             </motion.div>
             {(() => {
               const renderCard = (v, i) => {
@@ -238,7 +238,7 @@ export default function AboutPage() {
                     <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.1] flex items-center justify-center mx-auto mb-6 md:mb-10 group-hover:bg-[#4B4DF7]/[0.12] group-hover:border-[#4B4DF7]/[0.2] transition-all duration-500">
                       <Icon className="h-7 w-7 md:h-8 md:w-8 text-[#4B4DF7]/60 group-hover:text-[#4B4DF7] transition-colors duration-500" />
                     </div>
-                    <h3 className="text-[18px] md:text-[22px] font-bold text-[#121212] mb-3 md:mb-5 leading-tight">{t(v.title)}</h3>
+                    <h3 className="text-[18px] md:text-[22px] font-semibold text-[#121212] mb-3 md:mb-5 leading-tight">{t(v.title)}</h3>
                     <p className="text-[14px] md:text-[16px] text-[#121212]/[0.50] leading-[1.75] md:leading-[1.85]">{t(v.desc)}</p>
                   </motion.div>
                 );
@@ -272,7 +272,7 @@ export default function AboutPage() {
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">
+              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">
                 {t('Ready to make talent decisions you can defend?')}
               </h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">

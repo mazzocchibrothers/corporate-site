@@ -50,11 +50,11 @@ export default function EnterpriseTrust() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-4 md:mb-6">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-4 md:mb-6">
             {t('Built')}{' '}
             <span className="italic font-bold gradient-text-on-light">{t('enterprise ready')}</span>
           </h2>
-          <p className="text-[14px] md:text-[18px] text-[#1A1A2E]/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">
+          <p className="text-[14px] md:text-[18px] text-[#7A7A7A] leading-[1.6] md:leading-[1.75] max-w-2xl">
             {t('We are opinionated about science, flexible about everything else. From deep customizability to the most demanding regulatory environments.')}
           </p>
         </motion.div>
@@ -73,8 +73,8 @@ export default function EnterpriseTrust() {
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
               >
                 <Icon className="h-5 w-5 text-[#4B4DF7]/50 mb-3" strokeWidth={1.5} />
-                <h3 className="text-[16px] font-bold text-[#1A1A2E] mb-2">{t(pillar.title)}</h3>
-                <p className="text-[13px] text-[#1A1A2E]/[0.55] leading-[1.5]">{t(pillar.desc)}</p>
+                <h3 className="text-[16px] font-semibold text-[#1A1A2E] mb-2">{t(pillar.title)}</h3>
+                <p className="text-[13px] text-[#7A7A7A] leading-[1.5]">{t(pillar.desc)}</p>
               </motion.div>
             );
           })}
@@ -98,8 +98,8 @@ export default function EnterpriseTrust() {
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
               >
                 <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#4B4DF7]/50 mb-3 md:mb-5" strokeWidth={1.5} />
-                <h3 className="text-[16px] md:text-[20px] font-bold text-[#1A1A2E] mb-2 md:mb-4">{t(pillar.title)}</h3>
-                <p className="text-[13px] md:text-[15px] text-[#1A1A2E]/[0.55] leading-[1.5] md:leading-[1.75]">{t(pillar.desc)}</p>
+                <h3 className="text-[16px] md:text-[20px] font-semibold text-[#1A1A2E] mb-2 md:mb-4">{t(pillar.title)}</h3>
+                <p className="text-[13px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-[1.75]">{t(pillar.desc)}</p>
               </motion.div>
             );
           })}

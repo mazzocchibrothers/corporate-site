@@ -8,6 +8,8 @@ export default function SkillvueLogo({ size = 32, className = '', style = {} }: 
       viewBox="0 0 240 240"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Skillvue"
       className={className}
       style={style}
     >

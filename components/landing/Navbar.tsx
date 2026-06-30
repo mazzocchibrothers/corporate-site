@@ -148,9 +148,9 @@ export default function Navbar() {
         }}
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between h-[80px] relative">
-          <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }} className="flex items-center gap-2.5 shrink-0 outline-none" data-testid="nav-logo">
+          <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }} className="flex items-center gap-2.5 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded" data-testid="nav-logo">
             <img
-              src="/logos/Skillvue_logo_Gradient White (4).svg"
+              src={isLight ? '/logos/Skillvue_logo-on_light.svg' : '/logos/Skillvue_logo-on_dark.svg'}
               alt="Skillvue"
               className="h-7 w-auto block border-0"
             />
@@ -241,8 +241,10 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden flex items-center justify-center w-10 h-10"
+            className="lg:hidden flex items-center justify-center w-10 h-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-lg"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
             data-testid="mobile-menu-toggle"
           >
             {mobileOpen ? (

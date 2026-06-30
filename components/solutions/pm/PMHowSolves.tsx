@@ -12,7 +12,7 @@ export default function PMHowSolves() {
     <section id="pm-how" data-testid="pm-how" className="section-breathe relative py-20 lg:py-24" ref={ref}>
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#121212]">
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212]">
             {t('The best of')}{' '}
             <span className="font-bold gradient-text-on-light">{t('both worlds')}</span>
           </h2>
@@ -32,11 +32,11 @@ export default function PMHowSolves() {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <span className="text-[#4B4DF7] font-bold mt-0.5">✓</span>
-                <p className="text-[15px] text-[#121212]/[0.65] leading-[1.7]">{t('Captures context, relationships, and situational nuance that only a manager can see firsthand')}</p>
+                <p className="text-[15px] text-[#7A7A7A] leading-[1.7]">{t('Captures context, relationships, and situational nuance that only a manager can see firsthand')}</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✗</span>
-                <p className="text-[15px] text-[#121212]/[0.65] leading-[1.7]">{t('Without a shared standard, reviews become inconsistent and impossible to compare')}</p>
+                <p className="text-[15px] text-[#7A7A7A] leading-[1.7]">{t('Without a shared standard, reviews become inconsistent and impossible to compare')}</p>
               </div>
             </div>
           </motion.div>
@@ -53,11 +53,11 @@ export default function PMHowSolves() {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <span className="text-[#4B4DF7] font-bold mt-0.5">✓</span>
-                <p className="text-[15px] text-[#121212]/[0.65] leading-[1.7]">{t('One framework applied consistently. Evaluation is fair and comparable')}</p>
+                <p className="text-[15px] text-[#7A7A7A] leading-[1.7]">{t('One framework applied consistently. Evaluation is fair and comparable')}</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✗</span>
-                <p className="text-[15px] text-[#121212]/[0.65] leading-[1.7]">{t('Objective data alone can miss the human layer. the context behind a result')}</p>
+                <p className="text-[15px] text-[#7A7A7A] leading-[1.7]">{t('Objective data alone can miss the human layer. the context behind a result')}</p>
               </div>
             </div>
           </motion.div>
@@ -70,7 +70,7 @@ export default function PMHowSolves() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.35 }}
         >
-          <h3 className="text-[20px] font-bold text-white/90 mb-4 text-center">{t('Human Reviews + Skillvue')}</h3>
+          <h3 className="text-[20px] font-semibold text-white/90 mb-4 text-center">{t('Human Reviews + Skillvue')}</h3>
           <p className="text-[17px] text-white/[0.85] leading-[1.7] text-center max-w-3xl mx-auto font-medium">
             {t('Combining subjective verification methods with Skillvue verifications brings objectivity without compromising on context and nuance.')}
           </p>

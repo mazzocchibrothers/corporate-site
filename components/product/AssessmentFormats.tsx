@@ -115,7 +115,7 @@ export default function AssessmentFormats() {
                       <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center mb-2.5">
                         <Icon className="h-5 w-5 text-white/50" />
                       </div>
-                      <h4 className="text-[15px] font-bold text-white/90 mb-1 leading-tight" style={{ whiteSpace: 'pre-line' }}>{t(item.name)}</h4>
+                      <h4 className="text-[15px] font-semibold text-white/90 mb-1 leading-tight" style={{ whiteSpace: 'pre-line' }}>{t(item.name)}</h4>
                       <p className="text-[12px] text-white/[0.4] leading-[1.4]">{t(item.desc)}</p>
                     </div>
                   );
@@ -138,7 +138,7 @@ export default function AssessmentFormats() {
                       <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-white/[0.06] flex items-center justify-center mb-2.5 md:mb-4">
                         <Icon className="h-5 w-5 md:h-5 md:w-5 text-white/50" />
                       </div>
-                      <h4 className="text-[15px] md:text-[15px] font-bold text-white/90 mb-1 md:mb-1.5 leading-tight" style={{ whiteSpace: 'pre-line' }}>{t(item.name)}</h4>
+                      <h4 className="text-[15px] md:text-[15px] font-semibold text-white/90 mb-1 md:mb-1.5 leading-tight" style={{ whiteSpace: 'pre-line' }}>{t(item.name)}</h4>
                       <p className="text-[12px] md:text-[13px] text-white/[0.4] leading-[1.4] md:leading-[1.55]">{t(item.desc)}</p>
                     </div>
                   );

@@ -27,7 +27,7 @@ export default function HowSkillvueWorks() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-4xl mb-4 md:mb-6">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-4xl mb-4 md:mb-6">
             {t('From your context to actionable intelligence')}{' '}
             <span className="font-bold gradient-text">{t('in six steps')}</span>
           </h2>
@@ -65,7 +65,7 @@ export default function HowSkillvueWorks() {
           <div className="grid lg:grid-cols-2 gap-5 md:gap-10">
             <div>
               <span className="text-[10px] md:text-[12px] font-semibold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-2 md:mb-4 block">{t('STEP')} {steps[active].num}</span>
-              <h3 className="text-[18px] md:text-[clamp(1.5rem,2.5vw,2rem)] font-bold text-white/90 mb-3 md:mb-5 leading-[1.2]">{t(steps[active].title)}</h3>
+              <h3 className="text-[18px] md:text-[clamp(1.5rem,2.5vw,2rem)] font-semibold text-white/90 mb-3 md:mb-5 leading-[1.2]">{t(steps[active].title)}</h3>
               <p className="text-[14px] md:text-[16px] text-white/[0.65] leading-[1.6] md:leading-[1.75]">{t(steps[active].what)}</p>
             </div>
             <div>
@@ -85,13 +85,15 @@ export default function HowSkillvueWorks() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setActive((p) => (p - 1 + steps.length) % steps.length)}
-              className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/10 text-white/40 hover:text-white/80 hover:border-white/25 transition-all duration-400"
+              aria-label="Previous step"
+              className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/10 text-white/40 hover:text-white/80 hover:border-white/25 transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
               <ChevronLeft className="h-3.5 w-3.5 md:h-4 md:w-4" />
             </button>
             <button
               onClick={() => setActive((p) => (p + 1) % steps.length)}
-              className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/15 text-white/60 hover:text-white/90 hover:border-white/30 transition-all duration-400"
+              aria-label="Next step"
+              className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/15 text-white/60 hover:text-white/90 hover:border-white/30 transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
               <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4" />
             </button>

@@ -76,7 +76,7 @@ export default function BlogArticle1() {
                 <span className="text-[13px] text-white/35">{lang === 'it' ? '13 marzo 2026' : 'March 13, 2026'}</span>
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '8 min di lettura' : '8 min read'}</span>
               </div>
-              <h1 className="font-bold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
                 {lang === 'it' ? 'Attitudine vs. Competenza: come valutare un candidato' : 'Attitude vs. Competence: How to Evaluate a Candidate'}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
@@ -111,7 +111,7 @@ export default function BlogArticle1() {
                 </p>
               </div>
 
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
                 {lang === 'it' ? 'Attitudine vs. Competenza: qual è la vera differenza?' : "Attitude vs. Competence: What's the Real Difference?"}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
@@ -122,15 +122,15 @@ export default function BlogArticle1() {
 
               <div className="grid md:grid-cols-3 gap-3 my-8">
                 <div className="rounded-xl border border-[#4B4DF7]/[0.06] bg-white p-5 text-center">
-                  <h3 className="text-[14px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Attitudine' : 'Attitude'}</h3>
+                  <h3 className="text-[14px] font-semibold text-[#121212] mb-2">{lang === 'it' ? 'Attitudine' : 'Attitude'}</h3>
                   <p className="text-[13px] text-[#121212]/[0.45] leading-[1.6]">{lang === 'it' ? 'Predisposizione, potenziale. La capacità di imparare rapidamente, relazionarsi con facilità, affrontare i problemi con curiosità.' : 'Predisposition, potential. The ability to learn quickly, relate easily, tackle problems with curiosity.'}</p>
                 </div>
                 <div className="rounded-xl border border-[#121212]/[0.04] bg-[#121212]/[0.02] p-5 text-center">
-                  <h3 className="text-[14px] font-bold text-[#121212]/50 mb-2">vs.</h3>
+                  <h3 className="text-[14px] font-semibold text-[#121212]/50 mb-2">vs.</h3>
                   <p className="text-[13px] text-[#121212]/[0.35] leading-[1.6]">{lang === 'it' ? 'Potenziale versus performance già osservabile' : 'Potential versus already observable performance'}</p>
                 </div>
                 <div className="rounded-xl border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.03] p-5 text-center">
-                  <h3 className="text-[14px] font-bold text-[#4B4DF7]">{lang === 'it' ? 'Competenza' : 'Competence'}</h3>
+                  <h3 className="text-[14px] font-semibold text-[#4B4DF7]">{lang === 'it' ? 'Competenza' : 'Competence'}</h3>
                   <p className="text-[13px] text-[#121212]/[0.55] leading-[1.6]">{lang === 'it' ? 'Già sviluppata e applicata in contesti reali. Comportamenti osservabili, risultati raggiunti, decisioni prese.' : 'Already developed and applied in real contexts. Observable behaviors, results achieved, decisions made.'}</p>
                 </div>
               </div>
@@ -142,7 +142,7 @@ export default function BlogArticle1() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]">
                 {lang === 'it' ? "Quando valutare l'attitudine (e quando no)" : 'When to Evaluate Attitude (and When Not To)'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.5] leading-[1.9] mb-10">
@@ -202,7 +202,7 @@ export default function BlogArticle1() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]">
                 {lang === 'it' ? 'Come valutare la competenza in modo oggettivo' : 'How to Objectively Evaluate Competence'}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.5] leading-[1.9] mb-10">
@@ -248,7 +248,7 @@ export default function BlogArticle1() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-bold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">
                 {lang === 'it'
                   ? 'Perché lo skill verification ti aiuta a distinguere attitudine e competenza'
                   : 'Why Skill Verification Helps You Distinguish Attitude and Competence'}
@@ -260,11 +260,11 @@ export default function BlogArticle1() {
               </p>
               <div className="grid md:grid-cols-2 gap-4 my-8">
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.03] p-6">
-                  <h3 className="text-[15px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Misurazione della competenza' : 'Competence Measurement'}</h3>
+                  <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{lang === 'it' ? 'Misurazione della competenza' : 'Competence Measurement'}</h3>
                   <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Osserva comportamenti, processi decisionali, applicazione concreta delle competenze in scenari realistici.' : 'Observe behaviors, decision-making processes, concrete application of skills in realistic scenarios.'}</p>
                 </div>
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.03] p-6">
-                  <h3 className="text-[15px] font-bold text-[#121212] mb-2">{lang === 'it' ? 'Valutazione del potenziale' : 'Potential Evaluation'}</h3>
+                  <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{lang === 'it' ? 'Valutazione del potenziale' : 'Potential Evaluation'}</h3>
                   <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Analizza la capacità di apprendimento, la flessibilità cognitiva, l\'orientamento agli obiettivi. Elementi che indicano la possibilità di crescita futura.' : 'Analyze learning capacity, cognitive flexibility, goal orientation. Elements that indicate the possibility of future growth.'}</p>
                 </div>
               </div>
@@ -277,7 +277,7 @@ export default function BlogArticle1() {
               <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-10">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                  <h3 className="text-[16px] font-bold text-[#121212]">Key Takeaway</h3>
+                  <h3 className="text-[16px] font-semibold text-[#121212]">Key Takeaway</h3>
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {lang === 'it'
@@ -296,7 +296,7 @@ export default function BlogArticle1() {
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">
                 {lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}
               </span>
-              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
+              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
                 {lang === 'it'
                   ? <>Inizia a prendere decisioni basate su <span className="gradient-text">evidenze,</span> non impressioni.</>
                   : <>Start making decisions based on <span className="gradient-text">evidence,</span> not impressions.</>}

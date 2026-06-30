@@ -17,7 +17,7 @@ export default function ProductCTA() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">
             {t('Ready to make every talent decision')}{' '}
             <span className="font-bold gradient-text">{t('objective?')}</span>
           </h2>
@@ -30,7 +30,7 @@ export default function ProductCTA() {
         >
           <div className="group relative rounded-xl md:rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.04] hover:bg-white/[0.06] backdrop-blur-sm p-5 md:p-10 lg:p-14 transition-all duration-500 overflow-hidden">
             <span className="text-[10px] md:text-[11px] font-semibold text-[#9B9DFB]/[0.65] tracking-[0.15em] uppercase">{t('Ready to explore')}</span>
-            <h3 className="text-xl md:text-2xl font-bold text-white/90 mt-3 md:mt-4 mb-2 md:mb-3">{t('Book a Demo')}</h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-white/90 mt-3 md:mt-4 mb-2 md:mb-3">{t('Book a Demo')}</h3>
             <p className="text-[13px] md:text-[15px] text-white/[0.65] mb-5 md:mb-8 max-w-md">{t('See Skillvue live with your specific use case')}</p>
             <a
               href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}

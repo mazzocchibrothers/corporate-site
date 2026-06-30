@@ -10,7 +10,7 @@ export default function CTASection() {
 
 
   return (
-    <section id="cta" data-testid="cta-section" className="relative pt-12 pb-16 md:pb-20 lg:pt-16 lg:pb-24" ref={ref}>
+    <section id="cta" data-testid="cta-section" className="relative pt-20 pb-16 md:pt-28 md:pb-20 lg:pt-36 lg:pb-24" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div
           className="mb-6 md:mb-8"
@@ -18,7 +18,7 @@ export default function CTASection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.03em] text-white/90 max-w-4xl">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white/90 max-w-4xl">
             {t('Ready to make talent decisions')}{' '}
             <span className="italic font-bold gradient-text">{t('you can defend?')}</span>
           </h2>
@@ -38,7 +38,7 @@ export default function CTASection() {
             <div className="absolute top-0 right-0 w-[300px] h-[300px] rounded-full bg-[#4B4DF7]/[0.06] blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
             <div className="relative">
               <span className="text-[11px] md:text-[15px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase">{t('Ready to explore')}</span>
-              <h3 className="text-[20px] md:text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/85 mt-3 md:mt-5 mb-2 md:mb-4 leading-tight">
+              <h3 className="text-[20px] md:text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/85 mt-3 md:mt-5 mb-2 md:mb-4 leading-tight">
                 {t('Book a 30-min Demo')}
               </h3>
               <p className="text-[12px] md:text-[17px] text-white/[0.65] mb-0 md:mb-8 max-w-md leading-[1.5] md:leading-normal">

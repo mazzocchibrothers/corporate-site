@@ -159,7 +159,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
 
           <motion.h1
             variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
-            className="text-[clamp(2.4rem,5vw,4rem)] font-bold tracking-[-0.03em] text-[#0D0D0D] leading-[1.1] mb-6"
+            className="text-[clamp(2.4rem,5vw,4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.1] mb-6"
           >
             Scalare l'eccellenza{' '}
             <span
@@ -274,7 +274,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold tracking-[-0.025em] text-[#0D0D0D] mb-3">
+            <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.025em] text-[#0D0D0D] mb-3">
               Cosa troverai nel report
             </h2>
             <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
@@ -309,7 +309,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-bold tracking-[-0.025em] text-[#0D0D0D] leading-[1.15] mb-6">
+              <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.15] mb-6">
                 Scarica il report completo
               </h2>
               <ul className="space-y-3 mb-8">
@@ -348,7 +348,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
               className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10"
               style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}
             >
-              <h3 className="text-[17px] font-bold text-[#0D0D0D] mb-1">Compila per scaricare il PDF</h3>
+              <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">Compila per scaricare il PDF</h3>
               <p className="text-[13px] text-[#0D0D0D]/35 mb-7">Gratuito · Accesso immediato</p>
 
               {submitted ? (
@@ -387,7 +387,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                     placeholder="Il tuo nome"
                     value={form.nome}
                     onChange={e => { setForm(f => ({ ...f, nome: e.target.value })); setErrors(er => ({ ...er, nome: '' })); }}
-                    className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none transition-all"
+                    className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none focus-visible:ring-2 focus-visible:ring-[#4B4DF7]/60 focus-visible:border-[#4B4DF7] transition-all"
                     style={{ borderColor: errors.nome ? '#EF4444' : 'rgba(0,0,0,0.12)', background: '#FAFAFA' }}
                   />
                   {errors.nome && <p className="text-[11px] text-red-500 mt-1">{errors.nome}</p>}
@@ -402,7 +402,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                     placeholder="Il tuo cognome"
                     value={form.cognome}
                     onChange={e => { setForm(f => ({ ...f, cognome: e.target.value })); setErrors(er => ({ ...er, cognome: '' })); }}
-                    className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none transition-all"
+                    className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none focus-visible:ring-2 focus-visible:ring-[#4B4DF7]/60 focus-visible:border-[#4B4DF7] transition-all"
                     style={{ borderColor: errors.cognome ? '#EF4444' : 'rgba(0,0,0,0.12)', background: '#FAFAFA' }}
                   />
                   {errors.cognome && <p className="text-[11px] text-red-500 mt-1">{errors.cognome}</p>}
@@ -417,7 +417,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                     placeholder="nome@azienda.com"
                     value={form.email}
                     onChange={e => { setForm(f => ({ ...f, email: e.target.value })); setErrors(er => ({ ...er, email: '' })); }}
-                    className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none transition-all"
+                    className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none focus-visible:ring-2 focus-visible:ring-[#4B4DF7]/60 focus-visible:border-[#4B4DF7] transition-all"
                     style={{ borderColor: errors.email ? '#EF4444' : 'rgba(0,0,0,0.12)', background: '#FAFAFA' }}
                   />
                   {errors.email && <p className="text-[11px] text-red-500 mt-1">{errors.email}</p>}
@@ -503,7 +503,7 @@ function SectionHeading({ num, title }: { num?: string; title: string }) {
   return (
     <div className="mt-12 mb-5">
       <div className="w-8 h-0.5 rounded mb-3" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-      <h2 className="text-[1.5rem] font-bold tracking-[-0.02em] text-[#0D0D0D]">
+      <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D]">
         {num && <span className="mr-1">{num}.</span>}{title}
       </h2>
     </div>
@@ -513,7 +513,7 @@ function SectionHeading({ num, title }: { num?: string; title: string }) {
 function SubHeading({ title }: { title: string }) {
   return (
     <h3
-      className="text-[14px] font-bold mb-2 mt-6 flex items-center gap-2"
+      className="text-[14px] font-semibold mb-2 mt-6 flex items-center gap-2"
       style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
     >
       {title}
@@ -619,7 +619,7 @@ function WhitepaperLayer() {
             >
               RETAIL LUSSO · 2026
             </span>
-            <h1 className="text-[2rem] font-bold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
+            <h1 className="text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
               Scalare l'eccellenza
               <span
                 className="block"
@@ -959,7 +959,7 @@ function WhitepaperLayer() {
             {/* 3 domande */}
             <div className="mt-10 mb-8">
               <div className="w-8 h-0.5 rounded mb-3" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-              <h2 className="text-[1.5rem] font-bold tracking-[-0.02em] text-[#0D0D0D] mb-2">3 domande per il tuo comitato di direzione</h2>
+              <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D] mb-2">3 domande per il tuo comitato di direzione</h2>
               <p className="text-[14px] text-[#0D0D0D]/55 leading-[1.7]">
                 Prima di avviare qualsiasi iniziativa di retention o di riprogettazione del processo di selezione,
                 ci sono tre domande che vale la pena portare al tavolo del comitato di direzione.

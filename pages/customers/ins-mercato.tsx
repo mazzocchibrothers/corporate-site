@@ -181,7 +181,7 @@ export default function InsMercatoStoryPage() {
             <img src="/logos/insmercato-bg.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
             <div className="absolute inset-0 bg-black/40" />
           </div>
-          <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
+          <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
             <motion.div className="mb-10 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
               <button onClick={() => { router.push(lang === 'it' ? '/clienti' : '/customers'); window.scrollTo(0, 0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">
                 {lang === 'it' ? 'Clienti' : 'Customers'}
@@ -197,7 +197,7 @@ export default function InsMercatoStoryPage() {
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-8 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     CUSTOMER STORY
                   </span>
-                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
+                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-semibold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
                     {lang === 'it'
                       ? <>Come In's Mercato ha costruito una <span style={{ color: '#7b7df9' }}>pipeline interna</span> di Store Manager</>
                       : <>How In's Mercato built an <span style={{ color: '#7b7df9' }}>internal pipeline</span> of Store Managers</>
@@ -272,12 +272,12 @@ export default function InsMercatoStoryPage() {
 
         {/* Content */}
         <section id="context-section" className="section-breathe relative py-16 lg:py-20" style={{ background: '#F7F7F7' }}>
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
 
             {/* Context */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'CONTESTO' : 'CONTEXT'}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{lang === 'it' ? 'Il contesto del progetto' : 'The Company and The Context'}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{lang === 'it' ? 'Il contesto del progetto' : 'The Company and The Context'}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-6">
                 {lang === 'it'
                   ? <>In's Mercato è una delle principali insegne hard discount italiane, con un fatturato di <strong className="text-[#121212]/80 font-semibold">1,5 miliardi di euro</strong>, oltre <strong className="text-[#121212]/80 font-semibold">4.200 dipendenti</strong> e una rete di più di <strong className="text-[#121212]/80 font-semibold">570 punti vendita</strong>. L'azienda è in una fase di forte <strong className="text-[#121212]/80 font-semibold">espansione immobiliare</strong>, con un piano di nuove aperture che pone un <strong className="text-[#121212]/80 font-semibold">vincolo operativo preciso</strong>: senza Store Manager qualificati, pronti e pienamente allineati alla cultura aziendale, i nuovi negozi rischiano di sottoperformare. La crescita della rete dipende direttamente dalla capacità di avere figure manageriali formate nel momento in cui servono.</>
@@ -289,7 +289,7 @@ export default function InsMercatoStoryPage() {
             {/* Challenge */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'LA SFIDA' : 'THE CHALLENGE'}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{lang === 'it' ? 'Il problema strutturale' : 'The Structural Problem'}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{lang === 'it' ? 'Il problema strutturale' : 'The Structural Problem'}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">
                 {lang === 'it'
                   ? "In's Mercato è un'azienda in forte crescita. Con oltre 570 punti vendita e un piano di sviluppo immobiliare attivo, il business aveva un vincolo operativo che precedeva qualsiasi considerazione HR."
@@ -304,7 +304,7 @@ export default function InsMercatoStoryPage() {
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                         <p.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{p[l].title}</h4>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{p[l].title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{p[l].desc}</p>
                     </div>
                   ))}
@@ -318,7 +318,7 @@ export default function InsMercatoStoryPage() {
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
                         <p.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{p[l].title}</h4>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{p[l].title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{p[l].desc}</p>
                     </div>
                   ))}
@@ -329,7 +329,7 @@ export default function InsMercatoStoryPage() {
             {/* Objectives */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'OBIETTIVI DI COLLABORAZIONE' : 'COLLABORATION OBJECTIVES'}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-10">{lang === 'it' ? 'Cosa doveva cambiare' : 'What needed to change'}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{lang === 'it' ? 'Cosa doveva cambiare' : 'What needed to change'}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {objectives.map((o, i) => (
                   <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -347,7 +347,7 @@ export default function InsMercatoStoryPage() {
             {/* Solution */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'LA SOLUZIONE' : 'THE SOLUTION'}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">{lang === 'it' ? 'Assessment AI con Skillvue' : 'AI Assessment with Skillvue'}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{lang === 'it' ? 'Assessment AI con Skillvue' : 'AI Assessment with Skillvue'}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">
                 {lang === 'it'
                   ? "Skillvue ha abilitato un assessment strutturato, basato sul framework di soft skill che In's aveva già costruito internamente per il profilo di Store Manager."
@@ -375,7 +375,7 @@ export default function InsMercatoStoryPage() {
                       <div className="w-8 h-8 rounded-lg flex items-center justify-center mb-4" style={{ background: 'rgba(75,77,247,0.08)' }}>
                         <span className="text-[12px] font-bold" style={{ color: '#4b4df7' }}>{i + 1}</span>
                       </div>
-                      <h4 className="text-[15px] font-bold text-[#121212] mb-2 leading-[1.4]">{card[l].title}</h4>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-2 leading-[1.4]">{card[l].title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{card[l].text}</p>
                     </div>
                   ))}
@@ -386,7 +386,7 @@ export default function InsMercatoStoryPage() {
             {/* Results */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'RISULTATI' : 'RESULTS'}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">
                 {lang === 'it' ? 'Key Metrics & Impatto' : 'Key Metrics & Impact'}
               </h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">
@@ -544,7 +544,7 @@ export default function InsMercatoStoryPage() {
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <card.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <h4 className="text-[15px] font-bold text-[#121212] mb-3 leading-[1.4]">{card[l].title}</h4>
+                    <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{card[l].title}</h4>
                     <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{card[l].text}</p>
                   </div>
                 ))}
@@ -557,7 +557,7 @@ export default function InsMercatoStoryPage() {
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
                   {lang === 'it' ? 'EVOLUZIONE 2026' : 'EVOLUTION 2026'}
                 </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#121212] leading-[1.4] mb-4">
+                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">
                   {lang === 'it' ? 'Da sviluppo interno a talent strategy integrata' : 'From internal development to integrated talent strategy'}
                 </h2>
                 <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-8">
@@ -615,8 +615,8 @@ export default function InsMercatoStoryPage() {
 
         {/* Related Stories */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white/90 leading-[1.4] mb-12">{t('Related Stories')}</h3>
+          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{t('Related Stories')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {[
                 { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
@@ -624,7 +624,7 @@ export default function InsMercatoStoryPage() {
               ].map(s => (
                 <button key={s.id} onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0,0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
                   <span className="text-[14px] text-white/40 mb-4 block">{t(s.tag)}</span>
-                  <h4 className="text-[24px] font-bold text-white/90 mb-4">{s.company}</h4>
+                  <h4 className="text-[24px] font-semibold text-white/90 mb-4">{s.company}</h4>
                   <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{t(s.headline)}</p>
                   <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
                     {t('Read the story')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
