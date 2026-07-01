@@ -99,11 +99,6 @@ const content = {
           title: "Bisognava lavorare d'anticipo sul mercato",
           text: "La funzione HR doveva lavorare proattivamente per prepararsi alle trasformazioni in corso nel mercato del lavoro, assicurando che l'organizzazione disponesse di tutte le competenze necessarie allo sviluppo futuro.",
         },
-        {
-          icon: Zap,
-          title: "Bisognava lavorare d'anticipo sul mercato",
-          text: "La funzione HR doveva lavorare proattivamente per prepararsi alle trasformazioni in corso nel mercato del lavoro, assicurando che l'organizzazione disponesse di tutte le competenze necessarie allo sviluppo futuro.",
-        },
       ],
     },
     objectives: {
