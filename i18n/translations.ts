@@ -1127,8 +1127,8 @@ export const translations = {
   'Book a demo with our team and see how Skillvue can transform your hiring, performance, and development processes.': 'Prenota una demo con il nostro team e scopri come Skillvue può trasformare i tuoi processi di assunzione, gestione delle prestazioni e sviluppo.',
 
   // ===== FOOD RETAIL ONE-PAGER =====
-  'Get the one-pager for': 'Scarica il one pager per',
-  'food retail HR.': "l'HR del food retail",
+  'Your next store manager is': 'Il tuo prossimo store manager è',
+  'already in your stores.': 'già nei tuoi negozi.',
   'How an objective read of skills sharpens hiring, promotion, and development decisions.': 'Scopri come una valutazione oggettiva delle competenze rende più efficaci le decisioni di selezione, promozione e sviluppo del personale.',
   'One standard across every store, the same for new hires and the people you grow from within.': "Un unico standard per tutti i punti vendita, valido sia per i nuovi assunti sia per le persone che crescono all'interno dell'azienda.",
   'Fill in the form to download it.': 'Compila il modulo per scaricare la guida.',
