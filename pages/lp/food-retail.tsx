@@ -58,38 +58,25 @@ export default function FoodRetailPage() {
   }, [isIt]);
 
   // Title strings come from the shared translation dictionary.
-  const titleLead = t('Get the one-pager for');
-  const titleHighlight = t('food retail HR.');
+  const titleLead = t('Your next store manager is');
+  const titleHighlight = t('already in your stores.');
 
-  // IT is laid out on three fixed lines; EN wraps naturally on one line.
-  const renderTitle = () => {
-    if (!isIt) {
-      return (
-        <>
-          {titleLead}{' '}
-          <span className="font-bold gradient-text">{titleHighlight}</span>
-        </>
-      );
-    }
-
-    const leadWords = titleLead.split(' ');
-    const leadFirst = leadWords.slice(0, -1).join(' ');
-    const leadLast = leadWords[leadWords.length - 1];
-    const hlWords = titleHighlight.split(' ');
-    const hlFirst = hlWords[0];
-    const hlRest = hlWords.slice(1).join(' ');
-
-    return (
-      <>
-        <span className="block whitespace-nowrap">{leadFirst}</span>
-        <span className="block whitespace-nowrap">
-          {leadLast}{' '}
-          <span className="font-bold gradient-text">{hlFirst}</span>
-        </span>
-        <span className="block whitespace-nowrap font-bold gradient-text">{hlRest}</span>
-      </>
-    );
-  };
+  const renderTitle = () => (
+    <>
+      {titleLead}{' '}
+      {/* Inline so the highlight flows with the lead ("already" stays next to "is") and wraps naturally.
+          Local gradient override pushes the purple further out so less of it shows. */}
+      <span
+        className="font-bold gradient-text"
+        style={{
+          display: 'inline',
+          backgroundImage: 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)',
+        }}
+      >
+        {titleHighlight}
+      </span>
+    </>
+  );
 
   return (
     <>
@@ -101,7 +88,7 @@ export default function FoodRetailPage() {
               {/* Left. Text */}
               <div className="lg:col-span-5">
                 <h1
-                  className="text-[clamp(1.75rem,4.2vw,3.5rem)] font-bold tracking-[-0.03em] text-white/95 mb-4"
+                  className="text-[clamp(1.5rem,3.6vw,2.75rem)] font-bold tracking-[-0.03em] text-white/95 mb-4"
                   style={{ lineHeight: 1.1 }}
                 >
                   {renderTitle()}
