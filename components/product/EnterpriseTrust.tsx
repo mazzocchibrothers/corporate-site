@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Settings, Shield, Scale } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -27,20 +27,6 @@ export default function EnterpriseTrust() {
   const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
-
   return (
     <section id="enterprise-trust" data-testid="enterprise-trust" className="section-breathe relative py-14 md:py-16 lg:py-20" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">

@@ -1,36 +1,11 @@
 // @ts-nocheck
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Download, Mail } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
-
-function useScrollProgress() {
-  const ref = useRef(null);
-  const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
-  return { ref, progress };
-}
-
-function ScrollBar({ progress }) {
-  return (
-    <div className="md:hidden mx-auto mt-5 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-      <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${progress * 0.65}%` }} />
-    </div>
-  );
-}
 
 const pressArticles = [
   {
@@ -166,8 +141,6 @@ const investors = [
 export default function PressPage() {
   const router = useRouter();
   const { t, lang } = useLanguage();
-  const press = useScrollProgress();
-  const pressIt = useScrollProgress();
 
   return (
     <>

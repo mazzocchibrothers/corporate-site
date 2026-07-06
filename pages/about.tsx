@@ -32,40 +32,52 @@ function getCounterDisplay(original, count) {
 export default function AboutPage() {
   const router = useRouter();
   const { t, lang } = useLanguage();
+  const isIT = lang === 'it';
+  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/about`;
 
   const [heroVisible, setHeroVisible] = React.useState(false);
-  const [counts, setCounts] = React.useState(stats.map(() => 0));
+  const targets = React.useMemo(() => stats.map(s => {
+    const m = s.value.match(/\d+/);
+    return m ? parseInt(m[0]) : 0;
+  }), []);
+  const [counts, setCounts] = React.useState(targets);
 
   React.useEffect(() => {
     setHeroVisible(true);
 
+    let rafId: number;
+    setCounts(targets.map(() => 0));
+
     const delay = setTimeout(() => {
       const duration = 2000;
       const start = performance.now();
-      const targets = stats.map(s => {
-        const m = s.value.match(/\d+/);
-        return m ? parseInt(m[0]) : 0;
-      });
 
-      const tick = (now) => {
+      const tick = (now: number) => {
         const elapsed = now - start;
         const progress = Math.min(elapsed / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
         setCounts(targets.map(t => Math.round(t * eased)));
-        if (progress < 1) requestAnimationFrame(tick);
+        if (progress < 1) rafId = requestAnimationFrame(tick);
       };
 
-      requestAnimationFrame(tick);
+      rafId = requestAnimationFrame(tick);
     }, 300);
 
-    return () => clearTimeout(delay);
+    return () => {
+      clearTimeout(delay);
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
     <>
       <Head>
-        <title>{t('About Us – Skillvue')}</title>
-        <meta name="description" content={t('Learn about Skillvue, the Skills Operating System for modern enterprises. Our mission, vision, founders, and team.')} />
+        <title>{isIT ? 'Chi siamo – Skillvue' : 'About Us – Skillvue'}</title>
+        <meta name="description" content={isIT
+          ? 'Scopri Skillvue, lo Skills Operating System per le grandi imprese. La nostra missione, visione, fondatori e team.'
+          : 'Learn about Skillvue, the Skills Operating System for modern enterprises. Our mission, vision, founders, and team.'
+        } />
+        <link rel="canonical" href={canonical} />
       </Head>
       <Navbar />
 
@@ -76,16 +88,13 @@ export default function AboutPage() {
 
           {/* ── MOBILE: image at full width, text + stats below ── */}
           <div className="lg:hidden" style={{ backgroundColor: '#010102' }}>
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: 'relative', aspectRatio: '16/9' }}>
               <img
                 src="/about/Skillvue_Team_photo.avif"
                 alt=""
                 style={{
-                  display: 'block',
-                  width: '100%',
-                  height: 'auto',
-                  opacity: heroVisible ? 1 : 0,
-                  transition: 'opacity 1.6s ease-out',
+                  position: 'absolute', inset: 0,
+                  width: '100%', height: '100%', objectFit: 'cover',
                 }}
               />
               <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(180deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 12%, rgba(0,0,0,0) 75%, rgb(0,0,0) 100%)' }} />
@@ -95,11 +104,11 @@ export default function AboutPage() {
                 const line1 = t('Unlock human potential and').split(' ');
                 const line2 = t('organizational success at scale').split(' ');
                 return (
-                  <p style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 500, fontSize: 'clamp(42px, 10vw, 56px)', lineHeight: 1.05, color: '#fff', letterSpacing: '-1.5px', margin: 0, textAlign: 'left' }}>
+                  <h1 style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 500, fontSize: 'clamp(42px, 10vw, 56px)', lineHeight: 1.05, color: '#fff', letterSpacing: '-1.5px', margin: 0, textAlign: 'left' }}>
                     {[...line1, ...line2].map((word, i) => (
                       <span key={i} style={{ display: 'inline-block', opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(10px)', transition: 'opacity 0.7s ease-out, transform 0.7s ease-out', transitionDelay: heroVisible ? `${0.3 + i * 0.08}s` : '0s', marginRight: '0.25em' }}>{word}</span>
                     ))}
-                  </p>
+                  </h1>
                 );
               })()}
               <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 20 }}>
@@ -129,41 +138,18 @@ export default function AboutPage() {
                 alt=""
                 style={{
                   position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover',
-                  opacity: heroVisible ? 1 : 0,
-                  transition: 'opacity 1.6s ease-out',
                 }}
               />
-              <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(180deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 8%, rgba(0,0,0,0) 48%, rgb(0,0,0) 91%)' }} />
-            </div>
-            <div
-              style={{
-                position: 'absolute', inset: 0, display: 'flex', alignItems: 'flex-end',
-                justifyContent: 'center', padding: '0 48px 200px', pointerEvents: 'none',
-              }}
-            >
-              {(() => {
-                const line1 = t('Unlock human potential and').split(' ');
-                const line2 = t('organizational success at scale').split(' ');
-                return (
-                  <p style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 500, fontSize: 'clamp(36px, 4.2vw, 64px)', lineHeight: 1.1, color: '#fff', letterSpacing: '-1.28px', margin: 0, textAlign: 'center' }}>
-                    {line1.map((word, i) => (
-                      <span key={`l1-${i}`} style={{ display: 'inline-block', opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(10px)', transition: 'opacity 0.7s ease-out, transform 0.7s ease-out', transitionDelay: heroVisible ? `${0.3 + i * 0.08}s` : '0s', marginRight: '0.25em' }}>{word}</span>
-                    ))}
-                    <br />
-                    {line2.map((word, i) => (
-                      <span key={`l2-${i}`} style={{ display: 'inline-block', opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(10px)', transition: 'opacity 0.7s ease-out, transform 0.7s ease-out', transitionDelay: heroVisible ? `${0.3 + (line1.length + i) * 0.08}s` : '0s', marginRight: i < line2.length - 1 ? '0.25em' : 0 }}>{word}</span>
-                    ))}
-                  </p>
-                );
-              })()}
+              <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(180deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 8%, rgba(0,0,0,0) 30%, rgb(0,0,0) 72%)' }} />
             </div>
             <div
               style={{
                 position: 'absolute', bottom: 0, left: 0, right: 0,
-                display: 'flex', justifyContent: 'center', padding: '0 48px 56px',
+                display: 'flex', justifyContent: 'center', padding: '0 0 56px',
               }}
             >
-              <div style={{ width: '100%', maxWidth: 1304 }}>
+              <div className="px-5 md:px-8 lg:px-12" style={{ width: '100%', maxWidth: 1304, display: 'flex', flexDirection: 'column', gap: 40 }}>
+                {/* Stats row */}
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: 24 }}>
                   {stats.map((s, i) => (
                     <div key={i} style={{ flex: '1 0 0', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center' }}>
@@ -176,6 +162,22 @@ export default function AboutPage() {
                     </div>
                   ))}
                 </div>
+                {/* Headline text */}
+                {(() => {
+                  const line1 = t('Unlock human potential and').split(' ');
+                  const line2 = t('organizational success at scale').split(' ');
+                  return (
+                    <h1 style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 500, fontSize: 'clamp(36px, 4.2vw, 64px)', lineHeight: 1.1, color: '#fff', letterSpacing: '-1.28px', margin: 0, textAlign: 'center' }}>
+                      {line1.map((word, i) => (
+                        <span key={`l1-${i}`} style={{ display: 'inline-block', opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(10px)', transition: 'opacity 0.7s ease-out, transform 0.7s ease-out', transitionDelay: heroVisible ? `${0.3 + i * 0.08}s` : '0s', marginRight: '0.25em' }}>{word}</span>
+                      ))}
+                      <br />
+                      {line2.map((word, i) => (
+                        <span key={`l2-${i}`} style={{ display: 'inline-block', opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(10px)', transition: 'opacity 0.7s ease-out, transform 0.7s ease-out', transitionDelay: heroVisible ? `${0.3 + (line1.length + i) * 0.08}s` : '0s', marginRight: i < line2.length - 1 ? '0.25em' : 0 }}>{word}</span>
+                      ))}
+                    </h1>
+                  );
+                })()}
               </div>
             </div>
           </div>
@@ -183,9 +185,10 @@ export default function AboutPage() {
 
         {/* ─── 3. OUR VISION ───────────────────────────────────────────────── */}
         <section
+          className="px-5 md:px-8 lg:px-12"
           style={{
             position: 'relative',
-            padding: '112px 48px',
+            padding: '112px 0',
             backgroundColor: '#040404',
             overflow: 'hidden',
             minHeight: '100vh',
@@ -230,7 +233,7 @@ export default function AboutPage() {
         </section>
 
         {/* ─── 4. WHO WE ARE — Skills Operating System ────────────────────── */}
-        <section className="section-breathe" style={{ padding: '112px 48px', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ padding: '112px 0', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
             <p
               style={{
@@ -287,9 +290,10 @@ export default function AboutPage() {
 
         {/* ─── 5. OUR STORY ────────────────────────────────────────────────── */}
         <section
+          className="px-5 md:px-8 lg:px-12"
           style={{
             position: 'relative',
-            padding: '112px 48px',
+            padding: '112px 0',
             backgroundColor: '#040404',
             overflow: 'hidden',
             minHeight: '100vh',
@@ -351,10 +355,13 @@ export default function AboutPage() {
                 }}
               >
                 <p style={{ margin: '0 0 16px' }}>
-                  {t('Founded in 2021, Skillvue is an Italian HR-tech startup with a fast-growing team that has doubled in size over the past year, bringing together experts in psychometrics, AI, product design, and enterprise go-to-market across Milan, London, Berlin, and Paris.')}
+                  {t('Founded in Milan in 2021, Skillvue is building the Skills Operating System for talent decisions: the objective skills data layer that maps the skills an organisation needs, measures people against them with science, and feeds that intelligence into the HR systems companies already use. Every talent decision, from hiring to internal mobility to transformation, finally rests on evidence instead of gut feel.')}
+                </p>
+                <p style={{ margin: '0 0 16px' }}>
+                  {t('Backed by €9M from investors including 360 Capital, 14Peaks Capital and the Italian Founders Fund, Skillvue serves large European enterprises across banking, retail and pharma, with more than a million people already assessed. The platform pairs I/O psychology and psychometrics with generative AI, and it is built for European enterprise from day one: ISO/IEC 27001 certified, GDPR compliant, and designed around the EU AI Act.')}
                 </p>
                 <p style={{ margin: 0 }}>
-                  {t('We have built a product that combines psychometric rigour with modern AI. Our system transforms static data into predictive insights, driving smarter decisions across hiring and talent management. We support mid-to-large enterprises across Europe (1,000+ employees) working across a wide range of industries, where talent decisions are high-stakes and expensive.')}
+                  {t('Behind it sits a team of 50+ people across Milan, London and Berlin, supported by a science network of 50+ external collaborators from academia and industry, bringing together artificial intelligence, people science and enterprise readiness.')}
                 </p>
               </div>
               <div>
@@ -383,7 +390,7 @@ export default function AboutPage() {
         </section>
 
         {/* ─── 6. OUR MISSION — Make Skills ────────────────────────────────── */}
-        <section className="section-breathe" style={{ padding: '112px 48px', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ padding: '112px 0', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
             <p
               style={{
@@ -440,9 +447,10 @@ export default function AboutPage() {
 
         {/* ─── 7. FOUNDERS ─────────────────────────────────────────────────── */}
         <section
+          className="px-5 md:px-8 lg:px-12"
           style={{
             position: 'relative',
-            padding: '112px 48px',
+            padding: '112px 0',
             backgroundColor: '#040404',
             overflow: 'hidden',
             minHeight: '100vh',
@@ -572,7 +580,7 @@ export default function AboutPage() {
                   style={{ display: 'block', aspectRatio: '16/9', borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#222', cursor: 'pointer' }}
                 >
                   <img
-                    src="/about/Co-sounder-Simone.avif"
+                    src="/about/Co-founder-Simone.avif"
                     alt="Simone Patera"
                     className="transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                     style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
@@ -625,7 +633,7 @@ export default function AboutPage() {
         </section>
 
         {/* ─── 8. ONE TEAM ─────────────────────────────────────────────────── */}
-        <section className="section-breathe" style={{ padding: '80px 48px', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ padding: '80px 0', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', gap: 80 }}>
             {/* Header row: label + heading + pills (left), Join us button (right) */}
             <div
@@ -717,7 +725,7 @@ export default function AboutPage() {
         </section>
 
         {/* ─── 9. LIFE AT SKILLVUE ─────────────────────────────────────────── */}
-        <section className="section-breathe" style={{ padding: '128px 48px', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ padding: '128px 0', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', gap: 40 }}>
             {/* Header */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -809,6 +817,7 @@ export default function AboutPage() {
 
         {/* ─── 10. INVESTORS ───────────────────────────────────────────────── */}
         <section
+          className="px-5 md:px-8 lg:px-12"
           style={{
             position: 'relative',
             backgroundColor: '#040404',
@@ -838,7 +847,7 @@ export default function AboutPage() {
           </div>
 
           {/* Logos — static, centered */}
-          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '40px 64px', alignItems: 'center', padding: '0 48px' }}>
+          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '40px 64px', alignItems: 'center' }}>
             {investors.map((inv) => (
               <img
                 key={inv.name}

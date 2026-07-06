@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MessageSquare, MonitorSmartphone, ListChecks, UserCheck, Target, BookOpen, Wrench, GitBranch, Mic, Video, PenLine, CheckSquare } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -40,36 +40,6 @@ export default function AssessmentFormats() {
   const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  const scrollRef1 = useRef<HTMLDivElement | null>(null);
-  const scrollRef2 = useRef<HTMLDivElement | null>(null);
-  const scrollRef3 = useRef<HTMLDivElement | null>(null);
-  const [scrollProgress1, setScrollProgress1] = useState(0);
-  const [scrollProgress2, setScrollProgress2] = useState(0);
-  const [scrollProgress3, setScrollProgress3] = useState(0);
-
-  useEffect(() => {
-    const refs = [
-      { el: scrollRef1.current, setter: setScrollProgress1 },
-      { el: scrollRef2.current, setter: setScrollProgress2 },
-      { el: scrollRef3.current, setter: setScrollProgress3 },
-    ];
-    const cleanups: Array<() => void> = [];
-    refs.forEach(({ el, setter }) => {
-      if (!el) return;
-      const onScroll = () => {
-        const max = el.scrollWidth - el.clientWidth;
-        const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-        setter(pct);
-      };
-      el.addEventListener('scroll', onScroll, { passive: true });
-      cleanups.push(() => el.removeEventListener('scroll', onScroll));
-    });
-    return () => cleanups.forEach((fn) => fn());
-  }, []);
-
-  const scrollRefs = [scrollRef1, scrollRef2, scrollRef3];
-  const scrollProgresses = [scrollProgress1, scrollProgress2, scrollProgress3];
 
   return (
     <section id="verification-formats" data-testid="verification-formats" className="relative py-16 md:py-20 lg:py-28" ref={ref}>

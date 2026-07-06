@@ -52,7 +52,6 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [onLightSection, setOnLightSection] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [demoBtnHovered, setDemoBtnHovered] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const lastScrollY = useRef(0);
   const ticking = useRef(false);
@@ -229,18 +228,14 @@ export default function Navbar() {
             <a
               href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
               data-testid="nav-book-demo"
-              className="inline-flex items-center px-7 py-3 text-[14px] font-medium tracking-wide rounded-full transition-all duration-300"
+              className="inline-flex items-center px-7 py-3 text-[14px] font-medium tracking-wide rounded-full transition-all duration-300 hover:!border-[rgba(75,77,247,0.4)] hover:!bg-[rgba(75,77,247,0.08)]"
               style={{
                 color: menuActive ? '#ffffff' : textColor,
                 borderWidth: '1px',
                 borderStyle: 'solid',
-                borderColor: demoBtnHovered
-                  ? 'rgba(75,77,247,0.4)'
-                  : (menuActive ? 'rgba(255,255,255,0.15)' : btnBorder),
-                backgroundColor: demoBtnHovered ? 'rgba(75,77,247,0.08)' : 'transparent',
+                borderColor: menuActive ? 'rgba(255,255,255,0.15)' : btnBorder,
+                backgroundColor: 'transparent',
               }}
-              onMouseEnter={() => setDemoBtnHovered(true)}
-              onMouseLeave={() => setDemoBtnHovered(false)}
               onClick={(e) => { e.preventDefault(); navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); }}
             >
               {lang === 'it' ? 'Prenota una Demo' : 'Book a Demo'}
