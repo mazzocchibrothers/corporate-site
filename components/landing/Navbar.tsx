@@ -52,6 +52,7 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [onLightSection, setOnLightSection] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [demoBtnHovered, setDemoBtnHovered] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const lastScrollY = useRef(0);
   const ticking = useRef(false);
@@ -231,8 +232,15 @@ export default function Navbar() {
               className="inline-flex items-center px-7 py-3 text-[14px] font-medium tracking-wide rounded-full transition-all duration-300"
               style={{
                 color: menuActive ? '#ffffff' : textColor,
-                border: `1px solid ${menuActive ? 'rgba(255,255,255,0.15)' : btnBorder}`,
+                borderWidth: '1px',
+                borderStyle: 'solid',
+                borderColor: demoBtnHovered
+                  ? 'rgba(75,77,247,0.4)'
+                  : (menuActive ? 'rgba(255,255,255,0.15)' : btnBorder),
+                backgroundColor: demoBtnHovered ? 'rgba(75,77,247,0.08)' : 'transparent',
               }}
+              onMouseEnter={() => setDemoBtnHovered(true)}
+              onMouseLeave={() => setDemoBtnHovered(false)}
               onClick={(e) => { e.preventDefault(); navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); }}
             >
               {lang === 'it' ? 'Prenota una Demo' : 'Book a Demo'}
@@ -379,7 +387,7 @@ export default function Navbar() {
 
               <button
                 onClick={() => navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting')}
-                className="w-full flex items-center justify-center py-4 text-[16px] font-semibold text-white rounded-full border border-white/15"
+                className="w-full flex items-center justify-center py-4 text-[16px] font-semibold text-white rounded-full border border-white/15 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-300"
               >
                 {lang === 'it' ? 'Prenota una Demo' : 'Book a Demo'}
               </button>

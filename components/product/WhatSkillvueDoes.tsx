@@ -74,39 +74,7 @@ export default function WhatSkillvueDoes() {
           </p>
         </motion.div>
 
-        {/* Mobile: horizontal scroll */}
-        <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-          {pillars.map((pillar, i) => {
-            const Icon = pillar.icon;
-            return (
-              <motion.div
-                key={pillar.id}
-                data-testid={`pillar-${pillar.id}`}
-                className="shrink-0 w-[80vw] snap-center group relative rounded-xl border border-[#4B4DF7]/[0.08] bg-white/60 p-5 transition-all duration-500 flex flex-col"
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
-              >
-                <div className="flex-1">
-                  <Icon className="h-5 w-5 text-[#4B4DF7]/40 mb-2" strokeWidth={1.5} />
-                  <h3 className="text-[15px] font-semibold text-[#1A1A2E] mb-1.5 leading-snug">{t(pillar.title)}</h3>
-                  <p className="text-[12px] text-[#7A7A7A] leading-[1.4]">{t(pillar.desc)}</p>
-                </div>
-                <a href={pillar.path} className="group/link inline-flex items-center gap-1 text-[12px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300 mt-3">
-                  {t(pillar.link)}
-                  <ArrowRight className="h-3.5 w-3.5 shrink-0 group-hover/link:translate-x-1 transition-transform duration-300" />
-                </a>
-              </motion.div>
-            );
-          })}
-        </div>
-        {/* Progress bar */}
-        <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
-        </div>
-
-        {/* Desktop: existing grid */}
-        <div className="hidden md:grid grid-cols-2 gap-3 md:gap-5 auto-rows-fr">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-5 auto-rows-fr">
           {pillars.map((pillar, i) => {
             const Icon = pillar.icon;
             return (

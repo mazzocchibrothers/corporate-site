@@ -125,28 +125,8 @@ export default function SolutionSection() {
           </p>
         </motion.div>
 
-        {/* Mobile: horizontal scroll */}
-        <div
-          ref={scrollRef}
-          className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2 md:hidden"
-        >
-          {pillars.map((pillar, i) => (
-            <div key={pillar.id} className="shrink-0 w-[80vw] snap-center">
-              {renderCard(pillar, i)}
-            </div>
-          ))}
-        </div>
-
-        {/* Mobile scroll indicator — thumb-in-track (native scrollbar style) */}
-        <div className="md:hidden mx-auto mt-5 w-48 h-1.5 rounded-full bg-white/20 relative">
-          <div
-            className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill"
-            style={{ left: `${scrollProgress * 0.65}%` }}
-          />
-        </div>
-
-        {/* Desktop: 2x2 grid */}
-        <div className="hidden md:grid grid-cols-2 gap-3 md:gap-4 lg:gap-5">
+        {/* Cards grid */}
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4 lg:gap-5">
           {pillars.map((pillar, i) => renderCard(pillar, i))}
         </div>
       </div>

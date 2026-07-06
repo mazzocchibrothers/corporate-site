@@ -82,12 +82,12 @@ export default function ProblemSection() {
         </AnimatedSection>
 
         {/* Pain cards — horizontal scroll on mobile, 3-col grid on desktop */}
-        <div ref={(el) => { (ref as any).current = el; scrollRef.current = el; }} className="md:grid md:grid-cols-3 md:gap-4 lg:gap-5 flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5">
           {painCards.map((card, i) => (
             <motion.div
               key={card.stat + i}
               data-testid={`pain-card-${card.stat.replace('%', '')}`}
-              className="group bg-white border border-[#E5E7EB] shrink-0 w-[70vw] md:w-auto snap-center rounded-2xl p-5 md:p-6 lg:p-12 flex flex-col min-h-[240px] md:min-h-0"
+              className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-6 lg:p-12 flex flex-col min-h-[240px] md:min-h-0"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.12, ease: 'easeOut' }}
@@ -116,13 +116,6 @@ export default function ProblemSection() {
           ))}
         </div>
 
-        {/* Progress bar — mobile only */}
-        <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-          <div
-            className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill"
-            style={{ left: `${scrollProgress * 0.65}%` }}
-          />
-        </div>
       </div>
     </section>
   );

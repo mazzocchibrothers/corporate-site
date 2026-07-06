@@ -47,30 +47,7 @@ export default function WhatWeAssess() {
           </p>
         </motion.div>
 
-        {/* Mobile: horizontal scroll */}
-        <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-          {dimensions.map((dim, i) => (
-            <motion.div
-              key={dim.title}
-              data-testid={`dimension-${dim.title.toLowerCase().replace(/\s+/g, '-')}`}
-              className="shrink-0 w-[80vw] snap-center bg-white border border-[#E5E7EB] rounded-xl p-4 flex flex-col"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
-            >
-              <h3 className="text-[15px] font-semibold text-[#1A1A2E] mb-0.5">{t(dim.title)}</h3>
-              <span className="text-[12px] text-[#4B4DF7]/[0.65] font-medium mb-2">{t(dim.subtitle)}</span>
-              <p className="text-[12px] text-[#7A7A7A] leading-[1.5]">{t(dim.desc)}</p>
-            </motion.div>
-          ))}
-        </div>
-        {/* Progress bar */}
-        <div className="md:hidden mx-auto mt-4 mb-8 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
-        </div>
-
-        {/* Desktop: existing grid */}
-        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 md:gap-3 lg:gap-4 mb-8 md:mb-10">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 lg:grid-cols-5 md:gap-3 lg:gap-4 mb-8 md:mb-10">
           {dimensions.map((dim, i) => (
             <motion.div
               key={dim.title}
