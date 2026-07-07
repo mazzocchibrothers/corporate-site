@@ -41,6 +41,7 @@ const navLinks = [
       { name: 'White Papers', path: '/resources/whitepapers', hideInIT: true },
       { name: 'Blog', path: '/blog', hideInIT: true },
       { name: 'Press', path: '/resources/press' },
+      { name: 'Careers', path: '/careers' },
       { name: 'About', path: '/about' },
     ],
   },

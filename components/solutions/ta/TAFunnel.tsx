@@ -118,7 +118,7 @@ function ColumnCard({ data, delay, t }) {
             const ItemIcon = item.icon;
             return (
               <div key={i} className="flex items-start gap-3">
-                <ItemIcon className="h-5 w-5 md:h-4 md:w-4 text-[#4B4DF7]/40 mt-0.5 shrink-0" />
+                <ItemIcon className="h-5 w-5 md:h-4 md:w-4 text-[#9B9DFB]/40 mt-0.5 shrink-0" />
                 <div>
                   <span className="text-[14px] text-[#1A1A2E]/80 font-medium">{t(item.text)}</span>
                   {item.detail && (
@@ -193,7 +193,7 @@ export default function TAFunnel() {
                   : 'bg-white border-[#1A1A2E]/[0.06] hover:bg-[#1A1A2E]/[0.04] hover:border-[#1A1A2E]/[0.12]'
               }`}
             >
-              <span className={`text-[9px] md:text-[11px] font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase block mb-0.5 md:mb-1 ${i === active ? 'text-[#9B9DFB]' : 'text-[#1A1A2E]/25'}`}>
+              <span className={`text-[11px] font-bold tracking-[0.15em] uppercase block mb-0.5 md:mb-1 ${i === active ? 'text-[#9B9DFB]' : 'text-[#1A1A2E]/25'}`}>
                 {t('Stage')} {s.number}
               </span>
               <span className={`text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-white' : 'text-[#7A7A7A]'}`}>
@@ -206,7 +206,7 @@ export default function TAFunnel() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <ArrowDown className="h-4 w-4 text-[#4B4DF7]/50 mt-2" />
+                  <ArrowDown className="h-4 w-4 text-[#9B9DFB]/50 mt-2" />
                 </motion.div>
               )}
             </button>

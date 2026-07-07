@@ -44,7 +44,7 @@ export default function TAShift() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <span className="text-[13px] font-bold text-white/30 tracking-[0.12em] uppercase mb-6 block">{t('The old playbook')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-6 block">{t('The old playbook')}</span>
             <div className="space-y-4">
               {oldItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
@@ -78,7 +78,7 @@ export default function TAShift() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <span className="text-[13px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.12em] uppercase mb-6 block">{t('With Skillvue')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-6 block">{t('With Skillvue')}</span>
             <div className="space-y-4">
               {newItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
@@ -101,7 +101,7 @@ export default function TAShift() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <span className="text-[13px] font-bold text-white/30 tracking-[0.12em] uppercase mb-10 block">{t('The old playbook')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-10 block">{t('The old playbook')}</span>
             <div className="space-y-4 md:space-y-7">
               {oldItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
@@ -121,7 +121,7 @@ export default function TAShift() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.25 }}
           >
-            <span className="text-[13px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.12em] uppercase mb-10 block">{t('With Skillvue')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-10 block">{t('With Skillvue')}</span>
             <div className="space-y-4 md:space-y-7">
               {newItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">

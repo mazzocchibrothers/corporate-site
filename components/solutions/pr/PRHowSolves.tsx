@@ -36,7 +36,7 @@ export default function PRHowSolves() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
               >
-                <Icon className="h-6 w-6 text-[#9B9DFB]/50 mb-5" strokeWidth={1.5} />
+                <Icon className="h-6 w-6 text-[#4B4DF7]/50 mb-5" strokeWidth={1.5} />
                 <h3 className="text-[20px] font-semibold text-white/90 mb-4">{t(p.title)}</h3>
                 <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t(p.desc)}</p>
               </motion.div>

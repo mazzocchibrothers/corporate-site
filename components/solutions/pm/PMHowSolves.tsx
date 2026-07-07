@@ -27,7 +27,7 @@ export default function PMHowSolves() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.1em] uppercase mb-5 block">{t('Subjective verifications')}</span>
+            <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.1em] uppercase mb-5 block">{t('Subjective verifications')}</span>
             <h3 className="text-[20px] font-bold text-[#121212] mb-4">{t('360, 180, manager reviews')}</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -48,7 +48,7 @@ export default function PMHowSolves() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.25 }}
           >
-            <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-5 block">{t('Objective verifications')}</span>
+            <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.1em] uppercase mb-5 block">{t('Objective verifications')}</span>
             <h3 className="text-[20px] font-bold text-[#121212] mb-4">Skillvue</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">

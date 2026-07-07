@@ -114,7 +114,7 @@ export default function EnterpriseTrust() {
           {badges.map((badge) => (
             <span
               key={badge}
-              className="inline-flex px-3.5 py-2 md:px-5 md:py-2.5 rounded-full text-[12px] md:text-[12px] font-semibold text-[#4B4DF7]/70 border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.04] tracking-wide"
+              className="inline-flex px-3.5 py-2 md:px-5 md:py-2.5 rounded-full text-[12px] md:text-[12px] font-semibold text-[#121212]/60 border border-[#121212]/[0.1] bg-[#121212]/[0.03] tracking-wide"
             >
               {t(badge)}
             </span>

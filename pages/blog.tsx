@@ -132,7 +132,7 @@ export default function BlogPage() {
         <section className="relative pt-[80px] min-h-screen flex items-center">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <span className="text-[14px] font-semibold text-[#4B4DF7]/60 tracking-[0.2em] uppercase mb-8 block">{t('Resources')}</span>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">{t('Resources')}</span>
               <h1
                 className="font-semibold text-white/95 mb-8"
                 style={{ fontSize: 'clamp(3.5rem, 7vw, 6rem)', lineHeight: 1.05, letterSpacing: '-0.04em' }}

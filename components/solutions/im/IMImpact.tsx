@@ -19,16 +19,16 @@ export default function IMImpact() {
           transition={{ duration: 0.7 }}
         >
           <div className="lg:col-span-8 p-10 lg:p-14 bg-white/[0.04]">
-            <span className="text-[12px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-6 block">{t('Customer Story')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-6 block">{t('Customer Story')}</span>
             <h3 className="text-[28px] font-semibold text-white/90 mb-2">Fidia</h3>
             <p className="text-[14px] text-white/40 mb-8">{t('Pharma')}</p>
             <div className="grid md:grid-cols-2 gap-8 mb-10">
               <div>
-                <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase mb-3 block">{t('Challenge')}</span>
+                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-3 block">{t('Challenge')}</span>
                 <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('Mapping internal talent to identify succession candidates for critical leadership roles across multiple business units.')}</p>
               </div>
               <div>
-                <span className="text-[11px] font-bold text-[#9B9DFB]/50 tracking-[0.1em] uppercase mb-3 block">{t('Result')}</span>
+                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-3 block">{t('Result')}</span>
                 <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('Full talent visibility across the organization. Data-driven succession plans now cover 100% of critical roles with identified ready-now and ready-soon candidates.')}</p>
               </div>
             </div>

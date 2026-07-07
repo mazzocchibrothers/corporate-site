@@ -16,7 +16,7 @@ export default function PrivacyPolicyAlgo() {
           </div>
           <div className="relative z-10 max-w-[900px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <span className="text-[11px] font-bold text-[#4B4DF7]/60 tracking-[0.2em] uppercase mb-6 block">
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">
                 Legal
               </span>
               <h1 className="font-semibold text-white/95 mb-4" style={{ fontSize: 'clamp(2rem,4vw,3rem)', lineHeight: 1.1, letterSpacing: '-0.03em' }}>

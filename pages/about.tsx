@@ -132,7 +132,7 @@ export default function AboutPage() {
             <motion.div initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <div className="grid lg:grid-cols-12 gap-16 lg:gap-20">
                 <div className="lg:col-span-5">
-                  <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('Our Story')}</span>
+                  <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-6 block">{t('Our Story')}</span>
                   <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold text-[#121212] mb-8 tracking-[-0.02em] leading-[1.1]">
                     {t('We believe talent decisions deserve the same rigour as')} <span className="gradient-text-on-light">{t('business decisions.')}</span>
                   </h2>
@@ -187,7 +187,7 @@ export default function AboutPage() {
         {/* 5. Investors. Marquee scroll, right under team */}
         <section className="relative pt-4 pb-8">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <span className="text-[12px] font-bold text-white/25 tracking-[0.2em] uppercase mb-6 block text-center">{t('Backed by')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block text-center">{t('Backed by')}</span>
           </div>
           <div
             className="overflow-hidden relative"
@@ -221,7 +221,7 @@ export default function AboutPage() {
         <section className="section-breathe md:flex md:items-center md:min-h-screen" ref={valuesRef}>
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-16 lg:py-20 w-full">
             <motion.div className="text-center mb-10 md:mb-14" initial={{ opacity: 0, y: 20 }} animate={valuesInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-              <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-5 block">{t('Our Values')}</span>
+              <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-5 block">{t('Our Values')}</span>
               <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('What Drives Us')}</h2>
             </motion.div>
             {(() => {
