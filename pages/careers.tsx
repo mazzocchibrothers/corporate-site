@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 
 const stats = [
   { value: '50+', label: 'People across Europe' },
-  { value: '4', label: 'Offices in Milan, Paris, Berlin, London' },
+  { value: '3', label: 'Offices in Milan, Berlin, London' },
   { value: 'Hybrid', label: 'Working environment' },
   { value: '1M+', label: 'People empowered' },
 ];
@@ -19,12 +19,12 @@ const steps = [
   {
     num: '01',
     title: 'Apply with your skills',
-    desc: 'A short Skillvue verification of skills, mindset and readiness.',
+    desc: 'A short Skillvue verification of your skills, mindset and readiness.',
   },
   {
     num: '02',
     title: 'Meet the team',
-    desc: "Structured, fair conversations with the people you'd actually work with.",
+    desc: "Structured conversations with the people you'd actually work with.",
   },
   {
     num: '03',
@@ -42,7 +42,7 @@ const allRoles = [
   { team: 'Sales', title: 'Enterprise Account Executive – Italy', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://skillvue.factorial.it/job_posting/enterprise-account-executive-italy-294480' },
 ];
 
-const filters = ['All teams', 'Product', 'Design', 'People', 'Sales', 'Milan'];
+const filters = ['All teams', 'Product', 'Design', 'People', 'Sales'];
 
 export default function CareersPage() {
   const { t, lang } = useLanguage();
@@ -304,7 +304,7 @@ export default function CareersPage() {
                 className="font-semibold text-[#121212] mb-2"
                 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.8rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >
-                {t('50+ people across Milan, Paris, Berlin & London.')}
+                {t('50+ people across Milan, Berlin & London.')}
               </h2>
               <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.6]">
                 {t('Flexible and hybrid working environment')}
