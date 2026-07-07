@@ -112,31 +112,31 @@ export default function CareersPage() {
                 transition={{ duration: 0.7 }}
               >
                 <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">
-                  Careers
+                  {t('Careers')}
                 </span>
                 <h1
                   className="font-semibold text-white/95 mb-6"
                   style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
                 >
-                  Join the team making talent decisions{' '}
-                  <span className="italic font-bold gradient-text-warm">objective.</span>
+                  {t('Join the team making talent decisions')}{' '}
+                  <span className="italic font-bold gradient-text-warm">{t('objective.')}</span>
                 </h1>
                 <p className="text-[15px] md:text-[17px] text-white/55 leading-[1.7] mb-8 max-w-lg font-light">
-                  You'll help the world's biggest companies hire, promote and develop people based on skills and potential.
+                  {t("You'll help the world's biggest companies hire, promote and develop people based on skills and potential.")}
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a
                     href="#open-roles"
                     className="group inline-flex items-center gap-2 px-6 py-3.5 text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
                   >
-                    See open roles
+                    {t('See open roles')}
                     <ArrowRight className="h-4 w-4 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
                   </a>
                   <a
                     href="#life-at-skillvue"
                     className="inline-flex items-center gap-2 px-6 py-3.5 text-[14px] font-semibold text-white/70 rounded-full border border-white/[0.15] hover:border-white/[0.25] hover:text-white transition-all duration-300"
                   >
-                    Life at Skillvue
+                    {t('Life at Skillvue')}
                   </a>
                 </div>
               </motion.div>
@@ -169,9 +169,9 @@ export default function CareersPage() {
                   className={`pt-6 pb-8 ${i % 2 !== 0 ? 'pl-6 md:pl-8' : ''}`}
                 >
                   <p className="text-[26px] md:text-[34px] font-semibold text-white/90 tracking-[-0.02em] leading-none mb-1.5">
-                    {s.value}
+                    {t(s.value)}
                   </p>
-                  <p className="text-[12px] md:text-[13px] text-white/40 leading-[1.4]">{s.label}</p>
+                  <p className="text-[12px] md:text-[13px] text-white/40 leading-[1.4]">{t(s.label)}</p>
                 </div>
               ))}
             </motion.div>
@@ -189,24 +189,24 @@ export default function CareersPage() {
               transition={{ duration: 0.7 }}
             >
               <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-6 block">
-                Why Skillvue
+                {t('Why Skillvue')}
               </span>
               <h2
                 className="font-semibold text-[#121212] mb-6"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3.2rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >
-                Every talent decision, from hiring to transformation, is{' '}
-                <span className="italic font-bold gradient-text-on-light">finally the right one</span>
+                {t('Every talent decision, from hiring to transformation, is')}{' '}
+                <span className="italic font-bold gradient-text-on-light">{t('finally the right one')}</span>
               </h2>
               <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.7] mb-8 max-w-2xl">
-                We are building the objective skills data layer for the enterprise, grounded in science and scaled by AI.
+                {t('We are building the objective skills data layer for the enterprise, grounded in science and scaled by AI.')}
               </p>
               <a
                 href="/about"
                 onClick={(e) => { e.preventDefault(); router.push('/about'); window.scrollTo(0, 0); }}
                 className="group inline-flex items-center gap-2 px-6 py-3 text-[14px] font-semibold text-[#121212] rounded-full border border-[#121212]/[0.12] hover:border-[#4B4DF7]/30 hover:text-[#4B4DF7] transition-all duration-300"
               >
-                Read the full story
+                {t('Read the full story')}
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </motion.div>
@@ -231,17 +231,17 @@ export default function CareersPage() {
               transition={{ duration: 0.7 }}
             >
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">
-                How we hire
+                {t('How we hire')}
               </span>
               <h2
                 className="font-semibold text-white/95 mb-4"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >
-                We hire the way we help{' '}
-                <span className="italic font-bold gradient-text-warm">enterprises hire</span>
+                {t('We hire the way we help')}{' '}
+                <span className="italic font-bold gradient-text-warm">{t('enterprises hire')}</span>
               </h2>
               <p className="text-[15px] md:text-[17px] text-white/50 leading-[1.7] font-light">
-                Our own hiring reflects the same principles we bring to our customers: a skills-based method, not CV screening.
+                {t('Our own hiring reflects the same principles we bring to our customers: a skills-based method, not CV screening.')}
               </p>
             </motion.div>
 
@@ -260,9 +260,9 @@ export default function CareersPage() {
                     {step.num}
                   </span>
                   <h3 className="text-[16px] md:text-[18px] font-semibold text-white/90 mb-3 leading-snug">
-                    {step.title}
+                    {t(step.title)}
                   </h3>
-                  <p className="text-[13px] md:text-[14px] text-white/50 leading-[1.6]">{step.desc}</p>
+                  <p className="text-[13px] md:text-[14px] text-white/50 leading-[1.6]">{t(step.desc)}</p>
                 </motion.div>
               ))}
             </div>
@@ -280,7 +280,7 @@ export default function CareersPage() {
                   key={tag}
                   className="inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[12px] font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03] tracking-wide"
                 >
-                  {tag}
+                  {t(tag)}
                 </span>
               ))}
             </motion.div>
@@ -298,16 +298,16 @@ export default function CareersPage() {
               transition={{ duration: 0.7 }}
             >
               <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">
-                Life at Skillvue
+                {t('Life at Skillvue')}
               </span>
               <h2
                 className="font-semibold text-[#121212] mb-2"
                 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.8rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >
-                50+ people across Milan, Paris, Berlin &amp; London.
+                {t('50+ people across Milan, Paris, Berlin & London.')}
               </h2>
               <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.6]">
-                Flexible and hybrid working environment
+                {t('Flexible and hybrid working environment')}
               </p>
             </motion.div>
 
@@ -352,13 +352,13 @@ export default function CareersPage() {
               transition={{ duration: 0.7 }}
             >
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-4 block">
-                Join us!
+                {t('Join us!')}
               </span>
               <h2
                 className="font-semibold text-white/95"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >
-                Open roles
+                {t('Open roles')}
               </h2>
             </motion.div>
 
@@ -409,7 +409,7 @@ export default function CareersPage() {
                             {role.location} · {role.work}
                           </span>
                           <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#9B9DFB]/80 group-hover:text-[#9B9DFB] transition-colors duration-300">
-                            Apply
+                            {t('Apply')}
                             <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
                           </span>
                         </div>
@@ -420,7 +420,7 @@ export default function CareersPage() {
               ))}
 
               {Object.keys(grouped).length === 0 && (
-                <p className="text-[15px] text-white/35 py-8">No roles match this filter.</p>
+                <p className="text-[15px] text-white/35 py-8">{t('No roles match this filter.')}</p>
               )}
             </div>
 
@@ -431,12 +431,12 @@ export default function CareersPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Don't see your role?{' '}
+              {t("Don't see your role?")}{' '}
               <a
                 href="mailto:careers@skillvue.ai"
                 className="text-[#9B9DFB]/60 hover:text-[#9B9DFB] underline underline-offset-2 transition-colors duration-300"
               >
-                Submit an open application
+                {t('Submit an open application')}
               </a>
             </motion.p>
           </div>
@@ -460,21 +460,21 @@ export default function CareersPage() {
                   letterSpacing: '-0.02em',
                 }}
               >
-                Ready to do the most important work in HR tech?
+                {t('Ready to do the most important work in HR tech?')}
               </h2>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <a
                   href="#open-roles"
                   className="group inline-flex items-center gap-3 px-6 py-4 md:gap-4 md:px-10 md:py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/15 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
                 >
-                  <span>See open roles</span>
+                  <span>{t('See open roles')}</span>
                   <ArrowRight className="h-5 w-5 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
                 </a>
                 <a
                   href="#life-at-skillvue"
                   className="group inline-flex items-center gap-2 text-[14px] font-semibold text-white/40 hover:text-white/70 transition-colors duration-300"
                 >
-                  Life at Skillvue
+                  {t('Life at Skillvue')}
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
