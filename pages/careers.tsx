@@ -38,7 +38,7 @@ const tags = ['Skills-first', 'Bias-free', 'GDPR-compliant', 'Explainable'];
 const allRoles = [
   { team: 'Product', title: 'Technical Product Manager', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://skillvue.factorial.it/job_posting/technical-product-manager-310502' },
   { team: 'Design', title: 'Senior Brand Designer', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://skillvue.factorial.it/job_posting/senior-brand-designer-305100' },
-  { team: 'People & Talent', title: 'Talent Lead', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://www.linkedin.com/jobs/search/?currentJobId=4420136873&f_C=74553239&geoId=92000000&origin=COMPANY_PAGE_JOBS_CLUSTER_EXPANSION&originToLandingJobPostings=4418742788%2C4420136873%2C4434628642%2C4407791647&trk=d_flagship3_company_posts' },
+  { team: 'People & Talent', title: 'Talent Lead', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://www.linkedin.com/jobs/view/4420136873' },
   { team: 'Sales', title: 'Enterprise Account Executive – Italy', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://skillvue.factorial.it/job_posting/enterprise-account-executive-italy-294480' },
 ];
 
