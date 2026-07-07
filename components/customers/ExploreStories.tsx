@@ -102,13 +102,13 @@ export default function ExploreStories() {
         {/* Filters */}
         <motion.div className="mb-14 space-y-5" initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.2 }}>
           <div className="flex flex-wrap gap-2">
-            <span className="text-[13px] font-bold text-white/35 tracking-[0.1em] uppercase mr-4 self-center">{t('Industry')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mr-4 self-center">{t('Industry')}</span>
             {filters.industry.map(f => (
               <button key={f} onClick={() => setActiveIndustry(f)} className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-white/[0.1] text-white border border-white/[0.15]' : 'text-white/40 border border-transparent hover:text-white/70'}`}>{t(industryLabel(f))}</button>
             ))}
           </div>
           <div className="flex flex-wrap gap-2">
-            <span className="text-[13px] font-bold text-white/35 tracking-[0.1em] uppercase mr-4 self-center">{t('Use Case')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mr-4 self-center">{t('Use Case')}</span>
             {filters.useCase.map(f => (
               <button key={f} onClick={() => setActiveUseCase(f)} className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${activeUseCase === f ? 'bg-white/[0.1] text-white border border-white/[0.15]' : 'text-white/40 border border-transparent hover:text-white/70'}`}>{t(f)}</button>
             ))}

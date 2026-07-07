@@ -63,9 +63,9 @@ export default function IntegrationEcosystem() {
           </p>
           <p className="text-[15px] text-[#7A7A7A] leading-[1.75]">
             {lang === 'it' ? (
-              <>Ci integriamo nativamente con 100+ tra i principali <span className="text-[#4B4DF7]/70 font-semibold">ATS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LXP</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">PMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">HRIS</span></>
+              <>Ci integriamo nativamente con 100+ tra i principali <span className="text-[#9B9DFB]/70 font-semibold">ATS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">LMS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">LXP</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">PMS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">HRIS</span></>
             ) : (
-              <>{t('Integrating with')} <span className="text-[#4B4DF7]/70 font-semibold">ATS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">LXP</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">PMS</span> &middot; <span className="text-[#4B4DF7]/70 font-semibold">HRIS</span> &mdash; {t('100+ native integrations')}</>
+              <>{t('Integrating with')} <span className="text-[#9B9DFB]/70 font-semibold">ATS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">LMS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">LXP</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">PMS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">HRIS</span> &mdash; {t('100+ native integrations')}</>
             )}
           </p>
         </motion.div>

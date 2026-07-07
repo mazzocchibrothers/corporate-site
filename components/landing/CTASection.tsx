@@ -37,7 +37,7 @@ export default function CTASection() {
           >
             <div className="absolute top-0 right-0 w-[300px] h-[300px] rounded-full bg-[#4B4DF7]/[0.06] blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
             <div className="relative">
-              <span className="text-[11px] md:text-[15px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase">{t('Ready to explore')}</span>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase">{t('Ready to explore')}</span>
               <h3 className="text-[20px] md:text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/85 mt-3 md:mt-5 mb-2 md:mb-4 leading-tight">
                 {t('Book a 30-min Demo')}
               </h3>
@@ -60,7 +60,7 @@ export default function CTASection() {
             data-testid="cta-track-b"
             className="col-span-2 md:col-span-1 lg:col-span-6 group relative rounded-2xl md:rounded-3xl border border-white/[0.04] hover:border-white/[0.08] bg-white/[0.01] backdrop-blur-sm transition-all duration-700 p-5 md:p-10 lg:p-12"
           >
-            <span className="text-[11px] md:text-[15px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-0 md:mb-10 block">{t('Our Customers')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-0 md:mb-10 block">{t('Our Customers')}</span>
             {(() => {
               const ctaLogos = [
                     { name: 'Moncler', src: '/logos/client-moncler.svg' },

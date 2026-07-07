@@ -64,13 +64,13 @@ export default function HowSkillvueWorks() {
         >
           <div className="grid lg:grid-cols-2 gap-5 md:gap-10">
             <div>
-              <span className="text-[10px] md:text-[12px] font-semibold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-2 md:mb-4 block">{t('STEP')} {steps[active].num}</span>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-2 md:mb-4 block">{t('STEP')} {steps[active].num}</span>
               <h3 className="text-[18px] md:text-[clamp(1.5rem,2.5vw,2rem)] font-semibold text-white/90 mb-3 md:mb-5 leading-[1.2]">{t(steps[active].title)}</h3>
               <p className="text-[14px] md:text-[16px] text-white/[0.65] leading-[1.6] md:leading-[1.75]">{t(steps[active].what)}</p>
             </div>
             <div>
               <div className="rounded-lg md:rounded-xl bg-white/[0.04] border border-white/[0.06] p-4 md:p-6 w-full">
-                <span className="text-[10px] md:text-[11px] font-semibold text-white/30 tracking-[0.1em] uppercase mb-2 md:mb-3 block">{t('KEY CAPABILITY')}</span>
+                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-2 md:mb-3 block">{t('KEY CAPABILITY')}</span>
                 <p className="text-[13px] md:text-[15px] text-white/[0.65] leading-[1.5] md:leading-[1.7]">{t(steps[active].capability)}</p>
               </div>
             </div>

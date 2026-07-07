@@ -50,9 +50,9 @@ export default function MethodologyLifecycle() {
                 data-testid={`lifecycle-${s.num}`}
                 className={`w-full flex items-center gap-3 py-3.5 border-b transition-all duration-300 ${i === active ? 'border-[#9B9DFB]/30 bg-white/[0.03]' : 'border-white/[0.04]'}`}
               >
-                <span className={`text-[11px] font-bold w-6 ${i === active ? 'text-[#9B9DFB]' : 'text-white/15'}`}>{s.num}</span>
+                <span className={`text-[11px] font-bold w-6 ${i === active ? 'text-[#4B4DF7]' : 'text-white/15'}`}>{s.num}</span>
                 <span className={`text-[14px] flex-1 text-left ${i === active ? 'font-semibold text-white' : 'font-normal text-white/20'}`}>{t(s.title)}</span>
-                <span className={`text-[14px] transition-transform duration-300 ${i === active ? 'text-[#9B9DFB] rotate-90' : 'text-white/10'}`}>›</span>
+                <span className={`text-[14px] transition-transform duration-300 ${i === active ? 'text-[#4B4DF7] rotate-90' : 'text-white/10'}`}>›</span>
               </button>
               {i === active && (
                 <motion.div
@@ -73,14 +73,14 @@ export default function MethodologyLifecycle() {
           <div className="flex flex-col space-y-1">
             {steps.map((s, i) => (
               <button key={s.num} onClick={() => setActive(i)} data-testid={`lifecycle-desktop-${s.num}`} className={`w-full text-left px-5 py-4 rounded-xl transition-all duration-400 flex items-center gap-4 ${i === active ? 'bg-white/[0.06] border border-white/[0.1]' : 'hover:bg-white/[0.03] border border-transparent'}`}>
-                <span className={`text-[12px] font-bold ${i === active ? 'text-[#9B9DFB]' : 'text-[#9B9DFB]/30'}`}>{s.num}</span>
+                <span className={`text-[12px] font-bold ${i === active ? 'text-[#4B4DF7]' : 'text-[#4B4DF7]/30'}`}>{s.num}</span>
                 <span className={`text-[15px] font-medium ${i === active ? 'text-white/90' : 'text-white/40'}`}>{t(s.title)}</span>
               </button>
             ))}
           </div>
 
           <motion.div key={active} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-10 lg:p-14" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
-            <span className="text-[12px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-4 block">{t('Step')} {steps[active].num}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-4 block">{t('Step')} {steps[active].num}</span>
             <h3 className="text-[clamp(1.5rem,2.5vw,2rem)] font-semibold text-white/90 mb-5">{t(steps[active].title)}</h3>
             <p className="text-[16px] text-white/[0.55] leading-[1.75]">{t(steps[active].desc)}</p>
           </motion.div>
@@ -101,7 +101,7 @@ export default function MethodologyLifecycle() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.25 }}
               >
-                <Icon className="h-5 w-5 text-[#9B9DFB]/50 mb-3" strokeWidth={1.5} />
+                <Icon className="h-5 w-5 text-[#4B4DF7]/50 mb-3" strokeWidth={1.5} />
                 <h3 className="text-[16px] font-semibold text-white/90 mb-2">{t(p.title)}</h3>
                 <p className="text-[14px] text-white/[0.6] leading-[1.65]">{t(p.desc)}</p>
               </motion.div>
@@ -134,7 +134,7 @@ export default function MethodologyLifecycle() {
             const Icon = p.icon;
             return (
               <motion.div key={p.title} className="group rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}>
-                <Icon className="h-6 w-6 text-[#9B9DFB]/50 mb-5" strokeWidth={1.5} />
+                <Icon className="h-6 w-6 text-[#4B4DF7]/50 mb-5" strokeWidth={1.5} />
                 <h3 className="text-[20px] font-semibold text-white/90 mb-4">{t(p.title)}</h3>
                 <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t(p.desc)}</p>
               </motion.div>

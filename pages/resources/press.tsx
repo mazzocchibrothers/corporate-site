@@ -178,7 +178,7 @@ export default function PressPage() {
               transition={{ duration: 0.7 }}
               className="max-w-3xl"
             >
-              <span className="text-[14px] font-semibold text-[#4B4DF7]/60 tracking-[0.2em] uppercase mb-8 block">
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">
                 {t('Press')}
               </span>
               <h1
@@ -212,7 +212,7 @@ export default function PressPage() {
               transition={{ duration: 0.6 }}
               className="mb-8 md:mb-12"
             >
-              <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
+              <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">
                 {t('Press Coverage')}
               </span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
@@ -272,7 +272,7 @@ export default function PressPage() {
                 transition={{ duration: 0.6 }}
                 className="mb-8 md:mb-12"
               >
-                <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
+                <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">
                   Stampa italiana
                 </span>
                 <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
@@ -295,7 +295,7 @@ export default function PressPage() {
                   >
                     <div>
                       <div className="mb-4">
-                        <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.12em] uppercase">
+                        <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.12em] uppercase">
                           {article.publication}
                         </span>
                       </div>
@@ -330,7 +330,7 @@ export default function PressPage() {
               transition={{ duration: 0.6 }}
               className="mb-8 md:mb-12"
             >
-              <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
+              <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">
                 {t('Interviews')}
               </span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
@@ -386,7 +386,7 @@ export default function PressPage() {
               transition={{ duration: 0.6 }}
               className="mb-8 md:mb-12"
             >
-              <span className="text-[11px] font-bold text-[#4B4DF7]/40 tracking-[0.2em] uppercase mb-4 block">
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-4 block">
                 {t('Press Releases')}
               </span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-white/90 tracking-[-0.02em]">
@@ -408,14 +408,14 @@ export default function PressPage() {
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                 >
                   <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8 min-w-0 flex-1">
-                    <span className="text-[11px] md:text-[13px] text-[#4B4DF7]/60 md:text-white/25 shrink-0 md:mt-0.5 font-mono tracking-wider uppercase md:normal-case md:tracking-normal">{release.date}</span>
+                    <span className="text-[11px] md:text-[13px] text-[#9B9DFB]/60 md:text-white/25 shrink-0 md:mt-0.5 font-mono tracking-wider uppercase md:normal-case md:tracking-normal">{release.date}</span>
                     <span className="text-[16px] md:text-[15px] font-semibold md:font-medium text-white/85 md:text-white/70 group-hover:text-white/95 md:group-hover:text-white/90 leading-snug md:leading-[1.55] transition-colors duration-300">
                       {lang === 'it' && release.titleIt ? release.titleIt : release.title}
                     </span>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
-                    <Download className="h-4 w-4 text-[#4B4DF7]/70 md:text-white/20 group-hover:text-[#4B4DF7] md:group-hover:text-white/50 transition-colors duration-300" />
-                    <span className="text-[12px] font-semibold text-[#4B4DF7]/70 md:text-white/25 tracking-[0.08em] uppercase group-hover:text-[#4B4DF7] md:group-hover:text-white/50 transition-colors duration-300">
+                    <Download className="h-4 w-4 text-[#9B9DFB]/70 md:text-white/20 group-hover:text-[#9B9DFB] md:group-hover:text-white/50 transition-colors duration-300" />
+                    <span className="text-[12px] font-semibold text-[#9B9DFB]/70 md:text-white/25 tracking-[0.08em] uppercase group-hover:text-[#9B9DFB] md:group-hover:text-white/50 transition-colors duration-300">
                       {t('Download')}
                     </span>
                   </div>
@@ -428,7 +428,7 @@ export default function PressPage() {
         {/* 5. Investors — animated marquee, same as About */}
         <section className="relative pt-8 pb-8 bg-black">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <span className="text-[12px] font-bold text-white/25 tracking-[0.2em] uppercase mb-6 block text-center">
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block text-center">
               {t('Backed by')}
             </span>
           </div>

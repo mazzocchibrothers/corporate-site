@@ -61,13 +61,13 @@ export default function FeaturedStories() {
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-[20px] font-bold text-[#121212]">{s.company}</span>
                   {s.tags.map(t => (
-                    <span key={t} className="px-3 py-1 rounded-full text-[11px] font-semibold text-[#4B4DF7]/[0.65] bg-[#4B4DF7]/[0.06]">{t}</span>
+                    <span key={t} className="px-3 py-1 rounded-full text-[11px] font-semibold text-[#9B9DFB]/[0.65] bg-[#4B4DF7]/[0.06]">{t}</span>
                   ))}
                 </div>
                 <h3 className="text-[18px] font-semibold text-[#121212]/80 mb-4 leading-snug">{t(s.headline)}</h3>
                 <div className="flex flex-wrap gap-3 mb-6">
                   {s.metrics.map(m => (
-                    <span key={m} className="text-[15px] font-bold text-[#4B4DF7]">{m}</span>
+                    <span key={m} className="text-[15px] font-bold text-[#9B9DFB]">{m}</span>
                   ))}
                 </div>
                 {s.quote && (
@@ -78,7 +78,7 @@ export default function FeaturedStories() {
                 )}
               </div>
               <div className="lg:col-span-4 flex items-end justify-end">
-                <button onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0,0); }} className="group/btn inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
+                <button onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0,0); }} className="group/btn inline-flex items-center gap-2 text-[13px] font-semibold text-[#9B9DFB] hover:text-[#3A3BD6] transition-colors duration-300">
                   {t('Read the full story')}
                   <ArrowRight className="h-3.5 w-3.5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </button>

@@ -43,7 +43,7 @@ export default function IMShift() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <span className="text-[12px] font-bold text-white/30 tracking-[0.1em] uppercase mb-8 block">{t('The old playbook')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-8 block">{t('The old playbook')}</span>
             <div className="space-y-6">
               {oldItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
@@ -63,7 +63,7 @@ export default function IMShift() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.25 }}
           >
-            <span className="text-[12px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-8 block">{t('With Skillvue')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-8 block">{t('With Skillvue')}</span>
             <div className="space-y-6">
               {newItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">

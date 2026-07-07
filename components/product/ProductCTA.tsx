@@ -29,7 +29,7 @@ export default function ProductCTA() {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <div className="group relative rounded-xl md:rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.04] hover:bg-white/[0.06] backdrop-blur-sm p-5 md:p-10 lg:p-14 transition-all duration-500 overflow-hidden">
-            <span className="text-[10px] md:text-[11px] font-semibold text-[#9B9DFB]/[0.65] tracking-[0.15em] uppercase">{t('Ready to explore')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.15em] uppercase">{t('Ready to explore')}</span>
             <h3 className="text-xl md:text-2xl font-semibold text-white/90 mt-3 md:mt-4 mb-2 md:mb-3">{t('Book a Demo')}</h3>
             <p className="text-[13px] md:text-[15px] text-white/[0.65] mb-5 md:mb-8 max-w-md">{t('See Skillvue live with your specific use case')}</p>
             <a

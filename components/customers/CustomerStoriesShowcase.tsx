@@ -30,7 +30,7 @@ export default function CustomerStoriesShowcase() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            <span className="text-[11px] font-bold text-white/30 tracking-[0.2em] uppercase mb-6 block">
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">
               {t('Customer Stories')}
             </span>
 

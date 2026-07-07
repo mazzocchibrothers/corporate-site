@@ -36,6 +36,8 @@ const footerLinks = [
     links: [
       { name: 'Blog', nameIt: 'Blog', href: '/blog', hideInIT: true },
       { name: 'White Papers', nameIt: 'White Papers', href: '/resources/whitepapers', hideInIT: true },
+      { name: 'Press', nameIt: 'Press', href: '/resources/press' },
+      { name: 'Careers', nameIt: 'Lavora con noi', href: '/careers' },
       { name: 'About', nameIt: 'Chi siamo', href: '/about' },
       { name: 'Book a Demo', nameIt: 'Prenota una Demo', href: '/book-meeting', hrefIt: '/prenota-incontro' },
     ],
@@ -63,7 +65,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-white/[0.04] pt-10 md:pt-14 pb-6">
+    <footer className="relative border-t border-white/[0.04] bg-[#050508] pt-10 md:pt-14 pb-6">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <div className="grid lg:grid-cols-[220px_1fr] gap-8 lg:gap-24 mb-8">
 
@@ -132,9 +134,14 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/[0.04] pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4">
-          <span className="text-[12px] md:text-[13px] text-white/40">
-            &copy; {new Date().getFullYear()} Skillvue. {t('All rights reserved.')}
-          </span>
+          <div className="text-center sm:text-left">
+            <p className="text-[12px] md:text-[13px] text-white/40">
+              &copy; {new Date().getFullYear()} Skillvue. {t('All rights reserved.')}
+            </p>
+            <p className="text-[12px] md:text-[13px] text-white/40">
+              Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568
+            </p>
+          </div>
           <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
             {[
               {
@@ -161,13 +168,6 @@ export default function Footer() {
               )
             ))}
           </div>
-        </div>
-
-        {/* Company info line */}
-        <div className="border-t border-white/[0.04] pt-4 mt-6">
-          <p className="text-[12px] text-white/40 text-center">
-            Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568
-          </p>
         </div>
       </div>
     </footer>

@@ -71,7 +71,7 @@ export default function WhitepapersPage() {
         <section className="relative pt-[80px] min-h-screen flex items-center">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <span className="text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.25em] uppercase mb-8 block">{t('Resources')}</span>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.25em] uppercase mb-8 block">{t('Resources')}</span>
               <h1 className="font-semibold text-white/95 mb-8" style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
                 {t('White Papers')}<br />
                 {t('&')} <span className="gradient-text">{t('Reports')}</span>
@@ -122,7 +122,7 @@ export default function WhitepapersPage() {
                               </div>
                               <h3 className="text-[clamp(1.5rem,3vw,2.8rem)] font-semibold text-white leading-[1.1] mb-5">{c.title}</h3>
                             </div>
-                            <span className="text-[11px] text-white/35 font-semibold tracking-[0.15em] uppercase">{t('White Paper')}</span>
+                            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.15em] uppercase">{t('White Paper')}</span>
                           </div>
                         </div>
                       ) : (

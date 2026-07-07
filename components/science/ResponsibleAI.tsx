@@ -44,7 +44,7 @@ export default function ResponsibleAI() {
     const Icon = p.icon;
     return (
       <motion.div key={p.title} data-testid={`responsible-${p.title.toLowerCase().replace(/\s+/g, '-')}`} className="group rounded-xl md:rounded-2xl border border-[#4B4DF7]/[0.08] hover:border-[#4B4DF7]/[0.18] bg-white/60 hover:bg-white/80 p-5 md:p-10 transition-all duration-500 h-full" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}>
-        <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#4B4DF7]/40 mb-3 md:mb-5" strokeWidth={1.5} />
+        <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#9B9DFB]/40 mb-3 md:mb-5" strokeWidth={1.5} />
         <h3 className="text-[15px] md:text-[18px] font-semibold text-[#1A1A2E] mb-2 md:mb-3">{t(p.title)}</h3>
         <p className="text-[12px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-[1.75]">{t(p.desc)}</p>
       </motion.div>
