@@ -21,7 +21,7 @@ export default function TAHero() {
           <span className="font-bold gradient-text">{t('perform.')}</span>
         </motion.h1>
         <motion.div
-          className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 md:gap-8 lg:gap-12"
+          className="flex flex-col items-start lg:flex-row lg:items-end lg:justify-between gap-5 md:gap-8 lg:gap-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -29,7 +29,7 @@ export default function TAHero() {
           <p className="text-[14px] md:text-[16px] lg:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-xl font-normal md:font-light">
             {t('Skillvue replaces guesswork with science at scale. AI-powered verifications customized to your roles and leadership model surface top candidates, cut early turnover, and make every hiring decision defensible.')}
           </p>
-          <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="ta-hero-cta" className="group inline-flex items-center justify-between w-full lg:w-auto lg:max-w-xl px-6 py-4 lg:px-8 lg:py-5 text-[14px] lg:text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500 shrink-0">
+          <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="ta-hero-cta" className="group inline-flex items-center justify-between gap-4 w-auto lg:max-w-xl px-6 py-4 lg:px-8 lg:py-5 text-[14px] lg:text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500 shrink-0">
             <span>{t('Book a Demo')}</span>
             <ArrowRight className="h-5 w-5 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
           </a>
