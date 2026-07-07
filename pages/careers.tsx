@@ -35,10 +35,10 @@ const steps = [
 const tags = ['Skills-first', 'Bias-free', 'GDPR-compliant', 'Explainable'];
 
 const allRoles = [
-  { team: 'Product', title: 'Technical Product Manager', location: 'Milan', work: 'Hybrid · Full-time', url: '#' },
-  { team: 'Design', title: 'Senior Brand Designer', location: 'Milan', work: 'Hybrid · Full-time', url: '#' },
-  { team: 'People & Talent', title: 'Talent Lead', location: 'Milan', work: 'Hybrid · Full-time', url: '#' },
-  { team: 'Sales', title: 'Enterprise Account Executive – Italy', location: 'Milan', work: 'Hybrid · Full-time', url: '#' },
+  { team: 'Product', title: 'Technical Product Manager', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://skillvue.factorial.it/job_posting/technical-product-manager-310502' },
+  { team: 'Design', title: 'Senior Brand Designer', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://skillvue.factorial.it/job_posting/senior-brand-designer-305100' },
+  { team: 'People & Talent', title: 'Talent Lead', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://www.linkedin.com/jobs/search/?currentJobId=4420136873&f_C=74553239&geoId=92000000&origin=COMPANY_PAGE_JOBS_CLUSTER_EXPANSION&originToLandingJobPostings=4418742788%2C4420136873%2C4434628642%2C4407791647&trk=d_flagship3_company_posts' },
+  { team: 'Sales', title: 'Enterprise Account Executive – Italy', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://skillvue.factorial.it/job_posting/enterprise-account-executive-italy-294480' },
 ];
 
 const filters = ['All teams', 'Design', 'People', 'Sales', 'Milan'];
@@ -386,6 +386,8 @@ export default function CareersPage() {
                       <a
                         key={role.title}
                         href={role.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="group flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6 rounded-2xl border border-white/[0.07] bg-white/[0.03] hover:border-white/[0.14] hover:bg-white/[0.05] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
                       >
                         <span className="text-[15px] md:text-[17px] font-semibold text-white/85 group-hover:text-white/95 transition-colors duration-300">
