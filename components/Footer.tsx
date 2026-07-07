@@ -108,10 +108,10 @@ export default function Footer() {
           <div className="flex flex-col gap-6 md:grid md:grid-cols-4 md:gap-8">
             {footerLinks.map((group) => (
               <div key={group.title}>
-                <h4 className="text-[15px] md:text-[16px] font-semibold text-white/85 mb-2 md:mb-7">
+                <h4 className="text-[15px] md:text-[16px] font-semibold text-white/85 mb-2 md:mb-7 text-center md:text-left">
                   {lang === 'it' ? group.titleIt : group.title}
                 </h4>
-                <div className="flex flex-wrap gap-x-4 gap-y-1.5 md:block md:space-y-4">
+                <div className="flex flex-col items-center gap-4 md:items-start md:block md:space-y-4">
                   {group.links.filter(link => !(lang === 'it' && (link as any).hideInIT)).map((link) => {
                     const href = lang === 'it' && (link as any).hrefIt ? (link as any).hrefIt : link.href;
                     const name = lang === 'it' ? (link as any).nameIt : link.name;
@@ -120,7 +120,7 @@ export default function Footer() {
                         key={link.name}
                         href={href}
                         onClick={handleClick(href)}
-                        className="inline md:block text-[14px] md:text-[15px] text-white/55 hover:text-white/65 transition-colors duration-300"
+                        className="block text-center md:text-left text-[14px] md:text-[15px] text-white/55 hover:text-white/65 transition-colors duration-300 py-1 md:py-0"
                       >
                         {name}
                       </a>
@@ -133,7 +133,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/[0.04] pt-6 md:pt-8 flex flex-col sm:flex-row items-center sm:items-center justify-between gap-3 md:gap-4">
+        <div className="border-t border-white/[0.04] pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4">
           <div className="text-center sm:text-left">
             <p className="text-[12px] md:text-[13px] text-white/40">
               &copy; {new Date().getFullYear()} Skillvue. {t('All rights reserved.')}
@@ -142,7 +142,7 @@ export default function Footer() {
               Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 md:gap-6">
+          <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
             {[
               {
                 label: 'Privacy Policy',
@@ -158,11 +158,11 @@ export default function Footer() {
               },
             ].map(({ label, href }) => (
               href.startsWith('http') ? (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300">
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
                   {label}
                 </a>
               ) : (
-                <a key={label} href={href} onClick={handleClick(href)} className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300">
+                <a key={label} href={href} onClick={handleClick(href)} className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
                   {label}
                 </a>
               )

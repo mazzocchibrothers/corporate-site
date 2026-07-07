@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MessageSquare, MonitorSmartphone, ListChecks, UserCheck, Target, BookOpen, Wrench, GitBranch, Mic, Video, PenLine, CheckSquare } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -41,36 +41,6 @@ export default function AssessmentFormats() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const scrollRef1 = useRef<HTMLDivElement | null>(null);
-  const scrollRef2 = useRef<HTMLDivElement | null>(null);
-  const scrollRef3 = useRef<HTMLDivElement | null>(null);
-  const [scrollProgress1, setScrollProgress1] = useState(0);
-  const [scrollProgress2, setScrollProgress2] = useState(0);
-  const [scrollProgress3, setScrollProgress3] = useState(0);
-
-  useEffect(() => {
-    const refs = [
-      { el: scrollRef1.current, setter: setScrollProgress1 },
-      { el: scrollRef2.current, setter: setScrollProgress2 },
-      { el: scrollRef3.current, setter: setScrollProgress3 },
-    ];
-    const cleanups: Array<() => void> = [];
-    refs.forEach(({ el, setter }) => {
-      if (!el) return;
-      const onScroll = () => {
-        const max = el.scrollWidth - el.clientWidth;
-        const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-        setter(pct);
-      };
-      el.addEventListener('scroll', onScroll, { passive: true });
-      cleanups.push(() => el.removeEventListener('scroll', onScroll));
-    });
-    return () => cleanups.forEach((fn) => fn());
-  }, []);
-
-  const scrollRefs = [scrollRef1, scrollRef2, scrollRef3];
-  const scrollProgresses = [scrollProgress1, scrollProgress2, scrollProgress3];
-
   return (
     <section id="verification-formats" data-testid="verification-formats" className="relative py-16 md:py-20 lg:py-28" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
@@ -103,31 +73,7 @@ export default function AssessmentFormats() {
                 <span className="text-[12px] md:text-[15px] text-white/35 font-light hidden md:inline">{t(layer.subtitle)}</span>
               </div>
 
-              {/* Mobile: horizontal scroll */}
-              <div ref={scrollRefs[i]} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-                {layer.items.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div
-                      key={item.name}
-                      className="shrink-0 w-[80vw] snap-center rounded-lg border border-white/[0.06] bg-white/[0.03] p-4 transition-all duration-400"
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center mb-2.5">
-                        <Icon className="h-5 w-5 text-white/50" />
-                      </div>
-                      <h4 className="text-[15px] font-semibold text-white/90 mb-1 leading-tight" style={{ whiteSpace: 'pre-line' }}>{t(item.name)}</h4>
-                      <p className="text-[12px] text-white/[0.4] leading-[1.4]">{t(item.desc)}</p>
-                    </div>
-                  );
-                })}
-              </div>
-              {/* Progress bar */}
-              <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-white/20 relative">
-                <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgresses[i] * 0.65}%` }} />
-              </div>
-
-              {/* Desktop: existing grid */}
-              <div className={`hidden md:grid gap-3 ${layer.items.length === 5 ? 'grid-cols-2 lg:grid-cols-5' : layer.items.length === 4 ? 'grid-cols-2 lg:grid-cols-4' : 'grid-cols-1 md:grid-cols-3'}`}>
+              <div className={`grid gap-3 ${layer.items.length === 5 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-5' : layer.items.length === 4 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4' : 'grid-cols-1 md:grid-cols-3'}`}>
                 {layer.items.map((item) => {
                   const Icon = item.icon;
                   return (

@@ -270,12 +270,12 @@ html {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marqueeScroll 30s linear infinite;
+  animation: marqueeScroll 60s linear infinite;
 }
 /* Faster marquee on mobile */
 @media (max-width: 767px) {
   .marquee-track {
-    animation: marqueeScroll 14s linear infinite;
+    animation: marqueeScroll 28s linear infinite;
   }
 }
 .lp-marquee {
