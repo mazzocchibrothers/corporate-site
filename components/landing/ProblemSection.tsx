@@ -67,7 +67,7 @@ export default function ProblemSection() {
         </AnimatedSection>
 
         {/* Pain cards — horizontal scroll on mobile, 3-col grid on desktop */}
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5">
+        <div ref={ref} className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5">
           {painCards.map((card, i) => (
             <motion.div
               key={card.stat + i}

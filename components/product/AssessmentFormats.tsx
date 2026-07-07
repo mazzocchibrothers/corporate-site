@@ -68,8 +68,7 @@ export default function AssessmentFormats() {
             >
               {/* Section label */}
               <div className="flex items-center gap-2.5 md:gap-4 mb-5 md:mb-8">
-                <div className="w-1 h-6 md:w-1.5 md:h-8 rounded-full bg-gradient-to-b from-[#FF5F24] to-[#FF5F24]/30" />
-                <span className="text-[12px] md:text-[15px] font-bold text-[#FF5F24] tracking-[0.1em] uppercase">{t(layer.title)}</span>
+                <span className="text-[12px] md:text-[15px] font-bold text-white tracking-[0.1em] uppercase">{t(layer.title)}</span>
                 <span className="text-[12px] md:text-[15px] text-white/35 font-light hidden md:inline">{t(layer.subtitle)}</span>
               </div>
 

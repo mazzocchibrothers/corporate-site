@@ -54,13 +54,13 @@ export default function CustomerStoriesSection() {
           </p>
         </motion.div>
 
-        {/* Story cards — horizontal scroll on mobile, 2-col grid on desktop */}
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-5 mb-8 md:mb-10">
+        {/* Story cards — horizontal scroll on mobile, 3-col grid on desktop */}
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-5 mb-8 md:mb-10">
           {stories.map((s, i) => (
             <motion.div
               key={s.company}
               data-testid={`story-${s.company.toLowerCase().replace(/\s+/g, '-')}`}
-              className="group rounded-2xl border border-white/[0.07] bg-white/[0.04] hover:bg-white/[0.06] hover:border-white/[0.14] backdrop-blur-sm p-5 md:p-10 lg:p-12 transition-all duration-500 cursor-pointer flex flex-col justify-between min-h-[220px] md:min-h-0"
+              className="group rounded-2xl border border-white/[0.07] bg-white/[0.04] hover:bg-white/[0.06] hover:border-white/[0.14] backdrop-blur-sm p-5 md:p-10 lg:p-12 transition-all duration-500 cursor-pointer flex flex-col justify-between gap-5 md:gap-8 min-h-[220px] md:min-h-0"
               initial={{ opacity: 0, y: 25 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
@@ -68,8 +68,10 @@ export default function CustomerStoriesSection() {
             >
               {/* Company + industry */}
               <div>
-                <h3 className="text-[17px] md:text-[22px] font-semibold text-white/90 mb-1">{t(s.company)}</h3>
-                <span className="text-[13px] md:text-[15px] text-white/40">{t(s.industry)}</span>
+                <h3 className="text-[17px] md:text-[22px] font-semibold text-white/90 mb-4 md:mb-5">{t(s.company)}</h3>
+                <span className="inline-flex px-2.5 py-1 md:px-3 md:py-1.5 rounded-full text-[11px] md:text-[11px] font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03] tracking-wide">
+                  {t(s.industry)}
+                </span>
               </div>
 
               {/* Quote */}

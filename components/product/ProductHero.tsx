@@ -43,7 +43,7 @@ export default function ProductHero() {
             </motion.h1>
 
             <motion.div
-              className="flex flex-col gap-5 md:gap-8"
+              className="flex flex-col items-start gap-5 md:gap-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -55,7 +55,7 @@ export default function ProductHero() {
               <a
                 href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
                 data-testid="product-hero-book-demo"
-                className="group inline-flex items-center justify-between w-full lg:w-auto lg:max-w-xl px-6 py-4 md:px-8 md:py-5 text-[13px] md:text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500 shrink-0"
+                className="group inline-flex items-center justify-between gap-4 w-auto px-6 py-4 md:px-8 md:py-5 text-[13px] md:text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500 shrink-0"
               >
                 <span>{t('Book a Demo')}</span>
                 <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
