@@ -325,31 +325,31 @@ export default function EuropAssistanceStoryPage() {
       <main>
 
         {/* ===== HERO ===== */}
-        <section className="relative pt-[80px]">
+        <section className="relative pt-[80px] min-h-screen flex items-center">
           <div className="absolute inset-0 overflow-hidden">
             <img src="/logos/europ-assistance-background-explore-stories.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
             <div className="absolute inset-0 bg-black/40" />
           </div>
 
-          <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
+          <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-8 lg:py-10">
             {/* Breadcrumb */}
-            <motion.div className="mb-10 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
+            <motion.div className="mb-5 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
               <button onClick={() => { router.push(lang === 'it' ? '/clienti' : '/customers'); window.scrollTo(0, 0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">{c.breadcrumb}</button>
               <span className="text-white/20">/</span>
               <span className="text-[13px] text-white/[0.65]">Europ Assistance</span>
             </motion.div>
 
-            <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
               {/* Main content */}
               <div className="lg:col-span-7 flex flex-col">
                 <motion.div className="flex flex-col flex-1" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-                  <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-8 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
+                  <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-4 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-semibold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
+                  <h1 className="text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
-                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-10 max-w-2xl">{c.subtitle}</p>
+                  <p className="text-[15px] text-white/[0.60] leading-[1.65] mb-6 max-w-2xl">{c.subtitle}</p>
                   <div className="flex flex-wrap gap-4">
                     <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300" style={{ background: '#4b4df7' }}>
                       {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
@@ -359,11 +359,11 @@ export default function EuropAssistanceStoryPage() {
                     </button>
                   </div>
                   {/* Metrics — pinned to bottom, aligned with video */}
-                  <div className="mt-auto pt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="mt-auto pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {c.heroMetrics.map(m => (
-                      <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-8 py-7">
-                        <span className="block text-white" style={{ fontSize: 'clamp(2rem,3.5vw,2.8rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[14px] text-white/[0.55] mt-2.5 block leading-[1.4]">{m.label}</span>
+                      <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
+                        <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.4vw,1.9rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="text-[13px] text-white/[0.55] mt-1.5 block leading-[1.4]">{m.label}</span>
                       </div>
                     ))}
                   </div>
@@ -371,28 +371,28 @@ export default function EuropAssistanceStoryPage() {
               </div>
 
               {/* Client card + video */}
-              <motion.div className="lg:col-span-5 flex flex-col" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
-                  <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center">
+              <motion.div className="lg:col-span-5 flex flex-col gap-4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5">
+                  <div className="flex items-center gap-3 mb-3 pb-3 border-b border-white/[0.08]">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 bg-white flex items-center justify-center">
                       <img src="/logos/europ-assistance-logo.png" alt="Europ Assistance logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
-                      <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>
-                      <p className="text-[18px] font-bold text-white/90">{c.clientCard.companyName || 'Europ Assistance'}</p>
+                      <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{c.clientCard.label}</span>
+                      <p className="text-[16px] font-bold text-white/90">{c.clientCard.companyName || 'Europ Assistance'}</p>
                     </div>
                   </div>
-                  <div className="divide-y divide-white/[0.08]">
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
                     {c.clientCard.facts.map(s => (
-                      <div key={s.label} className="py-4 first:pt-0 last:pb-0">
-                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
-                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{s.value}</p>
+                      <div key={s.label}>
+                        <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{s.label}</span>
+                        <p className="text-[13px] text-white/[0.65] leading-[1.4]">{s.value}</p>
                       </div>
                     ))}
                   </div>
                 </div>
                 {/* Video */}
-                <div className="mt-4 rounded-2xl border border-white/[0.08] overflow-hidden aspect-video lg:aspect-auto lg:flex-1 lg:min-h-0">
+                <div className="rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
                   <iframe
                     src={`https://www.youtube.com/embed/${lang === 'it' ? 'sPkKN_MED1c' : 'OYb81Qw3_IM'}?autoplay=1&mute=1&rel=0&modestbranding=1`}
                     title="Europ Assistance – Skillvue"
