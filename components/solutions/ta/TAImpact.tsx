@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 
@@ -13,19 +13,6 @@ export default function TAImpact() {
   const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const scrollRef = useRef(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
 
   return (
     <section id="ta-impact" data-testid="ta-impact" className="relative pb-20 lg:pb-24" style={{ background: '#F5F5FA' }} ref={ref}>
@@ -36,28 +23,7 @@ export default function TAImpact() {
             <span className="italic font-bold gradient-text-on-light">{t('matters')}</span>
           </h2>
         </motion.div>
-        {/* Mobile: horizontal scroll */}
-        <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-          {kpis.map((k, i) => (
-            <motion.div
-              key={k.value}
-              className="shrink-0 w-[80vw] snap-center rounded-2xl border border-[#E5E7EB] bg-white p-5"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
-            >
-              <span className="block mb-6 md:mb-10 text-[#1A1A2E] font-semibold" style={{ fontSize: '64px', lineHeight: 1, letterSpacing: '-0.03em' }}>{k.value}</span>
-              <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-4">{t(k.label)} <span className="font-normal text-[#7A7A7A]">{t(k.sublabel)}</span></h3>
-            </motion.div>
-          ))}
-        </div>
-        {/* Progress bar */}
-        <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
-        </div>
-
-        {/* Desktop */}
-        <div className="hidden md:grid lg:grid-cols-3 gap-4 lg:gap-5">
+        <div className="grid gap-4 lg:grid-cols-3 lg:gap-5">
           {kpis.map((k, i) => (
             <motion.div key={k.value} className="bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-10 lg:p-12" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}>
               <span className="block mb-6 md:mb-10 text-[#1A1A2E] font-semibold" style={{ fontSize: '64px', lineHeight: 1, letterSpacing: '-0.03em' }}>{k.value}</span>
