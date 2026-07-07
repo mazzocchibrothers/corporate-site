@@ -188,7 +188,8 @@ export default function AboutPage() {
           className="px-5 md:px-8 lg:px-12"
           style={{
             position: 'relative',
-            padding: '112px 0',
+            paddingTop: 112,
+            paddingBottom: 112,
             backgroundColor: '#040404',
             overflow: 'hidden',
             minHeight: '100vh',
@@ -198,8 +199,8 @@ export default function AboutPage() {
         >
           {/* Background texture */}
           <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-            <img src="/about/section-margin.png" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-            <img src="/about/section-margin1.png" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/about/section-margin.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/about/section-margin1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ maxWidth: 1304, margin: '0 auto', position: 'relative', width: '100%' }}>
             <p
@@ -233,7 +234,7 @@ export default function AboutPage() {
         </section>
 
         {/* ─── 4. WHO WE ARE — Skills Operating System ────────────────────── */}
-        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ padding: '112px 0', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 112, paddingBottom: 112, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
             <p
               style={{
@@ -283,7 +284,7 @@ export default function AboutPage() {
                 maxWidth: 837,
               }}
             >
-              {t('Skillvue is the objective skills data layer for your enterprise, tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run, so every talent decision, from hiring to transformation, is finally the right one.')}
+              {t('Skillvue is the objective skills data layer for your enterprise, tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run.')}
             </p>
           </div>
         </section>
@@ -293,7 +294,8 @@ export default function AboutPage() {
           className="px-5 md:px-8 lg:px-12"
           style={{
             position: 'relative',
-            padding: '112px 0',
+            paddingTop: 112,
+            paddingBottom: 112,
             backgroundColor: '#040404',
             overflow: 'hidden',
             minHeight: '100vh',
@@ -302,8 +304,8 @@ export default function AboutPage() {
           }}
         >
           <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-            <img src="/about/section-margin.png" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-            <img src="/about/section-margin1.png" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/about/section-margin.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/about/section-margin1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div
             style={{
@@ -355,13 +357,10 @@ export default function AboutPage() {
                 }}
               >
                 <p style={{ margin: '0 0 16px' }}>
-                  {t('Founded in Milan in 2021, Skillvue is building the Skills Operating System for talent decisions: the objective skills data layer that maps the skills an organisation needs, measures people against them with science, and feeds that intelligence into the HR systems companies already use. Every talent decision, from hiring to internal mobility to transformation, finally rests on evidence instead of gut feel.')}
-                </p>
-                <p style={{ margin: '0 0 16px' }}>
-                  {t('Backed by €9M from investors including 360 Capital, 14Peaks Capital and the Italian Founders Fund, Skillvue serves large European enterprises across banking, retail and pharma, with more than a million people already assessed. The platform pairs I/O psychology and psychometrics with generative AI, and it is built for European enterprise from day one: ISO/IEC 27001 certified, GDPR compliant, and designed around the EU AI Act.')}
+                  {t("Founded in Milan in 2021, at the heart of one of Europe's most dynamic startup hubs, Skillvue is an HR-Tech company that helps organizations make every talent decision objective. Backed by €9M in funding, Skillvue supports 30+ languages and serves 100+ mid-to-large enterprises across industries such as retail, financial services, pharma, and energy.")}
                 </p>
                 <p style={{ margin: 0 }}>
-                  {t('Behind it sits a team of 50+ people across Milan, London and Berlin, supported by a science network of 50+ external collaborators from academia and industry, bringing together artificial intelligence, people science and enterprise readiness.')}
+                  {t('With a team of 50+ professionals across Milan, Berlin, and London, Skillvue brings together expertise in psychometrics, AI, product design, and enterprise go-to-market. Its platform combines psychometric rigour with modern AI to transform static and unstructured talent data into reliable, predictive insights, supporting decisions across hiring, performance management, internal mobility, and learning & development.')}
                 </p>
               </div>
               <div>
@@ -381,7 +380,7 @@ export default function AboutPage() {
               className="w-full lg:w-[474px] lg:h-[390px] lg:shrink-0"
             >
               <img
-                src="/about/coverage.svg"
+                src={isIT ? '/about/presenza.avif' : '/about/coverage.avif'}
                 alt="Skillvue locations across Europe"
                 style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
               />
@@ -390,7 +389,7 @@ export default function AboutPage() {
         </section>
 
         {/* ─── 6. OUR MISSION — Make Skills ────────────────────────────────── */}
-        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ padding: '112px 0', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 112, paddingBottom: 112, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
             <p
               style={{
@@ -435,7 +434,7 @@ export default function AboutPage() {
                 fontWeight: 400,
                 fontSize: 20,
                 lineHeight: 1.4,
-                color: '#121212',
+                color: '#7a7a7a',
                 margin: 0,
                 maxWidth: 900,
               }}
@@ -450,7 +449,8 @@ export default function AboutPage() {
           className="px-5 md:px-8 lg:px-12"
           style={{
             position: 'relative',
-            padding: '112px 0',
+            paddingTop: 112,
+            paddingBottom: 112,
             backgroundColor: '#040404',
             overflow: 'hidden',
             minHeight: '100vh',
@@ -459,8 +459,8 @@ export default function AboutPage() {
           }}
         >
           <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-            <img src="/about/section-margin.png" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-            <img src="/about/section-margin1.png" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/about/section-margin.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/about/section-margin1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ maxWidth: 1304, margin: '0 auto', position: 'relative', width: '100%' }}>
             {/* Header */}
@@ -565,7 +565,7 @@ export default function AboutPage() {
                       margin: 0,
                     }}
                   >
-                    {t('After competing at a pre-Olympic level in sports at a very young age, Nicolò found himself at a crossroads: a career as a professional sailor, with the dream of the Olympics, or a more conventional university education and career. After a year of reflection in Australia, he chose a third way: to set up his own business, founding his first startup in the B2C entertainment sector with his brother Riccardo. After this first successful experience, he decided to move into the HR Tech sector and, together with his partner Simone Patera, launched Skillvue with the aim of leveraging AI technology to support companies in human capital management and in the transition towards a skills-based approach.')}
+                    {t('After competing at a pre-Olympic level in sports at a very young age, Nicolò found himself at a crossroads: a career as a professional sailor, with the dream of the Olympics, or a more conventional university education and career. After a year of reflection in Australia, he chose a third way: to set up his own business, founding his first startup in the B2C entertainment sector with his brother Riccardo. After this first successful experience, he decided to move into the HR Tech sector and, together with his partner Simone Patera, launched Skillvue with the aim of leveraging science and AI to support companies in human capital management and in the transition towards a skills-based approach.')}
                   </p>
                 </div>
               </div>
@@ -624,7 +624,7 @@ export default function AboutPage() {
                       margin: 0,
                     }}
                   >
-                    {t("Simone started his first company in the education sector when he was just 18 years old, and led its growth to a team of 50 people, while completing his studies in Philosophy. After graduating, he worked as a Business Developer for various Italian companies in the tech sector, collaborating with major players such as Poste Italiane and Rai. During those years, he also became father to two girls. In 2021 his professional path crossed with Nicolò Mazzocchi's: from the union of their respective experiences in the startup and technology field, Skillvue was born.")}
+                    {t("Simone is the co-founder of Skillvue. He started his first company in the education sector when he was just 18 years old, and led its growth to a team of 50 people, while completing his studies in Philosophy. After graduating, he worked as a Business Developer for various Italian companies in the tech sector, collaborating with major players such as Poste Italiane and Rai. During those years, he also became father to two girls. In 2021 his professional path crossed with Nicolò Mazzocchi's: from the union of their respective experiences in the startup and technology field, Skillvue was born.")}
                   </p>
                 </div>
               </div>
@@ -633,7 +633,7 @@ export default function AboutPage() {
         </section>
 
         {/* ─── 8. ONE TEAM ─────────────────────────────────────────────────── */}
-        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ padding: '80px 0', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', gap: 80 }}>
             {/* Header row: label + heading + pills (left), Join us button (right) */}
             <div
@@ -695,11 +695,10 @@ export default function AboutPage() {
               {/* Join us button */}
               <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 8 }}>
                 <a
-                  href="https://www.linkedin.com/company/skillvue/jobs/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/careers"
                   className="group inline-flex items-center gap-3 px-7 py-3.5 text-[14px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:bg-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/30 transition-all duration-500"
                   style={{ textDecoration: 'none' }}
+                  onClick={(e) => { e.preventDefault(); router.push('/careers'); }}
                 >
                   {t('Join us →')}
                 </a>
@@ -725,7 +724,7 @@ export default function AboutPage() {
         </section>
 
         {/* ─── 9. LIFE AT SKILLVUE ─────────────────────────────────────────── */}
-        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ padding: '128px 0', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 128, paddingBottom: 128, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', gap: 40 }}>
             {/* Header */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -753,7 +752,7 @@ export default function AboutPage() {
                   margin: 0,
                 }}
               >
-                {t('50+ people across Milan, Paris, Berlin & London.')}
+                {t('50+ people across Milan, Berlin & London.')}
               </p>
             </div>
 
@@ -821,13 +820,14 @@ export default function AboutPage() {
           style={{
             position: 'relative',
             backgroundColor: '#040404',
-            padding: '112px 0',
+            paddingTop: 112,
+            paddingBottom: 112,
             overflow: 'hidden',
           }}
         >
           <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-            <img src="/about/section-margin.png" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-            <img src="/about/section-margin1.png" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/about/section-margin.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/about/section-margin1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           {/* "Backed by" label */}
           <div style={{ position: 'relative', textAlign: 'center', marginBottom: 24 }}>
