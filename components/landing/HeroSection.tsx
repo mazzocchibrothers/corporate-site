@@ -6,26 +6,23 @@ import { useLanguage } from '@/i18n/LanguageContext';
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import scrollArrowsData from '../../public/animations/scroll-arrows.json';
 
-const trustLogosIt = [
-  { name: 'Unicredit', src: '/logos/unicredit.png' },
-  { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
-  { name: 'Fidia', src: '/logos/fidia_fixed.png' },
-  { name: 'Generali', src: '/logos/generali.png' },
-  { name: 'Coop', src: '/logos/coop.png' },
-  { name: 'Douglas', src: '/logos/douglas.png' },
+const clientLogos = [
+  { name: 'Unicredit', src: '/logos/client-unicredit.svg' },
+  { name: 'Carrefour', src: '/logos/client-carrefour.svg' },
+  { name: 'Fidia', src: '/logos/client-fidia.svg' },
+  { name: 'Generali', src: '/logos/client-generali.svg' },
+  { name: 'Novacoop', src: '/logos/client-novacoop.svg' },
+  { name: 'Douglas', src: '/logos/client-douglas.svg' },
+  { name: 'Moncler', src: '/logos/client-moncler.svg' },
+  { name: 'Lagardère', src: '/logos/client-lagardere.svg' },
+  { name: 'Nespresso', src: '/logos/client-nespresso.svg' },
+  { name: 'Tecnomat', src: '/logos/client-tecnomat.svg' },
+  { name: 'Avolta', src: '/logos/client-avolta.svg' },
+  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg' },
 ];
 
-const trustLogosEn = [
-  { name: 'Moncler', src: '/logos/moncler-en.png' },
-  { name: 'Lagardère', src: '/logos/lagardere-en.png' },
-  { name: 'Nespresso', src: '/logos/nespresso-en.png' },
-  { name: 'Tecnomat', src: '/logos/tecnomat-en.png' },
-  { name: 'Avolta', src: '/logos/avolta-en.png' },
-  { name: 'Carrefour', src: '/logos/carrefour-en.png' },
-  { name: 'Generali', src: '/logos/generali-en.png' },
-  { name: 'Douglas', src: '/logos/douglas-en.png' },
-  { name: 'Europ Assistance', src: '/logos/europ-assistance-en.png' },
-];
+const trustLogosIt = clientLogos;
+const trustLogosEn = clientLogos;
 
 export default function HeroSection() {
   const { t, lang } = useLanguage();
@@ -161,7 +158,7 @@ export default function HeroSection() {
           {/* Fixed label. hidden on mobile, visible from md up */}
           <div className="hidden md:flex shrink-0 pl-8 lg:pl-12 pr-12 z-10 relative items-center h-full">
             <span
-              className="inline-flex items-center px-6 py-2.5 rounded-lg border border-white/[0.3] text-[15px] text-white/70 whitespace-nowrap hover:text-white/90 hover:border-white/[0.5] transition-all duration-500"
+              className="inline-flex items-center px-6 py-2.5 text-[15px] text-white/70 whitespace-nowrap"
               style={{ fontWeight: 300, letterSpacing: '0.02em' }}
             >
               {t('Our Customers')}
@@ -188,7 +185,7 @@ export default function HeroSection() {
                     <img
                       src={logo.src}
                       alt={logo.name}
-                      className="h-6 md:h-8 w-auto object-contain max-w-[90px] md:max-w-[120px]"
+                      className="h-8 w-auto object-contain"
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
                   </div>
@@ -201,7 +198,7 @@ export default function HeroSection() {
                     <img
                       src={logo.src}
                       alt=""
-                      className="h-6 md:h-8 w-auto object-contain max-w-[90px] md:max-w-[120px]"
+                      className="h-8 w-auto object-contain"
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
                   </div>

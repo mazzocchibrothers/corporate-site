@@ -62,26 +62,17 @@ export default function CTASection() {
           >
             <span className="text-[11px] md:text-[15px] font-bold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-0 md:mb-10 block">{t('Our Customers')}</span>
             {(() => {
-              const ctaLogosIt = [
-                    { name: 'Unicredit', src: '/logos/unicredit.png' },
-                    { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
-                    { name: 'Generali', src: '/logos/generali.png' },
-                    { name: 'Douglas', src: '/logos/douglas.png' },
-                    { name: 'Coop', src: '/logos/coop.png' },
-                    { name: 'Fidia', src: '/logos/fidia_fixed.png' },
+              const ctaLogos = [
+                    { name: 'Moncler', src: '/logos/client-moncler.svg' },
+                    { name: 'Lagardère', src: '/logos/client-lagardere.svg' },
+                    { name: 'Nespresso', src: '/logos/client-nespresso.svg' },
+                    { name: 'Tecnomat', src: '/logos/client-tecnomat.svg' },
+                    { name: 'Avolta', src: '/logos/client-avolta.svg' },
+                    { name: 'Carrefour', src: '/logos/client-carrefour.svg' },
+                    { name: 'Generali', src: '/logos/client-generali.svg' },
+                    { name: 'Douglas', src: '/logos/client-douglas.svg' },
+                    { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg' },
                   ];
-              const ctaLogosEn = [
-                    { name: 'Moncler', src: '/logos/moncler-en.png' },
-                    { name: 'Lagardère', src: '/logos/lagardere-en.png' },
-                    { name: 'Nespresso', src: '/logos/nespresso-en.png' },
-                    { name: 'Tecnomat', src: '/logos/tecnomat-en.png' },
-                    { name: 'Avolta', src: '/logos/avolta-en.png' },
-                    { name: 'Carrefour', src: '/logos/carrefour-en.png' },
-                    { name: 'Generali', src: '/logos/generali-en.png' },
-                    { name: 'Douglas', src: '/logos/douglas-en.png' },
-                    { name: 'Europ Assistance', src: '/logos/europ-assistance-en.png' },
-                  ];
-              const ctaLogos = lang === 'en' ? ctaLogosEn : ctaLogosIt;
               return (
                 <div className="grid grid-cols-3 gap-x-4 gap-y-3 md:gap-x-10 md:gap-y-8 mb-3 md:mb-8">
                   {ctaLogos.map((logo) => (
@@ -89,7 +80,7 @@ export default function CTASection() {
                       <img
                         src={logo.src}
                         alt={logo.name}
-                        className="h-6 md:h-9 w-auto max-w-[80px] md:max-w-[120px] object-contain opacity-[0.45] hover:opacity-[0.75] transition-opacity duration-500"
+                        className="h-6 w-auto object-contain opacity-[0.45] hover:opacity-[0.75] transition-opacity duration-500"
                         style={{ filter: 'brightness(0) invert(1)' }}
                       />
                     </div>

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -14,20 +14,6 @@ export default function CustomersROI() {
   const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const scrollRef = useRef(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
-
   const renderCard = (s, i) => (
     <motion.div
       key={s.value}
@@ -52,27 +38,14 @@ export default function CustomersROI() {
           </h2>
         </motion.div>
 
-        {/* Mobile: horizontal scroll */}
-        <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-          {stats.map((s, i) => (
-            <div key={s.value} className="shrink-0 w-[80vw] snap-center">
-              {renderCard(s, i)}
-            </div>
-          ))}
-        </div>
-        {/* Progress bar */}
-        <div className="md:hidden mx-auto mt-4 mb-10 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
-        </div>
-
-        {/* Desktop: bordered grid */}
-        <div className="hidden md:grid lg:grid-cols-3 gap-4 lg:gap-5 mb-10">
+        {/* Cards grid */}
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5 mb-10">
           {stats.map((s, i) => renderCard(s, i))}
         </div>
 
         <motion.div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6" initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.5 }}>
           <p className="text-[14px] md:text-[15px] text-[#7A7A7A]">{t('Every other budget line has an ROI framework. These companies proved talent spend can too.')}</p>
-          <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} className="group inline-flex items-center justify-center gap-3 px-7 py-3.5 text-[13px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:bg-[#4B4DF7]/[0.06] transition-all duration-500 shrink-0">
+          <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} className="group inline-flex items-center justify-center gap-3 px-7 py-3.5 text-[13px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:border-[#4B4DF7]/30 hover:bg-[#4B4DF7]/[0.06] transition-all duration-500 shrink-0">
             {t('Book a Demo')}
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
           </a>

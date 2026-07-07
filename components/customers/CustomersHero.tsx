@@ -10,26 +10,23 @@ const metrics = [
   { value: '85%+', label: 'hiring success rate' },
 ];
 
-const logoFilesIt = [
-  { name: 'Unicredit', src: '/logos/unicredit.png' },
-  { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
-  { name: 'Fidia', src: '/logos/fidia_fixed.png' },
-  { name: 'Generali', src: '/logos/generali.png' },
-  { name: 'Douglas', src: '/logos/douglas.png' },
-  { name: 'Coop', src: '/logos/coop.png' },
+const clientLogos = [
+  { name: 'Unicredit', src: '/logos/client-unicredit.svg' },
+  { name: 'Carrefour', src: '/logos/client-carrefour.svg' },
+  { name: 'Fidia', src: '/logos/client-fidia.svg' },
+  { name: 'Generali', src: '/logos/client-generali.svg' },
+  { name: 'Novacoop', src: '/logos/client-novacoop.svg' },
+  { name: 'Douglas', src: '/logos/client-douglas.svg' },
+  { name: 'Moncler', src: '/logos/client-moncler.svg' },
+  { name: 'Lagardère', src: '/logos/client-lagardere.svg' },
+  { name: 'Nespresso', src: '/logos/client-nespresso.svg' },
+  { name: 'Tecnomat', src: '/logos/client-tecnomat.svg' },
+  { name: 'Avolta', src: '/logos/client-avolta.svg' },
+  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg' },
 ];
 
-const logoFilesEn = [
-  { name: 'Moncler', src: '/logos/moncler-en.png' },
-  { name: 'Lagardère', src: '/logos/lagardere-en.png' },
-  { name: 'Nespresso', src: '/logos/nespresso-en.png' },
-  { name: 'Tecnomat', src: '/logos/tecnomat-en.png' },
-  { name: 'Avolta', src: '/logos/avolta-en.png' },
-  { name: 'Carrefour', src: '/logos/carrefour-en.png' },
-  { name: 'Generali', src: '/logos/generali-en.png' },
-  { name: 'Douglas', src: '/logos/douglas-en.png' },
-  { name: 'Europ Assistance', src: '/logos/europ-assistance-en.png' },
-];
+const logoFilesIt = clientLogos;
+const logoFilesEn = clientLogos;
 
 export default function CustomersHero() {
   const { t, lang } = useLanguage();
@@ -97,7 +94,7 @@ export default function CustomersHero() {
           <div className="flex items-center h-[80px]">
             <div className="shrink-0 pl-8 lg:pl-12 pr-12 z-10 relative flex items-center h-full">
               <span
-                className="inline-flex items-center px-6 py-2.5 rounded-lg border border-white/[0.3] text-[15px] text-white/70 whitespace-nowrap font-medium"
+                className="inline-flex items-center px-6 py-2.5 text-[15px] text-white/70 whitespace-nowrap"
                 style={{ fontWeight: 300, letterSpacing: '0.02em' }}
               >
                 {t('Our Customers')}
@@ -114,14 +111,14 @@ export default function CustomersHero() {
                 <div className="marquee-content flex items-center gap-16 shrink-0 pr-16">
                   {logoFiles.map((l, i) => (
                     <div key={`a-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
-                      <img src={l.src} alt={l.name} className="h-8 w-auto object-contain max-w-[120px]" style={{ filter: 'brightness(0) invert(1)' }} />
+                      <img src={l.src} alt={l.name} className="h-8 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
                     </div>
                   ))}
                 </div>
                 <div className="marquee-content flex items-center gap-16 shrink-0 pr-16" aria-hidden="true">
                   {logoFiles.map((l, i) => (
                     <div key={`b-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
-                      <img src={l.src} alt="" className="h-8 w-auto object-contain max-w-[120px]" style={{ filter: 'brightness(0) invert(1)' }} />
+                      <img src={l.src} alt="" className="h-8 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
                     </div>
                   ))}
                 </div>

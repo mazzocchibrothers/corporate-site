@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
@@ -36,21 +36,6 @@ export default function CustomerStoriesSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
-
   return (
     <section id="customers" data-testid="customer-stories-section" className="relative py-16 md:py-20 lg:py-28" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
@@ -70,12 +55,12 @@ export default function CustomerStoriesSection() {
         </motion.div>
 
         {/* Story cards — horizontal scroll on mobile, 2-col grid on desktop */}
-        <div ref={scrollRef} className="md:grid md:grid-cols-2 md:gap-5 flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 mb-8 md:mb-10 scrollbar-hide">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-5 mb-8 md:mb-10">
           {stories.map((s, i) => (
             <motion.div
               key={s.company}
               data-testid={`story-${s.company.toLowerCase().replace(/\s+/g, '-')}`}
-              className="group rounded-2xl border border-white/[0.07] bg-white/[0.04] hover:bg-white/[0.06] hover:border-white/[0.14] backdrop-blur-sm p-5 md:p-10 lg:p-12 transition-all duration-500 cursor-pointer shrink-0 w-[75vw] md:w-auto snap-center flex flex-col justify-between min-h-[220px] md:min-h-0"
+              className="group rounded-2xl border border-white/[0.07] bg-white/[0.04] hover:bg-white/[0.06] hover:border-white/[0.14] backdrop-blur-sm p-5 md:p-10 lg:p-12 transition-all duration-500 cursor-pointer flex flex-col justify-between min-h-[220px] md:min-h-0"
               initial={{ opacity: 0, y: 25 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
@@ -99,13 +84,6 @@ export default function CustomerStoriesSection() {
           ))}
         </div>
 
-        {/* Progress bar — mobile only */}
-        <div className="md:hidden mx-auto -mt-4 mb-8 w-48 h-1.5 rounded-full bg-white/20 relative">
-          <div
-            className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill"
-            style={{ left: `${scrollProgress * 0.65}%` }}
-          />
-        </div>
 
         {/* Join CTA */}
         <motion.div
@@ -117,10 +95,10 @@ export default function CustomerStoriesSection() {
           <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6">
             <button
               onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
-              className="group inline-flex items-center justify-between px-6 py-3 md:px-7 md:py-3.5 text-[14px] md:text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
+              className="group inline-flex items-center justify-between px-6 py-3 md:px-7 md:py-3.5 text-[14px] md:text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
             >
               <span>{t('Book a Demo')}</span>
-              <ArrowRight className="h-4 w-4 ml-4 md:ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
+              <ArrowRight className="h-4 w-4 ml-4 md:ml-6 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-300" />
             </button>
             <button
               onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}

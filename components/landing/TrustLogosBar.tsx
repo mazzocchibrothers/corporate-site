@@ -1,25 +1,22 @@
 import React from 'react';
 
-const trustLogosIt = [
-  { name: 'Unicredit', src: '/logos/unicredit.png' },
-  { name: 'Carrefour', src: '/logos/carrefour_fixed.png' },
-  { name: 'Fidia', src: '/logos/fidia_fixed.png' },
-  { name: 'Generali', src: '/logos/generali.png' },
-  { name: 'Coop', src: '/logos/coop.png' },
-  { name: 'Douglas', src: '/logos/douglas.png' },
+const clientLogos = [
+  { name: 'Unicredit', src: '/logos/client-unicredit.svg' },
+  { name: 'Carrefour', src: '/logos/client-carrefour.svg' },
+  { name: 'Fidia', src: '/logos/client-fidia.svg' },
+  { name: 'Generali', src: '/logos/client-generali.svg' },
+  { name: 'Novacoop', src: '/logos/client-novacoop.svg' },
+  { name: 'Douglas', src: '/logos/client-douglas.svg' },
+  { name: 'Moncler', src: '/logos/client-moncler.svg' },
+  { name: 'Lagardère', src: '/logos/client-lagardere.svg' },
+  { name: 'Nespresso', src: '/logos/client-nespresso.svg' },
+  { name: 'Tecnomat', src: '/logos/client-tecnomat.svg' },
+  { name: 'Avolta', src: '/logos/client-avolta.svg' },
+  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg' },
 ];
 
-const trustLogosEn = [
-  { name: 'Moncler', src: '/logos/moncler-en.png' },
-  { name: 'Lagardère', src: '/logos/lagardere-en.png' },
-  { name: 'Nespresso', src: '/logos/nespresso-en.png' },
-  { name: 'Tecnomat', src: '/logos/tecnomat-en.png' },
-  { name: 'Avolta', src: '/logos/avolta-en.png' },
-  { name: 'Carrefour', src: '/logos/carrefour-en.png' },
-  { name: 'Generali', src: '/logos/generali-en.png' },
-  { name: 'Douglas', src: '/logos/douglas-en.png' },
-  { name: 'Europ Assistance', src: '/logos/europ-assistance-en.png' },
-];
+const trustLogosIt = clientLogos;
+const trustLogosEn = clientLogos;
 
 interface TrustLogosBarProps {
   lang: 'en' | 'it';
@@ -59,7 +56,7 @@ export default function TrustLogosBar({ lang }: TrustLogosBarProps) {
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="h-6 md:h-8 w-auto object-contain max-w-[90px] md:max-w-[120px]"
+                    className="h-8 w-auto object-contain"
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
@@ -71,7 +68,7 @@ export default function TrustLogosBar({ lang }: TrustLogosBarProps) {
                   <img
                     src={logo.src}
                     alt=""
-                    className="h-6 md:h-8 w-auto object-contain max-w-[90px] md:max-w-[120px]"
+                    className="h-8 w-auto object-contain"
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>

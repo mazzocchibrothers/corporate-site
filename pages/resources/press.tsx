@@ -1,36 +1,11 @@
 // @ts-nocheck
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Download, Mail } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
-
-function useScrollProgress() {
-  const ref = useRef(null);
-  const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
-  return { ref, progress };
-}
-
-function ScrollBar({ progress }) {
-  return (
-    <div className="md:hidden mx-auto mt-5 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-      <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${progress * 0.65}%` }} />
-    </div>
-  );
-}
 
 const pressArticles = [
   {
@@ -155,19 +130,17 @@ const pressReleases = [
 ];
 
 const investors = [
-  { name: '360 Capital', src: '/logos/investor-360capital.png', h: '130px' },
-  { name: '14 Peaks', src: '/logos/investor-14peaks-new.svg', h: '60px' },
-  { name: 'Orbita', src: '/logos/investor-orbita.png', h: '60px' },
-  { name: 'Kfund', src: '/logos/investor-kfund.webp', h: '42px' },
-  { name: 'IFF', src: '/logos/iff_logo.svg', h: '80px', customFilter: 'grayscale(1) invert(1) brightness(1.2)' },
-  { name: 'Ithaca', src: '/logos/investor-ithaca.svg', h: '75px' },
+  { name: '360 Capital', src: '/logos/investor-360capital.svg', h: '42px' },
+  { name: '14 Peaks', src: '/logos/investor-14peaks.svg', h: '42px' },
+  { name: 'Orbita', src: '/logos/investor-orbita.svg', h: '42px' },
+  { name: 'Kfund', src: '/logos/investor-kfund.svg', h: '42px' },
+  { name: 'IFF', src: '/logos/investor-iff.svg', h: '42px' },
+  { name: 'Ithaca', src: '/logos/investor-ithaca.svg', h: '42px' },
 ];
 
 export default function PressPage() {
   const router = useRouter();
   const { t, lang } = useLanguage();
-  const press = useScrollProgress();
-  const pressIt = useScrollProgress();
 
   return (
     <>
@@ -279,18 +252,7 @@ export default function PressPage() {
               );
               return (
                 <>
-                  {/* Mobile: horizontal scroll */}
-                  <div ref={press.ref} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-                    {pressArticles.map((article, i) => (
-                      <div key={article.publication} className="shrink-0 w-[80vw] snap-center">
-                        {renderCard(article, i)}
-                      </div>
-                    ))}
-                  </div>
-                  <ScrollBar progress={press.progress} />
-
-                  {/* Desktop: grid */}
-                  <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 md:gap-5">
                     {pressArticles.map((article, i) => renderCard(article, i))}
                   </div>
                 </>
@@ -348,18 +310,7 @@ export default function PressPage() {
                 );
                 return (
                   <>
-                    {/* Mobile: horizontal scroll */}
-                    <div ref={pressIt.ref} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-                      {pressArticlesIt.map((article, i) => (
-                        <div key={`${article.publication}-${i}`} className="shrink-0 w-[80vw] snap-center">
-                          {renderCard(article, i)}
-                        </div>
-                      ))}
-                    </div>
-                    <ScrollBar progress={pressIt.progress} />
-
-                    {/* Desktop: grid */}
-                    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 md:gap-5">
                       {pressArticlesIt.map((article, i) => renderCard(article, i))}
                     </div>
                   </>

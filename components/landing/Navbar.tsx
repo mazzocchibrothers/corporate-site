@@ -228,10 +228,13 @@ export default function Navbar() {
             <a
               href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
               data-testid="nav-book-demo"
-              className="inline-flex items-center px-7 py-3 text-[14px] font-medium tracking-wide rounded-full transition-all duration-300"
+              className="inline-flex items-center px-7 py-3 text-[14px] font-medium tracking-wide rounded-full transition-all duration-300 hover:!border-[rgba(75,77,247,0.4)] hover:!bg-[rgba(75,77,247,0.08)]"
               style={{
                 color: menuActive ? '#ffffff' : textColor,
-                border: `1px solid ${menuActive ? 'rgba(255,255,255,0.15)' : btnBorder}`,
+                borderWidth: '1px',
+                borderStyle: 'solid',
+                borderColor: menuActive ? 'rgba(255,255,255,0.15)' : btnBorder,
+                backgroundColor: 'transparent',
               }}
               onClick={(e) => { e.preventDefault(); navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); }}
             >
@@ -379,7 +382,7 @@ export default function Navbar() {
 
               <button
                 onClick={() => navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting')}
-                className="w-full flex items-center justify-center py-4 text-[16px] font-semibold text-white rounded-full border border-white/15"
+                className="w-full flex items-center justify-center py-4 text-[16px] font-semibold text-white rounded-full border border-white/15 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-300"
               >
                 {lang === 'it' ? 'Prenota una Demo' : 'Book a Demo'}
               </button>
