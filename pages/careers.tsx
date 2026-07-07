@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 import { ArrowRight } from 'lucide-react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
@@ -46,6 +47,8 @@ const filters = ['All teams', 'Design', 'People', 'Sales', 'Milan'];
 export default function CareersPage() {
   const { t, lang } = useLanguage();
   const router = useRouter();
+  const isIT = lang === 'it';
+  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/careers`;
   const [activeFilter, setActiveFilter] = useState('All teams');
 
   const filtered =
@@ -65,6 +68,14 @@ export default function CareersPage() {
 
   return (
     <>
+      <Head>
+        <title>{isIT ? 'Lavora con noi | Carriere in Skillvue' : 'Careers | Join Skillvue'}</title>
+        <meta name="description" content={isIT
+          ? 'Unisciti al team che rende oggettive le decisioni sul talento. Scopri i ruoli aperti in Skillvue e come lavoriamo, a Milano e in tutta Europa.'
+          : "Join the team making talent decisions objective. Explore open roles at Skillvue and what it's like to work with us, across Milan and Europe."
+        } />
+        <link rel="canonical" href={canonical} />
+      </Head>
       <Navbar />
       <main>
 
