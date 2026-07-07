@@ -42,7 +42,7 @@ const allRoles = [
   { team: 'Sales', title: 'Enterprise Account Executive – Italy', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://skillvue.factorial.it/job_posting/enterprise-account-executive-italy-294480' },
 ];
 
-const filters = ['All teams', 'Design', 'People', 'Sales', 'Milan'];
+const filters = ['All teams', 'Product', 'Design', 'People', 'Sales', 'Milan'];
 
 export default function CareersPage() {
   const { t, lang } = useLanguage();
