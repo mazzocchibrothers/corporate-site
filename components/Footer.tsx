@@ -28,6 +28,7 @@ const footerLinks = [
     titleIt: 'Clienti',
     links: [
       { name: 'Customer Stories', nameIt: 'Storie di Successo', href: '/customers', hrefIt: '/clienti' },
+      { name: 'Book a Demo', nameIt: 'Prenota una Demo', href: '/book-meeting', hrefIt: '/prenota-incontro' },
     ],
   },
   {
@@ -37,9 +38,8 @@ const footerLinks = [
       { name: 'Blog', nameIt: 'Blog', href: '/blog', hideInIT: true },
       { name: 'White Papers', nameIt: 'White Papers', href: '/resources/whitepapers', hideInIT: true },
       { name: 'Press', nameIt: 'Press', href: '/resources/press' },
-      { name: 'Careers', nameIt: 'Lavora con noi', href: '/careers' },
       { name: 'About', nameIt: 'Chi siamo', href: '/about' },
-      { name: 'Book a Demo', nameIt: 'Prenota una Demo', href: '/book-meeting', hrefIt: '/prenota-incontro' },
+      { name: 'Careers', nameIt: 'Lavora con noi', href: '/careers' },
     ],
   },
 ];

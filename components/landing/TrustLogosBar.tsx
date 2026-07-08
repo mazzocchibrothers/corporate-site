@@ -56,7 +56,7 @@ export default function TrustLogosBar({ lang }: TrustLogosBarProps) {
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="h-8 w-auto object-contain"
+                    className="h-6 w-auto object-contain"
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
@@ -68,7 +68,7 @@ export default function TrustLogosBar({ lang }: TrustLogosBarProps) {
                   <img
                     src={logo.src}
                     alt=""
-                    className="h-8 w-auto object-contain"
+                    className="h-6 w-auto object-contain"
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
