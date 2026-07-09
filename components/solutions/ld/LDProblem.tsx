@@ -24,22 +24,19 @@ export default function LDProblem() {
           </h2>
         </motion.div>
 
-        {/* Numbered vertical list */}
-        <div className="space-y-0">
+        <div className="grid gap-5 lg:grid-cols-3">
           {pains.map((p, i) => (
             <motion.div
               key={p.num}
               data-testid={`ld-pain-${i}`}
-              className="group flex gap-8 py-10 border-t border-[#4B4DF7]/[0.08] last:border-b last:border-[#4B4DF7]/[0.08]"
+              className="group rounded-2xl border border-[#121212]/[0.08] bg-white p-6 md:p-8 lg:p-10 hover:border-[#4B4DF7]/[0.18] hover:shadow-xl hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 flex flex-col h-full"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
             >
-              <span className="text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-[#4B4DF7]/[0.12] leading-none shrink-0 w-20">{p.num}</span>
-              <div>
-                <h3 className="text-[20px] font-semibold text-[#121212] mb-3">{t(p.title)}</h3>
-                <p className="text-[16px] text-[#7A7A7A] leading-[1.75] max-w-2xl">{t(p.desc)}</p>
-              </div>
+              <span className="text-[36px] md:text-[42px] font-normal text-[#121212]/[0.1] leading-none tracking-[-0.03em] mb-6 md:mb-8 block">{p.num}</span>
+              <h3 className="text-[18px] md:text-[20px] font-semibold text-[#121212] mb-2 md:mb-3 leading-tight">{t(p.title)}</h3>
+              <p className="text-[14px] md:text-[15px] text-[#7A7A7A] leading-[1.7] flex-1">{t(p.desc)}</p>
             </motion.div>
           ))}
         </div>

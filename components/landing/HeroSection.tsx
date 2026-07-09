@@ -55,7 +55,7 @@ export default function HeroSection() {
               />
 
               <motion.h1
-                className="relative text-[clamp(1.75rem,7vw,2.4rem)] md:text-[clamp(2.5rem,4.4vw,3.9rem)] font-semibold tracking-[-0.028em] text-white"
+                className="relative text-[48px] md:text-[clamp(2.5rem,4.4vw,3.9rem)] font-semibold tracking-[-0.028em] text-white"
                 style={{ lineHeight: 1.08, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}

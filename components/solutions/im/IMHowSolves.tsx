@@ -18,52 +18,40 @@ export default function IMHowSolves() {
   return (
     <section id="im-how" data-testid="im-how" className="section-breathe relative py-20 lg:py-24" ref={ref}>
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 lg:gap-24">
-          {/* Left. sticky title */}
-          <motion.div
-            className="lg:sticky lg:top-32 self-start"
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7 }}
-          >
-            <h2 className="text-[clamp(2rem,3.5vw,3.2rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-[#121212]">
-              {t('Three pillars of')}{' '}
-              <span className="font-bold gradient-text-on-light">{t('intelligent mobility')}</span>
-            </h2>
-          </motion.div>
+        <motion.div
+          className="max-w-3xl mb-12 md:mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7 }}
+        >
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212]">
+            {t('Three pillars of')}{' '}
+            <span className="font-bold gradient-text-on-light">{t('intelligent mobility')}</span>
+          </h2>
+        </motion.div>
 
-          {/* Right. vertical pillar cards */}
-          <div className="space-y-6">
-            {pillars.map((p, i) => {
-              const Icon = p.icon;
-              return (
-                <motion.div
-                  key={p.title}
-                  className="group relative grid grid-cols-[60px_1fr] gap-6 items-start"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
-                >
-                  {/* Left: number + line */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-[60px] h-[60px] rounded-2xl bg-[#4B4DF7]/[0.07] group-hover:bg-[#4B4DF7]/[0.12] flex items-center justify-center transition-colors duration-500">
-                      <Icon className="h-6 w-6 text-[#4B4DF7]/50 group-hover:text-[#4B4DF7]/80 transition-colors duration-500" strokeWidth={1.5} />
-                    </div>
-                    {i < pillars.length - 1 && (
-                      <div className="w-px flex-1 bg-[#4B4DF7]/[0.08] mt-4" />
-                    )}
+        <div className="grid gap-5 lg:grid-cols-3">
+          {pillars.map((p, i) => {
+            const Icon = p.icon;
+            return (
+              <motion.div
+                key={p.title}
+                className="group rounded-2xl border border-[#121212]/[0.08] bg-white p-6 md:p-8 lg:p-10 hover:border-[#4B4DF7]/[0.18] hover:shadow-xl hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 flex flex-col h-full"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
+              >
+                <div className="flex items-center justify-between mb-6 md:mb-8">
+                  <span className="text-[36px] md:text-[42px] font-normal text-[#121212]/[0.1] leading-none tracking-[-0.03em]">{p.num}</span>
+                  <div className="w-11 h-11 rounded-xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.08] flex items-center justify-center group-hover:bg-[#4B4DF7]/[0.12] group-hover:border-[#4B4DF7]/[0.15] transition-all duration-500">
+                    <Icon className="h-5 w-5 text-[#4B4DF7]/50 group-hover:text-[#4B4DF7] transition-colors duration-500" strokeWidth={1.5} />
                   </div>
-
-                  {/* Right: content */}
-                  <div className="pb-10">
-                    <span className="text-[12px] font-bold text-[#4B4DF7]/30 tracking-[0.1em] mb-3 block">{p.num}</span>
-                    <h3 className="text-[20px] font-semibold text-[#121212] mb-3">{t(p.title)}</h3>
-                    <p className="text-[16px] text-[#7A7A7A] leading-[1.75] max-w-lg">{t(p.desc)}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                </div>
+                <h3 className="text-[18px] md:text-[20px] font-semibold text-[#121212] mb-2 md:mb-3 leading-tight">{t(p.title)}</h3>
+                <p className="text-[14px] md:text-[15px] text-[#7A7A7A] leading-[1.7] flex-1">{t(p.desc)}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

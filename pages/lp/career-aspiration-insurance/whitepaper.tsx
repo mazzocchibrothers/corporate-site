@@ -147,7 +147,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
               >
                 INSURANCE · 2026
               </span>
-              <h1 className="text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
+              <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
                 Career Aspiration Intelligence
                 <span
                   className="block"

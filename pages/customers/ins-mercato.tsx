@@ -197,7 +197,7 @@ export default function InsMercatoStoryPage() {
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-4 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     CUSTOMER STORY
                   </span>
-                  <h1 className="text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
+                  <h1 className="text-[48px] md:text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
                     {lang === 'it'
                       ? <>Come In's Mercato ha costruito una <span style={{ color: '#7b7df9' }}>pipeline interna</span> di Store Manager</>
                       : <>How In's Mercato built an <span style={{ color: '#7b7df9' }}>internal pipeline</span> of Store Managers</>
@@ -288,7 +288,7 @@ export default function InsMercatoStoryPage() {
 
             {/* Challenge */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'LA SFIDA' : 'THE CHALLENGE'}</span>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{lang === 'it' ? 'LA SFIDA' : 'THE CHALLENGE'}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{lang === 'it' ? 'Il problema strutturale' : 'The Structural Problem'}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">
                 {lang === 'it'
@@ -297,12 +297,12 @@ export default function InsMercatoStoryPage() {
                 }
               </p>
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{lang === 'it' ? 'IMPATTO SUL BUSINESS' : 'BUSINESS IMPACT'}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{lang === 'it' ? 'IMPATTO SUL BUSINESS' : 'BUSINESS CHALLENGES'}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {businessPains.map(p => (
                     <div key={p.en.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                        <p.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <p.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{p[l].title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{p[l].desc}</p>
@@ -311,12 +311,12 @@ export default function InsMercatoStoryPage() {
                 </div>
               </div>
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{lang === 'it' ? 'IMPATTO SU HR & PEOPLE' : 'HR & PEOPLE IMPACT'}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{lang === 'it' ? 'IMPATTO SU HR & PEOPLE' : 'HR & PEOPLE CHALLENGES'}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {hrPains.map(p => (
-                    <div key={p.en.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
-                        <p.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                    <div key={p.en.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <p.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{p[l].title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{p[l].desc}</p>
@@ -331,23 +331,26 @@ export default function InsMercatoStoryPage() {
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'OBIETTIVI DI COLLABORAZIONE' : 'COLLABORATION OBJECTIVES'}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{lang === 'it' ? 'Cosa doveva cambiare' : 'What needed to change'}</h2>
               <div className="grid md:grid-cols-2 gap-5">
-                {objectives.map((o, i) => (
-                  <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                {objectives.map((o, i) => {
+                  const [title, ...rest] = o[l].split(':');
+                  const desc = rest.join(':').trim();
+                  return (
+                    <div key={i} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{desc}</p>
                     </div>
-                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
-                      {o[l].includes(':') ? <><strong className="font-bold text-[#121212]/90">{o[l].split(':')[0]}</strong>:{o[l].split(':').slice(1).join(':')}</> : o[l]}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </Section>
 
             {/* Solution */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'LA SOLUZIONE' : 'THE SOLUTION'}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{lang === 'it' ? 'Assessment AI con Skillvue' : 'AI Assessment with Skillvue'}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{lang === 'it' ? 'Assessment AI con Skillvue' : 'AI-scaled Assessment with Skillvue'}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">
                 {lang === 'it'
                   ? "Skillvue ha abilitato un assessment strutturato, basato sul framework di soft skill che In's aveva già costruito internamente per il profilo di Store Manager."
@@ -356,13 +359,13 @@ export default function InsMercatoStoryPage() {
               </p>
               <div className="mb-10">
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{lang === 'it' ? 'COMPETENZE VALUTATE' : 'SKILLS ASSESSED'}</span>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid md:grid-cols-3 gap-5">
                   {skills.map(s => (
-                    <div key={s.en} className="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                        <s.icon className="h-4 w-4" style={{ color: '#4b4df7' }} />
+                    <div key={s.en} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <s.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <span className="text-[13px] text-[#121212]/70 font-medium">{s[l]}</span>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{s[l]}</h4>
                     </div>
                   ))}
                 </div>
@@ -372,10 +375,8 @@ export default function InsMercatoStoryPage() {
                 <div className="grid md:grid-cols-3 gap-5">
                   {methodologyCards.map((card, i) => (
                     <div key={card.en.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                      <div className="w-8 h-8 rounded-lg flex items-center justify-center mb-4" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                        <span className="text-[12px] font-bold" style={{ color: '#4b4df7' }}>{i + 1}</span>
-                      </div>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-2 leading-[1.4]">{card[l].title}</h4>
+                      <span className="block text-[2.75rem] font-light leading-none mb-6" style={{ color: '#c7d2fe' }}>0{i + 1}</span>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{card[l].title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{card[l].text}</p>
                     </div>
                   ))}
@@ -385,7 +386,7 @@ export default function InsMercatoStoryPage() {
 
             {/* Results */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{lang === 'it' ? 'RISULTATI' : 'RESULTS'}</span>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{lang === 'it' ? 'RISULTATI' : 'RESULTS'}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">
                 {lang === 'it' ? 'Key Metrics & Impatto' : 'Key Metrics & Impact'}
               </h2>
@@ -405,11 +406,11 @@ export default function InsMercatoStoryPage() {
                     <span className="text-[15px] font-bold text-[#121212]">Talent Pipeline</span>
                   </div>
 
-                  <div className="grid grid-cols-1 lg:grid-cols-[1fr_40px_1fr_40px_1fr] gap-3 items-center mb-5">
+                  <div className="grid grid-cols-1 lg:grid-cols-[1fr_40px_1fr_40px_1fr] gap-3 items-stretch mb-5">
                     {/* Step 1 */}
                     <div className="rounded-xl p-5" style={{ background: '#f1f5f9' }}>
                       <span className="text-[10px] font-bold tracking-[0.12em] text-[#121212]/30 block mb-2">STEP 1</span>
-                      <span className="block font-black text-[#121212] leading-none mb-2" style={{ fontSize: 'clamp(2rem,3.5vw,2.8rem)', letterSpacing: '-0.03em' }}>900</span>
+                      <span className="block font-semibold text-[#121212] leading-none mb-2 text-[32px] md:text-[clamp(2rem,3.5vw,2.8rem)]" style={{ letterSpacing: '-0.03em' }}>900</span>
                       <p className="text-[13px] font-semibold text-[#121212]/70 leading-[1.4]">{lang === 'it' ? 'Assessment AI completati' : 'AI Assessments completed'}</p>
                       <p className="text-[12px] text-[#121212]/35 mt-1">{lang === 'it' ? 'su ~1.000 collaboratori coinvolti' : 'across ~1,000 employees involved'}</p>
                     </div>
@@ -424,7 +425,7 @@ export default function InsMercatoStoryPage() {
                     {/* Step 2 */}
                     <div className="rounded-xl p-5" style={{ background: 'rgba(75,77,247,0.06)' }}>
                       <span className="text-[10px] font-bold tracking-[0.12em] block mb-2" style={{ color: 'rgba(75,77,247,0.45)' }}>STEP 2</span>
-                      <span className="block font-black leading-none mb-2" style={{ fontSize: 'clamp(2rem,3.5vw,2.8rem)', letterSpacing: '-0.03em', color: '#4b4df7' }}>90</span>
+                      <span className="block font-semibold leading-none mb-2 text-[32px] md:text-[clamp(2rem,3.5vw,2.8rem)]" style={{ letterSpacing: '-0.03em', color: '#4b4df7' }}>90</span>
                       <p className="text-[13px] font-semibold text-[#121212]/70 leading-[1.4]">{lang === 'it' ? 'Top Talent identificati' : 'Top Talent identified'}</p>
                       <p className="text-[12px] text-[#121212]/35 mt-1">{lang === 'it' ? "Top 10% emerso dall'assessment" : 'Top 10% emerging from assessment'}</p>
                     </div>
@@ -440,7 +441,7 @@ export default function InsMercatoStoryPage() {
                     <div className="space-y-3">
                       <div className="rounded-xl p-4 flex items-start justify-between gap-3" style={{ background: 'rgba(5,150,105,0.07)' }}>
                         <div>
-                          <span className="block font-black leading-none mb-1" style={{ fontSize: '1.7rem', color: '#059669', letterSpacing: '-0.02em' }}>47%</span>
+                          <span className="block font-semibold leading-none mb-1 text-[32px] md:text-[1.7rem]" style={{ color: '#059669', letterSpacing: '-0.02em' }}>47%</span>
                           <p className="text-[13px] font-semibold text-[#121212]/80">Role-Ready</p>
                           <p className="text-[11px] text-[#121212]/35 mt-0.5">{lang === 'it' ? '~42 profili pronti al ruolo' : '~42 profiles ready for the role'}</p>
                         </div>
@@ -450,7 +451,7 @@ export default function InsMercatoStoryPage() {
                       </div>
                       <div className="rounded-xl p-4 flex items-start justify-between gap-3" style={{ background: 'rgba(217,119,6,0.07)' }}>
                         <div>
-                          <span className="block font-black leading-none mb-1" style={{ fontSize: '1.7rem', color: '#d97706', letterSpacing: '-0.02em' }}>53%</span>
+                          <span className="block font-semibold leading-none mb-1 text-[32px] md:text-[1.7rem]" style={{ color: '#d97706', letterSpacing: '-0.02em' }}>53%</span>
                           <p className="text-[13px] font-semibold text-[#121212]/80">In Development</p>
                           <p className="text-[11px] text-[#121212]/35 mt-0.5">{lang === 'it' ? '~48 profili in upskilling' : '~48 profiles in upskilling'}</p>
                         </div>
@@ -472,24 +473,24 @@ export default function InsMercatoStoryPage() {
                 <div className="grid md:grid-cols-2 gap-4">
 
                   {/* Completion Rate */}
-                  <div className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                  <div className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm flex flex-col h-full">
                     <p className="text-[14px] font-bold text-[#121212] mb-7">{lang === 'it' ? 'Tasso di completamento' : 'Completion Rate'}</p>
                     <div className="flex flex-col items-center mb-6">
-                      <div className="relative w-32 h-32 mb-5">
+                      <div className="relative w-48 h-48 mb-5">
                         <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                          <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(75,77,247,0.1)" strokeWidth="9" />
-                          <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="9" strokeLinecap="round"
+                          <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(16,185,129,0.1)" strokeWidth="9" />
+                          <circle cx="50" cy="50" r="40" fill="none" stroke="#10b981" strokeWidth="9" strokeLinecap="round"
                             strokeDasharray={`${2 * Math.PI * 40 * 0.95} ${2 * Math.PI * 40}`} />
                         </svg>
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-[1.6rem] font-black text-[#121212]" style={{ letterSpacing: '-0.03em' }}>95%</span>
+                          <span className="text-[32px] md:text-[2.4rem] font-semibold text-[#121212]" style={{ letterSpacing: '-0.03em' }}>95%</span>
                         </div>
                       </div>
-                      <p className="text-[13px] text-[#121212]/50 text-center leading-[1.6]">
+                      <p className="text-[13px] text-[#121212]/50 text-left leading-[1.6] w-full">
                         {lang === 'it' ? 'Completamento al netto delle cause esterne (dimissioni, malattia)' : 'Completion rate net of external causes (resignations, sick leave)'}
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 text-[13px]" style={{ color: '#059669' }}>
+                    <div className="flex items-center gap-2 text-[13px] mt-auto" style={{ color: '#059669' }}>
                       <CheckCircle className="h-4 w-4 shrink-0" />
                       <span>{lang === 'it' ? '48 non terminate per cause esterne' : '48 not completed due to external causes'}</span>
                     </div>
@@ -511,7 +512,7 @@ export default function InsMercatoStoryPage() {
                             <span className="text-[12px] text-[#121212]/50">{lang === 'it' ? item.labelIt : item.labelEn}</span>
                             <span className="text-[12px] font-semibold text-[#121212]/65">{item.value}</span>
                           </div>
-                          <div className="h-[18px] rounded-full overflow-hidden" style={{ background: 'rgba(75,77,247,0.06)' }}>
+                          <div className="h-[10px] rounded-full overflow-hidden" style={{ background: 'rgba(75,77,247,0.06)' }}>
                             <div className="h-full rounded-full" style={{ width: item.pct, background: item.color }} />
                           </div>
                         </div>
@@ -524,8 +525,8 @@ export default function InsMercatoStoryPage() {
               {/* ── END DASHBOARD ── */}
 
               {/* Quote */}
-              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-8 lg:p-10 mb-10">
-                <p className="text-[17px] text-[#121212]/75 leading-[1.75] italic mb-6">"{quote[l].text}"</p>
+              <div className="rounded-2xl border border-[#e5e7eb] bg-white p-8 mb-5">
+                <p className="text-[24px] font-medium text-[#121212]/75 leading-[1.75] italic mb-6">"{quote[l].text}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-[#4b4df7]/[0.15]">
                     <img src="/logos/mirko%20tortolano.png" alt={quote[l].author} className="w-full h-full object-cover object-top" />
@@ -540,19 +541,19 @@ export default function InsMercatoStoryPage() {
               {/* Impact cards */}
               <div className="grid md:grid-cols-2 gap-5">
                 {impactCards.map(card => (
-                  <div key={card.en.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <card.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                  <div key={card.en.title} className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: '#e3f9ec' }}>
+                      <card.icon className="h-[22px] w-[22px]" style={{ color: '#10b981' }} />
                     </div>
-                    <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{card[l].title}</h4>
-                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{card[l].text}</p>
+                    <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{card[l].title}</h4>
+                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{card[l].text}</p>
                   </div>
                 ))}
               </div>
             </Section>
 
             {/* Future Vision */}
-            <Section>
+            <Section className="mb-5">
               <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10 lg:p-14">
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
                   {lang === 'it' ? 'EVOLUZIONE 2026' : 'EVOLUTION 2026'}
@@ -590,21 +591,28 @@ export default function InsMercatoStoryPage() {
 
             {/* Science Note */}
             <Section>
-              <div className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-8 lg:p-10">
-                <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-6 block">{t('The Science Behind It')}</span>
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="rounded-2xl border border-[#e2e8f0] bg-white p-8 lg:p-10 shadow-sm">
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase">{t('The Science Behind It')}</span>
+                  <button onClick={() => { router.push('/science'); window.scrollTo(0,0); }} className="group inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
+                    {t('Discover the Science')} <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_40px_1fr] gap-4 items-center">
                   <div className="rounded-xl bg-black/[0.03] p-6 text-center">
-                    <span className="block text-[#121212]/30" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>14%</span>
+                    <span className="block text-[#121212] text-[32px] font-semibold md:text-[2.5rem] md:font-extrabold" style={{ lineHeight: 1 }}>14%</span>
                     <span className="text-[13px] text-[#121212]/40 mt-2 block">{t('Unstructured interviews')}<br />{t('predictive accuracy')}</span>
                   </div>
+                  <div className="hidden md:flex items-center justify-center">
+                    <div className="w-7 h-7 rounded-full border border-[#e2e8f0] bg-white flex items-center justify-center">
+                      <ArrowRight className="h-3 w-3 text-[#121212]/25" />
+                    </div>
+                  </div>
                   <div className="rounded-xl bg-[#4B4DF7]/[0.06] p-6 text-center">
-                    <span className="block text-[#121212]" style={{ fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>51%+</span>
+                    <span className="block text-[32px] font-semibold md:text-[2.5rem] md:font-extrabold" style={{ lineHeight: 1, color: '#4b4df7' }}>51%+</span>
                     <span className="text-[13px] text-[#121212]/[0.65] mt-2 block">{t('Structured skills assessment')}<br />{t('predictive validity')}</span>
                   </div>
                 </div>
-                <button onClick={() => { router.push('/science'); window.scrollTo(0,0); }} className="group inline-flex items-center gap-2 text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] transition-colors duration-300">
-                  {t('Discover the Science')} <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
               </div>
             </Section>
 

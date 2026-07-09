@@ -55,7 +55,7 @@ export default function BookMeetingPage() {
               </button>
 
               <h1
-                className="text-[clamp(2.25rem,4.2vw,3.5rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4"
+                className="text-[48px] md:text-[clamp(2.25rem,4.2vw,3.5rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4"
                 style={{ lineHeight: 1.1 }}
               >
                 {t("Let's talk about your")}{' '}

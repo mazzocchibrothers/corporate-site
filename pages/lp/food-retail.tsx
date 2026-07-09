@@ -88,7 +88,7 @@ export default function FoodRetailPage() {
               {/* Left. Text */}
               <div className="lg:col-span-5">
                 <h1
-                  className="text-[clamp(1.5rem,3.6vw,2.75rem)] font-bold tracking-[-0.03em] text-white/95 mb-4"
+                  className="text-[48px] font-semibold md:text-[clamp(1.5rem,3.6vw,2.75rem)] md:font-bold tracking-[-0.03em] text-white/95 mb-4"
                   style={{ lineHeight: 1.1 }}
                 >
                   {renderTitle()}

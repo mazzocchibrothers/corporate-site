@@ -141,7 +141,7 @@ export default function WhitepaperDetailPage() {
                     ))}
                     <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-white/40 border border-white/[0.08] tracking-wide">White Paper</span>
                   </div>
-                  <h1 className="font-semibold text-white/95 mb-6" style={{ fontSize: 'clamp(2.8rem, 5.5vw, 4.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
+                  <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[clamp(2.8rem,5.5vw,4.5rem)]" style={{ lineHeight: 1.05, letterSpacing: '-0.03em' }}>
                     {c.title}
                   </h1>
                   <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-2xl" style={{ fontWeight: 300 }}>
@@ -169,7 +169,7 @@ export default function WhitepaperDetailPage() {
             <div className="grid grid-cols-3 gap-8">
               {stats.map((s, i) => (
                 <motion.div key={i} className="text-center" initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.12 }}>
-                  <span className="block text-[#4B4DF7] font-bold mb-3" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', letterSpacing: '-0.03em', lineHeight: 1 }}>
+                  <span className="block text-[#4B4DF7] font-semibold md:font-bold mb-3 text-[32px] md:text-[clamp(2.5rem,5vw,3.5rem)]" style={{ letterSpacing: '-0.03em', lineHeight: 1 }}>
                     {s.value}<span className="text-[0.6em] text-white/30 ml-1">{s.unit}</span>
                   </span>
                   <p className="text-[14px] text-white/35 leading-[1.6] max-w-[280px] mx-auto">{s.label}</p>

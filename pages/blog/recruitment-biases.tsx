@@ -54,7 +54,7 @@ export default function BlogArticle2() {
                 <span className="text-[13px] text-white/35">{lang === 'it' ? '10 marzo 2026' : 'March 10, 2026'}</span>
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '12 min di lettura' : '12 min read'}</span>
               </div>
-              <h1 className="font-semibold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[clamp(2.5rem,5vw,3.5rem)]" style={{ lineHeight: 1.12, letterSpacing: '-0.03em' }}>
                 {lang === 'it' ? 'Gli 8 bias di selezione più comuni (e come evitarli)' : 'The 8 Most Common Recruitment Biases (and How to Avoid Them)'}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>

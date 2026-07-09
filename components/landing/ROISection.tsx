@@ -73,7 +73,7 @@ export default function ROISection() {
             >
               {/* Stat number */}
               <span
-                className="block text-[#1A1A2E] text-[64px] font-semibold mb-6 md:mb-10"
+                className="block text-[#1A1A2E] text-[32px] md:text-[64px] font-semibold mb-6 md:mb-10"
                 style={{
                   lineHeight: 1,
                   letterSpacing: '-0.03em',

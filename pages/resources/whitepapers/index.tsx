@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
@@ -16,20 +16,6 @@ export default function WhitepapersPage() {
   const [selIndustry, setSelIndustry] = useState(null);
   const [selTopic, setSelTopic] = useState(null);
   const [selProcess, setSelProcess] = useState(null);
-  const scrollRef = useRef(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
-
   const published = whitepapers
     .filter(w => w.published && w.languageAvailability.includes(lang))
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
@@ -71,8 +57,8 @@ export default function WhitepapersPage() {
         <section className="relative pt-[80px] min-h-screen flex items-center">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.25em] uppercase mb-8 block">{t('Resources')}</span>
-              <h1 className="font-semibold text-white/95 mb-8" style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
+              <span className="text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.25em] uppercase mb-8 block">{t('Resources')}</span>
+              <h1 className="font-semibold text-white/95 mb-8 text-[48px] md:text-[clamp(3rem,6vw,5.5rem)]" style={{ lineHeight: 1.05, letterSpacing: '-0.03em' }}>
                 {t('White Papers')}<br />
                 {t('&')} <span className="gradient-text">{t('Reports')}</span>
               </h1>
@@ -154,21 +140,7 @@ export default function WhitepapersPage() {
               };
               return (
                 <>
-                  {/* Mobile: horizontal scroll */}
-                  <div ref={scrollRef} className="md:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-                    {published.map((w, i) => (
-                      <div key={w.slug} className="shrink-0 w-[80vw] snap-center">
-                        {renderCard(w, i)}
-                      </div>
-                    ))}
-                  </div>
-                  {/* Progress bar */}
-                  <div className="md:hidden mx-auto mt-5 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-                    <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
-                  </div>
-
-                  {/* Desktop: grid */}
-                  <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {published.map((w, i) => renderCard(w, i))}
                   </div>
                 </>

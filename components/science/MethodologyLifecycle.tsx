@@ -50,9 +50,9 @@ export default function MethodologyLifecycle() {
                 data-testid={`lifecycle-${s.num}`}
                 className={`w-full flex items-center gap-3 py-3.5 border-b transition-all duration-300 ${i === active ? 'border-[#9B9DFB]/30 bg-white/[0.03]' : 'border-white/[0.04]'}`}
               >
-                <span className={`text-[11px] font-bold w-6 ${i === active ? 'text-[#4B4DF7]' : 'text-white/15'}`}>{s.num}</span>
-                <span className={`text-[14px] flex-1 text-left ${i === active ? 'font-semibold text-white' : 'font-normal text-white/20'}`}>{t(s.title)}</span>
-                <span className={`text-[14px] transition-transform duration-300 ${i === active ? 'text-[#4B4DF7] rotate-90' : 'text-white/10'}`}>›</span>
+                <span className={`text-[11px] font-bold w-6 ${i === active ? 'text-[#4B4DF7]' : 'text-white/40'}`}>{s.num}</span>
+                <span className={`text-[14px] flex-1 text-left ${i === active ? 'font-semibold text-white' : 'font-normal text-white/55'}`}>{t(s.title)}</span>
+                <span className={`text-[14px] transition-transform duration-300 ${i === active ? 'text-[#4B4DF7] rotate-90' : 'text-white/30'}`}>›</span>
               </button>
               {i === active && (
                 <motion.div

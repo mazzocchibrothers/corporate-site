@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench } from 'lucide-react';
+import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench, UserCheck, ClipboardCheck, Workflow, Clock, Smile, CaseSensitive, PencilRuler, Brain } from 'lucide-react';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
@@ -60,8 +60,8 @@ const content = {
       badge: 'LA SFIDA',
       title: 'Migliaia di candidature, 2 picchi stagionali, 3 persone nel team recruiting.',
       intro: 'Le assunzioni di Europ Assistance Italia si concentrano in due picchi stagionali l\'anno, generando volumi nell\'ordine delle migliaia di candidature in pochi mesi. Per i ruoli di assistenza e customer care, le soft skill sono il primo predittore di successo — problem solving, orientamento al cliente, gestione dello stress — ma sono completamente invisibili nel CV.',
-      businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR & PEOPLE IMPACT',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: TrendingUp,
@@ -113,9 +113,9 @@ const content = {
       intro: "Skillvue è stato integrato nel processo di selezione di Europ Assistance Italia come primo step strutturato del funnel, gestendo il pre-screening su più profili e su più sedi geografiche. Il deployment è ricorrente, legato soprattutto ai due picchi stagionali annuali.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
-        { icon: Heart, label: 'Soft skill — problem solving, orientamento al cliente, orientamento agli obiettivi, teamworking' },
-        { icon: Wrench, label: 'Lingua inglese — test B1/B2/C1, competenza critica per un\'azienda che opera in 39 paesi e gestisce assistenza multilingue' },
-        { icon: Layers, label: 'Hard skill role-specific — es. Compensation & Benefits sui ruoli HR' },
+        { icon: PencilRuler, title: 'Hard skill role-specific', text: 'es. Compensation & Benefits sui ruoli HR' },
+        { icon: Brain, title: 'Soft skill', text: 'problem solving, orientamento al cliente, orientamento agli obiettivi, teamworking' },
+        { icon: CaseSensitive, title: 'Lingua inglese', text: 'test B1/B2/C1, competenza critica per un\'azienda che opera in 39 paesi e gestisce assistenza multilingue' },
       ],
       methodologyLabel: 'COME È STATO COSTRUITO',
       methodology: [
@@ -174,7 +174,7 @@ const content = {
     },
     subtitle: "With Skillvue, Europ Assistance transformed candidate pre-screening into a scalable, strategic process for the entire talent lifecycle — developing cross-functional skills from the very first step of the recruitment journey.",
     heroMetrics: [
-      { value: '10,000', label: 'centres in Italy\'s network' },
+      { value: '10,000', label: 'Service Centers in Italy\'s Network' },
       { value: '900+', label: 'employees' },
     ],
     ctaPrimary: 'Contact Us',
@@ -185,7 +185,7 @@ const content = {
       facts: [
         { label: 'Industry', value: 'Financial Services' },
         { label: 'Group', value: 'Generali' },
-        { label: 'Centres in Italy\'s network', value: '10,000' },
+        { label: 'Service centers in Italy\'s network', value: '10,000' },
         { label: 'Use Case', value: 'Hiring' },
       ],
     },
@@ -200,8 +200,8 @@ const content = {
       badge: 'THE CHALLENGE',
       title: 'Thousands of applications, 2 seasonal peaks, 3 people in the recruiting team.',
       intro: "Europ Assistance Italia's hires are concentrated in 2 seasonal peaks per year, generating volumes in the order of thousands of applications in just a few months. For assistance and customer care roles, soft skills are the top predictor of success — problem solving, customer orientation, stress management — but are completely invisible in a CV.",
-      businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR & PEOPLE IMPACT',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: TrendingUp,
@@ -249,13 +249,13 @@ const content = {
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment with Skillvue',
+      title: 'AI-scaled Assessment with Skillvue',
       intro: "Skillvue was integrated into Europ Assistance Italia's hiring process as the first structured step of the funnel, managing pre-screening across multiple profiles and geographic locations. Deployment is recurring, tied primarily to the two annual seasonal peaks.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
-        { icon: Heart, label: 'Soft skills — problem solving, customer orientation, goal orientation, teamworking' },
-        { icon: Wrench, label: 'English language — B1/B2/C1 tests, a critical skill for a company operating in 39 countries with multilingual customer care' },
-        { icon: Layers, label: 'Role-specific hard skills — e.g. Compensation & Benefits for HR roles' },
+        { icon: PencilRuler, title: 'Role-specific hard skills', text: 'e.g. Compensation & Benefits for HR roles' },
+        { icon: Brain, title: 'Soft skills', text: 'problem solving, customer orientation, goal orientation, teamworking' },
+        { icon: CaseSensitive, title: 'English language', text: 'B1/B2/C1 tests, a critical skill for a company operating in 39 countries with multilingual customer care' },
       ],
       methodologyLabel: 'HOW IT WAS BUILT',
       methodology: [
@@ -277,14 +277,14 @@ const content = {
       badge: 'RESULTS',
       title: 'What is changing.',
       pillars: [
-        { icon: Target, value: <>Higher-quality<br />candidates</>, label: 'less noise, more concrete signals for the HR team' },
-        { icon: Zap, value: <>More time<br />for what matters</>, label: 'more personalised and targeted interviews, based on real data' },
-        { icon: TrendingUp, value: <>Talent pipeline<br />for the future</>, label: 'hiring with tomorrow already in mind, not just immediate fit' },
+        { icon: UserCheck, value: 'Higher-quality candidates', label: 'less noise, more concrete signals for the HR team' },
+        { icon: ClipboardCheck, value: 'Data-driven decisions', label: 'more personalised interviews, decisions based on real data' },
+        { icon: Workflow, value: 'Talent pipeline for the future', label: 'hiring with tomorrow already in mind, not just immediate fit' },
       ],
       qualitative: [
-        { icon: BarChart3, title: 'Visibility on true potential from the first step', text: 'HR and line managers have structured soft skill data on every candidate before the interview — not just immediate fit, but concrete signals of growth over time.' },
-        { icon: Scale, title: 'Recruiters free to do high-value work', text: 'Time saved in pre-screening is reinvested in more in-depth interviews and potential analysis — activities that directly impact hiring quality and retention.' },
-        { icon: Heart, title: 'Enhanced candidate experience', text: 'More room for self-expression: when given the chance to prove themselves, candidates respond positively and enthusiastically.' },
+        { icon: Eye, title: 'Visibility on true potential before interview', text: 'soft-skill data with clear signals of potential and growth' },
+        { icon: Clock, title: 'More time for high-value recruiting', text: 'focus on improving hiring quality and retention' },
+        { icon: Smile, title: 'Enhanced candidate experience', text: 'more room for candidates to express themselves' },
       ],
     },
     quote: {
@@ -346,7 +346,7 @@ export default function EuropAssistanceStoryPage() {
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-4 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
+                  <h1 className="text-[48px] md:text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
                   <p className="text-[15px] text-white/[0.60] leading-[1.65] mb-6 max-w-2xl">{c.subtitle}</p>
@@ -362,7 +362,7 @@ export default function EuropAssistanceStoryPage() {
                   <div className="mt-auto pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {c.heroMetrics.map(m => (
                       <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
-                        <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.4vw,1.9rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="block text-white text-[32px] font-semibold md:text-[clamp(1.4rem,2.4vw,1.9rem)] md:font-extrabold" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                         <span className="text-[13px] text-white/[0.55] mt-1.5 block leading-[1.4]">{m.label}</span>
                       </div>
                     ))}
@@ -420,7 +420,7 @@ export default function EuropAssistanceStoryPage() {
 
             {/* CHALLENGE */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{c.challenge.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
@@ -429,8 +429,8 @@ export default function EuropAssistanceStoryPage() {
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
@@ -443,9 +443,9 @@ export default function EuropAssistanceStoryPage() {
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
@@ -460,16 +460,19 @@ export default function EuropAssistanceStoryPage() {
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
-                {c.objectives.items.map((o, i) => (
-                  <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                {c.objectives.items.map((o, i) => {
+                  const [title, ...rest] = o.text.split(':');
+                  const desc = rest.join(':').trim();
+                  return (
+                    <div key={i} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{desc}</p>
                     </div>
-                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </Section>
 
@@ -481,11 +484,14 @@ export default function EuropAssistanceStoryPage() {
 
               <div className="mb-12">
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
-                <div className="flex flex-wrap gap-3">
+                <div className="grid md:grid-cols-3 gap-5">
                   {c.solution.skills.map((s) => (
-                    <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
-                      <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#121212]/70">{s.label}</span>
+                    <div key={s.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <s.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{s.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{s.text}</p>
                     </div>
                   ))}
                 </div>
@@ -495,10 +501,10 @@ export default function EuropAssistanceStoryPage() {
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.solution.methodology.map((m, i) => (
-                    <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
-                      <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4] relative">{m.title}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65] relative">{m.text}</p>
+                    <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <span className="block text-[2.75rem] font-light leading-none mb-6" style={{ color: '#c7d2fe' }}>0{i + 1}</span>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{m.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{m.text}</p>
                     </div>
                   ))}
                 </div>
@@ -507,42 +513,35 @@ export default function EuropAssistanceStoryPage() {
 
             {/* RESULTS */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{c.results.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.results.title}</h2>
 
-              {/* Qualitative pillars */}
-              <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {c.results.pillars.map(({ icon: Icon, value, label }) => (
-                    <div key={label} className="text-center flex flex-col items-center">
-                      <div className="w-16 h-16 mb-5 flex items-center justify-center rounded-2xl" style={{ background: 'rgba(75,77,247,0.12)' }}>
-                        <Icon className="h-8 w-8" style={{ color: '#4b4df7' }} />
-                      </div>
-                      <span className="block text-white font-bold mb-2 leading-tight" style={{ fontSize: 'clamp(0.95rem,1.8vw,1.15rem)', letterSpacing: '-0.02em' }}>{value}</span>
-                      <span className="text-[13px] text-white/[0.55] leading-[1.4]">{label}</span>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {c.results.pillars.map(({ icon: Icon, value, label }) => (
+                  <div key={label} className="rounded-2xl border p-8" style={{ background: '#b7f5d8', borderColor: '#93e0bb' }}>
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: 'rgba(6,78,59,0.14)' }}>
+                      <Icon className="h-[22px] w-[22px]" style={{ color: '#064e3b' }} />
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <h4 className="text-[19px] font-bold text-[#0b3b28] mb-3 leading-[1.3]">{value}</h4>
+                    <p className="text-[15px] text-[#0b3b28]/60 leading-[1.55]">{label}</p>
+                  </div>
+                ))}
                 {c.results.qualitative.map((q) => (
-                  <div key={q.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <q.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                  <div key={q.title} className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: '#e3f9ec' }}>
+                      <q.icon className="h-[22px] w-[22px]" style={{ color: '#10b981' }} />
                     </div>
-                    <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
-                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
+                    <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{q.title}</h4>
+                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{q.text}</p>
                   </div>
                 ))}
               </div>
-
             </Section>
 
             {/* QUOTE */}
             <Section>
-              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-8 lg:p-10">
-                <p className="text-[17px] text-[#121212]/75 leading-[1.75] italic mb-6">"{c.quote.text}"</p>
+              <div className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
+                <p className="text-[24px] font-medium text-[#121212]/75 leading-[1.75] italic mb-6">"{c.quote.text}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-[#4b4df7]/[0.15]">
                     <img src="/logos/europ-assistance-nicole.jpg" alt={c.quote.author} className="w-full h-full object-cover object-top" />

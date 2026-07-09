@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, Heart, CheckCircle } from 'lucide-react';
+import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, Heart, CheckCircle, Clock } from 'lucide-react';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
@@ -193,8 +193,8 @@ const content = {
       badge: 'THE CHALLENGE',
       title: 'Growing at this pace means rethinking the way we work',
       intro: "The Career Passport campaign generated over a thousand applications for 3 key roles. A scale that required not just new tools, but a new way of working.",
-      businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR & PEOPLE IMPACT',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: Zap,
@@ -242,7 +242,7 @@ const content = {
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment with Skillvue for the Career Passport project',
+      title: 'AI-scaled Assessment with Skillvue for the Career Passport project',
       intro: "Skillvue was integrated into the external hiring process of the Eataly Career Passport project — the global mobility programme launched to support expansion in North America. After an omnichannel campaign collected over 1,000 applications, Skillvue managed the pre-screening with an assessment combining filter questions and situational questions calibrated to specific roles (Head Chef, Director of Store Operations, General Manager of Restaurant).",
       intro2: "The goal was not to replace human judgement, but to enhance it: let AI handle standardisation at scale, and give the HR team back the time and quality data to focus on what truly matters — the human conversation that follows.",
       skillsLabel: 'SKILLS ASSESSED',
@@ -328,14 +328,14 @@ export default function EatalyStoryPage() {
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-8 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-semibold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
+                  <h1 className="text-[48px] md:text-[clamp(2rem,4vw,3.4rem)] font-semibold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}{c.headline.highlight2 && <span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>}{c.headline.after}
                   </h1>
                   <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
                   <div className="flex flex-wrap gap-4 mb-12">
                     {c.heroMetrics.map(m => (
                       <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
-                        <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="block text-white font-semibold md:font-medium" style={{ fontSize: '32px', lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                         <span className="text-[13px] text-white/[0.55] mt-1 block">{m.label}</span>
                       </div>
                     ))}
@@ -391,7 +391,7 @@ export default function EatalyStoryPage() {
 
             {/* CHALLENGE */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{c.challenge.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
@@ -400,8 +400,8 @@ export default function EatalyStoryPage() {
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
@@ -414,9 +414,9 @@ export default function EatalyStoryPage() {
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
@@ -431,16 +431,19 @@ export default function EatalyStoryPage() {
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
-                {c.objectives.items.map((o, i) => (
-                  <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                {c.objectives.items.map((o, i) => {
+                  const [title, ...rest] = o.text.split(':');
+                  const desc = rest.join(':').trim();
+                  return (
+                    <div key={i} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{desc}</p>
                     </div>
-                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </Section>
 
@@ -452,11 +455,13 @@ export default function EatalyStoryPage() {
               {c.solution.intro2 && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.solution.intro2}</p>}
               <div>
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
-                <div className="flex flex-wrap gap-3">
+                <div className="grid md:grid-cols-3 gap-5">
                   {c.solution.skills.map((s) => (
-                    <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
-                      <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#121212]/70">{s.label}</span>
+                    <div key={s.label} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <s.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{s.label}</h4>
                     </div>
                   ))}
                 </div>
@@ -465,67 +470,33 @@ export default function EatalyStoryPage() {
 
             {/* RESULTS */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{c.results.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
+              {c.results.subtitle && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>}
 
-              {/* Key metrics */}
-              <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-4xl mx-auto">
-                  {/* 1.000+ — stacked documents */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <rect x="4" y="44" width="56" height="5" rx="2.5" fill="rgba(75,77,247,0.25)" />
-                        <rect x="4" y="34" width="56" height="5" rx="2.5" fill="rgba(75,77,247,0.45)" />
-                        <rect x="4" y="12" width="56" height="26" rx="3" fill="rgba(75,77,247,0.12)" stroke="#4b4df7" strokeWidth="2" />
-                        <line x1="12" y1="20" x2="52" y2="20" stroke="#4b4df7" strokeWidth="1.8" strokeLinecap="round" />
-                        <line x1="12" y1="26" x2="46" y2="26" stroke="#4b4df7" strokeWidth="1.8" strokeLinecap="round" />
-                        <line x1="12" y1="32" x2="38" y2="32" stroke="#4b4df7" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+                {[Users, Clock, TrendingUp].map((Icon, i) => {
+                  const m = c.results.metrics[i];
+                  return (
+                    <div key={m.label} className="rounded-2xl border p-8" style={{ background: '#b7f5d8', borderColor: '#93e0bb' }}>
+                      <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: 'rgba(6,78,59,0.14)' }}>
+                        <Icon className="h-[22px] w-[22px]" style={{ color: '#064e3b' }} />
+                      </div>
+                      <h4 className="text-[19px] font-bold text-[#0b3b28] mb-3 leading-[1.3]">{m.value}</h4>
+                      <p className="text-[15px] text-[#0b3b28]/60 leading-[1.55]">{m.label}</p>
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
-                  </div>
-                  {/* Poche settimane — clock with down arrow */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <circle cx="32" cy="26" r="18" stroke="#4b4df7" strokeWidth="2" fill="rgba(75,77,247,0.1)" />
-                        <line x1="32" y1="26" x2="32" y2="16" stroke="#4b4df7" strokeWidth="2.2" strokeLinecap="round" />
-                        <line x1="32" y1="26" x2="41" y2="32" stroke="#4b4df7" strokeWidth="2.2" strokeLinecap="round" />
-                        <circle cx="32" cy="26" r="2.5" fill="#4b4df7" />
-                        <line x1="32" y1="48" x2="32" y2="57" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round" />
-                        <path d="M26 53l6 6 6-6" stroke="#4b4df7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
-                    <span className="block text-white font-black mb-1 leading-tight" style={{ fontSize: 'clamp(1.2rem,2vw,1.6rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
-                  </div>
-                  {/* Più dati, più velocità — bars + lightning */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <rect x="6" y="42" width="12" height="16" rx="2" fill="rgba(75,77,247,0.3)" />
-                        <rect x="22" y="30" width="12" height="28" rx="2" fill="rgba(75,77,247,0.5)" />
-                        <rect x="38" y="16" width="12" height="42" rx="2" fill="#4b4df7" />
-                        <path d="M44 6l-5 10h7l-7 14" stroke="#7b7df9" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </div>
-                    <span className="block text-white font-black mb-1 leading-tight" style={{ fontSize: 'clamp(1.1rem,1.8vw,1.4rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
 
-              <div className="grid md:grid-cols-3 gap-5">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {c.results.qualitative.map((q) => (
-                  <div key={q.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <q.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                  <div key={q.title} className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: '#e3f9ec' }}>
+                      <q.icon className="h-[22px] w-[22px]" style={{ color: '#10b981' }} />
                     </div>
-                    <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
-                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
+                    <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{q.title}</h4>
+                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{q.text}</p>
                   </div>
                 ))}
               </div>

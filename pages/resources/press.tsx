@@ -182,8 +182,8 @@ export default function PressPage() {
                 {t('Press')}
               </span>
               <h1
-                className="font-semibold text-white/95 mb-6"
-                style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
+                className="font-semibold text-white/95 mb-6 text-[48px] md:text-[clamp(2.8rem,5.5vw,5rem)]"
+                style={{ lineHeight: 1.05, letterSpacing: '-0.03em' }}
               >
                 {t('Skillvue in')}<br />
                 <span className="gradient-text">{t('the News')}</span>

@@ -50,8 +50,8 @@ export default function LDImpact() {
         </div>
 
         <span
-          className="block mb-2 text-[#121212]"
-          style={{ fontSize: '64px', fontWeight: 600, lineHeight: 1, letterSpacing: '-0.03em' }}
+          className="block mb-2 text-[#121212] text-[32px] md:text-[64px]"
+          style={{ fontWeight: 600, lineHeight: 1, letterSpacing: '-0.03em' }}
         >
           {t(k.value)}
         </span>

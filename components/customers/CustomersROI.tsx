@@ -22,7 +22,7 @@ export default function CustomersROI() {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
     >
-      <span className="block mb-6 md:mb-10 text-[#121212] font-semibold" style={{ fontSize: '64px', lineHeight: 1, letterSpacing: '-0.03em' }}>{t(s.value)}</span>
+      <span className="block mb-6 md:mb-10 text-[#121212] font-semibold text-[32px] md:text-[64px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{t(s.value)}</span>
       <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212]/80 leading-snug mb-2">{t(s.label)}</h3>
       <p className="text-[13px] md:text-[14px] text-[#7A7A7A] leading-relaxed">{t(s.sub)}</p>
     </motion.div>

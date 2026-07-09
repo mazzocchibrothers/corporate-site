@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Linkedin } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -23,20 +23,6 @@ export default function ScienceTeam() {
   const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
-
-  const scrollRef = useRef(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
 
   const renderMember = (m, i) => (
     <motion.div
@@ -111,21 +97,7 @@ export default function ScienceTeam() {
           </div>
         </motion.div>
 
-        {/* Team members - Mobile: horizontal scroll */}
-        <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-          {members.map((m, i) => (
-            <div key={m.name} className="shrink-0 w-[60vw] snap-center">
-              {renderMember(m, i)}
-            </div>
-          ))}
-        </div>
-        {/* Progress bar */}
-        <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
-        </div>
-
-        {/* Team members - Desktop grid */}
-        <div className="hidden md:grid md:grid-cols-4 gap-3 md:gap-5 lg:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 lg:gap-6">
           {members.map((m, i) => renderMember(m, i))}
         </div>
 
@@ -136,7 +108,7 @@ export default function ScienceTeam() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <span className="text-[32px] md:text-[48px] font-bold text-[#1A1A2E] leading-none tracking-[-0.03em] shrink-0">50+</span>
+          <span className="text-[32px] font-semibold md:text-[48px] md:font-bold text-[#1A1A2E] leading-none tracking-[-0.03em] shrink-0">50+</span>
           <div className="w-px h-10 bg-[#1A1A2E]/[0.08] hidden sm:block shrink-0" />
           <p className="text-[14px] md:text-[16px] text-[#7A7A7A] leading-[1.6] md:leading-[1.7]">
             {t('External collaborators from academic, HR consulting and corporate world')}

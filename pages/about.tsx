@@ -104,7 +104,7 @@ export default function AboutPage() {
                 const line1 = t('Unlock human potential and').split(' ');
                 const line2 = t('organizational success at scale').split(' ');
                 return (
-                  <h1 style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 500, fontSize: 'clamp(42px, 10vw, 56px)', lineHeight: 1.05, color: '#fff', letterSpacing: '-1.5px', margin: 0, textAlign: 'left' }}>
+                  <h1 className="text-[48px] md:text-[clamp(42px,10vw,56px)] font-semibold md:font-medium" style={{ fontFamily: 'Mona Sans, sans-serif', lineHeight: 1.05, color: '#fff', letterSpacing: '-1.5px', margin: 0, textAlign: 'left' }}>
                     {[...line1, ...line2].map((word, i) => (
                       <span key={i} style={{ display: 'inline-block', opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(10px)', transition: 'opacity 0.7s ease-out, transform 0.7s ease-out', transitionDelay: heroVisible ? `${0.3 + i * 0.08}s` : '0s', marginRight: '0.25em' }}>{word}</span>
                     ))}
@@ -114,7 +114,7 @@ export default function AboutPage() {
               <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 20 }}>
                 {stats.map((s, i) => (
                   <div key={i} style={{ display: 'flex', flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between', width: '100%', paddingBottom: 20, borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-                    <p style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 600, fontSize: 40, lineHeight: 1.1, color: '#9395ff', letterSpacing: '-1.5px', margin: 0, flexShrink: 0 }}>
+                    <p style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 600, fontSize: 32, lineHeight: 1.1, color: '#9395ff', letterSpacing: '-1.5px', margin: 0, flexShrink: 0 }}>
                       {getCounterDisplay(s.value, counts[i])}
                     </p>
                     <p style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: 1.4, color: '#a9a9a9', margin: 0 }}>
@@ -167,7 +167,7 @@ export default function AboutPage() {
                   const line1 = t('Unlock human potential and').split(' ');
                   const line2 = t('organizational success at scale').split(' ');
                   return (
-                    <h1 style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 500, fontSize: 'clamp(36px, 4.2vw, 64px)', lineHeight: 1.1, color: '#fff', letterSpacing: '-1.28px', margin: 0, textAlign: 'center' }}>
+                    <h1 className="text-[48px] md:text-[clamp(36px,4.2vw,64px)] font-semibold md:font-medium" style={{ fontFamily: 'Mona Sans, sans-serif', lineHeight: 1.1, color: '#fff', letterSpacing: '-1.28px', margin: 0, textAlign: 'center' }}>
                       {line1.map((word, i) => (
                         <span key={`l1-${i}`} style={{ display: 'inline-block', opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(10px)', transition: 'opacity 0.7s ease-out, transform 0.7s ease-out', transitionDelay: heroVisible ? `${0.3 + i * 0.08}s` : '0s', marginRight: '0.25em' }}>{word}</span>
                       ))}
@@ -184,6 +184,39 @@ export default function AboutPage() {
         </section>
 
         {/* ─── 3. OUR VISION ───────────────────────────────────────────────── */}
+        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 112, paddingBottom: 112, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+          <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
+            <p
+              style={{
+                fontFamily: 'Mona Sans, sans-serif',
+                fontWeight: 500,
+                fontSize: 13,
+                letterSpacing: '0.52px',
+                color: '#4b4df7',
+                textTransform: 'uppercase',
+                margin: '0 0 24px',
+              }}
+            >
+              {t('OUR VISION')}
+            </p>
+            <p
+              style={{
+                fontFamily: 'Mona Sans, sans-serif',
+                fontWeight: 500,
+                fontSize: '40px',
+                lineHeight: 1.1,
+                color: '#121212',
+                letterSpacing: '-0.96px',
+                margin: 0,
+                maxWidth: 1000,
+              }}
+            >
+              {t('A world where every talent decision, from hire to promotion to transformation is powered by objective intelligence. Where human potential is no longer left to chance. And organizational success is something you build, not hope for.')}
+            </p>
+          </div>
+        </section>
+
+        {/* ─── OUR MISSION — Make Skills ────────────────────────────────── */}
         <section
           className="px-5 md:px-8 lg:px-12"
           style={{
@@ -197,7 +230,6 @@ export default function AboutPage() {
             alignItems: 'center',
           }}
         >
-          {/* Background texture */}
           <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
             <img src="/about/section-margin.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
             <img src="/about/section-margin1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -214,21 +246,44 @@ export default function AboutPage() {
                 margin: '0 0 24px',
               }}
             >
-              {t('OUR VISION')}
+              {t('OUR MISSION')}
             </p>
+            <h2
+              style={{
+                fontFamily: 'Mona Sans, sans-serif',
+                fontWeight: 600,
+                fontSize: 'clamp(28px, 3.1vw, 48px)',
+                lineHeight: 1.1,
+                letterSpacing: '-0.96px',
+                color: '#fff',
+                margin: '0 0 24px',
+              }}
+            >
+              {t('Make skills the most')}{' '}
+              <span
+                style={{
+                  background: 'linear-gradient(90deg, #4e6bff 0%, #ff5b5b 49.52%, #ff8447 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                {t('reliable data')}
+              </span>
+              {' '}{t('in every organization')}
+            </h2>
             <p
               style={{
                 fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 500,
-                fontSize: '40px',
-                lineHeight: 1.1,
-                color: '#fff',
-                letterSpacing: '-0.96px',
+                fontWeight: 400,
+                fontSize: 20,
+                lineHeight: 1.4,
+                color: '#7a7a7a',
                 margin: 0,
-                maxWidth: 1000,
+                maxWidth: 900,
               }}
             >
-              {t('A world where every talent decision, from hire to promotion to transformation is powered by objective intelligence. Where human potential is no longer left to chance. And organizational success is something you build, not hope for.')}
+              {t('Building the science-grounded, AI-scaled Skills Operating System that every HR system can plug into, so that every talent decision, from hire to promotion to transformation, is finally objective.')}
             </p>
           </div>
         </section>
@@ -388,81 +443,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── 6. OUR MISSION — Make Skills ────────────────────────────────── */}
+        {/* ─── 7. FOUNDERS ─────────────────────────────────────────────────── */}
         <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 112, paddingBottom: 112, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
-            <p
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 500,
-                fontSize: 13,
-                letterSpacing: '0.52px',
-                color: '#4b4df7',
-                textTransform: 'uppercase',
-                margin: '0 0 24px',
-              }}
-            >
-              {t('OUR MISSION')}
-            </p>
-            <h2
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 600,
-                fontSize: 'clamp(28px, 3.1vw, 48px)',
-                lineHeight: 1.1,
-                letterSpacing: '-0.96px',
-                color: '#121212',
-                margin: '0 0 24px',
-              }}
-            >
-              {t('Make skills the most')}{' '}
-              <span
-                style={{
-                  background: 'linear-gradient(90deg, #4e6bff 0%, #ff5b5b 49.52%, #ff8447 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                {t('reliable data')}
-              </span>
-              {' '}{t('in every organization')}
-            </h2>
-            <p
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 400,
-                fontSize: 20,
-                lineHeight: 1.4,
-                color: '#7a7a7a',
-                margin: 0,
-                maxWidth: 900,
-              }}
-            >
-              {t('Building the science-grounded, AI-scaled Skills Operating System that every HR system can plug into, so that every talent decision, from hire to promotion to transformation, is finally objective.')}
-            </p>
-          </div>
-        </section>
-
-        {/* ─── 7. FOUNDERS ─────────────────────────────────────────────────── */}
-        <section
-          className="px-5 md:px-8 lg:px-12"
-          style={{
-            position: 'relative',
-            paddingTop: 112,
-            paddingBottom: 112,
-            backgroundColor: '#040404',
-            overflow: 'hidden',
-            minHeight: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
-          <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-            <img src="/about/section-margin.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-            <img src="/about/section-margin1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-          </div>
-          <div style={{ maxWidth: 1304, margin: '0 auto', position: 'relative', width: '100%' }}>
             {/* Header */}
             <div style={{ marginBottom: 36 }}>
               <p
@@ -471,7 +454,7 @@ export default function AboutPage() {
                   fontWeight: 500,
                   fontSize: 13,
                   letterSpacing: '0.52px',
-                  color: '#6366f8',
+                  color: '#4b4df7',
                   textTransform: 'uppercase',
                   margin: '0 0 24px',
                 }}
@@ -484,7 +467,7 @@ export default function AboutPage() {
                   fontWeight: 600,
                   fontSize: 'clamp(28px, 3.1vw, 48px)',
                   lineHeight: 1.1,
-                  color: '#fff',
+                  color: '#121212',
                   letterSpacing: '-0.64px',
                   margin: '0 0 24px',
                 }}
@@ -534,7 +517,7 @@ export default function AboutPage() {
                       fontWeight: 600,
                       fontSize: 20,
                       lineHeight: '22px',
-                      color: '#fff',
+                      color: '#121212',
                       letterSpacing: '-0.4px',
                       margin: '0 0 4px',
                     }}
@@ -547,7 +530,7 @@ export default function AboutPage() {
                       fontWeight: 400,
                       fontSize: 14,
                       lineHeight: '21px',
-                      color: '#6366f8',
+                      color: '#4b4df7',
                       letterSpacing: '-0.176px',
                       margin: '0 0 8px',
                     }}
@@ -593,7 +576,7 @@ export default function AboutPage() {
                       fontWeight: 600,
                       fontSize: 20,
                       lineHeight: '22px',
-                      color: '#fff',
+                      color: '#121212',
                       letterSpacing: '-0.4px',
                       margin: '0 0 4px',
                     }}
@@ -606,7 +589,7 @@ export default function AboutPage() {
                       fontWeight: 400,
                       fontSize: 14,
                       lineHeight: '21px',
-                      color: '#6366f8',
+                      color: '#4b4df7',
                       letterSpacing: '-0.176px',
                       margin: '0 0 8px',
                     }}
@@ -633,8 +616,24 @@ export default function AboutPage() {
         </section>
 
         {/* ─── 8. ONE TEAM ─────────────────────────────────────────────────── */}
-        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 80, paddingBottom: 80, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
-          <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', gap: 80 }}>
+        <section
+          className="px-5 md:px-8 lg:px-12"
+          style={{
+            position: 'relative',
+            paddingTop: 80,
+            paddingBottom: 80,
+            backgroundColor: '#040404',
+            overflow: 'hidden',
+            minHeight: '100vh',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
+            <img src="/about/section-margin.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/about/section-margin1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
+          <div style={{ maxWidth: 1304, margin: '0 auto', position: 'relative', width: '100%', display: 'flex', flexDirection: 'column', gap: 80 }}>
             {/* Header row: label + heading + pills (left), Join us button (right) */}
             <div
               style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}
@@ -647,7 +646,7 @@ export default function AboutPage() {
                     fontWeight: 500,
                     fontSize: 13,
                     letterSpacing: '0.52px',
-                    color: '#4b4df7',
+                    color: '#9395ff',
                     textTransform: 'uppercase',
                     margin: 0,
                   }}
@@ -660,7 +659,7 @@ export default function AboutPage() {
                     fontWeight: 600,
                     fontSize: 'clamp(28px, 3.1vw, 48px)',
                     lineHeight: 1.1,
-                    color: '#121212',
+                    color: '#fff',
                     letterSpacing: '-0.96px',
                     margin: 0,
                   }}

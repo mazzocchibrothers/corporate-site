@@ -40,7 +40,7 @@ export default function PMImpact() {
               </a>
             </div>
             <div className="lg:col-span-4 flex flex-col items-center justify-center p-10 lg:p-14 bg-white/[0.04] border-t lg:border-t-0 lg:border-l border-white/[0.06]">
-              <span className="block text-white" style={{ fontSize: '3.5rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>3</span>
+              <span className="block text-white text-[32px] font-semibold md:text-[3.5rem] md:font-extrabold" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>3</span>
               <p className="text-[14px] text-white/[0.65] mt-3 text-center">{t('modules unified across')}<br />{t('hiring, performance & development')}</p>
             </div>
           </div>
