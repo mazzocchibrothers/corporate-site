@@ -62,8 +62,8 @@ const content = {
       badge: 'LA SFIDA',
       title: "Crescere a questa velocità significa ripensare il modo di lavorare",
       intro: "La campagna Career Passport ha generato oltre mille candidature per 3 posizioni chiave. Una scala che, per essere gestita, richiedeva non solo nuovi strumenti, ma un nuovo modo di lavorare.",
-      businessLabel: 'IMPATTO SUL BUSINESS',
-      hrLabel: 'IMPATTO SU HR & PEOPLE',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: Zap,

@@ -63,8 +63,8 @@ const content = {
       badge: 'LA SFIDA',
       title: 'Il problema strutturale',
       intro: "Su 2.500 dipendenti in quasi 400 punti vendita, l\’HQ non disponeva di alcun dato strutturato sulle competenze. In un settore con turnover elevato, l\’assenza di dati significava perdere talento, formare male e non pianificare la mobilit\à interna.",
-      businessLabel: 'IMPATTO SUL BUSINESS',
-      hrLabel: 'IMPATTO SU HR & PEOPLE',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: Eye,

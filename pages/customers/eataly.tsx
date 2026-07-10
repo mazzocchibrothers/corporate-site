@@ -62,8 +62,8 @@ const content = {
       badge: 'LA SFIDA',
       title: 'Crescere a questa velocit\u00e0 espone un collo di bottiglia: trovare le persone giuste, in tempo',
       intro: "La campagna Career Passport ha generato oltre mille candidature esterne da sommare a tutte le application interne per 3 posizioni chiave.",
-      businessLabel: 'IMPATTO SUL BUSINESS',
-      hrLabel: 'IMPATTO SU HR & PEOPLE',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: Zap,

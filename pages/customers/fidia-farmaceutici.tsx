@@ -64,8 +64,8 @@ const content = {
       badge: 'LA SFIDA',
       title: 'La transizione commerciale doveva andare di pari passo con una trasformazione in ottica skills-based',
       intro: "Fidia partiva da una realtà comune a molte multinazionali: una rete vendita capace e distribuita, ma valutata per forza di cose in modo frammentato, e molto complicata da gestire nel momento in cui erano necessari aggiornamenti radicali nel modello di vendita. Serviva uno shift nell'approccio alla gestione delle competenze, che permettesse di creare una base dati utile a prendere decisioni di talent management strategiche per il futuro su scala globale.",
-      businessLabel: 'IMPATTO SUL BUSINESS',
-      hrLabel: 'IMPATTO SU HR & PEOPLE',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: TrendingUp,

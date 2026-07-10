@@ -297,7 +297,7 @@ export default function InsMercatoStoryPage() {
                 }
               </p>
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{lang === 'it' ? 'IMPATTO SUL BUSINESS' : 'BUSINESS CHALLENGES'}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">BUSINESS CHALLENGES</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {businessPains.map(p => (
                     <div key={p.en.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -311,7 +311,7 @@ export default function InsMercatoStoryPage() {
                 </div>
               </div>
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{lang === 'it' ? 'IMPATTO SU HR & PEOPLE' : 'HR & PEOPLE CHALLENGES'}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">HR & PEOPLE CHALLENGES</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {hrPains.map(p => (
                     <div key={p.en.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -410,7 +410,7 @@ export default function InsMercatoStoryPage() {
                     {/* Step 1 */}
                     <div className="rounded-xl p-5" style={{ background: '#f1f5f9' }}>
                       <span className="text-[10px] font-bold tracking-[0.12em] text-[#121212]/30 block mb-2">STEP 1</span>
-                      <span className="block font-semibold text-[#121212] leading-none mb-2 text-[32px] md:text-[clamp(2rem,3.5vw,2.8rem)]" style={{ letterSpacing: '-0.03em' }}>900</span>
+                      <span className="block font-semibold text-[#121212] leading-none mb-2 text-[32px] md:text-[clamp(2rem,3.5vw,2.8rem)] md:font-black" style={{ letterSpacing: '-0.03em' }}>900</span>
                       <p className="text-[13px] font-semibold text-[#121212]/70 leading-[1.4]">{lang === 'it' ? 'Assessment AI completati' : 'AI Assessments completed'}</p>
                       <p className="text-[12px] text-[#121212]/35 mt-1">{lang === 'it' ? 'su ~1.000 collaboratori coinvolti' : 'across ~1,000 employees involved'}</p>
                     </div>
@@ -425,7 +425,7 @@ export default function InsMercatoStoryPage() {
                     {/* Step 2 */}
                     <div className="rounded-xl p-5" style={{ background: 'rgba(75,77,247,0.06)' }}>
                       <span className="text-[10px] font-bold tracking-[0.12em] block mb-2" style={{ color: 'rgba(75,77,247,0.45)' }}>STEP 2</span>
-                      <span className="block font-semibold leading-none mb-2 text-[32px] md:text-[clamp(2rem,3.5vw,2.8rem)]" style={{ letterSpacing: '-0.03em', color: '#4b4df7' }}>90</span>
+                      <span className="block font-semibold leading-none mb-2 text-[32px] md:text-[clamp(2rem,3.5vw,2.8rem)] md:font-black" style={{ letterSpacing: '-0.03em', color: '#4b4df7' }}>90</span>
                       <p className="text-[13px] font-semibold text-[#121212]/70 leading-[1.4]">{lang === 'it' ? 'Top Talent identificati' : 'Top Talent identified'}</p>
                       <p className="text-[12px] text-[#121212]/35 mt-1">{lang === 'it' ? "Top 10% emerso dall'assessment" : 'Top 10% emerging from assessment'}</p>
                     </div>
@@ -441,7 +441,7 @@ export default function InsMercatoStoryPage() {
                     <div className="space-y-3">
                       <div className="rounded-xl p-4 flex items-start justify-between gap-3" style={{ background: 'rgba(5,150,105,0.07)' }}>
                         <div>
-                          <span className="block font-semibold leading-none mb-1 text-[32px] md:text-[1.7rem]" style={{ color: '#059669', letterSpacing: '-0.02em' }}>47%</span>
+                          <span className="block font-semibold leading-none mb-1 text-[32px] md:text-[1.7rem] md:font-black" style={{ color: '#059669', letterSpacing: '-0.02em' }}>47%</span>
                           <p className="text-[13px] font-semibold text-[#121212]/80">Role-Ready</p>
                           <p className="text-[11px] text-[#121212]/35 mt-0.5">{lang === 'it' ? '~42 profili pronti al ruolo' : '~42 profiles ready for the role'}</p>
                         </div>
@@ -451,7 +451,7 @@ export default function InsMercatoStoryPage() {
                       </div>
                       <div className="rounded-xl p-4 flex items-start justify-between gap-3" style={{ background: 'rgba(217,119,6,0.07)' }}>
                         <div>
-                          <span className="block font-semibold leading-none mb-1 text-[32px] md:text-[1.7rem]" style={{ color: '#d97706', letterSpacing: '-0.02em' }}>53%</span>
+                          <span className="block font-semibold leading-none mb-1 text-[32px] md:text-[1.7rem] md:font-black" style={{ color: '#d97706', letterSpacing: '-0.02em' }}>53%</span>
                           <p className="text-[13px] font-semibold text-[#121212]/80">In Development</p>
                           <p className="text-[11px] text-[#121212]/35 mt-0.5">{lang === 'it' ? '~48 profili in upskilling' : '~48 profiles in upskilling'}</p>
                         </div>
@@ -483,7 +483,7 @@ export default function InsMercatoStoryPage() {
                             strokeDasharray={`${2 * Math.PI * 40 * 0.95} ${2 * Math.PI * 40}`} />
                         </svg>
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-[32px] md:text-[2.4rem] font-semibold text-[#121212]" style={{ letterSpacing: '-0.03em' }}>95%</span>
+                          <span className="text-[32px] md:text-[2.4rem] font-semibold md:font-black text-[#121212]" style={{ letterSpacing: '-0.03em' }}>95%</span>
                         </div>
                       </div>
                       <p className="text-[13px] text-[#121212]/50 text-left leading-[1.6] w-full">

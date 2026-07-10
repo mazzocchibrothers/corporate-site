@@ -66,8 +66,8 @@ const content = {
       badge: 'LA SFIDA',
       title: "Il modello precedente non poteva crescere alla velocità del business",
       intro: "Con l'intera organizzazione in rapida espansione, soprattutto, nella fase di ripresa post Covid, il modello di sviluppo esistente mostrava alcuni limiti strutturali.",
-      businessLabel: 'IMPATTO SUL BUSINESS',
-      hrLabel: 'IMPATTO SU HR & PEOPLE',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: Users,
