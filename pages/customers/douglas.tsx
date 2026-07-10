@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench } from 'lucide-react';
+import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench, Clock } from 'lucide-react';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
@@ -63,8 +63,8 @@ const content = {
       badge: 'LA SFIDA',
       title: 'Il problema strutturale',
       intro: "Su 2.500 dipendenti in quasi 400 punti vendita, l\’HQ non disponeva di alcun dato strutturato sulle competenze. In un settore con turnover elevato, l\’assenza di dati significava perdere talento, formare male e non pianificare la mobilit\à interna.",
-      businessLabel: 'IMPATTO SUL BUSINESS',
-      hrLabel: 'IMPATTO SU HR & PEOPLE',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: Eye,
@@ -188,8 +188,8 @@ const content = {
       badge: 'THE CHALLENGE',
       title: 'The Structural Problem',
       intro: "Across 2,500 employees in nearly 400 stores, the HQ had no structured data on skills. In a high-turnover sector, the absence of data meant losing talent, training poorly and being unable to plan internal mobility.",
-      businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR & PEOPLE IMPACT',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: Eye,
@@ -237,7 +237,7 @@ const content = {
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment with Skillvue',
+      title: 'AI-scaled Assessment with Skillvue',
       intro: "The Skillvue People Science team worked to align the assessments built on the platform with the company\’s leadership model, creating evaluations grounded in the real working situations of store employees.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
@@ -316,7 +316,7 @@ export default function DouglasStoryPage() {
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-4 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
+                  <h1 className="text-[48px] md:text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
                   <p className="text-[15px] text-white/[0.60] leading-[1.65] mb-6 max-w-2xl">{c.subtitle}</p>
@@ -332,7 +332,7 @@ export default function DouglasStoryPage() {
                   <div className="mt-auto pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {c.heroMetrics.map(m => (
                       <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
-                        <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.4vw,1.9rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="block text-white text-[32px] font-semibold md:text-[clamp(1.4rem,2.4vw,1.9rem)] md:font-extrabold" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                         <span className="text-[13px] text-white/[0.55] mt-1.5 block leading-[1.4]">{m.label}</span>
                       </div>
                     ))}
@@ -379,7 +379,7 @@ export default function DouglasStoryPage() {
 
             {/* CHALLENGE */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{c.challenge.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
@@ -388,8 +388,8 @@ export default function DouglasStoryPage() {
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
@@ -402,9 +402,9 @@ export default function DouglasStoryPage() {
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
@@ -419,16 +419,19 @@ export default function DouglasStoryPage() {
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
-                {c.objectives.items.map((o, i) => (
-                  <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                {c.objectives.items.map((o, i) => {
+                  const [title, ...rest] = o.text.split(':');
+                  const desc = rest.join(':').trim();
+                  return (
+                    <div key={i} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{desc}</p>
                     </div>
-                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </Section>
 
@@ -440,11 +443,13 @@ export default function DouglasStoryPage() {
 
               <div className="mb-12">
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
-                <div className="flex flex-wrap gap-3">
+                <div className="grid md:grid-cols-2 gap-5">
                   {c.solution.skills.map((s) => (
-                    <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
-                      <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#121212]/70">{s.label}</span>
+                    <div key={s.label} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <s.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-semibold text-[#121212] leading-[1.4]">{s.label}</h4>
                     </div>
                   ))}
                 </div>
@@ -454,61 +459,34 @@ export default function DouglasStoryPage() {
 
             {/* RESULTS */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{c.results.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
+              {c.results.subtitle && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>}
 
-              {/* Key metrics */}
-              <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* 88% — circular ring */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-5">
-                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 40 * 0.88} ${2 * Math.PI * 40}`} />
-                      </svg>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+                {[
+                  { ...c.results.metrics[0], icon: CheckCircle },
+                  { ...c.results.metrics[1], icon: Clock },
+                  { ...c.results.metrics[2], icon: Users },
+                ].map((m) => (
+                  <div key={m.label} className="rounded-2xl border p-8" style={{ background: '#b7f5d8', borderColor: '#93e0bb' }}>
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: 'rgba(6,78,59,0.14)' }}>
+                      <m.icon className="h-[22px] w-[22px]" style={{ color: '#064e3b' }} />
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
+                    <h4 className="text-[19px] font-bold text-[#0b3b28] mb-3 leading-[1.3]">{m.value}</h4>
+                    <p className="text-[15px] text-[#0b3b28]/60 leading-[1.55]">{m.label}</p>
                   </div>
-                  {/* 5 weeks — 5 vertical bars */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-end justify-center gap-2">
-                      {[1,1,1,1,1].map((_, i) => (
-                        <div key={i} className="rounded-sm bg-[#4b4df7]" style={{ width: 10, height: `${50 + i * 6}%`, opacity: 0.5 + i * 0.12 }} />
-                      ))}
-                    </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
-                  </div>
-                  {/* Only 3 — 3 people silhouettes */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 48" className="w-20 h-16" fill="none">
-                        <circle cx="12" cy="14" r="7" fill="#4b4df7" opacity="0.5" />
-                        <path d="M0 38c0-6.627 5.373-10 12-10s12 3.373 12 10" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.5" />
-                        <circle cx="32" cy="12" r="8" fill="#4b4df7" />
-                        <path d="M18 38c0-7.732 6.268-12 14-12s14 4.268 14 12" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-                        <circle cx="52" cy="14" r="7" fill="#4b4df7" opacity="0.5" />
-                        <path d="M40 38c0-6.627 5.373-10 12-10s12 3.373 12 10" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.5" />
-                      </svg>
-                    </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
-                  </div>
-                </div>
+                ))}
               </div>
 
               <div className="grid md:grid-cols-2 gap-5">
                 {c.results.qualitative.map((q) => (
-                  <div key={q.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <q.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                  <div key={q.title} className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: '#e3f9ec' }}>
+                      <q.icon className="h-[22px] w-[22px]" style={{ color: '#10b981' }} />
                     </div>
-                    <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
-                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
+                    <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{q.title}</h4>
+                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{q.text}</p>
                   </div>
                 ))}
               </div>

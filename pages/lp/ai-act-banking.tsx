@@ -255,7 +255,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.05)' }}
               >
                 <div
-                  className="text-[2rem] font-bold tracking-[-0.03em] mb-1.5"
+                  className="text-[2rem] font-semibold md:font-bold tracking-[-0.03em] mb-1.5"
                   style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                 >
                   {s.value}
@@ -619,7 +619,7 @@ function WhitepaperLayer() {
             >
               BANKING · 2026
             </span>
-            <h1 className="text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
+            <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
               AI Act-compliant nel Banking:
               <span
                 className="block"

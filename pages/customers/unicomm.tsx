@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench } from 'lucide-react';
+import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench, Store, Workflow } from 'lucide-react';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
@@ -62,8 +62,8 @@ const content = {
       badge: 'LA SFIDA',
       title: 'Non bastava ottimizzare: serviva costruire dalle fondamenta.',
       intro: "Unicomm partiva da una infrastruttura HR ancora poco digitalizzata, e lo faceva nel momento di crescita più intensa della propria storia.",
-      businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR & PEOPLE IMPACT',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: Layers,
@@ -105,8 +105,8 @@ const content = {
       intro: "Skillvue è stato integrato come partner per la costruzione del talent lifecycle di Unicomm, lavorando con la Direzione Risorse Umane guidata da Giuseppe Curci, Direttore Risorse Umane Gruppo, per allineare la piattaforma al modello di competenze aziendale e alle specificità della GDO.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
-        { icon: Wrench, label: 'Competenze tecniche GDO — differenziate per reparto e livello di responsabilità (ruolo client-facing o meno, livello da addetto vendita a gerente)' },
-        { icon: Heart, label: 'Soft skill specifiche — sviluppate ad hoc sul modello Unicomm (es. orientamento al servizio in contesti GDO, gestione del team su turni)' },
+        { icon: Wrench, title: 'Competenze tecniche GDO', text: 'differenziate per reparto e livello di responsabilità (ruolo client-facing o meno, livello da addetto vendita a gerente)' },
+        { icon: Heart, title: 'Soft skill specifiche', text: 'sviluppate ad hoc sul modello Unicomm (es. orientamento al servizio in contesti GDO, gestione del team su turni)' },
       ],
       methodologyLabel: 'STRUTTURA DEL PROGETTO — TRE FILONI IN PARALLELO',
       methodology: [
@@ -190,8 +190,8 @@ const content = {
       badge: 'THE CHALLENGE',
       title: 'Optimization was not enough: they needed to build from scratch.',
       intro: "Unicomm was starting from a scarcely-digitized HR infrastructure, and doing so at the most intense growth phase in its history.",
-      businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR & PEOPLE IMPACT',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: Layers,
@@ -233,8 +233,8 @@ const content = {
       intro: "Skillvue was integrated as a partner for building Unicomm's talent lifecycle, working with the HR Division led by Giuseppe Curci, Group HR Director, to align the platform to the company's leadership model and the specifics of grocery retail.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
-        { icon: Wrench, label: 'Grocery retail technical skills — differentiated by department and level of responsibility (client-facing or not, from sales associate to store manager)' },
-        { icon: Heart, label: 'Tailored soft skills — developed ad hoc on the Unicomm model (e.g. service orientation in grocery retail contexts, team management across shifts)' },
+        { icon: Wrench, title: 'Grocery retail technical skills', text: 'differentiated by department and level of responsibility (client-facing or not, from sales associate to store manager)' },
+        { icon: Heart, title: 'Tailored soft skills', text: 'developed ad hoc on the Unicomm model (e.g. service orientation in grocery retail contexts, team management across shifts)' },
       ],
       methodologyLabel: 'PROJECT STRUCTURE — THREE PARALLEL STREAMS',
       methodology: [
@@ -322,7 +322,7 @@ export default function UnicommStoryPage() {
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-4 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
+                  <h1 className="text-[48px] md:text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
                   <p className="text-[15px] text-white/[0.60] leading-[1.65] mb-6 max-w-2xl">{c.subtitle}</p>
@@ -338,7 +338,7 @@ export default function UnicommStoryPage() {
                   <div className="mt-auto pt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {c.heroMetrics.map(m => (
                       <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
-                        <span className="block text-white" style={{ fontSize: 'clamp(1.4rem,2.4vw,1.9rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="block text-white text-[32px] font-semibold md:text-[clamp(1.4rem,2.4vw,1.9rem)] md:font-extrabold" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                         <span className="text-[13px] text-white/[0.55] mt-1.5 block leading-[1.4]">{m.label}</span>
                       </div>
                     ))}
@@ -394,7 +394,7 @@ export default function UnicommStoryPage() {
 
             {/* CHALLENGE */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{c.challenge.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
@@ -403,8 +403,8 @@ export default function UnicommStoryPage() {
                 <div className="grid md:grid-cols-2 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
@@ -417,9 +417,9 @@ export default function UnicommStoryPage() {
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
                 <div className="grid md:grid-cols-2 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
@@ -434,16 +434,19 @@ export default function UnicommStoryPage() {
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
-                {c.objectives.items.map((o, i) => (
-                  <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                {c.objectives.items.map((o, i) => {
+                  const [title, ...rest] = o.text.split(':');
+                  const desc = rest.join(':').trim();
+                  return (
+                    <div key={i} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{desc}</p>
                     </div>
-                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </Section>
 
@@ -455,11 +458,14 @@ export default function UnicommStoryPage() {
 
               <div className="mb-12">
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
-                <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
+                <div className="grid md:grid-cols-2 gap-5">
                   {c.solution.skills.map((s) => (
-                    <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
-                      <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#121212]/70">{s.label}</span>
+                    <div key={s.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <s.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{s.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{s.text}</p>
                     </div>
                   ))}
                 </div>
@@ -469,10 +475,10 @@ export default function UnicommStoryPage() {
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.solution.methodology.map((m, i) => (
-                    <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
-                      <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4] relative">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65] relative">{m.text}</p>
+                    <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <span className="block text-[2.75rem] font-light leading-none mb-6" style={{ color: '#c7d2fe' }}>0{i + 1}</span>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{m.text}</p>
                     </div>
                   ))}
                 </div>
@@ -481,85 +487,33 @@ export default function UnicommStoryPage() {
 
             {/* RESULTS */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.results.title}</h2>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{c.results.badge}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
+              {c.results.subtitle && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>}
 
-              <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* Metric 0 — map / geographical expansion (250 stores) */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        {/* Organic territory outline */}
-                        <path d="M8 22 L14 12 L24 8 L36 9 L46 14 L54 22 L54 34 L48 44 L38 52 L26 54 L16 48 L8 38 Z" fill="rgba(75,77,247,0.1)" stroke="#4b4df7" strokeWidth="1.8" strokeLinejoin="round"/>
-                        {/* Store location dots */}
-                        <circle cx="22" cy="22" r="2.6" fill="rgba(75,77,247,0.55)"/>
-                        <circle cx="36" cy="18" r="2.6" fill="#4b4df7"/>
-                        <circle cx="46" cy="28" r="2.6" fill="rgba(75,77,247,0.7)"/>
-                        <circle cx="30" cy="32" r="3" fill="#4b4df7"/>
-                        <circle cx="18" cy="37" r="2.6" fill="rgba(75,77,247,0.6)"/>
-                        <circle cx="42" cy="40" r="2.6" fill="rgba(75,77,247,0.75)"/>
-                        <circle cx="28" cy="46" r="2.6" fill="rgba(75,77,247,0.5)"/>
-                        {/* Expansion pulse ring around central cluster */}
-                        <circle cx="30" cy="32" r="7" fill="none" stroke="rgba(75,77,247,0.22)" strokeWidth="1.2"/>
-                        <circle cx="30" cy="32" r="12" fill="none" stroke="rgba(75,77,247,0.1)" strokeWidth="1"/>
-                      </svg>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+                {[Store, Layers, Workflow].map((Icon, i) => {
+                  const m = c.results.metrics[i];
+                  return (
+                    <div key={m.label} className="rounded-2xl border p-8" style={{ background: '#b7f5d8', borderColor: '#93e0bb' }}>
+                      <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: 'rgba(6,78,59,0.14)' }}>
+                        <Icon className="h-[22px] w-[22px]" style={{ color: '#064e3b' }} />
+                      </div>
+                      <h4 className="text-[19px] font-bold text-[#0b3b28] mb-3 leading-[1.3]">{m.value}</h4>
+                      <p className="text-[15px] text-[#0b3b28]/60 leading-[1.55]">{m.label}</p>
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
-                  </div>
-                  {/* Metric 1 — 7 brands under 1 umbrella */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 80 54" className="w-20 h-14" fill="none">
-                        <circle cx="40" cy="9" r="8" fill="#4b4df7"/>
-                        <line x1="40" y1="17" x2="40" y2="26" stroke="#4b4df7" strokeWidth="2"/>
-                        <line x1="10" y1="26" x2="70" y2="26" stroke="#4b4df7" strokeWidth="1.5"/>
-                        <line x1="10" y1="26" x2="10" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
-                        <line x1="20" y1="26" x2="20" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
-                        <line x1="30" y1="26" x2="30" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
-                        <line x1="40" y1="26" x2="40" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
-                        <line x1="50" y1="26" x2="50" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
-                        <line x1="60" y1="26" x2="60" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
-                        <line x1="70" y1="26" x2="70" y2="36" stroke="rgba(75,77,247,0.5)" strokeWidth="1.5"/>
-                        <circle cx="10" cy="43" r="4.5" fill="rgba(75,77,247,0.2)" stroke="#4b4df7" strokeWidth="1.5"/>
-                        <circle cx="20" cy="43" r="4.5" fill="rgba(75,77,247,0.3)" stroke="#4b4df7" strokeWidth="1.5"/>
-                        <circle cx="30" cy="43" r="4.5" fill="rgba(75,77,247,0.45)" stroke="#4b4df7" strokeWidth="1.5"/>
-                        <circle cx="40" cy="43" r="4.5" fill="rgba(75,77,247,0.6)" stroke="#4b4df7" strokeWidth="1.5"/>
-                        <circle cx="50" cy="43" r="4.5" fill="rgba(75,77,247,0.45)" stroke="#4b4df7" strokeWidth="1.5"/>
-                        <circle cx="60" cy="43" r="4.5" fill="rgba(75,77,247,0.3)" stroke="#4b4df7" strokeWidth="1.5"/>
-                        <circle cx="70" cy="43" r="4.5" fill="rgba(75,77,247,0.2)" stroke="#4b4df7" strokeWidth="1.5"/>
-                      </svg>
-                    </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
-                  </div>
-                  {/* Metric 2 — 3 parallel lines (3 processes) */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 44" className="w-16 h-11" fill="none">
-                        <line x1="6" y1="10" x2="50" y2="10" stroke="rgba(75,77,247,0.4)" strokeWidth="2.5" strokeLinecap="round"/>
-                        <path d="M47 6l10 4-10 4" stroke="rgba(75,77,247,0.4)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                        <line x1="6" y1="22" x2="50" y2="22" stroke="rgba(75,77,247,0.7)" strokeWidth="2.5" strokeLinecap="round"/>
-                        <path d="M47 18l10 4-10 4" stroke="rgba(75,77,247,0.7)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                        <line x1="6" y1="34" x2="50" y2="34" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round"/>
-                        <path d="M47 30l10 4-10 4" stroke="#4b4df7" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                      </svg>
-                    </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
 
               <div className="grid md:grid-cols-2 gap-5">
                 {c.results.qualitative.map((q) => (
-                  <div key={q.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <q.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                  <div key={q.title} className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: '#e3f9ec' }}>
+                      <q.icon className="h-[22px] w-[22px]" style={{ color: '#10b981' }} />
                     </div>
-                    <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
-                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
+                    <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{q.title}</h4>
+                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{q.text}</p>
                   </div>
                 ))}
               </div>

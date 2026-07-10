@@ -38,7 +38,7 @@ export default function TAProblem() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
             >
-              <span className="block text-[#1A1A2E] mb-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.8rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.03em' }}>{p.stat}</span>
+              <span className="block text-[#1A1A2E] mb-4" style={{ fontSize: '32px', fontWeight: 600, lineHeight: 1.1, letterSpacing: '-0.03em' }}>{p.stat}</span>
               <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 mb-2">{t(p.title)}</h3>
               <p className="text-[15px] text-[#7A7A7A] leading-[1.7]">{t(p.desc)}</p>
             </motion.div>

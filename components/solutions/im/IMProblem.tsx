@@ -27,7 +27,7 @@ export default function IMProblem() {
         transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
       >
         <div className="flex items-center justify-between mb-6 md:mb-8">
-          <span className="text-[#121212]" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{p.stat}</span>
+          <span className="text-[#121212] text-[32px] font-semibold md:text-[clamp(2rem,4vw,3rem)] md:font-extrabold" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{p.stat}</span>
           <Icon className="h-6 w-6 text-[#4B4DF7]/30" strokeWidth={1.5} />
         </div>
         <h3 className="text-[18px] font-semibold text-[#121212] mb-2 md:mb-3">{t(p.title)}</h3>

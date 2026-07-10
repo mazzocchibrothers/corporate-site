@@ -360,7 +360,7 @@ export default function EuropAssistanceLandingPage() {
                   <div className="mt-auto pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {c.heroMetrics.map(m => (
                       <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-8 py-5">
-                        <span className="block text-white" style={{ fontSize: 'clamp(1.8rem,3vw,2.5rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="block text-white text-[32px] font-semibold md:text-[clamp(1.8rem,3vw,2.5rem)] md:font-extrabold" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                         <span className="text-[14px] text-white/[0.55] mt-2 block leading-[1.4]">{m.label}</span>
                       </div>
                     ))}
@@ -494,10 +494,10 @@ export default function EuropAssistanceLandingPage() {
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.solution.methodology.map((m, i) => (
-                    <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
-                      <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4] relative">{m.title}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65] relative">{m.text}</p>
+                    <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <span className="block text-[2.75rem] font-light leading-none mb-6" style={{ color: '#c7d2fe' }}>0{i + 1}</span>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{m.title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{m.text}</p>
                     </div>
                   ))}
                 </div>

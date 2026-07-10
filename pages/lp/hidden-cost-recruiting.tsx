@@ -164,7 +164,7 @@ export default function HiddenCostRecruiting() {
             {/* Title */}
             <motion.h1
               variants={fadeUp} initial="hidden" animate="visible" custom={0.2}
-              className="text-[clamp(2.8rem,5.5vw,4.8rem)] font-semibold tracking-[-0.03em] text-white/95 mb-6"
+              className="text-[48px] md:text-[clamp(2.8rem,5.5vw,4.8rem)] font-semibold tracking-[-0.03em] text-white/95 mb-6"
               style={{ lineHeight: 1.1 }}
             >
               Hidden Cost of{' '}
@@ -221,7 +221,7 @@ export default function HiddenCostRecruiting() {
                 className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-6"
               >
                 <div
-                  className="text-[2rem] font-bold tracking-[-0.03em] mb-1"
+                  className="text-[2rem] font-semibold md:font-bold tracking-[-0.03em] mb-1"
                   style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                 >
                   {s.value}
@@ -362,7 +362,7 @@ export default function HiddenCostRecruiting() {
               {economics.map((e, i) => (
                 <div key={i}>
                   <div
-                    className="text-[2.2rem] font-bold tracking-[-0.03em] mb-1"
+                    className="text-[32px] font-semibold md:text-[2.2rem] md:font-bold tracking-[-0.03em] mb-1"
                     style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                   >
                     {e.value}

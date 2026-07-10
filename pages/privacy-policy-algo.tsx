@@ -19,7 +19,7 @@ export default function PrivacyPolicyAlgo() {
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">
                 Legal
               </span>
-              <h1 className="font-semibold text-white/95 mb-4" style={{ fontSize: 'clamp(2rem,4vw,3rem)', lineHeight: 1.1, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-4 text-[48px] md:text-[clamp(2rem,4vw,3rem)]" style={{ lineHeight: 1.1, letterSpacing: '-0.03em' }}>
                 Trattamento dati personali
               </h1>
               <p className="text-[16px] text-white/40 leading-[1.7]">

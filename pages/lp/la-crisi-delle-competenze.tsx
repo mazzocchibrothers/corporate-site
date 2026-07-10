@@ -255,7 +255,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.05)' }}
               >
                 <div
-                  className="text-[2rem] font-bold tracking-[-0.03em] mb-1.5"
+                  className="text-[2rem] font-semibold md:font-bold tracking-[-0.03em] mb-1.5"
                   style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                 >
                   {s.value}
@@ -619,7 +619,7 @@ function WhitepaperLayer() {
             >
               BANKING · 2026
             </span>
-            <h1 className="text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
+            <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
               La crisi delle competenze obsolete nelle banche europee:
               <span
                 className="block"
@@ -853,7 +853,7 @@ function WhitepaperLayer() {
               ].map((item, i) => (
                 <div key={i} className="rounded-xl p-5 text-center" style={{ background: item.color, border: `1px solid ${item.border}` }}>
                   <div
-                    className="text-[2rem] font-bold mb-2"
+                    className="text-[2rem] font-semibold md:font-bold mb-2"
                     style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                   >
                     {item.num}
@@ -1105,14 +1105,14 @@ function WhitepaperLayer() {
               <p className="text-[12px] text-[#0D0D0D]/35 italic mb-6">Retention a 18 mesi dall'inserimento</p>
               <div className="flex items-end gap-6 justify-center">
                 <div className="text-center">
-                  <div className="text-[2rem] font-bold mb-2" style={{ color: '#EF4444' }}>62%</div>
+                  <div className="text-[2rem] font-semibold md:font-bold mb-2" style={{ color: '#EF4444' }}>62%</div>
                   <div className="w-16 bg-red-100 rounded-t-lg mx-auto" style={{ height: '80px' }}>
                     <div className="w-full h-full rounded-t-lg" style={{ background: 'rgba(239,68,68,0.3)' }} />
                   </div>
                   <p className="text-[11px] text-[#0D0D0D]/40 mt-2">Approccio tradizionale</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-[2rem] font-bold mb-2" style={{ background: 'linear-gradient(135deg, #4B4DF7, #22C55E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>85%</div>
+                  <div className="text-[2rem] font-semibold md:font-bold mb-2" style={{ background: 'linear-gradient(135deg, #4B4DF7, #22C55E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>85%</div>
                   <div className="w-16 rounded-t-lg mx-auto" style={{ height: '110px', background: 'rgba(34,197,94,0.25)' }} />
                   <p className="text-[11px] text-[#0D0D0D]/40 mt-2">Con talent intelligence strutturata</p>
                 </div>

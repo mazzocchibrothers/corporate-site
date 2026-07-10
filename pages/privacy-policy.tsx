@@ -132,7 +132,7 @@ export default function PrivacyPolicyPage() {
               {t('Back')}
             </button>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-semibold text-white/95 mb-4 tracking-[-0.03em] leading-[1.1]">
+              <h1 className="text-[48px] md:text-[clamp(2.5rem,5vw,4rem)] font-semibold text-white/95 mb-4 tracking-[-0.03em] leading-[1.1]">
                 Privacy Policy di Skillvue
               </h1>
               <p className="text-[18px] text-white/[0.45] leading-[1.75] max-w-2xl" style={{ fontWeight: 300 }}>

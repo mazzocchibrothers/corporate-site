@@ -12,7 +12,7 @@ export default function ScienceHero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="lg:col-span-7 flex flex-col gap-8 md:gap-10">
             <motion.h1
-              className="text-[clamp(2rem,7vw,2.8rem)] md:text-[clamp(2.5rem,4vw,3.5rem)] font-semibold tracking-[-0.03em] text-white/95"
+              className="text-[48px] md:text-[clamp(2.5rem,4vw,3.5rem)] font-semibold tracking-[-0.03em] text-white/95"
               style={{ lineHeight: 1.1 }}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}

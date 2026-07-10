@@ -197,7 +197,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             {heroStats.map((s, i) => (
               <div key={i} className="rounded-2xl bg-white border border-black/[0.06] p-6 text-center"
                 style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.05)' }}>
-                <div className="text-[2rem] font-bold tracking-[-0.03em] mb-1.5"
+                <div className="text-[2rem] font-semibold md:font-bold tracking-[-0.03em] mb-1.5"
                   style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                   {s.value}
                 </div>
@@ -436,7 +436,7 @@ function WhitepaperLayer() {
               style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>
               RETAIL LUSSO · 2026
             </span>
-            <h1 className="text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
+            <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
               Il turnover nei negozi del lusso:
               <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 il costo nascosto
@@ -484,7 +484,7 @@ function WhitepaperLayer() {
                   { value: '78%', label: "dei clienti abbandona l'acquisto dopo un'interazione negativa", color: '#4B4DF7' },
                 ].map((item, i) => (
                   <div key={i}>
-                    <div className="text-[2rem] font-bold tracking-[-0.03em] mb-1" style={{ color: item.color }}>{item.value}</div>
+                    <div className="text-[2rem] font-semibold md:font-bold tracking-[-0.03em] mb-1" style={{ color: item.color }}>{item.value}</div>
                     <div className="text-[11px] text-[#0D0D0D]/45 leading-snug">{item.label}</div>
                   </div>
                 ))}

@@ -168,7 +168,7 @@ export default function CareersPage() {
                   key={i}
                   className={`pt-6 pb-8 ${i % 2 !== 0 ? 'pl-6 md:pl-8' : ''}`}
                 >
-                  <p className="text-[26px] md:text-[34px] font-semibold text-white/90 tracking-[-0.02em] leading-none mb-1.5">
+                  <p className="text-[32px] md:text-[34px] font-semibold text-white/90 tracking-[-0.02em] leading-none mb-1.5">
                     {t(s.value)}
                   </p>
                   <p className="text-[12px] md:text-[13px] text-white/40 leading-[1.4]">{t(s.label)}</p>

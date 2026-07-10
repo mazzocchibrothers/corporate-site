@@ -61,7 +61,7 @@ export default function BlogArticle4() {
                 <span className="text-[13px] text-white/35">{lang === 'it' ? '27 febbraio 2026' : 'February 27, 2026'}</span>
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '11 min di lettura' : '11 min read'}</span>
               </div>
-              <h1 className="font-semibold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[clamp(2.5rem,5vw,3.5rem)]" style={{ lineHeight: 1.12, letterSpacing: '-0.03em' }}>
                 {lang === 'it' ? "Che cos'è l'accountability e perché migliora le performance lavorative" : 'What Is Accountability and Why It Improves Work Performance'}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>

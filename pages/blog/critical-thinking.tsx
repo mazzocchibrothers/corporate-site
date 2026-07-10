@@ -59,7 +59,7 @@ export default function BlogArticle5() {
                 <span className="text-[13px] text-white/35">{lang === 'it' ? '25 febbraio 2026' : 'February 25, 2026'}</span>
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '10 min di lettura' : '10 min read'}</span>
               </div>
-              <h1 className="font-bold text-white/95 mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1.12, letterSpacing: '-0.03em' }}>
+              <h1 className="text-white/95 mb-6 text-[48px] font-semibold md:text-[clamp(2.5rem,5vw,3.5rem)] md:font-bold" style={{ lineHeight: 1.12, letterSpacing: '-0.03em' }}>
                 {lang === 'it' ? 'Che cos\'è il pensiero critico e come valutare questa competenza' : 'What Is Critical Thinking and How to Verify This Skill'}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>

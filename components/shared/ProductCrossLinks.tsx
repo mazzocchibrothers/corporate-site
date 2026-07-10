@@ -26,7 +26,7 @@ export default function ProductCrossLinks() {
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <h3 className="text-[16px] md:text-[20px] font-semibold text-white/90 mb-5 md:mb-8">{t('Explore by use case')}</h3>
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3">
             {solutions.map((s, i) => (
               <motion.button
                 key={s.path}
