@@ -378,7 +378,7 @@ export default function Mediaset1StoryPage() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                 {c.heroMetrics.map(m => (
                   <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-5 text-center">
-                    <span className="block text-white font-semibold md:font-medium" style={{ fontSize: '32px', lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                    <span className="block text-white text-[32px] font-semibold md:text-[1.7rem] md:font-extrabold" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                     <span className="text-[13px] text-white/[0.55] mt-2 block leading-[1.4]">{m.label}</span>
                   </div>
                 ))}

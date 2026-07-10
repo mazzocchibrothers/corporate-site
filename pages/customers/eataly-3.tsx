@@ -335,7 +335,7 @@ export default function EatalyStoryPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
                     {c.heroMetrics.map(m => (
                       <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-5 py-4">
-                        <span className="block text-white font-semibold md:font-medium" style={{ fontSize: '32px', lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                        <span className="block text-white text-[32px] font-semibold md:text-[1.5rem] md:font-extrabold" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                         <span className="text-[12px] text-white/[0.55] mt-1.5 block leading-[1.35]">{m.label}</span>
                       </div>
                     ))}

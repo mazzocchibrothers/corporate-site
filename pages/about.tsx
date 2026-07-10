@@ -183,7 +183,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── 3. OUR VISION ───────────────────────────────────────────────── */}
+        {/* ─── 2. OUR VISION ───────────────────────────────────────────────── */}
         <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 112, paddingBottom: 112, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
             <p
@@ -216,7 +216,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── OUR MISSION — Make Skills ────────────────────────────────── */}
+        {/* ─── 3. OUR MISSION — Make Skills ────────────────────────────────── */}
         <section
           className="px-5 md:px-8 lg:px-12"
           style={{
@@ -288,7 +288,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── 4. WHO WE ARE — Skills Operating System ────────────────────── */}
+        {/* ─── 4. WHO WE ARE — Skills Operating System ─────────────────────── */}
         <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 112, paddingBottom: 112, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
             <p
@@ -443,7 +443,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── 7. FOUNDERS ─────────────────────────────────────────────────── */}
+        {/* ─── 6. FOUNDERS ─────────────────────────────────────────────────── */}
         <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 112, paddingBottom: 112, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
             {/* Header */}
@@ -615,7 +615,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── 8. ONE TEAM ─────────────────────────────────────────────────── */}
+        {/* ─── 7. ONE TEAM ─────────────────────────────────────────────────── */}
         <section
           className="px-5 md:px-8 lg:px-12"
           style={{
@@ -722,7 +722,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── 9. LIFE AT SKILLVUE ─────────────────────────────────────────── */}
+        {/* ─── 8. LIFE AT SKILLVUE ─────────────────────────────────────────── */}
         <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 128, paddingBottom: 128, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', gap: 40 }}>
             {/* Header */}
@@ -813,7 +813,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── 10. INVESTORS ───────────────────────────────────────────────── */}
+        {/* ─── 9. INVESTORS ────────────────────────────────────────────────── */}
         <section
           className="px-5 md:px-8 lg:px-12"
           style={{
