@@ -55,11 +55,21 @@ const ArrowRightIcon = <ArrowRight aria-hidden="true" />;
 type ButtonBaseProps = VariantProps<typeof buttonVariants> & {
   className?: string;
   children: React.ReactNode;
-  asChild?: boolean;
-  /** Defaults to a right-pointing arrow; pass `null` to omit, or your own icon node. */
-  icon?: React.ReactNode | null;
-  iconPosition?: "left" | "right";
-};
+} & (
+    | {
+        asChild: true;
+        // Radix's Slot takes exactly one child, so `icon`/`iconPosition` have no
+        // effect here — embed your own icon inside the element passed as `children`.
+        icon?: never;
+        iconPosition?: never;
+      }
+    | {
+        asChild?: false;
+        /** Defaults to a right-pointing arrow; pass `null` to omit, or your own icon node. */
+        icon?: React.ReactNode | null;
+        iconPosition?: "left" | "right";
+      }
+  );
 
 export type ButtonProps = ButtonBaseProps &
   Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof ButtonBaseProps>;

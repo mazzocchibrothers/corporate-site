@@ -160,11 +160,8 @@ export default function ExploreStories() {
           <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-10 text-center">
             <p className="text-[16px] text-white/50 mb-4">{t('No stories match these filters yet.')}</p>
             <p className="text-[14px] text-white/30">{t('We may have a relevant case to share privately.')}</p>
-            {/* FIXME: href="#" is a dead link inherited from the pre-migration markup —
-                should likely point to /book-meeting (or /prenota-incontro for IT).
-                Left as-is; flagging for a human decision rather than fixing silently. */}
             <Button asChild variant="secondary" mode="dark" className="mt-6">
-              <a href="#">
+              <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
                 {t('Book a demo')} <ArrowRight aria-hidden="true" />
               </a>
             </Button>

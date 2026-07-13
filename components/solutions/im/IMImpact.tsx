@@ -6,7 +6,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 
 export default function IMImpact() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -34,7 +34,7 @@ export default function IMImpact() {
               </div>
             </div>
             <Button asChild variant="secondary" mode="dark">
-              <a href="#">
+              <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
                 {t('Read the full story')}
                 <ArrowUpRight aria-hidden="true" />
               </a>

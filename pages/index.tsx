@@ -28,6 +28,8 @@ export default function HomePage() {
           : 'Verify skills, predict performance and make every hiring and promotion decision defensible. Skillvue combines psychometric rigour with AI for European enterprises.'
         } />
         <link rel="canonical" href={canonical} />
+        {/* Hero's italic gradient span needs Bold Italic; only this page (and /science) does. */}
+        <link rel="preload" href="/fonts/MonaSans-BoldItalic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </Head>
       <Navbar />
       <LazyMotion features={loadMotionFeatures} strict>

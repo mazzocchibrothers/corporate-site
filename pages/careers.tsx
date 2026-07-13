@@ -132,7 +132,7 @@ export default function CareersPage() {
                       <ArrowRight aria-hidden />
                     </a>
                   </Button>
-                  <Button asChild variant="secondary" mode="dark" icon={null}>
+                  <Button asChild variant="secondary" mode="dark">
                     <a href="#life-at-skillvue">{t('Life at Skillvue')}</a>
                   </Button>
                 </div>

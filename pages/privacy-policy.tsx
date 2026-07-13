@@ -79,9 +79,7 @@ export default function PrivacyPolicyPage() {
             >
               <p className="text-[16px] text-[#121212]/70 leading-[1.85]">
                 Il Titolare del trattamento informa ai sensi del regolamento UE 2016/679 ("GDPR") e della vigente normativa in materia di protezione dei Dati Personali che i Suoi Dati (in seguito, "Dati"), nell'ambito del Sito Web{' '}
-                <Button asChild variant="tertiary" mode="light" icon={null}>
-                  <a href="https://www.skillvue.ai/it" target="_blank" rel="noopener noreferrer">https://www.skillvue.ai/it</a>
-                </Button>
+                <a href="https://www.skillvue.ai/it" target="_blank" rel="noopener noreferrer" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">https://www.skillvue.ai/it</a>
                 {' '}e degli eventuali sottodomini (in seguito "Sito") nonché nell'ambito dell'utilizzo dei servizi offerti dal Titolare, saranno trattati con le modalità e per le finalità seguenti.
               </p>
               <p className="text-[16px] text-[#121212]/70 leading-[1.85]">
@@ -100,9 +98,7 @@ export default function PrivacyPolicyPage() {
                   <li>PEC: think-up@legalmail.it</li>
                   <li>
                     E-mail per questioni privacy:{' '}
-                    <Button asChild variant="tertiary" mode="light" icon={null}>
-                      <a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a>
-                    </Button>
+                    <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">privacy@skillvue.ai</a>
                   </li>
                 </ul>
               </PolicySection>
@@ -110,9 +106,7 @@ export default function PrivacyPolicyPage() {
               <PolicySection num="2" title="Responsabile della Protezione dei Dati (RPD/DPO)">
                 <p>
                   Il Titolare ha designato un Responsabile della Protezione dei Dati (RPD/DPO), contattabile per tutte le questioni relative al trattamento dei dati personali e all'esercizio dei diritti ai sensi del GDPR al seguente indirizzo e-mail:{' '}
-                  <Button asChild variant="tertiary" mode="light" icon={null}>
-                    <a href="mailto:dpo@skillvue.ai">dpo@skillvue.ai</a>
-                  </Button>
+                  <a href="mailto:dpo@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">dpo@skillvue.ai</a>
                 </p>
               </PolicySection>
 
@@ -244,17 +238,11 @@ export default function PrivacyPolicyPage() {
                 </ul>
                 <p>
                   Per esercitare i diritti e per proporre reclamo al Garante per la protezione dei dati personali (
-                  <Button asChild variant="tertiary" mode="light" icon={null}>
-                    <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>
-                  </Button>
+                  <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">www.garanteprivacy.it</a>
                   ), può scrivere a{' '}
-                  <Button asChild variant="tertiary" mode="light" icon={null}>
-                    <a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a>
-                  </Button>
+                  <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">privacy@skillvue.ai</a>
                   {' '}o al DPO a{' '}
-                  <Button asChild variant="tertiary" mode="light" icon={null}>
-                    <a href="mailto:dpo@skillvue.ai">dpo@skillvue.ai</a>
-                  </Button>
+                  <a href="mailto:dpo@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">dpo@skillvue.ai</a>
                   . Skillvue risponde alle richieste degli interessati entro un mese dalla ricezione, estensibile di ulteriori due mesi in caso di particolare complessità, ai sensi dell'art. 12, par. 3, GDPR.
                 </p>
               </PolicySection>

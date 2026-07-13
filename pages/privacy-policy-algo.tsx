@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 
 export default function PrivacyPolicyAlgo() {
   return (
@@ -55,9 +54,7 @@ export default function PrivacyPolicyAlgo() {
 
                 <p className="text-[16px] text-[#121212]/70 leading-[1.85] mb-6">
                   Il Titolare del trattamento informa ai sensi del regolamento UE 2016/679 ("GDPR") e della vigente normativa in materia di protezione dei Dati Personali che i Suoi Dati (in seguito, "Dati"), nell'ambito del Sito Web{' '}
-                  <Button asChild variant="tertiary" mode="light" icon={null}>
-                    <a href="https://www.skillvue.ai/it" target="_blank" rel="noopener noreferrer">https://www.skillvue.ai/it</a>
-                  </Button>
+                  <a href="https://www.skillvue.ai/it" target="_blank" rel="noopener noreferrer" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">https://www.skillvue.ai/it</a>
                   {' '}e degli eventuali sottodomini (in seguito "Sito") nonché nell'ambito dell'utilizzo dei servizi offerti dal Titolare, saranno trattati con le modalità e per le finalità seguenti.
                 </p>
                 <p className="text-[16px] text-[#121212]/70 leading-[1.85] mb-10">
@@ -69,12 +66,12 @@ export default function PrivacyPolicyAlgo() {
                   <p className="font-semibold text-[#121212]/80 mt-4">Contatti del Titolare:</p>
                   <ul>
                     <li>PEC: think-up@legalmail.it</li>
-                    <li>E-mail per questioni privacy: <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a></Button></li>
+                    <li>E-mail per questioni privacy: <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">privacy@skillvue.ai</a></li>
                   </ul>
                 </PolicySection>
 
                 <PolicySection title="2. Responsabile della Protezione dei Dati (RPD/DPO)">
-                  <p>Il Titolare ha designato un Responsabile della Protezione dei Dati (RPD/DPO), contattabile per tutte le questioni relative al trattamento dei dati personali e all'esercizio dei diritti ai sensi del GDPR al seguente indirizzo e-mail: <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:dpo@skillvue.ai">dpo@skillvue.ai</a></Button></p>
+                  <p>Il Titolare ha designato un Responsabile della Protezione dei Dati (RPD/DPO), contattabile per tutte le questioni relative al trattamento dei dati personali e all'esercizio dei diritti ai sensi del GDPR al seguente indirizzo e-mail: <a href="mailto:dpo@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">dpo@skillvue.ai</a></p>
                 </PolicySection>
 
                 <PolicySection title="3. Categorie di interessati e di dati trattati">
@@ -147,7 +144,7 @@ export default function PrivacyPolicyAlgo() {
                     <li><strong className="text-[#121212]/85 font-semibold">diritto di opposizione al trattamento</strong> (art. 21), in particolare al trattamento per finalità di marketing diretto;</li>
                     <li><strong className="text-[#121212]/85 font-semibold">diritto di revocare il consenso</strong> in qualsiasi momento (art. 7, par. 3), senza che ciò pregiudichi la liceità del trattamento basata sul consenso prestato prima della revoca.</li>
                   </ul>
-                  <p>Per esercitare i diritti e per proporre reclamo al Garante per la protezione dei dati personali (<Button asChild variant="tertiary" mode="light" icon={null}><a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a></Button>), può scrivere a <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a></Button> o al DPO a <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:dpo@skillvue.ai">dpo@skillvue.ai</a></Button>. Skillvue risponde alle richieste degli interessati entro un mese dalla ricezione, estensibile di ulteriori due mesi in caso di particolare complessità, ai sensi dell'art. 12, par. 3, GDPR.</p>
+                  <p>Per esercitare i diritti e per proporre reclamo al Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">www.garanteprivacy.it</a>), può scrivere a <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">privacy@skillvue.ai</a> o al DPO a <a href="mailto:dpo@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">dpo@skillvue.ai</a>. Skillvue risponde alle richieste degli interessati entro un mese dalla ricezione, estensibile di ulteriori due mesi in caso di particolare complessità, ai sensi dell'art. 12, par. 3, GDPR.</p>
                 </PolicySection>
 
                 <p className="text-[13px] text-[#121212]/35 mt-12 pt-8 border-t border-[#121212]/[0.06]">
@@ -183,7 +180,7 @@ export default function PrivacyPolicyAlgo() {
                     <li>Codice Fiscale: 11656370969</li>
                     <li>P.IVA: 11656370969</li>
                     <li>Registro Imprese: MI – 2617568</li>
-                    <li>Email: <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a></Button></li>
+                    <li>Email: <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">privacy@skillvue.ai</a></li>
                   </ul>
                 </PolicySection>
 
@@ -233,7 +230,7 @@ export default function PrivacyPolicyAlgo() {
                     <li>Esercitare il diritto di opposizione al trattamento basato sul legittimo interesse "per motivi connessi alla propria situazione particolare"</li>
                     <li>Proporre reclamo all'Autorità Garante per la protezione dei dati personali o ricorrere all'autorità giudiziaria</li>
                   </ul>
-                  <p>Per esercitare i propri diritti: <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a></Button></p>
+                  <p>Per esercitare i propri diritti: <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">privacy@skillvue.ai</a></p>
                 </PolicySection>
               </div>
 
@@ -260,7 +257,7 @@ export default function PrivacyPolicyAlgo() {
                     <li>Tax Code: 11656370969</li>
                     <li>VAT: 11656370969</li>
                     <li>Company Register: MI – 2617568</li>
-                    <li>Email: <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a></Button></li>
+                    <li>Email: <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">privacy@skillvue.ai</a></li>
                   </ul>
                 </PolicySection>
 
@@ -309,7 +306,7 @@ export default function PrivacyPolicyAlgo() {
                     <li>Exercise the right to object to processing based on legitimate interest at any time, for reasons related to their particular situation</li>
                     <li>Lodge a complaint with the Data Protection Authority or seek judicial remedy</li>
                   </ul>
-                  <p>To exercise your rights: <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a></Button></p>
+                  <p>To exercise your rights: <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">privacy@skillvue.ai</a></p>
                 </PolicySection>
 
                 <p className="text-[13px] text-[#121212]/35 mt-12 pt-8 border-t border-[#121212]/[0.06]">
