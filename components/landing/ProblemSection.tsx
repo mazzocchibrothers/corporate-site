@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const painCards = [
@@ -24,7 +24,7 @@ function AnimatedSection({ children, className = '' }: { children: React.ReactNo
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   return (
-    <motion.div
+    <m.div
       ref={ref}
       className={className}
       initial={{ opacity: 0, y: 50 }}
@@ -32,7 +32,7 @@ function AnimatedSection({ children, className = '' }: { children: React.ReactNo
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -69,10 +69,10 @@ export default function ProblemSection() {
         {/* Pain cards — horizontal scroll on mobile, 3-col grid on desktop */}
         <div ref={ref} className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5">
           {painCards.map((card, i) => (
-            <motion.div
+            <m.div
               key={card.stat + i}
               data-testid={`pain-card-${card.stat.replace('%', '')}`}
-              className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-6 lg:p-12 flex flex-col min-h-[240px] md:min-h-0"
+              className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-6 lg:p-10 flex flex-col min-h-[240px] md:min-h-0"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.12, ease: 'easeOut' }}
@@ -97,7 +97,7 @@ export default function ProblemSection() {
                   {t(card.desc)}
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 

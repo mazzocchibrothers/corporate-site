@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import SkillvueLogo from '@/components/landing/SkillvueLogo';
 import Head from 'next/head';
+import { Button } from '@/components/ui/button';
 
 // TODO: Replace with the actual HubSpot form ID for this whitepaper
 const HUBSPOT_PORTAL_ID = '48438018';
@@ -133,15 +134,11 @@ export default function HiddenCostRecruiting() {
         style={{ backdropFilter: 'blur(20px)', backgroundColor: 'rgba(0,0,0,0.35)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="flex items-center gap-3">
           <SkillvueLogo size={28} className="text-white" />
-          <span className="text-white/90 font-semibold text-[15px] tracking-[-0.01em]">Skillvue</span>
+          <span className="text-white/90 font-semibold text-[15px] tracking-[-0.03em]">Skillvue</span>
         </div>
-        <button
-          onClick={scrollToForm}
-          className="inline-flex items-center gap-2 px-5 py-2 rounded-lg text-[13px] font-semibold text-white transition-all duration-300"
-          style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
-        >
+        <Button variant="primary" mode="light" icon={null} onClick={scrollToForm}>
           Download Free
-        </button>
+        </Button>
       </nav>
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
@@ -164,7 +161,7 @@ export default function HiddenCostRecruiting() {
             {/* Title */}
             <motion.h1
               variants={fadeUp} initial="hidden" animate="visible" custom={0.2}
-              className="text-[48px] md:text-[clamp(2.8rem,5.5vw,4.8rem)] font-semibold tracking-[-0.03em] text-white/95 mb-6"
+              className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-6"
               style={{ lineHeight: 1.1 }}
             >
               Hidden Cost of{' '}
@@ -197,16 +194,9 @@ export default function HiddenCostRecruiting() {
             <motion.div
               variants={fadeUp} initial="hidden" animate="visible" custom={0.5}
             >
-              <button
-                onClick={scrollToForm}
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-[15px] font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
-                style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)', boxShadow: '0 8px 32px rgba(75,77,247,0.3)' }}
-              >
+              <Button variant="primary" mode="light" onClick={scrollToForm}>
                 Download the Free Whitepaper
-                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-              </button>
+              </Button>
             </motion.div>
           </div>
 
@@ -316,7 +306,7 @@ export default function HiddenCostRecruiting() {
               <motion.div
                 key={i}
                 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i * 0.1}
-                className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8"
+                className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-6"
               >
                 <div className="flex items-start gap-4 mb-5">
                   <div
@@ -352,7 +342,7 @@ export default function HiddenCostRecruiting() {
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full">
           <motion.div
             variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-12"
+            className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10"
           >
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-8"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
@@ -429,7 +419,7 @@ export default function HiddenCostRecruiting() {
             <div className="lg:col-span-7">
               <motion.div
                 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0.15}
-                className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-12 shadow-sm"
+                className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10 shadow-sm"
               >
                 <h3 className="text-[18px] font-semibold text-[#0D0D0D] mb-2">Download the Whitepaper</h3>
                 <p className="text-[13px] text-[#0D0D0D]/45 mb-8">Free · No credit card required · Instant access</p>
@@ -501,9 +491,13 @@ export default function HiddenCostRecruiting() {
             <SkillvueLogo size={22} className="text-white/40" />
             <span className="text-[13px] text-white/30">© {new Date().getFullYear()} Skillvue. All rights reserved.</span>
           </div>
-          <div className="flex items-center gap-6 text-[12px] text-white/25">
-            <a href="https://www.skillvue.ai/privacy-policy" className="hover:text-white/50 transition-colors">Privacy Policy</a>
-            <a href="https://www.skillvue.ai" className="hover:text-white/50 transition-colors">skillvue.ai</a>
+          <div className="flex items-center gap-6 text-[12px]">
+            <Button asChild variant="tertiary" mode="dark" icon={null} className="text-[12px]">
+              <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
+            </Button>
+            <Button asChild variant="tertiary" mode="dark" icon={null} className="text-[12px]">
+              <a href="https://www.skillvue.ai">skillvue.ai</a>
+            </Button>
           </div>
         </div>
       </footer>

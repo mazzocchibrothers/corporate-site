@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const stats = [
   { value: '€4.5M', label: 'saved annually in failed hire costs', sub: 'Based on 300 hires, 30% failure rate, €50K average cost per failure' },
@@ -17,7 +18,7 @@ export default function CustomersROI() {
   const renderCard = (s, i) => (
     <motion.div
       key={s.value}
-      className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-10 lg:p-12 h-full"
+      className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-10 h-full"
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
@@ -45,10 +46,12 @@ export default function CustomersROI() {
 
         <motion.div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6" initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.5 }}>
           <p className="text-[14px] md:text-[15px] text-[#7A7A7A]">{t('Every other budget line has an ROI framework. These companies proved talent spend can too.')}</p>
-          <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} className="group inline-flex items-center justify-center gap-3 px-7 py-3.5 text-[13px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:border-[#4B4DF7]/30 hover:bg-[#4B4DF7]/[0.06] transition-all duration-500 shrink-0">
-            {t('Book a Demo')}
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
+          <Button asChild variant="primary" mode="light">
+            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
+              {t('Book a Demo')}
+              <ArrowRight aria-hidden="true" />
+            </a>
+          </Button>
         </motion.div>
       </div>
     </section>

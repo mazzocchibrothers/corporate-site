@@ -1,12 +1,14 @@
 // @ts-nocheck
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { Shuffle, EyeOff, HelpCircle } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { IconTile } from '@/components/ui/icon-tile';
 
 const pains = [
-  { title: 'Staffing by availability, not capability', desc: "Project teams assembled based on who's free, not who has the right skills. Result: delivery delays, rework, and frustration." },
-  { title: 'No visibility on real skills across the org', desc: 'Managers rely on memory, reputation, and who they know. not verified competency data. Top performers are over-deployed; hidden talent stays invisible.' },
-  { title: 'Performance variance is unexplained', desc: "Team A delivers on time. Team B doesn't. Same tools, same size. The difference is people quality. but without objective data, you can't diagnose it." },
+  { icon: Shuffle, title: 'Staffing by availability, not capability', desc: "Project teams assembled based on who's free, not who has the right skills. Result: delivery delays, rework, and frustration." },
+  { icon: EyeOff, title: 'No visibility on real skills across the org', desc: 'Managers rely on memory, reputation, and who they know. not verified competency data. Top performers are over-deployed; hidden talent stays invisible.' },
+  { icon: HelpCircle, title: 'Performance variance is unexplained', desc: "Team A delivers on time. Team B doesn't. Same tools, same size. The difference is people quality. but without objective data, you can't diagnose it." },
 ];
 
 export default function PRProblem() {
@@ -24,19 +26,20 @@ export default function PRProblem() {
           </h2>
         </motion.div>
 
-        {/* Alternating left-right cards */}
-        <div className="space-y-5">
+        {/* Pain cards — 3-col grid, consistent with homepage card layout */}
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5">
           {pains.map((p, i) => (
             <motion.div
               key={p.title}
               data-testid={`pr-pain-${i}`}
-              className={`group rounded-2xl border border-[#4B4DF7]/[0.08] hover:border-[#4B4DF7]/[0.18] bg-white/60 hover:bg-white/90 p-8 lg:p-10 transition-all duration-500 max-w-3xl ${i % 2 === 1 ? 'ml-auto' : ''}`}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.12 }}
+              className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-6 lg:p-10 flex flex-col min-h-[240px] md:min-h-0"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: i * 0.12, ease: 'easeOut' }}
             >
-              <h3 className="text-[18px] font-semibold text-[#121212] mb-3">{t(p.title)}</h3>
-              <p className="text-[15px] text-[#7A7A7A] leading-[1.75]">{t(p.desc)}</p>
+              <IconTile icon={p.icon} mode="light" className="mb-6 md:mb-8" />
+              <h3 className="text-[15px] md:text-[15px] lg:text-[18px] font-semibold text-[#121212] leading-snug mb-2 md:mb-3 lg:mb-4">{t(p.title)}</h3>
+              <p className="text-[13px] md:text-[13px] lg:text-[15px] text-[#7A7A7A] leading-[1.6] md:leading-[1.7] lg:leading-[1.75]">{t(p.desc)}</p>
             </motion.div>
           ))}
         </div>

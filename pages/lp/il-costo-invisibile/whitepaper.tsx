@@ -1,6 +1,8 @@
 // @ts-nocheck
 import React, { useEffect } from 'react';
 import Head from 'next/head';
+import { Download, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 function SkillvueIcon({ size = 24 }: { size?: number }) {
   return (
@@ -134,26 +136,25 @@ export default function IlCostoInvisibileWhitepaper() {
             <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.01em]">Skillvue</span>
           </div>
           <div className="flex items-center gap-3">
-            <a
-              href="/WP-I1-ITA.pdf"
-              download="Il-Costo-Invisibile-Selezione-Non-Predittiva-Skillvue.pdf"
-              className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[12px] font-semibold transition-all hover:opacity-80 border"
-              style={{ borderColor: 'rgba(75,77,247,0.3)', color: '#4B4DF7', background: 'rgba(75,77,247,0.05)' }}
-            >
-              <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              Scarica PDF
-            </a>
-            <a
-              href="https://www.skillvue.ai/contact-us"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[12px] font-semibold text-white transition-all hover:opacity-90"
-              style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
-            >
-              Contattaci
-            </a>
+            <Button asChild variant="secondary" mode="light">
+              <a
+                href="/WP-I1-ITA.pdf"
+                download="Il-Costo-Invisibile-Selezione-Non-Predittiva-Skillvue.pdf"
+              >
+                <Download aria-hidden="true" />
+                Scarica PDF
+              </a>
+            </Button>
+            <Button asChild variant="primary" mode="light">
+              <a
+                href="https://www.skillvue.ai/contact-us"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contattaci
+                <ArrowRight aria-hidden="true" />
+              </a>
+            </Button>
           </div>
         </nav>
 
@@ -685,9 +686,13 @@ export default function IlCostoInvisibileWhitepaper() {
         <div className="py-6 px-6 text-center">
           <p className="text-[12px] text-[#0D0D0D]/30">
             © {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati. ·{' '}
-            <a href="https://www.skillvue.ai/privacy-policy" className="hover:text-[#4B4DF7] transition-colors">Privacy Policy</a>
+            <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+              <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
+            </Button>
             {' '}·{' '}
-            <a href="https://www.skillvue.ai" className="hover:text-[#4B4DF7] transition-colors">skillvue.ai</a>
+            <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+              <a href="https://www.skillvue.ai">skillvue.ai</a>
+            </Button>
           </p>
         </div>
       </div>

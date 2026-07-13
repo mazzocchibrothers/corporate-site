@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 
 export default function PrivacyPolicyAlgo() {
   return (
@@ -19,7 +20,7 @@ export default function PrivacyPolicyAlgo() {
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">
                 Legal
               </span>
-              <h1 className="font-semibold text-white/95 mb-4 text-[48px] md:text-[clamp(2rem,4vw,3rem)]" style={{ lineHeight: 1.1, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-4 text-[48px] md:text-[64px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
                 Trattamento dati personali
               </h1>
               <p className="text-[16px] text-white/40 leading-[1.7]">
@@ -59,7 +60,7 @@ export default function PrivacyPolicyAlgo() {
                     <li>Codice Fiscale: 11656370969</li>
                     <li>P.IVA: 11656370969</li>
                     <li>Registro Imprese: MI – 2617568</li>
-                    <li>Email: <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:underline">privacy@skillvue.ai</a></li>
+                    <li>Email: <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a></Button></li>
                   </ul>
                 </PolicySection>
 
@@ -109,7 +110,7 @@ export default function PrivacyPolicyAlgo() {
                     <li>Esercitare il diritto di opposizione al trattamento basato sul legittimo interesse "per motivi connessi alla propria situazione particolare"</li>
                     <li>Proporre reclamo all'Autorità Garante per la protezione dei dati personali o ricorrere all'autorità giudiziaria</li>
                   </ul>
-                  <p>Per esercitare i propri diritti: <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:underline">privacy@skillvue.ai</a></p>
+                  <p>Per esercitare i propri diritti: <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a></Button></p>
                 </PolicySection>
               </div>
 
@@ -136,7 +137,7 @@ export default function PrivacyPolicyAlgo() {
                     <li>Tax Code: 11656370969</li>
                     <li>VAT: 11656370969</li>
                     <li>Company Register: MI – 2617568</li>
-                    <li>Email: <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:underline">privacy@skillvue.ai</a></li>
+                    <li>Email: <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a></Button></li>
                   </ul>
                 </PolicySection>
 
@@ -185,7 +186,7 @@ export default function PrivacyPolicyAlgo() {
                     <li>Exercise the right to object to processing based on legitimate interest at any time, for reasons related to their particular situation</li>
                     <li>Lodge a complaint with the Data Protection Authority or seek judicial remedy</li>
                   </ul>
-                  <p>To exercise your rights: <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:underline">privacy@skillvue.ai</a></p>
+                  <p>To exercise your rights: <Button asChild variant="tertiary" mode="light" icon={null}><a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a></Button></p>
                 </PolicySection>
 
                 <p className="text-[13px] text-[#121212]/35 mt-12 pt-8 border-t border-[#121212]/[0.06]">

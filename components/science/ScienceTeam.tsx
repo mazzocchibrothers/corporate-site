@@ -72,7 +72,7 @@ export default function ScienceTeam() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <div className="flex flex-col md:flex-row gap-5 md:gap-8 lg:gap-12 items-start">
-            <div className="shrink-0 w-32 h-40 md:w-48 md:h-56 rounded-xl md:rounded-2xl overflow-hidden bg-[#F5F5FA]">
+            <div className="shrink-0 w-[clamp(6rem,25vw,12rem)] aspect-square rounded-xl md:rounded-2xl overflow-hidden bg-[#F5F5FA]">
               <img src={lead.photo} alt={lead.name} className="w-full h-full object-cover" />
             </div>
             <div className="flex-1 pt-0 md:pt-2">

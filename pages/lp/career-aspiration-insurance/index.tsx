@@ -2,6 +2,7 @@
 import React, { useRef, useEffect } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 
 function SkillvueIcon({ size = 24 }: { size?: number }) {
   return (
@@ -106,18 +107,11 @@ export default function CareerAspirationInsuranceVetrina() {
         >
           <div className="flex items-center gap-2.5">
             <SkillvueIcon size={26} />
-            <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.01em]">Skillvue</span>
+            <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">Skillvue</span>
           </div>
-          <button
-            onClick={scrollToForm}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-[13px] font-semibold text-white transition-all hover:opacity-90"
-            style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
-          >
+          <Button variant="primary" mode="light" onClick={scrollToForm}>
             Scarica il Report
-            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-          </button>
+          </Button>
         </nav>
 
         {/* HERO */}
@@ -134,7 +128,7 @@ export default function CareerAspirationInsuranceVetrina() {
 
             <motion.h1
               variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
-              className="text-[48px] md:text-[clamp(2.4rem,5vw,4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.1] mb-6"
+              className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.1] mb-6"
             >
               Career Aspiration Intelligence{' '}
               <span
@@ -200,16 +194,9 @@ export default function CareerAspirationInsuranceVetrina() {
             })()}
 
             <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.3}>
-              <button
-                onClick={scrollToForm}
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-[15px] font-semibold text-white transition-all hover:scale-[1.02] hover:shadow-lg"
-                style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)', boxShadow: '0 8px 24px rgba(75,77,247,0.25)' }}
-              >
+              <Button variant="primary" mode="light" onClick={scrollToForm}>
                 Scarica il Report Completo
-                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </button>
+              </Button>
             </motion.div>
           </div>
         </section>
@@ -247,7 +234,7 @@ export default function CareerAspirationInsuranceVetrina() {
               variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.025em] text-[#0D0D0D] mb-3">
+              <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] mb-3">
                 Cosa troverai nel report
               </h2>
               <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
@@ -282,7 +269,7 @@ export default function CareerAspirationInsuranceVetrina() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Left */}
               <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.15] mb-6">
+                <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
                   Scarica il report completo
                 </h2>
                 <ul className="space-y-3 mb-8">
@@ -337,9 +324,13 @@ export default function CareerAspirationInsuranceVetrina() {
               <SkillvueIcon size={20} />
               <span className="text-[12px] text-[#0D0D0D]/30">© {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati.</span>
             </div>
-            <div className="flex items-center gap-5 text-[12px] text-[#0D0D0D]/25">
-              <a href="https://www.skillvue.ai/privacy-policy" className="hover:text-[#4B4DF7] transition-colors">Privacy Policy</a>
-              <a href="https://www.skillvue.ai" className="hover:text-[#4B4DF7] transition-colors">skillvue.ai</a>
+            <div className="flex items-center gap-5 text-[12px]">
+              <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+                <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
+              </Button>
+              <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+                <a href="https://www.skillvue.ai">skillvue.ai</a>
+              </Button>
             </div>
           </div>
         </footer>

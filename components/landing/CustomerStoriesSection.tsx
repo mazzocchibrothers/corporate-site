@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { m, useInView } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const stories = [
   {
@@ -40,7 +40,7 @@ export default function CustomerStoriesSection() {
     <section id="customers" data-testid="customer-stories-section" className="relative py-16 md:py-20 lg:py-28" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         {/* Header */}
-        <motion.div
+        <m.div
           className="mb-8 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -52,15 +52,15 @@ export default function CustomerStoriesSection() {
           <p className="text-[15px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">
             {t('Leading Global enterprises make talent decisions with confidence.')}
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Story cards — horizontal scroll on mobile, 3-col grid on desktop */}
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-5 mb-8 md:mb-10">
           {stories.map((s, i) => (
-            <motion.div
+            <m.div
               key={s.company}
               data-testid={`story-${s.company.toLowerCase().replace(/\s+/g, '-')}`}
-              className="group rounded-2xl border border-white/[0.07] bg-white/[0.04] hover:bg-white/[0.06] hover:border-white/[0.14] backdrop-blur-sm p-5 md:p-10 lg:p-12 transition-all duration-500 cursor-pointer flex flex-col justify-between gap-5 md:gap-8 min-h-[220px] md:min-h-0"
+              className="group rounded-2xl border border-white/[0.07] bg-white/[0.04] hover:bg-white/[0.06] hover:border-white/[0.14] backdrop-blur-sm p-5 md:p-10 transition-all duration-500 cursor-pointer flex flex-col justify-between gap-5 md:gap-8 min-h-[220px] md:min-h-0"
               initial={{ opacity: 0, y: 25 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
@@ -82,38 +82,38 @@ export default function CustomerStoriesSection() {
                 <span className="text-[13px] md:text-[15px] font-semibold text-white/60">{t(s.author)}</span>
                 <span className="text-[13px] md:text-[14px] text-white/35 ml-1.5 md:ml-2">{t(s.role)}</span>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 
 
         {/* Join CTA */}
-        <motion.div
+        <m.div
           className="mb-10 md:mb-16"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6">
-            <button
+            <Button
+              variant="primary"
+              mode="dark"
               onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
-              className="group inline-flex items-center justify-between px-6 py-3 md:px-7 md:py-3.5 text-[14px] md:text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
             >
-              <span>{t('Book a Demo')}</span>
-              <ArrowRight className="h-4 w-4 ml-4 md:ml-6 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-300" />
-            </button>
-            <button
+              {t('Book a Demo')}
+            </Button>
+            <Button
+              variant="tertiary"
+              mode="dark"
               onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
-              className="group inline-flex items-center gap-2 md:gap-2.5 text-[13px] md:text-[13px] font-semibold text-white/[0.45] hover:text-white/80 transition-colors duration-300 tracking-wide"
             >
               {t('Join 50+ Global enterprises')}
-              <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
+            </Button>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Enterprise readiness */}
-        <motion.div
+        <m.div
           className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-8 lg:p-10"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -132,7 +132,7 @@ export default function CustomerStoriesSection() {
               </span>
             ))}
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

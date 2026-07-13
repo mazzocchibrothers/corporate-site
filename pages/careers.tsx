@@ -7,6 +7,7 @@ import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { useRouter } from 'next/router';
+import { Button, buttonVariants } from '@/components/ui/button';
 
 const stats = [
   { value: '50+', label: 'People across Europe' },
@@ -115,8 +116,8 @@ export default function CareersPage() {
                   {t('Careers')}
                 </span>
                 <h1
-                  className="font-semibold text-white/95 mb-6"
-                  style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
+                  className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
+                  style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
                 >
                   {t('Join the team making talent decisions')}{' '}
                   <span className="italic font-bold gradient-text-warm">{t('objective.')}</span>
@@ -125,19 +126,15 @@ export default function CareersPage() {
                   {t("You'll help the world's biggest companies hire, promote and develop people based on skills and potential.")}
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  <a
-                    href="#open-roles"
-                    className="group inline-flex items-center gap-2 px-6 py-3.5 text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
-                  >
-                    {t('See open roles')}
-                    <ArrowRight className="h-4 w-4 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
-                  </a>
-                  <a
-                    href="#life-at-skillvue"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 text-[14px] font-semibold text-white/70 rounded-full border border-white/[0.15] hover:border-white/[0.25] hover:text-white transition-all duration-300"
-                  >
-                    {t('Life at Skillvue')}
-                  </a>
+                  <Button asChild variant="primary" mode="dark">
+                    <a href="#open-roles">
+                      {t('See open roles')}
+                      <ArrowRight aria-hidden />
+                    </a>
+                  </Button>
+                  <Button asChild variant="secondary" mode="dark" icon={null}>
+                    <a href="#life-at-skillvue">{t('Life at Skillvue')}</a>
+                  </Button>
                 </div>
               </motion.div>
 
@@ -201,14 +198,12 @@ export default function CareersPage() {
               <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.7] mb-8 max-w-2xl">
                 {t('We are building the objective skills data layer for the enterprise, grounded in science and scaled by AI.')}
               </p>
-              <a
-                href="/about"
-                onClick={(e) => { e.preventDefault(); router.push('/about'); window.scrollTo(0, 0); }}
-                className="group inline-flex items-center gap-2 px-6 py-3 text-[14px] font-semibold text-[#121212] rounded-full border border-[#121212]/[0.12] hover:border-[#4B4DF7]/30 hover:text-[#4B4DF7] transition-all duration-300"
-              >
-                {t('Read the full story')}
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
+              <Button asChild variant="secondary" mode="light">
+                <a href="/about" onClick={(e) => { e.preventDefault(); router.push('/about'); window.scrollTo(0, 0); }}>
+                  {t('Read the full story')}
+                  <ArrowRight aria-hidden />
+                </a>
+              </Button>
             </motion.div>
           </div>
         </section>
@@ -404,13 +399,13 @@ export default function CareersPage() {
                         <span className="text-[15px] md:text-[17px] font-semibold text-white/85 group-hover:text-white/95 transition-colors duration-300">
                           {role.title}
                         </span>
-                        <div className="flex items-center gap-4 shrink-0">
+                        <div className="flex items-center justify-between w-full gap-4 md:w-auto md:justify-start shrink-0">
                           <span className="text-[13px] text-white/35">
                             {role.location} · {role.work}
                           </span>
-                          <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#9B9DFB]/80 group-hover:text-[#9B9DFB] transition-colors duration-300">
+                          <span className={buttonVariants({ variant: 'secondary', mode: 'dark' })}>
                             {t('Apply')}
-                            <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
+                            <ArrowRight aria-hidden className="group-hover:translate-x-1 transition-transform duration-300" />
                           </span>
                         </div>
                       </a>
@@ -423,22 +418,6 @@ export default function CareersPage() {
                 <p className="text-[15px] text-white/35 py-8">{t('No roles match this filter.')}</p>
               )}
             </div>
-
-            <motion.p
-              className="mt-8 text-[13px] text-white/35"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              {t("Don't see your role?")}{' '}
-              <a
-                href="mailto:careers@skillvue.ai"
-                className="text-[#9B9DFB]/60 hover:text-[#9B9DFB] underline underline-offset-2 transition-colors duration-300"
-              >
-                {t('Submit an open application')}
-              </a>
-            </motion.p>
           </div>
         </section>
 
@@ -446,7 +425,7 @@ export default function CareersPage() {
         <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <motion.div
-              className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-8 lg:p-12 text-center"
+              className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-8 lg:p-10 text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -463,20 +442,18 @@ export default function CareersPage() {
                 {t('Ready to do the most important work in HR tech?')}
               </h2>
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <a
-                  href="#open-roles"
-                  className="group inline-flex items-center gap-3 px-6 py-4 md:gap-4 md:px-10 md:py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/15 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
-                >
-                  <span>{t('See open roles')}</span>
-                  <ArrowRight className="h-5 w-5 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
-                </a>
-                <a
-                  href="#life-at-skillvue"
-                  className="group inline-flex items-center gap-2 text-[14px] font-semibold text-white/40 hover:text-white/70 transition-colors duration-300"
-                >
-                  {t('Life at Skillvue')}
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </a>
+                <Button asChild variant="primary" mode="dark">
+                  <a href="#open-roles">
+                    {t('See open roles')}
+                    <ArrowRight aria-hidden />
+                  </a>
+                </Button>
+                <Button asChild variant="tertiary" mode="dark">
+                  <a href="#life-at-skillvue">
+                    {t('Life at Skillvue')}
+                    <ArrowRight aria-hidden />
+                  </a>
+                </Button>
               </div>
             </motion.div>
           </div>

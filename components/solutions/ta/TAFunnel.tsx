@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Zap, BarChart3, Plug, FileText, Calendar, MessageSquare, Users, Filter, Trophy, Brain, Search, ArrowDown } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { IconTile } from '@/components/ui/icon-tile';
 
 const stages = [
   {
@@ -106,9 +107,7 @@ function ColumnCard({ data, delay, t }) {
       transition={{ duration: 0.4, delay }}
     >
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-9 h-9 rounded-lg bg-[#4B4DF7]/[0.12] flex items-center justify-center">
-          <Icon className="h-5 w-5 md:h-4.5 md:w-4.5 text-[#9B9DFB]" />
-        </div>
+        <IconTile icon={Icon} mode="light" />
         <h4 className="text-[15px] md:text-[14px] font-semibold text-[#1A1A2E]/70 tracking-wide">{t(data.title)}</h4>
       </div>
 

@@ -25,8 +25,8 @@ export default function TAImpact() {
         </motion.div>
         <div className="grid gap-4 lg:grid-cols-3 lg:gap-5">
           {kpis.map((k, i) => (
-            <motion.div key={k.value} className="bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-10 lg:p-12" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}>
-              <span className="block mb-6 md:mb-10 text-[#1A1A2E] font-semibold text-[32px] md:text-[64px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{k.value}</span>
+            <motion.div key={k.value} className="bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-10" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}>
+              <span className="block mb-6 md:mb-10 text-[#1A1A2E] stat-value text-[32px] md:text-[64px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{k.value}</span>
               <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-4">{t(k.label)} <span className="font-normal text-[#7A7A7A]">{t(k.sublabel)}</span></h3>
             </motion.div>
           ))}

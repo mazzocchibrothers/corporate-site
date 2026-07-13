@@ -6,6 +6,19 @@ const nextConfig: NextConfig = {
     locales: ['en', 'it'],
     defaultLocale: 'en',
   },
+  async headers() {
+    const oneYearImmutable = 'public, max-age=31536000, immutable';
+    const thirtyDays = 'public, max-age=2592000, stale-while-revalidate=86400';
+    return [
+      { source: '/fonts/:path*', headers: [{ key: 'Cache-Control', value: oneYearImmutable }] },
+      { source: '/logos/:path*', headers: [{ key: 'Cache-Control', value: thirtyDays }] },
+      { source: '/assets/:path*', headers: [{ key: 'Cache-Control', value: thirtyDays }] },
+      { source: '/animations/:path*', headers: [{ key: 'Cache-Control', value: thirtyDays }] },
+      { source: '/team/:path*', headers: [{ key: 'Cache-Control', value: thirtyDays }] },
+      { source: '/about/:path*', headers: [{ key: 'Cache-Control', value: thirtyDays }] },
+      { source: '/careers/:path*', headers: [{ key: 'Cache-Control', value: thirtyDays }] },
+    ];
+  },
   async rewrites() {
     return {
       beforeFiles: [

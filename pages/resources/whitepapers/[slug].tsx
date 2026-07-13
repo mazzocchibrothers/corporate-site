@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ArrowLeft, FileText, Download, BookOpen, Users, Brain, Zap, TrendingUp } from 'lucide-react';
 import { whitepapers } from '@/data/whitepapers';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 export default function WhitepaperDetailPage() {
   const router = useRouter();
@@ -128,10 +129,16 @@ export default function WhitepaperDetailPage() {
             </>
           )}
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full pb-20 lg:pb-28 pt-32">
-            <button onClick={() => { router.push('/resources/whitepapers'); window.scrollTo(0, 0); }} className="group inline-flex items-center gap-2 text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300 mb-12">
-              <ArrowLeft className="h-3.5 w-3.5 group-hover:-translate-x-1 transition-transform duration-300" />
+            <Button
+              onClick={() => { router.push('/resources/whitepapers'); window.scrollTo(0, 0); }}
+              variant="tertiary"
+              mode="dark"
+              icon={<ArrowLeft aria-hidden />}
+              iconPosition="left"
+              className="mb-12"
+            >
               {t('Back to White Papers')}
-            </button>
+            </Button>
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
               <div className="lg:col-span-8">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
@@ -141,7 +148,7 @@ export default function WhitepaperDetailPage() {
                     ))}
                     <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-white/40 border border-white/[0.08] tracking-wide">White Paper</span>
                   </div>
-                  <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[clamp(2.8rem,5.5vw,4.5rem)]" style={{ lineHeight: 1.05, letterSpacing: '-0.03em' }}>
+                  <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]" style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}>
                     {c.title}
                   </h1>
                   <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-2xl" style={{ fontWeight: 300 }}>
@@ -150,14 +157,25 @@ export default function WhitepaperDetailPage() {
                 </motion.div>
               </div>
               <motion.div className="lg:col-span-4" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-                <a href="#download-form" onClick={(e) => { e.preventDefault(); document.getElementById('download-form')?.scrollIntoView({ behavior: 'smooth' }); }}
-                  className="group flex items-center gap-4 px-7 py-5 rounded-2xl border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] hover:bg-[#4B4DF7]/[0.15] transition-all duration-500">
-                  <Download className="h-6 w-6 text-[#4B4DF7] shrink-0" />
-                  <div>
-                    <span className="text-[15px] font-semibold text-white/90 block">{t('Download Free')}</span>
-                  </div>
-                  <ArrowRight className="h-4 w-4 text-white/20 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300 ml-auto" />
-                </a>
+                <Button
+                  asChild
+                  variant="secondary"
+                  mode="dark"
+                  icon={null}
+                  className="justify-start gap-4 px-7 py-5 rounded-2xl border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] hover:bg-[#4B4DF7]/[0.15]"
+                >
+                  <a
+                    href="#download-form"
+                    onClick={(e) => { e.preventDefault(); document.getElementById('download-form')?.scrollIntoView({ behavior: 'smooth' }); }}
+                    className="group"
+                  >
+                    <Download className="h-6 w-6 text-[#4B4DF7] shrink-0" />
+                    <div>
+                      <span className="text-[15px] font-semibold text-white/90 block">{t('Download Free')}</span>
+                    </div>
+                    <ArrowRight className="h-4 w-4 text-white/20 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300 ml-auto" />
+                  </a>
+                </Button>
               </motion.div>
             </div>
           </div>
@@ -266,11 +284,13 @@ export default function WhitepaperDetailPage() {
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">
                 {t('Book a demo with our team and discover how Skillvue turns talent decisions into a competitive advantage.')}
               </p>
-              <button onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
-                className="group inline-flex items-center justify-between px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500">
-                <span>{t('Book a Demo')}</span>
-                <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
-              </button>
+              <Button
+                onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
+                variant="primary"
+                mode="dark"
+              >
+                {t('Book a Demo')}
+              </Button>
             </motion.div>
           </div>
         </section>

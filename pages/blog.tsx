@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const articles = [
   {
@@ -81,7 +82,7 @@ export default function BlogPage() {
     return (
       <motion.article
         key={article.id}
-        className="group rounded-2xl border border-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/[0.15] bg-white overflow-hidden transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] h-full flex flex-col"
+        className="group rounded-2xl border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] h-full flex flex-col"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -99,7 +100,7 @@ export default function BlogPage() {
             </span>
             <span className="text-[12px] text-[#121212]/30">{c.date}</span>
           </div>
-          <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212] leading-snug mb-3 md:mb-4 group-hover:text-[#4B4DF7] transition-colors duration-300">
+          <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212] leading-snug mb-3 md:mb-4">
             {c.title}
           </h3>
           <span className="text-[13px] font-semibold text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
@@ -120,8 +121,8 @@ export default function BlogPage() {
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">{t('Resources')}</span>
               <h1
-                className="font-semibold text-white/95 mb-8 text-[48px] md:text-[clamp(3.5rem,7vw,6rem)]"
-                style={{ lineHeight: 1.05, letterSpacing: '-0.04em' }}
+                className="font-semibold text-white/95 mb-8 text-[48px] md:text-[64px]"
+                style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
               >
                 {t('Blog &')}<br />
                 <span className="gradient-text">{t('Insights')}</span>
@@ -129,16 +130,18 @@ export default function BlogPage() {
               <p className="text-[20px] text-white/[0.45] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>
                 {t('Insights, research, and perspectives on talent intelligence, AI in HR, and the future of people decisions.')}
               </p>
-              <a
-                href="#articles"
-                onClick={(e) => { e.preventDefault(); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' }); }}
-                className="group inline-flex items-center gap-3 text-[14px] text-white/40 hover:text-white/70 transition-colors duration-300"
-              >
-                <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
-                  <ChevronDown className="h-4 w-4" />
-                </span>
-                {t('Explore articles')}
-              </a>
+              <Button asChild variant="tertiary" mode="dark" icon={null}>
+                <a
+                  href="#articles"
+                  onClick={(e) => { e.preventDefault(); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="group inline-flex items-center gap-3"
+                >
+                  <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
+                    <ChevronDown className="!h-4 !w-4" />
+                  </span>
+                  {t('Explore articles')}
+                </a>
+              </Button>
             </motion.div>
           </div>
         </section>
@@ -166,13 +169,13 @@ export default function BlogPage() {
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">
                 {t('Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.')}
               </p>
-              <button
+              <Button
                 onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
-                className="group inline-flex items-center justify-between px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
+                variant="primary"
+                mode="dark"
               >
-                <span>{t('Book a Demo')}</span>
-                <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
-              </button>
+                {t('Book a Demo')}
+              </Button>
             </motion.div>
           </div>
         </section>

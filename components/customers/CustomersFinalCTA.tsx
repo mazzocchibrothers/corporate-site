@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, FileText, BookOpen, Shield, Globe } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const badges = ['GDPR-compliant', 'ISO 27001 certified', 'EU AI Act ready', '50+ languages', 'Built for European enterprises'];
 
@@ -22,14 +23,16 @@ export default function CustomersFinalCTA() {
         </motion.div>
 
         <motion.div className="grid lg:grid-cols-12 gap-4 mb-6" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7, delay: 0.2 }}>
-          <div className="lg:col-span-12 group rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.04] hover:bg-white/[0.06] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
+          <div className="lg:col-span-12 group rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.04] hover:bg-white/[0.06] backdrop-blur-sm p-10 transition-all duration-500">
             <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.15em] uppercase">{t('Ready to explore')}</span>
             <h3 className="text-2xl font-bold text-white/90 mt-4 mb-3">{t('Book a Demo')}</h3>
             <p className="text-[15px] text-white/[0.65] mb-8 max-w-md">{t('See Skillvue live with your specific use case')}</p>
-            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} className="group/btn inline-flex items-center justify-between w-full max-w-sm px-8 py-5 text-[14px] font-semibold text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500">
-              <span>{t('Book a Demo')}</span>
-              <ArrowRight className="h-4 w-4 text-white/30 group-hover/btn:text-[#9B9DFB] group-hover/btn:translate-x-1 transition-all duration-500" />
-            </a>
+            <Button asChild variant="primary" mode="dark" className="w-full md:w-auto max-w-sm justify-between">
+              <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
+                <span>{t('Book a Demo')}</span>
+                <ArrowRight aria-hidden="true" />
+              </a>
+            </Button>
           </div>
         </motion.div>
 

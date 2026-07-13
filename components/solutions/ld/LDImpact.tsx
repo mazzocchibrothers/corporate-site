@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Zap, Target, TrendingUp } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { IconTile } from '@/components/ui/icon-tile';
 
 const kpis = [
   {
@@ -44,9 +45,7 @@ export default function LDImpact() {
         transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
       >
         <div className="flex items-center justify-between mb-5 md:mb-6">
-          <div className="w-11 h-11 rounded-xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.08] flex items-center justify-center group-hover:bg-[#4B4DF7]/[0.12] group-hover:border-[#4B4DF7]/[0.15] transition-all duration-500">
-            <Icon className="h-5 w-5 text-[#4B4DF7]/50 group-hover:text-[#4B4DF7] transition-colors duration-500" strokeWidth={1.5} />
-          </div>
+          <IconTile icon={Icon} mode="light" />
         </div>
 
         <span

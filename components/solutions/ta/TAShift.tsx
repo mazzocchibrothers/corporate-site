@@ -96,7 +96,7 @@ export default function TAShift() {
         <div className="hidden md:grid md:grid-cols-2 gap-6">
           {/* Old playbook */}
           <motion.div
-            className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-10 lg:p-14"
+            className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-10"
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.15 }}
@@ -116,7 +116,7 @@ export default function TAShift() {
 
           {/* With Skillvue */}
           <motion.div
-            className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-white/[0.06] p-5 md:p-10 lg:p-14"
+            className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-white/[0.06] p-5 md:p-10"
             initial={{ opacity: 0, x: 20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.25 }}

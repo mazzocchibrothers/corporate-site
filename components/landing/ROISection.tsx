@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const stats = [
   {
@@ -38,7 +39,7 @@ export default function ROISection() {
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         {/* Header */}
         {/* Header row: title left + CTA right */}
-        <motion.div
+        <m.div
           className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 md:gap-6 lg:gap-8 mb-10 md:mb-16 lg:mb-20"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -50,30 +51,31 @@ export default function ROISection() {
               {t('They can also be your biggest return.')}
             </span>
           </h2>
-          <a
-            href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
-            data-testid="roi-cta"
-            className="group inline-flex items-center gap-3 px-6 py-3 md:px-7 md:py-3.5 text-[14px] md:text-[13px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:bg-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/30 transition-all duration-500 shrink-0"
-          >
-            {t('Book a Demo')}
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
-        </motion.div>
+          <Button asChild variant="primary" mode="light" className="shrink-0">
+            <a
+              href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+              data-testid="roi-cta"
+            >
+              {t('Book a Demo')}
+              <ArrowRight aria-hidden="true" />
+            </a>
+          </Button>
+        </m.div>
 
         {/* 3-column stat cards — horizontal scroll on mobile, 3-col grid on desktop */}
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5 mb-10 md:mb-16">
           {stats.map((stat, i) => (
-            <motion.div
+            <m.div
               key={stat.value}
               data-testid={`roi-stat-${stat.value}`}
-              className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-10 lg:p-12 flex flex-col min-h-[240px] md:min-h-0"
+              className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-10 flex flex-col min-h-[240px] md:min-h-0"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 + i * 0.12, ease: 'easeOut' }}
             >
               {/* Stat number */}
               <span
-                className="block text-[#1A1A2E] text-[32px] md:text-[64px] font-semibold mb-6 md:mb-10"
+                className="block text-[#1A1A2E] text-[32px] md:text-[64px] stat-value mb-6 md:mb-10"
                 style={{
                   lineHeight: 1,
                   letterSpacing: '-0.03em',
@@ -93,7 +95,7 @@ export default function ROISection() {
                   {t(stat.footnote)}
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 

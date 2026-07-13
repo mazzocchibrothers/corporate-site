@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, MessageSquare, Database, Mail, Tag, BarChart3, Eye, Megaphone, Server, Activity, Globe, User } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
+import { IconTile } from '@/components/ui/icon-tile';
 
 const dataGroups = [
   [
@@ -99,9 +101,7 @@ function ServiceBlock({ item }) {
   return (
     <div>
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.08] flex items-center justify-center shrink-0">
-          <Icon className="h-4.5 w-4.5 text-[#4B4DF7]/50" />
-        </div>
+        <IconTile icon={Icon} mode="light" />
         <h3 className="text-[16px] font-semibold text-[#121212]">{item.title}</h3>
       </div>
       <div className="space-y-6 ml-[52px]">
@@ -127,12 +127,18 @@ export default function PrivacyPolicyPage() {
         {/* Hero */}
         <section className="relative pt-[80px] min-h-[50vh] flex items-end">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-24">
-            <button onClick={() => router.back()} className="group inline-flex items-center gap-2 text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300 mb-10">
-              <ArrowLeft className="h-3.5 w-3.5 group-hover:-translate-x-1 transition-transform duration-300" />
+            <Button
+              onClick={() => router.back()}
+              variant="tertiary"
+              mode="dark"
+              icon={<ArrowLeft aria-hidden />}
+              iconPosition="left"
+              className="mb-10"
+            >
               {t('Back')}
-            </button>
+            </Button>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <h1 className="text-[48px] md:text-[clamp(2.5rem,5vw,4rem)] font-semibold text-white/95 mb-4 tracking-[-0.03em] leading-[1.1]">
+              <h1 className="text-[48px] md:text-[64px] font-semibold text-white/95 mb-4 tracking-[-0.02em] leading-[1.1]">
                 Privacy Policy di Skillvue
               </h1>
               <p className="text-[18px] text-white/[0.45] leading-[1.75] max-w-2xl" style={{ fontWeight: 300 }}>
@@ -193,15 +199,15 @@ export default function PrivacyPolicyPage() {
                   Informazioni di contatto
                 </h2>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.08] flex items-center justify-center shrink-0 mt-0.5">
-                    <User className="h-4 w-4 text-[#4B4DF7]/50" />
-                  </div>
+                  <IconTile icon={User} mode="light" className="mt-0.5" />
                   <div>
                     <p className="text-[15px] font-semibold text-[#121212]/75 mb-2">Titolare del Trattamento dei Dati</p>
                     <p className="text-[14px] text-[#121212]/[0.5] leading-[1.75]">Algojob S.r.l. via Molino delle Armi 11, Milano (MI) 20123</p>
                     <p className="text-[14px] text-[#121212]/[0.5] leading-[1.75] mt-4">
                       <span className="font-semibold text-[#121212]/65">Indirizzo email del Titolare:</span>{' '}
-                      <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7]/70 hover:text-[#4B4DF7] transition-colors duration-300">privacy@skillvue.ai</a>
+                      <Button asChild variant="tertiary" mode="light" icon={null}>
+                        <a href="mailto:privacy@skillvue.ai">privacy@skillvue.ai</a>
+                      </Button>
                     </p>
                   </div>
                 </div>

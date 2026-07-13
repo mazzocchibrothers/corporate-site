@@ -18,6 +18,7 @@ export const translations = {
   'Skillvue': 'Skillvue',
 
   // ===== HOMEPAGE HERO =====
+  'See the Science': 'Scopri la Scienza',
   'Every talent': 'Ogni decisione',
   'decision,': 'sul talento,',
   'finally': 'finalmente',

@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Users, Radar, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { IconTile } from '@/components/ui/icon-tile';
 
 const pillars = [
   { icon: Users, title: 'Skills-matched staffing', desc: 'Assemble project teams based on verified skill data. Match people to assignments based on what they can actually do, not who raised their hand.' },
@@ -36,7 +37,7 @@ export default function PRHowSolves() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
               >
-                <Icon className="h-6 w-6 text-[#4B4DF7]/50 mb-5" strokeWidth={1.5} />
+                <IconTile icon={Icon} mode="dark" className="mb-5" />
                 <h3 className="text-[20px] font-semibold text-white/90 mb-4">{t(p.title)}</h3>
                 <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t(p.desc)}</p>
               </motion.div>

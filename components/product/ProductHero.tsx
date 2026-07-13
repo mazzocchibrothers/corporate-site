@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import Lottie from 'lottie-react';
+import { Button } from '@/components/ui/button';
 
 const ANIM_EN = 'https://cdn.lottielab.com/l/3FJ5CBuSY6Ebq8.json';
 const ANIM_IT = 'https://cdn.lottielab.com/l/9E2vegrr5hs33N.json';
@@ -31,7 +32,7 @@ export default function ProductHero() {
           {/* Left: text + CTA */}
           <div>
             <motion.h1
-              className="text-[48px] md:text-[64px] font-semibold tracking-[-0.03em] text-white/95 mb-6 md:mb-10"
+              className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-6 md:mb-10"
               style={{ lineHeight: 1.1 }}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -52,14 +53,15 @@ export default function ProductHero() {
                 {t('Skillvue is the AI-powered talent intelligence platform that turns static HR processes into predictive, objective insights. Verify skills, predict potential, and make every people decision defensible.')}
               </p>
 
-              <a
-                href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
-                data-testid="product-hero-book-demo"
-                className="group inline-flex items-center justify-between gap-4 w-auto px-6 py-4 md:px-8 md:py-5 text-[13px] md:text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500 shrink-0"
-              >
-                <span>{t('Book a Demo')}</span>
-                <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
-              </a>
+              <Button asChild variant="primary" mode="dark">
+                <a
+                  href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+                  data-testid="product-hero-book-demo"
+                >
+                  <span>{t('Book a Demo')}</span>
+                  <ArrowRight aria-hidden="true" />
+                </a>
+              </Button>
             </motion.div>
           </div>
 

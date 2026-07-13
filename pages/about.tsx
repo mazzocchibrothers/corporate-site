@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const stats = [
   { value: '€9M+', label: 'Raised' },
@@ -419,14 +420,14 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <a
-                  href="/resources/press"
-                  className="group inline-flex items-center gap-3 px-7 py-3.5 text-[14px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
-                  style={{ textDecoration: 'none' }}
-                  onClick={(e) => { e.preventDefault(); router.push('/resources/press'); }}
-                >
-                  {t('Learn more about Skillvue →')}
-                </a>
+                <Button asChild variant="secondary" mode="dark" icon={null}>
+                  <a
+                    href="/resources/press"
+                    onClick={(e) => { e.preventDefault(); router.push('/resources/press'); }}
+                  >
+                    {t('Learn more about Skillvue →')}
+                  </a>
+                </Button>
               </div>
             </div>
 
@@ -693,14 +694,14 @@ export default function AboutPage() {
 
               {/* Join us button */}
               <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 8 }}>
-                <a
-                  href="/careers"
-                  className="group inline-flex items-center gap-3 px-7 py-3.5 text-[14px] font-semibold tracking-wide rounded-full border border-[#4B4DF7]/15 text-[#4B4DF7] hover:bg-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/30 transition-all duration-500"
-                  style={{ textDecoration: 'none' }}
-                  onClick={(e) => { e.preventDefault(); router.push('/careers'); }}
-                >
-                  {t('Join us →')}
-                </a>
+                <Button asChild variant="secondary" mode="dark" icon={null}>
+                  <a
+                    href="/careers"
+                    onClick={(e) => { e.preventDefault(); router.push('/careers'); }}
+                  >
+                    {t('Join us →')}
+                  </a>
+                </Button>
               </div>
             </div>
 

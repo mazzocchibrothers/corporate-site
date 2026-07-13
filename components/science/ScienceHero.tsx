@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 export default function ScienceHero() {
   const { t, lang } = useLanguage();
@@ -12,7 +13,7 @@ export default function ScienceHero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="lg:col-span-7 flex flex-col gap-8 md:gap-10">
             <motion.h1
-              className="text-[48px] md:text-[clamp(2.5rem,4vw,3.5rem)] font-semibold tracking-[-0.03em] text-white/95"
+              className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95"
               style={{ lineHeight: 1.1 }}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -32,10 +33,12 @@ export default function ScienceHero() {
                   ? "Valutare le persone è difficile. Per prendere decisioni sul talento di cui fidarsi, accuratezza e affidabilità non possono essere degli optional. Skillvue è costruito su basi psicometriche e psicologiche rigorose, che garantiscono output a prova di qualsiasi scrutinio."
                   : "Measuring people is hard. To make talent decisions you can trust, accuracy and reliability aren't optional. Skillvue is built on I/O psychology and psychometrics, ensuring every data point holds up to scrutiny."}
               </p>
-              <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} className="group self-start inline-flex items-center gap-8 shrink-0 px-6 py-4 md:px-8 md:py-5 text-[13px] md:text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500">
-                <span>{t('Book a Demo')}</span>
-                <ArrowRight className="h-4 w-4 md:h-5 md:w-5 ml-4 md:ml-8 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-500" />
-              </a>
+              <Button asChild variant="primary" mode="dark" className="self-start gap-8">
+                <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
+                  <span>{t('Book a Demo')}</span>
+                  <ArrowRight aria-hidden="true" />
+                </a>
+              </Button>
             </motion.div>
           </div>
         </div>
