@@ -149,7 +149,7 @@ export default function Footer() {
             {[
               {
                 label: 'Privacy Policy',
-                href: lang === 'it' ? 'https://www.iubenda.com/privacy-policy/75783964' : 'https://www.iubenda.com/privacy-policy/45750674/full-legal',
+                href: '/privacy-policy',
               },
               {
                 label: 'Cookie Policy',
