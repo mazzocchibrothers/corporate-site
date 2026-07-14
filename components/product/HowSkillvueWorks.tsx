@@ -57,7 +57,7 @@ export default function HowSkillvueWorks() {
         {/* Active step card */}
         <motion.div
           key={active}
-          className="rounded-xl md:rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-10 lg:p-14"
+          className="rounded-xl md:rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-10"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}

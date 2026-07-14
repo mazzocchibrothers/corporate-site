@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Settings, Shield, Scale } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { IconTile } from '@/components/ui/icon-tile';
 
 const pillars = [
   {
@@ -57,7 +58,7 @@ export default function EnterpriseTrust() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
               >
-                <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#4B4DF7]/50 mb-3 md:mb-5" strokeWidth={1.5} />
+                <IconTile icon={Icon} mode="light" className="mb-3 md:mb-5" />
                 <h3 className="text-[16px] md:text-[20px] font-semibold text-[#1A1A2E] mb-2 md:mb-4">{t(pillar.title)}</h3>
                 <p className="text-[13px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-[1.75]">{t(pillar.desc)}</p>
               </motion.div>

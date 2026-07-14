@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const dimensions = [
   { title: 'Suitability', subtitle: 'Person-job fit', desc: 'Evaluates objective eligibility: qualifications, availability, logistics, baseline requirements. A structured screening layer before deeper verification.' },
@@ -56,10 +57,12 @@ export default function WhatWeAssess() {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <a href="/science" className="group inline-flex items-center gap-1.5 md:gap-2 text-[13px] md:text-[13px] font-semibold text-[#4B4DF7] hover:text-[#3A3BD6] shrink-0 transition-colors duration-300">
-            {t('Discover the Science')}
-            <ArrowRight className="h-3.5 w-3.5 md:h-3.5 md:w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
+          <Button asChild variant="tertiary" mode="dark">
+            <a href="/science">
+              {t('Discover the Science')}
+              <ArrowRight aria-hidden="true" />
+            </a>
+          </Button>
         </motion.div>
       </div>
     </section>

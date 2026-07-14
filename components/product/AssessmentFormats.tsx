@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MessageSquare, MonitorSmartphone, ListChecks, UserCheck, Target, BookOpen, Wrench, GitBranch, Mic, Video, PenLine, CheckSquare } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { IconTile } from '@/components/ui/icon-tile';
 
 const layers = [
   {
@@ -80,9 +81,7 @@ export default function AssessmentFormats() {
                       key={item.name}
                       className="rounded-lg md:rounded-xl border border-white/[0.06] bg-white/[0.03] p-4 md:p-5 hover:border-white/[0.12] hover:bg-white/[0.06] transition-all duration-400"
                     >
-                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-white/[0.06] flex items-center justify-center mb-2.5 md:mb-4">
-                        <Icon className="h-5 w-5 md:h-5 md:w-5 text-white/50" />
-                      </div>
+                      <IconTile icon={Icon} mode="dark" className="mb-2.5 md:mb-4" />
                       <h4 className="text-[15px] md:text-[15px] font-semibold text-white/90 mb-1 md:mb-1.5 leading-tight" style={{ whiteSpace: 'pre-line' }}>{t(item.name)}</h4>
                       <p className="text-[12px] md:text-[13px] text-white/[0.4] leading-[1.4] md:leading-[1.55]">{t(item.desc)}</p>
                     </div>

@@ -2,6 +2,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Download, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const HUBSPOT_PORTAL_ID = '48438018';
 const HUBSPOT_FORM_ID = 'YOUR_WP_L1_FORM_ID'; // TODO: replace with real form ID
@@ -131,18 +133,11 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
       >
         <div className="flex items-center gap-2.5">
           <SkillvueIcon size={26} />
-          <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.01em]">Skillvue</span>
+          <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">Skillvue</span>
         </div>
-        <button
-          onClick={scrollToForm}
-          className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-[13px] font-semibold text-white transition-all hover:opacity-90"
-          style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
-        >
+        <Button variant="primary" mode="light" onClick={scrollToForm}>
           Scarica il Report
-          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-          </svg>
-        </button>
+        </Button>
       </nav>
 
       {/* HERO */}
@@ -159,7 +154,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
 
           <motion.h1
             variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
-            className="text-[clamp(2.4rem,5vw,4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.1] mb-6"
+            className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.1] mb-6"
           >
             L'arte di misurare{' '}
             <span
@@ -227,16 +222,9 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             })()}
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.3}>
-            <button
-              onClick={scrollToForm}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-[15px] font-semibold text-white transition-all hover:scale-[1.02] hover:shadow-lg"
-              style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)', boxShadow: '0 8px 24px rgba(75,77,247,0.25)' }}
-            >
+            <Button variant="primary" mode="light" onClick={scrollToForm}>
               Scarica il Report Completo
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </button>
+            </Button>
           </motion.div>
         </div>
       </section>
@@ -274,7 +262,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.025em] text-[#0D0D0D] mb-3">
+            <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] mb-3">
               Cosa troverai nel report
             </h2>
             <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
@@ -309,7 +297,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.15] mb-6">
+              <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
                 Scarica il report completo
               </h2>
               <ul className="space-y-3 mb-8">
@@ -365,16 +353,13 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                     <p className="text-[16px] font-semibold text-[#0D0D0D] mb-1">Il whitepaper si è aperto in una nuova scheda.</p>
                     <p className="text-[13px] text-[#0D0D0D]/40">Controlla il tuo browser se non lo vedi subito.</p>
                   </div>
-                  <button
+                  <Button
+                    variant="secondary"
+                    mode="light"
                     onClick={() => window.open('/lp/arte-di-misurare-allineamento?access=true', '_blank')}
-                    className="inline-flex items-center gap-2 px-5 py-2 rounded-lg text-[13px] font-semibold border transition-all hover:opacity-70"
-                    style={{ borderColor: 'rgba(75,77,247,0.3)', color: '#4B4DF7' }}
                   >
-                    <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
                     Apri di nuovo
-                  </button>
+                  </Button>
                 </div>
               ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -424,11 +409,13 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                   {!errors.email && <p className="text-[11px] text-[#0D0D0D]/25 mt-1">Richiesta email aziendale (non personale)</p>}
                 </div>
 
-                <button
+                <Button
                   type="submit"
+                  variant="primary"
+                  mode="light"
                   disabled={submitting}
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-[14px] font-semibold text-white transition-all hover:opacity-90 disabled:opacity-60"
-                  style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)', marginTop: '8px' }}
+                  className="w-full"
+                  icon={submitting ? null : undefined}
                 >
                   {submitting ? (
                     <>
@@ -439,14 +426,9 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                       Caricamento…
                     </>
                   ) : (
-                    <>
-                      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                      </svg>
-                      Scarica il Report
-                    </>
+                    'Scarica il Report'
                   )}
-                </button>
+                </Button>
               </form>
               )}
             </motion.div>
@@ -461,9 +443,13 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             <SkillvueIcon size={20} />
             <span className="text-[12px] text-[#0D0D0D]/30">© {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati.</span>
           </div>
-          <div className="flex items-center gap-5 text-[12px] text-[#0D0D0D]/25">
-            <a href="https://www.skillvue.ai/privacy-policy" className="hover:text-[#4B4DF7] transition-colors">Privacy Policy</a>
-            <a href="https://www.skillvue.ai" className="hover:text-[#4B4DF7] transition-colors">skillvue.ai</a>
+          <div className="flex items-center gap-5 text-[12px]">
+            <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+              <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
+            </Button>
+            <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+              <a href="https://www.skillvue.ai">skillvue.ai</a>
+            </Button>
           </div>
         </div>
       </footer>
@@ -477,7 +463,7 @@ function StatBox({ value, label }: { value: string; label: string }) {
   return (
     <div className="rounded-xl border border-black/[0.08] bg-white p-5 text-center">
       <div
-        className="text-[1.9rem] font-bold tracking-[-0.02em] mb-1"
+        className="text-[1.9rem] font-bold tracking-[-0.03em] mb-1"
         style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
       >
         {value}
@@ -503,7 +489,7 @@ function SectionHeading({ num, title }: { num?: string; title: string }) {
   return (
     <div className="mt-12 mb-5">
       <div className="w-8 h-0.5 rounded mb-3" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-      <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D]">
+      <h2 className="text-[1.5rem] font-semibold tracking-[-0.03em] text-[#0D0D0D]">
         {num && <span className="mr-1">{num}.</span>}{title}
       </h2>
     </div>
@@ -581,29 +567,28 @@ function WhitepaperLayer() {
       >
         <div className="flex items-center gap-2.5">
           <SkillvueIcon size={24} />
-          <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.01em]">Skillvue</span>
+          <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.03em]">Skillvue</span>
         </div>
         <div className="flex items-center gap-3">
-          <a
-            href="/WP-L1-ITA.pdf"
-            download="Arte-Misurare-Allineamento-Brand-Skillvue.pdf"
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[12px] font-semibold transition-all hover:opacity-80 border"
-            style={{ borderColor: 'rgba(75,77,247,0.3)', color: '#4B4DF7', background: 'rgba(75,77,247,0.05)' }}
-          >
-            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            Scarica PDF
-          </a>
-          <a
-            href="https://www.skillvue.ai/contact-us"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[12px] font-semibold text-white transition-all hover:opacity-90"
-            style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
-          >
-            Contattaci
-          </a>
+          <Button asChild variant="secondary" mode="light">
+            <a
+              href="/WP-L1-ITA.pdf"
+              download="Arte-Misurare-Allineamento-Brand-Skillvue.pdf"
+            >
+              <Download aria-hidden="true" />
+              Scarica PDF
+            </a>
+          </Button>
+          <Button asChild variant="primary" mode="light">
+            <a
+              href="https://www.skillvue.ai/contact-us"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contattaci
+              <ArrowRight aria-hidden="true" />
+            </a>
+          </Button>
         </div>
       </nav>
 
@@ -619,7 +604,7 @@ function WhitepaperLayer() {
             >
               RETAIL LUSSO · 2026
             </span>
-            <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
+            <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.2] mb-2">
               L'arte di misurare
               <span
                 className="block"
@@ -987,18 +972,16 @@ function WhitepaperLayer() {
                 <strong className="text-[#0D0D0D]/80">verification comportamentali predittivi e scalabili</strong>, pienamente
                 conformi all'EU AI Act, personalizzati sulle specificità del contesto del tuo brand.
               </p>
-              <a
-                href="https://www.skillvue.ai/contact-us"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-[13px] font-semibold text-white transition-all hover:opacity-90"
-                style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
-              >
-                Richiedi una conversazione esplorativa
-                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
+              <Button asChild variant="primary" mode="light">
+                <a
+                  href="https://www.skillvue.ai/contact-us"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Richiedi una conversazione esplorativa
+                  <ArrowRight aria-hidden="true" />
+                </a>
+              </Button>
             </div>
 
             {/* References */}
@@ -1026,7 +1009,7 @@ function WhitepaperLayer() {
               <p className="text-[12px] text-[#0D0D0D]/30 mb-2">A cura di</p>
               <div className="flex items-center justify-center gap-2">
                 <SkillvueIcon size={22} />
-                <span className="font-bold text-[16px] text-[#0D0D0D]/70 tracking-[-0.01em]">Skillvue</span>
+                <span className="font-bold text-[16px] text-[#0D0D0D]/70 tracking-[-0.03em]">Skillvue</span>
               </div>
             </div>
 
@@ -1038,9 +1021,13 @@ function WhitepaperLayer() {
       <footer className="py-6 px-6 lg:px-10">
         <div className="max-w-[760px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
           <span className="text-[12px] text-[#0D0D0D]/25">© {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati.</span>
-          <div className="flex items-center gap-5 text-[12px] text-[#0D0D0D]/25">
-            <a href="https://www.skillvue.ai/privacy-policy" className="hover:text-[#4B4DF7] transition-colors">Privacy Policy</a>
-            <a href="https://www.skillvue.ai" className="hover:text-[#4B4DF7] transition-colors">skillvue.ai</a>
+          <div className="flex items-center gap-5 text-[12px]">
+            <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+              <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
+            </Button>
+            <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+              <a href="https://www.skillvue.ai">skillvue.ai</a>
+            </Button>
           </div>
         </div>
       </footer>

@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import { Target, TrendingUp, Award, Shield } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { IconTile } from '@/components/ui/icon-tile';
 
 const pillars = [
   {
@@ -44,7 +45,7 @@ export default function SolutionSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const renderCard = (pillar: typeof pillars[number], i: number) => (
-    <motion.div
+    <m.div
       key={pillar.id}
       data-testid={`solution-card-${pillar.id}`}
       className="group relative rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-sm p-5 md:p-8 lg:p-10 transition-all duration-500 overflow-hidden md:aspect-auto"
@@ -60,11 +61,7 @@ export default function SolutionSection() {
         <div>
           {(() => {
             const Icon = pillar.icon;
-            return (
-              <div className="w-9 h-9 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-3 md:mb-5" style={{ backgroundColor: 'rgba(75,77,247,0.08)', border: '1px solid rgba(75,77,247,0.15)' }}>
-                <Icon className="h-4 w-4 md:h-5 md:w-5 text-[#9B9DFB]/70" strokeWidth={1.5} />
-              </div>
-            );
+            return <IconTile icon={Icon} mode="dark" className="mb-3 md:mb-5" />;
           })()}
           <h3
             className="text-[15px] md:text-2xl font-semibold text-white/85 group-hover:text-white/95 transition-colors duration-500 leading-snug"
@@ -88,14 +85,14 @@ export default function SolutionSection() {
           </span>
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 
   return (
     <section id="solutions" data-testid="solution-section" className="relative py-20 lg:py-28" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         {/* Header */}
-        <motion.div
+        <m.div
           className="mb-16 lg:mb-20"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -108,7 +105,7 @@ export default function SolutionSection() {
           <p className="text-[15px] md:text-[18px] text-white/[0.65] leading-[1.7] mt-4 md:mt-6 max-w-xl">
             {t('One platform for every talent decision. hiring, performance, development, mobility. Objective. Scalable. Defensible.')}
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Cards grid */}
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4 lg:gap-5">

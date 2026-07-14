@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { ChevronDown, Volume2, VolumeX } from 'lucide-react';
 import AnimatedWaveform from '../ui/AnimatedWaveform';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 export default function CustomerStoriesShowcase() {
   const { t } = useLanguage();
@@ -46,19 +47,23 @@ export default function CustomerStoriesShowcase() {
               {t('Organizations harness Skillvue to make talent decisions with confidence, eliminating guesswork and empowering their people. These are their stories.')}
             </p>
 
-            <a
-              href="#explore"
-              className="group inline-flex items-center gap-3 text-[14px] text-white/50 hover:text-white/80 transition-colors duration-300"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('explore')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
-                <ChevronDown className="h-4 w-4" />
-              </span>
-              {t('Explore all stories')}
-            </a>
+            <Button asChild variant="tertiary" mode="dark" className="group gap-3">
+              <a
+                href="#explore"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('explore')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                {/* Decorative circular scroll-indicator badge — kept custom since it isn't
+                    the standard trailing arrow icon Button expects; size pinned with
+                    !size-4 so Button's own [&_svg]:size-6 rule doesn't blow it up. */}
+                <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
+                  <ChevronDown className="!size-4" />
+                </span>
+                {t('Explore all stories')}
+              </a>
+            </Button>
           </motion.div>
 
           {/* Right. Video card (replicating reference exactly) */}

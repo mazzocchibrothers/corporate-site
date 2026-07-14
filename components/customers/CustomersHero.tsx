@@ -37,7 +37,7 @@ export default function CustomersHero() {
     <section id="customers-hero" data-testid="customers-hero" className="relative pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-24 lg:py-32">
         <motion.h1
-          className="text-[48px] md:text-[clamp(2.8rem,5.5vw,5rem)] font-semibold tracking-[-0.03em] text-white/95 mb-8 max-w-5xl"
+          className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-8 max-w-5xl"
           style={{ lineHeight: 1.15 }}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,8 +76,8 @@ export default function CustomersHero() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           {metrics.map((m) => (
-            <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <span className="block text-white mb-1 font-semibold md:font-extrabold" style={{ fontSize: '2rem', lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+            <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.03] p-10">
+              <span className="block text-white mb-1 stat-value" style={{ fontSize: '2rem', lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
               <span className="text-[13px] text-white/[0.65]">{t(m.label)}</span>
             </div>
           ))}

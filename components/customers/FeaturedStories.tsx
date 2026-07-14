@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const stories = [
   {
@@ -78,10 +79,13 @@ export default function FeaturedStories() {
                 )}
               </div>
               <div className="lg:col-span-4 flex items-end justify-end">
-                <button onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0,0); }} className="group/btn inline-flex items-center gap-2 text-[13px] font-semibold text-[#9B9DFB] hover:text-[#3A3BD6] transition-colors duration-300">
+                <Button
+                  variant="tertiary"
+                  mode="dark"
+                  onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0, 0); }}
+                >
                   {t('Read the full story')}
-                  <ArrowRight className="h-3.5 w-3.5 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                </button>
+                </Button>
               </div>
             </motion.div>
           ))}

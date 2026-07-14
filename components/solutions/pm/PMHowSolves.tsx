@@ -22,7 +22,7 @@ export default function PMHowSolves() {
         <div className="grid md:grid-cols-2 gap-5 mb-8">
           {/* Subjective */}
           <motion.div
-            className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-10 lg:p-12"
+            className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-10"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.15 }}
@@ -43,7 +43,7 @@ export default function PMHowSolves() {
 
           {/* Objective */}
           <motion.div
-            className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-white/70 p-10 lg:p-12"
+            className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-white/70 p-10"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.25 }}

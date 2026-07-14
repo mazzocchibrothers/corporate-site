@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 export default function IMCTA() {
   const { t, lang } = useLanguage();
@@ -19,10 +20,12 @@ export default function IMCTA() {
           </h2>
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7, delay: 0.2 }}>
-          <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="im-final-cta" className="group inline-flex items-center justify-between w-full max-w-xl px-8 py-5 text-[14px] font-semibold tracking-wide text-[#4B4DF7] rounded-full border border-[#4B4DF7]/15 hover:border-[#4B4DF7]/30 hover:bg-[#4B4DF7]/[0.06] transition-all duration-500">
-            <span>{t('Book a Demo')}</span>
-            <ArrowRight className="h-4 w-4 text-[#4B4DF7]/40 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-500" />
-          </a>
+          <Button asChild variant="primary" mode="light" className="w-full md:w-auto max-w-xl">
+            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="im-final-cta">
+              <span>{t('Book a Demo')}</span>
+              <ArrowRight aria-hidden="true" />
+            </a>
+          </Button>
         </motion.div>
       </div>
     </section>

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Download, Mail } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const pressArticles = [
   {
@@ -182,8 +183,8 @@ export default function PressPage() {
                 {t('Press')}
               </span>
               <h1
-                className="font-semibold text-white/95 mb-6 text-[48px] md:text-[clamp(2.8rem,5.5vw,5rem)]"
-                style={{ lineHeight: 1.05, letterSpacing: '-0.03em' }}
+                className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
+                style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
               >
                 {t('Skillvue in')}<br />
                 <span className="gradient-text">{t('the News')}</span>
@@ -191,13 +192,12 @@ export default function PressPage() {
               <p className="text-[18px] text-white/[0.45] leading-[1.8] max-w-lg mb-10" style={{ fontWeight: 300 }}>
                 {t("See how the world's leading publications are covering the rise of AI-powered talent intelligence.")}
               </p>
-              <a
-                href="mailto:press@skillvue.ai"
-                className="inline-flex items-center gap-2 text-[14px] text-white/40 hover:text-white/70 transition-colors duration-300"
-              >
-                <Mail className="h-4 w-4" />
-                press@skillvue.ai
-              </a>
+              <Button asChild variant="tertiary" mode="dark">
+                <a href="mailto:press@skillvue.ai">
+                  <Mail aria-hidden />
+                  press@skillvue.ai
+                </a>
+              </Button>
             </motion.div>
           </div>
         </section>
@@ -480,13 +480,13 @@ export default function PressPage() {
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">
                 {t('Get in touch with our team to see how Skillvue turns every talent decision into a data-driven one.')}
               </p>
-              <button
+              <Button
                 onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
-                className="group inline-flex items-center justify-between px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
+                variant="primary"
+                mode="dark"
               >
-                <span>{t('Book a Demo')}</span>
-                <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
-              </button>
+                {t('Book a Demo')}
+              </Button>
             </motion.div>
           </div>
         </section>

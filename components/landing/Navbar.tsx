@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 
 const navLinks = [
@@ -114,6 +115,7 @@ export default function Navbar() {
   const textColor = isLight ? '#121212' : '#ffffff';
   const textMuted = isLight ? 'rgba(26,26,46,0.7)' : 'rgba(255,255,255,0.7)';
   const btnBorder = isLight ? 'rgba(26,26,46,0.15)' : 'rgba(255,255,255,0.15)';
+  const navCtaMode = !menuActive && isLight ? 'light' : 'dark';
 
   const activeItems = hasDropdown ? navLinks.find(l => l.label === openMenu)?.items : null;
 
@@ -153,6 +155,8 @@ export default function Navbar() {
             <img
               src={isLight ? '/logos/Skillvue_logo-on_light.svg' : '/logos/Skillvue_logo-on_dark.svg'}
               alt="Skillvue"
+              width={960}
+              height={240}
               className="h-7 w-auto block border-0"
             />
           </a>
@@ -226,21 +230,21 @@ export default function Navbar() {
               ))}
             </div>
 
-            <a
-              href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
-              data-testid="nav-book-demo"
-              className="inline-flex items-center px-7 py-3 text-[14px] font-medium tracking-wide rounded-full transition-all duration-300 hover:!border-[rgba(75,77,247,0.4)] hover:!bg-[rgba(75,77,247,0.08)]"
-              style={{
-                color: menuActive ? '#ffffff' : textColor,
-                borderWidth: '1px',
-                borderStyle: 'solid',
-                borderColor: menuActive ? 'rgba(255,255,255,0.15)' : btnBorder,
-                backgroundColor: 'transparent',
-              }}
-              onClick={(e) => { e.preventDefault(); navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); }}
+            <Button
+              asChild
+              variant="primary"
+              mode={navCtaMode}
+              className="text-[14px] tracking-wide"
             >
-              {lang === 'it' ? 'Prenota una Demo' : 'Book a Demo'}
-            </a>
+              <a
+                href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+                data-testid="nav-book-demo"
+                onClick={(e) => { e.preventDefault(); navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); }}
+              >
+                {lang === 'it' ? 'Prenota una Demo' : 'Book a Demo'}
+                <ArrowRight aria-hidden="true" />
+              </a>
+            </Button>
           </div>
 
           {/* Mobile hamburger */}
@@ -381,12 +385,14 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <button
+              <Button
+                variant="primary"
+                mode="dark"
                 onClick={() => navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting')}
-                className="w-full flex items-center justify-center py-4 text-[16px] font-semibold text-white rounded-full border border-white/15 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-300"
+                className="w-full text-[16px]"
               >
                 {lang === 'it' ? 'Prenota una Demo' : 'Book a Demo'}
-              </button>
+              </Button>
             </div>
           </div>
         </div>

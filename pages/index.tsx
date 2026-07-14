@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { LazyMotion } from 'framer-motion';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import HeroSection from '@/components/landing/HeroSection';
@@ -10,6 +11,8 @@ import HowItWorksSection from '@/components/landing/HowItWorksSection';
 import CustomerStoriesSection from '@/components/landing/CustomerStoriesSection';
 import ROISection from '@/components/landing/ROISection';
 import CTASection from '@/components/landing/CTASection';
+
+const loadMotionFeatures = () => import('@/lib/motion-features').then((res) => res.default);
 
 export default function HomePage() {
   const { locale } = useRouter();
@@ -25,24 +28,28 @@ export default function HomePage() {
           : 'Verify skills, predict performance and make every hiring and promotion decision defensible. Skillvue combines psychometric rigour with AI for European enterprises.'
         } />
         <link rel="canonical" href={canonical} />
+        {/* Hero's italic gradient span needs Bold Italic; only this page (and /science) does. */}
+        <link rel="preload" href="/fonts/MonaSans-BoldItalic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </Head>
       <Navbar />
-      <main>
-        <HeroSection />
-        <div className="fade-into-light" />
-        <ProblemSection />
-        <div className="fade-into-dark" />
-        <SolutionSection />
-        <div className="fade-into-light" />
-        <HowItWorksSection />
-        <div className="fade-into-dark" />
-        <CustomerStoriesSection />
-        <div className="fade-into-light" />
-        <ROISection />
-        <div className="fade-into-dark" />
-        <CTASection />
-        <Footer />
-      </main>
+      <LazyMotion features={loadMotionFeatures} strict>
+        <main>
+          <HeroSection />
+          <div className="fade-into-light" />
+          <ProblemSection />
+          <div className="fade-into-dark" />
+          <SolutionSection />
+          <div className="fade-into-light" />
+          <HowItWorksSection />
+          <div className="fade-into-dark" />
+          <CustomerStoriesSection />
+          <div className="fade-into-light" />
+          <ROISection />
+          <div className="fade-into-dark" />
+          <CTASection />
+          <Footer />
+        </main>
+      </LazyMotion>
     </>
   );
 }

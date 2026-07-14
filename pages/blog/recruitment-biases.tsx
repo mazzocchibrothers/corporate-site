@@ -2,8 +2,9 @@
 import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
+import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { ArrowRight, ArrowLeft, Clock, AlertTriangle, Shield, Eye, Anchor, UserCheck, Zap, ThumbsUp, Brain } from 'lucide-react';
+import { ArrowLeft, Clock, AlertTriangle, Shield, Eye, Anchor, UserCheck, Zap, ThumbsUp, Brain } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 
@@ -44,17 +45,23 @@ export default function BlogArticle2() {
           <img src="https://images.unsplash.com/photo-1758519288480-1489c17b1519?w=1400&h=600&fit=crop" alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.12]" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/30" />
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-20 lg:py-28">
-            <button onClick={() => { router.push('/blog'); window.scrollTo(0, 0); }} className="group inline-flex items-center gap-2 text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300 mb-10">
-              <ArrowLeft className="h-3.5 w-3.5 group-hover:-translate-x-1 transition-transform duration-300" />
+            <Button
+              variant="tertiary"
+              mode="dark"
+              iconPosition="left"
+              icon={<ArrowLeft aria-hidden />}
+              onClick={() => { router.push('/blog'); window.scrollTo(0, 0); }}
+              className="mb-10"
+            >
               {lang === 'it' ? 'Torna al Blog' : 'Back to Blog'}
-            </button>
+            </Button>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">Hiring</span>
                 <span className="text-[13px] text-white/35">{lang === 'it' ? '10 marzo 2026' : 'March 10, 2026'}</span>
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '12 min di lettura' : '12 min read'}</span>
               </div>
-              <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[clamp(2.5rem,5vw,3.5rem)]" style={{ lineHeight: 1.12, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]" style={{ lineHeight: 1.12, letterSpacing: '-0.02em' }}>
                 {lang === 'it' ? 'Gli 8 bias di selezione più comuni (e come evitarli)' : 'The 8 Most Common Recruitment Biases (and How to Avoid Them)'}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
@@ -181,11 +188,14 @@ export default function BlogArticle2() {
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {lang === 'it' ? 'Skillvue analizza le competenze di candidati e dipendenti in modo rapido, oggettivo e su larga scala grazie alla tecnologia AI proprietaria.' : 'Skillvue analyzes skills of candidates and employees quickly, objectively, and at scale using proprietary AI technology.'}
               </p>
-              <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
-                className="group inline-flex items-center justify-between px-9 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500 mb-16">
-                <span>{lang === 'it' ? 'Prenota una demo' : 'Book a Demo'}</span>
-                <ArrowRight className="h-4 w-4 ml-8 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
-              </button>
+              <Button
+                variant="primary"
+                mode="dark"
+                onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
+                className="mb-16"
+              >
+                {lang === 'it' ? 'Prenota una demo' : 'Book a Demo'}
+              </Button>
               <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
                 {(lang === 'it' ? ['Scienza psicometrica', 'Metodologia BEI', 'Profili oggettivi', 'Riduzione dei bias'] : ['Psychometric science', 'BEI methodology', 'Objective profiles', 'Bias reduction']).map((item) => (
                   <span key={item} className="text-[13px] text-white/25 flex items-center gap-2">

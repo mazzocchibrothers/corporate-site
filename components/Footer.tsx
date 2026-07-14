@@ -75,6 +75,9 @@ export default function Footer() {
               <img
                 src="/logos/Skillvue_logo_solid_white.svg"
                 alt="Skillvue"
+                width={961}
+                height={240}
+                loading="lazy"
                 className="h-6 w-auto block border-0"
               />
             </a>
@@ -146,7 +149,7 @@ export default function Footer() {
             {[
               {
                 label: 'Privacy Policy',
-                href: lang === 'it' ? 'https://www.iubenda.com/privacy-policy/75783964' : 'https://www.iubenda.com/privacy-policy/45750674/full-legal',
+                href: '/privacy-policy',
               },
               {
                 label: 'Cookie Policy',

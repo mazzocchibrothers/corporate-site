@@ -1,24 +1,21 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
-
-const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
-import scrollArrowsData from '../../public/animations/scroll-arrows.json';
+import { Button } from '@/components/ui/button';
 
 const clientLogos = [
-  { name: 'Unicredit', src: '/logos/client-unicredit.svg' },
-  { name: 'Carrefour', src: '/logos/client-carrefour.svg' },
-  { name: 'Fidia', src: '/logos/client-fidia.svg' },
-  { name: 'Generali', src: '/logos/client-generali.svg' },
-  { name: 'Novacoop', src: '/logos/client-novacoop.svg' },
-  { name: 'Douglas', src: '/logos/client-douglas.svg' },
-  { name: 'Moncler', src: '/logos/client-moncler.svg' },
-  { name: 'Lagardère', src: '/logos/client-lagardere.svg' },
-  { name: 'Nespresso', src: '/logos/client-nespresso.svg' },
-  { name: 'Tecnomat', src: '/logos/client-tecnomat.svg' },
-  { name: 'Avolta', src: '/logos/client-avolta.svg' },
-  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg' },
+  { name: 'Unicredit', src: '/logos/client-unicredit.svg', width: 221 },
+  { name: 'Carrefour', src: '/logos/client-carrefour.svg', width: 157 },
+  { name: 'Fidia', src: '/logos/client-fidia.svg', width: 98 },
+  { name: 'Generali', src: '/logos/client-generali.svg', width: 178 },
+  { name: 'Novacoop', src: '/logos/client-novacoop.svg', width: 86 },
+  { name: 'Douglas', src: '/logos/client-douglas.svg', width: 126 },
+  { name: 'Moncler', src: '/logos/client-moncler.svg', width: 150 },
+  { name: 'Lagardère', src: '/logos/client-lagardere.svg', width: 115 },
+  { name: 'Nespresso', src: '/logos/client-nespresso.svg', width: 151 },
+  { name: 'Tecnomat', src: '/logos/client-tecnomat.svg', width: 150 },
+  { name: 'Avolta', src: '/logos/client-avolta.svg', width: 155 },
+  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg', width: 112 },
 ];
 
 const trustLogosIt = clientLogos;
@@ -54,12 +51,9 @@ export default function HeroSection() {
                 }}
               />
 
-              <motion.h1
-                className="relative text-[48px] md:text-[clamp(2.5rem,4.4vw,3.9rem)] font-semibold tracking-[-0.028em] text-white"
+              <h1
+                className="hero-fade-up relative text-[48px] md:text-[clamp(2.5rem,4.6vw,4rem)] font-semibold tracking-[-0.02em] text-white"
                 style={{ lineHeight: 1.08, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
               >
                 {lang === 'en' ? (
                   <>
@@ -73,27 +67,33 @@ export default function HeroSection() {
                     della tua organizzazione
                   </>
                 )}
-              </motion.h1>
-              <motion.p
-                className="relative text-[15px] md:text-[17px] text-white/75 leading-[1.65] mt-6 md:mt-8 max-w-lg md:max-w-xl font-normal md:font-light"
+              </h1>
+              <p
+                className="hero-fade-up hero-delay-1 relative text-[15px] md:text-[17px] text-white/75 leading-[1.65] mt-6 md:mt-8 max-w-lg md:max-w-xl font-normal md:font-light"
                 style={{ textShadow: '0 1px 8px rgba(0,0,0,0.2)' }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
               >
                 {lang === 'en'
                   ? 'Skillvue is the objective skills data layer for your enterprise, tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run, so every talent decision, from hiring to transformation, is finally the right one.'
                   : 'Skillvue mappa, misura e riporta dati oggettivi sulle competenze: costruito sul tuo framework interno, fondato sulla scienza, potenziato dall’AI e integrato nei sistemi HR che già utilizzi, per trasformare ogni decisione sul talento, dall’assunzione allo sviluppo.'}
-              </motion.p>
+              </p>
+
+              <div className="hero-fade-up hero-delay-1 relative flex flex-wrap items-center gap-4 mt-8 md:mt-10">
+                <Button asChild variant="primary" mode="dark">
+                  <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="hero-book-demo">
+                    {t('Book a Demo')}
+                    <ArrowRight aria-hidden="true" />
+                  </a>
+                </Button>
+                <Button asChild variant="secondary" mode="dark">
+                  <a href="/science" data-testid="hero-our-science">
+                    {t('See the Science')}
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* RIGHT. Product video — slightly larger */}
-            <motion.div
-              className="lg:col-span-6 lg:-mr-8"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-            >
+            <div className="hero-video-in hero-delay-2 lg:col-span-6 lg:-mr-8">
               <div
                 className="relative rounded-2xl overflow-hidden border border-white/10 aspect-video bg-[#0d0d1f]"
                 style={{ boxShadow: '0 20px 60px -15px rgba(75, 77, 247, 0.45), 0 0 0 1px rgba(255,255,255,0.05)' }}
@@ -118,33 +118,21 @@ export default function HeroSection() {
                   className="absolute inset-0 w-full h-full"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Animated scroll-down arrows — mobile only */}
-      <motion.div
-        className="relative z-10 flex md:hidden justify-center pb-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-      >
-        <Lottie
-          animationData={scrollArrowsData}
-          loop
-          autoplay
-          style={{ width: 40, height: 40 }}
-        />
-      </motion.div>
+      <div className="hero-fade-in hero-delay-3 relative z-10 flex md:hidden justify-center pb-4">
+        <div className="scroll-arrows" aria-hidden="true">
+          <span />
+          <span />
+        </div>
+      </div>
 
       {/* Trust bar. infinite marquee with glassmorphic blur */}
-      <motion.div
-        className="relative z-10 overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
+      <div className="hero-fade-in hero-delay-3 relative z-10 overflow-hidden">
         <div
           className="flex items-center h-[60px] md:h-[80px]"
           style={{
@@ -185,6 +173,8 @@ export default function HeroSection() {
                     <img
                       src={logo.src}
                       alt={logo.name}
+                      width={logo.width}
+                      height={32}
                       className="h-8 w-auto object-contain"
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
@@ -198,6 +188,8 @@ export default function HeroSection() {
                     <img
                       src={logo.src}
                       alt=""
+                      width={logo.width}
+                      height={32}
                       className="h-8 w-auto object-contain"
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
@@ -207,7 +199,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

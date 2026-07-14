@@ -3,9 +3,10 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 export default function IMImpact() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -32,13 +33,15 @@ export default function IMImpact() {
                 <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('Full talent visibility across the organization. Data-driven succession plans now cover 100% of critical roles with identified ready-now and ready-soon candidates.')}</p>
               </div>
             </div>
-            <a href="#" className="group/btn inline-flex items-center gap-2.5 px-6 py-3 text-[13px] font-semibold tracking-wide rounded-full border border-white/[0.15] text-white/[0.65] hover:text-white/90 hover:border-white/25 hover:bg-white/[0.05] transition-all duration-500">
-              {t('Read the full story')}
-              <ArrowUpRight className="h-3.5 w-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
-            </a>
+            <Button asChild variant="secondary" mode="dark">
+              <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
+                {t('Read the full story')}
+                <ArrowUpRight aria-hidden="true" />
+              </a>
+            </Button>
           </div>
           <div className="lg:col-span-4 flex flex-col items-center justify-center p-10 lg:p-14 bg-white/[0.06] border-t lg:border-t-0 lg:border-l border-white/[0.06]">
-            <span className="block text-white text-[32px] font-semibold md:text-[3.5rem] md:font-extrabold" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>100%</span>
+            <span className="block text-white text-[32px] stat-value md:text-[3.5rem]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>100%</span>
             <p className="text-[14px] text-white/[0.65] mt-3 text-center">{t('critical roles with')}<br />{t('succession coverage')}</p>
           </div>
         </motion.div>

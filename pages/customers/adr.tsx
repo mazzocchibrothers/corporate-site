@@ -6,6 +6,7 @@ import { ArrowRight, Users, Plane, Shield, Scale, TrendingUp, Target, Layers, Za
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
+import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/i18n/LanguageContext';
 import Head from 'next/head';
 
@@ -340,7 +341,7 @@ export default function ADRStoryPage() {
           <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-8 lg:py-10">
             {/* Breadcrumb */}
             <motion.div className="mb-5 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <button onClick={() => { router.push(lang === 'it' ? '/clienti' : '/customers'); window.scrollTo(0, 0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">{c.breadcrumb}</button>
+              <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(lang === 'it' ? '/clienti' : '/customers'); window.scrollTo(0, 0); }}>{c.breadcrumb}</Button>
               <span className="text-white/20">/</span>
               <span className="text-[13px] text-white/[0.65]">Aeroporti di Roma</span>
             </motion.div>
@@ -352,27 +353,27 @@ export default function ADRStoryPage() {
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-4 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[48px] md:text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
+                  <h1 className="text-[48px] md:text-[44px] font-semibold tracking-[-0.02em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
                   <p className="text-[15px] text-white/[0.60] leading-[1.65] mb-6 max-w-2xl">{c.subtitle}</p>
                   <div className="flex flex-wrap gap-4">
-                    <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300" style={{ background: '#4b4df7' }}>
-                      {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
-                    </button>
-                    <button onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white/70 border border-white/[0.15] hover:border-white/[0.25] hover:text-white transition-all duration-300">
-                      {c.ctaSecondary} <ArrowRight className="h-4 w-4" />
-                    </button>
+                    <Button variant="primary" mode="dark" onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}>
+                      {c.ctaPrimary}
+                    </Button>
+                    <Button variant="secondary" mode="dark" onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })}>
+                      {c.ctaSecondary}
+                    </Button>
                   </div>
-                  {/* Metrics — pinned to bottom, aligned with client card */}
-                  <div className="mt-auto pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {c.heroMetrics.map(m => (
-                      <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
-                        <span className="block text-white text-[32px] font-semibold md:text-[clamp(1.4rem,2.4vw,1.9rem)] md:font-extrabold" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[13px] text-white/[0.55] mt-1.5 block leading-[1.4]">{m.label}</span>
+                    {/* Metrics — pinned to bottom, aligned with client card */}
+                    <div className="mt-auto pt-6 grid grid-cols-3 gap-2 md:gap-4">
+                      {c.heroMetrics.map(m => (
+                      <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-3 py-3 md:px-6 md:py-4">
+                      <span className="block text-white text-[19px] break-words stat-value md:text-[clamp(1.4rem,2.4vw,1.9rem)]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                      <span className="text-[13px] text-white/[0.55] mt-1.5 block leading-[1.4]">{m.label}</span>
                       </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
                 </motion.div>
               </div>
 
@@ -522,7 +523,7 @@ export default function ADRStoryPage() {
                       <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: 'rgba(6,78,59,0.14)' }}>
                         <MetricIcon className="h-[22px] w-[22px]" style={{ color: '#064e3b' }} />
                       </div>
-                      <h4 className="text-[19px] font-bold text-[#0b3b28] mb-3 leading-[1.3]">{m.value}</h4>
+                      <h4 className="text-[32px] stat-value text-[#0b3b28] mb-3 leading-[1.3]">{m.value}</h4>
                       <p className="text-[15px] text-[#0b3b28]/60 leading-[1.55]">{m.label}</p>
                     </div>
                   );
@@ -559,7 +560,7 @@ export default function ADRStoryPage() {
 
             {/* FUTURE VISION */}
             <Section>
-              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10 lg:p-14">
+              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10">
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
                   {c.vision.badge}
                 </span>
@@ -593,7 +594,7 @@ export default function ADRStoryPage() {
             <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{c.related.title}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {c.related.stories.map(s => (
-                <button key={s.id} onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
+                <button key={s.id} onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
                   <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
                   <h4 className="text-[24px] font-semibold text-white/90 mb-4">{s.company}</h4>
                   <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>

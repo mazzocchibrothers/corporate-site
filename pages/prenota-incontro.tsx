@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { ArrowLeft } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export default function PrenotaUnIncontroPage() {
   const formRef = useRef(null);
@@ -44,16 +45,19 @@ export default function PrenotaUnIncontroPage() {
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* Left. Text */}
             <div className="lg:col-span-5">
-              <button
+              <Button
                 onClick={() => { router.back(); }}
-                className="group inline-flex items-center gap-2 text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300 mb-6"
+                variant="tertiary"
+                mode="dark"
+                icon={<ArrowLeft aria-hidden />}
+                iconPosition="left"
+                className="mb-6"
               >
-                <ArrowLeft className="h-3.5 w-3.5 group-hover:-translate-x-1 transition-transform duration-300" />
                 Indietro
-              </button>
+              </Button>
 
               <h1
-                className="text-[48px] md:text-[clamp(2.25rem,4.2vw,3.5rem)] font-semibold tracking-[-0.03em] text-white/95 mb-4"
+                className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-4"
                 style={{ lineHeight: 1.1 }}
               >
                 Parliamo della tua{' '}

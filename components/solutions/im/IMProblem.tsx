@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { EyeOff, AlertTriangle, Scale } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { IconTile } from '@/components/ui/icon-tile';
 
 const pains = [
   { icon: EyeOff, stat: '?', title: 'High potentials are invisible', desc: 'How many are already in the organization but hidden. And at risk of leaving before you even act?' },
@@ -27,8 +28,8 @@ export default function IMProblem() {
         transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
       >
         <div className="flex items-center justify-between mb-6 md:mb-8">
-          <span className="text-[#121212] text-[32px] font-semibold md:text-[clamp(2rem,4vw,3rem)] md:font-extrabold" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{p.stat}</span>
-          <Icon className="h-6 w-6 text-[#4B4DF7]/30" strokeWidth={1.5} />
+          <span className="text-[#121212] text-[32px] stat-value md:text-[clamp(2rem,4vw,3rem)]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{p.stat}</span>
+          <IconTile icon={Icon} mode="light" />
         </div>
         <h3 className="text-[18px] font-semibold text-[#121212] mb-2 md:mb-3">{t(p.title)}</h3>
         <p className="text-[14px] md:text-[15px] text-[#7A7A7A] leading-[1.75]">{t(p.desc)}</p>
