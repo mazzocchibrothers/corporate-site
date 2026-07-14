@@ -332,7 +332,7 @@ export default function FidiaFarmaceuticiStoryPage() {
                     </Button>
                   </div>
                     {/* Metrics — pinned to bottom, aligned with client card */}
-                    <div className="mt-auto pt-6 grid grid-cols-3 gap-2 md:gap-4">
+                    <div className="mt-auto pt-6 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4">
                       {c.heroMetrics.map(m => (
                       <div key={m.label} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-3 py-3 md:px-6 md:py-4">
                       <span className="block text-white text-[19px] break-words stat-value md:text-[clamp(1.4rem,2.4vw,1.9rem)]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>

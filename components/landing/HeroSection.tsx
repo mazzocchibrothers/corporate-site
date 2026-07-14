@@ -57,9 +57,9 @@ export default function HeroSection() {
               >
                 {lang === 'en' ? (
                   <>
-                    <span className="whitespace-nowrap">The Skills</span><br />
-                    <span className="italic font-bold gradient-text whitespace-nowrap">Operating System</span><br />
-                    <span className="whitespace-nowrap">for your organization</span>
+                    <span className="md:whitespace-nowrap">The Skills</span><br />
+                    <span className="italic font-bold gradient-text md:whitespace-nowrap">Operating System</span><br />
+                    <span className="md:whitespace-nowrap">for your organization</span>
                   </>
                 ) : (
                   <>

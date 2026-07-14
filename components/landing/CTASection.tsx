@@ -14,7 +14,7 @@ export default function CTASection() {
     <section id="cta" data-testid="cta-section" className="relative pt-20 pb-16 md:pt-28 md:pb-20 lg:pt-36 lg:pb-24" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <m.div
-          className="mb-6 md:mb-8"
+          className="mb-8 md:mb-8"
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -26,7 +26,7 @@ export default function CTASection() {
         </m.div>
 
         <m.div
-          className="grid grid-cols-2 lg:grid-cols-12 gap-3 md:gap-4"
+          className="grid grid-cols-2 lg:grid-cols-12 gap-5 md:gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -42,7 +42,7 @@ export default function CTASection() {
               <h3 className="text-[20px] md:text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/85 mt-3 md:mt-5 mb-2 md:mb-4 leading-tight">
                 {t('Book a 30-min Demo')}
               </h3>
-              <p className="text-[12px] md:text-[17px] text-white/[0.65] mb-0 md:mb-8 max-w-md leading-[1.5] md:leading-normal">
+              <p className="text-[12px] md:text-[17px] text-white/[0.65] mb-5 md:mb-8 max-w-md leading-[1.5] md:leading-normal">
                 {t('See Skillvue live with your specific use case')}
               </p>
             </div>
@@ -62,7 +62,7 @@ export default function CTASection() {
             data-testid="cta-track-b"
             className="col-span-2 md:col-span-1 lg:col-span-6 group relative rounded-2xl md:rounded-3xl border border-white/[0.04] hover:border-white/[0.08] bg-white/[0.01] backdrop-blur-sm transition-all duration-700 p-5 md:p-10"
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-0 md:mb-10 block">{t('Our Customers')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-5 md:mb-10 block">{t('Our Customers')}</span>
             {(() => {
               const ctaLogos = [
                     { name: 'Moncler', src: '/logos/client-moncler.svg' },
@@ -76,7 +76,7 @@ export default function CTASection() {
                     { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg' },
                   ];
               return (
-                <div className="grid grid-cols-3 gap-x-4 gap-y-3 md:gap-x-10 md:gap-y-8 mb-3 md:mb-8">
+                <div className="grid grid-cols-3 gap-x-4 gap-y-5 md:gap-x-10 md:gap-y-8 mb-3 md:mb-8">
                   {ctaLogos.map((logo) => (
                     <div key={logo.name} className="flex items-center justify-center h-8 md:h-12">
                       <img

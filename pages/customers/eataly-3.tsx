@@ -333,7 +333,7 @@ export default function EatalyStoryPage() {
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}{c.headline.highlight2 && <span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>}{c.headline.after}
                   </h1>
                   <p className="text-[16px] text-white/[0.60] leading-[1.75] mb-10 max-w-2xl">{c.subtitle}</p>
-                  <div className="grid grid-cols-3 gap-2 md:gap-4 mb-10">
+                  <div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4 mb-10">
                     {c.heroMetrics.map(m => (
                       <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-2.5 py-2.5 md:px-5 md:py-4">
                         <span className="block text-white text-[19px] break-words stat-value md:text-[1.5rem]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>

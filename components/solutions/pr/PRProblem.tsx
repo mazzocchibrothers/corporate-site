@@ -32,7 +32,7 @@ export default function PRProblem() {
             <motion.div
               key={p.title}
               data-testid={`pr-pain-${i}`}
-              className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-6 lg:p-10 flex flex-col min-h-[240px] md:min-h-0"
+              className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-6 lg:p-10 flex flex-col"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.12, ease: 'easeOut' }}

@@ -376,7 +376,7 @@ export default function Mediaset1StoryPage() {
 
             {/* Hero metrics — horizontal row */}
             <motion.div className="mt-12" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }}>
-              <div className="grid grid-cols-3 gap-2 md:gap-5">
+              <div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-5">
                 {c.heroMetrics.map(m => (
                   <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-3 py-3 md:px-6 md:py-5 text-center">
                     <span className="block text-white text-[19px] break-words stat-value md:text-[1.7rem]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>

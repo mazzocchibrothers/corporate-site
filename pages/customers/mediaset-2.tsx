@@ -339,7 +339,7 @@ export default function Mediaset2StoryPage() {
                     </Button>
                   </div>
                     {/* Metrics — pinned to bottom, aligned with client card */}
-                    <div className="mt-auto pt-6 grid grid-cols-3 gap-2 md:gap-4">
+                    <div className="mt-auto pt-6 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4">
                       {c.heroMetrics.map(m => (
                       <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-2.5 py-2 md:px-5 md:py-3.5 text-center">
                       <span className="block text-white text-[19px] break-words stat-value md:text-[clamp(1.3rem,2.2vw,1.5rem)]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
