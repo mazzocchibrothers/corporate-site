@@ -137,9 +137,9 @@ const content = {
       ],
     },
     quote: {
-      text: 'Il supporto di Skillvue ci ha assicurato di poter raccogliere informazioni aggiuntive soprattutto sullo stile comportamentale, sul modo in cui le persone affrontano diversi tipi di situazioni.',
+      text: 'Skillvue ha supportato Mediaset nella raccolta di insight strutturati sui talenti, migliorando la velocità e l’efficacia dello screening dei candidati.',
       author: 'Luca Villari',
-      role: 'Head of Talent Acquisition and Talent Development, Mediaset',
+      role: 'Head of Recruiting and People Development, Mediaset',
     },
     related: {
       title: 'Storie correlate',
@@ -266,9 +266,9 @@ const content = {
       ],
     },
     quote: {
-      text: 'Skillvue\'s support ensured we could gather additional information, especially on behavioural style and the way people approach different types of situations.',
+      text: 'Skillvue supported Mediaset in gathering structured talent insights, improving the speed and effectiveness of candidate screening.',
       author: 'Luca Villari',
-      role: 'Head of Talent Acquisition and Talent Development, Mediaset',
+      role: 'Head of Recruiting and People Development, Mediaset',
     },
     related: {
       title: 'Related Stories',

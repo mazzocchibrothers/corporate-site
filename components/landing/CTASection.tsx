@@ -73,7 +73,7 @@ export default function CTASection() {
                     { name: 'Carrefour', src: '/logos/client-carrefour.svg' },
                     { name: 'Generali', src: '/logos/client-generali.svg' },
                     { name: 'Douglas', src: '/logos/client-douglas.svg' },
-                    { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg' },
+                    { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2' },
                   ];
               return (
                 <div className="grid grid-cols-3 gap-x-4 gap-y-5 md:gap-x-10 md:gap-y-8 mb-3 md:mb-8">

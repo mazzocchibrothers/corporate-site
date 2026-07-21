@@ -15,14 +15,150 @@ const stats = [
   { value: '1M+', label: 'People empowered' },
 ];
 
+// Backers — Orbita Verticale placed last per feedback
 const investors = [
   { name: '360 Capital', src: '/logos/investor-360capital.svg', h: 42 },
   { name: '14 Peaks', src: '/logos/investor-14peaks.svg', h: 42 },
-  { name: 'Orbita', src: '/logos/investor-orbita.svg', h: 42 },
   { name: 'Kfund', src: '/logos/investor-kfund.svg', h: 42 },
   { name: 'IFF', src: '/logos/investor-iff.svg', h: 42 },
   { name: 'Ithaca', src: '/logos/investor-ithaca.svg', h: 42 },
+  { name: 'Orbita', src: '/logos/investor-orbita.svg', h: 42 },
 ];
+
+// Enterprise clients — reused from the landing TrustLogosBar set
+const clientLogos = [
+  { name: 'Unicredit', src: '/logos/client-unicredit.svg' },
+  { name: 'Carrefour', src: '/logos/client-carrefour.svg' },
+  { name: 'Generali', src: '/logos/client-generali.svg' },
+  { name: 'Moncler', src: '/logos/client-moncler.svg' },
+  { name: 'Nespresso', src: '/logos/client-nespresso.svg' },
+  { name: 'Douglas', src: '/logos/client-douglas.svg' },
+  { name: 'Lagardère', src: '/logos/client-lagardere.svg' },
+  { name: 'Avolta', src: '/logos/client-avolta.svg' },
+  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2' },
+  { name: 'Fidia', src: '/logos/client-fidia.svg' },
+  { name: 'Novacoop', src: '/logos/client-novacoop.svg' },
+  { name: 'Tecnomat', src: '/logos/client-tecnomat.svg' },
+];
+
+// One Team section — full team photo set, scrolls infinitely
+const oneTeamPhotos = [
+  '/about/team-photo-01.avif',
+  '/about/team-photo-02.avif',
+  '/about/team-photo-03-v2.avif',
+  '/about/team-photo-04.avif',
+  '/about/team-photo-05-v2.avif',
+  '/about/team-photo-06.avif',
+  '/about/team-photo-07.avif',
+  '/about/team-photo-08.avif',
+  '/about/team-photo-09-v2.avif',
+];
+
+// Auto-scrolls continuously; dragging (mouse or touch) takes over and follows the pointer,
+// then auto-scroll resumes from wherever the drag left off.
+function DraggableMarquee({ photos }) {
+  const trackRef = React.useRef(null);
+  const offsetRef = React.useRef(0);
+  const loopWidthRef = React.useRef(0);
+  const draggingRef = React.useRef(false);
+  const dragStartXRef = React.useRef(0);
+  const dragStartOffsetRef = React.useRef(0);
+  const rafRef = React.useRef(null);
+  const lastTimeRef = React.useRef(null);
+
+  const LOOP_SECONDS = 60;
+
+  const applyTransform = () => {
+    if (trackRef.current) {
+      trackRef.current.style.transform = `translateX(${-offsetRef.current}px)`;
+    }
+  };
+
+  const wrap = (value) => {
+    const w = loopWidthRef.current;
+    if (!w) return value;
+    return ((value % w) + w) % w;
+  };
+
+  React.useEffect(() => {
+    const measure = () => {
+      if (trackRef.current) {
+        loopWidthRef.current = trackRef.current.scrollWidth / 2;
+      }
+    };
+    measure();
+    window.addEventListener('resize', measure);
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const tick = (time) => {
+      if (lastTimeRef.current == null) lastTimeRef.current = time;
+      const dt = (time - lastTimeRef.current) / 1000;
+      lastTimeRef.current = time;
+      if (!draggingRef.current && !reduceMotion && loopWidthRef.current) {
+        offsetRef.current = wrap(offsetRef.current + (loopWidthRef.current / LOOP_SECONDS) * dt);
+        applyTransform();
+      }
+      rafRef.current = requestAnimationFrame(tick);
+    };
+    rafRef.current = requestAnimationFrame(tick);
+
+    return () => {
+      window.removeEventListener('resize', measure);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, []);
+
+  const handlePointerDown = (e) => {
+    draggingRef.current = true;
+    dragStartXRef.current = e.clientX;
+    dragStartOffsetRef.current = offsetRef.current;
+    e.currentTarget.setPointerCapture(e.pointerId);
+    e.currentTarget.style.cursor = 'grabbing';
+  };
+
+  const handlePointerMove = (e) => {
+    if (!draggingRef.current) return;
+    const dx = e.clientX - dragStartXRef.current;
+    offsetRef.current = wrap(dragStartOffsetRef.current - dx);
+    applyTransform();
+  };
+
+  const endDrag = (e) => {
+    if (!draggingRef.current) return;
+    draggingRef.current = false;
+    if (e?.currentTarget?.style) e.currentTarget.style.cursor = 'grab';
+  };
+
+  return (
+    <div
+      className="relative w-full overflow-hidden select-none"
+      style={{
+        maskImage: 'linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%)',
+        cursor: 'grab',
+        touchAction: 'pan-y',
+      }}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={endDrag}
+      onPointerCancel={endDrag}
+      onPointerLeave={endDrag}
+    >
+      <div ref={trackRef} className="flex items-center" style={{ width: 'max-content', willChange: 'transform' }}>
+        {[0, 1].map((copy) => (
+          <div key={copy} className="flex items-center gap-4 shrink-0 pr-4" aria-hidden={copy === 1}>
+            {photos.map((src, i) => (
+              <div key={`${copy}-${i}`} className="w-[280px] h-[155px] sm:w-[424px] sm:h-[235px]" style={{ borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#141516', flexShrink: 0 }}>
+                <img src={src} alt="" draggable={false} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', pointerEvents: 'none' }} />
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function getCounterDisplay(original, count) {
   const match = original.match(/^([^\d]*)(\d+)(.*)$/);
@@ -184,40 +320,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── 2. OUR VISION ───────────────────────────────────────────────── */}
-        <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 112, paddingBottom: 112, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
-          <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
-            <p
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 500,
-                fontSize: 13,
-                letterSpacing: '0.52px',
-                color: '#4b4df7',
-                textTransform: 'uppercase',
-                margin: '0 0 24px',
-              }}
-            >
-              {t('OUR VISION')}
-            </p>
-            <p
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 500,
-                fontSize: '40px',
-                lineHeight: 1.1,
-                color: '#121212',
-                letterSpacing: '-0.96px',
-                margin: 0,
-                maxWidth: 1000,
-              }}
-            >
-              {t('A world where every talent decision, from hire to promotion to transformation is powered by objective intelligence. Where human potential is no longer left to chance. And organizational success is something you build, not hope for.')}
-            </p>
-          </div>
-        </section>
-
-        {/* ─── 3. OUR MISSION — Make Skills ────────────────────────────────── */}
+        {/* ─── 2. VISION + MISSION (compound) ──────────────────────────────── */}
         <section
           className="px-5 md:px-8 lg:px-12"
           style={{
@@ -226,66 +329,106 @@ export default function AboutPage() {
             paddingBottom: 112,
             backgroundColor: '#040404',
             overflow: 'hidden',
-            minHeight: '100vh',
-            display: 'flex',
-            alignItems: 'center',
           }}
         >
           <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
             <img src="/about/section-margin.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
             <img src="/about/section-margin1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
-          <div style={{ maxWidth: 1304, margin: '0 auto', position: 'relative', width: '100%' }}>
-            <p
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 500,
-                fontSize: 13,
-                letterSpacing: '0.52px',
-                color: '#9395ff',
-                textTransform: 'uppercase',
-                margin: '0 0 24px',
-              }}
-            >
-              {t('OUR MISSION')}
-            </p>
-            <h2
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 600,
-                fontSize: 'clamp(28px, 3.1vw, 48px)',
-                lineHeight: 1.1,
-                letterSpacing: '-0.96px',
-                color: '#fff',
-                margin: '0 0 24px',
-              }}
-            >
-              {t('Make skills the most')}{' '}
-              <span
+          <div style={{ maxWidth: 1304, margin: '0 auto', position: 'relative', width: '100%', display: 'flex', flexDirection: 'column', gap: 72 }}>
+
+            {/* Vision */}
+            <div style={{ maxWidth: 1000 }}>
+              <p
                 style={{
-                  background: 'linear-gradient(90deg, #4e6bff 0%, #ff5b5b 49.52%, #ff8447 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+                  fontFamily: 'Mona Sans, sans-serif',
+                  fontWeight: 500,
+                  fontSize: 13,
+                  letterSpacing: '0.52px',
+                  color: '#9395ff',
+                  textTransform: 'uppercase',
+                  margin: '0 0 24px',
                 }}
               >
-                {t('reliable data')}
-              </span>
-              {' '}{t('in every organization')}
-            </h2>
-            <p
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 400,
-                fontSize: 20,
-                lineHeight: 1.4,
-                color: '#7a7a7a',
-                margin: 0,
-                maxWidth: 900,
-              }}
-            >
-              {t('Building the science-grounded, AI-scaled Skills Operating System that every HR system can plug into, so that every talent decision, from hire to promotion to transformation, is finally objective.')}
-            </p>
+                {t('OUR VISION')}
+              </p>
+              <p
+                style={{
+                  fontFamily: 'Mona Sans, sans-serif',
+                  fontWeight: 500,
+                  fontSize: 'clamp(28px, 3vw, 40px)',
+                  lineHeight: 1.15,
+                  color: '#fff',
+                  letterSpacing: '-0.96px',
+                  margin: 0,
+                }}
+              >
+                {t('A world where every talent decision, from hire to promotion to transformation is powered by objective intelligence. Where human potential is no longer left to chance. And organizational success is something you build, not hope for.')}
+              </p>
+            </div>
+
+            {/* Team images — bridging vision and mission */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {['/about/vision-1.avif', '/about/vision-2.avif', '/about/vision-3.avif'].map((src, i) => (
+                <div key={i} style={{ aspectRatio: '16/9', borderRadius: 12, overflow: 'hidden', position: 'relative', backgroundColor: '#141516' }}>
+                  <img src={src} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+              ))}
+            </div>
+
+            {/* Mission */}
+            <div style={{ maxWidth: 900 }}>
+              <p
+                style={{
+                  fontFamily: 'Mona Sans, sans-serif',
+                  fontWeight: 500,
+                  fontSize: 13,
+                  letterSpacing: '0.52px',
+                  color: '#9395ff',
+                  textTransform: 'uppercase',
+                  margin: '0 0 24px',
+                }}
+              >
+                {t('OUR MISSION')}
+              </p>
+              <h2
+                style={{
+                  fontFamily: 'Mona Sans, sans-serif',
+                  fontWeight: 600,
+                  fontSize: 'clamp(28px, 3.1vw, 48px)',
+                  lineHeight: 1.1,
+                  letterSpacing: '-0.96px',
+                  color: '#fff',
+                  margin: '0 0 24px',
+                }}
+              >
+                {t('Make skills the most')}{' '}
+                <span
+                  style={{
+                    background: 'linear-gradient(90deg, #4e6bff 0%, #ff5b5b 49.52%, #ff8447 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                  }}
+                >
+                  {t('reliable data')}
+                </span>
+                {' '}{t('in every organization')}
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'Mona Sans, sans-serif',
+                  fontWeight: 400,
+                  fontSize: 20,
+                  lineHeight: 1.4,
+                  color: '#9a9a9a',
+                  margin: 0,
+                }}
+              >
+                {t('Building the science-grounded, AI-scaled Skills Operating System that every HR system can plug into, so that every talent decision, from hire to promotion to transformation, is finally objective.')}
+              </p>
+            </div>
+
           </div>
         </section>
 
@@ -314,6 +457,7 @@ export default function AboutPage() {
                 letterSpacing: '-0.96px',
                 color: '#121212',
                 margin: '0 0 24px',
+                maxWidth: 850,
               }}
             >
               {t('Skillvue is the')}{' '}
@@ -342,6 +486,36 @@ export default function AboutPage() {
             >
               {t('Skillvue is the objective skills data layer for your enterprise, tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run.')}
             </p>
+
+            {/* Working with leading global companies — client logos */}
+            <div style={{ marginTop: 72 }}>
+              <p
+                style={{
+                  fontFamily: 'Mona Sans, sans-serif',
+                  fontWeight: 700,
+                  fontSize: 12,
+                  letterSpacing: '2.4px',
+                  color: '#848484',
+                  textTransform: 'uppercase',
+                  margin: '0 0 36px',
+                }}
+              >
+                {t('Working with leading global companies')}
+              </p>
+              <div
+                className="grid grid-cols-2 lg:grid-cols-6 items-center justify-items-center"
+                style={{ gap: '36px 56px' }}
+              >
+                {clientLogos.map((logo) => (
+                  <img
+                    key={logo.name}
+                    src={logo.src}
+                    alt={logo.name}
+                    style={{ height: 26, width: 'auto', objectFit: 'contain', filter: 'brightness(0)', opacity: 0.45 }}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -370,11 +544,19 @@ export default function AboutPage() {
               position: 'relative',
               width: '100%',
               display: 'flex',
-              gap: 80,
-              alignItems: 'flex-end',
+              flexDirection: 'column',
+              gap: 72,
             }}
-            className="flex-col lg:flex-row"
           >
+            <div
+              style={{
+                width: '100%',
+                display: 'flex',
+                gap: 80,
+                alignItems: 'flex-end',
+              }}
+              className="flex-col lg:flex-row"
+            >
             {/* Left: text */}
             <div style={{ flex: '1 0 0', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 24 }}>
               <p
@@ -440,6 +622,34 @@ export default function AboutPage() {
                 alt="Skillvue locations across Europe"
                 style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
               />
+            </div>
+            </div>
+
+            {/* Backers — moved into Our Story per feedback (Orbita last) */}
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 48 }}>
+              <p
+                style={{
+                  fontFamily: 'Mona Sans, sans-serif',
+                  fontWeight: 700,
+                  fontSize: 12,
+                  letterSpacing: '2.4px',
+                  color: '#848484',
+                  textTransform: 'uppercase',
+                  margin: '0 0 32px',
+                }}
+              >
+                {t('Backed by leading European VCs')}
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap', gap: '36px 56px', alignItems: 'center' }}>
+                {investors.map((inv) => (
+                  <img
+                    key={inv.name}
+                    src={inv.src}
+                    alt={inv.name}
+                    style={{ height: inv.h, width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.7 }}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -652,7 +862,7 @@ export default function AboutPage() {
                     margin: 0,
                   }}
                 >
-                  {t('OUR TEAM')}
+                  {t('One Team One Mission')}
                 </p>
                 <h2
                   style={{
@@ -663,10 +873,25 @@ export default function AboutPage() {
                     color: '#fff',
                     letterSpacing: '-0.96px',
                     margin: 0,
+                    maxWidth: 760,
                   }}
                 >
-                  {t('One Team, Multiple Disciplines, One Mission')}
+                  {t('People. Data. Performance. One engine for the future of work.')}
                 </h2>
+                <p
+                  style={{
+                    fontFamily: 'Mona Sans, sans-serif',
+                    fontWeight: 400,
+                    fontSize: 18,
+                    lineHeight: 1.5,
+                    color: '#9a9a9a',
+                    letterSpacing: '-0.19px',
+                    margin: 0,
+                    maxWidth: 820,
+                  }}
+                >
+                  {t("One team across Europe at the intersection of Organizational and Psychometric Science, AI, and Data Science shipping cutting-edge AI Agents that measure what actually matters: what people can do, not what their title says. High ambition, high standards, zero complacency. We push boundaries daily and settle for nothing less than excellence. Talent is the world's most underused asset. We're here to unlock all of it and leave a mark doing it.")}
+                </p>
                 {/* Discipline pills */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
                   {['Psychometricians', 'Engineers', 'Designers', 'Product'].map((tag) => (
@@ -705,21 +930,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* 2×2 Photo grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-              <div style={{ aspectRatio: '16/9', borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#141516' }}>
-                <img src="/about/team_foto_01.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-              <div style={{ aspectRatio: '16/9', borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#141516' }}>
-                <img src="/about/team_foto_02.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-              <div style={{ aspectRatio: '16/9', borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#141516' }}>
-                <img src="/about/team_foto_03.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-              <div style={{ aspectRatio: '16/9', borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#141516' }}>
-                <img src="/about/team_foto_04.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-            </div>
+            {/* Photo marquee — auto-scrolls, drag to take control */}
+            <DraggableMarquee photos={oneTeamPhotos} />
           </div>
         </section>
 
@@ -777,91 +989,40 @@ export default function AboutPage() {
                   minHeight: 0,
                 }}
               >
-                <img src="/about/team_foto_05.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/about/life-1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               {/* Col 2, Row 1 */}
               <div style={{ gridColumn: 2, gridRow: 1, aspectRatio: '16/9', borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#141516' }}>
-                <img src="/about/team_foto_06.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/about/life-2.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               {/* Col 3, Row 1 */}
               <div style={{ gridColumn: 3, gridRow: 1, aspectRatio: '16/9', borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#141516' }}>
-                <img src="/about/team_foto_07.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/about/life-3.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               {/* Col 2, Row 2 */}
               <div style={{ gridColumn: 2, gridRow: 2, aspectRatio: '16/9', borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#141516' }}>
-                <img src="/about/team_foto_08.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/about/life-4.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               {/* Col 3, Row 2 */}
               <div style={{ gridColumn: 3, gridRow: 2, aspectRatio: '16/9', borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#141516' }}>
-                <img src="/about/team_foto_09.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/about/life-5.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </div>
 
             {/* Mobile photo grid */}
             <div className="lg:hidden grid grid-cols-1 gap-3">
               {[
-                '/about/team_foto_05.avif',
-                '/about/team_foto_06.avif',
-                '/about/team_foto_07.avif',
-                '/about/team_foto_08.avif',
-                '/about/team_foto_09.avif',
+                '/about/life-1.avif',
+                '/about/life-2.avif',
+                '/about/life-3.avif',
+                '/about/life-4.avif',
+                '/about/life-5.avif',
               ].map((src, i) => (
                 <div key={i} style={{ borderRadius: 12, overflow: 'hidden', aspectRatio: '16/9', position: 'relative', backgroundColor: '#141516' }}>
                   <img src={src} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* ─── 9. INVESTORS ────────────────────────────────────────────────── */}
-        <section
-          className="px-5 md:px-8 lg:px-12"
-          style={{
-            position: 'relative',
-            backgroundColor: '#040404',
-            paddingTop: 112,
-            paddingBottom: 112,
-            overflow: 'hidden',
-          }}
-        >
-          <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-            <img src="/about/section-margin.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-            <img src="/about/section-margin1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-          </div>
-          {/* "Backed by" label */}
-          <div style={{ position: 'relative', textAlign: 'center', marginBottom: 24 }}>
-            <p
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 700,
-                fontSize: 12,
-                letterSpacing: '2.4px',
-                color: '#848484',
-                textTransform: 'uppercase',
-                margin: 0,
-              }}
-            >
-              {t('Backed by')}
-            </p>
-          </div>
-
-          {/* Logos — static, centered */}
-          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '40px 64px', alignItems: 'center' }}>
-            {investors.map((inv) => (
-              <img
-                key={inv.name}
-                src={inv.src}
-                alt={inv.name}
-                style={{
-                  height: inv.h,
-                  width: 'auto',
-                  objectFit: 'contain',
-                  filter: 'brightness(0) invert(1)',
-                  opacity: 0.7,
-                }}
-              />
-            ))}
           </div>
         </section>
 
