@@ -15,7 +15,7 @@ const clientLogos = [
   { name: 'Nespresso', src: '/logos/client-nespresso.svg', width: 151 },
   { name: 'Tecnomat', src: '/logos/client-tecnomat.svg', width: 150 },
   { name: 'Avolta', src: '/logos/client-avolta.svg', width: 155 },
-  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg', width: 112 },
+  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2', width: 112 },
 ];
 
 const trustLogosIt = clientLogos;

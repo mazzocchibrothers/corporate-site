@@ -12,7 +12,7 @@ const clientLogos = [
   { name: 'Nespresso', src: '/logos/client-nespresso.svg' },
   { name: 'Tecnomat', src: '/logos/client-tecnomat.svg' },
   { name: 'Avolta', src: '/logos/client-avolta.svg' },
-  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg' },
+  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2' },
 ];
 
 const trustLogosIt = clientLogos;
