@@ -73,7 +73,7 @@ export default function WhitepapersPage() {
                   className="group inline-flex items-center gap-3"
                 >
                   <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
-                    <ArrowRight className="!h-4 !w-4 rotate-90" />
+                    <ArrowRight className="h-4 w-4 rotate-90" />
                   </span>
                   {t('Explore the library')}
                 </a>

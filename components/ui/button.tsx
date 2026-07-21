@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
  * default background is dark).
  */
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-full text-[15px] font-medium leading-6 whitespace-nowrap transition-colors duration-200 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-6 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 rounded-full text-[15px] font-medium leading-6 whitespace-nowrap transition-colors duration-200 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {

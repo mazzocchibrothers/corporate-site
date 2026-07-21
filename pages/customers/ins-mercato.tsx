@@ -419,7 +419,7 @@ export default function InsMercatoStoryPage() {
                     {/* Arrow */}
                     <div className="hidden lg:flex items-center justify-center">
                       <div className="w-7 h-7 rounded-full border border-[#e2e8f0] bg-white flex items-center justify-center">
-                        <ArrowRight className="h-3 w-3 text-[#121212]/25" />
+                        <ArrowRight className="h-4 w-4 text-[#121212]/25" />
                       </div>
                     </div>
 
@@ -434,7 +434,7 @@ export default function InsMercatoStoryPage() {
                     {/* Arrow */}
                     <div className="hidden lg:flex items-center justify-center">
                       <div className="w-7 h-7 rounded-full border border-[#e2e8f0] bg-white flex items-center justify-center">
-                        <ArrowRight className="h-3 w-3 text-[#121212]/25" />
+                        <ArrowRight className="h-4 w-4 text-[#121212]/25" />
                       </div>
                     </div>
 
@@ -606,7 +606,7 @@ export default function InsMercatoStoryPage() {
                   </div>
                   <div className="hidden md:flex items-center justify-center">
                     <div className="w-7 h-7 rounded-full border border-[#e2e8f0] bg-white flex items-center justify-center">
-                      <ArrowRight className="h-3 w-3 text-[#121212]/25" />
+                      <ArrowRight className="h-4 w-4 text-[#121212]/25" />
                     </div>
                   </div>
                   <div className="rounded-xl bg-[#4B4DF7]/[0.06] p-6 text-center">

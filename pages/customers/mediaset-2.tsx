@@ -373,7 +373,7 @@ export default function Mediaset2StoryPage() {
                 </div>
                 {/* Quote */}
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm px-5 py-4">
-                  <p className="text-[12px] text-white/[0.65] leading-[1.6] italic mb-3">"{c.quote.text}"</p>
+                  <p className="text-[24px] font-medium text-white leading-[1.4] italic mb-5 pb-5 border-b border-white/[0.08]">"{c.quote.text}"</p>
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full shrink-0 border border-white/[0.15] bg-white/[0.08] flex items-center justify-center">
                       <span className="text-[11px] font-bold text-white/60">LV</span>

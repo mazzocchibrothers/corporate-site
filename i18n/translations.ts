@@ -1144,7 +1144,7 @@ export const translations = {
   'ABOUT SKILLVUE': 'ABOUT SKILLVUE',
   "Founded in Milan in 2021, at the heart of one of Europe's most dynamic startup hubs, Skillvue is an HR-Tech company that helps organizations make every talent decision objective. Backed by €9M in funding, Skillvue supports 30+ languages and serves 100+ mid-to-large enterprises across industries such as retail, financial services, pharma, and energy.": "Fondata a Milano nel 2021, nel cuore di uno degli ecosistemi startup più dinamici d'Europa, Skillvue è un'azienda HR Tech che aiuta le organizzazioni a rendere ogni decisione sul talento oggettiva. Sostenuta da €9M di finanziamenti, Skillvue supporta oltre 30 lingue e serve più di 100 aziende medio-grandi in settori come retail, servizi finanziari, farmaceutico ed energia.",
   'With a team of 50+ professionals across Milan, Berlin, and London, Skillvue brings together expertise in psychometrics, AI, product design, and enterprise go-to-market. Its platform combines psychometric rigour with modern AI to transform static and unstructured talent data into reliable, predictive insights, supporting decisions across hiring, performance management, internal mobility, and learning & development.': "Con un team di oltre 50 professionisti tra Milano, Berlino e Londra, Skillvue unisce la solidità della scienza psicometrica con la potenza dell'AI moderna, product design e go-to-market enterprise. La sua piattaforma combina rigore psicometrico con AI moderna per trasformare dati statici e non strutturati sul talento in insight affidabili e predittivi, supportando decisioni in ambito di assunzioni, performance management, mobilità interna e formazione e sviluppo.",
-  'Learn more about Skillvue →': 'Scopri di più su Skillvue →',
+  'Learn more about Skillvue': 'Scopri di più su Skillvue',
   'OUR MISSION': 'LA NOSTRA MISSIONE',
   'Make skills the most': 'Rendi le competenze il dato più',
   'reliable data': 'affidabile',
@@ -1165,7 +1165,7 @@ export const translations = {
   'Psychometricians': 'Psicometristi',
   'Engineers': 'Ingegneri',
   'Designers': 'Designer',
-  'Join us →': 'Unisciti a noi →',
+  'Join us': 'Unisciti a noi',
   'Life at Skillvue': 'La vita in Skillvue',
   '50+ people across Milan, Berlin & London.': '50+ persone tra Milano, Berlino e Londra.',
 

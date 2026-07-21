@@ -56,10 +56,9 @@ export default function CustomerStoriesShowcase() {
                 }}
               >
                 {/* Decorative circular scroll-indicator badge — kept custom since it isn't
-                    the standard trailing arrow icon Button expects; size pinned with
-                    !size-4 so Button's own [&_svg]:size-6 rule doesn't blow it up. */}
+                    the standard trailing arrow icon Button expects. */}
                 <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
-                  <ChevronDown className="!size-4" />
+                  <ChevronDown className="size-4" />
                 </span>
                 {t('Explore all stories')}
               </a>

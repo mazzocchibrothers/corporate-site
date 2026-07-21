@@ -41,7 +41,7 @@ export default function ProductCrossLinks() {
                     <span className="text-[15px] md:text-[15px] font-semibold text-white/85 block mb-0.5 md:mb-1 leading-tight">{t(s.name)}</span>
                     <span className="text-[12px] md:text-[13px] text-white/40">{t(s.desc)}</span>
                   </div>
-                  <ArrowRight className="h-3 w-3 md:h-4 md:w-4 text-white/20 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-300 shrink-0 hidden md:block" />
+                  <ArrowRight className="h-4 w-4 text-white/20 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-300 shrink-0 hidden md:block" />
                 </div>
               </motion.button>
             ))}
