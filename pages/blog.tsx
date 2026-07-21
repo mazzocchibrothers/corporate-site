@@ -104,7 +104,7 @@ export default function BlogPage() {
             {c.title}
           </h3>
           <span className="text-[13px] font-semibold text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-            {t('Read more')} <ArrowRight className="h-3.5 w-3.5" />
+            {t('Read more')} <ArrowRight className="h-4 w-4" />
           </span>
         </div>
       </motion.article>

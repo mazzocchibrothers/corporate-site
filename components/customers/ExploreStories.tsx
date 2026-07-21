@@ -148,7 +148,7 @@ export default function ExploreStories() {
                     <span className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold text-white/90 tracking-tight">{s.company}</span>
                   </div>
                   <div className="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                    <ArrowRight className="h-5 w-5 text-white/50" />
+                    <ArrowRight className="h-4 w-4 text-white/50" />
                   </div>
                 </div>
                 {/* Title below. left aligned with card, with left padding */}

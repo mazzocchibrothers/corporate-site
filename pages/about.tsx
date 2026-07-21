@@ -6,6 +6,7 @@ import Navbar from '@/components/landing/Navbar';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const stats = [
   { value: '€9M+', label: 'Raised' },
@@ -607,7 +608,8 @@ export default function AboutPage() {
                     href="/resources/press"
                     onClick={(e) => { e.preventDefault(); router.push('/resources/press'); }}
                   >
-                    {t('Learn more about Skillvue →')}
+                    {t('Learn more about Skillvue')}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>
                 </Button>
               </div>
@@ -924,7 +926,8 @@ export default function AboutPage() {
                     href="/careers"
                     onClick={(e) => { e.preventDefault(); router.push('/careers'); }}
                   >
-                    {t('Join us →')}
+                    {t('Join us')}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>
                 </Button>
               </div>

@@ -88,14 +88,14 @@ export default function HowSkillvueWorks() {
               aria-label="Previous step"
               className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/10 text-white/40 hover:text-white/80 hover:border-white/25 transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
-              <ChevronLeft className="h-3.5 w-3.5 md:h-4 md:w-4" />
+              <ChevronLeft className="h-4 w-4" />
             </button>
             <button
               onClick={() => setActive((p) => (p + 1) % steps.length)}
               aria-label="Next step"
               className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/15 text-white/60 hover:text-white/90 hover:border-white/30 transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
-              <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4" />
+              <ChevronRight className="h-4 w-4" />
             </button>
           </div>
         </div>

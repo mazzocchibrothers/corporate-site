@@ -116,14 +116,14 @@ export default function MethodologyLifecycle() {
                 aria-label="Previous principle"
                 className="flex items-center justify-center h-8 w-8 rounded-full border border-white/10 text-white/40 active:text-white/80 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
               >
-                <ChevronLeft className="h-3.5 w-3.5" />
+                <ChevronLeft className="h-4 w-4" />
               </button>
               <button
                 onClick={() => setActivePrinciple((p) => (p + 1) % principles.length)}
                 aria-label="Next principle"
                 className="flex items-center justify-center h-8 w-8 rounded-full border border-white/15 text-white/60 active:text-white/90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
               >
-                <ChevronRight className="h-3.5 w-3.5" />
+                <ChevronRight className="h-4 w-4" />
               </button>
             </div>
           </div>
