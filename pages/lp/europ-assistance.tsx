@@ -26,15 +26,15 @@ const content = {
     breadcrumb: 'Clienti',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Europ Assistance: come cogliere il ',
+      before: 'Europ Assistance: come riconoscere il ',
       highlight1: 'potenziale che resiste alla prova del tempo',
-      middle: ' in un business fondato sul ',
-      highlight2: 'fattore umano',
+      middle: ' in un business fondato sulla ',
+      highlight2: 'componente umana',
       after: '',
     },
-    subtitle: "Con Skillvue, Europ Assistance ha trasformato il pre-screening dei candidati in un processo scalabile e strategico per l'intero talent lifecycle, mettendo le soft skill al centro fin dal primo step della selezione.",
+    subtitle: "Con Skillvue, Europ Assistance ha trasformato il pre-screening dei candidati in un processo scalabile e strategico per l'intero talent lifecycle, lavorando sulla valorizzazione delle competenze trasversali fin dal primo step della selezione.",
     heroMetrics: [
-      { value: '10.000', label: 'centri di servizio nella rete in Italia' },
+      { value: '10.000', label: 'centri nella rete in Italia' },
       { value: '900+', label: 'dipendenti' },
     ],
     ctaPrimary: 'Contattaci',
@@ -45,7 +45,7 @@ const content = {
       facts: [
         { label: 'Settore', value: 'Financial Services' },
         { label: 'Gruppo', value: 'Generali' },
-        { label: 'Centri di servizio in Italia', value: '10.000' },
+        { label: 'Centri nella rete in Italia', value: '10.000' },
         { label: 'Use Case', value: 'Hiring' },
       ],
     },
@@ -53,30 +53,30 @@ const content = {
       badge: 'CONTESTO',
       title: 'In un business fondato sull\'interazione umana, la qualità della selezione non può accettare compromessi.',
       paragraph: <>
-        Europ Assistance, parte del <strong className="text-[#121212]/80 font-semibold">Gruppo Generali</strong>, è uno dei leader mondiali nei servizi di assistenza e assicurazione viaggi. La sua è una crescita costante: è in corso l'espansione delle operazioni in nuovi mercati e la convergenza con Generali Care in un <strong className="text-[#121212]/80 font-semibold">hub integrato di assistenza</strong>.<br /><br />In Italia, opera con un modello di business fondato sulla qualità dell'interazione umana: <strong className="text-[#121212]/80 font-semibold">assistenza 24/7, gestione sinistri, customer care multilingue</strong>. La scelta e la crescita delle <strong className="text-[#121212]/80 font-semibold">persone</strong> è un fattore chiave per il corretto funzionamento e l'espansione del business, soprattutto vista l'instabilità del settore assicurativo, che <strong className="text-[#121212]/80 font-semibold">non sempre riesce ad attrarre i profili più qualificati</strong> e al tempo stesso richiede <strong className="text-[#121212]/80 font-semibold">profili professionali molto specifici e capaci di evolvere nel tempo</strong>. In questo contesto, ogni assunzione sbagliata costa di più e ogni persona giusta che resta vale ancora di più.
+        Europ Assistance, parte del <strong className="text-[#121212]/80 font-semibold">Gruppo Generali</strong>, è uno dei leader mondiali nei servizi di assistenza e assicurazione viaggi. La sua è una crescita costante: è in corso infatti l'espansione delle operazioni in nuovi mercati e la convergenza con Generali Care in un <strong className="text-[#121212]/80 font-semibold">hub integrato di assistenza</strong>.<br /><br />In Italia, opera con un modello di business fondato sulla qualità dell'interazione umana: <strong className="text-[#121212]/80 font-semibold">assistenza 24/7, gestione sinistri, customer care multilingue</strong>. <strong className="text-[#121212]/80 font-semibold">La scelta e la crescita delle persone</strong> rappresenta un punto chiave per il corretto funzionamento e l'espansione del business, soprattutto vista l'instabilità del settore assicurativo, che <strong className="text-[#121212]/80 font-semibold">non sempre riesce ad attrarre i profili più qualificati</strong> e al tempo stesso richiede <strong className="text-[#121212]/80 font-semibold">profili professionali molto specifici e capaci di evolvere nel tempo</strong>. In questo contesto, ogni assunzione sbagliata costa di più e ogni persona giusta che resta vale ancora di più.
       </>,
     },
     challenge: {
       badge: 'LA SFIDA',
       title: 'Migliaia di candidature, 2 picchi stagionali, 3 persone nel team recruiting.',
-      intro: 'Le assunzioni di Europ Assistance Italia si concentrano in due picchi stagionali l\'anno, generando volumi nell\'ordine delle migliaia di candidature in pochi mesi. Per i ruoli di assistenza e customer care, le soft skill sono il primo predittore di successo: problem solving, orientamento al cliente, gestione dello stress, eppure sono completamente invisibili nel CV.',
-      businessLabel: 'SFIDE DI BUSINESS',
-      hrLabel: 'SFIDE HR & PEOPLE',
+      intro: 'Le assunzioni di Europ Assistance Italia si concentrano in due picchi stagionali l\'anno, generando volumi nell\'ordine delle migliaia di candidature in pochi mesi. Per i ruoli di assistenza e customer care, le soft skill sono il primo predittore di successo: problem solving, orientamento al cliente, gestione dello stress, ma sono completamente invisibili nel CV.',
+      businessLabel: 'LE SFIDE DI BUSINESS',
+      hrLabel: 'LE SFIDE DI HR & PEOPLE',
       businessChallenges: [
         {
           icon: TrendingUp,
-          title: 'La necessità di crescere al ritmo del business',
+          title: 'Necessità di crescere al ritmo del business',
           text: 'Le esigenze crescevano costantemente e la velocità di risposta richiesta aumentava. Essere più veloci ed efficaci per HR nel raggiungere i risultati attesi era diventata una necessità operativa.',
         },
         {
           icon: Users,
           title: 'Gestione complessa nei picchi stagionali',
-          text: 'Con volumi elevati concentrati in finestre temporali ristrette, non c\'era margine per processi lenti. Ogni ritardo si traduceva in posizioni scoperte proprio quando il business ne aveva più bisogno.',
+          text: 'Con volumi elevati concentrati in finestre temporali ristrette, non c\'era margine per processi lenti. Ogni ritardo si traduceva in posizioni scoperte nel momento in cui il business ne aveva più bisogno.',
         },
         {
           icon: BarChart3,
-          title: 'Una richiesta di maggiore anticipo sui bisogni futuri',
-          text: 'Identificare le competenze predittive di crescita già in fase di pre-screening era essenziale per raccogliere informazioni utili alla costruzione di una pipeline di talento interna.',
+          title: 'Richiesta di maggiore anticipo sui need futuri',
+          text: 'Identificare già nel pre-screening le competenze predittive di crescita era fondamentale per portarsi a casa informazioni utili alla costruzione di una pipeline di talento interna.',
         },
       ],
       hrChallenges: [
@@ -87,7 +87,7 @@ const content = {
         },
         {
           icon: Eye,
-          title: 'Difficoltà nell\'individuare il potenziale futuro',
+          title: 'Difficoltà di individuazione del potenziale futuro',
           text: 'Portare in azienda persone con il potenziale giusto per percorsi di sviluppo interno richiedeva dati strutturati che il CV da solo non era in grado di fornire.',
         },
         {
@@ -102,14 +102,14 @@ const content = {
       title: 'Cosa doveva cambiare',
       items: [
         { icon: Zap, text: 'Scalare il pre-screening senza scalare il team: gestire migliaia di candidature con 3 FTE, liberando i recruiter dallo screening per concentrarli su colloqui e valutazione del potenziale.' },
-        { icon: Eye, text: 'Rendere visibili le soft skill dal primo step: dati oggettivi su soft skill e lingua inglese prima di impegnare ore di tempo del team recruiting.' },
-        { icon: Shield, text: 'Usare l\'AI come supporto al recruiter: garantendo maggiore velocità ed efficacia decisionale mantenendo pieno controllo decisionale in ogni step.' },
-        { icon: Target, text: 'Selezionare per il potenziale, non solo per la performance immediata: individuare candidati con competenze promettenti e indicative di una futura crescita nell\'organizzazione.' },
+        { icon: Eye, text: 'Rendere visibili le soft skill dal primo step: dati oggettivi su competenze trasversali e lingua inglese prima di impegnare ore di tempo del team recruiting.' },
+        { icon: Shield, text: 'Sfruttare l\'AI come supporto al recruiter: garantendo maggiore velocità ed efficacia decisionale e mantenendo pieno controllo decisionale in ogni step.' },
+        { icon: Target, text: 'Selezionare per il potenziale, non solo per la performance immediata: identificare candidati con competenze promettenti e indicative di una futura crescita all\'interno dell\'organizzazione.' },
       ],
     },
     solution: {
       badge: 'LA SOLUZIONE',
-      title: 'Assessment AI scalabile con Skillvue',
+      title: 'Valutazione Skillvue scalabile grazie all\'AI',
       intro: "Skillvue è stato integrato nel processo di selezione di Europ Assistance Italia come primo step strutturato del funnel, gestendo il pre-screening su più profili e su più sedi geografiche. Il deployment è ricorrente, legato soprattutto ai due picchi stagionali annuali.",
       skillsLabel: 'COMPETENZE VALUTATE',
       skills: [
@@ -120,7 +120,7 @@ const content = {
       methodologyLabel: 'COME È STATO COSTRUITO',
       methodology: [
         {
-          title: 'Assessment in autonomia come primo step',
+          title: 'Assessment come il primo step',
           text: 'Dopo la candidatura, ogni candidato completa l\'assessment in autonomia da qualsiasi dispositivo: telefono, tablet o laptop.',
         },
         {
@@ -136,13 +136,13 @@ const content = {
     results: {
       badge: 'RISULTATI',
       title: 'Cosa sta cambiando',
-      intro: 'L\'impatto concreto che Europ Assistance Italia ha ottenuto integrando Skillvue durante i picchi stagionali di selezione più intensi.',
+      intro: 'L\'impatto significativo che Europ Assistance Italia ha ottenuto implementando Skillvue durante i picchi più intensi delle assunzioni stagionali.',
       cards: [
         { icon: Target, title: 'Candidati più qualificati', text: 'meno rumore, più segnali concreti per il team HR' },
         { icon: Zap, title: 'Decisioni di selezione basate sui dati', text: 'colloqui più personalizzati, decisioni basate su dati reali' },
-        { icon: TrendingUp, title: 'Pipeline di talento per il futuro', text: 'si assume guardando già al domani, non solo al fit immediato' },
+        { icon: TrendingUp, title: 'Pipeline di talento per il futuro', text: 'selezione orientata al futuro, non solo al fit immediato' },
         { icon: BarChart3, title: 'Visibilità sul potenziale reale prima del colloquio', text: 'dati sulle soft skill con segnali chiari di potenziale e crescita' },
-        { icon: Scale, title: 'Più tempo per il recruiting ad alto valore', text: 'focus sul miglioramento della qualità delle assunzioni e della retention' },
+        { icon: Scale, title: 'Più tempo per il recruiting ad alto valore', text: 'maggiore qualità delle assunzioni e della retention' },
         { icon: Heart, title: 'Candidate experience migliorata', text: 'più spazio ai candidati per esprimersi' },
       ],
     },
