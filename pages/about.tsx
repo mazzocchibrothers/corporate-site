@@ -11,7 +11,7 @@ import { ArrowRight } from 'lucide-react';
 const stats = [
   { value: '€9M+', label: 'Raised' },
   { value: '50+', label: 'People across Europe' },
-  { value: '50+', label: 'Enterprise clients' },
+  { value: '100+', label: 'Enterprise clients' },
   { value: '30+', label: 'Languages' },
   { value: '1M+', label: 'People empowered' },
 ];
