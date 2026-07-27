@@ -11,7 +11,7 @@ import { ArrowRight } from 'lucide-react';
 const stats = [
   { value: '€9M+', label: 'Raised' },
   { value: '50+', label: 'People across Europe' },
-  { value: '50+', label: 'Enterprise clients' },
+  { value: '100+', label: 'Enterprise clients' },
   { value: '30+', label: 'Languages' },
   { value: '1M+', label: 'People empowered' },
 ];
@@ -487,22 +487,24 @@ export default function AboutPage() {
             >
               {t('Skillvue is the objective skills data layer for your enterprise, tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run.')}
             </p>
+            <p
+              style={{
+                fontFamily: 'Mona Sans, sans-serif',
+                fontWeight: 400,
+                fontSize: 18,
+                lineHeight: 1.4,
+                color: '#7a7a7a',
+                margin: '24px 0 0',
+                maxWidth: 837,
+              }}
+            >
+              {t("We work with the world's leading organizations.")}
+              <br />
+              {t('We enable global enterprises to access predictive data on talent, grounded in science and scaled by AI, so every decision about people is based on evidence, not intuition.')}
+            </p>
 
             {/* Working with leading global companies — client logos */}
             <div style={{ marginTop: 72 }}>
-              <p
-                style={{
-                  fontFamily: 'Mona Sans, sans-serif',
-                  fontWeight: 700,
-                  fontSize: 12,
-                  letterSpacing: '2.4px',
-                  color: '#848484',
-                  textTransform: 'uppercase',
-                  margin: '0 0 36px',
-                }}
-              >
-                {t('Working with leading global companies')}
-              </p>
               <div
                 className="grid grid-cols-2 lg:grid-cols-6 items-center justify-items-center"
                 style={{ gap: '36px 56px' }}
@@ -704,32 +706,32 @@ export default function AboutPage() {
 
             {/* Cards */}
             <div
-              style={{ display: 'flex', gap: 48 }}
+              style={{ display: 'flex', gap: 64 }}
               className="flex-col lg:flex-row"
             >
               {/* Nicolò */}
-              <div style={{ flex: '1 0 0', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <div style={{ flex: '1 0 0', minWidth: 0, display: 'flex', gap: 32 }} className="flex-col sm:flex-row">
                 <a
                   href="https://www.linkedin.com/in/nicolo-mazzocchi-16a39215b/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group"
-                  style={{ display: 'block', aspectRatio: '16/9', borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#222', cursor: 'pointer' }}
+                  className="group w-full aspect-square shrink-0 self-start sm:w-[288px] sm:h-[288px]"
+                  style={{ display: 'block', borderRadius: 16, position: 'relative', overflow: 'hidden', backgroundColor: '#222', cursor: 'pointer' }}
                 >
                   <img
-                    src="/about/CEO_nicolo.avif"
+                    src="/about/founder-nicolo.avif"
                     alt="Nicolò Mazzocchi"
                     className="transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                     style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </a>
-                <div style={{ paddingTop: 21 }}>
+                <div>
                   <p
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 600,
-                      fontSize: 20,
-                      lineHeight: '22px',
+                      fontSize: 24,
+                      lineHeight: '26px',
                       color: '#121212',
                       letterSpacing: '-0.4px',
                       margin: '0 0 4px',
@@ -741,11 +743,11 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 400,
-                      fontSize: 14,
+                      fontSize: 16,
                       lineHeight: '21px',
                       color: '#4b4df7',
                       letterSpacing: '-0.176px',
-                      margin: '0 0 8px',
+                      margin: '0 0 20px',
                     }}
                   >
                     {t('Co-founder & CEO')}
@@ -754,41 +756,41 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 400,
-                      fontSize: 13.5,
-                      lineHeight: '20.25px',
+                      fontSize: 16,
+                      lineHeight: 1.4,
                       color: '#7a7a7a',
                       letterSpacing: '-0.176px',
                       margin: 0,
                     }}
                   >
-                    {t('After competing at a pre-Olympic level in sports at a very young age, Nicolò found himself at a crossroads: a career as a professional sailor, with the dream of the Olympics, or a more conventional university education and career. After a year of reflection in Australia, he chose a third way: to set up his own business, founding his first startup in the B2C entertainment sector with his brother Riccardo. After this first successful experience, he decided to move into the HR Tech sector and, together with his partner Simone Patera, launched Skillvue with the aim of leveraging science and AI to support companies in human capital management and in the transition towards a skills-based approach.')}
+                    {t('A former pre-Olympic-level athlete turned entrepreneur, Nicolò co-founded Skillvue with Simone Patera after an early B2C entertainment venture, with the goal of bringing science and AI to human capital management and the shift toward a skills-based approach.')}
                   </p>
                 </div>
               </div>
 
               {/* Simone */}
-              <div style={{ flex: '1 0 0', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <div style={{ flex: '1 0 0', minWidth: 0, display: 'flex', gap: 32 }} className="flex-col sm:flex-row">
                 <a
                   href="https://www.linkedin.com/in/simone-patera/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group"
-                  style={{ display: 'block', aspectRatio: '16/9', borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#222', cursor: 'pointer' }}
+                  className="group w-full aspect-square shrink-0 self-start sm:w-[288px] sm:h-[288px]"
+                  style={{ display: 'block', borderRadius: 16, position: 'relative', overflow: 'hidden', backgroundColor: '#222', cursor: 'pointer' }}
                 >
                   <img
-                    src="/about/Co-founder-Simone.avif"
+                    src="/about/founder-simone.avif"
                     alt="Simone Patera"
                     className="transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                     style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </a>
-                <div style={{ paddingTop: 21 }}>
+                <div>
                   <p
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 600,
-                      fontSize: 20,
-                      lineHeight: '22px',
+                      fontSize: 24,
+                      lineHeight: '26px',
                       color: '#121212',
                       letterSpacing: '-0.4px',
                       margin: '0 0 4px',
@@ -800,11 +802,11 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 400,
-                      fontSize: 14,
+                      fontSize: 16,
                       lineHeight: '21px',
                       color: '#4b4df7',
                       letterSpacing: '-0.176px',
-                      margin: '0 0 8px',
+                      margin: '0 0 20px',
                     }}
                   >
                     {t('Co-founder')}
@@ -813,14 +815,14 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 400,
-                      fontSize: 13.5,
-                      lineHeight: '20.25px',
+                      fontSize: 16,
+                      lineHeight: 1.4,
                       color: '#7a7a7a',
                       letterSpacing: '-0.176px',
                       margin: 0,
                     }}
                   >
-                    {t("Simone is the co-founder of Skillvue. He started his first company in the education sector when he was just 18 years old, and led its growth to a team of 50 people, while completing his studies in Philosophy. After graduating, he worked as a Business Developer for various Italian companies in the tech sector, collaborating with major players such as Poste Italiane and Rai. During those years, he also became father to two girls. In 2021 his professional path crossed with Nicolò Mazzocchi's: from the union of their respective experiences in the startup and technology field, Skillvue was born.")}
+                    {t('Simone co-founded Skillvue, drawing on a background that began with launching an education company at 18 and grew through business development roles in Italian tech alongside players like Poste Italiane and Rai.')}
                   </p>
                 </div>
               </div>
