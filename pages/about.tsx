@@ -756,8 +756,8 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 400,
-                      fontSize: 13.5,
-                      lineHeight: '20.25px',
+                      fontSize: 18,
+                      lineHeight: 1.4,
                       color: '#7a7a7a',
                       letterSpacing: '-0.176px',
                       margin: 0,
@@ -815,8 +815,8 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 400,
-                      fontSize: 13.5,
-                      lineHeight: '20.25px',
+                      fontSize: 18,
+                      lineHeight: 1.4,
                       color: '#7a7a7a',
                       letterSpacing: '-0.176px',
                       margin: 0,
