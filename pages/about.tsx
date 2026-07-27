@@ -715,8 +715,8 @@ export default function AboutPage() {
                   href="https://www.linkedin.com/in/nicolo-mazzocchi-16a39215b/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group"
-                  style={{ display: 'block', flex: '0 0 auto', width: '100%', maxWidth: 240, aspectRatio: '1/1', borderRadius: 16, position: 'relative', overflow: 'hidden', backgroundColor: '#222', cursor: 'pointer' }}
+                  className="group w-full aspect-square shrink-0 self-start sm:w-[288px] sm:h-[288px]"
+                  style={{ display: 'block', borderRadius: 16, position: 'relative', overflow: 'hidden', backgroundColor: '#222', cursor: 'pointer' }}
                 >
                   <img
                     src="/about/founder-nicolo.avif"
@@ -730,8 +730,8 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 600,
-                      fontSize: 20,
-                      lineHeight: '22px',
+                      fontSize: 24,
+                      lineHeight: '26px',
                       color: '#121212',
                       letterSpacing: '-0.4px',
                       margin: '0 0 4px',
@@ -743,7 +743,7 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 400,
-                      fontSize: 14,
+                      fontSize: 16,
                       lineHeight: '21px',
                       color: '#4b4df7',
                       letterSpacing: '-0.176px',
@@ -756,7 +756,7 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 400,
-                      fontSize: 18,
+                      fontSize: 16,
                       lineHeight: 1.4,
                       color: '#7a7a7a',
                       letterSpacing: '-0.176px',
@@ -774,8 +774,8 @@ export default function AboutPage() {
                   href="https://www.linkedin.com/in/simone-patera/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group"
-                  style={{ display: 'block', flex: '0 0 auto', width: '100%', maxWidth: 240, aspectRatio: '1/1', borderRadius: 16, position: 'relative', overflow: 'hidden', backgroundColor: '#222', cursor: 'pointer' }}
+                  className="group w-full aspect-square shrink-0 self-start sm:w-[288px] sm:h-[288px]"
+                  style={{ display: 'block', borderRadius: 16, position: 'relative', overflow: 'hidden', backgroundColor: '#222', cursor: 'pointer' }}
                 >
                   <img
                     src="/about/founder-simone.avif"
@@ -789,8 +789,8 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 600,
-                      fontSize: 20,
-                      lineHeight: '22px',
+                      fontSize: 24,
+                      lineHeight: '26px',
                       color: '#121212',
                       letterSpacing: '-0.4px',
                       margin: '0 0 4px',
@@ -802,7 +802,7 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 400,
-                      fontSize: 14,
+                      fontSize: 16,
                       lineHeight: '21px',
                       color: '#4b4df7',
                       letterSpacing: '-0.176px',
@@ -815,7 +815,7 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
                       fontWeight: 400,
-                      fontSize: 18,
+                      fontSize: 16,
                       lineHeight: 1.4,
                       color: '#7a7a7a',
                       letterSpacing: '-0.176px',
