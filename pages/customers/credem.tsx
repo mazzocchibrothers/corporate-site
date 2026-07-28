@@ -32,11 +32,11 @@ const content = {
       highlight2: 'crescita del business',
       after: '',
     },
-    subtitle: "Con Skillvue, Gruppo Credem ha dimezzato il time-to-hire e raddoppiato la qualità dei candidati in colloquio davanti a decine di migliaia di application di profili junior ricevuti ogni anno.",
+    subtitle: "Con Skillvue, Gruppo Credem ha processato decine di migliaia di candidature mantenendo alta la qualità della candidate experience e ottimizzando del 30% la qualità dei candidati portati a colloquio.",
     heroMetrics: [
-      { value: '-50%', label: 'Time-to-hire' },
-      { value: '+50%', label: 'Fit-to-hire al colloquio' },
-      { value: '-15%', label: 'Riduzione colloqui non in linea' },
+      { value: '30K', label: 'Candidature ricevute e processate' },
+      { value: '100%', label: 'Aderenza tra valutazione umana e del recruiter' },
+      { value: '-30%', label: 'Riduzione dei colloqui non in linea' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
@@ -63,7 +63,7 @@ const content = {
     challenge: {
       badge: 'LA SFIDA',
       title: '30.000 candidature e tanti profili junior poco valorizzati dal semplice CV',
-      intro: "In un mercato dove banche, fintech e tech company spesso competono per gli stessi profili junior, la velocità e la qualità del processo di selezione sono diventate leve competitive ed elementi imprescindibili per l'ottenimento di una Candidate Experience all'altezza delle aspettative.",
+      intro: "In un mercato dove banche, fintech e tech company spesso competono per gli stessi profili junior, la velocità e la qualità del processo di selezione sono diventate leve competitive ed elementi imprescindibili per lavorare con i migliori talenti.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
@@ -126,13 +126,13 @@ const content = {
       badge: 'RISULTATI',
       title: 'Cosa è cambiato e perché conta',
       metrics: [
-        { value: '-50%', label: 'Time-to-hire' },
-        { value: '+50%', label: 'Fit-to-hire al colloquio' },
-        { value: '-15%', label: 'Colloqui non in linea' },
+        { value: '30K', label: <><strong className="text-white font-semibold">Candidature ricevute e processate</strong><br />con velocità ed efficacia</> },
+        { value: '100%', label: <><strong className="text-white font-semibold">Aderenza tra valutazione umana e del recruiter</strong><br />nel primo step della selezione</> },
+        { value: '-30%', label: <><strong className="text-white font-semibold">Riduzione dei colloqui non in linea</strong><br />al secondo step</> },
       ],
       qualitative: [
         { icon: Eye, title: 'Più candidati dimostrano il proprio valore', text: "L'assessment ha dato a più persone la possibilità di far emergere competenze reali oltre i limiti del CV. Profili ad alto potenziale che prima rischiavano di perdersi nel volume ora vengono intercettati efficacemente e rapidamente." },
-        { icon: CheckCircle, title: 'Qualità dei colloqui radicalmente migliorata', text: "Il +50% di fit-to-hire significa che il secondo step del processo è diventato più efficiente: meno tempo speso in interviste a basso rendimento, più decisioni consapevoli, cicli di feedback più rapidi." },
+        { icon: CheckCircle, title: 'Qualità dei colloqui radicalmente migliorata', text: "L'aumento del fit-to-hire significa che il secondo step del processo è diventato più efficiente: meno tempo speso in interviste a basso rendimento, più decisioni consapevoli, cicli di feedback più rapidi." },
         { icon: Layers, title: 'Human-in-the-loop, sempre', text: "L'assessment produce informazioni utili a rendere il decision-making più consapevole ed efficace. I dati prodotti dall'AI di Skillvue alimentano la decisione, che rimane però sempre in mano ai recruiter." },
       ],
     },
@@ -157,11 +157,11 @@ const content = {
       highlight2: 'business growth',
       after: '',
     },
-    subtitle: "With Skillvue, Gruppo Credem halved time-to-hire and doubled the quality of candidates in interviews, managing tens of thousands of junior profile applications received every year.",
+    subtitle: "With Skillvue, Gruppo Credem processed tens of thousands of applications while keeping candidate experience quality high and improving the quality of candidates brought to interview by 30%.",
     heroMetrics: [
-      { value: '-50%', label: 'Time-to-hire' },
-      { value: '+50%', label: 'Fit-to-hire in interviews' },
-      { value: '-15%', label: 'Reduction in unsuccessful interviews' },
+      { value: '30K', label: 'Applications received and processed' },
+      { value: '100%', label: 'Alignment between human assessment and the recruiter' },
+      { value: '-30%', label: 'Reduction in unsuccessful interviews' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -188,7 +188,7 @@ const content = {
     challenge: {
       badge: 'THE CHALLENGE',
       title: '30,000 applications and many junior profiles the CV could not really depict',
-      intro: "In a market where banks, fintechs and tech companies often compete for the same junior profiles, the speed and quality of the hiring process have become competitive levers and essential elements in delivering a Candidate Experience that meets expectations.",
+      intro: "In a market where banks, fintechs and tech companies often compete for the same junior profiles, the speed and quality of the hiring process have become competitive levers and essential elements in working with the best talent.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
@@ -251,13 +251,13 @@ const content = {
       badge: 'RESULTS',
       title: "What changed and why it matters",
       metrics: [
-        { value: '-50%', label: 'Time-to-hire' },
-        { value: '+50%', label: 'Fit-to-hire in interviews' },
-        { value: '-15%', label: 'Unsuccessful interviews' },
+        { value: '30K', label: <><strong className="text-white font-semibold">Applications received and processed</strong><br />quickly and effectively</> },
+        { value: '100%', label: <><strong className="text-white font-semibold">Alignment between human assessment and the recruiter</strong><br />in the first selection step</> },
+        { value: '-30%', label: <><strong className="text-white font-semibold">Reduction in unsuccessful interviews</strong><br />at the second step</> },
       ],
       qualitative: [
         { icon: Eye, title: 'More candidates get to demonstrate their value', text: "The assessment gave more people the opportunity to surface real skills beyond the CV. High-potential profiles that previously risked getting lost in the volume are now identified effectively and quickly." },
-        { icon: CheckCircle, title: 'Radically improved interview quality', text: "The +50% fit-to-hire means the second step of the process has become more efficient: less time spent on low-yield interviews, more informed decisions, faster feedback cycles." },
+        { icon: CheckCircle, title: 'Radically improved interview quality', text: "The increase in fit-to-hire means the second step of the process has become more efficient: less time spent on low-yield interviews, more informed decisions, faster feedback cycles." },
         { icon: Layers, title: 'Human-in-the-loop, always', text: "The assessment produces information that makes decision-making more informed and effective. The data produced by Skillvue's AI feeds the decision, which always remains in the hands of the recruiters." },
       ],
     },
@@ -320,7 +320,7 @@ export default function CredemStoryPage() {
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
                   <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
-                  <div className="flex flex-wrap gap-4 mb-12">
+                  <div className="grid grid-cols-3 gap-4 mb-12">
                     {c.heroMetrics.map(m => (
                       <div key={m.label} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
                         <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
@@ -467,20 +467,7 @@ export default function CredemStoryPage() {
 
               <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* -50% circular progress */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-5">
-                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 40 * 0.50} ${2 * Math.PI * 40}`} />
-                      </svg>
-                    </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
-                    {c.results.metrics[0].sublabel && <span className="text-[11px] text-white/30 mt-1 block">{c.results.metrics[0].sublabel}</span>}
-                  </div>
-                  {/* +50% upward bar chart */}
+                  {/* 30K upward bar chart */}
                   <div className="text-center flex flex-col items-center">
                     <div className="w-24 h-24 mb-5 flex items-end justify-center gap-1.5 pb-2">
                       <div className="rounded-sm bg-white/20" style={{ width: 14, height: 30 }} />
@@ -488,17 +475,30 @@ export default function CredemStoryPage() {
                       <div className="rounded-sm bg-white/55" style={{ width: 14, height: 58 }} />
                       <div className="rounded-sm bg-[#4b4df7]" style={{ width: 14, height: 76 }} />
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
-                    {c.results.metrics[1].sublabel && <span className="text-[11px] text-white/30 mt-1 block">{c.results.metrics[1].sublabel}</span>}
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
+                    {c.results.metrics[0].sublabel && <span className="text-[11px] text-white/30 mt-1 block">{c.results.metrics[0].sublabel}</span>}
                   </div>
-                  {/* -15% circular progress */}
+                  {/* 100% circular progress */}
                   <div className="text-center flex flex-col items-center">
                     <div className="relative w-24 h-24 mb-5">
                       <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
                         <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
                         <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 40 * 0.15} ${2 * Math.PI * 40}`} />
+                          strokeDasharray={`${2 * Math.PI * 40 * 1.00} ${2 * Math.PI * 40}`} />
+                      </svg>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
+                    {c.results.metrics[1].sublabel && <span className="text-[11px] text-white/30 mt-1 block">{c.results.metrics[1].sublabel}</span>}
+                  </div>
+                  {/* -30% circular progress */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.30} ${2 * Math.PI * 40}`} />
                       </svg>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
