@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import Script from "next/script";
 import { useRouter } from "next/router";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 
@@ -40,6 +41,18 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </Head>
+      {/* Loaded after hydration so GTM's tags (analytics, consent banner,
+          ad pixels, etc.) don't compete with the page's own JS for
+          main-thread time on load. afterInteractive (not lazyOnload) is
+          deliberate: lazyOnload waits for window.load + idle, which risks
+          missing pageview/pixel fires for visitors who bounce quickly. */}
+      <Script
+        id="gtm"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5JPQP5T');`,
+        }}
+      />
       <HreflangTags />
       <div className="min-h-screen">
         {/* Animated flowing background. fixed */}

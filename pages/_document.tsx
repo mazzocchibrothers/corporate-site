@@ -11,8 +11,10 @@ class MyDocument extends Document {
     return (
       <Html lang={locale}>
         <Head>
-          {/* Google Tag Manager */}
-          <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5JPQP5T');` }} />
+          {/* Preconnect to third-party origins loaded after interaction (GTM, YouTube facade) */}
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+          <link rel="preconnect" href="https://i.ytimg.com" />
+          <link rel="preconnect" href="https://www.youtube-nocookie.com" />
 
           {/* Favicons */}
           <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />

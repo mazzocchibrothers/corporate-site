@@ -2,6 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  experimental: {
+    // Inlines the CSS each page actually uses above the fold and defers the
+    // rest, so the full site-wide Tailwind bundle stops blocking first paint.
+    optimizeCss: true,
+  },
   i18n: {
     locales: ['en', 'it'],
     defaultLocale: 'en',

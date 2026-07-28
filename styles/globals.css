@@ -425,6 +425,12 @@ h1 .gradient-text {
   .animated-bg .orb, .animated-bg .shimmer { animation: none !important; }
 }
 
+/* Fewer blurred, animated layers on mobile — each one is a compositor cost
+   that competes with the CPU budget the rest of the page needs on load. */
+@media (max-width: 767px) {
+  .animated-bg .orb-3, .animated-bg .orb-5, .animated-bg .orb-6 { display: none; }
+}
+
 
 /* ===== MARQUEE ANIMATIONS ===== */
 @keyframes marquee-left {
