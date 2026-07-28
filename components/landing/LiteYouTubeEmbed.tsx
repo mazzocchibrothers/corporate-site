@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface LiteYouTubeEmbedProps {
   videoId: string;
@@ -7,37 +7,17 @@ interface LiteYouTubeEmbedProps {
 }
 
 // YouTube embeds ship a heavy chunk of third-party JS that competes with the
-// page's own scripts for main-thread time. Rendering just a poster image
-// until the player scrolls near the viewport keeps that cost off the
-// critical load path without changing the autoplay-on-view behavior.
+// page's own scripts for main-thread time. Rendering a poster image first and
+// swapping in the iframe from an effect keeps that JS out of the server-sent
+// HTML, so it doesn't compete with the page's own JS during initial load.
 export default function LiteYouTubeEmbed({ videoId, title, className }: LiteYouTubeEmbedProps) {
   const [shouldLoad, setShouldLoad] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [posterFailed, setPosterFailed] = useState(false);
 
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-
-    if (typeof IntersectionObserver === 'undefined') {
-      setShouldLoad(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShouldLoad(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '400px' }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  useEffect(() => setShouldLoad(true), []);
 
   return (
-    <div ref={containerRef} className={className}>
+    <div className={className}>
       {shouldLoad ? (
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&rel=0&modestbranding=1&vq=hd2160&hd=1&playsinline=1&enablejsapi=1`}
@@ -60,11 +40,12 @@ export default function LiteYouTubeEmbed({ videoId, title, className }: LiteYouT
         />
       ) : (
         <img
-          src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+          src={`https://i.ytimg.com/vi/${videoId}/${posterFailed ? 'hqdefault' : 'maxresdefault'}.jpg`}
           alt={title}
-          width={480}
-          height={360}
+          width={1280}
+          height={720}
           loading="eager"
+          onError={() => setPosterFailed(true)}
           className="absolute inset-0 w-full h-full object-cover"
         />
       )}

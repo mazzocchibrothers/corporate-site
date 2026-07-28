@@ -30,6 +30,9 @@ export default function HomePage() {
         <link rel="canonical" href={canonical} />
         {/* Hero's italic gradient span needs Bold Italic; only this page (and /science) does. */}
         <link rel="preload" href="/fonts/MonaSans-BoldItalic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        {/* Preconnect for the hero's YouTube facade — only this page has the video. */}
+        <link rel="preconnect" href="https://i.ytimg.com" />
+        <link rel="preconnect" href="https://www.youtube-nocookie.com" />
       </Head>
       <Navbar />
       <LazyMotion features={loadMotionFeatures} strict>

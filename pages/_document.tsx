@@ -11,10 +11,11 @@ class MyDocument extends Document {
     return (
       <Html lang={locale}>
         <Head>
-          {/* Preconnect to third-party origins loaded after interaction (GTM, YouTube facade) */}
+          {/* Preconnect to GTM, loaded on every page. The YouTube preconnects
+              live on the homepage's own <Head> — that's the only page with
+              the video, and every other page would otherwise open those
+              connections for nothing. */}
           <link rel="preconnect" href="https://www.googletagmanager.com" />
-          <link rel="preconnect" href="https://i.ytimg.com" />
-          <link rel="preconnect" href="https://www.youtube-nocookie.com" />
 
           {/* Favicons */}
           <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />

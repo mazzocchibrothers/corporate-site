@@ -134,11 +134,11 @@ export default function ExploreStories() {
                   {/* Background image if available */}
                   {s.bgImage && s.bgStyle === 'contain' ? (
                     <div className="absolute inset-0 flex items-center justify-center bg-white/[0.06] p-10">
-                      <img src={s.bgImage} alt="" className="max-w-[60%] max-h-[60%] object-contain opacity-90" />
+                      <img src={s.bgImage} alt="" loading="lazy" className="max-w-[60%] max-h-[60%] object-contain opacity-90" />
                     </div>
                   ) : s.bgImage ? (
                     <>
-                      <img src={s.bgImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                      <img src={s.bgImage} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/70" />
                     </>
                   ) : (
