@@ -2,6 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  experimental: {
+    // Inlines the CSS each page actually uses above the fold and defers the
+    // rest, so the full site-wide Tailwind bundle stops blocking first paint.
+    // noscriptFallback: without it, a client with JS disabled would only
+    // ever get the critical subset and never load the rest of the sheet.
+    optimizeCss: { noscriptFallback: true },
+  },
   i18n: {
     locales: ['en', 'it'],
     defaultLocale: 'en',

@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import LiteYouTubeEmbed from '@/components/landing/LiteYouTubeEmbed';
 
 const clientLogos = [
   { name: 'Unicredit', src: '/logos/client-unicredit.svg', width: 221 },
@@ -98,23 +99,9 @@ export default function HeroSection() {
                 className="relative rounded-2xl overflow-hidden border border-white/10 aspect-video bg-[#0d0d1f]"
                 style={{ boxShadow: '0 20px 60px -15px rgba(75, 77, 247, 0.45), 0 0 0 1px rgba(255,255,255,0.05)' }}
               >
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/g2Ju7COKZrM?autoplay=1&mute=1&loop=1&playlist=g2Ju7COKZrM&rel=0&modestbranding=1&vq=hd2160&hd=1&playsinline=1&enablejsapi=1"
+                <LiteYouTubeEmbed
+                  videoId="g2Ju7COKZrM"
                   title="Skillvue product video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  onLoad={(e) => {
-                    const iframe = e.currentTarget;
-                    const setQuality = () => {
-                      iframe.contentWindow?.postMessage(
-                        '{"event":"command","func":"setPlaybackQuality","args":["hd2160"]}',
-                        '*'
-                      );
-                    };
-                    setTimeout(setQuality, 800);
-                    setTimeout(setQuality, 2000);
-                    setTimeout(setQuality, 4000);
-                  }}
                   className="absolute inset-0 w-full h-full"
                 />
               </div>
