@@ -3,12 +3,19 @@ import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, Newspaper } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 
 const articles = [
+  {
+    id: 10,
+    image: '/newsletter-july-cover.png',
+    href: '/blog/newsletter-july-2026',
+    en: { title: 'The July Newsletter', date: 'July 2026', tag: 'Newsletter' },
+    it: { title: 'La newsletter di luglio', date: 'Luglio 2026', tag: 'Newsletter' },
+  },
   {
     id: 1,
     image: 'https://images.unsplash.com/photo-1713865469900-d12502a39875?w=600&h=400&fit=crop',
@@ -91,7 +98,13 @@ export default function BlogPage() {
         onClick={() => { if (article.href) { router.push(article.href); window.scrollTo(0, 0); } }}
       >
         <div className="aspect-[16/10] overflow-hidden">
-          <img src={article.image} alt={c.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          {article.cover === 'gradient' ? (
+            <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-700" style={{ background: 'linear-gradient(135deg, #cdc6f5 0%, #e6d5ea 55%, #f8ddc9 100%)' }}>
+              <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
+            </div>
+          ) : (
+            <img src={article.image} alt={c.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          )}
         </div>
         <div className="p-5 md:p-7 flex-1 flex flex-col">
           <div className="flex items-center gap-3 mb-3 md:mb-4">
