@@ -28,14 +28,15 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return {
+      // None of these set locale:false, so Next matches them with the locale
+      // prefix already stripped — "/it/clienti" is tested as "clienti" under
+      // the it locale and matches the same rule as plain "/clienti". No
+      // separate afterFiles entry needed for the IT-prefixed form.
       beforeFiles: [
         { source: '/customers/mediaset', destination: '/customers/mediaset-2' },
         { source: '/clienti/mediaset', destination: '/customers/mediaset-2' },
+        { source: '/clienti', destination: '/customers' },
         { source: '/clienti/:slug', destination: '/customers/:slug' },
-      ],
-      afterFiles: [
-        { source: '/it/clienti', destination: '/it/customers', locale: false },
-        { source: '/it/clienti/:slug', destination: '/it/customers/:slug', locale: false },
       ],
     };
   },
