@@ -31,6 +31,7 @@ const nextConfig: NextConfig = {
       beforeFiles: [
         { source: '/customers/mediaset', destination: '/customers/mediaset-2' },
         { source: '/clienti/mediaset', destination: '/customers/mediaset-2' },
+        { source: '/clienti', destination: '/customers' },
         { source: '/clienti/:slug', destination: '/customers/:slug' },
       ],
       afterFiles: [

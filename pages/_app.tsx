@@ -4,25 +4,15 @@ import Head from "next/head";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import { LanguageProvider } from "@/i18n/LanguageContext";
+import { toEnPath, toItPath } from "@/i18n/localePaths";
 
 const BASE_URL = 'https://skillvue.ai';
-
-// Maps IT-only slugs to their EN equivalents and vice versa
-const itToEn: Record<string, string> = { '/clienti': '/customers' };
-const enToIt: Record<string, string> = { '/customers': '/clienti' };
 
 function HreflangTags() {
   const { asPath } = useRouter();
 
-  let enPath = itToEn[asPath] ?? asPath;
-  let itPath = enToIt[asPath] ?? asPath;
-
-  // Handle /customers/:slug <-> /clienti/:slug
-  if (asPath.startsWith('/customers/')) {
-    itPath = '/clienti/' + asPath.slice('/customers/'.length);
-  } else if (asPath.startsWith('/clienti/')) {
-    enPath = '/customers/' + asPath.slice('/clienti/'.length);
-  }
+  const enPath = toEnPath(asPath);
+  const itPath = toItPath(asPath);
 
   const enUrl = `${BASE_URL}${enPath}`;
   const itUrl = itPath === '/' ? `${BASE_URL}/it` : `${BASE_URL}/it${itPath}`;
