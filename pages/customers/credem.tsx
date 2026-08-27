@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, Users, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle } from 'lucide-react';
+import { ArrowRight, Users, TrendingUp, TrendingDown, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle } from 'lucide-react';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
@@ -26,17 +26,17 @@ const content = {
     breadcrumb: 'Clienti',
     badge: 'CUSTOMER STORY',
     headline: {
-      before: 'Gruppo Credem: come scovare i migliori talenti tra ',
+      before: 'Gruppo Credem: come trovare i migliori talenti tra ',
       highlight1: '30.000 candidature',
       middle: ' per seguire la ',
       highlight2: 'crescita del business',
       after: '',
     },
-    subtitle: "Con Skillvue, Gruppo Credem ha processato decine di migliaia di candidature mantenendo alta la qualità della candidate experience e ottimizzando del 30% la qualità dei candidati portati a colloquio.",
+    subtitle: "Con Skillvue, Gruppo Credem processa ogni anno decine di migliaia di candidature mantenendo alta la qualità della candidate experience e riducendo significativamente il numero di colloqui non in linea.",
     heroMetrics: [
       { value: '30K', label: 'Candidature ricevute e processate' },
-      { value: '100%', label: 'Aderenza tra valutazione umana e del recruiter' },
-      { value: '-30%', label: 'Riduzione dei colloqui non in linea' },
+      { value: '-30%', label: 'Riduzione dei colloqui non in linea grazie a Skillvue' },
+      { value: '100%', label: 'Affidabilità dello screening eseguito da Skillvue' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
@@ -55,7 +55,7 @@ const content = {
       badge: 'CONTESTO',
       title: 'Una banca in crescita costante ha bisogno di selezionare talento alla velocità del business',
       paragraph: <>
-        Gruppo Credem (Credito Emiliano) è uno dei gruppi bancari privati più accreditati d'Italia e d'Europa. Con un utile netto di <strong className="text-[#121212]/80 font-semibold">+620 milioni di euro nel 2025</strong>, è riconosciuta come una delle realtà più solide per qualità degli attivi e gestione del rischio. Al tempo stesso è anche, e soprattutto, una banca che cresce: mentre il settore bancario italiano chiude sportelli e riduce l'organico, Credem fa il contrario: dal 2020 ha creato oltre <strong className="text-[#121212]/80 font-semibold">1.400 nuovi posti di lavoro</strong>.
+        Gruppo Credem (Credito Emiliano) è uno dei gruppi bancari privati più accreditati d'Italia e d'Europa. Con un utile netto di <strong className="text-[#121212]/80 font-semibold">+620 milioni di euro nel 2025</strong>, è riconosciuta come una delle realtà più solide per qualità degli attivi e gestione del rischio. Al tempo stesso è anche, e soprattutto, <strong className="text-[#121212]/80 font-semibold">una banca che cresce</strong>: mentre il settore bancario italiano chiude sportelli e riduce l'organico, Credem fa il contrario: dal 2020 ha creato oltre <strong className="text-[#121212]/80 font-semibold">1.400 nuovi posti di lavoro</strong>.
         <br /><br />
         Questa crescita genera un nodo cruciale per HR: ogni anno Credem riceve e si ritrova a gestire circa <strong className="text-[#121212]/80 font-semibold">30.000 candidature</strong>, in larga parte da profili junior, diplomati e neolaureati che si candidano attraverso il <strong className="text-[#121212]/80 font-semibold">Progetto Giovani</strong>, il principale canale di ingresso del gruppo. In un settore dove l'età media dei dipendenti è di oltre <strong className="text-[#121212]/80 font-semibold">48 anni</strong> e il <strong className="text-[#121212]/80 font-semibold">20-25%</strong> della forza lavoro raggiungerà il pensionamento entro il 2035, la capacità di <strong className="text-[#121212]/80 font-semibold">identificare e inserire velocemente giovani ad alto potenziale</strong> è fondamentale per poter supportare la crescita del business.
       </>,
@@ -75,7 +75,7 @@ const content = {
         {
           icon: Heart,
           title: "L'esperienza candidato doveva essere all'altezza del brand di Gruppo Credem",
-          text: "Per una banca certificata Top Employer per 10 anni consecutivi ed Equal Salary per 5, ogni punto di contatto con i candidati è fondamentale. Un processo di selezione moderno e allineato ai valori del Gruppo era fondamentale.",
+          text: "Per una banca certificata Top Employer per 10 anni consecutivi ed Equal Salary per 5, ogni punto di contatto con i candidati è fondamentale, partendo da un processo di selezione moderno e allineato ai valori del Gruppo.",
         },
         {
           icon: TrendingUp,
@@ -126,14 +126,14 @@ const content = {
       badge: 'RISULTATI',
       title: 'Cosa è cambiato e perché conta',
       metrics: [
-        { value: '30K', label: <><strong className="text-white font-semibold">Candidature ricevute e processate</strong><br />con velocità ed efficacia</> },
-        { value: '100%', label: <><strong className="text-white font-semibold">Aderenza tra valutazione umana e del recruiter</strong><br />nel primo step della selezione</> },
+        { value: '30K', label: <><strong className="text-white font-semibold">Candidature ricevute e processate</strong><br />ogni anno, con velocità ed efficacia</> },
         { value: '-30%', label: <><strong className="text-white font-semibold">Riduzione dei colloqui non in linea</strong><br />al secondo step</> },
+        { value: '100%', label: <><strong className="text-white font-semibold">Affidabilità dello screening eseguito da Skillvue</strong><br />nel primo step della selezione</> },
       ],
       qualitative: [
-        { icon: Eye, title: 'Più candidati dimostrano il proprio valore', text: "L'assessment ha dato a più persone la possibilità di far emergere competenze reali oltre i limiti del CV. Profili ad alto potenziale che prima rischiavano di perdersi nel volume ora vengono intercettati efficacemente e rapidamente." },
-        { icon: CheckCircle, title: 'Qualità dei colloqui radicalmente migliorata', text: "L'aumento del fit-to-hire significa che il secondo step del processo è diventato più efficiente: meno tempo speso in interviste a basso rendimento, più decisioni consapevoli, cicli di feedback più rapidi." },
-        { icon: Layers, title: 'Human-in-the-loop, sempre', text: "L'assessment produce informazioni utili a rendere il decision-making più consapevole ed efficace. I dati prodotti dall'AI di Skillvue alimentano la decisione, che rimane però sempre in mano ai recruiter." },
+        { icon: Eye, title: 'Più candidati possono dimostrare il proprio valore', text: <>L'assessment ha dato a più persone la possibilità di far emergere <strong className="text-[#121212]/90 font-semibold">competenze reali oltre i limiti del CV</strong>. Profili ad alto potenziale che prima rischiavano di perdersi nel volume ora vengono <strong className="text-[#121212]/90 font-semibold">intercettati efficacemente e rapidamente</strong>.</> },
+        { icon: CheckCircle, title: 'Qualità dei colloqui radicalmente migliorata', text: <>La riduzione dei colloqui non in linea con la posizione significa che il secondo step del processo è <strong className="text-[#121212]/90 font-semibold">diventato più efficiente</strong>: meno tempo speso in interviste a basso rendimento, più decisioni consapevoli, <strong className="text-[#121212]/90 font-semibold">cicli di feedback più rapidi</strong>.</> },
+        { icon: Layers, title: 'Human-in-the-loop, sempre', text: <>L'assessment produce informazioni utili a rendere il <strong className="text-[#121212]/90 font-semibold">decision-making più consapevole ed efficace</strong>. I dati prodotti dall'AI di Skillvue alimentano la decisione, che <strong className="text-[#121212]/90 font-semibold">rimane però sempre in mano ai recruiter</strong>.</> },
       ],
     },
     related: {
@@ -157,11 +157,11 @@ const content = {
       highlight2: 'business growth',
       after: '',
     },
-    subtitle: "With Skillvue, Gruppo Credem processed tens of thousands of applications while keeping candidate experience quality high and improving the quality of candidates brought to interview by 30%.",
+    subtitle: "With Skillvue, Gruppo Credem processes tens of thousands of applications every year while keeping candidate experience quality high and significantly reducing the number of unsuccessful interviews.",
     heroMetrics: [
       { value: '30K', label: 'Applications received and processed' },
-      { value: '100%', label: 'Alignment between human assessment and the recruiter' },
-      { value: '-30%', label: 'Reduction in unsuccessful interviews' },
+      { value: '-30%', label: 'Reduction in unsuccessful interviews thanks to Skillvue' },
+      { value: '100%', label: 'Reliability of the screening performed by Skillvue' },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -178,29 +178,29 @@ const content = {
     },
     context: {
       badge: 'CONTEXT',
-      title: 'A bank in sustained growth needs to hire talent at the speed of the business',
+      title: 'A constantly growing bank needs to hire talent at the speed of the business',
       paragraph: <>
-        Gruppo Credem (Credito Emiliano) is one of Italy's and Europe's most respected private banking groups. With a net profit of <strong className="text-[#121212]/80 font-semibold">+620 million euros in 2025</strong>, it is recognised as one of the most solid institutions for asset quality and risk management. It is also, and above all, a bank that grows: while the Italian banking sector closes branches and reduces headcount, Credem does the opposite: since 2020 it has created over <strong className="text-[#121212]/80 font-semibold">1,400 new jobs</strong>.
+        Gruppo Credem (Credito Emiliano) is one of Italy's and Europe's most respected private banking groups. With a net profit of <strong className="text-[#121212]/80 font-semibold">+620 million euros in 2025</strong>, it is recognised as one of the most solid institutions for asset quality and risk management. It is also, and above all, <strong className="text-[#121212]/80 font-semibold">a bank that grows</strong>: while the Italian banking sector closes branches and reduces headcount, Credem does the opposite: since 2020 it has created over <strong className="text-[#121212]/80 font-semibold">1,400 new jobs</strong>.
         <br /><br />
         This growth creates a critical challenge for HR: every year Credem receives and manages around <strong className="text-[#121212]/80 font-semibold">30,000 applications</strong>, largely from junior profiles, school leavers and recent graduates applying through the <strong className="text-[#121212]/80 font-semibold">Progetto Giovani</strong>, the group's main entry channel. In a sector where the average employee age exceeds <strong className="text-[#121212]/80 font-semibold">48</strong> and <strong className="text-[#121212]/80 font-semibold">20–25%</strong> of the workforce will reach retirement by 2035, the ability to <strong className="text-[#121212]/80 font-semibold">quickly identify and onboard high-potential young talent</strong> is fundamental to supporting the growth of the business.
       </>,
     },
     challenge: {
       badge: 'THE CHALLENGE',
-      title: '30,000 applications and many junior profiles the CV could not really depict',
+      title: '30,000 applications and many junior profiles that could not be accurately depicted by the CV only',
       intro: "In a market where banks, fintechs and tech companies often compete for the same junior profiles, the speed and quality of the hiring process have become competitive levers and essential elements in working with the best talent.",
       businessLabel: 'BUSINESS IMPACT',
       hrLabel: 'HR & PEOPLE IMPACT',
       businessChallenges: [
         {
           icon: Zap,
-          title: 'An infrastructure capable of handling high volumes to support the Group\'s growth',
+          title: 'An infrastructure capable of handling high volumes to support the Group\'s growth was key',
           text: "Managing 30,000 applications without technological support was no longer possible. It was necessary to strengthen the process by accelerating operational steps while keeping human judgement at the centre of every decision.",
         },
         {
           icon: Heart,
           title: "The candidate experience had to match the Gruppo Credem brand",
-          text: "For a bank certified as Top Employer for 10 consecutive years and Equal Salary for 5, every candidate touchpoint is fundamental. A modern hiring process, aligned with the Group's values, was essential.",
+          text: "For a bank certified as Top Employer for 10 consecutive years and Equal Salary for 5, every candidate touchpoint is fundamental, starting with a modern hiring process aligned with the Group's values.",
         },
         {
           icon: TrendingUp,
@@ -230,7 +230,7 @@ const content = {
       badge: 'COLLABORATION OBJECTIVES',
       title: 'What needed to change',
       items: [
-        { icon: Target, text: "Make the first filter more selective and predictive: identify high-potential profiles hidden among the 30,000 applications received annually, reducing the margin of error." },
+        { icon: Target, text: "Make the first step of the process more selective and predictive: identify high-potential profiles hidden among the 30,000 applications received annually, reducing the margin of error." },
         { icon: Zap, text: "Reduce time-to-hire and optimise shortlists: respond more quickly to candidates aligned with the Group's values and open roles to bring them to interview." },
         { icon: Layers, text: "Guarantee consistent hiring standards: maintain the same depth and quality of evaluation for all candidates regardless of when or where they applied." },
         { icon: Heart, text: "Improve the Candidate Experience: make the entire process accessible, fast and fair - a genuine opportunity to be heard, consistent with Gruppo Credem's Top Employer positioning." },
@@ -251,14 +251,14 @@ const content = {
       badge: 'RESULTS',
       title: "What changed and why it matters",
       metrics: [
-        { value: '30K', label: <><strong className="text-white font-semibold">Applications received and processed</strong><br />quickly and effectively</> },
-        { value: '100%', label: <><strong className="text-white font-semibold">Alignment between human assessment and the recruiter</strong><br />in the first selection step</> },
+        { value: '30K', label: <><strong className="text-white font-semibold">Applications received and processed</strong><br />every year, quickly and effectively</> },
         { value: '-30%', label: <><strong className="text-white font-semibold">Reduction in unsuccessful interviews</strong><br />at the second step</> },
+        { value: '100%', label: <><strong className="text-white font-semibold">Reliability of the screening performed by Skillvue</strong><br />in the first selection step</> },
       ],
       qualitative: [
-        { icon: Eye, title: 'More candidates get to demonstrate their value', text: "The assessment gave more people the opportunity to surface real skills beyond the CV. High-potential profiles that previously risked getting lost in the volume are now identified effectively and quickly." },
-        { icon: CheckCircle, title: 'Radically improved interview quality', text: "The increase in fit-to-hire means the second step of the process has become more efficient: less time spent on low-yield interviews, more informed decisions, faster feedback cycles." },
-        { icon: Layers, title: 'Human-in-the-loop, always', text: "The assessment produces information that makes decision-making more informed and effective. The data produced by Skillvue's AI feeds the decision, which always remains in the hands of the recruiters." },
+        { icon: Eye, title: 'More candidates can demonstrate their value', text: <>The assessment gave more people the opportunity to surface <strong className="text-[#121212]/90 font-semibold">real skills beyond the CV</strong>. High-potential profiles that previously risked getting lost in the volume are now <strong className="text-[#121212]/90 font-semibold">identified effectively and quickly</strong>.</> },
+        { icon: CheckCircle, title: 'Radically improved interview quality', text: <>The decrease in interviews not aligned with the role means the second step of the process has <strong className="text-[#121212]/90 font-semibold">become more efficient</strong>: less time spent on low-yield interviews, more informed decisions, <strong className="text-[#121212]/90 font-semibold">faster feedback cycles</strong>.</> },
+        { icon: Layers, title: 'Human-in-the-loop, always', text: <>The assessment produces information that makes <strong className="text-[#121212]/90 font-semibold">decision-making more informed and effective</strong>. The data produced by Skillvue's AI feeds the decision, which <strong className="text-[#121212]/90 font-semibold">always remains in the hands of the recruiters</strong>.</> },
       ],
     },
     related: {
@@ -297,7 +297,7 @@ export default function CredemStoryPage() {
         {/* ===== HERO ===== */}
         <section className="relative pt-[80px]">
           <div className="absolute inset-0 overflow-hidden">
-            <img src="/logos/credem-background-explore-stories.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
+            <img src="/logos/credem_customer_story_cover.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
             <div className="absolute inset-0 bg-black/40" />
           </div>
 
@@ -360,7 +360,7 @@ export default function CredemStoryPage() {
                     ))}
                   </div>
                 </div>
-                <div className="mt-4 rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                <div className="mt-[208px] rounded-2xl border border-white/[0.08] overflow-hidden" style={{ aspectRatio: '16/9' }}>
                   <iframe
                     className="w-full h-full"
                     src={lang === 'it' ? 'https://www.youtube.com/embed/sy7ycBPP-XM?autoplay=1&mute=1&rel=0&modestbranding=1' : 'https://www.youtube.com/embed/nWCKHRa9cig?autoplay=1&mute=1&rel=0&modestbranding=1'}
@@ -479,6 +479,22 @@ export default function CredemStoryPage() {
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
                     {c.results.metrics[0].sublabel && <span className="text-[11px] text-white/30 mt-1 block">{c.results.metrics[0].sublabel}</span>}
                   </div>
+                  {/* -30% circular progress with downward trend */}
+                  <div className="text-center flex flex-col items-center">
+                    <div className="relative w-24 h-24 mb-5">
+                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
+                          strokeDasharray={`${2 * Math.PI * 40 * 0.30} ${2 * Math.PI * 40}`} />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <TrendingDown className="h-8 w-8" style={{ color: '#4b4df7' }} />
+                      </div>
+                    </div>
+                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
+                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
+                    {c.results.metrics[1].sublabel && <span className="text-[11px] text-white/30 mt-1 block">{c.results.metrics[1].sublabel}</span>}
+                  </div>
                   {/* 100% circular progress */}
                   <div className="text-center flex flex-col items-center">
                     <div className="relative w-24 h-24 mb-5">
@@ -487,19 +503,9 @@ export default function CredemStoryPage() {
                         <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
                           strokeDasharray={`${2 * Math.PI * 40 * 1.00} ${2 * Math.PI * 40}`} />
                       </svg>
-                    </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
-                    {c.results.metrics[1].sublabel && <span className="text-[11px] text-white/30 mt-1 block">{c.results.metrics[1].sublabel}</span>}
-                  </div>
-                  {/* -30% circular progress */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-5">
-                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 40 * 0.30} ${2 * Math.PI * 40}`} />
-                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <CheckCircle className="h-8 w-8" style={{ color: '#4b4df7' }} />
+                      </div>
                     </div>
                     <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[2].value}</span>
                     <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
