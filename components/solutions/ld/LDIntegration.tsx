@@ -14,7 +14,7 @@ export default function LDIntegration() {
     <section id="ld-integration" data-testid="ld-integration" className="relative py-20 lg:py-28" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.div
-          className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-10 lg:p-14"
+          className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-10"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}

@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { translations } from './translations';
+import { toEnPath, toItPath } from './localePaths';
 
 interface LanguageContextType {
   lang: string;
@@ -15,7 +16,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const lang = router.locale || 'en';
 
   const switchLang = useCallback((newLang: string) => {
-    router.push(router.asPath, router.asPath, { locale: newLang });
+    // asPath has the locale stripped: on /it/clienti it's just "/clienti", which isn't a real EN page.
+    const targetPath = newLang === 'it' ? toItPath(router.asPath) : toEnPath(router.asPath);
+    router.push(targetPath, targetPath, { locale: newLang });
   }, [router]);
 
   const t = useCallback((key: string): string => {

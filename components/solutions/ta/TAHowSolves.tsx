@@ -51,7 +51,7 @@ export default function TAHowSolves() {
         {/* Active stage detail */}
         <motion.div
           key={active}
-          className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-5 md:p-10 lg:p-14"
+          className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-5 md:p-10"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35 }}

@@ -17,46 +17,21 @@
 @font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-BoldItalic.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-ExtraBoldItalic.woff2') format('woff2'); font-weight: 800; font-style: italic; font-display: swap; }
 
+/* Hero/impact stat-number weight — single source of truth for the big metric callouts
+   (e.g. "50+", "85%+", "-40%") across the homepage and every customer/solution page.
+   Do not restore a bold/extrabold/black override here for "desktop weight" during a
+   layout pass — that exact drift already happened once across ~25 files (PR #80) when
+   the weight was hard-coded per-file instead of centralized. Change the value below,
+   not the className in each page. */
+.stat-value {
+  font-weight: 600;
+}
+
 /* Prevent horizontal scroll on mobile */
 html, body {
   overflow-x: hidden;
 }
 
-/* Hide scrollbar on horizontal scroll containers */
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
-/* Skillvue-branded scroll progress bar fill */
-.skillvue-scroll-fill {
-  background: linear-gradient(
-    90deg,
-    #4B4DF7 0%,
-    #7577F8 20%,
-    #B57BB0 40%,
-    #FF5F24 60%,
-    #B57BB0 80%,
-    #4B4DF7 100%
-  );
-  background-size: 200% 100%;
-  animation: skillvue-scroll-shimmer 3.5s linear infinite;
-  box-shadow:
-    0 0 10px rgba(75, 77, 247, 0.45),
-    0 0 22px rgba(117, 119, 248, 0.25),
-    0 0 32px rgba(255, 95, 36, 0.15);
-  will-change: transform, background-position;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-@keyframes skillvue-scroll-shimmer {
-  from { background-position: 0% 50%; }
-  to { background-position: -200% 50%; }
-}
 
 #emergent-badge,
 [id="emergent-badge"],
@@ -266,16 +241,61 @@ html {
   .hero-mobile-gradient { animation: none; }
 }
 
+/* ===== HERO ENTRANCE (pure CSS so the LCP heading paints without waiting for JS hydration).
+   Starts at opacity 0.35, not 0: Chrome drops elements first painted at opacity 0 from LCP
+   candidacy, which would hand LCP to a smaller, slower element. ===== */
+@keyframes heroFadeUp { from { opacity: 0.35; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes heroFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes heroVideoIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: none; } }
+.hero-fade-up { animation: heroFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.hero-fade-in { animation: heroFadeIn 0.9s ease both; }
+.hero-video-in { animation: heroVideoIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.hero-delay-1 { animation-delay: 0.15s; }
+.hero-delay-2 { animation-delay: 0.25s; }
+.hero-delay-3 { animation-delay: 0.4s; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-up, .hero-fade-in, .hero-video-in { animation: none; }
+}
+
+/* ===== SCROLL-DOWN ARROWS (replaces the Lottie animation) ===== */
+.scroll-arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+}
+.scroll-arrows span {
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid rgba(255, 255, 255, 0.85);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.85);
+  transform: rotate(45deg);
+  margin-top: -8px;
+  animation: scrollArrowPulse 1.6s ease-in-out infinite;
+}
+.scroll-arrows span:nth-child(2) { animation-delay: 0.25s; }
+@keyframes scrollArrowPulse {
+  0% { opacity: 0; transform: rotate(45deg) translate(-4px, -4px); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: rotate(45deg) translate(4px, 4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-arrows span { animation: none; opacity: 0.85; }
+}
+
 /* ===== INFINITE LOGO MARQUEE ===== */
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marqueeScroll 30s linear infinite;
+  animation: marqueeScroll 60s linear infinite;
 }
 /* Faster marquee on mobile */
 @media (max-width: 767px) {
   .marquee-track {
-    animation: marqueeScroll 14s linear infinite;
+    animation: marqueeScroll 28s linear infinite;
   }
 }
 .lp-marquee {
@@ -345,6 +365,11 @@ html {
   letter-spacing: 0.02em;
   font-feature-settings: 'liga' 0, 'clig' 0;
 }
+/* Hero titles standardize on -2% tracking; keep the gradient span matching
+   whatever the parent h1 sets instead of this class's own default 0.02em. */
+h1 .gradient-text {
+  letter-spacing: inherit;
+}
 .gradient-text-warm {
   background: linear-gradient(135deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
@@ -400,6 +425,12 @@ html {
   .animated-bg .orb, .animated-bg .shimmer { animation: none !important; }
 }
 
+/* Fewer blurred, animated layers on mobile — each one is a compositor cost
+   that competes with the CPU budget the rest of the page needs on load. */
+@media (max-width: 767px) {
+  .animated-bg .orb-3, .animated-bg .orb-5, .animated-bg .orb-6 { display: none; }
+}
+
 
 /* ===== MARQUEE ANIMATIONS ===== */
 @keyframes marquee-left {
@@ -424,5 +455,4 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee-left,
   .animate-marquee-right { animation: none !important; }
-  .skillvue-scroll-fill { animation: none !important; }
 }

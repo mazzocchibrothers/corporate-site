@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Linkedin } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -8,35 +8,21 @@ const lead = {
   name: 'Dr. Tony Lee, Ph.D.',
   role: 'Head of AI & Science',
   bio: 'Computational psychologist with double Ph.D. degrees and hands-on experience in Machine Learning and AI-based verification. His interdisciplinary background brings a unique perspective to the verification field, combining psychological knowledge with advanced AI and machine learning techniques. At Skillvue, he leads the AI & Science team, innovating, validating and implementing new competency verification models built on the latest technologies.',
-  photo: '/team/tony-lee.jpg',
+  photo: '/team/tony-lee.avif',
   linkedin: 'https://www.linkedin.com/in/dr-tony-lee/',
 };
 
 const members = [
-  { name: 'Jatin Babbar', role: 'Senior Machine Learning Engineer', photo: '/team/jatin-babbar.jpg', linkedin: 'https://www.linkedin.com/in/jatin-babbar/' },
-  { name: 'Dr. Serena Dolfi, Ph.D.', role: 'People Scientist', photo: '/team/serena-dolfi.jpg', linkedin: 'https://www.linkedin.com/in/serena-dolfi/' },
-  { name: 'Wamiq Raza', role: 'Machine Learning Engineer', photo: '/team/wamiq-raza.jpg', linkedin: 'https://www.linkedin.com/in/wamiq-raza/' },
-  { name: 'Luca Sbrollini', role: 'People Scientist', photo: '/team/luca-sbrollini.jpg', linkedin: 'https://www.linkedin.com/in/luca-sbrollini/' },
+  { name: 'Jatin Babbar', role: 'Senior Machine Learning Engineer', photo: '/team/jatin-babbar.avif', linkedin: 'https://www.linkedin.com/in/jatin-babbar/' },
+  { name: 'Dr. Serena Dolfi, Ph.D.', role: 'People Scientist', photo: '/team/serena-dolfi.avif', linkedin: 'https://www.linkedin.com/in/serena-dolfi/' },
+  { name: 'Wamiq Raza', role: 'Machine Learning Engineer', photo: '/team/wamiq-raza.avif', linkedin: 'https://www.linkedin.com/in/wamiq-raza/' },
+  { name: 'Luca Sbrollini', role: 'People Scientist', photo: '/team/luca-sbrollini.avif', linkedin: 'https://www.linkedin.com/in/luca-sbrollini/' },
 ];
 
 export default function ScienceTeam() {
   const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
-
-  const scrollRef = useRef(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
 
   const renderMember = (m, i) => (
     <motion.div
@@ -86,7 +72,7 @@ export default function ScienceTeam() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <div className="flex flex-col md:flex-row gap-5 md:gap-8 lg:gap-12 items-start">
-            <div className="shrink-0 w-32 h-40 md:w-48 md:h-56 rounded-xl md:rounded-2xl overflow-hidden bg-[#F5F5FA]">
+            <div className="shrink-0 w-full md:w-[clamp(6rem,25vw,12rem)] aspect-square rounded-xl md:rounded-2xl overflow-hidden bg-[#F5F5FA]">
               <img src={lead.photo} alt={lead.name} className="w-full h-full object-cover" />
             </div>
             <div className="flex-1 pt-0 md:pt-2">
@@ -111,21 +97,7 @@ export default function ScienceTeam() {
           </div>
         </motion.div>
 
-        {/* Team members - Mobile: horizontal scroll */}
-        <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-          {members.map((m, i) => (
-            <div key={m.name} className="shrink-0 w-[60vw] snap-center">
-              {renderMember(m, i)}
-            </div>
-          ))}
-        </div>
-        {/* Progress bar */}
-        <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
-        </div>
-
-        {/* Team members - Desktop grid */}
-        <div className="hidden md:grid md:grid-cols-4 gap-3 md:gap-5 lg:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 lg:gap-6">
           {members.map((m, i) => renderMember(m, i))}
         </div>
 
@@ -136,7 +108,7 @@ export default function ScienceTeam() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <span className="text-[32px] md:text-[48px] font-bold text-[#1A1A2E] leading-none tracking-[-0.03em] shrink-0">50+</span>
+          <span className="text-[32px] font-semibold md:text-[48px] md:font-bold text-[#1A1A2E] leading-none tracking-[-0.03em] shrink-0">50+</span>
           <div className="w-px h-10 bg-[#1A1A2E]/[0.08] hidden sm:block shrink-0" />
           <p className="text-[14px] md:text-[16px] text-[#7A7A7A] leading-[1.6] md:leading-[1.7]">
             {t('External collaborators from academic, HR consulting and corporate world')}

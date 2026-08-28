@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { whitepapers, filterLabels } from '@/data/whitepapers';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 export default function WhitepapersPage() {
   const { t, lang } = useLanguage();
@@ -16,20 +17,6 @@ export default function WhitepapersPage() {
   const [selIndustry, setSelIndustry] = useState(null);
   const [selTopic, setSelTopic] = useState(null);
   const [selProcess, setSelProcess] = useState(null);
-  const scrollRef = useRef(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
-
   const published = whitepapers
     .filter(w => w.published && w.languageAvailability.includes(lang))
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
@@ -72,23 +59,25 @@ export default function WhitepapersPage() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.25em] uppercase mb-8 block">{t('Resources')}</span>
-              <h1 className="font-semibold text-white/95 mb-8" style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
+              <h1 className="font-semibold text-white/95 mb-8 text-[48px] md:text-[64px]" style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}>
                 {t('White Papers')}<br />
                 {t('&')} <span className="gradient-text">{t('Reports')}</span>
               </h1>
               <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>
                 {t('Research-backed insights to help you rethink how you hire, develop, and manage talent. Browse our library and download the resources that matter to you.')}
               </p>
-              <a
-                href="#wp-grid"
-                onClick={(e) => { e.preventDefault(); document.getElementById('wp-grid')?.scrollIntoView({ behavior: 'smooth' }); }}
-                className="group inline-flex items-center gap-3 text-[14px] text-white/40 hover:text-white/70 transition-colors duration-300"
-              >
-                <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
-                  <ArrowRight className="h-4 w-4 rotate-90" />
-                </span>
-                {t('Explore the library')}
-              </a>
+              <Button asChild variant="tertiary" mode="dark" icon={null}>
+                <a
+                  href="#wp-grid"
+                  onClick={(e) => { e.preventDefault(); document.getElementById('wp-grid')?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="group inline-flex items-center gap-3"
+                >
+                  <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
+                    <ArrowRight className="h-4 w-4 rotate-90" />
+                  </span>
+                  {t('Explore the library')}
+                </a>
+              </Button>
             </motion.div>
           </div>
         </section>
@@ -122,7 +111,7 @@ export default function WhitepapersPage() {
                               </div>
                               <h3 className="text-[clamp(1.5rem,3vw,2.8rem)] font-semibold text-white leading-[1.1] mb-5">{c.title}</h3>
                             </div>
-                            <span className="text-[11px] text-white/35 font-semibold tracking-[0.15em] uppercase">{t('White Paper')}</span>
+                            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.15em] uppercase">{t('White Paper')}</span>
                           </div>
                         </div>
                       ) : (
@@ -154,21 +143,7 @@ export default function WhitepapersPage() {
               };
               return (
                 <>
-                  {/* Mobile: horizontal scroll */}
-                  <div ref={scrollRef} className="md:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-                    {published.map((w, i) => (
-                      <div key={w.slug} className="shrink-0 w-[80vw] snap-center">
-                        {renderCard(w, i)}
-                      </div>
-                    ))}
-                  </div>
-                  {/* Progress bar */}
-                  <div className="md:hidden mx-auto mt-5 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-                    <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
-                  </div>
-
-                  {/* Desktop: grid */}
-                  <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {published.map((w, i) => renderCard(w, i))}
                   </div>
                 </>
@@ -187,13 +162,13 @@ export default function WhitepapersPage() {
               <p className="text-[16px] text-white/[0.45] mb-8 max-w-xl mx-auto">
                 {t('Book a demo with our team and discover how Skillvue turns talent decisions into a competitive advantage.')}
               </p>
-              <button
+              <Button
                 onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
-                className="group inline-flex items-center justify-between px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
+                variant="primary"
+                mode="dark"
               >
-                <span>{t('Book a Demo')}</span>
-                <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
-              </button>
+                {t('Book a Demo')}
+              </Button>
             </motion.div>
           </div>
         </section>

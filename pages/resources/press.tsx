@@ -1,36 +1,12 @@
 // @ts-nocheck
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Download, Mail } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
-
-function useScrollProgress() {
-  const ref = useRef(null);
-  const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
-  return { ref, progress };
-}
-
-function ScrollBar({ progress }) {
-  return (
-    <div className="md:hidden mx-auto mt-5 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-      <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${progress * 0.65}%` }} />
-    </div>
-  );
-}
+import { Button } from '@/components/ui/button';
 
 const pressArticles = [
   {
@@ -155,19 +131,17 @@ const pressReleases = [
 ];
 
 const investors = [
-  { name: '360 Capital', src: '/logos/investor-360capital.png', h: '130px' },
-  { name: '14 Peaks', src: '/logos/investor-14peaks-new.svg', h: '60px' },
-  { name: 'Orbita', src: '/logos/investor-orbita.png', h: '60px' },
-  { name: 'Kfund', src: '/logos/investor-kfund.webp', h: '42px' },
-  { name: 'IFF', src: '/logos/iff_logo.svg', h: '80px', customFilter: 'grayscale(1) invert(1) brightness(1.2)' },
-  { name: 'Ithaca', src: '/logos/investor-ithaca.svg', h: '75px' },
+  { name: '360 Capital', src: '/logos/investor-360capital.svg', h: '42px' },
+  { name: '14 Peaks', src: '/logos/investor-14peaks.svg', h: '42px' },
+  { name: 'Orbita', src: '/logos/investor-orbita.svg', h: '42px' },
+  { name: 'Kfund', src: '/logos/investor-kfund.svg', h: '42px' },
+  { name: 'IFF', src: '/logos/investor-iff.svg', h: '42px' },
+  { name: 'Ithaca', src: '/logos/investor-ithaca.svg', h: '42px' },
 ];
 
 export default function PressPage() {
   const router = useRouter();
   const { t, lang } = useLanguage();
-  const press = useScrollProgress();
-  const pressIt = useScrollProgress();
 
   return (
     <>
@@ -205,12 +179,12 @@ export default function PressPage() {
               transition={{ duration: 0.7 }}
               className="max-w-3xl"
             >
-              <span className="text-[14px] font-semibold text-[#4B4DF7]/60 tracking-[0.2em] uppercase mb-8 block">
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">
                 {t('Press')}
               </span>
               <h1
-                className="font-semibold text-white/95 mb-6"
-                style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
+                className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
+                style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
               >
                 {t('Skillvue in')}<br />
                 <span className="gradient-text">{t('the News')}</span>
@@ -218,13 +192,12 @@ export default function PressPage() {
               <p className="text-[18px] text-white/[0.45] leading-[1.8] max-w-lg mb-10" style={{ fontWeight: 300 }}>
                 {t("See how the world's leading publications are covering the rise of AI-powered talent intelligence.")}
               </p>
-              <a
-                href="mailto:press@skillvue.ai"
-                className="inline-flex items-center gap-2 text-[14px] text-white/40 hover:text-white/70 transition-colors duration-300"
-              >
-                <Mail className="h-4 w-4" />
-                press@skillvue.ai
-              </a>
+              <Button asChild variant="tertiary" mode="dark">
+                <a href="mailto:press@skillvue.ai">
+                  <Mail aria-hidden />
+                  press@skillvue.ai
+                </a>
+              </Button>
             </motion.div>
           </div>
         </section>
@@ -239,7 +212,7 @@ export default function PressPage() {
               transition={{ duration: 0.6 }}
               className="mb-8 md:mb-12"
             >
-              <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
+              <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">
                 {t('Press Coverage')}
               </span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
@@ -279,18 +252,7 @@ export default function PressPage() {
               );
               return (
                 <>
-                  {/* Mobile: horizontal scroll */}
-                  <div ref={press.ref} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-                    {pressArticles.map((article, i) => (
-                      <div key={article.publication} className="shrink-0 w-[80vw] snap-center">
-                        {renderCard(article, i)}
-                      </div>
-                    ))}
-                  </div>
-                  <ScrollBar progress={press.progress} />
-
-                  {/* Desktop: grid */}
-                  <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 md:gap-5">
                     {pressArticles.map((article, i) => renderCard(article, i))}
                   </div>
                 </>
@@ -310,7 +272,7 @@ export default function PressPage() {
                 transition={{ duration: 0.6 }}
                 className="mb-8 md:mb-12"
               >
-                <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
+                <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">
                   Stampa italiana
                 </span>
                 <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
@@ -333,7 +295,7 @@ export default function PressPage() {
                   >
                     <div>
                       <div className="mb-4">
-                        <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.12em] uppercase">
+                        <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.12em] uppercase">
                           {article.publication}
                         </span>
                       </div>
@@ -348,18 +310,7 @@ export default function PressPage() {
                 );
                 return (
                   <>
-                    {/* Mobile: horizontal scroll */}
-                    <div ref={pressIt.ref} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-                      {pressArticlesIt.map((article, i) => (
-                        <div key={`${article.publication}-${i}`} className="shrink-0 w-[80vw] snap-center">
-                          {renderCard(article, i)}
-                        </div>
-                      ))}
-                    </div>
-                    <ScrollBar progress={pressIt.progress} />
-
-                    {/* Desktop: grid */}
-                    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 md:gap-5">
                       {pressArticlesIt.map((article, i) => renderCard(article, i))}
                     </div>
                   </>
@@ -379,7 +330,7 @@ export default function PressPage() {
               transition={{ duration: 0.6 }}
               className="mb-8 md:mb-12"
             >
-              <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-4 block">
+              <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">
                 {t('Interviews')}
               </span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
@@ -417,7 +368,7 @@ export default function PressPage() {
                     <span className="text-[12px] font-semibold text-[#4B4DF7]/50 tracking-[0.08em] uppercase group-hover:text-[#4B4DF7]/80 transition-colors duration-300">
                       {t('Read interview')}
                     </span>
-                    <ArrowUpRight className="h-3.5 w-3.5 text-[#4B4DF7]/40 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                    <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]/40 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                   </div>
                 </motion.a>
               ))}
@@ -435,7 +386,7 @@ export default function PressPage() {
               transition={{ duration: 0.6 }}
               className="mb-8 md:mb-12"
             >
-              <span className="text-[11px] font-bold text-[#4B4DF7]/40 tracking-[0.2em] uppercase mb-4 block">
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-4 block">
                 {t('Press Releases')}
               </span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-white/90 tracking-[-0.02em]">
@@ -457,14 +408,14 @@ export default function PressPage() {
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                 >
                   <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8 min-w-0 flex-1">
-                    <span className="text-[11px] md:text-[13px] text-[#4B4DF7]/60 md:text-white/25 shrink-0 md:mt-0.5 font-mono tracking-wider uppercase md:normal-case md:tracking-normal">{release.date}</span>
+                    <span className="text-[11px] md:text-[13px] text-[#9B9DFB]/60 md:text-white/25 shrink-0 md:mt-0.5 font-mono tracking-wider uppercase md:normal-case md:tracking-normal">{release.date}</span>
                     <span className="text-[16px] md:text-[15px] font-semibold md:font-medium text-white/85 md:text-white/70 group-hover:text-white/95 md:group-hover:text-white/90 leading-snug md:leading-[1.55] transition-colors duration-300">
                       {lang === 'it' && release.titleIt ? release.titleIt : release.title}
                     </span>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
-                    <Download className="h-4 w-4 text-[#4B4DF7]/70 md:text-white/20 group-hover:text-[#4B4DF7] md:group-hover:text-white/50 transition-colors duration-300" />
-                    <span className="text-[12px] font-semibold text-[#4B4DF7]/70 md:text-white/25 tracking-[0.08em] uppercase group-hover:text-[#4B4DF7] md:group-hover:text-white/50 transition-colors duration-300">
+                    <Download className="h-4 w-4 text-[#9B9DFB]/70 md:text-white/20 group-hover:text-[#9B9DFB] md:group-hover:text-white/50 transition-colors duration-300" />
+                    <span className="text-[12px] font-semibold text-[#9B9DFB]/70 md:text-white/25 tracking-[0.08em] uppercase group-hover:text-[#9B9DFB] md:group-hover:text-white/50 transition-colors duration-300">
                       {t('Download')}
                     </span>
                   </div>
@@ -477,7 +428,7 @@ export default function PressPage() {
         {/* 5. Investors — animated marquee, same as About */}
         <section className="relative pt-8 pb-8 bg-black">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <span className="text-[12px] font-bold text-white/25 tracking-[0.2em] uppercase mb-6 block text-center">
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block text-center">
               {t('Backed by')}
             </span>
           </div>
@@ -529,13 +480,13 @@ export default function PressPage() {
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">
                 {t('Get in touch with our team to see how Skillvue turns every talent decision into a data-driven one.')}
               </p>
-              <button
+              <Button
                 onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
-                className="group inline-flex items-center justify-between px-8 py-5 text-[15px] font-semibold tracking-wide text-white rounded-full border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.04] transition-all duration-500"
+                variant="primary"
+                mode="dark"
               >
-                <span>{t('Book a Demo')}</span>
-                <ArrowRight className="h-4 w-4 ml-6 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all duration-300" />
-              </button>
+                {t('Book a Demo')}
+              </Button>
             </motion.div>
           </div>
         </section>

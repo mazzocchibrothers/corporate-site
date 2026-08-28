@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 
@@ -13,19 +13,6 @@ export default function TAProblem() {
   const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const scrollRef = useRef(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
 
   return (
     <section id="ta-problem" data-testid="ta-problem" className="section-breathe relative py-20 lg:py-24 md:flex md:items-center"  ref={ref}>
@@ -40,45 +27,26 @@ export default function TAProblem() {
           </p>
         </motion.div>
 
-        {/* Mobile: horizontal scroll */}
-        <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
+        {/* Pain cards — 3-col grid, consistent with homepage card layout */}
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5">
           {pains.map((p, i) => (
             <motion.div
               key={p.stat}
               data-testid={`ta-pain-${i}`}
-              className="shrink-0 w-[80vw] snap-center rounded-2xl border border-[#4B4DF7]/[0.06] bg-white/60 p-5 transition-all duration-500"
-              initial={{ opacity: 0, x: -30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
+              className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-6 lg:p-10 flex flex-col"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: i * 0.12, ease: 'easeOut' }}
             >
-              <span className="block text-[#1A1A2E] mb-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.8rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.03em' }}>{p.stat}</span>
-              <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 mb-2">{t(p.title)}</h3>
-              <p className="text-[15px] text-[#7A7A7A] leading-[1.7]">{t(p.desc)}</p>
-            </motion.div>
-          ))}
-        </div>
-        {/* Progress bar */}
-        <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
-        </div>
-
-        {/* Desktop: Vertical stacked pain cards with large stat on left */}
-        <div className="hidden md:block space-y-4">
-          {pains.map((p, i) => (
-            <motion.div
-              key={p.stat}
-              data-testid={`ta-pain-desktop-${i}`}
-              className="group grid grid-cols-12 gap-3 md:gap-6 lg:gap-10 items-center rounded-2xl border border-[#4B4DF7]/[0.06] bg-white/60 hover:bg-white/90 hover:border-[#4B4DF7]/[0.15] p-5 md:p-8 lg:p-10 transition-all duration-500"
-              initial={{ opacity: 0, x: -30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
-            >
-              <div className="col-span-4 lg:col-span-3">
-                <span className="block text-[#1A1A2E]" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.8rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.03em' }}>{p.stat}</span>
-              </div>
-              <div className="col-span-8 lg:col-span-9">
-                <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 mb-2">{t(p.title)}</h3>
-                <p className="text-[15px] text-[#7A7A7A] leading-[1.7]">{t(p.desc)}</p>
+              <span
+                className="block text-[#1A1A2E] text-[32px] md:text-[clamp(1.75rem,3.2vw,4rem)] font-semibold mb-6 md:mb-10"
+                style={{ lineHeight: 1, letterSpacing: '-0.03em' }}
+              >
+                {p.stat}
+              </span>
+              <div>
+                <h3 className="text-[15px] md:text-[15px] lg:text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-2 md:mb-3 lg:mb-4">{t(p.title)}</h3>
+                <p className="text-[13px] md:text-[13px] lg:text-[15px] text-[#7A7A7A] leading-[1.6] md:leading-[1.7] lg:leading-[1.75]">{t(p.desc)}</p>
               </div>
             </motion.div>
           ))}

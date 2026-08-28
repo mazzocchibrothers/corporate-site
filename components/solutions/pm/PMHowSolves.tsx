@@ -22,12 +22,12 @@ export default function PMHowSolves() {
         <div className="grid md:grid-cols-2 gap-5 mb-8">
           {/* Subjective */}
           <motion.div
-            className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-10 lg:p-12"
+            className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-10"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.1em] uppercase mb-5 block">{t('Subjective verifications')}</span>
+            <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.1em] uppercase mb-5 block">{t('Subjective verifications')}</span>
             <h3 className="text-[20px] font-bold text-[#121212] mb-4">{t('360, 180, manager reviews')}</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -43,12 +43,12 @@ export default function PMHowSolves() {
 
           {/* Objective */}
           <motion.div
-            className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-white/70 p-10 lg:p-12"
+            className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-white/70 p-10"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.25 }}
           >
-            <span className="text-[12px] font-bold text-[#4B4DF7]/[0.65] tracking-[0.1em] uppercase mb-5 block">{t('Objective verifications')}</span>
+            <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.1em] uppercase mb-5 block">{t('Objective verifications')}</span>
             <h3 className="text-[20px] font-bold text-[#121212] mb-4">Skillvue</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">

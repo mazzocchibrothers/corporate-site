@@ -2,10 +2,11 @@
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, Users, Plane, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench } from 'lucide-react';
+import { ArrowRight, Users, Plane, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench, Clock } from 'lucide-react';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
+import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/i18n/LanguageContext';
 import Head from 'next/head';
 
@@ -66,8 +67,8 @@ const content = {
       badge: 'LA SFIDA',
       title: "Il modello precedente non poteva crescere alla velocità del business",
       intro: "Con l'intera organizzazione in rapida espansione, soprattutto, nella fase di ripresa post Covid, il modello di sviluppo esistente mostrava alcuni limiti strutturali.",
-      businessLabel: 'IMPATTO SUL BUSINESS',
-      hrLabel: 'IMPATTO SU HR & PEOPLE',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: Users,
@@ -209,8 +210,8 @@ const content = {
       badge: 'THE CHALLENGE',
       title: "The previous model couldn't grow at the speed of the business",
       intro: "With the entire organisation in rapid expansion — especially during the post-Covid recovery phase — the existing development model was showing structural limitations.",
-      businessLabel: 'BUSINESS IMPACT',
-      hrLabel: 'HR & PEOPLE IMPACT',
+      businessLabel: 'BUSINESS CHALLENGES',
+      hrLabel: 'HR & PEOPLE CHALLENGES',
       businessChallenges: [
         {
           icon: Users,
@@ -258,7 +259,7 @@ const content = {
     },
     solution: {
       badge: 'THE SOLUTION',
-      title: 'AI Assessment with Skillvue',
+      title: 'AI-scaled Assessment with Skillvue',
       intro: "Skillvue was integrated into ADR's existing People Strategy, which already included a leadership model and defined development paths. Skillvue's People Science team worked with ADR to align the platform with the company's leadership model, ensuring every assessment measured what ADR considers relevant — not generic skills.",
       skillsLabel: 'SKILLS ASSESSED',
       skills: [
@@ -331,68 +332,68 @@ export default function ADRStoryPage() {
       <main>
 
         {/* ===== HERO ===== */}
-        <section className="relative pt-[80px]">
+        <section className="relative pt-[80px] min-h-screen flex items-center">
           <div className="absolute inset-0 overflow-hidden">
-            <img src="/logos/adr-explore-stories.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
+            <img src="/logos/adr-explore-stories.avif" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
             <div className="absolute inset-0 bg-black/40" />
           </div>
 
-          <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
+          <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-8 lg:py-10">
             {/* Breadcrumb */}
-            <motion.div className="mb-10 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <button onClick={() => { router.push(lang === 'it' ? '/clienti' : '/customers'); window.scrollTo(0, 0); }} className="text-[13px] text-white/40 hover:text-white/70 transition-colors duration-300">{c.breadcrumb}</button>
+            <motion.div className="mb-5 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
+              <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(lang === 'it' ? '/clienti' : '/customers'); window.scrollTo(0, 0); }}>{c.breadcrumb}</Button>
               <span className="text-white/20">/</span>
               <span className="text-[13px] text-white/[0.65]">Aeroporti di Roma</span>
             </motion.div>
 
-            <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
               {/* Main content */}
-              <div className="lg:col-span-7">
-                <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-                  <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-8 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
+              <div className="lg:col-span-7 flex flex-col">
+                <motion.div className="flex flex-col flex-1" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
+                  <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-4 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     {c.badge}
                   </span>
-                  <h1 className="text-[clamp(2rem,4vw,3.4rem)] font-semibold tracking-[-0.03em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
+                  <h1 className="text-[48px] md:text-[44px] font-semibold tracking-[-0.02em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
                     {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
                   </h1>
-                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
-                  <div className="flex flex-wrap gap-4 mb-12">
-                    {c.heroMetrics.map(m => (
-                      <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-6 py-4">
-                        <span className="block text-white" style={{ fontSize: '1.7rem', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[13px] text-white/[0.55] mt-1 block">{m.label}</span>
-                        {m.sublabel && <span className="text-[11px] text-white/[0.35] mt-0.5 block">{m.sublabel}</span>}
-                      </div>
-                    ))}
-                  </div>
+                  <p className="text-[15px] text-white/[0.60] leading-[1.65] mb-6 max-w-2xl">{c.subtitle}</p>
                   <div className="flex flex-wrap gap-4">
-                    <button onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300" style={{ background: '#4b4df7' }}>
-                      {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
-                    </button>
-                    <button onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white/70 border border-white/[0.15] hover:border-white/[0.25] hover:text-white transition-all duration-300">
-                      {c.ctaSecondary} <ArrowRight className="h-4 w-4" />
-                    </button>
+                    <Button variant="primary" mode="dark" onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}>
+                      {c.ctaPrimary}
+                    </Button>
+                    <Button variant="secondary" mode="dark" onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })}>
+                      {c.ctaSecondary}
+                    </Button>
                   </div>
+                    {/* Metrics — pinned to bottom, aligned with client card */}
+                    <div className="mt-auto pt-6 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4">
+                      {c.heroMetrics.map(m => (
+                      <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-3 py-3 md:px-6 md:py-4">
+                      <span className="block text-white text-[19px] break-words stat-value md:text-[clamp(1.4rem,2.4vw,1.9rem)]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                      <span className="text-[13px] text-white/[0.55] mt-1.5 block leading-[1.4]">{m.label}</span>
+                      </div>
+                      ))}
+                    </div>
                 </motion.div>
               </div>
 
               {/* Client card */}
-              <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
-                  <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
-                      <img src="/logos/adr-logo.jpg" alt="ADR logo" className="w-full h-full object-contain " />
+              <motion.div className="lg:col-span-5 flex flex-col gap-4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5">
+                  <div className="flex items-center gap-3 mb-3 pb-3 border-b border-white/[0.08]">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 bg-white flex items-center justify-center">
+                      <img src="/logos/adr-logo.jpg" alt="ADR logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
-                      <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>
-                      <p className="text-[18px] font-bold text-white/90">Aeroporti di Roma</p>
+                      <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{c.clientCard.label}</span>
+                      <p className="text-[16px] font-bold text-white/90">Aeroporti di Roma</p>
                     </div>
                   </div>
-                  <div className="divide-y divide-white/[0.08]">
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
                     {c.clientCard.facts.map(s => (
-                      <div key={s.label} className="py-4 first:pt-0 last:pb-0">
-                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
-                        <p className="text-[14px] text-white/[0.65] leading-[1.6]">{s.value}</p>
+                      <div key={s.label}>
+                        <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{s.label}</span>
+                        <p className="text-[13px] text-white/[0.65] leading-[1.4]">{s.value}</p>
                       </div>
                     ))}
                   </div>
@@ -415,7 +416,7 @@ export default function ADRStoryPage() {
 
             {/* CHALLENGE */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{c.challenge.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
 
@@ -424,8 +425,8 @@ export default function ADRStoryPage() {
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.businessChallenges.map((ch) => (
                     <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
@@ -438,9 +439,9 @@ export default function ADRStoryPage() {
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {c.challenge.hrChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
-                        <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
+                        <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
                       <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
@@ -455,16 +456,19 @@ export default function ADRStoryPage() {
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
               <div className="grid md:grid-cols-2 gap-5">
-                {c.objectives.items.map((o, i) => (
-                  <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                {c.objectives.items.map((o, i) => {
+                  const [title, ...rest] = o.text.split(':');
+                  const desc = rest.join(':').trim();
+                  return (
+                    <div key={i} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{title}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{desc}</p>
                     </div>
-                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </Section>
 
@@ -479,10 +483,10 @@ export default function ADRStoryPage() {
                   <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.streamsLabel}</span>
                   <div className="grid md:grid-cols-2 gap-5">
                     {c.solution.streams.map((s, i) => (
-                      <div key={s.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm relative overflow-hidden">
-                        <span className="absolute top-5 right-6 text-[3rem] font-black leading-none select-none" style={{ color: 'rgba(75,77,247,0.04)' }}>0{i + 1}</span>
-                        <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4] relative">{s.title}</h4>
-                        <p className="text-[14px] text-[#121212]/55 leading-[1.65] relative">{s.text}</p>
+                      <div key={s.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                        <span className="block text-[2.75rem] font-light leading-none mb-6" style={{ color: '#c7d2fe' }}>0{i + 1}</span>
+                        <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{s.title}</h4>
+                        <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{s.text}</p>
                       </div>
                     ))}
                   </div>
@@ -491,11 +495,13 @@ export default function ADRStoryPage() {
 
               <div className="mb-12">
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="grid md:grid-cols-3 gap-5">
                   {c.solution.skills.map((s) => (
-                    <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
-                      <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#121212]/70">{s.label}</span>
+                    <div key={s.label} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
+                        <s.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                      </div>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{s.label}</h4>
                     </div>
                   ))}
                 </div>
@@ -505,55 +511,23 @@ export default function ADRStoryPage() {
 
             {/* RESULTS */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.results.badge}</span>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{c.results.badge}</span>
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>
+              {c.results.subtitle && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>}
 
-              <div className="rounded-2xl bg-[#0E0E0E] p-10 lg:p-14 mb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
-                  {/* -97% circular progress */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-5">
-                      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="8" />
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#4b4df7" strokeWidth="8" strokeLinecap="round"
-                          strokeDasharray={`${2 * Math.PI * 40 * 0.97} ${2 * Math.PI * 40}`} />
-                      </svg>
-                    </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[0].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[0].label}</span>
-                  </div>
-                  {/* fino a 4.000 — x4 growth */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="relative w-24 h-24 mb-5 flex flex-col items-center justify-center gap-1">
-                      <div className="flex items-end gap-1.5">
-                        <div className="rounded-sm bg-white/20" style={{ width: 14, height: 20 }} />
-                        <div className="rounded-sm bg-white/40" style={{ width: 14, height: 32 }} />
-                        <div className="rounded-sm bg-white/60" style={{ width: 14, height: 48 }} />
-                        <div className="rounded-sm bg-[#4b4df7]" style={{ width: 14, height: 72 }} />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+                {c.results.metrics.map((m, i) => {
+                  const MetricIcon = [Zap, Users, Clock][i] || Target;
+                  return (
+                    <div key={m.label} className="rounded-2xl border p-8" style={{ background: '#b7f5d8', borderColor: '#93e0bb' }}>
+                      <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: 'rgba(6,78,59,0.14)' }}>
+                        <MetricIcon className="h-[22px] w-[22px]" style={{ color: '#064e3b' }} />
                       </div>
+                      <h4 className="text-[32px] stat-value text-[#0b3b28] mb-3 leading-[1.3]">{m.value}</h4>
+                      <p className="text-[15px] text-[#0b3b28]/60 leading-[1.55]">{m.label}</p>
                     </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.4rem,2.5vw,2rem)', letterSpacing: '-0.02em' }}>{c.results.metrics[1].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[1].label}</span>
-                  </div>
-                  {/* Giorni, non mesi — calendar icon */}
-                  <div className="text-center flex flex-col items-center">
-                    <div className="w-24 h-24 mb-5 flex items-center justify-center">
-                      <svg viewBox="0 0 64 64" className="w-16 h-16" fill="none">
-                        <rect x="4" y="10" width="56" height="50" rx="6" stroke="rgba(255,255,255,0.15)" strokeWidth="3" />
-                        <rect x="4" y="10" width="56" height="16" rx="6" fill="#4b4df7" />
-                        <line x1="20" y1="4" x2="20" y2="18" stroke="white" strokeWidth="3" strokeLinecap="round" />
-                        <line x1="44" y1="4" x2="44" y2="18" stroke="white" strokeWidth="3" strokeLinecap="round" />
-                        <rect x="13" y="34" width="8" height="8" rx="2" fill="rgba(255,255,255,0.5)" />
-                        <rect x="28" y="34" width="8" height="8" rx="2" fill="rgba(255,255,255,0.5)" />
-                        <rect x="13" y="48" width="8" height="8" rx="2" fill="rgba(255,255,255,0.3)" />
-                        <rect x="28" y="48" width="8" height="8" rx="2" fill="rgba(75,77,247,0.8)" />
-                      </svg>
-                    </div>
-                    <span className="block text-white font-black mb-1" style={{ fontSize: 'clamp(1.1rem,2vw,1.6rem)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>{c.results.metrics[2].value}</span>
-                    <span className="text-[13px] text-white/[0.65] leading-[1.4]">{c.results.metrics[2].label}</span>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
 
               {c.results.quote && (
@@ -571,14 +545,14 @@ export default function ADRStoryPage() {
                 </div>
               )}
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-5">
+              <div className="grid md:grid-cols-2 gap-5">
                 {c.results.qualitative.map((q) => (
-                  <div key={q.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
-                      <q.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
+                  <div key={q.title} className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: '#e3f9ec' }}>
+                      <q.icon className="h-[22px] w-[22px]" style={{ color: '#10b981' }} />
                     </div>
-                    <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{q.title}</h4>
-                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{q.text}</p>
+                    <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{q.title}</h4>
+                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{q.text}</p>
                   </div>
                 ))}
               </div>
@@ -586,7 +560,7 @@ export default function ADRStoryPage() {
 
             {/* FUTURE VISION */}
             <Section>
-              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10 lg:p-14">
+              <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10">
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
                   {c.vision.badge}
                 </span>
@@ -620,7 +594,7 @@ export default function ADRStoryPage() {
             <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{c.related.title}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {c.related.stories.map(s => (
-                <button key={s.id} onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 lg:p-14 transition-all duration-500">
+                <button key={s.id} onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
                   <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
                   <h4 className="text-[24px] font-semibold text-white/90 mb-4">{s.company}</h4>
                   <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>

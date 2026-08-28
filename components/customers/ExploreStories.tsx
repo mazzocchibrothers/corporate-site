@@ -4,55 +4,56 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const allStories = [
   {
     id: 'carrefour', company: 'Carrefour', industry: 'GDO', useCases: ['Hiring', 'Learning & Development'],
     headlineIt: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione',
     headlineEn: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI',
-    bgImage: '/logos/carrefour-bg.jpg',
+    bgImage: '/logos/carrefour-bg.avif',
   },
   {
     id: 'subdued', company: 'Subdued', industry: 'Retail', useCases: ['Hiring'],
     headlineIt: 'Subdued: come creare uno standard di selezione unico e scalabile per una rete internazionale di 130+ negozi',
     headlineEn: 'Subdued: building a single scalable hiring standard for an international network of 130+ stores',
-    bgImage: '/logos/subdued-bg.jpg',
+    bgImage: '/logos/subdued-bg.avif',
   },
   {
     id: 'ins-mercato', company: "In's Mercato", industry: 'GDO', useCases: ['Internal Mobility'],
     headlineIt: "In's Mercato: come ha costruito una pipeline interna di Store Manager",
     headlineEn: "In's Mercato: how it built an internal pipeline of Store Managers",
-    bgImage: '/logos/insmercato-bg.jpg',
+    bgImage: '/logos/insmercato-bg.avif',
   },
   {
     id: 'adr', company: 'Aeroporti di Roma', industry: 'Transportation & Logistics', useCases: ['Internal Mobility', 'Learning & Development'],
     headlineIt: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone ripartendo dal potenziale interno",
     headlineEn: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people starting from internal potential',
-    bgImage: '/logos/adr-explore-stories.jpg',
+    bgImage: '/logos/adr-explore-stories.avif',
   },
   {
     id: 'europ-assistance', company: 'Europ Assistance', industry: 'Financial Services', useCases: ['Hiring'],
     headlineIt: 'Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana',
     headlineEn: 'Europ Assistance: how to recognise the potential that stands the test of time in a business built on human interaction',
-    bgImage: '/logos/europ-assistance-background-explore-stories.jpg',
+    bgImage: '/logos/europ-assistance-background-explore-stories.avif',
   },
   {
     id: 'unicomm', company: 'Unicomm', industry: 'GDO', useCases: ['Hiring', 'Internal Mobility', 'Learning & Development'],
     headlineIt: 'Come Unicomm sta costruendo una nuova gestione del talento su una rete di 250 punti vendita in costante aumento',
     headlineEn: 'How Unicomm is building a new talent management system across a network of 250 stores and growing',
-    bgImage: '/logos/unicomm-background-explore-stories.jpg',
+    bgImage: '/logos/unicomm-background-explore-stories.avif',
   },
   {
     id: 'mediaset', company: 'Mediaset', industry: 'Media & Broadcasting', useCases: ['Hiring'],
     headlineIt: 'GRAPE, la Graduate Program Experience di Mediaset: come selezionare e accompagnare giovani di valore guardando al potenziale futuro',
     headlineEn: "GRAPE, Mediaset's Graduate Program Experience: how to identify and develop talented young people with an eye on future potential",
-    bgImage: '/logos/mediaset-background-explore-stories (2).jpg',
+    bgImage: '/logos/mediaset-background-explore-stories (2).avif',
   },
   {
     id: 'fidia-farmaceutici', company: 'Fidia Farmaceutici', industry: 'Pharmaceutical', useCases: ['Learning & Development'],
     headlineIt: 'Fidia Farmaceutici: come fotografare su scala globale le reali competenze della rete vendita per supportare la crescita futura',
     headlineEn: 'Fidia Farmaceutici: how to map the real skills of the sales network to drive future growth',
-    bgImage: '/logos/fidia-farmaceutici explore stories.jpg',
+    bgImage: '/logos/fidia-farmaceutici explore stories.avif',
   },
   // Temporarily removed from listing pending approval (restore when ready):
   // {
@@ -108,13 +109,13 @@ export default function ExploreStories() {
         {/* Filters */}
         <motion.div className="mb-14 space-y-5" initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.2 }}>
           <div className="flex flex-wrap gap-2">
-            <span className="text-[13px] font-bold text-white/35 tracking-[0.1em] uppercase mr-4 self-center">{t('Industry')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mr-4 self-center">{t('Industry')}</span>
             {filters.industry.map(f => (
               <button key={f} onClick={() => setActiveIndustry(f)} className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-white/[0.1] text-white border border-white/[0.15]' : 'text-white/40 border border-transparent hover:text-white/70'}`}>{t(industryLabel(f))}</button>
             ))}
           </div>
           <div className="flex flex-wrap gap-2">
-            <span className="text-[13px] font-bold text-white/35 tracking-[0.1em] uppercase mr-4 self-center">{t('Use Case')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mr-4 self-center">{t('Use Case')}</span>
             {filters.useCase.map(f => (
               <button key={f} onClick={() => setActiveUseCase(f)} className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${activeUseCase === f ? 'bg-white/[0.1] text-white border border-white/[0.15]' : 'text-white/40 border border-transparent hover:text-white/70'}`}>{t(f)}</button>
             ))}
@@ -139,11 +140,11 @@ export default function ExploreStories() {
                   {/* Background image if available */}
                   {s.bgImage && s.bgStyle === 'contain' ? (
                     <div className="absolute inset-0 flex items-center justify-center bg-white/[0.06] p-10">
-                      <img src={s.bgImage} alt="" className="max-w-[60%] max-h-[60%] object-contain opacity-90" />
+                      <img src={s.bgImage} alt="" loading="lazy" className="max-w-[60%] max-h-[60%] object-contain opacity-90" />
                     </div>
                   ) : s.bgImage ? (
                     <>
-                      <img src={s.bgImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                      <img src={s.bgImage} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black/70" />
                     </>
                   ) : (
@@ -153,7 +154,7 @@ export default function ExploreStories() {
                     <span className="text-[clamp(1.8rem,3.5vw,3rem)] font-bold text-white/90 tracking-tight">{s.company}</span>
                   </div>
                   <div className="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                    <ArrowRight className="h-5 w-5 text-white/50" />
+                    <ArrowRight className="h-4 w-4 text-white/50" />
                   </div>
                 </div>
                 {/* Title below. left aligned with card, with left padding */}
@@ -162,12 +163,14 @@ export default function ExploreStories() {
             ))}
           </div>
         ) : (
-          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-12 text-center">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-10 text-center">
             <p className="text-[16px] text-white/50 mb-4">{t('No stories match these filters yet.')}</p>
             <p className="text-[14px] text-white/30">{t('We may have a relevant case to share privately.')}</p>
-            <a href="#" className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full text-[13px] font-semibold text-white border border-white/15 hover:bg-white/[0.06] transition-all duration-400">
-              {t('Book a demo')} <ArrowRight className="h-3.5 w-3.5" />
-            </a>
+            <Button asChild variant="secondary" mode="dark" className="mt-6">
+              <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
+                {t('Book a demo')} <ArrowRight aria-hidden="true" />
+              </a>
+            </Button>
           </div>
         )}
       </div>

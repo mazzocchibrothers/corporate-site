@@ -28,6 +28,7 @@ const footerLinks = [
     titleIt: 'Clienti',
     links: [
       { name: 'Customer Stories', nameIt: 'Storie di Successo', href: '/customers', hrefIt: '/clienti' },
+      { name: 'Book a Demo', nameIt: 'Prenota una Demo', href: '/book-meeting', hrefIt: '/prenota-incontro' },
     ],
   },
   {
@@ -36,8 +37,9 @@ const footerLinks = [
     links: [
       { name: 'Blog', nameIt: 'Blog', href: '/blog', hideInIT: true },
       { name: 'White Papers', nameIt: 'White Papers', href: '/resources/whitepapers', hideInIT: true },
+      { name: 'Press', nameIt: 'Press', href: '/resources/press' },
       { name: 'About', nameIt: 'Chi siamo', href: '/about' },
-      { name: 'Book a Demo', nameIt: 'Prenota una Demo', href: '/book-meeting', hrefIt: '/prenota-incontro' },
+      { name: 'Careers', nameIt: 'Lavora con noi', href: '/careers' },
     ],
   },
 ];
@@ -63,7 +65,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-white/[0.04] pt-10 md:pt-14 pb-6">
+    <footer className="relative border-t border-white/[0.04] bg-[#050508] pt-10 md:pt-14 pb-6">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <div className="grid lg:grid-cols-[220px_1fr] gap-8 lg:gap-24 mb-8">
 
@@ -73,6 +75,9 @@ export default function Footer() {
               <img
                 src="/logos/Skillvue_logo_solid_white.svg"
                 alt="Skillvue"
+                width={961}
+                height={240}
+                loading="lazy"
                 className="h-6 w-auto block border-0"
               />
             </a>
@@ -106,10 +111,10 @@ export default function Footer() {
           <div className="flex flex-col gap-6 md:grid md:grid-cols-4 md:gap-8">
             {footerLinks.map((group) => (
               <div key={group.title}>
-                <h4 className="text-[15px] md:text-[16px] font-semibold text-white/85 mb-2 md:mb-7">
+                <h4 className="text-[15px] md:text-[16px] font-semibold text-white/85 mb-2 md:mb-7 text-center md:text-left">
                   {lang === 'it' ? group.titleIt : group.title}
                 </h4>
-                <div className="flex flex-wrap gap-x-4 gap-y-1.5 md:block md:space-y-4">
+                <div className="flex flex-col items-center gap-4 md:items-start md:block md:space-y-4">
                   {group.links.filter(link => !(lang === 'it' && (link as any).hideInIT)).map((link) => {
                     const href = lang === 'it' && (link as any).hrefIt ? (link as any).hrefIt : link.href;
                     const name = lang === 'it' ? (link as any).nameIt : link.name;
@@ -118,7 +123,7 @@ export default function Footer() {
                         key={link.name}
                         href={href}
                         onClick={handleClick(href)}
-                        className="inline md:block text-[14px] md:text-[15px] text-white/55 hover:text-white/65 transition-colors duration-300"
+                        className="block text-center md:text-left text-[14px] md:text-[15px] text-white/55 hover:text-white/65 transition-colors duration-300 py-1 md:py-0"
                       >
                         {name}
                       </a>
@@ -132,14 +137,19 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/[0.04] pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4">
-          <span className="text-[12px] md:text-[13px] text-white/40">
-            &copy; {new Date().getFullYear()} Skillvue. {t('All rights reserved.')}
-          </span>
-          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 md:gap-6">
+          <div className="text-center sm:text-left">
+            <p className="text-[12px] md:text-[13px] text-white/40">
+              &copy; {new Date().getFullYear()} Skillvue. {t('All rights reserved.')}
+            </p>
+            <p className="text-[12px] md:text-[13px] text-white/40">
+              Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568
+            </p>
+          </div>
+          <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
             {[
               {
                 label: 'Privacy Policy',
-                href: lang === 'it' ? 'https://www.iubenda.com/privacy-policy/75783964' : 'https://www.iubenda.com/privacy-policy/45750674/full-legal',
+                href: '/privacy-policy',
               },
               {
                 label: 'Cookie Policy',
@@ -151,23 +161,16 @@ export default function Footer() {
               },
             ].map(({ label, href }) => (
               href.startsWith('http') ? (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300">
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
                   {label}
                 </a>
               ) : (
-                <a key={label} href={href} onClick={handleClick(href)} className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300">
+                <a key={label} href={href} onClick={handleClick(href)} className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
                   {label}
                 </a>
               )
             ))}
           </div>
-        </div>
-
-        {/* Company info line */}
-        <div className="border-t border-white/[0.04] pt-4 mt-6">
-          <p className="text-[12px] text-white/40 text-center">
-            Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568
-          </p>
         </div>
       </div>
     </footer>

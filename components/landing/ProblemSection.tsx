@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useRef } from 'react';
+import { m, useInView } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const painCards = [
@@ -24,7 +24,7 @@ function AnimatedSection({ children, className = '' }: { children: React.ReactNo
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   return (
-    <motion.div
+    <m.div
       ref={ref}
       className={className}
       initial={{ opacity: 0, y: 50 }}
@@ -32,7 +32,7 @@ function AnimatedSection({ children, className = '' }: { children: React.ReactNo
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -40,21 +40,6 @@ export default function ProblemSection() {
   const { t, lang } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
-
   return (
     <section
       id="problem"
@@ -82,19 +67,19 @@ export default function ProblemSection() {
         </AnimatedSection>
 
         {/* Pain cards — horizontal scroll on mobile, 3-col grid on desktop */}
-        <div ref={(el) => { (ref as any).current = el; scrollRef.current = el; }} className="md:grid md:grid-cols-3 md:gap-4 lg:gap-5 flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-hide">
+        <div ref={ref} className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5">
           {painCards.map((card, i) => (
-            <motion.div
+            <m.div
               key={card.stat + i}
               data-testid={`pain-card-${card.stat.replace('%', '')}`}
-              className="group bg-white border border-[#E5E7EB] shrink-0 w-[70vw] md:w-auto snap-center rounded-2xl p-5 md:p-6 lg:p-12 flex flex-col min-h-[240px] md:min-h-0"
+              className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-6 lg:p-10 flex flex-col"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.12, ease: 'easeOut' }}
             >
               {/* Stat number */}
               <span
-                className="block text-[#1A1A2E] text-[64px] font-semibold mb-6 md:mb-10"
+                className="block text-[#1A1A2E] text-[32px] md:text-[64px] font-semibold mb-6 md:mb-10"
                 style={{
                   lineHeight: 1,
                   letterSpacing: '-0.03em',
@@ -112,17 +97,10 @@ export default function ProblemSection() {
                   {t(card.desc)}
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 
-        {/* Progress bar — mobile only */}
-        <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-          <div
-            className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill"
-            style={{ left: `${scrollProgress * 0.65}%` }}
-          />
-        </div>
       </div>
     </section>
   );

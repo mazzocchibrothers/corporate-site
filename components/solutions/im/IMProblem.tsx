@@ -1,8 +1,9 @@
 // @ts-nocheck
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { EyeOff, AlertTriangle, Scale } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { IconTile } from '@/components/ui/icon-tile';
 
 const pains = [
   { icon: EyeOff, stat: '?', title: 'High potentials are invisible', desc: 'How many are already in the organization but hidden. And at risk of leaving before you even act?' },
@@ -14,19 +15,6 @@ export default function IMProblem() {
   const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const scrollRef = useRef(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
 
   const renderCard = (p, i) => {
     const Icon = p.icon;
@@ -40,8 +28,8 @@ export default function IMProblem() {
         transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
       >
         <div className="flex items-center justify-between mb-6 md:mb-8">
-          <span className="text-[#121212]" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, lineHeight: 1, letterSpacing: '-0.03em' }}>{p.stat}</span>
-          <Icon className="h-6 w-6 text-[#4B4DF7]/30" strokeWidth={1.5} />
+          <span className="text-[#121212] text-[32px] stat-value md:text-[clamp(2rem,4vw,3rem)]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{p.stat}</span>
+          <IconTile icon={Icon} mode="light" />
         </div>
         <h3 className="text-[18px] font-semibold text-[#121212] mb-2 md:mb-3">{t(p.title)}</h3>
         <p className="text-[14px] md:text-[15px] text-[#7A7A7A] leading-[1.75]">{t(p.desc)}</p>
@@ -59,21 +47,7 @@ export default function IMProblem() {
           </h2>
         </motion.div>
 
-        {/* Mobile: horizontal scroll */}
-        <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-          {pains.map((p, i) => (
-            <div key={p.title} className="shrink-0 w-[80vw] snap-center">
-              {renderCard(p, i)}
-            </div>
-          ))}
-        </div>
-        {/* Progress bar */}
-        <div className="md:hidden mx-auto mt-4 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
-        </div>
-
-        {/* Desktop: grid */}
-        <div className="hidden md:grid lg:grid-cols-3 gap-5">
+        <div className="grid gap-5 lg:grid-cols-3">
           {pains.map((p, i) => renderCard(p, i))}
         </div>
       </div>

@@ -26,6 +26,8 @@ export default function SciencePage() {
           : 'Skillvue is built on I/O psychology and psychometrics. Every verification is accurate, reliable and defensible — designed to hold up to scientific scrutiny.'
         } />
         <link rel="canonical" href={canonical} />
+        {/* Hero's italic gradient span needs Bold Italic; only this page (and the homepage) does. */}
+        <link rel="preload" href="/fonts/MonaSans-BoldItalic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </Head>
       <Navbar />
       <main>

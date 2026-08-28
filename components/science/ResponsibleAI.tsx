@@ -1,8 +1,9 @@
 // @ts-nocheck
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Eye, Users, Activity, Scale, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { IconTile } from '@/components/ui/icon-tile';
 
 const pillars = [
   { icon: Eye, title: 'Transparent scoring', desc: 'Every score comes with an explanation: what was measured, how it was scored, and what evidence supports it.' },
@@ -26,25 +27,11 @@ export default function ResponsibleAI() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const scrollRef = useRef(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const pct = max > 0 ? (el.scrollLeft / max) * 100 : 0;
-      setScrollProgress(pct);
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, []);
-
   const renderPillar = (p, i) => {
     const Icon = p.icon;
     return (
       <motion.div key={p.title} data-testid={`responsible-${p.title.toLowerCase().replace(/\s+/g, '-')}`} className="group rounded-xl md:rounded-2xl border border-[#4B4DF7]/[0.08] hover:border-[#4B4DF7]/[0.18] bg-white/60 hover:bg-white/80 p-5 md:p-10 transition-all duration-500 h-full" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}>
-        <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#4B4DF7]/40 mb-3 md:mb-5" strokeWidth={1.5} />
+        <IconTile icon={Icon} mode="light" className="mb-3 md:mb-5" />
         <h3 className="text-[15px] md:text-[18px] font-semibold text-[#1A1A2E] mb-2 md:mb-3">{t(p.title)}</h3>
         <p className="text-[12px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-[1.75]">{t(p.desc)}</p>
       </motion.div>
@@ -63,21 +50,7 @@ export default function ResponsibleAI() {
           </h2>
         </motion.div>
 
-        {/* Mobile: horizontal scroll */}
-        <div ref={scrollRef} className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-2">
-          {pillars.map((p, i) => (
-            <div key={p.title} className="shrink-0 w-[80vw] snap-center">
-              {renderPillar(p, i)}
-            </div>
-          ))}
-        </div>
-        {/* Progress bar */}
-        <div className="md:hidden mx-auto mt-4 mb-12 w-48 h-1.5 rounded-full bg-[#1A1A2E]/20 relative">
-          <div className="absolute top-0 h-full w-[35%] rounded-full skillvue-scroll-fill" style={{ left: `${scrollProgress * 0.65}%` }} />
-        </div>
-
-        {/* Desktop grid */}
-        <div className="hidden md:grid md:grid-cols-2 gap-3 md:gap-5 mb-12 md:mb-20">
+        <div className="grid md:grid-cols-2 gap-3 md:gap-5 mb-12 md:mb-20">
           {pillars.map((p, i) => renderPillar(p, i))}
         </div>
 

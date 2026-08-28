@@ -57,20 +57,20 @@ export default function HowSkillvueWorks() {
         {/* Active step card */}
         <motion.div
           key={active}
-          className="rounded-xl md:rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-10 lg:p-14"
+          className="rounded-xl md:rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-10"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
           <div className="grid lg:grid-cols-2 gap-5 md:gap-10">
             <div>
-              <span className="text-[10px] md:text-[12px] font-semibold text-[#9B9DFB]/[0.65] tracking-[0.1em] uppercase mb-2 md:mb-4 block">{t('STEP')} {steps[active].num}</span>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-2 md:mb-4 block">{t('STEP')} {steps[active].num}</span>
               <h3 className="text-[18px] md:text-[clamp(1.5rem,2.5vw,2rem)] font-semibold text-white/90 mb-3 md:mb-5 leading-[1.2]">{t(steps[active].title)}</h3>
               <p className="text-[14px] md:text-[16px] text-white/[0.65] leading-[1.6] md:leading-[1.75]">{t(steps[active].what)}</p>
             </div>
             <div>
               <div className="rounded-lg md:rounded-xl bg-white/[0.04] border border-white/[0.06] p-4 md:p-6 w-full">
-                <span className="text-[10px] md:text-[11px] font-semibold text-white/30 tracking-[0.1em] uppercase mb-2 md:mb-3 block">{t('KEY CAPABILITY')}</span>
+                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-2 md:mb-3 block">{t('KEY CAPABILITY')}</span>
                 <p className="text-[13px] md:text-[15px] text-white/[0.65] leading-[1.5] md:leading-[1.7]">{t(steps[active].capability)}</p>
               </div>
             </div>
@@ -88,14 +88,14 @@ export default function HowSkillvueWorks() {
               aria-label="Previous step"
               className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/10 text-white/40 hover:text-white/80 hover:border-white/25 transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
-              <ChevronLeft className="h-3.5 w-3.5 md:h-4 md:w-4" />
+              <ChevronLeft className="h-4 w-4" />
             </button>
             <button
               onClick={() => setActive((p) => (p + 1) % steps.length)}
               aria-label="Next step"
               className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/15 text-white/60 hover:text-white/90 hover:border-white/30 transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
-              <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4" />
+              <ChevronRight className="h-4 w-4" />
             </button>
           </div>
         </div>
