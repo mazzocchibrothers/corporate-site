@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, Users, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Clock } from 'lucide-react';
+import { ArrowRight, Users, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Clock, History } from 'lucide-react';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
@@ -37,7 +37,7 @@ const content = {
     heroMetrics: [
       { value: '30K', label: 'Candidature ricevute e processate' },
       { value: '-30%', label: 'Riduzione dei colloqui non in linea grazie a Skillvue' },
-      { value: '100%', label: 'Affidabilità dello screening eseguito da Skillvue' },
+      { value: 'Drastica', label: 'Ottimizzazione dei tempi di lavoro del recruiter' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
@@ -129,7 +129,7 @@ const content = {
       metrics: [
         { value: '30K', label: <><strong className="text-[#0b3b28] font-semibold">Candidature ricevute e processate</strong><br />ogni anno, con velocità ed efficacia</> },
         { value: '-30%', label: <><strong className="text-[#0b3b28] font-semibold">Riduzione dei colloqui non in linea</strong><br />al secondo step</> },
-        { value: '100%', label: <><strong className="text-[#0b3b28] font-semibold">Affidabilità dello screening eseguito da Skillvue</strong><br />nel primo step della selezione</> },
+        { value: 'Drastica', label: <><strong className="text-[#0b3b28] font-semibold">Ottimizzazione dei tempi</strong><br />di lavoro del recruiter</> },
       ],
       qualitative: [
         { icon: Eye, title: 'Più candidati possono dimostrare il proprio valore', text: <>L'assessment ha dato a più persone la possibilità di far emergere <strong className="text-[#121212]/90 font-semibold">competenze reali oltre i limiti del CV</strong>. Profili ad alto potenziale che prima rischiavano di perdersi nel volume ora vengono <strong className="text-[#121212]/90 font-semibold">intercettati efficacemente e rapidamente</strong>.</> },
@@ -162,7 +162,7 @@ const content = {
     heroMetrics: [
       { value: '30K', label: 'Applications received and processed' },
       { value: '-30%', label: 'Reduction in unsuccessful interviews thanks to Skillvue' },
-      { value: '100%', label: 'Reliability of the screening performed by Skillvue' },
+      { value: 'Drastic', label: <>Recruiter time<br />optimization</> },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -254,7 +254,7 @@ const content = {
       metrics: [
         { value: '30K', label: <><strong className="text-[#0b3b28] font-semibold">Applications received and processed</strong><br />every year, quickly and effectively</> },
         { value: '-30%', label: <><strong className="text-[#0b3b28] font-semibold">Reduction in unsuccessful interviews</strong><br />at the second step</> },
-        { value: '100%', label: <><strong className="text-[#0b3b28] font-semibold">Reliability of the screening performed by Skillvue</strong><br />in the first selection step</> },
+        { value: 'Drastic', label: <><strong className="text-[#0b3b28] font-semibold">Recruiter time</strong><br />optimization</> },
       ],
       qualitative: [
         { icon: Eye, title: 'More candidates can demonstrate their value', text: <>The assessment gave more people the opportunity to surface <strong className="text-[#121212]/90 font-semibold">real skills beyond the CV</strong>. High-potential profiles that previously risked getting lost in the volume are now <strong className="text-[#121212]/90 font-semibold">identified effectively and quickly</strong>.</> },
@@ -476,7 +476,7 @@ export default function CredemStoryPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
                 {c.results.metrics.map((m, i) => {
-                  const Icon = [Clock, Target, CheckCircle][i] || Target;
+                  const Icon = [Clock, Target, History][i] || Target;
                   return (
                     <div key={m.label} className="rounded-2xl border p-8" style={{ background: '#b7f5d8', borderColor: '#93e0bb' }}>
                       <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: 'rgba(6,78,59,0.14)' }}>
