@@ -20,7 +20,10 @@ label, owner is the assignee.
 - [ ] At most one `in_progress` Issue per overlapping Scope (parallel
       `in_progress` Issues are allowed only across disjoint Scopes).
 - [ ] Every `in_progress` Issue has an assignee — no orphaned `in_progress`.
-- [ ] Every `status:done` Issue was closed by a merged `Closes #<n>` PR.
+- [ ] Every `status:done` Issue landed on `app-router` — by a merged
+      `Closes #<n>` PR into that branch, or by a commit already contained in it
+      (`git merge-base --is-ancestor`). **Not** by a merge into `main`: `main`
+      receives one merge, at the switch (#120).
 - [ ] No Issue is `done` while an Issue it **Depends on** is still open.
 - [ ] The merged branch left nothing behind: no worktree, no local branch, no
       remote branch.

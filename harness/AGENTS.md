@@ -110,10 +110,15 @@ not a formality, and it is the last Issue in the backlog for that reason.
 ## 5. Session close
 
 1. Run `./harness/init.sh` — all green.
-2. Open a PR whose body says `Closes #<n>`. One Issue per branch/PR.
-3. After review approves and the PR merges: set `status:done`
-   (`gh issue edit <n> --remove-label status:in_progress --add-label status:done`);
-   the merged `Closes #<n>` closes the Issue.
+2. Open a PR **into `app-router`** whose body says `Closes #<n>`. One Issue per
+   branch/PR. Never into `main` — see §2b.
+3. After review approves and the PR merges into `app-router`: set `status:done`
+   (`gh issue edit <n> --remove-label status:in_progress --add-label status:done`).
+
+   **During this migration, `done` means landed on `app-router`, not merged to
+   `main`.** `main` receives exactly one merge, at the switch (#120). An Issue
+   that waited for that would sit `in_progress` for five weeks and the backlog
+   would stop telling you anything.
 4. Post a closing summary as an **Issue comment** (what shipped, what you ran,
    what you observed **in both locales**).
 5. **A merged branch leaves nothing behind** — remove its worktree, its local
