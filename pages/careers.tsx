@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { useRouter } from 'next/router';
 import { Button, buttonVariants } from '@/components/ui/button';
+import { messagesFor } from '@/i18n/messages';
 
 const stats = [
   { value: '50+', label: 'People across Europe' },
@@ -44,6 +45,11 @@ const allRoles = [
 ];
 
 const filters = ['All teams', 'Product', 'Design', 'People', 'Sales'];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('careers');
 
 export default function CareersPage() {
   const { t, lang } = useLanguage();

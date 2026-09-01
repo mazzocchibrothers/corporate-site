@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, BookOpen, Heart, Users, Handshake, Target, Brain, RefreshCw, Wrench, Shield, Calendar, Compass } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { messagesFor } from '@/i18n/messages';
 
 const socialSkillsEN = [
   { icon: Heart, title: 'Emotional Intelligence', desc: 'The ability to read emotional dynamics that influence decisions, behaviors, and professional relationships. Recognizes tension signals before they become explicit conflict.' },
@@ -33,6 +34,11 @@ const socialSkillsIT = [
   { icon: Shield, title: 'Resilienza', desc: 'La capacità di mantenere equilibrio ed efficacia relazionale anche in contesti particolarmente critici. Dopo un conflitto, ripristina rapidamente una relazione funzionale.' },
   { icon: Calendar, title: 'Organizzazione & Pianificazione', desc: 'Ha una componente sociale spesso sottovalutata. Gestire tempo, priorità e responsabilità ha un impatto diretto sulle relazioni di lavoro.' },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('blog/social-skills');
 
 export default function BlogArticle8() {
   const router = useRouter();

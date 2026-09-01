@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, BookOpen, MessageSquare, Users, Target, Brain, AlertTriangle } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { messagesFor } from '@/i18n/messages';
 
 const indicatorsEN = [
   { context: 'In meetings', behavior: 'Doesn\'t automatically accept data or shared opinions. Asks for sources, verifies information consistency, distinguishes measurable facts from interpretations.' },
@@ -33,6 +34,11 @@ const faqsIT = [
   { q: 'Qual è la differenza tra pensiero critico e pensiero creativo?', a: 'Il pensiero critico serve a valutare, analizzare e verificare. Il pensiero creativo serve a generare nuove idee e soluzioni originali. Il primo riduce il rischio di errori e decisioni affrettate, mentre il secondo espande le possibilità. In ambito aziendale, le due competenze funzionano meglio insieme: la creatività genera opzioni, il pensiero critico valuta e seleziona quelle più sostenibili.' },
   { q: 'Come si valuta il pensiero critico?', a: 'Servono scenari realistici che riproducano situazioni tipiche del ruolo: dati parziali, priorità in conflitto, informazioni contraddittorie. Si osserva se la persona verifica le fonti prima di decidere, distingue i fatti dalle interpretazioni, rende esplicite le assunzioni alla base della propria scelta e valuta rischi e implicazioni.' },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('blog/critical-thinking');
 
 export default function BlogArticle5() {
   const router = useRouter();

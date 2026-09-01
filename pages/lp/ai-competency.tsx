@@ -6,6 +6,7 @@ import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Download, Lock, Check, ChevronDown } from 'lucide-react';
+import { messagesFor } from '@/i18n/messages';
 
 const TITLE = 'Skillvue — AI Competency One-Pager';
 
@@ -59,6 +60,11 @@ const COPY = {
     scrollHint: 'Scorri — pagina 2 di 2',
   },
 };
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('lp/ai-competency');
 
 export default function AiCompetencyPage() {
   const { lang } = useLanguage();

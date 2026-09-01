@@ -7,6 +7,7 @@ import { ArrowRight, ChevronDown, Newspaper } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { messagesFor } from '@/i18n/messages';
 
 const articles = [
   {
@@ -87,6 +88,11 @@ const articles = [
     it: { title: 'Talent Acquisition: Cos\'è, Come Funziona, Perché È Importante', date: '12 Febbraio 2026', tag: 'Talent Acquisition' },
   },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('blog');
 
 export default function BlogPage() {
   const { t, lang } = useLanguage();

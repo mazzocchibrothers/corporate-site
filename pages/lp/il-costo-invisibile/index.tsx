@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { messagesFor } from '@/i18n/messages';
 
 function SkillvueIcon({ size = 24 }: { size?: number }) {
   return (
@@ -61,6 +62,11 @@ const featureCards = [
     desc: 'La valutazione comportamentale strutturata riduce il mis-hire rate del 25-40% e produce un differenziale di 3-5x tra i top e i low performer nel valore del portafoglio.',
   },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('lp/il-costo-invisibile');
 
 export default function IlCostoInvisibileVetrina() {
   const formRef = useRef<HTMLDivElement>(null);

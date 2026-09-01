@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, BookOpen, AlertTriangle, CheckCircle, Settings, MessageSquare, Users, Layers } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { messagesFor } from '@/i18n/messages';
 
 const scenarios = [
   { context: 'A deliverable is late', low: '"It wasn\'t up to me." "I was missing information." "Nobody told me it was urgent."', high: '"We missed the deadline, this impacts X. The reason is Y. Going forward I propose Z and I\'m taking charge of recovery."' },
@@ -35,6 +36,11 @@ const leversIT = [
   { num: '03', title: 'Delega, non micro-management', icon: Layers, desc: 'La vera delega trasferisce non solo l\'attività, ma lo spazio decisionale. Questo significa accettare un certo margine di errore.' },
   { num: '04', title: 'Allineamento ruolo-competenza', icon: Users, desc: 'L\'accountability è sostenibile solo se la persona ha le competenze per esercitarla. Se il ruolo supera le capacità, si genera blocco o difesa.' },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('blog/accountability');
 
 export default function BlogArticle4() {
   const router = useRouter();

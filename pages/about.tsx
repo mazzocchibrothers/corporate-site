@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { messagesFor } from '@/i18n/messages';
 
 const stats = [
   { value: '€9M+', label: 'Raised' },
@@ -166,6 +167,11 @@ function getCounterDisplay(original, count) {
   if (!match) return original;
   return `${match[1]}${count}${match[3]}`;
 }
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('about');
 
 export default function AboutPage() {
   const router = useRouter();

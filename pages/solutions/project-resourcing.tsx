@@ -10,6 +10,12 @@ import PRHowSolves from '@/components/solutions/pr/PRHowSolves';
 import PRConsulting from '@/components/solutions/pr/PRConsulting';
 import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
+import { messagesFor } from '@/i18n/messages';
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('solutions/project-resourcing');
 
 export default function ProjectResourcingPage() {
   const { t, lang } = useLanguage();

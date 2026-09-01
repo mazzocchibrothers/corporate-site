@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import SkillvueLogo from '@/components/landing/SkillvueLogo';
 import Head from 'next/head';
 import { Button } from '@/components/ui/button';
+import { messagesFor } from '@/i18n/messages';
 
 // TODO: Replace with the actual HubSpot form ID for this whitepaper
 const HUBSPOT_PORTAL_ID = '48438018';
@@ -86,6 +87,11 @@ const economics = [
   { value: '3–5×', label: 'Top vs. low performer differential' },
   { value: '0.54', label: 'Predictive validity of structured verification' },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('lp/hidden-cost-recruiting');
 
 export default function HiddenCostRecruiting() {
   const formRef = useRef(null);

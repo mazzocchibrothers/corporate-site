@@ -9,6 +9,7 @@ import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/i18n/LanguageContext';
 import Head from 'next/head';
+import { messagesFor } from '@/i18n/messages';
 
 function Section({ children, className = '' }) {
   const ref = useRef(null);
@@ -311,6 +312,11 @@ const content = {
 };
 
 // ─── PAGE COMPONENT ───────────────────────────────────────────────────────────
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('customers/subdued');
 
 export default function SubduedStoryPage() {
   const router = useRouter();

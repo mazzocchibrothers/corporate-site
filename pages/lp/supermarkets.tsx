@@ -6,6 +6,7 @@ import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Download, ArrowRight, AlertTriangle, Check } from 'lucide-react';
+import { messagesFor } from '@/i18n/messages';
 
 const TITLE = 'Skillvue — Supermarkets One-Pager';
 const GRAD = 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)';
@@ -209,6 +210,11 @@ const SectionHead = ({ n, label }) => (
     <span className="text-[12px] md:text-[13px] font-bold tracking-[0.16em] uppercase text-white/70">{label}</span>
   </div>
 );
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('lp/supermarkets');
 
 export default function SupermarketsPage() {
   const { lang } = useLanguage();

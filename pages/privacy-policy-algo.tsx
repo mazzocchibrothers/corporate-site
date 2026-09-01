@@ -3,6 +3,12 @@ import React from 'react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
+import { messagesFor } from '@/i18n/messages';
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('privacy-policy-algo');
 
 export default function PrivacyPolicyAlgo() {
   return (

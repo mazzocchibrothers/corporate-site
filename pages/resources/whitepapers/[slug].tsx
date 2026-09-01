@@ -8,6 +8,18 @@ import { ArrowRight, ArrowLeft, FileText, Download, BookOpen, Users, Brain, Zap,
 import { whitepapers } from '@/data/whitepapers';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { messagesFor } from '@/i18n/messages';
+
+// The one dynamic route on the site. Its paths come from the same array the
+// sitemap expands, so a whitepaper cannot exist in one and not the other.
+export const getStaticPaths = async () => ({
+  paths: whitepapers.map((w) => ({ params: { slug: w.slug } })),
+  fallback: false,
+});
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('resources/whitepapers/[slug]');
 
 export default function WhitepaperDetailPage() {
   const router = useRouter();

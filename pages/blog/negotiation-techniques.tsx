@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, BookOpen, Users, Target, MessageCircle, Lock, Handshake, FileCheck, HelpCircle } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { messagesFor } from '@/i18n/messages';
 
 const techniquesEN = [
   { num: '01', title: 'Separate People from the Problem', icon: Users, summary: 'Distinguish the relational dimension from the objective issue to resolve.', example: 'Instead of "You never invest in people," try "We have a budget constraint. HR\'s goal is reducing turnover by 15%. Let\'s analyze the economic impact of training together."' },
@@ -27,6 +28,11 @@ const techniquesIT = [
   { num: '06', title: 'Cerca soluzioni win-win realistiche', icon: Handshake, summary: 'Non "tutti ottengono tutto" ma un accordo in cui nessuna parte si sente strutturalmente sconfitta.', example: 'Il dipendente vuole una promozione immediata. Il manager vede il potenziale ma i tempi sono prematuri. Soluzione: milestone chiari, responsabilità progressive, revisione salariale legata a obiettivi verificabili entro 6 mesi.' },
   { num: '07', title: 'Formalizza accordi e responsabilità', icon: FileCheck, summary: 'Molte negoziazioni sembrano riuscite fino a quando non devono essere eseguite.', example: 'HR e IT concordano di lanciare un nuovo sistema di valutazione delle performance. Formalizza: HR definisce il framework in 30 giorni, IT costruisce la piattaforma in 60, checkpoint tra le funzioni, go-live dopo il test sul gruppo pilota.' },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('blog/negotiation-techniques');
 
 export default function BlogArticle3() {
   const router = useRouter();

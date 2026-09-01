@@ -8,6 +8,12 @@ import CustomersHero from '@/components/customers/CustomersHero';
 import ExploreStories from '@/components/customers/ExploreStories';
 import CustomersROI from '@/components/customers/CustomersROI';
 import CustomersFinalCTA from '@/components/customers/CustomersFinalCTA';
+import { messagesFor } from '@/i18n/messages';
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('customers');
 
 export default function CustomersPage() {
   const { locale } = useRouter();

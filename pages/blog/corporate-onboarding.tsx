@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, BookOpen, CheckCircle, Clipboard, Users, MessageSquare, Heart, BarChart3 } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { messagesFor } from '@/i18n/messages';
 
 const phases = [
   { num: '01', title: 'Preboarding', timing: 'Offer accepted → Day 1', icon: Clipboard, points: ['Clarify priorities for the first 90 days: not just generic goals, but expected results and evaluation criteria', 'Define key references: direct manager, buddy, HR contacts', 'Align expectations on role and responsibilities before entry', 'Maintain active, structured contact: scheduled communications reduce uncertainty', 'Prepare the operational context: tools, access, first weeks agenda already planned'] },
@@ -23,6 +24,11 @@ const phasesIT = [
   { num: '04', title: 'Integrazione culturale', timing: 'Mesi 2-3', icon: Heart, points: ['Rendi espliciti i valori operativi, non solo quelli dichiarati', 'Facilita le relazioni interfunzionali: incontri con stakeholder chiave oltre il team diretto', 'Chiarisci i modelli decisionali: centralizzati, partecipativi, data-driven?', 'Condividi esempi concreti di comportamenti attesi: cosa viene premiato, cosa crea attrito', 'Pianifica check-in sull\'esperienza: chiedere "cosa ti ha sorpreso?" è spesso più utile di un sondaggio standard'] },
   { num: '05', title: 'Monitoraggio e feedback', timing: 'Giorni 30-60-90+', icon: BarChart3, points: ['Pianifica checkpoint strutturati a 30-60-90 giorni con obiettivi e criteri chiari', 'Coinvolgi attivamente il manager diretto: il feedback non può essere delegato solo all\'HR', 'Raccogli feedback bidirezionale: cosa funziona e cosa può migliorare', 'Valuta l\'autonomia raggiunta rispetto alle aspettative iniziali: non solo i compiti completati, ma la qualità delle decisioni', 'Collega i gap a piani di sviluppo concreti: formazione, mentoring, ridefinizione delle priorità'] },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('blog/corporate-onboarding');
 
 export default function BlogArticle6() {
   const router = useRouter();

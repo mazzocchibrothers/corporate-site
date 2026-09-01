@@ -14,6 +14,12 @@ import TAImpact from '@/components/solutions/ta/TAImpact';
 import TAFunnel from '@/components/solutions/ta/TAFunnel';
 import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
+import { messagesFor } from '@/i18n/messages';
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('solutions/talent-acquisition');
 
 export default function TalentAcquisitionPage() {
   const { t, lang } = useLanguage();

@@ -12,6 +12,12 @@ import LDIntegration from '@/components/solutions/ld/LDIntegration';
 import LDImpact from '@/components/solutions/ld/LDImpact';
 import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
+import { messagesFor } from '@/i18n/messages';
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('solutions/learning-development');
 
 export default function LearningDevelopmentPage() {
   const { t, lang } = useLanguage();

@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { messagesFor } from '@/i18n/messages';
 
 const FORM_IDS = {
   en: '824a40f6-57e6-46eb-bada-ca5d6f8122ea',
@@ -15,6 +16,11 @@ const PARAGRAPHS = [
   'One standard across every store, the same for new hires and the people you grow from within.',
   'Fill in the form to download it.',
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('lp/food-retail');
 
 export default function FoodRetailPage() {
   const { t, lang } = useLanguage();

@@ -11,6 +11,12 @@ import MethodologyLifecycle from '@/components/science/MethodologyLifecycle';
 import ResponsibleAI from '@/components/science/ResponsibleAI';
 import ScienceCTA from '@/components/science/ScienceCTA';
 import ProductCrossLinks from '@/components/shared/ProductCrossLinks';
+import { messagesFor } from '@/i18n/messages';
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('science');
 
 export default function SciencePage() {
   const { locale } = useRouter();

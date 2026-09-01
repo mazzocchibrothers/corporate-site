@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { messagesFor } from '@/i18n/messages';
 
 function SkillvueIcon({ size = 24 }: { size?: number }) {
   return (
@@ -61,6 +62,11 @@ const featureCards = [
     desc: 'Un approccio strutturato alle aspirazioni opera su 5 dimensioni distinte, ciascuna con diversa capacità predittiva rispetto ai comportamenti organizzativi futuri.',
   },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('lp/career-aspiration-insurance');
 
 export default function CareerAspirationInsuranceVetrina() {
   const formRef = useRef<HTMLDivElement>(null);

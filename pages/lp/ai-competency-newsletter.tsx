@@ -6,6 +6,7 @@ import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Download, ArrowRight, ArrowDown, Check } from 'lucide-react';
+import { messagesFor } from '@/i18n/messages';
 
 const TITLE = 'Skillvue — AI Competency One-Pager';
 const GRAD = 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)';
@@ -157,6 +158,11 @@ const Bars = ({ active }) => (
     ))}
   </div>
 );
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('lp/ai-competency-newsletter');
 
 export default function AiCompetencyNewsletterPage() {
   const { lang } = useLanguage();

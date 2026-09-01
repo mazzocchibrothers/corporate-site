@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, BookOpen, Compass, Target, Heart, Handshake, Wrench } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { messagesFor } from '@/i18n/messages';
 
 const skillsEN = [
   { icon: Compass, title: 'Leadership', desc: 'The ability to orient the team toward a clear direction, even in conditions of ambiguity. Observable when a manager defines coherent priorities, makes decisions taking responsibility, and maintains alignment during uncertainty.' },
@@ -35,6 +36,11 @@ const observablesIT = [
   { context: 'Nei momenti di conflitto', signs: ['Evita di personalizzare il problema', 'Rende espliciti i vincoli invece di spostare la responsabilità', 'Cerca un accordo operativo invece di imporre una soluzione'] },
   { context: 'Nella gestione delle priorità', signs: ['Traduce gli obiettivi strategici in attività concrete', 'Rinegozia le scadenze quando le condizioni cambiano', 'Protegge il team da richieste incoerenti o sovrapposte', 'Mantiene coerenza tra le priorità dichiarate e ciò che monitora'] },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('blog/managerial-skills');
 
 export default function BlogArticle7() {
   const router = useRouter();

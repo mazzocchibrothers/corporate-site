@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, BookOpen, Search, Building2, Users, BarChart3, GitBranch, Target } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { messagesFor } from '@/i18n/messages';
 
 const differencesEN = [
   { dimension: 'Approach', recruiting: 'Reactive — responds to an open vacancy', ta: 'Strategic — starts from competency mapping' },
@@ -39,6 +40,11 @@ const strategyStepsIT = [
   { icon: GitBranch, title: 'Collega talent acquisition e sviluppo interno', desc: 'Prima di cercare nuove persone all\'esterno, chiedi se alcune competenze sono già presenti internamente o sviluppabili attraverso percorsi mirati di upskilling e reskilling.' },
   { icon: Target, title: 'Misura ciò che conta davvero', desc: 'Monitorare solo il time-to-hire rischia di premiare la velocità a scapito della qualità. Indicatori come quality-of-hire, performance nel tempo e retention offrono una lettura molto più utile.' },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('blog/talent-acquisition');
 
 export default function BlogArticle9() {
   const router = useRouter();

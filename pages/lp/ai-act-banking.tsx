@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { messagesFor } from '@/i18n/messages';
 
 const HUBSPOT_PORTAL_ID = '48438018';
 const HUBSPOT_FORM_ID = 'YOUR_WP_B1_FORM_ID'; // TODO: replace with real form ID
@@ -1109,6 +1110,11 @@ function WhitepaperLayer() {
 }
 
 // ─── ROOT COMPONENT ────────────────────────────────────────────────────────────
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('lp/ai-act-banking');
 
 export default function AIActBankingPage() {
   const [unlocked, setUnlocked] = useState(false);

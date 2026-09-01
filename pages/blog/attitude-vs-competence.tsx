@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, BookOpen } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { messagesFor } from '@/i18n/messages';
 
 const whenAttitude = [
   'The role is junior or entry-level',
@@ -49,6 +50,11 @@ const methodsIT = [
   { num: '03', title: 'Evidenze comportamentali', desc: 'Una competenza deve essere supportata da comportamenti osservabili. Il candidato deve descrivere: un obiettivo specifico, le azioni intraprese, i risultati ottenuti, le metriche utilizzate.' },
   { num: '04', title: 'Test pratici', desc: 'Quando possibile, integra test tecnici o compiti simulati. Un case study, una simulazione, un esercizio pratico che permetta di osservare direttamente la competenza in azione.' },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('blog/attitude-vs-competence');
 
 export default function BlogArticle1() {
   const router = useRouter();

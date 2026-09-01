@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, AlertTriangle, Shield, Eye, Anchor, UserCheck, Zap, ThumbsUp, Brain } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { messagesFor } from '@/i18n/messages';
 
 const biasesEN = [
   { num: '01', title: 'Halo Effect', icon: ThumbsUp, oneliner: 'One positive trait overshadows everything else', desc: 'A single positive characteristic disproportionately influences the overall evaluation. A prestigious university, a brilliant communication style, or an international experience becomes dominant and "contaminates" the judgment on unverified competencies.', mitigation: ['Define key competencies before the interview', 'Use separate scoring grids per skill', 'Ask probing questions even when positive', 'Compare on uniform criteria'] },
@@ -29,6 +30,11 @@ const biasesIT = [
   { num: '07', title: 'Bias della Prima Impressione', icon: Zap, oneliner: 'I primi 5 minuti determinano tutto', desc: 'Formulare un giudizio nei primi minuti e mantenerlo per tutto il colloquio. Puntualità, stretta di mano, tono di voce, stile di presentazione. Il colloquio rischia di diventare una conferma dell\'impressione iniziale, positiva o negativa.', mitigation: ['Strutturare il colloquio con criteri distinti per sezione', 'Rimandare il giudizio alla fine', 'Annotare evidenze, non percezioni', 'Prevedere più momenti di valutazione'] },
   { num: '08', title: 'Bias di Eccesso di Fiducia', icon: Brain, oneliner: 'Ti fidi troppo del tuo stesso giudizio', desc: 'La tendenza a sovrastimare la propria capacità di giudizio. Pensi di poter "leggere le persone all\'istante" o di avere un intuito speciale per il talento. È insidioso perché riguarda il valutatore, non il candidato.', mitigation: ['Criteri misurabili e condivisi', 'Confronto tra più valutatori', 'Distinguere esperienza da validazione', 'Integrare strumenti strutturati'] },
 ];
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('blog/recruitment-biases');
 
 export default function BlogArticle2() {
   const router = useRouter();

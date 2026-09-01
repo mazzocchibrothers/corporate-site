@@ -8,6 +8,12 @@ import { useRouter } from 'next/router';
 import { whitepapers, filterLabels } from '@/data/whitepapers';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { messagesFor } from '@/i18n/messages';
+
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('resources/whitepapers');
 
 export default function WhitepapersPage() {
   const { t, lang } = useLanguage();
