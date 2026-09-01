@@ -119,22 +119,24 @@ else
   exit 1
 fi
 
-# Single source of truth for the gate tier: one npm script per gate, run in
-# order. docs/verification.md points here instead of re-listing them, so the
-# doc cannot drift from what actually runs. Adding a check: add it here, and
-# nowhere else.
+# The gate tier, derived from package.json by scripts/gates.mjs — not written
+# here. CI reads the same list from the same place, so the two cannot disagree
+# about what green means (#104). Adding a gate means adding a `check:*` script;
+# there is nothing else to update.
 #
 # It is a short list because this repo has no lint config and no test runner —
-# see docs/verification.md, "Starting point". Every `check:*` script you add
-# under scripts/ belongs on this list the moment it exists.
-GATES=(
-  "typecheck"
-  "check:i18n"
-  "check:routes"
-  "check:client"
-  "check:messages"
-  "check:migrated"
-)
+# see docs/verification.md, "Starting point".
+GATES=()
+while IFS= read -r line; do
+  [ -n "$line" ] && GATES+=("$line")
+done < <(node scripts/gates.mjs)
+
+# An empty list would report a clean run having checked nothing — the same
+# silent-pass failure the guard above exists to stop.
+if [ ${#GATES[@]} -eq 0 ]; then
+  fail "scripts/gates.mjs returned no gates — nothing would be checked"
+  exit 1
+fi
 
 for g in "${GATES[@]}"; do
   gate "$g"

@@ -7,16 +7,22 @@
 // with nothing to point at. That already happened 79 times, 10 of them with
 // genuinely different values.
 //
-// Scope is deliberately narrow: duplicates only. The dictionary's other two
-// defects (English-as-key, and t() calls whose key is missing) are recorded in
-// harness/docs/verification.md and need copy decisions, not a parser.
+// It also checks the catalogue that is replacing it: every key a
+// useTranslations/getTranslations call site asks for must exist in both
+// messages/en.json and messages/it.json. Today that is 3 call sites; by #118 it
+// is every string on the site, and a missing key there renders as the key path
+// itself in production.
+//
+// en/it key-set parity is NOT asserted here — check:messages already does it,
+// and two gates asserting the same thing is the drift this project exists to
+// remove.
 //
 // Run: npm run check:i18n
 
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
+import { dirname, join, relative } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FILE = 'i18n/translations.ts';
@@ -102,4 +108,93 @@ if (duplicates.length > 0) {
   );
 }
 
-console.log(`[OK] ${FILE}: ${entries.length} entries, ${seen.size} unique keys, no duplicates`);
+// ── Italian values identical to their English key ──────────────────────────
+// A ratchet, not an allowlist. Most of these are correct — proper nouns,
+// percentages, and the English job titles Italian tech companies actually use
+// ("ML Engineer" is not translated to "Ingegnere ML" by anyone). Naming an
+// owner for each would be bureaucracy around a file that #110 deletes. What
+// matters is that the number cannot grow: a genuinely untranslated string added
+// tomorrow fails here, and every one of these is read again as its page moves
+// to the catalogue in #106-#118.
+const UNTRANSLATED_BUDGET = 42;
+const untranslated = entries.filter((e) => e.key === e.value);
+
+assert.ok(
+  untranslated.length <= UNTRANSLATED_BUDGET,
+  `${FILE}: ${untranslated.length} entries whose Italian value is the English key, ` +
+    `up from ${UNTRANSLATED_BUDGET}.\n` +
+    untranslated.map((e) => `  L${e.lineNo}: ${JSON.stringify(e.key)}`).join('\n') +
+    '\nIf the new one is a proper noun or a term Italian keeps in English, raise the ' +
+    'budget in this file and say which. Otherwise translate it.',
+);
+
+// ── Every key a call site asks for exists in both catalogues ───────────────
+const catalogues = Object.fromEntries(
+  ['en', 'it'].map((l) => [l, JSON.parse(readFileSync(join(ROOT, `messages/${l}.json`), 'utf8'))]),
+);
+
+const has = (catalogue, path) =>
+  path.split('.').reduce((node, seg) => (node == null ? undefined : node[seg]), catalogue) !==
+  undefined;
+
+const SCAN_DIRS = ['pages', 'components', 'app', 'i18n', 'lib', 'hooks'];
+const sources = SCAN_DIRS.flatMap(function walk(dir) {
+  let listing;
+  try {
+    listing = readdirSync(join(ROOT, dir), { withFileTypes: true });
+  } catch {
+    return [];
+  }
+  return listing.flatMap((e) =>
+    e.isDirectory()
+      ? walk(join(dir, e.name))
+      : /\.tsx?$/.test(e.name)
+        ? [join(dir, e.name)]
+        : [],
+  );
+});
+
+// `const t = useTranslations('home.meta')` / `= await getTranslations('x')`.
+const BINDING = /(?:const|let)\s+(\w+)\s*=\s*(?:await\s+)?(?:use|get)Translations\s*\(\s*(['"])([^'"]*)\2\s*\)/g;
+// A namespace that is not a plain string — i18n/metadata.ts derives it from the
+// registry. Not checkable statically; counted so it stays visible.
+const DYNAMIC_NS = /(?:use|get)Translations\s*\(\s*(?!['"]|\))/g;
+
+const missing = [];
+let checked = 0;
+let dynamic = 0;
+
+for (const file of sources) {
+  const src = readFileSync(join(ROOT, file), 'utf8');
+  dynamic += [...src.matchAll(DYNAMIC_NS)].length;
+
+  for (const [, binding, , namespace] of src.matchAll(BINDING)) {
+    // `t('key')` and `t.rich('key')` for this binding, string literals only.
+    const usage = new RegExp(`\\b${binding}(?:\\.rich)?\\(\\s*(['"])([^'"\`]+)\\1`, 'g');
+    for (const [, , key] of src.matchAll(usage)) {
+      const path = `${namespace}.${key}`;
+      checked += 1;
+      for (const locale of ['en', 'it']) {
+        if (!has(catalogues[locale], path)) {
+          missing.push(`  ${relative('.', file)}: ${path} missing from messages/${locale}.json`);
+        }
+      }
+    }
+  }
+}
+
+assert.deepEqual(
+  missing,
+  [],
+  `${missing.length} translation key(s) a call site asks for do not exist.\n` +
+    missing.join('\n') +
+    '\nnext-intl renders the key path itself when a key is missing, so this ships as ' +
+    'literal "home.meta.title" on the page.',
+);
+
+console.log(
+  `[OK] ${FILE}: ${entries.length} entries, ${seen.size} unique keys, no duplicates, ` +
+    `${untranslated.length}/${UNTRANSLATED_BUDGET} untranslated\n` +
+    `[OK] messages: ${checked} key(s) used by call sites exist in en and it` +
+    (dynamic > 0 ? ` (${dynamic} dynamic namespace(s) not statically checkable)` : ''),
+);
