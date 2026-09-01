@@ -2,14 +2,14 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { ChevronDown, Volume2, VolumeX } from 'lucide-react';
 import AnimatedWaveform from '../ui/AnimatedWaveform';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 
 export default function CustomerStoriesShowcase() {
-  const { t } = useLanguage();
+  const t = useTranslations('customers');
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
@@ -33,21 +33,17 @@ export default function CustomerStoriesShowcase() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">
-              {t('Customer Stories')}
-            </span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">{t('toriesShowcase.text')}</span>
 
             <h2
               className="font-semibold text-white/95 mb-8"
               style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
-            >
-              {t('See how')}<br />{t('they')}{' '}
-              <span className="gradient-text">{t('grow.')}</span>
-            </h2>
+            >{t.rich('toriesShowcase.heading', {
+              br: () => <br />,
+              span: (chunks) => <span className="gradient-text">{chunks}</span>,
+            })}</h2>
 
-            <p className="text-[18px] text-white/[0.5] leading-[1.75] max-w-md mb-12" style={{ fontWeight: 300 }}>
-              {t('Organizations harness Skillvue to make talent decisions with confidence, eliminating guesswork and empowering their people. These are their stories.')}
-            </p>
+            <p className="text-[18px] text-white/[0.5] leading-[1.75] max-w-md mb-12" style={{ fontWeight: 300 }}>{t('toriesShowcase.body')}</p>
 
             <Button asChild variant="tertiary" mode="dark" className="group gap-3">
               <a
@@ -62,7 +58,7 @@ export default function CustomerStoriesShowcase() {
                 <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
                   <ChevronDown className="size-4" />
                 </span>
-                {t('Explore all stories')}
+                {t('toriesShowcase.cta')}
               </a>
             </Button>
           </motion.div>
@@ -127,16 +123,15 @@ export default function CustomerStoriesShowcase() {
                 }}
               >
                 {/* Quote */}
-                <p className="text-[clamp(1.2rem,2.2vw,1.6rem)] font-bold text-white leading-[1.35] mb-5">
-                  {t('has enabled me to turn that formerly manual process into a very fine tune')}{' '}
-                  <span className="text-[#FF5F24]">{t('machine.')}</span>
-                </p>
+                <p className="text-[clamp(1.2rem,2.2vw,1.6rem)] font-bold text-white leading-[1.35] mb-5">{t.rich('toriesShowcase.body2', {
+                  span: (chunks) => <span className="text-[#FF5F24]">{chunks}</span>,
+                })}</p>
 
                 {/* Author */}
-                <div className="mb-6">
-                  <span className="text-[14px] font-semibold text-white/80">Alessandro Mazzarol</span>
-                  <span className="text-[13px] text-white/40 ml-2">{t('TA & EB Manager, Carrefour')}</span>
-                </div>
+                <div className="mb-6">{t.rich('toriesShowcase.text2', {
+                  span: (chunks) => <span className="text-[14px] font-semibold text-white/80">{chunks}</span>,
+                  span2: (chunks) => <span className="text-[13px] text-white/40 ml-2">{chunks}</span>,
+                })}</div>
 
                 {/* Navigation bars */}
                 <div className="flex items-center gap-2">

@@ -60,6 +60,149 @@
       "description": "See how Skillvue turns interviews into skills data you can act on. Book a demo and we will walk through hiring, performance and development on your own use cases."
     }
   },
+  "customers": {
+    "customerHighlights": {
+      "highlights": {
+        "timeHire": {
+          "metricLabel": "time-to-hire",
+          "role": "TA & EB Manager, Carrefour Italia"
+        }
+      },
+      "heading": "Proof, not <span>promises.</span>",
+      "body": "See how leading European enterprises are making talent decisions with confidence."
+    },
+    "toriesShowcase": {
+      "text": "Customer Stories",
+      "heading": "See how<br></br>they <span>grow.</span>",
+      "body": "Organizations harness Skillvue to make talent decisions with confidence, eliminating guesswork and empowering their people. These are their stories.",
+      "cta": "Explore all stories",
+      "body2": "has enabled me to turn that formerly manual process into a very fine tune <span>machine.</span>",
+      "text2": "<span>Alessandro Mazzarol</span><span2>TA & EB Manager, Carrefour</span2>"
+    },
+    "finalCTA": {
+      "badges": {
+        "gdprCompliant": "GDPR-compliant",
+        "iso27001Certified": "ISO 27001 certified",
+        "euAiAct": "EU AI Act ready",
+        "n50Languages": "50+ languages",
+        "builtEuropeanEnterprises": "Built for European enterprises"
+      },
+      "heading": "Ready to see what Skillvue can do for your <span>organization?</span>",
+      "text": "Ready to explore",
+      "heading2": "Book a Demo",
+      "body": "See Skillvue live with your specific use case",
+      "cta": "Book a Demo"
+    },
+    "hero": {
+      "metrics": {
+        "europeanEnterprises": {
+          "label": "European enterprises"
+        },
+        "avgReductionTime": {
+          "label": "avg reduction in time-to-hire"
+        },
+        "roiWithin18": {
+          "label": "ROI within 18-24 months"
+        },
+        "hiringSuccessRate": {
+          "label": "hiring success rate"
+        }
+      },
+      "heading": "The decisions that define your organization. Finally backed by <span>proof.</span>",
+      "body": "50+ European enterprises have replaced gut feel with objective talent intelligence. across hiring, promotion, development, and transformation readiness. These are their stories.",
+      "cta": "Read the stories",
+      "text": "Our Customers"
+    },
+    "roi": {
+      "stats": {
+        "n45m": {
+          "value": "€4.5M",
+          "label": "saved annually in failed hire costs",
+          "sub": "Based on 300 hires, 30% failure rate, €50K average cost per failure"
+        },
+        "n69mo": {
+          "value": "6-9mo",
+          "label": "faster strategic execution",
+          "sub": "When the right people are in the right roles from day one"
+        },
+        "n1030x": {
+          "value": "10-30x",
+          "label": "ROI in 18-24 months",
+          "sub": "With payback typically in 6-12 months"
+        }
+      },
+      "heading": "People are your biggest cost. <span>They can also be your biggest return.</span>",
+      "body": "Every other budget line has an ROI framework. These companies proved talent spend can too.",
+      "cta": "Book a Demo"
+    },
+    "exploreStories": {
+      "heading": "Find your <span>story.</span>",
+      "body": "Every challenge is different. Every context is specific. Filter by what matters to you.",
+      "text": "Industry",
+      "text2": "Use Case",
+      "body2": "No stories match these filters yet.",
+      "body3": "We may have a relevant case to share privately.",
+      "cta": "Book a demo"
+    },
+    "featuredStories": {
+      "stories": {
+        "carrefour": {
+          "headline": "35% fewer days to hire. 30% better hires. Zero additional headcount.",
+          "quote": "Skillvue ci ha permesso di rafforzare la nostra People Strategy, rendendo la mappatura delle competenze più rapida, efficace e data-driven.",
+          "title": "TA & EB Manager, Carrefour Italia"
+        },
+        "ins-mercato": {
+          "headline": "~900 people verified. A Store Manager pipeline built from within."
+        }
+      },
+      "heading": "Proof, not <span>promises.</span>",
+      "body": "See how leading European enterprises are making talent decisions with confidence.",
+      "cta": "Read the full story"
+    },
+    "explore": {
+      "industries": {
+        "all": "All",
+        "gdo": "Large scale distribution",
+        "retail": "Retail",
+        "transportationLogistics": "Transportation & Logistics",
+        "financialServices": "Financial Services",
+        "mediaBroadcasting": "Media & Broadcasting",
+        "pharmaceutical": "Pharmaceutical"
+      },
+      "useCases": {
+        "all": "All",
+        "hiring": "Hiring",
+        "learningDevelopment": "Learning & Development",
+        "internalMobility": "Internal Mobility"
+      },
+      "stories": {
+        "carrefour": {
+          "headline": "Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI"
+        },
+        "subdued": {
+          "headline": "Subdued: building a single scalable hiring standard for an international network of 130+ stores"
+        },
+        "ins-mercato": {
+          "headline": "In's Mercato: how it built an internal pipeline of Store Managers"
+        },
+        "adr": {
+          "headline": "Aeroporti di Roma: how to develop an organisation of nearly 5,000 people starting from internal potential"
+        },
+        "europ-assistance": {
+          "headline": "Europ Assistance: how to recognise the potential that stands the test of time in a business built on human interaction"
+        },
+        "unicomm": {
+          "headline": "How Unicomm is building a new talent management system across a network of 250 stores and growing"
+        },
+        "mediaset": {
+          "headline": "GRAPE, Mediaset's Graduate Program Experience: how to identify and develop talented young people with an eye on future potential"
+        },
+        "fidia-farmaceutici": {
+          "headline": "Fidia Farmaceutici: how to map the real skills of the sales network to drive future growth"
+        }
+      }
+    }
+  },
   "home": {
     "meta": {
       "title": "Skillvue | AI Talent Intelligence Platform",
@@ -622,6 +765,51 @@
         }
       },
       "heading": "Two disciplines, one standard of <span>rigor</span>"
+    }
+  },
+  "shared": {
+    "productCrossLinks": {
+      "solutions": {
+        "talentAcquisition": {
+          "name": "Talent Acquisition",
+          "desc": "Predict who will perform"
+        },
+        "performanceManagement": {
+          "name": "Performance Management",
+          "desc": "Objective reviews"
+        },
+        "learningDevelopment": {
+          "name": "Learning & Development",
+          "desc": "Close real skill gaps"
+        },
+        "internalMobility": {
+          "name": "Internal Mobility",
+          "desc": "Unlock hidden talent"
+        },
+        "projectResourcing": {
+          "name": "Project Resourcing",
+          "desc": "Staff by capability"
+        }
+      },
+      "heading": "Explore by use case"
+    },
+    "solutionCrossLinks": {
+      "cta": "<span>Platform</span><span2>See how the full product works</span2>",
+      "cta2": "<span>Science</span><span2>Why you can trust the data</span2>",
+      "cta3": "<span>Platform</span><span2>See how the full product works</span2>",
+      "cta4": "<span>Science</span><span2>Why you can trust the data</span2>",
+      "text": "Explore other solutions",
+      "cta5": "Customer Stories",
+      "solutions": {
+        "talentAcquisition": "Talent Acquisition",
+        "performanceManagement": "Performance Management",
+        "learningDevelopment": "Learning & Development",
+        "internalMobility": "Internal Mobility",
+        "projectResourcing": "Project Resourcing"
+      }
+    },
+    "solutionFinalCTA": {
+      "cta": "Book a Demo"
     }
   },
   "solutions": {

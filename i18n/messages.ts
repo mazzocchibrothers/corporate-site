@@ -15,8 +15,15 @@
 
 import type { GetStaticProps } from 'next';
 
-/** Namespaces every page renders, because every page has a navbar and a footer. */
-const SHARED = ['common'];
+/**
+ * Namespaces every page renders.
+ *
+ * `common` is the navbar and the footer. `shared` is the handful of components
+ * used by more than one page — the cross-link blocks and the final CTA, which
+ * between them appear on 23 of the 61 routes. Loading the whole block everywhere
+ * costs less than the machinery to load a page's share of it.
+ */
+const SHARED = ['common', 'shared'];
 
 /**
  * Route id -> message namespace.

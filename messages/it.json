@@ -60,6 +60,149 @@
       "description": "Scopri come Skillvue trasforma i colloqui in dati sulle competenze su cui puoi agire. Prenota una demo: analizziamo insieme selezione, performance e sviluppo sui tuoi casi reali."
     }
   },
+  "customers": {
+    "customerHighlights": {
+      "highlights": {
+        "timeHire": {
+          "metricLabel": "time-to-hire",
+          "role": "TA & EB Manager, Carrefour Italia"
+        }
+      },
+      "heading": "Fatti, non <span>promesse.</span>",
+      "body": "Scopri come le principali aziende europee prendono decisioni sul talento con fiducia."
+    },
+    "toriesShowcase": {
+      "text": "Storie Clienti",
+      "heading": "See how<br></br>they <span>crescere.</span>",
+      "body": "Le organizzazioni usano Skillvue per prendere decisioni sul talento con fiducia, eliminando le supposizioni e valorizzando le proprie persone. Queste sono le loro storie.",
+      "cta": "Esplora tutte le storie",
+      "body2": "has enabled me to turn that formerly manual process into a very fine tune <span>machine.</span>",
+      "text2": "<span>Alessandro Mazzarol</span><span2>TA & EB Manager, Carrefour</span2>"
+    },
+    "finalCTA": {
+      "badges": {
+        "gdprCompliant": "Conforme al GDPR",
+        "iso27001Certified": "ISO 27001 certified",
+        "euAiAct": "EU AI Act ready",
+        "n50Languages": "50+ languages",
+        "builtEuropeanEnterprises": "Built for European enterprises"
+      },
+      "heading": "Pronto a vedere cosa Skillvue può fare per la tua <span>organizzazione?</span>",
+      "text": "Pronto per esplorare",
+      "heading2": "Prenota una Demo",
+      "body": "Vedi Skillvue in azione con il tuo caso d'uso specifico",
+      "cta": "Prenota una Demo"
+    },
+    "hero": {
+      "metrics": {
+        "europeanEnterprises": {
+          "label": "aziende europee"
+        },
+        "avgReductionTime": {
+          "label": "riduzione media del time-to-hire"
+        },
+        "roiWithin18": {
+          "label": "ROI entro 18-24 mesi"
+        },
+        "hiringSuccessRate": {
+          "label": "tasso di successo nelle assunzioni"
+        }
+      },
+      "heading": "Le decisioni che definiscono la tua organizzazione, finalmente supportate da <span>prove.</span>",
+      "body": "Oltre 50 aziende europee hanno sostituito sensazioni personali e giudizi non standardizzati con talent intelligence oggettiva per i propri processi di selezione, promozione e sviluppo. Queste sono le loro storie.",
+      "cta": "Leggi le storie",
+      "text": "I Nostri Clienti"
+    },
+    "roi": {
+      "stats": {
+        "n45m": {
+          "value": "€4,5M",
+          "label": "risparmiati annualmente da costi di potenziali assunzioni fallite",
+          "sub": "Calcolo basato su 300 assunzioni, 30% tasso mishire, €50K costo medio per mishire"
+        },
+        "n69mo": {
+          "value": "6-9 mesi",
+          "label": "esecuzione strategica più veloce",
+          "sub": "Quando le persone giuste sono nei ruoli giusti dal primo giorno"
+        },
+        "n1030x": {
+          "value": "10-30x",
+          "label": "ROI in 18-24 mesi",
+          "sub": "Con payback visibile tipicamente già nei primi 6-12 mesi"
+        }
+      },
+      "heading": "Le persone sono il tuo costo maggiore. <span>Possono anche essere il tuo ritorno maggiore.</span>",
+      "body": "Ogni altra area ha un framework consolidato per il calcolo del ROI. Queste storie ti dimostrano che anche HR può averlo.",
+      "cta": "Prenota una Demo"
+    },
+    "exploreStories": {
+      "heading": "Trova la tua <span>storia.</span>",
+      "body": "Ogni sfida è diversa. Ogni contesto ha le sue particolarità. Scoprili uno ad uno!",
+      "text": "Settore",
+      "text2": "Caso d'uso",
+      "body2": "Nessuna storia corrisponde ancora a questi filtri.",
+      "body3": "Potremmo avere un caso rilevante da condividere in privato.",
+      "cta": "Book a demo"
+    },
+    "featuredStories": {
+      "stories": {
+        "carrefour": {
+          "headline": "35% in meno di giorni per assumere. 30% di assunzioni migliori. Zero personale aggiuntivo.",
+          "quote": "Skillvue ci ha permesso di rafforzare la nostra People Strategy, rendendo la mappatura delle competenze più rapida, efficace e data-driven.",
+          "title": "TA & EB Manager, Carrefour Italia"
+        },
+        "ins-mercato": {
+          "headline": "~900 persone valutate. Una pipeline di Store Manager costruita dall interno."
+        }
+      },
+      "heading": "Fatti, non <span>promesse.</span>",
+      "body": "Scopri come le principali aziende europee prendono decisioni sul talento con fiducia.",
+      "cta": "Leggi la storia completa"
+    },
+    "explore": {
+      "industries": {
+        "all": "tutti",
+        "gdo": "GDO",
+        "retail": "Retail",
+        "transportationLogistics": "Trasporti e Logistica",
+        "financialServices": "Servizi Finanziari",
+        "mediaBroadcasting": "Media & Broadcasting",
+        "pharmaceutical": "Farmaceutico"
+      },
+      "useCases": {
+        "all": "tutti",
+        "hiring": "Selezione",
+        "learningDevelopment": "Learning & Development",
+        "internalMobility": "Mobilità Interna"
+      },
+      "stories": {
+        "carrefour": {
+          "headline": "Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione"
+        },
+        "subdued": {
+          "headline": "Subdued: come creare uno standard di selezione unico e scalabile per una rete internazionale di 130+ negozi"
+        },
+        "ins-mercato": {
+          "headline": "In's Mercato: come ha costruito una pipeline interna di Store Manager"
+        },
+        "adr": {
+          "headline": "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone ripartendo dal potenziale interno"
+        },
+        "europ-assistance": {
+          "headline": "Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana"
+        },
+        "unicomm": {
+          "headline": "Come Unicomm sta costruendo una nuova gestione del talento su una rete di 250 punti vendita in costante aumento"
+        },
+        "mediaset": {
+          "headline": "GRAPE, la Graduate Program Experience di Mediaset: come selezionare e accompagnare giovani di valore guardando al potenziale futuro"
+        },
+        "fidia-farmaceutici": {
+          "headline": "Fidia Farmaceutici: come fotografare su scala globale le reali competenze della rete vendita per supportare la crescita futura"
+        }
+      }
+    }
+  },
   "home": {
     "meta": {
       "title": "Skillvue | Piattaforma di Talent Intelligence con AI",
@@ -622,6 +765,51 @@
         }
       },
       "heading": "Due discipline, <span>uno standard rigoroso</span>"
+    }
+  },
+  "shared": {
+    "productCrossLinks": {
+      "solutions": {
+        "talentAcquisition": {
+          "name": "Talent Acquisition",
+          "desc": "Prevedi chi performerà"
+        },
+        "performanceManagement": {
+          "name": "Performance Management",
+          "desc": "Valutazioni oggettive"
+        },
+        "learningDevelopment": {
+          "name": "Learning & Development",
+          "desc": "Lavora da subito sul migliorare le aree più critiche"
+        },
+        "internalMobility": {
+          "name": "Mobilità Interna",
+          "desc": "Sblocca talento nascosto"
+        },
+        "projectResourcing": {
+          "name": "Project Resourcing",
+          "desc": "Assegna per competenza"
+        }
+      },
+      "heading": "Esplora per caso d'uso"
+    },
+    "solutionCrossLinks": {
+      "cta": "<span>Piattaforma</span><span2>Scopri come funziona il prodotto completo</span2>",
+      "cta2": "<span>Scienza</span><span2>Perché puoi fidarti dei dati</span2>",
+      "cta3": "<span>Piattaforma</span><span2>Scopri come funziona il prodotto completo</span2>",
+      "cta4": "<span>Scienza</span><span2>Perché puoi fidarti dei dati</span2>",
+      "text": "Esplora altre soluzioni",
+      "cta5": "Storie Clienti",
+      "solutions": {
+        "talentAcquisition": "Talent Acquisition",
+        "performanceManagement": "Performance Management",
+        "learningDevelopment": "Learning & Development",
+        "internalMobility": "Mobilità Interna",
+        "projectResourcing": "Project Resourcing"
+      }
+    },
+    "solutionFinalCTA": {
+      "cta": "Prenota una Demo"
     }
   },
   "solutions": {

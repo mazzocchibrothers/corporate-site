@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
@@ -14,26 +15,22 @@ const stories = [
     id: 'carrefour',
     company: 'Carrefour',
     tags: ['Retail GDO', 'Hiring'],
-    headline: '35% fewer days to hire. 30% better hires. Zero additional headcount.',
     metrics: ['-35% time-to-hire', '+30% new hire success'],
-    quote: 'Skillvue ci ha permesso di rafforzare la nostra People Strategy, rendendo la mappatura delle competenze più rapida, efficace e data-driven.',
     author: 'Alessandro Mazzarol',
-    title: 'TA & EB Manager, Carrefour Italia',
+    hasQuote: true,
   },
   {
     id: 'ins-mercato',
     company: "In's Mercato",
     tags: ['Retail GDO', 'Hiring + Internal Mobility'],
-    headline: '~900 people verified. A Store Manager pipeline built from within.',
     metrics: ['~900 verifications', 'Hiring + Mobility unified'],
-    quote: '',
     author: '',
-    title: '',
   },
 ];
 
 export default function FeaturedStories() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('customers');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
@@ -42,13 +39,10 @@ export default function FeaturedStories() {
     <section id="featured" data-testid="featured-stories" className="section-breathe relative py-20 lg:py-24" ref={ref}>
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-4">
-            {t('Proof, not')}{' '}
-            <span className="font-bold gradient-text-on-light">{t('promises.')}</span>
-          </h2>
-          <p className="text-[18px] text-[#7A7A7A] leading-[1.75] max-w-2xl">
-            {t('See how leading European enterprises are making talent decisions with confidence.')}
-          </p>
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-4">{t.rich('featuredStories.heading', {
+            span: (chunks) => <span className="font-bold gradient-text-on-light">{chunks}</span>,
+          })}</h2>
+          <p className="text-[18px] text-[#7A7A7A] leading-[1.75] max-w-2xl">{t('featuredStories.body')}</p>
         </motion.div>
 
         <div className="space-y-5">
@@ -68,16 +62,16 @@ export default function FeaturedStories() {
                     <span key={t} className="px-3 py-1 rounded-full text-[11px] font-semibold text-[#9B9DFB]/[0.65] bg-[#4B4DF7]/[0.06]">{t}</span>
                   ))}
                 </div>
-                <h3 className="text-[18px] font-semibold text-[#121212]/80 mb-4 leading-snug">{t(s.headline)}</h3>
+                <h3 className="text-[18px] font-semibold text-[#121212]/80 mb-4 leading-snug">{t(`featuredStories.stories.${s.id}.headline`)}</h3>
                 <div className="flex flex-wrap gap-3 mb-6">
                   {s.metrics.map(m => (
                     <span key={m} className="text-[15px] font-bold text-[#9B9DFB]">{m}</span>
                   ))}
                 </div>
-                {s.quote && (
+                {s.hasQuote && (
                   <div className="border-l-2 border-[#4B4DF7]/20 pl-5 mb-6">
-                    <p className="text-[14px] text-[#7A7A7A] italic leading-[1.7] mb-2">"{t(s.quote)}"</p>
-                    <p className="text-[13px] text-[#121212]/70 font-semibold">{s.author}, <span className="font-normal text-[#7A7A7A]">{t(s.title)}</span></p>
+                    <p className="text-[14px] text-[#7A7A7A] italic leading-[1.7] mb-2">"{t(`featuredStories.stories.${s.id}.quote`)}"</p>
+                    <p className="text-[13px] text-[#121212]/70 font-semibold">{s.author}, <span className="font-normal text-[#7A7A7A]">{t(`featuredStories.stories.${s.id}.title`)}</span></p>
                   </div>
                 )}
               </div>
@@ -86,9 +80,7 @@ export default function FeaturedStories() {
                   variant="tertiary"
                   mode="dark"
                   onClick={() => { router.push(`${href('customers', lang)}/${s.id}`); window.scrollTo(0, 0); }}
-                >
-                  {t('Read the full story')}
-                </Button>
+                >{t('featuredStories.cta')}</Button>
               </div>
             </motion.div>
           ))}

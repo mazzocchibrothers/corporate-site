@@ -28,14 +28,14 @@ assert.equal(
 );
 
 // ── The loader returns only what was asked for ─────────────────────────────
-const run = async (routeId, locale, extra) =>
-  (await messagesFor(routeId, extra)({ locale })).props.messages;
+const run = async (routeId, locale, forceLocale) =>
+  (await messagesFor(routeId, forceLocale)({ locale })).props.messages;
 
 const home = await run('index', 'en');
 assert.deepEqual(
   Object.keys(home).sort(),
-  ['common', 'home'],
-  'a page must receive its own namespace plus the shared one, and nothing else',
+  ['common', 'home', 'shared'],
+  'a page must receive its own namespace plus the shared ones (common, shared), and nothing else',
 );
 assert.ok(home.home.meta.title, 'the picked namespace keeps its nested shape');
 
@@ -44,7 +44,7 @@ assert.ok(home.home.meta.title, 'the picked namespace keeps its nested shape');
 const missing = await run('customers/does-not-exist', 'en');
 assert.deepEqual(
   Object.keys(missing).sort(),
-  ['common'],
+  ['common', 'shared'],
   'an unknown namespace contributes nothing — and must not drag the catalogue in with it',
 );
 

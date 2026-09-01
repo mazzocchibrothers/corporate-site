@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -9,7 +10,8 @@ import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
 export default function SolutionFinalCTA({ headline, accentWord }) {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('shared');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -28,7 +30,7 @@ export default function SolutionFinalCTA({ headline, accentWord }) {
           </h2>
           <Button asChild variant="primary" mode="dark">
             <a href={href('book-meeting', lang)}>
-              <span>{t('Book a Demo')}</span>
+              <span>{t('solutionFinalCTA.cta')}</span>
               <ArrowRight aria-hidden="true" />
             </a>
           </Button>

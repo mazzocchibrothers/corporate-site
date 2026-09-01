@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
@@ -11,51 +12,35 @@ import { href } from '@/i18n/routes';
 
 const allStories = [
   {
-    id: 'carrefour', company: 'Carrefour', industry: 'GDO', useCases: ['Hiring', 'Learning & Development'],
-    headlineIt: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione',
-    headlineEn: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI',
+    id: 'carrefour', company: 'Carrefour', industry: 'gdo', useCases: ['hiring', 'learningDevelopment'],
     bgImage: '/logos/carrefour-bg.avif',
   },
   {
-    id: 'subdued', company: 'Subdued', industry: 'Retail', useCases: ['Hiring'],
-    headlineIt: 'Subdued: come creare uno standard di selezione unico e scalabile per una rete internazionale di 130+ negozi',
-    headlineEn: 'Subdued: building a single scalable hiring standard for an international network of 130+ stores',
+    id: 'subdued', company: 'Subdued', industry: 'retail', useCases: ['hiring'],
     bgImage: '/logos/subdued-bg.avif',
   },
   {
-    id: 'ins-mercato', company: "In's Mercato", industry: 'GDO', useCases: ['Internal Mobility'],
-    headlineIt: "In's Mercato: come ha costruito una pipeline interna di Store Manager",
-    headlineEn: "In's Mercato: how it built an internal pipeline of Store Managers",
+    id: 'ins-mercato', company: "In's Mercato", industry: 'gdo', useCases: ['internalMobility'],
     bgImage: '/logos/insmercato-bg.avif',
   },
   {
-    id: 'adr', company: 'Aeroporti di Roma', industry: 'Transportation & Logistics', useCases: ['Internal Mobility', 'Learning & Development'],
-    headlineIt: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone ripartendo dal potenziale interno",
-    headlineEn: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people starting from internal potential',
+    id: 'adr', company: 'Aeroporti di Roma', industry: 'transportationLogistics', useCases: ['internalMobility', 'learningDevelopment'],
     bgImage: '/logos/adr-explore-stories.avif',
   },
   {
-    id: 'europ-assistance', company: 'Europ Assistance', industry: 'Financial Services', useCases: ['Hiring'],
-    headlineIt: 'Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana',
-    headlineEn: 'Europ Assistance: how to recognise the potential that stands the test of time in a business built on human interaction',
+    id: 'europ-assistance', company: 'Europ Assistance', industry: 'financialServices', useCases: ['hiring'],
     bgImage: '/logos/europ-assistance-background-explore-stories.avif',
   },
   {
-    id: 'unicomm', company: 'Unicomm', industry: 'GDO', useCases: ['Hiring', 'Internal Mobility', 'Learning & Development'],
-    headlineIt: 'Come Unicomm sta costruendo una nuova gestione del talento su una rete di 250 punti vendita in costante aumento',
-    headlineEn: 'How Unicomm is building a new talent management system across a network of 250 stores and growing',
+    id: 'unicomm', company: 'Unicomm', industry: 'gdo', useCases: ['hiring', 'internalMobility', 'learningDevelopment'],
     bgImage: '/logos/unicomm-background-explore-stories.avif',
   },
   {
-    id: 'mediaset', company: 'Mediaset', industry: 'Media & Broadcasting', useCases: ['Hiring'],
-    headlineIt: 'GRAPE, la Graduate Program Experience di Mediaset: come selezionare e accompagnare giovani di valore guardando al potenziale futuro',
-    headlineEn: "GRAPE, Mediaset's Graduate Program Experience: how to identify and develop talented young people with an eye on future potential",
+    id: 'mediaset', company: 'Mediaset', industry: 'mediaBroadcasting', useCases: ['hiring'],
     bgImage: '/logos/mediaset-background-explore-stories (2).avif',
   },
   {
-    id: 'fidia-farmaceutici', company: 'Fidia Farmaceutici', industry: 'Pharmaceutical', useCases: ['Learning & Development'],
-    headlineIt: 'Fidia Farmaceutici: come fotografare su scala globale le reali competenze della rete vendita per supportare la crescita futura',
-    headlineEn: 'Fidia Farmaceutici: how to map the real skills of the sales network to drive future growth',
+    id: 'fidia-farmaceutici', company: 'Fidia Farmaceutici', industry: 'pharmaceutical', useCases: ['learningDevelopment'],
     bgImage: '/logos/fidia-farmaceutici explore stories.avif',
   },
   // Temporarily removed from listing pending approval (restore when ready):
@@ -68,31 +53,26 @@ const allStories = [
   // douglas, eataly
 ];
 
+// Still derived from the stories, so a new story cannot arrive without its
+// filters. The values are ids now, and the labels come from the catalogue —
+// which is what retired the industryLabel() ladder of locale checks.
 const filters = {
-  industry: ['All', ...Array.from(new Set(allStories.map(s => s.industry)))],
-  useCase: ['All', ...Array.from(new Set(allStories.flatMap(s => s.useCases)))],
+  industry: ['all', ...Array.from(new Set(allStories.map(s => s.industry)))],
+  useCase: ['all', ...Array.from(new Set(allStories.flatMap(s => s.useCases)))],
 };
 
 export default function ExploreStories() {
-  const { t, lang } = useLanguage();
-  const [activeIndustry, setActiveIndustry] = useState('All');
-  const [activeUseCase, setActiveUseCase] = useState('All');
+  const { lang } = useLanguage();
+  const t = useTranslations('customers');
+  const [activeIndustry, setActiveIndustry] = useState('all');
+  const [activeUseCase, setActiveUseCase] = useState('all');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
 
-  const industryLabel = (f: string) => {
-    if (f === 'GDO' && lang === 'en') return 'Large scale distribution';
-    if (f === 'Transportation & Logistics' && lang === 'it') return 'Trasporti e Logistica';
-    if (f === 'Media & Broadcasting' && lang === 'it') return 'Media & Broadcasting';
-    if (f === 'Pharmaceutical' && lang === 'it') return 'Farmaceutico';
-    if (f === 'Pharmaceutical' && lang === 'en') return 'Pharmaceutical';
-    return f;
-  };
-
   const filtered = allStories.filter(s => {
-    if (activeIndustry !== 'All' && s.industry !== activeIndustry) return false;
-    if (activeUseCase !== 'All' && !s.useCases.includes(activeUseCase)) return false;
+    if (activeIndustry !== 'all' && s.industry !== activeIndustry) return false;
+    if (activeUseCase !== 'all' && !s.useCases.includes(activeUseCase)) return false;
     return true;
   });
 
@@ -100,27 +80,24 @@ export default function ExploreStories() {
     <section id="explore" data-testid="explore-stories" className="relative py-20 lg:py-28" ref={ref}>
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <motion.div className="mb-12" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">
-            {t('Find your')}{' '}
-            <span className="font-bold gradient-text">{t('story.')}</span>
-          </h2>
-          <p className="text-[20px] text-white/[0.65] leading-[1.75] max-w-2xl">
-            {t('Every challenge is different. Every context is specific. Filter by what matters to you.')}
-          </p>
+          <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">{t.rich('exploreStories.heading', {
+            span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+          })}</h2>
+          <p className="text-[20px] text-white/[0.65] leading-[1.75] max-w-2xl">{t('exploreStories.body')}</p>
         </motion.div>
 
         {/* Filters */}
         <motion.div className="mb-14 space-y-5" initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.2 }}>
           <div className="flex flex-wrap gap-2">
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mr-4 self-center">{t('Industry')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mr-4 self-center">{t('exploreStories.text')}</span>
             {filters.industry.map(f => (
-              <button key={f} onClick={() => setActiveIndustry(f)} className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-white/[0.1] text-white border border-white/[0.15]' : 'text-white/40 border border-transparent hover:text-white/70'}`}>{t(industryLabel(f))}</button>
+              <button key={f} onClick={() => setActiveIndustry(f)} className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${activeIndustry === f ? 'bg-white/[0.1] text-white border border-white/[0.15]' : 'text-white/40 border border-transparent hover:text-white/70'}`}>{t(`explore.industries.${f}`)}</button>
             ))}
           </div>
           <div className="flex flex-wrap gap-2">
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mr-4 self-center">{t('Use Case')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mr-4 self-center">{t('exploreStories.text2')}</span>
             {filters.useCase.map(f => (
-              <button key={f} onClick={() => setActiveUseCase(f)} className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${activeUseCase === f ? 'bg-white/[0.1] text-white border border-white/[0.15]' : 'text-white/40 border border-transparent hover:text-white/70'}`}>{t(f)}</button>
+              <button key={f} onClick={() => setActiveUseCase(f)} className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${activeUseCase === f ? 'bg-white/[0.1] text-white border border-white/[0.15]' : 'text-white/40 border border-transparent hover:text-white/70'}`}>{t(`explore.useCases.${f}`)}</button>
             ))}
           </div>
         </motion.div>
@@ -161,17 +138,17 @@ export default function ExploreStories() {
                   </div>
                 </div>
                 {/* Title below. left aligned with card, with left padding */}
-                <h3 className="text-[18px] font-semibold text-white/[0.65] leading-[1.45] mt-5 pl-2 group-hover:text-white/90 transition-colors duration-400">{lang === 'it' ? s.headlineIt : s.headlineEn}</h3>
+                <h3 className="text-[18px] font-semibold text-white/[0.65] leading-[1.45] mt-5 pl-2 group-hover:text-white/90 transition-colors duration-400">{t(`explore.stories.${s.id}.headline`)}</h3>
               </motion.div>
             ))}
           </div>
         ) : (
           <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-10 text-center">
-            <p className="text-[16px] text-white/50 mb-4">{t('No stories match these filters yet.')}</p>
-            <p className="text-[14px] text-white/30">{t('We may have a relevant case to share privately.')}</p>
+            <p className="text-[16px] text-white/50 mb-4">{t('exploreStories.body2')}</p>
+            <p className="text-[14px] text-white/30">{t('exploreStories.body3')}</p>
             <Button asChild variant="secondary" mode="dark" className="mt-6">
               <a href={href('book-meeting', lang)}>
-                {t('Book a demo')} <ArrowRight aria-hidden="true" />
+                {t('exploreStories.cta')} <ArrowRight aria-hidden="true" />
               </a>
             </Button>
           </div>
