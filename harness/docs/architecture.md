@@ -16,12 +16,30 @@ change here is almost always **a page**, and the risk is almost always
 
 ## Principles
 
-1. **Pages Router. Stay there.**
-   `pages/` with file-based routing, `_app.tsx` as the only shell (background
-   layers, GTM, hreflang, `LanguageProvider`). Do not introduce `app/`, Server
-   Components, or a route-group migration without an Issue that documents a
-   concrete reason. React 19 and Next 16 are installed; that is not permission
-   to migrate.
+1. **Migrating to the App Router. Follow the phases, don't freelance.**
+   The site is on the Pages Router today and is moving to `app/`, interleaved
+   with the copy migration so each page is visited once. Decided 2026-09-01.
+
+   **The order is not negotiable, and it is not a preference.** The built-in
+   `i18n` block in `next.config.ts` does not exist in the App Router, and
+   leaving it in place while an `app/` directory appears makes incremental
+   adoption 404 ([vercel/next.js#57704](https://github.com/vercel/next.js/issues/57704)).
+   So:
+
+   1. **Phase 0 first** (#124-#127): locale routing moves to next-intl
+      middleware, `nextConfig.i18n` is deleted, and all 61 routes are
+      regression-tested in both locales — all while still on the Pages Router.
+      `useRouter().locale` stops being populated the moment that block goes, and
+      with `@ts-nocheck` on 157 files nothing will tell you. It fails as "the
+      Italian page renders in English".
+   2. **Then the App Router shell** (#128-#132).
+   3. **Then pages, one at a time**, each moving its copy and its file together.
+
+   Until Phase 0 is green, **do not create `app/`**. A page added there earlier
+   does not fail loudly — it 404s in one locale.
+
+   During the migration both routers coexist, which Next supports. A page under
+   `pages/` is not stale: it has not been reached yet.
 
 2. **Every page renders its own `Navbar` and `Footer`.**
    There is no shared layout component and no `getLayout` pattern. Follow the
