@@ -6,6 +6,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 const stats = [
   { value: '€4.5M', label: 'saved annually in failed hire costs', sub: 'Based on 300 hires, 30% failure rate, €50K average cost per failure' },
@@ -49,7 +50,7 @@ export default function CustomersROI() {
         <motion.div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6" initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.5 }}>
           <p className="text-[14px] md:text-[15px] text-[#7A7A7A]">{t('Every other budget line has an ROI framework. These companies proved talent spend can too.')}</p>
           <Button asChild variant="primary" mode="light">
-            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
+            <a href={href('book-meeting', lang)}>
               {t('Book a Demo')}
               <ArrowRight aria-hidden="true" />
             </a>

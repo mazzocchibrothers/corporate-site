@@ -6,6 +6,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function LDCTA() {
   const { t, lang } = useLanguage();
@@ -23,7 +24,7 @@ export default function LDCTA() {
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7, delay: 0.2 }}>
           <Button asChild variant="primary" mode="light" className="w-full md:w-auto max-w-xl">
-            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="ld-final-cta">
+            <a href={href('book-meeting', lang)} data-testid="ld-final-cta">
               <span>{t('Book a Demo')}</span>
               <ArrowRight aria-hidden="true" />
             </a>

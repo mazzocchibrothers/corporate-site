@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { messagesFor } from '@/i18n/messages';
+import { href } from '@/i18n/routes';
 
 const articles = [
   {
@@ -196,7 +197,7 @@ export default function BlogPage() {
                 {t('Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.')}
               </p>
               <Button
-                onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
+                onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
                 variant="primary"
                 mode="dark"
               >

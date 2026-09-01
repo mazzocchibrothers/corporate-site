@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function LDHero() {
   const { t, lang } = useLanguage();
@@ -32,7 +33,7 @@ export default function LDHero() {
             {t('Skillvue gives L&D leaders objective, measurable data on where the real skill gaps are, at individual, team, and organizational level, so every training investment is targeted, measurable, and aligned to business impact.')}
           </p>
           <Button asChild variant="primary" mode="dark" className="shrink-0">
-            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="ld-hero-cta">
+            <a href={href('book-meeting', lang)} data-testid="ld-hero-cta">
               <span>{t('Book a Demo')}</span>
               <ArrowRight aria-hidden="true" />
             </a>

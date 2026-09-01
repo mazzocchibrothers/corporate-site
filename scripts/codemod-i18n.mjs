@@ -193,6 +193,72 @@ function renderUnit(node, italian, report) {
   return { en: en.trim(), it: it.trim(), chunks };
 }
 
+
+// ── Data arrays ────────────────────────────────────────────────────────────
+// The other half of the copy: `painCards.map(card => <h3>{t(card.title)}</h3>)`.
+// The English lives in a module-level array, not at the call site, so no scan
+// that only reads call sites can move it. These 139 calls are why the naive
+// version of this codemod would have quietly left a quarter of the site behind.
+
+const STOPWORDS = new Set(['of','the','a','an','to','and','in','for','with','are','is','on','your','our','that','it','be','by','at','as','from']);
+
+/** A readable, stable id for one array entry, from its first piece of copy.
+ *  "of hires fail within 18 months" -> hiresFailWithin. */
+function idFrom(text, taken) {
+  const words = text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter((w) => w && !STOPWORDS.has(w))
+    .slice(0, 3);
+  let base = words
+    .map((w, i) => (i === 0 ? w : w[0].toUpperCase() + w.slice(1)))
+    .join('') || 'item';
+  if (/^[0-9]/.test(base)) base = `n${base}`;
+  let id = base;
+  for (let n = 2; taken.has(id); n += 1) id = `${base}${n}`;
+  taken.add(id);
+  return id;
+}
+
+/** Module-level `const NAME = [ {…}, … ]` — the shape every one of these has. */
+function arrayDeclarations(sf) {
+  const found = new Map();
+  for (const stmt of sf.statements) {
+    if (!ts.isVariableStatement(stmt)) continue;
+    for (const decl of stmt.declarationList.declarations) {
+      if (!ts.isIdentifier(decl.name) || !decl.initializer) continue;
+      if (!ts.isArrayLiteralExpression(decl.initializer)) continue;
+      if (!decl.initializer.elements.every((e) => ts.isObjectLiteralExpression(e))) continue;
+      found.set(decl.name.text, decl.initializer);
+    }
+  }
+  return found;
+}
+
+/** `painCards.map((card) => …)` binds `card` to `painCards`. */
+function mapBindings(sf, arrays) {
+  const bindings = new Map();
+  const visit = (node) => {
+    if (
+      ts.isCallExpression(node) &&
+      ts.isPropertyAccessExpression(node.expression) &&
+      node.expression.name.text === 'map' &&
+      ts.isIdentifier(node.expression.expression) &&
+      arrays.has(node.expression.expression.text)
+    ) {
+      const cb = node.arguments[0];
+      const param = cb && (ts.isArrowFunction(cb) || ts.isFunctionExpression(cb)) ? cb.parameters[0] : null;
+      if (param && ts.isIdentifier(param.name)) {
+        bindings.set(param.name.text, node.expression.expression.text);
+      }
+    }
+    ts.forEachChild(node, visit);
+  };
+  visit(sf);
+  return bindings;
+}
+
 // ── Key naming ─────────────────────────────────────────────────────────────
 /**
  * `components/product/ProductHero.tsx` under namespace `product` becomes
@@ -211,7 +277,11 @@ function scopeOf(file, namespace) {
   for (const word of words) {
     stripped = stripped.replace(new RegExp(`^${word}`, 'i'), '');
   }
-  const slug = (stripped || name).replace(/^./, (c) => c.toLowerCase());
+  // `Section` is what every one of these is. It says nothing.
+  stripped = stripped.replace(/Section$/, '') || name;
+  // ROISection -> roi, not rOI: lowercase a leading run of capitals whole,
+  // except the capital that starts the next word.
+  const slug = stripped.replace(/^[A-Z]+(?![a-z])|^[A-Z]/, (m) => m.toLowerCase());
   return words.includes(slug) ? '' : slug;
 }
 
@@ -249,14 +319,114 @@ function processFile(file, namespace, italian) {
   // message whose value is the key — it happens to rewrite to the same bytes,
   // so the file looks idempotent while the reported catalogue is nonsense.
   if (/\bt\s*=\s*useTranslations\s*\(/.test(src)) {
-    return { src, out: src, messages: {}, report: { dynamic: [], untranslated: [] }, count: 0, done: true };
+    return { src, out: src, messages: {}, report: { dynamic: [], untranslated: [], keptInCode: [] }, count: 0, done: true };
   }
-  const report = { dynamic: [], untranslated: [], skipped: [] };
+  const report = { dynamic: [], untranslated: [], keptInCode: [] };
   const messages = {};
   const edits = [];
-  const nextKey = keyer(scopeOf(file, namespace));
+  const scope = scopeOf(file, namespace);
+  const nextKey = keyer(scope);
+
+  // Which module-level arrays feed a t(param.prop) call, and through which
+  // property. Collected before the JSX walk so the walk can rewrite the calls.
+  const arrays = arrayDeclarations(sf);
+  const bindings = mapBindings(sf, arrays);
+  const arrayProps = new Map(); // array name -> Set(prop)
+  const arrayCalls = []; // { node, array, prop }
+  const rawUse = new Map(); // array name -> Set(prop) read outside t()
+  {
+    // A property read anywhere but inside t() is not just copy — `key={s.company}`
+    // and `data-testid={s.company…}` are two of them. Lifting it out of the array
+    // would leave those references pointing at nothing, so the property stays and
+    // the string exists twice until a person decides which use is the real one.
+    const inTCall = new Set();
+    const mark = (node) => {
+      if (isTCall(node) && node.arguments[0]) inTCall.add(node.arguments[0]);
+      ts.forEachChild(node, mark);
+    };
+    mark(sf);
+
+    const scan = (node) => {
+      if (
+        ts.isPropertyAccessExpression(node) &&
+        ts.isIdentifier(node.expression) &&
+        bindings.has(node.expression.text) &&
+        !inTCall.has(node)
+      ) {
+        const array = bindings.get(node.expression.text);
+        if (!rawUse.has(array)) rawUse.set(array, new Set());
+        rawUse.get(array).add(node.name.text);
+      }
+      ts.forEachChild(node, scan);
+    };
+    scan(sf);
+
+    const visit = (node) => {
+      if (
+        isTCall(node) &&
+        node.arguments.length === 1 &&
+        ts.isPropertyAccessExpression(node.arguments[0]) &&
+        ts.isIdentifier(node.arguments[0].expression) &&
+        bindings.has(node.arguments[0].expression.text)
+      ) {
+        const array = bindings.get(node.arguments[0].expression.text);
+        const prop = node.arguments[0].name.text;
+        if (!arrayProps.has(array)) arrayProps.set(array, new Set());
+        arrayProps.get(array).add(prop);
+        arrayCalls.push({ node, array, prop, param: node.arguments[0].expression.text });
+      }
+      ts.forEachChild(node, visit);
+    };
+    visit(sf);
+  }
+
+  // Give every entry an id, and lift its copy out into the catalogue.
+  const arrayEdits = [];
+  const orphans = [];
+  for (const [name, props] of arrayProps) {
+    const literal = arrays.get(name);
+    const key = name.replace(/^./, (c) => c.toLowerCase());
+    const kept = new Set([...props].filter((p) => rawUse.get(name)?.has(p)));
+    for (const p of kept) report.keptInCode.push(`${file}: ${name}[].${p}`);
+    const taken = new Set();
+    const ids = [];
+
+    for (const element of literal.elements) {
+      const read = (prop) => {
+        const p = element.properties.find(
+          (x) => ts.isPropertyAssignment(x) && x.name.getText() === prop,
+        );
+        return p && ts.isStringLiteral(p.initializer) ? p.initializer.text : null;
+      };
+      const existing = read('id') ?? read('slug');
+      const first = [...props].map(read).find((v) => v);
+      if (!first) { ids.push(null); continue; }
+      const id = existing ?? idFrom(first, taken);
+      ids.push(id);
+
+      for (const prop of props) {
+        const english = read(prop);
+        if (english === null) continue;
+        const translated = italian.get(english);
+        if (translated === undefined) report.untranslated.push(english);
+        messages[`${scope ? `${scope}.` : ''}${key}.${id}.${prop}`] = {
+          en: english,
+          it: translated ?? english,
+        };
+      }
+    }
+    arrayEdits.push({ literal, props: new Set([...props].filter((p) => !kept.has(p))), ids });
+  }
 
   const visit = (node) => {
+    // A unit whose only child is an inline element is that element: the wrapper
+    // contributes a <span> tag to the message that stands for the whole of it,
+    // which a translator has to carry around for nothing.
+    while (ts.isJsxElement(node) && isUnit(node)) {
+      const only = meaningful(node.children);
+      if (only.length === 1 && ts.isJsxElement(only[0])) node = only[0];
+      else break;
+    }
     if (ts.isJsxElement(node) && isUnit(node)) {
       const key = nextKey(node);
       const { en, it, chunks } = renderUnit(node, italian, report);
@@ -264,8 +434,31 @@ function processFile(file, namespace, italian) {
       edits.push({ node, key, chunks });
       return; // the unit is a leaf: nothing inside it is its own message
     }
-    // Report a dynamic call wherever it sits, resolved or not.
-    if (ts.isCallExpression(node) && isTCall(node) && literalArg(node) === null) {
+
+    // A lone {t('…')} whose parent is not a unit — an <a> that also contains an
+    // icon component, say. Without this it belongs to no unit and is dropped
+    // silently, which is the one failure mode a codemod must never have.
+    if (
+      ts.isJsxExpression(node) &&
+      node.expression &&
+      isTCall(node.expression) &&
+      literalArg(node.expression) !== null
+    ) {
+      const english = literalArg(node.expression);
+      const translated = italian.get(english);
+      if (translated === undefined) report.untranslated.push(english);
+      const key = nextKey(node.parent);
+      messages[key] = { en: english, it: translated ?? english };
+      orphans.push({ node, key });
+      return;
+    }
+    // Report a dynamic call only if the array pass did not already resolve it.
+    if (
+      ts.isCallExpression(node) &&
+      isTCall(node) &&
+      literalArg(node) === null &&
+      !arrayCalls.some((c) => c.node === node)
+    ) {
       const { line } = sf.getLineAndCharacterOfPosition(node.getStart());
       report.dynamic.push(`${file}:${line + 1}  ${node.getText()}`);
     }
@@ -273,9 +466,14 @@ function processFile(file, namespace, italian) {
   };
   visit(sf);
 
-  // Apply from the end so earlier offsets stay valid.
-  let out = src;
-  for (const { node, key, chunks } of [...edits].reverse()) {
+  // All three rewrites — the JSX units, the t(card.title) calls and the data
+  // arrays — are collected as replacements against the ORIGINAL offsets and
+  // applied in one descending pass. Three separate reverse passes would each
+  // shift the offsets the next one is still reading, which corrupts the file in
+  // a way that only shows up on the largest components.
+  const replacements = [];
+
+  for (const { node, key, chunks } of edits) {
     // Indent the chunk map to the element it replaces, or the file reads like
     // a diff nobody wants to review.
     const column = sf.getLineAndCharacterOfPosition(node.getStart()).character;
@@ -289,12 +487,51 @@ function processFile(file, namespace, italian) {
               ? `${pad}${c.tag}: (chunks) => ${c.jsx}{chunks}${c.close},`
               : `${pad}${c.tag}: () => ${c.jsx},`)
           .join('\n')}\n${' '.repeat(column)}})}`;
-    const open = node.openingElement.getText();
-    const close = node.closingElement.getText();
-    out = out.slice(0, node.getStart()) + open + call + close + out.slice(node.getEnd());
+    replacements.push({
+      start: node.getStart(),
+      end: node.getEnd(),
+      text: node.openingElement.getText() + call + node.closingElement.getText(),
+    });
   }
 
-  if (edits.length > 0) {
+  for (const { node, key } of orphans) {
+    replacements.push({ start: node.getStart(), end: node.getEnd(), text: `{t('${key}')}` });
+  }
+
+  // t(card.title) -> t(`cards.${card.id}.title`)
+  for (const { node, array, prop, param } of arrayCalls) {
+    const key = array.replace(/^./, (c) => c.toLowerCase());
+    const path = `${scope ? `${scope}.` : ''}${key}.\${${param}.id}.${prop}`;
+    replacements.push({ start: node.getStart(), end: node.getEnd(), text: 't(`' + path + '`)' });
+  }
+
+  // The array keeps its structure and loses its copy.
+  for (const { literal, props, ids } of arrayEdits) {
+    const rendered = literal.elements
+      .map((element, i) => {
+        const kept = element.properties.filter(
+          (x) => !(ts.isPropertyAssignment(x) && props.has(x.name.getText())),
+        );
+        const lines = [
+          ...(ids[i] && !kept.some((x) => x.name?.getText() === 'id') ? [`id: '${ids[i]}'`] : []),
+          ...kept.map((x) => x.getText()),
+        ];
+        return `  {\n${lines.map((l) => `    ${l},`).join('\n')}\n  }`;
+      })
+      .join(',\n');
+    replacements.push({
+      start: literal.getStart(),
+      end: literal.getEnd(),
+      text: `[\n${rendered},\n]`,
+    });
+  }
+
+  let out = src;
+  for (const { start, end, text } of replacements.sort((a, b) => b.start - a.start)) {
+    out = out.slice(0, start) + text + out.slice(end);
+  }
+
+  if (replacements.length > 0) {
     out = out
       .replace(/const\s*\{\s*t\s*\}\s*=\s*useLanguage\(\);?/, `const t = useTranslations('${namespace}');`)
       .replace(/const\s*\{([^}]*)\bt\b([^}]*)\}\s*=\s*useLanguage\(\);?/,
@@ -303,9 +540,22 @@ function processFile(file, namespace, italian) {
     if (!/from 'next-intl'/.test(out)) {
       out = out.replace(/(^import .*\n)/m, `$1import { useTranslations } from 'next-intl';\n`);
     }
+
+    // A `const { lang } = useLanguage()` left with a binding nothing reads is
+    // dead code that still imports the dictionary this migration is deleting.
+    const leftover = /^[ \t]*const\s*\{\s*([A-Za-z0-9_,\s]*)\}\s*=\s*useLanguage\(\);?[ \t]*\n/m.exec(out);
+    if (leftover) {
+      const names = leftover[1].split(',').map((n) => n.trim()).filter(Boolean);
+      const body = out.slice(leftover.index + leftover[0].length);
+      const unused = names.every((n) => !new RegExp(`\\b${n}\\b`).test(body));
+      if (unused) {
+        out = out.replace(leftover[0], '');
+        out = out.replace(/^import \{ useLanguage \} from '@\/i18n\/LanguageContext';\n/m, '');
+      }
+    }
   }
 
-  return { src, out, messages, report, count: edits.length };
+  return { src, out, messages, report, count: Object.keys(messages).length };
 }
 
 // ── CLI ────────────────────────────────────────────────────────────────────
@@ -325,6 +575,7 @@ const catalogue = { en: {}, it: {} };
 let total = 0;
 const dynamic = [];
 const untranslated = [];
+const keptInCode = [];
 
 for (const file of files) {
   const { src, out, messages, report, count, done } = processFile(file, namespace, italian);
@@ -335,6 +586,7 @@ for (const file of files) {
   total += count;
   dynamic.push(...report.dynamic);
   untranslated.push(...report.untranslated);
+  keptInCode.push(...report.keptInCode);
 
   for (const [key, { en, it }] of Object.entries(messages)) {
     catalogue.en[`${namespace}.${key}`] = en;
@@ -399,6 +651,13 @@ if (dynamic.length > 0) {
   console.log(`\n── ${dynamic.length} dynamic call(s): the string is not at the call site ──`);
   console.log(dynamic.map((d) => `  ${d}`).join('\n'));
   console.log('  Move the data array into the catalogue and read it with t() by key.');
+}
+
+if (keptInCode.length > 0) {
+  console.log(`\n── ${keptInCode.length} array field(s) also read outside t() ──`);
+  console.log(keptInCode.map((k) => `  ${k}`).join('\n'));
+  console.log('  Left in the array, so the string is now in two places. Usually the raw');
+  console.log('  read wants the id instead — check it and delete the field.');
 }
 
 if (untranslated.length > 0) {

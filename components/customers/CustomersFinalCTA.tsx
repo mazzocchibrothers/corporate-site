@@ -6,6 +6,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight, FileText, BookOpen, Shield, Globe } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 const badges = ['GDPR-compliant', 'ISO 27001 certified', 'EU AI Act ready', '50+ languages', 'Built for European enterprises'];
 
@@ -30,7 +31,7 @@ export default function CustomersFinalCTA() {
             <h3 className="text-2xl font-bold text-white/90 mt-4 mb-3">{t('Book a Demo')}</h3>
             <p className="text-[15px] text-white/[0.65] mb-8 max-w-md">{t('See Skillvue live with your specific use case')}</p>
             <Button asChild variant="primary" mode="dark" className="w-full md:w-auto max-w-sm justify-between">
-              <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
+              <a href={href('book-meeting', lang)}>
                 <span>{t('Book a Demo')}</span>
                 <ArrowRight aria-hidden="true" />
               </a>

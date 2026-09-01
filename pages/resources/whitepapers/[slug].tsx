@@ -9,6 +9,7 @@ import { whitepapers } from '@/data/whitepapers';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { messagesFor } from '@/i18n/messages';
+import { href } from '@/i18n/routes';
 
 // The one dynamic route on the site. Its paths come from the same array the
 // sitemap expands, so a whitepaper cannot exist in one and not the other.
@@ -297,7 +298,7 @@ export default function WhitepaperDetailPage() {
                 {t('Book a demo with our team and discover how Skillvue turns talent decisions into a competitive advantage.')}
               </p>
               <Button
-                onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
+                onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
                 variant="primary"
                 mode="dark"
               >

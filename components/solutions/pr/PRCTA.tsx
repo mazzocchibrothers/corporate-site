@@ -6,6 +6,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function PRCTA() {
   const { t, lang } = useLanguage();
@@ -21,7 +22,7 @@ export default function PRCTA() {
             <span className="font-bold gradient-text">{t('confidence?')}</span>
           </h2>
           <Button asChild variant="primary" mode="dark">
-            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="pr-final-cta">
+            <a href={href('book-meeting', lang)} data-testid="pr-final-cta">
               <span>{t('Book a Demo')}</span>
               <ArrowRight aria-hidden="true" />
             </a>

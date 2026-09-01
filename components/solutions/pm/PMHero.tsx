@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function PMHero() {
   const { t, lang } = useLanguage();
@@ -32,7 +33,7 @@ export default function PMHero() {
             {t('Skillvue integrates objective skill verifications into your performance cycles. reducing bias, improving calibration, and giving every manager a data-backed starting point before they write a single review.')}
           </p>
           <Button asChild variant="primary" mode="dark" className="shrink-0">
-            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="pm-hero-cta">
+            <a href={href('book-meeting', lang)} data-testid="pm-hero-cta">
               <span>{t('Book a Demo')}</span>
               <ArrowRight aria-hidden="true" />
             </a>

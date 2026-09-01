@@ -36,6 +36,22 @@ export function urlFor(route: RouteLike, locale: Locale): string | undefined {
 }
 
 /**
+ * The in-site path for one locale of a route, prefixed the way the visitor
+ * sees it. This is what a link href needs; urlFor is the same thing absolute,
+ * for canonicals and the sitemap.
+ *
+ * Undefined means the route has no content in that locale — a nav item with no
+ * Italian version, which is a link the Italian navbar must not render rather
+ * than one that quietly falls back to English.
+ */
+export function pathFor(route: RouteLike, locale: Locale): string | undefined {
+  const path = route.paths[locale];
+  if (path === undefined) return undefined;
+  if (locale === 'en') return path;
+  return path === '/' ? '/it' : `/it${path}`;
+}
+
+/**
  * The hreflang set for a route: one entry per locale it serves, plus
  * x-default.
  *

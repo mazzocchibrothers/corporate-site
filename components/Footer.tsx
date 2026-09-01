@@ -3,48 +3,37 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Instagram, Facebook, Linkedin } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { href } from '@/i18n/routes';
 
-const footerLinks = [
+// Route ids, not paths — the URL for each comes from the registry through
+// href(), which is what retired the hrefIt flags. Labels come from the
+// catalogue, keyed on the same ids.
+const footerGroups = [
+  { id: 'platform', links: ['product-overview', 'science'] },
   {
-    title: 'Platform',
-    titleIt: 'Piattaforma',
+    id: 'solutions',
     links: [
-      { name: 'Product', nameIt: 'Prodotto', href: '/product-overview' },
-      { name: 'Science', nameIt: 'Scienza', href: '/science' },
+      'solutions/talent-acquisition',
+      'solutions/performance-management',
+      'solutions/learning-development',
+      'solutions/internal-mobility',
+      'solutions/project-resourcing',
     ],
   },
-  {
-    title: 'Solutions',
-    titleIt: 'Soluzioni',
-    links: [
-      { name: 'Hiring', nameIt: 'Hiring', href: '/solutions/talent-acquisition' },
-      { name: 'Performance Management', nameIt: 'Performance Management', href: '/solutions/performance-management' },
-      { name: 'Learning & Development', nameIt: 'Learning & Development', href: '/solutions/learning-development' },
-      { name: 'Internal Mobility', nameIt: 'Internal Mobility', href: '/solutions/internal-mobility' },
-      { name: 'Project Resourcing', nameIt: 'Project Resourcing', href: '/solutions/project-resourcing' },
-    ],
-  },
-  {
-    title: 'Customers',
-    titleIt: 'Clienti',
-    links: [
-      { name: 'Customer Stories', nameIt: 'Storie di Successo', href: '/customers', hrefIt: '/clienti' },
-      { name: 'Book a Demo', nameIt: 'Prenota una Demo', href: '/book-meeting', hrefIt: '/prenota-incontro' },
-    ],
-  },
-  {
-    title: 'Resources',
-    titleIt: 'Risorse',
-    links: [
-      { name: 'Blog', nameIt: 'Blog', href: '/blog', hideInIT: true },
-      { name: 'White Papers', nameIt: 'White Papers', href: '/resources/whitepapers', hideInIT: true },
-      { name: 'Press', nameIt: 'Press', href: '/resources/press' },
-      { name: 'About', nameIt: 'Chi siamo', href: '/about' },
-      { name: 'Careers', nameIt: 'Lavora con noi', href: '/careers' },
-    ],
-  },
+  { id: 'customers', links: ['customers', 'book-meeting'] },
+  { id: 'resources', links: ['blog', 'resources/whitepapers', 'resources/press', 'about', 'careers'] },
 ];
+
+// English-only content, not advertised to Italian visitors. Same list and same
+// reason as the navbar: it is an editorial decision, not something the registry
+// knows, until #116 declares those routes English-only.
+const HIDDEN_IN_IT = new Set(['blog', 'resources/whitepapers']);
+
+/** 'solutions/talent-acquisition' -> 'talentAcquisition', the label's key. */
+const labelKey = (id: string) =>
+  id.split('/').pop()!.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
 
 const socials = [
   { icon: Instagram, href: 'https://www.instagram.com/skillvue.ai/', label: 'Instagram' },
@@ -53,15 +42,16 @@ const socials = [
 ];
 
 export default function Footer() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('common');
   const router = useRouter();
 
-  const handleClick = (href: string) => (e: React.MouseEvent) => {
+  const handleClick = (target: string) => (e: React.MouseEvent) => {
     e.preventDefault();
-    if (href.startsWith('http')) {
-      window.open(href, '_blank');
+    if (target.startsWith('http')) {
+      window.open(target, '_blank');
     } else {
-      router.push(href);
+      router.push(target);
       window.scrollTo(0, 0);
     }
   };
@@ -103,34 +93,28 @@ export default function Footer() {
             </div>
 
             <p className="text-[12px] md:text-[11px] text-white/45 leading-[1.5] text-center lg:text-left max-w-[180px]">
-              {lang === 'it'
-                ? "Partner della ricerca 2025/2026 dell'Osservatorio HR del Politecnico di Milano"
-                : 'Partner of the 2025/2026 research of Osservatorio HR Politecnico di Milano'}
+              {t('footer.researchPartner')}
             </p>
           </div>
 
           {/* Link sections — stacked on mobile with horizontal links, 4-col grid on desktop */}
           <div className="flex flex-col gap-6 md:grid md:grid-cols-4 md:gap-8">
-            {footerLinks.map((group) => (
-              <div key={group.title}>
+            {footerGroups.map((group) => (
+              <div key={group.id}>
                 <h4 className="text-[15px] md:text-[16px] font-semibold text-white/85 mb-2 md:mb-7 text-center md:text-left">
-                  {lang === 'it' ? group.titleIt : group.title}
+                  {t(`footer.groups.${group.id}`)}
                 </h4>
                 <div className="flex flex-col items-center gap-4 md:items-start md:block md:space-y-4">
-                  {group.links.filter(link => !(lang === 'it' && (link as any).hideInIT)).map((link) => {
-                    const href = lang === 'it' && (link as any).hrefIt ? (link as any).hrefIt : link.href;
-                    const name = lang === 'it' ? (link as any).nameIt : link.name;
-                    return (
-                      <a
-                        key={link.name}
-                        href={href}
-                        onClick={handleClick(href)}
-                        className="block text-center md:text-left text-[14px] md:text-[15px] text-white/55 hover:text-white/65 transition-colors duration-300 py-1 md:py-0"
-                      >
-                        {name}
-                      </a>
-                    );
-                  })}
+                  {group.links.filter(id => !(lang === 'it' && HIDDEN_IN_IT.has(id))).map((id) => (
+                    <a
+                      key={id}
+                      href={href(id, lang)}
+                      onClick={handleClick(href(id, lang))}
+                      className="block text-center md:text-left text-[14px] md:text-[15px] text-white/55 hover:text-white/65 transition-colors duration-300 py-1 md:py-0"
+                    >
+                      {t(`footer.links.${labelKey(id)}`)}
+                    </a>
+                  ))}
                 </div>
               </div>
             ))}
@@ -141,7 +125,7 @@ export default function Footer() {
         <div className="border-t border-white/[0.04] pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4">
           <div className="text-center sm:text-left">
             <p className="text-[12px] md:text-[13px] text-white/40">
-              &copy; {new Date().getFullYear()} Skillvue. {t('All rights reserved.')}
+              &copy; {new Date().getFullYear()} Skillvue. {t('footer.rights')}
             </p>
             <p className="text-[12px] md:text-[13px] text-white/40">
               Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568
@@ -149,18 +133,16 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
             {[
+              { label: t('footer.legal.privacy'), href: href('privacy-policy', lang) },
               {
-                label: 'Privacy Policy',
-                href: '/privacy-policy',
+                label: t('footer.legal.cookies'),
+                // Two Iubenda policies, one per language — an external id, not a
+                // route, so it cannot come from the registry.
+                href: lang === 'it'
+                  ? 'https://www.iubenda.com/privacy-policy/75783964/cookie-policy'
+                  : 'https://www.iubenda.com/privacy-policy/45750674/cookie-policy',
               },
-              {
-                label: 'Cookie Policy',
-                href: lang === 'it' ? 'https://www.iubenda.com/privacy-policy/75783964/cookie-policy' : 'https://www.iubenda.com/privacy-policy/45750674/cookie-policy',
-              },
-              {
-                label: lang === 'it' ? 'Trattamento dati personali' : 'Personal Data Processing',
-                href: '/privacy-policy-algo',
-              },
+              { label: t('footer.legal.dataProcessing'), href: href('privacy-policy-algo', lang) },
             ].map(({ label, href }) => (
               href.startsWith('http') ? (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">

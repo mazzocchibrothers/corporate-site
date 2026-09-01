@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function ProductCTA() {
   const { t, lang } = useLanguage();
@@ -37,7 +38,7 @@ export default function ProductCTA() {
             <p className="text-[13px] md:text-[15px] text-white/[0.65] mb-5 md:mb-8 max-w-md">{t('See Skillvue live with your specific use case')}</p>
             <Button asChild variant="primary" mode="dark" className="w-full md:w-auto max-w-sm justify-between">
               <a
-                href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+                href={href('book-meeting', lang)}
                 data-testid="product-cta-book-demo"
               >
                 <span>{t('Book a Demo')}</span>

@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 const allStories = [
   {
@@ -135,7 +136,7 @@ export default function ExploreStories() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0, 0); }}
+                onClick={() => { router.push(`${href('customers', lang)}/${s.id}`); window.scrollTo(0, 0); }}
               >
                 {/* Card visual area */}
                 <div className="relative rounded-2xl border border-white/[0.08] hover:border-white/[0.14] transition-all duration-500 overflow-hidden" style={{ aspectRatio: '16/9' }}>
@@ -169,7 +170,7 @@ export default function ExploreStories() {
             <p className="text-[16px] text-white/50 mb-4">{t('No stories match these filters yet.')}</p>
             <p className="text-[14px] text-white/30">{t('We may have a relevant case to share privately.')}</p>
             <Button asChild variant="secondary" mode="dark" className="mt-6">
-              <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
+              <a href={href('book-meeting', lang)}>
                 {t('Book a demo')} <ArrowRight aria-hidden="true" />
               </a>
             </Button>

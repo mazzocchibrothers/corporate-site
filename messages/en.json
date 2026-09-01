@@ -1,6 +1,58 @@
 {
   "common": {
-    "brand": "Skillvue"
+    "brand": "Skillvue",
+    "nav": {
+      "platform": "Platform",
+      "solutions": "Solutions",
+      "customers": "Customers",
+      "resources": "Resources",
+      "bookDemo": "Book a Demo",
+      "links": {
+        "productOverview": "Product",
+        "science": "Science",
+        "talentAcquisition": "Hiring",
+        "performanceManagement": "Performance",
+        "learningDevelopment": "Development",
+        "internalMobility": "Mobility",
+        "projectResourcing": "Project Resourcing",
+        "whitepapers": "White Papers",
+        "blog": "Blog",
+        "press": "Press",
+        "about": "About",
+        "careers": "Careers"
+      }
+    },
+    "footer": {
+      "rights": "All rights reserved.",
+      "researchPartner": "Partner of the 2025/2026 research of Osservatorio HR Politecnico di Milano",
+      "groups": {
+        "platform": "Platform",
+        "solutions": "Solutions",
+        "customers": "Customers",
+        "resources": "Resources"
+      },
+      "links": {
+        "productOverview": "Product",
+        "science": "Science",
+        "talentAcquisition": "Hiring",
+        "performanceManagement": "Performance Management",
+        "learningDevelopment": "Learning & Development",
+        "internalMobility": "Internal Mobility",
+        "projectResourcing": "Project Resourcing",
+        "customers": "Customer Stories",
+        "bookMeeting": "Book a Demo",
+        "blog": "Blog",
+        "whitepapers": "White Papers",
+        "press": "Press",
+        "about": "About",
+        "careers": "Careers"
+      },
+      "legal": {
+        "privacy": "Privacy Policy",
+        "cookies": "Cookie Policy",
+        "dataProcessing": "Personal Data Processing"
+      }
+    }
   },
   "book-meeting": {
     "meta": {
@@ -12,6 +64,155 @@
     "meta": {
       "title": "Skillvue | AI Talent Intelligence Platform",
       "description": "Verify skills, predict performance and make every hiring and promotion decision defensible. Skillvue combines psychometric rigour with AI for European enterprises."
+    },
+    "hero": {
+      "cta": "See the Science",
+      "text": "Our Customers",
+      "cta2": "Book a Demo"
+    },
+    "problem": {
+      "painCards": {
+        "hiresFailWithin": {
+          "title": "of hires fail within 18 months",
+          "desc": "Costing 3-4x salary each time, and that's before you count the opportunity cost."
+        },
+        "transformationsStall": {
+          "title": "of transformations stall",
+          "desc": "Not due to bad strategy, but undetected skill gaps that only surface 12 months in."
+        },
+        "criticalRolesHave": {
+          "title": "of critical roles have zero ready successors",
+          "desc": "Succession pipelines are largely fiction. The next leadership crisis is already building."
+        }
+      },
+      "heading": "Your Biggest <span>Opportunity</span>",
+      "body": "Talent represents 60-70% of your operating costs. <span>Yet hiring decisions are based on CVs and gut feel. Promotions go to whoever is most visible, not most capable. Transformations stall because nobody mapped the skill gaps before spending millions in that project.</span>",
+      "body2": "And when the CFO asks for talent ROI, <span>HR has no answer.</span>"
+    },
+    "solution": {
+      "pillars": {
+        "hire": {
+          "label": "Hire right",
+          "desc": "AI-powered verifications predict on-the-job performance before you make an offer. Stop gambling on interviews.",
+          "statLabel": "hiring success rate",
+          "stat": "85%+"
+        },
+        "develop": {
+          "label": "Develop the right people",
+          "desc": "Identify high-potential talent before they disengage. Personalized development paths based on real competency data.",
+          "statLabel": "faster leadership pipeline",
+          "stat": "3x"
+        },
+        "promote": {
+          "label": "Promote with confidence",
+          "desc": "Replace gut-feel promotions with evidence-based decisions. Know who is truly ready for the next level.",
+          "statLabel": "promotion success rate",
+          "stat": "90%"
+        },
+        "transform": {
+          "label": "De-risk transformation",
+          "desc": "Map the skill gaps that will derail your next transformation. Know exactly where to invest in reskilling.",
+          "statLabel": "faster execution",
+          "stat": "6-9mo"
+        }
+      },
+      "heading": "Skillvue brings people processes<br></br><span>to life.</span>",
+      "body": "One platform for every talent decision. hiring, performance, development, mobility. Objective. Scalable. Defensible."
+    },
+    "howItWorks": {
+      "steps": {
+        "map": {
+          "title": "Map",
+          "desc": "Verify skills, mindset, and readiness across candidates and employees using AI-powered psychometric verifications, customized to your leadership model and deployable at scale across 50+ languages.",
+          "keywords": {
+            "skills": "Skills",
+            "mindset": "Mindset",
+            "readiness": "Readiness",
+            "languages": "50+ languages"
+          }
+        },
+        "predict": {
+          "title": "Predict",
+          "desc": "AI co-pilots surface who is ready now, who can be developed in 3-6 months, and where gaps will block your strategy, before they become expensive surprises.",
+          "keywords": {
+            "readyNow": "Ready now",
+            "months": "3-6 months",
+            "gapAnalysis": "Gap analysis",
+            "coPilot": "AI co-pilot"
+          }
+        },
+        "decide": {
+          "title": "Decide",
+          "desc": "Every hire, promotion, and transformation investment is backed by objective, auditable data. GDPR-compliant. Defensible to boards, regulators, and investors.",
+          "keywords": {
+            "objectiveData": "Objective data",
+            "auditable": "Auditable",
+            "gdpr": "GDPR",
+            "defensible": "Defensible"
+          }
+        }
+      },
+      "heading": "From verification to action <span>in three steps</span>"
+    },
+    "customerStories": {
+      "stories": {
+        "carrefour": {
+          "company": "Carrefour",
+          "industry": "Large-Scale Retail",
+          "quote": "Skills mapping was faster, more effective and fully data-driven.",
+          "author": "Francesca",
+          "role": "TA & EB Manager"
+        },
+        "subdued": {
+          "company": "Subdued",
+          "industry": "Fashion Retail",
+          "quote": "It not only improves the quality of my work, it makes us very attractive to candidates.",
+          "author": "Valentina",
+          "role": "HR Manager"
+        },
+        "insMercato": {
+          "company": "In's Mercato",
+          "industry": "Large-Scale Retail",
+          "quote": "Having a consistent skills verification, from external hiring to internal growth, meant delivering concrete solutions to our real challenges.",
+          "author": "Mirko",
+          "role": "HR Director"
+        }
+      },
+      "heading": "Proof, not <span>promises.</span>",
+      "body": "Leading Global enterprises make talent decisions with confidence.",
+      "cta": "Book a Demo",
+      "cta2": "Join 50+ Global enterprises",
+      "heading2": "Built <span>enterprise-ready</span>",
+      "body2": "100+ native integrations (Oracle, SAP, Workday, Greenhouse + more). Fully customisable to your processes, on your terms."
+    },
+    "roi": {
+      "stats": {
+        "savedAnnually": {
+          "label": "saved annually",
+          "sublabel": "in failed hire costs",
+          "footnote": "Based on 300 hires, 30% lower failure rate, 50K average cost per failure"
+        },
+        "monthsFaster": {
+          "label": "months faster",
+          "sublabel": "strategic execution",
+          "footnote": "When the right people are in the right roles from day one"
+        },
+        "roi": {
+          "label": "ROI",
+          "sublabel": "in 18-24 months",
+          "footnote": "With payback typically in 6-12 months"
+        }
+      },
+      "heading": "People are your biggest cost. <span>They can also be your biggest return.</span>",
+      "cta": "Book a Demo"
+    },
+    "cta": {
+      "heading": "Ready to make talent decisions <span>you can defend?</span>",
+      "text": "Ready to explore",
+      "heading2": "Book a 30-min Demo",
+      "body": "See Skillvue live with your specific use case",
+      "cta": "Book a Demo",
+      "text2": "Our Customers"
     }
   },
   "product-overview": {

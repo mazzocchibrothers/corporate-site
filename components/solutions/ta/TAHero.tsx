@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function TAHero() {
   const { t, lang } = useLanguage();
@@ -33,7 +34,7 @@ export default function TAHero() {
             {t('Skillvue replaces guesswork with science at scale. AI-powered verifications customized to your roles and leadership model surface top candidates, cut early turnover, and make every hiring decision defensible.')}
           </p>
           <Button asChild variant="primary" mode="dark" className="shrink-0">
-            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="ta-hero-cta">
+            <a href={href('book-meeting', lang)} data-testid="ta-hero-cta">
               <span>{t('Book a Demo')}</span>
               <ArrowRight aria-hidden="true" />
             </a>

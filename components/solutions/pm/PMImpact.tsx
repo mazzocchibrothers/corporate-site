@@ -6,6 +6,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function PMImpact() {
   const { t, lang } = useLanguage();
@@ -38,7 +39,7 @@ export default function PMImpact() {
                 </div>
               </div>
               <Button asChild variant="secondary" mode="dark">
-                <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
+                <a href={href('book-meeting', lang)}>
                   {t('Read the full story')}
                   <ArrowUpRight aria-hidden="true" />
                 </a>

@@ -3,52 +3,48 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { href } from '@/i18n/routes';
 import { Button } from '@/components/ui/button';
 
 
+// Nav structure: route ids, not paths. Each URL comes from i18n/routes.json
+// through href(), which is what retired the hrefIt flags — an Italian slug is
+// declared in the registry once and every link in the site follows it.
 const navLinks = [
+  { id: 'platform', anchor: '#hero', items: ['product-overview', 'science'] },
   {
-    label: 'Platform',
-    labelIt: 'Piattaforma',
-    href: '#hero',
+    id: 'solutions',
+    anchor: '#solutions',
     items: [
-      { name: 'Product', nameIt: 'Prodotto', path: '/product-overview' },
-      { name: 'Science', nameIt: 'Scienza', path: '/science' },
+      'solutions/talent-acquisition',
+      'solutions/performance-management',
+      'solutions/learning-development',
+      'solutions/internal-mobility',
+      'solutions/project-resourcing',
     ],
   },
+  { id: 'customers', route: 'customers', items: null },
   {
-    label: 'Solutions',
-    labelIt: 'Soluzioni',
-    href: '#solutions',
-    items: [
-      { name: 'Hiring', path: '/solutions/talent-acquisition' },
-      { name: 'Performance', path: '/solutions/performance-management' },
-      { name: 'Development', path: '/solutions/learning-development' },
-      { name: 'Mobility', path: '/solutions/internal-mobility' },
-      { name: 'Project Resourcing', path: '/solutions/project-resourcing' },
-    ],
-  },
-  {
-    label: 'Customers',
-    labelIt: 'Clienti',
-    href: '/customers',
-    hrefIt: '/clienti',
-    items: null,
-  },
-  {
-    label: 'Resources',
-    labelIt: 'Risorse',
-    href: '#',
-    items: [
-      { name: 'White Papers', path: '/resources/whitepapers', hideInIT: true },
-      { name: 'Blog', path: '/blog', hideInIT: true },
-      { name: 'Press', path: '/resources/press' },
-      { name: 'About', path: '/about' },
-      { name: 'Careers', path: '/careers' },
-    ],
+    id: 'resources',
+    anchor: '#',
+    items: ['resources/whitepapers', 'blog', 'resources/press', 'about', 'careers'],
   },
 ];
+
+// English-only content we do not advertise to Italian visitors.
+//
+// This is NOT derivable from the registry, and the difference matters:
+// /it/blog and /it/resources/whitepapers both return 200 and render English,
+// so the registry is right that they have an Italian URL. Hiding them is a
+// separate, editorial decision. #116 is where it gets settled — once those
+// routes are declared English-only, this list goes and hasLocale() replaces it.
+const HIDDEN_IN_IT = new Set(['resources/whitepapers', 'blog']);
+
+/** 'solutions/talent-acquisition' -> 'talentAcquisition', the label's key. */
+const labelKey = (id: string) =>
+  id.split('/').pop()!.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
 
 export default function Navbar() {
   const [hidden, setHidden] = useState(false);
@@ -62,7 +58,7 @@ export default function Navbar() {
   const closeTimeout = useRef<any>(null);
   const router = useRouter();
 
-  const hasDropdown = !!(openMenu && navLinks.find(l => l.label === openMenu)?.items);
+  const hasDropdown = !!(openMenu && navLinks.find(l => l.id === openMenu)?.items);
   const menuActive = !!openMenu;
 
   useEffect(() => {
@@ -111,6 +107,7 @@ export default function Navbar() {
   }, []);
 
   const { lang, switchLang } = useLanguage();
+  const t = useTranslations('common');
 
   const isLight = onLightSection && scrolled && !menuActive;
 
@@ -119,7 +116,7 @@ export default function Navbar() {
   const btnBorder = isLight ? 'rgba(26,26,46,0.15)' : 'rgba(255,255,255,0.15)';
   const navCtaMode = !menuActive && isLight ? 'light' : 'dark';
 
-  const activeItems = hasDropdown ? navLinks.find(l => l.label === openMenu)?.items : null;
+  const activeItems = hasDropdown ? navLinks.find(l => l.id === openMenu)?.items : null;
 
   const navigateTo = (path: string) => {
     setMobileOpen(false);
@@ -167,37 +164,38 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => (
               <div
-                key={link.label}
+                key={link.id}
                 className="relative"
-                onMouseEnter={() => handleEnter(link.label)}
+                onMouseEnter={() => handleEnter(link.id)}
                 onMouseLeave={handleLeave}
               >
                 <a
-                  href={lang === 'it' && (link as any).hrefIt ? (link as any).hrefIt : link.href}
-                  data-testid={`nav-link-${link.label.toLowerCase()}`}
+                  href={link.route ? href(link.route, lang) : link.anchor}
+                  data-testid={`nav-link-${link.id}`}
                   className="text-[15px] font-light tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300"
                   style={{
                     color: menuActive
-                      ? (openMenu === link.label ? '#ffffff' : 'rgba(255,255,255,0.5)')
-                      : (openMenu === link.label ? textColor : textMuted),
+                      ? (openMenu === link.id ? '#ffffff' : 'rgba(255,255,255,0.5)')
+                      : (openMenu === link.id ? textColor : textMuted),
                   }}
                   onClick={(e) => {
-                    const href = lang === 'it' && (link as any).hrefIt ? (link as any).hrefIt : link.href;
                     if (link.items) {
                       e.preventDefault();
-                    } else if (href.startsWith('/')) {
+                      return;
+                    }
+                    if (link.route) {
                       e.preventDefault();
-                      navigateTo(href);
+                      navigateTo(href(link.route, lang));
                     }
                   }}
                 >
-                  {lang === 'it' ? (link as any).labelIt : link.label}
+                  {t(`nav.${link.id}`)}
                   {link.items && (
                     <ChevronDown
                       className="h-3.5 w-3.5"
                       style={{
-                        opacity: openMenu === link.label ? 0.8 : 0.4,
-                        transform: openMenu === link.label ? 'rotate(180deg)' : 'rotate(0deg)',
+                        opacity: openMenu === link.id ? 0.8 : 0.4,
+                        transform: openMenu === link.id ? 'rotate(180deg)' : 'rotate(0deg)',
                         transition: 'transform 0.4s cubic-bezier(0.25,0.1,0.25,1), opacity 0.3s ease',
                       }}
                     />
@@ -239,11 +237,11 @@ export default function Navbar() {
               className="text-[14px] tracking-wide"
             >
               <a
-                href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+                href={href('book-meeting', lang)}
                 data-testid="nav-book-demo"
-                onClick={(e) => { e.preventDefault(); navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); }}
+                onClick={(e) => { e.preventDefault(); navigateTo(href('book-meeting', lang)); }}
               >
-                {lang === 'it' ? 'Prenota una Demo' : 'Book a Demo'}
+                {t('nav.bookDemo')}
                 <ArrowRight aria-hidden="true" />
               </a>
             </Button>
@@ -282,11 +280,11 @@ export default function Navbar() {
         {activeItems && (
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-5">
             <div className="flex flex-wrap items-center justify-center gap-2">
-              {activeItems.filter(item => !(lang === 'it' && (item as any).hideInIT)).map((item, idx) => (
+              {activeItems.filter(id => !(lang === 'it' && HIDDEN_IN_IT.has(id))).map((id, idx) => (
                 <a
-                  key={item.name}
-                  href={item.path}
-                  data-testid={`mega-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  key={id}
+                  href={href(id, lang)}
+                  data-testid={`mega-${labelKey(id)}`}
                   className="group flex items-center gap-2.5 px-5 py-3 rounded-full border border-white/[0.06] hover:border-white/[0.14] hover:bg-white/[0.04] transition-all duration-200"
                   style={{
                     opacity: hasDropdown ? 1 : 0,
@@ -294,15 +292,13 @@ export default function Navbar() {
                     transition: `opacity 0.3s ease ${idx * 0.04}s, transform 0.3s ease ${idx * 0.04}s, border-color 0.2s ease, background-color 0.2s ease`,
                   }}
                   onClick={(e) => {
-                    if (item.path && item.path !== '#') {
-                      e.preventDefault();
-                      setOpenMenu(null);
-                      navigateTo(item.path);
-                    }
+                    e.preventDefault();
+                    setOpenMenu(null);
+                    navigateTo(href(id, lang));
                   }}
                 >
                   <span className="text-[14px] font-medium text-white/90 group-hover:text-white transition-colors duration-200">
-                    {lang === 'it' && (item as any).nameIt ? (item as any).nameIt : item.name}
+                    {t(`nav.links.${labelKey(id)}`)}
                   </span>
                 </a>
               ))}
@@ -325,24 +321,23 @@ export default function Navbar() {
           <div className="flex flex-col h-full px-6 py-8 overflow-y-auto">
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
-                <div key={link.label}>
+                <div key={link.id}>
                   <button
                     className="w-full flex items-center justify-between py-4 border-b border-white/[0.06]"
                     onClick={() => {
                       if (link.items) {
-                        setMobileExpanded(mobileExpanded === link.label ? null : link.label);
-                      } else if (link.href.startsWith('/')) {
-                        const href = lang === 'it' && (link as any).hrefIt ? (link as any).hrefIt : link.href;
-                        navigateTo(href);
+                        setMobileExpanded(mobileExpanded === link.id ? null : link.id);
+                      } else if (link.route) {
+                        navigateTo(href(link.route, lang));
                       }
                     }}
                   >
-                    <span className="text-[18px] font-medium text-white">{lang === 'it' ? (link as any).labelIt : link.label}</span>
+                    <span className="text-[18px] font-medium text-white">{t(`nav.${link.id}`)}</span>
                     {link.items && (
                       <ChevronDown
                         className="h-4 w-4 text-white/40"
                         style={{
-                          transform: mobileExpanded === link.label ? 'rotate(180deg)' : 'rotate(0deg)',
+                          transform: mobileExpanded === link.id ? 'rotate(180deg)' : 'rotate(0deg)',
                           transition: 'transform 0.3s ease',
                         }}
                       />
@@ -350,15 +345,15 @@ export default function Navbar() {
                   </button>
 
                   {/* Expanded sub-items */}
-                  {link.items && mobileExpanded === link.label && (
+                  {link.items && mobileExpanded === link.id && (
                     <div className="pl-4 pb-2">
-                      {link.items.filter(item => !(lang === 'it' && (item as any).hideInIT)).map((item) => (
+                      {link.items.filter(id => !(lang === 'it' && HIDDEN_IN_IT.has(id))).map((id) => (
                         <button
-                          key={item.name}
+                          key={id}
                           className="w-full text-left py-3 text-[16px] text-white/60 hover:text-white transition-colors duration-200"
-                          onClick={() => navigateTo(item.path)}
+                          onClick={() => navigateTo(href(id, lang))}
                         >
-                          {lang === 'it' && (item as any).nameIt ? (item as any).nameIt : item.name}
+                          {t(`nav.links.${labelKey(id)}`)}
                         </button>
                       ))}
                     </div>
@@ -390,10 +385,10 @@ export default function Navbar() {
               <Button
                 variant="primary"
                 mode="dark"
-                onClick={() => navigateTo(lang === 'it' ? '/prenota-incontro' : '/book-meeting')}
+                onClick={() => navigateTo(href('book-meeting', lang))}
                 className="w-full text-[16px]"
               >
-                {lang === 'it' ? 'Prenota una Demo' : 'Book a Demo'}
+                {t('nav.bookDemo')}
               </Button>
             </div>
           </div>

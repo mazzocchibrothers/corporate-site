@@ -9,6 +9,7 @@ import { whitepapers, filterLabels } from '@/data/whitepapers';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { messagesFor } from '@/i18n/messages';
+import { href } from '@/i18n/routes';
 
 
 // One line per page is the whole contract: the argument is this route's `id` in
@@ -169,7 +170,7 @@ export default function WhitepapersPage() {
                 {t('Book a demo with our team and discover how Skillvue turns talent decisions into a competitive advantage.')}
               </p>
               <Button
-                onClick={() => { router.push(lang === 'it' ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}
+                onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
                 variant="primary"
                 mode="dark"
               >

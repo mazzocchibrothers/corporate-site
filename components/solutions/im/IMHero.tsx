@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function IMHero() {
   const { t, lang } = useLanguage();
@@ -32,7 +33,7 @@ export default function IMHero() {
             {t('Skillvue maps skills and potential across your entire workforce, making internal talent visible, succession decisions data-driven, and mobility paths transparent.')}
           </p>
           <Button asChild variant="primary" mode="dark" className="shrink-0">
-            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="im-hero-cta">
+            <a href={href('book-meeting', lang)} data-testid="im-hero-cta">
               <span>{t('Book a Demo')}</span>
               <ArrowRight aria-hidden="true" />
             </a>

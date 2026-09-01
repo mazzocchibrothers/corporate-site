@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import Lottie from 'lottie-react';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 const ANIM_EN = 'https://cdn.lottielab.com/l/3FJ5CBuSY6Ebq8.json';
 const ANIM_IT = 'https://cdn.lottielab.com/l/9E2vegrr5hs33N.json';
@@ -56,7 +57,7 @@ export default function ProductHero() {
 
               <Button asChild variant="primary" mode="dark">
                 <a
-                  href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+                  href={href('book-meeting', lang)}
                   data-testid="product-hero-book-demo"
                 >
                   <span>{t('hero.cta')}</span>

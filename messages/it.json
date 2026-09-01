@@ -1,6 +1,58 @@
 {
   "common": {
-    "brand": "Skillvue"
+    "brand": "Skillvue",
+    "nav": {
+      "platform": "Piattaforma",
+      "solutions": "Soluzioni",
+      "customers": "Clienti",
+      "resources": "Risorse",
+      "bookDemo": "Prenota una Demo",
+      "links": {
+        "productOverview": "Prodotto",
+        "science": "Scienza",
+        "talentAcquisition": "Selezione",
+        "performanceManagement": "Performance Management",
+        "learningDevelopment": "Learning & Development",
+        "internalMobility": "Mobilità Interna",
+        "projectResourcing": "Project Resourcing",
+        "whitepapers": "White Paper",
+        "blog": "Blog",
+        "press": "Stampa",
+        "about": "Chi Siamo",
+        "careers": "Carriere"
+      }
+    },
+    "footer": {
+      "rights": "Tutti i diritti riservati.",
+      "researchPartner": "Partner della ricerca 2025/2026 dell’Osservatorio HR del Politecnico di Milano",
+      "groups": {
+        "platform": "Piattaforma",
+        "solutions": "Soluzioni",
+        "customers": "Clienti",
+        "resources": "Risorse"
+      },
+      "links": {
+        "productOverview": "Prodotto",
+        "science": "Scienza",
+        "talentAcquisition": "Hiring",
+        "performanceManagement": "Performance Management",
+        "learningDevelopment": "Learning & Development",
+        "internalMobility": "Internal Mobility",
+        "projectResourcing": "Project Resourcing",
+        "customers": "Storie di Successo",
+        "bookMeeting": "Prenota una Demo",
+        "blog": "Blog",
+        "whitepapers": "White Papers",
+        "press": "Press",
+        "about": "Chi siamo",
+        "careers": "Lavora con noi"
+      },
+      "legal": {
+        "privacy": "Privacy Policy",
+        "cookies": "Cookie Policy",
+        "dataProcessing": "Trattamento dati personali"
+      }
+    }
   },
   "book-meeting": {
     "meta": {
@@ -12,6 +64,155 @@
     "meta": {
       "title": "Skillvue | Piattaforma di Talent Intelligence con AI",
       "description": "Valuta le competenze, prevedi le performance e rendi ogni decisione di hiring e promozione difendibile. Skillvue combina la scienza psicometrica con l’AI per le aziende europee."
+    },
+    "hero": {
+      "cta": "Scopri la Scienza",
+      "text": "I Nostri Clienti",
+      "cta2": "Prenota una Demo"
+    },
+    "problem": {
+      "painCards": {
+        "hiresFailWithin": {
+          "title": "delle assunzioni fallisce entro 18 mesi",
+          "desc": "Costando ogni volta 3-4 volte lo stipendio della risorsa"
+        },
+        "transformationsStall": {
+          "title": "delle trasformazioni si blocca sul nascere",
+          "desc": "Non per una strategia sbagliata, ma per gap di competenze non rilevati che emergono solo dopo 12 mesi."
+        },
+        "criticalRolesHave": {
+          "title": "dei ruoli critici non ha successori pronti",
+          "desc": "I piani di successione sono in gran parte una finzione. La prossima crisi di leadership si sta già formando."
+        }
+      },
+      "heading": "Le persone: la tua più grande <span>opportunità</span>",
+      "body": "La gestione delle persone impatta sul 60-70% dei costi operativi di un'azienda. <span>Eppure le decisioni di assunzione si basano su CV e sensazioni. Le promozioni vanno a chi è più visibile, non più capace. Le trasformazioni si bloccano perché nessuno ha mappato i gap di competenze prima di spendere milioni in quel progetto.</span>",
+      "body2": "E quando il CFO chiede il ROI del talento, <span>HR non ha una risposta.</span>"
+    },
+    "solution": {
+      "pillars": {
+        "hire": {
+          "label": "Assumi bene",
+          "desc": "Le valutazioni basate su AI predicono le performance lavorative prima di fare un'offerta. Porta maggiore oggettività nella selezione.",
+          "statLabel": "tasso di successo nelle assunzioni",
+          "stat": "85%+"
+        },
+        "develop": {
+          "label": "Sviluppa le persone giuste",
+          "desc": "Identifica i talenti ad alto potenziale prima che si disimpegnino progettando percorsi di sviluppo personalizzati basati su dati reali.",
+          "statLabel": "pipeline di leadership più veloce",
+          "stat": "3x"
+        },
+        "promote": {
+          "label": "Promuovi con fiducia",
+          "desc": "Sostituisci le promozioni istintive con decisioni basate sull'evidenza. Scopri chi è davvero pronto per il livello successivo.",
+          "statLabel": "tasso di successo delle promozioni",
+          "stat": "90%"
+        },
+        "transform": {
+          "label": "Riduci il rischio della trasformazione",
+          "desc": "Mappa in anticipo i gap di competenze che emergeranno con la prossima trasformazione. Investi al meglio le tue risorse per il reskilling.",
+          "statLabel": "Esecuzione più rapida",
+          "stat": "6-9 mesi"
+        }
+      },
+      "heading": "Skillvue dà nuova vita ai processi<br></br><span>delle persone.</span>",
+      "body": "Una piattaforma per ogni decisione sul talento, dalla selezione alla performance, allo sviluppo alla mobilità"
+    },
+    "howItWorks": {
+      "steps": {
+        "map": {
+          "title": "Mappa",
+          "desc": "Valuta competenze, mentalità e prontezza tra candidati e dipendenti usando valutazioni psicometriche basate su AI, personalizzate sul tuo modello di leadership e implementabili su scala in oltre 50 lingue.",
+          "keywords": {
+            "skills": "Competenze",
+            "mindset": "Mindset",
+            "readiness": "Prontezza",
+            "languages": "50+ lingue"
+          }
+        },
+        "predict": {
+          "title": "Prevedi",
+          "desc": "Sfrutta i co-pilot AI per capire chi è pronto oggi, chi può essere sviluppato in 3-6 mesi, e dove esistono aree di miglioramento nella tua strategia prima che si trasformino in minacce",
+          "keywords": {
+            "readyNow": "Pronto ora",
+            "months": "3-6 mesi",
+            "gapAnalysis": "Analisi dei gap",
+            "coPilot": "AI co-pilot"
+          }
+        },
+        "decide": {
+          "title": "Decidi",
+          "desc": "Ogni assunzione, promozione e investimento in trasformazione è supportato da dati oggettivi e verificabili. Conforme al GDPR. Difendibile davanti a consigli di amministrazione, regolatori e investitori.",
+          "keywords": {
+            "objectiveData": "Dati oggettivi",
+            "auditable": "Verificabile",
+            "gdpr": "GDPR",
+            "defensible": "Difendibile"
+          }
+        }
+      },
+      "heading": "Dalla valutazione all'azione <span>in tre passi</span>"
+    },
+    "customerStories": {
+      "stories": {
+        "carrefour": {
+          "company": "Carrefour",
+          "industry": "Grande Distribuzione",
+          "quote": "La mappatura delle competenze è stata più rapida, efficace e completamente data-driven.",
+          "author": "Francesca",
+          "role": "TA & EB Manager"
+        },
+        "subdued": {
+          "company": "Subdued",
+          "industry": "Fashion Retail",
+          "quote": "Non solo migliora la qualità del mio lavoro, ma ci rende molto attrattivi per i candidati.",
+          "author": "Valentina",
+          "role": "HR Manager"
+        },
+        "insMercato": {
+          "company": "In's Mercato",
+          "industry": "Grande Distribuzione",
+          "quote": "Avere una valutazione omogenea delle competenze, dalla selezione esterna alla crescita interna, per noi ha significato dare soluzioni concrete ai nostri problemi",
+          "author": "Mirko",
+          "role": "Direttore HR"
+        }
+      },
+      "heading": "Fatti, non <span>promesse.</span>",
+      "body": "Le principali aziende globali prendono decisioni sul talento con fiducia.",
+      "cta": "Prenota una Demo",
+      "cta2": "Unisciti a oltre 50 aziende globali",
+      "heading2": "Costruito <span>per le grandi organizzazioni</span>",
+      "body2": "Oltre 100 integrazioni native (Oracle, SAP, Workday, Greenhouse e altri). Completamente personalizzabile per i tuoi processi, alle tue condizioni."
+    },
+    "roi": {
+      "stats": {
+        "savedAnnually": {
+          "label": "risparmiati annualmente",
+          "sublabel": "da costi di potenziali assunzioni fallite",
+          "footnote": "Calcolo basato su 300 assunzioni, tasso di fallimento inferiore del 30%, costo medio per fallimento 50K"
+        },
+        "monthsFaster": {
+          "label": "mesi di recupero di tempo per",
+          "sublabel": "esecuzione strategica",
+          "footnote": "Quando le persone giuste sono nei ruoli giusti dal primo giorno"
+        },
+        "roi": {
+          "label": "ROI",
+          "sublabel": "in 18-24 mesi",
+          "footnote": "Con payback visibile tipicamente già nei primi 6-12 mesi"
+        }
+      },
+      "heading": "Le persone sono il tuo costo maggiore. <span>Possono anche essere il tuo ritorno maggiore.</span>",
+      "cta": "Prenota una Demo"
+    },
+    "cta": {
+      "heading": "Pronto a prendere decisioni sul talento <span>che puoi difendere?</span>",
+      "text": "Pronto per esplorare",
+      "heading2": "Prenota un meeting di 30 min",
+      "body": "Vedi Skillvue in azione con il tuo caso d'uso specifico",
+      "cta": "Prenota una Demo",
+      "text2": "I Nostri Clienti"
     }
   },
   "product-overview": {

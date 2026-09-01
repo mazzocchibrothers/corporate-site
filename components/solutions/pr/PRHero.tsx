@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function PRHero() {
   const { t, lang } = useLanguage();
@@ -32,7 +33,7 @@ export default function PRHero() {
             {t('Skillvue gives project leaders and resourcing teams an objective view of who has the skills to deliver, replacing "who\'s free" with "who\'s fit." Reduce delivery risk, improve team composition, and stop staffing in the dark.')}
           </p>
           <Button asChild variant="primary" mode="dark" className="shrink-0">
-            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="pr-hero-cta">
+            <a href={href('book-meeting', lang)} data-testid="pr-hero-cta">
               <span>{t('Book a Demo')}</span>
               <ArrowRight aria-hidden="true" />
             </a>

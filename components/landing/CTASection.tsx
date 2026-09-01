@@ -1,13 +1,16 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { m, useInView } from 'framer-motion';
 import { ArrowRight, ShieldIcon, Languages, Globe } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function CTASection() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('home');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -21,10 +24,9 @@ export default function CTASection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white/90 max-w-4xl">
-            {t('Ready to make talent decisions')}{' '}
-            <span className="italic font-bold gradient-text">{t('you can defend?')}</span>
-          </h2>
+          <h2 className="text-[clamp(1.5rem,3.5vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white/90 max-w-4xl">{t.rich('cta.heading', {
+            span: (chunks) => <span className="italic font-bold gradient-text">{chunks}</span>,
+          })}</h2>
         </m.div>
 
         <m.div
@@ -40,20 +42,16 @@ export default function CTASection() {
           >
             <div className="absolute top-0 right-0 w-[300px] h-[300px] rounded-full bg-[#4B4DF7]/[0.06] blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
             <div className="relative">
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase">{t('Ready to explore')}</span>
-              <h3 className="text-[20px] md:text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/85 mt-3 md:mt-5 mb-2 md:mb-4 leading-tight">
-                {t('Book a 30-min Demo')}
-              </h3>
-              <p className="text-[12px] md:text-[17px] text-white/[0.65] mb-5 md:mb-8 max-w-md leading-[1.5] md:leading-normal">
-                {t('See Skillvue live with your specific use case')}
-              </p>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase">{t('cta.text')}</span>
+              <h3 className="text-[20px] md:text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/85 mt-3 md:mt-5 mb-2 md:mb-4 leading-tight">{t('cta.heading2')}</h3>
+              <p className="text-[12px] md:text-[17px] text-white/[0.65] mb-5 md:mb-8 max-w-md leading-[1.5] md:leading-normal">{t('cta.body')}</p>
             </div>
             <Button asChild variant="primary" mode="dark" className="w-full md:w-auto md:max-w-sm">
               <a
-                href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+                href={href('book-meeting', lang)}
                 data-testid="cta-book-demo"
               >
-                <span>{t('Book a Demo')}</span>
+                <span>{t('cta.cta')}</span>
                 <ArrowRight aria-hidden="true" />
               </a>
             </Button>
@@ -64,7 +62,7 @@ export default function CTASection() {
             data-testid="cta-track-b"
             className="col-span-2 md:col-span-1 lg:col-span-6 group relative rounded-2xl md:rounded-3xl border border-white/[0.04] hover:border-white/[0.08] bg-white/[0.01] backdrop-blur-sm transition-all duration-700 p-5 md:p-10"
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-5 md:mb-10 block">{t('Our Customers')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-5 md:mb-10 block">{t('cta.text2')}</span>
             {(() => {
               const ctaLogos = [
                     { name: 'Moncler', src: '/logos/client-moncler.svg' },

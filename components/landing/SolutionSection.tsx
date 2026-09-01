@@ -1,49 +1,32 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { m, useInView } from 'framer-motion';
 import { Target, TrendingUp, Award, Shield } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { IconTile } from '@/components/ui/icon-tile';
 
 const pillars = [
   {
     id: 'hire',
     icon: Target,
-    label: 'Hire right',
-    desc: 'AI-powered verifications predict on-the-job performance before you make an offer. Stop gambling on interviews.',
-    stat: '85%+',
-    statLabel: 'hiring success rate',
   },
   {
     id: 'develop',
     icon: TrendingUp,
-    label: 'Develop the right people',
-    desc: 'Identify high-potential talent before they disengage. Personalized development paths based on real competency data.',
-    stat: '3x',
-    statLabel: 'faster leadership pipeline',
   },
   {
     id: 'promote',
     icon: Award,
-    label: 'Promote with confidence',
-    desc: 'Replace gut-feel promotions with evidence-based decisions. Know who is truly ready for the next level.',
-    stat: '90%',
-    statLabel: 'promotion success rate',
   },
   {
     id: 'transform',
     icon: Shield,
-    label: 'De-risk transformation',
-    desc: 'Map the skill gaps that will derail your next transformation. Know exactly where to invest in reskilling.',
-    stat: '6-9mo',
-    statIt: '6-9 mesi',
-    statLabel: 'faster execution',
   },
 ];
 
 export default function SolutionSection() {
-  const { t, lang } = useLanguage();
+  const t = useTranslations('home');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const renderCard = (pillar: typeof pillars[number], i: number) => (
@@ -68,22 +51,22 @@ export default function SolutionSection() {
           <h3
             className="text-[15px] md:text-2xl font-semibold text-white/85 group-hover:text-white/95 transition-colors duration-500 leading-snug"
           >
-            {t(pillar.label)}
+            {t(`solution.pillars.${pillar.id}.label`)}
           </h3>
         </div>
 
         {/* Description */}
         <p className="text-[13px] md:text-[16px] text-white/[0.55] md:text-white/[0.65] group-hover:text-white/[0.75] leading-[1.5] md:leading-[1.75] transition-colors duration-500 mb-4 md:mb-8 mt-2 md:mt-4">
-          {t(pillar.desc)}
+          {t(`solution.pillars.${pillar.id}.desc`)}
         </p>
 
         {/* Stat */}
         <div className="flex items-baseline gap-2 md:gap-3">
           <span className="text-[22px] md:text-[1.8rem] text-[#9B9DFB] font-semibold tracking-tight leading-none">
-            {lang === 'it' && (pillar as any).statIt ? (pillar as any).statIt : pillar.stat}
+            {t(`solution.pillars.${pillar.id}.stat`)}
           </span>
           <span className="text-[11px] md:text-[13px] text-white/50 font-medium tracking-wide leading-tight">
-            {t(pillar.statLabel)}
+            {t(`solution.pillars.${pillar.id}.statLabel`)}
           </span>
         </div>
       </div>
@@ -100,13 +83,11 @@ export default function SolutionSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-3xl">
-            {t('Skillvue brings people processes')}<br />
-            <span className="font-bold gradient-text-warm">{t('to life.')}</span>
-          </h2>
-          <p className="text-[15px] md:text-[18px] text-white/[0.65] leading-[1.7] mt-4 md:mt-6 max-w-xl">
-            {t('One platform for every talent decision. hiring, performance, development, mobility. Objective. Scalable. Defensible.')}
-          </p>
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-3xl">{t.rich('solution.heading', {
+            br: () => <br />,
+            span: (chunks) => <span className="font-bold gradient-text-warm">{chunks}</span>,
+          })}</h2>
+          <p className="text-[15px] md:text-[18px] text-white/[0.65] leading-[1.7] mt-4 md:mt-6 max-w-xl">{t('solution.body')}</p>
         </m.div>
 
         {/* Cards grid */}

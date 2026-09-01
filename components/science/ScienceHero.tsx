@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function ScienceHero() {
   const { t, lang } = useLanguage();
@@ -36,7 +37,7 @@ export default function ScienceHero() {
                   : "Measuring people is hard. To make talent decisions you can trust, accuracy and reliability aren't optional. Skillvue is built on I/O psychology and psychometrics, ensuring every data point holds up to scrutiny."}
               </p>
               <Button asChild variant="primary" mode="dark" className="self-start gap-8">
-                <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
+                <a href={href('book-meeting', lang)}>
                   <span>{t('Book a Demo')}</span>
                   <ArrowRight aria-hidden="true" />
                 </a>

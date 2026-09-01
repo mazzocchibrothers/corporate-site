@@ -6,6 +6,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function SolutionFinalCTA({ headline, accentWord }) {
   const { t, lang } = useLanguage();
@@ -26,7 +27,7 @@ export default function SolutionFinalCTA({ headline, accentWord }) {
             <span className="italic font-bold gradient-text">{accentWord}</span>
           </h2>
           <Button asChild variant="primary" mode="dark">
-            <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}>
+            <a href={href('book-meeting', lang)}>
               <span>{t('Book a Demo')}</span>
               <ArrowRight aria-hidden="true" />
             </a>

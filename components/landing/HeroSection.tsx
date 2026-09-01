@@ -1,10 +1,12 @@
 'use client';
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import LiteYouTubeEmbed from '@/components/landing/LiteYouTubeEmbed';
+import { href } from '@/i18n/routes';
 
 const clientLogos = [
   { name: 'Unicredit', src: '/logos/client-unicredit.svg', width: 221 },
@@ -25,7 +27,8 @@ const trustLogosIt = clientLogos;
 const trustLogosEn = clientLogos;
 
 export default function HeroSection() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('home');
   const baseLogos = lang === 'en' ? trustLogosEn : trustLogosIt;
   // Repeat the set so the marquee track is always wider than any viewport,
   // eliminating any visible gap before the duplicate kicks in.
@@ -82,15 +85,13 @@ export default function HeroSection() {
 
               <div className="hero-fade-up hero-delay-1 relative flex flex-wrap items-center gap-4 mt-8 md:mt-10">
                 <Button asChild variant="primary" mode="dark">
-                  <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="hero-book-demo">
-                    {t('Book a Demo')}
+                  <a href={href('book-meeting', lang)} data-testid="hero-book-demo">
+                    {t('hero.cta2')}
                     <ArrowRight aria-hidden="true" />
                   </a>
                 </Button>
                 <Button asChild variant="secondary" mode="dark">
-                  <a href="/science" data-testid="hero-our-science">
-                    {t('See the Science')}
-                  </a>
+                  <a href="/science" data-testid="hero-our-science">{t('hero.cta')}</a>
                 </Button>
               </div>
             </div>
@@ -137,9 +138,7 @@ export default function HeroSection() {
             <span
               className="inline-flex items-center px-6 py-2.5 text-[15px] text-white/70 whitespace-nowrap"
               style={{ fontWeight: 300, letterSpacing: '0.02em' }}
-            >
-              {t('Our Customers')}
-            </span>
+            >{t('hero.text')}</span>
           </div>
 
           {/* Scrolling marquee with mask fade on both edges */}

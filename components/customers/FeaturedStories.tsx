@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 const stories = [
   {
@@ -84,7 +85,7 @@ export default function FeaturedStories() {
                 <Button
                   variant="tertiary"
                   mode="dark"
-                  onClick={() => { router.push(`${lang === 'it' ? '/clienti' : '/customers'}/${s.id}`); window.scrollTo(0, 0); }}
+                  onClick={() => { router.push(`${href('customers', lang)}/${s.id}`); window.scrollTo(0, 0); }}
                 >
                   {t('Read the full story')}
                 </Button>

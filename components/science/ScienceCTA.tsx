@@ -6,6 +6,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function ScienceCTA() {
   const { t, lang } = useLanguage();
@@ -27,7 +28,7 @@ export default function ScienceCTA() {
             <h3 className="text-xl md:text-2xl font-semibold text-white/90 mt-3 md:mt-4 mb-2 md:mb-3">{t('Book a Demo')}</h3>
             <p className="text-[13px] md:text-[15px] text-white/[0.65] mb-5 md:mb-8 max-w-md">{t('See how science translates into better talent decisions')}</p>
             <Button asChild variant="primary" mode="dark" className="w-full md:w-auto max-w-sm justify-between">
-              <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="science-cta-demo">
+              <a href={href('book-meeting', lang)} data-testid="science-cta-demo">
                 <span>{t('Book a Demo')}</span>
                 <ArrowRight aria-hidden="true" />
               </a>

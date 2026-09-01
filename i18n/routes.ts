@@ -25,8 +25,9 @@
 // follows.
 
 import data from './routes.json';
+import { pathFor, type Locale as UrlLocale } from './urls';
 
-export type Locale = 'en' | 'it';
+export type Locale = UrlLocale;
 
 export type Route = {
   /** Stable identifier, independent of either slug. */
@@ -44,3 +45,28 @@ export const localesOf = (r: Route): Locale[] =>
 
 export const byPath = (locale: Locale, path: string): Route | undefined =>
   routes.find((r) => r.paths[locale] === path);
+
+export const byId = (id: string): Route | undefined => routes.find((r) => r.id === id);
+
+/**
+ * The href for a route id in the current locale — the replacement for the
+ * `hrefIt` flags that were scattered through the navbar and the footer, and for
+ * every `lang === 'it' ? '/prenota-incontro' : '/book-meeting'` ternary.
+ *
+ * It throws on an unknown id rather than returning '#': a typo in a nav link
+ * is a broken link on all 61 pages, and a silent one is worse than a loud one.
+ */
+export function href(id: string, locale: string): string {
+  const route = byId(id);
+  if (!route) throw new Error(`i18n/routes: no route '${id}'. Nav links come from the registry.`);
+  // `locale` is what the UI has, which is a string. A route with no page in
+  // that language falls back to English rather than rendering a dead link —
+  // hiding the link is the caller's decision, not this function's.
+  return pathFor(route, locale as Locale) ?? pathFor(route, 'en') ?? '/';
+}
+
+/** Whether a route has content in a locale — what hideInIT was guessing at. */
+export const hasLocale = (id: string, locale: string): boolean =>
+  byId(id)?.paths[locale as Locale] !== undefined;
+
+

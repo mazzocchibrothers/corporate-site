@@ -1,34 +1,31 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { m, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 const stats = [
   {
+    id: 'savedAnnually',
     value: '4.5M',
-    label: 'saved annually',
-    sublabel: 'in failed hire costs',
-    footnote: 'Based on 300 hires, 30% lower failure rate, 50K average cost per failure',
   },
   {
+    id: 'monthsFaster',
     value: '6-9',
-    label: 'months faster',
-    sublabel: 'strategic execution',
-    footnote: 'When the right people are in the right roles from day one',
   },
   {
+    id: 'roi',
     value: '10-30x',
-    label: 'ROI',
-    sublabel: 'in 18-24 months',
-    footnote: 'With payback typically in 6-12 months',
   },
 ];
 
 export default function ROISection() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('home');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   return (
@@ -47,18 +44,15 @@ export default function ROISection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">
-            {t('People are your biggest cost.')}{' '}
-            <span className="italic font-bold gradient-text-warm-on-light">
-              {t('They can also be your biggest return.')}
-            </span>
-          </h2>
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">{t.rich('roi.heading', {
+            span: (chunks) => <span className="italic font-bold gradient-text-warm-on-light">{chunks}</span>,
+          })}</h2>
           <Button asChild variant="primary" mode="light" className="shrink-0">
             <a
-              href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+              href={href('book-meeting', lang)}
               data-testid="roi-cta"
             >
-              {t('Book a Demo')}
+              {t('roi.cta')}
               <ArrowRight aria-hidden="true" />
             </a>
           </Button>
@@ -91,10 +85,10 @@ export default function ROISection() {
                 <h3
                   className="text-[15px] md:text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-2 md:mb-4"
                 >
-                  {t(stat.label)} <span className="font-normal text-[#7A7A7A]">{t(stat.sublabel)}</span>
+                  {t(`roi.stats.${stat.id}.label`)} <span className="font-normal text-[#7A7A7A]">{t(`roi.stats.${stat.id}.sublabel`)}</span>
                 </h3>
                 <p className="text-[13px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-relaxed">
-                  {t(stat.footnote)}
+                  {t(`roi.stats.${stat.id}.footnote`)}
                 </p>
               </div>
             </m.div>
