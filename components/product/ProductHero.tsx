@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -13,7 +14,8 @@ const EMBED_EN = 'https://cdn.lottielab.com/l/3FJ5CBuSY6Ebq8.html';
 const EMBED_IT = 'https://cdn.lottielab.com/l/9E2vegrr5hs33N.html';
 
 export default function ProductHero() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('product-overview');
   const [animData, setAnimData] = useState(null);
   const [useFallback, setUseFallback] = useState(false);
 
@@ -39,11 +41,10 @@ export default function ProductHero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              {t('One platform.')}<br />
-              {t('Every talent decision.')}<br />
-              <span className="font-bold gradient-text">{t('Objective data.')}</span>
-            </motion.h1>
+            >{t.rich('hero.heading', {
+              br: () => <br />,
+              span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+            })}</motion.h1>
 
             <motion.div
               className="flex flex-col items-start gap-5 md:gap-8"
@@ -51,16 +52,14 @@ export default function ProductHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-xl font-normal md:font-light">
-                {t('Skillvue is the AI-powered talent intelligence platform that turns static HR processes into predictive, objective insights. Verify skills, predict potential, and make every people decision defensible.')}
-              </p>
+              <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-xl font-normal md:font-light">{t('hero.body')}</p>
 
               <Button asChild variant="primary" mode="dark">
                 <a
                   href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
                   data-testid="product-hero-book-demo"
                 >
-                  <span>{t('Book a Demo')}</span>
+                  <span>{t('hero.cta')}</span>
                   <ArrowRight aria-hidden="true" />
                 </a>
               </Button>

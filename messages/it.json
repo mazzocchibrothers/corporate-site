@@ -13,5 +13,12 @@
       "title": "Skillvue | Piattaforma di Talent Intelligence con AI",
       "description": "Valuta le competenze, prevedi le performance e rendi ogni decisione di hiring e promozione difendibile. Skillvue combina la scienza psicometrica con l’AI per le aziende europee."
     }
+  },
+  "product-overview": {
+    "hero": {
+      "heading": "Una piattaforma.<br></br>Tutte le tue decisioni sulle persone.<br></br><span>Con dati oggettivi.</span>",
+      "body": "Skillvue è la piattaforma di talent intelligence basata su AI che trasforma i processi HR statici in insight predittivi e oggettivi. Valuta le competenze, ottieni una visione predittiva sul potenziale e rendi ogni decisione sulle persone più difendibile",
+      "cta": "Prenota una Demo"
+    }
   }
 }

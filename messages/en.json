@@ -13,5 +13,12 @@
       "title": "Skillvue | AI Talent Intelligence Platform",
       "description": "Verify skills, predict performance and make every hiring and promotion decision defensible. Skillvue combines psychometric rigour with AI for European enterprises."
     }
+  },
+  "product-overview": {
+    "hero": {
+      "heading": "One platform.<br></br>Every talent decision.<br></br><span>Objective data.</span>",
+      "body": "Skillvue is the AI-powered talent intelligence platform that turns static HR processes into predictive, objective insights. Verify skills, predict potential, and make every people decision defensible.",
+      "cta": "Book a Demo"
+    }
   }
 }

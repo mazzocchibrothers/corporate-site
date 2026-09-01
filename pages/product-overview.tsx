@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { messagesFor } from '@/i18n/messages';
 import { useRouter } from 'next/router';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -13,6 +14,10 @@ import IntegrationEcosystem from '@/components/product/IntegrationEcosystem';
 import EnterpriseTrust from '@/components/product/EnterpriseTrust';
 import ProductCTA from '@/components/product/ProductCTA';
 import ProductCrossLinks from '@/components/shared/ProductCrossLinks';
+
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('product-overview');
 
 export default function ProductOverviewPage() {
   const { locale } = useRouter();
