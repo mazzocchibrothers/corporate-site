@@ -1,5 +1,14 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
+// Points next-intl at i18n/request.ts. Without it the server has no config and
+// every App Router page fails at prerender with "Couldn't find next-intl config
+// file" — which surfaces as a build error, not a runtime one.
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+
+// Locale routing lives in i18n/routing.ts + middleware.ts, not here. The `i18n`
+// block does not exist in the App Router, and the /clienti rewrites it used to
+// carry are now next-intl `pathnames`, generated from i18n/routes.json.
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   experimental: {
@@ -8,10 +17,6 @@ const nextConfig: NextConfig = {
     // noscriptFallback: without it, a client with JS disabled would only
     // ever get the critical subset and never load the rest of the sheet.
     optimizeCss: { noscriptFallback: true },
-  },
-  i18n: {
-    locales: ['en', 'it'],
-    defaultLocale: 'en',
   },
   async headers() {
     const oneYearImmutable = 'public, max-age=31536000, immutable';
@@ -26,26 +31,6 @@ const nextConfig: NextConfig = {
       { source: '/careers/:path*', headers: [{ key: 'Cache-Control', value: thirtyDays }] },
     ];
   },
-  async rewrites() {
-    return {
-      // None of these set locale:false, so Next matches them with the locale
-      // prefix already stripped — "/it/clienti" is tested as "clienti" under
-      // the it locale and matches the same rule as plain "/clienti". No
-      // separate afterFiles entry needed for the IT-prefixed form.
-      beforeFiles: [
-        { source: '/customers/mediaset', destination: '/customers/mediaset-2' },
-        { source: '/clienti/mediaset', destination: '/customers/mediaset-2' },
-        { source: '/clienti', destination: '/customers' },
-        { source: '/clienti/:slug', destination: '/customers/:slug' },
-      ],
-    };
-  },
-  async redirects() {
-    return [
-      { source: '/it/customers', destination: '/it/clienti', locale: false, permanent: true },
-      { source: '/it/customers/:slug', destination: '/it/clienti/:slug', locale: false, permanent: true },
-    ];
-  },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

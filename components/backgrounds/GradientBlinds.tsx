@@ -13,7 +13,7 @@ const prepStops = stops => {
   const base = (stops && stops.length ? stops : ['#FF9FFC', '#5227FF']).slice(0, MAX_COLORS);
   if (base.length === 1) base.push(base[0]);
   while (base.length < MAX_COLORS) base.push(base[base.length - 1]);
-  const arr = [];
+  const arr: number[][] = [];
   for (let i = 0; i < MAX_COLORS; i++) arr.push(hexToRGB(base[i]));
   const count = Math.max(2, Math.min(MAX_COLORS, stops?.length ?? 2));
   return { arr, count };
@@ -38,12 +38,12 @@ const GradientBlinds = ({
   shineDirection = 'left',
   mixBlendMode = 'lighten'
 }) => {
-  const containerRef = useRef(null);
-  const rafRef = useRef(null);
-  const programRef = useRef(null);
-  const meshRef = useRef(null);
-  const geometryRef = useRef(null);
-  const rendererRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const rafRef = useRef<number | null>(null);
+  const programRef = useRef<Program | null>(null);
+  const meshRef = useRef<Mesh | null>(null);
+  const geometryRef = useRef<Triangle | null>(null);
+  const rendererRef = useRef<Renderer | null>(null);
   const mouseTargetRef = useRef([0, 0]);
   const lastTimeRef = useRef(0);
   const firstResizeRef = useRef(true);
