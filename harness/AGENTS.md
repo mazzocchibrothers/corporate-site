@@ -41,6 +41,47 @@ files and asset gaps that have since moved (it still calls `carrefour.tsx` a
 `t()` page; it isn't). When it disagrees with the code, **the code wins** —
 `HANDOFF.md` is frozen history, not a spec.
 
+## 2b. Branch model during the App Router migration
+
+`app-router` is the integration branch. **`main` is touched once, at the end.**
+
+```
+main         ●━━●━━●━━●━━●━━━━━━━━━━━━━━━━━━━●   ← marketing keeps shipping here
+              ╲                              ╱
+app-router     ●━━●━━●━━●━━●━━●━━●━━●━━●━━━━●    ← every Issue lands here
+                 ↑ one Issue = one branch off app-router, one PR back into it
+```
+
+- **Branch off `app-router`, PR into `app-router`.** Never into `main`.
+- **A PR that targets `main` during the migration is a mistake**, with one
+  exception: an urgent content fix the marketing team needs live. Those still go
+  to `main` — see the sync rule below.
+- Rebase onto `origin/app-router` before opening your PR, not onto `main`.
+
+### Syncing `main` in, and the trap in it
+
+Marketing keeps publishing while this runs, and every page they add lands in
+`pages/` — the directory this branch is deleting. So:
+
+```bash
+git checkout app-router && git merge origin/main
+npm run check:routes      # reports which router serves each route
+```
+
+The merge itself will be clean, because a new landing page is a new file. **That
+is the trap:** it lands in `pages/`, where nothing on this branch serves it, and
+git will not say a word. `check:routes` is what catches it (#133) — a route
+served by `pages/` after the sync is a route that still has to be re-created
+under `app/`.
+
+Sync weekly, not at the end. A month of unsynced content pages is a month of
+them discovered at once.
+
+### Before `app-router` merges into `main`
+
+The switch is the only moment the live site changes. See #120 — it is a gate,
+not a formality, and it is the last Issue in the backlog for that reason.
+
 ## 3. Hard rules (non-negotiable)
 
 - **One Issue per branch/worktree.** Never mix changes from different Issues.
