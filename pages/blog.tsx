@@ -10,6 +10,13 @@ import { Button } from '@/components/ui/button';
 
 const articles = [
   {
+    id: 11,
+    image: '/newsletter-august-cover.jpg',
+    href: '/blog/newsletter-august-2026',
+    en: { title: 'The August Newsletter', date: 'August 2026', tag: 'Newsletter' },
+    it: { title: 'La newsletter di agosto', date: 'Agosto 2026', tag: 'Newsletter' },
+  },
+  {
     id: 10,
     image: '/newsletter-july-cover.png',
     href: '/blog/newsletter-july-2026',
