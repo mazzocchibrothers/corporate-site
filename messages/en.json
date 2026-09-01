@@ -221,5 +221,573 @@
       "body": "Skillvue is the AI-powered talent intelligence platform that turns static HR processes into predictive, objective insights. Verify skills, predict potential, and make every people decision defensible.",
       "cta": "Book a Demo"
     }
+  },
+  "solutions": {
+    "internal-mobility": {
+      "imcta": {
+        "heading": "Ready to unlock the talent you <span>already have?</span>",
+        "cta": "Book a Demo"
+      },
+      "imHero": {
+        "heading": "Your next best hire might already <span>work for you.</span>",
+        "body": "Skillvue maps skills and potential across your entire workforce, making internal talent visible, succession decisions data-driven, and mobility paths transparent.",
+        "cta": "Book a Demo"
+      },
+      "imHowSolves": {
+        "pillars": {
+          "endEndTalent": {
+            "title": "End-to-end talent visibility",
+            "desc": "Continuous mapping of skills and potential to match capabilities with needs. Reduce turnover and replacement costs by seeing your full talent picture."
+          },
+          "dataDrivenSuccession": {
+            "title": "Data-driven succession planning",
+            "desc": "Faster coverage of critical roles. Cut vacancy cost and dependency on external recruiting. Know who's ready now, who's ready in 6 months, and where gaps exist."
+          },
+          "fasterInternalFills": {
+            "title": "Faster internal fills",
+            "desc": "Stronger engagement and retention through transparent, data-backed decisions that value existing talent. Cut external search costs by filling roles from within."
+          }
+        },
+        "heading": "Three pillars of <span>intelligent mobility</span>"
+      },
+      "imImpact": {
+        "text": "Customer Story",
+        "body": "Pharma",
+        "text2": "Challenge",
+        "body2": "Mapping internal talent to identify succession candidates for critical leadership roles across multiple business units.",
+        "text3": "Result",
+        "body3": "Full talent visibility across the organization. Data-driven succession plans now cover 100% of critical roles with identified ready-now and ready-soon candidates.",
+        "cta": "Read the full story",
+        "body4": "critical roles with<br></br>succession coverage"
+      },
+      "imProblem": {
+        "pains": {
+          "highPotentialsInvisible": {
+            "title": "High potentials are invisible",
+            "desc": "How many are already in the organization but hidden. And at risk of leaving before you even act?"
+          },
+          "successionPipelinesFiction": {
+            "title": "Succession pipelines are fiction",
+            "desc": "of critical roles have zero or one ready successor. The next leadership crisis is already building."
+          },
+          "mobilityPoliticalNot": {
+            "title": "Mobility is political, not meritocratic",
+            "desc": "Horizontal moves happen only when someone asks or when it's already too late. Internal moves based on proximity and politics, not verified competencies."
+          }
+        },
+        "heading": "The blind spots in your <span>talent mobility</span>"
+      },
+      "imShift": {
+        "heading": "From political moves to <span>skill intelligence</span>",
+        "text": "The old playbook",
+        "text2": "With Skillvue",
+        "oldItems": {
+          "promotionDecisionsDriven": "Promotion decisions driven by manager opinion and visibility",
+          "horizontalMovesOnly": "Horizontal moves only when someone asks or it's too late",
+          "mIntegrationsTurn": "M&A integrations turn into talent guesswork at scale",
+          "criticalKnowledgeWalks": "Critical knowledge walks out with retiring employees",
+          "endlessCalibrationRounds": "Endless calibration rounds with no time for decisions"
+        },
+        "newItems": {
+          "objectiveUpdatedView": "Objective, updated view of skills and potential across the entire organization",
+          "internalMovesMatched": "Internal moves matched on verified competencies, not politics or proximity",
+          "restructuringsGroundedData": "Restructurings grounded in data: who has the skills, who needs development, where are the gaps",
+          "successionRiskVisible": "Succession risk visible in real time. including knowledge concentration and retirement exposure",
+          "lessTimeProcess": "Less time on process, more time on decisions. with the ability to track whether they worked"
+        }
+      }
+    },
+    "learning-development": {
+      "ldcta": {
+        "heading": "Ready to prove L&D impact with <span>data?</span>",
+        "cta": "Book a Demo"
+      },
+      "ldHero": {
+        "heading": "Stop funding generic training.<br></br>Start focusing on the <span>real skill gaps.</span>",
+        "body": "Skillvue gives L&D leaders objective, measurable data on where the real skill gaps are, at individual, team, and organizational level, so every training investment is targeted, measurable, and aligned to business impact.",
+        "cta": "Book a Demo"
+      },
+      "ldHowSolves": {
+        "pillars": {
+          "preciseSkillGap": {
+            "title": "Precise skill gap analysis",
+            "desc": "Objective identification of improvement areas at both individual and aggregate level. Know exactly what to invest in, not where to guess.",
+            "statLabel": "more targeted L&D investments vs. catalogue-based programs"
+          },
+          "dataDrivenLearning": {
+            "title": "Data-driven learning design",
+            "desc": "Programs built on real, measured needs, not standard catalogues. Every learning investment tied to a validated gap.",
+            "statLabel": "reduction in unused or misaligned training budget"
+          },
+          "measurableRoi": {
+            "title": "Measurable ROI",
+            "desc": "Pre/post verification comparison. Objective tracking of progress and concrete impact on performance.",
+            "statLabel": "faster skill development with targeted interventions"
+          }
+        },
+        "heading": "Three pillars of <span>skill-driven L&D</span>",
+        "body": "Stop investing in training that doesn't move the needle. Measure gaps, design programs, and track impact with objective data."
+      },
+      "ldImpact": {
+        "kpis": {
+          "n69mo": {
+            "value": "6-9mo",
+            "label": "faster execution",
+            "sublabel": "on strategic initiatives",
+            "detail": "When you know exactly which skills your people have and which they lack, transformation projects stop stalling. Teams are staffed with the right capabilities from day one."
+          },
+          "n85": {
+            "value": "85%+",
+            "label": "hiring success",
+            "sublabel": "territories fill faster, products launch on-time",
+            "detail": "Objective skill data helps you place people where they can perform immediately. No more guessing, no more costly mismatches between role and capability."
+          },
+          "millions": {
+            "value": "Millions",
+            "label": "revenue captured",
+            "sublabel": "opportunities realized earlier",
+            "detail": "Every month a critical role stays empty or misaligned, revenue is left on the table. Skill-driven L&D closes gaps faster and turns people into your competitive advantage."
+          }
+        },
+        "heading": "Measurable impact on <span>L&D outcomes</span>",
+        "body": "When learning investments are driven by objective skill data, the results speak for themselves."
+      },
+      "ldIntegration": {
+        "heading": "Skillvue enriches your <span>learning ecosystem</span>",
+        "body": "Skillvue integrates natively with your LMS and LXP. feeding precise skill gap data into the systems where learning is delivered. The result: the right content reaches the right people based on verified needs, not generic assignments.",
+        "text": "+ more"
+      },
+      "ldProblem": {
+        "pains": {
+          "nearZeroVisibility": {
+            "title": "Near-zero visibility on actual capabilities",
+            "desc": "People data live in separate silos. Nobody connects the dots across the organization."
+          },
+          "programsPickedGut": {
+            "title": "Programs picked on gut feel",
+            "desc": "Training budgets deployed based on manager requests and vendor catalogues, not evidence of where gaps actually exist."
+          },
+          "roiQuestionNobody": {
+            "title": "ROI is a question nobody can answer",
+            "desc": "\"We trained X people\". but what was the business impact?"
+          }
+        },
+        "heading": "The blind spots in your <span>L&D investments</span>"
+      },
+      "ldShift": {
+        "heading": "From generic catalogues to <span>skill intelligence in L&D</span>",
+        "text": "The old playbook",
+        "text2": "With Skillvue",
+        "oldItems": {
+          "peopleDataSeparate": "People data in separate silos",
+          "programsPickedGut": "Programs picked on gut feel, not evidence",
+          "nearZeroVisibility": "Near-zero visibility on what people can and can't do",
+          "roiQuestionNobody": "ROI is a question nobody can answer",
+          "whenBusinessPivots": "When the business pivots, L&D is always catching up"
+        },
+        "newItems": {
+          "skillsMeasuredObjectively": "Skills measured objectively and benchmarked across the entire organization",
+          "budgetAllocatedWhere": "Budget allocated where gaps are widest and business impact is highest",
+          "trainingShapedAround": "Training shaped around concrete examples of where skills fall short and how",
+          "skillGapTrend": "Skill-gap trend lines show what's working and what needs to be reviewed or cut",
+          "contentPersonalizedScale": "Content personalized at scale. the platform knows what each person needs next"
+        }
+      }
+    },
+    "performance-management": {
+      "pmcta": {
+        "heading": "Ready to make performance reviews <span>objective?</span>",
+        "cta": "Book a Demo"
+      },
+      "pmHero": {
+        "heading": "If results are measured by KPIs, why are competencies still measured by <span>opinions?</span>",
+        "body": "Skillvue integrates objective skill verifications into your performance cycles. reducing bias, improving calibration, and giving every manager a data-backed starting point before they write a single review.",
+        "cta": "Book a Demo"
+      },
+      "pmHowSolves": {
+        "heading": "The best of <span>both worlds</span>",
+        "text": "Subjective verifications",
+        "heading2": "360, 180, manager reviews",
+        "body": "Captures context, relationships, and situational nuance that only a manager can see firsthand",
+        "body2": "Without a shared standard, reviews become inconsistent and impossible to compare",
+        "text2": "Objective verifications",
+        "body3": "One framework applied consistently. Evaluation is fair and comparable",
+        "body4": "Objective data alone can miss the human layer. the context behind a result",
+        "heading3": "Human Reviews + Skillvue",
+        "body5": "Combining subjective verification methods with Skillvue verifications brings objectivity without compromising on context and nuance."
+      },
+      "pmImpact": {
+        "text": "Customer Story",
+        "body": "Financial Services",
+        "text2": "Challenge",
+        "body2": "Introducing objective competency verification into performance cycles across multiple countries and business units.",
+        "text3": "Result",
+        "body3": "A unified talent language across hiring, performance, and development for the first time. Verifications now inform decisions from screening to succession.",
+        "cta": "Read the full story",
+        "body4": "modules unified across<br></br>hiring, performance & development"
+      },
+      "pmProblem": {
+        "pains": {
+          "managerSubjectivityDrives": {
+            "title": "Manager subjectivity drives everything",
+            "desc": "Criteria exist, but evaluations are filtered through each manager's lens — biased by recency, visibility, and personal dynamics.",
+            "statLabel": "of employees say reviews don't reflect actual performance"
+          },
+          "evaluationsArenT": {
+            "title": "Evaluations aren't comparable",
+            "desc": "Team A in London uses different standards than Team B in New York. No way to benchmark or calibrate across the organization.",
+            "statLabel": "cross-team comparability without structured verification"
+          },
+          "negativeKpisIndividual": {
+            "title": "Negative KPIs ≠ individual failure",
+            "desc": "How do you tell whether a poor result reflects individual performance or management quality? Without objective competency data, you can't.",
+            "statLabel": "cost of a wrong performance decision vs. getting it right"
+          }
+        },
+        "heading": "The blind spots in your <span>performance decisions</span>",
+        "body": "Most performance processes measure activity, not capability. The result: decisions built on impressions, not evidence."
+      },
+      "pmShift": {
+        "heading": "From subjective reviews to <span>objective-subjective linkage</span>",
+        "text": "The old playbook",
+        "text2": "With Skillvue",
+        "oldItems": {
+          "reviewsDrivenManager": "Reviews driven by manager opinion and recency bias",
+          "inconsistentEvaluationStandards": "Inconsistent evaluation standards across teams, countries, and BUs",
+          "promotionDecisionsBased": "Promotion decisions based on \"who's visible\"",
+          "noWayMeasure": "No way to measure competencies as rigorously as KPIs"
+        },
+        "newItems": {
+          "reviewsInformedObjective": "Reviews informed by objective skill data as a calibrated starting point",
+          "oneFrameworkApplied": "One framework applied consistently across the entire organization",
+          "promotionDecisionsBased": "Promotion decisions based on validated competency data",
+          "skillVerificationsEmbedded": "Skill verifications embedded in performance reviews with the same objectivity as business metrics"
+        }
+      }
+    },
+    "project-resourcing": {
+      "prcta": {
+        "heading": "Ready to staff projects with <span>confidence?</span>",
+        "cta": "Book a Demo"
+      },
+      "prConsulting": {
+        "points": {
+          "utilizationOptimization": {
+            "title": "Utilization optimization",
+            "desc": "Match consultants to engagements based on verified skills, not just availability.",
+            "statLabel": "improvement in billable utilization rates"
+          },
+          "clientFacingProof": {
+            "title": "Client-facing proof",
+            "desc": "Objective evidence of team capabilities for competitive bids.",
+            "statLabel": "higher win rates on proposals with skill-verified teams"
+          },
+          "reskillingIdentification": {
+            "title": "Reskilling identification",
+            "desc": "Know who can transition to high-demand practices (AI, data, cybersecurity) based on verified skills.",
+            "statLabel": "faster internal transitions to emerging practice areas"
+          }
+        },
+        "heading": "Built for organizations where people are <span>the product</span>",
+        "body": "In consulting, professional services, and project-driven organizations, the quality of every engagement depends on the quality of the team. Skillvue gives you objective skills data to staff smarter."
+      },
+      "prHero": {
+        "heading": "Staff projects based on verified capability, <span>not availability.</span>",
+        "body": "Skillvue gives project leaders and resourcing teams an objective view of who has the skills to deliver, replacing \"who's free\" with \"who's fit.\" Reduce delivery risk, improve team composition, and stop staffing in the dark.",
+        "cta": "Book a Demo"
+      },
+      "prHowSolves": {
+        "pillars": {
+          "skillsMatchedStaffing": {
+            "title": "Skills-matched staffing",
+            "desc": "Assemble project teams based on verified skill data. Match people to assignments based on what they can actually do, not who raised their hand."
+          },
+          "realTimeCapability": {
+            "title": "Real-time capability visibility",
+            "desc": "A live skills inventory across your entire workforce. Search by skill, proficiency level, and availability. Find the right person in minutes, not days."
+          },
+          "deliveryRiskReduction": {
+            "title": "Delivery risk reduction",
+            "desc": "Before a project kicks off, see whether the team has the skills to deliver. Identify gaps early, upskill or reassign before they become expensive problems."
+          }
+        },
+        "heading": "How Skillvue transforms <span>project resourcing</span>"
+      },
+      "prProblem": {
+        "pains": {
+          "staffingAvailabilityNot": {
+            "title": "Staffing by availability, not capability",
+            "desc": "Project teams assembled based on who's free, not who has the right skills. Result: delivery delays, rework, and frustration."
+          },
+          "noVisibilityReal": {
+            "title": "No visibility on real skills across the org",
+            "desc": "Managers rely on memory, reputation, and who they know. not verified competency data. Top performers are over-deployed; hidden talent stays invisible."
+          },
+          "performanceVarianceUnexplained": {
+            "title": "Performance variance is unexplained",
+            "desc": "Team A delivers on time. Team B doesn't. Same tools, same size. The difference is people quality. but without objective data, you can't diagnose it."
+          }
+        },
+        "heading": "The blind spots in your <span>project staffing</span>"
+      }
+    },
+    "talent-acquisition": {
+      "tacta": {
+        "heading": "Ready to hire with <span>confidence?</span>",
+        "cta": "Book a Demo"
+      },
+      "taExperience": {
+        "heading": "Candidate Experience",
+        "body": "Fast, frictionless, and designed to meet people where they are.",
+        "heading2": "HR Experience",
+        "body2": "From automation to insight.",
+        "candidateItems": {
+          "n530Minutes": "5-30 minutes depending on funnel stage",
+          "audioVideoOr": "Audio, video, or written responses",
+          "availableViaWeb": "Available via web app and WhatsApp",
+          "brandedMultilingualMobile": "Branded, multilingual, mobile-first"
+        },
+        "hrItems": {
+          "hiringProcessDocs": "Hiring process docs generated automatically",
+          "suitabilityFilteringRanking": "Suitability filtering, ranking, benchmarking with full explainability",
+          "scoringEvidenceAnswer": "Scoring with evidence: answer, justification, behavioral anchor",
+          "n100AtsIntegrations": "100+ ATS integrations — data flows where you already work"
+        }
+      },
+      "taFunnel": {
+        "stages": {
+          "pre-screening": {
+            "label": "Pre-screening",
+            "automation": {
+              "title": "Process automation",
+              "items": {
+                "hiringProcessDocs": {
+                  "text": "Hiring process docs generation",
+                  "detail": "JDs, reports etc."
+                },
+                "interviewScheduling": {
+                  "text": "Interview scheduling"
+                },
+                "candidatesFeedback": {
+                  "text": "Candidates feedback"
+                },
+                "lineManagerFeedback": {
+                  "text": "Line manager feedback"
+                }
+              }
+            },
+            "reporting": {
+              "title": "Reporting & decision making",
+              "items": {
+                "suitabilityFiltering": {
+                  "text": "Suitability filtering"
+                },
+                "rankingBenchmarking": {
+                  "text": "Ranking and benchmarking"
+                },
+                "scoringExplained": {
+                  "text": "Scoring explained",
+                  "detail": "answer, justification, evidence"
+                }
+              }
+            },
+            "integration": {
+              "title": "Core HR integration",
+              "text": "100+ ATS integrations"
+            }
+          },
+          "screening": {
+            "label": "Screening",
+            "automation": {
+              "title": "Process automation",
+              "items": {
+                "aiPoweredSkill": {
+                  "text": "AI-powered skill verification",
+                  "detail": "Audio, video, written"
+                },
+                "automatedScheduling": {
+                  "text": "Automated scheduling"
+                },
+                "realTimeCandidate": {
+                  "text": "Real-time candidate feedback"
+                }
+              }
+            },
+            "reporting": {
+              "title": "Reporting & decision making",
+              "items": {
+                "competencyBasedFiltering": {
+                  "text": "Competency-based filtering"
+                },
+                "rankingBenchmarking": {
+                  "text": "Ranking and benchmarking"
+                },
+                "scoringExplained": {
+                  "text": "Scoring explained",
+                  "detail": "answer, justification, evidence"
+                }
+              }
+            },
+            "integration": {
+              "title": "Core HR integration",
+              "text": "100+ ATS integrations"
+            }
+          },
+          "in-depth": {
+            "label": "In-depth",
+            "automation": {
+              "title": "Process automation",
+              "items": {
+                "interviewScheduling": {
+                  "text": "Interview scheduling"
+                },
+                "personInterviewsSupport": {
+                  "text": "In-person interviews support",
+                  "detail": "Questions packages, benchmarks, drill-down"
+                },
+                "depthCandidateFeedback": {
+                  "text": "In-depth candidate feedback"
+                }
+              }
+            },
+            "reporting": {
+              "title": "Reporting & decision making",
+              "items": {
+                "crossJobsInsights": {
+                  "text": "Cross-jobs insights"
+                },
+                "rankingBenchmarking": {
+                  "text": "Ranking and benchmarking"
+                },
+                "scoringExplained": {
+                  "text": "Scoring explained",
+                  "detail": "answer, justification, evidence"
+                }
+              }
+            },
+            "integration": {
+              "title": "Core HR integration",
+              "text": "100+ ATS integrations"
+            }
+          }
+        },
+        "heading": "From automation to insight, what your team gets at <span>every stage of the funnel</span>",
+        "cta": "Stage"
+      },
+      "taHero": {
+        "heading": "Stop gambling on hiring.<br></br>Start predicting who will <span>perform.</span>",
+        "body": "Skillvue replaces guesswork with science at scale. AI-powered verifications customized to your roles and leadership model surface top candidates, cut early turnover, and make every hiring decision defensible.",
+        "cta": "Book a Demo"
+      },
+      "taHowSolves": {
+        "stages": {
+          "preScreening": {
+            "title": "Pre-screening",
+            "subtitle": "Top of funnel"
+          },
+          "screening": {
+            "title": "Screening",
+            "subtitle": "Mid funnel"
+          },
+          "depth": {
+            "title": "In-depth",
+            "subtitle": "Late funnel"
+          }
+        },
+        "heading": "Skillvue adds value at every step of the <span>hiring funnel</span>"
+      },
+      "taImpact": {
+        "kpis": {
+          "badHireRate": {
+            "label": "bad hire rate",
+            "sublabel": "down from 30-40%"
+          },
+          "earlyTurnover": {
+            "label": "early turnover",
+            "sublabel": "0-18 months, down from 20-30%"
+          },
+          "annualSavings": {
+            "label": "annual savings",
+            "sublabel": "on failed hires, replacement costs, lost productivity"
+          }
+        },
+        "heading": "Measurable impact on every hiring metric that <span>matters</span>"
+      },
+      "taPlaybook": {
+        "rows": {
+          "seniorLeadership": {
+            "role": "Senior / leadership",
+            "skillvue": "Attitudes + Soft + Potential"
+          },
+          "managers": {
+            "role": "Managers",
+            "skillvue": "Attitude + Soft + Potential + Hard"
+          },
+          "employees": {
+            "role": "Employees",
+            "skillvue": "Suitability + Attitudes + Soft + Potential + Hard"
+          },
+          "fieldOperators": {
+            "role": "Field operators",
+            "skillvue": "Suitability + Soft + Hard"
+          }
+        },
+        "heading": "Skillvue is a partner for the recruitment journey",
+        "body": "Skillvue playbook recruitment process",
+        "header": {
+          "step1": "Step 1",
+          "step2": "Step 2",
+          "step3": "Step 3",
+          "step4": "Step N"
+        },
+        "stepLabels": {
+          "cLevel": "C-level",
+          "hr": "HR",
+          "hrManager": "HR + manager",
+          "hrSenior": "HR + senior",
+          "manager": "Manager",
+          "senior": "Senior"
+        }
+      },
+      "taProblem": {
+        "pains": {
+          "hiresFailWithin": {
+            "title": "of hires fail within 18 months",
+            "desc": "Costing 3-4x salary each time — before you count the opportunity cost of a vacant role."
+          },
+          "screeningDoesnT": {
+            "title": "Screening doesn't scale",
+            "desc": "Manual CV review degrades quality as volume increases. Different countries, different standards, no comparability."
+          },
+          "interviewsPredictNothing": {
+            "title": "Interviews predict nothing",
+            "desc": "Unstructured interviews have among the lowest predictive validity of any selection method, yet they drive most hiring decisions."
+          }
+        },
+        "heading": "The blind spots in your <span>hiring decisions</span>",
+        "body": "How do you really know who will perform before the interview? How do you make screening predictive and comparable at scale? How do you cut early turnover and mismatch from day one?"
+      },
+      "taShift": {
+        "heading": "From CV screening to <span>skill intelligence</span>",
+        "text": "The old playbook",
+        "text2": "With Skillvue",
+        "text3": "The old playbook",
+        "text4": "With Skillvue",
+        "oldItems": {
+          "cvScreeningGut": "CV screening + gut feeling",
+          "unstructuredInterviewsNo": "Unstructured interviews with no comparability",
+          "qualityDegradesVolume": "Quality degrades as volume increases",
+          "hiringDecisionsMade": "Hiring decisions made on who \"felt right\"",
+          "earlyTurnoverCost": "Early turnover as a cost of doing business"
+        },
+        "newItems": {
+          "aiPoweredSkill": "AI-powered skill verifications from the top of the funnel",
+          "structuredPsychometricallyValidated": "Structured, psychometrically validated evaluations across every candidate",
+          "sameScientificRigor": "Same scientific rigor whether you verify 10 or 10,000 candidates",
+          "hiringDecisionsBacked": "Hiring decisions backed by objective scores, evidence, and explainable recommendations",
+          "predictiveMatchingReduces": "Predictive matching that reduces mismatch from day one"
+        }
+      }
+    }
   }
 }

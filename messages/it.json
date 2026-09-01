@@ -221,5 +221,573 @@
       "body": "Skillvue è la piattaforma di talent intelligence basata su AI che trasforma i processi HR statici in insight predittivi e oggettivi. Valuta le competenze, ottieni una visione predittiva sul potenziale e rendi ogni decisione sulle persone più difendibile",
       "cta": "Prenota una Demo"
     }
+  },
+  "solutions": {
+    "internal-mobility": {
+      "imcta": {
+        "heading": "Pronto a sbloccare il talento che <span>hai già?</span>",
+        "cta": "Prenota una Demo"
+      },
+      "imHero": {
+        "heading": "La tua prossima migliore assunzione potrebbe già <span>work for you.</span>",
+        "body": "Skillvue mappa competenze e potenziale in tutta la tua forza lavoro, rendendo visibile il talento interno, le decisioni di successione data-driven e i percorsi di mobilità trasparenti.",
+        "cta": "Prenota una Demo"
+      },
+      "imHowSolves": {
+        "pillars": {
+          "endEndTalent": {
+            "title": "Visibilità completa del talento",
+            "desc": "Mappatura continua di competenze e potenziale per abbinare capacità e necessità. Riduci turnover e costi di sostituzione vedendo il quadro completo del talento."
+          },
+          "dataDrivenSuccession": {
+            "title": "Pianificazione della successione data-driven",
+            "desc": "Copertura più rapida dei ruoli critici. Riduci i costi di vacanza e la dipendenza dal recruiting esterno. Scopri chi è pronto ora, chi lo sarà in 6 mesi e dove esistono i gap."
+          },
+          "fasterInternalFills": {
+            "title": "Copertura interna più veloce",
+            "desc": "Maggiore engagement e retention attraverso decisioni trasparenti e data-backed che valorizzano il talento esistente. Riduci i costi di ricerca esterna coprendo i ruoli dall'interno."
+          }
+        },
+        "heading": "Tre pilastri di <span>mobilità intelligente</span>"
+      },
+      "imImpact": {
+        "text": "Storia Cliente",
+        "body": "Farmaceutico",
+        "text2": "Sfida",
+        "body2": "Mappatura del talento interno per identificare candidati alla successione per ruoli di leadership critici in più business unit.",
+        "text3": "Risultato",
+        "body3": "Visibilità completa del talento nell'organizzazione. I piani di successione data-driven ora coprono il 100% dei ruoli critici con candidati pronti e quasi pronti identificati.",
+        "cta": "Leggi la storia completa",
+        "body4": "ruoli critici con<br></br>copertura successione"
+      },
+      "imProblem": {
+        "pains": {
+          "highPotentialsInvisible": {
+            "title": "I talenti ad alto potenziale sono invisibili",
+            "desc": "Quanti sono già nell'organizzazione ma nascosti. E a rischio di andarsene prima che tu agisca?"
+          },
+          "successionPipelinesFiction": {
+            "title": "I piani di successione sono una finzione",
+            "desc": "dei ruoli critici ha zero o un solo successore pronto. La prossima crisi di leadership si sta già formando."
+          },
+          "mobilityPoliticalNot": {
+            "title": "La mobilità è politica, non meritocratica",
+            "desc": "I movimenti orizzontali avvengono solo quando qualcuno chiede o quando è già troppo tardi. Movimenti interni basati su prossimità e politica, non competenze verificate."
+          }
+        },
+        "heading": "I punti ciechi <span>nella tua talent mobility</span>"
+      },
+      "imShift": {
+        "heading": "Dalle mosse politiche alla <span>skill intelligence</span>",
+        "text": "Il vecchio approccio",
+        "text2": "Con Skillvue",
+        "oldItems": {
+          "promotionDecisionsDriven": "Decisioni di promozione guidate dalle opinioni del manager e dalla visibilità",
+          "horizontalMovesOnly": "Movimenti orizzontali solo quando qualcuno chiede o quando è già troppo tardi",
+          "mIntegrationsTurn": "Le integrazioni M&A diventano scommesse sul talento su larga scala",
+          "criticalKnowledgeWalks": "Le conoscenze critiche se ne vanno con i dipendenti che vanno in pensione",
+          "endlessCalibrationRounds": "Infiniti round di calibrazione senza tempo per le decisioni"
+        },
+        "newItems": {
+          "objectiveUpdatedView": "Vista oggettiva e aggiornata di competenze e potenziale in tutta l'organizzazione",
+          "internalMovesMatched": "Movimenti interni basati su competenze verificate, non su politica o prossimità",
+          "restructuringsGroundedData": "Ristrutturazioni basate sui dati: chi ha le competenze, chi ha bisogno di sviluppo, dove sono i gap",
+          "successionRiskVisible": "Rischio di successione visibile in tempo reale. inclusa la concentrazione di conoscenze e l'esposizione ai pensionamenti",
+          "lessTimeProcess": "Meno tempo sui processi, più tempo sulle decisioni. con la possibilità di verificare se hanno funzionato"
+        }
+      }
+    },
+    "learning-development": {
+      "ldcta": {
+        "heading": "Pronto a dimostrare l'impatto del L&D con <span>dati?</span>",
+        "cta": "Prenota una Demo"
+      },
+      "ldHero": {
+        "heading": "Smetti di finanziare formazione generica.<br></br>Concentrati sulle <span>aree più critiche.</span>",
+        "body": "Skillvue fornisce ai leader L&D dati oggettivi e misurabili su dove si trovano le vere aree da migliorare nelle competenze della popolazione aziendale, lavorando a livello individuale, di team e organizzativo per far sì che ogni investimento formativo sia mirato, misurabile e allineato all'impatto aziendale.",
+        "cta": "Prenota una Demo"
+      },
+      "ldHowSolves": {
+        "pillars": {
+          "preciseSkillGap": {
+            "title": "Analisi precisa dei gap di competenze",
+            "desc": "Identificazione oggettiva delle aree di miglioramento a livello individuale e aggregato. Decidi esattamente dove investire, senza tirare a indovinare.",
+            "statLabel": "investimenti L&D più mirati rispetto ai programmi basati su catalogo"
+          },
+          "dataDrivenLearning": {
+            "title": "Progettazione formativa data-driven",
+            "desc": "Programmi costruiti su bisogni reali e misurati, non su cataloghi standard. Ogni investimento formativo è legato a una necessità o criticità validata.",
+            "statLabel": "di riduzione del budget formativo inutilizzato o disallineato"
+          },
+          "measurableRoi": {
+            "title": "ROI Misurabile",
+            "desc": "Confronto valutazione pre/post. Tracciamento oggettivo dei progressi e impatto concreto sulle performance.",
+            "statLabel": "sviluppo delle competenze più rapido con interventi mirati"
+          }
+        },
+        "heading": "Tre pilastri di <span>una strategia L&D guidata dalle competenze</span>",
+        "body": "Smetti di investire in formazione che non sposta l'ago della bilancia. Misura i gap, progetta i programmi e traccia l'impatto con dati oggettivi."
+      },
+      "ldImpact": {
+        "kpis": {
+          "n69mo": {
+            "value": "6-9 mesi",
+            "label": "Esecuzione più rapida",
+            "sublabel": "delle iniziative strategiche",
+            "detail": "Quando sai esattamente quali competenze ha il tuo team e quali mancano, i progetti di trasformazione smettono di bloccarsi. I team vengono composti con le capacità giuste fin dal primo giorno."
+          },
+          "n85": {
+            "value": "85%+",
+            "label": "Inserimenti di successo",
+            "sublabel": "Le vacancy si coprono più velocemente, i prodotti si lanciano nei tempi previsti",
+            "detail": "I dati oggettivi sulle competenze permettono di collocare le persone dove possono essere operative da subito. Niente più supposizioni, niente più disallineamenti costosi tra ruolo e capacità."
+          },
+          "millions": {
+            "value": "Milioni",
+            "label": "Fatturato recuperato",
+            "sublabel": "e opportunità colte in anticipo",
+            "detail": "Ogni mese in cui un ruolo critico resta vacante o disallineato, si lascia fatturato sul tavolo. Una strategia L&D guidata dalle competenze colma i gap più rapidamente e trasforma le persone nel tuo vantaggio competitivo."
+          }
+        },
+        "heading": "Impatto misurabile su <span>i risultati L&D</span>",
+        "body": "Quando gli investimenti formativi sono guidati da dati oggettivi sulle competenze, i risultati parlano da soli."
+      },
+      "ldIntegration": {
+        "heading": "Skillvue arricchisce il tuo <span>ecosistema formativo</span>",
+        "body": "Skillvue si integra nativamente con il tuo LMS e LXP, alimentando dati precisi sugli skill gap direttamente nei sistemi dove la formazione viene erogata. Il risultato: i contenuti giusti raggiungono le persone giuste in base a bisogni verificati, non assegnazioni generiche.",
+        "text": "+ altri"
+      },
+      "ldProblem": {
+        "pains": {
+          "nearZeroVisibility": {
+            "title": "Visibilità quasi nulla sulle capacità reali",
+            "desc": "I dati sulle persone vivono in silos separati. Nessuno collega i punti nell'organizzazione."
+          },
+          "programsPickedGut": {
+            "title": "Programmi scelti a sensazione",
+            "desc": "Budget formativi allocati in base alle richieste dei manager e ai cataloghi dei fornitori, non alle evidenze di dove esistono realmente i gap."
+          },
+          "roiQuestionNobody": {
+            "title": "Il ROI è una domanda a cui nessuno sa rispondere",
+            "desc": "\"Abbiamo formato X persone.\" Ma qual è stato l'impatto aziendale?"
+          }
+        },
+        "heading": "I punti ciechi <span>nei tuoi investimenti in L&D</span>"
+      },
+      "ldShift": {
+        "heading": "Dai cataloghi generici alla <span>skill intelligence in L&D</span>",
+        "text": "Il vecchio approccio",
+        "text2": "Con Skillvue",
+        "oldItems": {
+          "peopleDataSeparate": "Dati sulle persone in silos separati",
+          "programsPickedGut": "Programmi scelti a sensazione, non sulle evidenze",
+          "nearZeroVisibility": "Visibilità quasi nulla su cosa le persone sanno e non sanno fare",
+          "roiQuestionNobody": "Il ROI è una domanda a cui nessuno sa rispondere",
+          "whenBusinessPivots": "Quando l'azienda cambia direzione, L&D è sempre in ritardo"
+        },
+        "newItems": {
+          "skillsMeasuredObjectively": "Competenze misurate oggettivamente e confrontate in tutta l'organizzazione",
+          "budgetAllocatedWhere": "Budget allocato dove i gap sono più ampi e l'impatto aziendale è maggiore",
+          "trainingShapedAround": "Formazione costruita attorno a esempi concreti di dove e come le competenze sono carenti",
+          "skillGapTrend": "Linee di tendenza sui gap di competenze che mostrano cosa funziona e cosa va rivisto o eliminato",
+          "contentPersonalizedScale": "Contenuti personalizzati su scala: la piattaforma sa cosa serve a ogni persona"
+        }
+      }
+    },
+    "performance-management": {
+      "pmcta": {
+        "heading": "Pronto a rendere le valutazioni di performance <span>oggettiva?</span>",
+        "cta": "Prenota una Demo"
+      },
+      "pmHero": {
+        "heading": "Se i risultati si misurano con i KPI, perché le competenze si misurano ancora con le <span>opinioni?</span>",
+        "body": "Skillvue integra valutazioni oggettive delle competenze nei tuoi cicli di performance riducendo i bias, migliorando la calibrazione e dando a ogni manager un punto di partenza basato sui dati prima di scrivere una singola review.",
+        "cta": "Prenota una Demo"
+      },
+      "pmHowSolves": {
+        "heading": "Non rinunciare a nessuno dei <span>due parametri</span>",
+        "text": "Valutazioni soggettive",
+        "heading2": "360, 180, review dei manager",
+        "body": "Cattura contesto, relazioni e sfumature situazionali che solo un manager può vedere direttamente",
+        "body2": "Senza uno standard condiviso, le review diventano incoerenti e impossibili da confrontare",
+        "text2": "Valutazioni oggettive",
+        "body3": "Un framework applicato in modo coerente. La valutazione è equa e comparabile",
+        "body4": "I soli dati oggettivi possono mancare il livello umano. il contesto dietro un risultato",
+        "heading3": "Review Umane + Skillvue",
+        "body5": "Combinare metodi di valutazione soggettivi con le valutazioni Skillvue porta oggettività senza compromettere contesto e sfumature."
+      },
+      "pmImpact": {
+        "text": "Storia Cliente",
+        "body": "Servizi Finanziari",
+        "text2": "Sfida",
+        "body2": "Introduzione della valutazione oggettiva delle competenze nei cicli di performance in più paesi e business unit.",
+        "text3": "Risultato",
+        "body3": "Un linguaggio del talento unificato tra selezione, performance e sviluppo per la prima volta. Le valutazioni ora informano le decisioni dallo screening alla successione.",
+        "cta": "Leggi la storia completa",
+        "body4": "modules unified across<br></br>hiring, performance & development"
+      },
+      "pmProblem": {
+        "pains": {
+          "managerSubjectivityDrives": {
+            "title": "La soggettività del manager guida tutto",
+            "desc": "Esistono dei criteri, ma le valutazioni sono filtrate dalla lente di ogni singolo manager, che può essere influenzato da dinamiche personali, mancanza di vicinanza e visibilità, e molto altro.",
+            "statLabel": "dei dipendenti dichiara che le performance review non riflettono la performance attuale"
+          },
+          "evaluationsArenT": {
+            "title": "Le valutazioni non sono comparabili",
+            "desc": "Il Team A a Londra usa standard diversi dal Team B a New York. Nessun modo per fare benchmark o calibrare nell'organizzazione.",
+            "statLabel": "comparabilità cross-team in assenza di verification strutturati"
+          },
+          "negativeKpisIndividual": {
+            "title": "KPI negativi ≠ fallimento individuale",
+            "desc": "Come si distingue se un risultato negativo riflette la performance individuale o la qualità del management? Senza dati oggettivi sulle competenze, non si può.",
+            "statLabel": "costo delle decisioni di performance sbagliate"
+          }
+        },
+        "heading": "I punti ciechi <span>nelle tue decisioni di performance</span>",
+        "body": "La maggior parte dei processi di performance management misurano le attività svolte, non le capacità. Il risultato? Decisioni basate su impressioni e non evidenze."
+      },
+      "pmShift": {
+        "heading": "Dalle review soggettive alla <span>massima oggettività</span>",
+        "text": "Il vecchio approccio",
+        "text2": "Con Skillvue",
+        "oldItems": {
+          "reviewsDrivenManager": "Review guidate dalle opinioni del manager e dal bias di prossimità",
+          "inconsistentEvaluationStandards": "Standard di valutazione incoerenti tra team, paesi e BU",
+          "promotionDecisionsBased": "Decisioni di promozione basate su \"chi è più visibile\"",
+          "noWayMeasure": "Nessun modo per misurare le competenze con lo stesso rigore dei KPI"
+        },
+        "newItems": {
+          "reviewsInformedObjective": "review basate su dati oggettivi sulle competenze",
+          "oneFrameworkApplied": "Un framework applicato in modo coerente in tutta l'organizzazione",
+          "promotionDecisionsBased": "Decisioni di promozione basate su dati di competenza validati",
+          "skillVerificationsEmbedded": "Valutazioni delle competenze integrate nelle performance review con la stessa oggettività delle metriche aziendali"
+        }
+      }
+    },
+    "project-resourcing": {
+      "prcta": {
+        "heading": "Pronto a gestire progetti con <span>fiducia?</span>",
+        "cta": "Prenota una Demo"
+      },
+      "prConsulting": {
+        "points": {
+          "utilizationOptimization": {
+            "title": "Ottimizzazione dell'impiego delle risorse",
+            "desc": "Abbina consulenti e incarichi sulla base di competenze verificate, non soltanto della disponibilità.",
+            "statLabel": "di miglioramento nei tassi di utilizzo fatturabile"
+          },
+          "clientFacingProof": {
+            "title": "Prove concrete per il cliente",
+            "desc": "Evidenze oggettive delle capacità del team a supporto delle offerte competitive.",
+            "statLabel": "più probabilità di successo nelle proposte con team composti su competenze verificate"
+          },
+          "reskillingIdentification": {
+            "title": "Individuazione delle esigenze di riqualificazione",
+            "desc": "Sai chi può passare ad aree ad alta domanda, come intelligenza artificiale, dati e cybersicurezza, sulla base di competenze verificate.",
+            "statLabel": "più rapidità nei passaggi interni verso nuove aree di specializzazione"
+          }
+        },
+        "heading": "Pensato per le organizzazioni in cui le persone sono <span>il vero prodotto</span>",
+        "body": "Nella consulenza, nei servizi professionali e nelle organizzazioni guidate da progetti, la qualità di ogni incarico dipende dalla qualità del team. Skillvue ti offre dati oggettivi sulle competenze per assegnare le persone in modo più efficace."
+      },
+      "prHero": {
+        "heading": "Assegna le persone ai progetti in base a capacità verificate, <span>non alla semplice disponibilità.</span>",
+        "body": "Skillvue gives project leaders and resourcing teams an objective view of who has the skills to deliver, replacing \"who's free\" with \"who's fit.\" Reduce delivery risk, improve team composition, and stop staffing in the dark.",
+        "cta": "Prenota una Demo"
+      },
+      "prHowSolves": {
+        "pillars": {
+          "skillsMatchedStaffing": {
+            "title": "Assegnazione ai progetti basata sulle competenze",
+            "desc": "Componi i team di progetto sulla base di dati verificati sulle competenze. Assegna le persone alle attività in funzione di ciò che sanno davvero fare, non di chi si propone per primo."
+          },
+          "realTimeCapability": {
+            "title": "Visibilità in tempo reale sulle capacità disponibili",
+            "desc": "Un inventario aggiornato delle competenze presenti in tutta la forza lavoro. Puoi cercare per competenza, livello di padronanza e disponibilità. Trovi la persona giusta in pochi minuti, non in giorni."
+          },
+          "deliveryRiskReduction": {
+            "title": "Riduzione del rischio di esecuzione",
+            "desc": "Prima ancora che un progetto parta, puoi vedere se il team possiede davvero le competenze necessarie per portarlo a termine. Individui i divari in anticipo, sviluppi le competenze mancanti o riassegni le persone prima che diventino problemi costosi."
+          }
+        },
+        "heading": "Come Skillvue trasforma <span>l'assegnazione delle risorse ai progetti</span>"
+      },
+      "prProblem": {
+        "pains": {
+          "staffingAvailabilityNot": {
+            "title": "Assegnazioni basate sulla disponibilità, non sulle capacità",
+            "desc": "I team di progetto vengono composti in base a chi è libero, non a chi possiede le competenze giuste. Il risultato: ritardi nelle consegne, rilavorazioni e frustrazione."
+          },
+          "noVisibilityReal": {
+            "title": "Nessuna visibilità sulle competenze reali presenti nell'organizzazione",
+            "desc": "I responsabili si affidano alla memoria, alla reputazione e alle conoscenze personali, non a dati verificati sulle competenze. Le persone con risultati migliori vengono impiegate troppo spesso, mentre i talenti nascosti restano invisibili."
+          },
+          "performanceVarianceUnexplained": {
+            "title": "Le differenze di rendimento restano senza spiegazione",
+            "desc": "Il team A consegna nei tempi. Il team B no. Stessi strumenti, stessa dimensione. La differenza sta nella qualità delle persone. Ma senza dati oggettivi, non puoi capirne la causa."
+          }
+        },
+        "heading": "I punti ciechi <span>nello staffing dei progetti</span>"
+      }
+    },
+    "talent-acquisition": {
+      "tacta": {
+        "heading": "Pronto ad assumere con <span>fiducia?</span>",
+        "cta": "Prenota una Demo"
+      },
+      "taExperience": {
+        "heading": "Esperienza Candidato",
+        "body": "Veloce, senza attriti, progettata per incontrare le persone dove sono.",
+        "heading2": "Esperienza HR",
+        "body2": "Dall'automazione all'insight.",
+        "candidateItems": {
+          "n530Minutes": "5-30 minutes depending on funnel stage",
+          "audioVideoOr": "Risposte audio, video o scritte",
+          "availableViaWeb": "Disponibile via web app e WhatsApp",
+          "brandedMultilingualMobile": "Personalizzata, multilingue, mobile-first"
+        },
+        "hrItems": {
+          "hiringProcessDocs": "Documentazione del processo di selezione generata automaticamente",
+          "suitabilityFilteringRanking": "Filtraggio idoneità, ranking, benchmarking con piena spiegabilità",
+          "scoringEvidenceAnswer": "Scoring con evidenze: risposta, giustificazione, ancoraggio comportamentale",
+          "n100AtsIntegrations": "100+ ATS integrations — data flows where you already work"
+        }
+      },
+      "taFunnel": {
+        "stages": {
+          "pre-screening": {
+            "label": "Pre-screening",
+            "automation": {
+              "title": "Process automation",
+              "items": {
+                "hiringProcessDocs": {
+                  "text": "Generazione documenti per il processo",
+                  "detail": "JD, report etc."
+                },
+                "interviewScheduling": {
+                  "text": "Programmazione interview"
+                },
+                "candidatesFeedback": {
+                  "text": "Feedback candidati"
+                },
+                "lineManagerFeedback": {
+                  "text": "Feedback Line Manager"
+                }
+              }
+            },
+            "reporting": {
+              "title": "Reporting & decision making",
+              "items": {
+                "suitabilityFiltering": {
+                  "text": "Filtro suitability"
+                },
+                "rankingBenchmarking": {
+                  "text": "Rankizzazione e comparazione con benchmark"
+                },
+                "scoringExplained": {
+                  "text": "Spiegazione output",
+                  "detail": "risposta, giustificazione, evidenze psicometriche"
+                }
+              }
+            },
+            "integration": {
+              "title": "Core HR integration",
+              "text": "100+ integrazioni con ATS"
+            }
+          },
+          "screening": {
+            "label": "Screening",
+            "automation": {
+              "title": "Process automation",
+              "items": {
+                "aiPoweredSkill": {
+                  "text": "AI-powered skill verification",
+                  "detail": "Audio, video, written"
+                },
+                "automatedScheduling": {
+                  "text": "Automated scheduling"
+                },
+                "realTimeCandidate": {
+                  "text": "Real-time candidate feedback"
+                }
+              }
+            },
+            "reporting": {
+              "title": "Reporting & decision making",
+              "items": {
+                "competencyBasedFiltering": {
+                  "text": "Competency-based filtering"
+                },
+                "rankingBenchmarking": {
+                  "text": "Rankizzazione e comparazione con benchmark"
+                },
+                "scoringExplained": {
+                  "text": "Spiegazione output",
+                  "detail": "risposta, giustificazione, evidenze psicometriche"
+                }
+              }
+            },
+            "integration": {
+              "title": "Core HR integration",
+              "text": "100+ integrazioni con ATS"
+            }
+          },
+          "in-depth": {
+            "label": "Approfondimento",
+            "automation": {
+              "title": "Process automation",
+              "items": {
+                "interviewScheduling": {
+                  "text": "Programmazione interview"
+                },
+                "personInterviewsSupport": {
+                  "text": "In-person interviews support",
+                  "detail": "Questions packages, benchmarks, drill-down"
+                },
+                "depthCandidateFeedback": {
+                  "text": "In-depth candidate feedback"
+                }
+              }
+            },
+            "reporting": {
+              "title": "Reporting & decision making",
+              "items": {
+                "crossJobsInsights": {
+                  "text": "Cross-jobs insights"
+                },
+                "rankingBenchmarking": {
+                  "text": "Rankizzazione e comparazione con benchmark"
+                },
+                "scoringExplained": {
+                  "text": "Spiegazione output",
+                  "detail": "risposta, giustificazione, evidenze psicometriche"
+                }
+              }
+            },
+            "integration": {
+              "title": "Core HR integration",
+              "text": "100+ integrazioni con ATS"
+            }
+          }
+        },
+        "heading": "Dall'automazione al dato finale, ecco cosa otterrà il tuo team in ogni <span>fase del funnel</span>",
+        "cta": "Stage"
+      },
+      "taHero": {
+        "heading": "Smetti di scommettere sulle assunzioni.<br></br>Inizia a prevedere chi <span>performerà davvero</span>",
+        "body": "Skillvue sostituisce i giudizi soggettivi con la scienza su scala. Con le nostre valutazioni potenziate da AI e personalizzate per i tuoi ruoli e modello di leadership identifichi i migliori candidati, riduci il turnover iniziale e rendi ogni decisione di assunzione difendibile.",
+        "cta": "Prenota una Demo"
+      },
+      "taHowSolves": {
+        "stages": {
+          "preScreening": {
+            "title": "Pre-screening",
+            "subtitle": "Top del funnel"
+          },
+          "screening": {
+            "title": "Screening",
+            "subtitle": "Metà funnel"
+          },
+          "depth": {
+            "title": "Approfondimento",
+            "subtitle": "Fine funnel"
+          }
+        },
+        "heading": "Skillvue aggiunge valore in ogni fase del <span>funnel di selezione</span>"
+      },
+      "taImpact": {
+        "kpis": {
+          "badHireRate": {
+            "label": "tasso assunzioni errate",
+            "sublabel": "in calo dal 30-40%"
+          },
+          "earlyTurnover": {
+            "label": "turnover nei primi 18 mesi",
+            "sublabel": "0-18 mesi, in calo dal 20-30%"
+          },
+          "annualSavings": {
+            "label": "risparmi annuali",
+            "sublabel": "su assunzioni fallite, costi di sostituzione, produttività persa"
+          }
+        },
+        "heading": "Impatto misurabile su ogni metrica di assunzione che <span>conta</span>"
+      },
+      "taPlaybook": {
+        "rows": {
+          "seniorLeadership": {
+            "role": "Senior / leadership",
+            "skillvue": "Attitudes + Soft + Potential"
+          },
+          "managers": {
+            "role": "Managers",
+            "skillvue": "Attitude + Soft + Potential + Hard"
+          },
+          "employees": {
+            "role": "Employees",
+            "skillvue": "Suitability + Attitudes + Soft + Potential + Hard"
+          },
+          "fieldOperators": {
+            "role": "Field operators",
+            "skillvue": "Suitability + Soft + Hard"
+          }
+        },
+        "heading": "Skillvue is a partner for the recruitment journey",
+        "body": "Skillvue playbook recruitment process",
+        "header": {
+          "step1": "Step 1",
+          "step2": "Step 2",
+          "step3": "Step 3",
+          "step4": "Step N"
+        },
+        "stepLabels": {
+          "cLevel": "C-level",
+          "hr": "HR",
+          "hrManager": "HR + manager",
+          "hrSenior": "HR + senior",
+          "manager": "Manager",
+          "senior": "Senior"
+        }
+      },
+      "taProblem": {
+        "pains": {
+          "hiresFailWithin": {
+            "title": "delle assunzioni fallisce entro 18 mesi",
+            "desc": "Costandoti 3-4 volte la RAL della risorsa ancora prima che tu possa calcolare il costo/opportunità della posizione vacante"
+          },
+          "screeningDoesnT": {
+            "title": "Lo screening non scala",
+            "desc": "La revisione manuale dei CV perde qualità con l'aumento dei volumi. Paesi diversi, standard diversi, nessuna comparabilità."
+          },
+          "interviewsPredictNothing": {
+            "title": "I colloqui non predicono nulla",
+            "desc": "I colloqui non strutturati hanno la più bassa validità predittiva tra tutti i metodi di selezione, eppure guidano la maggior parte delle decisioni di assunzione."
+          }
+        },
+        "heading": "I punti ciechi <span>nelle tue decisioni di assunzione</span>",
+        "body": "Come fai a sapere davvero chi performerà prima del colloquio? Come rendi lo screening predittivo e comparabile su scala? Come riduci il turnover iniziale e il mismatch dal primo giorno?"
+      },
+      "taShift": {
+        "heading": "Dallo screening CV alla <span>skill intelligence</span>",
+        "text": "Il vecchio approccio",
+        "text2": "Con Skillvue",
+        "text3": "Il vecchio approccio",
+        "text4": "Con Skillvue",
+        "oldItems": {
+          "cvScreeningGut": "Screening CV + sensazioni",
+          "unstructuredInterviewsNo": "Colloqui non strutturati senza comparabilità",
+          "qualityDegradesVolume": "La qualità si abbassa all'aumentare dei volumi",
+          "hiringDecisionsMade": "Decisioni di assunzione basate su chi \"sembrava giusto\"",
+          "earlyTurnoverCost": "Turnover iniziale considerato un costo necessario e inevitabile"
+        },
+        "newItems": {
+          "aiPoweredSkill": "Valutazioni delle competenze basate su AI dall'inizio del funnel",
+          "structuredPsychometricallyValidated": "Valutazioni strutturate e psicometricamente validate per ogni candidato",
+          "sameScientificRigor": "Stesso rigore scientifico che tu valuti 10 o 10.000 candidati",
+          "hiringDecisionsBacked": "Decisioni di assunzione supportate da valutazioni oggettive, evidenze e insight spiegabili",
+          "predictiveMatchingReduces": "Matching predittivo che riduce il mismatch fin dal primo giorno"
+        }
+      }
+    }
   }
 }

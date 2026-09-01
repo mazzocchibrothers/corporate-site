@@ -2,37 +2,31 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { Zap, Target, TrendingUp } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { IconTile } from '@/components/ui/icon-tile';
 
 const kpis = [
   {
+    id: 'n69mo',
     value: '6-9mo',
     icon: Zap,
-    label: 'faster execution',
-    sublabel: 'on strategic initiatives',
-    detail: 'When you know exactly which skills your people have and which they lack, transformation projects stop stalling. Teams are staffed with the right capabilities from day one.',
   },
   {
+    id: 'n85',
     value: '85%+',
     icon: Target,
-    label: 'hiring success',
-    sublabel: 'territories fill faster, products launch on-time',
-    detail: 'Objective skill data helps you place people where they can perform immediately. No more guessing, no more costly mismatches between role and capability.',
   },
   {
+    id: 'millions',
     value: 'Millions',
     icon: TrendingUp,
-    label: 'revenue captured',
-    sublabel: 'opportunities realized earlier',
-    detail: 'Every month a critical role stays empty or misaligned, revenue is left on the table. Skill-driven L&D closes gaps faster and turns people into your competitive advantage.',
   },
 ];
 
 export default function LDImpact() {
-  const { t } = useLanguage();
+  const t = useTranslations('solutions.learning-development');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -54,16 +48,16 @@ export default function LDImpact() {
           className="block mb-2 text-[#121212] text-[32px] md:text-[64px]"
           style={{ fontWeight: 600, lineHeight: 1, letterSpacing: '-0.03em' }}
         >
-          {t(k.value)}
+          {t(`ldImpact.kpis.${k.id}.value`)}
         </span>
 
         <h3 className="text-[15px] md:text-[17px] font-semibold text-[#121212]/80 leading-snug mb-1.5">
-          {t(k.label)} <span className="font-normal text-[#7A7A7A]">{t(k.sublabel)}</span>
+          {t(`ldImpact.kpis.${k.id}.label`)} <span className="font-normal text-[#7A7A7A]">{t(`ldImpact.kpis.${k.id}.sublabel`)}</span>
         </h3>
 
         <div className="w-12 h-px bg-[#4B4DF7]/[0.15] my-4 md:my-5" />
 
-        <p className="text-[14px] text-[#7A7A7A] leading-[1.75] flex-1">{t(k.detail)}</p>
+        <p className="text-[14px] text-[#7A7A7A] leading-[1.75] flex-1">{t(`ldImpact.kpis.${k.id}.detail`)}</p>
       </motion.div>
     );
   };
@@ -74,13 +68,10 @@ export default function LDImpact() {
 
         {/* Header */}
         <motion.div className="text-center mb-12 md:mb-16 lg:mb-20" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">
-            {t('Measurable impact on')}{' '}
-            <span className="font-bold gradient-text-on-light">{t('L&D outcomes')}</span>
-          </h2>
-          <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.75] max-w-2xl mx-auto">
-            {t('When learning investments are driven by objective skill data, the results speak for themselves.')}
-          </p>
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">{t.rich('ldImpact.heading', {
+            span: (chunks) => <span className="font-bold gradient-text-on-light">{chunks}</span>,
+          })}</h2>
+          <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.75] max-w-2xl mx-auto">{t('ldImpact.body')}</p>
         </motion.div>
 
         <div className="grid gap-5 lg:grid-cols-3">

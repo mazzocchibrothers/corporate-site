@@ -70,8 +70,17 @@ const isTCall = (node) =>
 
 const literalArg = (call) => {
   const [arg] = call.arguments;
-  return arg && ts.isStringLiteral(arg) ? arg.text : null;
+  if (!arg || !ts.isStringLiteral(arg)) return null;
+  // A literal that already resolves in the catalogue is a key, not English.
+  // This is what makes the codemod re-runnable: without it a second pass reads
+  // t('hero.body') as a sentence and emits a message whose value is its own key
+  // — which rewrites to the same bytes, so the file looks idempotent while the
+  // catalogue it reports is nonsense.
+  return alreadyMigrated(arg.text) ? null : arg.text;
 };
+
+/** Set by main(), once the namespace is known. */
+let alreadyMigrated = () => false;
 
 /** Children that carry meaning: whitespace-only JSX text is layout, not copy. */
 const meaningful = (children) =>
@@ -221,6 +230,23 @@ function idFrom(text, taken) {
   return id;
 }
 
+/** Module-level `const NAME = ['…', '…']` — a list of sentences, mapped with
+ *  t(item). The array becomes ids and the sentences move to the catalogue. */
+function stringArrayDeclarations(sf) {
+  const found = new Map();
+  for (const stmt of sf.statements) {
+    if (!ts.isVariableStatement(stmt)) continue;
+    for (const decl of stmt.declarationList.declarations) {
+      if (!ts.isIdentifier(decl.name) || !decl.initializer) continue;
+      if (!ts.isArrayLiteralExpression(decl.initializer)) continue;
+      if (decl.initializer.elements.length === 0) continue;
+      if (!decl.initializer.elements.every((e) => ts.isStringLiteral(e))) continue;
+      found.set(decl.name.text, decl.initializer);
+    }
+  }
+  return found;
+}
+
 /** Module-level `const NAME = [ {…}, … ]` — the shape every one of these has. */
 function arrayDeclarations(sf) {
   const found = new Map();
@@ -236,27 +262,33 @@ function arrayDeclarations(sf) {
   return found;
 }
 
-/** `painCards.map((card) => …)` binds `card` to `painCards`. */
-function mapBindings(sf, arrays) {
-  const bindings = new Map();
-  const visit = (node) => {
+/**
+ * Which array a `t(item…)` call is iterating, found by walking UP from the call
+ * to the nearest `X.map(item => …)` that binds that name.
+ *
+ * A file-wide param -> array map looks simpler and is wrong: `oldItems.map(item
+ * => …)` and `newItems.map(item => …)` in one component both bind `item`, and
+ * the map keeps whichever came last. Half the copy then silently belongs to the
+ * other list.
+ */
+function arrayForParam(node, param, arrays) {
+  for (let n = node.parent; n; n = n.parent) {
+    if (!ts.isArrowFunction(n) && !ts.isFunctionExpression(n)) continue;
+    const first = n.parameters[0];
+    if (!first || !ts.isIdentifier(first.name) || first.name.text !== param) continue;
+    const call = n.parent;
     if (
-      ts.isCallExpression(node) &&
-      ts.isPropertyAccessExpression(node.expression) &&
-      node.expression.name.text === 'map' &&
-      ts.isIdentifier(node.expression.expression) &&
-      arrays.has(node.expression.expression.text)
+      call && ts.isCallExpression(call) &&
+      ts.isPropertyAccessExpression(call.expression) &&
+      call.expression.name.text === 'map' &&
+      ts.isIdentifier(call.expression.expression) &&
+      arrays.has(call.expression.expression.text)
     ) {
-      const cb = node.arguments[0];
-      const param = cb && (ts.isArrowFunction(cb) || ts.isFunctionExpression(cb)) ? cb.parameters[0] : null;
-      if (param && ts.isIdentifier(param.name)) {
-        bindings.set(param.name.text, node.expression.expression.text);
-      }
+      return call.expression.expression.text;
     }
-    ts.forEachChild(node, visit);
-  };
-  visit(sf);
-  return bindings;
+    return null; // bound by a different map: not ours, and not the outer one's
+  }
+  return null;
 }
 
 // ── Key naming ─────────────────────────────────────────────────────────────
@@ -314,13 +346,7 @@ function processFile(file, namespace, italian) {
   const src = readFileSync(join(ROOT, file), 'utf8');
   const sf = parse(file, src);
 
-  // A file whose `t` already comes from useTranslations is done. Without this
-  // guard a second run reads `t('hero.body')` as an English string and emits a
-  // message whose value is the key — it happens to rewrite to the same bytes,
-  // so the file looks idempotent while the reported catalogue is nonsense.
-  if (/\bt\s*=\s*useTranslations\s*\(/.test(src)) {
-    return { src, out: src, messages: {}, report: { dynamic: [], untranslated: [], keptInCode: [] }, count: 0, done: true };
-  }
+
   const report = { dynamic: [], untranslated: [], keptInCode: [] };
   const messages = {};
   const edits = [];
@@ -330,7 +356,7 @@ function processFile(file, namespace, italian) {
   // Which module-level arrays feed a t(param.prop) call, and through which
   // property. Collected before the JSX walk so the walk can rewrite the calls.
   const arrays = arrayDeclarations(sf);
-  const bindings = mapBindings(sf, arrays);
+  const strings = stringArrayDeclarations(sf);
   const arrayProps = new Map(); // array name -> Set(prop)
   const arrayCalls = []; // { node, array, prop }
   const rawUse = new Map(); // array name -> Set(prop) read outside t()
@@ -350,10 +376,10 @@ function processFile(file, namespace, italian) {
       if (
         ts.isPropertyAccessExpression(node) &&
         ts.isIdentifier(node.expression) &&
-        bindings.has(node.expression.text) &&
+        arrayForParam(node, node.expression.text, arrays) &&
         !inTCall.has(node)
       ) {
-        const array = bindings.get(node.expression.text);
+        const array = arrayForParam(node, node.expression.text, arrays);
         if (!rawUse.has(array)) rawUse.set(array, new Set());
         rawUse.get(array).add(node.name.text);
       }
@@ -367,9 +393,9 @@ function processFile(file, namespace, italian) {
         node.arguments.length === 1 &&
         ts.isPropertyAccessExpression(node.arguments[0]) &&
         ts.isIdentifier(node.arguments[0].expression) &&
-        bindings.has(node.arguments[0].expression.text)
+        arrayForParam(node, node.arguments[0].expression.text, arrays)
       ) {
-        const array = bindings.get(node.arguments[0].expression.text);
+        const array = arrayForParam(node, node.arguments[0].expression.text, arrays);
         const prop = node.arguments[0].name.text;
         if (!arrayProps.has(array)) arrayProps.set(array, new Set());
         arrayProps.get(array).add(prop);
@@ -378,6 +404,44 @@ function processFile(file, namespace, italian) {
       ts.forEachChild(node, visit);
     };
     visit(sf);
+  }
+
+  // Lists of sentences: `oldItems.map(item => <p>{t(item)}</p>)`. The array
+  // holds ids afterwards, so `key={item}` keeps working and the copy is one
+  // message per line rather than a sentence used as its own key.
+  const stringEdits = [];
+  const stringCalls = [];
+  const stringUses = new Map(); // array name -> [{ node, param }]
+  {
+    const collect = (node) => {
+      if (isTCall(node) && node.arguments.length === 1 && ts.isIdentifier(node.arguments[0])) {
+        const param = node.arguments[0].text;
+        const array = arrayForParam(node, param, strings);
+        if (array) {
+          if (!stringUses.has(array)) stringUses.set(array, []);
+          stringUses.get(array).push({ node, param });
+        }
+      }
+      ts.forEachChild(node, collect);
+    };
+    collect(sf);
+  }
+
+  for (const [name, literal] of strings) {
+    const uses = stringUses.get(name) ?? [];
+    if (uses.length === 0) continue;
+
+    const key = name.replace(/^./, (c) => c.toLowerCase());
+    const taken = new Set();
+    const ids = literal.elements.map((e) => {
+      const id = idFrom(e.text, taken);
+      const translated = italian.get(e.text);
+      if (translated === undefined) report.untranslated.push(e.text);
+      messages[`${scope ? `${scope}.` : ''}${key}.${id}`] = { en: e.text, it: translated ?? e.text };
+      return id;
+    });
+    stringEdits.push({ literal, ids });
+    for (const { node, param } of uses) stringCalls.push({ node, key, param });
   }
 
   // Give every entry an id, and lift its copy out into the catalogue.
@@ -457,7 +521,14 @@ function processFile(file, namespace, italian) {
       ts.isCallExpression(node) &&
       isTCall(node) &&
       literalArg(node) === null &&
-      !arrayCalls.some((c) => c.node === node)
+      // A template literal is the migrated form — `t(`cards.${c.id}.title`)` —
+      // not work left to do. Reporting it every run trains people to ignore
+      // the report, which is the only place unresolved calls ever appear.
+      !(node.arguments[0] && (ts.isStringLiteral(node.arguments[0]) ||
+        ts.isTemplateExpression(node.arguments[0]) ||
+        ts.isNoSubstitutionTemplateLiteral(node.arguments[0]))) &&
+      !arrayCalls.some((c) => c.node === node) &&
+      !stringCalls.some((c) => c.node === node)
     ) {
       const { line } = sf.getLineAndCharacterOfPosition(node.getStart());
       report.dynamic.push(`${file}:${line + 1}  ${node.getText()}`);
@@ -496,6 +567,18 @@ function processFile(file, namespace, italian) {
 
   for (const { node, key } of orphans) {
     replacements.push({ start: node.getStart(), end: node.getEnd(), text: `{t('${key}')}` });
+  }
+
+  for (const { literal, ids } of stringEdits) {
+    replacements.push({
+      start: literal.getStart(),
+      end: literal.getEnd(),
+      text: `[\n${ids.map((id) => `  '${id}',`).join('\n')}\n]`,
+    });
+  }
+  for (const { node, key, param } of stringCalls) {
+    const path = `${scope ? `${scope}.` : ''}${key}.\${${param}}`;
+    replacements.push({ start: node.getStart(), end: node.getEnd(), text: 't(`' + path + '`)' });
   }
 
   // t(card.title) -> t(`cards.${card.id}.title`)
@@ -562,12 +645,36 @@ function processFile(file, namespace, italian) {
 const argv = process.argv.slice(2);
 const write = argv.includes('--write');
 const nsIndex = argv.indexOf('--namespace');
-const namespace = nsIndex === -1 ? null : argv[nsIndex + 1];
+// A route id is a path (`solutions/talent-acquisition`); a namespace is a dot
+// path into the catalogue. i18n/messages.ts does this same conversion when a
+// page loads its namespaces, so doing it here is what keeps the key the codemod
+// writes and the key the page reads the same one. Passing the raw route id and
+// getting a top-level `solutions/talent-acquisition` object is a silent
+// mismatch: every string on the page renders as its own key path.
+const namespace = nsIndex === -1 ? null : argv[nsIndex + 1]?.replace(/\//g, '.');
 const files = argv.filter((a, i) => !a.startsWith('--') && i !== nsIndex + 1);
 
 if (!namespace || files.length === 0) {
   console.error('Usage: node scripts/codemod-i18n.mjs <file...> --namespace <ns> [--write]');
   process.exit(1);
+}
+
+// The same rule check:messages enforces, applied before writing rather than
+// after — a key it would reject is a key the gate rejects.
+const SEGMENT = /^[a-z][a-zA-Z0-9]*(-[a-z0-9]+)*$/;
+const badSegment = namespace.split('.').find((seg) => !SEGMENT.test(seg));
+if (badSegment) {
+  console.error(`'${badSegment}' is not a valid namespace segment. Expected camelCase or kebab-case.`);
+  process.exit(1);
+}
+
+// Keys already in the catalogue under this namespace, so a second run leaves
+// them alone.
+{
+  const existing = JSON.parse(readFileSync(join(ROOT, 'messages/en.json'), 'utf8'));
+  const root = namespace.split('.').reduce((n, seg) => (n == null ? undefined : n[seg]), existing);
+  alreadyMigrated = (key) =>
+    key.split('.').reduce((n, seg) => (n == null ? undefined : n[seg]), root) !== undefined;
 }
 
 const italian = loadItalian();
@@ -578,11 +685,7 @@ const untranslated = [];
 const keptInCode = [];
 
 for (const file of files) {
-  const { src, out, messages, report, count, done } = processFile(file, namespace, italian);
-  if (done) {
-    console.log(`[skip]     ${file}: already on useTranslations`);
-    continue;
-  }
+  const { src, out, messages, report, count } = processFile(file, namespace, italian);
   total += count;
   dynamic.push(...report.dynamic);
   untranslated.push(...report.untranslated);

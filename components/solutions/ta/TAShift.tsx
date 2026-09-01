@@ -2,28 +2,28 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { X, Check, ArrowDown } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 
 const oldItems = [
-  'CV screening + gut feeling',
-  'Unstructured interviews with no comparability',
-  'Quality degrades as volume increases',
-  'Hiring decisions made on who "felt right"',
-  'Early turnover as a cost of doing business',
+  'cvScreeningGut',
+  'unstructuredInterviewsNo',
+  'qualityDegradesVolume',
+  'hiringDecisionsMade',
+  'earlyTurnoverCost',
 ];
 
 const newItems = [
-  'AI-powered skill verifications from the top of the funnel',
-  'Structured, psychometrically validated evaluations across every candidate',
-  'Same scientific rigor whether you verify 10 or 10,000 candidates',
-  'Hiring decisions backed by objective scores, evidence, and explainable recommendations',
-  'Predictive matching that reduces mismatch from day one',
+  'aiPoweredSkill',
+  'structuredPsychometricallyValidated',
+  'sameScientificRigor',
+  'hiringDecisionsBacked',
+  'predictiveMatchingReduces',
 ];
 
 export default function TAShift() {
-  const { t } = useLanguage();
+  const t = useTranslations('solutions.talent-acquisition');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -31,10 +31,9 @@ export default function TAShift() {
     <section id="ta-shift" data-testid="ta-shift" className="relative py-20 lg:py-28 md:flex md:items-center"  ref={ref}>
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full">
         <motion.div className="mb-10 md:mb-20" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white/90">
-            {t('From CV screening to')}{' '}
-            <span className="font-bold gradient-text">{t('skill intelligence')}</span>
-          </h2>
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white/90">{t.rich('taShift.heading', {
+            span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+          })}</h2>
         </motion.div>
 
         {/* Mobile: vertical stack with transition arrow */}
@@ -46,14 +45,14 @@ export default function TAShift() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-6 block">{t('The old playbook')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-6 block">{t('taShift.text')}</span>
             <div className="space-y-4">
               {oldItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-white/[0.06] flex items-center justify-center shrink-0 mt-0.5">
                     <X className="h-5 w-5 text-white/30" />
                   </div>
-                  <p className="text-[14px] text-white/40 leading-[1.7]">{t(item)}</p>
+                  <p className="text-[14px] text-white/40 leading-[1.7]">{t(`taShift.oldItems.${item}`)}</p>
                 </div>
               ))}
             </div>
@@ -80,14 +79,14 @@ export default function TAShift() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-6 block">{t('With Skillvue')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-6 block">{t('taShift.text2')}</span>
             <div className="space-y-4">
               {newItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-[#4B4DF7]/[0.12] flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="h-5 w-5 text-[#9B9DFB]" />
                   </div>
-                  <p className="text-[14px] text-white/[0.65] leading-[1.7]">{t(item)}</p>
+                  <p className="text-[14px] text-white/[0.65] leading-[1.7]">{t(`taShift.newItems.${item}`)}</p>
                 </div>
               ))}
             </div>
@@ -103,14 +102,14 @@ export default function TAShift() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-10 block">{t('The old playbook')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-10 block">{t('taShift.text3')}</span>
             <div className="space-y-4 md:space-y-7">
               {oldItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-white/[0.06] flex items-center justify-center shrink-0 mt-0.5">
                     <X className="h-5 w-5 md:h-4 md:w-4 text-white/30" />
                   </div>
-                  <p className="text-[14px] md:text-[17px] text-white/40 leading-[1.7]">{t(item)}</p>
+                  <p className="text-[14px] md:text-[17px] text-white/40 leading-[1.7]">{t(`taShift.oldItems.${item}`)}</p>
                 </div>
               ))}
             </div>
@@ -123,14 +122,14 @@ export default function TAShift() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.25 }}
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-10 block">{t('With Skillvue')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-10 block">{t('taShift.text4')}</span>
             <div className="space-y-4 md:space-y-7">
               {newItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-[#4B4DF7]/[0.12] flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="h-5 w-5 md:h-4 md:w-4 text-[#9B9DFB]" />
                   </div>
-                  <p className="text-[14px] md:text-[17px] text-white/[0.65] leading-[1.7]">{t(item)}</p>
+                  <p className="text-[14px] md:text-[17px] text-white/[0.65] leading-[1.7]">{t(`taShift.newItems.${item}`)}</p>
                 </div>
               ))}
             </div>

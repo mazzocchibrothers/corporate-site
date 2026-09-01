@@ -2,26 +2,26 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { User, Briefcase } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 
 const candidateItems = [
-  '5-30 minutes depending on funnel stage',
-  'Audio, video, or written responses',
-  'Available via web app and WhatsApp',
-  'Branded, multilingual, mobile-first',
+  'n530Minutes',
+  'audioVideoOr',
+  'availableViaWeb',
+  'brandedMultilingualMobile',
 ];
 
 const hrItems = [
-  'Hiring process docs generated automatically',
-  'Suitability filtering, ranking, benchmarking with full explainability',
-  'Scoring with evidence: answer, justification, behavioral anchor',
-  '100+ ATS integrations \u2014 data flows where you already work',
+  'hiringProcessDocs',
+  'suitabilityFilteringRanking',
+  'scoringEvidenceAnswer',
+  'n100AtsIntegrations',
 ];
 
 export default function TAExperience() {
-  const { t } = useLanguage();
+  const t = useTranslations('solutions.talent-acquisition');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -41,14 +41,14 @@ export default function TAExperience() {
               <div className="w-10 h-10 rounded-full bg-white/[0.06] border border-white/[0.1] flex items-center justify-center">
                 <User className="h-5 w-5 md:h-4 md:w-4 text-[#9B9DFB]/70" strokeWidth={1.5} />
               </div>
-              <h3 className="text-[16px] md:text-[20px] font-semibold text-white/90">{t('Candidate Experience')}</h3>
+              <h3 className="text-[16px] md:text-[20px] font-semibold text-white/90">{t('taExperience.heading')}</h3>
             </div>
-            <p className="text-[15px] text-white/[0.65] font-medium mb-8">{t('Fast, frictionless, and designed to meet people where they are.')}</p>
+            <p className="text-[15px] text-white/[0.65] font-medium mb-8">{t('taExperience.body')}</p>
             <div className="space-y-4">
               {candidateItems.map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <span className="w-1 h-1 rounded-full bg-[#9B9DFB] mt-2.5 shrink-0" />
-                  <span className="text-[15px] text-white/[0.65] leading-[1.7]">{t(item)}</span>
+                  <span className="text-[15px] text-white/[0.65] leading-[1.7]">{t(`taExperience.candidateItems.${item}`)}</span>
                 </div>
               ))}
             </div>
@@ -65,14 +65,14 @@ export default function TAExperience() {
               <div className="w-10 h-10 rounded-full bg-white/[0.06] border border-white/[0.1] flex items-center justify-center">
                 <Briefcase className="h-5 w-5 md:h-4 md:w-4 text-[#9B9DFB]/70" strokeWidth={1.5} />
               </div>
-              <h3 className="text-[16px] md:text-[20px] font-semibold text-white/90">{t('HR Experience')}</h3>
+              <h3 className="text-[16px] md:text-[20px] font-semibold text-white/90">{t('taExperience.heading2')}</h3>
             </div>
-            <p className="text-[15px] text-white/[0.65] font-medium mb-8">{t('From automation to insight.')}</p>
+            <p className="text-[15px] text-white/[0.65] font-medium mb-8">{t('taExperience.body2')}</p>
             <div className="space-y-4">
               {hrItems.map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <span className="w-1 h-1 rounded-full bg-[#9B9DFB] mt-2.5 shrink-0" />
-                  <span className="text-[15px] text-white/[0.65] leading-[1.7]">{t(item)}</span>
+                  <span className="text-[15px] text-white/[0.65] leading-[1.7]">{t(`taExperience.hrItems.${item}`)}</span>
                 </div>
               ))}
             </div>

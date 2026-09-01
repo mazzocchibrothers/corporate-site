@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -9,7 +10,8 @@ import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
 export default function IMImpact() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('solutions.internal-mobility');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -23,29 +25,31 @@ export default function IMImpact() {
           transition={{ duration: 0.7 }}
         >
           <div className="lg:col-span-8 p-10 lg:p-14 bg-white/[0.04]">
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-6 block">{t('Customer Story')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-6 block">{t('imImpact.text')}</span>
             <h3 className="text-[28px] font-semibold text-white/90 mb-2">Fidia</h3>
-            <p className="text-[14px] text-white/40 mb-8">{t('Pharma')}</p>
+            <p className="text-[14px] text-white/40 mb-8">{t('imImpact.body')}</p>
             <div className="grid md:grid-cols-2 gap-8 mb-10">
               <div>
-                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-3 block">{t('Challenge')}</span>
-                <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('Mapping internal talent to identify succession candidates for critical leadership roles across multiple business units.')}</p>
+                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-3 block">{t('imImpact.text2')}</span>
+                <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('imImpact.body2')}</p>
               </div>
               <div>
-                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-3 block">{t('Result')}</span>
-                <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('Full talent visibility across the organization. Data-driven succession plans now cover 100% of critical roles with identified ready-now and ready-soon candidates.')}</p>
+                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-3 block">{t('imImpact.text3')}</span>
+                <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('imImpact.body3')}</p>
               </div>
             </div>
             <Button asChild variant="secondary" mode="dark">
               <a href={href('book-meeting', lang)}>
-                {t('Read the full story')}
+                {t('imImpact.cta')}
                 <ArrowUpRight aria-hidden="true" />
               </a>
             </Button>
           </div>
           <div className="lg:col-span-4 flex flex-col items-center justify-center p-10 lg:p-14 bg-white/[0.06] border-t lg:border-t-0 lg:border-l border-white/[0.06]">
             <span className="block text-white text-[32px] stat-value md:text-[3.5rem]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>100%</span>
-            <p className="text-[14px] text-white/[0.65] mt-3 text-center">{t('critical roles with')}<br />{t('succession coverage')}</p>
+            <p className="text-[14px] text-white/[0.65] mt-3 text-center">{t.rich('imImpact.body4', {
+              br: () => <br />,
+            })}</p>
           </div>
         </motion.div>
       </div>

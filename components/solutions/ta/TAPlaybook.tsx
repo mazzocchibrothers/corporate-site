@@ -2,58 +2,54 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
-import { useLanguage } from '@/i18n/LanguageContext';
 
 const rows = [
   {
-    role: 'Senior / leadership',
+    id: 'seniorLeadership',
     steps: [
-      { label: 'HR', active: true },
-      { label: 'HR + senior', active: true },
-      { label: 'Senior', active: true },
-      { label: 'C-level', active: true },
+      { label: 'hr', active: true },
+      { label: 'hrSenior', active: true },
+      { label: 'senior', active: true },
+      { label: 'cLevel', active: true },
     ],
     barWidth: '75%',
-    skillvue: 'Attitudes + Soft + Potential',
   },
   {
-    role: 'Managers',
+    id: 'managers',
     steps: [
-      { label: 'HR', active: true },
-      { label: 'HR + manager', active: true },
-      { label: 'Manager', active: true },
-      { label: 'Senior', active: true },
+      { label: 'hr', active: true },
+      { label: 'hrManager', active: true },
+      { label: 'manager', active: true },
+      { label: 'senior', active: true },
     ],
     barWidth: '70%',
-    skillvue: 'Attitude + Soft + Potential + Hard',
   },
   {
-    role: 'Employees',
+    id: 'employees',
     steps: [
-      { label: 'HR', active: true },
-      { label: 'HR + manager', active: true },
-      { label: 'Manager', active: true },
+      { label: 'hr', active: true },
+      { label: 'hrManager', active: true },
+      { label: 'manager', active: true },
       { label: '', active: false },
     ],
     barWidth: '90%',
-    skillvue: 'Suitability + Attitudes + Soft + Potential + Hard',
   },
   {
-    role: 'Field operators',
+    id: 'fieldOperators',
     steps: [
-      { label: 'HR', active: true },
-      { label: 'Manager', active: true },
+      { label: 'hr', active: true },
+      { label: 'manager', active: true },
       { label: '', active: false },
       { label: '', active: false },
     ],
     barWidth: '50%',
-    skillvue: 'Suitability + Soft + Hard',
   },
 ];
 
 export default function RecruitmentPlaybook() {
-  const { t, lang } = useLanguage();
+  const t = useTranslations('solutions.talent-acquisition');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -61,10 +57,8 @@ export default function RecruitmentPlaybook() {
     <section className="section-breathe relative py-20 lg:py-28" ref={ref}>
       <div className="max-w-[1100px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div className="text-center mb-12" initial={{ opacity: 0, y: 25 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-semibold text-[#1A1A2E] tracking-[-0.02em] mb-3">
-            {t('Skillvue is a partner for the recruitment journey')}
-          </h2>
-          <p className="text-[14px] md:text-[16px] text-[#7A7A7A]">{t('Skillvue playbook recruitment process')}</p>
+          <h2 className="text-[clamp(1.8rem,3.5vw,2.5rem)] font-semibold text-[#1A1A2E] tracking-[-0.02em] mb-3">{t('taPlaybook.heading')}</h2>
+          <p className="text-[14px] md:text-[16px] text-[#7A7A7A]">{t('taPlaybook.body')}</p>
         </motion.div>
 
         {/* Step headers */}
@@ -76,9 +70,9 @@ export default function RecruitmentPlaybook() {
         >
           <div />
           <div className="grid grid-cols-4 gap-2">
-            {['Step 1', 'Step 2', 'Step 3', 'Step N'].map((step, i) => (
+            {[1, 2, 3, 'N'].map((step) => (
               <div key={step} className="py-3 rounded-xl text-center text-[13px] md:text-[14px] font-semibold text-white" style={{ backgroundColor: '#5E60F2', boxShadow: '0 2px 12px rgba(94,96,242,0.25)' }}>
-                {t(step)}
+                {t(`taPlaybook.header.step${step}`)}
               </div>
             ))}
           </div>
@@ -88,7 +82,7 @@ export default function RecruitmentPlaybook() {
         <div className="space-y-0">
           {rows.map((row, ri) => (
             <motion.div
-              key={row.role}
+              key={row.id}
               className="grid grid-cols-[100px_1fr] md:grid-cols-[180px_1fr] gap-0 border-b border-[#1A1A2E]/[0.05] last:border-b-0"
               initial={{ opacity: 0, y: 12 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -96,7 +90,7 @@ export default function RecruitmentPlaybook() {
             >
               {/* Role label */}
               <div className="flex items-center pr-4 md:pr-6 py-8">
-                <h3 className="text-[15px] md:text-[18px] font-semibold text-[#1A1A2E] leading-tight">{t(row.role)}</h3>
+                <h3 className="text-[15px] md:text-[18px] font-semibold text-[#1A1A2E] leading-tight">{t(`taPlaybook.rows.${row.id}.role`)}</h3>
               </div>
 
               {/* Steps + bar + Skillvue */}
@@ -111,7 +105,7 @@ export default function RecruitmentPlaybook() {
                             <circle cx="12" cy="8" r="4" fill="#5E60F2" fillOpacity="0.35" />
                             <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#5E60F2" strokeOpacity="0.35" strokeWidth="2" strokeLinecap="round" />
                           </svg>
-                          <span className="text-[11px] md:text-[12px] text-[#7A7A7A] text-center leading-tight">{t(step.label)}</span>
+                          <span className="text-[11px] md:text-[12px] text-[#7A7A7A] text-center leading-tight">{t(`taPlaybook.stepLabels.${step.label}`)}</span>
                         </>
                       ) : <div className="h-10" />}
                     </div>
@@ -132,7 +126,7 @@ export default function RecruitmentPlaybook() {
                       <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83" />
                     </svg>
                   </div>
-                  <span className="text-[12px] md:text-[13px] font-medium text-[#1A1A2E]/60">{t(row.skillvue)}</span>
+                  <span className="text-[12px] md:text-[13px] font-medium text-[#1A1A2E]/60">{t(`taPlaybook.rows.${row.id}.skillvue`)}</span>
                 </div>
               </div>
             </motion.div>

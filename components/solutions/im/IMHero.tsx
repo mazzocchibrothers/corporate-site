@@ -2,6 +2,7 @@
 'use client';
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -9,7 +10,8 @@ import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
 export default function IMHero() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('solutions.internal-mobility');
   return (
     <section id="im-hero" data-testid="im-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
@@ -19,22 +21,19 @@ export default function IMHero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          {t('Your next best hire might already')}{' '}
-          <span className="font-bold gradient-text">{t('work for you.')}</span>
-        </motion.h1>
+        >{t.rich('imHero.heading', {
+          span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+        })}</motion.h1>
         <motion.div
           className="flex flex-col items-start gap-6 md:gap-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <p className="text-[16px] lg:text-[18px] text-white/[0.65] leading-[1.75] max-w-xl" style={{ fontWeight: 300 }}>
-            {t('Skillvue maps skills and potential across your entire workforce, making internal talent visible, succession decisions data-driven, and mobility paths transparent.')}
-          </p>
+          <p className="text-[16px] lg:text-[18px] text-white/[0.65] leading-[1.75] max-w-xl" style={{ fontWeight: 300 }}>{t('imHero.body')}</p>
           <Button asChild variant="primary" mode="dark" className="shrink-0">
             <a href={href('book-meeting', lang)} data-testid="im-hero-cta">
-              <span>{t('Book a Demo')}</span>
+              <span>{t('imHero.cta')}</span>
               <ArrowRight aria-hidden="true" />
             </a>
           </Button>

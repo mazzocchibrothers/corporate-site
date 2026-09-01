@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -9,7 +10,8 @@ import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
 export default function PMImpact() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('solutions.performance-management');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -25,29 +27,31 @@ export default function PMImpact() {
         >
           <div className="grid lg:grid-cols-12">
             <div className="lg:col-span-8 p-10 lg:p-14">
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-6 block">{t('Customer Story')}</span>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-6 block">{t('pmImpact.text')}</span>
               <h3 className="text-[28px] font-semibold text-white/90 mb-2">UniCredit</h3>
-              <p className="text-[14px] text-white/40 mb-8">{t('Financial Services')}</p>
+              <p className="text-[14px] text-white/40 mb-8">{t('pmImpact.body')}</p>
               <div className="grid md:grid-cols-2 gap-8 mb-10">
                 <div>
-                  <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-3 block">{t('Challenge')}</span>
-                  <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('Introducing objective competency verification into performance cycles across multiple countries and business units.')}</p>
+                  <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-3 block">{t('pmImpact.text2')}</span>
+                  <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('pmImpact.body2')}</p>
                 </div>
                 <div>
-                  <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-3 block">{t('Result')}</span>
-                  <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('A unified talent language across hiring, performance, and development for the first time. Verifications now inform decisions from screening to succession.')}</p>
+                  <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-3 block">{t('pmImpact.text3')}</span>
+                  <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t('pmImpact.body3')}</p>
                 </div>
               </div>
               <Button asChild variant="secondary" mode="dark">
                 <a href={href('book-meeting', lang)}>
-                  {t('Read the full story')}
+                  {t('pmImpact.cta')}
                   <ArrowUpRight aria-hidden="true" />
                 </a>
               </Button>
             </div>
             <div className="lg:col-span-4 flex flex-col items-center justify-center p-10 lg:p-14 bg-white/[0.04] border-t lg:border-t-0 lg:border-l border-white/[0.06]">
               <span className="block text-white text-[32px] stat-value md:text-[3.5rem]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>3</span>
-              <p className="text-[14px] text-white/[0.65] mt-3 text-center">{t('modules unified across')}<br />{t('hiring, performance & development')}</p>
+              <p className="text-[14px] text-white/[0.65] mt-3 text-center">{t.rich('pmImpact.body4', {
+                br: () => <br />,
+              })}</p>
             </div>
           </div>
         </motion.div>

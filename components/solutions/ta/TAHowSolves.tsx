@@ -2,17 +2,32 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
-import { useLanguage } from '@/i18n/LanguageContext';
 
 const stages = [
-  { num: '01', title: 'Pre-screening', subtitle: 'Top of funnel', desc: 'Short verifications on suitability and killer skills via web app or WhatsApp. Reduce manual effort, accelerate pre-selection, filter for objective eligibility before deeper verification.', color: '#9B9DFB' },
-  { num: '02', title: 'Screening', subtitle: 'Mid funnel', desc: 'Verifications on soft skills, hard skills, potential, and traits. Standardized evaluation that removes bias and produces comparable, predictive shortlists.', color: '#7577F8' },
-  { num: '03', title: 'In-depth', subtitle: 'Late funnel', desc: 'Deep verifications on potential, traits, and skills for professional+ roles. Cross-job insights, detailed candidate profiles, and in-person interview support packages.', color: '#4B4DF7' },
+  {
+    id: 'preScreening',
+    num: '01',
+    desc: 'Short verifications on suitability and killer skills via web app or WhatsApp. Reduce manual effort, accelerate pre-selection, filter for objective eligibility before deeper verification.',
+    color: '#9B9DFB',
+  },
+  {
+    id: 'screening',
+    num: '02',
+    desc: 'Verifications on soft skills, hard skills, potential, and traits. Standardized evaluation that removes bias and produces comparable, predictive shortlists.',
+    color: '#7577F8',
+  },
+  {
+    id: 'depth',
+    num: '03',
+    desc: 'Deep verifications on potential, traits, and skills for professional+ roles. Cross-job insights, detailed candidate profiles, and in-person interview support packages.',
+    color: '#4B4DF7',
+  },
 ];
 
 export default function TAHowSolves() {
-  const { t, lang } = useLanguage();
+  const t = useTranslations('solutions.talent-acquisition');
   const [active, setActive] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
@@ -21,10 +36,9 @@ export default function TAHowSolves() {
     <section id="ta-how" data-testid="ta-how" className="section-breathe relative py-20 lg:py-24" ref={ref}>
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <motion.div className="mb-8 md:mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">
-            {t('Skillvue adds value at every step of the')}{' '}
-            <span className="italic font-bold gradient-text-on-light">{t('hiring funnel')}</span>
-          </h2>
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('taHowSolves.heading', {
+            span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+          })}</h2>
         </motion.div>
 
         {/* Horizontal funnel tabs */}
@@ -44,8 +58,8 @@ export default function TAHowSolves() {
                 <span className={`text-[12px] font-bold tracking-[0.1em] ${i === active ? 'text-white/50' : 'text-[#4B4DF7]/40'}`}>{s.num}</span>
                 <div className={`h-px flex-1 ${i === active ? 'bg-white/10' : 'bg-[#4B4DF7]/[0.08]'}`} />
               </div>
-              <h3 className={`text-[18px] font-semibold mb-1 ${i === active ? 'text-white' : 'text-[#1A1A2E]/70'}`}>{t(s.title)}</h3>
-              <span className={`text-[13px] ${i === active ? 'text-white/50' : 'text-[#7A7A7A]'}`}>{t(s.subtitle)}</span>
+              <h3 className={`text-[18px] font-semibold mb-1 ${i === active ? 'text-white' : 'text-[#1A1A2E]/70'}`}>{t(`taHowSolves.stages.${s.id}.title`)}</h3>
+              <span className={`text-[13px] ${i === active ? 'text-white/50' : 'text-[#7A7A7A]'}`}>{t(`taHowSolves.stages.${s.id}.subtitle`)}</span>
             </button>
           ))}
         </div>
@@ -61,8 +75,8 @@ export default function TAHowSolves() {
           <div className="flex items-start gap-6">
             <div className="w-1 h-20 rounded-full shrink-0" style={{ background: stages[active].color }} />
             <div>
-              <h3 className="text-[clamp(1.3rem,2vw,1.8rem)] font-semibold text-[#1A1A2E] mb-4">{t(stages[active].title)}: {t(stages[active].subtitle)}</h3>
-              <p className="text-[16px] text-[#7A7A7A] leading-[1.8] max-w-3xl">{t(stages[active].desc)}</p>
+              <h3 className="text-[clamp(1.3rem,2vw,1.8rem)] font-semibold text-[#1A1A2E] mb-4">{t(`taHowSolves.stages.${stages[active].id}.title`)}: {t(`taHowSolves.stages.${stages[active].id}.subtitle`)}</h3>
+              <p className="text-[16px] text-[#7A7A7A] leading-[1.8] max-w-3xl">{t(`taHowSolves.stages.${stages[active].id}.desc`)}</p>
             </div>
           </div>
         </motion.div>
