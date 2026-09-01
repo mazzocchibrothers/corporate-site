@@ -26,10 +26,11 @@
 No spaces in new asset filenames. Two shipped assets have them
 (`mediaset-background-explore-stories (2).avif`); don't add a third.
 
-## Page shape
+## Page shape (the one being migrated away from)
 
-Every page follows the same skeleton. Copy `pages/customers/europ-assistance.tsx`
-for a customer story, `pages/lp/supermarkets.tsx` for a landing page.
+**Read this to understand the 61 pages that still look like it, not to write a
+new one.** Copy lives in the page file here; the whole point of the migration is
+that it stops doing so. The replacement is the next section.
 
 ```tsx
 // @ts-nocheck
@@ -65,6 +66,80 @@ export default function Page() {
   `en` renders `undefined` in production with no warning.
 - **`<Head>` is per-page and per-locale.** Title and meta description are copy;
   they belong in the content object like everything else.
+
+## Copy and translation
+
+All copy lives in `messages/en.json` and `messages/it.json`. A page reads it
+through next-intl; no string a visitor can read belongs in a `.tsx` file.
+
+**Namespace = route id.** The id comes from `i18n/routes.json`, with `/` becoming
+`.`: `customers/adr` → `customers.adr`. Two adjustments, both in
+`i18n/messages.ts` → `namespaceOf`: the homepage is `home`, not `index`, and a
+dynamic segment drops its brackets, because `[slug]` is not a legal ICU key path.
+
+Only three kinds of top-level namespace exist, and `check:messages` rejects a
+fourth:
+
+| Namespace | Loaded by | For |
+|---|---|---|
+| a route id | that one page | everything that page says |
+| `common` | every page | navbar, footer, the strings on all 61 pages |
+| `shared.<name>` | the pages that ask for it | copy several pages share but not all |
+
+`common` is the expensive one — it ships with every page in both directions of
+the migration. Copy that five solution pages share goes in `shared.solutions`,
+which those five pull in explicitly.
+
+**Keys are identifiers, never sentences.**
+
+```jsonc
+// no
+"Verify skills, predict performance": "Verify skills, predict performance"
+// yes
+"hero": { "title": "Verify skills, predict performance" }
+```
+
+English-as-key is what this migration exists to undo. It makes the Italian
+unfindable, welds every key to one phrasing, and turns a copy edit into a rename
+across every file that renders it. `check:messages` fails on any key segment
+that is not `camelCase` (or the kebab already in a route id).
+
+**One key per full sentence. Never a fragment.**
+
+```jsonc
+// no — "trusted by" + "teams" cannot be reassembled into Italian
+"trustedBy": "Trusted by", "teams": "teams"
+// yes
+"trustedBy": "Trusted by {count} teams"
+```
+
+Italian moves the verb, agrees the adjective, and puts the number somewhere
+else. A sentence split into fragments is a sentence that can only ever be
+English with Italian words in it.
+
+**Markup belongs to the component, not the message.** Rich text uses an ICU tag
+resolved by `t.rich()`:
+
+```jsonc
+"consent": "By continuing you accept our <terms>terms of service</terms>."
+```
+
+```tsx
+t.rich('consent', { terms: (chunks) => <Link href="/terms">{chunks}</Link> })
+```
+
+The tag name is yours; the message never carries a class, an href, or a `<span>`.
+`check:messages` rejects any tag with an attribute — that is exactly what
+separates an ICU tag from HTML.
+
+**Both locales carry identical key sets**, and a key may not be an empty string.
+Both are checked. An empty string renders as nothing and reads, in a diff, like a
+finished translation.
+
+**Reading messages:** `useTranslations` in a Client Component, `getTranslations`
+in a Server Component. A Server Component renders its strings on the server, so
+only what crosses a `'use client'` boundary is paid for in the bundle — which is
+why the boundaries in `check:client` are drawn where they are.
 
 ## Sections and animation
 
@@ -115,8 +190,10 @@ cuts of a story. Some are live via a rewrite — `/customers/mediaset` serves
 
 ## Git
 
-- One Issue → one branch → one PR. Branch off `main`, rebase onto
-  `origin/main` before opening the PR.
+- One Issue → one branch → one PR. **During the App Router migration the base
+  is `app-router`, not `main`** — branch off it, rebase onto `origin/app-router`,
+  and target it in the PR. `main` receives exactly one merge, at the switch
+  (#120). See `harness/AGENTS.md` §2b.
 - Conventional, scoped commit subjects in the imperative:
   `Add August newsletter (EN/IT) and supermarkets one-pager LP`.
 - PR body says `Closes #<n>`.

@@ -77,6 +77,83 @@ assert.deepEqual(
 assert.deepEqual(pick(catalogue, 'nope.at.all'), {}, 'an absent path picks nothing');
 assert.deepEqual(pick(catalogue, 'home.meta.title.deeper'), {}, 'walking past a leaf picks nothing');
 
+// ── The catalogue obeys its own conventions ────────────────────────────────
+// Documented in harness/docs/conventions.md. Three of the four rules there are
+// mechanical, so they are checked rather than trusted: 20-odd pages of copy get
+// migrated by different passes over five weeks, and a convention nobody
+// enforces on day one is a convention nobody follows by day ten.
+
+const leaves = (obj, prefix = '') =>
+  Object.entries(obj).flatMap(([k, v]) =>
+    v && typeof v === 'object' && !Array.isArray(v)
+      ? leaves(v, `${prefix}${k}.`)
+      : [[`${prefix}${k}`, v]],
+  );
+
+const catalogueEn = JSON.parse(readFileSync(join(ROOT, 'messages/en.json'), 'utf8'));
+const catalogueIt = JSON.parse(readFileSync(join(ROOT, 'messages/it.json'), 'utf8'));
+const entries = [
+  ...leaves(catalogueEn).map(([k, v]) => ['en', k, v]),
+  ...leaves(catalogueIt).map(([k, v]) => ['it', k, v]),
+];
+
+// A key is an identifier, never the English sentence it holds. English-as-key
+// is what this whole migration exists to undo: it makes the Italian
+// unfindable, ties every key to one phrasing, and turns a copy edit into a
+// rename across 20 files.
+const SEGMENT = /^[a-z][a-zA-Z0-9]*(-[a-z0-9]+)*$/;
+const badKeys = entries
+  .filter(([, key]) => !key.split('.').every((seg) => SEGMENT.test(seg)))
+  .map(([locale, key]) => `  ${locale}: ${key}`);
+assert.deepEqual(
+  [...new Set(badKeys)],
+  [],
+  `Keys must be camelCase identifiers, not sentences:\n${[...new Set(badKeys)].join('\n')}`,
+);
+
+// Namespaces are not free-form: every message belongs to a route, to `common`
+// (rendered on every page), or to `shared.*` (rendered on some, pulled in
+// explicitly by the pages that want it). Without this, orphan copy accumulates
+// under namespaces no page loads and nobody can tell what is still in use.
+const routeNamespaces = JSON.parse(readFileSync(join(ROOT, 'i18n/routes.json'), 'utf8'))
+  .map((r) => namespaceOf(r.id));
+const validPrefixes = ['common', 'shared', ...routeNamespaces];
+const orphans = entries
+  .filter(([, key]) => !validPrefixes.some((p) => key === p || key.startsWith(`${p}.`)))
+  .map(([, key]) => `  ${key}`);
+assert.deepEqual(
+  [...new Set(orphans)],
+  [],
+  `Namespaces with no page behind them:\n${[...new Set(orphans)].join('\n')}\n` +
+    'A namespace is a route id from i18n/routes.json, `common`, or `shared.<name>`.',
+);
+
+// Markup in a message means a translator has to edit HTML to change a comma,
+// and a class name has to survive a language it has no business being in.
+// next-intl's t.rich() takes the tags from the component instead, so a message
+// carries `<link>the docs</link>` and the page decides what a link looks like.
+// An ICU tag has no attributes; that is what separates the two.
+const withMarkup = entries
+  .filter(([, , value]) => typeof value === 'string' && /<[a-zA-Z][^>]*\s[a-zA-Z-]+=/.test(value))
+  .map(([locale, key]) => `  ${locale}: ${key}`);
+assert.deepEqual(
+  withMarkup,
+  [],
+  `Messages carrying markup:\n${withMarkup.join('\n')}\n` +
+    'Use an ICU tag and resolve it with t.rich() — the markup belongs to the component.',
+);
+
+const empty = entries
+  .filter(([, , value]) => typeof value === 'string' && value.trim() === '')
+  .map(([locale, key]) => `  ${locale}: ${key}`);
+assert.deepEqual(
+  empty,
+  [],
+  `Empty messages:\n${empty.join('\n')}\n` +
+    'An empty string renders as nothing and reads as a finished translation. Delete the key ' +
+    'or translate it.',
+);
+
 // ── Catalogue parity ───────────────────────────────────────────────────────
 // A key in one locale only renders `undefined` in production, in one language,
 // which is exactly the failure nobody notices until a customer does.
@@ -95,4 +172,7 @@ const onlyIt = it.filter((k) => !en.includes(k));
 assert.deepEqual(onlyEn, [], `messages/en.json has keys missing from it.json:\n  ${onlyEn.join('\n  ')}`);
 assert.deepEqual(onlyIt, [], `messages/it.json has keys missing from en.json:\n  ${onlyIt.join('\n  ')}`);
 
-console.log(`[OK] messages: ${en.length} keys, en/it at parity, namespaces isolated`);
+console.log(
+  `[OK] messages: ${en.length} keys across ${Object.keys(catalogueEn).length} namespaces, ` +
+    'en/it at parity, keys semantic, no markup',
+);
