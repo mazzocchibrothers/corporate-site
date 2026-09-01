@@ -2,33 +2,51 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { Linkedin } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 
 const lead = {
   name: 'Dr. Tony Lee, Ph.D.',
-  role: 'Head of AI & Science',
-  bio: 'Computational psychologist with double Ph.D. degrees and hands-on experience in Machine Learning and AI-based verification. His interdisciplinary background brings a unique perspective to the verification field, combining psychological knowledge with advanced AI and machine learning techniques. At Skillvue, he leads the AI & Science team, innovating, validating and implementing new competency verification models built on the latest technologies.',
   photo: '/team/tony-lee.avif',
   linkedin: 'https://www.linkedin.com/in/dr-tony-lee/',
 };
 
 const members = [
-  { name: 'Jatin Babbar', role: 'Senior Machine Learning Engineer', photo: '/team/jatin-babbar.avif', linkedin: 'https://www.linkedin.com/in/jatin-babbar/' },
-  { name: 'Dr. Serena Dolfi, Ph.D.', role: 'People Scientist', photo: '/team/serena-dolfi.avif', linkedin: 'https://www.linkedin.com/in/serena-dolfi/' },
-  { name: 'Wamiq Raza', role: 'Machine Learning Engineer', photo: '/team/wamiq-raza.avif', linkedin: 'https://www.linkedin.com/in/wamiq-raza/' },
-  { name: 'Luca Sbrollini', role: 'People Scientist', photo: '/team/luca-sbrollini.avif', linkedin: 'https://www.linkedin.com/in/luca-sbrollini/' },
+  {
+    id: 'seniorMachineLearning',
+    name: 'Jatin Babbar',
+    photo: '/team/jatin-babbar.avif',
+    linkedin: 'https://www.linkedin.com/in/jatin-babbar/',
+  },
+  {
+    id: 'peopleScientist',
+    name: 'Dr. Serena Dolfi, Ph.D.',
+    photo: '/team/serena-dolfi.avif',
+    linkedin: 'https://www.linkedin.com/in/serena-dolfi/',
+  },
+  {
+    id: 'machineLearningEngineer',
+    name: 'Wamiq Raza',
+    photo: '/team/wamiq-raza.avif',
+    linkedin: 'https://www.linkedin.com/in/wamiq-raza/',
+  },
+  {
+    id: 'peopleScientist2',
+    name: 'Luca Sbrollini',
+    photo: '/team/luca-sbrollini.avif',
+    linkedin: 'https://www.linkedin.com/in/luca-sbrollini/',
+  },
 ];
 
 export default function ScienceTeam() {
-  const { t, lang } = useLanguage();
+  const t = useTranslations('science');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   const renderMember = (m, i) => (
     <motion.div
-      key={m.name}
+      key={m.id}
       data-testid={`team-${m.name.split(' ')[0]?.toLowerCase()}`}
       className="group text-center"
       initial={{ opacity: 0, y: 20 }}
@@ -44,7 +62,7 @@ export default function ScienceTeam() {
         {m.name}
       </h4>
       <p className="text-[12px] md:text-[13px] text-[#7A7A7A] leading-snug">
-        {t(m.role)}
+        {t(`team.members.${m.id}.role`)}
       </p>
     </motion.div>
   );
@@ -60,10 +78,9 @@ export default function ScienceTeam() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">
-            {t('The team behind the')}{' '}
-            <span className="italic font-bold gradient-text-on-light">{t('science')}</span>
-          </h2>
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('team.heading', {
+            span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+          })}</h2>
         </motion.div>
 
         {/* Lead card */}
@@ -82,10 +99,10 @@ export default function ScienceTeam() {
                 {lead.name}
               </h3>
               <p className="text-[13px] md:text-[15px] font-semibold text-[#4B4DF7]/70 mb-3 md:mb-6">
-                {t(lead.role)}
+                {t('team.lead.role')}
               </p>
               <p className="text-[14px] md:text-[15px] text-[#7A7A7A] leading-[1.6] md:leading-[1.8] max-w-2xl">
-                {t(lead.bio)}
+                {t('team.lead.bio')}
               </p>
               <a
                 href={lead.linkedin}
@@ -112,9 +129,7 @@ export default function ScienceTeam() {
         >
           <span className="text-[32px] font-semibold md:text-[48px] md:font-bold text-[#1A1A2E] leading-none tracking-[-0.03em] shrink-0">50+</span>
           <div className="w-px h-10 bg-[#1A1A2E]/[0.08] hidden sm:block shrink-0" />
-          <p className="text-[14px] md:text-[16px] text-[#7A7A7A] leading-[1.6] md:leading-[1.7]">
-            {t('External collaborators from academic, HR consulting and corporate world')}
-          </p>
+          <p className="text-[14px] md:text-[16px] text-[#7A7A7A] leading-[1.6] md:leading-[1.7]">{t('team.body')}</p>
         </motion.div>
       </div>
     </section>

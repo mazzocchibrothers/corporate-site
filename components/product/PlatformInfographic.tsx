@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
-import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function PlatformInfographic() {
-  const { t, lang } = useLanguage();
+  const t = useTranslations('product-overview');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -18,12 +18,8 @@ export default function PlatformInfographic() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,2.5rem)] font-semibold text-[#1A1A2E] tracking-[-0.02em] mb-3 md:mb-4">
-            {t('From signals to decisions. One connected flow.')}
-          </h2>
-          <p className="text-[14px] md:text-[17px] text-[#7A7A7A] leading-[1.6] md:leading-[1.75] max-w-2xl mx-auto">
-            {t('Skillvue gathers signals from candidates, workforce, and market data, processes them through AI-powered skills intelligence, integrates with your core HR systems, and enables every talent decision with objective, defensible data.')}
-          </p>
+          <h2 className="text-[clamp(1.5rem,3.5vw,2.5rem)] font-semibold text-[#1A1A2E] tracking-[-0.02em] mb-3 md:mb-4">{t('platformInfographic.heading')}</h2>
+          <p className="text-[14px] md:text-[17px] text-[#7A7A7A] leading-[1.6] md:leading-[1.75] max-w-2xl mx-auto">{t('platformInfographic.body')}</p>
         </motion.div>
 
         <motion.div

@@ -9,10 +9,9 @@ import Lottie from 'lottie-react';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
-const ANIM_EN = 'https://cdn.lottielab.com/l/3FJ5CBuSY6Ebq8.json';
-const ANIM_IT = 'https://cdn.lottielab.com/l/9E2vegrr5hs33N.json';
-const EMBED_EN = 'https://cdn.lottielab.com/l/3FJ5CBuSY6Ebq8.html';
-const EMBED_IT = 'https://cdn.lottielab.com/l/9E2vegrr5hs33N.html';
+// The hero animation has text baked into it, so there is one per language.
+// Both URLs live in the catalogue with the copy they belong to — an asset that
+// changes with the language is a translation, whatever its file extension.
 
 export default function ProductHero() {
   const { lang } = useLanguage();
@@ -21,13 +20,13 @@ export default function ProductHero() {
   const [useFallback, setUseFallback] = useState(false);
 
   useEffect(() => {
-    const url = lang === 'it' ? ANIM_IT : ANIM_EN;
+    const url = t('hero.animation');
     setAnimData(null);
     fetch(url)
       .then(r => r.json())
       .then(setAnimData)
       .catch(() => setUseFallback(true));
-  }, [lang]);
+  }, [t]);
 
   return (
     <section id="product-hero" data-testid="product-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px]">
@@ -78,7 +77,7 @@ export default function ProductHero() {
               <Lottie animationData={animData} loop autoplay style={{ width: '100%' }} />
             ) : useFallback ? (
               <iframe
-                src={lang === 'it' ? EMBED_IT : EMBED_EN}
+                src={t('hero.animationEmbed')}
                 title="Skillvue product demo"
                 className="w-full aspect-square border-0"
                 allowFullScreen

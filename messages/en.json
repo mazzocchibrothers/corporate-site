@@ -219,7 +219,409 @@
     "hero": {
       "heading": "One platform.<br></br>Every talent decision.<br></br><span>Objective data.</span>",
       "body": "Skillvue is the AI-powered talent intelligence platform that turns static HR processes into predictive, objective insights. Verify skills, predict potential, and make every people decision defensible.",
+      "cta": "Book a Demo",
+      "animation": "https://cdn.lottielab.com/l/3FJ5CBuSY6Ebq8.json",
+      "animationEmbed": "https://cdn.lottielab.com/l/3FJ5CBuSY6Ebq8.html"
+    },
+    "assessmentFormats": {
+      "layers": {
+        "interactionFormat": {
+          "title": "INTERACTION FORMAT",
+          "subtitle": "How is the verification delivered",
+          "items": {
+            "structuredInterviews": {
+              "name": "Structured interviews",
+              "desc": "Standardized question set for fair comparable evaluation"
+            },
+            "conversationFlows": {
+              "name": "Conversation flows",
+              "desc": "AI-driven dialogues that adapt in real time"
+            },
+            "closeEndedSurveys": {
+              "name": "Close-ended surveys",
+              "desc": "Targeted items for scalable objective measurement"
+            }
+          }
+        },
+        "assessmentMethod": {
+          "title": "ASSESSMENT METHOD",
+          "subtitle": "What is being measured",
+          "items": {
+            "behavioralEventInterview": {
+              "name": "Behavioral event interview",
+              "desc": "Past behavior as predictor of future performance"
+            },
+            "situationalJudgment": {
+              "name": "Situational Judgment",
+              "desc": "Real-world scenarios: testing decision making"
+            },
+            "declarativeKnowledge": {
+              "name": "Declarative knowledge",
+              "desc": "What candidates know: facts, concepts, principles"
+            },
+            "proceduralKnowledge": {
+              "name": "Procedural knowledge",
+              "desc": "Our candidates do it: methods and processes"
+            },
+            "conditionalKnowledge": {
+              "name": "Conditional knowledge",
+              "desc": "When and why: contextual application of knowledge"
+            }
+          }
+        },
+        "responseFormat": {
+          "title": "RESPONSE FORMAT",
+          "subtitle": "How is the verification delivered",
+          "items": {
+            "audio": {
+              "name": "Audio",
+              "desc": "Spoken responses for delivering a quick and effective interview experience"
+            },
+            "video": {
+              "name": "Video",
+              "desc": "Multimodal input for viewing participants' performance"
+            },
+            "written": {
+              "name": "Written",
+              "desc": "Free-text responses for handling writing-heavy skills or allowing in-room verifications"
+            },
+            "scqsMcqs": {
+              "name": "SCQs / MCQs",
+              "desc": "Structured choice for scalable objective scoring"
+            }
+          }
+        }
+      },
+      "heading": "Verification designed to surface <span>verified capabilities</span>"
+    },
+    "enterpriseTrust": {
+      "badges": {
+        "euAiAct": "EU AI Act",
+        "iso27001": "ISO 27001",
+        "gdpr": "GDPR",
+        "aicpaSoc2": "AICPA SOC 2"
+      },
+      "pillars": {
+        "customizability": {
+          "title": "Customizability",
+          "desc": "Every component, internal or candidate-facing, adapts to your processes, your leadership model, your workflows. We deploy on your terms, not ours."
+        },
+        "security": {
+          "title": "Security",
+          "desc": "ISO 27001 and SOC 2 certified. Data protection is embedded in our architecture from day one."
+        },
+        "compliance": {
+          "title": "Compliance",
+          "desc": "From GDPR to the EU AI Act, we build for the most demanding regulatory environments so you don't have to worry about what's next."
+        }
+      },
+      "heading": "Built <span>enterprise ready</span>",
+      "body": "We are opinionated about science, flexible about everything else. From deep customizability to the most demanding regulatory environments."
+    },
+    "howSkillvueWorks": {
+      "steps": {
+        "informationGathering": {
+          "title": "Information Gathering",
+          "what": "We learn your organization: competency frameworks, HR processes, systems, documentation.",
+          "capability": "Context, process, and data ingestion"
+        },
+        "jobsPeopleSkills": {
+          "title": "Jobs-People-Skills Mapping",
+          "what": "We digest your organizational landscape into a dynamic skill taxonomy.",
+          "capability": "Skill taxonomy generation, talent demand-supply mapping, market & AI impact view"
+        },
+        "verificationGeneration": {
+          "title": "Verification Generation",
+          "what": "We create verifications skill by skill. deeply contextualized to your roles and framework.",
+          "capability": "AI-generated items, expert validation, continuous adaptation"
+        },
+        "verificationDelivery": {
+          "title": "Verification Delivery",
+          "what": "We meet people where they are, through the channels where adoption is highest.",
+          "capability": "Web apps, WhatsApp, MS Teams, Slack. audio, video, written, MCQs"
+        },
+        "evaluationScoring": {
+          "title": "Evaluation & Scoring",
+          "what": "AI agents recommend scores rooted in science. Humans keep control over the final decision.",
+          "capability": "Scoring explainability, human-in-the-loop review"
+        },
+        "reportingInsights": {
+          "title": "Reporting & Insights",
+          "what": "Ready-to-use analytics for immediate consumption; integrations with core HR for full potential.",
+          "capability": "Skillvue reporting platform + native integrations (ATS, LMS, HRIS, PMS)"
+        }
+      },
+      "heading": "From your context to actionable intelligence <span>in six steps</span>",
+      "body": "Skillvue doesn't ask you to change how you work. We start by learning your organization and deliver insights where your teams already operate.",
+      "text": "STEP",
+      "text2": "KEY CAPABILITY"
+    },
+    "integrationEcosystem": {
+      "heading": "Giving life to your <span>core HR systems</span>",
+      "body": "Skillvue layers objective talent data into your existing stack, turning them from process gatekeepers into decision engines.",
+      "body2": "If it has an API, we connect.",
+      "systems": "Integrating with <acr>ATS</acr> · <acr>LMS</acr> · <acr>LXP</acr> · <acr>PMS</acr> · <acr>HRIS</acr> — 100+ native integrations"
+    },
+    "platformInfographic": {
+      "heading": "From signals to decisions. One connected flow.",
+      "body": "Skillvue gathers signals from candidates, workforce, and market data, processes them through AI-powered skills intelligence, integrates with your core HR systems, and enables every talent decision with objective, defensible data."
+    },
+    "cta": {
+      "heading": "Ready to make every talent decision <span>objective?</span>",
+      "text": "Ready to explore",
+      "heading2": "Book a Demo",
+      "body": "See Skillvue live with your specific use case",
       "cta": "Book a Demo"
+    },
+    "whatSkillvueDoes": {
+      "pillars": {
+        "talent-acquisition": {
+          "title": "Talent Acquisition",
+          "desc": "Replace gut-feel interviews with AI-powered verifications that predict on-the-job performance. Scalable from 10 to 10,000 candidates. same scientific rigor at every level.",
+          "link": "Explore Talent Acquisition"
+        },
+        "performance": {
+          "title": "Performance Management",
+          "desc": "Add an objective layer to performance cycles. Structured competency verifications reduce bias, improve calibration, and give managers a starting point grounded in data, not recency.",
+          "link": "Explore Performance Management"
+        },
+        "learning": {
+          "title": "Learning & Development",
+          "desc": "Know exactly where the skill gaps are: at individual, team, and organization level. Fund programs based on evidence, measure progress with before-and-after precision.",
+          "link": "Explore Learning & Development"
+        },
+        "mobility": {
+          "title": "Internal Mobility & Succession",
+          "desc": "See who is ready for a new role today, who can be developed in 6 months, and where critical knowledge is concentrated. Move from \"we think she might be ready\" to \"we know.\"",
+          "link": "Explore Internal Mobility"
+        }
+      },
+      "heading": "From screening to succession. every talent decision, <span>connected.</span>",
+      "body": "Most organizations run hiring, performance, L&D, and mobility on disconnected tools with different frameworks. Skillvue connects them through one skills language and one data layer so every decision compounds."
+    },
+    "whatWeAssess": {
+      "dimensions": {
+        "suitability": {
+          "title": "Suitability",
+          "subtitle": "Person-job fit",
+          "desc": "Evaluates objective eligibility: qualifications, availability, logistics, baseline requirements. A structured screening layer before deeper verification."
+        },
+        "softSkills": {
+          "title": "Soft Skills",
+          "subtitle": "Behavioral competencies",
+          "desc": "Communication, collaboration, problem-solving, leadership. Observable through action, rooted in stable behavioral patterns, and among the strongest predictors of long-term performance."
+        },
+        "hardSkills": {
+          "title": "Hard Skills",
+          "subtitle": "Technical proficiency",
+          "desc": "Domain-specific knowledge measured against defined proficiency levels, grounded in structured knowledge taxonomies relevant to the role."
+        },
+        "potential": {
+          "title": "Potential",
+          "subtitle": "Capacity to grow",
+          "desc": "Predicts capacity to grow, adapt, and take on greater complexity. Verified through three validated dimensions: learning agility, intrinsic motivation, and career aspiration."
+        },
+        "traits": {
+          "title": "Traits",
+          "subtitle": "Dispositional patterns",
+          "desc": "Stable personality traits. openness, conscientiousness, resilience. that shape cultural fit and sustained performance. Grounded in Big Five personality science."
+        }
+      },
+      "heading": "Five dimensions for <span>objective evaluations</span>",
+      "body": "Every person evaluated through a structured, science-backed framework. whether they're a candidate or a 20-year veteran.",
+      "cta": "Discover the Science"
+    }
+  },
+  "science": {
+    "aiScienceTogether": {
+      "principles": {
+        "betterEvidence": {
+          "title": "Better evidence",
+          "desc": "AI unlocks richer, more direct evidence of skill through realistic scenarios, interactive tasks, and multiple response modalities that reflect how work is actually done."
+        },
+        "rigorScale": {
+          "title": "Rigor at scale",
+          "desc": "We embed verification science into the product so rigor scales with the system. Clear constructs, evidence-centered design, and governed scoring prevent AI from introducing noise."
+        },
+        "continuousEvolution": {
+          "title": "Continuous evolution",
+          "desc": "Because skills and roles evolve quickly, measurement must evolve with them. Continuous monitoring and scientist-led iteration keep signals accurate and defensible."
+        }
+      }
+    },
+    "methodologyLifecycle": {
+      "steps": {
+        "defineConstructs": {
+          "title": "Define constructs",
+          "desc": "Identify what to measure, grounded in I-O psychology research and the client's competency model."
+        },
+        "designVerificationItems": {
+          "title": "Design verification items",
+          "desc": "AI generates deeply contextualized items; format, scale, and scoring model selected based on psychometric best practice."
+        },
+        "expertValidation": {
+          "title": "Expert validation",
+          "desc": "Human-in-the-loop validation by subject-matter experts and psychometricians. Calibration against proprietary benchmark data."
+        },
+        "pilotRefine": {
+          "title": "Pilot and refine",
+          "desc": "Items tested with real participants, analyzed for reliability, discrimination, and fairness. Bias evaluation across demographics."
+        },
+        "deployScale": {
+          "title": "Deploy at scale",
+          "desc": "Verifications delivered via web, WhatsApp, Teams, Slack — in 50+ languages with consistent measurement quality."
+        },
+        "scoreExplainability": {
+          "title": "Score with explainability",
+          "desc": "Every response scored with transparent evidence: answer, justification, and behavioral anchor. AI recommends; humans decide."
+        },
+        "monitorEvolve": {
+          "title": "Monitor and evolve",
+          "desc": "Continuous item analysis, reliability tracking, and construct stability monitoring as populations and roles change over time."
+        }
+      },
+      "principles": {
+        "betterEvidence": {
+          "title": "Better evidence",
+          "desc": "AI unlocks richer, more direct evidence of skill through realistic scenarios, interactive tasks, and multiple response modalities that reflect how work is actually done."
+        },
+        "rigorScale": {
+          "title": "Rigor at scale",
+          "desc": "We embed verification science into the product so rigor scales with the system. Clear constructs, evidence-centered design, and governed scoring prevent AI from introducing noise."
+        },
+        "continuousEvolution": {
+          "title": "Continuous evolution",
+          "desc": "Because skills and roles evolve quickly, measurement must evolve with them. Continuous monitoring and scientist-led iteration keep signals accurate and defensible."
+        }
+      },
+      "heading": "A rigorous, end-to-end verification <span>lifecycle</span>",
+      "text": "Step"
+    },
+    "responsibleAI": {
+      "pillars": {
+        "transparentScoring": {
+          "title": "Transparent scoring",
+          "desc": "Every score comes with an explanation: what was measured, how it was scored, and what evidence supports it."
+        },
+        "humanOversight": {
+          "title": "Human oversight",
+          "desc": "AI recommends; humans decide. HR teams can edit, override, and make the final call on every verification."
+        },
+        "continuousMonitoring": {
+          "title": "Continuous monitoring",
+          "desc": "Drift checks, stability reviews, and scoring audits detect changes before they affect results."
+        },
+        "regulatoryCompliance": {
+          "title": "Regulatory compliance",
+          "desc": "Built from the ground up for GDPR, EU AI Act, ISO 27001, and SOC 2. Auditable by design."
+        }
+      },
+      "faqs": {
+        "howDoesSkillvue": {
+          "q": "How does Skillvue ensure verification validity?",
+          "a": "Every verification is built on validated I-O psychology constructs, reviewed by subject-matter experts, piloted with real participants, and continuously monitored for reliability and fairness. We publish internal validity reports for every deployment."
+        },
+        "whatRoleDoes": {
+          "q": "What role does AI play in verification design and scoring?",
+          "a": "AI generates contextualized verification items, scores responses with transparent evidence, and surfaces patterns at scale. But every AI output is governed by psychometric constraints and subject to human review."
+        },
+        "howDoesSkillvue2": {
+          "q": "How does Skillvue handle bias in verifications?",
+          "a": "Bias evaluation is embedded at every stage: item design, pilot testing, scoring validation, and ongoing monitoring. We test for differential item functioning across demographics and adjust items that show systematic bias."
+        },
+        "whatLanguagesSupported": {
+          "q": "What languages are supported?",
+          "a": "Skillvue verifications are available in 50+ languages, with cultural adaptation built into the item design process to ensure measurement consistency across regions."
+        },
+        "howDoesSkillvue3": {
+          "q": "How does Skillvue comply with the EU AI Act?",
+          "a": "Skillvue is designed from the ground up for EU AI Act compliance: transparent scoring, human oversight, continuous monitoring, and full auditability. We maintain documentation and governance processes that meet high-risk AI system requirements."
+        },
+        "canVerificationsCustomized": {
+          "q": "Can verifications be customized to our competency framework?",
+          "a": "Yes. Every deployment starts with your competency model. We map your framework to validated constructs, generate contextualized items, and validate them against your population before going live."
+        }
+      },
+      "heading": "Responsible AI built for <span>high-stakes talent decisions</span>",
+      "heading2": "Frequently asked <span>questions</span>"
+    },
+    "cta": {
+      "heading": "Science-backed talent intelligence. <span>See it in action.</span>",
+      "text": "Ready to explore",
+      "heading2": "Book a Demo",
+      "body": "See how science translates into better talent decisions",
+      "cta": "Book a Demo"
+    },
+    "faq": {
+      "faqs": {
+        "howDoesSkillvue": {
+          "q": "How does Skillvue ensure verification validity?",
+          "a": "Every verification is built on validated I-O psychology constructs, reviewed by subject-matter experts, piloted with real participants, and continuously monitored for reliability and fairness. We publish internal validity reports for every deployment."
+        },
+        "whatRoleDoes": {
+          "q": "What role does AI play in verification design and scoring?",
+          "a": "AI generates contextualized verification items, scores responses with transparent evidence, and surfaces patterns at scale. But every AI output is governed by psychometric constraints and subject to human review."
+        },
+        "howDoesSkillvue2": {
+          "q": "How does Skillvue handle bias in verifications?",
+          "a": "Bias evaluation is embedded at every stage: item design, pilot testing, scoring validation, and ongoing monitoring. We test for differential item functioning across demographics and adjust items that show systematic bias."
+        },
+        "whatLanguagesSupported": {
+          "q": "What languages are supported?",
+          "a": "Skillvue verifications are available in 50+ languages, with cultural adaptation built into the item design process to ensure measurement consistency across regions."
+        },
+        "howDoesSkillvue3": {
+          "q": "How does Skillvue comply with the EU AI Act?",
+          "a": "Skillvue is designed from the ground up for EU AI Act compliance: transparent scoring, human oversight, continuous monitoring, and full auditability. We maintain documentation and governance processes that meet high-risk AI system requirements."
+        },
+        "canVerificationsCustomized": {
+          "q": "Can verifications be customized to our competency framework?",
+          "a": "Yes. Every deployment starts with your competency model. We map your framework to validated constructs, generate contextualized items, and validate them against your population before going live."
+        }
+      },
+      "heading": "Frequently asked <span>questions</span>"
+    },
+    "hero": {
+      "heading": "Science you can stake<br></br>talent decisions<br></br><span>on.</span>",
+      "cta": "Book a Demo",
+      "body": "Measuring people is hard. To make talent decisions you can trust, accuracy and reliability aren't optional. Skillvue is built on I/O psychology and psychometrics, ensuring every data point holds up to scrutiny."
+    },
+    "team": {
+      "members": {
+        "seniorMachineLearning": {
+          "role": "Senior Machine Learning Engineer"
+        },
+        "peopleScientist": {
+          "role": "People Scientist"
+        },
+        "machineLearningEngineer": {
+          "role": "Machine Learning Engineer"
+        },
+        "peopleScientist2": {
+          "role": "People Scientist"
+        }
+      },
+      "heading": "The team behind the <span>science</span>",
+      "body": "External collaborators from academic, HR consulting and corporate world",
+      "lead": {
+        "role": "Head of AI & Science",
+        "bio": "Computational psychologist with double Ph.D. degrees and hands-on experience in Machine Learning and AI-based verification. His interdisciplinary background brings a unique perspective to the verification field, combining psychological knowledge with advanced AI and machine learning techniques. At Skillvue, he leads the AI & Science team, innovating, validating and implementing new competency verification models built on the latest technologies."
+      }
+    },
+    "scientificPillars": {
+      "pillars": {
+        "iOPsychology": {
+          "title": "I-O Psychology",
+          "subtitle": "Defining what to measure and why it matters",
+          "desc": "I/O psychology grounds our platform in decades of research on human performance at work, ensuring we map the right skills, select the right constructs, and use the right mix of verification types for each talent decision."
+        },
+        "psychometrics": {
+          "title": "Psychometrics",
+          "subtitle": "Defining how to measure it right",
+          "desc": "Psychometrics governs the design of every verification we build: which format, which scale, which scoring model. The goal is simple: maximize accuracy, minimize noise, and make sure results mean what they claim to mean."
+        }
+      },
+      "heading": "Two disciplines, one standard of <span>rigor</span>"
     }
   },
   "solutions": {

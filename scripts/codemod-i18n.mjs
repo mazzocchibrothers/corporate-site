@@ -44,17 +44,27 @@ const ROLE = {
   blockquote: 'quote', figcaption: 'caption', th: 'columnHeader', td: 'cell',
 };
 
-// ── The Italian dictionary, read the same way check-i18n reads it ───────────
-const ENTRY =
-  /^ {2}('(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*")\s*:\s*('(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*")\s*,?\s*$/;
-const decode = (quoted) => quoted.slice(1, -1).replace(/\\(['"\\])/g, '$1');
-
+// ── The Italian dictionary ─────────────────────────────────────────────────
+// Parsed, not regexed. A regex has to decode the escapes itself, and the first
+// one it forgets is `\n`: nine values in the dictionary contain one, and they
+// arrive in the catalogue as a literal backslash-n that renders on the page.
+// The parser resolves every escape, including the `\u2019` the Italian
+// apostrophes are written with.
 function loadItalian() {
+  const file = join(ROOT, 'i18n/translations.ts');
+  const sf = ts.createSourceFile(file, readFileSync(file, 'utf8'), ts.ScriptTarget.Latest, true);
   const map = new Map();
-  for (const line of readFileSync(join(ROOT, 'i18n/translations.ts'), 'utf8').split('\n')) {
-    const m = ENTRY.exec(line);
-    if (m) map.set(decode(m[1]), decode(m[2]));
-  }
+  const visit = (node) => {
+    if (
+      ts.isPropertyAssignment(node) &&
+      ts.isStringLiteral(node.initializer) &&
+      (ts.isStringLiteral(node.name) || ts.isIdentifier(node.name))
+    ) {
+      map.set(node.name.text, node.initializer.text);
+    }
+    ts.forEachChild(node, visit);
+  };
+  visit(sf);
   return map;
 }
 
@@ -263,6 +273,45 @@ function arrayDeclarations(sf) {
 }
 
 /**
+ * `pillars.map((p, i) => renderCard(p, i))` — the copy is inside renderCard,
+ * where there is no map to walk up to. Maps the helper's name to the array so
+ * its first parameter can be resolved. Four components on the science page
+ * alone are written this way.
+ */
+function helperBindings(sf, arrays) {
+  const byHelper = new Map();
+  const visit = (node) => {
+    if (
+      ts.isCallExpression(node) &&
+      ts.isPropertyAccessExpression(node.expression) &&
+      node.expression.name.text === 'map' &&
+      ts.isIdentifier(node.expression.expression) &&
+      arrays.has(node.expression.expression.text)
+    ) {
+      const array = node.expression.expression.text;
+      const cb = node.arguments[0];
+      if (cb && ts.isIdentifier(cb)) {
+        byHelper.set(cb.text, array);                       // X.map(renderCard)
+      } else if (cb && (ts.isArrowFunction(cb) || ts.isFunctionExpression(cb))) {
+        const param = cb.parameters[0];
+        const body = ts.isArrowFunction(cb) && !ts.isBlock(cb.body) ? cb.body : null;
+        if (
+          param && ts.isIdentifier(param.name) && body &&
+          ts.isCallExpression(body) && ts.isIdentifier(body.expression) &&
+          body.arguments[0] && ts.isIdentifier(body.arguments[0]) &&
+          body.arguments[0].text === param.name.text
+        ) {
+          byHelper.set(body.expression.text, array);        // X.map(p => render(p))
+        }
+      }
+    }
+    ts.forEachChild(node, visit);
+  };
+  visit(sf);
+  return byHelper;
+}
+
+/**
  * Which array a `t(item…)` call is iterating, found by walking UP from the call
  * to the nearest `X.map(item => …)` that binds that name.
  *
@@ -271,11 +320,20 @@ function arrayDeclarations(sf) {
  * the map keeps whichever came last. Half the copy then silently belongs to the
  * other list.
  */
-function arrayForParam(node, param, arrays) {
+function arrayForParam(node, param, arrays, helpers = new Map()) {
   for (let n = node.parent; n; n = n.parent) {
-    if (!ts.isArrowFunction(n) && !ts.isFunctionExpression(n)) continue;
+    if (!ts.isArrowFunction(n) && !ts.isFunctionExpression(n) && !ts.isFunctionDeclaration(n)) continue;
     const first = n.parameters[0];
     if (!first || !ts.isIdentifier(first.name) || first.name.text !== param) continue;
+
+    // A named helper the map delegates to.
+    const name = ts.isFunctionDeclaration(n)
+      ? n.name?.text
+      : ts.isVariableDeclaration(n.parent) && ts.isIdentifier(n.parent.name)
+        ? n.parent.name.text
+        : null;
+    if (name && helpers.has(name)) return helpers.get(name);
+
     const call = n.parent;
     if (
       call && ts.isCallExpression(call) &&
@@ -357,6 +415,8 @@ function processFile(file, namespace, italian) {
   // property. Collected before the JSX walk so the walk can rewrite the calls.
   const arrays = arrayDeclarations(sf);
   const strings = stringArrayDeclarations(sf);
+  const helpers = helperBindings(sf, arrays);
+  const stringHelpers = helperBindings(sf, strings);
   const arrayProps = new Map(); // array name -> Set(prop)
   const arrayCalls = []; // { node, array, prop }
   const rawUse = new Map(); // array name -> Set(prop) read outside t()
@@ -376,10 +436,10 @@ function processFile(file, namespace, italian) {
       if (
         ts.isPropertyAccessExpression(node) &&
         ts.isIdentifier(node.expression) &&
-        arrayForParam(node, node.expression.text, arrays) &&
+        arrayForParam(node, node.expression.text, arrays, helpers) &&
         !inTCall.has(node)
       ) {
-        const array = arrayForParam(node, node.expression.text, arrays);
+        const array = arrayForParam(node, node.expression.text, arrays, helpers);
         if (!rawUse.has(array)) rawUse.set(array, new Set());
         rawUse.get(array).add(node.name.text);
       }
@@ -388,14 +448,33 @@ function processFile(file, namespace, italian) {
     scan(sf);
 
     const visit = (node) => {
+      // `t(steps[active].title)` — the selected tab. Not a map binding, so
+      // there is nothing to walk up to; the array is named at the call site.
+      if (
+        isTCall(node) &&
+        node.arguments.length === 1 &&
+        ts.isPropertyAccessExpression(node.arguments[0]) &&
+        ts.isElementAccessExpression(node.arguments[0].expression) &&
+        ts.isIdentifier(node.arguments[0].expression.expression) &&
+        arrays.has(node.arguments[0].expression.expression.text)
+      ) {
+        const access = node.arguments[0].expression;
+        const array = access.expression.text;
+        const prop = node.arguments[0].name.text;
+        if (!arrayProps.has(array)) arrayProps.set(array, new Set());
+        arrayProps.get(array).add(prop);
+        arrayCalls.push({ node, array, prop, param: access.getText() });
+        return;
+      }
+
       if (
         isTCall(node) &&
         node.arguments.length === 1 &&
         ts.isPropertyAccessExpression(node.arguments[0]) &&
         ts.isIdentifier(node.arguments[0].expression) &&
-        arrayForParam(node, node.arguments[0].expression.text, arrays)
+        arrayForParam(node, node.arguments[0].expression.text, arrays, helpers)
       ) {
-        const array = arrayForParam(node, node.arguments[0].expression.text, arrays);
+        const array = arrayForParam(node, node.arguments[0].expression.text, arrays, helpers);
         const prop = node.arguments[0].name.text;
         if (!arrayProps.has(array)) arrayProps.set(array, new Set());
         arrayProps.get(array).add(prop);
@@ -416,7 +495,7 @@ function processFile(file, namespace, italian) {
     const collect = (node) => {
       if (isTCall(node) && node.arguments.length === 1 && ts.isIdentifier(node.arguments[0])) {
         const param = node.arguments[0].text;
-        const array = arrayForParam(node, param, strings);
+        const array = arrayForParam(node, param, strings, stringHelpers);
         if (array) {
           if (!stringUses.has(array)) stringUses.set(array, []);
           stringUses.get(array).push({ node, param });

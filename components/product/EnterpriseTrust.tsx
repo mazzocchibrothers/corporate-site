@@ -1,33 +1,35 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { Settings, Shield, Scale } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { IconTile } from '@/components/ui/icon-tile';
 
 const pillars = [
   {
+    id: 'customizability',
     icon: Settings,
-    title: 'Customizability',
-    desc: 'Every component, internal or candidate-facing, adapts to your processes, your leadership model, your workflows. We deploy on your terms, not ours.',
   },
   {
+    id: 'security',
     icon: Shield,
-    title: 'Security',
-    desc: 'ISO 27001 and SOC 2 certified. Data protection is embedded in our architecture from day one.',
   },
   {
+    id: 'compliance',
     icon: Scale,
-    title: 'Compliance',
-    desc: "From GDPR to the EU AI Act, we build for the most demanding regulatory environments so you don't have to worry about what's next.",
   },
 ];
 
-const badges = ['EU AI Act', 'ISO 27001', 'GDPR', 'AICPA SOC 2'];
+const badges = [
+  'euAiAct',
+  'iso27001',
+  'gdpr',
+  'aicpaSoc2',
+];
 
 export default function EnterpriseTrust() {
-  const { t, lang } = useLanguage();
+  const t = useTranslations('product-overview');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   return (
@@ -39,13 +41,10 @@ export default function EnterpriseTrust() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-4 md:mb-6">
-            {t('Built')}{' '}
-            <span className="italic font-bold gradient-text-on-light">{t('enterprise ready')}</span>
-          </h2>
-          <p className="text-[14px] md:text-[18px] text-[#7A7A7A] leading-[1.6] md:leading-[1.75] max-w-2xl">
-            {t('We are opinionated about science, flexible about everything else. From deep customizability to the most demanding regulatory environments.')}
-          </p>
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-4 md:mb-6">{t.rich('enterpriseTrust.heading', {
+            span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+          })}</h2>
+          <p className="text-[14px] md:text-[18px] text-[#7A7A7A] leading-[1.6] md:leading-[1.75] max-w-2xl">{t('enterpriseTrust.body')}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-5 mb-8 md:mb-12">
@@ -53,16 +52,16 @@ export default function EnterpriseTrust() {
             const Icon = pillar.icon;
             return (
               <motion.div
-                key={pillar.title}
-                data-testid={`trust-${pillar.title.toLowerCase()}`}
+                key={pillar.id}
+                data-testid={`trust-${pillar.id}`}
                 className="group rounded-xl md:rounded-2xl border border-[#4B4DF7]/[0.08] bg-white p-5 md:p-10 hover:border-[#4B4DF7]/[0.15] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
               >
                 <IconTile icon={Icon} mode="light" className="mb-3 md:mb-5" />
-                <h3 className="text-[16px] md:text-[20px] font-semibold text-[#1A1A2E] mb-2 md:mb-4">{t(pillar.title)}</h3>
-                <p className="text-[13px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-[1.75]">{t(pillar.desc)}</p>
+                <h3 className="text-[16px] md:text-[20px] font-semibold text-[#1A1A2E] mb-2 md:mb-4">{t(`enterpriseTrust.pillars.${pillar.id}.title`)}</h3>
+                <p className="text-[13px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-[1.75]">{t(`enterpriseTrust.pillars.${pillar.id}.desc`)}</p>
               </motion.div>
             );
           })}
@@ -79,7 +78,7 @@ export default function EnterpriseTrust() {
               key={badge}
               className="inline-flex px-3.5 py-2 md:px-5 md:py-2.5 rounded-full text-[12px] md:text-[12px] font-semibold text-[#121212]/60 border border-[#121212]/[0.1] bg-[#121212]/[0.03] tracking-wide"
             >
-              {t(badge)}
+              {t(`enterpriseTrust.badges.${badge}`)}
             </span>
           ))}
         </motion.div>

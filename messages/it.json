@@ -219,7 +219,409 @@
     "hero": {
       "heading": "Una piattaforma.<br></br>Tutte le tue decisioni sulle persone.<br></br><span>Con dati oggettivi.</span>",
       "body": "Skillvue è la piattaforma di talent intelligence basata su AI che trasforma i processi HR statici in insight predittivi e oggettivi. Valuta le competenze, ottieni una visione predittiva sul potenziale e rendi ogni decisione sulle persone più difendibile",
+      "cta": "Prenota una Demo",
+      "animation": "https://cdn.lottielab.com/l/9E2vegrr5hs33N.json",
+      "animationEmbed": "https://cdn.lottielab.com/l/9E2vegrr5hs33N.html"
+    },
+    "assessmentFormats": {
+      "layers": {
+        "interactionFormat": {
+          "title": "INTERACTION FORMAT",
+          "subtitle": "Come viene costruito l'verification",
+          "items": {
+            "structuredInterviews": {
+              "name": "Interviste\nstrutturate",
+              "desc": "Set di domande standardizzate per una valutazione comparabile ed equa"
+            },
+            "conversationFlows": {
+              "name": "Flussi\nconversazionali",
+              "desc": "Conversazioni guidate dall'AI che si adattano al contesto in tempo reale"
+            },
+            "closeEndedSurveys": {
+              "name": "Sondaggi\na risposta chiusa",
+              "desc": "Focus su item specifici per ottenere una misurazione oggettiva"
+            }
+          }
+        },
+        "assessmentMethod": {
+          "title": "ASSESSMENT METHOD",
+          "subtitle": "Cosa viene misurato",
+          "items": {
+            "behavioralEventInterview": {
+              "name": "Behavioral event\ninterview",
+              "desc": "Comportamenti passati come segnali predittori della performance futura"
+            },
+            "situationalJudgment": {
+              "name": "Giudizio\nSituazionale",
+              "desc": "Scenari realistici per testare il decision-making"
+            },
+            "declarativeKnowledge": {
+              "name": "Conoscenza\ndichiarativa",
+              "desc": "Quello che i candidati sanno: fatti, concetti, principi"
+            },
+            "proceduralKnowledge": {
+              "name": "Conoscenza\nprocedurale",
+              "desc": "Ciò che i candidati sanno fare: metodi e processi"
+            },
+            "conditionalKnowledge": {
+              "name": "Conoscenza\ncondizionale",
+              "desc": "Quando e perché: applicazione contestuale delle conoscenze"
+            }
+          }
+        },
+        "responseFormat": {
+          "title": "RESPONSE FORMAT",
+          "subtitle": "Come viene costruito l'verification",
+          "items": {
+            "audio": {
+              "name": "Audio",
+              "desc": "Risposte audio per un'esperienza di valutazione rapida ed efficace"
+            },
+            "video": {
+              "name": "Video",
+              "desc": "Input multimodale per vedere i partecipanti"
+            },
+            "written": {
+              "name": "Testo",
+              "desc": "Risposte a testo libero per gestire competenze che richiedono molta scrittura o per verification svolti in ufficio"
+            },
+            "scqsMcqs": {
+              "name": "Domande a\nscelta multipla",
+              "desc": "Scelta strutturata per scoring scalabile e oggettivo"
+            }
+          }
+        }
+      },
+      "heading": "Verification costruiti per far emergere le vere <span>capacità</span>"
+    },
+    "enterpriseTrust": {
+      "badges": {
+        "euAiAct": "EU AI Act",
+        "iso27001": "ISO 27001",
+        "gdpr": "GDPR",
+        "aicpaSoc2": "AICPA SOC 2"
+      },
+      "pillars": {
+        "customizability": {
+          "title": "Personalizzazione",
+          "desc": "Ogni componente, interno o rivolto ai candidati, si adatta ai tuoi processi, al tuo modello di leadership, ai tuoi workflow. Ci implementiamo alle tue condizioni, non alle nostre."
+        },
+        "security": {
+          "title": "Sicurezza",
+          "desc": "Certificati ISO 27001 e SOC 2. La protezione dei dati è integrata nella nostra architettura dal primo giorno."
+        },
+        "compliance": {
+          "title": "Conformità",
+          "desc": "Dal GDPR all'EU AI Act, costruiamo per gli ambienti normativi più esigenti così non devi preoccuparti del futuro."
+        }
+      },
+      "heading": "Costruito <span>per le grandi organizzazioni</span>",
+      "body": "Siamo rigorosi sulla scienza, flessibili su tutto il resto. Dalla personalizzazione profonda agli ambienti normativi più esigenti."
+    },
+    "howSkillvueWorks": {
+      "steps": {
+        "informationGathering": {
+          "title": "Raccolta Informazioni",
+          "what": "Impariamo dalla tua organizzazione: framework di competenze, processi HR, sistemi, documentazione.",
+          "capability": "Acquisizione di contesto, processi e dati"
+        },
+        "jobsPeopleSkills": {
+          "title": "Mappatura Ruoli-Persone-Competenze",
+          "what": "Trasformiamo il panorama organizzativo in una tassonomia dinamica delle competenze.",
+          "capability": "Generazione tassonomia competenze, mappatura domanda-offerta talenti, visione sull'impatto di mercato"
+        },
+        "verificationGeneration": {
+          "title": "Generazione Valutazioni",
+          "what": "Creiamo valutazioni competenza per competenza, con una profonda contestualizzazione con i tuoi ruoli e framework.",
+          "capability": "Item generati da AI, validazione esperti, adattamento continuo"
+        },
+        "verificationDelivery": {
+          "title": "Erogazione Valutazioni",
+          "what": "Incontriamo le persone dove sono, attraverso i canali dove l'adozione è più alta.",
+          "capability": "Web app, WhatsApp, MS Teams, Slack. Il tutto in formato audio, video, scritto"
+        },
+        "evaluationScoring": {
+          "title": "Valutazione & Scoring",
+          "what": "Gli agenti AI raccomandano punteggi basati sulla scienza. Gli esseri umani mantengono il controllo sulla decisione finale.",
+          "capability": "Spiegabilità dei punteggi, revisione human-in-the-loop"
+        },
+        "reportingInsights": {
+          "title": "Reporting & Insight",
+          "what": "Analytics pronti all'uso",
+          "capability": "Piattaforma reporting Skillvue + integrazioni native (ATS, LMS, HRIS, PMS)"
+        }
+      },
+      "heading": "Dal tuo contesto a insight chiari e immediatamente utilizzabili <span>in sei passi</span>",
+      "body": "Skillvue non ti chiede di cambiare il modo in cui lavori. Iniziamo imparando dalla tua organizzazione e forniamo insight dove i tuoi team già operano.",
+      "text": "PASSO",
+      "text2": "CAPACITÀ CHIAVE"
+    },
+    "integrationEcosystem": {
+      "heading": "Diamo vita ai tuoi <span>processi HR più strategici</span>",
+      "body": "Skillvue inserisce dati oggettivi sul talento e le competenze nel tuo stack esistente, trasformandoli da punto di blocco dei tuoi processi a benzina per le tue decisioni",
+      "body2": "Se ha un'API, ci possiamo integrare",
+      "systems": "Ci integriamo nativamente con 100+ tra i principali <acr>ATS</acr> · <acr>LMS</acr> · <acr>LXP</acr> · <acr>PMS</acr> · <acr>HRIS</acr>"
+    },
+    "platformInfographic": {
+      "heading": "From signals to decisions. One connected flow.",
+      "body": "Skillvue gathers signals from candidates, workforce, and market data, processes them through AI-powered skills intelligence, integrates with your core HR systems, and enables every talent decision with objective, defensible data."
+    },
+    "cta": {
+      "heading": "Pronto a rendere ogni decisione sul talento <span>oggettiva?</span>",
+      "text": "Pronto per esplorare",
+      "heading2": "Prenota una Demo",
+      "body": "Vedi Skillvue in azione con il tuo caso d'uso specifico",
       "cta": "Prenota una Demo"
+    },
+    "whatSkillvueDoes": {
+      "pillars": {
+        "talent-acquisition": {
+          "title": "Talent Acquisition",
+          "desc": "Sostituisci i colloqui basati sull'intuito con valutazioni AI che predicono la performance lavorativa. Scalabile da 10 a 10.000 candidati. Stesso rigore scientifico a ogni livello.",
+          "link": "Esplora Talent Acquisition"
+        },
+        "performance": {
+          "title": "Performance Management",
+          "desc": "Aggiungi un livello oggettivo ai cicli di performance. Le valutazioni strutturate riducono i bias, migliorano la calibrazione e danno ai manager un punto di partenza basato sui dati.",
+          "link": "Esplora Performance Management"
+        },
+        "learning": {
+          "title": "Learning & Development",
+          "desc": "Scopri esattamente dove sono le aree di miglioramento: a livello individuale, di team e di organizzazione. Finanzia programmi basati sull'evidenza, misura i progressi con precisione.",
+          "link": "Esplora Learning & Development"
+        },
+        "mobility": {
+          "title": "Mobilità Interna & Successione",
+          "desc": "Scopri chi è pronto per un nuovo ruolo oggi, chi può essere sviluppato in 6 mesi e dove si concentrano le aree più critiche per lo sviluppo",
+          "link": "Esplora Mobilità Interna"
+        }
+      },
+      "heading": "Dallo screening alla successione. Ogni decisione sul talento, <span>connessa.</span>",
+      "body": "La maggior parte delle organizzazioni gestisce selezione, performance, learning, development e mobilità su strumenti disconnessi con framework diversi. Skillvue li connette attraverso un unico linguaggio di competenze e un unico layer di dati."
+    },
+    "whatWeAssess": {
+      "dimensions": {
+        "suitability": {
+          "title": "Idoneità",
+          "subtitle": "Fit persona-ruolo",
+          "desc": "Valuta l'idoneità oggettiva: qualifiche, disponibilità, logistica, requisiti di base. Uno screening strutturato prima di valutazioni più approfondite."
+        },
+        "softSkills": {
+          "title": "Soft Skill",
+          "subtitle": "Competenze comportamentali",
+          "desc": "Comunicazione, collaborazione, problem-solving, leadership. Osservabili attraverso l'azione, radicate in pattern comportamentali stabili e tra i più forti predittori di performance a lungo termine."
+        },
+        "hardSkills": {
+          "title": "Hard Skill",
+          "subtitle": "Competenza tecnica",
+          "desc": "Competenze specifiche per area misurate rispetto a livelli di competenza definiti, basate su tassonomie strutturate rilevanti per il ruolo."
+        },
+        "potential": {
+          "title": "Potenziale",
+          "subtitle": "Capacità di crescita",
+          "desc": "Predice la capacità di crescere, adattarsi e affrontare maggiore complessità. Valutata attraverso tre dimensioni validate: agilità di apprendimento, motivazione intrinseca e aspirazione."
+        },
+        "traits": {
+          "title": "Tratti",
+          "subtitle": "Pattern disposizionali",
+          "desc": "Tratti di personalità stabili come apertura, coscienziosità, resilienza che modellano il fit culturale e la performance lavorativa. Basati sulla scienza Big Five."
+        }
+      },
+      "heading": "Cinque dimensioni per <span>valutazioni oggettive</span>",
+      "body": "Ogni persona viene valutata con un framework strutturato e supportato dalla scienza, che sia un candidato o un dipendente con 20 anni di esperienza.",
+      "cta": "Scopri la Scienza"
+    }
+  },
+  "science": {
+    "aiScienceTogether": {
+      "principles": {
+        "betterEvidence": {
+          "title": "Evidenze migliori",
+          "desc": "L'AI sblocca evidenze più ricche e dirette sulle competenze attraverso scenari realistici, task interattivi e molteplici modalità di risposta che riflettono come si lavora realmente."
+        },
+        "rigorScale": {
+          "title": "Rigore su scala",
+          "desc": "Integriamo la migliore scienza dell'verification nel prodotto per permetterti di scalare con rigore. Costrutti chiari, design centrato sulle evidenze e scoring controllato impediscono all'AI di introdurre bias."
+        },
+        "continuousEvolution": {
+          "title": "Evoluzione continua",
+          "desc": "Dato che competenze e ruoli evolvono rapidamente, la misurazione deve evolvere con loro. Monitoraggio continuo e iterazione guidata dagli scienziati sono un must per rendere le nostre valutazioni accurate e difendibili."
+        }
+      }
+    },
+    "methodologyLifecycle": {
+      "steps": {
+        "defineConstructs": {
+          "title": "Definire i costrutti",
+          "desc": "Identificare cosa misurare, basandosi sulla ricerca in psicologia I/O e sul modello di competenze del cliente."
+        },
+        "designVerificationItems": {
+          "title": "Progettare gli item di verification",
+          "desc": "L'AI genera item profondamente contestualizzati; formato, scala e modello di scoring selezionati sulla base delle best practice psicometriche."
+        },
+        "expertValidation": {
+          "title": "Validazione degli esperti",
+          "desc": "Validazione human-in-the-loop da parte di esperti di settore e psicometristi. Calibrazione rispetto a dati benchmark proprietari."
+        },
+        "pilotRefine": {
+          "title": "Pilota e perfezionamento",
+          "desc": "Item testati con partecipanti reali, analizzati per affidabilità, discriminazione ed equità. Valutazione dei bias tra gruppi demografici."
+        },
+        "deployScale": {
+          "title": "Deploy su scala",
+          "desc": "Verification erogati via web, WhatsApp, Teams, Slack in 50+ lingue con la stessa consistenza qualitativa"
+        },
+        "scoreExplainability": {
+          "title": "Scoring con spiegabilità",
+          "desc": "Ogni risposta viene valutata con trasparenza, fornendo valutazione, spiegazione e riferimento ad aspetti comportamentali. L'AI consiglia, l'umano decide"
+        },
+        "monitorEvolve": {
+          "title": "Monitorare ed evolvere",
+          "desc": "Analisi continua degli item, tracciamento dell'affidabilità e monitoraggio della stabilità dei costrutti ad ogni cambiamento dei ruoli e delle persone valutate"
+        }
+      },
+      "principles": {
+        "betterEvidence": {
+          "title": "Evidenze migliori",
+          "desc": "L'AI sblocca evidenze più ricche e dirette sulle competenze attraverso scenari realistici, task interattivi e molteplici modalità di risposta che riflettono come si lavora realmente."
+        },
+        "rigorScale": {
+          "title": "Rigore su scala",
+          "desc": "Integriamo la migliore scienza dell'verification nel prodotto per permetterti di scalare con rigore. Costrutti chiari, design centrato sulle evidenze e scoring controllato impediscono all'AI di introdurre bias."
+        },
+        "continuousEvolution": {
+          "title": "Evoluzione continua",
+          "desc": "Dato che competenze e ruoli evolvono rapidamente, la misurazione deve evolvere con loro. Monitoraggio continuo e iterazione guidata dagli scienziati sono un must per rendere le nostre valutazioni accurate e difendibili."
+        }
+      },
+      "heading": "Un verification rigoroso per gestire un <span>lifecycle end-to-end</span>",
+      "text": "Passo"
+    },
+    "responsibleAI": {
+      "pillars": {
+        "transparentScoring": {
+          "title": "Scoring trasparente",
+          "desc": "Ogni punteggio è accompagnato da una spiegazione: cosa è stato misurato, come è stato calcolato e quali evidenze lo supportano."
+        },
+        "humanOversight": {
+          "title": "Supervisione umana",
+          "desc": "L'AI consiglia; gli umani decidono. I team HR possono modificare, sovrascrivere e prendere la decisione finale su ogni verification."
+        },
+        "continuousMonitoring": {
+          "title": "Monitoraggio continuo",
+          "desc": "Controlli di drift, revisioni di stabilità e audit dello scoring rilevano i cambiamenti prima che impattino i risultati."
+        },
+        "regulatoryCompliance": {
+          "title": "Conformità normativa",
+          "desc": "Costruito da zero per GDPR, EU AI Act, ISO 27001 e SOC 2. Audit-ready by design."
+        }
+      },
+      "faqs": {
+        "howDoesSkillvue": {
+          "q": "Come fa Skillvue a garantire la validità degli verification?",
+          "a": "Ogni verification è costruito su costrutti validati di psicologia I/O, revisionato da esperti di settore, testato con partecipanti reali e monitorato continuamente per affidabilità ed equità. Pubblichiamo report interni di validità per ogni implementazione."
+        },
+        "whatRoleDoes": {
+          "q": "Che ruolo ha l'AI nel design e nello scoring degli verification?",
+          "a": "L'AI genera item di verification contestualizzati, valuta le risposte con evidenze trasparenti e identifica pattern su scala. Ma ogni output dell'AI è governato da vincoli psicometrici e soggetto a revisione umana."
+        },
+        "howDoesSkillvue2": {
+          "q": "Come gestisce Skillvue i bias negli verification?",
+          "a": "La valutazione dei bias è integrata in ogni fase: design degli item, test pilota, validazione dello scoring e monitoraggio continuo. Testiamo il funzionamento differenziale degli item tra gruppi demografici e correggiamo gli item che mostrano bias sistematici."
+        },
+        "whatLanguagesSupported": {
+          "q": "Quali lingue sono supportate?",
+          "a": "Gli verification Skillvue sono disponibili in oltre 50 lingue, con adattamento culturale integrato nel processo di design degli item per garantire coerenza di misurazione tra le diverse regioni."
+        },
+        "howDoesSkillvue3": {
+          "q": "Come fa Skillvue ad essere compliant con l'AI Act Europeo?",
+          "a": "Skillvue è costruito dall'inizio per poter essere compliant con le normative europee: scoring trasparente, controllo umano, monitoraggio continuo, e completa apertura audit. Garantiamo l'utilizzo di documentazione e strumenti di governance dei processi che rispettano i requisiti dei sistemi AI ad alto rischio."
+        },
+        "canVerificationsCustomized": {
+          "q": "Gli verification possono essere customizzati sul modello di competenze?",
+          "a": "Sì. Ogni progetto parte dal tuo modello di competenze. Mappiamo il tuo framework di costrutti validati, generiamo item contestualizzati e li validiamo prima di andare live con l'verification."
+        }
+      },
+      "heading": "AI responsabile, costruita per le decisioni che più contano nella <span>gestione del talento</span>",
+      "heading2": "Q&A <span></span>"
+    },
+    "cta": {
+      "heading": "Talent intelligence supportata dalla scienza. <span>Vedila in azione.</span>",
+      "text": "Pronto per esplorare",
+      "heading2": "Prenota una Demo",
+      "body": "Scopri come la scienza si traduce in migliori decisioni sul talento",
+      "cta": "Prenota una Demo"
+    },
+    "faq": {
+      "faqs": {
+        "howDoesSkillvue": {
+          "q": "Come fa Skillvue a garantire la validità degli verification?",
+          "a": "Ogni verification è costruito su costrutti validati di psicologia I/O, revisionato da esperti di settore, testato con partecipanti reali e monitorato continuamente per affidabilità ed equità. Pubblichiamo report interni di validità per ogni implementazione."
+        },
+        "whatRoleDoes": {
+          "q": "Che ruolo ha l'AI nel design e nello scoring degli verification?",
+          "a": "L'AI genera item di verification contestualizzati, valuta le risposte con evidenze trasparenti e identifica pattern su scala. Ma ogni output dell'AI è governato da vincoli psicometrici e soggetto a revisione umana."
+        },
+        "howDoesSkillvue2": {
+          "q": "Come gestisce Skillvue i bias negli verification?",
+          "a": "La valutazione dei bias è integrata in ogni fase: design degli item, test pilota, validazione dello scoring e monitoraggio continuo. Testiamo il funzionamento differenziale degli item tra gruppi demografici e correggiamo gli item che mostrano bias sistematici."
+        },
+        "whatLanguagesSupported": {
+          "q": "Quali lingue sono supportate?",
+          "a": "Gli verification Skillvue sono disponibili in oltre 50 lingue, con adattamento culturale integrato nel processo di design degli item per garantire coerenza di misurazione tra le diverse regioni."
+        },
+        "howDoesSkillvue3": {
+          "q": "Come fa Skillvue ad essere compliant con l'AI Act Europeo?",
+          "a": "Skillvue è costruito dall'inizio per poter essere compliant con le normative europee: scoring trasparente, controllo umano, monitoraggio continuo, e completa apertura audit. Garantiamo l'utilizzo di documentazione e strumenti di governance dei processi che rispettano i requisiti dei sistemi AI ad alto rischio."
+        },
+        "canVerificationsCustomized": {
+          "q": "Gli verification possono essere customizzati sul modello di competenze?",
+          "a": "Sì. Ogni progetto parte dal tuo modello di competenze. Mappiamo il tuo framework di costrutti validati, generiamo item contestualizzati e li validiamo prima di andare live con l'verification."
+        }
+      },
+      "heading": "Q&A <span></span>"
+    },
+    "hero": {
+      "heading": "Scienza su cui puoi<br></br>basare<br></br><span>le tue decisioni</span>",
+      "cta": "Prenota una Demo",
+      "body": "Valutare le persone è difficile. Per prendere decisioni sul talento di cui fidarsi, accuratezza e affidabilità non possono essere degli optional. Skillvue è costruito su basi psicometriche e psicologiche rigorose, che garantiscono output a prova di qualsiasi scrutinio."
+    },
+    "team": {
+      "members": {
+        "seniorMachineLearning": {
+          "role": "Senior Machine Learning Engineer"
+        },
+        "peopleScientist": {
+          "role": "People Scientist"
+        },
+        "machineLearningEngineer": {
+          "role": "Machine Learning Engineer"
+        },
+        "peopleScientist2": {
+          "role": "People Scientist"
+        }
+      },
+      "heading": "Il team dietro la <span>scienza</span>",
+      "body": "collaboratori esterni dal mondo accademico, della consulenza HR e delle grandi corporate",
+      "lead": {
+        "role": "Head of AI & Science",
+        "bio": "Doppio dottore di ricerca e psicologo computazionale con esperienza pratica nel campo del Machine Learning e degli verification basati su AI. Grazie al suo background interdisciplinare, porta una prospettiva unica nell'ambito verification, combinando conoscenze psicologiche con avanzate tecniche di AI e machine learning. In Skillvue guida il team AI & Science, innovando, validando e implementando nuovi modelli di verification delle competenze basati sulle tecnologie più recenti."
+      }
+    },
+    "scientificPillars": {
+      "pillars": {
+        "iOPsychology": {
+          "title": "Psicologia industriale-organizzativa (I/O)",
+          "subtitle": "Definire cosa misurare e perché conta",
+          "desc": "La psicologia I/O fonda la nostra piattaforma su decenni di ricerca sulle performance umane al lavoro, garantendo che si mappino le competenze giuste, si selezionino i costrutti giusti e si utilizzi il mix giusto di tipi di verification per ogni decisione sul talento."
+        },
+        "psychometrics": {
+          "title": "Psicometria",
+          "subtitle": "Definire come misurare correttamente",
+          "desc": "La psicometria governa il design di ogni verification che costruiamo: quale formato, quale scala, quale modello di scoring. L'obiettivo è semplice: massimizzare l'accuratezza, minimizzare il rumore e assicurare che i risultati significhino ciò che dichiarano di significare."
+        }
+      },
+      "heading": "Due discipline, <span>uno standard rigoroso</span>"
     }
   },
   "solutions": {

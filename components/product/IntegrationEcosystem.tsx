@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 
@@ -38,7 +39,8 @@ function LogoItem({ item }: { item: { name: string; logo: string } }) {
 }
 
 export default function IntegrationEcosystem() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('product-overview');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -56,19 +58,14 @@ export default function IntegrationEcosystem() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-3 md:mb-4">
-            {t('Giving life to your')}{' '}
-            <span className="italic font-bold gradient-text-on-light">{t('core HR systems')}</span>
-          </h2>
-          <p className="text-[14px] md:text-[18px] text-[#7A7A7A] leading-[1.6] md:leading-[1.75] max-w-2xl mb-4 md:mb-6">
-            {t('Skillvue layers objective talent data into your existing stack, turning them from process gatekeepers into decision engines.')}
-          </p>
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-3 md:mb-4">{t.rich('integrationEcosystem.heading', {
+            span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+          })}</h2>
+          <p className="text-[14px] md:text-[18px] text-[#7A7A7A] leading-[1.6] md:leading-[1.75] max-w-2xl mb-4 md:mb-6">{t('integrationEcosystem.body')}</p>
           <p className="text-[15px] text-[#7A7A7A] leading-[1.75]">
-            {lang === 'it' ? (
-              <>Ci integriamo nativamente con 100+ tra i principali <span className="text-[#9B9DFB]/70 font-semibold">ATS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">LMS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">LXP</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">PMS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">HRIS</span></>
-            ) : (
-              <>{t('Integrating with')} <span className="text-[#9B9DFB]/70 font-semibold">ATS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">LMS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">LXP</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">PMS</span> &middot; <span className="text-[#9B9DFB]/70 font-semibold">HRIS</span> &mdash; {t('100+ native integrations')}</>
-            )}
+            {t.rich('integrationEcosystem.systems', {
+              acr: (chunks) => <span className="text-[#9B9DFB]/70 font-semibold">{chunks}</span>,
+            })}
           </p>
         </motion.div>
       </div>
@@ -99,9 +96,7 @@ export default function IntegrationEcosystem() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          {t('If it has an API, we connect.')}
-        </motion.p>
+        >{t('integrationEcosystem.body2')}</motion.p>
       </div>
     </section>
   );
