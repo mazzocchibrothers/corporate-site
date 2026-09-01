@@ -10,7 +10,19 @@
 // whichever page is half-migrated that day.
 
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { buildMetadata } from '@/i18n/metadata';
 import { GtmProbe, HubSpotProbe, MotionProbe } from './probes';
+
+// ponytail: the probe has no registry entry of its own, so it exercises the
+// helper against a real one. `index` is chosen because it is the only route
+// whose meta copy is in the catalogue today. The canonical this emits is the
+// homepage's, which is wrong for this URL and harmless: the probe is never
+// deployed, and it is deleted at the switch (#120).
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return buildMetadata('index', locale);
+}
 
 export default async function HarnessCheck({
   params,
@@ -20,6 +32,7 @@ export default async function HarnessCheck({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('home.meta');
+  const meta = await buildMetadata('index', locale);
 
   return (
     <main style={{ padding: '3rem', fontFamily: 'monospace', lineHeight: 1.8 }}>
@@ -30,6 +43,9 @@ export default async function HarnessCheck({
 
       <hr style={{ margin: '2rem 0' }} />
       <h2>dependency probes (#132)</h2>
+      <pre data-probe="metadata" style={{ whiteSpace: 'pre-wrap' }}>
+        {JSON.stringify(meta.alternates, null, 2)}
+      </pre>
       <MotionProbe />
       <GtmProbe />
       <HubSpotProbe />

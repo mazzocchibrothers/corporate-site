@@ -18,6 +18,10 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, relative } from 'node:path';
 import { appRoutePaths, routeAtPath } from './lib/app-routes.mjs';
+// Node 24 runs the TypeScript directly, so the URLs asserted below are built by
+// the same function the sitemap and the hreflang tags emit from — not by a
+// second copy of the rule that can drift from it.
+import { alternatesFor, localesOf, urlFor } from '../i18n/urls.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const REGISTRY = 'i18n/routes.json';
@@ -26,8 +30,9 @@ const REGISTRY = 'i18n/routes.json';
 // route. It and this line go at the switch (#120).
 const NOT_A_ROUTE_IN_APP = new Set(['/harness-check']);
 
-// Pages that are not routes: Next internals and the server-rendered sitemap.
-const NOT_A_ROUTE = (file) => /(^|\/)_/.test(file) || file.startsWith('sitemap');
+// Pages that are not routes: Next internals. The sitemap used to be one of
+// these too — it is app/sitemap.ts now, generated from this registry (#130).
+const NOT_A_ROUTE = (file) => /(^|\/)_/.test(file);
 
 // ── Read the registry ──────────────────────────────────────────────────────
 // The data is JSON so every consumer parses it the same way, with no eval and
@@ -121,6 +126,61 @@ assert.deepEqual(
   `app/[locale] has ${strayApp.length} page(s) with no entry in ${REGISTRY}.\n` +
     strayApp.map((p) => `  app/[locale]${p}/page.tsx`).join('\n'),
 );
+
+// ── Every hreflang alternate points at a route that exists ─────────────────
+// The defect this catches shipped: the old sitemap gave all 20 of the routes it
+// listed an Italian alternate, including pages with no Italian version, so
+// Google was told about URLs that 404. The rule is that an alternate is only
+// ever a URL some route in this registry actually serves.
+const everyUrl = new Set(
+  routes.flatMap((r) => localesOf(r).map((l) => urlFor(r, l))),
+);
+
+for (const route of routes) {
+  const languages = alternatesFor(route);
+  const locales = localesOf(route);
+
+  for (const [hreflang, url] of Object.entries(languages)) {
+    assert.ok(
+      everyUrl.has(url),
+      `Route '${route.id}' emits hreflang='${hreflang}' -> ${url}, which no route serves.`,
+    );
+    if (hreflang !== 'x-default') {
+      assert.ok(
+        locales.includes(hreflang),
+        `Route '${route.id}' claims a '${hreflang}' alternate but has no ${hreflang} path. ` +
+          'An alternate for a language the page does not have is a 404 handed to Google.',
+      );
+    }
+  }
+
+  assert.deepEqual(
+    Object.keys(languages).filter((k) => k !== 'x-default').sort(),
+    [...locales].sort(),
+    `Route '${route.id}': one alternate per locale it serves, no more and no fewer.`,
+  );
+  assert.ok(
+    languages['x-default'] !== undefined,
+    `Route '${route.id}' emits no x-default. Every cluster needs one — it is what a ` +
+      'visitor in a language we do not publish is sent to.',
+  );
+}
+
+// ── Every app/ page emits its own metadata ─────────────────────────────────
+// A page that moves to app/ and forgets generateMetadata loses its title, its
+// description and its canonical silently: the page still renders, and nothing
+// in the build mentions it. Nobody notices until the traffic does.
+for (const path of appSet) {
+  const file = join(ROOT, 'app/[locale]', path === '/' ? '' : path, 'page.tsx');
+  assert.ok(
+    /export\s+(async\s+)?function\s+generateMetadata|export\s+const\s+metadata\b/.test(
+      readFileSync(file, 'utf8'),
+    ),
+    `app/[locale]${path}/page.tsx exports neither generateMetadata nor metadata.\n` +
+      'Use buildMetadata(routeId, locale) from i18n/metadata.ts — it derives the title, the ' +
+      'description, the canonical and the hreflang alternates from the registry.',
+  );
+}
 
 // ── Structural invariants ──────────────────────────────────────────────────
 const ids = routes.map((r) => r.id);
