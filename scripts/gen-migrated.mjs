@@ -17,26 +17,15 @@
 //
 // Run: npm run gen:migrated   (check:routes fails if the file is stale)
 
-import { readdirSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { appRoutePaths, routeAtPath } from './lib/app-routes.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const APP = join(ROOT, 'app/[locale]');
 const OUT = 'i18n/migrated.json';
 
-/** Every route segment under app/[locale] that has a page.tsx. */
-function walk(dir, prefix = '') {
-  if (!existsSync(dir)) return [];
-  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
-    if (entry.isDirectory()) {
-      return walk(join(dir, entry.name), `${prefix}/${entry.name}`);
-    }
-    return entry.name === 'page.tsx' ? [prefix || '/'] : [];
-  });
-}
-
-const internal = walk(APP);
+const internal = appRoutePaths(ROOT);
 
 // A migrated route has to be matched by whichever external path the visitor
 // typed, not by its internal one: /clienti and /customers are the same route,
@@ -45,7 +34,7 @@ const routes = JSON.parse(readFileSync(join(ROOT, 'i18n/routes.json'), 'utf8'));
 const external = new Set();
 
 for (const path of internal) {
-  const route = routes.find((r) => r.paths.en === path || r.paths.it === path);
+  const route = routeAtPath(routes, path);
   if (route) {
     for (const p of Object.values(route.paths)) external.add(p);
   } else {
