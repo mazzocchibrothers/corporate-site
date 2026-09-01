@@ -75,8 +75,18 @@ export function merge(a: Record<string, unknown>, b: Record<string, unknown>) {
   return out;
 }
 
-export function messagesFor(routeId: string, extra: string[] = []): GetStaticProps {
-  return async function getStaticProps({ locale }) {
+/**
+ * @param routeId   the route's `id` in routes.json
+ * @param forceLocale for a twin-page pair — one route, one file per locale, like
+ *   book-meeting/prenota-incontro. Such a file serves exactly one language, and
+ *   during the migration `locale` is undefined here: nextConfig.i18n is gone and
+ *   the middleware skips unmigrated routes, so without this the Italian file
+ *   would render an English title. Delete the argument when the pair moves to
+ *   app/ and next-intl resolves the locale itself (#119).
+ */
+export function messagesFor(routeId: string, forceLocale?: 'en' | 'it'): GetStaticProps {
+  return async function getStaticProps({ locale: contextLocale }) {
+    const locale = forceLocale ?? contextLocale;
     // A literal path prefix keeps the bundler able to see the whole directory,
     // so both catalogues are emitted and only the requested one is fetched.
     // The import attribute is not decoration: without it Node refuses to load
@@ -86,7 +96,7 @@ export function messagesFor(routeId: string, extra: string[] = []): GetStaticPro
     const all = (await import(`../messages/${locale ?? 'en'}.json`, { with: { type: 'json' } }))
       .default;
 
-    const wanted = [...SHARED, namespaceOf(routeId), ...extra];
+    const wanted = [...SHARED, namespaceOf(routeId)];
     const messages = wanted.reduce<Record<string, unknown>>(
       (acc, ns) => merge(acc, pick(all, ns)),
       {},

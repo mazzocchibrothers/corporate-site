@@ -2,6 +2,12 @@
   "common": {
     "brand": "Skillvue"
   },
+  "book-meeting": {
+    "meta": {
+      "title": "Book a Demo | Skillvue",
+      "description": "See how Skillvue turns interviews into skills data you can act on. Book a demo and we will walk through hiring, performance and development on your own use cases."
+    }
+  },
   "home": {
     "meta": {
       "title": "Skillvue | AI Talent Intelligence Platform",

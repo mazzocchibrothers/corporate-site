@@ -1,5 +1,8 @@
 // @ts-nocheck
 import React, { useEffect, useRef } from 'react';
+import Head from 'next/head';
+import { useTranslations } from 'next-intl';
+import { messagesFor } from '@/i18n/messages';
 import Footer from '@/components/Footer';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
@@ -7,8 +10,13 @@ import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('book-meeting', 'it');
+
 export default function PrenotaUnIncontroPage() {
   const formRef = useRef(null);
+  const meta = useTranslations('book-meeting.meta');
   const router = useRouter();
 
   useEffect(() => {
@@ -38,6 +46,10 @@ export default function PrenotaUnIncontroPage() {
 
   return (
     <>
+      <Head>
+        <title>{meta('title')}</title>
+        <meta name="description" content={meta('description')} />
+      </Head>
       <Navbar />
       <div className="relative flex flex-col min-h-screen lg:h-screen pt-[80px]">
       <section className="relative flex-1 flex items-center min-h-0">

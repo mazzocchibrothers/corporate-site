@@ -2,6 +2,12 @@
   "common": {
     "brand": "Skillvue"
   },
+  "book-meeting": {
+    "meta": {
+      "title": "Prenota una Demo | Skillvue",
+      "description": "Scopri come Skillvue trasforma i colloqui in dati sulle competenze su cui puoi agire. Prenota una demo: analizziamo insieme selezione, performance e sviluppo sui tuoi casi reali."
+    }
+  },
   "home": {
     "meta": {
       "title": "Skillvue | Piattaforma di Talent Intelligence con AI",
