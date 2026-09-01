@@ -132,6 +132,7 @@ GATES=(
   "check:i18n"
   "check:routes"
   "check:messages"
+  "check:migrated"
 )
 
 for g in "${GATES[@]}"; do
