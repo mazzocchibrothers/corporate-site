@@ -1,3 +1,5 @@
+'use client';
+
 import React, { createContext, useContext, useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { translations } from './translations';

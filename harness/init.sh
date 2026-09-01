@@ -131,6 +131,7 @@ GATES=(
   "typecheck"
   "check:i18n"
   "check:routes"
+  "check:client"
   "check:messages"
   "check:migrated"
 )

@@ -1,4 +1,6 @@
 // @ts-nocheck
+'use client';
+
 import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';

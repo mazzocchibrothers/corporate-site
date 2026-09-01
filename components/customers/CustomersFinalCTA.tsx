@@ -1,4 +1,6 @@
 // @ts-nocheck
+'use client';
+
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, FileText, BookOpen, Shield, Globe } from 'lucide-react';

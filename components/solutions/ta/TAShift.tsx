@@ -1,4 +1,6 @@
 // @ts-nocheck
+'use client';
+
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { X, Check, ArrowDown } from 'lucide-react';

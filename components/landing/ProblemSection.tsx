@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useRef } from 'react';
 import { m, useInView } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';

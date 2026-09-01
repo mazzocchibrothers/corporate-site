@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useRef, useEffect } from 'react';
 import { m, useInView, AnimatePresence } from 'framer-motion';
 import { Map, Brain, CheckCircle } from 'lucide-react';

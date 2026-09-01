@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useRef } from 'react';
 import { m, useInView } from 'framer-motion';
 import { ArrowRight, ShieldIcon, Languages, Globe } from 'lucide-react';

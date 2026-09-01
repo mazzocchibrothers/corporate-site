@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';

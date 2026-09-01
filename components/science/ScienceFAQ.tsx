@@ -1,4 +1,6 @@
 // @ts-nocheck
+'use client';
+
 import React, { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useRef } from 'react';
 import { m, useInView } from 'framer-motion';
 import { Target, TrendingUp, Award, Shield } from 'lucide-react';
