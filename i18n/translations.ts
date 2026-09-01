@@ -8,7 +8,6 @@ export const translations = {
   'Customers': 'Clienti',
   'Product': 'Prodotto',
   'Science': 'Scienza',
-  'Hiring': 'Hiring',
   'Performance': 'Performance Management',
   'Development': 'Learning & Development',
   'Mobility': 'Mobilità Interna',
@@ -24,7 +23,6 @@ export const translations = {
   'finally': 'finalmente',
   'backed by science.': 'supportata dalla scienza.',
   'Skillvue combines psychometric rigour with modern AI to verify skills, predict performance, and guide every talent decision, from hiring to promotion to transformation readiness.': 'Skillvue combina il rigore psicometrico con l\'intelligenza artificiale per valutare le competenze, prevedere le performance e guidare ogni decisione sul talento, dalla selezione fino alla mobilità, alla formazione e allo sviluppo.',
-  'Our Customers': 'I Nostri Clienti',
 
   // ===== PROBLEM SECTION =====
   'Your Biggest': 'Le persone: la tua più grande',
@@ -34,13 +32,9 @@ export const translations = {
   'And when the CFO asks for talent ROI,': 'E quando il CFO chiede il ROI del talento,',
   'HR has no answer.': 'HR non ha una risposta.',
   '30-40%': '30-40%',
-  'of hires fail within 18 months': 'delle assunzioni fallisce entro 18 mesi',
   'Costing 3-4x salary each time. before you count the opportunity cost of a vacant role.': 'Con un impatto equivalente a 3-4x la RAL del ruolo.',
-  'No scale': 'Nessuna scalabilità',
-  "Screening doesn't scale": 'Lo screening non scala',
   'Manual CV review degrades quality as volume increases. Different countries, different standards, no comparability.': 'La revisione manuale dei CV perde qualità con l\'aumento dei volumi. Paesi diversi, standard diversi, nessuna comparabilità.',
   '0.05': '0,05',
-  'Interviews predict nothing': 'I colloqui non predicono nulla',
   'Unstructured interviews have among the lowest predictive validity of any selection method, yet they drive most hiring decisions.': 'I colloqui non strutturati hanno la più bassa validità predittiva tra tutti i metodi di selezione, eppure guidano la maggior parte delle decisioni di assunzione.',
   '60%': '60%',
   'of leadership transitions fail': 'delle transizioni di leadership fallisce',
@@ -57,9 +51,7 @@ export const translations = {
   'Succession pipelines are largely fiction. The next leadership crisis is already building.': 'I piani di successione sono in gran parte una finzione. La prossima crisi di leadership si sta già formando.',
 
   // ===== SOLUTION SECTION - CARDS =====
-  'Hire right': 'Assumi bene',
   'AI-powered verifications predict on-the-job performance before you make an offer. Stop gambling on interviews.': "Le valutazioni basate su AI predicono le performance lavorative prima di fare un'offerta. Porta maggiore oggettività nella selezione.",
-  'hiring success rate': 'tasso di successo nelle assunzioni',
   'Develop the right people': 'Sviluppa le persone giuste',
   'Identify high-potential talent before they disengage. Personalized development paths based on real competency data.': 'Identifica i talenti ad alto potenziale prima che si disimpegnino progettando percorsi di sviluppo personalizzati basati su dati reali.',
   'faster leadership pipeline': 'pipeline di leadership più veloce',
@@ -68,7 +60,6 @@ export const translations = {
   'promotion success rate': 'tasso di successo delle promozioni',
   'De-risk transformation': 'Riduci il rischio della trasformazione',
   'Map the skill gaps that will derail your next transformation. Know exactly where to invest in reskilling.': 'Mappa in anticipo i gap di competenze che emergeranno con la prossima trasformazione. Investi al meglio le tue risorse per il reskilling.',
-  'faster execution': 'esecuzione più rapida',
 
   // ===== SOLUTION SECTION =====
   'Skillvue brings people processes': 'Skillvue dà nuova vita ai processi',
@@ -84,22 +75,13 @@ export const translations = {
   'Internal mobility powered by verified competencies, not politics.': 'Mobilità interna basata su competenze verificate, non sulla politica.',
 
   // ===== HOW IT WORKS =====
-  'From verification': 'Dalla valutazione',
-  'to action': 'all\'azione',
-  'in three steps': 'in tre passi',
-  'Map': 'Mappa',
-  'Verify skills, mindset, and readiness across candidates and employees using AI-powered psychometric verifications, customized to your leadership model and deployable at scale across 50+ languages.': 'Valuta competenze, mentalità e prontezza tra candidati e dipendenti usando valutazioni psicometriche basate su AI, personalizzate sul tuo modello di leadership e implementabili su scala in oltre 50 lingue.',
   'Match': 'Abbina',
   'Surface the right people for the right roles. Skillvue\'s matching engine compares verified competency profiles against role requirements, succession criteria, or transformation readiness benchmarks.': 'Trova le persone giuste per i ruoli giusti. Il motore di matching di Skillvue confronta profili di competenze verificati con i requisiti dei ruoli, criteri di successione o benchmark di prontezza alla trasformazione.',
   'Move': 'Agisci',
-  'Every hire, promotion, and transformation investment is backed by objective, auditable data. GDPR-compliant. Defensible to boards, regulators, and investors.': 'Ogni assunzione, promozione e investimento in trasformazione è supportato da dati oggettivi e verificabili. Conforme al GDPR. Difendibile davanti a consigli di amministrazione, regolatori e investitori.',
 
   // ===== CUSTOMER STORIES (Homepage) =====
-  'Proof, not': 'Fatti, non',
-  'promises.': 'promesse.',
   'Leading Global enterprises make talent decisions with confidence.': 'Le principali aziende globali prendono decisioni sul talento con fiducia.',
   'Join 50+ Global enterprises': 'Unisciti a oltre 50 aziende globali',
-  'Built': 'Costruito',
   'enterprise-ready': 'per le grandi organizzazioni',
   '100+ native integrations (Oracle, SAP, Workday, Greenhouse + more). Fully customisable to your processes, on your terms.': 'Oltre 100 integrazioni native (Oracle, SAP, Workday, Greenhouse e altri). Completamente personalizzabile per i tuoi processi, alle tue condizioni.',
 
@@ -107,20 +89,11 @@ export const translations = {
   'People are your biggest cost.': 'Le persone sono il tuo costo maggiore.',
   'They can also be your biggest return.': 'Possono anche essere il tuo ritorno maggiore.',
   'Saved annually in failed hire costs': 'Risparmiati annualmente da costi di potenziali assunzioni fallite',
-  'Based on 300 hires, 30% lower failure rate, 50K average cost per failure': 'Calcolo basato su 300 assunzioni, tasso di fallimento inferiore del 30%, costo medio per fallimento 50K',
-  'Reduction in mis-hire rate': 'Riduzione del tasso di assunzioni errate',
-  'More candidates objectively verified without adding headcount': 'Più candidati valutati oggettivamente senza aggiungere personale',
-  'ROI within 18-24 months': 'ROI entro 18-24 mesi',
-  'The compounding value of better talent decisions over time': 'Il valore cumulativo di migliori decisioni sul talento nel tempo',
-  'saved annually in failed hire costs': 'risparmiati annualmente da costi di potenziali assunzioni fallite',
 
   // ===== CTA SECTION =====
   'Ready to make talent decisions': 'Pronto a prendere decisioni sul talento',
   'you can defend?': 'che puoi difendere?',
-  'Ready to explore': 'Pronto per esplorare',
   'READY TO EXPLORE': 'PRONTO PER ESPLORARE',
-  'Book a 30-min Demo': 'Prenota un meeting di 30 min',
-  'See Skillvue live with your specific use case': 'Vedi Skillvue in azione con il tuo caso d\'uso specifico',
   'Our Customers': 'I Nostri Clienti',
 
   // ===== PRODUCT HERO =====
@@ -130,18 +103,13 @@ export const translations = {
   'Skillvue is the AI-powered talent intelligence platform that turns static HR processes into predictive, objective insights. Verify skills, predict potential, and make every people decision defensible.': 'Skillvue è la piattaforma di talent intelligence basata su AI che trasforma i processi HR statici in insight predittivi e oggettivi. Valuta le competenze, ottieni una visione predittiva sul potenziale e rendi ogni decisione sulle persone più difendibile',
 
   // ===== PRODUCT - WHAT SKILLVUE DOES =====
-  'From screening to succession. every talent decision,': 'Dallo screening alla successione. Ogni decisione sul talento,',
-  'connected.': 'connessa.',
   'Talent Acquisition': 'Talent Acquisition',
   'Performance Management': 'Performance Management',
   'Learning & Development': 'Learning & Development',
-  'Internal Mobility': 'Mobilità Interna',
 
   // ===== PRODUCT - WHAT WE ASSESS =====
   'What we actually': 'Cosa valutiamo',
   'measure.': 'realmente.',
-  'Hard Skills': 'Hard Skill',
-  'Behavioral competencies': 'Competenze comportamentali',
   'Leadership traits': 'Tratti di leadership',
   'Cognitive agility': 'Agilità cognitiva',
   'Culture alignment': 'Allineamento culturale',
@@ -162,8 +130,6 @@ export const translations = {
   'Custom Models': 'Modelli Personalizzati',
 
   // ===== PRODUCT - INTEGRATIONS =====
-  'Giving life to your': 'Diamo vita ai tuoi',
-  'core HR systems': 'processi HR più strategici',
   'Skillvue layers objective talent data into your existing stack, turning them from process gatekeepers into decision engines.': 'Skillvue inserisce dati oggettivi sul talento e le competenze nel tuo stack esistente, trasformandoli da punto di blocco dei tuoi processi a benzina per le tue decisioni',
   '100+ native integrations. If it has an API, we connect.': "Oltre 100 integrazioni native. Se ha un'API, ci colleghiamo.",
   "If it has an API, we connect.": "Se ha un'API, ci possiamo integrare",
@@ -172,29 +138,14 @@ export const translations = {
   'Built for enterprise.': 'Costruito per le grandi organizzazioni.',
   'Trusted by enterprise.': 'Scelto dalle enterprise.',
 
-  // ===== PRODUCT CTA =====
-  'Science-backed talent intelligence.': 'Talent intelligence supportata dalla scienza.',
-  'See it in action.': 'Vedi in azione.',
-
   // ===== SCIENCE HERO =====
-  'Science you can stake': 'Scienza su cui puoi',
   'talent decisions': 'basare',
-  'on.': 'sul talento.',
-  'Measuring people is hard. To make talent decisions you can trust, accuracy and reliability aren\'t optional. Skillvue is built on I/O psychology and psychometrics, ensuring every data point holds up to scrutiny.': "Valutare le persone è difficile. Per prendere decisioni sul talento di cui fidarsi, accuratezza e affidabilità non possono essere degli optional. Skillvue è costruito su basi psicometriche e psicologiche rigorose, che garantiscono output a prova di qualsiasi scrutinio.",
 
   // ===== SCIENCE - PILLARS =====
-  'Three pillars of': 'Tre pilastri di',
-  'rigour.': 'rigoroso',
   'I/O Psychology': 'Psicologia industriale-organizzativa (I/O)',
-  'Psychometrics': 'Psicometria',
   'AI Engineering': 'Ingegneria AI',
 
-  // ===== SCIENCE - METHODOLOGY =====
-  'Continuous validation,': 'Validazione continua,',
-  'not a one-time study.': 'non uno studio una tantum.',
-
   // ===== SCIENCE - AI =====
-  'Where AI meets': 'Dove l\'AI incontra',
   'science.': 'la scienza.',
 
   // ===== SCIENCE - TEAM =====
@@ -208,16 +159,6 @@ export const translations = {
   // ===== SCIENCE - FAQ =====
   'Questions we get': 'Domande che riceviamo',
   'asked.': 'spesso.',
-
-  // ===== SCIENCE CTA =====
-  'Science-backed talent intelligence.': 'Talent intelligence supportata dalla scienza.',
-  'See it in action.': 'Vedila in azione.',
-
-  // ===== SOLUTIONS - TA HERO =====
-  'Stop gambling on hiring.': 'Smetti di scommettere sulle assunzioni.',
-  'Start predicting who will': 'Inizia a prevedere chi',
-  'perform.': 'performerà davvero',
-  'Skillvue replaces guesswork with science at scale. AI-powered verifications customized to your roles and leadership model surface top candidates, cut early turnover, and make every hiring decision defensible.': 'Skillvue sostituisce le supposizioni con la scienza su scala. Valutazioni basate su AI personalizzate per i tuoi ruoli e il tuo modello di leadership identificano i migliori candidati, riducono il turnover iniziale e rendono ogni decisione di assunzione difendibile.',
 
   // ===== SOLUTIONS - PM HERO =====
   'Replace opinion with': 'Sostituisci le opinioni con',
@@ -237,22 +178,17 @@ export const translations = {
   // ===== SOLUTIONS - PR HERO =====
   'Staff projects by': 'Gestisci i progetti per',
   'verified skills,': 'competenze verificate,',
-  'not availability.': 'non per disponibilità.',
 
   // ===== CUSTOMERS HUB =====
   'The decisions that define your organization. Finally backed by': 'Le decisioni che definiscono la tua organizzazione, finalmente supportate da',
   'data.': 'dati.',
   '50+': '50+',
   'European enterprises': 'aziende europee',
-  'avg reduction in time-to-hire': 'riduzione media del time-to-hire',
-  '10-30x': '10-30x',
   'ROI within 18-24 months': 'ROI entro 18-24 mesi',
   '85%+': '85%+',
-  'hiring success rate': 'tasso di successo nelle assunzioni',
   '40%': '40%',
 
   // ===== CUSTOMER HIGHLIGHTS =====
-  'Proof in numbers.': 'La prova nei numeri.',
   'Skillvue allowed us to strengthen our People Strategy, making skills mapping faster, more effective and data-driven.': 'Skillvue ci ha permesso di rafforzare la nostra People Strategy, rendendo la mappatura delle competenze più rapida, efficace e data-driven.',
   'A single objective standard now applies across all markets and geographies. from 500 to 10,000 candidates verified per year.': 'Un unico standard oggettivo ora si applica su tutti i mercati e le geografie. da 500 a 10.000 candidati valutati all\'anno.',
   'time-to-hire': 'time-to-hire',
@@ -267,7 +203,6 @@ export const translations = {
   'All': 'tutti',
   'Retail': 'Retail',
   'Hiring & Screening': 'Selezione & Screening',
-  'Internal Mobility & Succession': 'Mobilità Interna & Successione',
   'No stories match these filters yet.': 'Nessuna storia corrisponde ancora a questi filtri.',
   'We may have a relevant case to share privately.': 'Potremmo avere un caso rilevante da condividere in privato.',
 
@@ -275,15 +210,10 @@ export const translations = {
   'The ROI is': 'Il ROI è',
   'undeniable.': 'innegabile.',
 
-  // ===== CUSTOMERS FINAL CTA =====
-  'Ready to see what Skillvue can do for your': 'Pronto a vedere cosa Skillvue può fare per la tua',
-  'organization?': 'organizzazione?',
-
   // ===== SHARED CTA =====
   'See how Skillvue transforms': 'Scopri come Skillvue trasforma',
   'this process.': 'questo processo.',
   'Read the full story': 'Leggi la storia completa',
-  'Discover the Science': 'Scopri la Scienza',
   'Read the story': 'Leggi la storia',
 
   // ===== BOOK MEETING PAGE =====
@@ -293,7 +223,6 @@ export const translations = {
 
   // ===== CUSTOMER STORY SHARED =====
   'The Context': 'Il Contesto',
-  'The challenge': 'La Sfida',
   'The Challenge': 'La Sfida',
   'The Solution': 'La Soluzione',
   'The Transformation': 'La Trasformazione',
@@ -355,7 +284,6 @@ export const translations = {
 
   // ===== ROI - CARDS =====
   '€4.5M': '€4,5M',
-  'saved annually in failed hire costs': 'risparmiati annualmente da costi di potenziali assunzioni fallite',
   'Based on 300 hires, 30% lower failure rate, €50K average cost per failure': 'Calcolo basato su 300 assunzioni, tasso di fallimento inferiore del 30%, costo medio per fallimento €50K',
   '<15%': '<15%',
   'bad hire rate vs industry 30-40%': 'tasso di assunzioni errate vs media di settore 30-40%',
@@ -491,7 +419,6 @@ export const translations = {
   // ===== PRODUCT - WHAT WE ASSESS =====
   'Five dimensions for': 'Cinque dimensioni per',
   'objective evaluations': 'valutazioni oggettive',
-  "Every person evaluated through a structured, science-backed framework. whether they're a candidate or a 20-year veteran.": "Ogni persona viene valutata con un framework strutturato e supportato dalla scienza, che sia un candidato o un dipendente con 20 anni di esperienza.",
   'Suitability': 'Idoneità',
   'Person-job fit': 'Fit persona-ruolo',
   'Soft Skills': 'Soft Skill',
@@ -554,14 +481,8 @@ export const translations = {
   'Skillvue adds value at every step of the': 'Skillvue aggiunge valore in ogni fase del',
   'hiring funnel': 'funnel di selezione',
   'Pre-screening': 'Pre-screening',
-  'Top of funnel': 'Top del funnel',
-  'Short verifications on suitability and killer skills via web app or WhatsApp. Reduce manual effort, accelerate pre-selection, filter for objective eligibility before deeper verification.': "Brevi valutazioni su idoneità e competenze chiave via web app o WhatsApp. Riduci lo sforzo manuale, accelera la pre-selezione, filtra per idoneità oggettiva prima di valutazioni più approfondite.",
   'Screening': 'Screening',
-  'Mid funnel': 'Metà funnel',
-  'Verifications on soft skills, hard skills, potential, and traits. Standardized evaluation that removes bias and produces comparable, predictive shortlists.': 'Valutazioni su soft skill, hard skill, potenziale e tratti. Valutazione standardizzata che rimuove i bias e produce shortlist comparabili e predittive.',
   'In-depth': 'Approfondimento',
-  'Late funnel': 'Fine funnel',
-  'Deep verifications on potential, traits, and skills for professional+ roles. Cross-job insights, detailed candidate profiles, and in-person interview support packages.': 'Valutazioni approfondite su potenziale, tratti e competenze per ruoli professional+. Insight cross-ruolo, profili candidato dettagliati e pacchetti di supporto per colloqui in presenza.',
   'From CV screening to': 'Dallo screening CV alla',
   'skill intelligence': 'skill intelligence',
   'The old playbook': 'Il vecchio approccio',
@@ -587,11 +508,6 @@ export const translations = {
   'Suitability filtering, ranking, benchmarking with full explainability': 'Filtraggio idoneità, ranking, benchmarking con piena spiegabilità',
   'Scoring with evidence: answer, justification, behavioral anchor': 'Scoring con evidenze: risposta, giustificazione, ancoraggio comportamentale',
   'Measurable impact on every hiring metric that': 'Impatto misurabile su ogni metrica di assunzione che',
-  'matters': 'conta',
-  'Millions': 'milioni',
-  'annual savings': 'risparmi annuali',
-  'on failed hires, replacement costs, lost productivity': 'su assunzioni fallite, costi di sostituzione, produttività persa',
-  'Ready to hire with': 'Pronto ad assumere con',
   'confidence?': 'fiducia?',
 
   // ===== WHAT WE ASSESS =====
@@ -624,7 +540,6 @@ export const translations = {
   'down from 30-40%': 'in calo dal 30-40%',
   'early turnover': 'turnover nei primi 18 mesi',
   '0-18 months, down from 20-30%': '0-18 mesi, in calo dal 20-30%',
-  'Millions': 'milioni',
   'annual savings': 'risparmi annuali',
   'on failed hires, replacement costs, lost productivity': 'su assunzioni fallite, costi di sostituzione, produttività persa',
 
@@ -639,10 +554,7 @@ export const translations = {
 
   // ===== SOLUTION FINAL CTAs =====
   'Ready to hire with': 'Pronto ad assumere con',
-  'Ready to unlock the talent you': 'Pronto a sbloccare il talento che',
   'already have?': 'hai già?',
-  'Ready to prove L&D impact with': "Pronto a dimostrare l'impatto L&D con",
-  'data?': 'dati?',
   'Ready to make performance reviews': 'Pronto a rendere le valutazioni di performance',
 
   // ===== PM SECTION TRANSLATIONS =====
@@ -688,7 +600,6 @@ export const translations = {
   'Result': 'Risultato',
   'Introducing objective competency verification into performance cycles across multiple countries and business units.': 'Introduzione della valutazione oggettiva delle competenze nei cicli di performance in più paesi e business unit.',
   'A unified talent language across hiring, performance, and development for the first time. Verifications now inform decisions from screening to succession.': 'Un linguaggio del talento unificato tra selezione, performance e sviluppo per la prima volta. Le valutazioni ora informano le decisioni dallo screening alla successione.',
-  'Ready to staff projects with': 'Pronto a gestire progetti con',
   'Ready to see what Skillvue can do for your': 'Pronto a vedere cosa Skillvue può fare per la tua',
   'organization?': 'organizzazione?',
 
@@ -704,7 +615,6 @@ export const translations = {
   'People data live in separate silos. Nobody connects the dots across the organization.': "I dati sulle persone vivono in silos separati. Nessuno collega i punti nell'organizzazione.",
   'Programs picked on gut feel': 'Programmi scelti a sensazione',
   'Training budgets deployed based on manager requests and vendor catalogues, not evidence of where gaps actually exist.': 'Budget formativi allocati in base alle richieste dei manager e ai cataloghi dei fornitori, non alle evidenze di dove esistono realmente i gap.',
-  'ROI is a question nobody can answer': 'Il ROI è una domanda a cui nessuno sa rispondere',
   '"We trained X people". but what was the business impact?': '"Abbiamo formato X persone." Ma qual è stato l\'impatto aziendale?',
   "When learning budgets shrink, what do you protect? Without measurable impact data, L&D is always the first cost to cut.": "Quando i budget formativi si riducono, cosa proteggi? Senza dati di impatto misurabili, L&D è sempre il primo costo da tagliare.",
   'Near-zero visibility on what people can and can\'t do': 'Visibilità quasi nulla su cosa le persone sanno e non sanno fare',
@@ -807,11 +717,9 @@ export const translations = {
   'project staffing': 'nello staffing dei progetti',
   'Staffing by availability, not capability': 'Assegnazioni basate sulla disponibilità, non sulle capacità',
   "Project teams assembled based on who's free, not who has the right skills. Result: delivery delays, rework, and frustration.": "I team di progetto vengono composti in base a chi è libero, non a chi possiede le competenze giuste. Il risultato: ritardi nelle consegne, rilavorazioni e frustrazione.",
-  "Projects are assembled from who's free, not who's best. Resource managers rely on manager memory and spreadsheets, not verified skill profiles.": "I progetti vengono assemblati con chi è libero, non con chi è migliore. I resource manager si affidano alla memoria dei manager e ai fogli Excel, non a profili di competenze verificati.",
   'No visibility on real skills across the org': "Nessuna visibilità sulle competenze reali presenti nell'organizzazione",
   "Managers rely on memory, reputation, and who they know. not verified competency data. Top performers are over-deployed; hidden talent stays invisible.": "I responsabili si affidano alla memoria, alla reputazione e alle conoscenze personali, non a dati verificati sulle competenze. Le persone con risultati migliori vengono impiegate troppo spesso, mentre i talenti nascosti restano invisibili.",
   'Performance variance is unexplained': 'Le differenze di rendimento restano senza spiegazione',
-  "Some teams deliver, others don't. Nobody connects team composition to outcomes because nobody measured skills at the start.": "Alcuni team consegnano, altri no. Nessuno collega la composizione del team ai risultati perché nessuno ha misurato le competenze all'inizio.",
   'How Skillvue transforms': 'Come Skillvue trasforma',
   'project resourcing': "l'assegnazione delle risorse ai progetti",
   'project delivery': 'la delivery dei progetti',
@@ -1130,8 +1038,6 @@ export const translations = {
   // ===== ABOUT PAGE (CURRENT) =====
   'About Us – Skillvue': 'Chi Siamo – Skillvue',
   'Learn about Skillvue, the Skills Operating System for modern enterprises. Our mission, vision, founders, and team.': 'Scopri Skillvue, lo Skills Operating System per le grandi imprese. La nostra missione, visione, fondatori e team.',
-  'People across Europe': 'Persone in tutta Europa',
-  'People empowered': 'Persone valorizzate',
   'Unlock human potential and': 'Sblocchiamo il potenziale delle',
   'organizational success at scale': 'persone per guidare il successo della tua organizzazione su larga scala',
   'OUR VISION': 'LA NOSTRA VISIONE',

@@ -1,0 +1,651 @@
+[
+  {
+    "id": "about",
+    "paths": {
+      "en": "/about",
+      "it": "/about"
+    },
+    "files": {
+      "en": "about",
+      "it": "about"
+    }
+  },
+  {
+    "id": "blog",
+    "paths": {
+      "en": "/blog",
+      "it": "/blog"
+    },
+    "files": {
+      "en": "blog",
+      "it": "blog"
+    }
+  },
+  {
+    "id": "blog/accountability",
+    "paths": {
+      "en": "/blog/accountability",
+      "it": "/blog/accountability"
+    },
+    "files": {
+      "en": "blog/accountability",
+      "it": "blog/accountability"
+    }
+  },
+  {
+    "id": "blog/attitude-vs-competence",
+    "paths": {
+      "en": "/blog/attitude-vs-competence",
+      "it": "/blog/attitude-vs-competence"
+    },
+    "files": {
+      "en": "blog/attitude-vs-competence",
+      "it": "blog/attitude-vs-competence"
+    }
+  },
+  {
+    "id": "blog/corporate-onboarding",
+    "paths": {
+      "en": "/blog/corporate-onboarding",
+      "it": "/blog/corporate-onboarding"
+    },
+    "files": {
+      "en": "blog/corporate-onboarding",
+      "it": "blog/corporate-onboarding"
+    }
+  },
+  {
+    "id": "blog/critical-thinking",
+    "paths": {
+      "en": "/blog/critical-thinking",
+      "it": "/blog/critical-thinking"
+    },
+    "files": {
+      "en": "blog/critical-thinking",
+      "it": "blog/critical-thinking"
+    }
+  },
+  {
+    "id": "blog/managerial-skills",
+    "paths": {
+      "en": "/blog/managerial-skills",
+      "it": "/blog/managerial-skills"
+    },
+    "files": {
+      "en": "blog/managerial-skills",
+      "it": "blog/managerial-skills"
+    }
+  },
+  {
+    "id": "blog/negotiation-techniques",
+    "paths": {
+      "en": "/blog/negotiation-techniques",
+      "it": "/blog/negotiation-techniques"
+    },
+    "files": {
+      "en": "blog/negotiation-techniques",
+      "it": "blog/negotiation-techniques"
+    }
+  },
+  {
+    "id": "blog/newsletter-august-2026",
+    "paths": {
+      "en": "/blog/newsletter-august-2026",
+      "it": "/blog/newsletter-august-2026"
+    },
+    "files": {
+      "en": "blog/newsletter-august-2026",
+      "it": "blog/newsletter-august-2026"
+    }
+  },
+  {
+    "id": "blog/newsletter-july-2026",
+    "paths": {
+      "en": "/blog/newsletter-july-2026",
+      "it": "/blog/newsletter-july-2026"
+    },
+    "files": {
+      "en": "blog/newsletter-july-2026",
+      "it": "blog/newsletter-july-2026"
+    }
+  },
+  {
+    "id": "blog/recruitment-biases",
+    "paths": {
+      "en": "/blog/recruitment-biases",
+      "it": "/blog/recruitment-biases"
+    },
+    "files": {
+      "en": "blog/recruitment-biases",
+      "it": "blog/recruitment-biases"
+    }
+  },
+  {
+    "id": "blog/social-skills",
+    "paths": {
+      "en": "/blog/social-skills",
+      "it": "/blog/social-skills"
+    },
+    "files": {
+      "en": "blog/social-skills",
+      "it": "blog/social-skills"
+    }
+  },
+  {
+    "id": "blog/talent-acquisition",
+    "paths": {
+      "en": "/blog/talent-acquisition",
+      "it": "/blog/talent-acquisition"
+    },
+    "files": {
+      "en": "blog/talent-acquisition",
+      "it": "blog/talent-acquisition"
+    }
+  },
+  {
+    "id": "book-meeting",
+    "paths": {
+      "en": "/book-meeting",
+      "it": "/prenota-incontro"
+    },
+    "files": {
+      "en": "book-meeting",
+      "it": "prenota-incontro"
+    }
+  },
+  {
+    "id": "careers",
+    "paths": {
+      "en": "/careers",
+      "it": "/careers"
+    },
+    "files": {
+      "en": "careers",
+      "it": "careers"
+    }
+  },
+  {
+    "id": "customers",
+    "paths": {
+      "en": "/customers",
+      "it": "/clienti"
+    },
+    "files": {
+      "en": "customers",
+      "it": "customers"
+    }
+  },
+  {
+    "id": "customers/adr",
+    "paths": {
+      "en": "/customers/adr",
+      "it": "/clienti/adr"
+    },
+    "files": {
+      "en": "customers/adr",
+      "it": "customers/adr"
+    }
+  },
+  {
+    "id": "customers/adr-2",
+    "paths": {
+      "en": "/customers/adr-2",
+      "it": "/clienti/adr-2"
+    },
+    "files": {
+      "en": "customers/adr-2",
+      "it": "customers/adr-2"
+    }
+  },
+  {
+    "id": "customers/carrefour",
+    "paths": {
+      "en": "/customers/carrefour",
+      "it": "/clienti/carrefour"
+    },
+    "files": {
+      "en": "customers/carrefour",
+      "it": "customers/carrefour"
+    }
+  },
+  {
+    "id": "customers/credem",
+    "paths": {
+      "en": "/customers/credem",
+      "it": "/clienti/credem"
+    },
+    "files": {
+      "en": "customers/credem",
+      "it": "customers/credem"
+    }
+  },
+  {
+    "id": "customers/douglas",
+    "paths": {
+      "en": "/customers/douglas",
+      "it": "/clienti/douglas"
+    },
+    "files": {
+      "en": "customers/douglas",
+      "it": "customers/douglas"
+    }
+  },
+  {
+    "id": "customers/eataly",
+    "paths": {
+      "en": "/customers/eataly",
+      "it": "/clienti/eataly"
+    },
+    "files": {
+      "en": "customers/eataly",
+      "it": "customers/eataly"
+    }
+  },
+  {
+    "id": "customers/eataly-2",
+    "paths": {
+      "en": "/customers/eataly-2",
+      "it": "/clienti/eataly-2"
+    },
+    "files": {
+      "en": "customers/eataly-2",
+      "it": "customers/eataly-2"
+    }
+  },
+  {
+    "id": "customers/eataly-3",
+    "paths": {
+      "en": "/customers/eataly-3",
+      "it": "/clienti/eataly-3"
+    },
+    "files": {
+      "en": "customers/eataly-3",
+      "it": "customers/eataly-3"
+    }
+  },
+  {
+    "id": "customers/europ-assistance",
+    "paths": {
+      "en": "/customers/europ-assistance",
+      "it": "/clienti/europ-assistance"
+    },
+    "files": {
+      "en": "customers/europ-assistance",
+      "it": "customers/europ-assistance"
+    }
+  },
+  {
+    "id": "customers/europ-assistance-2",
+    "paths": {
+      "en": "/customers/europ-assistance-2",
+      "it": "/clienti/europ-assistance-2"
+    },
+    "files": {
+      "en": "customers/europ-assistance-2",
+      "it": "customers/europ-assistance-2"
+    }
+  },
+  {
+    "id": "customers/fidia-farmaceutici",
+    "paths": {
+      "en": "/customers/fidia-farmaceutici",
+      "it": "/clienti/fidia-farmaceutici"
+    },
+    "files": {
+      "en": "customers/fidia-farmaceutici",
+      "it": "customers/fidia-farmaceutici"
+    }
+  },
+  {
+    "id": "customers/ins-mercato",
+    "paths": {
+      "en": "/customers/ins-mercato",
+      "it": "/clienti/ins-mercato"
+    },
+    "files": {
+      "en": "customers/ins-mercato",
+      "it": "customers/ins-mercato"
+    }
+  },
+  {
+    "id": "customers/mediaset",
+    "paths": {
+      "en": "/customers/mediaset",
+      "it": "/clienti/mediaset"
+    },
+    "files": {
+      "en": "customers/mediaset",
+      "it": "customers/mediaset"
+    }
+  },
+  {
+    "id": "customers/mediaset-1",
+    "paths": {
+      "en": "/customers/mediaset-1",
+      "it": "/clienti/mediaset-1"
+    },
+    "files": {
+      "en": "customers/mediaset-1",
+      "it": "customers/mediaset-1"
+    }
+  },
+  {
+    "id": "customers/mediaset-2",
+    "paths": {
+      "en": "/customers/mediaset-2",
+      "it": "/clienti/mediaset-2"
+    },
+    "files": {
+      "en": "customers/mediaset-2",
+      "it": "customers/mediaset-2"
+    }
+  },
+  {
+    "id": "customers/subdued",
+    "paths": {
+      "en": "/customers/subdued",
+      "it": "/clienti/subdued"
+    },
+    "files": {
+      "en": "customers/subdued",
+      "it": "customers/subdued"
+    }
+  },
+  {
+    "id": "customers/unicomm",
+    "paths": {
+      "en": "/customers/unicomm",
+      "it": "/clienti/unicomm"
+    },
+    "files": {
+      "en": "customers/unicomm",
+      "it": "customers/unicomm"
+    }
+  },
+  {
+    "id": "index",
+    "paths": {
+      "en": "/",
+      "it": "/"
+    },
+    "files": {
+      "en": "index",
+      "it": "index"
+    }
+  },
+  {
+    "id": "lp/ai-act-banking",
+    "paths": {
+      "it": "/lp/ai-act-banking"
+    },
+    "files": {
+      "it": "lp/ai-act-banking"
+    }
+  },
+  {
+    "id": "lp/ai-competency",
+    "paths": {
+      "en": "/lp/ai-competency",
+      "it": "/lp/ai-competency"
+    },
+    "files": {
+      "en": "lp/ai-competency",
+      "it": "lp/ai-competency"
+    }
+  },
+  {
+    "id": "lp/ai-competency-newsletter",
+    "paths": {
+      "en": "/lp/ai-competency-newsletter",
+      "it": "/lp/ai-competency-newsletter"
+    },
+    "files": {
+      "en": "lp/ai-competency-newsletter",
+      "it": "lp/ai-competency-newsletter"
+    }
+  },
+  {
+    "id": "lp/arte-di-misurare-allineamento",
+    "paths": {
+      "it": "/lp/arte-di-misurare-allineamento"
+    },
+    "files": {
+      "it": "lp/arte-di-misurare-allineamento"
+    }
+  },
+  {
+    "id": "lp/career-aspiration-insurance",
+    "paths": {
+      "it": "/lp/career-aspiration-insurance"
+    },
+    "files": {
+      "it": "lp/career-aspiration-insurance/index"
+    }
+  },
+  {
+    "id": "lp/career-aspiration-insurance/whitepaper",
+    "paths": {
+      "it": "/lp/career-aspiration-insurance/whitepaper"
+    },
+    "files": {
+      "it": "lp/career-aspiration-insurance/whitepaper"
+    }
+  },
+  {
+    "id": "lp/europ-assistance",
+    "paths": {
+      "en": "/lp/europ-assistance",
+      "it": "/lp/europ-assistance"
+    },
+    "files": {
+      "en": "lp/europ-assistance",
+      "it": "lp/europ-assistance"
+    }
+  },
+  {
+    "id": "lp/food-retail",
+    "paths": {
+      "en": "/lp/food-retail",
+      "it": "/lp/food-retail"
+    },
+    "files": {
+      "en": "lp/food-retail",
+      "it": "lp/food-retail"
+    }
+  },
+  {
+    "id": "lp/hidden-cost-recruiting",
+    "paths": {
+      "en": "/lp/hidden-cost-recruiting"
+    },
+    "files": {
+      "en": "lp/hidden-cost-recruiting"
+    }
+  },
+  {
+    "id": "lp/il-costo-invisibile",
+    "paths": {
+      "it": "/lp/il-costo-invisibile"
+    },
+    "files": {
+      "it": "lp/il-costo-invisibile/index"
+    }
+  },
+  {
+    "id": "lp/il-costo-invisibile/whitepaper",
+    "paths": {
+      "it": "/lp/il-costo-invisibile/whitepaper"
+    },
+    "files": {
+      "it": "lp/il-costo-invisibile/whitepaper"
+    }
+  },
+  {
+    "id": "lp/il-turnover-nei-negozi-del-lusso",
+    "paths": {
+      "it": "/lp/il-turnover-nei-negozi-del-lusso"
+    },
+    "files": {
+      "it": "lp/il-turnover-nei-negozi-del-lusso"
+    }
+  },
+  {
+    "id": "lp/la-crisi-delle-competenze",
+    "paths": {
+      "it": "/lp/la-crisi-delle-competenze"
+    },
+    "files": {
+      "it": "lp/la-crisi-delle-competenze"
+    }
+  },
+  {
+    "id": "lp/scalare-l-eccellenza",
+    "paths": {
+      "it": "/lp/scalare-l-eccellenza"
+    },
+    "files": {
+      "it": "lp/scalare-l-eccellenza"
+    }
+  },
+  {
+    "id": "lp/supermarkets",
+    "paths": {
+      "en": "/lp/supermarkets",
+      "it": "/lp/supermarkets"
+    },
+    "files": {
+      "en": "lp/supermarkets",
+      "it": "lp/supermarkets"
+    }
+  },
+  {
+    "id": "privacy-policy",
+    "paths": {
+      "en": "/privacy-policy",
+      "it": "/privacy-policy"
+    },
+    "files": {
+      "en": "privacy-policy",
+      "it": "privacy-policy"
+    }
+  },
+  {
+    "id": "privacy-policy-algo",
+    "paths": {
+      "it": "/privacy-policy-algo"
+    },
+    "files": {
+      "it": "privacy-policy-algo"
+    }
+  },
+  {
+    "id": "product-overview",
+    "paths": {
+      "en": "/product-overview",
+      "it": "/product-overview"
+    },
+    "files": {
+      "en": "product-overview",
+      "it": "product-overview"
+    }
+  },
+  {
+    "id": "resources/press",
+    "paths": {
+      "en": "/resources/press",
+      "it": "/resources/press"
+    },
+    "files": {
+      "en": "resources/press",
+      "it": "resources/press"
+    }
+  },
+  {
+    "id": "resources/whitepapers",
+    "paths": {
+      "en": "/resources/whitepapers",
+      "it": "/resources/whitepapers"
+    },
+    "files": {
+      "en": "resources/whitepapers/index",
+      "it": "resources/whitepapers/index"
+    }
+  },
+  {
+    "id": "resources/whitepapers/[slug]",
+    "paths": {
+      "en": "/resources/whitepapers/[slug]",
+      "it": "/resources/whitepapers/[slug]"
+    },
+    "files": {
+      "en": "resources/whitepapers/[slug]",
+      "it": "resources/whitepapers/[slug]"
+    }
+  },
+  {
+    "id": "science",
+    "paths": {
+      "en": "/science",
+      "it": "/science"
+    },
+    "files": {
+      "en": "science",
+      "it": "science"
+    }
+  },
+  {
+    "id": "solutions/internal-mobility",
+    "paths": {
+      "en": "/solutions/internal-mobility",
+      "it": "/solutions/internal-mobility"
+    },
+    "files": {
+      "en": "solutions/internal-mobility",
+      "it": "solutions/internal-mobility"
+    }
+  },
+  {
+    "id": "solutions/learning-development",
+    "paths": {
+      "en": "/solutions/learning-development",
+      "it": "/solutions/learning-development"
+    },
+    "files": {
+      "en": "solutions/learning-development",
+      "it": "solutions/learning-development"
+    }
+  },
+  {
+    "id": "solutions/performance-management",
+    "paths": {
+      "en": "/solutions/performance-management",
+      "it": "/solutions/performance-management"
+    },
+    "files": {
+      "en": "solutions/performance-management",
+      "it": "solutions/performance-management"
+    }
+  },
+  {
+    "id": "solutions/project-resourcing",
+    "paths": {
+      "en": "/solutions/project-resourcing",
+      "it": "/solutions/project-resourcing"
+    },
+    "files": {
+      "en": "solutions/project-resourcing",
+      "it": "solutions/project-resourcing"
+    }
+  },
+  {
+    "id": "solutions/talent-acquisition",
+    "paths": {
+      "en": "/solutions/talent-acquisition",
+      "it": "/solutions/talent-acquisition"
+    },
+    "files": {
+      "en": "solutions/talent-acquisition",
+      "it": "solutions/talent-acquisition"
+    }
+  }
+]
