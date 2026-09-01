@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
 import { useRouter } from "next/router";
+import { NextIntlClientProvider } from "next-intl";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import { toEnPath, toItPath } from "@/i18n/localePaths";
 
@@ -25,8 +26,31 @@ function HreflangTags() {
   );
 }
 
+// A missing key must not read as a silent English fallback. In dev it throws, so
+// whoever introduced it sees it on the page they are already looking at. In
+// production it degrades instead, because one absent string is not a reason to
+// take the site down — `npm run check:i18n` in CI is what keeps them out of
+// production in the first place.
+function onIntlError(error: unknown) {
+  if (process.env.NODE_ENV === 'production') {
+    console.error(error);
+    return;
+  }
+  throw error;
+}
+
 export default function App({ Component, pageProps }: AppProps) {
+  const { locale } = useRouter();
   return (
+    <NextIntlClientProvider
+      locale={locale ?? 'en'}
+      timeZone="Europe/Rome"
+      // Pages migrated to next-intl provide these from getStaticProps via
+      // i18n/messages.ts. The rest of the site has not been migrated yet
+      // (#106-#118), so an absent `messages` is expected, not an error.
+      messages={pageProps.messages ?? {}}
+      onError={onIntlError}
+    >
     <LanguageProvider>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -69,5 +93,6 @@ export default function App({ Component, pageProps }: AppProps) {
         </div>
       </div>
     </LanguageProvider>
+    </NextIntlClientProvider>
   );
 }

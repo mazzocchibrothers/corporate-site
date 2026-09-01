@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
+import { messagesFor } from '@/i18n/messages';
 import { LazyMotion } from 'framer-motion';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -14,19 +16,21 @@ import CTASection from '@/components/landing/CTASection';
 
 const loadMotionFeatures = () => import('@/lib/motion-features').then((res) => res.default);
 
+// One line per page is the whole contract: the argument is this route's `id` in
+// routes.json, and i18n/messages.ts turns it into the namespaces to load.
+export const getStaticProps = messagesFor('index');
+
 export default function HomePage() {
   const { locale } = useRouter();
   const isIT = locale === 'it';
   const canonical = isIT ? 'https://skillvue.ai/it' : 'https://skillvue.ai/';
+  const t = useTranslations('home.meta');
 
   return (
     <>
       <Head>
-        <title>{isIT ? 'Skillvue | Piattaforma di Talent Intelligence con AI' : 'Skillvue | AI Talent Intelligence Platform'}</title>
-        <meta name="description" content={isIT
-          ? "Valuta le competenze, prevedi le performance e rendi ogni decisione di hiring e promozione difendibile. Skillvue combina la scienza psicometrica con l'AI per le aziende europee."
-          : 'Verify skills, predict performance and make every hiring and promotion decision defensible. Skillvue combines psychometric rigour with AI for European enterprises.'
-        } />
+        <title>{t('title')}</title>
+        <meta name="description" content={t('description')} />
         <link rel="canonical" href={canonical} />
         {/* Hero's italic gradient span needs Bold Italic; only this page (and /science) does. */}
         <link rel="preload" href="/fonts/MonaSans-BoldItalic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />

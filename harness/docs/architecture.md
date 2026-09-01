@@ -44,6 +44,35 @@ change here is almost always **a page**, and the risk is almost always
    - **Never add a bare `lang === 'it' ? … : …` ternary** outside a content
      object. There are 417 of them; that number goes down, not up.
 
+3b. **How messages reach a page (next-intl, Pages Router).**
+   Decided in #97; this is the contract every migrated page follows.
+
+   ```tsx
+   export const getStaticProps = messagesFor('customers/adr');  // the route id
+   const t = useTranslations('customers.adr');
+   ```
+
+   - **Per-page namespaces, never the whole catalogue.** `_app.tsx` mounts
+     `NextIntlClientProvider` but imports no messages of its own. Each page
+     loads only what it renders, through `getStaticProps`. This is the whole
+     reason the loader exists: the finished catalogue is ~19k words per locale,
+     and importing it in `_app.tsx` would ship every page's copy, in both
+     languages, to every visitor. `scripts/check-messages.mjs` asserts a page
+     receives its own namespace plus `common`, and nothing else.
+   - **The argument is the route's `id` in `routes.json`**, not a free-form
+     string, so a page cannot key off a namespace no route claims.
+     `namespaceOf()` maps it: `index` → `home`, `customers/adr` →
+     `customers.adr`, `[slug]` loses its brackets.
+   - **A missing key throws in dev, degrades in production.** `onError` in
+     `_app.tsx` rethrows outside production, so whoever introduced the gap sees
+     a 500 on the page they are already looking at rather than an English string
+     sitting quietly on the Italian site. Production logs and falls back —
+     one absent string is not a reason to take the site down. `check:i18n` and
+     `check:messages` in CI are what keep them out of production.
+   - **The JSON import carries `with { type: 'json' }`.** Turbopack does not
+     need it; bare Node does. Without it the gate script could only test the
+     pure helpers and never the loading path a page actually uses.
+
 4. **Italian apostrophes are `’`, never `'`.**
    A straight apostrophe inside a single-quoted JS string breaks the parser.
    Use the curly `’` (or `’`), or a double-quoted string. This is the most

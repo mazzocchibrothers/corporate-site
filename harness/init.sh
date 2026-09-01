@@ -131,6 +131,7 @@ GATES=(
   "typecheck"
   "check:i18n"
   "check:routes"
+  "check:messages"
 )
 
 for g in "${GATES[@]}"; do
