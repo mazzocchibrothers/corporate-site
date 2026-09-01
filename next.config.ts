@@ -16,6 +16,13 @@ const nextConfig: NextConfig = {
     // rest, so the full site-wide Tailwind bundle stops blocking first paint.
     // noscriptFallback: without it, a client with JS disabled would only
     // ever get the critical subset and never load the rest of the sheet.
+    //
+    // Pages Router only. Measured on this build (#132): a pages/ route ships
+    // 21.7 KB of inlined critical CSS and defers the 105 KB sheet; the app/
+    // route ships no inline CSS and a render-blocking <link> to the whole
+    // thing. So this option quietly stops doing anything, page by page, as the
+    // migration proceeds — it does not fail, it just goes silent. The
+    // replacement is decided in #135, before the switch.
     optimizeCss: { noscriptFallback: true },
   },
   async headers() {
