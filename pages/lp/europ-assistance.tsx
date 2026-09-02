@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench, Clock, Search } from 'lucide-react';
@@ -24,285 +25,6 @@ function Section({ children, className = '' }) {
 
 // ─── BILINGUAL CONTENT ────────────────────────────────────────────────────────
 
-const content = {
-  it: {
-    breadcrumb: 'Clienti',
-    badge: 'CUSTOMER STORY',
-    headline: {
-      before: 'Europ Assistance: come cogliere il ',
-      highlight1: 'potenziale che resiste alla prova del tempo',
-      middle: ' in un business fondato sul ',
-      highlight2: 'fattore umano',
-      after: '',
-    },
-    subtitle: "Con Skillvue, Europ Assistance ha trasformato il pre-screening dei candidati in un processo scalabile e strategico per l'intero talent lifecycle, mettendo le soft skill al centro fin dal primo step della selezione.",
-    heroMetrics: [
-      { value: '10.000', label: 'centri di servizio nella rete in Italia' },
-      { value: '900+', label: 'dipendenti' },
-    ],
-    ctaPrimary: 'Contattaci',
-    ctaSecondary: 'Scopri di più',
-    clientCard: {
-      label: 'SCHEDA CLIENTE',
-      companyName: 'Europ Assistance (ora Redion)',
-      facts: [
-        { label: 'Settore', value: 'Financial Services' },
-        { label: 'Gruppo', value: 'Generali' },
-        { label: 'Centri di servizio in Italia', value: '10.000' },
-        { label: 'Use Case', value: 'Hiring' },
-      ],
-    },
-    context: {
-      badge: 'CONTESTO',
-      title: 'In un business fondato sull\'interazione umana, la qualità della selezione non può accettare compromessi.',
-      paragraph: <>
-        Europ Assistance, parte del <strong className="text-[#121212]/80 font-semibold">Gruppo Generali</strong>, è uno dei leader mondiali nei servizi di assistenza e assicurazione viaggi. La sua è una crescita costante: è in corso l'espansione delle operazioni in nuovi mercati e la convergenza con Generali Care in un <strong className="text-[#121212]/80 font-semibold">hub integrato di assistenza</strong>.<br /><br />In Italia, opera con un modello di business fondato sulla qualità dell'interazione umana: <strong className="text-[#121212]/80 font-semibold">assistenza 24/7, gestione sinistri, customer care multilingue</strong>. La scelta e la crescita delle <strong className="text-[#121212]/80 font-semibold">persone</strong> è un fattore chiave per il corretto funzionamento e l'espansione del business, soprattutto vista l'instabilità del settore assicurativo, che <strong className="text-[#121212]/80 font-semibold">non sempre riesce ad attrarre i profili più qualificati</strong> e al tempo stesso richiede <strong className="text-[#121212]/80 font-semibold">profili professionali molto specifici e capaci di evolvere nel tempo</strong>. In questo contesto, ogni assunzione sbagliata costa di più e ogni persona giusta che resta vale ancora di più.
-      </>,
-    },
-    challenge: {
-      badge: 'LA SFIDA',
-      title: 'Migliaia di candidature, 2 picchi stagionali, 3 persone nel team recruiting.',
-      intro: 'Le assunzioni di Europ Assistance Italia si concentrano in due picchi stagionali l\'anno, generando volumi nell\'ordine delle migliaia di candidature in pochi mesi. Per i ruoli di assistenza e customer care, le soft skill sono il primo predittore di successo: problem solving, orientamento al cliente, gestione dello stress, eppure sono completamente invisibili nel CV.',
-      businessLabel: 'SFIDE DI BUSINESS',
-      hrLabel: 'SFIDE HR & PEOPLE',
-      businessChallenges: [
-        {
-          icon: TrendingUp,
-          title: 'La necessità di crescere al ritmo del business',
-          text: 'Le esigenze crescevano costantemente e la velocità di risposta richiesta aumentava. Essere più veloci ed efficaci per HR nel raggiungere i risultati attesi era diventata una necessità operativa.',
-        },
-        {
-          icon: Users,
-          title: 'Gestione complessa nei picchi stagionali',
-          text: 'Con volumi elevati concentrati in finestre temporali ristrette, non c\'era margine per processi lenti. Ogni ritardo si traduceva in posizioni scoperte proprio quando il business ne aveva più bisogno.',
-        },
-        {
-          icon: BarChart3,
-          title: 'Una richiesta di maggiore anticipo sui bisogni futuri',
-          text: 'Identificare le competenze predittive di crescita già in fase di pre-screening era essenziale per raccogliere informazioni utili alla costruzione di una pipeline di talento interna.',
-        },
-      ],
-      hrChallenges: [
-        {
-          icon: Clock,
-          title: 'Troppo tempo intrappolato nello screening',
-          text: 'Con migliaia di candidature da gestire, lo screening manuale assorbiva la maggior parte delle risorse disponibili, lasciando poco spazio all\'analisi approfondita e alla relazione con i candidati.',
-        },
-        {
-          icon: Eye,
-          title: 'Difficoltà nell\'individuare il potenziale futuro',
-          text: 'Portare in azienda persone con il potenziale giusto per percorsi di sviluppo interno richiedeva dati strutturati che il CV da solo non era in grado di fornire.',
-        },
-        {
-          icon: Search,
-          title: 'Profili di nicchia difficili da intercettare',
-          text: 'Alcuni ruoli strategici richiedevano competenze molto specifiche, difficili da rilevare tramite CV. Senza strumenti di valutazione oggettivi, il processo si allungava e il rischio di mancato match aumentava.',
-        },
-      ],
-    },
-    objectives: {
-      badge: 'OBIETTIVI DI COLLABORAZIONE',
-      title: 'Cosa doveva cambiare',
-      items: [
-        { icon: Zap, text: 'Scalare il pre-screening senza scalare il team: gestire migliaia di candidature con 3 FTE, liberando i recruiter dallo screening per concentrarli su colloqui e valutazione del potenziale.' },
-        { icon: Eye, text: 'Rendere visibili le soft skill dal primo step: dati oggettivi su soft skill e lingua inglese prima di impegnare ore di tempo del team recruiting.' },
-        { icon: Shield, text: 'Usare l\'AI come supporto al recruiter: garantendo maggiore velocità ed efficacia decisionale mantenendo pieno controllo decisionale in ogni step.' },
-        { icon: Target, text: 'Selezionare per il potenziale, non solo per la performance immediata: individuare candidati con competenze promettenti e indicative di una futura crescita nell\'organizzazione.' },
-      ],
-    },
-    solution: {
-      badge: 'LA SOLUZIONE',
-      title: 'Assessment AI scalabile con Skillvue',
-      intro: "Skillvue è stato integrato nel processo di selezione di Europ Assistance Italia come primo step strutturato del funnel, gestendo il pre-screening su più profili e su più sedi geografiche. Il deployment è ricorrente, legato soprattutto ai due picchi stagionali annuali.",
-      skillsLabel: 'COMPETENZE VALUTATE',
-      skills: [
-        { icon: Heart, label: 'Soft skill — problem solving, orientamento al cliente, orientamento agli obiettivi, teamworking.' },
-        { icon: Wrench, label: 'Lingua inglese — test B1/B2/C1, competenza critica per un\'azienda che opera in 39 paesi e gestisce assistenza multilingue.' },
-        { icon: Layers, label: 'Hard skill role-specific — es. Compensation & Benefits sui ruoli HR.' },
-      ],
-      methodologyLabel: 'COME È STATO COSTRUITO',
-      methodology: [
-        {
-          title: 'Assessment in autonomia come primo step',
-          text: 'Dopo la candidatura, ogni candidato completa l\'assessment in autonomia da qualsiasi dispositivo: telefono, tablet o laptop.',
-        },
-        {
-          title: 'Report strutturato per il recruiter',
-          text: 'Il team HR riceve una prima analisi oggettiva e approfondita delle competenze. Il primo colloquio è basato sui dati, non su impressioni.',
-        },
-        {
-          title: 'Human-in-the-loop a ogni fase',
-          text: 'Il team HR mantiene pieno controllo decisionale in ogni fase. I dati Skillvue strutturano e informano il giudizio, senza mai sostituire la valutazione del recruiter.',
-        },
-      ],
-    },
-    results: {
-      badge: 'RISULTATI',
-      title: 'Cosa sta cambiando',
-      intro: 'L\'impatto concreto che Europ Assistance Italia ha ottenuto integrando Skillvue durante i picchi stagionali di selezione più intensi.',
-      cards: [
-        { icon: Target, title: 'Candidati più qualificati', text: 'meno rumore, più segnali concreti per il team HR' },
-        { icon: Zap, title: 'Decisioni di selezione basate sui dati', text: 'colloqui più personalizzati, decisioni basate su dati reali' },
-        { icon: TrendingUp, title: 'Pipeline di talento per il futuro', text: 'si assume guardando già al domani, non solo al fit immediato' },
-        { icon: BarChart3, title: 'Visibilità sul potenziale reale prima del colloquio', text: 'dati sulle soft skill con segnali chiari di potenziale e crescita' },
-        { icon: Scale, title: 'Più tempo per il recruiting ad alto valore', text: 'focus sul miglioramento della qualità delle assunzioni e della retention' },
-        { icon: Heart, title: 'Candidate experience migliorata', text: 'più spazio ai candidati per esprimersi' },
-      ],
-    },
-    quote: {
-      text: 'Credo che selezione e sviluppo debbano parlare la stessa lingua: il dato raccolto oggi diventa la base per lo sviluppo di domani.',
-      author: 'Nicole Cerruti',
-      role: 'Recruitment Manager, Europ Assistance Italia',
-    },
-    related: {
-      title: 'Storie correlate',
-      stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Retail GDO · Hiring at Scale', headline: 'Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione' },
-      ],
-      cta: 'Leggi la storia',
-    },
-    finalCta: { headline: 'Pronto a trasformare la tua', accent: 'People Strategy?' },
-  },
-
-  en: {
-    breadcrumb: 'Customers',
-    badge: 'CUSTOMER STORY',
-    headline: {
-      before: 'Europ Assistance: how to spot the ',
-      highlight1: 'potential that stands the test of time',
-      middle: ' in a business built on the ',
-      highlight2: 'human factor',
-      after: '',
-    },
-    subtitle: "With Skillvue, Europ Assistance turned candidate pre-screening into a scalable, strategic process for the entire talent lifecycle, putting soft skills at the center from the very first step of hiring.",
-    heroMetrics: [
-      { value: '10,000', label: 'service centers in the network in Italy' },
-      { value: '900+', label: 'employees' },
-    ],
-    ctaPrimary: 'Contact Us',
-    ctaSecondary: 'Learn More',
-    clientCard: {
-      label: 'CLIENT PROFILE',
-      companyName: 'Europ Assistance (now Redion)',
-      facts: [
-        { label: 'Industry', value: 'Financial Services' },
-        { label: 'Group', value: 'Generali' },
-        { label: 'Service centers in Italy', value: '10,000' },
-        { label: 'Use Case', value: 'Hiring' },
-      ],
-    },
-    context: {
-      badge: 'CONTEXT',
-      title: 'In a business built on human interaction, hiring quality can\'t accept compromises.',
-      paragraph: <>
-        Europ Assistance, part of the <strong className="text-[#121212]/80 font-semibold">Generali Group</strong>, is one of the world leaders in assistance services and travel insurance. Its growth is steady: it is expanding operations into new markets and converging with Generali Care into an <strong className="text-[#121212]/80 font-semibold">integrated assistance hub</strong>.<br /><br />In Italy, it operates with a business model built on the quality of human interaction: <strong className="text-[#121212]/80 font-semibold">24/7 assistance, claims management, multilingual customer care</strong>. Choosing and growing <strong className="text-[#121212]/80 font-semibold">people</strong> is a key factor for the proper functioning and expansion of the business, especially given the instability of the insurance sector, which <strong className="text-[#121212]/80 font-semibold">does not always manage to attract the most qualified profiles</strong> and at the same time requires <strong className="text-[#121212]/80 font-semibold">very specific professional profiles able to evolve over time</strong>. In this context, every wrong hire costs more and every right person who stays is worth even more.
-      </>,
-    },
-    challenge: {
-      badge: 'THE CHALLENGE',
-      title: 'Thousands of applications, 2 seasonal peaks, 3 people on the recruiting team.',
-      intro: "Europ Assistance Italia's hiring is concentrated in two seasonal peaks a year, generating volumes in the order of thousands of applications in a few months. For assistance and customer care roles, soft skills are the leading predictor of success: problem solving, customer orientation, stress management, yet they are completely invisible on a CV.",
-      businessLabel: 'BUSINESS CHALLENGES',
-      hrLabel: 'HR & PEOPLE CHALLENGES',
-      businessChallenges: [
-        {
-          icon: TrendingUp,
-          title: 'The need to grow at the pace of the business',
-          text: "Needs grew constantly and the required response speed increased. Being faster and more effective for HR in achieving expected results had become an operational necessity.",
-        },
-        {
-          icon: Users,
-          title: 'Complex management during seasonal peaks',
-          text: "With high volumes concentrated in narrow time windows, there was no room for slow processes. Every delay translated into open positions exactly when the business needed them most.",
-        },
-        {
-          icon: BarChart3,
-          title: 'A demand for more foresight on future needs',
-          text: "Identifying growth-predictive skills as early as pre-screening was essential to gather information useful for building an internal talent pipeline.",
-        },
-      ],
-      hrChallenges: [
-        {
-          icon: Clock,
-          title: 'Too much time trapped in screening',
-          text: "With thousands of applications to handle, manual screening absorbed most of the available resources, leaving little room for in-depth analysis and the relationship with candidates.",
-        },
-        {
-          icon: Eye,
-          title: 'Difficulty in spotting future potential',
-          text: "Bringing in people with the right potential for internal development paths required structured data that the CV alone couldn't provide.",
-        },
-        {
-          icon: Search,
-          title: 'Niche profiles hard to identify',
-          text: "Some strategic roles required very specific skills, hard to detect via CV. Without objective assessment tools, the process dragged on and the risk of a mismatch increased.",
-        },
-      ],
-    },
-    objectives: {
-      badge: 'COLLABORATION OBJECTIVES',
-      title: 'What needed to change',
-      items: [
-        { icon: Zap, text: 'Scale pre-screening without scaling the team: handle thousands of applications with 3 FTEs, freeing recruiters from screening to focus on interviews and potential assessment.' },
-        { icon: Eye, text: 'Make soft skills visible from the first step: objective data on soft skills and English language before committing hours of the recruiting team\'s time.' },
-        { icon: Shield, text: 'Use AI as support for the recruiter: ensuring greater speed and decision-making effectiveness while keeping full decision control at every step.' },
-        { icon: Target, text: 'Hire for potential, not just immediate performance: identify candidates with promising skills indicative of future growth within the organization.' },
-      ],
-    },
-    solution: {
-      badge: 'THE SOLUTION',
-      title: 'AI-scaled assessment with Skillvue',
-      intro: "Skillvue was integrated into Europ Assistance Italia's hiring process as the first structured step of the funnel, handling pre-screening across multiple profiles and multiple locations. The deployment is recurring, tied mainly to the two annual seasonal peaks.",
-      skillsLabel: 'SKILLS ASSESSED',
-      skills: [
-        { icon: Heart, label: 'Soft skills — problem solving, customer orientation, goal orientation, teamworking.' },
-        { icon: Wrench, label: 'English language — B1/B2/C1 test, a critical skill for a company operating in 39 countries and managing multilingual assistance.' },
-        { icon: Layers, label: 'Role-specific hard skills — e.g. Compensation & Benefits for HR roles.' },
-      ],
-      methodologyLabel: 'HOW IT WAS BUILT',
-      methodology: [
-        {
-          title: 'Self-serve assessment as the first step',
-          text: "After applying, each candidate completes the assessment independently from any device: phone, tablet or laptop.",
-        },
-        {
-          title: 'Structured report for the recruiter',
-          text: "The HR team receives an initial objective, in-depth analysis of the skills. The first interview is based on data, not impressions.",
-        },
-        {
-          title: 'Human-in-the-loop at every stage',
-          text: "The HR team keeps full decision control at every stage. Skillvue data structures and informs the judgment, without ever replacing the recruiter's assessment.",
-        },
-      ],
-    },
-    results: {
-      badge: 'RESULTS',
-      title: 'What is changing',
-      intro: 'The remarkable impact Europ Assistance Italia unlocked by deploying Skillvue during their most intense seasonal hiring peaks.',
-      cards: [
-        { icon: Target, title: 'More higher-quality candidates', text: 'less noise, more concrete signals for the HR team' },
-        { icon: Zap, title: 'Data-driven hiring decisions', text: 'more personalised interviews, decisions based on real data' },
-        { icon: TrendingUp, title: 'Talent pipeline for the future', text: 'hiring with tomorrow already in mind, not just immediate fit' },
-        { icon: BarChart3, title: 'Visibility on true potential before interview', text: 'soft-skill data with clear signals of potential and growth' },
-        { icon: Scale, title: 'More time for high-value recruiting', text: 'focus on improving hiring quality and retention' },
-        { icon: Heart, title: 'Enhanced candidate experience', text: 'more room for candidates to express themselves' },
-      ],
-    },
-    quote: {
-      text: 'I believe hiring and development must speak the same language: the data gathered today becomes the foundation for tomorrow\'s growth.',
-      author: 'Nicole Cerruti',
-      role: 'Recruitment Manager, Europ Assistance Italia',
-    },
-    related: {
-      title: 'Related Stories',
-      stories: [
-        { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
-      ],
-      cta: 'Read the story',
-    },
-    finalCta: { headline: 'Ready to transform your', accent: 'People Strategy?' },
-  },
-};
 
 // ─── PAGE COMPONENT ───────────────────────────────────────────────────────────
 
@@ -311,12 +33,48 @@ const content = {
 // routes.json, and i18n/messages.ts turns it into the namespaces to load.
 export const getStaticProps = messagesFor('lp/europ-assistance');
 
+// Structure the catalogue cannot hold: ids and the components the page
+// renders for each row. The words that went with them are in messages/.
+const CHALLENGE_BUSINESS_CHALLENGES = [
+  { id: 'needGrowAt', icon: TrendingUp },
+  { id: 'complexManagementDuring', icon: Users },
+  { id: 'demandMoreForesight', icon: BarChart3 },
+];
+
+const CHALLENGE_HR_CHALLENGES = [
+  { id: 'tooMuchTime', icon: Clock },
+  { id: 'difficultySpottingFuture', icon: Eye },
+  { id: 'nicheProfilesHard', icon: Search },
+];
+
+const OBJECTIVES_ITEMS = [
+  { id: 'scalePreScreening', icon: Zap },
+  { id: 'makeSoftSkills', icon: Eye },
+  { id: 'useAiAs', icon: Shield },
+  { id: 'hirePotentialNot', icon: Target },
+];
+
+const SOLUTION_SKILLS = [
+  { id: 'softSkillsProblem', icon: Heart },
+  { id: 'englishLanguageB1', icon: Wrench },
+  { id: 'roleSpecificHard', icon: Layers },
+];
+
+const RESULTS_CARDS = [
+  { id: 'moreHigherQuality', icon: Target },
+  { id: 'dataDrivenHiring', icon: Zap },
+  { id: 'talentPipelineFuture', icon: TrendingUp },
+  { id: 'visibilityTruePotential', icon: BarChart3 },
+  { id: 'moreTimeHigh', icon: Scale },
+  { id: 'enhancedCandidateExperience', icon: Heart },
+];
+
 export default function EuropAssistanceLandingPage() {
   const router = useRouter();
-  const { lang, t } = useLanguage();
-  const c = lang === 'it' ? content.it : content.en;
-  const metaTitle = `${c.headline.before}${c.headline.highlight1}${c.headline.middle || ''}${c.headline.highlight2 || ''}${c.headline.after || ''} | Skillvue`;
-  const metaDesc = c.subtitle.length > 160 ? c.subtitle.substring(0, 157) + '...' : c.subtitle;
+  const { lang } = useLanguage();
+  const t = useTranslations('lp.europ-assistance');
+  const metaTitle = `${t('headline').replace(/<\/?hl\d*>/g, '')} | Skillvue`;
+  const metaDesc = t('subtitle').length > 160 ? t('subtitle').substring(0, 157) + '...' : t('subtitle');
 
   return (
     <>
@@ -340,7 +98,7 @@ export default function EuropAssistanceLandingPage() {
           <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-12 lg:py-8 lg:flex-1 lg:flex lg:flex-col lg:justify-center">
             {/* Breadcrumb */}
             <motion.div className="mb-6 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{c.breadcrumb}</Button>
+              <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{t('breadcrumb')}</Button>
               <span className="text-white/20">/</span>
               <span className="text-[13px] text-white/[0.65]">Europ Assistance</span>
             </motion.div>
@@ -350,23 +108,26 @@ export default function EuropAssistanceLandingPage() {
               <div className="lg:col-span-7 flex flex-col">
                 <motion.div className="flex flex-col flex-1" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-5 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
-                    {c.badge}
+                    {t('badge')}
                   </span>
                   <h1 className="text-[48px] md:text-[44px] font-semibold tracking-[-0.02em] text-white/95 mb-5" style={{ lineHeight: 1.2 }}>
-                    {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
+                    {t.rich('headline', {
+                      hl: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+                      hl2: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+                    })}
                   </h1>
-                  <p className="text-[16px] text-white/[0.60] leading-[1.7] mb-7 max-w-2xl">{c.subtitle}</p>
+                  <p className="text-[16px] text-white/[0.60] leading-[1.7] mb-7 max-w-2xl">{t('subtitle')}</p>
                   <div className="flex flex-wrap gap-4">
                     <Button variant="primary" mode="dark" onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}>
-                      {c.ctaPrimary}
+                      {t('ctaPrimary')}
                     </Button>
                     <Button variant="secondary" mode="dark" onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })}>
-                      {c.ctaSecondary}
+                      {t('ctaSecondary')}
                     </Button>
                   </div>
                   {/* Metrics — pinned to bottom, aligned with video */}
                   <div className="mt-auto pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {c.heroMetrics.map(m => (
+                    {t.raw('heroMetrics').map(m => (
                       <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-8 py-5">
                         <span className="block text-white text-[32px] stat-value md:text-[clamp(1.8rem,3vw,2.5rem)]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                         <span className="text-[14px] text-white/[0.55] mt-2 block leading-[1.4]">{m.label}</span>
@@ -396,12 +157,12 @@ export default function EuropAssistanceLandingPage() {
                       <img src="/logos/europ-assistance-logo-2026.png" alt="Europ Assistance logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
-                      <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>
-                      <p className="text-[18px] font-bold text-white/90">{c.clientCard.companyName || 'Europ Assistance'}</p>
+                      <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{t('clientCard.label')}</span>
+                      <p className="text-[18px] font-bold text-white/90">{t('clientCard.companyName') || 'Europ Assistance'}</p>
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-x-6 gap-y-3">
-                    {c.clientCard.facts.map(s => (
+                    {t.raw('clientCard.facts').map(s => (
                       <div key={s.label}>
                         <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
                         <p className="text-[14px] text-white/[0.65] leading-[1.5]">{s.value}</p>
@@ -420,42 +181,45 @@ export default function EuropAssistanceLandingPage() {
 
             {/* CONTEXT */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-6">{c.context.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('context.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-6">{t('context.title')}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{t.rich('context.paragraph', {
+    b: (chunks) => <strong className="text-[#121212]/80 font-semibold">{chunks}</strong>,
+    br: () => <br />,
+  })}</p>
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('challenge.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('challenge.title')}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{t('challenge.intro')}</p>
 
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('challenge.businessLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
-                  {c.challenge.businessChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                  {CHALLENGE_BUSINESS_CHALLENGES.map((ch) => (
+                    <div key={t(`challenge.businessChallenges.${ch.id}.title`)} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`challenge.businessChallenges.${ch.id}.title`)}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`challenge.businessChallenges.${ch.id}.text`)}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('challenge.hrLabel')}</span>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                  {c.challenge.hrChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
+                  {CHALLENGE_HR_CHALLENGES.map((ch) => (
+                    <div key={t(`challenge.hrChallenges.${ch.id}.title`)} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.1)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`challenge.hrChallenges.${ch.id}.title`)}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`challenge.hrChallenges.${ch.id}.text`)}</p>
                     </div>
                   ))}
                 </div>
@@ -464,16 +228,16 @@ export default function EuropAssistanceLandingPage() {
 
             {/* OBJECTIVES */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('objectives.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{t('objectives.title')}</h2>
               <div className="grid md:grid-cols-2 gap-5">
-                {c.objectives.items.map((o, i) => (
+                {OBJECTIVES_ITEMS.map((o, i) => (
                   <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
                     <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
-                      {o.text.includes(':') ? <><strong className="font-bold text-[#121212]/90">{o.text.split(':')[0]}</strong>:{o.text.split(':').slice(1).join(':')}</> : o.text}
+                      {t(`objectives.items.${o.id}.text`).includes(':') ? <><strong className="font-bold text-[#121212]/90">{t(`objectives.items.${o.id}.text`).split(':')[0]}</strong>:{t(`objectives.items.${o.id}.text`).split(':').slice(1).join(':')}</> : t(`objectives.items.${o.id}.text`)}
                     </p>
                   </div>
                 ))}
@@ -482,26 +246,26 @@ export default function EuropAssistanceLandingPage() {
 
             {/* SOLUTION */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.solution.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('solution.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('solution.title')}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('solution.intro')}</p>
 
               <div className="mb-12">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('solution.skillsLabel')}</span>
                 <div className="flex flex-wrap gap-3">
-                  {c.solution.skills.map((s) => (
-                    <div key={s.label} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
+                  {SOLUTION_SKILLS.map((s) => (
+                    <div key={t(`solution.skills.${s.id}.label`)} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
                       <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#121212]/70">{s.label}</span>
+                      <span className="text-[14px] font-semibold text-[#121212]/70">{t(`solution.skills.${s.id}.label`)}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('solution.methodologyLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
-                  {c.solution.methodology.map((m, i) => (
+                  {t.raw('solution.methodology').map((m, i) => (
                     <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <span className="block text-[2.75rem] font-light leading-none mb-6" style={{ color: '#c7d2fe' }}>0{i + 1}</span>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{m.title}</h4>
@@ -514,18 +278,18 @@ export default function EuropAssistanceLandingPage() {
 
             {/* RESULTS */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#16a34a' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-10">{c.results.intro}</p>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#16a34a' }}>{t('results.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('results.title')}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-10">{t('results.intro')}</p>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {c.results.cards.map((r) => (
-                  <div key={r.title} className="rounded-2xl border border-[#16a34a]/[0.14] bg-[#16a34a]/[0.03] p-7">
+                {RESULTS_CARDS.map((r) => (
+                  <div key={t(`results.cards.${r.id}.title`)} className="rounded-2xl border border-[#16a34a]/[0.14] bg-[#16a34a]/[0.03] p-7">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(22,163,74,0.1)' }}>
                       <r.icon className="h-5 w-5" style={{ color: '#16a34a' }} />
                     </div>
-                    <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{r.title}</h4>
-                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{r.text}</p>
+                    <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`results.cards.${r.id}.title`)}</h4>
+                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`results.cards.${r.id}.text`)}</p>
                   </div>
                 ))}
               </div>
@@ -534,14 +298,14 @@ export default function EuropAssistanceLandingPage() {
             {/* QUOTE */}
             <Section>
               <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-8 lg:p-10">
-                <p className="text-[17px] text-[#121212]/75 leading-[1.75] italic mb-6">"{c.quote.text}"</p>
+                <p className="text-[17px] text-[#121212]/75 leading-[1.75] italic mb-6">"{t('quote.text')}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-[#4b4df7]/[0.15]">
-                    <img src="/logos/europ-assistance-nicole.jpg" alt={c.quote.author} className="w-full h-full object-cover object-top" />
+                    <img src="/logos/europ-assistance-nicole.jpg" alt={t('quote.author')} className="w-full h-full object-cover object-top" />
                   </div>
                   <div>
-                    <p className="text-[14px] font-semibold text-[#121212]/80">{c.quote.author}</p>
-                    <p className="text-[12px] text-[#121212]/40 leading-[1.5]">{c.quote.role}</p>
+                    <p className="text-[14px] font-semibold text-[#121212]/80">{t('quote.author')}</p>
+                    <p className="text-[12px] text-[#121212]/40 leading-[1.5]">{t('quote.role')}</p>
                   </div>
                 </div>
               </div>
@@ -555,15 +319,15 @@ export default function EuropAssistanceLandingPage() {
         {/* RELATED STORIES */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{c.related.title}</h3>
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{t('related.title')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
-              {c.related.stories.map(s => (
+              {t.raw('related.stories').map(s => (
                 <button key={s.id} onClick={() => { router.push(`${href('customers', lang)}/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
                   <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
                   <h4 className="text-[24px] font-semibold text-white/90 mb-4">{s.company}</h4>
                   <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
                   <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
-                    {c.related.cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    {t('related.cta')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
               ))}
@@ -571,7 +335,7 @@ export default function EuropAssistanceLandingPage() {
           </div>
         </section>
 
-        <SolutionFinalCTA headline={c.finalCta.headline} accentWord={c.finalCta.accent} />
+        <SolutionFinalCTA headline={t('finalCta.headline')} accentWord={t('finalCta.accent')} />
         <Footer />
       </main>
     </>

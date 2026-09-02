@@ -3429,6 +3429,422 @@
       "text2": "Our Customers"
     }
   },
+  "lp": {
+    "supermarkets": {
+      "badge": "SUPERMARKETS",
+      "titleLead": "The ",
+      "titleHighlight": "Skills Operating System",
+      "titleTail": " for your organization",
+      "subhead": "Skillvue is the **objective skills data layer** for your retail workforce. Tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run. So every talent decision, from hiring to transformation, is finally the right one.",
+      "download": "Download the one-pager",
+      "s1": {
+        "n": "01",
+        "label": "WHERE RETAIL STANDS TODAY",
+        "cards": [
+          {
+            "t": "Your Status Quo",
+            "b": "Stores run on **people**, but talent decisions remain expensive gambles. You **hire based on CVs** and **gut feeling**, and you **promote who is visible** rather than who has the **potential** for the next role."
+          },
+          {
+            "t": "What You Face",
+            "b": "High **turnover** and **unstructured hiring** fail at scale. Store managers are evaluated on **subjective criteria** with no **predictability of future performance**, and **reskilling** programs stay generic with no focus on gap maps."
+          },
+          {
+            "t": "What We Do",
+            "b": "Our skills operating system **powers the entire retail talent lifecycle**: from the checkout counter to store management, **with no silos** or inconsistent assessments between **new hires** and **internal talent**."
+          }
+        ]
+      },
+      "s2": {
+        "n": "02",
+        "label": "WORKFORCE CHALLENGES VS SKILLVUE SOLUTIONS",
+        "costLabel": "COST OF INACTION",
+        "valueLabel": "SKILLVUE VALUE",
+        "roiLabel": "SKILLVUE ROI",
+        "rows": [
+          {
+            "t": "Hire Right",
+            "sub": "Hiring, screening and confirmation at scale",
+            "cost": "Low margins, high turnover, costly mishires, confirmation left to subjective, store-by-store judgment. At **€30-40K per failure**, a **30%** mishire rate becomes a massive drag on tight **2.8% EBIT margins**.",
+            "value": "Fast, objective screening (5 to 15 minutes) based on **your organization’s specific model**. Structured, bias-free probation reviews provide **one unified lens** for new hires and growing employees.",
+            "roi": [
+              "30% reduction in mis-hire rate; 70% faster CV screening",
+              "Payback period: 6 months",
+              "1st year ROI: 85%"
+            ]
+          },
+          {
+            "t": "Promote with Confidence",
+            "sub": "Store manager and department head pipelines",
+            "cost": "**40% of new managers** fail within **24 months** because promotions rely on sales performance rather than leadership skills.",
+            "value": "Build internal academies on **potential**, not seniority. Early leadership mapping ensures **training reaches the right people**, reducing promotion failures and creating a pipeline for roles the market lacks.",
+            "roi": [
+              "Post-promotion failure reduced from 40% to 15%",
+              "Payback period: 2 months",
+              "1st year ROI: 500%"
+            ]
+          },
+          {
+            "t": "Develop the Right People",
+            "sub": "Frontline development and succession",
+            "cost": "**A lack of effective leadership** drives a **5-10% performance drop**, costing stores millions in lost revenue.",
+            "value": "Top-tier retail staff **double retention** and **drive growth**. Verifying soft skills early lets you **hire for attitude** and **motivational fit**, identifying long-term talent and reducing early turnover.",
+            "roi": [
+              "Time-to-fill for leadership roles reduced by 35%",
+              "Payback period: 4 months",
+              "1st year ROI: 170%"
+            ]
+          },
+          {
+            "t": "De-Risk Transformation",
+            "sub": "M&A integration and multi-format reorganization",
+            "cost": "**70%+** of business transformations **fall short** of their original ambitions. **Lacking shared criteria** across brands, **people managers** can’t assure acquisition success.",
+            "value": "Standardize skills with a **single framework** and assure **meritocracy in internal mobility**. Post-deal skills mapping achieved in just weeks. Adaptability, learning agility and growth mindset verified before integration.",
+            "roi": [
+              "Post-deal skills mapped in just weeks",
+              "Payback period: 5 months",
+              "1st year ROI: 160%"
+            ]
+          }
+        ]
+      },
+      "s3": {
+        "n": "03",
+        "label": "FIRST-YEAR RETURN",
+        "body": "Across the four areas, this is what the skills operating system pays back within the first twelve months.",
+        "stats": [
+          {
+            "v": "85%",
+            "l": "Hire Right",
+            "s": "payback in 6 months"
+          },
+          {
+            "v": "500%",
+            "l": "Promote with Confidence",
+            "s": "payback in 2 months"
+          },
+          {
+            "v": "170%",
+            "l": "Develop the Right People",
+            "s": "payback in 4 months"
+          },
+          {
+            "v": "160%",
+            "l": "De-Risk Transformation",
+            "s": "payback in 5 months"
+          }
+        ],
+        "note": "1st year ROI"
+      },
+      "cta": {
+        "title": "See it on your own competency framework",
+        "body": "Book a demo and we’ll walk through how objective skills data works across your stores — from hiring to post-deal integration.",
+        "button": "Contact us for a demo"
+      },
+      "footNote": "SKILLVUE FOR RETAIL",
+      "assets": {
+        "pdf": "/skillvue-supermarkets-one-pager-en.pdf"
+      }
+    },
+    "ai-competency": {
+      "badge": "AI COMPETENCY ASSESSMENT",
+      "titleLead": "AI won't replace you. Only its ",
+      "titleHighlight": "smarter users",
+      "titleTail": " will.",
+      "intro": "In page 2 you unlock: the verification framework, the 5-level competency scale and what you get.",
+      "unlockLead": "Complete the form to unlock page 2 and download the PDF.",
+      "download": "Download PDF",
+      "lockedTitle": "Page 2 locked",
+      "lockedHint": "Fill in the form to unlock",
+      "unlockedMsg": "Unlocked. Scroll to read page 2.",
+      "scrollHint": "Scroll — page 2 of 2",
+      "assets": {
+        "pdf": "/skillvue-ai-competency-one-pager.pdf",
+        "downloadName": "Skillvue-AI-Competency-One-Pager.pdf",
+        "page1": "/ai-competency-page-1.png",
+        "page2": "/ai-competency-page-2.png"
+      }
+    },
+    "ai-competency-newsletter": {
+      "badge": "AI COMPETENCY ASSESSMENT",
+      "titleLead": "AI won’t replace you. Only its ",
+      "titleHighlight": "smarter users",
+      "titleTail": " will.",
+      "subhead": "Can your organization actually identify its smart AI users? The real AI advantage doesn’t come from the tools you buy — it comes from knowing who can use them to create impact.",
+      "download": "Download the PDF",
+      "book": "Book a conversation",
+      "introBody": "The investment in AI is staggering. The visibility into who can deliver? Close to zero. How many of your employees actually have real AI competency, rather than just claim it? This lack of visibility is a massive bottleneck. Right now, most companies are guessing.",
+      "introPunch": "We help you start knowing.",
+      "pillFrom": "GUESSING",
+      "pillTo": "KNOWING",
+      "s1": {
+        "n": "01",
+        "label": "THE PROBLEM",
+        "body": "Companies often fail to verify their AI readiness or close the skill gaps necessary for successful AI adoption. Employers need teams that can collaborate fluently with AI, evaluate its outputs and adapt in real time. Yet, most can’t actually demonstrate these skills.",
+        "bullets": [
+          "A list of self-claimed, not proven skills which don’t show smart AI users",
+          "Most AI-readiness assessments are unscientific and unvalidated checklists",
+          "Almost no one verifies critical thinking or whether AI outputs can be trusted",
+          "Most tools only test basic Gen-AI use, missing the future of intelligent machines"
+        ]
+      },
+      "s2": {
+        "n": "02",
+        "label": "HOW WE VERIFY IT",
+        "body": "We combine technical skills verification with the mental judgment to steer AI, integrated into one validated framework and re-evaluated over time.",
+        "inputLabel": "INPUT",
+        "input": "Tailored simulated test with realistic scenarios",
+        "sig1Label": "SIGNAL 1",
+        "sig1": "Technical skill",
+        "sig2Label": "SIGNAL 2",
+        "sig2": "Mental judgment",
+        "integrated": "Integrated into one framework",
+        "outputLabel": "OUTPUT",
+        "output": "A validated competency profile for each individual of your organization"
+      },
+      "s3": {
+        "n": "03",
+        "label": "WHY OURS IS DIFFERENT",
+        "body": "We verify if your people can create value with AI in the work they actually do before you invest in the technology. Four deliberate breaks from how the market tests today:",
+        "cards": [
+          {
+            "t": "Measured in one task",
+            "b": "We verify technical skills and mental judgment in one, realistic scenario, reflecting what your team can actually do on the job."
+          },
+          {
+            "t": "Built on scientific rigor",
+            "b": "We use our own validated framework with human-in-the-loop review to verify how your team performs with AI at work."
+          },
+          {
+            "t": "Tailored to your context",
+            "b": "We build scenarios around your company: roles, workflows and real use cases, so results reflect readiness for your work, not a generic benchmark."
+          },
+          {
+            "t": "Designed to scale",
+            "b": "We combine a frontier AI model with expert human oversight, so scoring stays consistent and fast at volume, without scoring case by case."
+          }
+        ]
+      },
+      "s4": {
+        "n": "04",
+        "label": "WHAT YOU GET",
+        "body": "Data-driven, not assumption-driven, visibility into where your people are today, who will perform, which skill gaps to close first, and who needs upskilling or reskilling. A decision-ready AI competency profile on a five-level behavioral scale showing exactly what to do next.",
+        "levels": [
+          {
+            "t": "Poor",
+            "b": "AI competency is missing or consistently below standard."
+          },
+          {
+            "t": "Limited",
+            "b": "AI competency shows up unevenly, with frequent gaps."
+          },
+          {
+            "t": "Adequate",
+            "b": "AI competency is present at a consistent, baseline level."
+          },
+          {
+            "t": "Strong",
+            "b": "AI competency is demonstrated reliably and effectively, above expectations."
+          },
+          {
+            "t": "Excellent",
+            "b": "AI competency is exemplary and consistently above the expected standard."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to identify your smart AI users?",
+        "body": "Get more value from your AI technology investments and avoid mistakes.",
+        "button": "Book a conversation"
+      },
+      "footNote": "SKILLVUE AI & SCIENCE LAB",
+      "assets": {
+        "pdf": "/skillvue-ai-competency-one-pager-nl-en.pdf"
+      }
+    },
+    "europ-assistance": {
+      "breadcrumb": "Customers",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "With Skillvue, Europ Assistance turned candidate pre-screening into a scalable, strategic process for the entire talent lifecycle, putting soft skills at the center from the very first step of hiring.",
+      "heroMetrics": [
+        {
+          "value": "10,000",
+          "label": "service centers in the network in Italy"
+        },
+        {
+          "value": "900+",
+          "label": "employees"
+        }
+      ],
+      "ctaPrimary": "Contact Us",
+      "ctaSecondary": "Learn More",
+      "clientCard": {
+        "label": "CLIENT PROFILE",
+        "companyName": "Europ Assistance (now Redion)",
+        "facts": [
+          {
+            "label": "Industry",
+            "value": "Financial Services"
+          },
+          {
+            "label": "Group",
+            "value": "Generali"
+          },
+          {
+            "label": "Service centers in Italy",
+            "value": "10,000"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTEXT",
+        "title": "In a business built on human interaction, hiring quality can't accept compromises.",
+        "paragraph": "Europ Assistance, part of the <b>Generali Group</b>, is one of the world leaders in assistance services and travel insurance. Its growth is steady: it is expanding operations into new markets and converging with Generali Care into an <b>integrated assistance hub</b>.<br></br><br></br>In Italy, it operates with a business model built on the quality of human interaction: <b>24/7 assistance, claims management, multilingual customer care</b>. Choosing and growing <b>people</b> is a key factor for the proper functioning and expansion of the business, especially given the instability of the insurance sector, which <b>does not always manage to attract the most qualified profiles</b> and at the same time requires <b>very specific professional profiles able to evolve over time</b>. In this context, every wrong hire costs more and every right person who stays is worth even more."
+      },
+      "challenge": {
+        "badge": "THE CHALLENGE",
+        "title": "Thousands of applications, 2 seasonal peaks, 3 people on the recruiting team.",
+        "intro": "Europ Assistance Italia's hiring is concentrated in two seasonal peaks a year, generating volumes in the order of thousands of applications in a few months. For assistance and customer care roles, soft skills are the leading predictor of success: problem solving, customer orientation, stress management, yet they are completely invisible on a CV.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "needGrowAt": {
+            "title": "The need to grow at the pace of the business",
+            "text": "Needs grew constantly and the required response speed increased. Being faster and more effective for HR in achieving expected results had become an operational necessity."
+          },
+          "complexManagementDuring": {
+            "title": "Complex management during seasonal peaks",
+            "text": "With high volumes concentrated in narrow time windows, there was no room for slow processes. Every delay translated into open positions exactly when the business needed them most."
+          },
+          "demandMoreForesight": {
+            "title": "A demand for more foresight on future needs",
+            "text": "Identifying growth-predictive skills as early as pre-screening was essential to gather information useful for building an internal talent pipeline."
+          }
+        },
+        "hrChallenges": {
+          "tooMuchTime": {
+            "title": "Too much time trapped in screening",
+            "text": "With thousands of applications to handle, manual screening absorbed most of the available resources, leaving little room for in-depth analysis and the relationship with candidates."
+          },
+          "difficultySpottingFuture": {
+            "title": "Difficulty in spotting future potential",
+            "text": "Bringing in people with the right potential for internal development paths required structured data that the CV alone couldn't provide."
+          },
+          "nicheProfilesHard": {
+            "title": "Niche profiles hard to identify",
+            "text": "Some strategic roles required very specific skills, hard to detect via CV. Without objective assessment tools, the process dragged on and the risk of a mismatch increased."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "COLLABORATION OBJECTIVES",
+        "title": "What needed to change",
+        "items": {
+          "scalePreScreening": {
+            "text": "Scale pre-screening without scaling the team: handle thousands of applications with 3 FTEs, freeing recruiters from screening to focus on interviews and potential assessment."
+          },
+          "makeSoftSkills": {
+            "text": "Make soft skills visible from the first step: objective data on soft skills and English language before committing hours of the recruiting team's time."
+          },
+          "useAiAs": {
+            "text": "Use AI as support for the recruiter: ensuring greater speed and decision-making effectiveness while keeping full decision control at every step."
+          },
+          "hirePotentialNot": {
+            "text": "Hire for potential, not just immediate performance: identify candidates with promising skills indicative of future growth within the organization."
+          }
+        }
+      },
+      "solution": {
+        "badge": "THE SOLUTION",
+        "title": "AI-scaled assessment with Skillvue",
+        "intro": "Skillvue was integrated into Europ Assistance Italia's hiring process as the first structured step of the funnel, handling pre-screening across multiple profiles and multiple locations. The deployment is recurring, tied mainly to the two annual seasonal peaks.",
+        "skillsLabel": "SKILLS ASSESSED",
+        "skills": {
+          "softSkillsProblem": {
+            "label": "Soft skills — problem solving, customer orientation, goal orientation, teamworking."
+          },
+          "englishLanguageB1": {
+            "label": "English language — B1/B2/C1 test, a critical skill for a company operating in 39 countries and managing multilingual assistance."
+          },
+          "roleSpecificHard": {
+            "label": "Role-specific hard skills — e.g. Compensation & Benefits for HR roles."
+          }
+        },
+        "methodologyLabel": "HOW IT WAS BUILT",
+        "methodology": [
+          {
+            "title": "Self-serve assessment as the first step",
+            "text": "After applying, each candidate completes the assessment independently from any device: phone, tablet or laptop."
+          },
+          {
+            "title": "Structured report for the recruiter",
+            "text": "The HR team receives an initial objective, in-depth analysis of the skills. The first interview is based on data, not impressions."
+          },
+          {
+            "title": "Human-in-the-loop at every stage",
+            "text": "The HR team keeps full decision control at every stage. Skillvue data structures and informs the judgment, without ever replacing the recruiter's assessment."
+          }
+        ]
+      },
+      "results": {
+        "badge": "RESULTS",
+        "title": "What is changing",
+        "intro": "The remarkable impact Europ Assistance Italia unlocked by deploying Skillvue during their most intense seasonal hiring peaks.",
+        "cards": {
+          "moreHigherQuality": {
+            "title": "More higher-quality candidates",
+            "text": "less noise, more concrete signals for the HR team"
+          },
+          "dataDrivenHiring": {
+            "title": "Data-driven hiring decisions",
+            "text": "more personalised interviews, decisions based on real data"
+          },
+          "talentPipelineFuture": {
+            "title": "Talent pipeline for the future",
+            "text": "hiring with tomorrow already in mind, not just immediate fit"
+          },
+          "visibilityTruePotential": {
+            "title": "Visibility on true potential before interview",
+            "text": "soft-skill data with clear signals of potential and growth"
+          },
+          "moreTimeHigh": {
+            "title": "More time for high-value recruiting",
+            "text": "focus on improving hiring quality and retention"
+          },
+          "enhancedCandidateExperience": {
+            "title": "Enhanced candidate experience",
+            "text": "more room for candidates to express themselves"
+          }
+        }
+      },
+      "quote": {
+        "text": "I believe hiring and development must speak the same language: the data gathered today becomes the foundation for tomorrow's growth.",
+        "author": "Nicole Cerruti",
+        "role": "Recruitment Manager, Europ Assistance Italia"
+      },
+      "related": {
+        "title": "Related Stories",
+        "stories": [
+          {
+            "id": "carrefour",
+            "company": "Carrefour",
+            "tag": "Large-scale distribution · Hiring at Scale",
+            "headline": "Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI"
+          }
+        ],
+        "cta": "Read the story"
+      },
+      "finalCta": {
+        "headline": "Ready to transform your",
+        "accent": "People Strategy?"
+      },
+      "headline": "Europ Assistance: how to spot the <hl>potential that stands the test of time</hl> in a business built on the <hl2>human factor</hl2>"
+    }
+  },
   "privacy-policy": {
     "cta": "Back"
   },

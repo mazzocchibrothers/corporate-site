@@ -3429,6 +3429,422 @@
       "text2": "I Nostri Clienti"
     }
   },
+  "lp": {
+    "supermarkets": {
+      "badge": "GDO",
+      "titleLead": "Il ",
+      "titleHighlight": "Sistema Operativo delle Competenze",
+      "titleTail": " per la tua organizzazione",
+      "subhead": "Skillvue è il **data layer** oggettivo sulle competenze per la tua forza lavoro nel retail. Progettato su misura per la tua organizzazione, fondato sulla scienza, scalabile grazie all’AI e integrabile nei tuoi sistemi HR che già utilizzi. Ogni decisione sui talenti, dall’assunzione alla trasformazione, finalmente supportata da dati oggettivi.",
+      "download": "Scarica il one-pager",
+      "s1": {
+        "n": "01",
+        "label": "DA DOVE PARTE OGGI IL RETAIL",
+        "cards": [
+          {
+            "t": "Status Quo",
+            "b": "I punti vendita si reggono sulle **persone**, ma le decisioni sui talenti restano ancora scommesse costose: le assunzioni basate su CV e istinto, le promozioni a chi è più visibile anziché a chi ha maggior **potenziale** e **fit** per il ruolo."
+          },
+          {
+            "t": "Ciò Che Affronti",
+            "b": "L’alto **turnover** e la selezione **non strutturata** diventano insostenibili su larga scala: gli store manager sono valutati su **criteri soggettivi**, senza prevedibilità sulle performance future, e i **programmi di reskilling** restano generici, senza un focus sulla **mappatura dei gap**."
+          },
+          {
+            "t": "Ciò Che Facciamo",
+            "b": "Il **nostro sistema operativo delle competenze** valorizza **l’intero ciclo di vita del talento** nel settore retail: dall’addetto di cassa allo store manager, senza silos o valutazioni incoerenti tra nuovi assunti e risorse interne."
+          }
+        ]
+      },
+      "s2": {
+        "n": "02",
+        "label": "LE SFIDE DEL PERSONALE VS. LE SOLUZIONI SKILLVUE",
+        "costLabel": "COSTO DELL’INAZIONE",
+        "valueLabel": "VALORE AGGIUNTO DI SKILLVUE",
+        "roiLabel": "IL ROI DI SKILLVUE",
+        "rows": [
+          {
+            "t": "Assunzioni Giuste",
+            "sub": "Selezioni, assunzioni, screening e conferme su larga scala",
+            "cost": "Margini ridotti, alto turnover e conferme basate su **valutazioni soggettive**. Ogni inserimento inefficace costa **30-40k €**, un peso insostenibile con un EBIT del **2,8%**.",
+            "value": "Uno screening rapido e oggettivo, basato sul **tuo framework**. Valutazioni del periodo di prova strutturate e senza bias, per una **visione unificata** di nuovi assunti e talenti in crescita.",
+            "roi": [
+              "-30% tassi di assunzioni errate; +70% velocità di CV screening",
+              "Risultati entro: 6 mesi",
+              "ROI del primo anno: 85%"
+            ]
+          },
+          {
+            "t": "Promozioni Strategiche",
+            "sub": "Pipeline per store manager e capi reparto",
+            "cost": "Il **40% delle promozioni a nuovi manager** si rivela inefficace entro 24 mesi, perché si basa sulle **performance di vendita**, non sulle leadership skill.",
+            "value": "Academy interne basate sul **potenziale** e sullo **skill mapping** indirizzano la formazione alle **persone giuste**, riducendo le **promozioni inefficaci** e creando una **pipeline per i ruoli più difficili da reperire**.",
+            "roi": [
+              "Promozioni inefficaci ridotte dal 40% al 15%",
+              "Risultati entro: 2 mesi",
+              "ROI del primo anno: 500%"
+            ]
+          },
+          {
+            "t": "Formazioni Mirate",
+            "sub": "Sviluppo del personale frontline e succession planning",
+            "cost": "La mancanza di una **leadership preparata** fa calare del **5-10%** le performance, causando **milioni di euro di fatturato perso** per i punti vendita.",
+            "value": "I migliori talenti nel retail **raddoppiano la retention** e **la crescita del brand**. Valutare le soft skill fin dall’inizio aiuta ad assumere per **attitudine** e **fit motivazionale**, riducendo il turnover.",
+            "roi": [
+              "-35% sul tempo di copertura per i ruoli di leadership",
+              "Risultati entro: 4 mesi",
+              "ROI del primo anno: 170%"
+            ]
+          },
+          {
+            "t": "Trasformazioni sicure",
+            "sub": "Integrazione post-M&A e riorganizzazione multi-formato",
+            "cost": "Oltre **il 70%** delle trasformazioni aziendali **non raggiunge gli obiettivi**. Servono criteri condivisi tra gli store per garantire il successo post-acquisizione.",
+            "value": "Un **unico framework di competenze** per una **mobilità interna meritocratica**. Mappa le skill post-acquisizione in poche settimane, per integrare i talenti con **criteri oggettivi**.",
+            "roi": [
+              "Skills mapping post-deal in poche settimane",
+              "Risultati entro: 5 mesi",
+              "ROI del primo anno: 160%"
+            ]
+          }
+        ]
+      },
+      "s3": {
+        "n": "03",
+        "label": "IL RITORNO NEL PRIMO ANNO",
+        "body": "Sui quattro ambiti, questo è il ritorno che il sistema operativo delle competenze genera entro i primi dodici mesi.",
+        "stats": [
+          {
+            "v": "85%",
+            "l": "Assunzioni Giuste",
+            "s": "risultati in 6 mesi"
+          },
+          {
+            "v": "500%",
+            "l": "Promozioni Strategiche",
+            "s": "risultati in 2 mesi"
+          },
+          {
+            "v": "170%",
+            "l": "Formazioni Mirate",
+            "s": "risultati in 4 mesi"
+          },
+          {
+            "v": "160%",
+            "l": "Trasformazioni sicure",
+            "s": "risultati in 5 mesi"
+          }
+        ],
+        "note": "ROI del primo anno"
+      },
+      "cta": {
+        "title": "Guardalo sul tuo modello di competenze",
+        "body": "Prenota una demo: vediamo insieme come i dati oggettivi sulle competenze funzionano nei tuoi punti vendita, dalla selezione all’integrazione post-acquisizione.",
+        "button": "Prenota una demo"
+      },
+      "footNote": "SKILLVUE PER IL RETAIL",
+      "assets": {
+        "pdf": "/skillvue-supermarkets-one-pager-it.pdf"
+      }
+    },
+    "ai-competency": {
+      "badge": "AI COMPETENCY ASSESSMENT",
+      "titleLead": "L'AI non ti sostituirà, ma chi saprà usarla in ",
+      "titleHighlight": "modo intelligente",
+      "titleTail": " sì.",
+      "intro": "Nella pagina 2 sblocchi: il framework di verifica, la scala di competenza a 5 livelli e cosa ottieni.",
+      "unlockLead": "Compila il modulo per sbloccare la pagina 2 e scaricare il PDF.",
+      "download": "Scarica il PDF",
+      "lockedTitle": "Pagina 2 bloccata",
+      "lockedHint": "Compila il modulo per sbloccare",
+      "unlockedMsg": "Sbloccato. Scorri per leggere la pagina 2.",
+      "scrollHint": "Scorri — pagina 2 di 2",
+      "assets": {
+        "pdf": "/skillvue-ai-competency-one-pager-it.pdf",
+        "downloadName": "Skillvue-AI-Competency-One-Pager-IT.pdf",
+        "page1": "/ai-competency-page-it-1.png",
+        "page2": "/ai-competency-page-it-2.png"
+      }
+    },
+    "ai-competency-newsletter": {
+      "badge": "VALUTAZIONE COMPETENZE AI",
+      "titleLead": "L’AI non ti sostituirà, ma chi saprà usarla in ",
+      "titleHighlight": "modo intelligente",
+      "titleTail": " sì.",
+      "subhead": "La tua organizzazione è davvero in grado di individuare queste persone? Il vero vantaggio non nasce dagli strumenti che acquisti, ma dalla capacità di riconoscere chi sa usarli per generare valore reale.",
+      "download": "Scarica il PDF",
+      "book": "Prenota un incontro",
+      "introBody": "Gli investimenti nell’AI sono enormi. La visibilità su chi può davvero generare risultati? Quasi zero. Quante persone nella tua azienda hanno competenze reali nell’AI? Questa mancanza di visibilità è un forte ostacolo. Oggi, la maggior parte delle aziende procede per ipotesi.",
+      "introPunch": "Noi ti aiutiamo a basarti sui dati.",
+      "pillFrom": "IPOTESI",
+      "pillTo": "DATI",
+      "s1": {
+        "n": "01",
+        "label": "IL PROBLEMA",
+        "body": "Le aziende spesso non riescono a verificare il proprio livello di preparazione all’AI né a colmare i gap di competenze necessari per adottarla con successo. I datori di lavoro hanno bisogno di team capaci di collaborare con l’AI in modo fluido, valutarne i risultati e adattarsi in tempo reale. Eppure, la maggior parte delle persone non è in grado di dimostrare concretamente queste competenze.",
+        "bullets": [
+          "Competenze autodichiarate, ma non verificate, che non rivelano chi sa davvero usare l’AI.",
+          "Molte valutazioni delle competenze AI si basano su checklist non validate e prive di rigore scientifico.",
+          "Il pensiero critico e la capacità di valutare l’affidabilità degli output dell’AI vengono raramente verificati.",
+          "La maggior parte si ferma alle basi dell’IA generativa, ignorando le vere potenzialità future di questa tecnologia."
+        ]
+      },
+      "s2": {
+        "n": "02",
+        "label": "COME VERIFICHIAMO LE COMPETENZE",
+        "body": "Valutiamo sia le competenze tecniche sia la capacità di giudizio necessaria per guidare l’AI, integrandole in un unico framework validato e rivalutandole nel tempo.",
+        "inputLabel": "INPUT",
+        "input": "Test simulato personalizzato con scenari realistici",
+        "sig1Label": "SEGNALE 1",
+        "sig1": "Hard skill",
+        "sig2Label": "SEGNALE 2",
+        "sig2": "Soft skill",
+        "integrated": "Integrati in un unico framework",
+        "outputLabel": "OUTPUT",
+        "output": "Un profilo di competenze validato per ogni persona della tua organizzazione"
+      },
+      "s3": {
+        "n": "03",
+        "label": "PERCHÉ IL NOSTRO METODO È DIVERSO",
+        "body": "Prima di investire nella tecnologia, verifichiamo se il tuo team sa creare valore con l’AI nel lavoro quotidiano. Ecco quattro elementi che ci distinguono dai test oggi disponibili sul mercato:",
+        "cards": [
+          {
+            "t": "Misurato in un solo compito",
+            "b": "Verifichiamo competenze tecniche e trasversali in un unico scenario realistico, che riflette ciò che il team sa davvero fare sul lavoro."
+          },
+          {
+            "t": "Basato sul rigore scientifico",
+            "b": "Utilizziamo il nostro framework validato con revisione umana per verificare come il team performa con l’AI al lavoro."
+          },
+          {
+            "t": "Creato su misura",
+            "b": "Costruiamo scenari attorno alla tua azienda: ruoli, workflow e casi d’uso reali, affinché i risultati riflettano la preparazione rispetto al lavoro concreto, non a un benchmark generico."
+          },
+          {
+            "t": "Progettato per scalare",
+            "b": "Combiniamo un modello di AI all’avanguardia con la supervisione di esperti, garantendo valutazioni rapide e coerenti anche su larga scala, senza analizzare ogni caso singolarmente."
+          }
+        ]
+      },
+      "s4": {
+        "n": "04",
+        "label": "COSA OTTIENI",
+        "body": "Una visibilità basata sui dati, non su ipotesi: dove è oggi il tuo team, chi performerà, quali gap di competenze colmare per primi e chi ha bisogno di upskilling o reskilling. Un profilo delle competenze AI pronto a supportare le decisioni, strutturato su una scala comportamentale a cinque livelli e capace di indicare con chiarezza i prossimi passi.",
+        "levels": [
+          {
+            "t": "Insufficiente",
+            "b": "La competenza AI è assente o costantemente sotto lo standard."
+          },
+          {
+            "t": "Limitato",
+            "b": "La competenza AI emerge in modo discontinuo, con lacune frequenti."
+          },
+          {
+            "t": "Adeguato",
+            "b": "La competenza AI è presente a un livello di base costante."
+          },
+          {
+            "t": "Solido",
+            "b": "La competenza AI è dimostrata con efficacia e continuità, oltre le aspettative."
+          },
+          {
+            "t": "Eccellente",
+            "b": "La competenza AI è esemplare e costantemente sopra lo standard atteso."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Pronto a identificare chi sa davvero usare l’AI?",
+        "body": "Ottieni più valore dai tuoi investimenti in tecnologia AI ed evita errori.",
+        "button": "Prenota un incontro"
+      },
+      "footNote": "SKILLVUE AI & SCIENCE LAB",
+      "assets": {
+        "pdf": "/skillvue-ai-competency-one-pager-nl-it.pdf"
+      }
+    },
+    "europ-assistance": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue, Europ Assistance ha trasformato il pre-screening dei candidati in un processo scalabile e strategico per l'intero talent lifecycle, mettendo le soft skill al centro fin dal primo step della selezione.",
+      "heroMetrics": [
+        {
+          "value": "10.000",
+          "label": "centri di servizio nella rete in Italia"
+        },
+        {
+          "value": "900+",
+          "label": "dipendenti"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "companyName": "Europ Assistance (ora Redion)",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Financial Services"
+          },
+          {
+            "label": "Gruppo",
+            "value": "Generali"
+          },
+          {
+            "label": "Centri di servizio in Italia",
+            "value": "10.000"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "In un business fondato sull'interazione umana, la qualità della selezione non può accettare compromessi.",
+        "paragraph": "Europ Assistance, parte del <b>Gruppo Generali</b>, è uno dei leader mondiali nei servizi di assistenza e assicurazione viaggi. La sua è una crescita costante: è in corso l'espansione delle operazioni in nuovi mercati e la convergenza con Generali Care in un <b>hub integrato di assistenza</b>.<br></br><br></br>In Italia, opera con un modello di business fondato sulla qualità dell'interazione umana: <b>assistenza 24/7, gestione sinistri, customer care multilingue</b>. La scelta e la crescita delle <b>persone</b> è un fattore chiave per il corretto funzionamento e l'espansione del business, soprattutto vista l'instabilità del settore assicurativo, che <b>non sempre riesce ad attrarre i profili più qualificati</b> e al tempo stesso richiede <b>profili professionali molto specifici e capaci di evolvere nel tempo</b>. In questo contesto, ogni assunzione sbagliata costa di più e ogni persona giusta che resta vale ancora di più."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Migliaia di candidature, 2 picchi stagionali, 3 persone nel team recruiting.",
+        "intro": "Le assunzioni di Europ Assistance Italia si concentrano in due picchi stagionali l'anno, generando volumi nell'ordine delle migliaia di candidature in pochi mesi. Per i ruoli di assistenza e customer care, le soft skill sono il primo predittore di successo: problem solving, orientamento al cliente, gestione dello stress, eppure sono completamente invisibili nel CV.",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
+        "businessChallenges": {
+          "needGrowAt": {
+            "title": "La necessità di crescere al ritmo del business",
+            "text": "Le esigenze crescevano costantemente e la velocità di risposta richiesta aumentava. Essere più veloci ed efficaci per HR nel raggiungere i risultati attesi era diventata una necessità operativa."
+          },
+          "complexManagementDuring": {
+            "title": "Gestione complessa nei picchi stagionali",
+            "text": "Con volumi elevati concentrati in finestre temporali ristrette, non c'era margine per processi lenti. Ogni ritardo si traduceva in posizioni scoperte proprio quando il business ne aveva più bisogno."
+          },
+          "demandMoreForesight": {
+            "title": "Una richiesta di maggiore anticipo sui bisogni futuri",
+            "text": "Identificare le competenze predittive di crescita già in fase di pre-screening era essenziale per raccogliere informazioni utili alla costruzione di una pipeline di talento interna."
+          }
+        },
+        "hrChallenges": {
+          "tooMuchTime": {
+            "title": "Troppo tempo intrappolato nello screening",
+            "text": "Con migliaia di candidature da gestire, lo screening manuale assorbiva la maggior parte delle risorse disponibili, lasciando poco spazio all'analisi approfondita e alla relazione con i candidati."
+          },
+          "difficultySpottingFuture": {
+            "title": "Difficoltà nell'individuare il potenziale futuro",
+            "text": "Portare in azienda persone con il potenziale giusto per percorsi di sviluppo interno richiedeva dati strutturati che il CV da solo non era in grado di fornire."
+          },
+          "nicheProfilesHard": {
+            "title": "Profili di nicchia difficili da intercettare",
+            "text": "Alcuni ruoli strategici richiedevano competenze molto specifiche, difficili da rilevare tramite CV. Senza strumenti di valutazione oggettivi, il processo si allungava e il rischio di mancato match aumentava."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "scalePreScreening": {
+            "text": "Scalare il pre-screening senza scalare il team: gestire migliaia di candidature con 3 FTE, liberando i recruiter dallo screening per concentrarli su colloqui e valutazione del potenziale."
+          },
+          "makeSoftSkills": {
+            "text": "Rendere visibili le soft skill dal primo step: dati oggettivi su soft skill e lingua inglese prima di impegnare ore di tempo del team recruiting."
+          },
+          "useAiAs": {
+            "text": "Usare l'AI come supporto al recruiter: garantendo maggiore velocità ed efficacia decisionale mantenendo pieno controllo decisionale in ogni step."
+          },
+          "hirePotentialNot": {
+            "text": "Selezionare per il potenziale, non solo per la performance immediata: individuare candidati con competenze promettenti e indicative di una futura crescita nell'organizzazione."
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI scalabile con Skillvue",
+        "intro": "Skillvue è stato integrato nel processo di selezione di Europ Assistance Italia come primo step strutturato del funnel, gestendo il pre-screening su più profili e su più sedi geografiche. Il deployment è ricorrente, legato soprattutto ai due picchi stagionali annuali.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "softSkillsProblem": {
+            "label": "Soft skill — problem solving, orientamento al cliente, orientamento agli obiettivi, teamworking."
+          },
+          "englishLanguageB1": {
+            "label": "Lingua inglese — test B1/B2/C1, competenza critica per un'azienda che opera in 39 paesi e gestisce assistenza multilingue."
+          },
+          "roleSpecificHard": {
+            "label": "Hard skill role-specific — es. Compensation & Benefits sui ruoli HR."
+          }
+        },
+        "methodologyLabel": "COME È STATO COSTRUITO",
+        "methodology": [
+          {
+            "title": "Assessment in autonomia come primo step",
+            "text": "Dopo la candidatura, ogni candidato completa l'assessment in autonomia da qualsiasi dispositivo: telefono, tablet o laptop."
+          },
+          {
+            "title": "Report strutturato per il recruiter",
+            "text": "Il team HR riceve una prima analisi oggettiva e approfondita delle competenze. Il primo colloquio è basato sui dati, non su impressioni."
+          },
+          {
+            "title": "Human-in-the-loop a ogni fase",
+            "text": "Il team HR mantiene pieno controllo decisionale in ogni fase. I dati Skillvue strutturano e informano il giudizio, senza mai sostituire la valutazione del recruiter."
+          }
+        ]
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Cosa sta cambiando",
+        "intro": "L'impatto concreto che Europ Assistance Italia ha ottenuto integrando Skillvue durante i picchi stagionali di selezione più intensi.",
+        "cards": {
+          "moreHigherQuality": {
+            "title": "Candidati più qualificati",
+            "text": "meno rumore, più segnali concreti per il team HR"
+          },
+          "dataDrivenHiring": {
+            "title": "Decisioni di selezione basate sui dati",
+            "text": "colloqui più personalizzati, decisioni basate su dati reali"
+          },
+          "talentPipelineFuture": {
+            "title": "Pipeline di talento per il futuro",
+            "text": "si assume guardando già al domani, non solo al fit immediato"
+          },
+          "visibilityTruePotential": {
+            "title": "Visibilità sul potenziale reale prima del colloquio",
+            "text": "dati sulle soft skill con segnali chiari di potenziale e crescita"
+          },
+          "moreTimeHigh": {
+            "title": "Più tempo per il recruiting ad alto valore",
+            "text": "focus sul miglioramento della qualità delle assunzioni e della retention"
+          },
+          "enhancedCandidateExperience": {
+            "title": "Candidate experience migliorata",
+            "text": "più spazio ai candidati per esprimersi"
+          }
+        }
+      },
+      "quote": {
+        "text": "Credo che selezione e sviluppo debbano parlare la stessa lingua: il dato raccolto oggi diventa la base per lo sviluppo di domani.",
+        "author": "Nicole Cerruti",
+        "role": "Recruitment Manager, Europ Assistance Italia"
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "carrefour",
+            "company": "Carrefour",
+            "tag": "Retail GDO · Hiring at Scale",
+            "headline": "Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Europ Assistance: come cogliere il <hl>potenziale che resiste alla prova del tempo</hl> in un business fondato sul <hl2>fattore umano</hl2>"
+    }
+  },
   "privacy-policy": {
     "cta": "Indietro"
   },

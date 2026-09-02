@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -7,6 +8,7 @@ import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Download, ArrowRight, ArrowDown, Check } from 'lucide-react';
 import { messagesFor } from '@/i18n/messages';
+import { href } from '@/i18n/routes';
 
 const TITLE = 'Skillvue — AI Competency One-Pager';
 const GRAD = 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)';
@@ -21,127 +23,10 @@ const HS_DOWNLOAD_FORM_GUID = {
   it: 'c325222b-2a19-4014-8261-31af82b84d9c', // "AI Competency Download – IT"
 };
 
-const ASSETS = {
-  en: { pdf: '/skillvue-ai-competency-one-pager-nl-en.pdf', book: '/book-meeting' },
-  it: { pdf: '/skillvue-ai-competency-one-pager-nl-it.pdf', book: '/prenota-incontro' },
-};
+// The per-language one-pagers are translations, not configuration: they live
+// in the catalogue with the words they belong to. The booking link comes
+// from the registry, which is what removes the /it prefix question.
 
-const C = {
-  en: {
-    badge: 'AI COMPETENCY ASSESSMENT',
-    titleLead: 'AI won’t replace you. Only its ',
-    titleHighlight: 'smarter users',
-    titleTail: ' will.',
-    subhead:
-      'Can your organization actually identify its smart AI users? The real AI advantage doesn’t come from the tools you buy — it comes from knowing who can use them to create impact.',
-    download: 'Download the PDF',
-    book: 'Book a conversation',
-    introBody:
-      'The investment in AI is staggering. The visibility into who can deliver? Close to zero. How many of your employees actually have real AI competency, rather than just claim it? This lack of visibility is a massive bottleneck. Right now, most companies are guessing.',
-    introPunch: 'We help you start knowing.',
-    pillFrom: 'GUESSING',
-    pillTo: 'KNOWING',
-    s1: {
-      n: '01', label: 'THE PROBLEM',
-      body: 'Companies often fail to verify their AI readiness or close the skill gaps necessary for successful AI adoption. Employers need teams that can collaborate fluently with AI, evaluate its outputs and adapt in real time. Yet, most can’t actually demonstrate these skills.',
-      bullets: [
-        'A list of self-claimed, not proven skills which don’t show smart AI users',
-        'Most AI-readiness assessments are unscientific and unvalidated checklists',
-        'Almost no one verifies critical thinking or whether AI outputs can be trusted',
-        'Most tools only test basic Gen-AI use, missing the future of intelligent machines',
-      ],
-    },
-    s2: {
-      n: '02', label: 'HOW WE VERIFY IT',
-      body: 'We combine technical skills verification with the mental judgment to steer AI, integrated into one validated framework and re-evaluated over time.',
-      inputLabel: 'INPUT', input: 'Tailored simulated test with realistic scenarios',
-      sig1Label: 'SIGNAL 1', sig1: 'Technical skill',
-      sig2Label: 'SIGNAL 2', sig2: 'Mental judgment',
-      integrated: 'Integrated into one framework',
-      outputLabel: 'OUTPUT', output: 'A validated competency profile for each individual of your organization',
-    },
-    s3: {
-      n: '03', label: 'WHY OURS IS DIFFERENT',
-      body: 'We verify if your people can create value with AI in the work they actually do before you invest in the technology. Four deliberate breaks from how the market tests today:',
-      cards: [
-        { t: 'Measured in one task', b: 'We verify technical skills and mental judgment in one, realistic scenario, reflecting what your team can actually do on the job.' },
-        { t: 'Built on scientific rigor', b: 'We use our own validated framework with human-in-the-loop review to verify how your team performs with AI at work.' },
-        { t: 'Tailored to your context', b: 'We build scenarios around your company: roles, workflows and real use cases, so results reflect readiness for your work, not a generic benchmark.' },
-        { t: 'Designed to scale', b: 'We combine a frontier AI model with expert human oversight, so scoring stays consistent and fast at volume, without scoring case by case.' },
-      ],
-    },
-    s4: {
-      n: '04', label: 'WHAT YOU GET',
-      body: 'Data-driven, not assumption-driven, visibility into where your people are today, who will perform, which skill gaps to close first, and who needs upskilling or reskilling. A decision-ready AI competency profile on a five-level behavioral scale showing exactly what to do next.',
-      levels: [
-        { t: 'Poor', b: 'AI competency is missing or consistently below standard.' },
-        { t: 'Limited', b: 'AI competency shows up unevenly, with frequent gaps.' },
-        { t: 'Adequate', b: 'AI competency is present at a consistent, baseline level.' },
-        { t: 'Strong', b: 'AI competency is demonstrated reliably and effectively, above expectations.' },
-        { t: 'Excellent', b: 'AI competency is exemplary and consistently above the expected standard.' },
-      ],
-    },
-    cta: { title: 'Ready to identify your smart AI users?', body: 'Get more value from your AI technology investments and avoid mistakes.', button: 'Book a conversation' },
-    footNote: 'SKILLVUE AI & SCIENCE LAB',
-  },
-  it: {
-    badge: 'VALUTAZIONE COMPETENZE AI',
-    titleLead: 'L’AI non ti sostituirà, ma chi saprà usarla in ',
-    titleHighlight: 'modo intelligente',
-    titleTail: ' sì.',
-    subhead:
-      'La tua organizzazione è davvero in grado di individuare queste persone? Il vero vantaggio non nasce dagli strumenti che acquisti, ma dalla capacità di riconoscere chi sa usarli per generare valore reale.',
-    download: 'Scarica il PDF',
-    book: 'Prenota un incontro',
-    introBody:
-      'Gli investimenti nell’AI sono enormi. La visibilità su chi può davvero generare risultati? Quasi zero. Quante persone nella tua azienda hanno competenze reali nell’AI? Questa mancanza di visibilità è un forte ostacolo. Oggi, la maggior parte delle aziende procede per ipotesi.',
-    introPunch: 'Noi ti aiutiamo a basarti sui dati.',
-    pillFrom: 'IPOTESI',
-    pillTo: 'DATI',
-    s1: {
-      n: '01', label: 'IL PROBLEMA',
-      body: 'Le aziende spesso non riescono a verificare il proprio livello di preparazione all’AI né a colmare i gap di competenze necessari per adottarla con successo. I datori di lavoro hanno bisogno di team capaci di collaborare con l’AI in modo fluido, valutarne i risultati e adattarsi in tempo reale. Eppure, la maggior parte delle persone non è in grado di dimostrare concretamente queste competenze.',
-      bullets: [
-        'Competenze autodichiarate, ma non verificate, che non rivelano chi sa davvero usare l’AI.',
-        'Molte valutazioni delle competenze AI si basano su checklist non validate e prive di rigore scientifico.',
-        'Il pensiero critico e la capacità di valutare l’affidabilità degli output dell’AI vengono raramente verificati.',
-        'La maggior parte si ferma alle basi dell’IA generativa, ignorando le vere potenzialità future di questa tecnologia.',
-      ],
-    },
-    s2: {
-      n: '02', label: 'COME VERIFICHIAMO LE COMPETENZE',
-      body: 'Valutiamo sia le competenze tecniche sia la capacità di giudizio necessaria per guidare l’AI, integrandole in un unico framework validato e rivalutandole nel tempo.',
-      inputLabel: 'INPUT', input: 'Test simulato personalizzato con scenari realistici',
-      sig1Label: 'SEGNALE 1', sig1: 'Hard skill',
-      sig2Label: 'SEGNALE 2', sig2: 'Soft skill',
-      integrated: 'Integrati in un unico framework',
-      outputLabel: 'OUTPUT', output: 'Un profilo di competenze validato per ogni persona della tua organizzazione',
-    },
-    s3: {
-      n: '03', label: 'PERCHÉ IL NOSTRO METODO È DIVERSO',
-      body: 'Prima di investire nella tecnologia, verifichiamo se il tuo team sa creare valore con l’AI nel lavoro quotidiano. Ecco quattro elementi che ci distinguono dai test oggi disponibili sul mercato:',
-      cards: [
-        { t: 'Misurato in un solo compito', b: 'Verifichiamo competenze tecniche e trasversali in un unico scenario realistico, che riflette ciò che il team sa davvero fare sul lavoro.' },
-        { t: 'Basato sul rigore scientifico', b: 'Utilizziamo il nostro framework validato con revisione umana per verificare come il team performa con l’AI al lavoro.' },
-        { t: 'Creato su misura', b: 'Costruiamo scenari attorno alla tua azienda: ruoli, workflow e casi d’uso reali, affinché i risultati riflettano la preparazione rispetto al lavoro concreto, non a un benchmark generico.' },
-        { t: 'Progettato per scalare', b: 'Combiniamo un modello di AI all’avanguardia con la supervisione di esperti, garantendo valutazioni rapide e coerenti anche su larga scala, senza analizzare ogni caso singolarmente.' },
-      ],
-    },
-    s4: {
-      n: '04', label: 'COSA OTTIENI',
-      body: 'Una visibilità basata sui dati, non su ipotesi: dove è oggi il tuo team, chi performerà, quali gap di competenze colmare per primi e chi ha bisogno di upskilling o reskilling. Un profilo delle competenze AI pronto a supportare le decisioni, strutturato su una scala comportamentale a cinque livelli e capace di indicare con chiarezza i prossimi passi.',
-      levels: [
-        { t: 'Insufficiente', b: 'La competenza AI è assente o costantemente sotto lo standard.' },
-        { t: 'Limitato', b: 'La competenza AI emerge in modo discontinuo, con lacune frequenti.' },
-        { t: 'Adeguato', b: 'La competenza AI è presente a un livello di base costante.' },
-        { t: 'Solido', b: 'La competenza AI è dimostrata con efficacia e continuità, oltre le aspettative.' },
-        { t: 'Eccellente', b: 'La competenza AI è esemplare e costantemente sopra lo standard atteso.' },
-      ],
-    },
-    cta: { title: 'Pronto a identificare chi sa davvero usare l’AI?', body: 'Ottieni più valore dai tuoi investimenti in tecnologia AI ed evita errori.', button: 'Prenota un incontro' },
-    footNote: 'SKILLVUE AI & SCIENCE LAB',
-  },
-};
 
 const SectionHead = ({ n, label }) => (
   <div className="flex items-baseline gap-4 mb-5">
@@ -166,15 +51,12 @@ export const getStaticProps = messagesFor('lp/ai-competency-newsletter');
 
 export default function AiCompetencyNewsletterPage() {
   const { lang } = useLanguage();
-  const isIt = lang === 'it';
-  const t = isIt ? C.it : C.en;
-  const a = isIt ? ASSETS.it : ASSETS.en;
-  const langCode = isIt ? 'it' : 'en';
+  const t = useTranslations('lp.ai-competency-newsletter');
 
   const track = (action) => {
     if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: `lp_${action}`, lp: 'ai-competency-newsletter', language: langCode });
+      window.dataLayer.push({ event: `lp_${action}`, lp: 'ai-competency-newsletter', language: lang });
     }
   };
 
@@ -189,7 +71,7 @@ export default function AiCompetencyNewsletterPage() {
   // personalized newsletter link, e.g. ...?e={{contact.email}}). No gate, non-blocking.
   const logDownloadToHubSpot = () => {
     const email = readParam('e') || readParam('email');
-    const formGuid = HS_DOWNLOAD_FORM_GUID[langCode];
+    const formGuid = HS_DOWNLOAD_FORM_GUID[lang];
     if (!formGuid || !email) return; // unknown visitor → stays anonymous
     const hutk = readCookie('hubspotutk');
     try {
@@ -237,17 +119,17 @@ export default function AiCompetencyNewsletterPage() {
 
           {/* HERO */}
           <header className="mb-14 md:mb-20">
-            <span className="inline-block text-[11px] font-bold tracking-[0.16em] uppercase mb-4" style={{ color: '#7b7df9' }}>{t.badge}</span>
+            <span className="inline-block text-[11px] font-bold tracking-[0.16em] uppercase mb-4" style={{ color: '#7b7df9' }}>{t('badge')}</span>
             <h1 className="text-[32px] md:text-[52px] font-bold tracking-[-0.02em] text-white/95" style={{ lineHeight: 1.08 }}>
-              {t.titleLead}
-              <span className="gradient-text" style={{ backgroundImage: GRAD }}>{t.titleHighlight}</span>
-              {t.titleTail}
+              {t('titleLead')}
+              <span className="gradient-text" style={{ backgroundImage: GRAD }}>{t('titleHighlight')}</span>
+              {t('titleTail')}
             </h1>
-            <p className="text-[16px] md:text-[18px] text-white/65 leading-[1.55] mt-5 max-w-2xl">{t.subhead}</p>
+            <p className="text-[16px] md:text-[18px] text-white/65 leading-[1.55] mt-5 max-w-2xl">{t('subhead')}</p>
             <div className="flex flex-col sm:flex-row gap-3 mt-8">
-              <a href={a.pdf} download onClick={() => handleDownload('download')} data-testid="download-cta"
+              <a href={t('assets.pdf')} download onClick={() => handleDownload('download')} data-testid="download-cta"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
-                <Download className="h-[18px] w-[18px]" /> {t.download}
+                <Download className="h-[18px] w-[18px]" /> {t('download')}
               </a>
             </div>
           </header>
@@ -255,21 +137,21 @@ export default function AiCompetencyNewsletterPage() {
           {/* INTRO strip */}
           <section className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 mb-16 flex flex-col md:flex-row md:items-center gap-6">
             <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] flex-1">
-              {t.introBody} <span className="font-semibold" style={{ color: '#8a8cff' }}>{t.introPunch}</span>
+              {t('introBody')} <span className="font-semibold" style={{ color: '#8a8cff' }}>{t('introPunch')}</span>
             </p>
             <div className="flex items-center gap-3 shrink-0 md:pl-8 md:border-l md:border-white/10">
-              <span className="text-[15px] font-bold tracking-[0.06em] text-white/25 uppercase line-through decoration-white/25">{t.pillFrom}</span>
+              <span className="text-[15px] font-bold tracking-[0.06em] text-white/25 uppercase line-through decoration-white/25">{t('pillFrom')}</span>
               <ArrowRight className="h-4 w-4 text-white/40" />
-              <span className="text-[15px] font-extrabold tracking-[0.06em] uppercase gradient-text" style={{ backgroundImage: GRAD }}>{t.pillTo}</span>
+              <span className="text-[15px] font-extrabold tracking-[0.06em] uppercase gradient-text" style={{ backgroundImage: GRAD }}>{t('pillTo')}</span>
             </div>
           </section>
 
           {/* 01 THE PROBLEM */}
           <section className="mb-16">
-            <SectionHead n={t.s1.n} label={t.s1.label} />
-            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t.s1.body}</p>
+            <SectionHead n={t('s1.n')} label={t('s1.label')} />
+            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t('s1.body')}</p>
             <div className="grid sm:grid-cols-2 gap-x-8 gap-y-5">
-              {t.s1.bullets.map((b, i) => (
+              {t.raw('s1.bullets').map((b, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="mt-[7px] w-2 h-2 rotate-45 shrink-0 rounded-[1px]" style={{ background: i % 2 === 0 ? '#FF5656' : '#7b7df9' }} />
                   <p className="text-[14px] md:text-[15px] text-white/75 leading-[1.5]">{b}</p>
@@ -280,15 +162,15 @@ export default function AiCompetencyNewsletterPage() {
 
           {/* 02 HOW WE VERIFY IT */}
           <section className="mb-16">
-            <SectionHead n={t.s2.n} label={t.s2.label} />
-            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t.s2.body}</p>
+            <SectionHead n={t('s2.n')} label={t('s2.label')} />
+            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t('s2.body')}</p>
 
             <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 md:p-7">
               <div className="flex flex-col md:flex-row items-stretch md:items-center gap-4 md:gap-3">
                 {/* INPUT */}
                 <div className="flex-1 rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                  <span className="text-[10px] font-bold tracking-[0.16em] uppercase text-white/40">{t.s2.inputLabel}</span>
-                  <p className="text-[14px] font-semibold text-white/90 mt-1.5 leading-[1.35]">{t.s2.input}</p>
+                  <span className="text-[10px] font-bold tracking-[0.16em] uppercase text-white/40">{t('s2.inputLabel')}</span>
+                  <p className="text-[14px] font-semibold text-white/90 mt-1.5 leading-[1.35]">{t('s2.input')}</p>
                 </div>
 
                 <ArrowRight className="hidden md:block h-5 w-5 text-[#7b7df9] shrink-0" />
@@ -297,7 +179,7 @@ export default function AiCompetencyNewsletterPage() {
                 {/* SIGNALS + integrated */}
                 <div className="flex-[1.3]">
                   <div className="grid grid-cols-2 gap-3">
-                    {[[t.s2.sig1Label, t.s2.sig1], [t.s2.sig2Label, t.s2.sig2]].map(([l, v], i) => (
+                    {[[t('s2.sig1Label'), t('s2.sig1')], [t('s2.sig2Label'), t('s2.sig2')]].map(([l, v], i) => (
                       <div key={i} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
                         <span className="text-[10px] font-bold tracking-[0.16em] uppercase text-white/40">{l}</span>
                         <p className="text-[14px] font-semibold text-white/90 mt-1.5">{v}</p>
@@ -306,7 +188,7 @@ export default function AiCompetencyNewsletterPage() {
                   </div>
                   <div className="flex justify-center gap-16 my-2 text-[#7b7df9]"><ArrowDown className="h-4 w-4" /><ArrowDown className="h-4 w-4" /></div>
                   <div className="rounded-xl p-3 text-center" style={{ background: 'rgba(75,77,247,0.12)', border: '1px solid rgba(123,125,249,0.25)' }}>
-                    <p className="text-[13px] font-semibold" style={{ color: '#a9aaff' }}>{t.s2.integrated}</p>
+                    <p className="text-[13px] font-semibold" style={{ color: '#a9aaff' }}>{t('s2.integrated')}</p>
                   </div>
                 </div>
 
@@ -315,8 +197,8 @@ export default function AiCompetencyNewsletterPage() {
 
                 {/* OUTPUT */}
                 <div className="flex-1 rounded-xl p-4" style={{ background: 'linear-gradient(160deg, #23234d 0%, #16163a 100%)', border: '1px solid rgba(123,125,249,0.3)' }}>
-                  <span className="text-[10px] font-bold tracking-[0.16em] uppercase" style={{ color: '#8a8cff' }}>{t.s2.outputLabel}</span>
-                  <p className="text-[14px] font-semibold text-white mt-1.5 leading-[1.35]">{t.s2.output}</p>
+                  <span className="text-[10px] font-bold tracking-[0.16em] uppercase" style={{ color: '#8a8cff' }}>{t('s2.outputLabel')}</span>
+                  <p className="text-[14px] font-semibold text-white mt-1.5 leading-[1.35]">{t('s2.output')}</p>
                 </div>
               </div>
             </div>
@@ -324,10 +206,10 @@ export default function AiCompetencyNewsletterPage() {
 
           {/* 03 WHY OURS IS DIFFERENT */}
           <section className="mb-16">
-            <SectionHead n={t.s3.n} label={t.s3.label} />
-            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t.s3.body}</p>
+            <SectionHead n={t('s3.n')} label={t('s3.label')} />
+            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t('s3.body')}</p>
             <div className="grid sm:grid-cols-2 gap-4">
-              {t.s3.cards.map((card, i) => (
+              {t.raw('s3.cards').map((card, i) => (
                 <div key={i} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6">
                   <h3 className="text-[16px] font-bold text-white/95 mb-2">{card.t}</h3>
                   <p className="text-[14px] text-white/60 leading-[1.55]">{card.b}</p>
@@ -338,11 +220,11 @@ export default function AiCompetencyNewsletterPage() {
 
           {/* 04 WHAT YOU GET */}
           <section className="mb-16">
-            <SectionHead n={t.s4.n} label={t.s4.label} />
-            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t.s4.body}</p>
+            <SectionHead n={t('s4.n')} label={t('s4.label')} />
+            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t('s4.body')}</p>
             <div className="space-y-2.5">
-              {t.s4.levels.map((lvl, i) => {
-                const top = i === t.s4.levels.length - 1;
+              {t.raw('s4.levels').map((lvl, i) => {
+                const top = i === t.raw('s4.levels').length - 1;
                 return (
                   <div key={i} className="flex items-center gap-4 rounded-xl px-5 py-4"
                     style={top
@@ -362,25 +244,25 @@ export default function AiCompetencyNewsletterPage() {
             style={{ background: 'linear-gradient(120deg, #1a1a3f 0%, #201436 45%, #3a1730 100%)' }}>
             <div className="pointer-events-none absolute -top-24 right-[-80px] w-[420px] h-[420px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(255,86,86,0.22) 0%, rgba(255,86,86,0) 65%)' }} />
             <div className="relative">
-              <h2 className="text-[26px] md:text-[38px] font-bold text-white tracking-[-0.02em] mb-3">{t.cta.title}</h2>
-              <p className="text-[15px] md:text-[16px] text-white/65 mb-8 max-w-xl mx-auto">{t.cta.body}</p>
+              <h2 className="text-[26px] md:text-[38px] font-bold text-white tracking-[-0.02em] mb-3">{t('cta.title')}</h2>
+              <p className="text-[15px] md:text-[16px] text-white/65 mb-8 max-w-xl mx-auto">{t('cta.body')}</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <a href={a.book} onClick={() => track('book_bottom')}
+                <a href={href('book-meeting', lang)} onClick={() => track('book_bottom')}
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[15px] font-semibold text-[#1a1a3f] bg-white hover:opacity-90 transition-all duration-300">
-                  {t.cta.button} <ArrowRight className="h-4 w-4" />
+                  {t('cta.button')} <ArrowRight className="h-4 w-4" />
                 </a>
-                <a href={a.pdf} download onClick={() => handleDownload('download_bottom')}
+                <a href={t('assets.pdf')} download onClick={() => handleDownload('download_bottom')}
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[15px] font-semibold text-white border border-white/20 hover:bg-white/[0.08] transition-all duration-300">
-                  <Download className="h-[18px] w-[18px]" /> {t.download}
+                  <Download className="h-[18px] w-[18px]" /> {t('download')}
                 </a>
               </div>
             </div>
           </section>
 
-          <p className="text-[11px] font-medium tracking-[0.16em] uppercase text-white/25 mt-10 text-center">{t.footNote}</p>
+          <p className="text-[11px] font-medium tracking-[0.16em] uppercase text-white/25 mt-10 text-center">{t('footNote')}</p>
         </div>
 
-        <TrustLogosBar lang={isIt ? 'it' : 'en'} />
+        <TrustLogosBar lang={lang} />
       </main>
 
       <Footer />

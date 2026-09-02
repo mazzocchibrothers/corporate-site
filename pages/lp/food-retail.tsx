@@ -25,10 +25,9 @@ export const getStaticProps = messagesFor('lp/food-retail');
 export default function FoodRetailPage() {
   const { t, lang } = useLanguage();
   const formRef = useRef(null);
-  const isIt = lang === 'it';
 
   useEffect(() => {
-    const formId = isIt ? FORM_IDS.it : FORM_IDS.en;
+    const formId = FORM_IDS[lang] ?? FORM_IDS.en;
 
     const createForm = () => {
       if (window.hbspt && formRef.current) {
@@ -61,7 +60,7 @@ export default function FoodRetailPage() {
         script.parentNode.removeChild(script);
       }
     };
-  }, [isIt]);
+  }, [lang]);
 
   // Title strings come from the shared translation dictionary.
   const titleLead = t('Your next store manager is');
@@ -127,7 +126,7 @@ export default function FoodRetailPage() {
             </div>
           </div>
         </section>
-        <TrustLogosBar lang={isIt ? 'it' : 'en'} />
+        <TrustLogosBar lang={lang} />
       </div>
       <Footer />
     </>

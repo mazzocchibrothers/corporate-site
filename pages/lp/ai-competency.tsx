@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -13,53 +14,11 @@ const TITLE = 'Skillvue — AI Competency One-Pager';
 const HS_PORTAL_ID = '48438018';
 const HS_REGION = 'na1';
 
-const ASSETS = {
-  en: {
-    formId: '313b9013-e406-4914-9a18-7870fb99957f',
-    pdf: '/skillvue-ai-competency-one-pager.pdf',
-    downloadName: 'Skillvue-AI-Competency-One-Pager.pdf',
-    page1: '/ai-competency-page-1.png',
-    page2: '/ai-competency-page-2.png',
-  },
-  it: {
-    formId: '3f50c248-96fa-4b8c-a7dd-893264f65d6e',
-    pdf: '/skillvue-ai-competency-one-pager-it.pdf',
-    downloadName: 'Skillvue-AI-Competency-One-Pager-IT.pdf',
-    page1: '/ai-competency-page-it-1.png',
-    page2: '/ai-competency-page-it-2.png',
-  },
-};
+// The two HubSpot forms ask different questions, so the id is data. The
+// per-language files are translations and live in the catalogue with the
+// words they belong to.
+const FORM_IDS = { en: '313b9013-e406-4914-9a18-7870fb99957f', it: '3f50c248-96fa-4b8c-a7dd-893264f65d6e' };
 
-const COPY = {
-  en: {
-    badge: 'AI COMPETENCY ASSESSMENT',
-    titleLead: "AI won't replace you. Only its ",
-    titleHighlight: 'smarter users',
-    titleTail: ' will.',
-    intro:
-      "In page 2 you unlock: the verification framework, the 5-level competency scale and what you get.",
-    unlockLead: 'Complete the form to unlock page 2 and download the PDF.',
-    download: 'Download PDF',
-    lockedTitle: 'Page 2 locked',
-    lockedHint: 'Fill in the form to unlock',
-    unlockedMsg: 'Unlocked. Scroll to read page 2.',
-    scrollHint: 'Scroll — page 2 of 2',
-  },
-  it: {
-    badge: 'AI COMPETENCY ASSESSMENT',
-    titleLead: "L'AI non ti sostituirà, ma chi saprà usarla in ",
-    titleHighlight: 'modo intelligente',
-    titleTail: ' sì.',
-    intro:
-      "Nella pagina 2 sblocchi: il framework di verifica, la scala di competenza a 5 livelli e cosa ottieni.",
-    unlockLead: 'Compila il modulo per sbloccare la pagina 2 e scaricare il PDF.',
-    download: 'Scarica il PDF',
-    lockedTitle: 'Pagina 2 bloccata',
-    lockedHint: 'Compila il modulo per sbloccare',
-    unlockedMsg: 'Sbloccato. Scorri per leggere la pagina 2.',
-    scrollHint: 'Scorri — pagina 2 di 2',
-  },
-};
 
 
 // One line per page is the whole contract: the argument is this route's `id` in
@@ -68,9 +27,7 @@ export const getStaticProps = messagesFor('lp/ai-competency');
 
 export default function AiCompetencyPage() {
   const { lang } = useLanguage();
-  const isIt = lang === 'it';
-  const c = isIt ? COPY.it : COPY.en;
-  const a = isIt ? ASSETS.it : ASSETS.en;
+  const t = useTranslations('lp.ai-competency');
 
   const [unlocked, setUnlocked] = useState(false);
   const [showLock, setShowLock] = useState(false);
@@ -89,7 +46,7 @@ export default function AiCompetencyPage() {
   useEffect(() => {
     if (unlocked) return;
 
-    const formId = isIt ? ASSETS.it.formId : ASSETS.en.formId;
+    const formId = FORM_IDS[lang] ?? FORM_IDS.en;
 
     const createForm = () => {
       if (window.hbspt && formRef.current) {
@@ -120,7 +77,7 @@ export default function AiCompetencyPage() {
     return () => {
       if (script.parentNode) script.parentNode.removeChild(script);
     };
-  }, [unlocked, isIt]);
+  }, [unlocked, lang]);
 
   return (
     <>
@@ -189,16 +146,16 @@ export default function AiCompetencyPage() {
               {/* LEFT — description + HubSpot form */}
               <div className="lg:col-span-5">
                 <span className="inline-block text-[10px] md:text-[11px] font-bold tracking-[0.15em] uppercase mb-3" style={{ color: '#7b7df9' }}>
-                  {c.badge}
+                  {t('badge')}
                 </span>
                 <h1 className="text-[23px] font-semibold md:text-[30px] md:font-bold tracking-[-0.02em] text-white/95 mb-2.5" style={{ lineHeight: 1.12 }}>
-                  {c.titleLead}
+                  {t('titleLead')}
                   <span className="font-bold gradient-text" style={{ display: 'inline', backgroundImage: 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)' }}>
-                    {c.titleHighlight}
+                    {t('titleHighlight')}
                   </span>
-                  {c.titleTail}
+                  {t('titleTail')}
                 </h1>
-                <p className="text-[13px] text-white/65 leading-[1.5] mb-4 max-w-md">{c.intro}</p>
+                <p className="text-[13px] text-white/65 leading-[1.5] mb-4 max-w-md">{t('intro')}</p>
 
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-5 max-w-[560px]">
                   {unlocked ? (
@@ -207,16 +164,16 @@ export default function AiCompetencyPage() {
                         <Check className="h-4 w-4" style={{ color: '#7b7df9' }} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-[13px] text-white/80 mb-2.5">{c.unlockedMsg}</p>
-                        <a href={a.pdf} download={a.downloadName} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-[13px] font-semibold text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
-                          <Download className="h-4 w-4" /> {c.download}
+                        <p className="text-[13px] text-white/80 mb-2.5">{t('unlockedMsg')}</p>
+                        <a href={t('assets.pdf')} download={t('assets.downloadName')} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-[13px] font-semibold text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
+                          <Download className="h-4 w-4" /> {t('download')}
                         </a>
                       </div>
                     </div>
                   ) : (
                     <>
                       <p className="text-[12px] font-semibold text-white/80 mb-3 flex items-center gap-2">
-                        <Lock className="h-3.5 w-3.5" style={{ color: '#7b7df9' }} /> {c.unlockLead}
+                        <Lock className="h-3.5 w-3.5" style={{ color: '#7b7df9' }} /> {t('unlockLead')}
                       </p>
                       <div id="lead-form" ref={formRef} data-testid="lead-form" style={{ minHeight: '220px' }} />
                     </>
@@ -233,12 +190,12 @@ export default function AiCompetencyPage() {
                   {/* Scrolling content */}
                   <div ref={scrollRef} onScroll={handleDocScroll} className="absolute inset-0 overflow-y-auto overflow-x-hidden">
                     {/* Page 1 — free */}
-                    <img ref={page1Ref} src={a.page1} alt="AI Competency One-Pager — page 1" className="block w-full select-none" draggable={false} />
+                    <img ref={page1Ref} src={t('assets.page1')} alt="AI Competency One-Pager — page 1" className="block w-full select-none" draggable={false} />
 
                     {/* Page 2 — scrollable but obscured until unlocked */}
                     <div className="relative">
                       <img
-                        src={a.page2}
+                        src={t('assets.page2')}
                         alt="AI Competency One-Pager — page 2"
                         className="block w-full transition-[filter] duration-500"
                         style={unlocked ? {} : { filter: 'blur(6px)', userSelect: 'none', pointerEvents: 'none' }}
@@ -258,8 +215,8 @@ export default function AiCompetencyPage() {
                         <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4" style={{ background: 'rgba(255,255,255,0.12)', backdropFilter: 'blur(6px)' }}>
                           <Lock className="h-6 w-6 text-white" />
                         </div>
-                        <p className="text-[16px] font-bold text-white">{c.lockedTitle}</p>
-                        <p className="text-[13px] text-white/75 mt-1">{c.lockedHint}</p>
+                        <p className="text-[16px] font-bold text-white">{t('lockedTitle')}</p>
+                        <p className="text-[13px] text-white/75 mt-1">{t('lockedHint')}</p>
                       </div>
                     </div>
                   )}
@@ -270,7 +227,7 @@ export default function AiCompetencyPage() {
                       className="absolute bottom-0 left-0 right-0 flex items-center justify-center gap-2 py-3 text-[13px] font-semibold text-white pointer-events-none transition-opacity duration-500"
                       style={{ opacity: showLock ? 0 : 1, background: 'linear-gradient(180deg, rgba(8,8,12,0) 0%, rgba(8,8,12,0.92) 55%)' }}
                     >
-                      <ChevronDown className="h-4 w-4 animate-bounce" /> {c.scrollHint}
+                      <ChevronDown className="h-4 w-4 animate-bounce" /> {t('scrollHint')}
                     </div>
                   )}
                 </div>
@@ -281,7 +238,7 @@ export default function AiCompetencyPage() {
         </section>
 
         <div className="compact-logos">
-          <TrustLogosBar lang={isIt ? 'it' : 'en'} />
+          <TrustLogosBar lang={lang} />
         </div>
       </div>
 
