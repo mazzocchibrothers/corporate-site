@@ -28,7 +28,7 @@ const walk = (dir) =>
   readdirSync(join(ROOT, dir), { withFileTypes: true }).flatMap((e) =>
     e.isDirectory() ? walk(join(dir, e.name)) : [join(dir, e.name)]);
 
-const EXT = /\.(png|jpe?g|webp|avif|gif|svg|pdf|mp4|webm|woff2?|ico)$/i;
+const EXT = /\.(png|jpe?g|webp|avif|gif|svg|pdf|mp4|webm|woff2?|ico|webmanifest)$/i;
 const sources = [...walk('app'), ...walk('components'), ...walk('data'), ...walk('i18n'), ...walk('styles')]
   .filter((f) => /\.(tsx?|css|json)$/.test(f));
 
@@ -39,7 +39,7 @@ for (const file of sources) {
   const src = readFileSync(join(ROOT, file), 'utf8');
 
   // literal
-  for (const [, path] of src.matchAll(/["'`(](\/[A-Za-z0-9._%()/ +-]+\.[a-z0-9]{2,5})["'`)]/gi)) {
+  for (const [, path] of src.matchAll(/["'`(](\/[A-Za-z0-9._%()/ +-]+\.[a-z0-9]{2,12})["'`)]/gi)) {
     if (EXT.test(path) && !path.startsWith('/_next')) want(decodeURIComponent(path), file);
   }
 
@@ -62,8 +62,39 @@ for (const file of sources) {
 // The catalogue holds a handful too — a one-pager's PDF, a coverage map.
 for (const locale of ['en', 'it']) {
   const cat = readFileSync(join(ROOT, `messages/${locale}.json`), 'utf8');
-  for (const [, path] of cat.matchAll(/"(\/[A-Za-z0-9._%()/ +-]+\.[a-z0-9]{2,5})"/gi)) {
+  for (const [, path] of cat.matchAll(/"(\/[A-Za-z0-9._%()/ +-]+\.[a-z0-9]{2,12})"/gi)) {
     if (EXT.test(path)) want(decodeURIComponent(path), `messages/${locale}.json`);
+  }
+}
+
+/**
+ * Files nothing in the source ever names, because the thing that asks for them
+ * is not the app.
+ *
+ * A crawler asks for /robots.txt by name. A browser asks for /favicon.ico by
+ * name. site.webmanifest is named once, in the layout, and the two icons it
+ * points at are named only inside the manifest itself — a JSON file in public/,
+ * which nothing scans.
+ *
+ * All four were deleted by a sweep for assets no source file references, which
+ * is exactly what they are. robots.txt took `Disallow: /lp/` and the sitemap
+ * declaration with it; the manifest took the install icons. Nothing failed:
+ * the build does not fetch them either.
+ */
+const WELL_KNOWN = [
+  '/robots.txt',
+  '/favicon.ico',
+  '/site.webmanifest',
+];
+
+for (const path of WELL_KNOWN) want(path, 'requested by name — see WELL_KNOWN');
+
+// The manifest names its own icons and lives in public/, so it is the one
+// asset that is also a source of references.
+const manifest = join(ROOT, 'public/site.webmanifest');
+if (existsSync(manifest)) {
+  for (const icon of JSON.parse(readFileSync(manifest, 'utf8')).icons ?? []) {
+    want(icon.src, 'public/site.webmanifest');
   }
 }
 
