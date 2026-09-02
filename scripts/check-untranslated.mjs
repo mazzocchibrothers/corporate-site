@@ -104,7 +104,7 @@ const DELIBERATE = [
   ['blog.attitude-vs-competence.methods.', 'named methodologies (BEI, STAR)'],
   // Product surface named in English on both sites.
   ['solutions.talent-acquisition.taFunnel.', 'product surface named in English on the Italian page too'],
-  ['solutions.project-resourcing.prHero.body', 'English copy on the Italian page (#139)'],
+  ['solutions.project-resourcing.prHero.body', 'English copy on the Italian page (#142)'],
 ];
 
 const allowed = (path) =>
