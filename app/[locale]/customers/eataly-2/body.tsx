@@ -76,7 +76,7 @@ export default function EatalyStoryPage() {
         {/* ===== HERO ===== */}
         <section className="relative pt-[80px]">
           <div className="absolute inset-0 overflow-hidden">
-            <img src="/logos/eataly-explore-stories.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
+            <img src="/logos/eataly-explore-stories.avif" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
             <div className="absolute inset-0 bg-black/40" />
           </div>
 

@@ -129,7 +129,7 @@ export default function Mediaset2StoryPage() {
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5">
                   <div className="flex items-center gap-3 mb-3 pb-3 border-b border-white/[0.08]">
                     <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">
-                      <img loading="lazy" decoding="async" src="/logos/mediaset-logo.png" alt="Mediaset logo" className="w-full h-full object-contain " />
+                      <img loading="lazy" decoding="async" src="/logos/mediaset-logo.avif" alt="Mediaset logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{t('clientCard.label')}</span>

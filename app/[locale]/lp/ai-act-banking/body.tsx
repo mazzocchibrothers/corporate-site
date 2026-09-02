@@ -184,7 +184,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 { src: '/logos/webuild.svg', alt: 'Webuild', w: 120, h: 40 },
                 { src: '/logos/aeroporti-di-roma.svg', alt: 'Aeroporti di Roma', w: 140, h: 40 },
                 { src: '/logos/banca-di-asti.svg', alt: 'Banca di Asti', w: 140, h: 40 },
-                { src: '/logos/monte-paschi.png', alt: 'Monte dei Paschi di Siena', keepColor: true, w: 120, h: 52 },
+                { src: '/logos/monte-paschi.avif', alt: 'Monte dei Paschi di Siena', keepColor: true, w: 120, h: 52 },
                 { src: '/logos/unicredit.png', alt: 'UniCredit', keepColor: true, w: 150, h: 40 },
               ];
               const bwStyle = { filter: 'brightness(0)', opacity: 0.55 } as const;

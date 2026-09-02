@@ -142,7 +142,7 @@ export default function EuropAssistanceLandingPage() {
                 <div className="mt-4 rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-6">
                   <div className="flex items-center gap-4 mb-5 pb-5 border-b border-white/[0.08]">
                     <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center p-2">
-                      <img loading="lazy" decoding="async" src="/logos/europ-assistance-logo-2026.png" alt="Europ Assistance logo" className="w-full h-full object-contain" />
+                      <img loading="lazy" decoding="async" src="/logos/europ-assistance-logo-2026.avif" alt="Europ Assistance logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{t('clientCard.label')}</span>

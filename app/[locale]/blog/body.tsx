@@ -16,8 +16,8 @@ import { href } from '@/i18n/routes';
 // slug as the post itself — so the card and the page it opens are neighbours in
 // the catalogue instead of an `id: 11` in a module array.
 const ARTICLES = [
-  { id: 'newsletter-august-2026', image: '/newsletter-august-cover.jpg', href: '/blog/newsletter-august-2026' },
-  { id: 'newsletter-july-2026', image: '/newsletter-july-cover.png', href: '/blog/newsletter-july-2026' },
+  { id: 'newsletter-august-2026', image: '/newsletter-august-cover.avif', href: '/blog/newsletter-august-2026' },
+  { id: 'newsletter-july-2026', image: '/newsletter-july-cover.avif', href: '/blog/newsletter-july-2026' },
   { id: 'attitude-vs-competence', image: 'https://images.unsplash.com/photo-1713865469900-d12502a39875?w=600&h=400&fit=crop', href: '/blog/attitude-vs-competence' },
   { id: 'recruitment-biases', image: 'https://images.unsplash.com/photo-1758519288480-1489c17b1519?w=600&h=400&fit=crop', href: '/blog/recruitment-biases' },
   { id: 'negotiation-techniques', image: 'https://images.unsplash.com/photo-1745847768380-2caeadbb3b71?w=600&h=400&fit=crop', href: '/blog/negotiation-techniques' },

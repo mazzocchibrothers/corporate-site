@@ -12,9 +12,9 @@ import { useRouter } from '@/i18n/navigation';
 
 // ─── Fill these in when the assets/links are ready ──────────────────────────
 const IMAGES = {
-  vivatech: '/newsletter-july-vivatech.jpeg',
-  execTa: '/newsletter-july-execta.jpeg',
-  aiReadiness: '/newsletter-july-ai-readiness.png',
+  vivatech: '/newsletter-july-vivatech.avif',
+  execTa: '/newsletter-july-execta.avif',
+  aiReadiness: '/newsletter-july-ai-readiness.avif',
   fidia: '/newsletter-july-fidia.webp',
 };
 const LINKS = {

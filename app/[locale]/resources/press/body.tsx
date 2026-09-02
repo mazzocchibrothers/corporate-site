@@ -41,7 +41,7 @@ const pressArticles = [
   },
   {
     publication: 'StartupRise UK',
-    logo: '/logos/press-startuprise.png',
+    logo: '/logos/press-startuprise.avif',
     logoH: 28,
     title: 'HRtech Startup Skillvue Raises €5.5 Mn Seed Funding',
     url: 'https://startuprise.co.uk/hrtech-startup-skillvue-raises-e5-5-mn-seed-funding/',

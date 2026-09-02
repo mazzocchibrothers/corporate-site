@@ -131,7 +131,7 @@ function ColumnCard({ data, delay, t }) {
             {data.logos.map((logo) => (
               <div key={logo} className="flex items-center justify-center h-8">
                 <img
-                  src={`/logos/integrations/${logo}_white.png`}
+                  src={`/logos/integrations/${logo}_white.avif`}
                   alt={logo}
                   className="h-5 w-auto max-w-[80px] object-contain"
                   style={{ filter: 'grayscale(1) brightness(0.3)', opacity: 0.5 }}

@@ -149,8 +149,8 @@ export default function CareerAspirationInsuranceVetrina() {
             {/* Logo marquee */}
             {(() => {
               const logos = [
-                { src: '/logos/generali.png', alt: 'Generali' },
-                { src: '/logos/reale-mutua.png', alt: 'Reale Mutua' },
+                { src: '/logos/generali.avif', alt: 'Generali' },
+                { src: '/logos/reale-mutua.avif', alt: 'Reale Mutua' },
                 { src: '/logos/unipol.svg', alt: 'Unipol' },
                 { src: '/logos/plenitude.png', alt: 'Plenitude', square: true },
                 { src: '/logos/windtre.svg', alt: 'WindTre Business' },

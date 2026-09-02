@@ -143,7 +143,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             {(() => {
               const logos: { src: string; alt: string; keepColor?: boolean; w?: number; h?: number }[] = [
                 { src: '/logos/essilorluxottica.png', alt: 'EssilorLuxottica', w: 150, h: 40 },
-                { src: '/logos/eataly.png', alt: 'Eataly', w: 100, h: 40 },
+                { src: '/logos/eataly.avif', alt: 'Eataly', w: 100, h: 40 },
                 { src: '/logos/nespresso.png', alt: 'Nespresso', w: 100, h: 52 },
                 { src: '/logos/miroglio.png', alt: 'Miroglio Group', keepColor: true, w: 130, h: 40 },
                 { src: '/logos/subdued-logo.png', alt: 'Subdued', w: 100, h: 40 },

@@ -15,10 +15,10 @@ import { href, localizePath } from '@/i18n/routes';
 // Empty string '' → a labelled dashed placeholder box renders instead.
 // Put files in public/ as: /newsletter-august-<key>.<ext>
 const IMAGES = {
-  events: { en: '/newsletter-august-events-en.jpg', it: '/newsletter-august-events-it.jpg' },
+  events: { en: '/newsletter-august-events-en.avif', it: '/newsletter-august-events-it.avif' },
   // per-language artwork: the headline is baked into the image
-  supermarkets: { en: '/newsletter-august-supermarkets-en.jpg', it: '/newsletter-august-supermarkets-it.jpg' },
-  unicomm: '/newsletter-august-unicomm.jpg',
+  supermarkets: { en: '/newsletter-august-supermarkets-en.avif', it: '/newsletter-august-supermarkets-it.avif' },
+  unicomm: '/newsletter-august-unicomm.avif',
 };
 // external links → full https URL; internal links → relative path ('/lp/...', '/customers/...')
 const LINKS = {

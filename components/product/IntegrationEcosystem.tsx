@@ -5,19 +5,19 @@ import { useLocale, useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 
 const integrations = [
-  { name: 'Oracle', logo: '/logos/integrations/oracle_white.png' },
-  { name: 'SAP SuccessFactors', logo: '/logos/integrations/sap-successfactors_white.png' },
-  { name: 'Workday', logo: '/logos/integrations/workday_white.png' },
-  { name: 'SmartRecruiters', logo: '/logos/integrations/smartrecruiters_white.png' },
-  { name: 'Greenhouse', logo: '/logos/integrations/greenhouse_onblack.png' },
-  { name: 'BambooHR', logo: '/logos/integrations/bamboohr_white.png' },
-  { name: 'Cornerstone', logo: '/logos/integrations/cornerstone_white.png' },
-  { name: 'Docebo', logo: '/logos/integrations/docebo_white.png' },
+  { name: 'Oracle', logo: '/logos/integrations/oracle_white.avif' },
+  { name: 'SAP SuccessFactors', logo: '/logos/integrations/sap-successfactors_white.avif' },
+  { name: 'Workday', logo: '/logos/integrations/workday_white.avif' },
+  { name: 'SmartRecruiters', logo: '/logos/integrations/smartrecruiters_white.avif' },
+  { name: 'Greenhouse', logo: '/logos/integrations/greenhouse_onblack.avif' },
+  { name: 'BambooHR', logo: '/logos/integrations/bamboohr_white.avif' },
+  { name: 'Cornerstone', logo: '/logos/integrations/cornerstone_white.avif' },
+  { name: 'Docebo', logo: '/logos/integrations/docebo_white.avif' },
   { name: 'SAP Learning', logo: '/logos/integrations/sap_clean.png' },
   { name: 'Oracle HCM', logo: '/logos/integrations/oraclehcm_color.png' },
-  { name: 'ADP', logo: '/logos/integrations/adp_white.png' },
-  { name: 'Sage', logo: '/logos/integrations/sage_white.png' },
-  { name: 'Lever', logo: '/logos/integrations/lever_white.png' },
+  { name: 'ADP', logo: '/logos/integrations/adp_white.avif' },
+  { name: 'Sage', logo: '/logos/integrations/sage_white.avif' },
+  { name: 'Lever', logo: '/logos/integrations/lever_white.avif' },
   { name: 'iCIMS', logo: '/logos/integrations/icims_onblack.png' },
 ];
 

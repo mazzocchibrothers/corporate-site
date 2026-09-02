@@ -431,7 +431,7 @@ export default function InsMercatoStoryPage() {
                 <p className="text-[24px] font-medium text-[#121212]/75 leading-[1.75] italic mb-6">"{t('quote.text')}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-[#4b4df7]/[0.15]">
-                    <img loading="lazy" decoding="async" src="/logos/mirko%20tortolano.png" alt={t('quote.author')} className="w-full h-full object-cover object-top" />
+                    <img loading="lazy" decoding="async" src="/logos/mirko%20tortolano.avif" alt={t('quote.author')} className="w-full h-full object-cover object-top" />
                   </div>
                   <div>
                     <p className="text-[14px] font-semibold text-[#121212]/80">{t('quote.author')}</p>
