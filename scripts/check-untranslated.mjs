@@ -94,7 +94,7 @@ const DELIBERATE = [
   ['customers.mediaset-2.related.', 'industry names'],
   ['customers.subdued.related.', 'industry names'],
   ['customers.unicomm.related.', 'industry names'],
-  // The three one-pagers are an English PDF served at a bilingual URL (#139).
+  // The three one-pagers are an English PDF served at a bilingual URL (#142).
   ['lp.supermarkets.', 'an English one-pager, served under both locales'],
   ['lp.ai-competency.', 'an English one-pager, served under both locales'],
   ['lp.ai-competency-newsletter.', 'an English one-pager, served under both locales'],
