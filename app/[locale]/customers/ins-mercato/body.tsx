@@ -91,16 +91,9 @@ export default function InsMercatoStoryPage() {
   const lang = useLocale();
   // The Open Graph pair is the page's own title and description — the same two
   // strings generateMetadata emits, not a second copy of them.
-  const metaTitle = t('meta.title');
-  const metaDesc = t('meta.description');
 
   return (
     <>
-      <>
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDesc} />
-        <meta property="og:type" content="article" />
-      </>
       <Navbar />
       <main>
         {/* Hero */}

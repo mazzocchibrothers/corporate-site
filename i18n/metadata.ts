@@ -15,9 +15,26 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { canonicalRoute, routes } from './routes';
 import { namespaceOf } from './messages';
-import { alternatesFor, urlFor, type Locale } from './urls';
+import { alternatesFor, BASE_URL, urlFor, type Locale } from './urls';
 
 const LOCALES: Locale[] = ['en', 'it'];
+
+/** What Open Graph calls a locale. */
+const OG_LOCALE: Record<Locale, string> = { en: 'en_US', it: 'it_IT' };
+
+/**
+ * og:type. A customer story and a blog post are articles; everything else —
+ * the product pages, the solutions, the landing pages — is a website.
+ *
+ * Sixteen bodies used to render this tag themselves, along with og:title and
+ * og:description, as literal <meta> inside a client component. Those three
+ * were the only Open Graph tags on the site: the other 99 pages shared as a
+ * bare URL. They are gone from the bodies now — the strings they built,
+ * `headline` + ' | Skillvue' and a truncated `subtitle`, are character for
+ * character what `meta.title` and `meta.description` already hold.
+ */
+const ogType = (routeId: string): 'article' | 'website' =>
+  routeId.startsWith('customers/') || routeId.startsWith('blog/') ? 'article' : 'website';
 
 /**
  * `locale` is typed as string because that is what it is: a URL segment, from
@@ -58,9 +75,27 @@ export async function buildMetadata(routeId: string, locale: string): Promise<Me
   // 16 routes had none (#138) this returned a partial object rather than let
   // next-intl fill the gap with the key path — 'blog.accountability.meta.title'
   // in a search result is worse than the blank it replaces.
+  const title = t('title');
+  const description = t('description');
+
   return {
-    title: t('title'),
-    description: t('description'),
+    metadataBase: new URL(BASE_URL),
+    title,
+    description,
     alternates: { canonical, languages: alternatesFor(indexed) },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: 'Skillvue',
+      type: ogType(routeId),
+      locale: OG_LOCALE[locale as Locale],
+      // The other language of the same page, when there is one. LinkedIn and
+      // Facebook use it to pick the version that matches the reader.
+      alternateLocale: LOCALES.filter((l) => l !== locale && urlFor(indexed, l) !== undefined).map(
+        (l) => OG_LOCALE[l],
+      ),
+    },
+    twitter: { card: 'summary_large_image', title, description },
   };
 }

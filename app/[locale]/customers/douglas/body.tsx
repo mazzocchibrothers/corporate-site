@@ -60,16 +60,9 @@ export default function DouglasStoryPage() {
   const router = useRouter();
   const lang = useLocale();
   const t = useTranslations('customers.douglas');
-  const metaTitle = `${t('headline').replace(/<\/?hl\d*>/g, '')} | Skillvue`;
-  const metaDesc = t('subtitle').length > 160 ? t('subtitle').substring(0, 157) + '...' : t('subtitle');
 
   return (
     <>
-      <>
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDesc} />
-        <meta property="og:type" content="article" />
-      </>
       <Navbar />
       <main>
 

@@ -61,8 +61,6 @@ export default function FidiaFarmaceuticiStoryPage() {
   const router = useRouter();
   const lang = useLocale();
   const t = useTranslations('customers.fidia-farmaceutici');
-  const metaTitle = `${t('headline').replace(/<\/?hl\d*>/g, '')} | Skillvue`;
-  const metaDesc = t('subtitle').length > 160 ? t('subtitle').substring(0, 157) + '...' : t('subtitle');
 
   return (
     <>
