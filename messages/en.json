@@ -559,7 +559,6 @@
     },
     "newsletter-july-2026": {
       "onClick": "/book-meeting",
-      "metaTitle": "Skillvue — The July Newsletter",
       "tag": "Newsletter",
       "date": "July 2026",
       "readTime": "4 min read",
@@ -647,6 +646,10 @@
         "execTa": "ExecTA roundtable photo (London)",
         "aiReadiness": "AI Competency Test visual",
         "fidia": "Fidia customer story photo"
+      },
+      "meta": {
+        "title": "Skillvue — The July Newsletter",
+        "description": "Skills, AI and better talent decisions — four perspectives gathered from London to Paris, plus a closer look at AI readiness."
       }
     },
     "recruitment-biases": {
@@ -915,7 +918,6 @@
       "cta2": "Book a Demo"
     },
     "newsletter-august-2026": {
-      "metaTitle": "Skillvue — The August Newsletter",
       "tag": "Newsletter",
       "date": "August 2026",
       "readTime": "5 min read",
@@ -1035,6 +1037,10 @@
         "events": "Where to find Skillvue in the coming months?",
         "supermarkets": "The roles of skills in the retail industry",
         "unicomm": "Giuseppe Curci, HR Director at Gruppo Unicomm"
+      },
+      "meta": {
+        "title": "Skillvue — The August Newsletter",
+        "description": "A new customer story with Gruppo Unicomm, a closer look at the workforce challenges in the retail industry, and our upcoming events across Europe."
       }
     }
   },
@@ -1448,7 +1454,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "Aeroporti di Roma: how to <hl>develop an organisation of nearly 5,000 people</hl> starting from internal potential"
+      "headline": "Aeroporti di Roma: how to <hl>develop an organisation of nearly 5,000 people</hl> starting from internal potential",
+      "meta": {
+        "title": "Aeroporti di Roma: how to develop an organisation of nearly 5,000 people starting from internal potential | Skillvue",
+        "description": "With Skillvue, ADR found the key to making the potential of nearly 5,000 people visible — operational staff included — turning talent development into a stra..."
+      }
     },
     "adr-2": {
       "breadcrumb": "Customers",
@@ -1609,7 +1619,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "Aeroporti di Roma (AdR): how to <hl>ensure organisational excellence</hl> through a renewed focus on internal potential"
+      "headline": "Aeroporti di Roma (AdR): how to <hl>ensure organisational excellence</hl> through a renewed focus on internal potential",
+      "meta": {
+        "title": "Aeroporti di Roma (AdR): how to ensure organisational excellence through a renewed focus on internal potential | Skillvue",
+        "description": "With Skillvue, AdR found the key to detecting and measuring the potential of the entire organisation starting from the most operational roles, transforming t..."
+      }
     },
     "carrefour": {
       "breadcrumb": "Customers",
@@ -1802,7 +1816,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "Carrefour: how to protect margins across <hl>1,200 stores</hl> by optimising the <hl2>key hiring KPI</hl2>"
+      "headline": "Carrefour: how to protect margins across <hl>1,200 stores</hl> by optimising the <hl2>key hiring KPI</hl2>",
+      "meta": {
+        "title": "Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI | Skillvue",
+        "description": "In a sector where labour cost is 3.4x operating profit, Carrefour Italia turned hiring into a real profitability lever thanks to clear, transparent data on s..."
+      }
     },
     "credem": {
       "breadcrumb": "Customers",
@@ -1982,7 +2000,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "Gruppo Credem: how to find the best talent among <hl>30,000 applications</hl> to support <hl2>business growth</hl2>"
+      "headline": "Gruppo Credem: how to find the best talent among <hl>30,000 applications</hl> to support <hl2>business growth</hl2>",
+      "meta": {
+        "title": "Gruppo Credem: how to find the best talent among 30,000 applications to support business growth | Skillvue",
+        "description": "With Skillvue, Gruppo Credem processes tens of thousands of applications every year while keeping candidate experience quality high and significantly reducin..."
+      }
     },
     "douglas": {
       "breadcrumb": "Customers",
@@ -2165,7 +2187,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "How Europe’s leading beauty retailer made the skills of <hl>2,200 people</hl> across 370 stores visible in <hl2>5 weeks</hl2>"
+      "headline": "How Europe’s leading beauty retailer made the skills of <hl>2,200 people</hl> across 370 stores visible in <hl2>5 weeks</hl2>",
+      "meta": {
+        "title": "How Europe’s leading beauty retailer made the skills of 2,200 people across 370 stores visible in 5 weeks | Skillvue",
+        "description": "2,500 employees across nearly 400 stores, zero visibility on skills, high turnover. With Skillvue, Douglas built the first complete skills database of its en..."
+      }
     },
     "eataly": {
       "breadcrumb": "Customers",
@@ -2344,7 +2370,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "Eataly: how to fuel a global expansion plan by identifying and mobilising <hl>high-potential talent</hl>"
+      "headline": "Eataly: how to fuel a global expansion plan by identifying and mobilising <hl>high-potential talent</hl>",
+      "meta": {
+        "title": "Eataly: how to fuel a global expansion plan by identifying and mobilising high-potential talent | Skillvue",
+        "description": "Eataly is growing fast, especially with new openings in North America. With Skillvue, it assessed thousands of candidates for international mobility in weeks..."
+      }
     },
     "eataly-2": {
       "breadcrumb": "Customers",
@@ -2524,7 +2554,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "Eataly: how to fuel a global expansion plan by identifying and mobilising <hl>high-potential talent</hl>"
+      "headline": "Eataly: how to fuel a global expansion plan by identifying and mobilising <hl>high-potential talent</hl>",
+      "meta": {
+        "title": "Eataly: how to fuel a global expansion plan by identifying and mobilising high-potential talent | Skillvue",
+        "description": "Eataly has embarked on a digital transformation journey to integrate AI and human touch in recruiting, supporting its global business expansion."
+      }
     },
     "eataly-3": {
       "breadcrumb": "Customers",
@@ -2703,7 +2737,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "Eataly: how to integrate <hl>Artificial Intelligence and Human Touch</hl> to build more effective, inclusive and conscious hiring processes"
+      "headline": "Eataly: how to integrate <hl>Artificial Intelligence and Human Touch</hl> to build more effective, inclusive and conscious hiring processes",
+      "meta": {
+        "title": "Eataly: how to integrate Artificial Intelligence and Human Touch to build more effective, inclusive and conscious hiring processes | Skillvue",
+        "description": "With Skillvue's support, Eataly optimised skills assessment at the pre-screening stage, managing over 1,000 applications without compromising on evaluation q..."
+      }
     },
     "fidia-farmaceutici": {
       "breadcrumb": "Customers",
@@ -2881,7 +2919,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "Fidia Farmaceutici: how to map the <hl>real skills of the sales network</hl> to drive <hl2>future growth</hl2>"
+      "headline": "Fidia Farmaceutici: how to map the <hl>real skills of the sales network</hl> to drive <hl2>future growth</hl2>",
+      "meta": {
+        "title": "Fidia Farmaceutici: how to map the real skills of the sales network to drive future growth | Skillvue",
+        "description": "With Skillvue, Fidia is transforming its HR infrastructure into a global talent intelligence system, capable of mapping the skills of hundreds of Medical Rep..."
+      }
     },
     "europ-assistance": {
       "breadcrumb": "Customers",
@@ -3067,7 +3109,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "Europ Assistance: how to recognise the <hl>potential that stands the test of time</hl> in a business built on <hl2>human interaction</hl2>"
+      "headline": "Europ Assistance: how to recognise the <hl>potential that stands the test of time</hl> in a business built on <hl2>human interaction</hl2>",
+      "meta": {
+        "title": "Europ Assistance: how to recognise the potential that stands the test of time in a business built on human interaction | Skillvue",
+        "description": "With Skillvue, Europ Assistance transformed candidate pre-screening into a scalable, strategic process for the entire talent lifecycle — developing cross-fun..."
+      }
     },
     "europ-assistance-2": {
       "breadcrumb": "Customers",
@@ -3264,7 +3310,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "How to achieve a <hl>76%</hl> hiring success rate in a business built on <hl2>human interaction</hl2>"
+      "headline": "How to achieve a <hl>76%</hl> hiring success rate in a business built on <hl2>human interaction</hl2>",
+      "meta": {
+        "title": "How to achieve a 76% hiring success rate in a business built on human interaction | Skillvue",
+        "description": "With Skillvue, Europ Assistance transformed pre-screening from a bottleneck into a competitive advantage and is now extending the model to internal skills ma..."
+      }
     },
     "mediaset": {
       "breadcrumb": "Customers",
@@ -3442,7 +3492,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "<hl>GRAPE</hl>, Mediaset's Graduate Program Experience: how to identify and develop <hl2>talented young people</hl2> with an eye on <hl3>future potential</hl3>"
+      "headline": "<hl>GRAPE</hl>, Mediaset's Graduate Program Experience: how to identify and develop <hl2>talented young people</hl2> with an eye on <hl3>future potential</hl3>",
+      "meta": {
+        "title": "GRAPE, Mediaset's Graduate Program Experience: how to identify and develop talented young people with an eye on future potential | Skillvue",
+        "description": "With Skillvue, Mediaset standardised the pre-screening step across thousands of applications from junior profiles applying to Progetto GRAPE, building a stru..."
+      }
     },
     "mediaset-1": {
       "breadcrumb": "Customers",
@@ -3620,7 +3674,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "<hl>GRAPE</hl>, Mediaset's Graduate Program Experience: how to identify and develop <hl2>talented young people</hl2> with an eye on <hl3>future potential</hl3>"
+      "headline": "<hl>GRAPE</hl>, Mediaset's Graduate Program Experience: how to identify and develop <hl2>talented young people</hl2> with an eye on <hl3>future potential</hl3>",
+      "meta": {
+        "title": "GRAPE, Mediaset's Graduate Program Experience: how to identify and develop talented young people with an eye on future potential | Skillvue",
+        "description": "With Skillvue, Mediaset standardised the pre-screening step across thousands of applications from junior profiles applying to Progetto GRAPE, building a stru..."
+      }
     },
     "mediaset-2": {
       "breadcrumb": "Customers",
@@ -3798,7 +3856,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "<hl>GRAPE</hl>, Mediaset's Graduate Program Experience: how to identify and develop <hl2>talented young people</hl2> with an eye on <hl3>future potential</hl3>"
+      "headline": "<hl>GRAPE</hl>, Mediaset's Graduate Program Experience: how to identify and develop <hl2>talented young people</hl2> with an eye on <hl3>future potential</hl3>",
+      "meta": {
+        "title": "GRAPE, Mediaset's Graduate Program Experience: how to identify and develop talented young people with an eye on future potential | Skillvue",
+        "description": "With Skillvue, Mediaset standardised the pre-screening step across thousands of applications from junior profiles applying to Progetto GRAPE, building a stru..."
+      }
     },
     "subdued": {
       "breadcrumb": "Customers",
@@ -3994,7 +4056,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "Subdued: building a <hl>single scalable hiring standard</hl> for an international network of <hl2>130+ stores</hl2>"
+      "headline": "Subdued: building a <hl>single scalable hiring standard</hl> for an international network of <hl2>130+ stores</hl2>",
+      "meta": {
+        "title": "Subdued: building a single scalable hiring standard for an international network of 130+ stores | Skillvue",
+        "description": "With Skillvue, Subdued built a consistent, scalable evaluation process across multiple markets, allowing a lean HR team to apply the same hiring rigour in ev..."
+      }
     },
     "unicomm": {
       "breadcrumb": "Customers",
@@ -4184,7 +4250,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "How Unicomm is building a new <hl>talent management system</hl> across a network of <hl2>250+ stores</hl2>"
+      "headline": "How Unicomm is building a new <hl>talent management system</hl> across a network of <hl2>250+ stores</hl2>",
+      "meta": {
+        "title": "How Unicomm is building a new talent management system across a network of 250+ stores | Skillvue",
+        "description": "With Skillvue, Unicomm is transforming its HR infrastructure into an agile, skills-based system that responds to hiring, confirmation and internal developmen..."
+      }
     },
     "ins-mercato": {
       "text": "The Science Behind It",
@@ -4194,7 +4264,11 @@
       "heading": "Related Stories",
       "cta2": "Read the story",
       "text4": "Ready to see what Skillvue can do for your",
-      "text5": "organization?"
+      "text5": "organization?",
+      "meta": {
+        "title": "How In’s Mercato built an internal pipeline of Store Managers | Skillvue",
+        "description": "Network growth depends on having trained managerial talent ready when it’s needed. With Skillvue, In’s Mercato transformed talent management from reactive to predictive."
+      }
     }
   },
   "home": {
@@ -4467,6 +4541,10 @@
       "footNote": "SKILLVUE FOR RETAIL",
       "assets": {
         "pdf": "/skillvue-supermarkets-one-pager-en.pdf"
+      },
+      "meta": {
+        "title": "Skillvue — Supermarkets One-Pager",
+        "description": "The Skills Operating System for supermarkets — objective skills data across the retail talent lifecycle."
       }
     },
     "ai-competency": {
@@ -4486,6 +4564,10 @@
         "downloadName": "Skillvue-AI-Competency-One-Pager.pdf",
         "page1": "/ai-competency-page-1.png",
         "page2": "/ai-competency-page-2.png"
+      },
+      "meta": {
+        "title": "Skillvue — AI Competency One-Pager",
+        "description": "Skillvue AI Competency One-Pager"
       }
     },
     "ai-competency-newsletter": {
@@ -4583,6 +4665,10 @@
       "footNote": "SKILLVUE AI & SCIENCE LAB",
       "assets": {
         "pdf": "/skillvue-ai-competency-one-pager-nl-en.pdf"
+      },
+      "meta": {
+        "title": "Skillvue — AI Competency One-Pager",
+        "description": "Skillvue AI Competency One-Pager"
       }
     },
     "europ-assistance": {
@@ -4765,7 +4851,11 @@
         "headline": "Ready to transform your",
         "accent": "People Strategy?"
       },
-      "headline": "Europ Assistance: how to spot the <hl>potential that stands the test of time</hl> in a business built on the <hl2>human factor</hl2>"
+      "headline": "Europ Assistance: how to spot the <hl>potential that stands the test of time</hl> in a business built on the <hl2>human factor</hl2>",
+      "meta": {
+        "title": "Europ Assistance: how to spot the potential that stands the test of time in a business built on the human factor | Skillvue",
+        "description": "With Skillvue, Europ Assistance turned candidate pre-screening into a scalable, strategic process for the entire talent lifecycle, putting soft skills at the..."
+      }
     },
     "food-retail": {
       "paragraphs": {
@@ -4775,6 +4865,57 @@
       },
       "titleLead": "Your next store manager is",
       "titleHighlight": "already in your stores."
+    },
+    "ai-act-banking": {
+      "meta": {
+        "title": "AI Act-compliant nel Banking: da obbligo regolatorio a vantaggio competitivo | Skillvue"
+      }
+    },
+    "arte-di-misurare-allineamento": {
+      "meta": {
+        "title": "L'arte di misurare l'allineamento al brand — Skillvue"
+      }
+    },
+    "career-aspiration-insurance": {
+      "meta": {
+        "title": "Career Aspiration Intelligence nel settore assicurativo | Skillvue"
+      },
+      "whitepaper": {
+        "meta": {
+          "title": "Career Aspiration Intelligence nel settore assicurativo | Skillvue"
+        }
+      }
+    },
+    "hidden-cost-recruiting": {
+      "meta": {
+        "title": "Hidden Cost of Non-Predictive Recruiting | Skillvue"
+      }
+    },
+    "il-costo-invisibile": {
+      "meta": {
+        "title": "Il costo invisibile della selezione non predittiva | Skillvue"
+      },
+      "whitepaper": {
+        "meta": {
+          "title": "Il costo invisibile della selezione non predittiva | Skillvue"
+        }
+      }
+    },
+    "il-turnover-nei-negozi-del-lusso": {
+      "meta": {
+        "title": "Il turnover nei negozi del lusso: il costo nascosto | Skillvue",
+        "description": "La selezione non efficace nei flagship store e il suo impatto sul business. Analisi della struttura economica del turnover e degli strumenti predittivi per ridurlo. Whitepaper gratuito di Skillvue."
+      }
+    },
+    "la-crisi-delle-competenze": {
+      "meta": {
+        "title": "La crisi delle competenze obsolete nelle banche europee | Skillvue"
+      }
+    },
+    "scalare-l-eccellenza": {
+      "meta": {
+        "title": "Scalare l'eccellenza senza perdere l'esclusività — Skillvue"
+      }
     }
   },
   "privacy-policy": {

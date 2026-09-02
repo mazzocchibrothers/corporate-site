@@ -5,7 +5,7 @@ import React, { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { useRouter } from 'next/router';
+import { useRouter } from '@/i18n/navigation';
 
 const solutions = [
   {

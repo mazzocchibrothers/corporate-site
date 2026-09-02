@@ -100,22 +100,32 @@ export function merge(a: Record<string, unknown>, b: Record<string, unknown>) {
  */
 export function messagesFor(routeId: string, forceLocale?: 'en' | 'it'): GetStaticProps {
   return async function getStaticProps({ locale: contextLocale }) {
-    const locale = forceLocale ?? contextLocale;
-    // A literal path prefix keeps the bundler able to see the whole directory,
-    // so both catalogues are emitted and only the requested one is fetched.
-    // The import attribute is not decoration: without it Node refuses to load
-    // JSON through a dynamic import, and scripts/check-messages.mjs could only
-    // ever test the pure helpers, never the loading path a page actually uses.
-    // Turbopack accepts it too, so one line of code serves both runtimes.
-    const all = (await import(`../messages/${locale ?? 'en'}.json`, { with: { type: 'json' } }))
-      .default;
-
-    const wanted = [...SHARED, namespaceOf(routeId)];
-    const messages = wanted.reduce<Record<string, unknown>>(
-      (acc, ns) => merge(acc, pick(all, ns)),
-      {},
-    );
-
-    return { props: { messages } };
+    return { props: { messages: await messagesForRoute(routeId, forceLocale ?? contextLocale) } };
   };
+}
+
+/**
+ * The same selection, for the App Router.
+ *
+ * It is needed there for a reason that is easy to miss: `i18n/request.ts` gives
+ * the server the whole catalogue, and a `<NextIntlClientProvider>` rendered
+ * without `messages` inherits it — all of it — into the HTML. Measured on the
+ * probe route before this existed: a ten-line page prerendered to a 310 KB
+ * document, 338 KB of catalogue serialized into every page on the site.
+ *
+ * So each page provides its own narrowed provider. Server-rendered strings
+ * still read from the request config; this is only what crosses to the browser.
+ */
+export async function messagesForRoute(routeId: string, locale: string | undefined) {
+  // A literal path prefix keeps the bundler able to see the whole directory,
+  // so both catalogues are emitted and only the requested one is fetched.
+  // The import attribute is not decoration: without it Node refuses to load
+  // JSON through a dynamic import, and scripts/check-messages.mjs could only
+  // ever test the pure helpers, never the loading path a page actually uses.
+  // Turbopack accepts it too, so one line of code serves both runtimes.
+  const all = (await import(`../messages/${locale ?? 'en'}.json`, { with: { type: 'json' } }))
+    .default;
+
+  const wanted = [...SHARED, namespaceOf(routeId)];
+  return wanted.reduce<Record<string, unknown>>((acc, ns) => merge(acc, pick(all, ns)), {});
 }

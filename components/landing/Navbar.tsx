@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
-import { useRouter } from 'next/router';
+import { useRouter } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { useSwitchLocale } from '@/i18n/switch-locale';
 import { href } from '@/i18n/routes';

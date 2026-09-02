@@ -9,40 +9,19 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 // Locale routing lives in i18n/routing.ts + middleware.ts, not here. The `i18n`
 // block does not exist in the App Router, and the /clienti rewrites it used to
 // carry are now next-intl `pathnames`, generated from i18n/routes.json.
+//
+// There are no rewrites left at all. The last one aliased /customers/mediaset
+// onto the mediaset-2 cut of that story; it is a re-export in that route's
+// page.tsx now, because a rewrite onto a path that also exists as a page never
+// fires — which is how it broke once already (#113).
+//
+// There is no CSS option here on purpose. experimental.optimizeCss went with
+// pages/ — critters is Pages Router only, and it did not fail when a page
+// moved, it just quietly stopped inlining that page's critical CSS. Its App
+// Router counterpart, experimental.inlineCss, was measured and rejected: see
+// harness/docs/conventions.md, "CSS delivery" (#135).
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  experimental: {
-    // Inlines the CSS each page actually uses above the fold and defers the
-    // rest, so the full site-wide Tailwind bundle stops blocking first paint.
-    // noscriptFallback: without it, a client with JS disabled would only
-    // ever get the critical subset and never load the rest of the sheet.
-    //
-    // Pages Router only. Measured on this build (#132): a pages/ route ships
-    // 21.7 KB of inlined critical CSS and defers the 105 KB sheet; the app/
-    // route ships no inline CSS and a render-blocking <link> to the whole
-    // thing. So this option quietly stops doing anything, page by page, as the
-    // migration proceeds — it does not fail, it just goes silent. The
-    // replacement is decided in #135, before the switch.
-    optimizeCss: { noscriptFallback: true },
-  },
-  // The one rewrite that is not about locale, and so did not move to next-intl
-  // pathnames with the others (#126): /customers/mediaset serves the mediaset-2
-  // cut of the story. It was dropped with the locale rewrites, which silently
-  // changed what that URL renders — found by diffing against production (#113).
-  //
-  // Which cut should be live is a content question, recorded on #113. This
-  // restores what the site serves today.
-  // beforeFiles, not the default afterFiles: pages/customers/mediaset.tsx
-  // exists, so an afterFiles rewrite would never fire — the page matches first
-  // and the alias is silently ignored.
-  async rewrites() {
-    return {
-      beforeFiles: [
-        { source: '/customers/mediaset', destination: '/customers/mediaset-2' },
-        { source: '/it/customers/mediaset', destination: '/it/customers/mediaset-2' },
-      ],
-    };
-  },
 
   async headers() {
     const oneYearImmutable = 'public, max-age=31536000, immutable';

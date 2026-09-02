@@ -49,9 +49,15 @@ export async function buildMetadata(routeId: string, locale: string): Promise<Me
 
   const t = await getTranslations(`${namespaceOf(routeId)}.meta`);
 
+  // 16 routes have no meta in the catalogue because they have no <title> on the
+  // site today either — the blog posts, the whitepaper pages, /privacy-policy
+  // and /resources/press ship a document with no title at all (#138). Without
+  // this guard next-intl would fill the gap with the key path itself, and
+  // 'blog.accountability.meta.title' in a search result is worse than the blank
+  // it replaces.
   return {
-    title: t('title'),
-    description: t('description'),
+    ...(t.has('title') ? { title: t('title') } : {}),
+    ...(t.has('description') ? { description: t('description') } : {}),
     alternates: { canonical, languages: alternatesFor(route) },
   };
 }

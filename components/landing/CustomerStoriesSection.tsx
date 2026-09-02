@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { m, useInView } from 'framer-motion';
-import { useRouter } from 'next/router';
+import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 

@@ -5,7 +5,7 @@ import React, { useRef } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { useRouter } from 'next/router';
+import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
@@ -19,13 +19,17 @@ const solutions = [
   { key: 'projectResourcing', id: 'solutions/project-resourcing' },
 ];
 
-export default function SolutionCrossLinks({ currentPath }) {
+// `currentId` is a route id, not a path. It used to be a path compared against
+// href(id, lang), which agreed in English and never in Italian — href returns
+// /it/solutions/… there, so the page's own solution stayed in its own "explore
+// the others" list on all five Italian pages. An id has one spelling.
+export default function SolutionCrossLinks({ currentId }) {
   const lang = useLocale();
   const t = useTranslations('shared');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
-  const otherSolutions = solutions.filter(s => href(s.id, lang) !== currentPath);
+  const otherSolutions = solutions.filter((s) => s.id !== currentId);
 
   const handleNav = (path) => { router.push(path); window.scrollTo(0, 0); };
 

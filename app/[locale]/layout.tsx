@@ -11,7 +11,6 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
-import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 
@@ -31,6 +30,12 @@ export const metadata: Metadata = {
 // viewport export, and Next warns (then ignores it) if it stays above.
 export const viewport: Viewport = {
   themeColor: '#4B4DF7',
+  // Next's default is width=device-width, initial-scale=1. viewport-fit=cover is
+  // the part it does not add, and pages/_app.tsx did — it is what lets the fixed
+  // navbar reach under the notch instead of leaving a white band above it.
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
 };
 
 // Both locales are prerendered. Without this every page falls back to dynamic
@@ -95,30 +100,34 @@ export default async function LocaleLayout({
           }}
         />
 
-        <NextIntlClientProvider>
-          <div className="min-h-screen">
-            {/* Animated flowing background. fixed */}
-            <div className="animated-bg">
-              <div className="side-left" />
-              <div className="side-right" />
-              <div className="orb orb-1" />
-              <div className="orb orb-2" />
-              <div className="orb orb-3" />
-              <div className="orb orb-4" />
-              <div className="orb orb-5" />
-              <div className="orb orb-6" />
-              <div className="shimmer shimmer-1" />
-              <div className="shimmer shimmer-2" />
-              <div className="shimmer shimmer-3" />
-            </div>
-
-            {/* Grain */}
-            <div className="grain-overlay" />
-
-            {/* Content */}
-            <div className="content-layer">{children}</div>
+        {/* No NextIntlClientProvider here, deliberately. One rendered at this
+            level inherits the whole catalogue from i18n/request.ts and
+            serializes it into every document: measured, a ten-line probe page
+            prerendered to 310 KB, of which 251 KB was copy no page on screen
+            used. Each page provides its own, narrowed to the namespaces it
+            renders — see messagesForRoute in i18n/messages.ts. */}
+        <div className="min-h-screen">
+          {/* Animated flowing background. fixed */}
+          <div className="animated-bg">
+            <div className="side-left" />
+            <div className="side-right" />
+            <div className="orb orb-1" />
+            <div className="orb orb-2" />
+            <div className="orb orb-3" />
+            <div className="orb orb-4" />
+            <div className="orb orb-5" />
+            <div className="orb orb-6" />
+            <div className="shimmer shimmer-1" />
+            <div className="shimmer shimmer-2" />
+            <div className="shimmer shimmer-3" />
           </div>
-        </NextIntlClientProvider>
+
+          {/* Grain */}
+          <div className="grain-overlay" />
+
+          {/* Content */}
+          <div className="content-layer">{children}</div>
+        </div>
       </body>
     </html>
   );

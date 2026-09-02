@@ -8,22 +8,34 @@
 // With the dictionary gone (#110), a whole React context for one navigation
 // helper is machinery around nothing.
 //
-// ponytail: this goes too, at the switch. next-intl's own Link and usePathname
-// do it natively once routing is `pathnames`-driven (#119).
+// The route it lands on is the registry's, in two steps: the visitor's URL back
+// to the internal path (`/it/clienti/adr` -> `/customers/adr`), then forward
+// into the target locale. Both steps are covered by scripts/check-navigation.mjs,
+// which round-trips every bilingual route — this is the code path that shipped a
+// 404 once already (commit 67f53be).
 
-import { useRouter } from 'next/router';
+import { usePathname, useRouter } from 'next/navigation';
+import { useLocale } from 'next-intl';
 import { useCallback } from 'react';
-import { localizePath } from './routes';
+import { routes } from './routes';
+import { internalPathIn, localizePathIn, type Locale } from './urls';
 
 export function useSwitchLocale() {
   const router = useRouter();
+  const pathname = usePathname();
+  const current = useLocale();
+
   return useCallback(
     (locale: string) => {
-      // asPath comes with the locale prefix stripped, so /it/clienti reads as
-      // /clienti — which is not a real English path. The registry maps it.
-      const target = localizePath(router.asPath, locale);
-      router.push(target, target, { locale });
+      // usePathname is null only before the router mounts; there is nothing to
+      // switch to then, and guessing '/' would move the visitor off the page.
+      if (pathname === null) return;
+      const internal = internalPathIn(routes, pathname, current as Locale);
+      // Plain next/navigation, not i18n/navigation: the target is already
+      // localized, and localizing it a second time is exactly what this hook
+      // must not do.
+      router.push(localizePathIn(routes, internal, locale as Locale));
     },
-    [router],
+    [router, pathname, current],
   );
 }

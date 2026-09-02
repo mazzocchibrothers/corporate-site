@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from '@/i18n/navigation';
 import { Instagram, Facebook, Linkedin } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { href } from '@/i18n/routes';

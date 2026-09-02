@@ -559,7 +559,6 @@
     },
     "newsletter-july-2026": {
       "onClick": "/prenota-incontro",
-      "metaTitle": "Skillvue — La newsletter di luglio",
       "tag": "Newsletter",
       "date": "Luglio 2026",
       "readTime": "4 min di lettura",
@@ -647,6 +646,10 @@
         "execTa": "Foto tavola rotonda ExecTA (Londra)",
         "aiReadiness": "Visual AI Competency Test",
         "fidia": "Foto customer story Fidia"
+      },
+      "meta": {
+        "title": "Skillvue — La newsletter di luglio",
+        "description": "Competenze, AI e decisioni migliori sul talento — quattro prospettive raccolte da Londra a Parigi, più un approfondimento sull’AI readiness."
       }
     },
     "recruitment-biases": {
@@ -915,7 +918,6 @@
       "cta2": "Prenota una demo"
     },
     "newsletter-august-2026": {
-      "metaTitle": "Skillvue — La newsletter di agosto",
       "tag": "Newsletter",
       "date": "Agosto 2026",
       "readTime": "5 min di lettura",
@@ -1035,6 +1037,10 @@
         "events": "Dove trovare Skillvue nei prossimi mesi?",
         "supermarkets": "Il ruolo delle competenze nella GDO",
         "unicomm": "Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm"
+      },
+      "meta": {
+        "title": "Skillvue — La newsletter di agosto",
+        "description": "Una nuova customer story con Gruppo Unicomm, un approfondimento sulle sfide organizzative della GDO e i nostri prossimi eventi in Europa."
       }
     }
   },
@@ -1044,8 +1050,8 @@
       "description": "Scopri come Skillvue trasforma i colloqui in dati sulle competenze su cui puoi agire. Prenota una demo: analizziamo insieme selezione, performance e sviluppo sui tuoi casi reali."
     },
     "back": "Indietro",
-    "body": "Prenota una demo con il nostro team per scoprire come Skillvue può trasformare i tuoi processi di selezione, performance e sviluppo con la talent intelligence supportata dalla scienza.",
-    "heading": "Parliamo della tua <span>strategia di talento.</span>"
+    "body": "Prenota una demo con il nostro team per scoprire come Skillvue può trasformare i tuoi processi di selezione, performance e sviluppo grazie a dati chiari e oggettivi supportati dalla scienza.",
+    "heading": "Parliamo della tua <span>talent strategy.</span>"
   },
   "careers": {
     "meta": {
@@ -1448,7 +1454,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Aeroporti di Roma: come <hl>sviluppare un'organizzazione da quasi 5.000 persone</hl> ripartendo dal potenziale interno"
+      "headline": "Aeroporti di Roma: come <hl>sviluppare un'organizzazione da quasi 5.000 persone</hl> ripartendo dal potenziale interno",
+      "meta": {
+        "title": "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone ripartendo dal potenziale interno | Skillvue",
+        "description": "Con Skillvue, ADR ha trovato la chiave per rendere visibile il potenziale di quasi 5.000 persone, operativi inclusi, trasformando lo sviluppo del talento in ..."
+      }
     },
     "adr-2": {
       "breadcrumb": "Clienti",
@@ -1609,7 +1619,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Aeroporti di Roma (AdR): come <hl>assicurare l'eccellenza organizzativa</hl> grazie alla rinnovata valorizzazione del potenziale interno"
+      "headline": "Aeroporti di Roma (AdR): come <hl>assicurare l'eccellenza organizzativa</hl> grazie alla rinnovata valorizzazione del potenziale interno",
+      "meta": {
+        "title": "Aeroporti di Roma (AdR): come assicurare l'eccellenza organizzativa grazie alla rinnovata valorizzazione del potenziale interno | Skillvue",
+        "description": "Con Skillvue, AdR ha trovato la chiave per rilevare e misurare il potenziale dell'intera organizzazione a partire dai ruoli più operativi, trasformando la cu..."
+      }
     },
     "carrefour": {
       "breadcrumb": "Clienti",
@@ -1655,7 +1669,7 @@
             "value": "~1.200"
           },
           {
-            "label": "Use Case",
+            "label": "Caso d’uso",
             "value": "Hiring, Learning & Development"
           }
         ]
@@ -1802,7 +1816,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Carrefour: come proteggere i margini su <hl>1.200 punti vendita</hl> ottimizzando il <hl2>KPI chiave del processo di selezione</hl2>"
+      "headline": "Carrefour: come proteggere i margini su <hl>1.200 punti vendita</hl> ottimizzando il <hl2>KPI chiave del processo di selezione</hl2>",
+      "meta": {
+        "title": "Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione | Skillvue",
+        "description": "In un settore dove il costo del lavoro è 3.4x l'utile operativo, Carrefour Italia ha trasformato la selezione in una leva di profittabilità grazie a dati ogg..."
+      }
     },
     "credem": {
       "breadcrumb": "Clienti",
@@ -1982,7 +2000,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Gruppo Credem: come trovare i migliori talenti tra <hl>30.000 candidature</hl> per seguire la <hl2>crescita del business</hl2>"
+      "headline": "Gruppo Credem: come trovare i migliori talenti tra <hl>30.000 candidature</hl> per seguire la <hl2>crescita del business</hl2>",
+      "meta": {
+        "title": "Gruppo Credem: come trovare i migliori talenti tra 30.000 candidature per seguire la crescita del business | Skillvue",
+        "description": "Con Skillvue, Gruppo Credem processa ogni anno decine di migliaia di candidature mantenendo alta la qualità della candidate experience e riducendo significat..."
+      }
     },
     "douglas": {
       "breadcrumb": "Clienti",
@@ -2165,7 +2187,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Come il primo beauty retailer europeo ha reso visibili le competenze di <hl>2.200 persone</hl> su 370 store in <hl2>5 settimane</hl2>"
+      "headline": "Come il primo beauty retailer europeo ha reso visibili le competenze di <hl>2.200 persone</hl> su 370 store in <hl2>5 settimane</hl2>",
+      "meta": {
+        "title": "Come il primo beauty retailer europeo ha reso visibili le competenze di 2.200 persone su 370 store in 5 settimane | Skillvue",
+        "description": "2.500 dipendenti su quasi 400 punti vendita, nessuna visibilità sulle competenze, turnover elevato. Con Skillvue, Douglas ha creato il primo database complet..."
+      }
     },
     "eataly": {
       "breadcrumb": "Clienti",
@@ -2344,7 +2370,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti <hl>ad alto potenziale</hl>"
+      "headline": "Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti <hl>ad alto potenziale</hl>",
+      "meta": {
+        "title": "Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti ad alto potenziale | Skillvue",
+        "description": "Eataly continua a crescere a ritmi serrati, soprattutto con le nuove aperture in Nord America. Con Skillvue, ha valutato migliaia di candidati per la mobilit..."
+      }
     },
     "eataly-2": {
       "breadcrumb": "Clienti",
@@ -2524,7 +2554,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti <hl>ad alto potenziale</hl>"
+      "headline": "Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti <hl>ad alto potenziale</hl>",
+      "meta": {
+        "title": "Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti ad alto potenziale | Skillvue",
+        "description": "Insieme a Skillvue, Eataly ha avviato un percorso di digital transformation per integrare AI e human touch nel recruiting e sostenere così l'espansione del b..."
+      }
     },
     "eataly-3": {
       "breadcrumb": "Clienti",
@@ -2628,7 +2662,7 @@
       "solution": {
         "badge": "LA SOLUZIONE",
         "title": "Assessment AI con Skillvue per il progetto Career Passport",
-        "intro": "Skillvue è stato integrato nel processo di selezione di <b>Eataly Career Passport</b>, il programma di global mobility lanciato per supportare l'<b>espansione in Nord America</b>. Dopo una campagna omnichannel che <b>ha raccolto oltre 1.000 candidature</b>, Skillvue ha gestito il pre-screening con un assessment basato su <b>domande filtro e domande situazionali</b> calibrate sui ruoli specifici (<b>Head Chef, Director of Store Operations, General Manager of Restaurant</b>).",
+        "intro": "Skillvue è stato integrato nel processo di selezione di <b>Eataly Career Passport</b>, il programma di global mobility lanciato per supportare l’<b>espansione in Nord America</b>. Dopo una campagna omnichannel che <b>ha raccolto oltre 1.000 candidature</b>, Skillvue ha gestito il pre-screening con un assessment basato su <b>domande filtro e domande situazionali</b> calibrate sui ruoli specifici (<b>Head Chef, Director of Store Operations, General Manager of Restaurant</b>).",
         "intro2": "L'obiettivo non era <b>sostituire il giudizio umano, ma liberarlo</b>. All'AI il lavoro di standardizzazione su larga scala; al team HR i dati per concentrarsi su ciò che <b>nessun algoritmo può sostituire</b>: la valutazione umana che segue.",
         "skillsLabel": "COMPETENZE VALUTATE",
         "skills": {
@@ -2703,7 +2737,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Eataly: come Integrare <hl>Intelligenza Artificiale e tocco umano</hl> per costruire processi di selezione più efficaci, inclusivi e consapevoli"
+      "headline": "Eataly: come Integrare <hl>Intelligenza Artificiale e tocco umano</hl> per costruire processi di selezione più efficaci, inclusivi e consapevoli",
+      "meta": {
+        "title": "Eataly: come Integrare Intelligenza Artificiale e tocco umano per costruire processi di selezione più efficaci, inclusivi e consapevoli | Skillvue",
+        "description": "Con il supporto di Skillvue, Eataly ha ottimizzato la valutazione delle competenze in fase di pre-screening, gestendo oltre 1.000 candidature senza rinunciar..."
+      }
     },
     "fidia-farmaceutici": {
       "breadcrumb": "Clienti",
@@ -2757,7 +2795,7 @@
       "context": {
         "badge": "CONTESTO",
         "title": "Un leader mondiale dell'innovazione farmaceutica con una rete vendita da conoscere a fondo",
-        "paragraph": "Fidia Farmaceutici è un'azienda italiana con <b>80 anni di competenza scientifica</b>, leader mondiale nella ricerca, sviluppo, produzione e commercializzazione di prodotti innovativi a base di <b>acido ialuronico e suoi derivati</b> (<b>1.250+ brevetti</b>) in aree strategiche quali joint care, skin care, eye care, specialty care e health&wellness care. Fidia distribuisce i propri prodotti in <b>120+ paesi nel mondo</b>, grazie a un consolidato network di partner e distributori e filiali commerciali in mercati strategici.<br></br><br></br> La sua rete commerciale è altrettanto articolata: è infatti composta da centinaia di <b>Medical Representative</b> distribuiti non solo al di fuori dei confini nazionali, in <b>Europa</b>, ma anche in <b>USA e Medio Oriente</b>. Questi professionisti sono il punto di contatto tra la scienza di Fidia e l'utenza finale, e in un momento caratterizzato da una parte dalla <b>forte crescita ed espansione internazionale</b> dell'organizzazione e dall'altra dall'<b>evoluzione delle competenze</b> richieste dal mercato del lavoro, conoscerne le capacità in modo strutturato diventava sempre più un <b>prerequisito strategico</b> per poter direzionare al meglio le evoluzioni del modello commerciale."
+        "paragraph": "Fidia Farmaceutici è un'azienda italiana con <b>80 anni di competenza scientifica</b>, leader mondiale nella ricerca, sviluppo, produzione e commercializzazione di prodotti innovativi a base di <b>acido ialuronico e suoi derivati</b> (<b>1.250+ brevetti</b>) in aree strategiche quali joint care, skin care, eye care, specialty care e health&wellness care. Fidia distribuisce i propri prodotti in <b>120+ paesi nel mondo</b>, grazie a un consolidato network di partner e distributori e filiali commerciali in mercati strategici.<br></br><br></br> La sua rete commerciale è altrettanto articolata: è infatti composta da centinaia di <b>Medical Representative</b> distribuiti non solo al di fuori dei confini nazionali, in <b>Europa</b>, ma anche in <b>USA e Medio Oriente</b>. Questi professionisti sono il punto di contatto tra la scienza di Fidia e l'utenza finale, e in un momento caratterizzato da una parte dalla <b>forte crescita ed espansione internazionale</b> dell'organizzazione e dall'altra dall’<b>evoluzione delle competenze</b> richieste dal mercato del lavoro, conoscerne le capacità in modo strutturato diventava sempre più un <b>prerequisito strategico</b> per poter direzionare al meglio le evoluzioni del modello commerciale."
       },
       "challenge": {
         "badge": "LA SFIDA",
@@ -2881,7 +2919,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Fidia Farmaceutici: come fotografare su scala globale le <hl>reali competenze della rete vendita</hl> per supportare la <hl2>crescita futura</hl2>"
+      "headline": "Fidia Farmaceutici: come fotografare su scala globale le <hl>reali competenze della rete vendita</hl> per supportare la <hl2>crescita futura</hl2>",
+      "meta": {
+        "title": "Fidia Farmaceutici: come fotografare su scala globale le reali competenze della rete vendita per supportare la crescita futura | Skillvue",
+        "description": "Con Skillvue, Fidia sta trasformando la propria infrastruttura HR in un sistema di talent intelligence globale, capace di mappare le competenze di centinaia ..."
+      }
     },
     "europ-assistance": {
       "breadcrumb": "Clienti",
@@ -3067,7 +3109,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Europ Assistance: come riconoscere il <hl>potenziale che resiste alla prova del tempo</hl> in un business fondato sulla <hl2>componente umana</hl2>"
+      "headline": "Europ Assistance: come riconoscere il <hl>potenziale che resiste alla prova del tempo</hl> in un business fondato sulla <hl2>componente umana</hl2>",
+      "meta": {
+        "title": "Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana | Skillvue",
+        "description": "Con Skillvue, Europ Assistance ha trasformato il pre-screening dei candidati in un processo scalabile e strategico per l'intero talent lifecycle, lavorando s..."
+      }
     },
     "europ-assistance-2": {
       "breadcrumb": "Clienti",
@@ -3264,7 +3310,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Come ottenere un tasso di successo delle assunzioni del <hl>76%</hl> in un business fondato sulla <hl2>componente umana</hl2>"
+      "headline": "Come ottenere un tasso di successo delle assunzioni del <hl>76%</hl> in un business fondato sulla <hl2>componente umana</hl2>",
+      "meta": {
+        "title": "Come ottenere un tasso di successo delle assunzioni del 76% in un business fondato sulla componente umana | Skillvue",
+        "description": "Con Skillvue, Europ Assistance ha trasformato il pre-screening da collo di bottiglia a vantaggio competitivo, estendendo il modello alla mappatura delle comp..."
+      }
     },
     "mediaset": {
       "breadcrumb": "Clienti",
@@ -3442,7 +3492,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "<hl>GRAPE</hl>, la Graduate Program Experience di Mediaset: come selezionare e accompagnare <hl2>giovani di valore</hl2> guardando al <hl3>potenziale futuro</hl3>"
+      "headline": "<hl>GRAPE</hl>, la Graduate Program Experience di Mediaset: come selezionare e accompagnare <hl2>giovani di valore</hl2> guardando al <hl3>potenziale futuro</hl3>",
+      "meta": {
+        "title": "GRAPE, la Graduate Program Experience di Mediaset: come selezionare e accompagnare giovani di valore guardando al potenziale futuro | Skillvue",
+        "description": "Con Skillvue Mediaset ha standardizzato lo step di pre-screening di migliaia di candidature di profili junior al progetto Grape, creando una base di dati str..."
+      }
     },
     "mediaset-1": {
       "breadcrumb": "Clienti",
@@ -3620,7 +3674,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "<hl>GRAPE</hl>, la Graduate Program Experience di Mediaset: come selezionare e accompagnare <hl2>giovani di valore</hl2> guardando al <hl3>potenziale futuro</hl3>"
+      "headline": "<hl>GRAPE</hl>, la Graduate Program Experience di Mediaset: come selezionare e accompagnare <hl2>giovani di valore</hl2> guardando al <hl3>potenziale futuro</hl3>",
+      "meta": {
+        "title": "GRAPE, la Graduate Program Experience di Mediaset: come selezionare e accompagnare giovani di valore guardando al potenziale futuro | Skillvue",
+        "description": "Con Skillvue Mediaset ha standardizzato lo step di pre-screening di migliaia di candidature di profili junior al progetto Grape, creando una base di dati str..."
+      }
     },
     "mediaset-2": {
       "breadcrumb": "Clienti",
@@ -3798,7 +3856,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "<hl>GRAPE</hl>, la Graduate Program Experience di Mediaset: come selezionare e accompagnare <hl2>giovani di valore</hl2> guardando al <hl3>potenziale futuro</hl3>"
+      "headline": "<hl>GRAPE</hl>, la Graduate Program Experience di Mediaset: come selezionare e accompagnare <hl2>giovani di valore</hl2> guardando al <hl3>potenziale futuro</hl3>",
+      "meta": {
+        "title": "GRAPE, la Graduate Program Experience di Mediaset: come selezionare e accompagnare giovani di valore guardando al potenziale futuro | Skillvue",
+        "description": "Con Skillvue Mediaset ha standardizzato lo step di pre-screening di migliaia di candidature di profili junior al progetto Grape, creando una base di dati str..."
+      }
     },
     "subdued": {
       "breadcrumb": "Clienti",
@@ -3994,7 +4056,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Subdued: come creare uno <hl>standard di selezione unico e scalabile</hl> per una rete internazionale di <hl2>130+ negozi</hl2>"
+      "headline": "Subdued: come creare uno <hl>standard di selezione unico e scalabile</hl> per una rete internazionale di <hl2>130+ negozi</hl2>",
+      "meta": {
+        "title": "Subdued: come creare uno standard di selezione unico e scalabile per una rete internazionale di 130+ negozi | Skillvue",
+        "description": "Con Skillvue, Subdued ha costruito un processo di selezione coerente e scalabile su più mercati, con lo stesso rigore in ogni paese e un turnover dimezzato."
+      }
     },
     "unicomm": {
       "breadcrumb": "Clienti",
@@ -4184,7 +4250,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Come Unicomm sta costruendo una nuova <hl>gestione del talento</hl> su una rete di <hl2>250 punti vendita</hl2> in costante aumento"
+      "headline": "Come Unicomm sta costruendo una nuova <hl>gestione del talento</hl> su una rete di <hl2>250 punti vendita</hl2> in costante aumento",
+      "meta": {
+        "title": "Come Unicomm sta costruendo una nuova gestione del talento su una rete di 250 punti vendita in costante aumento | Skillvue",
+        "description": "Con Skillvue, Unicomm sta trasformando la propria infrastruttura HR in un sistema skills-based agile, capace di rispondere alle necessità di selezione, confe..."
+      }
     },
     "ins-mercato": {
       "text": "La Scienza Dietro",
@@ -4194,7 +4264,11 @@
       "heading": "Storie Correlate",
       "cta2": "Leggi la storia",
       "text4": "Pronto a vedere cosa Skillvue può fare per la tua",
-      "text5": "organizzazione?"
+      "text5": "organizzazione?",
+      "meta": {
+        "title": "Come In’s Mercato ha costruito una pipeline interna di Store Manager | Skillvue",
+        "description": "La crescita della rete dipende dalla capacità di avere figure manageriali formate nel momento in cui servono. Con Skillvue, In’s ha trasformato la gestione del talento da reattiva a predittiva."
+      }
     }
   },
   "home": {
@@ -4467,6 +4541,10 @@
       "footNote": "SKILLVUE PER IL RETAIL",
       "assets": {
         "pdf": "/skillvue-supermarkets-one-pager-it.pdf"
+      },
+      "meta": {
+        "title": "Skillvue — Supermarkets One-Pager",
+        "description": "The Skills Operating System for supermarkets — objective skills data across the retail talent lifecycle."
       }
     },
     "ai-competency": {
@@ -4486,6 +4564,10 @@
         "downloadName": "Skillvue-AI-Competency-One-Pager-IT.pdf",
         "page1": "/ai-competency-page-it-1.png",
         "page2": "/ai-competency-page-it-2.png"
+      },
+      "meta": {
+        "title": "Skillvue — AI Competency One-Pager",
+        "description": "Skillvue AI Competency One-Pager"
       }
     },
     "ai-competency-newsletter": {
@@ -4583,6 +4665,10 @@
       "footNote": "SKILLVUE AI & SCIENCE LAB",
       "assets": {
         "pdf": "/skillvue-ai-competency-one-pager-nl-it.pdf"
+      },
+      "meta": {
+        "title": "Skillvue — AI Competency One-Pager",
+        "description": "Skillvue AI Competency One-Pager"
       }
     },
     "europ-assistance": {
@@ -4765,7 +4851,11 @@
         "headline": "Pronto a trasformare la tua",
         "accent": "People Strategy?"
       },
-      "headline": "Europ Assistance: come cogliere il <hl>potenziale che resiste alla prova del tempo</hl> in un business fondato sul <hl2>fattore umano</hl2>"
+      "headline": "Europ Assistance: come cogliere il <hl>potenziale che resiste alla prova del tempo</hl> in un business fondato sul <hl2>fattore umano</hl2>",
+      "meta": {
+        "title": "Europ Assistance: come cogliere il potenziale che resiste alla prova del tempo in un business fondato sul fattore umano | Skillvue",
+        "description": "Con Skillvue, Europ Assistance ha trasformato il pre-screening dei candidati in un processo scalabile e strategico per l'intero talent lifecycle, mettendo le..."
+      }
     },
     "food-retail": {
       "paragraphs": {
@@ -4775,6 +4865,57 @@
       },
       "titleLead": "Il tuo prossimo store manager è",
       "titleHighlight": "già nei tuoi negozi."
+    },
+    "ai-act-banking": {
+      "meta": {
+        "title": "AI Act-compliant nel Banking: da obbligo regolatorio a vantaggio competitivo | Skillvue"
+      }
+    },
+    "arte-di-misurare-allineamento": {
+      "meta": {
+        "title": "L'arte di misurare l'allineamento al brand — Skillvue"
+      }
+    },
+    "career-aspiration-insurance": {
+      "meta": {
+        "title": "Career Aspiration Intelligence nel settore assicurativo | Skillvue"
+      },
+      "whitepaper": {
+        "meta": {
+          "title": "Career Aspiration Intelligence nel settore assicurativo | Skillvue"
+        }
+      }
+    },
+    "hidden-cost-recruiting": {
+      "meta": {
+        "title": "Hidden Cost of Non-Predictive Recruiting | Skillvue"
+      }
+    },
+    "il-costo-invisibile": {
+      "meta": {
+        "title": "Il costo invisibile della selezione non predittiva | Skillvue"
+      },
+      "whitepaper": {
+        "meta": {
+          "title": "Il costo invisibile della selezione non predittiva | Skillvue"
+        }
+      }
+    },
+    "il-turnover-nei-negozi-del-lusso": {
+      "meta": {
+        "title": "Il turnover nei negozi del lusso: il costo nascosto | Skillvue",
+        "description": "La selezione non efficace nei flagship store e il suo impatto sul business. Analisi della struttura economica del turnover e degli strumenti predittivi per ridurlo. Whitepaper gratuito di Skillvue."
+      }
+    },
+    "la-crisi-delle-competenze": {
+      "meta": {
+        "title": "La crisi delle competenze obsolete nelle banche europee | Skillvue"
+      }
+    },
+    "scalare-l-eccellenza": {
+      "meta": {
+        "title": "Scalare l'eccellenza senza perdere l'esclusività — Skillvue"
+      }
     }
   },
   "privacy-policy": {

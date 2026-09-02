@@ -69,3 +69,72 @@ export function alternatesFor(route: RouteLike): Record<string, string> {
   if (fallback) languages['x-default'] = fallback;
   return languages;
 }
+
+/**
+ * The localized form of an English in-site path — `/customers/adr` becomes
+ * `/it/clienti/adr`. For a raw <a href> and for router.push, neither of which
+ * adds the locale prefix itself once nextConfig.i18n is gone.
+ *
+ * It is idempotent: an already-localized path is not a known English path, so
+ * it comes back untouched. About half the call sites already pass
+ * `href(id, lang)`, and they must not be localized twice.
+ *
+ * `routes` is a parameter rather than an import because this file has none —
+ * that is what lets scripts/check-navigation.mjs run the real function instead
+ * of a second copy of the rule.
+ */
+export function localizePathIn(routes: RouteLike[], path: string, locale: Locale): string {
+  const [pathname, suffix = ''] = path.split(/(?=[?#])/);
+
+  const exact = routes.find((r) => r.paths.en === pathname);
+  if (exact) return (pathFor(exact, locale) ?? pathname) + suffix;
+
+  // A URL under a dynamic route — /resources/whitepapers/beyond-skills — has no
+  // registry entry of its own; its parent does. Without this branch it is the
+  // one link shape that keeps its English prefix in Italian, silently.
+  //
+  // The trailing slash in the test is what keeps '/' — which is a route — from
+  // claiming every path on the site: no pathname starts with '//'. The longest
+  // match wins, so /resources/whitepapers/x is claimed by /resources/whitepapers
+  // and not by /resources.
+  const parent = routes
+    .filter((r) => r.paths.en !== undefined)
+    .filter((r) => pathname.startsWith(`${r.paths.en}/`))
+    .sort((a, b) => b.paths.en!.length - a.paths.en!.length)[0];
+  if (parent) {
+    const localized = pathFor(parent, locale);
+    if (localized === undefined) return path;
+    return localized + pathname.slice(parent.paths.en!.length) + suffix;
+  }
+
+  return path;
+}
+
+/**
+ * The reverse of localizePathIn: the URL a visitor is on, back to the internal
+ * English-keyed path the registry is written in. `/it/clienti/adr` becomes
+ * `/customers/adr`.
+ *
+ * The language switcher is the one caller that needs it — "this page, in the
+ * other language" is `internalPathIn` followed by `localizePathIn`. Doing it in
+ * two steps rather than one it-to-en map is what makes a third locale a data
+ * change instead of a code change.
+ */
+export function internalPathIn(routes: RouteLike[], path: string, locale: Locale): string {
+  const [prefixed, suffix = ''] = path.split(/(?=[?#])/);
+  // Strip the prefix the visitor sees; the registry is written without it.
+  const pathname = locale === 'en' ? prefixed : prefixed.replace(/^\/it(?=\/|$)/, '') || '/';
+
+  const exact = routes.find((r) => r.paths[locale] === pathname);
+  if (exact) return (exact.paths.en ?? pathname) + suffix;
+
+  const parent = routes
+    .filter((r) => r.paths[locale] !== undefined)
+    .filter((r) => pathname.startsWith(`${r.paths[locale]}/`))
+    .sort((a, b) => b.paths[locale]!.length - a.paths[locale]!.length)[0];
+  if (parent?.paths.en !== undefined) {
+    return parent.paths.en + pathname.slice(parent.paths[locale]!.length) + suffix;
+  }
+
+  return pathname + suffix;
+}

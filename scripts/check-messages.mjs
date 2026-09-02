@@ -197,6 +197,37 @@ assert.deepEqual(
   `${mismatched.length} array(s) differ in shape between the locales:\n${mismatched.join('\n')}`,
 );
 
+// ── ICU escapes ───────────────────────────────────────────────────────────
+// A straight apostrophe immediately before `<` or `{` is not an apostrophe to
+// ICU — it opens a quoted literal, and everything up to the next quote is
+// emitted verbatim. Two Italian messages read `l'<b>espansione…` and rendered
+// the tag as visible text with the apostrophe swallowed. Nothing failed: the
+// page compiled, the build passed, and the sentence was wrong in one language.
+//
+// The fix in the catalogue is the curly apostrophe the house style asks for
+// anyway. This is the check that keeps the straight one from coming back.
+const values = (obj, prefix = '') =>
+  Object.entries(obj).flatMap(([k, v]) =>
+    typeof v === 'string'
+      ? [[`${prefix}${k}`, v]]
+      : v && typeof v === 'object'
+        ? values(v, `${prefix}${k}.`)
+        : [],
+  );
+
+const escaping = ['en', 'it'].flatMap((locale) =>
+  values(JSON.parse(readFileSync(join(ROOT, `messages/${locale}.json`), 'utf8')))
+    .filter(([, value]) => /'[<{]/.test(value))
+    .map(([key, value]) => `  ${locale}: ${key}\n      ${value.slice(0, 120)}`),
+);
+assert.deepEqual(
+  escaping,
+  [],
+  `${escaping.length} message(s) open an ICU quoted literal before a tag:\n${escaping.join('\n')}\n` +
+    'Use the curly apostrophe (\u2019). ICU reads the straight one as an escape and renders the ' +
+    'tag as text.',
+);
+
 const onlyEn = en.filter((k) => !it.includes(k));
 const onlyIt = it.filter((k) => !en.includes(k));
 assert.deepEqual(onlyEn, [], `messages/en.json has keys missing from it.json:\n  ${onlyEn.join('\n  ')}`);

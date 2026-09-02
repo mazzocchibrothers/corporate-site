@@ -1,0 +1,112 @@
+// check-navigation — localizePath is what every in-site link and every
+// router.push now goes through, so it is the single point where the whole
+// site's Italian navigation can break at once.
+//
+// Under nextConfig.i18n, Next added the /it prefix and a rewrite resolved the
+// slug. Both are gone (#128). This function is their replacement, and the two
+// properties below are the ones that are easy to lose:
+//
+//   * a path that is already localized must come back unchanged — roughly half
+//     the call sites pass href(id, lang), which is already localized, and a
+//     second pass would produce /it/it/clienti
+//   * a URL under a dynamic route has no registry entry of its own, so it needs
+//     its parent's
+//
+// Run: npm run check:navigation
+
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+// Node 24 runs the TypeScript directly, so this asserts against the same
+// function the site navigates with.
+import { internalPathIn, localizePathIn } from '../i18n/urls.ts';
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const routes = JSON.parse(readFileSync(join(ROOT, 'i18n/routes.json'), 'utf8'));
+const at = (path, locale) => localizePathIn(routes, path, locale);
+
+// ── English is the unprefixed locale: nothing moves ────────────────────────
+assert.equal(at('/', 'en'), '/');
+assert.equal(at('/customers/adr', 'en'), '/customers/adr');
+assert.equal(at('/book-meeting', 'en'), '/book-meeting');
+
+// ── Italian gets the prefix, and the slug where there is one ───────────────
+assert.equal(at('/', 'it'), '/it');
+assert.equal(at('/blog', 'it'), '/it/blog');
+assert.equal(at('/customers', 'it'), '/it/clienti');
+assert.equal(at('/customers/adr', 'it'), '/it/clienti/adr');
+assert.equal(at('/book-meeting', 'it'), '/it/prenota-incontro');
+
+// ── Idempotent ────────────────────────────────────────────────────────────
+// The property that lets one guard sit in i18n/navigation.ts instead of at 98
+// call sites: passing an already-localized path is a no-op, so a caller that
+// already used href(id, lang) is not localized twice.
+for (const path of ['/it', '/it/blog', '/it/clienti/adr', '/it/prenota-incontro']) {
+  assert.equal(at(path, 'it'), path, `${path} was localized twice`);
+}
+
+// ── A URL under a dynamic route travels with its parent ───────────────────
+assert.equal(
+  at('/resources/whitepapers/beyond-skills', 'it'),
+  '/it/resources/whitepapers/beyond-skills',
+);
+// …and '/' must not act as everyone's parent. An unknown path is returned as
+// given, not prefixed on a guess.
+assert.equal(at('/not-a-route', 'it'), '/not-a-route');
+
+// ── Query strings and hashes ride along ───────────────────────────────────
+// UTM-tagged links are how half the traffic to the landing pages arrives.
+assert.equal(at('/customers/adr?utm_source=nl', 'it'), '/it/clienti/adr?utm_source=nl');
+assert.equal(at('/book-meeting#form', 'it'), '/it/prenota-incontro#form');
+assert.equal(
+  at('/resources/whitepapers/beyond-skills?utm_medium=email', 'it'),
+  '/it/resources/whitepapers/beyond-skills?utm_medium=email',
+);
+
+// ── A route with no page in the target locale is left alone ───────────────
+// /lp/hidden-cost-recruiting is English-only. Localizing it would hand the
+// visitor a URL that 404s; the decision to hide the link belongs to the caller.
+assert.equal(at('/lp/hidden-cost-recruiting', 'it'), '/lp/hidden-cost-recruiting');
+
+// ── External URLs are not paths ───────────────────────────────────────────
+assert.equal(at('https://www.linkedin.com/company/skillvue/', 'it'),
+  'https://www.linkedin.com/company/skillvue/');
+
+console.log(`[OK] navigation: localizePath over ${routes.length} routes`);
+
+// ── The language switcher: this page, in the other language ───────────────
+// Two steps, not one it-to-en map: internalPathIn back to the registry's own
+// spelling, then localizePathIn forward into the target locale. The property
+// that matters is the round trip — a switch to Italian and back must land where
+// it started, on every route, or the switcher walks the visitor off the page.
+const switchTo = (path, from, to) => at(internalPathIn(routes, path, from), to);
+
+assert.equal(switchTo('/customers/adr', 'en', 'it'), '/it/clienti/adr');
+assert.equal(switchTo('/it/clienti/adr', 'it', 'en'), '/customers/adr');
+assert.equal(switchTo('/', 'en', 'it'), '/it');
+assert.equal(switchTo('/it', 'it', 'en'), '/');
+assert.equal(switchTo('/book-meeting', 'en', 'it'), '/it/prenota-incontro');
+assert.equal(switchTo('/it/prenota-incontro', 'it', 'en'), '/book-meeting');
+assert.equal(
+  switchTo('/it/resources/whitepapers/beyond-skills', 'it', 'en'),
+  '/resources/whitepapers/beyond-skills',
+);
+assert.equal(switchTo('/it/clienti/adr?utm_source=nl', 'it', 'en'), '/customers/adr?utm_source=nl');
+
+for (const route of routes) {
+  for (const locale of ['en', 'it']) {
+    if (route.paths[locale] === undefined) continue;
+    const other = locale === 'en' ? 'it' : 'en';
+    if (route.paths[other] === undefined) continue; // monolingual: no round trip to make
+    const here = locale === 'en' ? route.paths.en : `/it${route.paths.it}`.replace(/\/$/, '');
+    const there = switchTo(here, locale, other);
+    assert.equal(
+      switchTo(there, other, locale),
+      here,
+      `Round trip lost '${route.id}': ${here} -> ${there} -> ${switchTo(there, other, locale)}`,
+    );
+  }
+}
+
+console.log(`[OK] navigation: locale switch round-trips on every bilingual route`);

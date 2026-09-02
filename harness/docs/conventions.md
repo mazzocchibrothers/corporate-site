@@ -197,3 +197,38 @@ cuts of a story. Some are live via a rewrite — `/customers/mediaset` serves
 - Conventional, scoped commit subjects in the imperative:
   `Add August newsletter (EN/IT) and supermarkets one-pager LP`.
 - PR body says `Closes #<n>`.
+
+## CSS delivery
+
+One stylesheet, external, cached. No `experimental.inlineCss`, no critical-CSS
+extraction step. **Decided on measurement (#135), not on default.**
+
+The site compiles to a single sheet: 105.5 KB raw, 18.7 KB gzipped, 1,562
+utility rules across 61 pages — for markup this dense that is what the pages
+use, not bloat, so there is nothing to trim first. Next puts a `<link>` for it
+in `<head>`, where the preload scanner finds it immediately, and
+`/_next/static` already carries an immutable cache header, so it is fetched
+once per visitor and never again.
+
+`experimental.inlineCss: true` is the App Router replacement for the
+`optimizeCss` that the Pages Router used, and it is the wrong trade here.
+Measured on two real pages, same build:
+
+| | `/about` | `/it/clienti/adr` |
+|---|---|---|
+| external sheet (this) | 13.1 KB gzip | 17.2 KB gzip |
+| `inlineCss: true` | 51.2 KB gzip | 55.7 KB gzip |
+
+It costs **+38 KB gzipped on every page view, uncacheable**, to save one
+request for an 18.7 KB sheet that is cached for the rest of the visit and the
+next one. Marketing traffic lands, reads, and moves on: paying 38 KB per view
+to save one cached fetch per visitor is backwards.
+
+What was actually lost with `optimizeCss` is the deferred load — the sheet is
+render-blocking again. That is one round trip on the connection that already
+delivered the HTML. Revisit only with a real LCP measurement saying it matters.
+
+**Do not add `./app/**` to the Tailwind content globs as an afterthought.** It
+is there because a page moved to `app/[locale]` without it keeps compiling and
+loses every utility it uses. Nothing warns; the page just renders unstyled.
+

@@ -11,21 +11,22 @@
 // from plain Node — JSON is the one format both get for free, with no eval and
 // no build step. This module is the typed view of it.
 //
-// `paths`  the URL per locale, WITHOUT the /it prefix Next adds itself.
-// `files`  the page under pages/ that serves that locale. Usually the same file
-//          for both; /book-meeting and /prenota-incontro are two real files.
+// `paths`  the URL per locale, WITHOUT the /it prefix Next adds itself. It is
+//          also where the page lives: app/[locale]<paths.en ?? paths.it>. The
+//          registry used to carry a second `files` list; with one directory per
+//          route there is nothing for it to say that `paths` does not.
 //
 // A locale missing from `paths` means the route has no content in that
-// language. Today that is 10 Italian-only routes and 1 English-only one — they
-// currently render under both locales and claim an hreflang alternate they
-// cannot serve (#102, #116).
+// language. That is 10 Italian-only routes and 1 English-only one, and their
+// pages now 404 in the language they do not have rather than serving the other
+// one under a URL that claims through hreflang to be a translation (#116).
 //
 // Slugs still to translate: every route whose `it` path equals its `en` path is
 // waiting on #119. Adding one to routes.json is all it takes — every consumer
 // follows.
 
 import data from './routes.json';
-import { pathFor, urlFor, type Locale as UrlLocale } from './urls';
+import { localizePathIn, pathFor, urlFor, type Locale as UrlLocale } from './urls';
 
 export type Locale = UrlLocale;
 
@@ -34,8 +35,6 @@ export type Route = {
   id: string;
   /** URL per locale, no /it prefix. Absent locale = no content there. */
   paths: Partial<Record<Locale, string>>;
-  /** Page file under pages/, no extension. */
-  files: Partial<Record<Locale, string>>;
 };
 
 export const routes: Route[] = data as Route[];
@@ -86,11 +85,8 @@ export function canonical(id: string, locale: string): string {
  * It replaces the hand-built version in the newsletters, which knew about
  * `/clienti` because someone typed it there.
  */
-export function localizePath(path: string, locale: string): string {
-  const [pathname, suffix = ''] = path.split(/(?=[?#])/);
-  const route = byPath('en', pathname);
-  return route ? (pathFor(route, locale as Locale) ?? pathname) + suffix : path;
-}
+export const localizePath = (path: string, locale: string): string =>
+  localizePathIn(routes, path, locale as Locale);
 
 /** Whether a route has content in a locale — what hideInIT was guessing at. */
 export const hasLocale = (id: string, locale: string): boolean =>
