@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React, { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import { ArrowRight } from 'lucide-react';
@@ -9,33 +10,44 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { useRouter } from 'next/router';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { messagesFor } from '@/i18n/messages';
+import { canonical as canonicalUrl } from '@/i18n/routes';
 
 const stats = [
-  { value: '50+', label: 'People across Europe' },
-  { value: '3', label: 'Offices in Milan, Berlin, London' },
-  { value: 'Hybrid', label: 'Working environment' },
-  { value: '1M+', label: 'People empowered' },
+  {
+    id: 'n50',
+  },
+  {
+    id: 'n3',
+  },
+  {
+    id: 'hybrid',
+  },
+  {
+    id: 'n1m',
+  },
 ];
 
 const steps = [
   {
+    id: 'applySkills',
     num: '01',
-    title: 'Apply with your skills',
-    desc: 'A short Skillvue verification of your skills, mindset and readiness.',
   },
   {
+    id: 'meetTeam',
     num: '02',
-    title: 'Meet the team',
-    desc: "Structured conversations with the people you'd actually work with.",
   },
   {
+    id: 'moveForwardClarity',
     num: '03',
-    title: 'Move forward with clarity',
-    desc: 'An objective, bias-free, explainable decision. For you and for us.',
   },
 ];
 
-const tags = ['Skills-first', 'Bias-free', 'GDPR-compliant', 'Explainable'];
+const tags = [
+  'skillsFirst',
+  'biasFree',
+  'gdprCompliant',
+  'explainable',
+];
 
 const allRoles = [
   { team: 'Product', title: 'Technical Product Manager', location: 'Milan', work: 'Hybrid · Full-time', url: 'https://skillvue.factorial.it/job_posting/technical-product-manager-310502' },
@@ -52,10 +64,11 @@ const filters = ['All teams', 'Product', 'Design', 'People', 'Sales'];
 export const getStaticProps = messagesFor('careers');
 
 export default function CareersPage() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('careers');
+  const meta = useTranslations('careers.meta');
   const router = useRouter();
-  const isIT = lang === 'it';
-  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/careers`;
+  const canonical = canonicalUrl('careers', lang);
   const [activeFilter, setActiveFilter] = useState('All teams');
 
   const filtered =
@@ -76,10 +89,8 @@ export default function CareersPage() {
   return (
     <>
       <Head>
-        <title>{isIT ? 'Lavora con noi | Carriere in Skillvue' : 'Careers | Join Skillvue'}</title>
-        <meta name="description" content={isIT
-          ? 'Unisciti al team che rende oggettive le decisioni sul talento. Scopri i ruoli aperti in Skillvue e come lavoriamo, a Milano e in tutta Europa.'
-          : "Join the team making talent decisions objective. Explore open roles at Skillvue and what it's like to work with us, across Milan and Europe."
+        <title>{meta('title')}</title>
+        <meta name="description" content={meta('description')
         } />
         <link rel="canonical" href={canonical} />
       </Head>
@@ -118,28 +129,23 @@ export default function CareersPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
               >
-                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">
-                  {t('Careers')}
-                </span>
+                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">{t('text')}</span>
                 <h1
                   className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
                   style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-                >
-                  {t('Join the team making talent decisions')}{' '}
-                  <span className="italic font-bold gradient-text-warm">{t('objective.')}</span>
-                </h1>
-                <p className="text-[15px] md:text-[17px] text-white/55 leading-[1.7] mb-8 max-w-lg font-light">
-                  {t("You'll help the world's biggest companies hire, promote and develop people based on skills and potential.")}
-                </p>
+                >{t.rich('heading', {
+                  span: (chunks) => <span className="italic font-bold gradient-text-warm">{chunks}</span>,
+                })}</h1>
+                <p className="text-[15px] md:text-[17px] text-white/55 leading-[1.7] mb-8 max-w-lg font-light">{t('body')}</p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild variant="primary" mode="dark">
                     <a href="#open-roles">
-                      {t('See open roles')}
+                      {t('cta')}
                       <ArrowRight aria-hidden />
                     </a>
                   </Button>
                   <Button asChild variant="secondary" mode="dark">
-                    <a href="#life-at-skillvue">{t('Life at Skillvue')}</a>
+                    <a href="#life-at-skillvue">{t('cta2')}</a>
                   </Button>
                 </div>
               </motion.div>
@@ -172,9 +178,9 @@ export default function CareersPage() {
                   className={`pt-6 pb-8 ${i % 2 !== 0 ? 'pl-6 md:pl-8' : ''}`}
                 >
                   <p className="text-[32px] md:text-[34px] font-semibold text-white/90 tracking-[-0.02em] leading-none mb-1.5">
-                    {t(s.value)}
+                    {t(`stats.${s.id}.value`)}
                   </p>
-                  <p className="text-[12px] md:text-[13px] text-white/40 leading-[1.4]">{t(s.label)}</p>
+                  <p className="text-[12px] md:text-[13px] text-white/40 leading-[1.4]">{t(`stats.${s.id}.label`)}</p>
                 </div>
               ))}
             </motion.div>
@@ -191,22 +197,17 @@ export default function CareersPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-6 block">
-                {t('Why Skillvue')}
-              </span>
+              <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-6 block">{t('text2')}</span>
               <h2
                 className="font-semibold text-[#121212] mb-6"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3.2rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
-              >
-                {t('Every talent decision, from hiring to transformation, is')}{' '}
-                <span className="italic font-bold gradient-text-on-light">{t('finally the right one')}</span>
-              </h2>
-              <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.7] mb-8 max-w-2xl">
-                {t('We are building the objective skills data layer for the enterprise, grounded in science and scaled by AI.')}
-              </p>
+              >{t.rich('heading2', {
+                span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+              })}</h2>
+              <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.7] mb-8 max-w-2xl">{t('body2')}</p>
               <Button asChild variant="secondary" mode="light">
                 <a href="/about" onClick={(e) => { e.preventDefault(); router.push('/about'); window.scrollTo(0, 0); }}>
-                  {t('Read the full story')}
+                  {t('cta3')}
                   <ArrowRight aria-hidden />
                 </a>
               </Button>
@@ -231,19 +232,14 @@ export default function CareersPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">
-                {t('How we hire')}
-              </span>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">{t('text3')}</span>
               <h2
                 className="font-semibold text-white/95 mb-4"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
-              >
-                {t('We hire the way we help')}{' '}
-                <span className="italic font-bold gradient-text-warm">{t('enterprises hire')}</span>
-              </h2>
-              <p className="text-[15px] md:text-[17px] text-white/50 leading-[1.7] font-light">
-                {t('Our own hiring reflects the same principles we bring to our customers: a skills-based method, not CV screening.')}
-              </p>
+              >{t.rich('heading3', {
+                span: (chunks) => <span className="italic font-bold gradient-text-warm">{chunks}</span>,
+              })}</h2>
+              <p className="text-[15px] md:text-[17px] text-white/50 leading-[1.7] font-light">{t('body3')}</p>
             </motion.div>
 
             {/* Step cards */}
@@ -261,9 +257,9 @@ export default function CareersPage() {
                     {step.num}
                   </span>
                   <h3 className="text-[16px] md:text-[18px] font-semibold text-white/90 mb-3 leading-snug">
-                    {t(step.title)}
+                    {t(`steps.${step.id}.title`)}
                   </h3>
-                  <p className="text-[13px] md:text-[14px] text-white/50 leading-[1.6]">{t(step.desc)}</p>
+                  <p className="text-[13px] md:text-[14px] text-white/50 leading-[1.6]">{t(`steps.${step.id}.desc`)}</p>
                 </motion.div>
               ))}
             </div>
@@ -281,7 +277,7 @@ export default function CareersPage() {
                   key={tag}
                   className="inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[12px] font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03] tracking-wide"
                 >
-                  {t(tag)}
+                  {t(`tags.${tag}`)}
                 </span>
               ))}
             </motion.div>
@@ -298,18 +294,12 @@ export default function CareersPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">
-                {t('Life at Skillvue')}
-              </span>
+              <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">{t('text4')}</span>
               <h2
                 className="font-semibold text-[#121212] mb-2"
                 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.8rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
-              >
-                {t('50+ people across Milan, Berlin & London.')}
-              </h2>
-              <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.6]">
-                {t('Flexible and hybrid working environment')}
-              </p>
+              >{t('heading4')}</h2>
+              <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.6]">{t('body4')}</p>
             </motion.div>
 
             {/* Photo mosaic — large left + 2×2 right */}
@@ -352,15 +342,11 @@ export default function CareersPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-4 block">
-                {t('Join us!')}
-              </span>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-4 block">{t('text5')}</span>
               <h2
                 className="font-semibold text-white/95"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
-              >
-                {t('Open roles')}
-              </h2>
+              >{t('heading5')}</h2>
             </motion.div>
 
             {/* Filter pills */}
@@ -410,7 +396,7 @@ export default function CareersPage() {
                             {role.location} · {role.work}
                           </span>
                           <span className={buttonVariants({ variant: 'secondary', mode: 'dark' })}>
-                            {t('Apply')}
+                            {t('cta4')}
                             <ArrowRight aria-hidden className="group-hover:translate-x-1 transition-transform duration-300" />
                           </span>
                         </div>
@@ -421,7 +407,7 @@ export default function CareersPage() {
               ))}
 
               {Object.keys(grouped).length === 0 && (
-                <p className="text-[15px] text-white/35 py-8">{t('No roles match this filter.')}</p>
+                <p className="text-[15px] text-white/35 py-8">{t('body5')}</p>
               )}
             </div>
           </div>
@@ -444,19 +430,17 @@ export default function CareersPage() {
                   lineHeight: 1.05,
                   letterSpacing: '-0.02em',
                 }}
-              >
-                {t('Ready to do the most important work in HR tech?')}
-              </h2>
+              >{t('heading6')}</h2>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Button asChild variant="primary" mode="dark">
                   <a href="#open-roles">
-                    {t('See open roles')}
+                    {t('cta5')}
                     <ArrowRight aria-hidden />
                   </a>
                 </Button>
                 <Button asChild variant="tertiary" mode="dark">
                   <a href="#life-at-skillvue">
-                    {t('Life at Skillvue')}
+                    {t('cta6')}
                     <ArrowRight aria-hidden />
                   </a>
                 </Button>

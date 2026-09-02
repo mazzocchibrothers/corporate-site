@@ -358,14 +358,23 @@ function arrayForParam(node, param, arrays, helpers = new Map()) {
  */
 function scopeOf(file, namespace) {
   const name = basename(file).replace(/\.tsx?$/, '');
+  // `index.tsx` IS the page: its copy sits directly on the namespace.
   if (name === 'index') return '';
+  // A dynamic route shares its collection's namespace — the card and the page
+  // it links to render the same title — so its own chrome needs a scope of its
+  // own, or the two pages' headings collide silently. `[slug]` would also be an
+  // illegal key path.
+  if (/^\[.*\]$/.test(name)) return 'detail';
   // `ProductHero` under namespace `product-overview` is the overview page's
   // hero, so it is `hero` — repeating the page's own name inside its namespace
   // is noise the key has to carry forever.
   const words = namespace.split('.').pop().split('-');
   let stripped = name;
   for (const word of words) {
-    stripped = stripped.replace(new RegExp(`^${word}`, 'i'), '');
+    // Strip the separator with the word, or `book-meeting.tsx` under namespace
+    // `book-meeting` leaves `-meeting` and the catalogue grows a key that
+    // starts with a dash.
+    stripped = stripped.replace(new RegExp(`^${word}[-_]?`, 'i'), '');
   }
   // `Section` is what every one of these is. It says nothing.
   stripped = stripped.replace(/Section$/, '') || name;

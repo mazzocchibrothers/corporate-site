@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -15,6 +16,7 @@ import TAFunnel from '@/components/solutions/ta/TAFunnel';
 import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { messagesFor } from '@/i18n/messages';
+import { canonical as canonicalUrl } from '@/i18n/routes';
 
 
 // One line per page is the whole contract: the argument is this route's `id` in
@@ -23,16 +25,14 @@ export const getStaticProps = messagesFor('solutions/talent-acquisition');
 
 export default function TalentAcquisitionPage() {
   const { t, lang } = useLanguage();
-  const isIT = lang === 'it';
-  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/solutions/talent-acquisition`;
+  const meta = useTranslations('solutions.talent-acquisition.meta');
+  const canonical = canonicalUrl('solutions/talent-acquisition', lang);
 
   return (
     <>
       <Head>
-        <title>{isIT ? 'Talent Acquisition | Valutazioni Predittive con AI | Skillvue' : 'Talent Acquisition | AI Hiring Verifications | Skillvue'}</title>
-        <meta name="description" content={isIT
-          ? "Sostituisci il recruiting basato sull'istinto con valutazioni AI predittive. Riduci il turnover precoce e rendi ogni decisione di assunzione difendibile."
-          : 'Replace gut-feel hiring with AI verifications that predict performance. Reduce early turnover and make every hiring decision defensible at scale.'
+        <title>{meta('title')}</title>
+        <meta name="description" content={meta('description')
         } />
         <link rel="canonical" href={canonical} />
       </Head>

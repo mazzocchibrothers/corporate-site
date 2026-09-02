@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -8,13 +9,29 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { messagesFor } from '@/i18n/messages';
+import { canonical as canonicalUrl } from '@/i18n/routes';
 
 const stats = [
-  { value: '€9M+', label: 'Raised' },
-  { value: '50+', label: 'People across Europe' },
-  { value: '100+', label: 'Enterprise clients' },
-  { value: '30+', label: 'Languages' },
-  { value: '1M+', label: 'People empowered' },
+  {
+    id: 'raised',
+    value: '€9M+',
+  },
+  {
+    id: 'peopleAcrossEurope',
+    value: '50+',
+  },
+  {
+    id: 'enterpriseClients',
+    value: '100+',
+  },
+  {
+    id: 'languages',
+    value: '30+',
+  },
+  {
+    id: 'peopleEmpowered',
+    value: '1M+',
+  },
 ];
 
 // Backers — Orbita Verticale placed last per feedback
@@ -175,9 +192,10 @@ export const getStaticProps = messagesFor('about');
 
 export default function AboutPage() {
   const router = useRouter();
-  const { t, lang } = useLanguage();
-  const isIT = lang === 'it';
-  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/about`;
+  const { lang } = useLanguage();
+  const t = useTranslations('about');
+  const meta = useTranslations('about.meta');
+  const canonical = canonicalUrl('about', lang);
 
   const [heroVisible, setHeroVisible] = React.useState(false);
   const targets = React.useMemo(() => stats.map(s => {
@@ -216,10 +234,8 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>{isIT ? 'Chi siamo – Skillvue' : 'About Us – Skillvue'}</title>
-        <meta name="description" content={isIT
-          ? 'Scopri Skillvue, lo Skills Operating System per le grandi imprese. La nostra missione, visione, fondatori e team.'
-          : 'Learn about Skillvue, the Skills Operating System for modern enterprises. Our mission, vision, founders, and team.'
+        <title>{meta('title')}</title>
+        <meta name="description" content={meta('description')
         } />
         <link rel="canonical" href={canonical} />
       </Head>
@@ -245,8 +261,8 @@ export default function AboutPage() {
             </div>
             <div style={{ padding: '40px 24px 64px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 48 }}>
               {(() => {
-                const line1 = t('Unlock human potential and').split(' ');
-                const line2 = t('organizational success at scale').split(' ');
+                const line1 = t('heroLine1').split(' ');
+                const line2 = t('heroLine2').split(' ');
                 return (
                   <h1 className="text-[48px] md:text-[clamp(42px,10vw,56px)] font-semibold md:font-medium" style={{ fontFamily: 'Mona Sans, sans-serif', lineHeight: 1.05, color: '#fff', letterSpacing: '-1.5px', margin: 0, textAlign: 'left' }}>
                     {[...line1, ...line2].map((word, i) => (
@@ -262,7 +278,7 @@ export default function AboutPage() {
                       {getCounterDisplay(s.value, counts[i])}
                     </p>
                     <p style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: 1.4, color: '#a9a9a9', margin: 0 }}>
-                      {t(s.label)}
+                      {t(`stats.${s.id}.label`)}
                     </p>
                   </div>
                 ))}
@@ -301,15 +317,15 @@ export default function AboutPage() {
                         {getCounterDisplay(s.value, counts[i])}
                       </p>
                       <p style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 400, fontSize: 13.5, lineHeight: 1.5, color: '#a9a9a9', margin: 0 }}>
-                        {t(s.label)}
+                        {t(`stats.${s.id}.label`)}
                       </p>
                     </div>
                   ))}
                 </div>
                 {/* Headline text */}
                 {(() => {
-                  const line1 = t('Unlock human potential and').split(' ');
-                  const line2 = t('organizational success at scale').split(' ');
+                  const line1 = t('heroLine1').split(' ');
+                  const line2 = t('heroLine2').split(' ');
                   return (
                     <h1 className="text-[48px] md:text-[clamp(36px,4.2vw,64px)] font-semibold md:font-medium" style={{ fontFamily: 'Mona Sans, sans-serif', lineHeight: 1.1, color: '#fff', letterSpacing: '-1.28px', margin: 0, textAlign: 'center' }}>
                       {line1.map((word, i) => (
@@ -356,9 +372,7 @@ export default function AboutPage() {
                   textTransform: 'uppercase',
                   margin: '0 0 24px',
                 }}
-              >
-                {t('OUR VISION')}
-              </p>
+              >{t('body')}</p>
               <p
                 style={{
                   fontFamily: 'Mona Sans, sans-serif',
@@ -369,9 +383,7 @@ export default function AboutPage() {
                   letterSpacing: '-0.96px',
                   margin: 0,
                 }}
-              >
-                {t('A world where every talent decision, from hire to promotion to transformation is powered by objective intelligence. Where human potential is no longer left to chance. And organizational success is something you build, not hope for.')}
-              </p>
+              >{t('body2')}</p>
             </div>
 
             {/* Team images — bridging vision and mission */}
@@ -395,9 +407,7 @@ export default function AboutPage() {
                   textTransform: 'uppercase',
                   margin: '0 0 24px',
                 }}
-              >
-                {t('OUR MISSION')}
-              </p>
+              >{t('body3')}</p>
               <h2
                 style={{
                   fontFamily: 'Mona Sans, sans-serif',
@@ -408,20 +418,16 @@ export default function AboutPage() {
                   color: '#fff',
                   margin: '0 0 24px',
                 }}
-              >
-                {t('Make skills the most')}{' '}
-                <span
+              >{t.rich('heading', {
+                span: (chunks) => <span
                   style={{
                     background: 'linear-gradient(90deg, #4e6bff 0%, #ff5b5b 49.52%, #ff8447 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
                   }}
-                >
-                  {t('reliable data')}
-                </span>
-                {' '}{t('in every organization')}
-              </h2>
+                >{chunks}</span>,
+              })}</h2>
               <p
                 style={{
                   fontFamily: 'Mona Sans, sans-serif',
@@ -431,9 +437,7 @@ export default function AboutPage() {
                   color: '#9a9a9a',
                   margin: 0,
                 }}
-              >
-                {t('Building the science-grounded, AI-scaled Skills Operating System that every HR system can plug into, so that every talent decision, from hire to promotion to transformation, is finally objective.')}
-              </p>
+              >{t('body4')}</p>
             </div>
 
           </div>
@@ -452,9 +456,7 @@ export default function AboutPage() {
                 textTransform: 'uppercase',
                 margin: '0 0 24px',
               }}
-            >
-              {t('WHO WE ARE')}
-            </p>
+            >{t('body5')}</p>
             <h2
               style={{
                 fontFamily: 'Mona Sans, sans-serif',
@@ -466,20 +468,16 @@ export default function AboutPage() {
                 margin: '0 0 24px',
                 maxWidth: 850,
               }}
-            >
-              {t('Skillvue is the')}{' '}
-              <span
+            >{t.rich('heading2', {
+              span: (chunks) => <span
                 style={{
                   background: 'linear-gradient(90deg, #5667ff 0%, #ff6262 51.93%, #ff7d49 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
                 }}
-              >
-                {t('Skills Operating System')}
-              </span>
-              {' '}{t('for your organization.')}
-            </h2>
+              >{chunks}</span>,
+            })}</h2>
             <p
               style={{
                 fontFamily: 'Mona Sans, sans-serif',
@@ -490,9 +488,7 @@ export default function AboutPage() {
                 margin: 0,
                 maxWidth: 837,
               }}
-            >
-              {t('Skillvue is the objective skills data layer for your enterprise, tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run.')}
-            </p>
+            >{t('body6')}</p>
             <p
               style={{
                 fontFamily: 'Mona Sans, sans-serif',
@@ -503,11 +499,9 @@ export default function AboutPage() {
                 margin: '24px 0 0',
                 maxWidth: 837,
               }}
-            >
-              {t("We work with the world's leading organizations.")}
-              <br />
-              {t('We enable global enterprises to access predictive data on talent, grounded in science and scaled by AI, so every decision about people is based on evidence, not intuition.')}
-            </p>
+            >{t.rich('body7', {
+              br: () => <br />,
+            })}</p>
 
             {/* Working with leading global companies — client logos */}
             <div style={{ marginTop: 72 }}>
@@ -578,9 +572,7 @@ export default function AboutPage() {
                   textTransform: 'uppercase',
                   margin: 0,
                 }}
-              >
-                {t('ABOUT SKILLVUE')}
-              </p>
+              >{t('body8')}</p>
               <h2
                 style={{
                   fontFamily: 'Mona Sans, sans-serif',
@@ -591,9 +583,7 @@ export default function AboutPage() {
                   letterSpacing: '-0.96px',
                   margin: 0,
                 }}
-              >
-                {t('Our Story')}
-              </h2>
+              >{t('heading3')}</h2>
               <div
                 style={{
                   fontFamily: 'Mona Sans, sans-serif',
@@ -603,12 +593,8 @@ export default function AboutPage() {
                   color: '#7a7a7a',
                 }}
               >
-                <p style={{ margin: '0 0 16px' }}>
-                  {t("Founded in Milan in 2021, at the heart of one of Europe's most dynamic startup hubs, Skillvue is an HR-Tech company that helps organizations make every talent decision objective. Backed by €9M in funding, Skillvue supports 30+ languages and serves 100+ mid-to-large enterprises across industries such as retail, financial services, pharma, and energy.")}
-                </p>
-                <p style={{ margin: 0 }}>
-                  {t('With a team of 50+ professionals across Milan, Berlin, and London, Skillvue brings together expertise in psychometrics, AI, product design, and enterprise go-to-market. Its platform combines psychometric rigour with modern AI to transform static and unstructured talent data into reliable, predictive insights, supporting decisions across hiring, performance management, internal mobility, and learning & development.')}
-                </p>
+                <p style={{ margin: '0 0 16px' }}>{t('body9')}</p>
+                <p style={{ margin: 0 }}>{t('body10')}</p>
               </div>
               <div>
                 <Button asChild variant="secondary" mode="dark" icon={null}>
@@ -616,7 +602,7 @@ export default function AboutPage() {
                     href="/resources/press"
                     onClick={(e) => { e.preventDefault(); router.push('/resources/press'); }}
                   >
-                    {t('Learn more about Skillvue')}
+                    {t('cta')}
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>
                 </Button>
@@ -628,7 +614,7 @@ export default function AboutPage() {
               className="w-full lg:w-[474px] lg:h-[390px] lg:shrink-0"
             >
               <img
-                src={isIT ? '/about/presenza.avif' : '/about/coverage.avif'}
+                src={t('coverageMap')}
                 alt="Skillvue locations across Europe"
                 style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
               />
@@ -647,9 +633,7 @@ export default function AboutPage() {
                   textTransform: 'uppercase',
                   margin: '0 0 32px',
                 }}
-              >
-                {t('Backed by leading European VCs')}
-              </p>
+              >{t('body11')}</p>
               <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap', gap: '36px 56px', alignItems: 'center' }}>
                 {investors.map((inv) => (
                   <img
@@ -679,9 +663,7 @@ export default function AboutPage() {
                   textTransform: 'uppercase',
                   margin: '0 0 24px',
                 }}
-              >
-                {t('Leadership')}
-              </p>
+              >{t('body12')}</p>
               <h2
                 style={{
                   fontFamily: 'Mona Sans, sans-serif',
@@ -692,9 +674,7 @@ export default function AboutPage() {
                   letterSpacing: '-0.64px',
                   margin: '0 0 24px',
                 }}
-              >
-                {t('Meet Our Founders')}
-              </h2>
+              >{t('heading4')}</h2>
               <p
                 style={{
                   fontFamily: 'Inter, sans-serif',
@@ -705,9 +685,7 @@ export default function AboutPage() {
                   letterSpacing: '-0.19px',
                   margin: 0,
                 }}
-              >
-                {t('"We set out to make talent decisions as rigorous as every other business decision"')}
-              </p>
+              >{t('body13')}</p>
             </div>
 
             {/* Cards */}
@@ -755,9 +733,7 @@ export default function AboutPage() {
                       letterSpacing: '-0.176px',
                       margin: '0 0 20px',
                     }}
-                  >
-                    {t('Co-founder & CEO')}
-                  </p>
+                  >{t('body14')}</p>
                   <p
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
@@ -768,9 +744,7 @@ export default function AboutPage() {
                       letterSpacing: '-0.176px',
                       margin: 0,
                     }}
-                  >
-                    {t('A former pre-Olympic-level athlete turned entrepreneur, Nicolò co-founded Skillvue with Simone Patera after an early B2C entertainment venture, with the goal of bringing science and AI to human capital management and the shift toward a skills-based approach.')}
-                  </p>
+                  >{t('body15')}</p>
                 </div>
               </div>
 
@@ -814,9 +788,7 @@ export default function AboutPage() {
                       letterSpacing: '-0.176px',
                       margin: '0 0 20px',
                     }}
-                  >
-                    {t('Co-founder')}
-                  </p>
+                  >{t('body16')}</p>
                   <p
                     style={{
                       fontFamily: 'Mona Sans, sans-serif',
@@ -827,9 +799,7 @@ export default function AboutPage() {
                       letterSpacing: '-0.176px',
                       margin: 0,
                     }}
-                  >
-                    {t('Simone co-founded Skillvue, drawing on a background that began with launching an education company at 18 and grew through business development roles in Italian tech alongside players like Poste Italiane and Rai.')}
-                  </p>
+                  >{t('body17')}</p>
                 </div>
               </div>
             </div>
@@ -871,9 +841,7 @@ export default function AboutPage() {
                     textTransform: 'uppercase',
                     margin: 0,
                   }}
-                >
-                  {t('One Team One Mission')}
-                </p>
+                >{t('body18')}</p>
                 <h2
                   style={{
                     fontFamily: 'Mona Sans, sans-serif',
@@ -885,9 +853,7 @@ export default function AboutPage() {
                     margin: 0,
                     maxWidth: 760,
                   }}
-                >
-                  {t('People. Data. Performance. One engine for the future of work.')}
-                </h2>
+                >{t('heading5')}</h2>
                 <p
                   style={{
                     fontFamily: 'Mona Sans, sans-serif',
@@ -899,12 +865,10 @@ export default function AboutPage() {
                     margin: 0,
                     maxWidth: 820,
                   }}
-                >
-                  {t("One team across Europe at the intersection of Organizational and Psychometric Science, AI, and Data Science shipping cutting-edge AI Agents that measure what actually matters: what people can do, not what their title says. High ambition, high standards, zero complacency. We push boundaries daily and settle for nothing less than excellence. Talent is the world's most underused asset. We're here to unlock all of it and leave a mark doing it.")}
-                </p>
+                >{t('body19')}</p>
                 {/* Discipline pills */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-                  {['Psychometricians', 'Engineers', 'Designers', 'Product'].map((tag) => (
+                  {['psychometricians', 'engineers', 'designers', 'product'].map((tag) => (
                     <span
                       key={tag}
                       style={{
@@ -921,7 +885,7 @@ export default function AboutPage() {
                         whiteSpace: 'nowrap',
                       }}
                     >
-                      {t(tag)}
+                      {t(`teamTags.${tag}`)}
                     </span>
                   ))}
                 </div>
@@ -934,7 +898,7 @@ export default function AboutPage() {
                     href="/careers"
                     onClick={(e) => { e.preventDefault(); router.push('/careers'); }}
                   >
-                    {t('Join us')}
+                    {t('cta2')}
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>
                 </Button>
@@ -961,9 +925,7 @@ export default function AboutPage() {
                   textTransform: 'uppercase',
                   margin: 0,
                 }}
-              >
-                {t('Life at Skillvue')}
-              </p>
+              >{t('body20')}</p>
               <p
                 style={{
                   fontFamily: 'Mona Sans, sans-serif',
@@ -974,9 +936,7 @@ export default function AboutPage() {
                   letterSpacing: '-0.96px',
                   margin: 0,
                 }}
-              >
-                {t('50+ people across Milan, Berlin & London.')}
-              </p>
+              >{t('body21')}</p>
             </div>
 
             {/* Asymmetric photo grid: desktop — large left + 2×2 right */}

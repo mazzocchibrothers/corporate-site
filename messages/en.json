@@ -54,11 +54,151 @@
       }
     }
   },
+  "about": {
+    "meta": {
+      "title": "About Us – Skillvue",
+      "description": "Learn about Skillvue, the Skills Operating System for modern enterprises. Our mission, vision, founders, and team."
+    },
+    "stats": {
+      "raised": {
+        "label": "Raised"
+      },
+      "peopleAcrossEurope": {
+        "label": "People across Europe"
+      },
+      "enterpriseClients": {
+        "label": "Enterprise clients"
+      },
+      "languages": {
+        "label": "Languages"
+      },
+      "peopleEmpowered": {
+        "label": "People empowered"
+      }
+    },
+    "body": "OUR VISION",
+    "body2": "A world where every talent decision, from hire to promotion to transformation is powered by objective intelligence. Where human potential is no longer left to chance. And organizational success is something you build, not hope for.",
+    "body3": "OUR MISSION",
+    "heading": "Make skills the most <span>reliable data</span> in every organization",
+    "body4": "Building the science-grounded, AI-scaled Skills Operating System that every HR system can plug into, so that every talent decision, from hire to promotion to transformation, is finally objective.",
+    "body5": "WHO WE ARE",
+    "heading2": "Skillvue is the <span>Skills Operating System</span> for your organization.",
+    "body6": "Skillvue is the objective skills data layer for your enterprise, tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run.",
+    "body7": "We work with the world's leading organizations.<br></br>We enable global enterprises to access predictive data on talent, grounded in science and scaled by AI, so every decision about people is based on evidence, not intuition.",
+    "body8": "ABOUT SKILLVUE",
+    "heading3": "Our Story",
+    "body9": "Founded in Milan in 2021, at the heart of one of Europe's most dynamic startup hubs, Skillvue is an HR-Tech company that helps organizations make every talent decision objective. Backed by €9M in funding, Skillvue supports 30+ languages and serves 100+ mid-to-large enterprises across industries such as retail, financial services, pharma, and energy.",
+    "body10": "With a team of 50+ professionals across Milan, Berlin, and London, Skillvue brings together expertise in psychometrics, AI, product design, and enterprise go-to-market. Its platform combines psychometric rigour with modern AI to transform static and unstructured talent data into reliable, predictive insights, supporting decisions across hiring, performance management, internal mobility, and learning & development.",
+    "cta": "Learn more about Skillvue",
+    "body11": "Backed by leading European VCs",
+    "body12": "Leadership",
+    "heading4": "Meet Our Founders",
+    "body13": "\"We set out to make talent decisions as rigorous as every other business decision\"",
+    "body14": "Co-founder & CEO",
+    "body15": "A former pre-Olympic-level athlete turned entrepreneur, Nicolò co-founded Skillvue with Simone Patera after an early B2C entertainment venture, with the goal of bringing science and AI to human capital management and the shift toward a skills-based approach.",
+    "body16": "Co-founder",
+    "body17": "Simone co-founded Skillvue, drawing on a background that began with launching an education company at 18 and grew through business development roles in Italian tech alongside players like Poste Italiane and Rai.",
+    "body18": "One Team One Mission",
+    "heading5": "People. Data. Performance. One engine for the future of work.",
+    "body19": "One team across Europe at the intersection of Organizational and Psychometric Science, AI, and Data Science shipping cutting-edge AI Agents that measure what actually matters: what people can do, not what their title says. High ambition, high standards, zero complacency. We push boundaries daily and settle for nothing less than excellence. Talent is the world's most underused asset. We're here to unlock all of it and leave a mark doing it.",
+    "cta2": "Join us",
+    "body20": "Life at Skillvue",
+    "body21": "50+ people across Milan, Berlin & London.",
+    "teamTags": {
+      "psychometricians": "Psychometricians",
+      "engineers": "Engineers",
+      "designers": "Designers",
+      "product": "Product"
+    },
+    "coverageMap": "/about/coverage.avif",
+    "heroLine1": "Unlock human potential and",
+    "heroLine2": "organizational success at scale"
+  },
+  "blog": {
+    "text": "Read more",
+    "text2": "Resources",
+    "heading": "Blog &<br></br><span>Insights</span>",
+    "body": "Insights, research, and perspectives on talent intelligence, AI in HR, and the future of people decisions.",
+    "cta": "Explore articles",
+    "heading2": "All Articles",
+    "heading3": "Want to go deeper? Talk to our team.",
+    "body2": "Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.",
+    "cta2": "Book a Demo"
+  },
   "book-meeting": {
     "meta": {
       "title": "Book a Demo | Skillvue",
       "description": "See how Skillvue turns interviews into skills data you can act on. Book a demo and we will walk through hiring, performance and development on your own use cases."
-    }
+    },
+    "back": "Back",
+    "body": "Book a demo with our team to see how Skillvue can transform your hiring, performance, and development processes with science-backed talent intelligence.",
+    "heading": "Let's talk about your <span>talent strategy.</span>"
+  },
+  "careers": {
+    "meta": {
+      "title": "Careers | Join Skillvue",
+      "description": "Join the team making talent decisions objective. Explore open roles at Skillvue and what it's like to work with us, across Milan and Europe."
+    },
+    "tags": {
+      "skillsFirst": "Skills-first",
+      "biasFree": "Bias-free",
+      "gdprCompliant": "GDPR-compliant",
+      "explainable": "Explainable"
+    },
+    "stats": {
+      "n50": {
+        "value": "50+",
+        "label": "People across Europe"
+      },
+      "n3": {
+        "value": "3",
+        "label": "Offices in Milan, Berlin, London"
+      },
+      "hybrid": {
+        "value": "Hybrid",
+        "label": "Working environment"
+      },
+      "n1m": {
+        "value": "1M+",
+        "label": "People empowered"
+      }
+    },
+    "steps": {
+      "applySkills": {
+        "title": "Apply with your skills",
+        "desc": "A short Skillvue verification of your skills, mindset and readiness."
+      },
+      "meetTeam": {
+        "title": "Meet the team",
+        "desc": "Structured conversations with the people you'd actually work with."
+      },
+      "moveForwardClarity": {
+        "title": "Move forward with clarity",
+        "desc": "An objective, bias-free, explainable decision. For you and for us."
+      }
+    },
+    "text": "Careers",
+    "heading": "Join the team making talent decisions <span>objective.</span>",
+    "body": "You'll help the world's biggest companies hire, promote and develop people based on skills and potential.",
+    "cta": "See open roles",
+    "cta2": "Life at Skillvue",
+    "text2": "Why Skillvue",
+    "heading2": "Every talent decision, from hiring to transformation, is <span>finally the right one</span>",
+    "body2": "We are building the objective skills data layer for the enterprise, grounded in science and scaled by AI.",
+    "cta3": "Read the full story",
+    "text3": "How we hire",
+    "heading3": "We hire the way we help <span>enterprises hire</span>",
+    "body3": "Our own hiring reflects the same principles we bring to our customers: a skills-based method, not CV screening.",
+    "text4": "Life at Skillvue",
+    "heading4": "50+ people across Milan, Berlin & London.",
+    "body4": "Flexible and hybrid working environment",
+    "text5": "Join us!",
+    "heading5": "Open roles",
+    "cta4": "Apply",
+    "body5": "No roles match this filter.",
+    "heading6": "Ready to do the most important work in HR tech?",
+    "cta5": "See open roles",
+    "cta6": "Life at Skillvue"
   },
   "customers": {
     "customerHighlights": {
@@ -201,6 +341,10 @@
           "headline": "Fidia Farmaceutici: how to map the real skills of the sales network to drive future growth"
         }
       }
+    },
+    "meta": {
+      "title": "Customer Stories | Skillvue",
+      "description": "See how 50+ European enterprises like Unicredit and Carrefour replaced gut-feel talent decisions with objective AI verifications. 10–30x ROI."
     }
   },
   "home": {
@@ -357,6 +501,9 @@
       "cta": "Book a Demo",
       "text2": "Our Customers"
     }
+  },
+  "privacy-policy": {
+    "cta": "Back"
   },
   "product-overview": {
     "hero": {
@@ -573,6 +720,215 @@
       "heading": "Five dimensions for <span>objective evaluations</span>",
       "body": "Every person evaluated through a structured, science-backed framework. whether they're a candidate or a 20-year veteran.",
       "cta": "Discover the Science"
+    },
+    "meta": {
+      "title": "Platform | AI-Powered Talent Verifications | Skillvue",
+      "description": "One platform for hiring, performance, L&D and succession planning. AI-powered verifications with psychometric science and 100+ integrations with SAP, Workday and Oracle."
+    }
+  },
+  "resources": {
+    "press": {
+      "text": "Press",
+      "heading": "Skillvue in<br></br><span>the News</span>",
+      "body": "See how the world's leading publications are covering the rise of AI-powered talent intelligence.",
+      "text2": "Press Coverage",
+      "heading2": "Coverage from leading publications",
+      "text3": "Interviews",
+      "heading3": "In conversation",
+      "cta": "Read interview",
+      "text4": "Press Releases",
+      "heading4": "Official announcements",
+      "cta2": "Download",
+      "text5": "Backed by",
+      "heading5": "Want to learn more?",
+      "body2": "Get in touch with our team to see how Skillvue turns every talent decision into a data-driven one.",
+      "cta3": "Book a Demo",
+      "releases": {
+        "seedRound": {
+          "title": "Skillvue raises €5.5M seed round to transform skills verification with AI",
+          "url": "https://drive.google.com/file/d/1gLVJF8SDxvNA4kG3gWfzmuS-IW_RVneu/view"
+        },
+        "becomesSkillvue": {
+          "title": "Algo AI raises €2.5M and becomes Skillvue",
+          "url": "https://drive.google.com/file/d/1uDckbrpFysgHJtz1DS5XrvQjjwGeHCnQ/view"
+        }
+      }
+    },
+    "whitepapers": {
+      "items": {
+        "beyond-skills": {
+          "title": "Beyond Skills. Measuring Aspirations and Motivation",
+          "shortDesc": "How to measure career aspirations and motivation to predict long-term job success.",
+          "fullDesc": "This whitepaper is a concise, easy-to-read resource designed to give you the key insights you need to rethink how you measure career aspirations and motivation. A curated selection of theoretical frameworks and practical takeaways. from motivational drivers to the role of AI. that will bring you immediate value.",
+          "heroDesc": "Knowing what someone can do is no longer enough. you need to understand why they do it. Discover how to identify, measure, and leverage career aspirations and motivation with a research-backed approach.",
+          "takeaways": {
+            "t1": "Scientific insights and research on motivational drivers and career aspirations",
+            "t2": "Interview with Letizia Spione, Clinical Psychologist and People Scientist",
+            "t3": "A practical case study showing how to apply the concepts in real scenarios",
+            "t4": "The role of AI in measuring motivation at scale"
+          },
+          "chapters": {
+            "c1": {
+              "title": "The Myth of \"Eternal\" Skills",
+              "desc": "Why technical skills expire in 12 to 18 months and what it means for hiring."
+            },
+            "c2": {
+              "title": "The \"M\" Factor",
+              "desc": "How intrinsic motivation, driven by Autonomy, Mastery, and Purpose, redefines long-term performance."
+            },
+            "c3": {
+              "title": "Expert Interview",
+              "desc": "Clinical Psychologist Letizia Spione on how to concretely identify and measure motivation."
+            },
+            "c4": {
+              "title": "Can You Analyze Motivation?",
+              "desc": "Moving from intuition to evidence: reliable tools and methods for measuring what CVs cannot show."
+            },
+            "c5": {
+              "title": "Case Study",
+              "desc": "How a major Italian insurance company used Skillvue to map employee motivation at scale."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "12-18",
+              "unit": "months",
+              "label": "Average lifespan of a technical skill before it becomes obsolete"
+            },
+            "s2": {
+              "value": "39%",
+              "label": "of current skills will be obsolete by 2030 according to the World Economic Forum"
+            },
+            "s3": {
+              "value": "1B+",
+              "label": "people worldwide will need to reskill in the next five years"
+            }
+          }
+        },
+        "future-leaders": {
+          "title": "The Skills of Future Leaders",
+          "shortDesc": "Research, data, and practical advice to understand how the world of work is changing and prepare your People Strategy.",
+          "fullDesc": "This report is a guide that walks you through the major transformations reshaping the HR function. From managing demographic decline to understanding how new technologies are disrupting jobs and skills: everything you need to build your personal Future of Work survival kit. a practical resource to apply best practices and take the lead on change.",
+          "heroDesc": "How are demographic shifts, new technologies, and rapid changes in the world of work shaping the future of leadership? Explore this report packed with research, data, interviews, and practical advice to future-proof your People Strategy.",
+          "takeaways": {
+            "t1": "Scientific insights on skill obsolescence and the role of AI in rewriting the rules of work",
+            "t2": "Interview with Martina Mauri, Director of the HR Innovation Practice Observatory at Politecnico di Milano",
+            "t3": "Best practices and an HR to-do list to identify future leaders by reading skills and potential",
+            "t4": "Practical tools to build your own \"Future of Work survival kit\""
+          },
+          "chapters": {
+            "c1": {
+              "title": "Why Is the Job Market Changing?",
+              "desc": "The forces behind skills obsolescence: 5 years for a skill to lose half its value, 12 to 18 months for technical skills."
+            },
+            "c2": {
+              "title": "AI's Role in Redefining Work",
+              "desc": "How AI is creating a hybridisation of humans and machines, and what it means for the skills that matter."
+            },
+            "c3": {
+              "title": "The Demographic Challenge",
+              "desc": "Interview with Martina Mauri (Politecnico di Milano) on Italy's 3.7 million worker gap by 2040 and how to react."
+            },
+            "c4": {
+              "title": "Beyond Skills: Leveraging Potential",
+              "desc": "Why verifying Skill Proximity, Aspirational Outlook, and Learning Agility is the new competitive advantage."
+            },
+            "c5": {
+              "title": "Your HR To-Do List",
+              "desc": "Best practices to map skills dynamically, uncover hidden potential, connect data with performance, and build lifelong learning."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "3.7M",
+              "label": "worker gap projected in Italy by 2040 due to demographic decline"
+            },
+            "s2": {
+              "value": "39%",
+              "label": "of current skills will be obsolete by 2030, reshaping what leadership requires"
+            },
+            "s3": {
+              "value": "78%",
+              "label": "of companies struggling to recruit, while expecting workforce growth"
+            }
+          }
+        },
+        "sales-network-turnover": {
+          "title": "Turnover in Sales Networks",
+          "shortDesc": "Key figures, root causes, and verification-based strategies to fight turnover in sales networks.",
+          "fullDesc": "Turnover is a complex phenomenon driven by both internal and external factors. Historically, it has been managed ineffectively, partly due to a significant disconnect between headquarters and the field sales network. In this whitepaper, you'll discover how to intervene through the strategic use of verifications, which can have a real impact on reducing turnover. alongside established initiatives like financial incentives, work-life balance, and other HR levers.",
+          "heroDesc": "In Italy, the overall turnover rate is around 34%. In sales networks, the impact is even more significant and represents one of the biggest costs for HR and business. Explore the numbers, root causes, and strategies to fight it.",
+          "takeaways": {
+            "t1": "Insights and statistics on the economic impact of turnover in sales networks",
+            "t2": "Analysis of the key factors driving turnover and how different functions can help manage it",
+            "t3": "How skills and potential verifications can help predict and reduce turnover",
+            "t4": "Practical strategies to bridge the gap between HQ and the sales network"
+          },
+          "chapters": {
+            "c1": {
+              "title": "The Economic Impact of Turnover",
+              "desc": "One departure in retail equals 9.4 lost days of sales. 63% of productivity loss happens before the employee even leaves."
+            },
+            "c2": {
+              "title": "Why Turnover Is So High",
+              "desc": "Job dissatisfaction, harsh conditions, low motivation: the three key factors driving sales network churn."
+            },
+            "c3": {
+              "title": "Fighting Turnover with Data",
+              "desc": "How Skillvue verifications transform recruitment, internal mobility, and talent development to predict and prevent turnover."
+            },
+            "c4": {
+              "title": "The Sales Growth Bonus",
+              "desc": "+1% turnover = -0.5% average net sales. The direct, traceable link between retention and commercial performance."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "34%",
+              "label": "overall turnover rate in Italy, rising to 47% in service companies"
+            },
+            "s2": {
+              "value": "9.4",
+              "unit": "days",
+              "label": "of sales lost for every single employee departure in retail"
+            },
+            "s3": {
+              "value": "63%",
+              "label": "of productivity losses happen before the employee actually leaves"
+            }
+          }
+        }
+      },
+      "filters": {
+        "allIndustries": "All Industries",
+        "allTopics": "All Topics",
+        "allProcesses": "All Processes",
+        "industry": "Industry",
+        "topic": "Topic",
+        "hrProcess": "HR Process",
+        "noResults": "No whitepapers match your current filters. Try adjusting your selection.",
+        "read": "Read"
+      },
+      "text": "Resources",
+      "heading": "White Papers<br></br>& <span>Reports</span>",
+      "body": "Research-backed insights to help you rethink how you hire, develop, and manage talent. Browse our library and download the resources that matter to you.",
+      "cta": "Explore the library",
+      "text2": "White Paper",
+      "heading2": "Want to see the science in action?",
+      "body2": "Book a demo with our team and discover how Skillvue turns talent decisions into a competitive advantage.",
+      "cta2": "Book a Demo",
+      "detail": {
+        "body": "White Paper not found.",
+        "cta": "Back to White Papers",
+        "cta2": "Download Free",
+        "heading": "Get the Full White Paper",
+        "body2": "Fill the form below and we'll send it straight to your inbox.",
+        "heading2": "More White Papers",
+        "heading3": "Want to see the science in action?",
+        "body3": "Book a demo with our team and discover how Skillvue turns talent decisions into a competitive advantage.",
+        "cta3": "Book a Demo",
+        "insideHeading": "What's <span>Inside</span>"
+      }
     }
   },
   "science": {
@@ -765,6 +1121,10 @@
         }
       },
       "heading": "Two disciplines, one standard of <span>rigor</span>"
+    },
+    "meta": {
+      "title": "The Science Behind Skillvue | Psychometrics & AI",
+      "description": "Skillvue is built on I/O psychology and psychometrics. Every verification is accurate, reliable and defensible — designed to hold up to scientific scrutiny."
     }
   },
   "shared": {
@@ -885,6 +1245,10 @@
           "successionRiskVisible": "Succession risk visible in real time. including knowledge concentration and retirement exposure",
           "lessTimeProcess": "Less time on process, more time on decisions. with the ability to track whether they worked"
         }
+      },
+      "meta": {
+        "title": "Internal Mobility & Succession | Skillvue",
+        "description": "Map skills and potential across your entire workforce. Make internal talent visible, succession decisions data-driven and mobility paths transparent."
       }
     },
     "learning-development": {
@@ -982,6 +1346,10 @@
           "skillGapTrend": "Skill-gap trend lines show what's working and what needs to be reviewed or cut",
           "contentPersonalizedScale": "Content personalized at scale. the platform knows what each person needs next"
         }
+      },
+      "meta": {
+        "title": "Learning & Development | Skill Gap Analysis | Skillvue",
+        "description": "Identify real skill gaps at individual, team and org level. Target every training investment where it matters and measure impact on business outcomes."
       }
     },
     "performance-management": {
@@ -1053,6 +1421,10 @@
           "promotionDecisionsBased": "Promotion decisions based on validated competency data",
           "skillVerificationsEmbedded": "Skill verifications embedded in performance reviews with the same objectivity as business metrics"
         }
+      },
+      "meta": {
+        "title": "Performance Management | Data-Backed Reviews | Skillvue",
+        "description": "Add objective skill verifications to your performance cycles. Reduce bias, improve calibration and give every manager a data-backed starting point."
       }
     },
     "project-resourcing": {
@@ -1119,6 +1491,10 @@
           }
         },
         "heading": "The blind spots in your <span>project staffing</span>"
+      },
+      "meta": {
+        "title": "Project Resourcing | Match Skills to Projects | Skillvue",
+        "description": "Assign projects based on verified skill fit, not just availability. Reduce delivery risk, improve team composition and stop staffing in the dark."
       }
     },
     "talent-acquisition": {
@@ -1377,6 +1753,10 @@
           "hiringDecisionsBacked": "Hiring decisions backed by objective scores, evidence, and explainable recommendations",
           "predictiveMatchingReduces": "Predictive matching that reduces mismatch from day one"
         }
+      },
+      "meta": {
+        "title": "Talent Acquisition | AI Hiring Verifications | Skillvue",
+        "description": "Replace gut-feel hiring with AI verifications that predict performance. Reduce early turnover and make every hiring decision defensible at scale."
       }
     }
   }

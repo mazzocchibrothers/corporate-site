@@ -16,9 +16,10 @@ import { Button } from '@/components/ui/button';
 export const getStaticProps = messagesFor('book-meeting');
 
 export default function BookMeetingPage() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('book-meeting');
   const formRef = useRef(null);
-  const meta = useTranslations('book-meeting.meta');
+
   const router = useRouter();
 
   useEffect(() => {
@@ -49,8 +50,8 @@ export default function BookMeetingPage() {
   return (
     <>
       <Head>
-        <title>{meta('title')}</title>
-        <meta name="description" content={meta('description')} />
+        <title>{t('meta.title')}</title>
+        <meta name="description" content={t('meta.description')} />
       </Head>
       <Navbar />
       <div className="relative flex flex-col min-h-screen lg:h-screen pt-[80px]">
@@ -67,19 +68,18 @@ export default function BookMeetingPage() {
                 iconPosition="left"
                 className="mb-6"
               >
-                {t('Back')}
+                {t('back')}
               </Button>
 
               <h1
                 className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-4"
                 style={{ lineHeight: 1.1 }}
-              >
-                {t("Let's talk about your")}{' '}
-                <span className="font-bold gradient-text">{t('talent strategy.')}</span>
-              </h1>
+              >{t.rich('heading', {
+                span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+              })}</h1>
 
               <p className="text-[16px] text-white/[0.55] leading-[1.65] max-w-md" style={{ fontWeight: 300 }}>
-                {t('Book a demo with our team to see how Skillvue can transform your hiring, performance, and development processes with science-backed talent intelligence.')}
+                {t('body')}
               </p>
             </div>
 
@@ -99,7 +99,7 @@ export default function BookMeetingPage() {
           </div>
         </div>
       </section>
-        <TrustLogosBar lang={lang === 'it' ? 'it' : 'en'} />
+        <TrustLogosBar lang={lang} />
       </div>
       <Footer />
     </>

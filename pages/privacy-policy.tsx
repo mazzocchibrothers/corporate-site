@@ -1,11 +1,11 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/router';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { messagesFor } from '@/i18n/messages';
 
@@ -41,7 +41,7 @@ function SubSection({ num, title, children }: { num: string; title: string; chil
 export const getStaticProps = messagesFor('privacy-policy');
 
 export default function PrivacyPolicyPage() {
-  const { t } = useLanguage();
+  const t = useTranslations('privacy-policy');
   const router = useRouter();
 
   return (
@@ -58,9 +58,7 @@ export default function PrivacyPolicyPage() {
               icon={<ArrowLeft aria-hidden />}
               iconPosition="left"
               className="mb-10"
-            >
-              {t('Back')}
-            </Button>
+            >{t('cta')}</Button>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <h1 className="text-[40px] md:text-[56px] font-semibold text-white/95 mb-4 tracking-[-0.02em] leading-[1.1]">
                 Informativa sul trattamento dei dati personali

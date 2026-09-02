@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -11,6 +12,7 @@ import PRConsulting from '@/components/solutions/pr/PRConsulting';
 import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { messagesFor } from '@/i18n/messages';
+import { canonical as canonicalUrl } from '@/i18n/routes';
 
 
 // One line per page is the whole contract: the argument is this route's `id` in
@@ -19,16 +21,14 @@ export const getStaticProps = messagesFor('solutions/project-resourcing');
 
 export default function ProjectResourcingPage() {
   const { t, lang } = useLanguage();
-  const isIT = lang === 'it';
-  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/solutions/project-resourcing`;
+  const meta = useTranslations('solutions.project-resourcing.meta');
+  const canonical = canonicalUrl('solutions/project-resourcing', lang);
 
   return (
     <>
       <Head>
-        <title>{isIT ? 'Project Resourcing | Staffing per Competenza | Skillvue' : 'Project Resourcing | Match Skills to Projects | Skillvue'}</title>
-        <meta name="description" content={isIT
-          ? "Assegna i progetti in base alle competenze verificate, non alla disponibilità. Riduci il rischio di delivery e migliora la composizione dei team."
-          : 'Assign projects based on verified skill fit, not just availability. Reduce delivery risk, improve team composition and stop staffing in the dark.'
+        <title>{meta('title')}</title>
+        <meta name="description" content={meta('description')
         } />
         <link rel="canonical" href={canonical} />
       </Head>

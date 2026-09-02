@@ -23,8 +23,9 @@ assert.equal(namespaceOf('about'), 'about');
 assert.equal(namespaceOf('customers/adr'), 'customers.adr', 'path separators become dots');
 assert.equal(
   namespaceOf('resources/whitepapers/[slug]'),
-  'resources.whitepapers.slug',
-  'a dynamic segment loses its brackets — `[slug]` is not a legal ICU key path',
+  'resources.whitepapers',
+  'a dynamic segment is dropped: the collection and its detail page share one ' +
+    'namespace, because they render the same titles',
 );
 
 // ── The loader returns only what was asked for ─────────────────────────────

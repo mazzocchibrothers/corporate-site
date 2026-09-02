@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -12,6 +13,7 @@ import PMImpact from '@/components/solutions/pm/PMImpact';
 import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { messagesFor } from '@/i18n/messages';
+import { canonical as canonicalUrl } from '@/i18n/routes';
 
 
 // One line per page is the whole contract: the argument is this route's `id` in
@@ -20,16 +22,14 @@ export const getStaticProps = messagesFor('solutions/performance-management');
 
 export default function PerformanceManagementPage() {
   const { t, lang } = useLanguage();
-  const isIT = lang === 'it';
-  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/solutions/performance-management`;
+  const meta = useTranslations('solutions.performance-management.meta');
+  const canonical = canonicalUrl('solutions/performance-management', lang);
 
   return (
     <>
       <Head>
-        <title>{isIT ? 'Performance Management | Valutazioni Obiettive | Skillvue' : 'Performance Management | Data-Backed Reviews | Skillvue'}</title>
-        <meta name="description" content={isIT
-          ? "Integra valutazioni oggettive nei tuoi cicli di performance. Riduci i bias e dai a ogni manager un punto di partenza basato sui dati."
-          : 'Add objective skill verifications to your performance cycles. Reduce bias, improve calibration and give every manager a data-backed starting point.'
+        <title>{meta('title')}</title>
+        <meta name="description" content={meta('description')
         } />
         <link rel="canonical" href={canonical} />
       </Head>

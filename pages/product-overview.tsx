@@ -1,7 +1,7 @@
 import React from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import Head from 'next/head';
 import { messagesFor } from '@/i18n/messages';
-import { useRouter } from 'next/router';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import ProductHero from '@/components/product/ProductHero';
@@ -14,23 +14,22 @@ import IntegrationEcosystem from '@/components/product/IntegrationEcosystem';
 import EnterpriseTrust from '@/components/product/EnterpriseTrust';
 import ProductCTA from '@/components/product/ProductCTA';
 import ProductCrossLinks from '@/components/shared/ProductCrossLinks';
+import { canonical as canonicalUrl } from '@/i18n/routes';
 
 // One line per page is the whole contract: the argument is this route's `id` in
 // routes.json, and i18n/messages.ts turns it into the namespaces to load.
 export const getStaticProps = messagesFor('product-overview');
 
 export default function ProductOverviewPage() {
-  const { locale } = useRouter();
-  const isIT = locale === 'it';
-  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/product-overview`;
+  const lang = useLocale();
+  const meta = useTranslations('product-overview.meta');
+  const canonical = canonicalUrl('product-overview', lang);
 
   return (
     <>
       <Head>
-        <title>{isIT ? 'Piattaforma | Valutazioni Talent con AI | Skillvue' : 'Platform | AI-Powered Talent Verifications | Skillvue'}</title>
-        <meta name="description" content={isIT
-          ? "Un'unica piattaforma per selezione, performance, L&D e successione. Valutazioni AI con scienza psicometrica e 100+ integrazioni con SAP, Workday e Oracle."
-          : 'One platform for hiring, performance, L&D and succession planning. AI-powered verifications with psychometric science and 100+ integrations with SAP, Workday and Oracle.'
+        <title>{meta('title')}</title>
+        <meta name="description" content={meta('description')
         } />
         <link rel="canonical" href={canonical} />
       </Head>

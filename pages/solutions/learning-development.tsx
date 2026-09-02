@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -13,6 +14,7 @@ import LDImpact from '@/components/solutions/ld/LDImpact';
 import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { messagesFor } from '@/i18n/messages';
+import { canonical as canonicalUrl } from '@/i18n/routes';
 
 
 // One line per page is the whole contract: the argument is this route's `id` in
@@ -21,16 +23,14 @@ export const getStaticProps = messagesFor('solutions/learning-development');
 
 export default function LearningDevelopmentPage() {
   const { t, lang } = useLanguage();
-  const isIT = lang === 'it';
-  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/solutions/learning-development`;
+  const meta = useTranslations('solutions.learning-development.meta');
+  const canonical = canonicalUrl('solutions/learning-development', lang);
 
   return (
     <>
       <Head>
-        <title>{isIT ? 'Learning & Development | Gap Analysis Competenze | Skillvue' : 'Learning & Development | Skill Gap Analysis | Skillvue'}</title>
-        <meta name="description" content={isIT
-          ? "Identifica i reali gap di competenze a livello individuale, di team e organizzativo. Concentra ogni investimento formativo dove ha il maggiore impatto."
-          : 'Identify real skill gaps at individual, team and org level. Target every training investment where it matters and measure impact on business outcomes.'
+        <title>{meta('title')}</title>
+        <meta name="description" content={meta('description')
         } />
         <link rel="canonical" href={canonical} />
       </Head>

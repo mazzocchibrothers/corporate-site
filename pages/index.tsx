@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { messagesFor } from '@/i18n/messages';
+import { canonical as canonicalUrl } from '@/i18n/routes';
 import { LazyMotion } from 'framer-motion';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -21,9 +21,8 @@ const loadMotionFeatures = () => import('@/lib/motion-features').then((res) => r
 export const getStaticProps = messagesFor('index');
 
 export default function HomePage() {
-  const { locale } = useRouter();
-  const isIT = locale === 'it';
-  const canonical = isIT ? 'https://skillvue.ai/it' : 'https://skillvue.ai/';
+  const lang = useLocale();
+  const canonical = canonicalUrl('index', lang);
   const t = useTranslations('home.meta');
 
   return (

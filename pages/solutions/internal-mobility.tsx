@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -12,6 +13,7 @@ import IMImpact from '@/components/solutions/im/IMImpact';
 import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { messagesFor } from '@/i18n/messages';
+import { canonical as canonicalUrl } from '@/i18n/routes';
 
 
 // One line per page is the whole contract: the argument is this route's `id` in
@@ -20,16 +22,14 @@ export const getStaticProps = messagesFor('solutions/internal-mobility');
 
 export default function InternalMobilityPage() {
   const { t, lang } = useLanguage();
-  const isIT = lang === 'it';
-  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/solutions/internal-mobility`;
+  const meta = useTranslations('solutions.internal-mobility.meta');
+  const canonical = canonicalUrl('solutions/internal-mobility', lang);
 
   return (
     <>
       <Head>
-        <title>{isIT ? 'Mobilità Interna e Successione | Skillvue' : 'Internal Mobility & Succession | Skillvue'}</title>
-        <meta name="description" content={isIT
-          ? "Mappa competenze e potenziale nell'intera organizzazione. Successione data-driven, mobilità interna trasparente e talento interno finalmente visibile."
-          : 'Map skills and potential across your entire workforce. Make internal talent visible, succession decisions data-driven and mobility paths transparent.'
+        <title>{meta('title')}</title>
+        <meta name="description" content={meta('description')
         } />
         <link rel="canonical" href={canonical} />
       </Head>

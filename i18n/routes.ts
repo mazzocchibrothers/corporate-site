@@ -25,7 +25,7 @@
 // follows.
 
 import data from './routes.json';
-import { pathFor, type Locale as UrlLocale } from './urls';
+import { pathFor, urlFor, type Locale as UrlLocale } from './urls';
 
 export type Locale = UrlLocale;
 
@@ -63,6 +63,19 @@ export function href(id: string, locale: string): string {
   // that language falls back to English rather than rendering a dead link —
   // hiding the link is the caller's decision, not this function's.
   return pathFor(route, locale as Locale) ?? pathFor(route, 'en') ?? '/';
+}
+
+/**
+ * The absolute URL for a route in a locale — the canonical link.
+ *
+ * It replaces the per-page `https://skillvue.ai${isIT ? '/it' : ''}/…` literal,
+ * which was copied into 20 pages and wrong in every page that had been copied
+ * from another one.
+ */
+export function canonical(id: string, locale: string): string {
+  const route = byId(id);
+  if (!route) throw new Error(`i18n/routes: no route '${id}'.`);
+  return urlFor(route, locale as Locale) ?? urlFor(route, 'en')!;
 }
 
 /** Whether a route has content in a locale — what hideInIT was guessing at. */

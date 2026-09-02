@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
@@ -96,7 +97,8 @@ const articles = [
 export const getStaticProps = messagesFor('blog');
 
 export default function BlogPage() {
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
+  const t = useTranslations('blog');
   const router = useRouter();
   const renderArticle = (article, i) => {
     const c = lang === 'it' ? article.it : article.en;
@@ -131,7 +133,7 @@ export default function BlogPage() {
             {c.title}
           </h3>
           <span className="text-[13px] font-semibold text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-            {t('Read more')} <ArrowRight className="h-4 w-4" />
+            {t('text')} <ArrowRight className="h-4 w-4" />
           </span>
         </div>
       </motion.article>
@@ -146,17 +148,15 @@ export default function BlogPage() {
         <section className="relative pt-[80px] min-h-screen flex items-center">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">{t('Resources')}</span>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">{t('text2')}</span>
               <h1
                 className="font-semibold text-white/95 mb-8 text-[48px] md:text-[64px]"
                 style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-              >
-                {t('Blog &')}<br />
-                <span className="gradient-text">{t('Insights')}</span>
-              </h1>
-              <p className="text-[20px] text-white/[0.45] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>
-                {t('Insights, research, and perspectives on talent intelligence, AI in HR, and the future of people decisions.')}
-              </p>
+              >{t.rich('heading', {
+                br: () => <br />,
+                span: (chunks) => <span className="gradient-text">{chunks}</span>,
+              })}</h1>
+              <p className="text-[20px] text-white/[0.45] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>{t('body')}</p>
               <Button asChild variant="tertiary" mode="dark" icon={null}>
                 <a
                   href="#articles"
@@ -166,7 +166,7 @@ export default function BlogPage() {
                   <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
                     <ChevronDown className="!h-4 !w-4" />
                   </span>
-                  {t('Explore articles')}
+                  {t('cta')}
                 </a>
               </Button>
             </motion.div>
@@ -177,7 +177,7 @@ export default function BlogPage() {
         <section id="articles" className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
             <motion.div className="mb-8 md:mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('All Articles')}</h2>
+              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading2')}</h2>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -190,19 +190,13 @@ export default function BlogPage() {
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">
-                {t('Want to go deeper? Talk to our team.')}
-              </h2>
-              <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">
-                {t('Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.')}
-              </p>
+              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">{t('heading3')}</h2>
+              <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">{t('body2')}</p>
               <Button
                 onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
                 variant="primary"
                 mode="dark"
-              >
-                {t('Book a Demo')}
-              </Button>
+              >{t('cta2')}</Button>
             </motion.div>
           </div>
         </section>

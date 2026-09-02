@@ -29,13 +29,20 @@ const SHARED = ['common', 'shared'];
  * Route id -> message namespace.
  *
  * `customers/adr` -> `customers.adr`, so the catalogue nests the same way the
- * routes do. Two adjustments: the homepage is `home` rather than the
- * meaningless `index`, and a dynamic segment loses its brackets because
- * `[slug]` is not a legal thing to type in an ICU key path.
+ * routes do. Two adjustments:
+ *
+ * - the homepage is `home` rather than the meaningless `index`
+ * - a dynamic segment is dropped, not de-bracketed. `[slug]` is not a legal ICU
+ *   key path, and `resources.whitepapers.slug` would be worse than illegal: it
+ *   would split one whitepaper's copy across two namespaces, because the card on
+ *   the index and the page it links to render the same title.
  */
 export function namespaceOf(routeId: string): string {
   if (routeId === 'index') return 'home';
-  return routeId.replace(/\[|\]/g, '').replace(/\//g, '.');
+  return routeId
+    .split('/')
+    .filter((segment) => !/^\[.*\]$/.test(segment))
+    .join('.');
 }
 
 /** Rebuilds `{a: {b: …}}` from a dotted path, dropping everything else.

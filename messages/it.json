@@ -54,11 +54,151 @@
       }
     }
   },
+  "about": {
+    "meta": {
+      "title": "Chi siamo – Skillvue",
+      "description": "Scopri Skillvue, lo Skills Operating System per le grandi imprese. La nostra missione, visione, fondatori e team."
+    },
+    "stats": {
+      "raised": {
+        "label": "Investimenti raccolti"
+      },
+      "peopleAcrossEurope": {
+        "label": "Persone in tutta Europa"
+      },
+      "enterpriseClients": {
+        "label": "Aziende partner"
+      },
+      "languages": {
+        "label": "Lingue"
+      },
+      "peopleEmpowered": {
+        "label": "Persone valorizzate"
+      }
+    },
+    "body": "LA NOSTRA VISIONE",
+    "body2": "Un mondo in cui ogni decisione sui talenti, dall'assunzione alla promozione fino allo sviluppo, è guidata da un'intelligenza oggettiva. Dove il potenziale umano non è più lasciato al caso, e il successo organizzativo è qualcosa che viene costruita, anziché atteso.",
+    "body3": "LA NOSTRA MISSIONE",
+    "heading": "Rendi le competenze il dato più <span>affidabile</span> in ogni organizzazione",
+    "body4": "Costruiamo lo Skills Operating System fondato sulla scienza e scalato dall'AI, a cui ogni sistema HR può connettersi, affinché ogni decisione sul talento — dall'assunzione alla promozione fino alla trasformazione — sia finalmente obiettiva.",
+    "body5": "CHI SIAMO",
+    "heading2": "Skillvue è il <span>sistema operativo delle competenze</span> per la tua organizzazione.",
+    "body6": "Skillvue è il data layer oggettivo sulle competenze progettato su misura per la tua organizzazione, fondato sulla scienza, scalabile grazie all’AI e integrabile nei tuoi sistemi HR che già utilizzi.",
+    "body7": "Lavoriamo con le organizzazioni leader a livello mondiale.<br></br>Permettiamo alle grandi aziende globali di accedere a dati predittivi sul talento, fondati sulla scienza e scalati dall'AI, affinché ogni decisione sulle persone si basi su evidenze, non sull'intuito.",
+    "body8": "ABOUT SKILLVUE",
+    "heading3": "La nostra storia",
+    "body9": "Fondata a Milano nel 2021, nel cuore di uno degli ecosistemi startup più dinamici d'Europa, Skillvue è un'azienda HR Tech che aiuta le organizzazioni a rendere ogni decisione sul talento oggettiva. Sostenuta da €9M di finanziamenti, Skillvue supporta oltre 30 lingue e serve più di 100 aziende medio-grandi in settori come retail, servizi finanziari, farmaceutico ed energia.",
+    "body10": "Con un team di oltre 50 professionisti tra Milano, Berlino e Londra, Skillvue unisce la solidità della scienza psicometrica con la potenza dell'AI moderna, product design e go-to-market enterprise. La sua piattaforma combina rigore psicometrico con AI moderna per trasformare dati statici e non strutturati sul talento in insight affidabili e predittivi, supportando decisioni in ambito di assunzioni, performance management, mobilità interna e formazione e sviluppo.",
+    "cta": "Scopri di più su Skillvue",
+    "body11": "Sostenuti dai principali VC europei",
+    "body12": "Leadership",
+    "heading4": "Conosci i nostri fondatori",
+    "body13": "\"Ci siamo posti l'obiettivo di rendere le decisioni sul talento rigorose quanto le decisioni più strategiche dell'azienda\".",
+    "body14": "Co-founder & CEO",
+    "body15": "Ex atleta di livello pre-olimpico diventato imprenditore, Nicolò ha co-fondato Skillvue con Simone Patera dopo una prima esperienza in un'azienda di entertainment B2C, con l'obiettivo di portare scienza e AI nella gestione del capitale umano e nella transizione verso un approccio skills-based.",
+    "body16": "Co-founder",
+    "body17": "Simone ha co-fondato Skillvue, forte di un percorso iniziato con il lancio di un'azienda nel settore dell'educazione a 18 anni e proseguito in ruoli di business development nel tech italiano, al fianco di realtà come Poste Italiane e Rai.",
+    "body18": "Un team, una missione",
+    "heading5": "Persone. Dati. Performance. Un unico motore per il futuro del lavoro.",
+    "body19": "Un unico team in tutta Europa, all'intersezione tra scienza organizzativa e psicometrica, AI e data science, che sviluppa AI Agent all'avanguardia capaci di misurare ciò che conta davvero: cosa sanno fare le persone, non cosa dice il loro ruolo. Grande ambizione, standard elevati, zero compiacimento. Superiamo i limiti ogni giorno e non ci accontentiamo di nulla che non sia eccellenza. Il talento è la risorsa più sottoutilizzata al mondo. Siamo qui per liberarlo tutto e lasciare il segno.",
+    "cta2": "Unisciti a noi",
+    "body20": "La vita in Skillvue",
+    "body21": "50+ persone tra Milano, Berlino e Londra.",
+    "teamTags": {
+      "psychometricians": "Psicometristi",
+      "engineers": "Ingegneri",
+      "designers": "Designer",
+      "product": "Prodotto"
+    },
+    "coverageMap": "/about/presenza.avif",
+    "heroLine1": "Sblocchiamo il potenziale delle",
+    "heroLine2": "persone per guidare il successo della tua organizzazione su larga scala"
+  },
+  "blog": {
+    "text": "Leggi di più",
+    "text2": "Risorse",
+    "heading": "Blog &<br></br><span>Approfondimenti</span>",
+    "body": "Approfondimenti, ricerche e prospettive sulla talent intelligence, AI nelle risorse umane e il futuro delle decisioni sulle persone.",
+    "cta": "Esplora gli articoli",
+    "heading2": "Tutti gli Articoli",
+    "heading3": "Vuoi approfondire ulteriormente? Parla con il nostro team.",
+    "body2": "Prenota una demo e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
+    "cta2": "Prenota una Demo"
+  },
   "book-meeting": {
     "meta": {
       "title": "Prenota una Demo | Skillvue",
       "description": "Scopri come Skillvue trasforma i colloqui in dati sulle competenze su cui puoi agire. Prenota una demo: analizziamo insieme selezione, performance e sviluppo sui tuoi casi reali."
-    }
+    },
+    "back": "Indietro",
+    "body": "Prenota una demo con il nostro team per scoprire come Skillvue può trasformare i tuoi processi di selezione, performance e sviluppo con la talent intelligence supportata dalla scienza.",
+    "heading": "Parliamo della tua <span>strategia di talento.</span>"
+  },
+  "careers": {
+    "meta": {
+      "title": "Lavora con noi | Carriere in Skillvue",
+      "description": "Unisciti al team che rende oggettive le decisioni sul talento. Scopri i ruoli aperti in Skillvue e come lavoriamo, a Milano e in tutta Europa."
+    },
+    "tags": {
+      "skillsFirst": "Competenze al centro",
+      "biasFree": "Senza bias",
+      "gdprCompliant": "Conforme al GDPR",
+      "explainable": "Spiegabile"
+    },
+    "stats": {
+      "n50": {
+        "value": "50+",
+        "label": "Persone in tutta Europa"
+      },
+      "n3": {
+        "value": "3",
+        "label": "Uffici a Milano, Berlino, Londra"
+      },
+      "hybrid": {
+        "value": "Ibrido",
+        "label": "Ambiente di lavoro"
+      },
+      "n1m": {
+        "value": "1M+",
+        "label": "Persone valorizzate"
+      }
+    },
+    "steps": {
+      "applySkills": {
+        "title": "Candidati con le tue competenze",
+        "desc": "Una breve valutazione Skillvue delle tue competenze, mindset e readiness."
+      },
+      "meetTeam": {
+        "title": "Incontra il team",
+        "desc": "Colloqui strutturati con le persone con cui lavorerai davvero."
+      },
+      "moveForwardClarity": {
+        "title": "Vai avanti con chiarezza",
+        "desc": "Una decisione oggettiva, priva di bias e spiegabile. Per te e per noi."
+      }
+    },
+    "text": "Carriere",
+    "heading": "Entra nel team che rende le decisioni sul talento <span>oggettive.</span>",
+    "body": "Aiuterai le più grandi aziende del mondo ad assumere, promuovere e sviluppare le persone in base alle competenze e al potenziale.",
+    "cta": "Vedi le posizioni aperte",
+    "cta2": "La vita in Skillvue",
+    "text2": "Perché Skillvue",
+    "heading2": "Ogni decisione sul talento, dall'assunzione alla trasformazione, è <span>finalmente quella giusta</span>",
+    "body2": "Stiamo costruendo lo strato oggettivo di dati sulle competenze per le aziende, fondato sulla scienza e scalato dall'intelligenza artificiale.",
+    "cta3": "Leggi la storia completa",
+    "text3": "Come selezioniamo",
+    "heading3": "Selezioniamo come aiutiamo <span>le aziende a selezionare</span>",
+    "body3": "La nostra selezione riflette gli stessi principi che portiamo ai nostri clienti: un metodo basato sulle competenze, non sulla scrematura dei CV.",
+    "text4": "La vita in Skillvue",
+    "heading4": "50+ persone tra Milano, Berlino e Londra.",
+    "body4": "Ambiente di lavoro flessibile e ibrido",
+    "text5": "Unisciti a noi!",
+    "heading5": "Posizioni aperte",
+    "cta4": "Candidati",
+    "body5": "Nessuna posizione corrisponde a questo filtro.",
+    "heading6": "Pronto a fare il lavoro più importante nell'HR tech?",
+    "cta5": "Vedi le posizioni aperte",
+    "cta6": "La vita in Skillvue"
   },
   "customers": {
     "customerHighlights": {
@@ -201,6 +341,10 @@
           "headline": "Fidia Farmaceutici: come fotografare su scala globale le reali competenze della rete vendita per supportare la crescita futura"
         }
       }
+    },
+    "meta": {
+      "title": "Storie di Successo | Skillvue",
+      "description": "Scopri come 50+ aziende europee come Unicredit e Carrefour hanno sostituito le decisioni intuitive sul talento con valutazioni AI obiettive. ROI 10–30x."
     }
   },
   "home": {
@@ -357,6 +501,9 @@
       "cta": "Prenota una Demo",
       "text2": "I Nostri Clienti"
     }
+  },
+  "privacy-policy": {
+    "cta": "Indietro"
   },
   "product-overview": {
     "hero": {
@@ -573,6 +720,215 @@
       "heading": "Cinque dimensioni per <span>valutazioni oggettive</span>",
       "body": "Ogni persona viene valutata con un framework strutturato e supportato dalla scienza, che sia un candidato o un dipendente con 20 anni di esperienza.",
       "cta": "Scopri la Scienza"
+    },
+    "meta": {
+      "title": "Piattaforma | Valutazioni Talent con AI | Skillvue",
+      "description": "Un'unica piattaforma per selezione, performance, L&D e successione. Valutazioni AI con scienza psicometrica e 100+ integrazioni con SAP, Workday e Oracle."
+    }
+  },
+  "resources": {
+    "press": {
+      "text": "Stampa",
+      "heading": "Skillvue sui<br></br><span>media</span>",
+      "body": "Scopri come le principali testate internazionali raccontano l'ascesa dell'intelligenza dei talenti potenziata dall'intelligenza artificiale.",
+      "text2": "Rassegna Stampa",
+      "heading2": "Copertura da parte delle principali testate",
+      "text3": "Interviste",
+      "heading3": "In evidenza",
+      "cta": "Leggi l'intervista",
+      "text4": "Comunicati ufficiali",
+      "heading4": "Annunci ufficiali",
+      "cta2": "Scarica",
+      "text5": "Supportati da",
+      "heading5": "Vuoi saperne di più?",
+      "body2": "Contatta il nostro team per scoprire come Skillvue rende ogni decisione sui talenti guidata dai dati.",
+      "cta3": "Prenota una Demo",
+      "releases": {
+        "seedRound": {
+          "title": "Round Seed di 5 milioni per Skillvue, la startup che sta cambiando la valutazione delle competenze con l’AI",
+          "url": "https://drive.google.com/file/d/1vX3y93J-tVmDDyUTVtzmIITEkBfDA0TR/view?usp=sharing"
+        },
+        "becomesSkillvue": {
+          "title": "Round Seed di 5 milioni per Skillvue, la startup che sta cambiando la valutazione delle competenze con l’AI",
+          "url": "https://drive.google.com/file/d/1BAfx-JMQ5KjI9EVY3HfY6yK8P4sn4o66/view?usp=sharing"
+        }
+      }
+    },
+    "whitepapers": {
+      "items": {
+        "beyond-skills": {
+          "title": "Beyond Skills. Misurare aspirazioni e motivazione",
+          "shortDesc": "Come misurare le aspirazioni di carriera e la motivazione per predire il successo lavorativo a lungo termine.",
+          "fullDesc": "Questo whitepaper è un contenuto di comoda e rapida lettura, pensato per fornirti informazioni chiave utili a ripensare il tuo approccio alla misurazione delle aspirazioni di carriera e della motivazione. Una selezione di approfondimenti teorici e insight pratici. dall'analisi dei driver motivazionali al ruolo dell'AI. che ti porterà valore nell'immediato.",
+          "heroDesc": "Sapere cosa una persona sa fare non basta più. Serve capire perché lo fa. Scopri come comprendere, identificare e valorizzare la motivazione e le aspirazioni di carriera di candidati e dipendenti con un approccio basato sulla ricerca.",
+          "takeaways": {
+            "t1": "Insight e approfondimenti scientifici sui driver motivazionali e le aspirazioni di carriera",
+            "t2": "Intervista a Letizia Spione, Psicologa Clinica e People Scientist",
+            "t3": "Case study pratico che mostra come applicare concretamente i concetti analizzati",
+            "t4": "Il ruolo dell'AI nella misurazione della motivazione su larga scala"
+          },
+          "chapters": {
+            "c1": {
+              "title": "Il Mito delle Competenze \"Eterne\"",
+              "desc": "Perché le competenze tecniche scadono in 12-18 mesi e cosa significa per la selezione."
+            },
+            "c2": {
+              "title": "Il Fattore \"M\"",
+              "desc": "Come la motivazione intrinseca — guidata da Autonomia, Padronanza e Scopo — ridefinisce le performance a lungo termine."
+            },
+            "c3": {
+              "title": "Intervista all'Esperta",
+              "desc": "La Psicologa Clinica Letizia Spione spiega come identificare e misurare concretamente la motivazione."
+            },
+            "c4": {
+              "title": "Si Può Analizzare la Motivazione?",
+              "desc": "Dall'intuizione all'evidenza: strumenti e metodi affidabili per misurare ciò che i CV non mostrano."
+            },
+            "c5": {
+              "title": "Case Study",
+              "desc": "Come una grande compagnia assicurativa italiana ha usato Skillvue per mappare la motivazione dei dipendenti su larga scala."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "12-18",
+              "unit": "mesi",
+              "label": "Durata media di una competenza tecnica prima di diventare obsoleta"
+            },
+            "s2": {
+              "value": "39%",
+              "label": "delle competenze attuali sarà obsoleta entro il 2030 secondo il World Economic Forum"
+            },
+            "s3": {
+              "value": "1B+",
+              "label": "persone nel mondo dovranno riqualificarsi nei prossimi cinque anni"
+            }
+          }
+        },
+        "future-leaders": {
+          "title": "Le competenze dei leader del futuro",
+          "shortDesc": "Ricerche, dati e consigli pratici per capire come sta cambiando il mondo del lavoro e preparare la tua People Strategy.",
+          "fullDesc": "Questo report è una guida che ti accompagna alla scoperta delle principali trasformazioni che stanno ridefinendo il ruolo della funzione HR. Dalla gestione del calo demografico all'impatto delle nuove tecnologie sulla volatilità di lavori e competenze: tutto ciò che ti serve per costruire il tuo personale kit di sopravvivenza al Future of Work, uno strumento pratico per applicare best practice e diventare protagonista del cambiamento.",
+          "heroDesc": "Che ruolo hanno il calo demografico, le nuove tecnologie e i cambiamenti nel mondo del lavoro nel plasmare il futuro della leadership? Scoprilo in questo report ricco di ricerche, dati, interviste e consigli pratici per adattare la tua People Strategy.",
+          "takeaways": {
+            "t1": "Insight scientifici sull'obsolescenza delle competenze e sul ruolo dell'AI nel ridefinire le regole del gioco",
+            "t2": "Intervista a Martina Mauri, Direttrice dell'Osservatorio HR Innovation Practice del Politecnico di Milano",
+            "t3": "Best Practice e HR to-do list per individuare i veri leader del futuro, leggendo competenze e potenziale",
+            "t4": "Strumenti pratici per costruire il tuo \"kit di sopravvivenza\" al Future of Work"
+          },
+          "chapters": {
+            "c1": {
+              "title": "Perché il Mercato del Lavoro Sta Cambiando?",
+              "desc": "Le forze dietro l'obsolescenza delle competenze: 5 anni per perdere metà del valore, 12-18 mesi per le competenze tecniche."
+            },
+            "c2": {
+              "title": "Il Ruolo dell'AI nel Ridefinire il Lavoro",
+              "desc": "Come l'AI sta creando un'ibridazione tra uomini e macchine, e cosa significa per le competenze che contano."
+            },
+            "c3": {
+              "title": "La Sfida Demografica",
+              "desc": "Intervista con Martina Mauri (Politecnico di Milano) sul gap di 3,7 milioni di lavoratori in Italia entro il 2040 e come reagire."
+            },
+            "c4": {
+              "title": "Oltre le Competenze: Valorizzare il Potenziale",
+              "desc": "Perché valutare la Prossimità alle Competenze, la Proiezione Aspirazionale e l'Agilità di Apprendimento è il nuovo vantaggio competitivo."
+            },
+            "c5": {
+              "title": "La To-Do List HR",
+              "desc": "Best practice per mappare le competenze dinamicamente, scoprire il potenziale nascosto, collegare i dati alle performance e costruire l'apprendimento continuo."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "3,7M",
+              "label": "gap di lavoratori previsto in Italia entro il 2040 a causa del calo demografico"
+            },
+            "s2": {
+              "value": "39%",
+              "label": "delle competenze attuali diventeranno obsolete entro il 2030, ridefinendo i requisiti della leadership"
+            },
+            "s3": {
+              "value": "78%",
+              "label": "delle aziende fatica a reclutare, pur aspettandosi una crescita dell'organico"
+            }
+          }
+        },
+        "sales-network-turnover": {
+          "title": "Turnover nelle reti vendita",
+          "shortDesc": "Numeri, cause profonde e strategie basate sugli verification per combattere il turnover nelle reti commerciali.",
+          "fullDesc": "Il turnover è un fenomeno complesso, alimentato da fattori sia interni sia esterni all'organizzazione. Storicamente è stato gestito in modo poco efficace anche a causa di un forte scollamento tra la sede centrale e la rete commerciale. In questo whitepaper scoprirai come intervenire grazie all'utilizzo strategico degli verification, che possono avere un impatto concreto nella riduzione del turnover, integrandosi con iniziative già diffuse come i contributi economici, il work-life balance e altre leve HR.",
+          "heroDesc": "In Italia il tasso di turnover complessivo si aggira intorno al 34%. Nelle reti commerciali l'impatto è ancora più significativo e rappresenta uno dei principali costi per HR e business. Scopri numeri, cause e strategie per combatterlo.",
+          "takeaways": {
+            "t1": "Insight e statistiche sul peso economico del turnover nelle reti vendita",
+            "t2": "Analisi dei fattori chiave che causano il turnover e del ruolo delle diverse funzioni nella sua gestione",
+            "t3": "Come gli verification di competenze e potenziale possono contribuire a predire e ridurre il turnover",
+            "t4": "Strategie pratiche per colmare lo scollamento tra sede centrale e rete commerciale"
+          },
+          "chapters": {
+            "c1": {
+              "title": "L'Impatto Economico del Turnover",
+              "desc": "Un'uscita nel retail equivale a 9,4 giorni di vendite perse. Il 63% della perdita di produttività avviene prima che il dipendente se ne vada."
+            },
+            "c2": {
+              "title": "Perché il Turnover È Così Alto",
+              "desc": "Insoddisfazione lavorativa, condizioni difficili, bassa motivazione: i tre fattori chiave che alimentano il turnover nelle reti commerciali."
+            },
+            "c3": {
+              "title": "Combattere il Turnover con i Dati",
+              "desc": "Come gli verification Skillvue trasformano il recruiting, la mobilità interna e lo sviluppo del talento per prevedere e prevenire il turnover."
+            },
+            "c4": {
+              "title": "Il Bonus sulla Crescita delle Vendite",
+              "desc": "+1% di turnover = -0,5% di fatturato netto medio. Il legame diretto e tracciabile tra retention e performance commerciale."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "34%",
+              "label": "tasso di turnover complessivo in Italia, che sale al 47% nelle aziende di servizi"
+            },
+            "s2": {
+              "value": "9,4",
+              "unit": "giorni",
+              "label": "di vendite perse per ogni singola uscita nel retail"
+            },
+            "s3": {
+              "value": "63%",
+              "label": "delle perdite di produttività avvengono prima che il dipendente se ne vada effettivamente"
+            }
+          }
+        }
+      },
+      "filters": {
+        "allIndustries": "Tutti i Settori",
+        "allTopics": "Tutti i Topic",
+        "allProcesses": "Tutti i Processi",
+        "industry": "Settore",
+        "topic": "Area Tematica",
+        "hrProcess": "Processo",
+        "noResults": "Nessun whitepaper corrisponde ai filtri selezionati. Prova a modificare la selezione.",
+        "read": "Leggi"
+      },
+      "text": "Risorse",
+      "heading": "White Paper<br></br>& <span>Report</span>",
+      "body": "Ricerche e approfondimenti per ripensare il modo in cui selezioni, sviluppi e gestisci il talento. Esplora la nostra libreria e scarica le risorse che ti servono.",
+      "cta": "Esplora la libreria",
+      "text2": "White Paper",
+      "heading2": "Vuoi vedere la scienza in azione?",
+      "body2": "Prenota una demo con il nostro team e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
+      "cta2": "Prenota una Demo",
+      "detail": {
+        "body": "White Paper non trovato.",
+        "cta": "Torna ai White Paper",
+        "cta2": "Scarica Gratis",
+        "heading": "Scarica il White Paper Completo",
+        "body2": "Compila il modulo e te lo invieremo direttamente nella tua inbox.",
+        "heading2": "Altri White Paper",
+        "heading3": "Vuoi vedere la scienza in azione?",
+        "body3": "Prenota una demo con il nostro team e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
+        "cta3": "Prenota una Demo",
+        "insideHeading": "Cosa <span>Contiene</span>"
+      }
     }
   },
   "science": {
@@ -765,6 +1121,10 @@
         }
       },
       "heading": "Due discipline, <span>uno standard rigoroso</span>"
+    },
+    "meta": {
+      "title": "La Scienza di Skillvue | Psicometria e AI per il Talent",
+      "description": "Skillvue è costruita sulla psicologia I/O e la psicometria. Ogni valutazione è accurata, affidabile e progettata per resistere al vaglio scientifico."
     }
   },
   "shared": {
@@ -885,6 +1245,10 @@
           "successionRiskVisible": "Rischio di successione visibile in tempo reale. inclusa la concentrazione di conoscenze e l'esposizione ai pensionamenti",
           "lessTimeProcess": "Meno tempo sui processi, più tempo sulle decisioni. con la possibilità di verificare se hanno funzionato"
         }
+      },
+      "meta": {
+        "title": "Mobilità Interna e Successione | Skillvue",
+        "description": "Mappa competenze e potenziale nell'intera organizzazione. Successione data-driven, mobilità interna trasparente e talento interno finalmente visibile."
       }
     },
     "learning-development": {
@@ -982,6 +1346,10 @@
           "skillGapTrend": "Linee di tendenza sui gap di competenze che mostrano cosa funziona e cosa va rivisto o eliminato",
           "contentPersonalizedScale": "Contenuti personalizzati su scala: la piattaforma sa cosa serve a ogni persona"
         }
+      },
+      "meta": {
+        "title": "Learning & Development | Gap Analysis Competenze | Skillvue",
+        "description": "Identifica i reali gap di competenze a livello individuale, di team e organizzativo. Concentra ogni investimento formativo dove ha il maggiore impatto."
       }
     },
     "performance-management": {
@@ -1053,6 +1421,10 @@
           "promotionDecisionsBased": "Decisioni di promozione basate su dati di competenza validati",
           "skillVerificationsEmbedded": "Valutazioni delle competenze integrate nelle performance review con la stessa oggettività delle metriche aziendali"
         }
+      },
+      "meta": {
+        "title": "Performance Management | Valutazioni Obiettive | Skillvue",
+        "description": "Integra valutazioni oggettive nei tuoi cicli di performance. Riduci i bias e dai a ogni manager un punto di partenza basato sui dati."
       }
     },
     "project-resourcing": {
@@ -1119,6 +1491,10 @@
           }
         },
         "heading": "I punti ciechi <span>nello staffing dei progetti</span>"
+      },
+      "meta": {
+        "title": "Project Resourcing | Staffing per Competenza | Skillvue",
+        "description": "Assegna i progetti in base alle competenze verificate, non alla disponibilità. Riduci il rischio di delivery e migliora la composizione dei team."
       }
     },
     "talent-acquisition": {
@@ -1377,6 +1753,10 @@
           "hiringDecisionsBacked": "Decisioni di assunzione supportate da valutazioni oggettive, evidenze e insight spiegabili",
           "predictiveMatchingReduces": "Matching predittivo che riduce il mismatch fin dal primo giorno"
         }
+      },
+      "meta": {
+        "title": "Talent Acquisition | Valutazioni Predittive con AI | Skillvue",
+        "description": "Sostituisci il recruiting basato sull'istinto con valutazioni AI predittive. Riduci il turnover precoce e rendi ogni decisione di assunzione difendibile."
       }
     }
   }

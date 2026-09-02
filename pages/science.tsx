@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import ScienceHero from '@/components/science/ScienceHero';
@@ -12,6 +12,7 @@ import ResponsibleAI from '@/components/science/ResponsibleAI';
 import ScienceCTA from '@/components/science/ScienceCTA';
 import ProductCrossLinks from '@/components/shared/ProductCrossLinks';
 import { messagesFor } from '@/i18n/messages';
+import { canonical as canonicalUrl } from '@/i18n/routes';
 
 
 // One line per page is the whole contract: the argument is this route's `id` in
@@ -19,17 +20,15 @@ import { messagesFor } from '@/i18n/messages';
 export const getStaticProps = messagesFor('science');
 
 export default function SciencePage() {
-  const { locale } = useRouter();
-  const isIT = locale === 'it';
-  const canonical = `https://skillvue.ai${isIT ? '/it' : ''}/science`;
+  const lang = useLocale();
+  const meta = useTranslations('science.meta');
+  const canonical = canonicalUrl('science', lang);
 
   return (
     <>
       <Head>
-        <title>{isIT ? 'La Scienza di Skillvue | Psicometria e AI per il Talent' : 'The Science Behind Skillvue | Psychometrics & AI'}</title>
-        <meta name="description" content={isIT
-          ? "Skillvue è costruita sulla psicologia I/O e la psicometria. Ogni valutazione è accurata, affidabile e progettata per resistere al vaglio scientifico."
-          : 'Skillvue is built on I/O psychology and psychometrics. Every verification is accurate, reliable and defensible — designed to hold up to scientific scrutiny.'
+        <title>{meta('title')}</title>
+        <meta name="description" content={meta('description')
         } />
         <link rel="canonical" href={canonical} />
         {/* Hero's italic gradient span needs Bold Italic; only this page (and the homepage) does. */}
