@@ -100,6 +100,8 @@ const DELIBERATE = [
   ['lp.ai-competency-newsletter.', 'an English one-pager, served under both locales'],
   // Landing-page microcopy shared by Italian-only pages.
   ['shared.lp.', 'used only by the Italian-only landing pages'],
+  // Event names are the events' own names.
+  ['blog.newsletter-august-2026.sections.2.events.', 'event names'],
   // A named interview methodology.
   ['blog.attitude-vs-competence.methods.', 'named methodologies (BEI, STAR)'],
   // Product surface named in English on both sites.

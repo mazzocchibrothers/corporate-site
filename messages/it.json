@@ -976,22 +976,20 @@
       "tag": "Newsletter",
       "date": "Agosto 2026",
       "readTime": "5 min di lettura",
-      "title": "Competenze, nuovi insight e dove incontrarci in Europa",
+      "title": "Skills, nuovi insight e dove incontrarci in Europa",
       "subtitle": "Una nuova customer story con Gruppo Unicomm, un approfondimento sulle sfide organizzative della GDO e i nostri prossimi eventi in Europa.",
       "intro": [
         "In Skillvue, mentre entriamo in una nuova stagione di eventi e confronti in tutta Europa, continuiamo a esplorare i temi che stanno ridefinendo il modo in cui le organizzazioni misurano e gestiscono le competenze.",
-        "Dalla trasformazione della forza lavoro al talent management, fino alla necessità di prendere decisioni più rapide e informate in organizzazioni complesse e distribuite, avere **dati chiari sulle competenze** diventa sempre più importante.",
-        "In questa edizione raccogliamo una nuova customer story con Gruppo Unicomm, un approfondimento su alcune delle principali sfide organizzative della GDO e i nostri prossimi eventi in Europa."
+        "Dalla trasformazione della forza lavoro al talent management, fino alla necessità di prendere decisioni più rapide e informate in organizzazioni complesse e distribuite, avere **dati chiari sulle competenze** è essenziale.",
+        "In questa newsletter raccogliamo una nuova customer story con Gruppo Unicomm, un approfondimento su alcune delle principali sfide organizzative della GDO e i nostri prossimi eventi in Europa."
       ],
       "sections": [
         {
           "img": "unicomm",
           "heading": "Rendere visibili le competenze in Gruppo Unicomm",
           "body": [
-            "Quando un gruppo cresce attraverso acquisizioni e una rete distribuita di punti vendita, il rischio è che informazioni, valutazioni e competenze restino frammentate tra le persone e l’organizzazione.",
-            "Per Gruppo Unicomm, partire dalle competenze significa costruire un **linguaggio comune tra persone, punti vendita e strategia di business**, contribuendo a rendere le decisioni HR più coerenti con le reali esigenze dell’organizzazione.",
-            "Nella nostra ultima customer story, Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm, racconta il percorso avviato con Skillvue per trasformare grandi volumi di informazioni su candidati e popolazione aziendale in dati utili, prioritizzati e azionabili.",
-            "In un contesto in cui i team HR devono gestire volumi elevati senza rallentare il business, l’obiettivo è rendere la selezione più strutturata e creare maggiore continuità tra le decisioni sulle persone."
+            "Quando un’organizzazione cresce attraverso acquisizioni e gestisce una rete distribuita di punti vendita, costruire un **linguaggio comune sulle competenze** diventa essenziale.",
+            "Nella nostra ultima customer story, Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm, racconta come l’azienda stia trasformando grandi volumi di dati su candidati e popolazione aziendale in insight che i team HR possono prioritizzare e su cui agire."
           ],
           "cta": {
             "label": "Guarda la customer story",
@@ -1001,14 +999,14 @@
         },
         {
           "img": "supermarkets",
-          "heading": "Che cosa significa un approccio skills-based nei supermercati?",
+          "heading": "Che cosa significa un approccio skills-based nella GDO?",
           "body": [
-            "Turnover elevato, selezione su larga scala, pipeline per i direttori di punto vendita, sviluppo delle persone in prima linea e integrazione post-acquisizione rendono particolarmente complesso prendere decisioni coerenti sulle persone in organizzazioni retail distribuite.",
-            "In una nuova breve panoramica abbiamo raccolto alcune delle sfide chiave del settore e approfondito il ruolo che **dati oggettivi sulle competenze** possono avere nelle diverse fasi del talent lifecycle, dalla selezione alla crescita interna fino alla trasformazione organizzativa.",
+            "Turnover elevato, selezione su larga scala, pipeline per i direttori di punto vendita, sviluppo delle persone in prima linea e integrazione post-acquisizione rendono la gestione del talento particolarmente complessa nella GDO.",
+            "Abbiamo raccolto alcune delle sfide chiave del settore e approfondito come **dati oggettivi sulle competenze** possano supportare selezione, promozioni, sviluppo e trasformazione organizzativa.",
             "Il documento si concentra in particolare su quattro ambiti: selezione e screening su larga scala, costruzione delle pipeline per direttori di punto vendita e capireparto, sviluppo delle persone in prima linea e gestione delle competenze durante acquisizioni e riorganizzazioni."
           ],
           "cta": {
-            "label": "Esplora la panoramica sui supermercati",
+            "label": "Esplora la panoramica nella GDO",
             "href": "supermarkets",
             "external": false,
             "newTab": true
@@ -1058,6 +1056,26 @@
               "cta": {
                 "label": "Scopri di più",
                 "href": "hrcoreAcademy",
+                "external": true
+              }
+            },
+            {
+              "name": "Retail Executive Summit",
+              "meta": "Cernobbio, 15–16 ottobre",
+              "text": "Un confronto C-level su come persone e talent strategy stiano diventando parte integrante dell’agenda strategica delle aziende retail.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "retailExecutiveSummit",
+                "external": true
+              }
+            },
+            {
+              "name": "Festival del Lavoro Sostenibile",
+              "meta": "Roma, 20 ottobre",
+              "text": "Un pomeriggio di roundtable dedicate all’evoluzione del futuro del lavoro, seguito da networking e aperitivo.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "lavoroSostenibile",
                 "external": true
               }
             },

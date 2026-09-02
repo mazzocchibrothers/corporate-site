@@ -27,6 +27,9 @@ const LINKS = {
   gartner: 'https://www.gartner.com/en/conferences/emea/hr-symposium-uk',
   hrcoreAcademy: 'https://www.hrcoreacademy.com',
   unleash: 'https://www.unleash.ai/events/unleash-paris',
+  // Events in Italy
+  retailExecutiveSummit: 'https://www.retailexecutivesummit.it',
+  lavoroSostenibile: 'https://www.lavorosostenibile.com',
   // Internal pages (already live on the site)
   supermarkets: '/lp/supermarkets',
   unicomm: '/customers/unicomm',
