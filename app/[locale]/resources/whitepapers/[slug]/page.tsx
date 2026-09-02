@@ -10,6 +10,7 @@ import { notFound } from 'next/navigation';
 import { whitepapers } from '@/data/whitepapers';
 import { routes } from '@/i18n/routes';
 import { ogImageUrl } from '@/i18n/urls';
+import JsonLd from '@/i18n/json-ld';
 import Body from './body';
 
 const ROUTE = 'resources/whitepapers/[slug]';
@@ -79,6 +80,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <NextIntlClientProvider locale={locale} messages={await messagesForRoute(ROUTE, locale)}>
+      <JsonLd routeId={ROUTE} locale={locale} />
       <Body slug={slug} />
     </NextIntlClientProvider>
   );

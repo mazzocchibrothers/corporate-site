@@ -14,6 +14,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { buildMetadata } from '@/i18n/metadata';
 import { messagesForRoute, namespaceOf } from '@/i18n/messages';
+import JsonLd from '@/i18n/json-ld';
 import Body from '../mediaset-2/body';
 
 /** The URL — what the canonical and the hreflang alternates are built from. */
@@ -28,8 +29,18 @@ export async function generateMetadata({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations(`${namespaceOf(CONTENT)}.meta`);
   // The canonical stays this URL's own; the title and description belong to the
-  // story being shown, which is the pair a search result has to agree on.
-  return { ...(await buildMetadata(ROUTE, locale)), title: t('title'), description: t('description') };
+  // story being shown, which is the pair a search result has to agree on — and
+  // openGraph carries the same pair, so it splits the same way. Without this
+  // the page's <title> named one cut of the story and its share card named the
+  // other.
+  const meta = await buildMetadata(ROUTE, locale);
+  return {
+    ...meta,
+    title: t('title'),
+    description: t('description'),
+    openGraph: { ...meta.openGraph, title: t('title'), description: t('description') },
+    twitter: { ...meta.twitter, title: t('title'), description: t('description') },
+  };
 }
 
 export default async function Page({ params }: Props) {
@@ -38,6 +49,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <NextIntlClientProvider locale={locale} messages={await messagesForRoute(CONTENT, locale)}>
+      <JsonLd routeId={ROUTE} contentId={CONTENT} locale={locale} />
       <Body />
     </NextIntlClientProvider>
   );

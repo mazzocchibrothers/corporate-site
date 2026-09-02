@@ -9,5 +9,7 @@ export function generateStaticParams() {
 
 export default async function Image({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  return ogFor('customers/mediaset', locale);
+  // The card names the story the URL shows, not the route it is filed under —
+  // the same split as generateMetadata in page.tsx.
+  return ogFor('customers/mediaset-2', locale);
 }

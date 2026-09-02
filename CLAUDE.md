@@ -26,19 +26,25 @@ Deployed on Vercel from `main`.
 
 ## The shape of a page
 
-Every route is a directory under `app/[locale]/`, holding two files:
+Every route is a directory under `app/[locale]/`, holding three files:
 
 ```
 app/[locale]/customers/adr/
-  page.tsx    server. The same eight lines on every route.
-  body.tsx    the page. 'use client', because framer-motion and useRouter live here.
+  page.tsx              server. The same eight lines on every route.
+  body.tsx              the page. 'use client', because framer-motion and useRouter live here.
+  opengraph-image.tsx   three lines. Hands the route id to i18n/og-card.tsx.
 ```
 
-`page.tsx` does the two things only the server can: `generateMetadata` calling
-`buildMetadata(routeId, locale)`, and a `NextIntlClientProvider` narrowed to the
-route's namespaces. **Do not widen that provider.** One rendered without
-`messages` inherits the entire catalogue and serializes 338 KB of copy into
-every document.
+`page.tsx` does the three things only the server can: `generateMetadata` calling
+`buildMetadata(routeId, locale)`, a `NextIntlClientProvider` narrowed to the
+route's namespaces, and `<JsonLd routeId={ROUTE} locale={locale} />`.
+**Do not widen that provider.** One rendered without `messages` inherits the
+entire catalogue and serializes 338 KB of copy into every document.
+
+`opengraph-image.tsx` and `<JsonLd>` are both per-route by construction and
+cannot be inherited from a layout, so `check:routes` fails on a route that
+lacks either — without it the page shares as a blank rectangle and tells Google
+nothing about itself, and nothing else notices.
 
 ## The route registry — `i18n/routes.json`
 
@@ -83,7 +89,7 @@ person — listed in `scripts/check-hardcoded.mjs`.
 
 ## Adding a customer story
 
-1. `app/[locale]/customers/<slug>/` — copy an existing pair.
+1. `app/[locale]/customers/<slug>/` — copy an existing trio.
    `europ-assistance` is the reference structure: Hero → Context → Challenge →
    Objectives → Solution → Results → Vision → Related.
 2. Add the copy to `messages/en.json` and `messages/it.json` under
@@ -94,7 +100,8 @@ person — listed in `scripts/check-hardcoded.mjs`.
    nothing links to.
 5. Assets go in `public/logos/` (AVIF for card backgrounds).
 
-The sitemap, the hreflang tags and the language switcher need no edit.
+The sitemap, the hreflang tags, the share card, the structured data and the
+language switcher need no edit beyond the three lines in step 1.
 
 ## Navigation
 
@@ -117,6 +124,12 @@ For a raw `<a href>`, use `href(id, locale)` from `@/i18n/routes`.
   font-weight lives only in `globals.css` — change it there, never per-file.
 - **CSS delivery** is decided and measured: one external sheet, no `inlineCss`.
   See `harness/docs/conventions.md`.
+- **`assets/` is build input, not `public/`.** The two Mona Sans ttf weights
+  live there because satori cannot read the woff2 the site serves, and because
+  nothing ever requests them over HTTP. Conversely `public/robots.txt` and
+  `public/site.webmanifest` are requested by name and referenced by no source
+  file — `check:assets` asserts them explicitly, since a sweep for unused
+  assets is exactly what deleted them once.
 - HubSpot forms are embedded by portal ID + form GUID (see
   `app/[locale]/book-meeting/body.tsx`, `data/whitepapers.ts`,
   `app/[locale]/lp/*`). GTM is in `app/[locale]/layout.tsx`.

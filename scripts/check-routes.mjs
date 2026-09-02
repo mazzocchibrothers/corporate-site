@@ -261,6 +261,30 @@ for (const locale of ['en', 'it']) {
   }
 }
 
+// ── Every route carries its share card and its structured data ─────────────
+// Both are per-route by construction: opengraph-image.tsx is Next's file
+// convention, and JsonLd is rendered by page.tsx because that is the only
+// server component that knows which route it is. Neither can be inherited, so
+// a route added without them ships a page that shares as a blank rectangle and
+// tells Google nothing about itself — and nothing else fails.
+const missingSeo = [];
+for (const route of routes) {
+  const dir = join(ROOT, 'app/[locale]', (route.paths.en ?? route.paths.it) === '/' ? '' : (route.paths.en ?? route.paths.it));
+  if (!existsSync(join(dir, 'opengraph-image.tsx'))) {
+    missingSeo.push(`  ${route.id}: no opengraph-image.tsx — the page has no share card`);
+  }
+  const page = join(dir, 'page.tsx');
+  if (existsSync(page) && !readFileSync(page, 'utf8').includes('<JsonLd')) {
+    missingSeo.push(`  ${route.id}: page.tsx does not render <JsonLd> — the page has no structured data`);
+  }
+}
+assert.deepEqual(
+  missingSeo,
+  [],
+  `${missingSeo.length} route(s) are missing what every route carries:\n${missingSeo.join('\n')}\n` +
+    'Copy the three lines from a neighbouring route.',
+);
+
 const monolingual = routes.filter((r) => Object.keys(r.paths).length === 1);
 console.log(
   `[OK] ${REGISTRY}: ${routes.length} routes, all served by app/[locale] ` +

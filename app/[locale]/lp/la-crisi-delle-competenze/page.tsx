@@ -13,6 +13,7 @@ import { notFound } from 'next/navigation';
 import { hasLocale } from '@/i18n/routes';
 import { buildMetadata } from '@/i18n/metadata';
 import { messagesForRoute } from '@/i18n/messages';
+import JsonLd from '@/i18n/json-ld';
 import Body from './body';
 
 const ROUTE = 'lp/la-crisi-delle-competenze';
@@ -36,6 +37,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <NextIntlClientProvider locale={locale} messages={await messagesForRoute(ROUTE, locale)}>
+      <JsonLd routeId={ROUTE} locale={locale} />
       <Body />
     </NextIntlClientProvider>
   );
