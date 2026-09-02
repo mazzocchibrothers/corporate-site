@@ -1,12 +1,11 @@
 // @ts-nocheck
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Download, Mail } from 'lucide-react';
 import { useRouter } from 'next/router';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { messagesFor } from '@/i18n/messages';
 
@@ -142,7 +141,7 @@ export const getStaticProps = messagesFor('resources/press');
 
 export default function PressPage() {
   const router = useRouter();
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('resources.press');
 
   return (

@@ -4,7 +4,6 @@ import Head from "next/head";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import { NextIntlClientProvider } from "next-intl";
-import { LanguageProvider } from "@/i18n/LanguageContext";
 import { toEnPath, toItPath } from "@/i18n/localePaths";
 
 const BASE_URL = 'https://skillvue.ai';
@@ -51,7 +50,6 @@ export default function App({ Component, pageProps }: AppProps) {
       messages={pageProps.messages ?? {}}
       onError={onIntlError}
     >
-    <LanguageProvider>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </Head>
@@ -92,7 +90,6 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </div>
       </div>
-    </LanguageProvider>
     </NextIntlClientProvider>
   );
 }

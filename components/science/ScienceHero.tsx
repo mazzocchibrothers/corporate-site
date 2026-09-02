@@ -2,15 +2,14 @@
 'use client';
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
 export default function ScienceHero() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('science');
   return (
     <section id="science-hero" data-testid="science-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px] overflow-hidden">

@@ -1,15 +1,14 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
 export default function ProductCTA() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('product-overview');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });

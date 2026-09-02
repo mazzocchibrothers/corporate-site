@@ -1,10 +1,9 @@
 // @ts-nocheck
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { useLanguage } from '@/i18n/LanguageContext';
 import PRHero from '@/components/solutions/pr/PRHero';
 import PRProblem from '@/components/solutions/pr/PRProblem';
 import PRHowSolves from '@/components/solutions/pr/PRHowSolves';
@@ -20,7 +19,8 @@ import { canonical as canonicalUrl } from '@/i18n/routes';
 export const getStaticProps = messagesFor('solutions/project-resourcing');
 
 export default function ProjectResourcingPage() {
-  const { t, lang } = useLanguage();
+  const lang = useLocale();
+  const t = useTranslations('solutions.project-resourcing');
   const meta = useTranslations('solutions.project-resourcing.meta');
   const canonical = canonicalUrl('solutions/project-resourcing', lang);
 
@@ -43,7 +43,7 @@ export default function ProjectResourcingPage() {
         <PRConsulting />
         <div className="fade-into-dark" />
         <SolutionCrossLinks currentPath="/solutions/project-resourcing" />
-        <SolutionFinalCTA headline={t('Ready to staff projects with')} accentWord={t('confidence?')} />
+        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} />
       <Footer />
       </main>
     </>

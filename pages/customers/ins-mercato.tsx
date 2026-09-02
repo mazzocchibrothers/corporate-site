@@ -1,5 +1,6 @@
 ﻿// @ts-nocheck
 import React, { useRef } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, Target, TrendingUp, Layers, Eye, Scale, Zap, Heart, Users, Shield, CheckCircle } from 'lucide-react';
@@ -7,7 +8,6 @@ import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/i18n/LanguageContext';
 import Head from 'next/head';
 import { messagesFor } from '@/i18n/messages';
 import { href } from '@/i18n/routes';
@@ -163,7 +163,8 @@ export const getStaticProps = messagesFor('customers/ins-mercato');
 
 export default function InsMercatoStoryPage() {
   const router = useRouter();
-  const { t, lang } = useLanguage();
+  const lang = useLocale();
+  const t = useTranslations('customers.ins-mercato');
   const l = lang === 'it' ? 'it' : 'en';
   const metaTitle = lang === 'it'
     ? "Come In's Mercato ha costruito una pipeline interna di Store Manager | Skillvue"
@@ -601,25 +602,25 @@ export default function InsMercatoStoryPage() {
             <Section>
               <div className="rounded-2xl border border-[#e2e8f0] bg-white p-8 lg:p-10 shadow-sm">
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase">{t('The Science Behind It')}</span>
-                  <Button variant="tertiary" mode="dark" onClick={() => { router.push('/science'); window.scrollTo(0,0); }}>
-                    {t('Discover the Science')}
-                  </Button>
+                  <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase">{t('text')}</span>
+                  <Button variant="tertiary" mode="dark" onClick={() => { router.push('/science'); window.scrollTo(0,0); }}>{t('cta')}</Button>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-[1fr_40px_1fr] gap-4 items-center">
-                  <div className="rounded-xl bg-black/[0.03] p-6 text-center">
-                    <span className="block text-[#121212] text-[32px] stat-value md:text-[2.5rem]" style={{ lineHeight: 1 }}>14%</span>
-                    <span className="text-[13px] text-[#121212]/40 mt-2 block">{t('Unstructured interviews')}<br />{t('predictive accuracy')}</span>
-                  </div>
+                  <div className="rounded-xl bg-black/[0.03] p-6 text-center">{t.rich('text2', {
+                    span: (chunks) => <span className="block text-[#121212] text-[32px] stat-value md:text-[2.5rem]" style={{ lineHeight: 1 }}>{chunks}</span>,
+                    br: () => <br />,
+                    span2: (chunks) => <span className="text-[13px] text-[#121212]/40 mt-2 block">{chunks}</span>,
+                  })}</div>
                   <div className="hidden md:flex items-center justify-center">
                     <div className="w-7 h-7 rounded-full border border-[#e2e8f0] bg-white flex items-center justify-center">
                       <ArrowRight className="h-4 w-4 text-[#121212]/25" />
                     </div>
                   </div>
-                  <div className="rounded-xl bg-[#4B4DF7]/[0.06] p-6 text-center">
-                    <span className="block text-[32px] stat-value md:text-[2.5rem]" style={{ lineHeight: 1, color: '#4b4df7' }}>51%+</span>
-                    <span className="text-[13px] text-[#121212]/[0.65] mt-2 block">{t('Structured skills assessment')}<br />{t('predictive validity')}</span>
-                  </div>
+                  <div className="rounded-xl bg-[#4B4DF7]/[0.06] p-6 text-center">{t.rich('text3', {
+                    span: (chunks) => <span className="block text-[32px] stat-value md:text-[2.5rem]" style={{ lineHeight: 1, color: '#4b4df7' }}>{chunks}</span>,
+                    br: () => <br />,
+                    span2: (chunks) => <span className="text-[13px] text-[#121212]/[0.65] mt-2 block">{chunks}</span>,
+                  })}</div>
                 </div>
               </div>
             </Section>
@@ -632,18 +633,18 @@ export default function InsMercatoStoryPage() {
         {/* Related Stories */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{t('Related Stories')}</h3>
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{t('heading')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
               {[
                 { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
                 { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: 'Subdued: building a single scalable hiring standard for a network of 130+ stores' },
               ].map(s => (
                 <button key={s.id} onClick={() => { router.push(`${href('customers', lang)}/${s.id}`); window.scrollTo(0,0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
-                  <span className="text-[14px] text-white/40 mb-4 block">{t(s.tag)}</span>
+                  <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
                   <h4 className="text-[24px] font-semibold text-white/90 mb-4">{s.company}</h4>
-                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{t(s.headline)}</p>
+                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
                   <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
-                    {t('Read the story')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    {t('cta2')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
               ))}
@@ -651,7 +652,7 @@ export default function InsMercatoStoryPage() {
           </div>
         </section>
 
-        <SolutionFinalCTA headline={t("Ready to see what Skillvue can do for your")} accentWord={t("organization?")} />
+        <SolutionFinalCTA headline={t('text4')} accentWord={t('text5')} />
         <Footer />
       </main>
     </>

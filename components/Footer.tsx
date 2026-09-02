@@ -3,8 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Instagram, Facebook, Linkedin } from 'lucide-react';
-import { useTranslations } from 'next-intl';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLocale, useTranslations } from 'next-intl';
 import { href } from '@/i18n/routes';
 
 // Route ids, not paths — the URL for each comes from the registry through
@@ -42,7 +41,7 @@ const socials = [
 ];
 
 export default function Footer() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('common');
   const router = useRouter();
 

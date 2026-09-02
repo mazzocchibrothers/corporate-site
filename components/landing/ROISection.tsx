@@ -1,10 +1,9 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { m, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
@@ -24,7 +23,7 @@ const stats = [
 ];
 
 export default function ROISection() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('home');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });

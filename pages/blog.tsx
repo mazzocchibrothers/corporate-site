@@ -1,12 +1,11 @@
 // @ts-nocheck
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown, Newspaper } from 'lucide-react';
 import { useRouter } from 'next/router';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { messagesFor } from '@/i18n/messages';
 import { href } from '@/i18n/routes';
@@ -97,7 +96,7 @@ const articles = [
 export const getStaticProps = messagesFor('blog');
 
 export default function BlogPage() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('blog');
   const router = useRouter();
   const renderArticle = (article, i) => {

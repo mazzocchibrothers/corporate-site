@@ -1,10 +1,9 @@
 // @ts-nocheck
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { useLanguage } from '@/i18n/LanguageContext';
 import PMHero from '@/components/solutions/pm/PMHero';
 import PMProblem from '@/components/solutions/pm/PMProblem';
 import PMShift from '@/components/solutions/pm/PMShift';
@@ -21,7 +20,8 @@ import { canonical as canonicalUrl } from '@/i18n/routes';
 export const getStaticProps = messagesFor('solutions/performance-management');
 
 export default function PerformanceManagementPage() {
-  const { t, lang } = useLanguage();
+  const lang = useLocale();
+  const t = useTranslations('solutions.performance-management');
   const meta = useTranslations('solutions.performance-management.meta');
   const canonical = canonicalUrl('solutions/performance-management', lang);
 
@@ -44,7 +44,7 @@ export default function PerformanceManagementPage() {
         <PMHowSolves />
         <div className="fade-into-dark" />
         <SolutionCrossLinks currentPath="/solutions/performance-management" />
-        <SolutionFinalCTA headline={t('Ready to make performance reviews')} accentWord={t('objective?')} />
+        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} />
       <Footer />
       </main>
     </>

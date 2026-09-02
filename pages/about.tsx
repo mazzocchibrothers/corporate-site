@@ -1,11 +1,10 @@
 // @ts-nocheck
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { useRouter } from 'next/router';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { messagesFor } from '@/i18n/messages';
@@ -192,7 +191,7 @@ export const getStaticProps = messagesFor('about');
 
 export default function AboutPage() {
   const router = useRouter();
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('about');
   const meta = useTranslations('about.meta');
   const canonical = canonicalUrl('about', lang);

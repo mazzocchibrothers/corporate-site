@@ -1,12 +1,11 @@
 // @ts-nocheck
 import React, { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import { ArrowRight } from 'lucide-react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { useRouter } from 'next/router';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { messagesFor } from '@/i18n/messages';
@@ -64,7 +63,7 @@ const filters = ['All teams', 'Product', 'Design', 'People', 'Sales'];
 export const getStaticProps = messagesFor('careers');
 
 export default function CareersPage() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('careers');
   const meta = useTranslations('careers.meta');
   const router = useRouter();

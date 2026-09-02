@@ -1,13 +1,12 @@
 // @ts-nocheck
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, AlertTriangle, Shield, Eye, Anchor, UserCheck, Zap, ThumbsUp, Brain } from 'lucide-react';
 import { useRouter } from 'next/router';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { messagesFor } from '@/i18n/messages';
 
 
@@ -32,7 +31,7 @@ const BIASES = [
 
 export default function BlogArticle2() {
   const router = useRouter();
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('blog.recruitment-biases');
 
 

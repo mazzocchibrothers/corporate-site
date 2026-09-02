@@ -4185,6 +4185,16 @@
         "accent": "People Strategy?"
       },
       "headline": "Come Unicomm sta costruendo una nuova <hl>gestione del talento</hl> su una rete di <hl2>250 punti vendita</hl2> in costante aumento"
+    },
+    "ins-mercato": {
+      "text": "La Scienza Dietro",
+      "cta": "Scopri la Scienza",
+      "text2": "<span>14%</span><span2>Colloqui non strutturati<br></br>accuratezza predittiva</span2>",
+      "text3": "<span>51%+</span><span2>Structured skills assessment<br></br>validità predittiva</span2>",
+      "heading": "Storie Correlate",
+      "cta2": "Leggi la storia",
+      "text4": "Pronto a vedere cosa Skillvue può fare per la tua",
+      "text5": "organizzazione?"
     }
   },
   "home": {
@@ -4756,6 +4766,15 @@
         "accent": "People Strategy?"
       },
       "headline": "Europ Assistance: come cogliere il <hl>potenziale che resiste alla prova del tempo</hl> in un business fondato sul <hl2>fattore umano</hl2>"
+    },
+    "food-retail": {
+      "paragraphs": {
+        "howObjectiveRead": "Scopri come una valutazione oggettiva delle competenze rende più efficaci le decisioni di selezione, promozione e sviluppo del personale.",
+        "oneStandardAcross": "Un unico standard per tutti i punti vendita, valido sia per i nuovi assunti sia per le persone che crescono all'interno dell'azienda.",
+        "fillFormDownload": "Compila il modulo per scaricare la guida."
+      },
+      "titleLead": "Il tuo prossimo store manager è",
+      "titleHighlight": "già nei tuoi negozi."
     }
   },
   "privacy-policy": {
@@ -5505,7 +5524,9 @@
       "meta": {
         "title": "Mobilità Interna e Successione | Skillvue",
         "description": "Mappa competenze e potenziale nell'intera organizzazione. Successione data-driven, mobilità interna trasparente e talento interno finalmente visibile."
-      }
+      },
+      "text": "Pronto a sbloccare il talento che",
+      "text2": "hai già?"
     },
     "learning-development": {
       "ldcta": {
@@ -5606,7 +5627,9 @@
       "meta": {
         "title": "Learning & Development | Gap Analysis Competenze | Skillvue",
         "description": "Identifica i reali gap di competenze a livello individuale, di team e organizzativo. Concentra ogni investimento formativo dove ha il maggiore impatto."
-      }
+      },
+      "text": "Pronto a dimostrare l'impatto del L&D con",
+      "text2": "dati?"
     },
     "performance-management": {
       "pmcta": {
@@ -5681,7 +5704,9 @@
       "meta": {
         "title": "Performance Management | Valutazioni Obiettive | Skillvue",
         "description": "Integra valutazioni oggettive nei tuoi cicli di performance. Riduci i bias e dai a ogni manager un punto di partenza basato sui dati."
-      }
+      },
+      "text": "Pronto a rendere le valutazioni di performance",
+      "text2": "oggettiva?"
     },
     "project-resourcing": {
       "prcta": {
@@ -5751,7 +5776,9 @@
       "meta": {
         "title": "Project Resourcing | Staffing per Competenza | Skillvue",
         "description": "Assegna i progetti in base alle competenze verificate, non alla disponibilità. Riduci il rischio di delivery e migliora la composizione dei team."
-      }
+      },
+      "text": "Pronto a gestire progetti con",
+      "text2": "fiducia?"
     },
     "talent-acquisition": {
       "tacta": {
@@ -6013,7 +6040,9 @@
       "meta": {
         "title": "Talent Acquisition | Valutazioni Predittive con AI | Skillvue",
         "description": "Sostituisci il recruiting basato sull'istinto con valutazioni AI predittive. Riduci il turnover precoce e rendi ogni decisione di assunzione difendibile."
-      }
+      },
+      "text": "Pronto ad assumere con",
+      "text2": "fiducia?"
     }
   }
 }

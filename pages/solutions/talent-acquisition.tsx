@@ -1,10 +1,9 @@
 // @ts-nocheck
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { useLanguage } from '@/i18n/LanguageContext';
 import TAHero from '@/components/solutions/ta/TAHero';
 import TAProblem from '@/components/solutions/ta/TAProblem';
 import TAShift from '@/components/solutions/ta/TAShift';
@@ -24,7 +23,8 @@ import { canonical as canonicalUrl } from '@/i18n/routes';
 export const getStaticProps = messagesFor('solutions/talent-acquisition');
 
 export default function TalentAcquisitionPage() {
-  const { t, lang } = useLanguage();
+  const lang = useLocale();
+  const t = useTranslations('solutions.talent-acquisition');
   const meta = useTranslations('solutions.talent-acquisition.meta');
   const canonical = canonicalUrl('solutions/talent-acquisition', lang);
 
@@ -48,7 +48,7 @@ export default function TalentAcquisitionPage() {
         <TAImpact />
         <div className="fade-into-dark" />
         <SolutionCrossLinks currentPath="/solutions/talent-acquisition" />
-        <SolutionFinalCTA headline={t('Ready to hire with')} accentWord={t('confidence?')} />
+        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} />
       <Footer />
       </main>
     </>

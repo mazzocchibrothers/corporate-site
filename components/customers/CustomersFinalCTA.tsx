@@ -2,10 +2,9 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, FileText, BookOpen, Shield, Globe } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
@@ -18,7 +17,7 @@ const badges = [
 ];
 
 export default function CustomersFinalCTA() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('customers');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });

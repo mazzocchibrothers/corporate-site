@@ -1,6 +1,6 @@
 ﻿// @ts-nocheck
 import React, { useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, Heart, CheckCircle, Clock, BarChart3 } from 'lucide-react';
@@ -8,7 +8,6 @@ import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/i18n/LanguageContext';
 import Head from 'next/head';
 import { messagesFor } from '@/i18n/messages';
 import { href } from '@/i18n/routes';
@@ -68,7 +67,7 @@ const RESULTS_QUALITATIVE = [
 
 export default function EatalyStoryPage() {
   const router = useRouter();
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('customers.eataly-3');
   const metaTitle = `${t('headline').replace(/<\/?hl\d*>/g, '')} | Skillvue`;
   const metaDesc = t('subtitle').length > 160 ? t('subtitle').substring(0, 157) + '...' : t('subtitle');

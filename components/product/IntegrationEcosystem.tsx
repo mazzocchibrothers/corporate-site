@@ -1,9 +1,8 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
-import { useLanguage } from '@/i18n/LanguageContext';
 
 const integrations = [
   { name: 'Oracle', logo: '/logos/integrations/oracle_white.png' },
@@ -39,7 +38,7 @@ function LogoItem({ item }: { item: { name: string; logo: string } }) {
 }
 
 export default function IntegrationEcosystem() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('product-overview');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });

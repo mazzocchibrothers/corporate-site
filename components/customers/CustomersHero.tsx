@@ -2,9 +2,8 @@
 'use client';
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { useLanguage } from '@/i18n/LanguageContext';
 
 const metrics = [
   {
@@ -44,7 +43,7 @@ const logoFilesIt = clientLogos;
 const logoFilesEn = clientLogos;
 
 export default function CustomersHero() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('customers');
   const baseLogos = lang === 'en' ? logoFilesEn : logoFilesIt;
   // Repeat to keep the track wider than any viewport (no visible gap on wide screens)

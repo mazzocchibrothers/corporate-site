@@ -1,10 +1,9 @@
 // @ts-nocheck
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { useLanguage } from '@/i18n/LanguageContext';
 import LDHero from '@/components/solutions/ld/LDHero';
 import LDProblem from '@/components/solutions/ld/LDProblem';
 import LDShift from '@/components/solutions/ld/LDShift';
@@ -22,7 +21,8 @@ import { canonical as canonicalUrl } from '@/i18n/routes';
 export const getStaticProps = messagesFor('solutions/learning-development');
 
 export default function LearningDevelopmentPage() {
-  const { t, lang } = useLanguage();
+  const lang = useLocale();
+  const t = useTranslations('solutions.learning-development');
   const meta = useTranslations('solutions.learning-development.meta');
   const canonical = canonicalUrl('solutions/learning-development', lang);
 
@@ -49,7 +49,7 @@ export default function LearningDevelopmentPage() {
         <div className="fade-into-light" />
         <LDImpact />
         <div className="fade-into-dark" />
-        <SolutionFinalCTA headline={t('Ready to prove L&D impact with')} accentWord={t('data?')} />
+        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} />
       <Footer />
       </main>
     </>

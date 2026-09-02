@@ -1,9 +1,8 @@
 'use client';
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import LiteYouTubeEmbed from '@/components/landing/LiteYouTubeEmbed';
 import { href } from '@/i18n/routes';
@@ -27,7 +26,7 @@ const trustLogosIt = clientLogos;
 const trustLogosEn = clientLogos;
 
 export default function HeroSection() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('home');
   const baseLogos = lang === 'en' ? trustLogosEn : trustLogosIt;
   // Repeat the set so the marquee track is always wider than any viewport,

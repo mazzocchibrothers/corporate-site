@@ -3,8 +3,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
-import { useTranslations } from 'next-intl';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLocale, useTranslations } from 'next-intl';
+import { useSwitchLocale } from '@/i18n/switch-locale';
 import { href } from '@/i18n/routes';
 import { Button } from '@/components/ui/button';
 
@@ -106,7 +106,8 @@ export default function Navbar() {
     closeTimeout.current = setTimeout(() => setOpenMenu(null), 250);
   }, []);
 
-  const { lang, switchLang } = useLanguage();
+  const lang = useLocale();
+  const switchLang = useSwitchLocale();
   const t = useTranslations('common');
 
   const isLight = onLightSection && scrolled && !menuActive;

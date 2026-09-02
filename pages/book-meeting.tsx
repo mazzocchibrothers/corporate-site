@@ -1,14 +1,13 @@
 // @ts-nocheck
 import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { messagesFor } from '@/i18n/messages';
 import Footer from '@/components/Footer';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { ArrowLeft } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 
 // One line per page is the whole contract: the argument is this route's `id` in
@@ -16,7 +15,7 @@ import { Button } from '@/components/ui/button';
 export const getStaticProps = messagesFor('book-meeting');
 
 export default function BookMeetingPage() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('book-meeting');
   const formRef = useRef(null);
 

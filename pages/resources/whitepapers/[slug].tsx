@@ -1,13 +1,12 @@
 // @ts-nocheck
 import React, { useEffect, useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import { useRouter } from 'next/router';
 import Navbar from '@/components/landing/Navbar';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowLeft, FileText, Download, BookOpen, Users, Brain, Zap, TrendingUp } from 'lucide-react';
 import { whitepapers } from '@/data/whitepapers';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { messagesFor } from '@/i18n/messages';
 import { href } from '@/i18n/routes';
@@ -54,7 +53,7 @@ export const getStaticProps = messagesFor('resources/whitepapers/[slug]');
 
 export default function WhitepaperDetailPage() {
   const router = useRouter();
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('resources.whitepapers');
   const slug = router.query.slug as string;
   const formRef = useRef(null);

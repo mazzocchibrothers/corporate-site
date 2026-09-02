@@ -1,11 +1,10 @@
 // @ts-nocheck
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Download, ArrowRight, ArrowDown, Check } from 'lucide-react';
 import { messagesFor } from '@/i18n/messages';
 import { href } from '@/i18n/routes';
@@ -50,7 +49,7 @@ const Bars = ({ active }) => (
 export const getStaticProps = messagesFor('lp/ai-competency-newsletter');
 
 export default function AiCompetencyNewsletterPage() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('lp.ai-competency-newsletter');
 
   const track = (action) => {

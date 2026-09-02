@@ -2,11 +2,10 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/router';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
@@ -62,7 +61,7 @@ const filters = {
 };
 
 export default function ExploreStories() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('customers');
   const [activeIndustry, setActiveIndustry] = useState('all');
   const [activeUseCase, setActiveUseCase] = useState('all');

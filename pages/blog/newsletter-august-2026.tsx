@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Clock, ImageIcon } from 'lucide-react';
 import { useRouter } from 'next/router';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { href, localizePath } from '@/i18n/routes';
 import { messagesFor } from '@/i18n/messages';
 
@@ -95,7 +94,7 @@ export const getStaticProps = messagesFor('blog/newsletter-august-2026');
 
 export default function AugustNewsletter() {
   const router = useRouter();
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('blog.newsletter-august-2026');
   // An IMAGES entry is either one shared file or { en, it } when the artwork
   // carries baked-in copy.

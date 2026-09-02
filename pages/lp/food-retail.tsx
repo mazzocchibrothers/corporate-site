@@ -1,9 +1,9 @@
 // @ts-nocheck
 import React, { useEffect, useRef } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { messagesFor } from '@/i18n/messages';
 
 const FORM_IDS = {
@@ -12,9 +12,9 @@ const FORM_IDS = {
 };
 
 const PARAGRAPHS = [
-  'How an objective read of skills sharpens hiring, promotion, and development decisions.',
-  'One standard across every store, the same for new hires and the people you grow from within.',
-  'Fill in the form to download it.',
+  'howObjectiveRead',
+  'oneStandardAcross',
+  'fillFormDownload',
 ];
 
 
@@ -23,7 +23,8 @@ const PARAGRAPHS = [
 export const getStaticProps = messagesFor('lp/food-retail');
 
 export default function FoodRetailPage() {
-  const { t, lang } = useLanguage();
+  const lang = useLocale();
+  const t = useTranslations('lp.food-retail');
   const formRef = useRef(null);
 
   useEffect(() => {
@@ -63,8 +64,8 @@ export default function FoodRetailPage() {
   }, [lang]);
 
   // Title strings come from the shared translation dictionary.
-  const titleLead = t('Your next store manager is');
-  const titleHighlight = t('already in your stores.');
+  const titleLead = t('titleLead');
+  const titleHighlight = t('titleHighlight');
 
   const renderTitle = () => (
     <>
@@ -105,7 +106,7 @@ export default function FoodRetailPage() {
                     className={`text-[18px] text-white/95 leading-[1.65] max-w-md${i > 0 ? ' mt-4' : ''}`}
                     style={{ fontWeight: 300 }}
                   >
-                    {t(text)}
+                    {t(`paragraphs.${text}`)}
                   </p>
                 ))}
               </div>

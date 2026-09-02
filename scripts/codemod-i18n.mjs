@@ -377,7 +377,11 @@ function scopeOf(file, namespace) {
     stripped = stripped.replace(new RegExp(`^${word}[-_]?`, 'i'), '');
   }
   // `Section` is what every one of these is. It says nothing.
-  stripped = stripped.replace(/Section$/, '') || name;
+  stripped = stripped.replace(/Section$/, '');
+  // If the namespace consumed the whole filename, the file IS the page and its
+  // copy sits directly on the namespace — `ins-mercato.tsx` under
+  // `customers.ins-mercato` must not produce `customers.ins-mercato.ins-mercato`.
+  if (!stripped) return '';
   // ROISection -> roi, not rOI: lowercase a leading run of capitals whole,
   // except the capital that starts the next word.
   const slug = stripped.replace(/^[A-Z]+(?![a-z])|^[A-Z]/, (m) => m.toLowerCase());
@@ -519,7 +523,9 @@ function processFile(file, namespace, italian) {
     const uses = stringUses.get(name) ?? [];
     if (uses.length === 0) continue;
 
-    const key = name.replace(/^./, (c) => c.toLowerCase());
+    const key = /^[A-Z0-9_]+$/.test(name)
+      ? name.toLowerCase().replace(/_(.)/g, (_, c) => c.toUpperCase())
+      : name.replace(/^./, (c) => c.toLowerCase());
     const taken = new Set();
     const ids = literal.elements.map((e) => {
       const id = idFrom(e.text, taken);
@@ -537,7 +543,10 @@ function processFile(file, namespace, italian) {
   const orphans = [];
   for (const [name, props] of arrayProps) {
     const literal = arrays.get(name);
-    const key = name.replace(/^./, (c) => c.toLowerCase());
+    // PARAGRAPHS -> paragraphs, painCards -> painCards.
+    const key = /^[A-Z0-9_]+$/.test(name)
+      ? name.toLowerCase().replace(/_(.)/g, (_, c) => c.toUpperCase())
+      : name.replace(/^./, (c) => c.toLowerCase());
     const kept = new Set([...props].filter((p) => rawUse.get(name)?.has(p)));
     for (const p of kept) report.keptInCode.push(`${file}: ${name}[].${p}`);
     const taken = new Set();
@@ -671,7 +680,9 @@ function processFile(file, namespace, italian) {
 
   // t(card.title) -> t(`cards.${card.id}.title`)
   for (const { node, array, prop, param } of arrayCalls) {
-    const key = array.replace(/^./, (c) => c.toLowerCase());
+    const key = /^[A-Z0-9_]+$/.test(array)
+      ? array.toLowerCase().replace(/_(.)/g, (_, c) => c.toUpperCase())
+      : array.replace(/^./, (c) => c.toLowerCase());
     const path = `${scope ? `${scope}.` : ''}${key}.\${${param}.id}.${prop}`;
     replacements.push({ start: node.getStart(), end: node.getEnd(), text: 't(`' + path + '`)' });
   }

@@ -4185,6 +4185,16 @@
         "accent": "People Strategy?"
       },
       "headline": "How Unicomm is building a new <hl>talent management system</hl> across a network of <hl2>250+ stores</hl2>"
+    },
+    "ins-mercato": {
+      "text": "The Science Behind It",
+      "cta": "Discover the Science",
+      "text2": "<span>14%</span><span2>Unstructured interviews<br></br>predictive accuracy</span2>",
+      "text3": "<span>51%+</span><span2>Structured skills assessment<br></br>predictive validity</span2>",
+      "heading": "Related Stories",
+      "cta2": "Read the story",
+      "text4": "Ready to see what Skillvue can do for your",
+      "text5": "organization?"
     }
   },
   "home": {
@@ -4756,6 +4766,15 @@
         "accent": "People Strategy?"
       },
       "headline": "Europ Assistance: how to spot the <hl>potential that stands the test of time</hl> in a business built on the <hl2>human factor</hl2>"
+    },
+    "food-retail": {
+      "paragraphs": {
+        "howObjectiveRead": "How an objective read of skills sharpens hiring, promotion, and development decisions.",
+        "oneStandardAcross": "One standard across every store, the same for new hires and the people you grow from within.",
+        "fillFormDownload": "Fill in the form to download it."
+      },
+      "titleLead": "Your next store manager is",
+      "titleHighlight": "already in your stores."
     }
   },
   "privacy-policy": {
@@ -5505,7 +5524,9 @@
       "meta": {
         "title": "Internal Mobility & Succession | Skillvue",
         "description": "Map skills and potential across your entire workforce. Make internal talent visible, succession decisions data-driven and mobility paths transparent."
-      }
+      },
+      "text": "Ready to unlock the talent you",
+      "text2": "already have?"
     },
     "learning-development": {
       "ldcta": {
@@ -5606,7 +5627,9 @@
       "meta": {
         "title": "Learning & Development | Skill Gap Analysis | Skillvue",
         "description": "Identify real skill gaps at individual, team and org level. Target every training investment where it matters and measure impact on business outcomes."
-      }
+      },
+      "text": "Ready to prove L&D impact with",
+      "text2": "data?"
     },
     "performance-management": {
       "pmcta": {
@@ -5681,7 +5704,9 @@
       "meta": {
         "title": "Performance Management | Data-Backed Reviews | Skillvue",
         "description": "Add objective skill verifications to your performance cycles. Reduce bias, improve calibration and give every manager a data-backed starting point."
-      }
+      },
+      "text": "Ready to make performance reviews",
+      "text2": "objective?"
     },
     "project-resourcing": {
       "prcta": {
@@ -5751,7 +5776,9 @@
       "meta": {
         "title": "Project Resourcing | Match Skills to Projects | Skillvue",
         "description": "Assign projects based on verified skill fit, not just availability. Reduce delivery risk, improve team composition and stop staffing in the dark."
-      }
+      },
+      "text": "Ready to staff projects with",
+      "text2": "confidence?"
     },
     "talent-acquisition": {
       "tacta": {
@@ -6013,7 +6040,9 @@
       "meta": {
         "title": "Talent Acquisition | AI Hiring Verifications | Skillvue",
         "description": "Replace gut-feel hiring with AI verifications that predict performance. Reduce early turnover and make every hiring decision defensible at scale."
-      }
+      },
+      "text": "Ready to hire with",
+      "text2": "confidence?"
     }
   }
 }

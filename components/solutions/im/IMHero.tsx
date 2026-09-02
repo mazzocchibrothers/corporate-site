@@ -2,15 +2,14 @@
 'use client';
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
 export default function IMHero() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('solutions.internal-mobility');
   return (
     <section id="im-hero" data-testid="im-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px]">

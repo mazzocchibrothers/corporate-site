@@ -1,11 +1,10 @@
 // @ts-nocheck
 import React, { useState, useEffect, useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Download, Lock, Check, ChevronDown } from 'lucide-react';
 import { messagesFor } from '@/i18n/messages';
 
@@ -26,7 +25,7 @@ const FORM_IDS = { en: '313b9013-e406-4914-9a18-7870fb99957f', it: '3f50c248-96f
 export const getStaticProps = messagesFor('lp/ai-competency');
 
 export default function AiCompetencyPage() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('lp.ai-competency');
 
   const [unlocked, setUnlocked] = useState(false);

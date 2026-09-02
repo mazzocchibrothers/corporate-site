@@ -1,10 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import Lottie from 'lottie-react';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
@@ -14,7 +13,7 @@ import { href } from '@/i18n/routes';
 // changes with the language is a translation, whatever its file extension.
 
 export default function ProductHero() {
-  const { lang } = useLanguage();
+  const lang = useLocale();
   const t = useTranslations('product-overview');
   const [animData, setAnimData] = useState(null);
   const [useFallback, setUseFallback] = useState(false);
