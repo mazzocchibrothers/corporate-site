@@ -1,10 +1,10 @@
 // Server-side message resolution for the App Router.
 //
-// The per-page namespace loading from #97 does not carry over: in the App
-// Router a Server Component reads messages through this config, not through
-// getStaticProps. The payload constraint it existed to solve is handled
-// differently here — a Server Component renders its strings on the server, so
-// only what a `'use client'` boundary actually needs crosses to the browser.
+// A Server Component reads its messages through this config, and the whole
+// catalogue is what it gets. That is correct here and dangerous one level up:
+// a NextIntlClientProvider rendered without `messages` inherits all of it and
+// serializes it into the document. Each page narrows its own — see
+// messagesForRoute in i18n/messages.ts, and the note in app/[locale]/layout.tsx.
 //
 // See harness/docs/architecture.md §3b.
 

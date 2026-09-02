@@ -14,7 +14,7 @@
 // Run: npm run check:routes
 
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { appRoutePaths, routeAtPath } from './lib/app-routes.mjs';
@@ -170,6 +170,54 @@ for (const locale of ['en', 'it']) {
     seen.set(meta.title, route.id);
   }
 }
+
+// ── Nothing of the Pages Router survives ───────────────────────────────────
+// Every one of these is **inert** under the App Router, not broken: Next does
+// not read them and does not say so. A `getStaticProps` added to a page.tsx
+// simply never runs, and the page renders without whatever it was meant to
+// fetch. `useRouter` from next/router is the loud one — it throws at prerender —
+// and it is the only loud one.
+//
+// The whole migration existed because this repo's failures are silent. This is
+// the check that keeps the silent half of the old router from creeping back.
+const PAGES_ROUTER = [
+  ['getStaticProps', 'never runs under the App Router — use generateStaticParams, or fetch in the Server Component'],
+  ['getStaticPaths', 'never runs — use generateStaticParams'],
+  ['getServerSideProps', 'never runs — a Server Component already runs on the server'],
+  ['getInitialProps', 'never runs'],
+  ["from 'next/router'", 'throws at prerender — use @/i18n/navigation, which adds the locale'],
+  ["from 'next/head'", 'silently renders nothing — use generateMetadata, or let React 19 hoist a bare <link>'],
+  ["from 'next/document'", 'has no meaning without pages/_document'],
+];
+
+const scan = (dir) =>
+  readdirSync(join(ROOT, dir), { withFileTypes: true }).flatMap((e) =>
+    e.isDirectory()
+      ? scan(join(dir, e.name))
+      : /\.tsx?$/.test(e.name)
+        ? [join(dir, e.name)]
+        : [],
+  );
+
+const relics = [];
+for (const file of ['app', 'components', 'i18n', 'lib', 'data'].filter((d) => existsSync(join(ROOT, d))).flatMap(scan)) {
+  const src = readFileSync(join(ROOT, file), 'utf8');
+  // Comments are prose about the past; code is the past still running.
+  const code = src.replace(/\/\*[\s\S]*?\*\//g, '').split('\n').filter((l) => !/^\s*(\/\/|\*)/.test(l)).join('\n');
+  for (const [needle, why] of PAGES_ROUTER) {
+    if (code.includes(needle)) relics.push(`  ${file}: ${needle} — ${why}`);
+  }
+}
+assert.ok(
+  !existsSync(join(ROOT, 'pages')),
+  'pages/ exists. Two routers serving one site is how a route ends up live in ' +
+    'one language and 404 in the other; there is one router here.',
+);
+assert.deepEqual(
+  relics,
+  [],
+  `${relics.length} Pages Router API(s) left in the tree:\n${relics.join('\n')}`,
+);
 
 // ── Structural invariants ──────────────────────────────────────────────────
 const ids = routes.map((r) => r.id);

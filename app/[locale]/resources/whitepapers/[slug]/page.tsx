@@ -17,9 +17,9 @@ type Props = { params: Promise<{ locale: string; slug: string }> };
 // The one dynamic route on the site. Prerendered from the same array the
 // sitemap expands, so a whitepaper cannot exist in one and not the other.
 //
-// Under pages/ this route had no getStaticPaths at all: the three whitepaper
-// URLs served the component's own "not found" branch as their static HTML, and
-// only filled in after hydration. Google saw the empty one.
+// The old router served this route with nothing declaring its paths, so the
+// three whitepaper URLs shipped the component's own "not found" branch as their
+// static HTML and only filled in after hydration. Google saw the empty one.
 export function generateStaticParams() {
   return whitepapers.map((w) => ({ slug: w.slug }));
 }
