@@ -92,7 +92,7 @@ export default function ScienceTeam() {
         >
           <div className="flex flex-col md:flex-row gap-5 md:gap-8 lg:gap-12 items-start">
             <div className="shrink-0 w-full md:w-[clamp(6rem,25vw,12rem)] aspect-square rounded-xl md:rounded-2xl overflow-hidden bg-[#F5F5FA]">
-              <img src={lead.photo} alt={lead.name} className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={lead.photo} alt={lead.name} className="w-full h-full object-cover" />
             </div>
             <div className="flex-1 pt-0 md:pt-2">
               <h3 className="text-[clamp(1.5rem,2.5vw,2rem)] font-semibold text-[#1A1A2E] mb-1.5">

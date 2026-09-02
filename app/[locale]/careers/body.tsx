@@ -297,7 +297,7 @@ export default function CareersPage() {
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               <div className="rounded-2xl overflow-hidden aspect-video">
-                <img
+                <img loading="lazy" decoding="async"
                   src="/careers/life_at_skillvue.avif"
                   alt="Skillvue team"
                   className="w-full h-full object-cover"
@@ -306,7 +306,7 @@ export default function CareersPage() {
               <div className="grid grid-cols-2 gap-3 md:gap-4">
                 {[1, 2, 3, 4].map((n) => (
                   <div key={n} className="rounded-2xl overflow-hidden aspect-video">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={`/careers/life_at_skillvue-${n}.avif`}
                       alt={`Life at Skillvue ${n}`}
                       className="w-full h-full object-cover"

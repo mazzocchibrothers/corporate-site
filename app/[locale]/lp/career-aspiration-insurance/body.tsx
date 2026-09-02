@@ -160,7 +160,7 @@ export default function CareerAspirationInsuranceVetrina() {
                 <div className="shrink-0 flex items-center gap-10" aria-hidden={ariaHidden || undefined}>
                   {logos.map((logo, i) => (
                     <div key={i} className="shrink-0 flex items-center justify-center" style={{ width: 168, height: logo.square ? 80 : 48 }}>
-                      <img src={logo.src} alt={ariaHidden ? '' : logo.alt} style={{ maxWidth: '90%', maxHeight: '90%', objectFit: 'contain', ...logoStyle }} />
+                      <img loading="lazy" decoding="async" src={logo.src} alt={ariaHidden ? '' : logo.alt} style={{ maxWidth: '90%', maxHeight: '90%', objectFit: 'contain', ...logoStyle }} />
                     </div>
                   ))}
                 </div>

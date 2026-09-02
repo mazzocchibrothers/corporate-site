@@ -78,7 +78,7 @@ export default function CTASection() {
                 <div className="grid grid-cols-3 gap-x-4 gap-y-5 md:gap-x-10 md:gap-y-8 mb-3 md:mb-8">
                   {ctaLogos.map((logo) => (
                     <div key={logo.name} className="flex items-center justify-center h-8 md:h-12">
-                      <img
+                      <img loading="lazy" decoding="async"
                         src={logo.src}
                         alt={logo.name}
                         className="h-6 w-auto object-contain opacity-[0.45] hover:opacity-[0.75] transition-opacity duration-500"

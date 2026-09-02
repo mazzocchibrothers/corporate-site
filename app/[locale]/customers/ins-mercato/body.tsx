@@ -151,7 +151,7 @@ export default function InsMercatoStoryPage() {
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5">
                   <div className="flex items-center gap-3 mb-3 pb-3 border-b border-white/[0.08]">
                     <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">
-                      <img src="/logos/ins-mercato-logo.png" alt="In's Mercato logo" className="w-full h-full object-contain " />
+                      <img loading="lazy" decoding="async" src="/logos/ins-mercato-logo.png" alt="In's Mercato logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">
@@ -431,7 +431,7 @@ export default function InsMercatoStoryPage() {
                 <p className="text-[24px] font-medium text-[#121212]/75 leading-[1.75] italic mb-6">"{t('quote.text')}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-[#4b4df7]/[0.15]">
-                    <img src="/logos/mirko%20tortolano.png" alt={t('quote.author')} className="w-full h-full object-cover object-top" />
+                    <img loading="lazy" decoding="async" src="/logos/mirko%20tortolano.png" alt={t('quote.author')} className="w-full h-full object-cover object-top" />
                   </div>
                   <div>
                     <p className="text-[14px] font-semibold text-[#121212]/80">{t('quote.author')}</p>

@@ -49,7 +49,7 @@ export default function TrustLogosBar() {
                   data-testid={`trust-logo-${logo.name.toLowerCase().replace(/\s+/g, '-')}`}
                   className="shrink-0 opacity-[0.55]"
                 >
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={logo.src}
                     alt={logo.name}
                     className="h-6 w-auto object-contain"
@@ -61,7 +61,7 @@ export default function TrustLogosBar() {
             <div className="marquee-content flex items-center gap-8 md:gap-16 shrink-0 pr-8 md:pr-16" aria-hidden="true">
               {trustLogos.map((logo, i) => (
                 <div key={`b-${i}-${logo.name}`} className="shrink-0 opacity-[0.45]">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={logo.src}
                     alt=""
                     className="h-6 w-auto object-contain"

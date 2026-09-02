@@ -227,7 +227,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                       onClick={() => { router.push(`/resources/whitepapers/${rw.slug}`); window.scrollTo(0, 0); }}>
                       {rw.coverBg && (
                         <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0 relative">
-                          <img src={rw.coverBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-50" />
+                          <img loading="lazy" decoding="async" src={rw.coverBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-50" />
                           <div className="absolute inset-0 bg-black/40" />
                         </div>
                       )}

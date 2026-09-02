@@ -128,7 +128,7 @@ export default function ADRStoryPage() {
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5">
                   <div className="flex items-center gap-3 mb-3 pb-3 border-b border-white/[0.08]">
                     <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 bg-white flex items-center justify-center">
-                      <img src="/logos/adr-logo.jpg" alt="ADR logo" className="w-full h-full object-contain" />
+                      <img loading="lazy" decoding="async" src="/logos/adr-logo.jpg" alt="ADR logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
                       <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{t('clientCard.label')}</span>
@@ -284,7 +284,7 @@ export default function ADRStoryPage() {
                   <p className="text-[17px] text-[#121212]/75 leading-[1.75] italic mb-6">"{t('results.quote.text')}"</p>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-[#4b4df7]/[0.15]">
-                      <img src="/logos/adr-alberto.jpg" alt={t('results.quote.author')} className="w-full h-full object-cover object-top" />
+                      <img loading="lazy" decoding="async" src="/logos/adr-alberto.jpg" alt={t('results.quote.author')} className="w-full h-full object-cover object-top" />
                     </div>
                     <div>
                       <p className="text-[14px] font-semibold text-[#121212]/80">{t('results.quote.author')}</p>

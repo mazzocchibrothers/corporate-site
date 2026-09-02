@@ -188,7 +188,7 @@ export default function AiCompetencyPage() {
 
                     {/* Page 2 — scrollable but obscured until unlocked */}
                     <div className="relative">
-                      <img
+                      <img loading="lazy" decoding="async"
                         src={t('assets.page2')}
                         alt={t('altPage2')}
                         className="block w-full transition-[filter] duration-500"

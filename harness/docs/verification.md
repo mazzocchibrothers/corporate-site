@@ -92,6 +92,7 @@ trip over all 61 routes catches what eight hand-picked cases do not.
 | `check:dead` | a component nothing imports, an import nothing renders |
 | `check:hardcoded` | copy that is in the code rather than in the catalogue |
 | `check:untranslated` | an Italian value that is still the English one |
+| `check:assets` | an image, font or PDF a page asks for that is not in `public/` |
 | `check:build` | everything the above cannot see — **and any warning the build prints** |
 
 Each was written after the defect it guards had already shipped at least once.

@@ -33,7 +33,7 @@ const stages = [
     integration: {
       keyPath: 'taFunnel.stages.pre-screening.integration',
       icon: Plug,
-      logos: ['oracle', 'sap-successfactors', 'workday', 'sage', 'bamboohr', 'greenhouse_onblack'],
+      logos: ['oracle', 'sap-successfactors', 'workday', 'sage', 'bamboohr', 'greenhouse'],
     },
   },
   {
@@ -60,7 +60,7 @@ const stages = [
     integration: {
       keyPath: 'taFunnel.stages.screening.integration',
       icon: Plug,
-      logos: ['oracle', 'sap-successfactors', 'workday', 'sage', 'bamboohr', 'greenhouse_onblack'],
+      logos: ['oracle', 'sap-successfactors', 'workday', 'sage', 'bamboohr', 'greenhouse'],
     },
   },
   {
@@ -87,7 +87,7 @@ const stages = [
     integration: {
       keyPath: 'taFunnel.stages.in-depth.integration',
       icon: Plug,
-      logos: ['oracle', 'sap-successfactors', 'workday', 'sage', 'bamboohr', 'greenhouse_onblack'],
+      logos: ['oracle', 'sap-successfactors', 'workday', 'sage', 'bamboohr', 'greenhouse'],
     },
   },
 ];

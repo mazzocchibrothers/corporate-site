@@ -341,7 +341,7 @@ export default function PressPage() {
                 >
                   <div>
                     <div className="mb-5 md:mb-6 h-10 flex items-center">
-                      <img
+                      <img loading="lazy" decoding="async"
                         src={item.logo}
                         alt={item.publication}
                         style={{ height: `${item.logoH}px`, maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' }}
@@ -421,7 +421,7 @@ export default function PressPage() {
                 <div key={set} className="flex items-center gap-20 lg:gap-32 shrink-0 pr-20 lg:pr-32" aria-hidden={set === 1}>
                   {investors.map(inv => (
                     <div key={`${set}-${inv.name}`} className="flex items-center justify-center shrink-0">
-                      <img
+                      <img loading="lazy" decoding="async"
                         src={inv.src}
                         alt={inv.name}
                         className="object-contain"

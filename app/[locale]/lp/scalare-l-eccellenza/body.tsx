@@ -193,7 +193,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 <div className="shrink-0 flex items-center gap-12" aria-hidden={ariaHidden || undefined}>
                   {logos.map((logo, i) => (
                     <div key={i} className="shrink-0 flex items-center justify-center" style={{ width: logo.w, height: logo.h }}>
-                      <img src={logo.src} alt={ariaHidden ? '' : logo.alt} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', ...(logo.keepColor ? colorStyle : bwStyle) }} />
+                      <img loading="lazy" decoding="async" src={logo.src} alt={ariaHidden ? '' : logo.alt} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', ...(logo.keepColor ? colorStyle : bwStyle) }} />
                     </div>
                   ))}
                 </div>

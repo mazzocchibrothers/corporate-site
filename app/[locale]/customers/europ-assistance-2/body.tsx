@@ -124,7 +124,7 @@ export default function EuropAssistance2StoryPage() {
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
                     <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center">
-                      <img src="/logos/europ-assistance-logo.png" alt="Europ Assistance logo" className="w-full h-full object-contain " />
+                      <img loading="lazy" decoding="async" src="/logos/europ-assistance-logo.png" alt="Europ Assistance logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{t('clientCard.label')}</span>

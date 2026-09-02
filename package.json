@@ -15,7 +15,8 @@
     "check:dead": "node scripts/check-dead.mjs",
     "check:hardcoded": "node scripts/check-hardcoded.mjs",
     "check:untranslated": "node scripts/check-untranslated.mjs",
-    "check:build": "node scripts/build-clean.mjs"
+    "check:build": "node scripts/build-clean.mjs",
+    "check:assets": "node scripts/check-assets.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

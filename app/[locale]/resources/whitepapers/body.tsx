@@ -108,7 +108,7 @@ export default function WhitepapersPage() {
                           <div className="relative z-10 flex flex-col justify-between h-full p-6 md:p-8">
                             <div>
                               <div className="flex items-center gap-2.5 mb-6 md:mb-8">
-                                <img src="/logos/skillvue-logomark.svg" alt="Skillvue" className="h-7 w-7" style={{ filter: 'brightness(0) invert(1)' }} />
+                                <img loading="lazy" decoding="async" src="/logos/skillvue-logomark.svg" alt="Skillvue" className="h-7 w-7" style={{ filter: 'brightness(0) invert(1)' }} />
                                 <span className="text-white/90 text-[15px] font-semibold">Skillvue</span>
                               </div>
                               <h3 className="text-[clamp(1.5rem,3vw,2.8rem)] font-semibold text-white leading-[1.1] mb-5">{t(`items.${w.slug}.title`)}</h3>
@@ -118,7 +118,7 @@ export default function WhitepapersPage() {
                         </div>
                       ) : (
                         <div className="aspect-[4/5] overflow-hidden">
-                          <img src={w.coverImage} alt={t(`items.${w.slug}.title`)} className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700" />
+                          <img loading="lazy" decoding="async" src={w.coverImage} alt={t(`items.${w.slug}.title`)} className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700" />
                         </div>
                       )}
                     </div>
