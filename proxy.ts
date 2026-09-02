@@ -2,6 +2,11 @@
 // next.config.ts: it resolves the locale from the URL prefix, the cookie and
 // Accept-Language, and rewrites the localized pathname onto the internal one
 // (`/it/clienti/adr` -> `/it/customers/adr`).
+//
+// The file is `proxy.ts`, not `middleware.ts`. Next 16 deprecated the
+// middleware convention in favour of this one and warns on every build; keeping
+// both is a hard error, so there is nothing to hedge. next-intl's
+// createMiddleware is unchanged — only the file name and the export are.
 
 import type { NextRequest } from 'next/server';
 import createMiddleware from 'next-intl/middleware';
@@ -21,7 +26,7 @@ import { routing } from './i18n/routing';
 const detectLocale = createMiddleware(routing);
 const respectTheUrl = createMiddleware({ ...routing, localeDetection: false });
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const isHomepage = request.nextUrl.pathname === '/';
   return (isHomepage ? detectLocale : respectTheUrl)(request);
 }

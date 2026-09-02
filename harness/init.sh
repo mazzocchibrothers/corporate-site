@@ -148,10 +148,14 @@ echo "── 5. Build gate ─────────────────�
 # The slow tier. It is also the only gate that catches a broken page: a stray
 # straight apostrophe in an Italian string is a parse error that `tsc` walks
 # past (@ts-nocheck) and only `next build` reports.
+#
+# check:build, not build: it runs the same build and then fails on a warning.
+# Next 16 deprecated the middleware convention and said so on every build for a
+# whole session, unread, because a deprecation is not an error.
 if [ $FAST -eq 1 ]; then
-  warn "skipped by --fast: npm run build — NEVER declare an Issue done on a --fast run"
+  warn "skipped by --fast: npm run check:build — NEVER declare an Issue done on a --fast run"
 else
-  gate "build"
+  gate "check:build"
 fi
 
 echo ""

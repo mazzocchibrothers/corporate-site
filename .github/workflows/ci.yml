@@ -57,4 +57,5 @@ jobs:
 
       # Slow, and the only gate that catches a stray straight apostrophe in an
       # Italian string: tsc walks past it because the file carries @ts-nocheck.
-      - run: npm run build
+      # check:build is `next build` plus a failure on any warning it prints.
+      - run: npm run check:build

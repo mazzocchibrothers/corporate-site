@@ -7,7 +7,7 @@ import routes from "./i18n/routes.json";
 // file" — which surfaces as a build error, not a runtime one.
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
-// Locale routing lives in i18n/routing.ts + middleware.ts, not here. The `i18n`
+// Locale routing lives in i18n/routing.ts + proxy.ts, not here. The `i18n`
 // block does not exist in the App Router, and the /clienti rewrites it used to
 // carry are now next-intl `pathnames`, generated from i18n/routes.json.
 //

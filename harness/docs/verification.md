@@ -91,11 +91,19 @@ trip over all 61 routes catches what eight hand-picked cases do not.
 | `check:navigation` | an Italian link losing its prefix or its slug; the language switcher failing to round-trip |
 | `check:dead` | a component nothing imports, an import nothing renders |
 | `check:hardcoded` | copy that is in the code rather than in the catalogue |
-| `build` | everything the above cannot see |
+| `check:untranslated` | an Italian value that is still the English one |
+| `check:build` | everything the above cannot see — **and any warning the build prints** |
 
 Each was written after the defect it guards had already shipped at least once.
 That is the bar for adding a tenth: name the failure, then write the check that
 would have caught it.
+
+`check:build` is the shortest lesson here. Next 16 deprecated the `middleware`
+file convention in favour of `proxy` and said so on every build for an entire
+session, unread, because the way a build gets checked around here is
+`grep -E "Error"` and a deprecation is not an error. It is the thing that
+becomes one at the next major. The gate reads the build's own output now and
+fails on a warning.
 
 `check:hardcoded` is the one to read if you only read one. It exists because
 "zero hardcoded copy" was reported as done and was not — not as a lie, as an

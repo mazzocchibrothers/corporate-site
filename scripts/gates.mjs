@@ -10,7 +10,12 @@
 // makes every other failure noise, then every `check:*` script in package.json
 // in declaration order. Adding a gate means adding a script — nothing else.
 //
-// Run: node scripts/gates.mjs
+// `check:build` is not in the list. It runs `next build`, which is the slow
+// tier: harness/init.sh runs it separately and skips it under --fast, and CI
+// runs it as its own step. Including it here would run the build twice and make
+// --fast mean nothing.
+//
+// Run: node scripts/gates.mjs [--all]
 
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -19,7 +24,12 @@ import { dirname, join } from 'node:path';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const { scripts } = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8'));
 
-const gates = ['typecheck', ...Object.keys(scripts).filter((s) => s.startsWith('check:'))];
+const SLOW = new Set(['check:build']);
+const all = process.argv.includes('--all');
+const gates = [
+  'typecheck',
+  ...Object.keys(scripts).filter((s) => s.startsWith('check:') && (all || !SLOW.has(s))),
+];
 
 if (gates.length < 2) {
   console.error('[FAIL] scripts/gates.mjs found no check:* scripts. Every gate would be skipped.');

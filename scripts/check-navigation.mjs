@@ -129,19 +129,19 @@ console.log(`[OK] navigation: locale switch round-trips on every bilingual route
 // Italian version of it — production answers that URL 200, in English. Sharing
 // a link would have stopped meaning what it says.
 //
-// middleware.ts runs detection for '/' and only '/'. This asserts the shape of
-// that decision, because it is one line and it is easy to delete by accident.
-const middleware = readFileSync(join(ROOT, 'middleware.ts'), 'utf8');
+// proxy.ts runs detection for '/' and only '/'. This asserts the shape of that
+// decision, because it is one line and it is easy to delete by accident.
+const middleware = readFileSync(join(ROOT, 'proxy.ts'), 'utf8');
 assert.match(
   middleware,
   /localeDetection:\s*false/,
-  'middleware.ts must build a locale-detection-free middleware for non-homepage ' +
+  'proxy.ts must build a locale-detection-free middleware for non-homepage ' +
     'paths, or every English URL redirects an Italian browser away from it.',
 );
 assert.match(
   middleware,
   /pathname === '\/'/,
-  'middleware.ts must decide by pathname whether to detect the locale: the ' +
+  'proxy.ts must decide by pathname whether to detect the locale: the ' +
     'homepage guesses, every other path answers what its URL says.',
 );
 

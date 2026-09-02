@@ -1,7 +1,7 @@
 > **Superseded for everything about routing.** This document was written for
 > the Pages Router: `nextConfig.i18n`, the `/clienti` rewrites, `LanguageContext`
 > and `pages/_app.tsx`. None of them exist any more. Locale routing now lives in
-> `i18n/routing.ts` + `middleware.ts`, computed from `i18n/routes.json`, and
+> `i18n/routing.ts` + `proxy.ts`, computed from `i18n/routes.json`, and
 > `harness/docs/architecture.md` §5 is the current description.
 >
 > **What is still true here is the domain and DNS half** — the URL contract it
