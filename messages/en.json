@@ -557,130 +557,6 @@
         "skillsBasedHiring": "Skills-based hiring"
       }
     },
-    "newsletter-august-2026": {
-      "onClick": "/book-meeting",
-      "metaTitle": "Skillvue — The August Newsletter",
-      "tag": "Newsletter",
-      "date": "August 2026",
-      "readTime": "5 min read",
-      "title": "Skills, new insights and where to meet us across Europe",
-      "subtitle": "Our upcoming events across Europe, a closer look at the workforce challenges in supermarkets, and a new customer story with Gruppo Unicomm.",
-      "intro": [
-        "As we head into a new season of events and conversations across Europe, we’re continuing to explore the themes reshaping how organisations understand and manage skills.",
-        "From workforce transformation to talent management, and the need to make faster, more informed decisions in complex and distributed organisations, having **clear skills data** is becoming increasingly important.",
-        "In this edition, we bring together our upcoming events across Europe, a closer look at some of the key workforce challenges in supermarkets, and a new customer story with Gruppo Unicomm."
-      ],
-      "sections": [
-        {
-          "img": "events",
-          "heading": "Where to meet us this autumn",
-          "body": [
-            "Over the next two months, we’ll be in **several European cities**, joining CHROs, Talent leaders and HR professionals to discuss the topics reshaping the future of work."
-          ],
-          "events": [
-            {
-              "name": "Transformational CHRO Assembly",
-              "meta": "Amsterdam, 9–10 September",
-              "text": "We’ll join closed-door conversations with CHROs from some of Europe’s leading companies, discussing the trends and priorities transforming the role of HR.",
-              "cta": {
-                "label": "Learn more",
-                "href": "chroAssembly",
-                "external": true
-              }
-            },
-            {
-              "name": "Fair Cultures",
-              "meta": "Barcelona, 1 October",
-              "text": "We’ll take part in stage sessions and private workshops exploring how skills can become a real infrastructure for the future of workforce planning.",
-              "cta": {
-                "label": "Learn more",
-                "href": "fairCultures",
-                "external": true
-              }
-            },
-            {
-              "name": "Gartner HR Symposium/Xpo",
-              "meta": "London, 6–8 October",
-              "text": "Meet us at our stand to connect with the team and explore how objective skills data can support better decisions across hiring, internal mobility and development.",
-              "cta": {
-                "label": "Learn more",
-                "href": "gartner",
-                "external": true
-              }
-            },
-            {
-              "name": "HRcoreACADEMY Summit",
-              "meta": "Amsterdam, 7–8 October",
-              "text": "Two days focused on Talent Transformation and Learning & Development, where we’ll also bring new perspectives on the changes reshaping skills, AI and talent management.",
-              "cta": {
-                "label": "Learn more",
-                "href": "hrcoreAcademy",
-                "external": true
-              }
-            },
-            {
-              "name": "UNLEASH World",
-              "meta": "Paris, 20–22 October",
-              "text": "Come and meet us at our stand at one of Europe’s leading events dedicated to HR, technology and the future of work.",
-              "cta": {
-                "label": "Learn more",
-                "href": "unleash",
-                "external": true
-              }
-            }
-          ]
-        },
-        {
-          "img": "supermarkets",
-          "heading": "What does a skills-based approach look like in supermarkets?",
-          "body": [
-            "High turnover, hiring at scale, store manager pipelines, frontline development and post-M&A integration make it particularly challenging to make consistent people decisions across distributed retail organisations.",
-            "In a new short overview, we’ve brought together some of the sector’s key challenges and explored the role **objective skills data** can play across different stages of the talent lifecycle, from hiring and internal growth to organisational transformation.",
-            "The document focuses on four areas in particular: hiring and screening at scale, building pipelines for store managers and department heads, frontline development, and managing skills during acquisitions and reorganisations."
-          ],
-          "cta": {
-            "label": "Explore the full supermarkets overview",
-            "href": "supermarkets",
-            "external": false,
-            "newTab": true
-          }
-        },
-        {
-          "img": "unicomm",
-          "heading": "Making skills visible at Gruppo Unicomm",
-          "body": [
-            "When a group grows through acquisitions and a distributed network of stores, there is a risk that information, assessments and skills remain fragmented across people and the organisation.",
-            "For Gruppo Unicomm, starting from skills means building a **common language across people, stores and business strategy**, helping make HR decisions more consistent with the organisation’s actual needs.",
-            "In our latest customer story, Giuseppe Curci, HR Director at Gruppo Unicomm, shares the journey started with Skillvue to turn large volumes of candidate and workforce information into data that is useful, prioritised and actionable.",
-            "In a context where HR teams need to manage high volumes without slowing down the business, the goal is to make hiring more structured and create greater continuity across people decisions."
-          ],
-          "cta": {
-            "label": "Read the full customer story",
-            "href": "unicomm",
-            "external": false
-          }
-        }
-      ],
-      "closing": {
-        "heading": "Looking ahead to what’s next",
-        "body": [
-          "The next few months will bring new conversations around **how skills, AI and workforce planning are evolving** across Europe.",
-          "We’ll continue sharing what we’re learning from HR leaders, customers and the events where these discussions are taking place."
-        ]
-      },
-      "finalKicker": "Discover Skillvue",
-      "finalTitle": "Better talent decisions start with",
-      "finalTitleHighlight": "clearer skills.",
-      "finalBody": "Book a demo and see how Skillvue verifies skills and AI readiness across your organisation.",
-      "finalButton": "Book a Demo",
-      "back": "Back to Blog",
-      "imgSoon": "image coming",
-      "imgLabels": {
-        "events": "Where to find Skillvue in the coming months",
-        "supermarkets": "The role of skills in supermarkets",
-        "unicomm": "Giuseppe Curci, HR Director at Gruppo Unicomm"
-      }
-    },
     "newsletter-july-2026": {
       "onClick": "/book-meeting",
       "metaTitle": "Skillvue — The July Newsletter",
@@ -1037,6 +913,129 @@
       "heading5": "Build a talent pipeline based on <s>real competencies.</s>",
       "body6": "Improve quality-of-hire with structured, objective skill verifications.",
       "cta2": "Book a Demo"
+    },
+    "newsletter-august-2026": {
+      "metaTitle": "Skillvue — The August Newsletter",
+      "tag": "Newsletter",
+      "date": "August 2026",
+      "readTime": "5 min read",
+      "title": "Skills, new insights and where to meet us across Europe",
+      "subtitle": "A new customer story with Gruppo Unicomm, a closer look at the workforce challenges in the retail industry, and our upcoming events across Europe.",
+      "intro": [
+        "At Skillvue, as we head into a new season of events and conversations across Europe, we’re continuing to explore the themes reshaping how organisations measure and manage skills.",
+        "From workforce transformation to talent management, and the need to make faster, more informed decisions in complex and distributed organisations, having **clear skills data** is becoming increasingly important.",
+        "In this edition, we bring together a new customer story with Gruppo Unicomm, a closer look at some of the key workforce challenges in the retail industry, and our upcoming events across Europe."
+      ],
+      "sections": [
+        {
+          "img": "unicomm",
+          "heading": "Making skills visible at Gruppo Unicomm",
+          "body": [
+            "When a group grows through acquisitions and a distributed network of stores, there is a risk that information, assessments and skills remain fragmented across people and the organisation.",
+            "For Gruppo Unicomm, starting from skills means building a **common language across people, stores and business strategy**, helping make HR decisions more consistent with the organisation’s actual needs.",
+            "In our latest customer story, Giuseppe Curci, HR Director at Gruppo Unicomm, shares the journey started with Skillvue to turn large volumes of candidate and workforce information into data that is useful, prioritised and actionable.",
+            "In a context where HR teams need to manage high volumes without slowing down the business, the goal is to make hiring more structured and create greater continuity across people decisions."
+          ],
+          "cta": {
+            "label": "Read the full customer story",
+            "href": "unicomm",
+            "external": false
+          }
+        },
+        {
+          "img": "supermarkets",
+          "heading": "What does a skills-based approach look like in the retail industry?",
+          "body": [
+            "High turnover, hiring at scale, store manager pipelines, frontline development and post-M&A integration make it particularly challenging to make consistent people decisions across distributed retail organisations.",
+            "In a new short overview, we’ve brought together some of the sector’s key challenges and explored the role **objective skills data** can play across different stages of the talent lifecycle, from hiring and internal growth to organisational transformation.",
+            "The document focuses on four areas in particular: hiring and screening at scale, building pipelines for store managers and department heads, frontline development, and managing skills during acquisitions and reorganisations."
+          ],
+          "cta": {
+            "label": "Explore the full retail overview",
+            "href": "supermarkets",
+            "external": false,
+            "newTab": true
+          }
+        },
+        {
+          "img": "events",
+          "heading": "Where to meet us this autumn",
+          "body": [
+            "Over the next two months, we’ll be in **several European cities**, joining CHROs, Talent leaders and HR professionals to discuss the topics reshaping the future of work."
+          ],
+          "events": [
+            {
+              "name": "Transformational CHRO Assembly",
+              "meta": "Amsterdam, 9–10 September",
+              "text": "We’ll join closed-door conversations with CHROs from some of Europe’s leading companies, discussing the trends and priorities transforming the role of HR.",
+              "cta": {
+                "label": "Learn more",
+                "href": "chroAssembly",
+                "external": true
+              }
+            },
+            {
+              "name": "Fair Cultures",
+              "meta": "Barcelona, 1 October",
+              "text": "We’ll take part in stage sessions and private workshops exploring how skills can become a real infrastructure for the future of workforce planning.",
+              "cta": {
+                "label": "Learn more",
+                "href": "fairCultures",
+                "external": true
+              }
+            },
+            {
+              "name": "Gartner HR Symposium/Xpo",
+              "meta": "London, 6–8 October",
+              "text": "Meet us at our stand to connect with the team and explore how objective skills data can support better decisions across hiring, internal mobility and development.",
+              "cta": {
+                "label": "Learn more",
+                "href": "gartner",
+                "external": true
+              }
+            },
+            {
+              "name": "HRcoreACADEMY Summit",
+              "meta": "Amsterdam, 7–8 October",
+              "text": "Two days focused on Talent Transformation and Learning & Development, where we’ll also bring new perspectives on the changes reshaping skills, AI and talent management.",
+              "cta": {
+                "label": "Learn more",
+                "href": "hrcoreAcademy",
+                "external": true
+              }
+            },
+            {
+              "name": "UNLEASH World",
+              "meta": "Paris, 20–22 October",
+              "text": "Come and meet us at our stand at one of Europe’s leading events dedicated to HR, technology and the future of work.",
+              "cta": {
+                "label": "Learn more",
+                "href": "unleash",
+                "external": true
+              }
+            }
+          ]
+        }
+      ],
+      "closing": {
+        "heading": "Looking ahead to what’s next",
+        "body": [
+          "The next few months will bring new conversations around **how skills, AI and workforce planning are evolving** across Europe.",
+          "We’ll continue sharing what we’re learning from HR leaders, customers and the events where these discussions are taking place."
+        ]
+      },
+      "finalKicker": "Discover Skillvue",
+      "finalTitle": "Better talent decisions start with",
+      "finalTitleHighlight": "clearer skills.",
+      "finalBody": "Book a demo and see how Skillvue verifies skills and AI readiness across your organisation.",
+      "finalButton": "Book a Demo",
+      "back": "Back to Blog",
+      "imgSoon": "image coming",
+      "imgLabels": {
+        "events": "Where to find Skillvue in the coming months?",
+        "supermarkets": "The roles of skills in the retail industry",
+        "unicomm": "Giuseppe Curci, HR Director at Gruppo Unicomm"
+      }
     }
   },
   "book-meeting": {

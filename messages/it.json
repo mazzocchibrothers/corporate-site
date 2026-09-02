@@ -557,130 +557,6 @@
         "skillsBasedHiring": "Skills-based hiring"
       }
     },
-    "newsletter-august-2026": {
-      "onClick": "/prenota-incontro",
-      "metaTitle": "Skillvue — La newsletter di agosto",
-      "tag": "Newsletter",
-      "date": "Agosto 2026",
-      "readTime": "5 min di lettura",
-      "title": "Competenze, nuovi insight e dove incontrarci in Europa",
-      "subtitle": "I nostri prossimi eventi in Europa, un approfondimento sulle sfide organizzative dei supermercati e una nuova customer story con Gruppo Unicomm.",
-      "intro": [
-        "Mentre entriamo in una nuova stagione di eventi e confronti in tutta Europa, continuiamo a esplorare i temi che stanno ridefinendo il modo in cui le organizzazioni comprendono e gestiscono le competenze.",
-        "Dalla trasformazione della forza lavoro al talent management, fino alla necessità di prendere decisioni più rapide e informate in organizzazioni complesse e distribuite, avere **dati chiari sulle competenze** diventa sempre più importante.",
-        "In questa edizione raccogliamo i nostri prossimi eventi in Europa, un approfondimento su alcune delle principali sfide organizzative dei supermercati e una nuova customer story con Gruppo Unicomm."
-      ],
-      "sections": [
-        {
-          "img": "events",
-          "heading": "Dove incontrarci questo autunno",
-          "body": [
-            "Nei prossimi due mesi saremo in **diverse città europee**, insieme a CHRO, Talent leader e professionisti HR, per confrontarci sui temi che stanno ridefinendo il futuro del lavoro."
-          ],
-          "events": [
-            {
-              "name": "Transformational CHRO Assembly",
-              "meta": "Amsterdam, 9–10 settembre",
-              "text": "Parteciperemo a confronti a porte chiuse con i CHRO di alcune delle principali aziende europee, per discutere i trend e le priorità che stanno trasformando il ruolo dell’HR.",
-              "cta": {
-                "label": "Scopri di più",
-                "href": "chroAssembly",
-                "external": true
-              }
-            },
-            {
-              "name": "Fair Cultures",
-              "meta": "Barcellona, 1 ottobre",
-              "text": "Parteciperemo a sessioni sul palco e a workshop privati per esplorare come le competenze possano diventare una vera infrastruttura per il futuro del workforce planning.",
-              "cta": {
-                "label": "Scopri di più",
-                "href": "fairCultures",
-                "external": true
-              }
-            },
-            {
-              "name": "Gartner HR Symposium/Xpo",
-              "meta": "Londra, 6–8 ottobre",
-              "text": "Vieni a trovarci al nostro stand per conoscere il team ed esplorare come dati oggettivi sulle competenze possano supportare decisioni migliori su selezione, mobilità interna e sviluppo.",
-              "cta": {
-                "label": "Scopri di più",
-                "href": "gartner",
-                "external": true
-              }
-            },
-            {
-              "name": "HRcoreACADEMY Summit",
-              "meta": "Amsterdam, 7–8 ottobre",
-              "text": "Due giornate dedicate a Talent Transformation e Learning & Development, dove porteremo anche nuove prospettive sui cambiamenti che stanno ridefinendo competenze, AI e talent management.",
-              "cta": {
-                "label": "Scopri di più",
-                "href": "hrcoreAcademy",
-                "external": true
-              }
-            },
-            {
-              "name": "UNLEASH World",
-              "meta": "Parigi, 20–22 ottobre",
-              "text": "Vieni a trovarci al nostro stand a uno dei principali eventi europei dedicati a HR, tecnologia e futuro del lavoro.",
-              "cta": {
-                "label": "Scopri di più",
-                "href": "unleash",
-                "external": true
-              }
-            }
-          ]
-        },
-        {
-          "img": "supermarkets",
-          "heading": "Che cosa significa un approccio skills-based nei supermercati?",
-          "body": [
-            "Turnover elevato, selezione su larga scala, pipeline per i direttori di punto vendita, sviluppo delle persone in prima linea e integrazione post-acquisizione rendono particolarmente complesso prendere decisioni coerenti sulle persone in organizzazioni retail distribuite.",
-            "In una nuova breve panoramica abbiamo raccolto alcune delle sfide chiave del settore e approfondito il ruolo che **dati oggettivi sulle competenze** possono avere nelle diverse fasi del talent lifecycle, dalla selezione alla crescita interna fino alla trasformazione organizzativa.",
-            "Il documento si concentra in particolare su quattro ambiti: selezione e screening su larga scala, costruzione delle pipeline per direttori di punto vendita e capireparto, sviluppo delle persone in prima linea e gestione delle competenze durante acquisizioni e riorganizzazioni."
-          ],
-          "cta": {
-            "label": "Esplora la panoramica sui supermercati",
-            "href": "supermarkets",
-            "external": false,
-            "newTab": true
-          }
-        },
-        {
-          "img": "unicomm",
-          "heading": "Rendere visibili le competenze in Gruppo Unicomm",
-          "body": [
-            "Quando un gruppo cresce attraverso acquisizioni e una rete distribuita di punti vendita, il rischio è che informazioni, valutazioni e competenze restino frammentate tra le persone e l’organizzazione.",
-            "Per Gruppo Unicomm, partire dalle competenze significa costruire un **linguaggio comune tra persone, punti vendita e strategia di business**, contribuendo a rendere le decisioni HR più coerenti con le reali esigenze dell’organizzazione.",
-            "Nella nostra ultima customer story, Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm, racconta il percorso avviato con Skillvue per trasformare grandi volumi di informazioni su candidati e popolazione aziendale in dati utili, prioritizzati e azionabili.",
-            "In un contesto in cui i team HR devono gestire volumi elevati senza rallentare il business, l’obiettivo è rendere la selezione più strutturata e creare maggiore continuità tra le decisioni sulle persone."
-          ],
-          "cta": {
-            "label": "Guarda la customer story",
-            "href": "unicomm",
-            "external": false
-          }
-        }
-      ],
-      "closing": {
-        "heading": "Uno sguardo a ciò che verrà",
-        "body": [
-          "I prossimi mesi porteranno nuovi confronti su **come competenze, AI e workforce planning stanno evolvendo** in tutta Europa.",
-          "Continueremo a condividere ciò che impariamo dagli HR leader, dai nostri clienti e dagli eventi in cui questi temi vengono discussi."
-        ]
-      },
-      "finalKicker": "Scopri Skillvue",
-      "finalTitle": "Decisioni migliori sul talento partono da",
-      "finalTitleHighlight": "competenze più chiare.",
-      "finalBody": "Prenota una demo e scopri come Skillvue verifica competenze e AI readiness in tutta l’organizzazione.",
-      "finalButton": "Prenota una demo",
-      "back": "Torna al Blog",
-      "imgSoon": "immagine in arrivo",
-      "imgLabels": {
-        "events": "Dove trovare Skillvue nei prossimi mesi",
-        "supermarkets": "Il ruolo delle competenze nella GDO",
-        "unicomm": "Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm"
-      }
-    },
     "newsletter-july-2026": {
       "onClick": "/prenota-incontro",
       "metaTitle": "Skillvue — La newsletter di luglio",
@@ -1037,6 +913,129 @@
       "heading5": "Costruisci una talent pipeline basata su <s>competenze reali.</s>",
       "body6": "Migliora la quality-of-hire con skill verification strutturati e oggettivi.",
       "cta2": "Prenota una demo"
+    },
+    "newsletter-august-2026": {
+      "metaTitle": "Skillvue — La newsletter di agosto",
+      "tag": "Newsletter",
+      "date": "Agosto 2026",
+      "readTime": "5 min di lettura",
+      "title": "Competenze, nuovi insight e dove incontrarci in Europa",
+      "subtitle": "Una nuova customer story con Gruppo Unicomm, un approfondimento sulle sfide organizzative della GDO e i nostri prossimi eventi in Europa.",
+      "intro": [
+        "In Skillvue, mentre entriamo in una nuova stagione di eventi e confronti in tutta Europa, continuiamo a esplorare i temi che stanno ridefinendo il modo in cui le organizzazioni misurano e gestiscono le competenze.",
+        "Dalla trasformazione della forza lavoro al talent management, fino alla necessità di prendere decisioni più rapide e informate in organizzazioni complesse e distribuite, avere **dati chiari sulle competenze** diventa sempre più importante.",
+        "In questa edizione raccogliamo una nuova customer story con Gruppo Unicomm, un approfondimento su alcune delle principali sfide organizzative della GDO e i nostri prossimi eventi in Europa."
+      ],
+      "sections": [
+        {
+          "img": "unicomm",
+          "heading": "Rendere visibili le competenze in Gruppo Unicomm",
+          "body": [
+            "Quando un gruppo cresce attraverso acquisizioni e una rete distribuita di punti vendita, il rischio è che informazioni, valutazioni e competenze restino frammentate tra le persone e l’organizzazione.",
+            "Per Gruppo Unicomm, partire dalle competenze significa costruire un **linguaggio comune tra persone, punti vendita e strategia di business**, contribuendo a rendere le decisioni HR più coerenti con le reali esigenze dell’organizzazione.",
+            "Nella nostra ultima customer story, Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm, racconta il percorso avviato con Skillvue per trasformare grandi volumi di informazioni su candidati e popolazione aziendale in dati utili, prioritizzati e azionabili.",
+            "In un contesto in cui i team HR devono gestire volumi elevati senza rallentare il business, l’obiettivo è rendere la selezione più strutturata e creare maggiore continuità tra le decisioni sulle persone."
+          ],
+          "cta": {
+            "label": "Guarda la customer story",
+            "href": "unicomm",
+            "external": false
+          }
+        },
+        {
+          "img": "supermarkets",
+          "heading": "Che cosa significa un approccio skills-based nei supermercati?",
+          "body": [
+            "Turnover elevato, selezione su larga scala, pipeline per i direttori di punto vendita, sviluppo delle persone in prima linea e integrazione post-acquisizione rendono particolarmente complesso prendere decisioni coerenti sulle persone in organizzazioni retail distribuite.",
+            "In una nuova breve panoramica abbiamo raccolto alcune delle sfide chiave del settore e approfondito il ruolo che **dati oggettivi sulle competenze** possono avere nelle diverse fasi del talent lifecycle, dalla selezione alla crescita interna fino alla trasformazione organizzativa.",
+            "Il documento si concentra in particolare su quattro ambiti: selezione e screening su larga scala, costruzione delle pipeline per direttori di punto vendita e capireparto, sviluppo delle persone in prima linea e gestione delle competenze durante acquisizioni e riorganizzazioni."
+          ],
+          "cta": {
+            "label": "Esplora la panoramica sui supermercati",
+            "href": "supermarkets",
+            "external": false,
+            "newTab": true
+          }
+        },
+        {
+          "img": "events",
+          "heading": "Dove incontrarci questo autunno",
+          "body": [
+            "Nei prossimi due mesi saremo in **diverse città europee**, insieme a CHRO, Talent leader e professionisti HR, per confrontarci sui temi che stanno ridefinendo il futuro del lavoro."
+          ],
+          "events": [
+            {
+              "name": "Transformational CHRO Assembly",
+              "meta": "Amsterdam, 9–10 settembre",
+              "text": "Parteciperemo a confronti a porte chiuse con i CHRO di alcune delle principali aziende europee, per discutere i trend e le priorità che stanno trasformando il ruolo dell’HR.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "chroAssembly",
+                "external": true
+              }
+            },
+            {
+              "name": "Fair Cultures",
+              "meta": "Barcellona, 1 ottobre",
+              "text": "Parteciperemo a sessioni sul palco e a workshop privati per esplorare come le competenze possano diventare una vera infrastruttura per il futuro del workforce planning.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "fairCultures",
+                "external": true
+              }
+            },
+            {
+              "name": "Gartner HR Symposium/Xpo",
+              "meta": "Londra, 6–8 ottobre",
+              "text": "Vieni a trovarci al nostro stand per conoscere il team ed esplorare come dati oggettivi sulle competenze possano supportare decisioni migliori su selezione, mobilità interna e sviluppo.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "gartner",
+                "external": true
+              }
+            },
+            {
+              "name": "HRcoreACADEMY Summit",
+              "meta": "Amsterdam, 7–8 ottobre",
+              "text": "Due giornate dedicate a Talent Transformation e Learning & Development, dove porteremo anche nuove prospettive sui cambiamenti che stanno ridefinendo competenze, AI e talent management.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "hrcoreAcademy",
+                "external": true
+              }
+            },
+            {
+              "name": "UNLEASH World",
+              "meta": "Parigi, 20–22 ottobre",
+              "text": "Vieni a trovarci al nostro stand a uno dei principali eventi europei dedicati a HR, tecnologia e futuro del lavoro.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "unleash",
+                "external": true
+              }
+            }
+          ]
+        }
+      ],
+      "closing": {
+        "heading": "Uno sguardo a ciò che verrà",
+        "body": [
+          "I prossimi mesi porteranno nuovi confronti su **come competenze, AI e workforce planning stanno evolvendo** in tutta Europa.",
+          "Continueremo a condividere ciò che impariamo dagli HR leader, dai nostri clienti e dagli eventi in cui questi temi vengono discussi."
+        ]
+      },
+      "finalKicker": "Scopri Skillvue",
+      "finalTitle": "Decisioni migliori sul talento partono da",
+      "finalTitleHighlight": "competenze più chiare.",
+      "finalBody": "Prenota una demo e scopri come Skillvue verifica competenze e AI readiness in tutta l’organizzazione.",
+      "finalButton": "Prenota una demo",
+      "back": "Torna al Blog",
+      "imgSoon": "immagine in arrivo",
+      "imgLabels": {
+        "events": "Dove trovare Skillvue nei prossimi mesi?",
+        "supermarkets": "Il ruolo delle competenze nella GDO",
+        "unicomm": "Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm"
+      }
     }
   },
   "book-meeting": {

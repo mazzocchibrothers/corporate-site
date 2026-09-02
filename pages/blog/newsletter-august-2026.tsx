@@ -9,14 +9,14 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Clock, ImageIcon } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { href, localizePath } from '@/i18n/routes';
 import { messagesFor } from '@/i18n/messages';
-import { localizePath } from '@/i18n/routes';
 
 // ─── Fill these in when the assets/links are ready ──────────────────────────
 // Empty string '' → a labelled dashed placeholder box renders instead.
 // Put files in public/ as: /newsletter-august-<key>.<ext>
 const IMAGES = {
-  events: '/newsletter-august-events.jpg',
+  events: { en: '/newsletter-august-events-en.jpg', it: '/newsletter-august-events-it.jpg' },
   // per-language artwork: the headline is baked into the image
   supermarkets: { en: '/newsletter-august-supermarkets-en.jpg', it: '/newsletter-august-supermarkets-it.jpg' },
   unicomm: '/newsletter-august-unicomm.jpg',
@@ -88,7 +88,6 @@ function EventCard({ event, localize }) {
     </div>
   );
 }
-
 
 // One line per page is the whole contract: the argument is this route's `id` in
 // routes.json, and i18n/messages.ts turns it into the namespaces to load.
@@ -184,7 +183,7 @@ export default function AugustNewsletter() {
                 {t('finalTitle')} <span className="gradient-text">{t('finalTitleHighlight')}</span>
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">{t('finalBody')}</p>
-              <Button variant="primary" mode="dark" onClick={() => { router.push(t('onClick')); window.scrollTo(0, 0); }}>
+              <Button variant="primary" mode="dark" onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}>
                 {t('finalButton')}
               </Button>
             </motion.div>
