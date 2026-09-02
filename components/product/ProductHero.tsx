@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
@@ -42,22 +42,23 @@ export default function ProductHero() {
 
           {/* Left: text + CTA */}
           <div>
-            <motion.h1
+            <Reveal
+              as="h1"
+              y={40}
+              duration={0.8}
+              delay={0.3}
               className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-6 md:mb-10"
               style={{ lineHeight: 1.1 }}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
             >{t.rich('hero.heading', {
               br: () => <br />,
               span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
-            })}</motion.h1>
+            })}</Reveal>
 
-            <motion.div
+            <Reveal
+              y={20}
+              duration={0.8}
+              delay={0.5}
               className="flex flex-col items-start gap-5 md:gap-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
             >
               <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-xl font-normal md:font-light">{t('hero.body')}</p>
 
@@ -70,15 +71,16 @@ export default function ProductHero() {
                   <ArrowRight aria-hidden="true" />
                 </a>
               </Button>
-            </motion.div>
+            </Reveal>
           </div>
 
           {/* Right: Lottie animation */}
-          <motion.div
+          <Reveal
+            y={0}
+            x={30}
+            duration={0.9}
+            delay={0.5}
             className="w-full"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 0.5 }}
           >
             {!useFallback && animData ? (
               <Lottie animationData={animData} loop autoplay style={{ width: '100%' }} />
@@ -92,7 +94,7 @@ export default function ProductHero() {
             ) : (
               <div className="w-full aspect-square" />
             )}
-          </motion.div>
+          </Reveal>
 
         </div>
       </div>

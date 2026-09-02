@@ -1,9 +1,10 @@
 // @ts-nocheck
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Sparkles, Shield, RefreshCw, ChevronLeft, ChevronRight } from 'lucide-react';
 import { IconTile } from '@/components/ui/icon-tile';
 
@@ -61,19 +62,17 @@ export default function MethodologyLifecycle() {
   const ta = useTranslations('shared');
   const [active, setActive] = useState(0);
   const [activePrinciple, setActivePrinciple] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="methodology" data-testid="methodology" className="relative py-16 md:py-20 lg:py-28" ref={ref}>
+    <section id="methodology" data-testid="methodology" className="relative py-16 md:py-20 lg:py-28">
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
 
         {/* Title */}
-        <motion.div className="mb-8 md:mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
+        <Reveal duration={0.7} className="mb-8 md:mb-16">
           <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white/90 mb-4 md:mb-6">{t.rich('methodologyLifecycle.heading', {
             span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
           })}</h2>
-        </motion.div>
+        </Reveal>
 
         {/* Steps — accordion on mobile, sidebar + card on desktop */}
 
@@ -115,11 +114,11 @@ export default function MethodologyLifecycle() {
             ))}
           </div>
 
-          <motion.div key={active} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-10" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
+          <Reveal y={10} duration={0.35} key={active} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-10">
             <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-4 block">{t('methodologyLifecycle.text')} {steps[active].num}</span>
             <h3 className="text-[clamp(1.5rem,2.5vw,2rem)] font-semibold text-white/90 mb-5">{t(`methodologyLifecycle.steps.${steps[active].id}.title`)}</h3>
             <p className="text-[16px] text-white/[0.55] leading-[1.75]">{t(`methodologyLifecycle.steps.${steps[active].id}.desc`)}</p>
-          </motion.div>
+          </Reveal>
         </div>
 
         {/* 3 principle cards — single swipeable card on mobile, 3-col on desktop */}
@@ -130,17 +129,17 @@ export default function MethodologyLifecycle() {
             const p = principles[activePrinciple];
             const Icon = p.icon;
             return (
-              <motion.div
+              <Reveal
+                y={0}
+                x={10}
+                duration={0.25}
                 key={activePrinciple}
                 className="rounded-xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 transition-all duration-300"
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.25 }}
               >
                 <IconTile icon={Icon} mode="dark" className="mb-3" />
                 <h3 className="text-[16px] font-semibold text-white/90 mb-2">{t(`methodologyLifecycle.principles.${p.id}.title`)}</h3>
                 <p className="text-[14px] text-white/[0.6] leading-[1.65]">{t(`methodologyLifecycle.principles.${p.id}.desc`)}</p>
-              </motion.div>
+              </Reveal>
             );
           })()}
           <div className="flex items-center justify-between mt-4">
@@ -169,11 +168,11 @@ export default function MethodologyLifecycle() {
           {principles.map((p, i) => {
             const Icon = p.icon;
             return (
-              <motion.div key={p.id} className="group rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}>
+              <Reveal y={20} delay={0.15 + i * 0.1} key={p.id} className="group rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
                 <IconTile icon={Icon} mode="dark" className="mb-5" />
                 <h3 className="text-[20px] font-semibold text-white/90 mb-4">{t(`methodologyLifecycle.principles.${p.id}.title`)}</h3>
                 <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t(`methodologyLifecycle.principles.${p.id}.desc`)}</p>
-              </motion.div>
+              </Reveal>
             );
           })}
         </div>

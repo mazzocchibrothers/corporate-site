@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useRef } from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { m, useInView } from 'framer-motion';
 
 const painCards = [
   {
@@ -21,24 +21,20 @@ const painCards = [
 
 function AnimatedSection({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
   return (
-    <m.div
-      ref={ref}
+    <Reveal
+      y={50}
+      duration={0.8}
       className={className}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       {children}
-    </m.div>
+    </Reveal>
   );
 }
 
 export default function ProblemSection() {
   const t = useTranslations('home');
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
   return (
     <section
       id="problem"
@@ -62,15 +58,13 @@ export default function ProblemSection() {
         </AnimatedSection>
 
         {/* Pain cards — horizontal scroll on mobile, 3-col grid on desktop */}
-        <div ref={ref} className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5">
           {painCards.map((card, i) => (
-            <m.div
+            <Reveal
+              delay={i * 0.12}
               key={card.stat + i}
               data-testid={`pain-card-${card.stat.replace('%', '')}`}
               className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-6 lg:p-10 flex flex-col"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.12, ease: 'easeOut' }}
             >
               {/* Stat number */}
               <span
@@ -92,7 +86,7 @@ export default function ProblemSection() {
                   {t(`problem.painCards.${card.id}.desc`)}
                 </p>
               </div>
-            </m.div>
+            </Reveal>
           ))}
         </div>
 

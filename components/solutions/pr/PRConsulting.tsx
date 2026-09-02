@@ -1,9 +1,9 @@
 // @ts-nocheck
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
 import { TrendingUp, Award, RefreshCw } from 'lucide-react';
 import { IconTile } from '@/components/ui/icon-tile';
 
@@ -30,18 +30,14 @@ const points = [
 
 export default function PRConsulting() {
   const t = useTranslations('solutions.project-resourcing');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   const renderCard = (p, i) => {
     const Icon = p.icon;
     return (
-      <motion.div
+      <Reveal
+        delay={0.1 + i * 0.12}
         key={p.id}
         className="group rounded-2xl border border-[#121212]/[0.08] bg-white p-6 md:p-8 lg:p-10 hover:border-[#4B4DF7]/[0.18] hover:shadow-xl hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 flex flex-col h-full"
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5, delay: 0.1 + i * 0.12 }}
       >
         <div className="flex items-center justify-between mb-6 md:mb-8">
           <span className="text-[36px] md:text-[42px] font-normal text-[#121212]/[0.1] leading-none tracking-[-0.03em]">{p.num}</span>
@@ -55,21 +51,21 @@ export default function PRConsulting() {
           <span className="text-[24px] md:text-[28px] font-bold text-[#121212] leading-none tracking-[-0.02em] block mb-1.5">{p.stat}</span>
           <span className="text-[12px] text-[#7A7A7A] leading-[1.5]">{t(`prConsulting.points.${p.id}.statLabel`)}</span>
         </div>
-      </motion.div>
+      </Reveal>
     );
   };
 
   return (
-    <section id="pr-consulting" data-testid="pr-consulting" className="section-breathe relative md:flex md:items-center" style={{ minHeight: '100vh' }} ref={ref}>
+    <section id="pr-consulting" data-testid="pr-consulting" className="section-breathe relative md:flex md:items-center" style={{ minHeight: '100vh' }}>
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full py-20 lg:py-28">
 
         {/* Header */}
-        <motion.div className="max-w-3xl mb-12 md:mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
+        <Reveal duration={0.7} className="max-w-3xl mb-12 md:mb-16">
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">{t.rich('prConsulting.heading', {
             span: (chunks) => <span className="font-bold gradient-text-on-light">{chunks}</span>,
           })}</h2>
           <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.75] max-w-2xl">{t('prConsulting.body')}</p>
-        </motion.div>
+        </Reveal>
 
         <div className="grid gap-5 lg:grid-cols-3">
           {points.map((p, i) => renderCard(p, i))}

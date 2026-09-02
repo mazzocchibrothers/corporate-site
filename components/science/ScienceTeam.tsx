@@ -1,9 +1,9 @@
 // @ts-nocheck
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
 import { Linkedin } from 'lucide-react';
 
 const lead = {
@@ -41,17 +41,14 @@ const members = [
 
 export default function ScienceTeam() {
   const t = useTranslations('science');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   const renderMember = (m, i) => (
-    <motion.div
+    <Reveal
+      y={20}
+      delay={0.2 + i * 0.08}
       key={m.id}
       data-testid={`team-${m.name.split(' ')[0]?.toLowerCase()}`}
       className="group text-center"
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
     >
       <div className="rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white overflow-hidden mb-2 md:mb-4 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500">
         <div className="w-full aspect-[3/4]">
@@ -64,31 +61,26 @@ export default function ScienceTeam() {
       <p className="text-[12px] md:text-[13px] text-[#7A7A7A] leading-snug">
         {t(`team.members.${m.id}.role`)}
       </p>
-    </motion.div>
+    </Reveal>
   );
 
   return (
-    <section id="science-team" data-testid="science-team" className="section-breathe relative py-16 lg:py-24" ref={ref}>
+    <section id="science-team" data-testid="science-team" className="section-breathe relative py-16 lg:py-24">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
 
         {/* Section title */}
-        <motion.div
-          className="mb-8 md:mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
+        <Reveal duration={0.7} className="mb-8 md:mb-12">
           <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('team.heading', {
             span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
           })}</h2>
-        </motion.div>
+        </Reveal>
 
         {/* Lead card */}
-        <motion.div
+        <Reveal
+          y={20}
+          duration={0.6}
+          delay={0.1}
           className="rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-5 md:p-6 lg:p-10 mb-8 md:mb-14"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
         >
           <div className="flex flex-col md:flex-row gap-5 md:gap-8 lg:gap-12 items-start">
             <div className="shrink-0 w-full md:w-[clamp(6rem,25vw,12rem)] aspect-square rounded-xl md:rounded-2xl overflow-hidden bg-[#F5F5FA]">
@@ -114,23 +106,22 @@ export default function ScienceTeam() {
               </a>
             </div>
           </div>
-        </motion.div>
+        </Reveal>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 lg:gap-6">
           {members.map((m, i) => renderMember(m, i))}
         </div>
 
         {/* 50+ collaborators */}
-        <motion.div
+        <Reveal
+          y={20}
+          delay={0.6}
           className="mt-8 md:mt-12 rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-5 md:p-8 lg:p-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.6 }}
         >
           <span className="text-[32px] font-semibold md:text-[48px] md:font-bold text-[#1A1A2E] leading-none tracking-[-0.03em] shrink-0">50+</span>
           <div className="w-px h-10 bg-[#1A1A2E]/[0.08] hidden sm:block shrink-0" />
           <p className="text-[14px] md:text-[16px] text-[#7A7A7A] leading-[1.6] md:leading-[1.7]">{t('team.body')}</p>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   );

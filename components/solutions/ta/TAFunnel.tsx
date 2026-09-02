@@ -1,9 +1,10 @@
 // @ts-nocheck
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, BarChart3, Plug, FileText, Calendar, MessageSquare, Users, Filter, Trophy, Brain, Search, ArrowDown } from 'lucide-react';
 import { IconTile } from '@/components/ui/icon-tile';
 
@@ -149,32 +150,25 @@ function ColumnCard({ data, delay, t }) {
 export default function TAFunnel() {
   const t = useTranslations('solutions.talent-acquisition');
   const [active, setActive] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
   const stage = stages[active];
 
   return (
-    <section id="ta-funnel" data-testid="ta-funnel" className="section-breathe relative py-20 lg:py-28" ref={ref}>
+    <section id="ta-funnel" data-testid="ta-funnel" className="section-breathe relative py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
 
         {/* Title */}
-        <motion.div
-          className="mb-8 md:mb-14"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
+        <Reveal duration={0.7} className="mb-8 md:mb-14">
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">{t.rich('taFunnel.heading', {
             span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
           })}</h2>
-        </motion.div>
+        </Reveal>
 
         {/* Stage selector — compact pills on mobile, full cards on desktop */}
-        <motion.div
+        <Reveal
+          y={20}
+          duration={0.6}
+          delay={0.1}
           className="grid grid-cols-3 gap-2 md:flex md:items-stretch md:gap-2 mb-8 md:mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
         >
           {stages.map((s, i) => (
             <button
@@ -194,18 +188,17 @@ export default function TAFunnel() {
                 {t(`taFunnel.stages.${s.id}.label`)}
               </span>
               {i === active && (
-                <motion.div
+                <Reveal
+                  y={0}
+                  duration={0.3}
                   className="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
                 >
                   <ArrowDown className="h-4 w-4 text-[#9B9DFB]/50 mt-2" />
-                </motion.div>
+                </Reveal>
               )}
             </button>
           ))}
-        </motion.div>
+        </Reveal>
 
         {/* Content cards for active stage */}
         <AnimatePresence mode="wait">

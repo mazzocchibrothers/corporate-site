@@ -32,6 +32,8 @@ type Props = {
   /** Seconds. */
   duration?: number;
   delay?: number;
+  /** A CSS timing function. The whitepaper landings use their own curve. */
+  ease?: string;
   /** The element to render. `section`, `li`, whatever the markup needs. */
   as?: ElementType;
   style?: CSSProperties;
@@ -46,8 +48,12 @@ export function Reveal({
   scale = 1,
   duration = 0.5,
   delay = 0,
+  ease = 'ease-out',
   as: Tag = 'div',
   style,
+  // A caller's `ref` would land in `...rest` and replace the one the observer
+  // reads, and the element would simply never appear. Ours is the only one.
+  ref: _ref,
   ...rest
 }: Props) {
   const ref = useRef<HTMLElement>(null);
@@ -88,7 +94,7 @@ export function Reveal({
         transform: shown
           ? 'none'
           : `translate(${x}px, ${y}px)${scale === 1 ? '' : ` scale(${scale})`}`,
-        transition: `opacity ${duration}s ease-out ${delay}s, transform ${duration}s ease-out ${delay}s`,
+        transition: `opacity ${duration}s ${ease} ${delay}s, transform ${duration}s ${ease} ${delay}s`,
       }}
       {...rest}
     >

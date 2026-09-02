@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
 
 const integrations = [
   { name: 'Oracle', logo: '/logos/integrations/oracle_white.avif' },
@@ -40,23 +40,15 @@ function LogoItem({ item }: { item: { name: string; logo: string } }) {
 export default function IntegrationEcosystem() {
   const lang = useLocale();
   const t = useTranslations('product-overview');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
     <section
       id="integrations"
       data-testid="integrations"
       className="section-breathe relative pt-16 pb-10 lg:pt-20 lg:pb-12"
-      ref={ref}
     >
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-        <motion.div
-          className="mb-8 md:mb-10"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
+        <Reveal duration={0.7} className="mb-8 md:mb-10">
           <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-3 md:mb-4">{t.rich('integrationEcosystem.heading', {
             span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
           })}</h2>
@@ -66,15 +58,15 @@ export default function IntegrationEcosystem() {
               acr: (chunks) => <span className="text-[#9B9DFB]/70 font-semibold">{chunks}</span>,
             })}
           </p>
-        </motion.div>
+        </Reveal>
       </div>
 
       {/* Marquee container */}
-      <motion.div
+      <Reveal
+        y={0}
+        duration={0.6}
+        delay={0.2}
         className="relative overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.6, delay: 0.2 }}
       >
         {/* No fade edges needed */}
         <div className="absolute left-0 top-0 bottom-0 w-24 lg:w-40 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #F5F5FA, transparent)' }} />
@@ -87,15 +79,15 @@ export default function IntegrationEcosystem() {
             {integrations.map((item, i) => <LogoItem key={`b-${i}`} item={item} />)}
           </div>
         </div>
-      </motion.div>
+      </Reveal>
 
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-        <motion.p
+        <Reveal
+          as="p"
+          y={0}
+          delay={0.5}
           className="mt-8 text-[15px] text-[#7A7A7A] font-semibold"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >{t('integrationEcosystem.body2')}</motion.p>
+        >{t('integrationEcosystem.body2')}</Reveal>
       </div>
     </section>
   );

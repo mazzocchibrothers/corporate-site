@@ -1,9 +1,9 @@
 // @ts-nocheck
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
 import { UserX, GitCompare, HelpCircle } from 'lucide-react';
 import { IconTile } from '@/components/ui/icon-tile';
 
@@ -30,19 +30,15 @@ const pains = [
 
 export default function PMProblem() {
   const t = useTranslations('solutions.performance-management');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   const renderCard = (p, i) => {
     const Icon = p.icon;
     return (
-      <motion.div
+      <Reveal
+        delay={0.1 + i * 0.12}
         key={p.id}
         data-testid={`pm-pain-${i}`}
         className="group rounded-2xl border border-[#121212]/[0.08] bg-white p-6 md:p-8 lg:p-10 hover:border-[#4B4DF7]/[0.18] hover:shadow-xl hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 flex flex-col h-full"
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5, delay: 0.1 + i * 0.12 }}
       >
         <div className="flex items-center justify-between mb-6 md:mb-8">
           <span className="text-[36px] md:text-[42px] font-normal text-[#121212]/[0.1] leading-none tracking-[-0.03em]">{p.num}</span>
@@ -56,21 +52,21 @@ export default function PMProblem() {
           <span className="text-[24px] md:text-[28px] font-bold text-[#121212] leading-none tracking-[-0.02em] block mb-1.5">{p.stat}</span>
           <span className="text-[12px] text-[#7A7A7A] leading-[1.5]">{t(`pmProblem.pains.${p.id}.statLabel`)}</span>
         </div>
-      </motion.div>
+      </Reveal>
     );
   };
 
   return (
-    <section id="pm-problem" data-testid="pm-problem" className="section-breathe relative md:flex md:items-center" style={{ minHeight: '100vh' }} ref={ref}>
+    <section id="pm-problem" data-testid="pm-problem" className="section-breathe relative md:flex md:items-center" style={{ minHeight: '100vh' }}>
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-20 lg:py-28">
 
         {/* Header row: title + subtitle */}
-        <motion.div className="max-w-3xl mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
+        <Reveal duration={0.7} className="max-w-3xl mb-16">
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">{t.rich('pmProblem.heading', {
             span: (chunks) => <span className="font-bold gradient-text-on-light">{chunks}</span>,
           })}</h2>
           <p className="text-[17px] text-[#7A7A7A] leading-[1.75]">{t('pmProblem.body')}</p>
-        </motion.div>
+        </Reveal>
 
         <div className="grid gap-5 lg:grid-cols-3">
           {pains.map((p, i) => renderCard(p, i))}

@@ -1,32 +1,29 @@
 // @ts-nocheck
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
 
 export default function PMHowSolves() {
   const t = useTranslations('solutions.performance-management');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="pm-how" data-testid="pm-how" className="section-breathe relative py-20 lg:py-24" ref={ref}>
+    <section id="pm-how" data-testid="pm-how" className="section-breathe relative py-20 lg:py-24">
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
-        <motion.div className="mb-16" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
+        <Reveal duration={0.7} className="mb-16">
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212]">{t.rich('pmHowSolves.heading', {
             span: (chunks) => <span className="font-bold gradient-text-on-light">{chunks}</span>,
           })}</h2>
-        </motion.div>
+        </Reveal>
 
         {/* Two-column comparison */}
         <div className="grid md:grid-cols-2 gap-5 mb-8">
           {/* Subjective */}
-          <motion.div
+          <Reveal
+            y={20}
+            delay={0.15}
             className="rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-10"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.15 }}
           >
             <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.1em] uppercase mb-5 block">{t('pmHowSolves.text')}</span>
             <h3 className="text-[20px] font-bold text-[#121212] mb-4">{t('pmHowSolves.heading2')}</h3>
@@ -40,14 +37,13 @@ export default function PMHowSolves() {
                 <p className="text-[15px] text-[#7A7A7A] leading-[1.7]">{t('pmHowSolves.body2')}</p>
               </div>
             </div>
-          </motion.div>
+          </Reveal>
 
           {/* Objective */}
-          <motion.div
+          <Reveal
+            y={20}
+            delay={0.25}
             className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-white/70 p-10"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.25 }}
           >
             <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.1em] uppercase mb-5 block">{t('pmHowSolves.text2')}</span>
             <h3 className="text-[20px] font-bold text-[#121212] mb-4">Skillvue</h3>
@@ -61,19 +57,18 @@ export default function PMHowSolves() {
                 <p className="text-[15px] text-[#7A7A7A] leading-[1.7]">{t('pmHowSolves.body4')}</p>
               </div>
             </div>
-          </motion.div>
+          </Reveal>
         </div>
 
         {/* Bottom callout */}
-        <motion.div
+        <Reveal
+          y={15}
+          delay={0.35}
           className="rounded-2xl bg-[#0E0E0E] p-8 lg:p-10"
-          initial={{ opacity: 0, y: 15 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.35 }}
         >
           <h3 className="text-[20px] font-semibold text-white/90 mb-4 text-center">{t('pmHowSolves.heading3')}</h3>
           <p className="text-[17px] text-white/[0.85] leading-[1.7] text-center max-w-3xl mx-auto font-medium">{t('pmHowSolves.body5')}</p>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   );

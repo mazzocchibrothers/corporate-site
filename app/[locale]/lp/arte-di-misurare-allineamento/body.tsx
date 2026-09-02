@@ -2,8 +2,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Reveal } from '@/components/ui/reveal';
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -22,14 +22,7 @@ function SkillvueIcon({ size = 24 }: { size?: number }) {
   );
 }
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
-  }),
-};
+const FADE = { y: 24, duration: 0.65, ease: 'cubic-bezier(0.22, 1, 0.36, 1)' };
 
 // ─── LAYER 1: VETRINA ──────────────────────────────────────────────────────────
 
@@ -146,28 +139,33 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
       {/* HERO */}
       <section className="pt-[88px] pb-16 px-6 lg:px-10">
         <div className="max-w-[760px] mx-auto text-center pt-16">
-          <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.05}>
+          <Reveal {...FADE} delay={0.05}>
             {t.rich('text3', {
           s: (chunks) => <span className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
-        })}</motion.div>
+        })}</Reveal>
 
-          <motion.h1
-            variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
+          <Reveal
+            {...FADE}
+            delay={0.1}
+            as="h1"
             className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.1] mb-6"
           >
             {t.rich('text4', {
           s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
-        })}</motion.h1>
+        })}</Reveal>
 
-          <motion.p
-            variants={fadeUp} initial="hidden" animate="visible" custom={0.18}
+          <Reveal
+            {...FADE}
+            delay={0.18}
+            as="p"
             className="text-[17px] text-[#0D0D0D]/55 leading-[1.7] mb-4"
             style={{ fontWeight: 300 }}
           >
-            {t('text5')}</motion.p>
+            {t('text5')}</Reveal>
 
-          <motion.div
-            variants={fadeUp} initial="hidden" animate="visible" custom={0.24}
+          <Reveal
+            {...FADE}
+            delay={0.24}
             className="flex items-center justify-center gap-6 text-[12px] text-[#0D0D0D]/35 mb-12"
           >
             {t.rich('text6', {
@@ -175,7 +173,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
           b: (chunks) => <strong className="text-[#0D0D0D]/55">{chunks}</strong>,
           s2: (chunks) => <span className="w-px h-3 bg-[#0D0D0D]/15">{chunks}</span>,
           s3: (chunks) => <span>{chunks}</span>,
-        })}</motion.div>
+        })}</Reveal>
 
             {/* Logo marquee */}
             {(() => {
@@ -199,8 +197,9 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 </div>
               );
               return (
-                <motion.div
-                  variants={fadeUp} initial="hidden" animate="visible" custom={0.27}
+                <Reveal
+                  {...FADE}
+                  delay={0.27}
                   className="relative overflow-hidden mb-10 mx-auto"
                   style={{
                     maxWidth: 700,
@@ -212,24 +211,21 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                     <LogoSet />
                     <LogoSet ariaHidden />
                   </div>
-                </motion.div>
+                </Reveal>
               );
             })()}
 
-          <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.3}>
+          <Reveal {...FADE} delay={0.3}>
             <Button variant="primary" mode="light" onClick={scrollToForm}>
               {t('text7')}</Button>
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
       {/* STATS */}
       <section className="pb-16 px-6 lg:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <motion.div
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-4"
-          >
+          <Reveal {...FADE} className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {heroStats.map((s, i) => (
               <div
                 key={i}
@@ -245,28 +241,26 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 <div className="text-[12px] text-[#0D0D0D]/45 leading-snug">{s.label}</div>
               </div>
             ))}
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
       {/* WHAT'S INSIDE */}
       <section className="py-16 px-6 lg:px-10 bg-white">
         <div className="max-w-[1100px] mx-auto">
-          <motion.div
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <Reveal {...FADE} className="text-center mb-12">
             <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] mb-3">
               {t('heading')}</h2>
             <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
               {t('body')}</p>
-          </motion.div>
+          </Reveal>
 
           <div className="grid md:grid-cols-3 gap-5">
             {featureCards.map((f, i) => (
-              <motion.div
+              <Reveal
+                {...FADE}
+                delay={i * 0.08}
                 key={i}
-                variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i * 0.08}
                 className="rounded-2xl border border-black/[0.07] bg-[#F8F8FA] p-7"
               >
                 <div
@@ -277,7 +271,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 </div>
                 <h3 className="text-[15px] font-semibold text-[#0D0D0D] mb-2 leading-snug">{f.title}</h3>
                 <p className="text-[13px] text-[#0D0D0D]/50 leading-[1.65]">{f.desc}</p>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -288,7 +282,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
         <div className="max-w-[1100px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left */}
-            <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <Reveal {...FADE}>
               <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
                 {t('heading2')}</h2>
               <ul className="space-y-3 mb-8">
@@ -318,12 +312,13 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 </svg>
                 {tl('dataSafe')}
               </p>
-            </motion.div>
+            </Reveal>
 
             {/* Right: Form */}
-            <motion.div
+            <Reveal
+              {...FADE}
+              delay={0.1}
               ref={formRef}
-              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0.1}
               className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10"
               style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}
             >
@@ -422,7 +417,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 </Button>
               </form>
               )}
-            </motion.div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -979,17 +974,15 @@ export default function ArteAllineamentoPage() {
       <>
         <meta name="robots" content="noindex, nofollow" />
       </>
-      <AnimatePresence mode="wait">
         {unlocked ? (
-          <motion.div key="wp" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
+          <Reveal y={0} duration={0.4} key="wp">
             <WhitepaperLayer />
-          </motion.div>
+          </Reveal>
         ) : (
-          <motion.div key="vetrina" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
+          <Reveal y={0} duration={0.4} key="vetrina">
             <VetrinaLayer onUnlock={() => setUnlocked(true)} />
-          </motion.div>
+          </Reveal>
         )}
-      </AnimatePresence>
     </>
   );
 }

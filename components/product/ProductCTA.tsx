@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
@@ -10,27 +10,20 @@ import { href } from '@/i18n/routes';
 export default function ProductCTA() {
   const lang = useLocale();
   const t = useTranslations('product-overview');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="product-cta" data-testid="product-cta" className="relative pt-10 pb-16 md:pt-12 md:pb-20 lg:pt-16 lg:pb-24" ref={ref}>
+    <section id="product-cta" data-testid="product-cta" className="relative pt-10 pb-16 md:pt-12 md:pb-20 lg:pt-16 lg:pb-24">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-        <motion.div
-          className="mb-6 md:mb-10"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
+        <Reveal duration={0.7} className="mb-6 md:mb-10">
           <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">{t.rich('cta.heading', {
             span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
           })}</h2>
-        </motion.div>
+        </Reveal>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
+        <Reveal
+          y={20}
+          duration={0.7}
+          delay={0.2}
         >
           <div className="group relative rounded-xl md:rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.04] hover:bg-white/[0.06] backdrop-blur-sm p-5 md:p-10 transition-all duration-500 overflow-hidden">
             <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.15em] uppercase">{t('cta.text')}</span>
@@ -46,7 +39,7 @@ export default function ProductCTA() {
               </a>
             </Button>
           </div>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   );

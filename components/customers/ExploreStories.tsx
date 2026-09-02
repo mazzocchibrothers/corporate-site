@@ -1,9 +1,9 @@
 // @ts-nocheck
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
@@ -65,8 +65,6 @@ export default function ExploreStories() {
   const t = useTranslations('customers');
   const [activeIndustry, setActiveIndustry] = useState('all');
   const [activeUseCase, setActiveUseCase] = useState('all');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
 
   const filtered = allStories.filter(s => {
@@ -76,17 +74,17 @@ export default function ExploreStories() {
   });
 
   return (
-    <section id="explore" data-testid="explore-stories" className="relative py-20 lg:py-28" ref={ref}>
+    <section id="explore" data-testid="explore-stories" className="relative py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-        <motion.div className="mb-12" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
+        <Reveal duration={0.7} className="mb-12">
           <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">{t.rich('exploreStories.heading', {
             span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
           })}</h2>
           <p className="text-[20px] text-white/[0.65] leading-[1.75] max-w-2xl">{t('exploreStories.body')}</p>
-        </motion.div>
+        </Reveal>
 
         {/* Filters */}
-        <motion.div className="mb-14 space-y-5" initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.2 }}>
+        <Reveal y={0} delay={0.2} className="mb-14 space-y-5">
           <div className="flex flex-wrap gap-2">
             <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mr-4 self-center">{t('exploreStories.text')}</span>
             {filters.industry.map(f => (
@@ -99,19 +97,19 @@ export default function ExploreStories() {
               <button key={f} onClick={() => setActiveUseCase(f)} className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${activeUseCase === f ? 'bg-white/[0.1] text-white border border-white/[0.15]' : 'text-white/40 border border-transparent hover:text-white/70'}`}>{t(`explore.useCases.${f}`)}</button>
             ))}
           </div>
-        </motion.div>
+        </Reveal>
 
         {/* Story grid. 2 columns, large cards with centered name + title below */}
         {filtered.length > 0 ? (
           <div className="grid md:grid-cols-2 gap-10">
             {filtered.map((s, i) => (
-              <motion.div
+              <Reveal
+                y={20}
+                duration={0.4}
+                delay={i * 0.06}
                 key={s.id}
                 data-testid={`story-${s.id}`}
                 className="group cursor-pointer"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: i * 0.06 }}
                 onClick={() => { router.push(`${href('customers', lang)}/${s.id}`); window.scrollTo(0, 0); }}
               >
                 {/* Card visual area */}
@@ -138,7 +136,7 @@ export default function ExploreStories() {
                 </div>
                 {/* Title below. left aligned with card, with left padding */}
                 <h3 className="text-[18px] font-semibold text-white/[0.65] leading-[1.45] mt-5 pl-2 group-hover:text-white/90 transition-colors duration-400">{t(`explore.stories.${s.id}.headline`)}</h3>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         ) : (

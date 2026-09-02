@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 
 const steps = [
@@ -39,23 +39,16 @@ export default function HowSkillvueWorks() {
   // namespace.
   const ta = useTranslations('shared');
   const [active, setActive] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="how-skillvue-works" data-testid="how-skillvue-works" className="relative py-16 md:py-20 lg:py-28" ref={ref}>
+    <section id="how-skillvue-works" data-testid="how-skillvue-works" className="relative py-16 md:py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-        <motion.div
-          className="mb-8 md:mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
+        <Reveal duration={0.7} className="mb-8 md:mb-16">
           <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-4xl mb-4 md:mb-6">{t.rich('howSkillvueWorks.heading', {
             span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
           })}</h2>
           <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">{t('howSkillvueWorks.body')}</p>
-        </motion.div>
+        </Reveal>
 
         {/* Timeline — grid 3x2 on mobile, inline on desktop */}
         <div className="grid grid-cols-3 gap-2 mb-8 md:flex md:items-center md:gap-2 md:mb-12 md:overflow-x-auto md:pb-2">
@@ -76,12 +69,11 @@ export default function HowSkillvueWorks() {
         </div>
 
         {/* Active step card */}
-        <motion.div
+        <Reveal
+          y={15}
+          duration={0.4}
           key={active}
           className="rounded-xl md:rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-10"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
         >
           <div className="grid lg:grid-cols-2 gap-5 md:gap-10">
             <div>
@@ -96,7 +88,7 @@ export default function HowSkillvueWorks() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </Reveal>
 
         {/* Nav arrows */}
         <div className="flex items-center justify-between mt-5 md:mt-8">

@@ -152,6 +152,28 @@ things fill that gap and neither is automatable:
    hand-written id list, and a Tailwind class the Italian headline never had.
    Every text check on those pages was green.
 
+4. **The attribute-set comparison**, when the change rewrites the tags
+   themselves and the structural diff above would therefore report all of it.
+   Replacing framer-motion with `<Reveal>` turns every `motion.div` into a
+   `Reveal` and rewrites its props, so tag/class tokens differ by construction —
+   but everything that is *not* the animation must not move.
+
+   Take the multiset of `className`, `style`, `onClick`, `href`, `data-testid`
+   and `t(...)` calls out of each changed file at `HEAD` and in the working
+   tree, and require them equal. Anything the codemod dropped by accident — a
+   class, a handler, a translation key — shows up as `lost:` with the string.
+   Across 74 files and 300 converted tags it found nothing, which is the point:
+   it is a check that can fail, run against a change large enough that reading
+   the diff would not have.
+
+5. **`node harness/measure-js.mjs`** for the size claim. It sums the gzipped
+   JavaScript each built page loads, read from the script tags in that page's
+   own HTML — not from a chunk list, and never counting the `nomodule` polyfill
+   bundle, which no browser that supports modules requests and which made the
+   site look 39 KB heavier than it is. `--save before.json` before the change,
+   pass the file after it, and it prints the per-page delta and flags any page
+   that got heavier. "It should be smaller" is not a measurement.
+
 ## Level 3 — Bilingual smoke test (required for any page or routing change)
 
 **This is the level that matters here, and it is always ×2.** A page verified

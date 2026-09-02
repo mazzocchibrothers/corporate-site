@@ -2,8 +2,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Reveal } from '@/components/ui/reveal';
 import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
 import SkillvueLogo from '@/components/landing/SkillvueLogo';
 import { Button } from '@/components/ui/button';
 
@@ -11,14 +11,7 @@ import { Button } from '@/components/ui/button';
 const HUBSPOT_PORTAL_ID = '48438018';
 const HUBSPOT_FORM_ID = 'YOUR_WHITEPAPER_FORM_ID';
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 32 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
-  }),
-};
+const FADE = { y: 32, duration: 0.7, ease: 'cubic-bezier(0.22, 1, 0.36, 1)' };
 
 const stats = [
   { value: '€15–25M', label: 'Non-predictive selection cost / year' },
@@ -143,36 +136,42 @@ export default function HiddenCostRecruiting() {
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-24 lg:py-32">
           <div className="max-w-[780px]">
             {/* Badge */}
-            <motion.div
-              variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
+            <Reveal
+              {...FADE}
+              delay={0.1}
               className="inline-flex items-center gap-2 mb-8"
             >
               {t.rich('text3', {
           s: (chunks) => <span className="px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.25em] uppercase text-white" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
-        })}</motion.div>
+        })}</Reveal>
 
             {/* Title */}
-            <motion.h1
-              variants={fadeUp} initial="hidden" animate="visible" custom={0.2}
+            <Reveal
+              {...FADE}
+              delay={0.2}
+              as="h1"
               className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-6"
               style={{ lineHeight: 1.1 }}
             >
               {t.rich('text4', {
           s: (chunks) => <span className="gradient-text">{chunks}</span>,
           br: () => <br />,
-        })}</motion.h1>
+        })}</Reveal>
 
             {/* Subtitle */}
-            <motion.p
-              variants={fadeUp} initial="hidden" animate="visible" custom={0.3}
+            <Reveal
+              {...FADE}
+              delay={0.3}
+              as="p"
               className="text-[18px] text-white/55 leading-[1.75] mb-10 max-w-[560px]"
               style={{ fontWeight: 300 }}
             >
-              {t('text5')}</motion.p>
+              {t('text5')}</Reveal>
 
             {/* Metadata */}
-            <motion.div
-              variants={fadeUp} initial="hidden" animate="visible" custom={0.4}
+            <Reveal
+              {...FADE}
+              delay={0.4}
               className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-white/40 mb-14"
             >
               {t.rich('text6', {
@@ -182,20 +181,19 @@ export default function HiddenCostRecruiting() {
           s3: (chunks) => <span>{chunks}</span>,
           s4: (chunks) => <span className="w-px h-3 bg-white/15 hidden sm:block">{chunks}</span>,
           s5: (chunks) => <span>{chunks}</span>,
-        })}</motion.div>
+        })}</Reveal>
 
             {/* CTA */}
-            <motion.div
-              variants={fadeUp} initial="hidden" animate="visible" custom={0.5}
-            >
+            <Reveal {...FADE} delay={0.5}>
               <Button variant="primary" mode="light" onClick={scrollToForm}>
                 {t('text7')}</Button>
-            </motion.div>
+            </Reveal>
           </div>
 
           {/* Stats */}
-          <motion.div
-            variants={fadeUp} initial="hidden" animate="visible" custom={0.6}
+          <Reveal
+            {...FADE}
+            delay={0.6}
             className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-20"
           >
             {stats.map((s, i) => (
@@ -212,15 +210,16 @@ export default function HiddenCostRecruiting() {
                 <div className="text-[12px] text-white/45 leading-snug">{s.label}</div>
               </div>
             ))}
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── PROBLEM STATEMENT ─────────────────────────────────────── */}
       <section className="relative pb-16 lg:pb-24">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full">
-          <motion.div
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0}
+          <Reveal
+            {...FADE}
+            delay={0}
             className="rounded-2xl p-8 lg:p-12"
             style={{ border: '1px solid rgba(75,77,247,0.2)', background: 'rgba(75,77,247,0.05)' }}
           >
@@ -234,7 +233,7 @@ export default function HiddenCostRecruiting() {
           b3: (chunks) => <strong className="text-white/95">{chunks}</strong>,
           b4: (chunks) => <strong className="text-white/95">{chunks}</strong>,
         })}</p>
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
@@ -242,22 +241,20 @@ export default function HiddenCostRecruiting() {
       <div className="fade-into-light" />
       <section className="section-breathe py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full">
-          <motion.div
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="mb-14"
-          >
+          <Reveal {...FADE} className="mb-14">
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-4"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               {t('body3')}</p>
             <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15]">
               {t('heading')}</h2>
-          </motion.div>
+          </Reveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {chapters.map((c, i) => (
-              <motion.div
+              <Reveal
+                {...FADE}
+                delay={i * 0.08}
                 key={i}
-                variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i * 0.08}
                 className="rounded-2xl bg-white border border-black/[0.06] p-7 hover:shadow-md transition-shadow duration-300"
               >
                 <div className="text-[11px] font-bold tracking-[0.2em] mb-4"
@@ -266,7 +263,7 @@ export default function HiddenCostRecruiting() {
                 </div>
                 <h3 className="text-[15px] font-semibold text-[#0D0D0D] mb-2 leading-snug">{c.title}</h3>
                 <p className="text-[13px] text-[#0D0D0D]/55 leading-[1.65]">{c.desc}</p>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -276,10 +273,7 @@ export default function HiddenCostRecruiting() {
       {/* ── 4 BEHAVIORAL DIMENSIONS ───────────────────────────────── */}
       <section className="relative py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full">
-          <motion.div
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="mb-14"
-          >
+          <Reveal {...FADE} className="mb-14">
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-4"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               {t('body4')}</p>
@@ -287,13 +281,14 @@ export default function HiddenCostRecruiting() {
               {t.rich('heading2', {
           s: (chunks) => <span className="gradient-text">{chunks}</span>,
         })}</h2>
-          </motion.div>
+          </Reveal>
 
           <div className="grid md:grid-cols-2 gap-6">
             {dimensions.map((d, i) => (
-              <motion.div
+              <Reveal
+                {...FADE}
+                delay={i * 0.1}
                 key={i}
-                variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i * 0.1}
                 className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-6"
               >
                 <div className="flex items-start gap-4 mb-5">
@@ -319,7 +314,7 @@ export default function HiddenCostRecruiting() {
                     />
                   </div>
                 </div>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -328,10 +323,7 @@ export default function HiddenCostRecruiting() {
       {/* ── ECONOMICS ─────────────────────────────────────────────── */}
       <section className="relative pb-20 lg:pb-28">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full">
-          <motion.div
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10"
-          >
+          <Reveal {...FADE} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10">
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-8"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               {t('body5')}</p>
@@ -354,7 +346,7 @@ export default function HiddenCostRecruiting() {
           i: (chunks) => <em className="text-white/80 not-italic">{chunks}</em>,
         })}</p>
             </div>
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
@@ -365,7 +357,7 @@ export default function HiddenCostRecruiting() {
           <div className="grid lg:grid-cols-12 gap-16 lg:gap-20 items-start">
             {/* Left */}
             <div className="lg:col-span-5">
-              <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+              <Reveal {...FADE}>
                 <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-5"
                   style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                   {t('body7')}</p>
@@ -396,13 +388,14 @@ export default function HiddenCostRecruiting() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </Reveal>
             </div>
 
             {/* Right: HubSpot Form */}
             <div className="lg:col-span-7">
-              <motion.div
-                variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0.15}
+              <Reveal
+                {...FADE}
+                delay={0.15}
                 className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10 shadow-sm"
               >
                 <h3 className="text-[18px] font-semibold text-[#0D0D0D] mb-2">{t('heading4')}</h3>
@@ -417,7 +410,7 @@ export default function HiddenCostRecruiting() {
                     <div className="text-[13px] text-[#0D0D0D]/30">{t('text9')}</div>
                   </div>
                 )}
-              </motion.div>
+              </Reveal>
             </div>
           </div>
         </div>
@@ -428,10 +421,7 @@ export default function HiddenCostRecruiting() {
       <section className="relative py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
-            <motion.div
-              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-              className="lg:col-span-7"
-            >
+            <Reveal {...FADE} className="lg:col-span-7">
               <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-5"
                 style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 {t('body10')}</p>
@@ -443,9 +433,10 @@ export default function HiddenCostRecruiting() {
                 {t('body11')}</p>
               <p className="text-[16px] text-white/50 leading-[1.8]" style={{ fontWeight: 300 }}>
                 {t('body12')}</p>
-            </motion.div>
-            <motion.div
-              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0.15}
+            </Reveal>
+            <Reveal
+              {...FADE}
+              delay={0.15}
               className="lg:col-span-5"
             >
               <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8">
@@ -459,7 +450,7 @@ export default function HiddenCostRecruiting() {
                   <span className="text-[13px] text-white/50">{t('text10')}</span>
                 </div>
               </div>
-            </motion.div>
+            </Reveal>
           </div>
         </div>
       </section>

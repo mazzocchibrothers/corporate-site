@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
 import { MessageSquare, MonitorSmartphone, ListChecks, UserCheck, Target, BookOpen, Wrench, GitBranch, Mic, Video, PenLine, CheckSquare } from 'lucide-react';
 import { IconTile } from '@/components/ui/icon-tile';
 
@@ -38,32 +38,24 @@ const layers = [
 
 export default function AssessmentFormats() {
   const t = useTranslations('product-overview');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="verification-formats" data-testid="verification-formats" className="relative py-16 md:py-20 lg:py-28" ref={ref}>
+    <section id="verification-formats" data-testid="verification-formats" className="relative py-16 md:py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-        <motion.div
-          className="mb-14"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
+        <Reveal duration={0.7} className="mb-14">
           <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.03em] text-white/90">{t.rich('assessmentFormats.heading', {
             span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
           })}</h2>
-        </motion.div>
+        </Reveal>
 
         <div>
           {layers.map((layer, i) => (
-            <motion.div
+            <Reveal
+              y={20}
+              delay={0.15 + i * 0.1}
               key={layer.id}
               data-testid={`format-${layer.id}`}
               className={i > 0 ? 'pt-12 md:pt-24' : ''}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
             >
               {/* Section label */}
               <div className="flex items-center gap-2.5 md:gap-4 mb-5 md:mb-8">
@@ -86,7 +78,7 @@ export default function AssessmentFormats() {
                   );
                 })}
               </div>
-            </motion.div>
+            </Reveal>
           ))}
         </div>
       </div>

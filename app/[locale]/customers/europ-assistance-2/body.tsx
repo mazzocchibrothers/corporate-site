@@ -1,10 +1,10 @@
 // @ts-nocheck
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
-import { motion, useInView } from 'framer-motion';
 import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench, Clock } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import Navbar from '@/components/landing/Navbar';
@@ -13,12 +13,10 @@ import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
 function Section({ children, className = '' }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
   return (
-    <motion.div ref={ref} className={className} initial={{ opacity: 0, y: 25 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
+    <Reveal y={25} duration={0.6} className={className}>
       {children}
-    </motion.div>
+    </Reveal>
   );
 }
 
@@ -73,16 +71,16 @@ export default function EuropAssistance2StoryPage() {
 
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             {/* Breadcrumb */}
-            <motion.div className="mb-10 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
+            <Reveal y={0} delay={0.2} className="mb-10 flex items-center gap-2">
               <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{t('breadcrumb')}</Button>
               <span className="text-white/20">/</span>
               <span className="text-[13px] text-white/[0.65]">Europ Assistance</span>
-            </motion.div>
+            </Reveal>
 
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
               {/* Main content */}
               <div className="lg:col-span-7">
-                <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
+                <Reveal duration={0.7} delay={0.3}>
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-8 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
                     {t('badge')}
                   </span>
@@ -109,11 +107,11 @@ export default function EuropAssistance2StoryPage() {
                       {t('ctaSecondary')}
                     </Button>
                   </div>
-                </motion.div>
+                </Reveal>
               </div>
 
               {/* Client card */}
-              <motion.div className="lg:col-span-5 lg:sticky lg:top-[100px] self-start" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
+              <Reveal y={0} x={20} duration={0.6} delay={0.5} className="lg:col-span-5 lg:sticky lg:top-[100px] self-start">
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
                     <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 bg-white flex items-center justify-center">
@@ -133,7 +131,7 @@ export default function EuropAssistance2StoryPage() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </Reveal>
             </div>
           </div>
         </section>

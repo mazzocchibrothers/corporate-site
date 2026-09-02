@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
-import { m, useInView } from 'framer-motion';
 import { ArrowRight, ShieldIcon, Languages, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
@@ -10,29 +10,26 @@ import { href } from '@/i18n/routes';
 export default function CTASection() {
   const lang = useLocale();
   const t = useTranslations('home');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
 
   return (
-    <section id="cta" data-testid="cta-section" className="relative pt-20 pb-16 md:pt-28 md:pb-20 lg:pt-36 lg:pb-24" ref={ref}>
+    <section id="cta" data-testid="cta-section" className="relative pt-20 pb-16 md:pt-28 md:pb-20 lg:pt-36 lg:pb-24">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-        <m.div
+        <Reveal
+          y={40}
+          duration={0.8}
           className="mb-8 md:mb-8"
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
         >
           <h2 className="text-[clamp(1.5rem,3.5vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white/90 max-w-4xl">{t.rich('cta.heading', {
             span: (chunks) => <span className="italic font-bold gradient-text">{chunks}</span>,
           })}</h2>
-        </m.div>
+        </Reveal>
 
-        <m.div
+        <Reveal
+          y={20}
+          duration={0.8}
+          delay={0.2}
           className="grid grid-cols-2 lg:grid-cols-12 gap-5 md:gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
         >
           {/* Track A — Demo CTA */}
           <div
@@ -90,7 +87,7 @@ export default function CTASection() {
               );
             })()}
           </div>
-        </m.div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,9 +1,9 @@
 // @ts-nocheck
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { motion, useInView } from 'framer-motion';
 import { X, Check, ArrowDown } from 'lucide-react';
 
 const oldItems = [
@@ -24,26 +24,24 @@ const newItems = [
 
 export default function TAShift() {
   const t = useTranslations('solutions.talent-acquisition');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="ta-shift" data-testid="ta-shift" className="relative py-20 lg:py-28 md:flex md:items-center"  ref={ref}>
+    <section id="ta-shift" data-testid="ta-shift" className="relative py-20 lg:py-28 md:flex md:items-center">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full">
-        <motion.div className="mb-10 md:mb-20" initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
+        <Reveal duration={0.7} className="mb-10 md:mb-20">
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white/90">{t.rich('taShift.heading', {
             span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
           })}</h2>
-        </motion.div>
+        </Reveal>
 
         {/* Mobile: vertical stack with transition arrow */}
         <div className="md:hidden flex flex-col gap-4">
           {/* Old playbook */}
-          <motion.div
+          <Reveal
+            y={20}
+            duration={0.6}
+            delay={0.15}
             className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.15 }}
           >
             <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-6 block">{t('taShift.text')}</span>
             <div className="space-y-4">
@@ -56,28 +54,28 @@ export default function TAShift() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </Reveal>
 
           {/* Transition arrow */}
-          <motion.div
+          <Reveal
+            y={0}
+            duration={0.6}
+            delay={0.3}
             className="flex items-center justify-center gap-3 py-1"
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
           >
             <span className="h-px flex-1 bg-gradient-to-r from-transparent to-white/15" />
             <span className="w-9 h-9 rounded-full flex items-center justify-center bg-[#4B4DF7]/[0.12] border border-[#4B4DF7]/25">
               <ArrowDown className="h-4 w-4 text-[#9B9DFB]" strokeWidth={2.5} />
             </span>
             <span className="h-px flex-1 bg-gradient-to-l from-transparent to-white/15" />
-          </motion.div>
+          </Reveal>
 
           {/* With Skillvue */}
-          <motion.div
+          <Reveal
+            y={20}
+            duration={0.6}
+            delay={0.4}
             className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-white/[0.06] p-5"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
           >
             <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-6 block">{t('taShift.text2')}</span>
             <div className="space-y-4">
@@ -90,17 +88,18 @@ export default function TAShift() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </Reveal>
         </div>
 
         {/* Desktop */}
         <div className="hidden md:grid md:grid-cols-2 gap-6">
           {/* Old playbook */}
-          <motion.div
+          <Reveal
+            y={0}
+            x={-20}
+            duration={0.6}
+            delay={0.15}
             className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-10"
-            initial={{ opacity: 0, x: -20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.15 }}
           >
             <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-10 block">{t('taShift.text3')}</span>
             <div className="space-y-4 md:space-y-7">
@@ -113,14 +112,15 @@ export default function TAShift() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </Reveal>
 
           {/* With Skillvue */}
-          <motion.div
+          <Reveal
+            y={0}
+            x={20}
+            duration={0.6}
+            delay={0.25}
             className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-white/[0.06] p-5 md:p-10"
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.25 }}
           >
             <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-10 block">{t('taShift.text4')}</span>
             <div className="space-y-4 md:space-y-7">
@@ -133,7 +133,7 @@ export default function TAShift() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </Reveal>
         </div>
       </div>
     </section>
