@@ -16,56 +16,72 @@
 
 | Thing | Convention | Example |
 |---|---|---|
-| Page files | `kebab-case.tsx`, route = path | `pages/customers/europ-assistance.tsx` |
+| Routes | one `kebab-case` directory, `page.tsx` + `body.tsx` | `app/[locale]/customers/europ-assistance/` |
 | Components | `PascalCase.tsx`, grouped by area | `components/customers/ExploreStories.tsx` |
 | Component dirs | the site area they serve | `landing/`, `product/`, `science/`, `solutions/`, `customers/`, `shared/` |
 | shadcn primitives | untouched, `kebab-case` | `components/ui/navigation-menu.tsx` |
 | Public assets | `kebab-case`, AVIF for photos | `public/logos/adr-explore-stories.avif` |
-| Functions / vars | `camelCase` | `toItPath`, `activeUseCase` |
+| Functions / vars | `camelCase` | `localizePath`, `activeUseCase` |
 
 No spaces in new asset filenames. Two shipped assets have them
 (`mediaset-background-explore-stories (2).avif`); don't add a third.
 
-## Page shape (the one being migrated away from)
+## Page shape
 
-**Read this to understand the 61 pages that still look like it, not to write a
-new one.** Copy lives in the page file here; the whole point of the migration is
-that it stops doing so. The replacement is the next section.
+Two files per route. Nothing else is a page.
 
 ```tsx
+// app/[locale]/customers/adr/page.tsx — server. The same on every route.
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return buildMetadata(ROUTE, locale);
+}
+
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return (
+    <NextIntlClientProvider locale={locale} messages={await messagesForRoute(ROUTE, locale)}>
+      <Body />
+    </NextIntlClientProvider>
+  );
+}
+```
+
+```tsx
+// app/[locale]/customers/adr/body.tsx — the page.
 // @ts-nocheck
-import React, { useRef } from 'react';
-import Head from 'next/head';
-import Navbar from '@/components/landing/Navbar';
-import Footer from '@/components/Footer';
-import { useLanguage } from '@/i18n/LanguageContext';
+'use client';
 
-// ─── BILINGUAL CONTENT ──────────────────────────────────────────────
-const content = {
-  it: { … },
-  en: { … },
-};
-
-export default function Page() {
-  const { lang } = useLanguage();
-  const c = lang === 'it' ? content.it : content.en;
+export default function AdrStory() {
+  const lang = useLocale();
+  const t = useTranslations('customers.adr');
   return (
     <>
-      <Head>{/* title + meta description, per locale */}</Head>
       <Navbar />
-      {/* sections */}
+      {/* sections, every string through t() */}
       <Footer />
     </>
   );
 }
 ```
 
-- **`content` sits above the component**, not inside it — it is data, and
-  rebuilding it on every render is the tell that someone inlined it.
-- **Both locales carry the same keys.** A key present in `it` and missing in
-  `en` renders `undefined` in production with no warning.
-- **`<Head>` is per-page and per-locale.** Title and meta description are copy;
-  they belong in the content object like everything else.
+No copy in either file. No `<Head>` — `generateMetadata` emits the title, the
+description and the canonical, and a bare `<link rel="preload">` rendered in the
+body is hoisted into `<head>` by React 19 if a page needs one of its own.
+
+Structure the catalogue cannot hold — an icon per row, a component per card —
+stays in the file as a small array of ids:
+
+```tsx
+const LEVERS = [
+  { id: 'n01', icon: Settings },
+  { id: 'n02', icon: MessageSquare },
+];
+…
+{LEVERS.map((l) => <Row key={l.id} icon={l.icon} title={t(`levers.${l.id}.title`)} />)}
+```
 
 ## Copy and translation
 
@@ -163,26 +179,35 @@ worse than either state.
 
 ## Adding a customer story (the full checklist)
 
-1. `pages/customers/<slug>.tsx` — content object, both locales.
-2. Register in `components/customers/ExploreStories.tsx` → `allStories`:
+1. `app/[locale]/customers/<slug>/` — copy an existing `page.tsx` + `body.tsx`
+   pair and change the route id.
+2. Copy into `messages/en.json` and `messages/it.json` under
+   `customers.<slug>`, including `meta.title` and `meta.description`. The title
+   must not be one another page already uses — `check:routes` fails on that,
+   and it is how six alternate cuts were found competing with the stories they
+   are cuts of.
+3. Add the route to `i18n/routes.json`. The Italian slug is `/clienti/<slug>`.
+4. Register in `components/customers/ExploreStories.tsx` → `allStories`:
    `id`, `company`, `industry`, `useCases[]`, `headlineIt`, `headlineEn`,
    `bgImage`. The filter lists derive from this array; there is no second list.
-3. Add the EN/IT pair to `translatedPages` in `pages/sitemap.xml.tsx`.
-4. Assets in `public/logos/`, AVIF for the card background.
-5. The `/clienti/:slug` rewrite in `next.config.ts` is generic — it already
-   covers you. `localePaths.ts` is also already generic for `/customers` →
-   `/clienti`. **A new customer story is the one route change that does *not*
-   need those two files.** Any other new route does.
+   A story missing from it is a page nothing links to — two already are.
+5. Assets in `public/logos/`, AVIF for the card background.
 
-Numbered variants (`mediaset-2.tsx`, `adr-2.tsx`, `eataly-3.tsx`) are alternate
-cuts of a story. Some are live via a rewrite — `/customers/mediaset` serves
-`mediaset-2`. **Check `next.config.ts` before assuming a variant file is dead.**
+The sitemap, the hreflang cluster, the canonical, the 308 from the old slug and
+the language switcher all derive from step 3. There is nothing else to edit.
+
+An alternate cut of an existing story (`mediaset-2`, `adr-2`, `eataly-3`)
+declares `"canonicalOf": "customers/mediaset"` in the registry. It keeps its
+URL, points its canonical and hreflang at the base story, and stays out of the
+sitemap — otherwise it competes in search with the page it is a cut of.
 
 ## Comments
 
 - Explain **why**, never what. The codebase's existing comments are the model:
-  `next.config.ts` explains why no `afterFiles` entry is needed;
-  `_app.tsx` explains why GTM is `afterInteractive` and not `lazyOnload`.
+  `i18n/navigation.ts` explains why the locale guard is in one module and not
+  at 98 call sites; `app/[locale]/layout.tsx` explains why GTM is
+  `afterInteractive` and not `lazyOnload`, and why there is no message provider
+  at that level.
 - A deliberate shortcut gets `// ponytail:` and names the upgrade path.
 - No commented-out code without a line saying when it comes back.
   `ExploreStories.tsx` does this correctly for the Credem story.

@@ -1,3 +1,14 @@
+> **Superseded for everything about routing.** This document was written for
+> the Pages Router: `nextConfig.i18n`, the `/clienti` rewrites, `LanguageContext`
+> and `pages/_app.tsx`. None of them exist any more. Locale routing now lives in
+> `i18n/routing.ts` + `middleware.ts`, computed from `i18n/routes.json`, and
+> `harness/docs/architecture.md` §5 is the current description.
+>
+> **What is still true here is the domain and DNS half** — the URL contract it
+> describes (English at `/`, Italian at `/it/…`) is exactly what the site
+> serves, and that was the point of preserving it through the migration. Read it
+> for the *decisions*; do not follow its *steps*.
+
 # Production Deployment Guide
 ## Subdirectory i18n: `skillvue.ai/en` + `skillvue.ai/it`
 

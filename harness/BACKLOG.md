@@ -27,7 +27,7 @@ makes parallel work safe. Three sections, always:
 - [ ] For a bilingual change, list the EN item and the IT item separately.
 
 ## Scope
-- pages/customers/<slug>.tsx
+- app/[locale]/customers/<slug>/
 - components/customers/ExploreStories.tsx
 - public/logos/<slug>-*.avif
 
@@ -36,7 +36,7 @@ makes parallel work safe. Three sections, always:
 ```
 
 **Scope is files and globs, not prose.** "the customer stories area" is not a
-Scope; `pages/customers/*.tsx` is. If your work turns out to need a file the
+Scope; `app/[locale]/customers/*` is. If your work turns out to need a file the
 Scope doesn't name, that is a blocker to comment — not a licence to widen.
 
 ## Labels the harness needs

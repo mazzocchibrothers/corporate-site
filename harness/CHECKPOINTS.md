@@ -30,17 +30,22 @@ label, owner is the assignee.
 
 ## C3 — The code respects the architecture
 
-- [ ] New bilingual copy uses the **content object** pattern. No key was added
-      to `i18n/translations.ts`, and no new bare `lang === 'it' ? … : …`
-      ternary was introduced outside a content object.
-- [ ] `content.it` and `content.en` declare the **same keys**. No locale
-      renders `undefined`.
-- [ ] No straight `'` inside a single-quoted Italian string. Curly `’` only.
-- [ ] The page renders its own `Navbar` and `Footer`, and its `<Head>` title
-      and description are per-locale.
+- [ ] New copy went into `messages/{en,it}.json` under the route's namespace.
+      No string was hardcoded in a component, and no bare
+      `lang === 'it' ? … : …` ternary was introduced.
+- [ ] `en` and `it` declare the **same keys and the same array shapes**. No
+      locale renders `undefined` or one card fewer.
+- [ ] No straight `'` in Italian copy. Curly `’` only — and before `<` or `{`
+      it is not style, it is an ICU escape that eats the tag.
+- [ ] The page renders its own `Navbar` and `Footer`, and its title and
+      description come from `buildMetadata`, not from a hand-written tag.
+- [ ] `page.tsx` provides messages narrowed to its own namespaces. Nothing
+      widened the provider — one without `messages` ships the whole catalogue
+      into every document.
+- [ ] `router.push` came from `@/i18n/navigation`, not `next/navigation`.
 - [ ] `components/ui/` was not hand-edited.
 - [ ] No per-file override of a centralized value (`.stat-value`, the font
-      stack).
+      stack, the Tailwind content globs).
 - [ ] No new dependency without a line on the Issue saying what it replaces.
 - [ ] No `// @ts-nocheck` added to silence a real error. No debug
       `console.log`. No TODO without context.
@@ -48,18 +53,26 @@ label, owner is the assignee.
 
 ## C4 — Routing and SEO stayed consistent
 
-Only applies when the Issue adds, renames or removes a route. When it does,
-**all four** must hold — the build checks none of them.
+Only applies when the Issue adds, renames or removes a route.
 
-- [ ] `next.config.ts` — the IT slug rewrite exists (or the generic
-      `/clienti/:slug` rule already covers it).
-- [ ] `i18n/localePaths.ts` — the EN↔IT pair is mapped, and the language
-      switcher round-trips on the new route.
-- [ ] `pages/sitemap.xml.tsx` — the route is in `pages` or `translatedPages`.
-- [ ] `Navbar.tsx` / `Footer.tsx` — `hrefIt` / `nameIt` / `hideInIT` set where
-      the route is linked.
-- [ ] A monolingual page is flagged as such on the Issue rather than silently
-      inheriting `_app.tsx`'s unconditional `hreflang` for both locales.
+Almost everything that used to be on this list is now derived from
+`i18n/routes.json` and asserted by `npm run check:routes` — the rewrite, the
+locale-path map, the sitemap entry and the hreflang cluster were four
+hand-kept lists, and commit `67f53be` exists because they drifted. What is left
+is what no check can decide for you.
+
+- [ ] The route is in `i18n/routes.json`, with a path for **every locale it
+      actually has content in** — and none for the ones it does not.
+- [ ] It has `meta.title` and `meta.description` in both locales, and the title
+      is not one another page already uses.
+- [ ] An alternate cut of an existing page declares `canonicalOf` rather than
+      competing with the page it is a cut of.
+- [ ] The directory under `app/[locale]` is the English path (or the Italian
+      one where there is no English) — one directory per route, never two.
+- [ ] `Navbar.tsx` / `Footer.tsx` link it through `href(id, locale)` where it
+      belongs in the nav.
+- [ ] `ExploreStories.tsx` lists it, if it is a customer story. A story missing
+      from that array is a page nothing links to.
 
 ## C5 — Verification is real
 

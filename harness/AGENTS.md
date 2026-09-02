@@ -4,7 +4,7 @@
 > This is **not** a rulebook: it is a **map**. Read only what you need, when you
 > need it (progressive disclosure).
 >
-> **Scope:** the whole repo. It is a single Next.js Pages Router marketing site
+> **Scope:** the whole repo. It is a single Next.js App Router marketing site
 > for skillvue.ai, bilingual EN/IT. There is no monorepo, no backend, no
 > database — almost all work here is content pages, not infrastructure.
 
@@ -34,7 +34,7 @@
 | `.claude/agents/site-*.md` | Subagent definitions: leader, implementer, reviewer | If you orchestrate work |
 | `CLAUDE.md` | Repo orientation: stack, i18n patterns, the customer-story checklist | First, if you've never worked here |
 | `DEPLOY.md` | Domain, locale routing and DNS decisions already made | Before changing routing |
-| `pages/`, `components/`, `i18n/` | The code | To implement |
+| `app/`, `components/`, `i18n/`, `messages/` | The code and the copy | To implement |
 
 **Known live conflict:** `HANDOFF.md` describes a mid-2026 session and names
 files and asset gaps that have since moved (it still calls `carrefour.tsx` a
@@ -60,19 +60,20 @@ app-router     ●━━●━━●━━●━━●━━●━━●━━�
 
 ### Syncing `main` in, and the trap in it
 
-Marketing keeps publishing while this runs, and every page they add lands in
-`pages/` — the directory this branch is deleting. So:
+Marketing keeps publishing while this runs, and everything they add lands in
+`pages/` — a directory this branch has deleted. So:
 
 ```bash
 git checkout app-router && git merge origin/main
-npm run check:routes      # reports which router serves each route
+npm run check:routes      # every route must be served by app/[locale]
 ```
 
 The merge itself will be clean, because a new landing page is a new file. **That
-is the trap:** it lands in `pages/`, where nothing on this branch serves it, and
-git will not say a word. `check:routes` is what catches it (#133) — a route
-served by `pages/` after the sync is a route that still has to be re-created
-under `app/`.
+is the trap:** it arrives as `pages/<something>.tsx`, which this branch does not
+serve and git will not mention. `check:routes` is what catches it — it fails on
+a registry entry with no directory under `app/[locale]`, and a page under
+`pages/` is a page that still has to be re-created there, with its copy moved to
+`messages/` and its route added to `i18n/routes.json`.
 
 Sync weekly, not at the end. A month of unsynced content pages is a month of
 them discovered at once.
@@ -155,9 +156,9 @@ checks scope-disjointness before launching in parallel.
   rebase onto is the one that will be there when you merge.
 
 **Scope in this repo is unusually easy to get wrong.** Most content pages are
-genuinely disjoint (`pages/customers/adr.tsx` and `pages/blog/accountability.tsx`
-share nothing). But four files are touched by almost every *routing* change —
-`next.config.ts`, `i18n/localePaths.ts`, `pages/sitemap.xml.tsx`,
-`components/landing/Navbar.tsx` — and `i18n/translations.ts` is touched by
-almost every *copy* change. Two Issues that both add a route are **not**
-disjoint, however unrelated their pages look. Sequence them.
+genuinely disjoint (`app/[locale]/customers/adr/` and
+`app/[locale]/blog/accountability/` share nothing). But two files are touched by
+almost every change of either kind: `i18n/routes.json` by every *routing*
+change, and `messages/{en,it}.json` by every *copy* change. Two Issues that both
+add a route are **not** disjoint, however unrelated their pages look, and two
+that both add copy will conflict in the catalogue. Sequence them.
