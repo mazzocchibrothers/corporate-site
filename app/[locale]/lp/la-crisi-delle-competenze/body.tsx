@@ -1110,17 +1110,19 @@ function WhitepaperLayer() {
 
 export default function LaCrisiDelleCompetenze() {
   const [showWhitepaper, setShowWhitepaper] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       if (params.get('access') === 'true') setShowWhitepaper(true);
     }
   }, []);
 
-  if (!mounted) return null;
+  // No `mounted` gate here. This page used to return null until hydration, so
+  // the prerendered HTML held the layout shell and nothing else: no heading, no
+  // copy, no link. The gate existed only to avoid a flash for a visitor arriving
+  // with ?access=true, and showWhitepaper already defaults to false — which is
+  // the marketing page, which is what the server should render.
 
   return (
     <>
