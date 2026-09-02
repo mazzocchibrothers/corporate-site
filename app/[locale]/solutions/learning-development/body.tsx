@@ -1,7 +1,4 @@
 // @ts-nocheck
-'use client';
-
-import React from 'react';
 import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';

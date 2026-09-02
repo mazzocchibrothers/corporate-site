@@ -1,7 +1,4 @@
 // @ts-nocheck
-'use client';
-
-import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import CustomersHero from '@/components/customers/CustomersHero';
