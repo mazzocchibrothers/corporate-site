@@ -35,12 +35,12 @@ const SKILLS = [
 const BUSINESS_PAINS = [
   { group: 'businessPains', id: 'expansionHeldBack', icon: Target },
   { group: 'businessPains', id: 'storePerformance', icon: TrendingUp },
-  { group: 'businessPains', id: 'externalHiring', icon: Users },
+  { group: 'businessPains', id: 'externalHiring', icon: Layers },
 ];
 
 const HR_PAINS = [
   { group: 'hrPains', id: 'invisibleTalent', icon: Eye },
-  { group: 'hrPains', id: 'fragmentedEvaluations', icon: Layers },
+  { group: 'hrPains', id: 'fragmentedEvaluations', icon: Scale },
   { group: 'hrPains', id: 'reactiveManagement', icon: Zap },
 ];
 

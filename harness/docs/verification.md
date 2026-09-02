@@ -118,6 +118,31 @@ things fill that gap and neither is automatable:
    is the only check that would have caught a page silently serving a different
    cut of a customer story.
 
+3. **The structural comparison against the previous build**, for a mechanical
+   change to markup. The text diff proves the sentences survived and says
+   nothing about what surrounds them — and moving ~1,900 strings meant rebuilding
+   their inline tags through `t.rich` handlers, where a dropped `className` is
+   invisible to a reader of words.
+
+   Build the commit before the change into a worktree, serve it on another port,
+   and diff the two documents as a sequence of `tag.class[style]` tokens with the
+   text removed:
+
+   ```bash
+   git worktree add /tmp/before <sha>
+   cp -R node_modules /tmp/before/    # a symlink makes Turbopack panic
+   (cd /tmp/before && npm run build && PORT=3001 npm run start &)
+   ```
+
+   Do not use production as the baseline for this one: the router changed, so
+   the shell differs on every page and the signal drowns. The previous build is
+   the only baseline that isolates what you did.
+
+   It earned its keep the first time it ran: 112 of 115 pages matched, and the
+   three that did not were two customer-story icons silently swapped by a
+   hand-written id list, and a Tailwind class the Italian headline never had.
+   Every text check on those pages was green.
+
 ## Level 3 — Bilingual smoke test (required for any page or routing change)
 
 **This is the level that matters here, and it is always ×2.** A page verified

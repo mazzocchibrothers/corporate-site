@@ -59,11 +59,15 @@ export default function HeroSection() {
                 className="hero-fade-up relative text-[48px] md:text-[clamp(2.5rem,4.6vw,4rem)] font-semibold tracking-[-0.02em] text-white"
                 style={{ lineHeight: 1.08, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
               >
+                {/* Two gradient tags, not one: the English headline sets its
+                    span to md:whitespace-nowrap and the Italian one does not,
+                    and a single handler quietly gave the class to both. */}
                 {t.rich('hero.heading', {
                   l: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
                   g: (chunks) => (
                     <span className="italic font-bold gradient-text md:whitespace-nowrap">{chunks}</span>
                   ),
+                  gw: (chunks) => <span className="italic font-bold gradient-text">{chunks}</span>,
                   br: () => <br />,
                 })}
               </h1>
