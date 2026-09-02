@@ -63,16 +63,13 @@ for (const { path, text } of sources) {
   }
 }
 
-// Reported, not asserted — yet. Ten of these are open on #136, and "nobody
-// imports it" and "we stopped showing it on purpose" look identical in the
-// code: three of them are substantial marketing sections, and deleting a
-// section someone paused for a launch is not a cleanup. The day that Issue is
-// answered this becomes an assert like the one below, and the list is the
-// thing to check it against.
-if (orphans.length > 0) {
-  console.log(`[report] ${orphans.length} component(s) nothing imports — see #136:`);
-  for (const path of orphans) console.log(`  ${path}`);
-}
+assert.deepEqual(
+  orphans.map((p) => `  ${p}`),
+  [],
+  `${orphans.length} component(s) nothing imports:\n${orphans.map((p) => `  ${p}`).join('\n')}\n` +
+    'A component no page reaches still compiles, still gates, and still asks to be translated. ' +
+    'Delete it, or wire it to the page it belongs to.',
+);
 
 assert.deepEqual(
   unrendered,
@@ -82,7 +79,4 @@ assert.deepEqual(
     'nobody will see.',
 );
 
-console.log(
-  `[OK] dead code: ${components.length} components, every import rendered` +
-    (orphans.length > 0 ? `, ${orphans.length} unimported (#136)` : ''),
-);
+console.log(`[OK] dead code: ${components.length} components, all imported and all rendered`);

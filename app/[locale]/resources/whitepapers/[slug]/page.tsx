@@ -3,7 +3,7 @@
 // only page.tsx with generateStaticParams and a slug to hand down. The page
 // itself is body.tsx.
 import { NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { buildMetadata } from '@/i18n/metadata';
 import { messagesForRoute } from '@/i18n/messages';
 import { notFound } from 'next/navigation';
@@ -25,9 +25,30 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { locale } = await params;
+  const { locale, slug } = await params;
   setRequestLocale(locale);
-  return buildMetadata(ROUTE, locale);
+  const meta = await buildMetadata(ROUTE, locale);
+
+  // The registry holds one entry for N real URLs, so the canonical and the
+  // alternates come back with the segment still bracketed —
+  // /resources/whitepapers/[slug]. Every whitepaper would name a URL that does
+  // not exist as its canonical, which tells Google to index none of them.
+  // app/sitemap.ts fills the slug the same way.
+  const fill = (url: string) => url.replace('[slug]', slug);
+  const languages = Object.fromEntries(
+    Object.entries(meta.alternates?.languages ?? {}).map(([k, v]) => [k, fill(String(v))]),
+  );
+
+  // Four URLs share this route's namespace, so buildMetadata alone would give
+  // the index's title to all three whitepapers and to the index — one title on
+  // four pages, which is the defect #138 exists to remove, reintroduced.
+  const t = await getTranslations(`resources.whitepapers.items.${slug}.meta`);
+  return {
+    ...meta,
+    title: t('title'),
+    description: t('description'),
+    alternates: { canonical: fill(String(meta.alternates?.canonical)), languages },
+  };
 }
 
 export default async function Page({ params }: Props) {

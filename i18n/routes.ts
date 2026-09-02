@@ -35,6 +35,18 @@ export type Route = {
   id: string;
   /** URL per locale, no /it prefix. Absent locale = no content there. */
   paths: Partial<Record<Locale, string>>;
+  /**
+   * This route is an alternate cut of another one: `customers/eataly-2` is a
+   * second telling of `customers/eataly`, and `lp/ai-competency-newsletter` is
+   * the one-pager as the newsletter links to it.
+   *
+   * Nothing on the site links to them — /customers lists the base stories only
+   * — but they were in the sitemap with the same title as the page they are a
+   * cut of, which makes them compete with it in search rather than support it.
+   * So they keep their URL, point their canonical at the base, and leave the
+   * sitemap.
+   */
+  canonicalOf?: string;
 };
 
 export const routes: Route[] = data as Route[];
@@ -87,6 +99,10 @@ export function canonical(id: string, locale: string): string {
  */
 export const localizePath = (path: string, locale: string): string =>
   localizePathIn(routes, path, locale as Locale);
+
+/** The route a variant is a cut of, or the route itself. */
+export const canonicalRoute = (route: Route): Route =>
+  (route.canonicalOf !== undefined ? byId(route.canonicalOf) : undefined) ?? route;
 
 /** Whether a route has content in a locale — what hideInIT was guessing at. */
 export const hasLocale = (id: string, locale: string): boolean =>

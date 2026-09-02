@@ -15,6 +15,8 @@ export type Locale = 'en' | 'it';
 export type RouteLike = {
   id: string;
   paths: Partial<Record<Locale, string>>;
+  /** Set when this route is an alternate cut of another. See i18n/routes.ts. */
+  canonicalOf?: string;
 };
 
 export const BASE_URL = 'https://skillvue.ai';

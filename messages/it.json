@@ -193,7 +193,11 @@
       "text5": "Scopri Skillvue",
       "heading7": "Riduci il rischio di promuovere sulla base di <s>impressioni.</s>",
       "body11": "Integra la valutazione delle competenze nel tuo processo di valutazione per decisioni più solide e sostenibili.",
-      "cta2": "Prenota una demo"
+      "cta2": "Prenota una demo",
+      "meta": {
+        "title": "Che cos'è l'accountability e perché migliora le performance lavorative | Skillvue",
+        "description": "Quando un progetto si blocca, una scadenza slitta o un errore rimbalza tra funzioni senza che nessuno se ne faccia carico, la parola mancante è spesso una so..."
+      }
     },
     "attitude-vs-competence": {
       "whenAttitude": {
@@ -264,7 +268,11 @@
       "text5": "Scopri Skillvue",
       "heading10": "Inizia a prendere decisioni basate su <s>evidenze,</s> non impressioni.",
       "body18": "Skillvue analizza le competenze di candidati e dipendenti in modo rapido, obiettivo e su scala, grazie a una tecnologia AI proprietaria.",
-      "cta2": "Prenota una demo"
+      "cta2": "Prenota una demo",
+      "meta": {
+        "title": "Attitudine vs. Competenza: come valutare un candidato | Skillvue",
+        "description": "Dovresti assumere qualcuno che sa già fare il lavoro, o qualcuno che sembra avere il potenziale per impararlo?"
+      }
     },
     "corporate-onboarding": {
       "phases": {
@@ -345,7 +353,11 @@
       "text3": "Scopri Skillvue",
       "heading5": "Prendi decisioni di onboarding basate su <s>competenze reali.</s>",
       "body7": "Skillvue analizza le competenze in modo rapido, obiettivo e su scala, grazie a una tecnologia AI proprietaria.",
-      "cta2": "Prenota una demo"
+      "cta2": "Prenota una demo",
+      "meta": {
+        "title": "Corporate Onboarding: guida completa al processo | Skillvue",
+        "description": "Circa il 50% dei candidati selezionati si ritira prima di iniziare. Ogni onboarding fallito significa ripetere i costi di selezione, perdere tempo del manage..."
+      }
     },
     "critical-thinking": {
       "indicators": {
@@ -406,7 +418,11 @@
       "text4": "Scopri Skillvue",
       "heading9": "Distingui la percezione dalla <s>competenza reale.</s>",
       "body12": "Integra la valutazione delle competenze per decisioni organizzative più obiettive e sostenibili.",
-      "cta2": "Prenota una demo"
+      "cta2": "Prenota una demo",
+      "meta": {
+        "title": "Che cos'è il pensiero critico e come valutare questa competenza | Skillvue",
+        "description": "Il pensiero critico è una delle competenze più citate nei modelli di competenze. Eppure, quando si tratta di riconoscerlo o misurarlo, spesso diventa un'etic..."
+      }
     },
     "managerial-skills": {
       "skills": {
@@ -476,7 +492,11 @@
       "text3": "Scopri Skillvue",
       "heading6": "Prendi decisioni di leadership basate su <s>dati, non impressioni.</s>",
       "body7": "Valuta il potenziale manageriale con verification strutturati basati su evidenze comportamentali.",
-      "cta2": "Prenota una demo"
+      "cta2": "Prenota una demo",
+      "meta": {
+        "title": "Competenze manageriali: cosa sono e come identificarle | Skillvue",
+        "description": "Promuovere un buon professionista a manager è una delle decisioni più delicate che si possano prendere. Le competenze richieste cambiano radicalmente."
+      }
     },
     "negotiation-techniques": {
       "techniques": {
@@ -555,6 +575,10 @@
         "beiMethodology": "Metodologia BEI",
         "objectiveProfiles": "Profili oggettivi",
         "skillsBasedHiring": "Skills-based hiring"
+      },
+      "meta": {
+        "title": "Le 7 tecniche di negoziazione più efficaci al lavoro | Skillvue",
+        "description": "Per anni abbiamo pensato alla negoziazione come a qualcosa di commerciale. In realtà, negozi ogni giorno al lavoro: priorità, budget, obiettivi, condizioni."
       }
     },
     "newsletter-july-2026": {
@@ -783,6 +807,10 @@
         "beiMethodology": "Metodologia BEI",
         "objectiveProfiles": "Profili oggettivi",
         "biasReduction": "Riduzione dei bias"
+      },
+      "meta": {
+        "title": "Gli 8 bias di selezione più comuni (e come evitarli) | Skillvue",
+        "description": "Hai mai scartato un candidato nei primi cinque minuti di un colloquio? O deciso quasi subito che era \"quello giusto\"?"
       }
     },
     "social-skills": {
@@ -848,7 +876,11 @@
       "text3": "Scopri Skillvue",
       "heading7": "Valuta l'efficacia sociale reale, non la <s>simpatia percepita.</s>",
       "body9": "Prendi decisioni basate su competenze sociali reali, non su impressioni.",
-      "cta2": "Prenota una demo"
+      "cta2": "Prenota una demo",
+      "meta": {
+        "title": "Social Skills: cosa sono e perché contano nel lavoro | Skillvue",
+        "description": "Le social skill non riguardano l'essere socievoli. Riguardano il modo in cui una persona si comporta nelle interazioni professionali, soprattutto quando il c..."
+      }
     },
     "talent-acquisition": {
       "differences": {
@@ -915,7 +947,11 @@
       "text3": "Scopri Skillvue",
       "heading5": "Costruisci una talent pipeline basata su <s>competenze reali.</s>",
       "body6": "Migliora la quality-of-hire con skill verification strutturati e oggettivi.",
-      "cta2": "Prenota una demo"
+      "cta2": "Prenota una demo",
+      "meta": {
+        "title": "Talent Acquisition: cos'è, come funziona, perché conta | Skillvue",
+        "description": "Quante assunzioni, pur essendo \"giuste sulla carta,\" iniziano a mostrare crepe dopo pochi mesi? Il ruolo è coperto, il CV era coerente, il colloquio è andato..."
+      }
     },
     "newsletter-august-2026": {
       "tag": "Newsletter",
@@ -1042,6 +1078,10 @@
         "title": "Skillvue — La newsletter di agosto",
         "description": "Una nuova customer story con Gruppo Unicomm, un approfondimento sulle sfide organizzative della GDO e i nostri prossimi eventi in Europa."
       }
+    },
+    "meta": {
+      "title": "Blog & Approfondimenti | Skillvue",
+      "description": "Approfondimenti, ricerche e prospettive sulla talent intelligence, AI nelle risorse umane e il futuro delle decisioni sulle persone."
     }
   },
   "book-meeting": {
@@ -1120,24 +1160,6 @@
     "cta6": "La vita in Skillvue"
   },
   "customers": {
-    "customerHighlights": {
-      "highlights": {
-        "timeHire": {
-          "metricLabel": "time-to-hire",
-          "role": "TA & EB Manager, Carrefour Italia"
-        }
-      },
-      "heading": "Fatti, non <span>promesse.</span>",
-      "body": "Scopri come le principali aziende europee prendono decisioni sul talento con fiducia."
-    },
-    "toriesShowcase": {
-      "text": "Storie Clienti",
-      "heading": "See how<br></br>they <span>crescere.</span>",
-      "body": "Le organizzazioni usano Skillvue per prendere decisioni sul talento con fiducia, eliminando le supposizioni e valorizzando le proprie persone. Queste sono le loro storie.",
-      "cta": "Esplora tutte le storie",
-      "body2": "has enabled me to turn that formerly manual process into a very fine tune <span>machine.</span>",
-      "text2": "<span>Alessandro Mazzarol</span><span2>TA & EB Manager, Carrefour</span2>"
-    },
     "finalCTA": {
       "badges": {
         "gdprCompliant": "Conforme al GDPR",
@@ -1202,21 +1224,6 @@
       "body2": "Nessuna storia corrisponde ancora a questi filtri.",
       "body3": "Potremmo avere un caso rilevante da condividere in privato.",
       "cta": "Book a demo"
-    },
-    "featuredStories": {
-      "stories": {
-        "carrefour": {
-          "headline": "35% in meno di giorni per assumere. 30% di assunzioni migliori. Zero personale aggiuntivo.",
-          "quote": "Skillvue ci ha permesso di rafforzare la nostra People Strategy, rendendo la mappatura delle competenze più rapida, efficace e data-driven.",
-          "title": "TA & EB Manager, Carrefour Italia"
-        },
-        "ins-mercato": {
-          "headline": "~900 persone valutate. Una pipeline di Store Manager costruita dall interno."
-        }
-      },
-      "heading": "Fatti, non <span>promesse.</span>",
-      "body": "Scopri come le principali aziende europee prendono decisioni sul talento con fiducia.",
-      "cta": "Leggi la storia completa"
     },
     "explore": {
       "industries": {
@@ -4864,40 +4871,51 @@
         "fillFormDownload": "Compila il modulo per scaricare la guida."
       },
       "titleLead": "Il tuo prossimo store manager è",
-      "titleHighlight": "già nei tuoi negozi."
+      "titleHighlight": "già nei tuoi negozi.",
+      "meta": {
+        "title": "Il tuo prossimo store manager è già nei tuoi negozi. | Skillvue",
+        "description": "Scopri come una valutazione oggettiva delle competenze rende più efficaci le decisioni di selezione, promozione e sviluppo del personale."
+      }
     },
     "ai-act-banking": {
       "meta": {
-        "title": "AI Act-compliant nel Banking: da obbligo regolatorio a vantaggio competitivo | Skillvue"
+        "title": "AI Act-compliant nel Banking: da obbligo regolatorio a vantaggio competitivo | Skillvue",
+        "description": "Entro il 2 agosto 2026 ogni sistema AI usato per screening e decisioni di assunzione dovrà essere conforme all’EU AI Act. Come arrivarci con un vantaggio, non con una sanzione."
       }
     },
     "arte-di-misurare-allineamento": {
       "meta": {
-        "title": "L'arte di misurare l'allineamento al brand — Skillvue"
+        "title": "L'arte di misurare l'allineamento al brand — Skillvue",
+        "description": "La valutazione comportamentale nella selezione del personale nel lusso: come misurare l’allineamento al brand prima del primo colloquio."
       }
     },
     "career-aspiration-insurance": {
       "meta": {
-        "title": "Career Aspiration Intelligence nel settore assicurativo | Skillvue"
+        "title": "Career Aspiration Intelligence nel settore assicurativo | Skillvue",
+        "description": "Un’analisi completa su come il settore assicurativo può trasformare la retention del management misurando la variabile più predittiva: le aspirazioni di carriera."
       },
       "whitepaper": {
         "meta": {
-          "title": "Career Aspiration Intelligence nel settore assicurativo | Skillvue"
+          "title": "Career Aspiration Intelligence nel settore assicurativo — Whitepaper | Skillvue",
+          "description": "Perché misurare le aspirazioni aiuta a prevedere chi rimane e chi eccelle. Whitepaper Skillvue per il settore assicurativo."
         }
       }
     },
     "hidden-cost-recruiting": {
       "meta": {
-        "title": "Hidden Cost of Non-Predictive Recruiting | Skillvue"
+        "title": "Hidden Cost of Non-Predictive Recruiting | Skillvue",
+        "description": "An operational guide for CHROs and distribution leaders who must decide, today, how to select the people who will build tomorrow’s agency network."
       }
     },
     "il-costo-invisibile": {
       "meta": {
-        "title": "Il costo invisibile della selezione non predittiva | Skillvue"
+        "title": "Il costo invisibile della selezione non predittiva | Skillvue",
+        "description": "Una guida operativa per chi deve decidere come selezionare, oggi, le persone che costruiranno la rete agenziale di domani."
       },
       "whitepaper": {
         "meta": {
-          "title": "Il costo invisibile della selezione non predittiva | Skillvue"
+          "title": "Il costo invisibile della selezione non predittiva — Whitepaper | Skillvue",
+          "description": "Come identificare e misurare il profilo comportamentale dell’agente assicurativo ibrido ad alta performance. Whitepaper Skillvue."
         }
       }
     },
@@ -4909,17 +4927,23 @@
     },
     "la-crisi-delle-competenze": {
       "meta": {
-        "title": "La crisi delle competenze obsolete nelle banche europee | Skillvue"
+        "title": "La crisi delle competenze obsolete nelle banche europee | Skillvue",
+        "description": "Come costruire un sistema di talent intelligence continua nel settore bancario, contro l’obsolescenza delle competenze."
       }
     },
     "scalare-l-eccellenza": {
       "meta": {
-        "title": "Scalare l'eccellenza senza perdere l'esclusività — Skillvue"
+        "title": "Scalare l'eccellenza senza perdere l'esclusività — Skillvue",
+        "description": "AI verification per la selezione stagionale ad alto volume nel lusso: scalare senza perdere l’esclusività."
       }
     }
   },
   "privacy-policy": {
-    "cta": "Indietro"
+    "cta": "Indietro",
+    "meta": {
+      "title": "Informativa sul trattamento dei dati personali | Skillvue",
+      "description": "Sito Web — resa ai sensi dell’art. 13 del Regolamento UE 2016/679 (GDPR)."
+    }
   },
   "product-overview": {
     "hero": {
@@ -5068,10 +5092,6 @@
       "body2": "Se ha un'API, ci possiamo integrare",
       "systems": "Ci integriamo nativamente con 100+ tra i principali <acr>ATS</acr> · <acr>LMS</acr> · <acr>LXP</acr> · <acr>PMS</acr> · <acr>HRIS</acr>"
     },
-    "platformInfographic": {
-      "heading": "From signals to decisions. One connected flow.",
-      "body": "Skillvue gathers signals from candidates, workforce, and market data, processes them through AI-powered skills intelligence, integrates with your core HR systems, and enables every talent decision with objective, defensible data."
-    },
     "cta": {
       "heading": "Pronto a rendere ogni decisione sul talento <span>oggettiva?</span>",
       "text": "Pronto per esplorare",
@@ -5168,6 +5188,10 @@
           "title": "Round Seed di 5 milioni per Skillvue, la startup che sta cambiando la valutazione delle competenze con l’AI",
           "url": "https://drive.google.com/file/d/1BAfx-JMQ5KjI9EVY3HfY6yK8P4sn4o66/view?usp=sharing"
         }
+      },
+      "meta": {
+        "title": "Skillvue sui media",
+        "description": "Scopri come le principali testate internazionali raccontano l'ascesa dell'intelligenza dei talenti potenziata dall'intelligenza artificiale."
       }
     },
     "whitepapers": {
@@ -5219,6 +5243,10 @@
               "value": "1B+",
               "label": "persone nel mondo dovranno riqualificarsi nei prossimi cinque anni"
             }
+          },
+          "meta": {
+            "title": "Beyond Skills. Misurare aspirazioni e motivazione | Skillvue",
+            "description": "Come misurare le aspirazioni di carriera e la motivazione per predire il successo lavorativo a lungo termine."
           }
         },
         "future-leaders": {
@@ -5267,6 +5295,10 @@
               "value": "78%",
               "label": "delle aziende fatica a reclutare, pur aspettandosi una crescita dell'organico"
             }
+          },
+          "meta": {
+            "title": "Le competenze dei leader del futuro | Skillvue",
+            "description": "Ricerche, dati e consigli pratici per capire come sta cambiando il mondo del lavoro e preparare la tua People Strategy."
           }
         },
         "sales-network-turnover": {
@@ -5312,6 +5344,10 @@
               "value": "63%",
               "label": "delle perdite di produttività avvengono prima che il dipendente se ne vada effettivamente"
             }
+          },
+          "meta": {
+            "title": "Turnover nelle reti vendita | Skillvue",
+            "description": "Numeri, cause profonde e strategie basate sugli verification per combattere il turnover nelle reti commerciali."
           }
         }
       },
@@ -5344,26 +5380,14 @@
         "body3": "Prenota una demo con il nostro team e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
         "cta3": "Prenota una Demo",
         "insideHeading": "Cosa <span>Contiene</span>"
+      },
+      "meta": {
+        "title": "White Paper & Report | Skillvue",
+        "description": "Ricerche e approfondimenti per ripensare il modo in cui selezioni, sviluppi e gestisci il talento. Esplora la nostra libreria e scarica le risorse che ti ser..."
       }
     }
   },
   "science": {
-    "aiScienceTogether": {
-      "principles": {
-        "betterEvidence": {
-          "title": "Evidenze migliori",
-          "desc": "L'AI sblocca evidenze più ricche e dirette sulle competenze attraverso scenari realistici, task interattivi e molteplici modalità di risposta che riflettono come si lavora realmente."
-        },
-        "rigorScale": {
-          "title": "Rigore su scala",
-          "desc": "Integriamo la migliore scienza dell'verification nel prodotto per permetterti di scalare con rigore. Costrutti chiari, design centrato sulle evidenze e scoring controllato impediscono all'AI di introdurre bias."
-        },
-        "continuousEvolution": {
-          "title": "Evoluzione continua",
-          "desc": "Dato che competenze e ruoli evolvono rapidamente, la misurazione deve evolvere con loro. Monitoraggio continuo e iterazione guidata dagli scienziati sono un must per rendere le nostre valutazioni accurate e difendibili."
-        }
-      }
-    },
     "methodologyLifecycle": {
       "steps": {
         "defineConstructs": {
@@ -5467,35 +5491,6 @@
       "body": "Scopri come la scienza si traduce in migliori decisioni sul talento",
       "cta": "Prenota una Demo"
     },
-    "faq": {
-      "faqs": {
-        "howDoesSkillvue": {
-          "q": "Come fa Skillvue a garantire la validità degli verification?",
-          "a": "Ogni verification è costruito su costrutti validati di psicologia I/O, revisionato da esperti di settore, testato con partecipanti reali e monitorato continuamente per affidabilità ed equità. Pubblichiamo report interni di validità per ogni implementazione."
-        },
-        "whatRoleDoes": {
-          "q": "Che ruolo ha l'AI nel design e nello scoring degli verification?",
-          "a": "L'AI genera item di verification contestualizzati, valuta le risposte con evidenze trasparenti e identifica pattern su scala. Ma ogni output dell'AI è governato da vincoli psicometrici e soggetto a revisione umana."
-        },
-        "howDoesSkillvue2": {
-          "q": "Come gestisce Skillvue i bias negli verification?",
-          "a": "La valutazione dei bias è integrata in ogni fase: design degli item, test pilota, validazione dello scoring e monitoraggio continuo. Testiamo il funzionamento differenziale degli item tra gruppi demografici e correggiamo gli item che mostrano bias sistematici."
-        },
-        "whatLanguagesSupported": {
-          "q": "Quali lingue sono supportate?",
-          "a": "Gli verification Skillvue sono disponibili in oltre 50 lingue, con adattamento culturale integrato nel processo di design degli item per garantire coerenza di misurazione tra le diverse regioni."
-        },
-        "howDoesSkillvue3": {
-          "q": "Come fa Skillvue ad essere compliant con l'AI Act Europeo?",
-          "a": "Skillvue è costruito dall'inizio per poter essere compliant con le normative europee: scoring trasparente, controllo umano, monitoraggio continuo, e completa apertura audit. Garantiamo l'utilizzo di documentazione e strumenti di governance dei processi che rispettano i requisiti dei sistemi AI ad alto rischio."
-        },
-        "canVerificationsCustomized": {
-          "q": "Gli verification possono essere customizzati sul modello di competenze?",
-          "a": "Sì. Ogni progetto parte dal tuo modello di competenze. Mappiamo il tuo framework di costrutti validati, generiamo item contestualizzati e li validiamo prima di andare live con l'verification."
-        }
-      },
-      "heading": "Q&A <span></span>"
-    },
     "hero": {
       "heading": "Scienza su cui puoi<br></br>basare<br></br><span>le tue decisioni</span>",
       "cta": "Prenota una Demo",
@@ -5590,10 +5585,6 @@
   },
   "solutions": {
     "internal-mobility": {
-      "imcta": {
-        "heading": "Pronto a sbloccare il talento che <span>hai già?</span>",
-        "cta": "Prenota una Demo"
-      },
       "imHero": {
         "heading": "La tua prossima migliore assunzione potrebbe già <span>work for you.</span>",
         "body": "Skillvue mappa competenze e potenziale in tutta la tua forza lavoro, rendendo visibile il talento interno, le decisioni di successione data-driven e i percorsi di mobilità trasparenti.",
@@ -5615,16 +5606,6 @@
           }
         },
         "heading": "Tre pilastri di <span>mobilità intelligente</span>"
-      },
-      "imImpact": {
-        "text": "Storia Cliente",
-        "body": "Farmaceutico",
-        "text2": "Sfida",
-        "body2": "Mappatura del talento interno per identificare candidati alla successione per ruoli di leadership critici in più business unit.",
-        "text3": "Risultato",
-        "body3": "Visibilità completa del talento nell'organizzazione. I piani di successione data-driven ora coprono il 100% dei ruoli critici con candidati pronti e quasi pronti identificati.",
-        "cta": "Leggi la storia completa",
-        "body4": "ruoli critici con<br></br>copertura successione"
       },
       "imProblem": {
         "pains": {
@@ -5670,10 +5651,6 @@
       "text2": "hai già?"
     },
     "learning-development": {
-      "ldcta": {
-        "heading": "Pronto a dimostrare l'impatto del L&D con <span>dati?</span>",
-        "cta": "Prenota una Demo"
-      },
       "ldHero": {
         "heading": "Smetti di finanziare formazione generica.<br></br>Concentrati sulle <span>aree più critiche.</span>",
         "body": "Skillvue fornisce ai leader L&D dati oggettivi e misurabili su dove si trovano le vere aree da migliorare nelle competenze della popolazione aziendale, lavorando a livello individuale, di team e organizzativo per far sì che ogni investimento formativo sia mirato, misurabile e allineato all'impatto aziendale.",
@@ -5773,10 +5750,6 @@
       "text2": "dati?"
     },
     "performance-management": {
-      "pmcta": {
-        "heading": "Pronto a rendere le valutazioni di performance <span>oggettiva?</span>",
-        "cta": "Prenota una Demo"
-      },
       "pmHero": {
         "heading": "Se i risultati si misurano con i KPI, perché le competenze si misurano ancora con le <span>opinioni?</span>",
         "body": "Skillvue integra valutazioni oggettive delle competenze nei tuoi cicli di performance riducendo i bias, migliorando la calibrazione e dando a ogni manager un punto di partenza basato sui dati prima di scrivere una singola review.",
@@ -5793,16 +5766,6 @@
         "body4": "I soli dati oggettivi possono mancare il livello umano. il contesto dietro un risultato",
         "heading3": "Review Umane + Skillvue",
         "body5": "Combinare metodi di valutazione soggettivi con le valutazioni Skillvue porta oggettività senza compromettere contesto e sfumature."
-      },
-      "pmImpact": {
-        "text": "Storia Cliente",
-        "body": "Servizi Finanziari",
-        "text2": "Sfida",
-        "body2": "Introduzione della valutazione oggettiva delle competenze nei cicli di performance in più paesi e business unit.",
-        "text3": "Risultato",
-        "body3": "Un linguaggio del talento unificato tra selezione, performance e sviluppo per la prima volta. Le valutazioni ora informano le decisioni dallo screening alla successione.",
-        "cta": "Leggi la storia completa",
-        "body4": "modules unified across<br></br>hiring, performance & development"
       },
       "pmProblem": {
         "pains": {
@@ -5850,10 +5813,6 @@
       "text2": "oggettiva?"
     },
     "project-resourcing": {
-      "prcta": {
-        "heading": "Pronto a gestire progetti con <span>fiducia?</span>",
-        "cta": "Prenota una Demo"
-      },
       "prConsulting": {
         "points": {
           "utilizationOptimization": {
@@ -5922,28 +5881,6 @@
       "text2": "fiducia?"
     },
     "talent-acquisition": {
-      "tacta": {
-        "heading": "Pronto ad assumere con <span>fiducia?</span>",
-        "cta": "Prenota una Demo"
-      },
-      "taExperience": {
-        "heading": "Esperienza Candidato",
-        "body": "Veloce, senza attriti, progettata per incontrare le persone dove sono.",
-        "heading2": "Esperienza HR",
-        "body2": "Dall'automazione all'insight.",
-        "candidateItems": {
-          "n530Minutes": "5-30 minutes depending on funnel stage",
-          "audioVideoOr": "Risposte audio, video o scritte",
-          "availableViaWeb": "Disponibile via web app e WhatsApp",
-          "brandedMultilingualMobile": "Personalizzata, multilingue, mobile-first"
-        },
-        "hrItems": {
-          "hiringProcessDocs": "Documentazione del processo di selezione generata automaticamente",
-          "suitabilityFilteringRanking": "Filtraggio idoneità, ranking, benchmarking con piena spiegabilità",
-          "scoringEvidenceAnswer": "Scoring con evidenze: risposta, giustificazione, ancoraggio comportamentale",
-          "n100AtsIntegrations": "100+ ATS integrations — data flows where you already work"
-        }
-      },
       "taFunnel": {
         "stages": {
           "pre-screening": {
@@ -6069,23 +6006,6 @@
         "body": "Skillvue sostituisce i giudizi soggettivi con la scienza su scala. Con le nostre valutazioni potenziate da AI e personalizzate per i tuoi ruoli e modello di leadership identifichi i migliori candidati, riduci il turnover iniziale e rendi ogni decisione di assunzione difendibile.",
         "cta": "Prenota una Demo"
       },
-      "taHowSolves": {
-        "stages": {
-          "preScreening": {
-            "title": "Pre-screening",
-            "subtitle": "Top del funnel"
-          },
-          "screening": {
-            "title": "Screening",
-            "subtitle": "Metà funnel"
-          },
-          "depth": {
-            "title": "Approfondimento",
-            "subtitle": "Fine funnel"
-          }
-        },
-        "heading": "Skillvue aggiunge valore in ogni fase del <span>funnel di selezione</span>"
-      },
       "taImpact": {
         "kpis": {
           "badHireRate": {
@@ -6104,39 +6024,11 @@
         "heading": "Impatto misurabile su ogni metrica di assunzione che <span>conta</span>"
       },
       "taPlaybook": {
-        "rows": {
-          "seniorLeadership": {
-            "role": "Senior / leadership",
-            "skillvue": "Attitudes + Soft + Potential"
-          },
-          "managers": {
-            "role": "Managers",
-            "skillvue": "Attitude + Soft + Potential + Hard"
-          },
-          "employees": {
-            "role": "Employees",
-            "skillvue": "Suitability + Attitudes + Soft + Potential + Hard"
-          },
-          "fieldOperators": {
-            "role": "Field operators",
-            "skillvue": "Suitability + Soft + Hard"
-          }
-        },
-        "heading": "Skillvue is a partner for the recruitment journey",
-        "body": "Skillvue playbook recruitment process",
         "header": {
           "step1": "Step 1",
           "step2": "Step 2",
           "step3": "Step 3",
           "step4": "Step N"
-        },
-        "stepLabels": {
-          "cLevel": "C-level",
-          "hr": "HR",
-          "hrManager": "HR + manager",
-          "hrSenior": "HR + senior",
-          "manager": "Manager",
-          "senior": "Senior"
         }
       },
       "taProblem": {
@@ -6184,6 +6076,12 @@
       },
       "text": "Pronto ad assumere con",
       "text2": "fiducia?"
+    }
+  },
+  "privacy-policy-algo": {
+    "meta": {
+      "title": "Trattamento dati personali | Skillvue",
+      "description": "Le informative di Skillvue sul trattamento dei dati personali — Sito Web e Software Skillvue."
     }
   }
 }

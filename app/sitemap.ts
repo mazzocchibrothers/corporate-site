@@ -23,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const route of routes) {
+    // An alternate cut of another story canonicalises to it, and a sitemap
+    // entry for a URL that says "index the other one" is a contradiction Google
+    // has to resolve on its own. Seven of these existed, three of them sharing
+    // a title with the page they are a cut of.
+    if (route.canonicalOf !== undefined) continue;
+
     const languages = alternatesFor(route);
 
     // A dynamic route's registry entry stands for N real URLs. Substituting the

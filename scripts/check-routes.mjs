@@ -124,6 +124,53 @@ for (const path of appSet) {
   );
 }
 
+// ── Every route has a title and a description, and no two share one ────────
+// 16 routes shipped no <title> at all (#138) — every blog post among them, the
+// pages most likely to be found by search rather than by navigation. A page
+// with no title shows the URL in the tab and lets Google write its own from the
+// body. buildMetadata used to guard against the gap; this is what replaced the
+// guard.
+//
+// The duplicate check is the other half: one title on four pages is the same
+// defect wearing a different hat, and the three whitepaper detail pages would
+// have inherited the index's title without noticing.
+const namespaceOf = (id) =>
+  id === 'index'
+    ? 'home'
+    : id.split('/').filter((s) => !/^\[.*\]$/.test(s)).join('.');
+
+for (const locale of ['en', 'it']) {
+  const catalogue = JSON.parse(readFileSync(join(ROOT, `messages/${locale}.json`), 'utf8'));
+  const at = (dotted) => dotted.split('.').reduce((o, k) => (o ?? {})[k], catalogue);
+  const seen = new Map();
+
+  for (const route of routes) {
+    if (route.paths[locale] === undefined) continue;
+    const meta = at(`${namespaceOf(route.id)}.meta`);
+
+    assert.ok(
+      meta?.title && meta?.description,
+      `Route '${route.id}' has no ${locale} meta.title/meta.description in messages/${locale}.json.\n` +
+        'A page with no title shows its URL in the browser tab and lets Google write one from the ' +
+        'body. Add it under the route namespace, not to the page.',
+    );
+
+    // The dynamic route is N pages behind one registry entry; each one titles
+    // itself from its own item, so the shared namespace title is the index's.
+    if (route.id.includes('[')) continue;
+    // An alternate cut is allowed to share its base's title: it canonicalises
+    // to it and is not in the sitemap, so the two do not compete.
+    if (route.canonicalOf !== undefined) continue;
+
+    assert.ok(
+      !seen.has(meta.title),
+      `Routes '${seen.get(meta.title)}' and '${route.id}' share the ${locale} title ` +
+        `'${meta.title}'. Two pages with one title compete with each other in search results.`,
+    );
+    seen.set(meta.title, route.id);
+  }
+}
+
 // ── Structural invariants ──────────────────────────────────────────────────
 const ids = routes.map((r) => r.id);
 const dupIds = ids.filter((id, i) => ids.indexOf(id) !== i);

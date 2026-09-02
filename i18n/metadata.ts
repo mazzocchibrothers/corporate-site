@@ -13,7 +13,7 @@
 
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { routes } from './routes';
+import { canonicalRoute, routes } from './routes';
 import { namespaceOf } from './messages';
 import { alternatesFor, urlFor, type Locale } from './urls';
 
@@ -36,7 +36,11 @@ export async function buildMetadata(routeId: string, locale: string): Promise<Me
     );
   }
 
-  const canonical = urlFor(route, locale as Locale);
+  // An alternate cut points at the story it is a cut of: same customer, same
+  // headline, a different telling, and nothing on the site links to it. Left
+  // alone it competed with the page it supports.
+  const indexed = canonicalRoute(route);
+  const canonical = urlFor(indexed, locale as Locale) ?? urlFor(route, locale as Locale);
   if (!canonical) {
     // The page rendered in a locale its own registry entry says it does not
     // serve. That is a routing bug upstream, and emitting a canonical pointing
@@ -49,15 +53,14 @@ export async function buildMetadata(routeId: string, locale: string): Promise<Me
 
   const t = await getTranslations(`${namespaceOf(routeId)}.meta`);
 
-  // 16 routes have no meta in the catalogue because they have no <title> on the
-  // site today either — the blog posts, the whitepaper pages, /privacy-policy
-  // and /resources/press ship a document with no title at all (#138). Without
-  // this guard next-intl would fill the gap with the key path itself, and
-  // 'blog.accountability.meta.title' in a search result is worse than the blank
-  // it replaces.
+  // No guard on t.has any more: every route has a title and a description in
+  // both locales, and scripts/check-routes.mjs fails if one loses them. While
+  // 16 routes had none (#138) this returned a partial object rather than let
+  // next-intl fill the gap with the key path — 'blog.accountability.meta.title'
+  // in a search result is worse than the blank it replaces.
   return {
-    ...(t.has('title') ? { title: t('title') } : {}),
-    ...(t.has('description') ? { description: t('description') } : {}),
-    alternates: { canonical, languages: alternatesFor(route) },
+    title: t('title'),
+    description: t('description'),
+    alternates: { canonical, languages: alternatesFor(indexed) },
   };
 }

@@ -36,11 +36,16 @@ const nextConfig: NextConfig = {
   // translates them. Adding a slug to i18n/routes.json is the whole change.
   async redirects() {
     return routes
-      .filter((r) => r.paths.en !== undefined && r.paths.it !== undefined)
-      .filter((r) => r.paths.en !== r.paths.it)
-      .map((r) => ({
-        source: `/it${r.paths.en}`,
-        destination: `/it${r.paths.it}`,
+      .flatMap((r) => {
+        const { en, it } = r.paths as { en?: string; it?: string };
+        return en !== undefined && it !== undefined && en !== it ? [{ en, it }] : [];
+      })
+      .map(({ en, it }) => ({
+        // The registry writes a dynamic segment as [slug]; Next's matcher wants
+        // :slug. Without this the one dynamic route's redirect silently never
+        // matches, and its old Italian URLs fall through to next-intl's 307.
+        source: `/it${en.replace(/\[(\w+)\]/g, ':$1')}`,
+        destination: `/it${it.replace(/\[(\w+)\]/g, ':$1')}`,
         permanent: true,
       }));
   },

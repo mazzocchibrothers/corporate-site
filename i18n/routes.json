@@ -3,7 +3,7 @@
     "id": "about",
     "paths": {
       "en": "/about",
-      "it": "/about"
+      "it": "/chi-siamo"
     }
   },
   {
@@ -101,7 +101,7 @@
     "id": "careers",
     "paths": {
       "en": "/careers",
-      "it": "/careers"
+      "it": "/lavora-con-noi"
     }
   },
   {
@@ -123,7 +123,8 @@
     "paths": {
       "en": "/customers/adr-2",
       "it": "/clienti/adr-2"
-    }
+    },
+    "canonicalOf": "customers/adr"
   },
   {
     "id": "customers/carrefour",
@@ -158,14 +159,16 @@
     "paths": {
       "en": "/customers/eataly-2",
       "it": "/clienti/eataly-2"
-    }
+    },
+    "canonicalOf": "customers/eataly"
   },
   {
     "id": "customers/eataly-3",
     "paths": {
       "en": "/customers/eataly-3",
       "it": "/clienti/eataly-3"
-    }
+    },
+    "canonicalOf": "customers/eataly"
   },
   {
     "id": "customers/europ-assistance",
@@ -179,7 +182,8 @@
     "paths": {
       "en": "/customers/europ-assistance-2",
       "it": "/clienti/europ-assistance-2"
-    }
+    },
+    "canonicalOf": "customers/europ-assistance"
   },
   {
     "id": "customers/fidia-farmaceutici",
@@ -207,14 +211,16 @@
     "paths": {
       "en": "/customers/mediaset-1",
       "it": "/clienti/mediaset-1"
-    }
+    },
+    "canonicalOf": "customers/mediaset"
   },
   {
     "id": "customers/mediaset-2",
     "paths": {
       "en": "/customers/mediaset-2",
       "it": "/clienti/mediaset-2"
-    }
+    },
+    "canonicalOf": "customers/mediaset"
   },
   {
     "id": "customers/subdued",
@@ -255,7 +261,8 @@
     "paths": {
       "en": "/lp/ai-competency-newsletter",
       "it": "/lp/ai-competency-newsletter"
-    }
+    },
+    "canonicalOf": "lp/ai-competency"
   },
   {
     "id": "lp/arte-di-misurare-allineamento",
@@ -336,7 +343,7 @@
     "id": "privacy-policy",
     "paths": {
       "en": "/privacy-policy",
-      "it": "/privacy-policy"
+      "it": "/privacy"
     }
   },
   {
@@ -349,70 +356,70 @@
     "id": "product-overview",
     "paths": {
       "en": "/product-overview",
-      "it": "/product-overview"
+      "it": "/piattaforma"
     }
   },
   {
     "id": "resources/press",
     "paths": {
       "en": "/resources/press",
-      "it": "/resources/press"
+      "it": "/risorse/stampa"
     }
   },
   {
     "id": "resources/whitepapers",
     "paths": {
       "en": "/resources/whitepapers",
-      "it": "/resources/whitepapers"
+      "it": "/risorse/whitepaper"
     }
   },
   {
     "id": "resources/whitepapers/[slug]",
     "paths": {
       "en": "/resources/whitepapers/[slug]",
-      "it": "/resources/whitepapers/[slug]"
+      "it": "/risorse/whitepaper/[slug]"
     }
   },
   {
     "id": "science",
     "paths": {
       "en": "/science",
-      "it": "/science"
+      "it": "/scienza"
     }
   },
   {
     "id": "solutions/internal-mobility",
     "paths": {
       "en": "/solutions/internal-mobility",
-      "it": "/solutions/internal-mobility"
+      "it": "/soluzioni/mobilita-interna"
     }
   },
   {
     "id": "solutions/learning-development",
     "paths": {
       "en": "/solutions/learning-development",
-      "it": "/solutions/learning-development"
+      "it": "/soluzioni/formazione-e-sviluppo"
     }
   },
   {
     "id": "solutions/performance-management",
     "paths": {
       "en": "/solutions/performance-management",
-      "it": "/solutions/performance-management"
+      "it": "/soluzioni/performance-management"
     }
   },
   {
     "id": "solutions/project-resourcing",
     "paths": {
       "en": "/solutions/project-resourcing",
-      "it": "/solutions/project-resourcing"
+      "it": "/soluzioni/project-resourcing"
     }
   },
   {
     "id": "solutions/talent-acquisition",
     "paths": {
       "en": "/solutions/talent-acquisition",
-      "it": "/solutions/talent-acquisition"
+      "it": "/soluzioni/talent-acquisition"
     }
   }
 ]
