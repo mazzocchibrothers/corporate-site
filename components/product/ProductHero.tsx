@@ -4,9 +4,17 @@ import React, { useState, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+
+// lottie-react is 84 KB gzipped — a third of this page's JavaScript, and the
+// heaviest chunk on the site. It cannot draw anything until the animation JSON
+// comes back from lottielab's CDN below, so loading it with the page buys
+// nothing: it is dead weight on the critical path of the one route that has it.
+// ssr:false because the player touches the DOM on mount and the page is
+// prerendered.
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 // The hero animation has text baked into it, so there is one per language.
 // Both URLs live in the catalogue with the copy they belong to — an asset that
