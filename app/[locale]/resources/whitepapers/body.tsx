@@ -2,10 +2,10 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { whitepapers } from '@/data/whitepapers';
@@ -62,7 +62,7 @@ export default function WhitepapersPage() {
         {/* Hero */}
         <section className="relative pt-[80px] min-h-screen flex items-center">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+            <Reveal duration={0.7}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.25em] uppercase mb-8 block">{t('text')}</span>
               <h1 className="font-semibold text-white/95 mb-8 text-[48px] md:text-[64px]" style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}>{t.rich('heading', {
                 br: () => <br />,
@@ -81,7 +81,7 @@ export default function WhitepapersPage() {
                   {t('cta')}
                 </a>
               </Button>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
@@ -91,12 +91,11 @@ export default function WhitepapersPage() {
             {(() => {
               const renderCard = (w, i) => {
                 return (
-                  <motion.div
+                  <Reveal
+                    y={20}
+                    delay={i * 0.1}
                     key={w.slug}
                     className="group cursor-pointer flex flex-col h-full"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
                     onClick={() => { router.push(`/resources/whitepapers/${w.slug}`); window.scrollTo(0, 0); }}
                   >
                     {/* Cover image in a rounded container */}
@@ -140,7 +139,7 @@ export default function WhitepapersPage() {
                     <span className="text-[14px] font-semibold text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
                       {labels('read')} <ArrowRight className="h-4 w-4" />
                     </span>
-                  </motion.div>
+                  </Reveal>
                 );
               };
               return (
@@ -157,7 +156,7 @@ export default function WhitepapersPage() {
         {/* Bottom CTA */}
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+            <Reveal duration={0.7}>
               <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-semibold text-white/90 mb-4 leading-[1.2] max-w-2xl mx-auto">{t('heading2')}</h2>
               <p className="text-[16px] text-white/[0.45] mb-8 max-w-xl mx-auto">{t('body2')}</p>
               <Button
@@ -165,7 +164,7 @@ export default function WhitepapersPage() {
                 variant="primary"
                 mode="dark"
               >{t('cta2')}</Button>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
       <Footer />

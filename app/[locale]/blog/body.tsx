@@ -2,10 +2,10 @@
 'use client';
 
 import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown, Newspaper } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
@@ -37,13 +37,12 @@ export default function BlogPage() {
   const router = useRouter();
   const renderArticle = (article, i) => {
     return (
-      <motion.article
+      <Reveal
+        as="article"
+        y={20}
+        delay={Math.min(i * 0.06, 0.4)}
         key={article.id}
         className="group rounded-2xl border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] h-full flex flex-col"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: Math.min(i * 0.06, 0.4) }}
         data-testid={`blog-article-${article.id}`}
         onClick={() => { if (article.href) { router.push(article.href); window.scrollTo(0, 0); } }}
       >
@@ -70,7 +69,7 @@ export default function BlogPage() {
             {t('text')} <ArrowRight className="h-4 w-4" />
           </span>
         </div>
-      </motion.article>
+      </Reveal>
     );
   };
 
@@ -81,7 +80,7 @@ export default function BlogPage() {
         {/* 1. Hero */}
         <section className="relative pt-[80px] min-h-screen flex items-center">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+            <Reveal duration={0.7}>
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">{t('text2')}</span>
               <h1
                 className="font-semibold text-white/95 mb-8 text-[48px] md:text-[64px]"
@@ -103,16 +102,16 @@ export default function BlogPage() {
                   {t('cta')}
                 </a>
               </Button>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* 2. Article Grid */}
         <section id="articles" className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
-            <motion.div className="mb-8 md:mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <Reveal y={20} duration={0.6} className="mb-8 md:mb-12">
               <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading2')}</h2>
-            </motion.div>
+            </Reveal>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {ARTICLES.map((article, i) => renderArticle(article, i))}
@@ -123,7 +122,7 @@ export default function BlogPage() {
         {/* 3. Bottom CTA */}
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+            <Reveal duration={0.7}>
               <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">{t('heading3')}</h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">{t('body2')}</p>
               <Button
@@ -131,7 +130,7 @@ export default function BlogPage() {
                 variant="primary"
                 mode="dark"
               >{t('cta2')}</Button>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
       <Footer />

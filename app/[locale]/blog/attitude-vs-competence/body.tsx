@@ -2,11 +2,11 @@
 'use client';
 
 import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, BookOpen } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 
@@ -65,7 +65,7 @@ export default function BlogArticle1() {
             >
               {t('cta')}
             </Button>
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
+            <Reveal duration={0.7} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{t('tag')}</span>
                 <span className="text-[13px] text-white/35">{t('text')}</span>
@@ -77,14 +77,14 @@ export default function BlogArticle1() {
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
                 {t('body')}
               </p>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* Intro */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <Reveal y={20} duration={0.6}>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
                 {t('body2')}
               </p>
@@ -119,14 +119,14 @@ export default function BlogArticle1() {
                   <p className="text-[13px] text-[#121212]/[0.55] leading-[1.6]">{t('body8')}</p>
                 </div>
               </div>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* When to prioritize */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <Reveal y={20} duration={0.6}>
               <h2 className="text-[26px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]">
                 {t('heading5')}
               </h2>
@@ -137,7 +137,7 @@ export default function BlogArticle1() {
               </p>
 
               <div className="space-y-0">
-                <motion.details className="group border-b border-[#121212]/[0.06]" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.3 }}>
+                <Reveal as="details" y={0} duration={0.3} className="group border-b border-[#121212]/[0.06]">
                   <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                     <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">01</span>
                     <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{t('text3')}</span>
@@ -152,9 +152,9 @@ export default function BlogArticle1() {
                       ))}
                     </ul>
                   </div>
-                </motion.details>
+                </Reveal>
 
-                <motion.details className="group border-b border-[#121212]/[0.06]" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: 0.05 }}>
+                <Reveal as="details" y={0} duration={0.3} delay={0.05} className="group border-b border-[#121212]/[0.06]">
                   <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                     <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">02</span>
                     <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{t('text4')}</span>
@@ -169,7 +169,7 @@ export default function BlogArticle1() {
                       ))}
                     </ul>
                   </div>
-                </motion.details>
+                </Reveal>
               </div>
 
               <div className="border-l-[3px] border-[#4B4DF7]/30 pl-6 my-10">
@@ -177,14 +177,14 @@ export default function BlogArticle1() {
                   {t('body10')}
                 </p>
               </div>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* How to evaluate — accordions */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <Reveal y={20} duration={0.6}>
               <h2 className="text-[26px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]">
                 {t('heading6')}
               </h2>
@@ -194,13 +194,13 @@ export default function BlogArticle1() {
 
               <div className="space-y-0">
                 {METHODS.map((m, i) => (
-                  <motion.details
+                  <Reveal
+                    as="details"
+                    y={0}
+                    duration={0.3}
+                    delay={i * 0.04}
                     key={t(`methods.${m.id}.num`)}
                     className="group border-b border-[#121212]/[0.06] last:border-b-0"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: i * 0.04 }}
                   >
                     <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                       <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">{t(`methods.${m.id}.num`)}</span>
@@ -210,7 +210,7 @@ export default function BlogArticle1() {
                     <div className="pl-12 pb-6">
                       <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8]">{t(`methods.${m.id}.desc`)}</p>
                     </div>
-                  </motion.details>
+                  </Reveal>
                 ))}
               </div>
 
@@ -221,14 +221,14 @@ export default function BlogArticle1() {
   })}
                 </p>
               </div>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* Skill Verification */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <Reveal y={20} duration={0.6}>
               <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">
                 {t('heading7')}
               </h2>
@@ -260,14 +260,14 @@ export default function BlogArticle1() {
                   {t('body17')}
                 </p>
               </div>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* CTA */}
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+            <Reveal duration={0.7}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">
                 {t('text5')}
               </span>
@@ -286,7 +286,7 @@ export default function BlogArticle1() {
               >
                 {t('cta2')}
               </Button>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
       <Footer />

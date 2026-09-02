@@ -2,10 +2,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Reveal } from '@/components/ui/reveal';
 import React from 'react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
-import { motion } from 'framer-motion';
 
 
 
@@ -21,24 +21,24 @@ export default function PrivacyPolicyAlgo() {
             <div className="absolute rounded-full" style={{ width: '600px', height: '600px', top: '-200px', left: '-100px', background: 'radial-gradient(circle, rgba(75,77,247,0.10) 0%, transparent 70%)', filter: 'blur(60px)' }} />
           </div>
           <div className="relative z-10 max-w-[900px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <Reveal y={20} duration={0.6}>
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">
                 {t('text')}</span>
               <h1 className="font-semibold text-white/95 mb-4 text-[48px] md:text-[64px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
                 {t('heading')}</h1>
               <p className="text-[16px] text-white/40 leading-[1.7]">
                 {t('body')}</p>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* Content */}
         <section className="section-breathe py-16 lg:py-24">
           <div className="max-w-[900px] mx-auto px-8 lg:px-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <Reveal
+              y={20}
+              duration={0.6}
+              delay={0.2}
               className="prose-custom"
             >
 
@@ -365,7 +365,7 @@ export default function PrivacyPolicyAlgo() {
                   {t('body52')}</p>
               </div>
 
-            </motion.div>
+            </Reveal>
           </div>
         </section>
       </main>

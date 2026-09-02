@@ -2,8 +2,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
@@ -110,11 +110,7 @@ export default function CareersPage() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
               {/* Left — headline + CTAs */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
-              >
+              <Reveal duration={0.7}>
                 <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">{t('text')}</span>
                 <h1
                   className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
@@ -134,29 +130,30 @@ export default function CareersPage() {
                     <a href="#life-at-skillvue">{t('cta2')}</a>
                   </Button>
                 </div>
-              </motion.div>
+              </Reveal>
 
               {/* Right — photo */}
-              <motion.div
+              <Reveal
+                y={0}
+                scale={0.97}
+                duration={0.8}
+                delay={0.3}
                 className="rounded-2xl overflow-hidden aspect-video"
-                initial={{ opacity: 0, scale: 0.97 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
               >
                 <img
                   src="/careers/team_foto_01.avif"
                   alt="Skillvue team"
                   className="w-full h-full object-cover"
                 />
-              </motion.div>
+              </Reveal>
             </div>
 
             {/* Stats row */}
-            <motion.div
+            <Reveal
+              y={20}
+              duration={0.7}
+              delay={0.5}
               className="grid grid-cols-2 lg:grid-cols-4 mt-14 lg:mt-16"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.5 }}
             >
               {stats.map((s, i) => (
                 <div
@@ -169,20 +166,14 @@ export default function CareersPage() {
                   <p className="text-[12px] md:text-[13px] text-white/40 leading-[1.4]">{t(`stats.${s.id}.label`)}</p>
                 </div>
               ))}
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* ── 2. WHY SKILLVUE ─────────────────────────────────────── */}
         <section className="section-breathe py-20 lg:py-28 min-h-screen flex flex-col justify-center">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full">
-            <motion.div
-              className="max-w-4xl"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
+            <Reveal duration={0.7} className="max-w-4xl">
               <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-6 block">{t('text2')}</span>
               <h2
                 className="font-semibold text-[#121212] mb-6"
@@ -197,7 +188,7 @@ export default function CareersPage() {
                   <ArrowRight aria-hidden />
                 </a>
               </Button>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
@@ -211,13 +202,7 @@ export default function CareersPage() {
             }}
           />
           <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-            <motion.div
-              className="mb-12 lg:mb-16 max-w-2xl"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
+            <Reveal duration={0.7} className="mb-12 lg:mb-16 max-w-2xl">
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">{t('text3')}</span>
               <h2
                 className="font-semibold text-white/95 mb-4"
@@ -226,18 +211,16 @@ export default function CareersPage() {
                 span: (chunks) => <span className="italic font-bold gradient-text-warm">{chunks}</span>,
               })}</h2>
               <p className="text-[15px] md:text-[17px] text-white/50 leading-[1.7] font-light">{t('body3')}</p>
-            </motion.div>
+            </Reveal>
 
             {/* Step cards */}
             <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5 mb-8 md:mb-10">
               {steps.map((step, i) => (
-                <motion.div
+                <Reveal
+                  y={20}
+                  delay={i * 0.1}
                   key={step.num}
                   className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 md:p-8 lg:p-10"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
                 >
                   <span className="block text-[40px] md:text-[56px] font-light text-white/10 leading-none tracking-[-0.04em] mb-6 md:mb-8">
                     {step.num}
@@ -246,17 +229,15 @@ export default function CareersPage() {
                     {t(`steps.${step.id}.title`)}
                   </h3>
                   <p className="text-[13px] md:text-[14px] text-white/50 leading-[1.6]">{t(`steps.${step.id}.desc`)}</p>
-                </motion.div>
+                </Reveal>
               ))}
             </div>
 
             {/* Tags */}
-            <motion.div
+            <Reveal
+              y={0}
+              delay={0.35}
               className="flex flex-wrap gap-2 md:gap-3"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.35 }}
             >
               {tags.map((tag) => (
                 <span
@@ -266,35 +247,28 @@ export default function CareersPage() {
                   {t(`tags.${tag}`)}
                 </span>
               ))}
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* ── 4. LIFE AT SKILLVUE ─────────────────────────────────── */}
         <section id="life-at-skillvue" className="section-breathe py-20 lg:py-28 min-h-screen flex flex-col justify-center">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-            <motion.div
-              className="mb-10 lg:mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
+            <Reveal duration={0.7} className="mb-10 lg:mb-12">
               <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">{t('text4')}</span>
               <h2
                 className="font-semibold text-[#121212] mb-2"
                 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.8rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t('heading4')}</h2>
               <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.6]">{t('body4')}</p>
-            </motion.div>
+            </Reveal>
 
             {/* Photo mosaic — large left + 2×2 right */}
-            <motion.div
+            <Reveal
+              y={20}
+              duration={0.7}
+              delay={0.2}
               className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.2 }}
             >
               <div className="rounded-2xl overflow-hidden aspect-video">
                 <img loading="lazy" decoding="async"
@@ -314,26 +288,20 @@ export default function CareersPage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* ── 5. OPEN ROLES ───────────────────────────────────────── */}
         <section id="open-roles" className="relative py-20 lg:py-28 min-h-screen flex flex-col justify-start">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full">
-            <motion.div
-              className="mb-8 lg:mb-10"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
+            <Reveal duration={0.7} className="mb-8 lg:mb-10">
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-4 block">{t('text5')}</span>
               <h2
                 className="font-semibold text-white/95"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t('heading5')}</h2>
-            </motion.div>
+            </Reveal>
 
             {/* Filter pills */}
             <div className="flex flex-wrap gap-2 mb-10">
@@ -355,12 +323,10 @@ export default function CareersPage() {
             {/* Grouped listings */}
             <div className="flex flex-col gap-8">
               {Object.entries(grouped).map(([team, teamRoles], gi) => (
-                <motion.div
+                <Reveal
+                  y={20}
+                  delay={gi * 0.07}
                   key={team}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: gi * 0.07 }}
                 >
                   <p className="text-[11px] font-medium text-white/40 tracking-[0.05em] uppercase mb-3">
                     {team}
@@ -389,7 +355,7 @@ export default function CareersPage() {
                       </a>
                     ))}
                   </div>
-                </motion.div>
+                </Reveal>
               ))}
 
               {Object.keys(grouped).length === 0 && (
@@ -402,13 +368,7 @@ export default function CareersPage() {
         {/* ── 6. FINAL CTA ────────────────────────────────────────── */}
         <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-            <motion.div
-              className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-8 lg:p-10 text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
+            <Reveal duration={0.7} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-8 lg:p-10 text-center">
               <h2
                 className="font-semibold text-white/90 mx-auto mb-6 max-w-2xl"
                 style={{
@@ -431,7 +391,7 @@ export default function CareersPage() {
                   </a>
                 </Button>
               </div>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 

@@ -2,11 +2,11 @@
 'use client';
 
 import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Clock, ImageIcon } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { href, localizePath } from '@/i18n/routes';
@@ -122,7 +122,7 @@ export default function AugustNewsletter() {
             >
               {t('back')}
             </Button>
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
+            <Reveal duration={0.7} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{t('tag')}</span>
                 <span className="text-[13px] text-white/35">{t('date')}</span>
@@ -130,7 +130,7 @@ export default function AugustNewsletter() {
               </div>
               <h1 className="font-semibold text-white/95 mb-6 text-[40px] md:text-[60px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t('title')}</h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>{t('subtitle')}</p>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
@@ -138,13 +138,13 @@ export default function AugustNewsletter() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-6 md:px-8 lg:px-12 py-16 lg:py-20">
             {/* Intro */}
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="space-y-5">
+            <Reveal y={20} duration={0.6} className="space-y-5">
               {t.raw('intro').map((p, i) => <p key={i} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
-            </motion.div>
+            </Reveal>
 
             {/* Sections */}
             {t.raw('sections').map((s, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mt-16 pt-10 border-t border-[#121212]/[0.06]">
+              <Reveal y={20} key={i} className="mt-16 pt-10 border-t border-[#121212]/[0.06]">
                 <h2 className={`text-[26px] font-semibold text-[#121212] tracking-[-0.02em] ${s.img ? 'mb-1' : 'mb-5'}`}>{s.heading}</h2>
                 {s.img && <Img src={imgSrc(s.img)} label={t.raw('imgLabels')[s.img]} soon={t('imgSoon')} />}
                 <div className="space-y-5">
@@ -156,23 +156,23 @@ export default function AugustNewsletter() {
                   </div>
                 )}
                 {s.cta && <CtaLink label={s.cta.label} href={localize(LINKS[s.cta.href])} newTab={s.cta.external || s.cta.newTab} />}
-              </motion.div>
+              </Reveal>
             ))}
 
             {/* Closing */}
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mt-16 pt-10 border-t border-[#121212]/[0.06]">
+            <Reveal y={20} className="mt-16 pt-10 border-t border-[#121212]/[0.06]">
               <h2 className="text-[26px] font-semibold text-[#121212] tracking-[-0.02em] mb-4">{t('closing.heading')}</h2>
               <div className="space-y-5">
                 {t.raw('closing.body').map((p, j) => <p key={j} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
               </div>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* FINAL CTA — dark */}
         <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24" style={{ background: '#08080c' }}>
           <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 text-center">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+            <Reveal duration={0.7}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('finalKicker')}</span>
               <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
                 {t('finalTitle')} <span className="gradient-text">{t('finalTitleHighlight')}</span>
@@ -181,7 +181,7 @@ export default function AugustNewsletter() {
               <Button variant="primary" mode="dark" onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}>
                 {t('finalButton')}
               </Button>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
       <Footer />

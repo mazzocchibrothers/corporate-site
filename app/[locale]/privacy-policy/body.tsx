@@ -2,10 +2,10 @@
 'use client';
 
 import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
@@ -57,12 +57,12 @@ export default function PrivacyPolicyPage() {
               iconPosition="left"
               className="mb-10"
             >{t('cta')}</Button>
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+            <Reveal duration={0.7}>
               <h1 className="text-[40px] md:text-[56px] font-semibold text-white/95 mb-4 tracking-[-0.02em] leading-[1.1]">
                 {t('heading')}</h1>
               <p className="text-[16px] text-white/[0.45] leading-[1.75] max-w-2xl" style={{ fontWeight: 300 }}>
                 {t('body')}</p>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
@@ -70,11 +70,9 @@ export default function PrivacyPolicyPage() {
         <section className="section-breathe">
           <div className="max-w-[860px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <Reveal
+              y={20}
+              duration={0.6}
               className="mb-16 space-y-5"
             >
               <p className="text-[16px] text-[#121212]/70 leading-[1.85]">
@@ -83,9 +81,9 @@ export default function PrivacyPolicyPage() {
         })}</p>
               <p className="text-[16px] text-[#121212]/70 leading-[1.85]">
                 {t('body3')}</p>
-            </motion.div>
+            </Reveal>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <Reveal y={20} duration={0.6}>
 
               <PolicySection num="1" title={t('sections.s1')}>
                 <p>
@@ -259,7 +257,7 @@ export default function PrivacyPolicyPage() {
         })}</p>
               </PolicySection>
 
-            </motion.div>
+            </Reveal>
 
             {/* Last modified */}
             <div className="border-t border-[#121212]/[0.06] mt-4 pt-10">

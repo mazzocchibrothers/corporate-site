@@ -2,10 +2,10 @@
 'use client';
 
 import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Download, Mail } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
@@ -172,12 +172,7 @@ export default function PressPage() {
           </div>
 
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-20 lg:py-28">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="max-w-3xl"
-            >
+            <Reveal duration={0.7} className="max-w-3xl">
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">{t('text')}</span>
               <h1
                 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
@@ -193,36 +188,33 @@ export default function PressPage() {
                   press@skillvue.ai
                 </a>
               </Button>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 
         {/* 2. Press Coverage */}
         <section className="section-breathe py-20 lg:py-28">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <Reveal
+              y={20}
+              duration={0.6}
               className="mb-8 md:mb-12"
             >
               <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">{t('text2')}</span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading2')}</h2>
-            </motion.div>
+            </Reveal>
 
             {(() => {
               const renderCard = (article, i) => (
-                <motion.a
+                <Reveal
+                  as="a"
+                  y={20}
+                  delay={Math.min(i * 0.07, 0.4)}
                   key={article.publication}
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col justify-between rounded-2xl border border-[#121212]/[0.06] bg-white p-6 md:p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 h-full"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: Math.min(i * 0.07, 0.4) }}
                 >
                   <div>
                     <div className="mb-5 md:mb-6 h-10 flex items-center">
@@ -239,7 +231,7 @@ export default function PressPage() {
                   <div className="mt-5 md:mt-6 flex items-center justify-end">
                     <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]/30 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                   </div>
-                </motion.a>
+                </Reveal>
               );
               return (
                 <>
@@ -256,11 +248,9 @@ export default function PressPage() {
         {lang === 'it' && (
           <section className="section-breathe py-16 lg:py-20 border-t border-[#121212]/[0.04]">
             <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+              <Reveal
+                y={20}
+                duration={0.6}
                 className="mb-8 md:mb-12"
               >
                 <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">
@@ -269,20 +259,19 @@ export default function PressPage() {
                 <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
                   {t('italianHeading')}
                 </h2>
-              </motion.div>
+              </Reveal>
 
               {(() => {
                 const renderCard = (article, i) => (
-                  <motion.a
+                  <Reveal
+                    as="a"
+                    y={20}
+                    delay={Math.min(i * 0.07, 0.4)}
                     key={`${article.publication}-${i}`}
                     href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex flex-col justify-between rounded-2xl border border-[#121212]/[0.06] bg-white p-6 md:p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 h-full"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: Math.min(i * 0.07, 0.4) }}
                   >
                     <div>
                       <div className="mb-4">
@@ -297,7 +286,7 @@ export default function PressPage() {
                     <div className="mt-5 md:mt-6 flex items-center justify-end">
                       <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]/30 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                     </div>
-                  </motion.a>
+                  </Reveal>
                 );
                 return (
                   <>
@@ -314,30 +303,27 @@ export default function PressPage() {
         {/* 3. Interviews */}
         <section className="section-breathe py-16 lg:py-20 border-t border-[#121212]/[0.04]">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <Reveal
+              y={20}
+              duration={0.6}
               className="mb-8 md:mb-12"
             >
               <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">{t('text3')}</span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading3')}</h2>
-            </motion.div>
+            </Reveal>
 
             <div className="flex flex-col md:grid md:grid-cols-2 gap-3 md:gap-5 md:max-w-3xl">
               {interviews.map((item, i) => (
-                <motion.a
+                <Reveal
+                  as="a"
+                  y={20}
+                  delay={i * 0.1}
                   key={item.publication}
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col justify-between rounded-2xl border border-[#4B4DF7]/[0.10] bg-white p-6 md:p-8 hover:border-[#4B4DF7]/[0.25] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.06] transition-all duration-500"
                   style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f8f8ff 100%)' }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
                 >
                   <div>
                     <div className="mb-5 md:mb-6 h-10 flex items-center">
@@ -355,7 +341,7 @@ export default function PressPage() {
                     <span className="text-[12px] font-semibold text-[#4B4DF7]/50 tracking-[0.08em] uppercase group-hover:text-[#4B4DF7]/80 transition-colors duration-300">{t('cta')}</span>
                     <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]/40 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                   </div>
-                </motion.a>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -364,29 +350,26 @@ export default function PressPage() {
         {/* 4. Press Releases — dark section */}
         <section className="relative py-20 lg:py-28 bg-black">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <Reveal
+              y={20}
+              duration={0.6}
               className="mb-8 md:mb-12"
             >
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-4 block">{t('text4')}</span>
               <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-white/90 tracking-[-0.02em]">{t('heading4')}</h2>
-            </motion.div>
+            </Reveal>
 
             <div className="flex flex-col gap-3 md:gap-4">
               {pressReleases.map((release, i) => (
-                <motion.a
+                <Reveal
+                  as="a"
+                  y={16}
+                  delay={i * 0.08}
                   key={release.id}
                   href={t(`releases.${release.id}.url`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-6 rounded-2xl border border-white/[0.06] hover:border-white/[0.14] hover:bg-white/[0.03] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
                 >
                   <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8 min-w-0 flex-1">
                     <span className="text-[11px] md:text-[13px] text-[#9B9DFB]/60 md:text-white/25 shrink-0 md:mt-0.5 font-mono tracking-wider uppercase md:normal-case md:tracking-normal">{release.date}</span>
@@ -398,7 +381,7 @@ export default function PressPage() {
                     <Download className="h-4 w-4 text-[#9B9DFB]/70 md:text-white/20 group-hover:text-[#9B9DFB] md:group-hover:text-white/50 transition-colors duration-300" />
                     <span className="text-[12px] font-semibold text-[#9B9DFB]/70 md:text-white/25 tracking-[0.08em] uppercase group-hover:text-[#9B9DFB] md:group-hover:text-white/50 transition-colors duration-300">{t('cta2')}</span>
                   </div>
-                </motion.a>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -442,12 +425,7 @@ export default function PressPage() {
         {/* 6. Final CTA — dark */}
         <section className="relative pt-8 pb-24 lg:pb-32 bg-black">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
+            <Reveal duration={0.7}>
               <h2
                 className="font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]"
                 style={{ fontSize: 'clamp(1.8rem,3.5vw,3rem)' }}
@@ -458,7 +436,7 @@ export default function PressPage() {
                 variant="primary"
                 mode="dark"
               >{t('cta3')}</Button>
-            </motion.div>
+            </Reveal>
           </div>
         </section>
 

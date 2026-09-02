@@ -13,20 +13,28 @@
 // this, it ships two.
 //
 // The animation is deliberately the same one: opacity 0 -> 1 and a 30px rise,
-// once, when the element is 100px inside the viewport.
+// once, when the element is 100px inside the viewport. `x` and `scale` are here
+// because the site's `initial` objects use them too — 27 elements slide in from
+// the side and one photo grows — and they are the same transform, not a second
+// animation.
 
-import { useEffect, useRef, useState, type ElementType, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type CSSProperties, type ElementType, type ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
   className?: string;
   /** Pixels to rise from. framer-motion's `y` in the `initial` object. */
   y?: number;
+  /** Pixels to slide in from. framer-motion's `x`. */
+  x?: number;
+  /** Scale to grow from. framer-motion's `scale`. */
+  scale?: number;
   /** Seconds. */
   duration?: number;
   delay?: number;
   /** The element to render. `section`, `li`, whatever the markup needs. */
   as?: ElementType;
+  style?: CSSProperties;
   [key: string]: unknown;
 };
 
@@ -34,9 +42,12 @@ export function Reveal({
   children,
   className,
   y = 30,
+  x = 0,
+  scale = 1,
   duration = 0.5,
   delay = 0,
   as: Tag = 'div',
+  style,
   ...rest
 }: Props) {
   const ref = useRef<HTMLElement>(null);
@@ -64,13 +75,19 @@ export function Reveal({
     return () => io.disconnect();
   }, []);
 
+  // The caller's own style is merged, not spread after ours: `{...rest}` on the
+  // element would replace the whole style object, and the element would simply
+  // never animate — with nothing to see in a diff or a build.
   return (
     <Tag
       ref={ref}
       className={className}
       style={{
+        ...style,
         opacity: shown ? 1 : 0,
-        transform: shown ? 'none' : `translateY(${y}px)`,
+        transform: shown
+          ? 'none'
+          : `translate(${x}px, ${y}px)${scale === 1 ? '' : ` scale(${scale})`}`,
         transition: `opacity ${duration}s ease-out ${delay}s, transform ${duration}s ease-out ${delay}s`,
       }}
       {...rest}
