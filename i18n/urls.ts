@@ -54,6 +54,37 @@ export function pathFor(route: RouteLike, locale: Locale): string | undefined {
 }
 
 /**
+ * Absolute URL of a route's generated share card.
+ *
+ * Next builds this URL from the *file-system* route, which under app/[locale]
+ * always carries the prefix — so the English page emitted
+ * `/en/about/opengraph-image`, and that 307s to `/about/opengraph-image`
+ * because English has no prefix in a URL. Crawlers follow it, but a redirect
+ * on every card fetch is a redirect that did not have to exist.
+ *
+ * The directory under app/[locale] is the English path, or the Italian one
+ * where there is no English page — the same rule the routes README states, and
+ * the reason this cannot be built from `pathFor`, which returns the *localised*
+ * URL that next-intl rewrites onto that directory.
+ */
+export function ogImageUrl(all: RouteLike[], route: RouteLike, locale: Locale): string | undefined {
+  if (route.paths[locale] === undefined) return undefined;
+  const dir = route.paths.en ?? route.paths.it!;
+
+  // One exception, and it is structural rather than a quirk of one route: a
+  // route with a dynamic child is shadowed by it. /resources/whitepapers has
+  // /resources/whitepapers/[slug] beneath it, so the internal path of its own
+  // card reads as a slug and redirects to the Italian URL. There the card does
+  // resolve — next-intl rewrites the localised path back onto the directory —
+  // so for a shadowed route the localised path is the one to name.
+  const shadowed = all.some((r) => (r.paths.en ?? r.paths.it ?? '').startsWith(`${dir}/[`));
+  const path = shadowed ? (route.paths[locale] as string) : dir;
+
+  const base = locale === 'en' ? BASE_URL : `${BASE_URL}/it`;
+  return `${base}${path === '/' ? '' : path}/opengraph-image`;
+}
+
+/**
  * The hreflang set for a route: one entry per locale it serves, plus
  * x-default.
  *

@@ -15,7 +15,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { canonicalRoute, routes } from './routes';
 import { namespaceOf } from './messages';
-import { alternatesFor, BASE_URL, urlFor, type Locale } from './urls';
+import { alternatesFor, BASE_URL, ogImageUrl, urlFor, type Locale } from './urls';
 
 const LOCALES: Locale[] = ['en', 'it'];
 
@@ -77,6 +77,10 @@ export async function buildMetadata(routeId: string, locale: string): Promise<Me
   // in a search result is worse than the blank it replaces.
   const title = t('title');
   const description = t('description');
+  // The card is generated for the route as it is, not for the story it
+  // canonicalises to: an alternate cut has its own title, and that is what the
+  // card shows.
+  const image = ogImageUrl(routes, route, locale as Locale);
 
   return {
     metadataBase: new URL(BASE_URL),
@@ -95,7 +99,8 @@ export async function buildMetadata(routeId: string, locale: string): Promise<Me
       alternateLocale: LOCALES.filter((l) => l !== locale && urlFor(indexed, l) !== undefined).map(
         (l) => OG_LOCALE[l],
       ),
+      images: image ? [{ url: image, width: 1200, height: 630, type: 'image/png' }] : undefined,
     },
-    twitter: { card: 'summary_large_image', title, description },
+    twitter: { card: 'summary_large_image', title, description, images: image ? [image] : undefined },
   };
 }

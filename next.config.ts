@@ -44,7 +44,14 @@ const nextConfig: NextConfig = {
         // The registry writes a dynamic segment as [slug]; Next's matcher wants
         // :slug. Without this the one dynamic route's redirect silently never
         // matches, and its old Italian URLs fall through to next-intl's 307.
-        source: `/it${en.replace(/\[(\w+)\]/g, ':$1')}`,
+        //
+        // The pattern on the source excludes one value. `opengraph-image` is
+        // Next's own file-convention name, never a slug, and the share card of
+        // the *parent* index sits at exactly that path: without the exclusion
+        // /it/resources/whitepapers/opengraph-image read as :slug and 308'd to
+        // the Italian URL, so the whitepapers index served its card from behind
+        // a redirect while every other card served directly.
+        source: `/it${en.replace(/\[(\w+)\]/g, ':$1((?!opengraph-image$)[^/]+)')}`,
         destination: `/it${it.replace(/\[(\w+)\]/g, ':$1')}`,
         permanent: true,
       }));

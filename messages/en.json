@@ -6820,6 +6820,12 @@
       "loading": "Caricamento…",
       "exploratoryCall": "Contattaci per una conversazione esplorativa",
       "requestCall": "Richiedi una conversazione esplorativa"
+    },
+    "ogEyebrow": {
+      "customers": "Customer story",
+      "blog": "Blog",
+      "solutions": "Solutions",
+      "resources": "Resources"
     }
   },
   "solutions": {

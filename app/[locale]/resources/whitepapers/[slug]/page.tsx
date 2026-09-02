@@ -8,6 +8,8 @@ import { buildMetadata } from '@/i18n/metadata';
 import { messagesForRoute } from '@/i18n/messages';
 import { notFound } from 'next/navigation';
 import { whitepapers } from '@/data/whitepapers';
+import { routes } from '@/i18n/routes';
+import { ogImageUrl } from '@/i18n/urls';
 import Body from './body';
 
 const ROUTE = 'resources/whitepapers/[slug]';
@@ -43,11 +45,30 @@ export async function generateMetadata({ params }: Props) {
   // the index's title to all three whitepapers and to the index — one title on
   // four pages, which is the defect #138 exists to remove, reintroduced.
   const t = await getTranslations(`resources.whitepapers.items.${slug}.meta`);
+
+  // The card too: one image per whitepaper, not the route's bracketed one.
+  const card = fill(ogImageUrl(routes, routes.find((r) => r.id === ROUTE)!, locale as 'en' | 'it')!);
   return {
     ...meta,
     title: t('title'),
     description: t('description'),
     alternates: { canonical: fill(String(meta.alternates?.canonical)), languages },
+    // openGraph carries the same three strings, and spreading `meta` alone
+    // would hand all four URLs the index's share card and the index's title
+    // on LinkedIn — the defect above, one level down.
+    openGraph: {
+      ...meta.openGraph,
+      title: t('title'),
+      description: t('description'),
+      url: fill(String(meta.alternates?.canonical)),
+      images: [{ url: card, width: 1200, height: 630, type: 'image/png' }],
+    },
+    twitter: {
+      ...meta.twitter,
+      title: t('title'),
+      description: t('description'),
+      images: [card],
+    },
   };
 }
 
