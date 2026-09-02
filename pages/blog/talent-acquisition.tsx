@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
@@ -9,49 +10,38 @@ import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { messagesFor } from '@/i18n/messages';
 
-const differencesEN = [
-  { dimension: 'Approach', recruiting: 'Reactive — responds to an open vacancy', ta: 'Strategic — starts from competency mapping' },
-  { dimension: 'Time Horizon', recruiting: 'Short term — fill the position quickly', ta: 'Medium-long term — build lasting capabilities' },
-  { dimension: 'Key Metrics', recruiting: 'Time-to-hire, volume of applications', ta: 'Quality-of-hire, retention, performance over time' },
-  { dimension: 'Decision Basis', recruiting: 'CV, experience, interview impressions', ta: 'Structured data on skills, potential, behaviors' },
-];
 
-const differencesIT = [
-  { dimension: 'Approccio', recruiting: 'Reattivo — risponde a una posizione aperta', ta: 'Strategico — parte dalla mappatura delle competenze' },
-  { dimension: 'Orizzonte Temporale', recruiting: 'Breve termine — coprire la posizione rapidamente', ta: 'Medio-lungo termine — costruire capacità durature' },
-  { dimension: 'Metriche Chiave', recruiting: 'Time-to-hire, volume di candidature', ta: 'Quality-of-hire, retention, performance nel tempo' },
-  { dimension: 'Base Decisionale', recruiting: 'CV, esperienza, impressioni del colloquio', ta: 'Dati strutturati su competenze, potenziale, comportamenti' },
-];
 
-const strategyStepsEN = [
-  { icon: Search, title: 'Start from competencies, not job titles', desc: 'A solid talent acquisition strategy always begins with: which competencies are truly needed to make work function today and in the coming months? Working on critical competencies lets you anticipate future needs.' },
-  { icon: Building2, title: 'Align recruiting and employer branding', desc: 'If what you communicate externally doesn\'t reflect the real way of working, you\'ll attract misaligned candidates and increase early turnover risk. Coherence between messages, declared values, and observable behaviors is key.' },
-  { icon: Users, title: 'Build a talent pipeline over time', desc: 'Talent acquisition doesn\'t start when a position opens, but much earlier. Cultivate relationships with potentially relevant professionals even without an immediate need.' },
-  { icon: BarChart3, title: 'Use data and objective evaluations', desc: 'A mature strategy doesn\'t rely on intuitions or interview impressions but on comparable data and clear criteria. Integrate objective evaluations of competencies, potential, and observable behaviors.' },
-  { icon: GitBranch, title: 'Connect talent acquisition and internal development', desc: 'Before looking for new people externally, ask whether some competencies are already present in-house or developable through targeted upskilling and reskilling paths.' },
-  { icon: Target, title: 'Measure what truly matters', desc: 'Monitoring only time-to-hire risks rewarding speed at the expense of quality. Indicators like quality-of-hire, performance over time, and retention give a much more useful reading.' },
-];
 
-const strategyStepsIT = [
-  { icon: Search, title: 'Parti dalle competenze, non dai titoli di lavoro', desc: 'Una strategia di talent acquisition solida parte sempre da: quali competenze sono davvero necessarie per far funzionare il lavoro oggi e nei prossimi mesi? Lavorare sulle competenze critiche consente di anticipare i bisogni futuri.' },
-  { icon: Building2, title: 'Allinea recruiting ed employer branding', desc: 'Se ciò che comunichi all\'esterno non riflette il vero modo di lavorare, attirerai candidati disallineati e aumenterai il rischio di turnover precoce. La coerenza tra messaggi, valori dichiarati e comportamenti osservabili è fondamentale.' },
-  { icon: Users, title: 'Costruisci una talent pipeline nel tempo', desc: 'Il talent acquisition non inizia quando si apre una posizione, ma molto prima. Coltiva relazioni con professionisti potenzialmente rilevanti anche senza un bisogno immediato.' },
-  { icon: BarChart3, title: 'Usa dati e valutazioni oggettive', desc: 'Una strategia matura non si affida a intuizioni o impressioni del colloquio, ma a dati comparabili e criteri chiari. Integra valutazioni oggettive di competenze, potenziale e comportamenti osservabili.' },
-  { icon: GitBranch, title: 'Collega talent acquisition e sviluppo interno', desc: 'Prima di cercare nuove persone all\'esterno, chiedi se alcune competenze sono già presenti internamente o sviluppabili attraverso percorsi mirati di upskilling e reskilling.' },
-  { icon: Target, title: 'Misura ciò che conta davvero', desc: 'Monitorare solo il time-to-hire rischia di premiare la velocità a scapito della qualità. Indicatori come quality-of-hire, performance nel tempo e retention offrono una lettura molto più utile.' },
-];
 
 
 // One line per page is the whole contract: the argument is this route's `id` in
 // routes.json, and i18n/messages.ts turns it into the namespaces to load.
 export const getStaticProps = messagesFor('blog/talent-acquisition');
 
+// Structure the catalogue cannot hold: ids and the components each row
+// renders. The words that went with them are in messages/.
+const DIFFERENCES = [
+  { id: 'approach' },
+  { id: 'timeHorizon' },
+  { id: 'keyMetrics' },
+  { id: 'decisionBasis' },
+];
+
+const STRATEGY_STEPS = [
+  { id: 'startFromCompetencies', icon: Search },
+  { id: 'alignRecruitingEmployer', icon: Building2 },
+  { id: 'buildTalentPipeline', icon: Users },
+  { id: 'useDataObjective', icon: BarChart3 },
+  { id: 'connectTalentAcquisition', icon: GitBranch },
+  { id: 'measureWhatTruly', icon: Target },
+];
+
 export default function BlogArticle9() {
   const router = useRouter();
   const { lang } = useLanguage();
+  const t = useTranslations('blog.talent-acquisition');
 
-  const differences = lang === 'it' ? differencesIT : differencesEN;
-  const strategySteps = lang === 'it' ? strategyStepsIT : strategyStepsEN;
 
   return (
     <>
@@ -69,19 +59,19 @@ export default function BlogArticle9() {
               onClick={() => { router.push('/blog'); window.scrollTo(0, 0); }}
               className="mb-10"
             >
-              {lang === 'it' ? 'Torna al Blog' : 'Back to Blog'}
+              {t('cta')}
             </Button>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">Talent Acquisition</span>
-                <span className="text-[13px] text-white/35">{lang === 'it' ? '12 febbraio 2026' : 'February 12, 2026'}</span>
-                <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '13 min di lettura' : '13 min read'}</span>
+                <span className="text-[13px] text-white/35">{t('text')}</span>
+                <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('text2')}</span>
               </div>
               <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]" style={{ lineHeight: 1.12, letterSpacing: '-0.02em' }}>
-                {lang === 'it' ? 'Talent Acquisition: cos\'è, come funziona, perché conta' : 'Talent Acquisition: What It Is, How It Works, Why It Matters'}
+                {t('heading')}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
-                {lang === 'it' ? 'Quante assunzioni, pur essendo "giuste sulla carta," iniziano a mostrare crepe dopo pochi mesi? Il ruolo è coperto, il CV era coerente, il colloquio è andato bene... eppure.' : 'How many hires, despite being "right on paper," start showing cracks after a few months? The role is covered, the CV was coherent, the interview went well... and yet.'}
+                {t('body')}
               </p>
             </motion.div>
           </div>
@@ -90,16 +80,18 @@ export default function BlogArticle9() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Cos\'è il Talent Acquisition (e Perché Non è Solo Recruiting)' : "What Is Talent Acquisition (and Why It's Not Just Recruiting)"}</h2>
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">{t('heading2')}</h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
-                {lang === 'it' ? <>Il talent acquisition è l'insieme di strategie e processi attraverso cui un'azienda identifica, attrae, valuta e sviluppa le persone di cui avrà bisogno non solo oggi, ma anche in futuro. La differenza rispetto al recruiting tradizionale risiede principalmente nel livello di <strong className="text-[#121212]/80">intenzionalità</strong>.</> : <>Talent acquisition is the set of strategies and processes through which a company identifies, attracts, evaluates, and develops the people it will need not only today, but also in the future. The difference from traditional recruiting lies primarily in the level of <strong className="text-[#121212]/80">intentionality</strong>.</>}
+                {t.rich('body2', {
+    b: (chunks) => <strong className="text-[#121212]/80">{chunks}</strong>,
+  })}
               </p>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
-                {lang === 'it' ? 'Il recruiting è spesso tattico: risponde a una posizione aperta, lavora su tempi e volumi. Il talent acquisition, invece, è strategico: parte dalla comprensione di quali competenze sono critiche per l\'organizzazione, quali lo diventeranno, e come costruire nel tempo un pool di persone in grado di sostenerle.' : "Recruiting is often tactical: it responds to an open vacancy, works on timing and volumes. Talent acquisition, instead, is strategic: it starts from understanding which competencies are critical for the organization, which will become so, and how to build over time a pool of people capable of sustaining them."}
+                {t('body3')}
               </p>
               <div className="border-l-[3px] border-[#4B4DF7]/30 pl-6 my-10">
                 <p className="text-[17px] text-[#121212]/60 leading-[1.8] italic">
-                  {lang === 'it' ? '"L\'orizzonte non è la singola assunzione ma il medio-lungo termine. Le decisioni non si basano solo su ciò che serve oggi, ma su come un ruolo potrebbe evolversi e quale contributo una persona può dare nel tempo."' : '"The horizon is not the single hire but the medium-long term. Decisions aren\'t based only on what\'s needed today, but on how a role might evolve and what kind of contribution a person can make over time."'}
+                  {t('body4')}
                 </p>
               </div>
             </motion.div>
@@ -109,22 +101,22 @@ export default function BlogArticle9() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Talent Acquisition vs Recruiting: Le Differenze' : 'Talent Acquisition vs Recruiting: The Differences'}</h2>
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">{t('heading3')}</h2>
               <div className="overflow-x-auto my-8">
                 <table className="w-full text-left">
                   <thead>
                     <tr className="border-b border-[#121212]/[0.08]">
-                      <th className="py-3 pr-4 text-[12px] font-bold text-[#121212]/40 tracking-[0.1em] uppercase">{lang === 'it' ? 'Dimensione' : 'Dimension'}</th>
+                      <th className="py-3 pr-4 text-[12px] font-bold text-[#121212]/40 tracking-[0.1em] uppercase">{t('columnHeader')}</th>
                       <th className="py-3 pr-4 text-[12px] font-bold text-[#121212]/40 tracking-[0.1em] uppercase">Recruiting</th>
                       <th className="py-3 text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.1em] uppercase">Talent Acquisition</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {differences.map((d, i) => (
+                    {DIFFERENCES.map((d, i) => (
                       <tr key={i} className="border-b border-[#121212]/[0.04]">
-                        <td className="py-4 pr-4 text-[14px] font-semibold text-[#121212]/70">{d.dimension}</td>
-                        <td className="py-4 pr-4 text-[14px] text-[#121212]/[0.45]">{d.recruiting}</td>
-                        <td className="py-4 text-[14px] text-[#121212]/[0.65] font-medium">{d.ta}</td>
+                        <td className="py-4 pr-4 text-[14px] font-semibold text-[#121212]/70">{t(`differences.${d.id}.dimension`)}</td>
+                        <td className="py-4 pr-4 text-[14px] text-[#121212]/[0.45]">{t(`differences.${d.id}.recruiting`)}</td>
+                        <td className="py-4 text-[14px] text-[#121212]/[0.65] font-medium">{t(`differences.${d.id}.ta`)}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -137,12 +129,12 @@ export default function BlogArticle9() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">{lang === 'it' ? 'Come Costruire una Strategia Efficace' : 'How to Build an Effective Strategy'}</h2>
+              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">{t('heading4')}</h2>
               <div className="space-y-0">
-                {strategySteps.map((s, i) => {
+                {STRATEGY_STEPS.map((s, i) => {
                   return (
                     <motion.details
-                      key={s.title}
+                      key={t(`strategySteps.${s.id}.title`)}
                       className="group border-b border-[#121212]/[0.06] last:border-b-0"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
@@ -151,11 +143,11 @@ export default function BlogArticle9() {
                     >
                       <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                         <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">0{i + 1}</span>
-                        <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{s.title}</span>
+                        <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{t(`strategySteps.${s.id}.title`)}</span>
                         <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                       </summary>
                       <div className="pl-12 pb-6">
-                        <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8]">{s.desc}</p>
+                        <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8]">{t(`strategySteps.${s.id}.desc`)}</p>
                       </div>
                     </motion.details>
                   );
@@ -168,7 +160,7 @@ export default function BlogArticle9() {
                   <h3 className="text-[16px] font-semibold text-[#121212]">Key Takeaway</h3>
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
-                  {lang === 'it' ? 'Attraverso Skill Verification rapidi e standardizzati, Skillvue ti aiuta a valutare i candidati su criteri chiari e comparabili usando domande situazionali basate sul BEI, test mirati di hard skill e indicatori su potenziale, autonomia e capacità di apprendimento. Sposta la selezione dal confronto di CV e impressioni a una valutazione strutturata di competenze, comportamenti e potenziale.' : 'Through rapid, standardized Skill Verifications, Skillvue helps you evaluate candidates on clear, comparable criteria using BEI-based situational questions, targeted hard skill tests, and indicators on potential, autonomy, and learning ability. Shift selection from a comparison of CVs and impressions to a structured evaluation of competencies, behaviors, and potential.'}
+                  {t('body5')}
                 </p>
               </div>
             </motion.div>
@@ -178,19 +170,21 @@ export default function BlogArticle9() {
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}</span>
+              <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('text3')}</span>
               <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
-                {lang === 'it' ? <>Costruisci una talent pipeline basata su <span className="gradient-text">competenze reali.</span></> : <>Build a talent pipeline based on <span className="gradient-text">real competencies.</span></>}
+                {t.rich('heading5', {
+    s: (chunks) => <span className="gradient-text">{chunks}</span>,
+  })}
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
-                {lang === 'it' ? 'Migliora la quality-of-hire con skill verification strutturati e oggettivi.' : 'Improve quality-of-hire with structured, objective skill verifications.'}
+                {t('body6')}
               </p>
               <Button
                 variant="primary"
                 mode="dark"
                 onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
               >
-                {lang === 'it' ? 'Prenota una demo' : 'Book a Demo'}
+                {t('cta2')}
               </Button>
             </motion.div>
           </div>

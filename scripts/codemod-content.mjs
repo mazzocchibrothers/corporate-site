@@ -413,6 +413,25 @@ if (codeMismatch.length) {
   console.log('  Kept per locale, so nothing changes on the page. Almost certainly drift — worth a look.');
 }
 
+// A code reference nested inside an array that is being written verbatim —
+// `sections[].events[].cta.href: LINKS.unleash`. JSON cannot hold it, and the
+// impure-array split only reaches the top level, so it would arrive in the
+// catalogue as a {__code} object and render as one.
+const leaked = [];
+const findLeaks = (node, path = '') => {
+  if (!node || typeof node !== 'object') return;
+  if (node.__code) { leaked.push(`${path}: ${node.__code}`); return; }
+  if (node.__jsx) return;
+  for (const [k, v] of Object.entries(node)) findLeaks(v, path ? `${path}.${k}` : k);
+};
+for (const [path, value] of Object.entries(catalogue.en)) findLeaks(value, path);
+if (leaked.length) {
+  console.error(`${file}: ${leaked.length} code reference(s) nested inside a list.`);
+  console.error(leaked.map((l) => `  ${l}`).join('\n'));
+  console.error('  Put a key in the data and resolve it at the call site first.');
+  process.exit(1);
+}
+
 // ── Rewrite the source ─────────────────────────────────────────────────────
 // The binding the page reads the tree through, e.g. `const c = lang === 'it' …`.
 let binding = null;
@@ -677,6 +696,29 @@ for (const { node, parts } of reads) {
   visit(sf);
 }
 
+// A callback parameter named `t` shadows the translator, so every rewrite
+// inside it calls the row object instead. Renamed before anything else.
+const shadow = [];
+{
+  const visit = (node) => {
+    if ((ts.isArrowFunction(node) || ts.isFunctionExpression(node))) {
+      for (const p of node.parameters) {
+        if (ts.isIdentifier(p.name) && p.name.text === 't') {
+          shadow.push(sf.getLineAndCharacterOfPosition(p.getStart()).line + 1);
+        }
+      }
+    }
+    ts.forEachChild(node, visit);
+  };
+  visit(sf);
+}
+if (shadow.length) {
+  console.error(`${file}: a callback parameter is named 't' at line(s) ${shadow.join(', ')}.`);
+  console.error("  It shadows the translator, so every rewritten call inside it would");
+  console.error('  call the row instead. Rename it first.');
+  process.exit(1);
+}
+
 let out = src;
 for (const r of replacements.sort((a, b) => b.start - a.start)) {
   out = out.slice(0, r.start) + r.text + out.slice(r.end);
@@ -717,8 +759,13 @@ if (!/from 'next-intl'/.test(out)) {
 // both in scope is a duplicate declaration, not a fallback. Rewrite the line in
 // place — dropping it and re-inserting elsewhere is how the next statement ends
 // up glued to the end of this one.
-let hooked = false;
+// The other codemod may have been here first.
+let hooked = /const t = useTranslations\(/.test(out);
 out = out.replace(/^([ \t]*)const \{([^}]*)\} = useLanguage\(\);[ \t]*$/m, (m, indent, names) => {
+  if (hooked) {
+    const kept = names.split(',').map((n) => n.trim()).filter((n) => n && n !== 't');
+    return kept.length ? `${indent}const { ${kept.join(', ')} } = useLanguage();` : '';
+  }
   hooked = true;
   const kept = names.split(',').map((n) => n.trim()).filter((n) => n && n !== 't');
   const hook = `${indent}const t = useTranslations('${namespace}');`;

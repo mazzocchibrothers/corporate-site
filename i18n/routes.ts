@@ -78,6 +78,20 @@ export function canonical(id: string, locale: string): string {
   return urlFor(route, locale as Locale) ?? urlFor(route, 'en')!;
 }
 
+/**
+ * The localized form of an English in-site path — `/customers/adr` becomes
+ * `/it/clienti/adr`. For a raw <a href>, which unlike next/link does not add
+ * the locale prefix itself.
+ *
+ * It replaces the hand-built version in the newsletters, which knew about
+ * `/clienti` because someone typed it there.
+ */
+export function localizePath(path: string, locale: string): string {
+  const [pathname, suffix = ''] = path.split(/(?=[?#])/);
+  const route = byPath('en', pathname);
+  return route ? (pathFor(route, locale as Locale) ?? pathname) + suffix : path;
+}
+
 /** Whether a route has content in a locale — what hideInIT was guessing at. */
 export const hasLocale = (id: string, locale: string): boolean =>
   byId(id)?.paths[locale as Locale] !== undefined;

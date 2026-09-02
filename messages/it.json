@@ -123,7 +123,921 @@
     "heading2": "Tutti gli Articoli",
     "heading3": "Vuoi approfondire ulteriormente? Parla con il nostro team.",
     "body2": "Prenota una demo e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
-    "cta2": "Prenota una Demo"
+    "cta2": "Prenota una Demo",
+    "accountability": {
+      "scenarios": {
+        "deliverableLate": {
+          "context": "Un deliverable è in ritardo",
+          "low": "\"Non dipendeva da me.\" \"Mancavano le informazioni.\" \"Nessuno mi ha detto che era urgente.\"",
+          "high": "\"Abbiamo mancato la scadenza, questo impatta X. Il motivo è Y. Da ora propongo Z e mi faccio carico del recupero.\""
+        },
+        "twoUrgentRequests": {
+          "context": "Due richieste urgenti da stakeholder diversi",
+          "low": "Esegue in ordine di arrivo, o aspetta che qualcun altro decida cosa viene prima.",
+          "high": "Verifica gli impatti e le urgenze reali, rende esplicito il trade-off, propone una scelta, si allinea con il manager quando serve."
+        },
+        "newProjectNo": {
+          "context": "Nuovo progetto senza un owner chiaro",
+          "low": "Aspetta che venga nominato un referente. Nel frattempo, non si muove.",
+          "high": "Chiama gli stakeholder, propone uno scope iniziale e una suddivisione delle responsabilità, avvia un allineamento rapido."
+        },
+        "teamDeliverableDepends": {
+          "context": "Un deliverable di team dipende da più persone",
+          "low": "\"Ho fatto la mia parte\" anche se il risultato finale non arriva.",
+          "high": "Monitora l'avanzamento delle dipendenze, scala, si riallinea e segnala in anticipo i rischi sul risultato complessivo."
+        }
+      },
+      "levers": {
+        "n01": {
+          "num": "01",
+          "title": "Chiarezza su aspettative e KPI",
+          "desc": "Le persone devono sapere quali risultati sono prioritari, quali metriche verranno usate e entro quali confini possono decidere autonomamente."
+        },
+        "n02": {
+          "num": "02",
+          "title": "Feedback continuo",
+          "desc": "L'accountability si rafforza con feedback tempestivi. Passa dal giudicante (\"non sei stato abbastanza responsabile\") al comportamentale (\"in quella situazione hai atteso invece di proporre una soluzione\")."
+        },
+        "n03": {
+          "num": "03",
+          "title": "Delega, non micro-management",
+          "desc": "La vera delega trasferisce non solo l'attività, ma lo spazio decisionale. Questo significa accettare un certo margine di errore."
+        },
+        "n04": {
+          "num": "04",
+          "title": "Allineamento ruolo-competenza",
+          "desc": "L'accountability è sostenibile solo se la persona ha le competenze per esercitarla. Se il ruolo supera le capacità, si genera blocco o difesa."
+        }
+      },
+      "cta": "Torna al Blog",
+      "text": "27 febbraio 2026",
+      "text2": "11 min di lettura",
+      "heading": "Che cos'è l'accountability e perché migliora le performance lavorative",
+      "body": "Quando un progetto si blocca, una scadenza slitta o un errore rimbalza tra funzioni senza che nessuno se ne faccia carico, la parola mancante è spesso una sola: accountability.",
+      "heading2": "Che cos'è davvero l'accountability?",
+      "body2": "La traduzione più comune è \"responsabilità\". In azienda, però, questa equivalenza è fuorviante. <b>La responsabilità può essere assegnata. L'accountability no.</b>",
+      "heading3": "Delega",
+      "body3": "Trasferimento di un compito a un'altra persona",
+      "body4": "Senso di appartenenza verso un progetto o risultato",
+      "body5": "Piena titolarità di decisioni e conseguenze, anche nell'ambiguità",
+      "heading4": "Il legame con la performance",
+      "body6": "Quando l'accountability manca: spostamento di responsabilità, decisioni rinviate, conflitti impliciti. La performance cala non solo per inefficienza operativa, ma perché <b>l'ambiguità aumenta</b>.",
+      "body7": "\"L'accountability riduce il costo organizzativo dell'ambiguità.\"",
+      "heading5": "Riconoscere l'accountability nel lavoro quotidiano",
+      "body8": "Quattro scenari. Due comportamenti. Quale vedi nella tua organizzazione?",
+      "text3": "Bassa accountability",
+      "text4": "Alta accountability",
+      "heading6": "Come sviluppare l'accountability",
+      "body9": "L'accountability non si impone tramite comunicazioni interne o codici etici. Si costruisce attraverso scelte organizzative coerenti. Quattro leve operative:",
+      "body10": "Attraverso verification sulle competenze basati su scienza psicometrica, domande situazionali e metodologia BEI, Skillvue osserva come una persona ragiona e decide in scenari organizzativi realistici, distinguendo tra responsabilità dichiarata e accountability reale.",
+      "text5": "Scopri Skillvue",
+      "heading7": "Riduci il rischio di promuovere sulla base di <s>impressioni.</s>",
+      "body11": "Integra la valutazione delle competenze nel tuo processo di valutazione per decisioni più solide e sostenibili.",
+      "cta2": "Prenota una demo"
+    },
+    "attitude-vs-competence": {
+      "whenAttitude": {
+        "roleJuniorOr": "Il ruolo è junior o entry-level",
+        "contextEvolvingOr": "Il contesto è in evoluzione o in rapida crescita",
+        "thereTimeStructured": "C'è tempo per un onboarding strutturato",
+        "thereStrongInvestment": "Esiste un forte investimento in programmi L&D"
+      },
+      "whenCompetence": {
+        "roleCriticalOr": "Il ruolo è critico o ad alto impatto",
+        "consolidatedTechnicalSkills": "Sono richieste competenze tecniche consolidate",
+        "immediatePerformanceImpact": "È necessario un impatto immediato sulle performance",
+        "teamCannotAbsorb": "Il team non può assorbire una lunga curva di apprendimento"
+      },
+      "methods": {
+        "n01": {
+          "num": "01",
+          "title": "Behavioral Event Interview (BEI)",
+          "desc": "Invece di chiedere \"come ti comporteresti\", chiedi un episodio concreto. Analizza il processo: quali decisioni sono state prese, quali alternative sono state considerate, quale impatto ha avuto l'azione."
+        },
+        "n02": {
+          "num": "02",
+          "title": "Domande situazionali",
+          "desc": "Presenta scenari realistici per capire come ragiona il candidato. Non cerchi la risposta \"perfetta\", ma la struttura del ragionamento: analisi del problema, gestione dei vincoli, criteri di decisione."
+        },
+        "n03": {
+          "num": "03",
+          "title": "Evidenze comportamentali",
+          "desc": "Una competenza deve essere supportata da comportamenti osservabili. Il candidato deve descrivere: un obiettivo specifico, le azioni intraprese, i risultati ottenuti, le metriche utilizzate."
+        },
+        "n04": {
+          "num": "04",
+          "title": "Test pratici",
+          "desc": "Quando possibile, integra test tecnici o compiti simulati. Un case study, una simulazione, un esercizio pratico che permetta di osservare direttamente la competenza in azione."
+        }
+      },
+      "cta": "Torna al Blog",
+      "text": "13 marzo 2026",
+      "text2": "8 min di lettura",
+      "heading": "Attitudine vs. Competenza: come valutare un candidato",
+      "body": "Dovresti assumere qualcuno che sa già fare il lavoro, o qualcuno che sembra avere il potenziale per impararlo?",
+      "body2": "Questa è una delle domande più comuni e più sottovalutate nel recruitment. Quando valuti un candidato, stai sempre facendo una scelta tra attitudine e competenza.",
+      "body3": "Un profilo può avere un'ottima predisposizione: curiosità, velocità di apprendimento, energia. Un altro può avere competenze già consolidate, sviluppate in contesti simili. La scelta tra i due non è solo tecnica, ma implica considerazioni strategiche per la tua azienda.",
+      "body4": "Vediamo la differenza tra attitudine e competenza, quando ha senso privilegiare l'una rispetto all'altra, e come puoi valutarle entrambe riducendo il rischio di decisioni basate su impressioni o bias.",
+      "heading2": "Attitudine vs. Competenza: qual è la vera differenza?",
+      "body5": "La differenza tra attitudine e competenza non è teorica. È profondamente operativa.",
+      "heading3": "Attitudine",
+      "body6": "Predisposizione, potenziale. La capacità di imparare rapidamente, relazionarsi con facilità, affrontare i problemi con curiosità.",
+      "body7": "Potenziale versus performance già osservabile",
+      "heading4": "Competenza",
+      "body8": "Già sviluppata e applicata in contesti reali. Comportamenti osservabili, risultati raggiunti, decisioni prese.",
+      "heading5": "Quando valutare l'attitudine (e quando no)",
+      "body9": "<b>Quanto tempo e margine di apprendimento può permettersi la tua organizzazione?</b>",
+      "text3": "Privilegia l'attitudine quando",
+      "text4": "Non affidarti solo all'attitudine quando",
+      "body10": "\"L'attitudine è una promessa. La competenza è una garanzia parziale. La scelta dipende dal livello di urgenza e dalla maturità del contesto organizzativo.\"",
+      "heading6": "Come valutare la competenza in modo oggettivo",
+      "body11": "La competenza non può essere valutata solo attraverso dichiarazioni. Occorre spostare il focus dalle opinioni alle evidenze comportamentali.",
+      "body12": "<b>Importante:</b> alcuni candidati sanno spiegare molto bene come si dovrebbe fare una cosa. Spiegare non equivale a saperlo fare in un contesto reale, con vincoli, pressione e responsabilità.",
+      "heading7": "Perché lo skill verification ti aiuta a distinguere attitudine e competenza",
+      "body13": "Distinguere attitudine e competenza richiede più di una buona intervista. Un verification strutturato delle competenze ti permette di lavorare su due livelli distinti:",
+      "heading8": "Misurazione della competenza",
+      "body14": "Osserva comportamenti, processi decisionali, applicazione concreta delle competenze in scenari realistici.",
+      "heading9": "Valutazione del potenziale",
+      "body15": "Analizza la capacità di apprendimento, la flessibilità cognitiva, l'orientamento agli obiettivi. Elementi che indicano la possibilità di crescita futura.",
+      "body16": "Il vantaggio immediato è la <b>comparabilità</b>: candidati diversi vengono valutati sugli stessi criteri, con indicatori uniformi. Questo riduce il rischio di basare le decisioni sullo storytelling, sulle impressioni o sull'affinità personale.",
+      "body17": "Attraverso verification basati su scienza psicometrica, domande situazionali e metodologia BEI, Skillvue ti aiuta a distinguere tra chi ha già sviluppato una competenza e chi mostra un potenziale coerente con il ruolo. Decisioni basate su evidenze, non impressioni.",
+      "text5": "Scopri Skillvue",
+      "heading10": "Inizia a prendere decisioni basate su <s>evidenze,</s> non impressioni.",
+      "body18": "Skillvue analizza le competenze di candidati e dipendenti in modo rapido, obiettivo e su scala, grazie a una tecnologia AI proprietaria.",
+      "cta2": "Prenota una demo"
+    },
+    "corporate-onboarding": {
+      "phases": {
+        "n01": {
+          "num": "01",
+          "title": "Preboarding",
+          "timing": "Offerta accettata → Giorno 1",
+          "points": [
+            "Chiarisci le priorità per i primi 90 giorni: non solo obiettivi generici, ma risultati attesi e criteri di valutazione",
+            "Definisci i riferimenti chiave: manager diretto, buddy, contatti HR",
+            "Allinea le aspettative su ruolo e responsabilità prima dell'ingresso",
+            "Mantieni un contatto attivo e strutturato: le comunicazioni pianificate riducono l'incertezza",
+            "Prepara il contesto operativo: strumenti, accessi, agenda delle prime settimane già pianificata"
+          ]
+        },
+        "n02": {
+          "num": "02",
+          "title": "Integrazione operativa",
+          "timing": "Settimane 1-4",
+          "points": [
+            "Definisci obiettivi a breve termine chiari (30-60 giorni): risultati concreti, non solo attività",
+            "Pianifica check-in strutturati con il manager: un feedback frequente previene errori facilmente correggibili",
+            "Assegna responsabilità progressive: inizia con compiti osservabili, aumentando gradualmente l'autonomia",
+            "Rendi espliciti i criteri di priorità: cosa è urgente, strategico o può aspettare",
+            "Raccogli segnali precoci di disallineamento: difficoltà ricorrenti, esitazioni decisionali"
+          ]
+        },
+        "n03": {
+          "num": "03",
+          "title": "Allineamento ruolo e aspettative",
+          "timing": "Settimane 4-8",
+          "points": [
+            "Revisiona formalmente le responsabilità del ruolo: confronta ciò che è stato definito in selezione con la realtà",
+            "Rendi espliciti i criteri di performance: cosa significa \"fare bene\" nei primi 3-6 mesi",
+            "Verifica il livello di autonomia raggiunto: quali decisioni sono autonome, quali richiedono ancora supervisione",
+            "Chiedi un feedback bidirezionale: dal manager alla persona e viceversa",
+            "Identifica i gap di competenza: distingui tra bisogno formativo, supporto organizzativo o ridefinizione delle priorità"
+          ]
+        },
+        "n04": {
+          "num": "04",
+          "title": "Integrazione culturale",
+          "timing": "Mesi 2-3",
+          "points": [
+            "Rendi espliciti i valori operativi, non solo quelli dichiarati",
+            "Facilita le relazioni interfunzionali: incontri con stakeholder chiave oltre il team diretto",
+            "Chiarisci i modelli decisionali: centralizzati, partecipativi, data-driven?",
+            "Condividi esempi concreti di comportamenti attesi: cosa viene premiato, cosa crea attrito",
+            "Pianifica check-in sull'esperienza: chiedere \"cosa ti ha sorpreso?\" è spesso più utile di un sondaggio standard"
+          ]
+        },
+        "n05": {
+          "num": "05",
+          "title": "Monitoraggio e feedback",
+          "timing": "Giorni 30-60-90+",
+          "points": [
+            "Pianifica checkpoint strutturati a 30-60-90 giorni con obiettivi e criteri chiari",
+            "Coinvolgi attivamente il manager diretto: il feedback non può essere delegato solo all'HR",
+            "Raccogli feedback bidirezionale: cosa funziona e cosa può migliorare",
+            "Valuta l'autonomia raggiunta rispetto alle aspettative iniziali: non solo i compiti completati, ma la qualità delle decisioni",
+            "Collega i gap a piani di sviluppo concreti: formazione, mentoring, ridefinizione delle priorità"
+          ]
+        }
+      },
+      "cta": "Torna al Blog",
+      "text": "23 febbraio 2026",
+      "text2": "15 min di lettura",
+      "heading": "Corporate Onboarding: guida completa al processo",
+      "body": "Circa il 50% dei candidati selezionati si ritira prima di iniziare. Ogni onboarding fallito significa ripetere i costi di selezione, perdere tempo del manager e rallentare il team.",
+      "heading2": "Che cos'è davvero l'onboarding?",
+      "body2": "L'onboarding è un processo di allineamento progressivo tra persona, ruolo e organizzazione. Costruisce chiarezza su tre dimensioni fondamentali: cosa è atteso nei primi mesi, come funzionano realmente i processi e le decisioni, e quali comportamenti generano valore in quel contesto specifico.",
+      "body3": "Non confondere l'onboarding con il welcome. Il welcome riguarda l'esperienza iniziale. L'onboarding riguarda la capacità della persona di diventare autonoma, produttiva e integrata nel sistema organizzativo.",
+      "heading3": "Le 5 fasi dell'onboarding",
+      "body4": "Ogni fase risponde a una domanda specifica. Insieme formano un processo strutturato e misurabile.",
+      "heading4": "L'onboarding come verification sul campo",
+      "body5": "Durante l'onboarding è possibile distinguere tre situazioni molto diverse: un <b>gap di competenza</b> (richiede formazione mirata), un <b>disallineamento di ruolo</b> (le competenze presenti non corrispondono alle reali esigenze del contesto), o un <b>problema di integrazione</b> (le competenze tecniche ci sono, ma l'allineamento culturale è debole). Confondere queste situazioni porta a interventi inefficaci.",
+      "body6": "Integrare uno skill verification all'inizio dell'onboarding permette di validare le competenze chiave rispetto al ruolo reale, identificare i gap prima che impattino la performance e costruire un piano di sviluppo personalizzato basato su evidenze, non percezioni. Skillvue supporta questo attraverso verification psicometrici, domande situazionali e metodologia BEI.",
+      "text3": "Scopri Skillvue",
+      "heading5": "Prendi decisioni di onboarding basate su <s>competenze reali.</s>",
+      "body7": "Skillvue analizza le competenze in modo rapido, obiettivo e su scala, grazie a una tecnologia AI proprietaria.",
+      "cta2": "Prenota una demo"
+    },
+    "critical-thinking": {
+      "indicators": {
+        "meetings": {
+          "context": "Nelle riunioni",
+          "behavior": "Non accetta automaticamente i dati o le opinioni condivise. Chiede le fonti, verifica la coerenza delle informazioni, distingue i fatti misurabili dalle interpretazioni."
+        },
+        "projects": {
+          "context": "Nei progetti",
+          "behavior": "Quando emerge un problema, non agisce sul \"sintomo\" ma cerca la causa reale. Analizza se il problema è organizzativo, comunicativo o legato a priorità mal definite."
+        },
+        "conflict": {
+          "context": "Nei conflitti",
+          "behavior": "Separa le percezioni personali dai fatti verificabili. Evita le generalizzazioni (\"non collabora mai\") e riporta la discussione a episodi specifici e comportamenti osservabili."
+        },
+        "decisions": {
+          "context": "Nelle decisioni",
+          "behavior": "Prima di scegliere una direzione, valuta le implicazioni a medio termine. Considera gli impatti su altre funzioni, le risorse necessarie e le possibili conseguenze non volute."
+        }
+      },
+      "faqs": {
+        "whatCriticalThinking": {
+          "q": "Che cos'è il pensiero critico?",
+          "a": "Il pensiero critico è la capacità di analizzare le informazioni, distinguere i fatti dalle opinioni, mettere in discussione le assunzioni implicite e prendere decisioni coerenti con il contesto. In ambito aziendale, è una competenza operativa che si manifesta quando una persona verifica i dati prima di agire, valuta possibili alternative e considera le implicazioni delle proprie scelte."
+        },
+        "whatSDifference": {
+          "q": "Qual è la differenza tra pensiero critico e pensiero creativo?",
+          "a": "Il pensiero critico serve a valutare, analizzare e verificare. Il pensiero creativo serve a generare nuove idee e soluzioni originali. Il primo riduce il rischio di errori e decisioni affrettate, mentre il secondo espande le possibilità. In ambito aziendale, le due competenze funzionano meglio insieme: la creatività genera opzioni, il pensiero critico valuta e seleziona quelle più sostenibili."
+        },
+        "howDoYou": {
+          "q": "Come si valuta il pensiero critico?",
+          "a": "Servono scenari realistici che riproducano situazioni tipiche del ruolo: dati parziali, priorità in conflitto, informazioni contraddittorie. Si osserva se la persona verifica le fonti prima di decidere, distingue i fatti dalle interpretazioni, rende esplicite le assunzioni alla base della propria scelta e valuta rischi e implicazioni."
+        }
+      },
+      "cta": "Torna al Blog",
+      "text": "Scienza",
+      "text2": "25 febbraio 2026",
+      "text3": "10 min di lettura",
+      "heading": "Che cos'è il pensiero critico e come valutare questa competenza",
+      "body": "Il pensiero critico è una delle competenze più citate nei modelli di competenze. Eppure, quando si tratta di riconoscerlo o misurarlo, spesso diventa un'etichetta generica.",
+      "heading2": "Che cos'è davvero il pensiero critico?",
+      "body2": "In filosofia, il pensiero critico nasce come capacità di mettere in discussione assunzioni, argomenti e sistemi di credenze. In pedagogia, è legato allo sviluppo del ragionamento autonomo. <b>In ambito aziendale, tuttavia, il pensiero critico diventa una competenza operativa.</b>",
+      "body3": "Per pensiero critico intendiamo la capacità di analizzare le informazioni prima di agire, distinguere i fatti dalle opinioni, valutare le implicazioni e prendere decisioni coerenti con il contesto e gli obiettivi.",
+      "body4": "\"Il pensiero critico non è sinonimo di razionalità o spirito analitico. Include anche la capacità di mettere in discussione le proprie assunzioni, valutare le fonti e decidere quando i dati sono sufficienti per agire.\"",
+      "body5": "Una persona con un pensiero critico solido non si limita a eseguire. Analizza dati e contesto, distingue i fatti dalle interpretazioni, mette in discussione le assunzioni implicite e valuta le conseguenze delle proprie decisioni. Una persona con un pensiero critico debole tende a reagire, a seguire schemi predefiniti o a delegare il ragionamento ad altri.",
+      "heading3": "Come identificare il pensiero critico nel lavoro quotidiano",
+      "body6": "Il pensiero critico diventa utile solo quando è possibile osservarlo nei comportamenti. Se rimane una definizione astratta, finirà per essere valutato soggettivamente.",
+      "heading4": "Come valutare il pensiero critico",
+      "body7": "I CV non bastano. Un curriculum può dire che una persona ha gestito progetti complessi, ma non come prende decisioni o come reagisce a dati incompleti. Anche le domande generiche in colloquio aiutano poco.",
+      "body8": "Se vuoi valutare seriamente il pensiero critico, devi spostare l'attenzione su due elementi: <b>contesto e processo decisionale</b>. Servono scenari realistici con dati parziali, priorità in conflitto e informazioni contraddittorie.",
+      "heading5": "Domande situazionali",
+      "body9": "Forzano il ragionamento su un caso concreto, non su un principio astratto. Si osserva la struttura del ragionamento, non solo la risposta finale.",
+      "heading6": "Behavioral Event Interview",
+      "body10": "Invece di chiedere cosa farebbero, si chiede cosa hanno fatto. Si analizza il percorso mentale: quali informazioni sono state considerate, quali alternative sono state valutate.",
+      "heading7": "Punto chiave",
+      "body11": "Skillvue ti permette di valutare il pensiero critico attraverso verification basati su scenari realistici e metodologie psicometriche, osservando come una persona analizza le informazioni, identifica le variabili rilevanti e costruisce una decisione coerente. Il processo conta più della risposta finale.",
+      "heading8": "Domande frequenti",
+      "text4": "Scopri Skillvue",
+      "heading9": "Distingui la percezione dalla <s>competenza reale.</s>",
+      "body12": "Integra la valutazione delle competenze per decisioni organizzative più obiettive e sostenibili.",
+      "cta2": "Prenota una demo"
+    },
+    "managerial-skills": {
+      "skills": {
+        "leadership": {
+          "title": "Leadership",
+          "desc": "La capacità di orientare il team verso una direzione chiara, anche in condizioni di ambiguità. Si osserva quando un manager definisce priorità coerenti, prende decisioni assumendosi la responsabilità e mantiene l'allineamento durante l'incertezza."
+        },
+        "goalOrientation": {
+          "title": "Orientamento agli obiettivi",
+          "desc": "Un manager efficace mantiene il focus sui risultati senza disperdere energie in dinamiche non funzionali. Traduce la strategia in priorità operative, rinegozia le scadenze in modo trasparente e guida il team verso risultati concreti."
+        },
+        "emotionalIntelligence": {
+          "title": "Intelligenza emotiva",
+          "desc": "Gestire le persone significa gestire le dinamiche emotive. Questa competenza si manifesta nella capacità di leggere le tensioni nel team, modulare lo stile comunicativo e affrontare feedback o conflitti senza rigidità."
+        },
+        "negotiation": {
+          "title": "Negoziazione",
+          "desc": "Gran parte del lavoro manageriale è mediazione tra interessi diversi: top management, team, altre funzioni. Emerge quando un manager rende espliciti i vincoli e costruisce soluzioni accettabili mantenendo relazioni funzionali."
+        },
+        "problemSolving": {
+          "title": "Problem Solving",
+          "desc": "Nei ruoli manageriali, i problemi sono raramente tecnici e lineari. Coinvolgono persone, priorità e vincoli organizzativi. Si vede nella capacità di analizzare le situazioni, distinguere i fatti dalle percezioni e prendere decisioni praticabili."
+        }
+      },
+      "observables": {
+        "meetings": {
+          "context": "Nelle riunioni",
+          "signs": [
+            "Chiarisce l'obiettivo della riunione prima di entrare nei dettagli",
+            "Sintetizza i punti chiave quando la discussione si disperde",
+            "Prende una posizione quando è necessaria una decisione",
+            "Assegna responsabilità chiare al termine"
+          ]
+        },
+        "conflictMoments": {
+          "context": "Nei momenti di conflitto",
+          "signs": [
+            "Evita di personalizzare il problema",
+            "Rende espliciti i vincoli invece di spostare la responsabilità",
+            "Cerca un accordo operativo invece di imporre una soluzione"
+          ]
+        },
+        "priorityManagement": {
+          "context": "Nella gestione delle priorità",
+          "signs": [
+            "Traduce gli obiettivi strategici in attività concrete",
+            "Rinegozia le scadenze quando le condizioni cambiano",
+            "Protegge il team da richieste incoerenti o sovrapposte",
+            "Mantiene coerenza tra le priorità dichiarate e ciò che monitora"
+          ]
+        }
+      },
+      "cta": "Torna al Blog",
+      "text": "23 febbraio 2026",
+      "text2": "12 min di lettura",
+      "heading": "Competenze manageriali: cosa sono e come identificarle",
+      "body": "Promuovere un buon professionista a manager è una delle decisioni più delicate che si possano prendere. Le competenze richieste cambiano radicalmente.",
+      "heading2": "Cosa sono le competenze manageriali?",
+      "body2": "Le competenze manageriali riguardano il modo in cui una persona esercita la responsabilità sugli altri e sui risultati. Sono l'insieme delle abilità che permettono di definire priorità chiare, prendere decisioni in condizioni di incertezza, gestire le dinamiche relazionali, sviluppare l'autonomia nei collaboratori e mantenere l'allineamento tra obiettivi individuali e organizzativi.",
+      "body3": "Uno degli equivoci più frequenti è <b>confondere le attività con il valore generato</b>. Un manager può organizzare molte riunioni e monitorare i task, ma questo non è di per sé un indicatore di competenza manageriale. La vera differenza si vede nell'impatto: il team è allineato? Le decisioni sono chiare? I conflitti vengono gestiti o evitati? Le persone crescono o rimangono dipendenti dal capo?",
+      "body4": "\"Le competenze manageriali non riguardano solo ciò che una persona sa fare, ma ciò che sa far accadere attraverso il proprio ruolo.\"",
+      "heading3": "Le 5 competenze manageriali chiave",
+      "heading4": "Come riconoscerle nel lavoro quotidiano",
+      "body5": "Le competenze manageriali non si manifestano in modo spettacolare, ma sono visibili nei dettagli: come un manager conduce una riunione, prende una decisione scomoda, gestisce una priorità che cambia.",
+      "heading5": "Punto chiave",
+      "body6": "Skillvue supporta HR e organizzazioni nella valutazione oggettiva delle competenze manageriali attraverso verification basati su scienze psicometriche, domande situazionali e metodologia BEI. Invece di chiedere \"che tipo di leader sei?\", l'verification osserva come una persona ragiona e decide in scenari manageriali concreti.",
+      "text3": "Scopri Skillvue",
+      "heading6": "Prendi decisioni di leadership basate su <s>dati, non impressioni.</s>",
+      "body7": "Valuta il potenziale manageriale con verification strutturati basati su evidenze comportamentali.",
+      "cta2": "Prenota una demo"
+    },
+    "negotiation-techniques": {
+      "techniques": {
+        "n01": {
+          "num": "01",
+          "title": "Separa le persone dal problema",
+          "summary": "Distingui la dimensione relazionale dalla questione oggettiva da risolvere.",
+          "example": "Invece di \"Non investi mai nelle persone\", prova: \"Abbiamo un vincolo di budget. L'obiettivo HR è ridurre il turnover del 15%. Analizziamo insieme l'impatto economico della formazione.\""
+        },
+        "n02": {
+          "num": "02",
+          "title": "Definisci gli interessi, non solo le posizioni",
+          "summary": "Una posizione è ciò che qualcuno dichiara di volere. Un interesse è il perché lo vuole.",
+          "example": "Un dipendente chiede un aumento del 10% (posizione). L'interesse potrebbe essere il riconoscimento, l'allineamento al mercato o le prospettive di crescita. Concentrati sugli interessi per sbloccare più leve."
+        },
+        "n03": {
+          "num": "03",
+          "title": "Prepara le alternative (BATNA)",
+          "summary": "La tua migliore alternativa a un accordo negoziato. Senza di essa, negozi per necessità, non per scelta.",
+          "example": "Un manager vuole trattenere una risorsa chiave che si sposta in un'altra funzione. BATNA: transizione graduale, affiancamento temporaneo o piano di sostituzione prima del trasferimento."
+        },
+        "n04": {
+          "num": "04",
+          "title": "Usa domande esplorative",
+          "summary": "Le domande spostano le conversazioni dalla logica difensiva a quella analitica.",
+          "example": "\"Qual è il risultato minimo accettabile per te?\" \"Quale vincolo ti preoccupa di più?\" \"Se dovessimo scegliere una priorità questo trimestre, quale sarebbe?\""
+        },
+        "n05": {
+          "num": "05",
+          "title": "Rendi espliciti i vincoli",
+          "summary": "I vincoli non dichiarati vengono interpretati come indisponibilità o rigidità personale.",
+          "example": "\"Il range per questo ruolo è definito da una policy interna di equità salariale. Possiamo lavorare su variabile o benefit, ma la parte fissa ha questo limite.\""
+        },
+        "n06": {
+          "num": "06",
+          "title": "Cerca soluzioni win-win realistiche",
+          "summary": "Non \"tutti ottengono tutto\" ma un accordo in cui nessuna parte si sente strutturalmente sconfitta.",
+          "example": "Il dipendente vuole una promozione immediata. Il manager vede il potenziale ma i tempi sono prematuri. Soluzione: milestone chiari, responsabilità progressive, revisione salariale legata a obiettivi verificabili entro 6 mesi."
+        },
+        "n07": {
+          "num": "07",
+          "title": "Formalizza accordi e responsabilità",
+          "summary": "Molte negoziazioni sembrano riuscite fino a quando non devono essere eseguite.",
+          "example": "HR e IT concordano di lanciare un nuovo sistema di valutazione delle performance. Formalizza: HR definisce il framework in 30 giorni, IT costruisce la piattaforma in 60, checkpoint tra le funzioni, go-live dopo il test sul gruppo pilota."
+        }
+      },
+      "cta": "Torna al Blog",
+      "text": "4 marzo 2026",
+      "text2": "14 min di lettura",
+      "heading": "Le 7 tecniche di negoziazione più efficaci al lavoro",
+      "body": "Per anni abbiamo pensato alla negoziazione come a qualcosa di commerciale. In realtà, negozi ogni giorno al lavoro: priorità, budget, obiettivi, condizioni.",
+      "body2": "Il problema è che le persone non sempre hanno gli strumenti per farlo in modo strutturato. Se lavori in HR, lo vedi chiaramente: molti conflitti organizzativi non nascono da differenze inconciliabili, ma da negoziazioni mal gestite. Posizioni irrigidite, interessi non espressi, decisioni prese per autorità invece che per allineamento.",
+      "body3": "La negoziazione non è una competenza \"commerciale\". È una competenza manageriale trasversale.",
+      "heading2": "Perché la negoziazione è importante per le HR",
+      "body4": "La negoziazione entra costantemente nei momenti strategici delle HR: durante la selezione (definizione dell'offerta, gestione delle aspettative), nella risoluzione dei conflitti (tensioni manager-dipendente), nella mobilità interna (ridefinizione del ruolo) e nella leadership (ogni volta che un manager assegna priorità o riallinea gli obiettivi).",
+      "heading3": "Come si manifesta la negoziazione nel lavoro quotidiano",
+      "body5": "Una negoziazione efficace tiene insieme tre dimensioni: <b>obiettivi</b> (cosa vogliamo), <b>vincoli</b> (budget, tempo, risorse, policy) e <b>relazioni</b> (fiducia, equilibrio interno, reputazione).",
+      "heading4": "Distributiva",
+      "body6": "Logica di scambio: se ottengo di più, tu ottieni di meno. Tipica per negoziazioni su budget o risorse limitate.",
+      "heading5": "Integrativa",
+      "body7": "Analizza gli interessi sottostanti, non solo le posizioni dichiarate. Ridefinisce il perimetro del problema per trovare soluzioni per entrambe le parti.",
+      "heading6": "Le 7 tecniche",
+      "body8": "Non sono \"formule magiche\". Sono leve operative per strutturare la conversazione, rendere espliciti gli interessi e costruire accordi sostenibili.",
+      "text3": "Esempio concreto",
+      "heading7": "Come valutare oggettivamente le competenze di negoziazione",
+      "body9": "La negoziazione tende a essere sovrastimata. Un professionista sicuro, fluente e articolato può sembrare un buon negoziatore. Ma la vera capacità negoziale si misura dalla qualità del processo: preparazione, gestione degli interessi, uso dei dati, capacità di formalizzare accordi sostenibili.",
+      "body10": "In un CV potresti leggere \"gestione di negoziazioni complesse\". In realtà, non sai se la persona ha lavorato sugli interessi o solo sulle posizioni, se ha usato dati o leve relazionali, o se gli accordi erano sostenibili o solo momentaneamente vantaggiosi.",
+      "heading8": "Punto chiave",
+      "body11": "Ciò che conta non è solo il risultato, ma la struttura del processo decisionale. Attraverso skill verification basati su scienza psicometrica, domande situazionali e metodologia BEI, Skillvue osserva come una persona gestisce scenari di negoziazione realistici, distinguendo tra stile comunicativo e reale capacità di gestire interessi divergenti.",
+      "text4": "Scopri Skillvue",
+      "heading9": "Valuta la negoziazione come <s>competenza organizzativa,</s> non come percezione soggettiva.",
+      "body12": "Skillvue analizza le competenze di candidati e dipendenti in modo rapido, oggettivo e su scala tramite tecnologia AI proprietaria.",
+      "cta2": "Prenota una demo",
+      "credentials": {
+        "psychometricScience": "Scienza psicometrica",
+        "beiMethodology": "Metodologia BEI",
+        "objectiveProfiles": "Profili oggettivi",
+        "skillsBasedHiring": "Skills-based hiring"
+      }
+    },
+    "newsletter-august-2026": {
+      "onClick": "/prenota-incontro",
+      "metaTitle": "Skillvue — La newsletter di agosto",
+      "tag": "Newsletter",
+      "date": "Agosto 2026",
+      "readTime": "5 min di lettura",
+      "title": "Competenze, nuovi insight e dove incontrarci in Europa",
+      "subtitle": "I nostri prossimi eventi in Europa, un approfondimento sulle sfide organizzative dei supermercati e una nuova customer story con Gruppo Unicomm.",
+      "intro": [
+        "Mentre entriamo in una nuova stagione di eventi e confronti in tutta Europa, continuiamo a esplorare i temi che stanno ridefinendo il modo in cui le organizzazioni comprendono e gestiscono le competenze.",
+        "Dalla trasformazione della forza lavoro al talent management, fino alla necessità di prendere decisioni più rapide e informate in organizzazioni complesse e distribuite, avere **dati chiari sulle competenze** diventa sempre più importante.",
+        "In questa edizione raccogliamo i nostri prossimi eventi in Europa, un approfondimento su alcune delle principali sfide organizzative dei supermercati e una nuova customer story con Gruppo Unicomm."
+      ],
+      "sections": [
+        {
+          "img": "events",
+          "heading": "Dove incontrarci questo autunno",
+          "body": [
+            "Nei prossimi due mesi saremo in **diverse città europee**, insieme a CHRO, Talent leader e professionisti HR, per confrontarci sui temi che stanno ridefinendo il futuro del lavoro."
+          ],
+          "events": [
+            {
+              "name": "Transformational CHRO Assembly",
+              "meta": "Amsterdam, 9–10 settembre",
+              "text": "Parteciperemo a confronti a porte chiuse con i CHRO di alcune delle principali aziende europee, per discutere i trend e le priorità che stanno trasformando il ruolo dell’HR.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "chroAssembly",
+                "external": true
+              }
+            },
+            {
+              "name": "Fair Cultures",
+              "meta": "Barcellona, 1 ottobre",
+              "text": "Parteciperemo a sessioni sul palco e a workshop privati per esplorare come le competenze possano diventare una vera infrastruttura per il futuro del workforce planning.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "fairCultures",
+                "external": true
+              }
+            },
+            {
+              "name": "Gartner HR Symposium/Xpo",
+              "meta": "Londra, 6–8 ottobre",
+              "text": "Vieni a trovarci al nostro stand per conoscere il team ed esplorare come dati oggettivi sulle competenze possano supportare decisioni migliori su selezione, mobilità interna e sviluppo.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "gartner",
+                "external": true
+              }
+            },
+            {
+              "name": "HRcoreACADEMY Summit",
+              "meta": "Amsterdam, 7–8 ottobre",
+              "text": "Due giornate dedicate a Talent Transformation e Learning & Development, dove porteremo anche nuove prospettive sui cambiamenti che stanno ridefinendo competenze, AI e talent management.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "hrcoreAcademy",
+                "external": true
+              }
+            },
+            {
+              "name": "UNLEASH World",
+              "meta": "Parigi, 20–22 ottobre",
+              "text": "Vieni a trovarci al nostro stand a uno dei principali eventi europei dedicati a HR, tecnologia e futuro del lavoro.",
+              "cta": {
+                "label": "Scopri di più",
+                "href": "unleash",
+                "external": true
+              }
+            }
+          ]
+        },
+        {
+          "img": "supermarkets",
+          "heading": "Che cosa significa un approccio skills-based nei supermercati?",
+          "body": [
+            "Turnover elevato, selezione su larga scala, pipeline per i direttori di punto vendita, sviluppo delle persone in prima linea e integrazione post-acquisizione rendono particolarmente complesso prendere decisioni coerenti sulle persone in organizzazioni retail distribuite.",
+            "In una nuova breve panoramica abbiamo raccolto alcune delle sfide chiave del settore e approfondito il ruolo che **dati oggettivi sulle competenze** possono avere nelle diverse fasi del talent lifecycle, dalla selezione alla crescita interna fino alla trasformazione organizzativa.",
+            "Il documento si concentra in particolare su quattro ambiti: selezione e screening su larga scala, costruzione delle pipeline per direttori di punto vendita e capireparto, sviluppo delle persone in prima linea e gestione delle competenze durante acquisizioni e riorganizzazioni."
+          ],
+          "cta": {
+            "label": "Esplora la panoramica sui supermercati",
+            "href": "supermarkets",
+            "external": false,
+            "newTab": true
+          }
+        },
+        {
+          "img": "unicomm",
+          "heading": "Rendere visibili le competenze in Gruppo Unicomm",
+          "body": [
+            "Quando un gruppo cresce attraverso acquisizioni e una rete distribuita di punti vendita, il rischio è che informazioni, valutazioni e competenze restino frammentate tra le persone e l’organizzazione.",
+            "Per Gruppo Unicomm, partire dalle competenze significa costruire un **linguaggio comune tra persone, punti vendita e strategia di business**, contribuendo a rendere le decisioni HR più coerenti con le reali esigenze dell’organizzazione.",
+            "Nella nostra ultima customer story, Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm, racconta il percorso avviato con Skillvue per trasformare grandi volumi di informazioni su candidati e popolazione aziendale in dati utili, prioritizzati e azionabili.",
+            "In un contesto in cui i team HR devono gestire volumi elevati senza rallentare il business, l’obiettivo è rendere la selezione più strutturata e creare maggiore continuità tra le decisioni sulle persone."
+          ],
+          "cta": {
+            "label": "Guarda la customer story",
+            "href": "unicomm",
+            "external": false
+          }
+        }
+      ],
+      "closing": {
+        "heading": "Uno sguardo a ciò che verrà",
+        "body": [
+          "I prossimi mesi porteranno nuovi confronti su **come competenze, AI e workforce planning stanno evolvendo** in tutta Europa.",
+          "Continueremo a condividere ciò che impariamo dagli HR leader, dai nostri clienti e dagli eventi in cui questi temi vengono discussi."
+        ]
+      },
+      "finalKicker": "Scopri Skillvue",
+      "finalTitle": "Decisioni migliori sul talento partono da",
+      "finalTitleHighlight": "competenze più chiare.",
+      "finalBody": "Prenota una demo e scopri come Skillvue verifica competenze e AI readiness in tutta l’organizzazione.",
+      "finalButton": "Prenota una demo",
+      "back": "Torna al Blog",
+      "imgSoon": "immagine in arrivo",
+      "imgLabels": {
+        "events": "Dove trovare Skillvue nei prossimi mesi",
+        "supermarkets": "Il ruolo delle competenze nella GDO",
+        "unicomm": "Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm"
+      }
+    },
+    "newsletter-july-2026": {
+      "onClick": "/prenota-incontro",
+      "metaTitle": "Skillvue — La newsletter di luglio",
+      "tag": "Newsletter",
+      "date": "Luglio 2026",
+      "readTime": "4 min di lettura",
+      "title": "La newsletter di luglio",
+      "subtitle": "Competenze, AI e decisioni migliori sul talento — quattro prospettive raccolte da Londra a Parigi, più un approfondimento sull’AI readiness.",
+      "intro": [
+        "Negli ultimi mesi abbiamo incontrato HR e Talent leader in diversi eventi in tutta Europa, confrontandoci sui cambiamenti che stanno ridefinendo il modo in cui le organizzazioni assumono, valutano e sviluppano le persone.",
+        "Da questi confronti è emerso un tema comune: l’AI apre nuove opportunità, ma trasformarle in decisioni migliori richiede **dati affidabili**, una comprensione chiara delle competenze delle persone e processi che uniscano tecnologia e giudizio umano.",
+        "In questa edizione raccogliamo quattro prospettive su questi temi — da Londra a Parigi — insieme a un approfondimento sull’AI readiness e all’esperienza di un nostro cliente nel settore farmaceutico."
+      ],
+      "sections": [
+        {
+          "img": "vivatech",
+          "heading": "Un premio a VivaTech e nuove prospettive",
+          "body": [
+            "A VivaTech, a Parigi, ci siamo confrontati con aziende, startup e leader internazionali su come l’AI sta trasformando il mondo del lavoro.",
+            "Uno dei messaggi più chiari è che la sfida dell’AI **non è solo tecnologica, ma anche organizzativa**. Per le Direzioni HR significa capire quali competenze servono, come svilupparle e come l’AI può supportare decisioni sul talento più consapevoli.",
+            "Durante l’evento abbiamo anche vinto il ManpowerGroup Startup Challenge, “Redesigning Work for the Age of AI” — un riconoscimento importante e un’esperienza che ci ha lasciato nuove idee e prospettive sul futuro del lavoro."
+          ],
+          "cta": {
+            "label": "Scopri di più sulla nostra esperienza a VivaTech",
+            "href": "vivatech",
+            "external": true
+          }
+        },
+        {
+          "img": "execTa",
+          "heading": "Oltre lo skills-based hiring",
+          "body": [
+            "Un paio di settimane fa a Londra, insieme a ExecTASocial, ci siamo seduti con un gruppo di Head of Talent Acquisition per discutere alcune delle sfide più grandi che stanno ridefinendo la selezione oggi: migliorare la qualità dei candidati, costruire la fiducia degli hiring manager, migliorare la candidate experience, ridurre gli errori di assunzione, aumentare l’adozione degli assessment e comprendere il ruolo crescente dell’AI lungo tutto il talent lifecycle.",
+            "Un punto è emerso con chiarezza: lo skills-based hiring **non è più solo una metodologia di selezione**. Sta diventando la base per decisioni sul talento più oggettive e basate sui dati, dall’assunzione allo sviluppo fino alla mobilità interna.",
+            "Ma questo cambiamento richiede più della sola tecnologia. L’HR ha bisogno dell’autorevolezza per far comprendere a CEO e alle altre funzioni il valore strategico di un modello operativo basato sulle competenze, oltre a un supporto cross-funzionale per superare le sfide di implementazione — dall’integrazione tecnica all’allocazione delle risorse. Solo così le organizzazioni possono collegare davvero la strategia sulle persone a risultati di business misurabili."
+          ],
+          "cta": {
+            "label": "Leggi il post su LinkedIn",
+            "href": "execTa",
+            "external": true
+          }
+        },
+        {
+          "img": "aiReadiness",
+          "heading": "Quanto è pronta la tua organizzazione per l’AI?",
+          "body": [
+            "Adottare nuovi strumenti non significa necessariamente che un’organizzazione sia pronta a usare l’AI in modo efficace. Autovalutazioni, competenze dichiarate e benchmark generici offrono solo un quadro parziale della reale preparazione.",
+            "Per questo abbiamo sviluppato un test che misura **sia la conoscenza tecnica sia la capacità di applicare l’AI con giudizio**. È costruito attorno ai ruoli, ai processi e ai casi d’uso reali dell’organizzazione, aiutando a individuare le capacità esistenti, i gap di competenze rilevanti e le priorità di upskilling e reskilling.",
+            "In questo modo l’AI readiness può diventare una fonte concreta di informazioni per prendere decisioni di sviluppo più mirate."
+          ],
+          "cta": {
+            "label": "Esplora l’AI Competency Test",
+            "href": "aiTest",
+            "external": false
+          }
+        },
+        {
+          "img": "fidia",
+          "heading": "Rendere visibili le competenze in Fidia Farmaceutici",
+          "body": [
+            "Come può un’organizzazione rendere più strutturato, oggettivo e scalabile il modo in cui valuta e sviluppa le competenze delle proprie persone?",
+            "Ne parliamo nella nostra ultima customer story con Gianluca Magnani, Global People & Culture Officer di Fidia Farmaceutici, che racconta come l’organizzazione sia passata **da criteri basati sul CV a criteri basati sulle competenze** — rendendo competenze e potenziale più visibili per sviluppare sempre più persone in una rete vendita di 900 persone, dove prima solo il 5-10% riusciva a crescere nel proprio percorso di carriera.",
+            "L’obiettivo non è sostituire il giudizio umano, ma offrire una base più solida per costruire percorsi di sviluppo allineati sia al potenziale delle persone sia alle esigenze dell’organizzazione."
+          ],
+          "cta": {
+            "label": "Guarda la customer story",
+            "href": "fidia",
+            "external": false
+          }
+        }
+      ],
+      "closing": {
+        "heading": "Verso decisioni migliori sul talento",
+        "body": [
+          "Dall’assunzione allo sviluppo delle persone, queste esperienze riflettono lo stesso bisogno di fondo: comprendere le competenze in modo più chiaro e prendere decisioni sul talento **più informate, oggettive e ancorate alla realtà di ogni organizzazione**.",
+          "Continueremo a condividere insight pratici, conversazioni ed esempi concreti di come l’AI e gli approcci basati sulle competenze stanno trasformando il lavoro delle Direzioni HR."
+        ]
+      },
+      "finalKicker": "Scopri Skillvue",
+      "finalTitle": "Decisioni migliori sul talento partono da",
+      "finalTitleHighlight": "competenze più chiare.",
+      "finalBody": "Prenota una demo e scopri come Skillvue verifica competenze e AI readiness in tutta l’organizzazione.",
+      "finalButton": "Prenota una demo",
+      "back": "Torna al Blog",
+      "imgSoon": "immagine in arrivo",
+      "imgLabels": {
+        "vivatech": "Foto VivaTech",
+        "execTa": "Foto tavola rotonda ExecTA (Londra)",
+        "aiReadiness": "Visual AI Competency Test",
+        "fidia": "Foto customer story Fidia"
+      }
+    },
+    "recruitment-biases": {
+      "biases": {
+        "n01": {
+          "num": "01",
+          "title": "Effetto Alone (Halo Effect)",
+          "oneliner": "Un tratto positivo oscura tutto il resto",
+          "desc": "Una singola caratteristica positiva influenza in modo sproporzionato la valutazione complessiva. Un'università prestigiosa, uno stile comunicativo brillante o un'esperienza internazionale diventano dominanti e \"contaminano\" il giudizio su competenze non ancora verificate.",
+          "mitigation": [
+            "Definire le competenze chiave prima del colloquio",
+            "Usare griglie di valutazione separate per competenza",
+            "Fare domande di approfondimento anche quando l'impressione è positiva",
+            "Confrontare su criteri uniformi"
+          ]
+        },
+        "n02": {
+          "num": "02",
+          "title": "Effetto Corna (Horn Effect)",
+          "oneliner": "Un dettaglio negativo affonda l'intera valutazione",
+          "desc": "Il gemello negativo dell'Effetto Alone. Un elemento percepito come negativo condiziona tutta la valutazione. Un errore nel CV, un'esperienza lavorativa breve o uno stile meno sicuro. Il colloquio diventa una ricerca di conferma del dubbio iniziale.",
+          "mitigation": [
+            "Separare le competenze nella valutazione",
+            "Verificare prima di confermare i negativi",
+            "Distinguere l'errore dal pattern",
+            "Usare griglie strutturate per tutti"
+          ]
+        },
+        "n03": {
+          "num": "03",
+          "title": "Bias di Affinità",
+          "oneliner": "Preferisci i candidati che ti sembrano simili a te",
+          "desc": "Valuti più positivamente i candidati che percepisci come simili a te o al tuo team. Background, percorso professionale, stile comunicativo o interessi. La chimica sembra competenza, ma non lo è.",
+          "mitigation": [
+            "Ancorare la valutazione a competenze osservabili",
+            "Domande identiche per tutti i candidati",
+            "Più valutatori con criteri condivisi",
+            "Separare \"simpatico\" da \"qualificato\""
+          ]
+        },
+        "n04": {
+          "num": "04",
+          "title": "Bias di Conferma",
+          "oneliner": "Vedi solo ciò che conferma la tua prima impressione",
+          "desc": "La tendenza a cercare, interpretare e ricordare solo le informazioni che confermano un'idea già formata. Una volta che hai un'opinione, inizi a fare domande orientate a confermarla. Se non trovi prove contrarie, non hai cercato abbastanza.",
+          "mitigation": [
+            "Metti in discussione la tua prima impressione",
+            "Cerca attivamente prove contrarie",
+            "Usa griglie di valutazione predefinite",
+            "Separa la raccolta dati dal giudizio finale"
+          ]
+        },
+        "n05": {
+          "num": "05",
+          "title": "Bias di Ancoraggio",
+          "oneliner": "Il primo dato domina tutto ciò che segue",
+          "desc": "Il primo pezzo di informazione ricevuto su un candidato diventa un punto di riferimento che condiziona tutte le valutazioni successive. Lo stipendio attuale, il titolo di studio, il commento di un collega. Il giudizio ruota attorno a quel dato iniziale.",
+          "mitigation": [
+            "Rimandare la valutazione economica",
+            "Criteri indipendenti per competenza",
+            "Valutare ogni competenza separatamente",
+            "Confrontare su evidenze comportamentali"
+          ]
+        },
+        "n06": {
+          "num": "06",
+          "title": "Bias di Somiglianza",
+          "oneliner": "Favorisci i candidati che rispecchiano il tuo percorso",
+          "desc": "La tendenza a preferire candidati che riflettono il tuo percorso, stile decisionale o modo di lavorare. Se il candidato ha affrontato sfide simili o condivide il tuo approccio, inconsciamente lo consideri \"più adatto.\"",
+          "mitigation": [
+            "Modello di competenze condiviso e chiaro",
+            "Distinguere lo stile dall'adeguatezza",
+            "Diversità di background tra i valutatori",
+            "Chiedersi: è competente o solo simile?"
+          ]
+        },
+        "n07": {
+          "num": "07",
+          "title": "Bias della Prima Impressione",
+          "oneliner": "I primi 5 minuti determinano tutto",
+          "desc": "Formulare un giudizio nei primi minuti e mantenerlo per tutto il colloquio. Puntualità, stretta di mano, tono di voce, stile di presentazione. Il colloquio rischia di diventare una conferma dell'impressione iniziale, positiva o negativa.",
+          "mitigation": [
+            "Strutturare il colloquio con criteri distinti per sezione",
+            "Rimandare il giudizio alla fine",
+            "Annotare evidenze, non percezioni",
+            "Prevedere più momenti di valutazione"
+          ]
+        },
+        "n08": {
+          "num": "08",
+          "title": "Bias di Eccesso di Fiducia",
+          "oneliner": "Ti fidi troppo del tuo stesso giudizio",
+          "desc": "La tendenza a sovrastimare la propria capacità di giudizio. Pensi di poter \"leggere le persone all'istante\" o di avere un intuito speciale per il talento. È insidioso perché riguarda il valutatore, non il candidato.",
+          "mitigation": [
+            "Criteri misurabili e condivisi",
+            "Confronto tra più valutatori",
+            "Distinguere esperienza da validazione",
+            "Integrare strumenti strutturati"
+          ]
+        }
+      },
+      "cta": "Torna al Blog",
+      "text": "10 marzo 2026",
+      "text2": "12 min di lettura",
+      "heading": "Gli 8 bias di selezione più comuni (e come evitarli)",
+      "body": "Hai mai scartato un candidato nei primi cinque minuti di un colloquio? O deciso quasi subito che era \"quello giusto\"?",
+      "body2": "Se la risposta è sì, non significa che sei un recruiter superficiale: significa che sei umano e, proprio per questo, esposto ai bias di selezione.",
+      "body3": "Nel processo di selezione, molte decisioni si formano prima di quanto immaginiamo. Il resto del colloquio spesso diventa una ricerca di conferma. Questo accade perché il nostro cervello usa scorciatoie cognitive per semplificare la complessità: rapide, automatiche, apparentemente efficienti. Il problema è che non sono sempre accurate.",
+      "body4": "La domanda a cui vogliamo rispondere in questa guida non è se i bias esistono. La domanda è: quanto impattano concretamente sulle tue decisioni?",
+      "heading2": "Cosa Sono i Bias Cognitivi?",
+      "body5": "I bias cognitivi sono scorciatoie mentali che usiamo per prendere decisioni più velocemente. Non sono errori intenzionali: sono meccanismi automatici del cervello che ci aiutano a semplificare la complessità. Il problema sorge quando queste scorciatoie entrano in gioco in situazioni che richiedono valutazioni strutturate, come la selezione del personale.",
+      "body6": "Nel processo di selezione, un bias può portarti a sovrastimare un candidato per una singola caratteristica positiva, a scartarlo per un dettaglio irrilevante, a cercare solo informazioni che confermano la tua prima impressione, o a preferire inconsciamente profili simili a te.",
+      "heading3": "Gli 8 Bias di Selezione più Comuni",
+      "body7": "Raramente si manifestano come errori evidenti. Più spesso si travestono da esperienza, intuizione o \"istinto.\"",
+      "heading4": "Come Ridurre i Bias nella Selezione",
+      "body8": "La cattiva notizia: essendo umani, i bias non possono essere eliminati. La buona notizia: possono essere gestiti con metodo. Se vuoi ridurne l'impatto, devi intervenire sul processo di selezione, rendendolo più strutturato e meno dipendente dalla percezione individuale.",
+      "text3": {
+        "defineJobProfiles": "Definire i profili di ruolo sulla base delle competenze, non solo delle attività o della seniority",
+        "structureInterviewsConsistent": "Strutturare i colloqui con domande coerenti per tutti i candidati",
+        "evaluateUniformCriteria": "Valutare su criteri uniformi, separando dimensioni diverse (hard skill, soft skill, potenziale)",
+        "separateDataCollection": "Separare la raccolta dei dati dal giudizio finale, evitando valutazioni precoci",
+        "compareDecisionsAcross": "Confrontare le decisioni tra più valutatori su indicatori condivisi"
+      },
+      "body9": "Skillvue supporta HR e Talent Acquisition nella valutazione oggettiva delle competenze attraverso verification basati sulla scienza psicometrica, domande situazionali e metodologia BEI. Questo consente di confrontare i candidati su criteri misurabili, riducendo il peso delle percezioni individuali.",
+      "text4": "Scopri Skillvue",
+      "heading5": "Rendi il tuo processo di selezione più strutturato, meno esposto ai <s>bias.</s>",
+      "body10": "Skillvue analizza le competenze di candidati e dipendenti in modo rapido, oggettivo e su larga scala grazie alla tecnologia AI proprietaria.",
+      "cta2": "Prenota una demo",
+      "text5": {
+        "psychometricScience": "Scienza psicometrica",
+        "beiMethodology": "Metodologia BEI",
+        "objectiveProfiles": "Profili oggettivi",
+        "biasReduction": "Riduzione dei bias"
+      }
+    },
+    "social-skills": {
+      "socialSkills": {
+        "emotionalIntelligence": {
+          "title": "Intelligenza Emotiva",
+          "desc": "La capacità di leggere le dinamiche emotive che influenzano decisioni, comportamenti e relazioni professionali. Riconosce i segnali di tensione prima che diventino conflitto esplicito."
+        },
+        "orientationOthers": {
+          "title": "Orientamento agli Altri",
+          "desc": "La capacità di comprendere i bisogni, le aspettative e le priorità degli interlocutori e agire di conseguenza. Chiarisce cosa ha realmente bisogno l'interlocutore prima di proporre una soluzione."
+        },
+        "negotiation": {
+          "title": "Negoziazione",
+          "desc": "La negoziazione quotidiana che avviene su priorità, risorse e scadenze. Osservabile nella capacità di trovare compromessi sostenibili tenendo conto degli obiettivi individuali e organizzativi."
+        },
+        "teamworking": {
+          "title": "Teamworking",
+          "desc": "La capacità di lavorare in modo integrato verso un obiettivo comune, anche quando le priorità individuali o funzionali non sono perfettamente allineate."
+        },
+        "leadership": {
+          "title": "Leadership",
+          "desc": "Non necessariamente legata a un ruolo gerarchico. È una competenza che riguarda la capacità di orientare le persone verso una direzione condivisa, anche senza potere formale."
+        },
+        "goalOrientation": {
+          "title": "Orientamento agli Obiettivi",
+          "desc": "La capacità di mantenere il focus sui risultati anche quando le dinamiche relazionali diventano complesse o conflittuali."
+        },
+        "cognitiveFlexibility": {
+          "title": "Flessibilità Cognitiva",
+          "desc": "La capacità di adattare il proprio modo di pensare e agire a contesti, interlocutori e richieste diversi, senza perdere coerenza decisionale."
+        },
+        "problemSolving": {
+          "title": "Problem Solving",
+          "desc": "Non solo risoluzione tecnica, ma gestione di situazioni che coinvolgono più attori, interessi e vincoli. Analizzare i problemi distinguendo fatti, percezioni e interpretazioni."
+        },
+        "resilience": {
+          "title": "Resilienza",
+          "desc": "La capacità di mantenere equilibrio ed efficacia relazionale anche in contesti particolarmente critici. Dopo un conflitto, ripristina rapidamente una relazione funzionale."
+        },
+        "organizationPlanning": {
+          "title": "Organizzazione & Pianificazione",
+          "desc": "Ha una componente sociale spesso sottovalutata. Gestire tempo, priorità e responsabilità ha un impatto diretto sulle relazioni di lavoro."
+        }
+      },
+      "cta": "Torna al Blog",
+      "text": "18 febbraio 2026",
+      "text2": "14 min di lettura",
+      "heading": "Social Skills: cosa sono e perché contano nel lavoro",
+      "body": "Le social skill non riguardano l'essere socievoli. Riguardano il modo in cui una persona si comporta nelle interazioni professionali, soprattutto quando il contesto è complesso.",
+      "heading2": "Cosa Sono le Social Skills?",
+      "body2": "Le social skill sono capacità osservabili che si manifestano nel modo in cui una persona interagisce con colleghi, stakeholder e manager, soprattutto quando il contesto richiede scelte, negoziazione e adattamento.",
+      "body3": "L\\'aspetto più critico è che le social skill vengono spesso trattate come un'etichetta. Si leggono frequentemente nei CV frasi come \"buone capacità relazionali\" o \"ottima comunicazione,\" <b>senza mai chiarire quali comportamenti osservare</b> e quali decisioni supportare.",
+      "body4": "\"Le social skill rappresentano un sottoinsieme delle competenze trasversali che riguardano specificamente la gestione delle relazioni, delle dinamiche interpersonali e delle interazioni professionali.\"",
+      "heading3": "10 Social Skills Rilevanti per il Lavoro Oggi",
+      "body5": "Queste dimensioni non vengono misurate come etichette generiche, ma come costrutti validati scientificamente, osservabili nel lavoro quotidiano.",
+      "heading4": "Esempi Concreti nel Lavoro Quotidiano",
+      "heading5": "Nelle riunioni",
+      "body6": "Una social skill ben sviluppata si riconosce quando una persona chiarisce l'obiettivo della riunione, riporta la conversazione in tema quando si disperde, dà spazio a posizioni diverse senza perdere il focus ed esplicita i disaccordi in modo funzionale senza bloccare la discussione.",
+      "heading6": "Nei momenti di tensione",
+      "body7": "Le social skill si notano con maggiore chiarezza quando il contesto smette di essere lineare. Osserva se una persona chiede chiarimenti prima di reagire, rende espliciti i vincoli invece di spostare la responsabilità, affronta il disaccordo senza personalizzarlo e prende posizione anche senza una direzione chiara.",
+      "body8": "Attraverso Skill Verification basati su metodologie psicometriche accurate e domande situazionali ispirate al BEI, Skillvue ti consente di osservare come le persone si comportano nelle interazioni complesse: disaccordi con gli stakeholder, ambiguità di ruolo, richieste contrastanti, pressioni relazionali. Non come una persona si descrive, ma come ragiona e decide in situazioni sociali realistiche.",
+      "text3": "Scopri Skillvue",
+      "heading7": "Valuta l'efficacia sociale reale, non la <s>simpatia percepita.</s>",
+      "body9": "Prendi decisioni basate su competenze sociali reali, non su impressioni.",
+      "cta2": "Prenota una demo"
+    },
+    "talent-acquisition": {
+      "differences": {
+        "approach": {
+          "dimension": "Approccio",
+          "recruiting": "Reattivo — risponde a una posizione aperta",
+          "ta": "Strategico — parte dalla mappatura delle competenze"
+        },
+        "timeHorizon": {
+          "dimension": "Orizzonte Temporale",
+          "recruiting": "Breve termine — coprire la posizione rapidamente",
+          "ta": "Medio-lungo termine — costruire capacità durature"
+        },
+        "keyMetrics": {
+          "dimension": "Metriche Chiave",
+          "recruiting": "Time-to-hire, volume di candidature",
+          "ta": "Quality-of-hire, retention, performance nel tempo"
+        },
+        "decisionBasis": {
+          "dimension": "Base Decisionale",
+          "recruiting": "CV, esperienza, impressioni del colloquio",
+          "ta": "Dati strutturati su competenze, potenziale, comportamenti"
+        }
+      },
+      "strategySteps": {
+        "startFromCompetencies": {
+          "title": "Parti dalle competenze, non dai titoli di lavoro",
+          "desc": "Una strategia di talent acquisition solida parte sempre da: quali competenze sono davvero necessarie per far funzionare il lavoro oggi e nei prossimi mesi? Lavorare sulle competenze critiche consente di anticipare i bisogni futuri."
+        },
+        "alignRecruitingEmployer": {
+          "title": "Allinea recruiting ed employer branding",
+          "desc": "Se ciò che comunichi all'esterno non riflette il vero modo di lavorare, attirerai candidati disallineati e aumenterai il rischio di turnover precoce. La coerenza tra messaggi, valori dichiarati e comportamenti osservabili è fondamentale."
+        },
+        "buildTalentPipeline": {
+          "title": "Costruisci una talent pipeline nel tempo",
+          "desc": "Il talent acquisition non inizia quando si apre una posizione, ma molto prima. Coltiva relazioni con professionisti potenzialmente rilevanti anche senza un bisogno immediato."
+        },
+        "useDataObjective": {
+          "title": "Usa dati e valutazioni oggettive",
+          "desc": "Una strategia matura non si affida a intuizioni o impressioni del colloquio, ma a dati comparabili e criteri chiari. Integra valutazioni oggettive di competenze, potenziale e comportamenti osservabili."
+        },
+        "connectTalentAcquisition": {
+          "title": "Collega talent acquisition e sviluppo interno",
+          "desc": "Prima di cercare nuove persone all'esterno, chiedi se alcune competenze sono già presenti internamente o sviluppabili attraverso percorsi mirati di upskilling e reskilling."
+        },
+        "measureWhatTruly": {
+          "title": "Misura ciò che conta davvero",
+          "desc": "Monitorare solo il time-to-hire rischia di premiare la velocità a scapito della qualità. Indicatori come quality-of-hire, performance nel tempo e retention offrono una lettura molto più utile."
+        }
+      },
+      "cta": "Torna al Blog",
+      "text": "12 febbraio 2026",
+      "text2": "13 min di lettura",
+      "heading": "Talent Acquisition: cos'è, come funziona, perché conta",
+      "body": "Quante assunzioni, pur essendo \"giuste sulla carta,\" iniziano a mostrare crepe dopo pochi mesi? Il ruolo è coperto, il CV era coerente, il colloquio è andato bene... eppure.",
+      "heading2": "Cos'è il Talent Acquisition (e Perché Non è Solo Recruiting)",
+      "body2": "Il talent acquisition è l'insieme di strategie e processi attraverso cui un'azienda identifica, attrae, valuta e sviluppa le persone di cui avrà bisogno non solo oggi, ma anche in futuro. La differenza rispetto al recruiting tradizionale risiede principalmente nel livello di <b>intenzionalità</b>.",
+      "body3": "Il recruiting è spesso tattico: risponde a una posizione aperta, lavora su tempi e volumi. Il talent acquisition, invece, è strategico: parte dalla comprensione di quali competenze sono critiche per l'organizzazione, quali lo diventeranno, e come costruire nel tempo un pool di persone in grado di sostenerle.",
+      "body4": "\"L'orizzonte non è la singola assunzione ma il medio-lungo termine. Le decisioni non si basano solo su ciò che serve oggi, ma su come un ruolo potrebbe evolversi e quale contributo una persona può dare nel tempo.\"",
+      "heading3": "Talent Acquisition vs Recruiting: Le Differenze",
+      "columnHeader": "Dimensione",
+      "heading4": "Come Costruire una Strategia Efficace",
+      "body5": "Attraverso Skill Verification rapidi e standardizzati, Skillvue ti aiuta a valutare i candidati su criteri chiari e comparabili usando domande situazionali basate sul BEI, test mirati di hard skill e indicatori su potenziale, autonomia e capacità di apprendimento. Sposta la selezione dal confronto di CV e impressioni a una valutazione strutturata di competenze, comportamenti e potenziale.",
+      "text3": "Scopri Skillvue",
+      "heading5": "Costruisci una talent pipeline basata su <s>competenze reali.</s>",
+      "body6": "Migliora la quality-of-hire con skill verification strutturati e oggettivi.",
+      "cta2": "Prenota una demo"
+    }
   },
   "book-meeting": {
     "meta": {

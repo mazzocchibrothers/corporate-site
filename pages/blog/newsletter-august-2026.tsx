@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -9,6 +10,7 @@ import { ArrowLeft, ArrowRight, Clock, ImageIcon } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { messagesFor } from '@/i18n/messages';
+import { localizePath } from '@/i18n/routes';
 
 // ─── Fill these in when the assets/links are ready ──────────────────────────
 // Empty string '' → a labelled dashed placeholder box renders instead.
@@ -32,196 +34,6 @@ const LINKS = {
 };
 // ────────────────────────────────────────────────────────────────────────────
 
-const C = {
-  en: {
-    metaTitle: 'Skillvue — The August Newsletter',
-    tag: 'Newsletter',
-    date: 'August 2026',
-    readTime: '5 min read',
-    title: 'Skills, new insights and where to meet us across Europe',
-    subtitle: 'Our upcoming events across Europe, a closer look at the workforce challenges in supermarkets, and a new customer story with Gruppo Unicomm.',
-    intro: [
-      'As we head into a new season of events and conversations across Europe, we’re continuing to explore the themes reshaping how organisations understand and manage skills.',
-      'From workforce transformation to talent management, and the need to make faster, more informed decisions in complex and distributed organisations, having **clear skills data** is becoming increasingly important.',
-      'In this edition, we bring together our upcoming events across Europe, a closer look at some of the key workforce challenges in supermarkets, and a new customer story with Gruppo Unicomm.',
-    ],
-    sections: [
-      {
-        img: 'events',
-        heading: 'Where to meet us this autumn',
-        body: [
-          'Over the next two months, we’ll be in **several European cities**, joining CHROs, Talent leaders and HR professionals to discuss the topics reshaping the future of work.',
-        ],
-        events: [
-          {
-            name: 'Transformational CHRO Assembly',
-            meta: 'Amsterdam, 9–10 September',
-            text: 'We’ll join closed-door conversations with CHROs from some of Europe’s leading companies, discussing the trends and priorities transforming the role of HR.',
-            cta: { label: 'Learn more', href: LINKS.chroAssembly, external: true },
-          },
-          {
-            name: 'Fair Cultures',
-            meta: 'Barcelona, 1 October',
-            text: 'We’ll take part in stage sessions and private workshops exploring how skills can become a real infrastructure for the future of workforce planning.',
-            cta: { label: 'Learn more', href: LINKS.fairCultures, external: true },
-          },
-          {
-            name: 'Gartner HR Symposium/Xpo',
-            meta: 'London, 6–8 October',
-            text: 'Meet us at our stand to connect with the team and explore how objective skills data can support better decisions across hiring, internal mobility and development.',
-            cta: { label: 'Learn more', href: LINKS.gartner, external: true },
-          },
-          {
-            name: 'HRcoreACADEMY Summit',
-            meta: 'Amsterdam, 7–8 October',
-            text: 'Two days focused on Talent Transformation and Learning & Development, where we’ll also bring new perspectives on the changes reshaping skills, AI and talent management.',
-            cta: { label: 'Learn more', href: LINKS.hrcoreAcademy, external: true },
-          },
-          {
-            name: 'UNLEASH World',
-            meta: 'Paris, 20–22 October',
-            text: 'Come and meet us at our stand at one of Europe’s leading events dedicated to HR, technology and the future of work.',
-            cta: { label: 'Learn more', href: LINKS.unleash, external: true },
-          },
-        ],
-      },
-      {
-        img: 'supermarkets',
-        heading: 'What does a skills-based approach look like in supermarkets?',
-        body: [
-          'High turnover, hiring at scale, store manager pipelines, frontline development and post-M&A integration make it particularly challenging to make consistent people decisions across distributed retail organisations.',
-          'In a new short overview, we’ve brought together some of the sector’s key challenges and explored the role **objective skills data** can play across different stages of the talent lifecycle, from hiring and internal growth to organisational transformation.',
-          'The document focuses on four areas in particular: hiring and screening at scale, building pipelines for store managers and department heads, frontline development, and managing skills during acquisitions and reorganisations.',
-        ],
-        cta: { label: 'Explore the full supermarkets overview', href: LINKS.supermarkets, external: false, newTab: true },
-      },
-      {
-        img: 'unicomm',
-        heading: 'Making skills visible at Gruppo Unicomm',
-        body: [
-          'When a group grows through acquisitions and a distributed network of stores, there is a risk that information, assessments and skills remain fragmented across people and the organisation.',
-          'For Gruppo Unicomm, starting from skills means building a **common language across people, stores and business strategy**, helping make HR decisions more consistent with the organisation’s actual needs.',
-          'In our latest customer story, Giuseppe Curci, HR Director at Gruppo Unicomm, shares the journey started with Skillvue to turn large volumes of candidate and workforce information into data that is useful, prioritised and actionable.',
-          'In a context where HR teams need to manage high volumes without slowing down the business, the goal is to make hiring more structured and create greater continuity across people decisions.',
-        ],
-        cta: { label: 'Read the full customer story', href: LINKS.unicomm, external: false },
-      },
-    ],
-    closing: {
-      heading: 'Looking ahead to what’s next',
-      body: [
-        'The next few months will bring new conversations around **how skills, AI and workforce planning are evolving** across Europe.',
-        'We’ll continue sharing what we’re learning from HR leaders, customers and the events where these discussions are taking place.',
-      ],
-    },
-    finalKicker: 'Discover Skillvue',
-    finalTitle: 'Better talent decisions start with',
-    finalTitleHighlight: 'clearer skills.',
-    finalBody: 'Book a demo and see how Skillvue verifies skills and AI readiness across your organisation.',
-    finalButton: 'Book a Demo',
-    back: 'Back to Blog',
-    imgSoon: 'image coming',
-    imgLabels: {
-      events: 'Where to find Skillvue in the coming months',
-      supermarkets: 'The role of skills in supermarkets',
-      unicomm: 'Giuseppe Curci, HR Director at Gruppo Unicomm',
-    },
-  },
-  it: {
-    metaTitle: 'Skillvue — La newsletter di agosto',
-    tag: 'Newsletter',
-    date: 'Agosto 2026',
-    readTime: '5 min di lettura',
-    title: 'Competenze, nuovi insight e dove incontrarci in Europa',
-    subtitle: 'I nostri prossimi eventi in Europa, un approfondimento sulle sfide organizzative dei supermercati e una nuova customer story con Gruppo Unicomm.',
-    intro: [
-      'Mentre entriamo in una nuova stagione di eventi e confronti in tutta Europa, continuiamo a esplorare i temi che stanno ridefinendo il modo in cui le organizzazioni comprendono e gestiscono le competenze.',
-      'Dalla trasformazione della forza lavoro al talent management, fino alla necessità di prendere decisioni più rapide e informate in organizzazioni complesse e distribuite, avere **dati chiari sulle competenze** diventa sempre più importante.',
-      'In questa edizione raccogliamo i nostri prossimi eventi in Europa, un approfondimento su alcune delle principali sfide organizzative dei supermercati e una nuova customer story con Gruppo Unicomm.',
-    ],
-    sections: [
-      {
-        img: 'events',
-        heading: 'Dove incontrarci questo autunno',
-        body: [
-          'Nei prossimi due mesi saremo in **diverse città europee**, insieme a CHRO, Talent leader e professionisti HR, per confrontarci sui temi che stanno ridefinendo il futuro del lavoro.',
-        ],
-        events: [
-          {
-            name: 'Transformational CHRO Assembly',
-            meta: 'Amsterdam, 9–10 settembre',
-            text: 'Parteciperemo a confronti a porte chiuse con i CHRO di alcune delle principali aziende europee, per discutere i trend e le priorità che stanno trasformando il ruolo dell’HR.',
-            cta: { label: 'Scopri di più', href: LINKS.chroAssembly, external: true },
-          },
-          {
-            name: 'Fair Cultures',
-            meta: 'Barcellona, 1 ottobre',
-            text: 'Parteciperemo a sessioni sul palco e a workshop privati per esplorare come le competenze possano diventare una vera infrastruttura per il futuro del workforce planning.',
-            cta: { label: 'Scopri di più', href: LINKS.fairCultures, external: true },
-          },
-          {
-            name: 'Gartner HR Symposium/Xpo',
-            meta: 'Londra, 6–8 ottobre',
-            text: 'Vieni a trovarci al nostro stand per conoscere il team ed esplorare come dati oggettivi sulle competenze possano supportare decisioni migliori su selezione, mobilità interna e sviluppo.',
-            cta: { label: 'Scopri di più', href: LINKS.gartner, external: true },
-          },
-          {
-            name: 'HRcoreACADEMY Summit',
-            meta: 'Amsterdam, 7–8 ottobre',
-            text: 'Due giornate dedicate a Talent Transformation e Learning & Development, dove porteremo anche nuove prospettive sui cambiamenti che stanno ridefinendo competenze, AI e talent management.',
-            cta: { label: 'Scopri di più', href: LINKS.hrcoreAcademy, external: true },
-          },
-          {
-            name: 'UNLEASH World',
-            meta: 'Parigi, 20–22 ottobre',
-            text: 'Vieni a trovarci al nostro stand a uno dei principali eventi europei dedicati a HR, tecnologia e futuro del lavoro.',
-            cta: { label: 'Scopri di più', href: LINKS.unleash, external: true },
-          },
-        ],
-      },
-      {
-        img: 'supermarkets',
-        heading: 'Che cosa significa un approccio skills-based nei supermercati?',
-        body: [
-          'Turnover elevato, selezione su larga scala, pipeline per i direttori di punto vendita, sviluppo delle persone in prima linea e integrazione post-acquisizione rendono particolarmente complesso prendere decisioni coerenti sulle persone in organizzazioni retail distribuite.',
-          'In una nuova breve panoramica abbiamo raccolto alcune delle sfide chiave del settore e approfondito il ruolo che **dati oggettivi sulle competenze** possono avere nelle diverse fasi del talent lifecycle, dalla selezione alla crescita interna fino alla trasformazione organizzativa.',
-          'Il documento si concentra in particolare su quattro ambiti: selezione e screening su larga scala, costruzione delle pipeline per direttori di punto vendita e capireparto, sviluppo delle persone in prima linea e gestione delle competenze durante acquisizioni e riorganizzazioni.',
-        ],
-        cta: { label: 'Esplora la panoramica sui supermercati', href: LINKS.supermarkets, external: false, newTab: true },
-      },
-      {
-        img: 'unicomm',
-        heading: 'Rendere visibili le competenze in Gruppo Unicomm',
-        body: [
-          'Quando un gruppo cresce attraverso acquisizioni e una rete distribuita di punti vendita, il rischio è che informazioni, valutazioni e competenze restino frammentate tra le persone e l’organizzazione.',
-          'Per Gruppo Unicomm, partire dalle competenze significa costruire un **linguaggio comune tra persone, punti vendita e strategia di business**, contribuendo a rendere le decisioni HR più coerenti con le reali esigenze dell’organizzazione.',
-          'Nella nostra ultima customer story, Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm, racconta il percorso avviato con Skillvue per trasformare grandi volumi di informazioni su candidati e popolazione aziendale in dati utili, prioritizzati e azionabili.',
-          'In un contesto in cui i team HR devono gestire volumi elevati senza rallentare il business, l’obiettivo è rendere la selezione più strutturata e creare maggiore continuità tra le decisioni sulle persone.',
-        ],
-        cta: { label: 'Guarda la customer story', href: LINKS.unicomm, external: false },
-      },
-    ],
-    closing: {
-      heading: 'Uno sguardo a ciò che verrà',
-      body: [
-        'I prossimi mesi porteranno nuovi confronti su **come competenze, AI e workforce planning stanno evolvendo** in tutta Europa.',
-        'Continueremo a condividere ciò che impariamo dagli HR leader, dai nostri clienti e dagli eventi in cui questi temi vengono discussi.',
-      ],
-    },
-    finalKicker: 'Scopri Skillvue',
-    finalTitle: 'Decisioni migliori sul talento partono da',
-    finalTitleHighlight: 'competenze più chiare.',
-    finalBody: 'Prenota una demo e scopri come Skillvue verifica competenze e AI readiness in tutta l’organizzazione.',
-    finalButton: 'Prenota una demo',
-    back: 'Torna al Blog',
-    imgSoon: 'immagine in arrivo',
-    imgLabels: {
-      events: 'Dove trovare Skillvue nei prossimi mesi',
-      supermarkets: 'Il ruolo delle competenze nella GDO',
-      unicomm: 'Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm',
-    },
-  },
-};
 
 // Renders **bold** markers inside a plain string as <strong> spans.
 function renderRich(text) {
@@ -267,7 +79,7 @@ function EventCard({ event, localize }) {
       <p className="mt-1.5 text-[13px] font-semibold text-[#4B4DF7] tracking-[0.01em]">{event.meta}</p>
       <p className="mt-4 text-[16px] text-[#121212]/[0.7] leading-[1.8]">{renderRich(event.text)}</p>
       <a
-        href={localize(event.cta.href)}
+        href={localize(LINKS[event.cta.href])}
         {...(event.cta.external || event.cta.newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#4B4DF7] transition-colors duration-300 hover:text-[#3133E7]"
       >
@@ -285,22 +97,19 @@ export const getStaticProps = messagesFor('blog/newsletter-august-2026');
 export default function AugustNewsletter() {
   const router = useRouter();
   const { lang } = useLanguage();
-  const isIt = lang === 'it';
-  const t = isIt ? C.it : C.en;
-  // A raw <a href> (unlike next/link) doesn't add the locale prefix, so without
-  // this an IT reader following an internal link would land on the EN page.
-  // /it/customers/:slug 308-redirects to /it/clienti/:slug, so point straight there.
+  const t = useTranslations('blog.newsletter-august-2026');
   // An IMAGES entry is either one shared file or { en, it } when the artwork
   // carries baked-in copy.
-  const imgSrc = (key) => { const v = IMAGES[key]; return typeof v === 'string' ? v : (isIt ? v.it : v.en); };
-  const localize = (href)=>
-    !isIt || !href.startsWith('/') ? href : `/it${href.replace(/^\/customers\//, '/clienti/')}`;
+  const imgSrc = (key) => { const v = IMAGES[key]; return typeof v === 'string' ? v : (v[lang] ?? v.en); };
+  // A raw <a href> (unlike next/link) does not add the locale prefix, and the
+  // Italian slug is the registry's to know.
+  const localize = (href) => localizePath(href, lang);
 
   return (
     <>
       <Head>
-        <title>{t.metaTitle}</title>
-        <meta name="description" content={t.subtitle} />
+        <title>{t('metaTitle')}</title>
+        <meta name="description" content={t('subtitle')} />
       </Head>
 
       <Navbar />
@@ -317,16 +126,16 @@ export default function AugustNewsletter() {
               onClick={() => { router.push('/blog'); window.scrollTo(0, 0); }}
               className="mb-10"
             >
-              {t.back}
+              {t('back')}
             </Button>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
-                <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{t.tag}</span>
-                <span className="text-[13px] text-white/35">{t.date}</span>
-                <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t.readTime}</span>
+                <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{t('tag')}</span>
+                <span className="text-[13px] text-white/35">{t('date')}</span>
+                <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('readTime')}</span>
               </div>
-              <h1 className="font-semibold text-white/95 mb-6 text-[40px] md:text-[60px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t.title}</h1>
-              <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>{t.subtitle}</p>
+              <h1 className="font-semibold text-white/95 mb-6 text-[40px] md:text-[60px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t('title')}</h1>
+              <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>{t('subtitle')}</p>
             </motion.div>
           </div>
         </section>
@@ -336,14 +145,14 @@ export default function AugustNewsletter() {
           <div className="max-w-[780px] mx-auto px-6 md:px-8 lg:px-12 py-16 lg:py-20">
             {/* Intro */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="space-y-5">
-              {t.intro.map((p, i) => <p key={i} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
+              {t.raw('intro').map((p, i) => <p key={i} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
             </motion.div>
 
             {/* Sections */}
-            {t.sections.map((s, i) => (
+            {t.raw('sections').map((s, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mt-16 pt-10 border-t border-[#121212]/[0.06]">
                 <h2 className={`text-[26px] font-semibold text-[#121212] tracking-[-0.02em] ${s.img ? 'mb-1' : 'mb-5'}`}>{s.heading}</h2>
-                {s.img && <Img src={imgSrc(s.img)} label={t.imgLabels[s.img]} soon={t.imgSoon} />}
+                {s.img && <Img src={imgSrc(s.img)} label={t.raw('imgLabels')[s.img]} soon={t('imgSoon')} />}
                 <div className="space-y-5">
                   {s.body.map((p, j) => <p key={j} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
                 </div>
@@ -352,15 +161,15 @@ export default function AugustNewsletter() {
                     {s.events.map((e, k) => <EventCard key={k} event={e} localize={localize} />)}
                   </div>
                 )}
-                {s.cta && <CtaLink label={s.cta.label} href={localize(s.cta.href)} newTab={s.cta.external || s.cta.newTab} />}
+                {s.cta && <CtaLink label={s.cta.label} href={localize(LINKS[s.cta.href])} newTab={s.cta.external || s.cta.newTab} />}
               </motion.div>
             ))}
 
             {/* Closing */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mt-16 pt-10 border-t border-[#121212]/[0.06]">
-              <h2 className="text-[26px] font-semibold text-[#121212] tracking-[-0.02em] mb-4">{t.closing.heading}</h2>
+              <h2 className="text-[26px] font-semibold text-[#121212] tracking-[-0.02em] mb-4">{t('closing.heading')}</h2>
               <div className="space-y-5">
-                {t.closing.body.map((p, j) => <p key={j} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
+                {t.raw('closing.body').map((p, j) => <p key={j} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
               </div>
             </motion.div>
           </div>
@@ -370,13 +179,13 @@ export default function AugustNewsletter() {
         <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24" style={{ background: '#08080c' }}>
           <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t.finalKicker}</span>
+              <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('finalKicker')}</span>
               <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
-                {t.finalTitle} <span className="gradient-text">{t.finalTitleHighlight}</span>
+                {t('finalTitle')} <span className="gradient-text">{t('finalTitleHighlight')}</span>
               </h2>
-              <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">{t.finalBody}</p>
-              <Button variant="primary" mode="dark" onClick={() => { router.push(isIt ? '/prenota-incontro' : '/book-meeting'); window.scrollTo(0, 0); }}>
-                {t.finalButton}
+              <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">{t('finalBody')}</p>
+              <Button variant="primary" mode="dark" onClick={() => { router.push(t('onClick')); window.scrollTo(0, 0); }}>
+                {t('finalButton')}
               </Button>
             </motion.div>
           </div>

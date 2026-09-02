@@ -123,7 +123,921 @@
     "heading2": "All Articles",
     "heading3": "Want to go deeper? Talk to our team.",
     "body2": "Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.",
-    "cta2": "Book a Demo"
+    "cta2": "Book a Demo",
+    "accountability": {
+      "scenarios": {
+        "deliverableLate": {
+          "context": "A deliverable is late",
+          "low": "\"It wasn't up to me.\" \"I was missing information.\" \"Nobody told me it was urgent.\"",
+          "high": "\"We missed the deadline, this impacts X. The reason is Y. Going forward I propose Z and I'm taking charge of recovery.\""
+        },
+        "twoUrgentRequests": {
+          "context": "Two urgent requests from different stakeholders",
+          "low": "Executes in order of arrival, or waits for someone else to decide what comes first.",
+          "high": "Verifies real impacts and urgencies, makes the trade-off explicit, proposes a choice, aligns with the manager when needed."
+        },
+        "newProjectNo": {
+          "context": "New project with no clear owner",
+          "low": "Waits for a point person to be named. Meanwhile, doesn't move.",
+          "high": "Calls stakeholders, proposes an initial scope and responsibility split, kicks off rapid alignment."
+        },
+        "teamDeliverableDepends": {
+          "context": "A team deliverable depends on multiple people",
+          "low": "\"I did my part\" even if the final result doesn't arrive.",
+          "high": "Follows progress of dependencies, escalates, realigns, and flags risks on the overall result in advance."
+        }
+      },
+      "levers": {
+        "n01": {
+          "num": "01",
+          "title": "Clarity on Expectations & KPIs",
+          "desc": "People must know which results are priority, which metrics will be used, and within which boundaries they can decide autonomously."
+        },
+        "n02": {
+          "num": "02",
+          "title": "Continuous Feedback",
+          "desc": "Accountability strengthens with timely feedback. Move from judgmental (\"you weren't responsible enough\") to behavioral (\"in that situation, you waited instead of proposing a solution\")."
+        },
+        "n03": {
+          "num": "03",
+          "title": "Delegation, Not Micro-management",
+          "desc": "Real delegation transfers not just the activity, but the decision-making space. This means accepting some margin for error."
+        },
+        "n04": {
+          "num": "04",
+          "title": "Role-Competency Alignment",
+          "desc": "Accountability is sustainable only if the person has the skills to exercise it. If the role exceeds capability, you generate freeze or defense."
+        }
+      },
+      "cta": "Back to Blog",
+      "text": "February 27, 2026",
+      "text2": "11 min read",
+      "heading": "What Is Accountability and Why It Improves Work Performance",
+      "body": "When a project stalls, a deadline slips, or an error bounces between functions with nobody taking ownership, the missing word is often just one: accountability.",
+      "heading2": "What Is Accountability, Really?",
+      "body2": "The most common translation is \"responsibility.\" In a company, though, this equivalence is misleading. <b>Responsibility can be assigned. Accountability cannot.</b>",
+      "heading3": "Delegation",
+      "body3": "Transfer of a task to another person",
+      "body4": "Sense of ownership over a project or result",
+      "body5": "Full ownership of decisions and consequences, even in ambiguity",
+      "heading4": "The Link to Performance",
+      "body6": "When accountability is missing: responsibility shifting, deferred decisions, implicit conflicts. Performance drops not just from operational inefficiency, but because <b>ambiguity increases</b>.",
+      "body7": "\"Accountability reduces the organizational cost of ambiguity.\"",
+      "heading5": "Recognizing Accountability in Daily Work",
+      "body8": "Four scenarios. Two behaviors. Which one do you see in your organization?",
+      "text3": "Low accountability",
+      "text4": "High accountability",
+      "heading6": "How to Develop Accountability",
+      "body9": "Accountability isn't imposed through internal communications or ethics codes. It's built through coherent organizational choices. Four operational levers:",
+      "body10": "Through skill verifications based on psychometric science, situational questions, and BEI methodology, Skillvue observes how a person reasons and decides in realistic organizational scenarios, distinguishing between declared responsibility and real accountability.",
+      "text5": "Discover Skillvue",
+      "heading7": "Reduce the risk of promoting based on <s>impressions.</s>",
+      "body11": "Integrate skill verification into your evaluation process for more solid and sustainable decisions.",
+      "cta2": "Book a Demo"
+    },
+    "attitude-vs-competence": {
+      "whenAttitude": {
+        "roleJuniorOr": "The role is junior or entry-level",
+        "contextEvolvingOr": "The context is evolving or growing rapidly",
+        "thereTimeStructured": "There is time for structured onboarding",
+        "thereStrongInvestment": "There is strong investment in L&D programs"
+      },
+      "whenCompetence": {
+        "roleCriticalOr": "The role is critical or high-impact",
+        "consolidatedTechnicalSkills": "Consolidated technical skills are required",
+        "immediatePerformanceImpact": "Immediate performance impact is needed",
+        "teamCannotAbsorb": "The team cannot absorb a long learning curve"
+      },
+      "methods": {
+        "n01": {
+          "num": "01",
+          "title": "Behavioral Event Interview (BEI)",
+          "desc": "Instead of asking \"how would you behave,\" ask for a concrete episode. Analyze the process: what decisions were made, what alternatives were considered, what impact the action had."
+        },
+        "n02": {
+          "num": "02",
+          "title": "Situational Questions",
+          "desc": "Present realistic scenarios to understand how the candidate reasons. You're not looking for the \"perfect\" answer, but the structure of their reasoning: problem analysis, constraint management, decision criteria."
+        },
+        "n03": {
+          "num": "03",
+          "title": "Behavioral Evidence",
+          "desc": "A competence must be supported by observable behaviors. The candidate must describe: a specific goal, actions taken, results obtained, metrics used."
+        },
+        "n04": {
+          "num": "04",
+          "title": "Practical Tests",
+          "desc": "When possible, integrate technical tests or simulated tasks. A case study, a simulation, a practical exercise that allows you to directly observe competence in action."
+        }
+      },
+      "cta": "Back to Blog",
+      "text": "March 13, 2026",
+      "text2": "8 min read",
+      "heading": "Attitude vs. Competence: How to Evaluate a Candidate",
+      "body": "Should you hire someone who already knows how to do the job, or someone who seems to have the potential to learn it?",
+      "body2": "This is one of the most common and most underestimated questions in recruitment. When you evaluate a candidate, you're always making a choice between attitude and competence.",
+      "body3": "One profile may have a great predisposition: curiosity, speed of learning, energy. Another may have already consolidated skills, developed in similar contexts. The decision between the two is not just technical but involves strategic considerations for your company.",
+      "body4": "Let's look at the difference between attitude and competence, when it makes sense to prioritize one over the other, and how you can evaluate both while reducing the risk of decisions based on impressions or bias.",
+      "heading2": "Attitude vs. Competence: What's the Real Difference?",
+      "body5": "The difference between attitude and competence is not theoretical. It's deeply operational.",
+      "heading3": "Attitude",
+      "body6": "Predisposition, potential. The ability to learn quickly, relate easily, tackle problems with curiosity.",
+      "body7": "Potential versus already observable performance",
+      "heading4": "Competence",
+      "body8": "Already developed and applied in real contexts. Observable behaviors, results achieved, decisions made.",
+      "heading5": "When to Evaluate Attitude (and When Not To)",
+      "body9": "The key question is: <b>how much time and learning margin can your organization afford?</b>",
+      "text3": "Prioritize Attitude When",
+      "text4": "Don't Rely Only on Attitude When",
+      "body10": "\"Attitude is a promise. Competence is a partial guarantee. The choice depends on the level of urgency and the maturity of the organizational context.\"",
+      "heading6": "How to Objectively Evaluate Competence",
+      "body11": "Competence cannot be evaluated only through declarations. You need to shift the focus from opinions to behavioral evidence.",
+      "body12": "<b>Important:</b> some candidates can explain very well how something should be done. Explaining is not the same as knowing how to do it in a real context, with constraints, pressure, and responsibility.",
+      "heading7": "Why Skill Verification Helps You Distinguish Attitude and Competence",
+      "body13": "Distinguishing between attitude and competence requires more than a good interview. A structured skill verification allows you to work on two distinct levels:",
+      "heading8": "Competence Measurement",
+      "body14": "Observe behaviors, decision-making processes, concrete application of skills in realistic scenarios.",
+      "heading9": "Potential Evaluation",
+      "body15": "Analyze learning capacity, cognitive flexibility, goal orientation. Elements that indicate the possibility of future growth.",
+      "body16": "The immediate advantage is <b>comparability</b>: different candidates are evaluated on the same criteria, with uniform indicators. This reduces the risk of basing decisions on storytelling, impressions, or personal affinity.",
+      "body17": "Through verifications based on psychometric science, situational questions, and BEI methodology, Skillvue helps you distinguish between those who have already developed a competence and those who show potential consistent with the role. Decisions based on evidence, not impressions.",
+      "text5": "Discover Skillvue",
+      "heading10": "Start making decisions based on <s>evidence,</s> not impressions.",
+      "body18": "Skillvue analyzes skills of candidates and employees quickly, objectively, and at scale using proprietary AI technology.",
+      "cta2": "Book a Demo"
+    },
+    "corporate-onboarding": {
+      "phases": {
+        "n01": {
+          "num": "01",
+          "title": "Preboarding",
+          "timing": "Offer accepted → Day 1",
+          "points": [
+            "Clarify priorities for the first 90 days: not just generic goals, but expected results and evaluation criteria",
+            "Define key references: direct manager, buddy, HR contacts",
+            "Align expectations on role and responsibilities before entry",
+            "Maintain active, structured contact: scheduled communications reduce uncertainty",
+            "Prepare the operational context: tools, access, first weeks agenda already planned"
+          ]
+        },
+        "n02": {
+          "num": "02",
+          "title": "Operational Integration",
+          "timing": "Weeks 1-4",
+          "points": [
+            "Define clear short-term objectives (30-60 days): concrete results, not just activities",
+            "Schedule structured check-ins with the manager: frequent feedback prevents easily fixable errors",
+            "Assign progressive responsibilities: start with observable tasks, gradually increasing autonomy",
+            "Make priority criteria explicit: what is urgent, strategic, or can wait",
+            "Collect early signals of misalignment: recurring difficulties, decision hesitation"
+          ]
+        },
+        "n03": {
+          "num": "03",
+          "title": "Role & Expectations Alignment",
+          "timing": "Weeks 4-8",
+          "points": [
+            "Formally review role responsibilities: compare what was defined in selection with reality",
+            "Make performance criteria explicit: what \"doing well\" means in the first 3-6 months",
+            "Verify autonomy level reached: which decisions are autonomous, which still need supervision",
+            "Ask for bidirectional feedback: manager to person and vice versa",
+            "Identify competency gaps: distinguish between training need, organizational support, or priority redefinition"
+          ]
+        },
+        "n04": {
+          "num": "04",
+          "title": "Cultural Integration",
+          "timing": "Months 2-3",
+          "points": [
+            "Make operational values explicit, not just declared ones",
+            "Facilitate cross-functional relationships: meetings with key stakeholders beyond the direct team",
+            "Clarify decision-making models: centralized, participative, data-driven?",
+            "Share concrete examples of expected behaviors: what gets rewarded, what creates friction",
+            "Schedule experience check-ins: asking \"what surprised you?\" is often more useful than a standard survey"
+          ]
+        },
+        "n05": {
+          "num": "05",
+          "title": "Monitoring & Feedback",
+          "timing": "Days 30-60-90+",
+          "points": [
+            "Schedule structured checkpoints at 30-60-90 days with clear objectives and criteria",
+            "Actively involve the direct manager: feedback cannot be delegated only to HR",
+            "Collect bidirectional feedback: what is working and what can improve",
+            "Evaluate autonomy reached vs. initial expectations: not just tasks completed, but decision quality",
+            "Connect gaps to concrete development plans: training, mentoring, priority redefinition"
+          ]
+        }
+      },
+      "cta": "Back to Blog",
+      "text": "February 23, 2026",
+      "text2": "15 min read",
+      "heading": "Corporate Onboarding: A Complete Process Guide",
+      "body": "About 50% of selected candidates back out before starting. Every failed onboarding means repeating selection costs, lost manager time, and team slowdown.",
+      "heading2": "What Is Onboarding, Really?",
+      "body2": "Onboarding is a process of progressive alignment between person, role, and organization. It builds clarity on three fundamental dimensions: what is expected in the first months, how processes and decisions actually work, and which behaviors generate value in that specific context.",
+      "body3": "Don't confuse onboarding with welcome. Welcome concerns the initial experience. Onboarding concerns the person's ability to become autonomous, productive, and integrated into the organizational system.",
+      "heading3": "The 5 Phases of Onboarding",
+      "body4": "Each phase answers a specific question. Together they form a structured, measurable process.",
+      "heading4": "Onboarding as a Field Verification",
+      "body5": "During onboarding you can distinguish three very different situations: a <b>competency gap</b> (needs targeted training), a <b>role mismatch</b> (present skills don't match real context needs), or an <b>integration problem</b> (technical skills are there but cultural alignment is weak). Confusing these leads to ineffective interventions.",
+      "body6": "Integrating a skill verification at the start of onboarding lets you validate key competencies against the actual role, identify gaps before they impact performance, and build a personalized development plan based on evidence, not perceptions. Skillvue supports this through psychometric verifications, situational questions, and BEI methodology.",
+      "text3": "Discover Skillvue",
+      "heading5": "Make onboarding decisions based on real <s>competencies.</s>",
+      "body7": "Skillvue analyzes skills quickly, objectively, and at scale using proprietary AI technology.",
+      "cta2": "Book a Demo"
+    },
+    "critical-thinking": {
+      "indicators": {
+        "meetings": {
+          "context": "In meetings",
+          "behavior": "Doesn't automatically accept data or shared opinions. Asks for sources, verifies information consistency, distinguishes measurable facts from interpretations."
+        },
+        "projects": {
+          "context": "In projects",
+          "behavior": "When a problem emerges, doesn't act on the \"symptom\" but seeks the real cause. Analyzes whether the issue is organizational, communicative, or related to poorly defined priorities."
+        },
+        "conflict": {
+          "context": "In conflict",
+          "behavior": "Separates personal perceptions from verifiable facts. Avoids generalizations (\"never collaborates\") and brings discussion back to specific episodes and observable behaviors."
+        },
+        "decisions": {
+          "context": "In decisions",
+          "behavior": "Before choosing a direction, evaluates medium-term implications. Considers impacts on other functions, required resources, and possible unintended consequences."
+        }
+      },
+      "faqs": {
+        "whatCriticalThinking": {
+          "q": "What is critical thinking?",
+          "a": "Critical thinking is the ability to analyze information, distinguish facts from opinions, question implicit assumptions, and make decisions consistent with context. In business, it's an operational competence that manifests when a person verifies data before acting, evaluates possible alternatives, and considers the implications of their choices."
+        },
+        "whatSDifference": {
+          "q": "What's the difference between critical thinking and creative thinking?",
+          "a": "Critical thinking serves to evaluate, analyze, and verify. Creative thinking serves to generate new ideas and original solutions. The first reduces the risk of errors and hasty decisions, while the second expands possibilities. In business, the two competencies work better together: creativity generates options, critical thinking evaluates and selects the most sustainable ones."
+        },
+        "howDoYou": {
+          "q": "How do you evaluate critical thinking?",
+          "a": "You need realistic scenarios that reproduce typical role situations: partial data, conflicting priorities, contradictory information. Observe whether the person verifies sources before deciding, distinguishes facts from interpretations, makes explicit the assumptions underlying their choice, and evaluates risks and implications."
+        }
+      },
+      "cta": "Back to Blog",
+      "text": "Science",
+      "text2": "February 25, 2026",
+      "text3": "10 min read",
+      "heading": "What Is Critical Thinking and How to Verify This Skill",
+      "body": "Critical thinking is one of the most cited competencies in competency models. Yet when it comes to recognizing or measuring it, it often becomes a generic label.",
+      "heading2": "What Is Critical Thinking, Really?",
+      "body2": "In philosophy, critical thinking originates as the ability to question assumptions, arguments, and belief systems. In pedagogy, it's linked to the development of autonomous reasoning. <b>In business, however, critical thinking becomes an operational competence.</b>",
+      "body3": "By critical thinking we mean the ability to analyze information before acting, distinguish facts from opinions, evaluate implications, and make decisions consistent with context and objectives.",
+      "body4": "\"Critical thinking is not synonymous with rationality or analytical spirit. It also includes questioning one's own assumptions, evaluating sources, and the ability to decide when data is sufficient to act.\"",
+      "body5": "A person with solid critical thinking doesn't just execute. They analyze data and context, distinguish facts from interpretations, question implicit assumptions, and evaluate the consequences of their decisions. A person with weak critical thinking tends to react, follow predefined patterns, or delegate reasoning to others.",
+      "heading3": "How to Identify Critical Thinking in Daily Work",
+      "body6": "Critical thinking becomes useful only when you can observe it in behaviors. If it remains an abstract definition, it will end up being evaluated subjectively.",
+      "heading4": "How to Evaluate Critical Thinking",
+      "body7": "CVs aren't enough. A resume can tell you that a person has managed complex projects, but not how they make decisions or how they react to incomplete data. Generic interview questions help little either.",
+      "body8": "If you want to evaluate critical thinking seriously, you need to shift attention to two elements: <b>context and decision-making process</b>. You'll need realistic scenarios with partial data, conflicting priorities, and contradictory information.",
+      "heading5": "Situational Questions",
+      "body9": "Force reasoning on a concrete case, not an abstract principle. Observe the structure of reasoning, not just the final answer.",
+      "heading6": "Behavioral Event Interview",
+      "body10": "Instead of asking what they would do, ask what they did. Analyze the mental path: what information was considered, what alternatives were evaluated.",
+      "heading7": "Key Takeaway",
+      "body11": "Skillvue enables you to evaluate critical thinking through verifications based on realistic scenarios and psychometric methodologies, observing how a person analyzes information, identifies relevant variables, and builds a coherent decision. The process matters more than the final answer.",
+      "heading8": "Frequently Asked Questions",
+      "text4": "Discover Skillvue",
+      "heading9": "Distinguish perception from real <s>competency.</s>",
+      "body12": "Integrate skill verification for more objective and sustainable organizational decisions.",
+      "cta2": "Book a Demo"
+    },
+    "managerial-skills": {
+      "skills": {
+        "leadership": {
+          "title": "Leadership",
+          "desc": "The ability to orient the team toward a clear direction, even in conditions of ambiguity. Observable when a manager defines coherent priorities, makes decisions taking responsibility, and maintains alignment during uncertainty."
+        },
+        "goalOrientation": {
+          "title": "Goal Orientation",
+          "desc": "An effective manager maintains focus on results without dispersing energy in non-functional dynamics. Translates strategy into operational priorities, renegotiates deadlines transparently, and guides the team toward concrete outcomes."
+        },
+        "emotionalIntelligence": {
+          "title": "Emotional Intelligence",
+          "desc": "Managing people means managing emotional dynamics. This competence manifests in the ability to read tensions in the team, modulate communication style, and address feedback or conflicts without rigidity."
+        },
+        "negotiation": {
+          "title": "Negotiation",
+          "desc": "Much of managerial work is mediation between different interests: top management, team, other functions. Emerges when a manager makes constraints explicit and builds acceptable solutions while maintaining functional relationships."
+        },
+        "problemSolving": {
+          "title": "Problem Solving",
+          "desc": "In managerial roles, problems are rarely technical and linear. They involve people, priorities, and organizational constraints. Visible in the ability to analyze situations, distinguish facts from perceptions, and make practicable decisions."
+        }
+      },
+      "observables": {
+        "meetings": {
+          "context": "In meetings",
+          "signs": [
+            "Clarifies the meeting objective before entering details",
+            "Synthesizes key points when discussion disperses",
+            "Takes a position when a decision is needed",
+            "Assigns clear responsibilities at the end"
+          ]
+        },
+        "conflictMoments": {
+          "context": "In conflict moments",
+          "signs": [
+            "Avoids personalizing the problem",
+            "Makes constraints explicit instead of shifting responsibility",
+            "Seeks an operational agreement instead of imposing a solution"
+          ]
+        },
+        "priorityManagement": {
+          "context": "In priority management",
+          "signs": [
+            "Translates strategic objectives into concrete activities",
+            "Renegotiates deadlines when conditions change",
+            "Protects the team from incoherent or overlapping requests",
+            "Maintains coherence between declared priorities and what they monitor"
+          ]
+        }
+      },
+      "cta": "Back to Blog",
+      "text": "February 23, 2026",
+      "text2": "12 min read",
+      "heading": "Managerial Skills: What They Are and How to Identify Them",
+      "body": "Promoting a good professional to manager is one of the most delicate decisions you can make. The skills required change radically.",
+      "heading2": "What Are Managerial Skills?",
+      "body2": "Managerial skills concern how a person exercises responsibility over others and over results. They are the set of abilities that enable someone to define clear priorities, make decisions under uncertainty, manage relational dynamics, develop autonomy in collaborators, and maintain alignment between individual and organizational objectives.",
+      "body3": "One of the most frequent misunderstandings is <b>confusing activities with generated value</b>. A manager can organize many meetings and monitor tasks, but this isn't in itself an indicator of managerial competence. The real difference is seen in impact: is the team aligned? Are decisions clear? Are conflicts managed or avoided? Do people grow or remain dependent on the boss?",
+      "body4": "\"Managerial skills don't concern only what a person can do, but what they can make happen through their role.\"",
+      "heading3": "The 5 Key Managerial Skills",
+      "heading4": "How to Recognize Them in Daily Work",
+      "body5": "Managerial skills don't manifest spectacularly but are visible in the details: how a manager runs a meeting, makes an uncomfortable decision, handles a shifting priority.",
+      "heading5": "Key Takeaway",
+      "body6": "Skillvue supports HR and organizations in the objective evaluation of managerial skills through verifications based on psychometric sciences, situational questions, and BEI methodology. Instead of asking \"what kind of leader are you?\", the verification observes how a person reasons and decides in concrete managerial scenarios.",
+      "text3": "Discover Skillvue",
+      "heading6": "Make leadership decisions based on <s>data, not impressions.</s>",
+      "body7": "Evaluate managerial potential with structured verifications based on behavioral evidence.",
+      "cta2": "Book a Demo"
+    },
+    "negotiation-techniques": {
+      "techniques": {
+        "n01": {
+          "num": "01",
+          "title": "Separate People from the Problem",
+          "summary": "Distinguish the relational dimension from the objective issue to resolve.",
+          "example": "Instead of \"You never invest in people,\" try \"We have a budget constraint. HR's goal is reducing turnover by 15%. Let's analyze the economic impact of training together.\""
+        },
+        "n02": {
+          "num": "02",
+          "title": "Define Interests, Not Just Positions",
+          "summary": "A position is what someone declares they want. An interest is why they want it.",
+          "example": "An employee asks for a 10% raise (position). The interest might be recognition, market alignment, or growth prospects. Focus on interests to unlock multiple levers."
+        },
+        "n03": {
+          "num": "03",
+          "title": "Prepare Alternatives (BATNA)",
+          "summary": "Your Best Alternative to a Negotiated Agreement. Without one, you negotiate from necessity, not choice.",
+          "example": "A manager wants to retain a key resource moving to another function. BATNA: gradual transition, temporary shadowing, or a replacement plan before transfer."
+        },
+        "n04": {
+          "num": "04",
+          "title": "Use Exploratory Questions",
+          "summary": "Questions shift conversations from defensive logic to analytical logic.",
+          "example": "\"What's the minimum acceptable result for you?\" \"Which constraint worries you most?\" \"If we had to choose one priority this quarter, what would it be?\""
+        },
+        "n05": {
+          "num": "05",
+          "title": "Make Constraints Explicit",
+          "summary": "Undeclared constraints get interpreted as unwillingness or personal rigidity.",
+          "example": "\"The range for this role is defined by an internal salary equity policy. We can work on variable or benefits, but the fixed part has this limit.\""
+        },
+        "n06": {
+          "num": "06",
+          "title": "Seek Realistic Win-Win Solutions",
+          "summary": "Not \"everyone gets everything\" but an agreement where neither side feels structurally defeated.",
+          "example": "Employee wants immediate promotion. Manager sees potential but timing is early. Solution: clear milestones, progressive responsibilities, salary review tied to verifiable objectives within 6 months."
+        },
+        "n07": {
+          "num": "07",
+          "title": "Formalize Agreements and Responsibilities",
+          "summary": "Many negotiations seem successful until they need to be executed.",
+          "example": "HR and IT agree to launch a new performance review system. Formalize: HR defines framework in 30 days, IT builds platform in 60, checkpoint between functions, go-live after pilot group test."
+        }
+      },
+      "cta": "Back to Blog",
+      "text": "March 4, 2026",
+      "text2": "14 min read",
+      "heading": "The 7 Most Effective Negotiation Techniques at Work",
+      "body": "For years we've thought of negotiation as something commercial. In reality, you negotiate every day at work: priorities, budgets, objectives, conditions.",
+      "body2": "The problem is that people don't always have the tools to do it in a structured way. If you work in HR, you see it clearly: many organizational conflicts don't arise from irreconcilable differences, but from poorly managed negotiations. Hardened positions, unexpressed interests, decisions made by authority instead of alignment.",
+      "body3": "Negotiation is not a \"commercial\" skill. It's a cross-functional managerial competency.",
+      "heading2": "Why Negotiation Matters for HR",
+      "body4": "Negotiation enters strategic HR moments constantly: during selection (offer definition, expectation management), conflict resolution (manager-employee tensions), internal mobility (role redefinition), and leadership (every time a manager assigns priorities or realigns objectives).",
+      "heading3": "What Negotiation Looks Like in Daily Work",
+      "body5": "Effective negotiation holds together three dimensions: <b>objectives</b> (what we want), <b>constraints</b> (budget, time, resources, policy), and <b>relationships</b> (trust, internal balance, reputation).",
+      "heading4": "Distributive",
+      "body6": "Exchange logic: if I get more, you get less. Typical for budget or limited resource negotiations.",
+      "heading5": "Integrative",
+      "body7": "Analyzes underlying interests, not just declared positions. Redefines the problem perimeter to find solutions for both sides.",
+      "heading6": "The 7 Techniques",
+      "body8": "These aren't \"magic formulas.\" They're operational levers to structure the conversation, make interests explicit, and build sustainable agreements.",
+      "text3": "Concrete example",
+      "heading7": "How to Objectively Evaluate Negotiation Skills",
+      "body9": "Negotiation tends to be overestimated. A professional who is confident, fluent, and articulate may seem like a good negotiator. But real negotiation ability is measured by the quality of the process: preparation, interest management, use of data, ability to formalize sustainable agreements.",
+      "body10": "On a CV you might read \"complex negotiation management.\" In reality, you don't know if the person worked on interests or just positions, used data or relational leverage, or if agreements were sustainable or just momentarily advantageous.",
+      "heading8": "Key Takeaway",
+      "body11": "What matters is not just the outcome, but the structure of the decision-making process. Through skill verifications based on psychometric science, situational questions, and BEI methodology, Skillvue observes how a person manages realistic negotiation scenarios, distinguishing between communication style and real ability to manage divergent interests.",
+      "text4": "Discover Skillvue",
+      "heading9": "Evaluate negotiation as an organizational <s>competency,</s> not a subjective perception.",
+      "body12": "Skillvue analyzes skills of candidates and employees quickly, objectively, and at scale using proprietary AI technology.",
+      "cta2": "Book a Demo",
+      "credentials": {
+        "psychometricScience": "Psychometric science",
+        "beiMethodology": "BEI methodology",
+        "objectiveProfiles": "Objective profiles",
+        "skillsBasedHiring": "Skills-based hiring"
+      }
+    },
+    "newsletter-august-2026": {
+      "onClick": "/book-meeting",
+      "metaTitle": "Skillvue — The August Newsletter",
+      "tag": "Newsletter",
+      "date": "August 2026",
+      "readTime": "5 min read",
+      "title": "Skills, new insights and where to meet us across Europe",
+      "subtitle": "Our upcoming events across Europe, a closer look at the workforce challenges in supermarkets, and a new customer story with Gruppo Unicomm.",
+      "intro": [
+        "As we head into a new season of events and conversations across Europe, we’re continuing to explore the themes reshaping how organisations understand and manage skills.",
+        "From workforce transformation to talent management, and the need to make faster, more informed decisions in complex and distributed organisations, having **clear skills data** is becoming increasingly important.",
+        "In this edition, we bring together our upcoming events across Europe, a closer look at some of the key workforce challenges in supermarkets, and a new customer story with Gruppo Unicomm."
+      ],
+      "sections": [
+        {
+          "img": "events",
+          "heading": "Where to meet us this autumn",
+          "body": [
+            "Over the next two months, we’ll be in **several European cities**, joining CHROs, Talent leaders and HR professionals to discuss the topics reshaping the future of work."
+          ],
+          "events": [
+            {
+              "name": "Transformational CHRO Assembly",
+              "meta": "Amsterdam, 9–10 September",
+              "text": "We’ll join closed-door conversations with CHROs from some of Europe’s leading companies, discussing the trends and priorities transforming the role of HR.",
+              "cta": {
+                "label": "Learn more",
+                "href": "chroAssembly",
+                "external": true
+              }
+            },
+            {
+              "name": "Fair Cultures",
+              "meta": "Barcelona, 1 October",
+              "text": "We’ll take part in stage sessions and private workshops exploring how skills can become a real infrastructure for the future of workforce planning.",
+              "cta": {
+                "label": "Learn more",
+                "href": "fairCultures",
+                "external": true
+              }
+            },
+            {
+              "name": "Gartner HR Symposium/Xpo",
+              "meta": "London, 6–8 October",
+              "text": "Meet us at our stand to connect with the team and explore how objective skills data can support better decisions across hiring, internal mobility and development.",
+              "cta": {
+                "label": "Learn more",
+                "href": "gartner",
+                "external": true
+              }
+            },
+            {
+              "name": "HRcoreACADEMY Summit",
+              "meta": "Amsterdam, 7–8 October",
+              "text": "Two days focused on Talent Transformation and Learning & Development, where we’ll also bring new perspectives on the changes reshaping skills, AI and talent management.",
+              "cta": {
+                "label": "Learn more",
+                "href": "hrcoreAcademy",
+                "external": true
+              }
+            },
+            {
+              "name": "UNLEASH World",
+              "meta": "Paris, 20–22 October",
+              "text": "Come and meet us at our stand at one of Europe’s leading events dedicated to HR, technology and the future of work.",
+              "cta": {
+                "label": "Learn more",
+                "href": "unleash",
+                "external": true
+              }
+            }
+          ]
+        },
+        {
+          "img": "supermarkets",
+          "heading": "What does a skills-based approach look like in supermarkets?",
+          "body": [
+            "High turnover, hiring at scale, store manager pipelines, frontline development and post-M&A integration make it particularly challenging to make consistent people decisions across distributed retail organisations.",
+            "In a new short overview, we’ve brought together some of the sector’s key challenges and explored the role **objective skills data** can play across different stages of the talent lifecycle, from hiring and internal growth to organisational transformation.",
+            "The document focuses on four areas in particular: hiring and screening at scale, building pipelines for store managers and department heads, frontline development, and managing skills during acquisitions and reorganisations."
+          ],
+          "cta": {
+            "label": "Explore the full supermarkets overview",
+            "href": "supermarkets",
+            "external": false,
+            "newTab": true
+          }
+        },
+        {
+          "img": "unicomm",
+          "heading": "Making skills visible at Gruppo Unicomm",
+          "body": [
+            "When a group grows through acquisitions and a distributed network of stores, there is a risk that information, assessments and skills remain fragmented across people and the organisation.",
+            "For Gruppo Unicomm, starting from skills means building a **common language across people, stores and business strategy**, helping make HR decisions more consistent with the organisation’s actual needs.",
+            "In our latest customer story, Giuseppe Curci, HR Director at Gruppo Unicomm, shares the journey started with Skillvue to turn large volumes of candidate and workforce information into data that is useful, prioritised and actionable.",
+            "In a context where HR teams need to manage high volumes without slowing down the business, the goal is to make hiring more structured and create greater continuity across people decisions."
+          ],
+          "cta": {
+            "label": "Read the full customer story",
+            "href": "unicomm",
+            "external": false
+          }
+        }
+      ],
+      "closing": {
+        "heading": "Looking ahead to what’s next",
+        "body": [
+          "The next few months will bring new conversations around **how skills, AI and workforce planning are evolving** across Europe.",
+          "We’ll continue sharing what we’re learning from HR leaders, customers and the events where these discussions are taking place."
+        ]
+      },
+      "finalKicker": "Discover Skillvue",
+      "finalTitle": "Better talent decisions start with",
+      "finalTitleHighlight": "clearer skills.",
+      "finalBody": "Book a demo and see how Skillvue verifies skills and AI readiness across your organisation.",
+      "finalButton": "Book a Demo",
+      "back": "Back to Blog",
+      "imgSoon": "image coming",
+      "imgLabels": {
+        "events": "Where to find Skillvue in the coming months",
+        "supermarkets": "The role of skills in supermarkets",
+        "unicomm": "Giuseppe Curci, HR Director at Gruppo Unicomm"
+      }
+    },
+    "newsletter-july-2026": {
+      "onClick": "/book-meeting",
+      "metaTitle": "Skillvue — The July Newsletter",
+      "tag": "Newsletter",
+      "date": "July 2026",
+      "readTime": "4 min read",
+      "title": "The July newsletter",
+      "subtitle": "Skills, AI and better talent decisions — four perspectives gathered from London to Paris, plus a closer look at AI readiness.",
+      "intro": [
+        "Over the past few months, we’ve met HR and Talent leaders at several events across Europe, discussing the changes reshaping the way organisations hire, assess and develop people.",
+        "One shared theme emerged from these conversations: AI creates new opportunities, but turning them into better decisions requires **reliable data**, a clear understanding of people’s skills, and processes that combine technology with human judgement.",
+        "In this edition, we bring together four perspectives on these topics — gathered from London to Paris — alongside a closer look at AI readiness and the experience of one of our clients in the pharmaceutical field."
+      ],
+      "sections": [
+        {
+          "img": "vivatech",
+          "heading": "A VivaTech award and fresh perspectives",
+          "body": [
+            "At VivaTech in Paris, we joined companies, startups and international leaders to discuss how AI is transforming the world of work.",
+            "One of the clearest takeaways was that the AI challenge is **not only technological, but also organisational**. For HR leaders, this means understanding which skills are needed, how to develop them, and how AI can support more informed talent decisions.",
+            "During the event, we also won the ManpowerGroup Startup Challenge, “Redesigning Work for the Age of AI” — an important recognition and an experience that gave us fresh ideas and perspectives on the future of work."
+          ],
+          "cta": {
+            "label": "Discover more about our VivaTech experience",
+            "href": "vivatech",
+            "external": true
+          }
+        },
+        {
+          "img": "execTa",
+          "heading": "Beyond skills-based hiring",
+          "body": [
+            "A couple of weeks ago in London, together with ExecTASocial, we sat down with a group of Heads of Talent Acquisition to discuss some of the biggest challenges shaping hiring today: improving candidate quality, building hiring-manager trust, enhancing the candidate experience, reducing mis-hires, increasing assessment adoption, and understanding the growing role of AI across the talent lifecycle.",
+            "One point emerged clearly: skills-based hiring is **no longer just a selection methodology**. It is becoming the foundation for more objective and evidence-based talent decisions across hiring, development, and internal mobility.",
+            "But making this shift requires more than new technology. HR needs the influence to help CEOs and other business functions understand the strategic value of a skills-based operating model, as well as cross-functional support to overcome implementation challenges — from technical integration to resource allocation. Only then can organisations fully connect people strategy with measurable business outcomes."
+          ],
+          "cta": {
+            "label": "Read the LinkedIn post",
+            "href": "execTa",
+            "external": true
+          }
+        },
+        {
+          "img": "aiReadiness",
+          "heading": "How ready is your organisation for AI?",
+          "body": [
+            "Adopting new tools does not necessarily mean that an organisation is ready to use AI effectively. Self-assessments, claimed skills and generic benchmarks provide only a partial picture of actual readiness.",
+            "That’s why we developed a test that measures **both technical knowledge and the ability to apply AI with sound judgement**. It is built around the organisation’s real roles, processes and use cases, helping identify existing capabilities, relevant skill gaps and priorities for upskilling and reskilling.",
+            "In this way, AI readiness can become a concrete source of information for making more targeted development decisions."
+          ],
+          "cta": {
+            "label": "Explore the AI Competency Test",
+            "href": "aiTest",
+            "external": false
+          }
+        },
+        {
+          "img": "fidia",
+          "heading": "Making skills visible at Fidia Farmaceutici",
+          "body": [
+            "How can an organisation make skills assessment and development more structured, objective and scalable?",
+            "In our latest customer story, Gianluca Magnani, Global People & Culture Officer at Fidia Farmaceutici, explains how the organisation moved **from CV-based to skills-based criteria** — making skills and potential more visible in order to develop more and more people across a 900-person sales network, where previously only 5-10% managed to progress in their career.",
+            "The objective is not to replace human judgement, but to provide a stronger foundation for building development paths aligned with both people’s potential and the organisation’s needs."
+          ],
+          "cta": {
+            "label": "Read the full customer story",
+            "href": "fidia",
+            "external": false
+          }
+        }
+      ],
+      "closing": {
+        "heading": "Towards better talent decisions",
+        "body": [
+          "From hiring to people development, these experiences reflect the same underlying need: to understand skills more clearly and make talent decisions that are **more informed, objective and grounded in the reality of each organisation**.",
+          "We’ll continue sharing practical insights, conversations and real-world examples of how AI and skills-based approaches are transforming the work of HR leaders."
+        ]
+      },
+      "finalKicker": "Discover Skillvue",
+      "finalTitle": "Better talent decisions start with",
+      "finalTitleHighlight": "clearer skills.",
+      "finalBody": "Book a demo and see how Skillvue verifies skills and AI readiness across your organisation.",
+      "finalButton": "Book a Demo",
+      "back": "Back to Blog",
+      "imgSoon": "image coming",
+      "imgLabels": {
+        "vivatech": "VivaTech photo",
+        "execTa": "ExecTA roundtable photo (London)",
+        "aiReadiness": "AI Competency Test visual",
+        "fidia": "Fidia customer story photo"
+      }
+    },
+    "recruitment-biases": {
+      "biases": {
+        "n01": {
+          "num": "01",
+          "title": "Halo Effect",
+          "oneliner": "One positive trait overshadows everything else",
+          "desc": "A single positive characteristic disproportionately influences the overall evaluation. A prestigious university, a brilliant communication style, or an international experience becomes dominant and \"contaminates\" the judgment on unverified competencies.",
+          "mitigation": [
+            "Define key competencies before the interview",
+            "Use separate scoring grids per skill",
+            "Ask probing questions even when positive",
+            "Compare on uniform criteria"
+          ]
+        },
+        "n02": {
+          "num": "02",
+          "title": "Horn Effect",
+          "oneliner": "One negative detail tanks the whole evaluation",
+          "desc": "The negative twin of the Halo Effect. A perceived negative element conditions the entire evaluation. A CV error, a short work experience, or a less confident style. The interview becomes a search for confirmation of the initial doubt.",
+          "mitigation": [
+            "Separate competencies in evaluation",
+            "Verify before confirming negatives",
+            "Distinguish error from pattern",
+            "Use structured scoring for all"
+          ]
+        },
+        "n03": {
+          "num": "03",
+          "title": "Affinity Bias",
+          "oneliner": "You prefer candidates who feel like you",
+          "desc": "You evaluate more positively candidates you perceive as similar to you or your team. Background, career path, communication style, or interests. The chemistry feels like competence, but it is not.",
+          "mitigation": [
+            "Anchor to observable competencies",
+            "Identical questions for all candidates",
+            "Multiple evaluators with shared criteria",
+            "Separate \"likeable\" from \"qualified\""
+          ]
+        },
+        "n04": {
+          "num": "04",
+          "title": "Confirmation Bias",
+          "oneliner": "You only see what confirms your first impression",
+          "desc": "The tendency to seek, interpret, and remember only information that confirms an already formed idea. Once you have an opinion, you start asking questions oriented to confirm it. If you find no contradicting evidence, you did not look hard enough.",
+          "mitigation": [
+            "Challenge your first impression",
+            "Search for contrary evidence",
+            "Use predefined evaluation grids",
+            "Separate gathering from judging"
+          ]
+        },
+        "n05": {
+          "num": "05",
+          "title": "Anchoring Bias",
+          "oneliner": "First data point dominates all that follows",
+          "desc": "The first piece of information received about a candidate becomes a reference point conditioning all subsequent evaluations. Current salary, degree, a colleague comment. Judgment revolves around that initial data point.",
+          "mitigation": [
+            "Postpone economic evaluation",
+            "Independent criteria per competency",
+            "Evaluate each skill separately first",
+            "Compare on behavioral evidence"
+          ]
+        },
+        "n06": {
+          "num": "06",
+          "title": "Similar-to-me Bias",
+          "oneliner": "You favor candidates who mirror your own path",
+          "desc": "The tendency to prefer candidates who reflect your own path, decision-making style, or way of working. If the candidate faced similar challenges or shares your approach, you unconsciously consider them \"more suitable.\"",
+          "mitigation": [
+            "Clear shared competency model",
+            "Distinguish style from adequacy",
+            "Diverse evaluator backgrounds",
+            "Ask: competent or just similar?"
+          ]
+        },
+        "n07": {
+          "num": "07",
+          "title": "First Impression Bias",
+          "oneliner": "The first 5 minutes determine everything",
+          "desc": "Forming a judgment in the first minutes and maintaining it throughout. Punctuality, handshake, tone of voice, presentation style. The interview risks becoming a confirmation of the initial impression, positive or negative.",
+          "mitigation": [
+            "Section the interview with distinct criteria",
+            "Defer judgment to the end",
+            "Notes on evidence, not perceptions",
+            "Multiple evaluation moments"
+          ]
+        },
+        "n08": {
+          "num": "08",
+          "title": "Overconfidence Bias",
+          "oneliner": "You trust your own judgment too much",
+          "desc": "The tendency to overestimate your own judgment ability. You think you can \"read people instantly\" or have a special instinct for talent. This is insidious because it concerns the evaluator, not the candidate.",
+          "mitigation": [
+            "Shared measurable criteria",
+            "Cross-evaluator comparison",
+            "Distinguish experience from validation",
+            "Integrate structured tools"
+          ]
+        }
+      },
+      "cta": "Back to Blog",
+      "text": "March 10, 2026",
+      "text2": "12 min read",
+      "heading": "The 8 Most Common Recruitment Biases (and How to Avoid Them)",
+      "body": "Have you ever rejected a candidate in the first five minutes of an interview? Or decided almost immediately they were \"the one\"?",
+      "body2": "If the answer is yes, it doesn't mean you're a superficial recruiter: it means you're human and, precisely for this reason, exposed to recruitment biases.",
+      "body3": "In the selection process, many decisions are formed earlier than we imagine. The rest of the interview often becomes a search for confirmation. This happens because our brain uses cognitive shortcuts to simplify complexity: fast, automatic, apparently efficient. The problem is they're not always accurate.",
+      "body4": "The question we want to answer in this guide isn't whether biases exist. The question is: how much do they concretely impact your decisions?",
+      "heading2": "What Are Cognitive Biases?",
+      "body5": "Cognitive biases are mental shortcuts we use to make decisions faster. They're not intentional errors: they're automatic brain mechanisms that help us simplify complexity. The problem arises when these shortcuts come into play in situations requiring structured evaluations, like recruitment.",
+      "body6": "In the selection process, a bias can lead you to overestimate a candidate for a single positive characteristic, reject them for an irrelevant detail, seek only information confirming your first impression, or unconsciously prefer profiles similar to you.",
+      "heading3": "The 8 Most Common Recruitment Biases",
+      "body7": "They rarely appear as obvious errors. More often, they disguise themselves as experience, intuition, or \"gut feeling.\"",
+      "heading4": "How to Reduce Biases in Recruitment",
+      "body8": "The bad news: being human, biases cannot be eliminated. The good news: they can be managed with method. If you want to reduce their impact, you need to intervene on the selection process, making it more structured and less dependent on individual perception.",
+      "text3": {
+        "defineJobProfiles": "Define job profiles based on competencies, not just activities or seniority",
+        "structureInterviewsConsistent": "Structure interviews with consistent questions for all candidates",
+        "evaluateUniformCriteria": "Evaluate on uniform criteria, separating different dimensions (hard skills, soft skills, potential)",
+        "separateDataCollection": "Separate data collection from final judgment, avoiding early evaluations",
+        "compareDecisionsAcross": "Compare decisions across multiple evaluators on shared indicators"
+      },
+      "body9": "Skillvue supports HR and Talent Acquisition in objective competency evaluation through verifications based on psychometric science, situational questions, and BEI methodology. This allows comparing candidates on measurable criteria, reducing the weight of individual perceptions.",
+      "text4": "Discover Skillvue",
+      "heading5": "Make your recruitment process more structured, less exposed to <s>bias.</s>",
+      "body10": "Skillvue analyzes skills of candidates and employees quickly, objectively, and at scale using proprietary AI technology.",
+      "cta2": "Book a Demo",
+      "text5": {
+        "psychometricScience": "Psychometric science",
+        "beiMethodology": "BEI methodology",
+        "objectiveProfiles": "Objective profiles",
+        "biasReduction": "Bias reduction"
+      }
+    },
+    "social-skills": {
+      "socialSkills": {
+        "emotionalIntelligence": {
+          "title": "Emotional Intelligence",
+          "desc": "The ability to read emotional dynamics that influence decisions, behaviors, and professional relationships. Recognizes tension signals before they become explicit conflict."
+        },
+        "orientationOthers": {
+          "title": "Orientation to Others",
+          "desc": "The ability to understand needs, expectations, and priorities of interlocutors and act accordingly. Clarifies what the interlocutor really needs before proposing a solution."
+        },
+        "negotiation": {
+          "title": "Negotiation",
+          "desc": "The daily negotiation that happens on priorities, resources, and deadlines. Observable in the ability to find sustainable compromises considering both individual and organizational goals."
+        },
+        "teamworking": {
+          "title": "Teamworking",
+          "desc": "The ability to work in an integrated way toward a common goal, even when individual or functional priorities aren't perfectly aligned."
+        },
+        "leadership": {
+          "title": "Leadership",
+          "desc": "Not necessarily tied to a hierarchical role. It's a competence that concerns the ability to orient people toward a shared direction, even without formal power."
+        },
+        "goalOrientation": {
+          "title": "Goal Orientation",
+          "desc": "The ability to maintain focus on results even when relational dynamics become complex or conflictual."
+        },
+        "cognitiveFlexibility": {
+          "title": "Cognitive Flexibility",
+          "desc": "The ability to adapt one's way of thinking and acting to different contexts, interlocutors, and requests, without losing decision-making coherence."
+        },
+        "problemSolving": {
+          "title": "Problem Solving",
+          "desc": "Not just technical resolution, but managing situations involving multiple actors, interests, and constraints. Analyzing problems distinguishing facts, perceptions, and interpretations."
+        },
+        "resilience": {
+          "title": "Resilience",
+          "desc": "The ability to maintain balance and relational effectiveness even in particularly critical contexts. After a conflict, quickly restores a functional relationship."
+        },
+        "organizationPlanning": {
+          "title": "Organization & Planning",
+          "desc": "Has an often-underestimated social component. Managing time, priorities, and responsibilities impacts directly on work relationships."
+        }
+      },
+      "cta": "Back to Blog",
+      "text": "February 18, 2026",
+      "text2": "14 min read",
+      "heading": "Social Skills: What They Are and Why They Matter at Work",
+      "body": "Social skills aren't about being sociable. They concern how a person acts in professional interactions, especially when the context is complex.",
+      "heading2": "What Are Social Skills?",
+      "body2": "Social skills are observable capabilities that manifest in how a person interacts with colleagues, stakeholders, and managers, especially when the context requires choices, negotiation, and adaptation.",
+      "body3": "The most critical aspect is that social skills are often treated as a label. We frequently read in CVs phrases like \"good relational abilities\" or \"excellent communication,\" <b>without ever clarifying which behaviors to observe</b> and which decisions to support.",
+      "body4": "\"Social skills represent a subset of transversal competencies that specifically concern the management of relationships, interpersonal dynamics, and professional interactions.\"",
+      "heading3": "10 Social Skills Relevant for Work Today",
+      "body5": "These dimensions are not measured as generic labels but as scientifically validated constructs, observable in daily work.",
+      "heading4": "Concrete Examples in Daily Work",
+      "heading5": "In meetings",
+      "body6": "A well-developed social skill is recognized when a person clarifies the meeting objective, brings conversation back on point when it disperses, gives space to different positions without losing focus, and explicates disagreements functionally without blocking the discussion.",
+      "heading6": "In moments of tension",
+      "body7": "Social skills are noticed more clearly when context stops being linear. Observe whether a person asks for clarification before reacting, makes constraints explicit instead of shifting responsibility, addresses disagreement without personalizing it, and takes a position even without clear direction.",
+      "body8": "Through Skill Verifications based on accurate psychometric methodologies and BEI-inspired situational questions, Skillvue lets you observe how people act in complex interactions: stakeholder disagreements, role ambiguity, conflicting requests, relational pressures. Not how a person describes themselves, but how they reason and decide in realistic social situations.",
+      "text3": "Discover Skillvue",
+      "heading7": "Evaluate real social effectiveness, not <s>perceived agreeableness.</s>",
+      "body9": "Make decisions based on real social competencies, not impressions.",
+      "cta2": "Book a Demo"
+    },
+    "talent-acquisition": {
+      "differences": {
+        "approach": {
+          "dimension": "Approach",
+          "recruiting": "Reactive — responds to an open vacancy",
+          "ta": "Strategic — starts from competency mapping"
+        },
+        "timeHorizon": {
+          "dimension": "Time Horizon",
+          "recruiting": "Short term — fill the position quickly",
+          "ta": "Medium-long term — build lasting capabilities"
+        },
+        "keyMetrics": {
+          "dimension": "Key Metrics",
+          "recruiting": "Time-to-hire, volume of applications",
+          "ta": "Quality-of-hire, retention, performance over time"
+        },
+        "decisionBasis": {
+          "dimension": "Decision Basis",
+          "recruiting": "CV, experience, interview impressions",
+          "ta": "Structured data on skills, potential, behaviors"
+        }
+      },
+      "strategySteps": {
+        "startFromCompetencies": {
+          "title": "Start from competencies, not job titles",
+          "desc": "A solid talent acquisition strategy always begins with: which competencies are truly needed to make work function today and in the coming months? Working on critical competencies lets you anticipate future needs."
+        },
+        "alignRecruitingEmployer": {
+          "title": "Align recruiting and employer branding",
+          "desc": "If what you communicate externally doesn't reflect the real way of working, you'll attract misaligned candidates and increase early turnover risk. Coherence between messages, declared values, and observable behaviors is key."
+        },
+        "buildTalentPipeline": {
+          "title": "Build a talent pipeline over time",
+          "desc": "Talent acquisition doesn't start when a position opens, but much earlier. Cultivate relationships with potentially relevant professionals even without an immediate need."
+        },
+        "useDataObjective": {
+          "title": "Use data and objective evaluations",
+          "desc": "A mature strategy doesn't rely on intuitions or interview impressions but on comparable data and clear criteria. Integrate objective evaluations of competencies, potential, and observable behaviors."
+        },
+        "connectTalentAcquisition": {
+          "title": "Connect talent acquisition and internal development",
+          "desc": "Before looking for new people externally, ask whether some competencies are already present in-house or developable through targeted upskilling and reskilling paths."
+        },
+        "measureWhatTruly": {
+          "title": "Measure what truly matters",
+          "desc": "Monitoring only time-to-hire risks rewarding speed at the expense of quality. Indicators like quality-of-hire, performance over time, and retention give a much more useful reading."
+        }
+      },
+      "cta": "Back to Blog",
+      "text": "February 12, 2026",
+      "text2": "13 min read",
+      "heading": "Talent Acquisition: What It Is, How It Works, Why It Matters",
+      "body": "How many hires, despite being \"right on paper,\" start showing cracks after a few months? The role is covered, the CV was coherent, the interview went well... and yet.",
+      "heading2": "What Is Talent Acquisition (and Why It's Not Just Recruiting)",
+      "body2": "Talent acquisition is the set of strategies and processes through which a company identifies, attracts, evaluates, and develops the people it will need not only today, but also in the future. The difference from traditional recruiting lies primarily in the level of <b>intentionality</b>.",
+      "body3": "Recruiting is often tactical: it responds to an open vacancy, works on timing and volumes. Talent acquisition, instead, is strategic: it starts from understanding which competencies are critical for the organization, which will become so, and how to build over time a pool of people capable of sustaining them.",
+      "body4": "\"The horizon is not the single hire but the medium-long term. Decisions aren't based only on what's needed today, but on how a role might evolve and what kind of contribution a person can make over time.\"",
+      "heading3": "Talent Acquisition vs Recruiting: The Differences",
+      "columnHeader": "Dimension",
+      "heading4": "How to Build an Effective Strategy",
+      "body5": "Through rapid, standardized Skill Verifications, Skillvue helps you evaluate candidates on clear, comparable criteria using BEI-based situational questions, targeted hard skill tests, and indicators on potential, autonomy, and learning ability. Shift selection from a comparison of CVs and impressions to a structured evaluation of competencies, behaviors, and potential.",
+      "text3": "Discover Skillvue",
+      "heading5": "Build a talent pipeline based on <s>real competencies.</s>",
+      "body6": "Improve quality-of-hire with structured, objective skill verifications.",
+      "cta2": "Book a Demo"
+    }
   },
   "book-meeting": {
     "meta": {

@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
@@ -9,43 +10,35 @@ import { useRouter } from 'next/router';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { messagesFor } from '@/i18n/messages';
 
-const indicatorsEN = [
-  { context: 'In meetings', behavior: 'Doesn\'t automatically accept data or shared opinions. Asks for sources, verifies information consistency, distinguishes measurable facts from interpretations.' },
-  { context: 'In projects', behavior: 'When a problem emerges, doesn\'t act on the "symptom" but seeks the real cause. Analyzes whether the issue is organizational, communicative, or related to poorly defined priorities.' },
-  { context: 'In conflict', behavior: 'Separates personal perceptions from verifiable facts. Avoids generalizations ("never collaborates") and brings discussion back to specific episodes and observable behaviors.' },
-  { context: 'In decisions', behavior: 'Before choosing a direction, evaluates medium-term implications. Considers impacts on other functions, required resources, and possible unintended consequences.' },
-];
 
-const indicatorsIT = [
-  { context: 'Nelle riunioni', behavior: 'Non accetta automaticamente i dati o le opinioni condivise. Chiede le fonti, verifica la coerenza delle informazioni, distingue i fatti misurabili dalle interpretazioni.' },
-  { context: 'Nei progetti', behavior: 'Quando emerge un problema, non agisce sul "sintomo" ma cerca la causa reale. Analizza se il problema è organizzativo, comunicativo o legato a priorità mal definite.' },
-  { context: 'Nei conflitti', behavior: 'Separa le percezioni personali dai fatti verificabili. Evita le generalizzazioni ("non collabora mai") e riporta la discussione a episodi specifici e comportamenti osservabili.' },
-  { context: 'Nelle decisioni', behavior: 'Prima di scegliere una direzione, valuta le implicazioni a medio termine. Considera gli impatti su altre funzioni, le risorse necessarie e le possibili conseguenze non volute.' },
-];
 
-const faqsEN = [
-  { q: 'What is critical thinking?', a: 'Critical thinking is the ability to analyze information, distinguish facts from opinions, question implicit assumptions, and make decisions consistent with context. In business, it\'s an operational competence that manifests when a person verifies data before acting, evaluates possible alternatives, and considers the implications of their choices.' },
-  { q: 'What\'s the difference between critical thinking and creative thinking?', a: 'Critical thinking serves to evaluate, analyze, and verify. Creative thinking serves to generate new ideas and original solutions. The first reduces the risk of errors and hasty decisions, while the second expands possibilities. In business, the two competencies work better together: creativity generates options, critical thinking evaluates and selects the most sustainable ones.' },
-  { q: 'How do you evaluate critical thinking?', a: 'You need realistic scenarios that reproduce typical role situations: partial data, conflicting priorities, contradictory information. Observe whether the person verifies sources before deciding, distinguishes facts from interpretations, makes explicit the assumptions underlying their choice, and evaluates risks and implications.' },
-];
 
-const faqsIT = [
-  { q: 'Che cos\'è il pensiero critico?', a: 'Il pensiero critico è la capacità di analizzare le informazioni, distinguere i fatti dalle opinioni, mettere in discussione le assunzioni implicite e prendere decisioni coerenti con il contesto. In ambito aziendale, è una competenza operativa che si manifesta quando una persona verifica i dati prima di agire, valuta possibili alternative e considera le implicazioni delle proprie scelte.' },
-  { q: 'Qual è la differenza tra pensiero critico e pensiero creativo?', a: 'Il pensiero critico serve a valutare, analizzare e verificare. Il pensiero creativo serve a generare nuove idee e soluzioni originali. Il primo riduce il rischio di errori e decisioni affrettate, mentre il secondo espande le possibilità. In ambito aziendale, le due competenze funzionano meglio insieme: la creatività genera opzioni, il pensiero critico valuta e seleziona quelle più sostenibili.' },
-  { q: 'Come si valuta il pensiero critico?', a: 'Servono scenari realistici che riproducano situazioni tipiche del ruolo: dati parziali, priorità in conflitto, informazioni contraddittorie. Si osserva se la persona verifica le fonti prima di decidere, distingue i fatti dalle interpretazioni, rende esplicite le assunzioni alla base della propria scelta e valuta rischi e implicazioni.' },
-];
 
 
 // One line per page is the whole contract: the argument is this route's `id` in
 // routes.json, and i18n/messages.ts turns it into the namespaces to load.
 export const getStaticProps = messagesFor('blog/critical-thinking');
 
+// Structure the catalogue cannot hold: ids and the components each row
+// renders. The words that went with them are in messages/.
+const INDICATORS = [
+  { id: 'meetings' },
+  { id: 'projects' },
+  { id: 'conflict' },
+  { id: 'decisions' },
+];
+
+const FAQS = [
+  { id: 'whatCriticalThinking' },
+  { id: 'whatSDifference' },
+  { id: 'howDoYou' },
+];
+
 export default function BlogArticle5() {
   const router = useRouter();
   const { lang } = useLanguage();
+  const t = useTranslations('blog.critical-thinking');
 
-  const indicators = lang === 'it' ? indicatorsIT : indicatorsEN;
-  const faqs = lang === 'it' ? faqsIT : faqsEN;
 
   return (
     <>
@@ -64,21 +57,19 @@ export default function BlogArticle5() {
               onClick={() => { router.push('/blog'); window.scrollTo(0, 0); }}
               className="mb-10"
             >
-              {lang === 'it' ? 'Torna al Blog' : 'Back to Blog'}
+              {t('cta')}
             </Button>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
-                <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{lang === 'it' ? 'Scienza' : 'Science'}</span>
-                <span className="text-[13px] text-white/35">{lang === 'it' ? '25 febbraio 2026' : 'February 25, 2026'}</span>
-                <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {lang === 'it' ? '10 min di lettura' : '10 min read'}</span>
+                <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{t('text')}</span>
+                <span className="text-[13px] text-white/35">{t('text2')}</span>
+                <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('text3')}</span>
               </div>
               <h1 className="text-white/95 mb-6 text-[48px] font-semibold md:text-[64px] md:font-bold" style={{ lineHeight: 1.12, letterSpacing: '-0.02em' }}>
-                {lang === 'it' ? 'Che cos\'è il pensiero critico e come valutare questa competenza' : 'What Is Critical Thinking and How to Verify This Skill'}
+                {t('heading')}
               </h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
-                {lang === 'it'
-                  ? 'Il pensiero critico è una delle competenze più citate nei modelli di competenze. Eppure, quando si tratta di riconoscerlo o misurarlo, spesso diventa un\'etichetta generica.'
-                  : 'Critical thinking is one of the most cited competencies in competency models. Yet when it comes to recognizing or measuring it, it often becomes a generic label.'}
+                {t('body')}
               </p>
             </motion.div>
           </div>
@@ -89,31 +80,25 @@ export default function BlogArticle5() {
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">
-                {lang === 'it' ? 'Che cos\'è davvero il pensiero critico?' : 'What Is Critical Thinking, Really?'}
+                {t('heading2')}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
-                {lang === 'it'
-                  ? <>In filosofia, il pensiero critico nasce come capacità di mettere in discussione assunzioni, argomenti e sistemi di credenze. In pedagogia, è legato allo sviluppo del ragionamento autonomo. <strong className="text-[#121212]/80">In ambito aziendale, tuttavia, il pensiero critico diventa una competenza operativa.</strong></>
-                  : <>In philosophy, critical thinking originates as the ability to question assumptions, arguments, and belief systems. In pedagogy, it's linked to the development of autonomous reasoning. <strong className="text-[#121212]/80">In business, however, critical thinking becomes an operational competence.</strong></>}
+                {t.rich('body2', {
+    b: (chunks) => <strong className="text-[#121212]/80">{chunks}</strong>,
+  })}
               </p>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
-                {lang === 'it'
-                  ? 'Per pensiero critico intendiamo la capacità di analizzare le informazioni prima di agire, distinguere i fatti dalle opinioni, valutare le implicazioni e prendere decisioni coerenti con il contesto e gli obiettivi.'
-                  : 'By critical thinking we mean the ability to analyze information before acting, distinguish facts from opinions, evaluate implications, and make decisions consistent with context and objectives.'}
+                {t('body3')}
               </p>
 
               <div className="border-l-[3px] border-[#4B4DF7]/30 pl-6 my-10">
                 <p className="text-[17px] text-[#121212]/60 leading-[1.8] italic">
-                  {lang === 'it'
-                    ? '"Il pensiero critico non è sinonimo di razionalità o spirito analitico. Include anche la capacità di mettere in discussione le proprie assunzioni, valutare le fonti e decidere quando i dati sono sufficienti per agire."'
-                    : '"Critical thinking is not synonymous with rationality or analytical spirit. It also includes questioning one\'s own assumptions, evaluating sources, and the ability to decide when data is sufficient to act."'}
+                  {t('body4')}
                 </p>
               </div>
 
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
-                {lang === 'it'
-                  ? 'Una persona con un pensiero critico solido non si limita a eseguire. Analizza dati e contesto, distingue i fatti dalle interpretazioni, mette in discussione le assunzioni implicite e valuta le conseguenze delle proprie decisioni. Una persona con un pensiero critico debole tende a reagire, a seguire schemi predefiniti o a delegare il ragionamento ad altri.'
-                  : 'A person with solid critical thinking doesn\'t just execute. They analyze data and context, distinguish facts from interpretations, question implicit assumptions, and evaluate the consequences of their decisions. A person with weak critical thinking tends to react, follow predefined patterns, or delegate reasoning to others.'}
+                {t('body5')}
               </p>
             </motion.div>
           </div>
@@ -124,16 +109,14 @@ export default function BlogArticle5() {
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">
-                {lang === 'it' ? 'Come identificare il pensiero critico nel lavoro quotidiano' : 'How to Identify Critical Thinking in Daily Work'}
+                {t('heading3')}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-8">
-                {lang === 'it'
-                  ? 'Il pensiero critico diventa utile solo quando è possibile osservarlo nei comportamenti. Se rimane una definizione astratta, finirà per essere valutato soggettivamente.'
-                  : 'Critical thinking becomes useful only when you can observe it in behaviors. If it remains an abstract definition, it will end up being evaluated subjectively.'}
+                {t('body6')}
               </p>
 
               <div className="space-y-4">
-                {indicators.map((item, i) => (
+                {INDICATORS.map((item, i) => (
                   <motion.details
                     key={i}
                     className="group border-b border-[#121212]/[0.06] last:border-b-0"
@@ -144,11 +127,11 @@ export default function BlogArticle5() {
                   >
                     <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
                       <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">0{i + 1}</span>
-                      <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{item.context}</span>
+                      <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{t(`indicators.${item.id}.context`)}</span>
                       <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                     </summary>
                     <div className="pl-12 pb-6">
-                      <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8]">{item.behavior}</p>
+                      <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8]">{t(`indicators.${item.id}.behavior`)}</p>
                     </div>
                   </motion.details>
                 ))}
@@ -162,39 +145,35 @@ export default function BlogArticle5() {
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">
-                {lang === 'it' ? 'Come valutare il pensiero critico' : 'How to Evaluate Critical Thinking'}
+                {t('heading4')}
               </h2>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
-                {lang === 'it'
-                  ? 'I CV non bastano. Un curriculum può dire che una persona ha gestito progetti complessi, ma non come prende decisioni o come reagisce a dati incompleti. Anche le domande generiche in colloquio aiutano poco.'
-                  : 'CVs aren\'t enough. A resume can tell you that a person has managed complex projects, but not how they make decisions or how they react to incomplete data. Generic interview questions help little either.'}
+                {t('body7')}
               </p>
               <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
-                {lang === 'it'
-                  ? <>Se vuoi valutare seriamente il pensiero critico, devi spostare l'attenzione su due elementi: <strong className="text-[#121212]/80">contesto e processo decisionale</strong>. Servono scenari realistici con dati parziali, priorità in conflitto e informazioni contraddittorie.</>
-                  : <>If you want to evaluate critical thinking seriously, you need to shift attention to two elements: <strong className="text-[#121212]/80">context and decision-making process</strong>. You'll need realistic scenarios with partial data, conflicting priorities, and contradictory information.</>}
+                {t.rich('body8', {
+    b: (chunks) => <strong className="text-[#121212]/80">{chunks}</strong>,
+  })}
               </p>
 
               <div className="grid md:grid-cols-2 gap-4 my-8">
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.03] p-6">
-                  <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{lang === 'it' ? 'Domande situazionali' : 'Situational Questions'}</h3>
-                  <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Forzano il ragionamento su un caso concreto, non su un principio astratto. Si osserva la struttura del ragionamento, non solo la risposta finale.' : 'Force reasoning on a concrete case, not an abstract principle. Observe the structure of reasoning, not just the final answer.'}</p>
+                  <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{t('heading5')}</h3>
+                  <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{t('body9')}</p>
                 </div>
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.03] p-6">
-                  <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{lang === 'it' ? 'Behavioral Event Interview' : 'Behavioral Event Interview'}</h3>
-                  <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{lang === 'it' ? 'Invece di chiedere cosa farebbero, si chiede cosa hanno fatto. Si analizza il percorso mentale: quali informazioni sono state considerate, quali alternative sono state valutate.' : 'Instead of asking what they would do, ask what they did. Analyze the mental path: what information was considered, what alternatives were evaluated.'}</p>
+                  <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{t('heading6')}</h3>
+                  <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{t('body10')}</p>
                 </div>
               </div>
 
               <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-10">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                  <h3 className="text-[16px] font-semibold text-[#121212]">{lang === 'it' ? 'Punto chiave' : 'Key Takeaway'}</h3>
+                  <h3 className="text-[16px] font-semibold text-[#121212]">{t('heading7')}</h3>
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
-                  {lang === 'it'
-                    ? 'Skillvue ti permette di valutare il pensiero critico attraverso verification basati su scenari realistici e metodologie psicometriche, osservando come una persona analizza le informazioni, identifica le variabili rilevanti e costruisce una decisione coerente. Il processo conta più della risposta finale.'
-                    : 'Skillvue enables you to evaluate critical thinking through verifications based on realistic scenarios and psychometric methodologies, observing how a person analyzes information, identifies relevant variables, and builds a coherent decision. The process matters more than the final answer.'}
+                  {t('body11')}
                 </p>
               </div>
             </motion.div>
@@ -206,17 +185,17 @@ export default function BlogArticle5() {
           <div className="max-w-[780px] mx-auto px-8 lg:px-12">
             <motion.h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]"
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              {lang === 'it' ? 'Domande frequenti' : 'Frequently Asked Questions'}
+              {t('heading8')}
             </motion.h2>
             <div className="space-y-0">
-              {faqs.map((faq, i) => (
+              {FAQS.map((faq, i) => (
                 <details key={i} className="group border-b border-white/[0.06]">
                   <summary className="flex items-center justify-between py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
-                    <span className="text-[16px] font-semibold text-white/85 pr-8">{faq.q}</span>
+                    <span className="text-[16px] font-semibold text-white/85 pr-8">{t(`faqs.${faq.id}.q`)}</span>
                     <span className="text-white/30 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                   </summary>
                   <div className="pb-6">
-                    <p className="text-[15px] text-white/[0.55] leading-[1.75]">{faq.a}</p>
+                    <p className="text-[15px] text-white/[0.55] leading-[1.75]">{t(`faqs.${faq.id}.a`)}</p>
                   </div>
                 </details>
               ))}
@@ -228,23 +207,21 @@ export default function BlogArticle5() {
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{lang === 'it' ? 'Scopri Skillvue' : 'Discover Skillvue'}</span>
+              <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('text4')}</span>
               <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
-                {lang === 'it'
-                  ? <>Distingui la percezione dalla <span className="gradient-text">competenza reale.</span></>
-                  : <>Distinguish perception from real <span className="gradient-text">competency.</span></>}
+                {t.rich('heading9', {
+    s: (chunks) => <span className="gradient-text">{chunks}</span>,
+  })}
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
-                {lang === 'it'
-                  ? 'Integra la valutazione delle competenze per decisioni organizzative più obiettive e sostenibili.'
-                  : 'Integrate skill verification for more objective and sustainable organizational decisions.'}
+                {t('body12')}
               </p>
               <Button
                 variant="primary"
                 mode="dark"
                 onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
               >
-                {lang === 'it' ? 'Prenota una demo' : 'Book a Demo'}
+                {t('cta2')}
               </Button>
             </motion.div>
           </div>
