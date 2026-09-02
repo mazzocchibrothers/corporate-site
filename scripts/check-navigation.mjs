@@ -118,3 +118,31 @@ for (const route of routes) {
 }
 
 console.log(`[OK] navigation: locale switch round-trips on every bilingual route`);
+
+// ── Language detection belongs to the homepage only ───────────────────────
+// Not a property of localizePath, but of the middleware that calls it, and the
+// one thing about this migration that changed the site without anyone asking.
+//
+// `nextConfig.i18n` redirected `/` by Accept-Language and left every other path
+// alone. next-intl's middleware detects on every path by default, so an Italian
+// browser opening an English link to a customer story was bounced to the
+// Italian version of it — production answers that URL 200, in English. Sharing
+// a link would have stopped meaning what it says.
+//
+// middleware.ts runs detection for '/' and only '/'. This asserts the shape of
+// that decision, because it is one line and it is easy to delete by accident.
+const middleware = readFileSync(join(ROOT, 'middleware.ts'), 'utf8');
+assert.match(
+  middleware,
+  /localeDetection:\s*false/,
+  'middleware.ts must build a locale-detection-free middleware for non-homepage ' +
+    'paths, or every English URL redirects an Italian browser away from it.',
+);
+assert.match(
+  middleware,
+  /pathname === '\/'/,
+  'middleware.ts must decide by pathname whether to detect the locale: the ' +
+    'homepage guesses, every other path answers what its URL says.',
+);
+
+console.log('[OK] navigation: locale detection is scoped to the homepage');
