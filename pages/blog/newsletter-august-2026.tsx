@@ -41,7 +41,7 @@ const C = {
     subtitle: 'A new customer story with Gruppo Unicomm, a closer look at the workforce challenges in the retail industry, and our upcoming events across Europe.',
     intro: [
       'At Skillvue, as we head into a new season of events and conversations across Europe, we’re continuing to explore the themes reshaping how organisations measure and manage skills.',
-      'From workforce transformation to talent management, and the need to make faster, more informed decisions in complex and distributed organisations, having **clear skills data** is becoming increasingly important.',
+      'From workforce transformation to talent management, and the need to make faster, more informed decisions in complex and distributed organisations, having **clear skills data** is becoming essential.',
       'In this edition, we bring together a new customer story with Gruppo Unicomm, a closer look at some of the key workforce challenges in the retail industry, and our upcoming events across Europe.',
     ],
     sections: [
@@ -49,10 +49,8 @@ const C = {
         img: 'unicomm',
         heading: 'Making skills visible at Gruppo Unicomm',
         body: [
-          'When a group grows through acquisitions and a distributed network of stores, there is a risk that information, assessments and skills remain fragmented across people and the organisation.',
-          'For Gruppo Unicomm, starting from skills means building a **common language across people, stores and business strategy**, helping make HR decisions more consistent with the organisation’s actual needs.',
-          'In our latest customer story, Giuseppe Curci, HR Director at Gruppo Unicomm, shares the journey started with Skillvue to turn large volumes of candidate and workforce information into data that is useful, prioritised and actionable.',
-          'In a context where HR teams need to manage high volumes without slowing down the business, the goal is to make hiring more structured and create greater continuity across people decisions.',
+          'When an organisation grows through acquisitions and manages a distributed network of stores, building a **common language around skills** becomes essential.',
+          'In our latest customer story, Giuseppe Curci, HR Director at Gruppo Unicomm, shares how the company is turning large volumes of candidate and workforce data into insights that HR teams can prioritise and act on.',
         ],
         cta: { label: 'Read the full customer story', href: LINKS.unicomm, external: false },
       },
@@ -60,8 +58,8 @@ const C = {
         img: 'supermarkets',
         heading: 'What does a skills-based approach look like in the retail industry?',
         body: [
-          'High turnover, hiring at scale, store manager pipelines, frontline development and post-M&A integration make it particularly challenging to make consistent people decisions across distributed retail organisations.',
-          'In a new short overview, we’ve brought together some of the sector’s key challenges and explored the role **objective skills data** can play across different stages of the talent lifecycle, from hiring and internal growth to organisational transformation.',
+          'High turnover, hiring at scale, store manager pipelines, frontline development and post-M&A integration all make talent management particularly complex in the retail industry.',
+          'We’ve brought together some of the sector’s key challenges and explored how **objective skills data** can support hiring, promotions, development and organisational transformation.',
           'The document focuses on four areas in particular: hiring and screening at scale, building pipelines for store managers and department heads, frontline development, and managing skills during acquisitions and reorganisations.',
         ],
         cta: { label: 'Explore the full retail overview', href: LINKS.supermarkets, external: false, newTab: true },
@@ -135,7 +133,7 @@ const C = {
     subtitle: 'Una nuova customer story con Gruppo Unicomm, un approfondimento sulle sfide organizzative della GDO e i nostri prossimi eventi in Europa.',
     intro: [
       'In Skillvue, mentre entriamo in una nuova stagione di eventi e confronti in tutta Europa, continuiamo a esplorare i temi che stanno ridefinendo il modo in cui le organizzazioni misurano e gestiscono le competenze.',
-      'Dalla trasformazione della forza lavoro al talent management, fino alla necessità di prendere decisioni più rapide e informate in organizzazioni complesse e distribuite, avere **dati chiari sulle competenze** diventa sempre più importante.',
+      'Dalla trasformazione della forza lavoro al talent management, fino alla necessità di prendere decisioni più rapide e informate in organizzazioni complesse e distribuite, avere **dati chiari sulle competenze** è essenziale.',
       'In questa edizione raccogliamo una nuova customer story con Gruppo Unicomm, un approfondimento su alcune delle principali sfide organizzative della GDO e i nostri prossimi eventi in Europa.',
     ],
     sections: [
@@ -143,10 +141,8 @@ const C = {
         img: 'unicomm',
         heading: 'Rendere visibili le competenze in Gruppo Unicomm',
         body: [
-          'Quando un gruppo cresce attraverso acquisizioni e una rete distribuita di punti vendita, il rischio è che informazioni, valutazioni e competenze restino frammentate tra le persone e l’organizzazione.',
-          'Per Gruppo Unicomm, partire dalle competenze significa costruire un **linguaggio comune tra persone, punti vendita e strategia di business**, contribuendo a rendere le decisioni HR più coerenti con le reali esigenze dell’organizzazione.',
-          'Nella nostra ultima customer story, Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm, racconta il percorso avviato con Skillvue per trasformare grandi volumi di informazioni su candidati e popolazione aziendale in dati utili, prioritizzati e azionabili.',
-          'In un contesto in cui i team HR devono gestire volumi elevati senza rallentare il business, l’obiettivo è rendere la selezione più strutturata e creare maggiore continuità tra le decisioni sulle persone.',
+          'Quando un’organizzazione cresce attraverso acquisizioni e gestisce una rete distribuita di punti vendita, costruire un **linguaggio comune sulle competenze** diventa essenziale.',
+          'Nella nostra ultima customer story, Giuseppe Curci, Direttore Risorse Umane di Gruppo Unicomm, racconta come l’azienda stia trasformando grandi volumi di dati su candidati e popolazione aziendale in insight che i team HR possono prioritizzare e su cui agire.',
         ],
         cta: { label: 'Guarda la customer story', href: LINKS.unicomm, external: false },
       },
@@ -154,8 +150,8 @@ const C = {
         img: 'supermarkets',
         heading: 'Che cosa significa un approccio skills-based nei supermercati?',
         body: [
-          'Turnover elevato, selezione su larga scala, pipeline per i direttori di punto vendita, sviluppo delle persone in prima linea e integrazione post-acquisizione rendono particolarmente complesso prendere decisioni coerenti sulle persone in organizzazioni retail distribuite.',
-          'In una nuova breve panoramica abbiamo raccolto alcune delle sfide chiave del settore e approfondito il ruolo che **dati oggettivi sulle competenze** possono avere nelle diverse fasi del talent lifecycle, dalla selezione alla crescita interna fino alla trasformazione organizzativa.',
+          'Turnover elevato, selezione su larga scala, pipeline per i direttori di punto vendita, sviluppo delle persone in prima linea e integrazione post-acquisizione rendono la gestione del talento particolarmente complessa nella GDO.',
+          'Abbiamo raccolto alcune delle sfide chiave del settore e approfondito come **dati oggettivi sulle competenze** possano supportare selezione, promozioni, sviluppo e trasformazione organizzativa.',
           'Il documento si concentra in particolare su quattro ambiti: selezione e screening su larga scala, costruzione delle pipeline per direttori di punto vendita e capireparto, sviluppo delle persone in prima linea e gestione delle competenze durante acquisizioni e riorganizzazioni.',
         ],
         cta: { label: 'Esplora la panoramica sui supermercati', href: LINKS.supermarkets, external: false, newTab: true },
