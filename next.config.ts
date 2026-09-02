@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
+import routes from "./i18n/routes.json";
 
 // Points next-intl at i18n/request.ts. Without it the server has no config and
 // every App Router page fails at prerender with "Couldn't find next-intl config
@@ -22,6 +23,27 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 // harness/docs/conventions.md, "CSS delivery" (#135).
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+
+  // Permanent redirects for every Italian slug, generated from the registry.
+  //
+  // next-intl already sends /it/customers/adr to /it/clienti/adr — but with a
+  // 307, which tells Google the move is temporary and to keep indexing the old
+  // URL. A slug that has been translated is not moving back. These run before
+  // the middleware, so they answer first and next-intl's 307 is never reached.
+  //
+  // Nothing to maintain: the list is every route whose Italian path differs
+  // from its English one, which is two today and becomes every route as #119
+  // translates them. Adding a slug to i18n/routes.json is the whole change.
+  async redirects() {
+    return routes
+      .filter((r) => r.paths.en !== undefined && r.paths.it !== undefined)
+      .filter((r) => r.paths.en !== r.paths.it)
+      .map((r) => ({
+        source: `/it${r.paths.en}`,
+        destination: `/it${r.paths.it}`,
+        permanent: true,
+      }));
+  },
 
   async headers() {
     const oneYearImmutable = 'public, max-age=31536000, immutable';
