@@ -1239,10 +1239,10 @@
     "finalCTA": {
       "badges": {
         "gdprCompliant": "Conforme al GDPR",
-        "iso27001Certified": "ISO 27001 certified",
-        "euAiAct": "EU AI Act ready",
-        "n50Languages": "50+ languages",
-        "builtEuropeanEnterprises": "Built for European enterprises"
+        "iso27001Certified": "Certificato ISO 27001",
+        "euAiAct": "Conforme all’EU AI Act",
+        "n50Languages": "50+ lingue",
+        "builtEuropeanEnterprises": "Costruito per le aziende europee"
       },
       "heading": "Pronto a vedere cosa Skillvue può fare per la tua <span>organizzazione?</span>",
       "text": "Pronto per esplorare",
@@ -1403,8 +1403,8 @@
         "badge": "LA SFIDA",
         "title": "Il modello precedente non poteva crescere alla velocità del business",
         "intro": "Con l'intera organizzazione in rapida espansione, soprattutto, nella fase di ripresa post Covid, il modello di sviluppo esistente mostrava alcuni limiti strutturali.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "potentialNearly4": {
             "title": "Il potenziale di quasi 4.000 persone non era visibile",
@@ -1766,8 +1766,8 @@
         "badge": "LA SFIDA",
         "title": "Il problema strutturale",
         "intro": "Carrefour Italia aveva un vincolo operativo chiaro: scalare la qualità della selezione senza moltiplicare le risorse, in un settore dove ogni assunzione sbagliata erode direttamente i margini.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "costPotentialWrong": {
             "title": "Costo delle possibili assunzioni errate",
@@ -1963,8 +1963,8 @@
         "badge": "LA SFIDA",
         "title": "30.000 candidature e tanti profili junior poco valorizzati dal semplice CV",
         "intro": "In un mercato dove banche, fintech e tech company spesso competono per gli stessi profili junior, la velocità e la qualità del processo di selezione sono diventate leve competitive ed elementi imprescindibili per l'ottenimento di una Candidate Experience all'altezza delle aspettative.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "infrastructureCapableHandling": {
             "title": "Serviva un'infrastruttura capace di lavorare su grandi volumi per seguire la crescita del Gruppo",
@@ -2148,8 +2148,8 @@
         "badge": "LA SFIDA",
         "title": "Il problema strutturale",
         "intro": "Su 2.500 dipendenti in quasi 400 punti vendita, l’HQ non disponeva di alcun dato strutturato sulle competenze. In un settore con turnover elevato, l’assenza di dati significava perdere talento, formare male e non pianificare la mobilità interna.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "noVisibilityHigh": {
             "title": "Assenza di visibilità sulle figure ad alto potenziale",
@@ -2327,8 +2327,8 @@
         "badge": "LA SFIDA",
         "title": "Crescere a questa velocità espone un collo di bottiglia: trovare le persone giuste, in tempo",
         "intro": "La campagna Career Passport ha generato oltre mille candidature esterne da sommare a tutte le application interne per 3 posizioni chiave.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "expansionSpeedOutpaces": {
             "title": "La velocità dell’espansione supera la capacity di selezione",
@@ -2509,8 +2509,8 @@
         "badge": "LA SFIDA",
         "title": "Crescere a questa velocità significa ripensare il modo di lavorare",
         "intro": "La campagna Career Passport ha generato oltre mille candidature per 3 posizioni chiave. Una scala che, per essere gestita, richiedeva non solo nuovi strumenti, ma un nuovo modo di lavorare.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "expansionSpeedOutpaces": {
             "title": "La velocità dell'espansione supera la capacity di selezione",
@@ -2693,8 +2693,8 @@
         "badge": "LA SFIDA",
         "title": "Crescere a questa velocità significa ripensare il modo di lavorare",
         "intro": "La campagna Eataly Career Passport ha generato oltre mille candidature per 3 posizioni chiave. Un volume che, per essere gestito, richiedeva non solo nuovi strumenti, ma anche un nuovo approccio.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "paceExpansionDemanded": {
             "title": "La velocità di espansione richiedeva nuove strategie nel processo di selezione",
@@ -2884,8 +2884,8 @@
         "badge": "LA SFIDA",
         "title": "La transizione commerciale doveva andare di pari passo con una trasformazione in ottica skills-based",
         "intro": "Fidia partiva da una realtà comune a molte multinazionali: una rete vendita capace e distribuita, ma valutata per forza di cose in modo frammentato, e molto complicata da gestire nel momento in cui erano necessari aggiornamenti radicali nel modello di vendita. Serviva uno shift nell'approccio alla gestione delle competenze, che permettesse di creare una base dati utile a prendere decisioni di talent management strategiche per il futuro su scala globale.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "networkDevelopmentRequired": {
             "title": "Lo sviluppo della rete richiedeva più dati",
@@ -3055,8 +3055,8 @@
         "badge": "LA SFIDA",
         "title": "Migliaia di candidature, 2 picchi stagionali, 3 persone nel team recruiting.",
         "intro": "Le assunzioni di Europ Assistance Italia si concentrano in due picchi stagionali l'anno, generando volumi nell'ordine delle migliaia di candidature in pochi mesi. Per i ruoli di assistenza e customer care, le soft skill sono il primo predittore di successo — problem solving, orientamento al cliente, gestione dello stress — ma sono completamente invisibili nel CV.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "needGrowAt": {
             "title": "Necessità di crescere al ritmo del business",
@@ -3252,8 +3252,8 @@
         "badge": "LA SFIDA",
         "title": "Migliaia di candidature, due picchi stagionali, 3 persone nel team recruiting.",
         "intro": "Le assunzioni di Europ Assistance Italia si concentrano in due picchi stagionali l'anno, generando volumi nell'ordine delle migliaia di candidature in pochi mesi. Per i ruoli di assistenza e customer care, le soft skill sono il primo predittore di successo — problem solving, orientamento al cliente, gestione dello stress — ma sono completamente invisibili nel CV.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "needManageSeasonal": {
             "title": "Necessità di gestire i picchi stagionali",
@@ -3449,8 +3449,8 @@
         "badge": "LA SFIDA",
         "title": "Migliaia di candidati e tanti CV che da soli non rivelavano il potenziale nascosto",
         "intro": "Il Progetto Grape ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l'obiettivo di individuare in sei settimane un numero significativo di candidati qualificati da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell'assessment.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "europeanGroupExpansion": {
             "title": "La crescita europea del Gruppo rende urgente costruire una pipeline di talento",
@@ -3631,8 +3631,8 @@
         "badge": "LA SFIDA",
         "title": "Migliaia di candidati e tanti CV che da soli non rivelavano il potenziale nascosto",
         "intro": "Il Progetto Grape ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l'obiettivo di individuare in sei settimane un numero significativo di candidati qualificati da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell'assessment.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "groupSExpansion": {
             "title": "La crescita europea del Gruppo rende urgente costruire una pipeline di talento",
@@ -3813,8 +3813,8 @@
         "badge": "LA SFIDA",
         "title": "Migliaia di candidati e tanti CV che da soli non rivelavano il potenziale nascosto",
         "intro": "Il Progetto Grape ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l'obiettivo di individuare in sei settimane un numero significativo di candidati qualificati da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell'assessment.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "groupSExpansion": {
             "title": "La crescita europea del Gruppo rende urgente costruire una pipeline di talento",
@@ -3999,8 +3999,8 @@
         "badge": "LA SFIDA",
         "title": "Il problema strutturale",
         "intro": "Tante figure chiave da selezionare, turnover alto e un team HR snello che non poteva scalare con l'espansione senza un sistema strutturato.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "highStorePerformance": {
             "title": "Alta performance in store: la selezione è il punto di partenza",
@@ -4203,8 +4203,8 @@
         "badge": "LA SFIDA",
         "title": "Non bastava ottimizzare: serviva costruire dalle fondamenta.",
         "intro": "Unicomm partiva da una infrastruttura HR ancora poco digitalizzata, e lo faceva nel momento di crescita più intensa della propria storia.",
-        "businessLabel": "BUSINESS CHALLENGES",
-        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessLabel": "SFIDE DI BUSINESS",
+        "hrLabel": "SFIDE HR & PEOPLE",
         "businessChallenges": {
           "distributedNetworkFragmented": {
             "title": "Rete distribuita, criteri frammentati",

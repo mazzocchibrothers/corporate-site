@@ -1,19 +1,18 @@
-// Message loading for Pages Router.
+// Which messages reach the browser.
 //
-// The constraint that shapes this file: the catalogue is roughly 19k words per
-// locale. Importing all of it into _app.tsx would ship every page's copy to
-// every visitor, in both languages. So a page loads only the namespaces it
-// actually renders, through getStaticProps, and next-intl gets exactly those.
+// The constraint that shapes this file: the catalogue is ~19k words per locale.
+// A NextIntlClientProvider rendered without `messages` inherits all of it from
+// i18n/request.ts and serializes it into the document — measured, a ten-line
+// page prerendered to 310 KB. So each page provides its own, narrowed to the
+// namespaces it renders.
 //
-// Usage, one line per page:
+// Usage, one line per page.tsx:
 //
-//   export const getStaticProps = messagesFor('customers/adr');
+//   <NextIntlClientProvider messages={await messagesForRoute(ROUTE, locale)}>
 //
 // The argument is the route's `id` in routes.json — the same identifier the
 // sitemap and the hreflang tags key off, so a page cannot drift into using a
 // namespace no route claims.
-
-import type { GetStaticProps } from 'next';
 
 /**
  * Namespaces every page renders.
@@ -90,31 +89,10 @@ export function merge(a: Record<string, unknown>, b: Record<string, unknown>) {
 }
 
 /**
- * @param routeId   the route's `id` in routes.json
- * @param forceLocale for a twin-page pair — one route, one file per locale, like
- *   book-meeting/prenota-incontro. Such a file serves exactly one language, and
- *   during the migration `locale` is undefined here: nextConfig.i18n is gone and
- *   the middleware skips unmigrated routes, so without this the Italian file
- *   would render an English title. Delete the argument when the pair moves to
- *   app/ and next-intl resolves the locale itself (#119).
- */
-export function messagesFor(routeId: string, forceLocale?: 'en' | 'it'): GetStaticProps {
-  return async function getStaticProps({ locale: contextLocale }) {
-    return { props: { messages: await messagesForRoute(routeId, forceLocale ?? contextLocale) } };
-  };
-}
-
-/**
- * The same selection, for the App Router.
+ * The namespaces one route renders, for both locales' catalogues.
  *
- * It is needed there for a reason that is easy to miss: `i18n/request.ts` gives
- * the server the whole catalogue, and a `<NextIntlClientProvider>` rendered
- * without `messages` inherits it — all of it — into the HTML. Measured on the
- * probe route before this existed: a ten-line page prerendered to a 310 KB
- * document, 338 KB of catalogue serialized into every page on the site.
- *
- * So each page provides its own narrowed provider. Server-rendered strings
- * still read from the request config; this is only what crosses to the browser.
+ * Server-rendered strings do not come through here — they read from the request
+ * config. This is only what crosses to the browser.
  */
 export async function messagesForRoute(routeId: string, locale: string | undefined) {
   // A literal path prefix keeps the bundler able to see the whole directory,

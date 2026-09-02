@@ -15,7 +15,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const { messagesFor, namespaceOf, pick, merge } = await import(join(ROOT, 'i18n/messages.ts'));
+const { messagesForRoute, namespaceOf, pick, merge } = await import(join(ROOT, 'i18n/messages.ts'));
 
 // ── Route id -> namespace ──────────────────────────────────────────────────
 assert.equal(namespaceOf('index'), 'home', 'the homepage namespace is `home`, not `index`');
@@ -29,8 +29,7 @@ assert.equal(
 );
 
 // ── The loader returns only what was asked for ─────────────────────────────
-const run = async (routeId, locale, forceLocale) =>
-  (await messagesFor(routeId, forceLocale)({ locale })).props.messages;
+const run = async (routeId, locale) => await messagesForRoute(routeId, locale);
 
 const home = await run('index', 'en');
 assert.deepEqual(
