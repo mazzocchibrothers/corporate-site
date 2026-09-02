@@ -137,3 +137,9 @@ spans several pages, several agents, or touches routing/i18n.
 
 One branch per change, PR into `main` (Vercel auto-deploys). Commit and push
 only when asked.
+
+**No AI attribution, anywhere.** No `Co-Authored-By: Claude`, no session URL, no
+"Generated with Claude Code" — not in a commit message, not in a PR body, not in
+a code comment. A commit ends with its last real paragraph. `harness/CHECKPOINTS.md`
+C6 has always said this; it was still missed for 43 commits on one branch, so it
+is here too.
