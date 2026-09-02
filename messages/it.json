@@ -345,6 +345,914 @@
     "meta": {
       "title": "Storie di Successo | Skillvue",
       "description": "Scopri come 50+ aziende europee come Unicredit e Carrefour hanno sostituito le decisioni intuitive sul talento con valutazioni AI obiettive. ROI 10–30x."
+    },
+    "adr": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue, ADR ha trovato la chiave per rendere visibile il potenziale di quasi 5.000 persone, operativi inclusi, trasformando lo sviluppo del talento in leva strategica per la crescita.",
+      "heroMetrics": [
+        {
+          "value": "-97%",
+          "label": "Time-to-Process"
+        },
+        {
+          "value": "fino a 4.000",
+          "label": "operativi inclusi per la prima volta"
+        },
+        {
+          "value": "10+",
+          "label": "dimensioni mappate"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Trasporti e Logistica"
+          },
+          {
+            "label": "Fatturato",
+            "value": ">1B€"
+          },
+          {
+            "label": "Dipendenti",
+            "value": "Oltre 4.500"
+          },
+          {
+            "label": "Passeggeri gestiti annualmente",
+            "value": ">55 milioni"
+          },
+          {
+            "label": "Use Case",
+            "value": "Internal Mobility, Learning & Development"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Un aeroporto in forte crescita di traffico ha bisogno di una people strategy che regga su scala",
+        "paragraph": "Aeroporti di Roma (ADR), parte del Gruppo Mundys, gestisce e sviluppa gli aeroporti di Fiumicino e Ciampino con oltre <b>4.500 dipendenti</b> e con l'obiettivo di costruire \"l'aeroporto del futuro\" sulla base di un nuovo modello inclusivo. <br></br><br></br> ADR è oggi protagonista di una crescita sostenuta del traffico passeggeri, accompagnata da un progressivo adeguamento infrastrutturale, che richiede una crescita organizzativa in grado di sostenere questa espansione nel tempo. <br></br><br></br> In questo scenario, la capacità dell'organizzazione di crescere alla velocità del business diventa una priorità strategica. Per ADR, sviluppare e mobilizzare il capitale umano interno significa poter pianificare con precisione la copertura dei ruoli critici, <b>accelerare la crescita verticale e orizzontale delle persone, e costruire una pipeline di talento visibile e misurabile.</b>",
+        "summary": "Il progetto ha trasformato lo sviluppo del talento da processo riservato a pochi a leva strategica per la crescita: per la prima volta, ADR ha una mappa oggettiva del potenziale su tutta la popolazione, operativi inclusi."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Il modello precedente non poteva crescere alla velocità del business",
+        "intro": "Con l'intera organizzazione in rapida espansione, soprattutto, nella fase di ripresa post Covid, il modello di sviluppo esistente mostrava alcuni limiti strutturali.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "potentialNearly4": {
+            "title": "Il potenziale di quasi 4.000 persone non era visibile",
+            "text": "Gli operativi, proprio le persone su cui costruire il management dell'aeroporto in crescita, non potevano essere tutti sottoposti a valutazione: le opportunità di sviluppo partivano dalle segnalazioni dei responsabili diretti."
+          },
+          "developmentPipelineWas": {
+            "title": "La pipeline di sviluppo non era scalabile",
+            "text": "Quando un aeroporto cresce, la velocità con cui identifichi e sviluppi le persone diventa una variabile operativa, non solo un KPI HR: con picchi di 2.000+ assunzioni annue, il modello di gestione manuale non poteva tenere il passo."
+          },
+          "withoutClearPaths": {
+            "title": "Senza percorsi chiari, c'era rischio turnover",
+            "text": "In un mercato del lavoro sempre più competitivo, trattenere il talento ad alto potenziale non è solo una questione di engagement, è un investimento: più aumenta il turnover, più si perdono investimenti in mesi di formazione e conoscenze."
+          }
+        },
+        "hrChallenges": {
+          "topDownApproach": {
+            "title": "Approccio top-down allo sviluppo",
+            "text": "Le decisioni su chi portare in valutazione più approfondita e sviluppare dipendevano dalle indicazioni del manager diretto, non da una base dati uniforme. Il potenziale non segnalato restava invisibile."
+          },
+          "democratisationDevelopmentAt": {
+            "title": "Democratizzazione dello sviluppo a rischio",
+            "text": "Possibile percezione di un accesso non del tutto equo alle opportunità di crescita e sviluppo professionale, con il rischio che questo incida sul senso di fiducia verso il processo."
+          },
+          "complianceRequiredStronger": {
+            "title": "La compliance richiedeva fondamenta più solide",
+            "text": "C'era la chiara volontà di rendere ogni decisione di promozione trasparente davanti al dipendente e difendibile davanti al regolatore. Servivano basi psicometriche auditabili e criteri documentabili."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "makePotentialVisible": {
+            "text": "Rendere visibile il potenziale su tutta la popolazione: assessment accessibile a tutti i 4.500+ dipendenti, non solo i 1.000 corporate. Includere per la prima volta gli operativi"
+          },
+          "guideDecisionsScience": {
+            "text": "Guidare le decisioni con un approccio science-based e auditabile: passare dalle segnalazioni soggettive a dati strutturati per ogni ruolo, con criteri chiari, feedback per ogni dipendente e piena compliance regolatoria"
+          },
+          "scaleWithoutAdding": {
+            "text": "Scalare senza appesantire carico operativo e tempistiche: processare le candidature interne in giorni anziché mesi, mantenendo la qualità psicometrica che una realtà pubblica richiede"
+          },
+          "buildHumanLoop": {
+            "text": "Costruire un modello human-in-the-loop: l'assessment deve produrre intelligenza a supporto delle decisioni manageriali, non sostituirle. Dati per decidere meglio, non verdetti automatici"
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI con Skillvue",
+        "intro": "Skillvue è stato integrato nella People Strategy esistente di ADR, che già includeva un modello di leadership e percorsi di sviluppo definiti. Il team People Science di Skillvue ha lavorato con ADR per allineare la piattaforma al modello di competenze aziendale, garantendo che ogni assessment misurasse ciò che ADR considera rilevante, non competenze generiche.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "technicalSkillsRole": {
+            "label": "Competenze tecniche (role-specific, calibrate sul modello ADR)"
+          },
+          "softSkillsOperational": {
+            "label": "Soft skills (attenzione al passeggero, narrative communication, proattività, ecc.)"
+          },
+          "englishLanguageCritical": {
+            "label": "Lingua inglese (competenza critica per un hub internazionale con 240 destinazioni)"
+          }
+        }
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Cosa è cambiato e perché conta.",
+        "subtitle": "I risultati misurabili e qualitativi del progetto Skillvue x Aeroporti di Roma.",
+        "metrics": [
+          {
+            "value": "-97%",
+            "label": "Time-to-Process"
+          },
+          {
+            "value": "fino a 4.000",
+            "label": "operativi inclusi"
+          },
+          {
+            "value": "Giorni, non mesi",
+            "label": "dall'application alla valutazione"
+          }
+        ],
+        "qualitative": {
+          "hiddenTalentFinally": {
+            "title": "Talento nascosto, finalmente visibile",
+            "text": "Per la prima volta, ADR ha dati aggiornati su competenze, comportamenti, e potenziale della forza lavoro che fisicamente gestirà i nuovi terminal e le nuove infrastrutture. La pipeline di talento futuro si costruisce da qui."
+          },
+          "extremeSpeedMore": {
+            "title": "Velocità estrema per un approccio più strategico",
+            "text": "Quello che prima si svolgeva in mesi, per garantire equo trattamento e accuratezza di ogni application, oggi si può svolgere in giorni. Rimane la profondità dell'analisi, ma si libera tempo prezioso per gli aspetti di gestione strategica dei processi HR."
+          },
+          "humanLoopMore": {
+            "title": "Human-in-the-loop: più dati, più responsabilità",
+            "text": "L'assessment non produce una lista di profili approvati, ma informazioni strutturate che alimentano una decisione manageriale consapevole. Lo sforzo cognitivo rimane chiave perché ora va presa e interpretata una base dati che prima non esisteva."
+          },
+          "concreteImpactEmployee": {
+            "title": "Impatto concreto su employee experience e retention",
+            "text": "I dipendenti hanno visibilità sui criteri utilizzati per le valutazioni e ricevono feedback strutturati sul proprio percorso. Fattori chiave in un contesto dove la competizione per il talento è intensa e minaccia la continuità operativa."
+          }
+        },
+        "quote": {
+          "text": "L'Assessment non è più visto soltanto come uno step necessario per una promozione: è parte di un sistema integrato di sviluppo che permette la costruzione di percorsi di crescita personalizzati.",
+          "author": "Alberto Valenza",
+          "role": "SVP Human Capital, Organization & Procurement — Aeroporti di Roma"
+        }
+      },
+      "vision": {
+        "badge": "EVOLUZIONE 2026",
+        "title": "Da sviluppo interno a talent strategy integrata.",
+        "intro": "Quando il modello testato con Skillvue ha dimostrato di reggere su scala, la domanda successiva è stata naturale: ha senso valutare chi entra con criteri diversi da chi viene sviluppato internamente? La risposta è stata no.",
+        "objective": "Costruire un unico ciclo coerente in cui ogni persona, dal primo giorno, viene valutata, orientata e accompagnata con la stessa logica.",
+        "bullets": [
+          "Prosecuzione del modello di sviluppo già avviato sull'interno",
+          "Integrazione nel Talent Acquisition esterno"
+        ]
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "ins-mercato",
+            "company": "In's Mercato",
+            "tag": "Retail GDO · Mobilità Interna",
+            "headline": "Come In's Mercato ha costruito una pipeline interna di Store Manager"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Aeroporti di Roma: come <hl>sviluppare un'organizzazione da quasi 5.000 persone</hl> ripartendo dal potenziale interno"
+    },
+    "adr-2": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue, AdR ha trovato la chiave per rilevare e misurare il potenziale dell'intera organizzazione a partire dai ruoli più operativi, trasformando la cura e lo sviluppo del talento interno in una leva strategica per la soddisfazione dei crescenti bisogni organizzativi.",
+      "heroMetrics": [
+        {
+          "value": "-97%",
+          "label": "riduzione del tempo di\nrilevazione del potenziale"
+        },
+        {
+          "value": "4.000",
+          "label": "collaboratori inclusi per la prima volta in un processo di valutazione del potenziale"
+        },
+        {
+          "value": "20+",
+          "label": "dimensioni tecniche e comportamentali\nrilevate e misurate"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Trasporti e Logistica"
+          },
+          {
+            "label": "Fatturato",
+            "value": ">1B€"
+          },
+          {
+            "label": "Dipendenti",
+            "value": "4.500+"
+          },
+          {
+            "label": "Passeggeri gestiti annualmente",
+            "value": ">55 milioni"
+          },
+          {
+            "label": "Use Case",
+            "value": "Internal Mobility, Learning & Development"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Il successo di AdR è anche il risultato di un'agenda di capitale umano e sviluppo organizzativo in permanente evoluzione",
+        "paragraph": "La capacità dell'organizzazione di evolvere con la stessa velocità con cui AdR sta immaginando l'\"Aeroporto del futuro\" diventa una <b>priorità strategica</b>. <br></br><br></br> Per AdR, curare e valorizzare il capitale umano già presente nell'organizzazione significa prima di tutto <b>dare la massima velocità e precisione al processo di rilevazione e misurazione delle competenze e delle capacità</b> di ciascun collaboratore e creare le condizioni per una loro costante valorizzazione sui ruoli organizzativi di oggi e di domani. <br></br><br></br><s>* L'aeroporto Leonardo da Vinci di Roma Fiumicino è stato premiato nel 2025 come miglior scalo europeo per l'ottavo anno consecutivo dall'Airports Council International Europe.</s><s2>** L'aeroporto di Ciampino è stato premiato nel 2025 come miglior aeroporto nella categoria 2–5 milioni di passeggeri.</s2>",
+        "summary": "Il progetto ha trasformato lo sviluppo del talento da processo riservato a pochi a leva strategica per la crescita: per la prima volta, AdR ha una mappa oggettiva del potenziale su tutta la popolazione, operativi inclusi."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Dare ai processi di valutazione del potenziale quelle caratteristiche di accuratezza, velocità e inclusione necessarie per assecondare le ambizioni di crescita accelerata del business.",
+        "factorsLabel": "FATTORI DI SUCCESSO E OBIETTIVI ABILITATI DALL'APPLICAZIONE DELLA PIATTAFORMA SKILLVUE",
+        "cards": {
+          "inclusion": {
+            "title": "Inclusione",
+            "text": "Offrire a tutti, a partire dall'organizzazione operativa, la possibilità di rendere visibile e fruibile il proprio talento individuale."
+          },
+          "scalability": {
+            "title": "Scalabilità",
+            "text": "Cogliere le opportunità offerte dall'applicazione della tecnologia AI per rendere scalabili, agili e veloci i processi di misurazione delle competenze e delle capacità dei collaboratori."
+          },
+          "stability": {
+            "title": "Stabilità",
+            "text": "Assicurare la necessaria stabilità organizzativa attivando la valorizzazione delle risorse già presenti nell'organizzazione."
+          },
+          "rigour": {
+            "title": "Rigore",
+            "text": "Offrire un contesto di valutazione rigoroso e scientificamente validato a supporto e integrazione della valutazione delle competenze."
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI con Skillvue",
+        "intro": "Skillvue è stato integrato nella People Strategy esistente di AdR, che già includeva un modello di leadership e percorsi di sviluppo definiti. Il team People Science di Skillvue ha lavorato con AdR per allineare la piattaforma al modello di competenze aziendale, garantendo che ogni assessment misurasse ciò che AdR considera rilevante, non competenze generiche.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "technicalSkillsRole": {
+            "label": "Competenze tecniche (role-specific, calibrate sul modello AdR)"
+          },
+          "softSkillsOperational": {
+            "label": "Soft skills (attenzione al passeggero, narrative communication, proattività, ecc.)"
+          },
+          "englishLanguageCritical": {
+            "label": "Lingua inglese (competenza critica per un hub internazionale con 240 destinazioni)"
+          }
+        }
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Cosa è cambiato e perché conta.",
+        "subtitle": "I risultati misurabili e qualitativi del progetto Skillvue x Aeroporti di Roma.",
+        "metrics": [
+          {
+            "value": "-97%",
+            "label": "riduzione del tempo di\nrilevazione del potenziale"
+          },
+          {
+            "value": "4.000",
+            "label": "collaboratori inclusi\nper la prima volta"
+          },
+          {
+            "value": "Giorni, non mesi",
+            "label": "dall'application\nalla valutazione"
+          }
+        ],
+        "qualitative": {
+          "hiddenTalentFinally": {
+            "title": "Talento nascosto, finalmente visibile",
+            "text": "Per la prima volta, AdR ha dati aggiornati su competenze, comportamenti, e potenziale della forza lavoro che fisicamente gestirà i nuovi terminal e le nuove infrastrutture. La pipeline di talento futuro si costruisce da qui."
+          },
+          "extremeSpeedMore": {
+            "title": "Velocità estrema per un approccio più strategico",
+            "text": "Quello che prima si svolgeva in mesi, per garantire equo trattamento e accuratezza di ogni application, oggi si può svolgere in giorni. Rimane la profondità dell'analisi, ma si libera tempo prezioso per gli aspetti di gestione strategica dei processi HR."
+          },
+          "humanLoopMore": {
+            "title": "Human-in-the-loop: più dati, più responsabilità",
+            "text": "L'assessment non produce una lista di profili approvati, ma informazioni strutturate che alimentano una decisione manageriale consapevole. Lo sforzo cognitivo rimane chiave perché ora va presa e interpretata una base dati che prima non esisteva."
+          },
+          "concreteImpactEmployee": {
+            "title": "Impatto concreto su employee experience e retention",
+            "text": "I dipendenti hanno visibilità sui criteri utilizzati per le valutazioni e ricevono feedback strutturati sul proprio percorso. Fattori chiave in un contesto dove la competizione per il talento è intensa e minaccia la continuità operativa."
+          }
+        },
+        "quote": {
+          "text": "L'Assessment non è più visto soltanto come uno step necessario per una promozione: è parte di un sistema integrato di sviluppo che permette la costruzione di percorsi di crescita personalizzati.",
+          "author": "Alberto Valenza",
+          "role": "SVP Human Capital, Organization & Procurement — Aeroporti di Roma"
+        }
+      },
+      "vision": {
+        "badge": "EVOLUZIONE 2026",
+        "title": "Da sviluppo interno a talent strategy integrata.",
+        "intro": "Quando il modello testato con Skillvue ha dimostrato di reggere su scala, la domanda successiva è stata naturale: ha senso valutare chi entra con criteri diversi da chi viene sviluppato internamente? La risposta è stata no.",
+        "objective": "Costruire un unico ciclo coerente in cui ogni persona, dal primo giorno, viene valutata, orientata e accompagnata con la stessa logica.",
+        "bullets": [
+          "Prosecuzione del modello di sviluppo già avviato sull'interno",
+          "Integrazione nel Talent Acquisition esterno"
+        ]
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "ins-mercato",
+            "company": "In's Mercato",
+            "tag": "Retail GDO · Mobilità Interna",
+            "headline": "Come In's Mercato ha costruito una pipeline interna di Store Manager"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Aeroporti di Roma (AdR): come <hl>assicurare l'eccellenza organizzativa</hl> grazie alla rinnovata valorizzazione del potenziale interno"
+    },
+    "carrefour": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "In un settore dove il costo del lavoro è 3.4x l'utile operativo, Carrefour Italia ha trasformato la selezione in una leva di profittabilità grazie a dati oggettivi sulle competenze.",
+      "heroMetrics": [
+        {
+          "value": "-35%",
+          "label": "Time-to-Hire"
+        },
+        {
+          "value": "+20%",
+          "label": "Successo assunzioni"
+        },
+        {
+          "value": "Fino a 6.000",
+          "label": "Persone valutate in 1 mese"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "GDO"
+          },
+          {
+            "label": "Gruppo",
+            "value": "Carrefour Group"
+          },
+          {
+            "label": "Fatturato",
+            "value": "~4,5 mld €"
+          },
+          {
+            "label": "Dipendenti",
+            "value": "13.000+ diretti + 8.000 rete franchising"
+          },
+          {
+            "label": "Punti vendita",
+            "value": "~1.200"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring, Learning & Development"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Il contesto del progetto",
+        "paragraph": "Carrefour Italia (oggi <b>Princes Retail S.p.A.</b>) gestisce circa <b>1.200 punti vendita</b> su 4 formati — Ipermercati, Market, Express, Cash & Carry — con <b>13.000 dipendenti diretti</b> e una rete franchising di 8.000 persone. <br></br><br></br> In un settore dove il costo del lavoro pesa per il <b>9.8% del fatturato</b> (3.4 volte l'utile operativo), ogni decisione sulle persone diventa necessariamente anche una decisione sui margini. In questo scenario, la capacità di mettere la persona giusta nel ruolo giusto — a scala, con dati — non era un tema HR: era un prerequisito per proteggere la profittabilità. Carrefour riceveva fino a <b>30.000 candidature l'anno</b>, che dovevano essere gestite da soli <b>3 recruiter</b>, senza alcuno strumento in grado di distinguere, su 1.200 punti vendita, chi avrebbe performato rispetto a chi sarebbe uscito entro pochi mesi."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Il problema strutturale",
+        "intro": "Carrefour Italia aveva un vincolo operativo chiaro: scalare la qualità della selezione senza moltiplicare le risorse, in un settore dove ogni assunzione sbagliata erode direttamente i margini.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "costPotentialWrong": {
+            "title": "Costo delle possibili assunzioni errate",
+            "text": "Il costo di sostituzione varia da €3.000 a €6.600 per un frontline, fino a €90.000 per uno store manager. Ogni assunzione sbagliata erode direttamente i margini."
+          },
+          "multiFormatComplexity": {
+            "title": "Contesto multi-formato",
+            "text": "4 formati retail, profili e competenze diverse. 3 recruiter non potevano garantire profondità di valutazione su 1.200 punti vendita senza impattare le performance di store."
+          },
+          "skillsInvisibleAcross": {
+            "title": "Competenze invisibili sulla rete vendita",
+            "text": "Per migliaia di dipendenti non esisteva alcuna mappatura strutturata. Promozioni, formazione, mobilità interna: tutte decisioni senza dati."
+          }
+        },
+        "hrChallenges": {
+          "cvsDidnT": {
+            "title": "Il CV non prediceva la performance",
+            "text": "Per profili junior e operativi — la maggioranza delle 30.000 candidature — i CV sono un indicatore inefficace. Orientamento al cliente, problem solving, adattamento: invisibili sulla carta."
+          },
+          "preScreeningNo": {
+            "title": "Pre-screening senza output strutturato",
+            "text": "Decisioni basate sul giudizio del recruiter e colloqui non strutturati, con un calo dell'accuratezza predittiva del 14%. Nessun dato sulle competenze prima del colloquio."
+          },
+          "skillsModelExisted": {
+            "title": "Il modello di competenze esisteva sulla carta, non nel processo",
+            "text": "Il modello di competenze era definito per ogni ruolo, ma le assunzioni non avvenivano con valutazione sistematica rispetto ad esso."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "scalePreScreening": {
+            "text": "Scalare il pre-screening senza sacrificare la qualità: gestire 30.000 candidature/anno con 3 recruiter, riducendo la dipendenza da headhunter esterni e liberando tempo per valutazione approfondita ed employer branding"
+          },
+          "integrateProprietaryLeadership": {
+            "text": "Integrare il modello di leadership proprietario nella selezione: valutare soft e hard skill allineate al framework Carrefour, con output strutturato su ogni candidato prima del primo colloquio"
+          },
+          "coverMultiFormat": {
+            "text": "Coprire un'organizzazione multi-formato: uno strumento unico adattabile a profili diversi — stage HQ, ruoli operativi su più formati, profili di leadership — ciascuno con un mix specifico di competenze"
+          },
+          "buildBridgeBetween": {
+            "text": "Costruire un ponte tra selezione e sviluppo: allineare le competenze misurate in fase di hiring con quelle sviluppate internamente, creando le basi per un modello skills-based che copra l'intero ciclo del talento"
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI con Skillvue",
+        "intro": "Skillvue è stato integrato come prima cosa nel processo di selezione dei profili junior, per poi essere progressivamente esteso anche alla popolazione interna.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "softSkillsAligned": {
+            "label": "Soft skill allineate al modello di leadership proprietario"
+          },
+          "hardSkillsStore": {
+            "label": "Hard skill per ruoli store (co-sviluppate sul modello Carrefour)"
+          }
+        },
+        "methodologyLabel": "COME È STATO COSTRUITO",
+        "methodology": [
+          {
+            "title": "01 — Integrazione con il modello di leadership proprietario",
+            "text": "Il modello di leadership Carrefour è stato integrato negli assessment Skillvue, calibrando contenuti e comportamenti osservabili. Ogni candidato riceve una valutazione strutturata prima ancora del primo colloquio, con la scalabilità e l'oggettività che solo un assessment science-backed può garantire."
+          },
+          {
+            "title": "02 — Architettura multi-canale, processo unico",
+            "text": "Assessment configurati per profili diversi — stage HQ, ruoli operativi, leadership — ciascuno con mix specifico di soft e hard skill. Il recruiter riceve un report strutturato con profilo di competenze e matching rispetto al ruolo. Un unico standard su 4 formati e 1.200 punti vendita."
+          },
+          {
+            "title": "03 — Da hiring alla mappatura della rete vendita",
+            "text": "Il valore dimostrato nella selezione ha portato all'estensione alla rete vendita: 6.000 dipendenti mappati sulle competenze in 1 mese, sostituendo l'osservazione in presenza. Per la prima volta, un unico linguaggio dalla selezione allo sviluppo."
+          }
+        ]
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Key Metrics & Impatto",
+        "subtitle": "I risultati misurabili ottenuti da Carrefour Italia attraverso l'adozione di Skillvue nei processi di selezione e mappatura interna.",
+        "metrics": [
+          {
+            "value": "-35%",
+            "label": "Time-to-hire"
+          },
+          {
+            "value": "65% → 85%",
+            "label": "Tasso successo selezioni portate avanti da Hiring Manager"
+          },
+          {
+            "value": "6.000",
+            "label": "Dipendenti mappati in 1 mese"
+          }
+        ],
+        "qualitative": {
+          "radicallyMoreQualified": {
+            "title": "Shortlist radicalmente più qualificate",
+            "text": "I candidati portati avanti nel processo erano più allineati alle aspettative, con riduzione diretta dei colloqui senza esito. Su 30.000 candidature/anno, centinaia di errori evitati, ciascuno con un costo di €3.000–6.600."
+          },
+          "hiddenTalentDiscovered": {
+            "title": "Talento nascosto scoperto nella rete",
+            "text": "La mappatura di 6.000 dipendenti ha fatto emergere profili ad alto potenziale dove prima non esisteva alcuna visibilità. In un mercato dove formare internamente costa il 30–50% in meno rispetto a reclutare dall'esterno, sapere chi hai è il primo passo per smettere di rincorrere il fabbisogno sul mercato."
+          },
+          "leadershipModelCame": {
+            "title": "Il modello di leadership ha preso davvero vita",
+            "text": "Il framework proprietario è diventato un criterio di selezione misurabile. Ogni candidato viene valutato con output strutturato: il modello informa le decisioni, non solo i valori dichiarati."
+          }
+        }
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "europ-assistance",
+            "company": "Europ Assistance",
+            "tag": "Insurance · Hiring",
+            "headline": "Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana"
+          },
+          {
+            "id": "subdued",
+            "company": "Subdued",
+            "tag": "Fashion Retail · Hiring",
+            "headline": "Subdued: come creare uno standard di selezione unico e scalabile per l'espansione di una rete di 130+ negozi"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Carrefour: come proteggere i margini su <hl>1.200 punti vendita</hl> ottimizzando il <hl2>KPI chiave del processo di selezione</hl2>"
+    },
+    "credem": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue, Gruppo Credem processa ogni anno decine di migliaia di candidature mantenendo alta la qualità della candidate experience e riducendo significativamente il numero di colloqui non in linea.",
+      "heroMetrics": [
+        {
+          "value": "30K",
+          "label": "Candidature ricevute e processate"
+        },
+        {
+          "value": "-30%",
+          "label": "Riduzione dei colloqui non in linea grazie a Skillvue"
+        },
+        {
+          "value": "Drastica",
+          "label": "Ottimizzazione dei tempi di lavoro del recruiter"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Financial Services"
+          },
+          {
+            "label": "Gruppo",
+            "value": "Credito Emiliano"
+          },
+          {
+            "label": "Utile netto",
+            "value": "+620M€"
+          },
+          {
+            "label": "Dipendenti",
+            "value": "5.000+"
+          },
+          {
+            "label": "Filiali",
+            "value": "600+"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Una banca in crescita costante ha bisogno di selezionare talento alla velocità del business",
+        "paragraph": "Gruppo Credem (Credito Emiliano) è uno dei gruppi bancari privati più accreditati d'Italia e d'Europa. Con un utile netto di <b>+620 milioni di euro nel 2025</b>, è riconosciuta come una delle realtà più solide per qualità degli attivi e gestione del rischio. Al tempo stesso è anche, e soprattutto, <b>una banca che cresce</b>: mentre il settore bancario italiano chiude sportelli e riduce l'organico, Credem fa il contrario: dal 2020 ha creato oltre <b>1.400 nuovi posti di lavoro</b>. <br></br><br></br> Questa crescita genera un nodo cruciale per HR: ogni anno Credem riceve e si ritrova a gestire circa <b>30.000 candidature</b>, in larga parte da profili junior, diplomati e neolaureati che si candidano attraverso il <b>Progetto Giovani</b>, il principale canale di ingresso del gruppo. In un settore dove l'età media dei dipendenti è di oltre <b>48 anni</b> e il <b>20-25%</b> della forza lavoro raggiungerà il pensionamento entro il 2035, la capacità di <b>identificare e inserire velocemente giovani ad alto potenziale</b> è fondamentale per poter supportare la crescita del business."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "30.000 candidature e tanti profili junior poco valorizzati dal semplice CV",
+        "intro": "In un mercato dove banche, fintech e tech company spesso competono per gli stessi profili junior, la velocità e la qualità del processo di selezione sono diventate leve competitive ed elementi imprescindibili per l'ottenimento di una Candidate Experience all'altezza delle aspettative.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "infrastructureCapableHandling": {
+            "title": "Serviva un'infrastruttura capace di lavorare su grandi volumi per seguire la crescita del Gruppo",
+            "text": "Gestire 30.000 candidature senza un supporto tecnologico non era più possibile. Era necessario potenziare il processo accelerando le fasi operative e mantenendo il giudizio umano al centro delle decisioni."
+          },
+          "candidateExperienceHad": {
+            "title": "L'esperienza candidato doveva essere all'altezza del brand di Gruppo Credem",
+            "text": "Per una banca certificata Top Employer per 10 anni consecutivi ed Equal Salary per 5, ogni punto di contatto con i candidati è fondamentale, partendo da un processo di selezione moderno e allineato ai valori del Gruppo."
+          },
+          "identifyingUnexpressedPotential": {
+            "title": "Intercettare il potenziale inespresso era tanto importante per HR quanto per il business",
+            "text": "Su profili così junior, lo screening basato sul CV non permetteva di differenziare i profili: le soft skill decisive per lo sviluppo di queste figure erano invisibili su carta, e il rischio era quello di non riuscire a intercettare talenti in linea con Gruppo Credem."
+          }
+        },
+        "hrChallenges": {
+          "talentPoolNeeded": {
+            "title": "Bisognava ampliare la Talent Pool e dare a ogni candidato la possibilità di farsi conoscere",
+            "text": "Con 30.000 candidature l'anno e strumenti di selezione tradizionali, non è possibile dare a tutti uno spazio autentico per esprimersi. Senza un supporto tecnologico, i profili più motivati e ad alto potenziale rischiavano di restare invisibili."
+          },
+          "timeHireNeeded": {
+            "title": "Il time-to-hire andava ottimizzato per non perdere i candidati migliori",
+            "text": "La velocità del processo era una delle leve competitive più importanti sulle quali lavorare per assicurarsi di garantire un'esperienza di selezione ottimale e di non perdere nessuno dei candidati più promettenti."
+          },
+          "selectionQualityNeeded": {
+            "title": "La qualità della selezione doveva essere il più possibile omogenea per tutto il Gruppo",
+            "text": "Garantire standard di screening uniformi per un Gruppo che è distribuito su oltre 600 filiali in 19 regioni era una sfida operativa e di equità. Senza un filtro centralizzato e strutturato, la qualità della selezione rischiava di variare."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "makeFirstStep": {
+            "text": "Rendere il primo filtro più selettivo e predittivo: intercettare i profili ad alto potenziale nascosti nelle 30.000 candidature ricevute annualmente, riducendo il margine di errore."
+          },
+          "reduceTimeHire": {
+            "text": "Ridurre il time-to-hire e ottimizzare le shortlist: rispondere più rapidamente ai candidati che risultano in linea con i valori del Gruppo e con le posizioni aperte per portarli a colloquio."
+          },
+          "guaranteeConsistentHiring": {
+            "text": "Garantire standard di selezione omogenei: mantenere lo stesso livello di profondità e qualità della valutazione per tutti i candidati a prescindere dal momento o dal luogo di candidatura."
+          },
+          "improveCandidateExperience": {
+            "text": "Migliorare la Candidate Experience: rendere l'intero processo accessibile, rapido ed equo - un'opportunità autentica di farsi conoscere, coerente con il posizionamento Top Employer di Gruppo Credem."
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI con Skillvue",
+        "intro": "Skillvue è stato integrato nel processo di selezione del Progetto Giovani con un approccio graduale e data-driven: prima la validazione su un perimetro iniziale, poi l'estensione progressiva.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "resilienza": {
+            "label": "Resilienza"
+          },
+          "intelligenzaEmotiva": {
+            "label": "Intelligenza emotiva"
+          },
+          "orientamentoAgliObiettivi": {
+            "label": "Orientamento agli obiettivi"
+          }
+        }
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Cosa è cambiato e perché conta",
+        "metrics": {
+          "n30k": {
+            "value": "30K",
+            "label": "<b>Candidature ricevute e processate</b><br></br>ogni anno, con velocità ed efficacia"
+          },
+          "n30": {
+            "value": "-30%",
+            "label": "<b>Riduzione dei colloqui non in linea</b><br></br>al secondo step"
+          },
+          "drastic": {
+            "value": "Drastica",
+            "label": "<b>Ottimizzazione dei tempi</b><br></br>di lavoro del recruiter"
+          }
+        },
+        "qualitative": {
+          "moreCandidatesCan": {
+            "title": "Più candidati possono dimostrare il proprio valore",
+            "text": "L'assessment ha dato a più persone la possibilità di far emergere <b>competenze reali oltre i limiti del CV</b>. Profili ad alto potenziale che prima rischiavano di perdersi nel volume ora vengono <b>intercettati efficacemente e rapidamente</b>."
+          },
+          "radicallyImprovedInterview": {
+            "title": "Qualità dei colloqui radicalmente migliorata",
+            "text": "La riduzione dei colloqui non in linea con la posizione significa che il secondo step del processo è <b>diventato più efficiente</b>: meno tempo speso in interviste a basso rendimento, più decisioni consapevoli, <b>cicli di feedback più rapidi</b>."
+          },
+          "humanLoopAlways": {
+            "title": "Human-in-the-loop, sempre",
+            "text": "L'assessment produce informazioni utili a rendere il <b>decision-making più consapevole ed efficace</b>. I dati prodotti dall'AI di Skillvue alimentano la decisione, che <b>rimane però sempre in mano ai recruiter</b>."
+          }
+        }
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "carrefour",
+            "company": "Carrefour",
+            "tag": "Retail GDO · Hiring at Scale",
+            "headline": "Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione"
+          },
+          {
+            "id": "europ-assistance",
+            "company": "Europ Assistance",
+            "tag": "Insurance · Hiring",
+            "headline": "Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Gruppo Credem: come trovare i migliori talenti tra <hl>30.000 candidature</hl> per seguire la <hl2>crescita del business</hl2>"
+    },
+    "douglas": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "2.500 dipendenti su quasi 400 punti vendita, nessuna visibilità sulle competenze, turnover elevato. Con Skillvue, Douglas ha creato il primo database completo di competenze dell'intera forza lavoro.",
+      "heroMetrics": [
+        {
+          "value": "2K",
+          "label": "persone portate nel radar di HR"
+        },
+        {
+          "value": "5 sett.",
+          "label": "tempo di mappatura"
+        },
+        {
+          "value": "88%",
+          "label": "tasso di completion"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Retail"
+          },
+          {
+            "label": "Gruppo",
+            "value": "Douglas Group"
+          },
+          {
+            "label": "Fatturato",
+            "value": "521,5 mln €"
+          },
+          {
+            "label": "Dipendenti",
+            "value": "2.500"
+          },
+          {
+            "label": "Punti vendita",
+            "value": "370+"
+          },
+          {
+            "label": "Use Case",
+            "value": "Learning & Development, Internal Mobility"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Il contesto del progetto",
+        "paragraph": "Douglas Group, con <b>1.972 punti vendita in 22 paesi</b>, un fatturato di <b>€4,58 miliardi</b> a livello europeo e un piano di espansione da <b>200 nuove aperture e 400 ristrutturazioni entro fine 2026</b>, è il primo beauty retailer omnicanale in Europa. La qualità della consulenza in-store è il principale vantaggio competitivo del retail fisico rispetto all'e-commerce, ma è anche la variabile meno misurata e strutturata del settore. In Italia, Douglas opera con oltre <b>370 punti vendita</b> e circa <b>2.500 persone</b> nella rete commerciale, in un mercato beauty che traina i consumi interni per <b>€14,2 miliardi</b>.<br></br><br></br>Seppure in un contesto di crescita molto solida, dal punto di vista people emergevano delle lacune. L\\’HQ italiano non disponeva di <b>alcun dato oggettivo sulle competenze</b> distribuite nelle persone in rete vendita: l\\’unica fonte erano i feedback dei responsabili di negozio o di area. In un settore dove il turnover del personale di vendita oscilla tra il <b>25% e il 35%</b> annuo e può essere direttamente ricollegato alla possibilità di crescita e sviluppo all\\’interno dell\\’azienda, è diventata chiara la necessità di adottare un approccio più data-driven alla gestione del talento.",
+        "summary": "Il progetto ha trasformato la gestione del talento da un modello basato su feedback soggettivi e osservazione in presenza a un sistema scalabile e data-driven, creando per la prima volta una fotografia completa e oggettiva delle competenze dell'intera rete vendita — soft skill e hard skill — e abilitando percorsi di crescita, mobilità interna e formazione customizzata basati su dati reali."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Il problema strutturale",
+        "intro": "Su 2.500 dipendenti in quasi 400 punti vendita, l’HQ non disponeva di alcun dato strutturato sulle competenze. In un settore con turnover elevato, l’assenza di dati significava perdere talento, formare male e non pianificare la mobilità interna.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "noVisibilityHigh": {
+            "title": "Assenza di visibilità sulle figure ad alto potenziale",
+            "text": "Le uniche informazioni disponibili erano feedback soggettivi dei responsabili, disomogenei e non confrontabili tra sedi."
+          },
+          "wideGapBetween": {
+            "title": "Forte distanza tra HQ e rete vendita",
+            "text": "I dipendenti non avevano modo di far emergere competenze e aspirazioni. Il talento restava invisibile, con impatto su engagement e retention."
+          },
+          "highTurnoverStore": {
+            "title": "Turnover elevato e consulenza in-store a rischio",
+            "text": "Con un turnover del 25-35% e la crescente complessità del prodotto beauty – skincare scientifica, fragranze di nicchia, clean beauty – trattenere e sviluppare i talenti interni è un asset strategico non negoziabile."
+          }
+        },
+        "hrChallenges": {
+          "competencyAnalysisNecessary": {
+            "title": "Analisi delle competenze necessaria ma insostenibile",
+            "text": "Su 2.500 persone distribuite sul territorio, l’osservazione in presenza comportava tempi lunghi, costi elevati e risultati disomogenei."
+          },
+          "developmentReservedOnly": {
+            "title": "Sviluppo riservato al 5-10% della popolazione",
+            "text": "Mancava la capacità di offrire opportunità di crescita su scala, non solo ai pochi già identificati."
+          },
+          "noStructuredFeedback": {
+            "title": "Nessun feedback strutturato ai dipendenti",
+            "text": "L’assenza di una restituzione oggettiva lasciava l’iniziativa di sviluppo nelle mani del singolo responsabile."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "mapSkillsEntire": {
+            "text": "Fotografare in maniera oggettiva e immediata le competenze dell'intera rete vendita: un’analisi standardizzata su tutti i ruoli (Beauty Advisor, Sales Assistant, Store Manager) e su tutte le seniority."
+          },
+          "optimiseTimeCost": {
+            "text": "Ottimizzare tempi e costi dell’analisi delle competenze interne: renderli sostenibili per i tassi di turnover e la velocità del mercato del lavoro, sostituendo l’osservazione in presenza con un sistema scalabile."
+          },
+          "promoteInternalCareer": {
+            "text": "Promuovere percorsi di crescita interna e ridurre il turnover: identificare persone ad alto potenziale e propensioni a ruoli diversi per agevolare spostamenti interni orizzontali e verticali, riducendo gli effort di selezione dall’esterno."
+          },
+          "workProactivelyTraining": {
+            "text": "Lavorare preventivamente su formazione e sviluppo: costruire un database di competenze condiviso che permetta di attivare percorsi formativi customizzati per colmare i gap esistenti e pianificare lo sviluppo della forza lavoro."
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI con Skillvue",
+        "intro": "Il team People Science Skillvue ha lavorato per allineare gli assessment costruiti in piattaforma con il modello di leadership aziendale e creato valutazioni calate sulle reali situazioni lavorative dei punti vendita.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "industrySpecificHard": {
+            "label": "Hard Skill industry-specific"
+          },
+          "keySoftSkills": {
+            "label": "Soft Skill chiave per la vendita"
+          }
+        }
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Key Metrics & Impatto",
+        "subtitle": "I risultati quantitativi e qualitativi del progetto Skillvue x Douglas.",
+        "metrics": [
+          {
+            "value": "88%",
+            "label": "Completion rate"
+          },
+          {
+            "value": "5 sett.",
+            "label": "Tempo di mappatura"
+          },
+          {
+            "value": "Solo 3",
+            "label": "Persone nel team HR"
+          }
+        ],
+        "qualitative": {
+          "skillsFinallyVisible": {
+            "title": "Competenze finalmente visibili",
+            "text": "Per la prima volta, una visione chiara e confrontabile delle competenze di oggi e di domani per ogni persona della rete vendita: un quadro direttamente azionabile per decisioni su crescita, mobilità e formazione."
+          },
+          "hiddenTalentPredictive": {
+            "title": "Talento nascosto e potenziale predittivo",
+            "text": "L’analisi ha individuato propensioni predittive a ruoli diversi, agevolando spostamenti interni orizzontali e verticali e scoprendo talento dove prima non esisteva visibilità."
+          },
+          "customisedTrainingSkill": {
+            "title": "Formazione customizzata e skill gap colmati",
+            "text": "Con i dati raccolti sono stati attivati percorsi formativi customizzati per colmare i gap esistenti e definire più rapidamente le ricollocazioni interne. Un altro punto cruciale per ottimizzare costi e performance."
+          },
+          "timeCostOptimisation": {
+            "title": "Ottimizzazione di tempi e costi",
+            "text": "Tempi di analisi ottimizzati e impegno dei responsabili ridotto, liberando risorse per attività di sviluppo a maggior valore."
+          }
+        }
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "unicomm",
+            "company": "Unicomm",
+            "tag": "Retail GDO · Sviluppo interno",
+            "headline": "Come Unicomm sta costruendo una nuova gestione del talento su una rete di 270 punti vendita in costante aumento"
+          },
+          {
+            "id": "carrefour",
+            "company": "Carrefour",
+            "tag": "Retail GDO · Hiring at Scale",
+            "headline": "Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Come il primo beauty retailer europeo ha reso visibili le competenze di <hl>2.200 persone</hl> su 370 store in <hl2>5 settimane</hl2>"
     }
   },
   "home": {

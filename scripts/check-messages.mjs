@@ -168,6 +168,35 @@ const flatten = (obj, prefix = '') =>
 const en = flatten(JSON.parse(readFileSync(join(ROOT, 'messages/en.json'), 'utf8')));
 const it = flatten(JSON.parse(readFileSync(join(ROOT, 'messages/it.json'), 'utf8')));
 
+// An array leaf is compared as a key above, which says nothing about what is
+// inside it. A story whose Italian list is one item short renders one card
+// fewer, in one language, and nothing says so.
+const arrays = (obj, prefix = '') =>
+  Object.entries(obj).flatMap(([k, v]) =>
+    Array.isArray(v)
+      ? [[`${prefix}${k}`, v]]
+      : v && typeof v === 'object'
+        ? arrays(v, `${prefix}${k}.`)
+        : [],
+  );
+
+const shapeOf = (v) =>
+  Array.isArray(v)
+    ? `[${v.map(shapeOf).join(',')}]`
+    : v && typeof v === 'object'
+      ? `{${Object.keys(v).sort().join(',')}}`
+      : typeof v;
+
+const arraysIt = new Map(arrays(JSON.parse(readFileSync(join(ROOT, 'messages/it.json'), 'utf8'))));
+const mismatched = arrays(JSON.parse(readFileSync(join(ROOT, 'messages/en.json'), 'utf8')))
+  .filter(([key, value]) => arraysIt.has(key) && shapeOf(value) !== shapeOf(arraysIt.get(key)))
+  .map(([key, value]) => `  ${key}: en ${shapeOf(value)} vs it ${shapeOf(arraysIt.get(key))}`);
+assert.deepEqual(
+  mismatched,
+  [],
+  `${mismatched.length} array(s) differ in shape between the locales:\n${mismatched.join('\n')}`,
+);
+
 const onlyEn = en.filter((k) => !it.includes(k));
 const onlyIt = it.filter((k) => !en.includes(k));
 assert.deepEqual(onlyEn, [], `messages/en.json has keys missing from it.json:\n  ${onlyEn.join('\n  ')}`);

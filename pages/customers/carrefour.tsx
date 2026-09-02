@@ -1,5 +1,6 @@
 ﻿// @ts-nocheck
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench, Clock } from 'lucide-react';
@@ -24,287 +25,6 @@ function Section({ children, className = '' }) {
 
 // ─── BILINGUAL CONTENT ────────────────────────────────────────────────────────
 
-const content = {
-  it: {
-    breadcrumb: 'Clienti',
-    badge: 'CUSTOMER STORY',
-    headline: {
-      before: 'Carrefour: come proteggere i margini su ',
-      highlight1: '1.200 punti vendita',
-      middle: ' ottimizzando il ',
-      highlight2: 'KPI chiave del processo di selezione',
-      after: '',
-    },
-    subtitle: "In un settore dove il costo del lavoro è 3.4x l'utile operativo, Carrefour Italia ha trasformato la selezione in una leva di profittabilità grazie a dati oggettivi sulle competenze.",
-    heroMetrics: [
-      { value: '-35%', label: 'Time-to-Hire' },
-      { value: '+20%', label: 'Successo assunzioni' },
-      { value: 'Fino a 6.000', label: 'Persone valutate in 1 mese' },
-    ],
-    ctaPrimary: 'Contattaci',
-    ctaSecondary: 'Scopri di più',
-    clientCard: {
-      label: 'SCHEDA CLIENTE',
-      facts: [
-        { label: 'Settore', value: 'GDO' },
-        { label: 'Gruppo', value: 'Carrefour Group' },
-        { label: 'Fatturato', value: '~4,5 mld €' },
-        { label: 'Dipendenti', value: '13.000+ diretti + 8.000 rete franchising' },
-        { label: 'Punti vendita', value: '~1.200' },
-        { label: 'Use Case', value: 'Hiring, Learning & Development' },
-      ],
-    },
-    context: {
-      badge: 'CONTESTO',
-      title: 'Il contesto del progetto',
-      paragraph: <>
-        Carrefour Italia (oggi <strong className="text-[#121212]/80 font-semibold">Princes Retail S.p.A.</strong>) gestisce circa <strong className="text-[#121212]/80 font-semibold">1.200 punti vendita</strong> su 4 formati — Ipermercati, Market, Express, Cash &amp; Carry — con <strong className="text-[#121212]/80 font-semibold">13.000 dipendenti diretti</strong> e una rete franchising di 8.000 persone.
-        <br /><br />
-        In un settore dove il costo del lavoro pesa per il <strong className="text-[#121212]/80 font-semibold">9.8% del fatturato</strong> (3.4 volte l'utile operativo), ogni decisione sulle persone diventa necessariamente anche una decisione sui margini. In questo scenario, la capacità di mettere la persona giusta nel ruolo giusto — a scala, con dati — non era un tema HR: era un prerequisito per proteggere la profittabilità. Carrefour riceveva fino a <strong className="text-[#121212]/80 font-semibold">30.000 candidature l'anno</strong>, che dovevano essere gestite da soli <strong className="text-[#121212]/80 font-semibold">3 recruiter</strong>, senza alcuno strumento in grado di distinguere, su 1.200 punti vendita, chi avrebbe performato rispetto a chi sarebbe uscito entro pochi mesi.
-      </>,
-    },
-    challenge: {
-      badge: 'LA SFIDA',
-      title: 'Il problema strutturale',
-      intro: "Carrefour Italia aveva un vincolo operativo chiaro: scalare la qualità della selezione senza moltiplicare le risorse, in un settore dove ogni assunzione sbagliata erode direttamente i margini.",
-      businessLabel: 'BUSINESS CHALLENGES',
-      hrLabel: 'HR & PEOPLE CHALLENGES',
-      businessChallenges: [
-        {
-          icon: Target,
-          title: 'Costo delle possibili assunzioni errate',
-          text: "Il costo di sostituzione varia da €3.000 a €6.600 per un frontline, fino a €90.000 per uno store manager. Ogni assunzione sbagliata erode direttamente i margini.",
-        },
-        {
-          icon: Layers,
-          title: 'Contesto multi-formato',
-          text: "4 formati retail, profili e competenze diverse. 3 recruiter non potevano garantire profondità di valutazione su 1.200 punti vendita senza impattare le performance di store.",
-        },
-        {
-          icon: Eye,
-          title: 'Competenze invisibili sulla rete vendita',
-          text: "Per migliaia di dipendenti non esisteva alcuna mappatura strutturata. Promozioni, formazione, mobilità interna: tutte decisioni senza dati.",
-        },
-      ],
-      hrChallenges: [
-        {
-          icon: BarChart3,
-          title: 'Il CV non prediceva la performance',
-          text: "Per profili junior e operativi — la maggioranza delle 30.000 candidature — i CV sono un indicatore inefficace. Orientamento al cliente, problem solving, adattamento: invisibili sulla carta.",
-        },
-        {
-          icon: Wrench,
-          title: 'Pre-screening senza output strutturato',
-          text: "Decisioni basate sul giudizio del recruiter e colloqui non strutturati, con un calo dell'accuratezza predittiva del 14%. Nessun dato sulle competenze prima del colloquio.",
-        },
-        {
-          icon: Users,
-          title: 'Il modello di competenze esisteva sulla carta, non nel processo',
-          text: "Il modello di competenze era definito per ogni ruolo, ma le assunzioni non avvenivano con valutazione sistematica rispetto ad esso.",
-        },
-      ],
-    },
-    objectives: {
-      badge: 'OBIETTIVI DI COLLABORAZIONE',
-      title: 'Cosa doveva cambiare',
-      items: [
-        { icon: Zap, text: "Scalare il pre-screening senza sacrificare la qualità: gestire 30.000 candidature/anno con 3 recruiter, riducendo la dipendenza da headhunter esterni e liberando tempo per valutazione approfondita ed employer branding" },
-        { icon: CheckCircle, text: "Integrare il modello di leadership proprietario nella selezione: valutare soft e hard skill allineate al framework Carrefour, con output strutturato su ogni candidato prima del primo colloquio" },
-        { icon: Layers, text: "Coprire un'organizzazione multi-formato: uno strumento unico adattabile a profili diversi — stage HQ, ruoli operativi su più formati, profili di leadership — ciascuno con un mix specifico di competenze" },
-        { icon: TrendingUp, text: "Costruire un ponte tra selezione e sviluppo: allineare le competenze misurate in fase di hiring con quelle sviluppate internamente, creando le basi per un modello skills-based che copra l'intero ciclo del talento" },
-      ],
-    },
-    solution: {
-      badge: 'LA SOLUZIONE',
-      title: 'Assessment AI con Skillvue',
-      intro: "Skillvue è stato integrato come prima cosa nel processo di selezione dei profili junior, per poi essere progressivamente esteso anche alla popolazione interna.",
-      skillsLabel: 'COMPETENZE VALUTATE',
-      skills: [
-        { icon: Heart, label: "Soft skill allineate al modello di leadership proprietario" },
-        { icon: Wrench, label: "Hard skill per ruoli store (co-sviluppate sul modello Carrefour)" },
-      ],
-      methodologyLabel: 'COME È STATO COSTRUITO',
-      methodology: [
-        {
-          title: "01 — Integrazione con il modello di leadership proprietario",
-          text: "Il modello di leadership Carrefour è stato integrato negli assessment Skillvue, calibrando contenuti e comportamenti osservabili. Ogni candidato riceve una valutazione strutturata prima ancora del primo colloquio, con la scalabilità e l'oggettività che solo un assessment science-backed può garantire.",
-        },
-        {
-          title: "02 — Architettura multi-canale, processo unico",
-          text: "Assessment configurati per profili diversi — stage HQ, ruoli operativi, leadership — ciascuno con mix specifico di soft e hard skill. Il recruiter riceve un report strutturato con profilo di competenze e matching rispetto al ruolo. Un unico standard su 4 formati e 1.200 punti vendita.",
-        },
-        {
-          title: "03 — Da hiring alla mappatura della rete vendita",
-          text: "Il valore dimostrato nella selezione ha portato all'estensione alla rete vendita: 6.000 dipendenti mappati sulle competenze in 1 mese, sostituendo l'osservazione in presenza. Per la prima volta, un unico linguaggio dalla selezione allo sviluppo.",
-        },
-      ],
-    },
-    results: {
-      badge: 'RISULTATI',
-      title: 'Key Metrics & Impatto',
-      subtitle: "I risultati misurabili ottenuti da Carrefour Italia attraverso l'adozione di Skillvue nei processi di selezione e mappatura interna.",
-      metrics: [
-        { value: '-35%', label: 'Time-to-hire' },
-        { value: '65% → 85%', label: 'Tasso successo selezioni portate avanti da Hiring Manager' },
-        { value: '6.000', label: 'Dipendenti mappati in 1 mese' },
-      ],
-      qualitative: [
-        { icon: CheckCircle, title: 'Shortlist radicalmente più qualificate', text: "I candidati portati avanti nel processo erano più allineati alle aspettative, con riduzione diretta dei colloqui senza esito. Su 30.000 candidature/anno, centinaia di errori evitati, ciascuno con un costo di €3.000–6.600." },
-        { icon: Eye, title: 'Talento nascosto scoperto nella rete', text: "La mappatura di 6.000 dipendenti ha fatto emergere profili ad alto potenziale dove prima non esisteva alcuna visibilità. In un mercato dove formare internamente costa il 30–50% in meno rispetto a reclutare dall'esterno, sapere chi hai è il primo passo per smettere di rincorrere il fabbisogno sul mercato." },
-        { icon: Wrench, title: 'Il modello di leadership ha preso davvero vita', text: "Il framework proprietario è diventato un criterio di selezione misurabile. Ogni candidato viene valutato con output strutturato: il modello informa le decisioni, non solo i valori dichiarati." },
-      ],
-    },
-    related: {
-      title: 'Storie correlate',
-      stories: [
-        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring', headline: 'Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana' },
-        { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: "Subdued: come creare uno standard di selezione unico e scalabile per l'espansione di una rete di 130+ negozi" },
-      ],
-      cta: 'Leggi la storia',
-    },
-    finalCta: { headline: 'Pronto a trasformare la tua', accent: 'People Strategy?' },
-  },
-
-  en: {
-    breadcrumb: 'Customers',
-    badge: 'CUSTOMER STORY',
-    headline: {
-      before: 'Carrefour: how to protect margins across ',
-      highlight1: '1,200 stores',
-      middle: ' by optimising the ',
-      highlight2: 'key hiring KPI',
-      after: '',
-    },
-    subtitle: "In a sector where labour cost is 3.4x operating profit, Carrefour Italia turned hiring into a real profitability lever thanks to clear, transparent data on skills.",
-    heroMetrics: [
-      { value: '-35%', label: 'Time-to-Hire' },
-      { value: '+20%', label: 'Hiring success rate' },
-      { value: 'Up to 6,000', label: 'People assessed in 1 month' },
-    ],
-    ctaPrimary: 'Contact Us',
-    ctaSecondary: 'Learn More',
-    clientCard: {
-      label: 'CLIENT PROFILE',
-      facts: [
-        { label: 'Industry', value: 'Large-scale distribution' },
-        { label: 'Group', value: 'Carrefour Group' },
-        { label: 'Revenue', value: '~€4.5B' },
-        { label: 'Employees', value: '13,000+ direct + 8,000 franchise network' },
-        { label: 'Stores', value: '~1,200' },
-        { label: 'Use Case', value: 'Hiring, Learning & Development' },
-      ],
-    },
-    context: {
-      badge: 'CONTEXT',
-      title: 'The Company and The Context',
-      paragraph: <>
-        Carrefour Italia (now <strong className="text-[#121212]/80 font-semibold">Princes Retail S.p.A.</strong>) operates approximately <strong className="text-[#121212]/80 font-semibold">1,200 stores</strong> across 4 formats (Hypermarkets, Market, Express, Cash &amp; Carry) with <strong className="text-[#121212]/80 font-semibold">13,000 direct employees</strong> and a franchise network of 8,000 people.
-        <br /><br />
-        In an industry where labour cost accounts for <strong className="text-[#121212]/80 font-semibold">9.8% of revenues</strong> (3.4 times the costs of operating profits), every people decision is inevitably also a decision that impacts margins. In this context, the ability to put the right person in the right role at scale, with data, was not just an HR issue: it was a prerequisite for protecting profitability. Carrefour received up to <strong className="text-[#121212]/80 font-semibold">30,000 applications per year</strong>, managed by just <strong className="text-[#121212]/80 font-semibold">3 recruiters</strong>, with no tool capable of distinguishing, across 1,200 stores, who would perform from who would leave within months.
-      </>,
-    },
-    challenge: {
-      badge: 'THE CHALLENGE',
-      title: 'The Structural Problem',
-      intro: "Carrefour Italia had a clear operational constraint: scale hiring quality without multiplying resources, in a sector where every wrong hire directly erodes margins.",
-      businessLabel: 'BUSINESS CHALLENGES',
-      hrLabel: 'HR & PEOPLE CHALLENGES',
-      businessChallenges: [
-        {
-          icon: Target,
-          title: 'Cost of potential wrong hires',
-          text: "Frontline replacement costs €3,000–6,600; a store manager can reach €40,000–90,000. Keeping hiring quality high and turnover low was a direct financial imperative.",
-        },
-        {
-          icon: Layers,
-          title: 'Multi-format complexity',
-          text: "4 retail formats, each with different profiles and skills. 3 recruiters could not guarantee the correct depth of evaluation across 1,200 stores without risking negative impact on store performance.",
-        },
-        {
-          icon: Eye,
-          title: 'Skills invisible across the store network',
-          text: "No structured skills mapping was available for thousands of employees. Decisions on who to promote, where to invest in training, who was ready for more responsibility had no data behind them.",
-        },
-      ],
-      hrChallenges: [
-        {
-          icon: BarChart3,
-          title: "CVs didn't predict performance",
-          text: "For junior and operational profiles — most of the 30,000 annual applications — CVs are a poor predictor of real capabilities. Customer orientation, problem solving, adaptability: all invisible on paper.",
-        },
-        {
-          icon: Wrench,
-          title: 'Pre-screening with no structured output',
-          text: "Decisions relied on individual judgment and traditional interviews, something that can reduce predictive accuracy by up to 14% in comparison to structured interviews. No skill data was available before the interview.",
-        },
-        {
-          icon: Users,
-          title: 'The skills model existed on paper, not in the process',
-          text: "Carrefour had defined critical behaviours for each role, but hiring was not always conducted with a systematic evaluation based on that framework.",
-        },
-      ],
-    },
-    objectives: {
-      badge: 'COLLABORATION OBJECTIVES',
-      title: 'What needed to change',
-      items: [
-        { icon: Zap, text: "Scale pre-screening without sacrificing quality: handle 30,000 applications/year with 3 recruiters, reducing reliance on external headhunters and freeing time for in-depth evaluation and employer branding" },
-        { icon: CheckCircle, text: "Integrate the proprietary leadership model into hiring: assess soft and hard skills aligned to the Carrefour framework, with structured output on every candidate before the first interview" },
-        { icon: Layers, text: "Cover a multi-format organization: a single adaptable tool for different profiles — HQ internships, operational roles across multiple store formats, leadership profiles — each with a specific skill mix" },
-        { icon: TrendingUp, text: "Build a bridge between hiring and development: align skills measured at hiring with those developed internally, creating the foundation for a skills-based model covering the entire talent lifecycle" },
-      ],
-    },
-    solution: {
-      badge: 'THE SOLUTION',
-      title: 'AI-scaled Assessment with Skillvue',
-      intro: "Skillvue was integrated first into the hiring process for junior profiles, then progressively extended to the internal workforce.",
-      skillsLabel: 'SKILLS ASSESSED',
-      skills: [
-        { icon: Heart, label: "Soft skills aligned to the proprietary leadership model" },
-        { icon: Wrench, label: "Hard skills for store roles (co-developed on the Carrefour model)" },
-      ],
-      methodologyLabel: 'HOW IT WAS BUILT',
-      methodology: [
-        {
-          title: "01 — Integration with the proprietary leadership model",
-          text: "Carrefour's leadership model was integrated into Skillvue assessments, calibrating content and observable behaviours. This way every candidate gets a structured evaluation before their first interview, with the scalability and objectivity that only a science-backed assessment can guarantee.",
-        },
-        {
-          title: "02 — Multi-channel architecture, one process",
-          text: "Assessments configured for different profiles — HQ internships, operational roles, leadership — each with a specific mix of soft and hard skills. The recruiter receives a structured report with skill profile and role matching. One single standard across 4 formats and 1,200 stores.",
-        },
-        {
-          title: "03 — From hiring to store network mapping",
-          text: "The value demonstrated in hiring led to extending the model to the store network: 6,000 employees mapped on skills in 1 month, replacing in-person observation. For the first time, a single language from hiring to development.",
-        },
-      ],
-    },
-    results: {
-      badge: 'RESULTS',
-      title: 'Key Metrics & Impact',
-      subtitle: 'The measurable outcomes Carrefour Italia achieved through Skillvue across hiring and internal skills mapping.',
-      metrics: [
-        { value: '-35%', label: 'Time-to-hire' },
-        { value: '65% → 85%', label: 'Success rate of hires once handed over to Hiring Managers' },
-        { value: '6,000', label: 'Employees mapped in 1 month' },
-      ],
-      qualitative: [
-        { icon: CheckCircle, title: 'Radically more qualified shortlists', text: "Candidates moving on to next steps in the process were more aligned to expectations, with a direct reduction in interviews that didn't lead to a hire. Across 30,000 applications/year, hundreds of mistakes avoided — each costing €3,000–6,600." },
-        { icon: Eye, title: 'Hidden talent discovered in the network', text: "Mapping 6,000 employees highlighted high-potential profiles where no visibility previously existed. In a market where developing internally costs 30–50% less than external hiring, knowing who you have is the first step to stop chasing demand on the market." },
-        { icon: Wrench, title: 'The leadership model came to life', text: "The proprietary framework became a measurable hiring criterion. Every candidate is evaluated and receives a structured output: the model informs decisions, not just declared values." },
-      ],
-    },
-    related: {
-      title: 'Related Stories',
-      stories: [
-        { id: 'europ-assistance', company: 'Europ Assistance', tag: 'Insurance · Hiring', headline: 'Europ Assistance: how to recognise the potential that stands the test of time in a business built on human interaction' },
-        { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: 'Subdued: building a single scalable hiring standard for a network of 130+ stores' },
-      ],
-      cta: 'Read the story',
-    },
-    finalCta: { headline: 'Ready to transform your', accent: 'People Strategy?' },
-  },
-};
 
 // ─── PAGE COMPONENT ───────────────────────────────────────────────────────────
 
@@ -313,12 +33,44 @@ const content = {
 // routes.json, and i18n/messages.ts turns it into the namespaces to load.
 export const getStaticProps = messagesFor('customers/carrefour');
 
+// Structure the catalogue cannot hold: ids and the components the page
+// renders for each row. The words that went with them are in messages/.
+const CHALLENGE_BUSINESS_CHALLENGES = [
+  { id: 'costPotentialWrong', icon: Target },
+  { id: 'multiFormatComplexity', icon: Layers },
+  { id: 'skillsInvisibleAcross', icon: Eye },
+];
+
+const CHALLENGE_HR_CHALLENGES = [
+  { id: 'cvsDidnT', icon: BarChart3 },
+  { id: 'preScreeningNo', icon: Wrench },
+  { id: 'skillsModelExisted', icon: Users },
+];
+
+const OBJECTIVES_ITEMS = [
+  { id: 'scalePreScreening', icon: Zap },
+  { id: 'integrateProprietaryLeadership', icon: CheckCircle },
+  { id: 'coverMultiFormat', icon: Layers },
+  { id: 'buildBridgeBetween', icon: TrendingUp },
+];
+
+const SOLUTION_SKILLS = [
+  { id: 'softSkillsAligned', icon: Heart },
+  { id: 'hardSkillsStore', icon: Wrench },
+];
+
+const RESULTS_QUALITATIVE = [
+  { id: 'radicallyMoreQualified', icon: CheckCircle },
+  { id: 'hiddenTalentDiscovered', icon: Eye },
+  { id: 'leadershipModelCame', icon: Wrench },
+];
+
 export default function CarrefourStoryPage() {
   const router = useRouter();
-  const { lang, t } = useLanguage();
-  const c = lang === 'it' ? content.it : content.en;
-  const metaTitle = `${c.headline.before}${c.headline.highlight1}${c.headline.middle || ''}${c.headline.highlight2 || ''}${c.headline.after || ''} | Skillvue`;
-  const metaDesc = c.subtitle.length > 160 ? c.subtitle.substring(0, 157) + '...' : c.subtitle;
+  const { lang } = useLanguage();
+  const t = useTranslations('customers.carrefour');
+  const metaTitle = `${t('headline').replace(/<\/?hl\d*>/g, '')} | Skillvue`;
+  const metaDesc = t('subtitle').length > 160 ? t('subtitle').substring(0, 157) + '...' : t('subtitle');
 
   return (
     <>
@@ -342,7 +94,7 @@ export default function CarrefourStoryPage() {
           <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-8 lg:py-10">
             {/* Breadcrumb */}
             <motion.div className="mb-5 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{c.breadcrumb}</Button>
+              <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{t('breadcrumb')}</Button>
               <span className="text-white/20">/</span>
               <span className="text-[13px] text-white/[0.65]">Carrefour</span>
             </motion.div>
@@ -352,23 +104,26 @@ export default function CarrefourStoryPage() {
               <div className="lg:col-span-7 flex flex-col">
                 <motion.div className="flex flex-col flex-1" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-4 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
-                    {c.badge}
+                    {t('badge')}
                   </span>
                   <h1 className="text-[48px] md:text-[44px] font-semibold tracking-[-0.02em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
-                    {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}<span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>{c.headline.after}
+                    {t.rich('headline', {
+                      hl: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+                      hl2: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+                    })}
                   </h1>
-                  <p className="text-[15px] text-white/[0.60] leading-[1.65] mb-6 max-w-2xl">{c.subtitle}</p>
+                  <p className="text-[15px] text-white/[0.60] leading-[1.65] mb-6 max-w-2xl">{t('subtitle')}</p>
                   <div className="flex flex-wrap gap-4">
                     <Button variant="primary" mode="dark" onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}>
-                      {c.ctaPrimary}
+                      {t('ctaPrimary')}
                     </Button>
                     <Button variant="secondary" mode="dark" onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })}>
-                      {c.ctaSecondary}
+                      {t('ctaSecondary')}
                     </Button>
                   </div>
                     {/* Metrics — pinned to bottom, aligned with client card */}
                     <div className="mt-auto pt-6 grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4">
-                      {c.heroMetrics.map(m => (
+                      {t.raw('heroMetrics').map(m => (
                       <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-3 py-3 md:px-6 md:py-4">
                       <span className="block text-white text-[19px] break-words stat-value md:text-[clamp(1.4rem,2.4vw,1.9rem)]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                       <span className="text-[13px] text-white/[0.55] mt-1.5 block leading-[1.4]">{m.label}</span>
@@ -386,15 +141,15 @@ export default function CarrefourStoryPage() {
                       <img src="/logos/carrefour.png" alt="Carrefour logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{c.clientCard.label}</span>
+                      <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{t('clientCard.label')}</span>
                       <p className="text-[16px] font-bold text-white/90">Carrefour Italia</p>
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
-                    {c.clientCard.facts.map(s => (
+                    {t.raw('clientCard.facts').map(s => (
                       <div key={s.label}>
-                        <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{t(s.label)}</span>
-                        <p className="text-[13px] text-white/[0.65] leading-[1.4]">{t(s.value)}</p>
+                        <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{s.label}</span>
+                        <p className="text-[13px] text-white/[0.65] leading-[1.4]">{s.value}</p>
                       </div>
                     ))}
                   </div>
@@ -410,42 +165,45 @@ export default function CarrefourStoryPage() {
 
             {/* CONTEXT */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-6">{c.context.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('context.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-6">{t('context.title')}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{t.rich('context.paragraph', {
+    b: (chunks) => <strong className="text-[#121212]/80 font-semibold">{chunks}</strong>,
+    br: () => <br />,
+  })}</p>
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{t('challenge.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('challenge.title')}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{t('challenge.intro')}</p>
 
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('challenge.businessLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
-                  {c.challenge.businessChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                  {CHALLENGE_BUSINESS_CHALLENGES.map((ch) => (
+                    <div key={t(`challenge.businessChallenges.${ch.id}.title`)} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`challenge.businessChallenges.${ch.id}.title`)}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`challenge.businessChallenges.${ch.id}.text`)}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('challenge.hrLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
-                  {c.challenge.hrChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                  {CHALLENGE_HR_CHALLENGES.map((ch) => (
+                    <div key={t(`challenge.hrChallenges.${ch.id}.title`)} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`challenge.hrChallenges.${ch.id}.title`)}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`challenge.hrChallenges.${ch.id}.text`)}</p>
                     </div>
                   ))}
                 </div>
@@ -454,11 +212,11 @@ export default function CarrefourStoryPage() {
 
             {/* OBJECTIVES */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('objectives.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{t('objectives.title')}</h2>
               <div className="grid md:grid-cols-2 gap-5">
-                {c.objectives.items.map((o, i) => {
-                  const [title, ...rest] = o.text.split(':');
+                {OBJECTIVES_ITEMS.map((o, i) => {
+                  const [title, ...rest] = t(`objectives.items.${o.id}.text`).split(':');
                   const desc = rest.join(':').trim();
                   return (
                     <div key={i} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -475,28 +233,28 @@ export default function CarrefourStoryPage() {
 
             {/* SOLUTION */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.solution.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.solution.intro}</p>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('solution.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('solution.title')}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('solution.intro')}</p>
 
               <div className="mb-12">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('solution.skillsLabel')}</span>
                 <div className="grid md:grid-cols-2 gap-5">
-                  {c.solution.skills.map((s) => (
-                    <div key={s.label} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                  {SOLUTION_SKILLS.map((s) => (
+                    <div key={t(`solution.skills.${s.id}.label`)} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                         <s.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{s.label}</h4>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`solution.skills.${s.id}.label`)}</h4>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.methodologyLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('solution.methodologyLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
-                  {c.solution.methodology.map((m, i) => (
+                  {t.raw('solution.methodology').map((m, i) => (
                     <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <span className="block text-[2.75rem] font-light leading-none mb-6" style={{ color: '#c7d2fe' }}>0{i + 1}</span>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{m.title.replace(/^\d+\s*[—\-]+\s*/, '')}</h4>
@@ -509,12 +267,12 @@ export default function CarrefourStoryPage() {
 
             {/* RESULTS */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
-              {c.results.subtitle && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>}
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{t('results.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('results.title')}</h2>
+              {t.has('results.subtitle') && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('results.subtitle')}</p>}
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
-                {c.results.metrics.map((m, i) => {
+                {t.raw('results.metrics').map((m, i) => {
                   const ResultIcon = [Clock, TrendingUp, Users][i] || Target;
                   return (
                     <div key={m.label} className="rounded-2xl border p-8" style={{ background: '#b7f5d8', borderColor: '#93e0bb' }}>
@@ -529,13 +287,13 @@ export default function CarrefourStoryPage() {
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {c.results.qualitative.map((q) => (
-                  <div key={q.title} className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
+                {RESULTS_QUALITATIVE.map((q) => (
+                  <div key={t(`results.qualitative.${q.id}.title`)} className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
                     <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: '#e3f9ec' }}>
                       <q.icon className="h-[22px] w-[22px]" style={{ color: '#10b981' }} />
                     </div>
-                    <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{q.title}</h4>
-                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{q.text}</p>
+                    <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{t(`results.qualitative.${q.id}.title`)}</h4>
+                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{t(`results.qualitative.${q.id}.text`)}</p>
                   </div>
                 ))}
               </div>
@@ -549,15 +307,15 @@ export default function CarrefourStoryPage() {
         {/* RELATED STORIES */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{c.related.title}</h3>
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{t('related.title')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
-              {c.related.stories.map(s => (
+              {t.raw('related.stories').map(s => (
                 <button key={s.id} onClick={() => { router.push(`${href('customers', lang)}/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
                   <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
                   <h4 className="text-[24px] font-semibold text-white/90 mb-4">{s.company}</h4>
-                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{t(s.headline)}</p>
+                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
                   <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
-                    {c.related.cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    {t('related.cta')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
               ))}
@@ -565,7 +323,7 @@ export default function CarrefourStoryPage() {
           </div>
         </section>
 
-        <SolutionFinalCTA headline={c.finalCta.headline} accentWord={c.finalCta.accent} />
+        <SolutionFinalCTA headline={t('finalCta.headline')} accentWord={t('finalCta.accent')} />
         <Footer />
       </main>
     </>
