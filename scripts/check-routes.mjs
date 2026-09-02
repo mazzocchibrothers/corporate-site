@@ -285,6 +285,35 @@ assert.deepEqual(
     'Copy the three lines from a neighbouring route.',
 );
 
+// ── The sitemap and robots.txt say the same thing ──────────────────────────
+// They are two files, written apart, that both answer "should Google have this
+// URL". When they disagree the answer is neither of the two: a URL submitted in
+// the sitemap and blocked in robots gets indexed with no content, which is the
+// one outcome neither file asked for. This asserts the sitemap emits nothing
+// robots forbids, in every locale — the prefix rules are literal, so a Disallow
+// on /lp/ says nothing whatever about /it/lp/.
+const disallow = readFileSync(join(ROOT, 'public/robots.txt'), 'utf8')
+  .split('\n')
+  .map((line) => line.match(/^\s*Disallow:\s*(\S+)/i)?.[1])
+  .filter(Boolean);
+
+const submitted = routes
+  .filter((r) => r.canonicalOf === undefined && !r.id.startsWith('lp/'))
+  .flatMap((r) => localesOf(r).map((locale) => new URL(urlFor(r, locale)).pathname));
+
+const contradictions = submitted.filter((path) =>
+  disallow.some((rule) => path.startsWith(rule)),
+);
+assert.deepEqual(
+  contradictions,
+  [],
+  contradictions.length +
+    ' URL(s) are in the sitemap and blocked by robots.txt:\n' +
+    contradictions.map((p) => '  ' + p).join('\n') +
+    '\nDrop them from the sitemap or stop disallowing them — submitting a URL ' +
+    'you block gets it indexed as a blank result, which is worse than either.',
+);
+
 const monolingual = routes.filter((r) => Object.keys(r.paths).length === 1);
 console.log(
   `[OK] ${REGISTRY}: ${routes.length} routes, all served by app/[locale] ` +

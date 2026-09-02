@@ -29,6 +29,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // a title with the page they are a cut of.
     if (route.canonicalOf !== undefined) continue;
 
+    // robots.txt asks Google not to fetch /lp/, so a sitemap entry for one is
+    // the two files contradicting each other — and the outcome is worse than
+    // either alone: a URL that is submitted but uncrawlable gets indexed as a
+    // blank listing rather than not indexed at all. Whether the landing pages
+    // belong in search is a marketing call; this only stops the contradiction.
+    if (route.id.startsWith("lp/")) continue;
+
     const languages = alternatesFor(route);
 
     // A dynamic route's registry entry stands for N real URLs. Substituting the
