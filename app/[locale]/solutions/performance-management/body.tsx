@@ -9,7 +9,6 @@ import PMHero from '@/components/solutions/pm/PMHero';
 import PMProblem from '@/components/solutions/pm/PMProblem';
 import PMShift from '@/components/solutions/pm/PMShift';
 import PMHowSolves from '@/components/solutions/pm/PMHowSolves';
-import PMImpact from '@/components/solutions/pm/PMImpact';
 import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 

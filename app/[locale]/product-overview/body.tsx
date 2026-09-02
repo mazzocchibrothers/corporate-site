@@ -4,7 +4,6 @@ import React from 'react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import ProductHero from '@/components/product/ProductHero';
-import PlatformInfographic from '@/components/product/PlatformInfographic';
 import WhatSkillvueDoes from '@/components/product/WhatSkillvueDoes';
 import HowSkillvueWorks from '@/components/product/HowSkillvueWorks';
 import WhatWeAssess from '@/components/product/WhatWeAssess';

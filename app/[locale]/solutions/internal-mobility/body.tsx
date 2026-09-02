@@ -9,7 +9,6 @@ import IMHero from '@/components/solutions/im/IMHero';
 import IMProblem from '@/components/solutions/im/IMProblem';
 import IMShift from '@/components/solutions/im/IMShift';
 import IMHowSolves from '@/components/solutions/im/IMHowSolves';
-import IMImpact from '@/components/solutions/im/IMImpact';
 import SolutionCrossLinks from '@/components/shared/SolutionCrossLinks';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 
