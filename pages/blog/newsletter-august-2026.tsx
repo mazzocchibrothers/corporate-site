@@ -25,6 +25,9 @@ const LINKS = {
   gartner: 'https://www.gartner.com/en/conferences/emea/hr-symposium-uk',
   hrcoreAcademy: 'https://www.hrcoreacademy.com',
   unleash: 'https://www.unleash.ai/events/unleash-paris',
+  // Events in Italy
+  retailExecutiveSummit: 'https://www.retailexecutivesummit.it',
+  lavoroSostenibile: 'https://www.lavorosostenibile.com',
   // Internal pages (already live on the site)
   supermarkets: '/lp/supermarkets',
   unicomm: '/customers/unicomm',
@@ -96,6 +99,18 @@ const C = {
             cta: { label: 'Learn more', href: LINKS.hrcoreAcademy, external: true },
           },
           {
+            name: 'Retail Executive Summit',
+            meta: 'Cernobbio, 15–16 October',
+            text: 'A C-level conversation on how people and talent strategy are becoming an integral part of the strategic agenda in retail companies.',
+            cta: { label: 'Learn more', href: LINKS.retailExecutiveSummit, external: true },
+          },
+          {
+            name: 'Festival del Lavoro Sostenibile',
+            meta: 'Rome, 20 October',
+            text: 'An afternoon of roundtables on how the future of work is evolving, followed by networking and drinks.',
+            cta: { label: 'Learn more', href: LINKS.lavoroSostenibile, external: true },
+          },
+          {
             name: 'UNLEASH World',
             meta: 'Paris, 20–22 October',
             text: 'Come and meet us at our stand at one of Europe’s leading events dedicated to HR, technology and the future of work.',
@@ -129,7 +144,7 @@ const C = {
     tag: 'Newsletter',
     date: 'Agosto 2026',
     readTime: '5 min di lettura',
-    title: 'Competenze, nuovi insight e dove incontrarci in Europa',
+    title: 'Skills, nuovi insight e dove incontrarci in Europa',
     subtitle: 'Una nuova customer story con Gruppo Unicomm, un approfondimento sulle sfide organizzative della GDO e i nostri prossimi eventi in Europa.',
     intro: [
       'In Skillvue, mentre entriamo in una nuova stagione di eventi e confronti in tutta Europa, continuiamo a esplorare i temi che stanno ridefinendo il modo in cui le organizzazioni misurano e gestiscono le competenze.',
@@ -186,6 +201,18 @@ const C = {
             meta: 'Amsterdam, 7–8 ottobre',
             text: 'Due giornate dedicate a Talent Transformation e Learning & Development, dove porteremo anche nuove prospettive sui cambiamenti che stanno ridefinendo competenze, AI e talent management.',
             cta: { label: 'Scopri di più', href: LINKS.hrcoreAcademy, external: true },
+          },
+          {
+            name: 'Retail Executive Summit',
+            meta: 'Cernobbio, 15–16 ottobre',
+            text: 'Un confronto C-level su come persone e talent strategy stiano diventando parte integrante dell’agenda strategica delle aziende retail.',
+            cta: { label: 'Scopri di più', href: LINKS.retailExecutiveSummit, external: true },
+          },
+          {
+            name: 'Festival del Lavoro Sostenibile',
+            meta: 'Roma, 20 ottobre',
+            text: 'Un pomeriggio di roundtable dedicate all’evoluzione del futuro del lavoro, seguito da networking e aperitivo.',
+            cta: { label: 'Scopri di più', href: LINKS.lavoroSostenibile, external: true },
           },
           {
             name: 'UNLEASH World',
