@@ -149,7 +149,7 @@ const C = {
     intro: [
       'In Skillvue, mentre entriamo in una nuova stagione di eventi e confronti in tutta Europa, continuiamo a esplorare i temi che stanno ridefinendo il modo in cui le organizzazioni misurano e gestiscono le competenze.',
       'Dalla trasformazione della forza lavoro al talent management, fino alla necessità di prendere decisioni più rapide e informate in organizzazioni complesse e distribuite, avere **dati chiari sulle competenze** è essenziale.',
-      'In questa edizione raccogliamo una nuova customer story con Gruppo Unicomm, un approfondimento su alcune delle principali sfide organizzative della GDO e i nostri prossimi eventi in Europa.',
+      'In questa newsletter raccogliamo una nuova customer story con Gruppo Unicomm, un approfondimento su alcune delle principali sfide organizzative della GDO e i nostri prossimi eventi in Europa.',
     ],
     sections: [
       {
@@ -163,13 +163,13 @@ const C = {
       },
       {
         img: 'supermarkets',
-        heading: 'Che cosa significa un approccio skills-based nei supermercati?',
+        heading: 'Che cosa significa un approccio skills-based nella GDO?',
         body: [
           'Turnover elevato, selezione su larga scala, pipeline per i direttori di punto vendita, sviluppo delle persone in prima linea e integrazione post-acquisizione rendono la gestione del talento particolarmente complessa nella GDO.',
           'Abbiamo raccolto alcune delle sfide chiave del settore e approfondito come **dati oggettivi sulle competenze** possano supportare selezione, promozioni, sviluppo e trasformazione organizzativa.',
           'Il documento si concentra in particolare su quattro ambiti: selezione e screening su larga scala, costruzione delle pipeline per direttori di punto vendita e capireparto, sviluppo delle persone in prima linea e gestione delle competenze durante acquisizioni e riorganizzazioni.',
         ],
-        cta: { label: 'Esplora la panoramica sui supermercati', href: LINKS.supermarkets, external: false, newTab: true },
+        cta: { label: 'Esplora la panoramica nella GDO', href: LINKS.supermarkets, external: false, newTab: true },
       },
       {
         img: 'events',
