@@ -226,12 +226,21 @@ collectObjects(trees.en);
 // ── The headline fragments ─────────────────────────────────────────────────
 // `{ before, highlight1, middle, highlight2, after }` is one sentence written
 // as five keys. It becomes one message with <hl> tags.
-const HEADLINE_PARTS = ['before', 'highlight1', 'middle', 'highlight2', 'after'];
+// `{ before, highlight1, middle, highlight2, after }` — and, on the Mediaset
+// stories, a `highlight3` as well. One sentence written as five or six keys so
+// two or three phrases could be coloured. The parts are joined in the order the
+// object declares them, not in a fixed order, because that is the order the JSX
+// renders them in.
+const HEADLINE_PART = /^(before|middle\d*|after\d*|highlight\d*)$/;
 const headlines = [];
 const findHeadlines = (node, path = '') => {
   if (!node || typeof node !== 'object' || Array.isArray(node) || node.__jsx || node.__code) return;
   const keys = Object.keys(node);
-  if (keys.length && keys.every((k) => HEADLINE_PARTS.includes(k)) && keys.includes('before')) {
+  if (
+    keys.length >= 3 &&
+    keys.every((k) => HEADLINE_PART.test(k) && typeof node[k] === 'string') &&
+    keys.some((k) => k.startsWith('highlight'))
+  ) {
     headlines.push(path);
     return;
   }
@@ -243,11 +252,15 @@ const joinHeadline = (tree, path) => {
   const node = path.split('.').reduce((n, s) => n[s], tree);
   let out = '';
   let n = 0;
-  for (const part of HEADLINE_PARTS) {
-    const text = node[part];
-    if (text === undefined || text === '') continue;
-    if (part.startsWith('highlight')) { n += 1; out += `<hl${n > 1 ? n : ''}>${text}</hl${n > 1 ? n : ''}>`; }
-    else out += text;
+  for (const [part, text] of Object.entries(node)) {
+    if (!text) continue;
+    if (part.startsWith('highlight')) {
+      n += 1;
+      const tag = n === 1 ? 'hl' : `hl${n}`;
+      out += `<${tag}>${text}</${tag}>`;
+    } else {
+      out += text;
+    }
   }
   return out;
 };
@@ -314,13 +327,13 @@ const findImpure = (node, path = '') => {
 };
 findImpure(trees.en);
 
-const flatten = (node, path, into) => {
+const flatten = (node, path, into, locale) => {
   if (impureArrays.has(path) && Array.isArray(node)) {
     const { ids, structural } = impureArrays.get(path);
     node.forEach((el, i) => {
       for (const [k, v] of Object.entries(el)) {
         if (structural.has(k)) continue;
-        flatten(v, `${path}.${ids[i]}.${k}`, into);
+        flatten(v, `${path}.${ids[i]}.${k}`, into, locale);
       }
     });
     return;
@@ -328,22 +341,40 @@ const flatten = (node, path, into) => {
   if (node && typeof node === 'object' && node.__code) return;
   if (node && typeof node === 'object' && node.__jsx) {
     into[path] = node.__jsx.icu;
-    if (!richChunks.has(path)) richChunks.set(path, node.__jsx.chunks);
+    // Merge the two locales' chunks. The Italian sometimes breaks a label the
+    // English does not; the message differs, the rendering of each stays what
+    // it is, and t.rich simply needs a chunk for every tag either one uses.
+    const existing = richChunks.get(path) ?? [];
+    for (const c of node.__jsx.chunks) {
+      if (!existing.some((e) => e.tag === c.tag)) existing.push(c);
+    }
+    richChunks.set(path, existing);
     return;
   }
   if (node && typeof node === 'object' && !Array.isArray(node)) {
-    for (const [k, v] of Object.entries(node)) flatten(v, path ? `${path}.${k}` : k, into);
+    for (const [k, v] of Object.entries(node)) flatten(v, path ? `${path}.${k}` : k, into, locale);
   } else {
     into[path] = node;
   }
 };
 const catalogue = { en: {}, it: {} };
-for (const locale of ['en', 'it']) flatten(trees[locale], '', catalogue[locale]);
+for (const locale of ['en', 'it']) flatten(trees[locale], '', catalogue[locale], locale);
 for (const path of headlines) {
-  for (const part of HEADLINE_PARTS) delete catalogue.en[`${path}.${part}`], delete catalogue.it[`${path}.${part}`];
-  catalogue.en[path] = joinHeadline(trees.en, path);
-  catalogue.it[path] = joinHeadline(trees.it, path);
+  for (const locale of ['en', 'it']) {
+    for (const key of Object.keys(catalogue[locale])) {
+      if (key.startsWith(`${path}.`)) delete catalogue[locale][key];
+    }
+    catalogue[locale][path] = joinHeadline(trees[locale], path);
+  }
 }
+
+// An empty string in both locales is not a translation — check:messages says so
+// — and it is not copy either. It is a field the page reads and renders as
+// nothing. It stays nothing, at the call site.
+const emptyPaths = new Set(
+  Object.keys(catalogue.en).filter((k) => catalogue.en[k] === '' && catalogue.it[k] === ''),
+);
+for (const k of emptyPaths) { delete catalogue.en[k]; delete catalogue.it[k]; }
 
 // The two locales duplicate the same markup by hand, so they can disagree about
 // it. A tag in one and not the other means one language renders a fragment the
@@ -353,9 +384,33 @@ const tagMismatch = Object.keys(catalogue.en)
   .filter((k) => richChunks.has(k) && tagsIn(catalogue.en[k]) !== tagsIn(catalogue.it[k]))
   .map((k) => `  ${k}: en <${tagsIn(catalogue.en[k])}> vs it <${tagsIn(catalogue.it[k])}>`);
 if (tagMismatch.length) {
-  console.error(`${file}: the two locales use different markup in ${tagMismatch.length} message(s).`);
-  console.error(tagMismatch.join('\n'));
-  process.exit(1);
+  console.log(`  ${tagMismatch.length} message(s) where the two locales break differently:`);
+  console.log(tagMismatch.join('\n'));
+  console.log('  Both keep what they render today; the chunk map covers either.');
+}
+
+// A structural value that differs between the locales is a different matter.
+// It is taken from the English tree, so the Italian page would silently render
+// the English one — a different icon, from a different import.
+const codePaths = (node, path = '') => {
+  if (!node || typeof node !== 'object') return [];
+  if (node.__code) return [[path, node.__code]];
+  if (node.__jsx) return [];
+  return Object.entries(node).flatMap(([k, v]) => codePaths(v, path ? `${path}.${k}` : k));
+};
+const itCode = new Map(codePaths(trees.it));
+const codeMismatch = codePaths(trees.en)
+  .filter(([p, v]) => itCode.has(p) && itCode.get(p) !== v)
+  .map(([p, v]) => `  ${p}: en ${v} vs it ${itCode.get(p)}`);
+// Not an error: the icons are structure, and structure is allowed to differ.
+// But it is almost always drift — six icons on one page changed in English and
+// not in Italian — so it is reported loudly and the table keeps both, rather
+// than the English set silently becoming the Italian one too.
+const localeSplit = new Set(codeMismatch.map((l) => l.trim().split(':')[0].split('.').slice(0, -2).join('.')));
+if (codeMismatch.length) {
+  console.log(`  ${codeMismatch.length} place(s) where the two locales use different components:`);
+  console.log(codeMismatch.join('\n'));
+  console.log('  Kept per locale, so nothing changes on the page. Almost certainly drift — worth a look.');
 }
 
 // ── Rewrite the source ─────────────────────────────────────────────────────
@@ -403,14 +458,57 @@ const replacements = [];
 // the words.
 const tableName = (path) => path.replace(/\./g, '_').replace(/([a-z0-9])([A-Z])/g, '$1_$2').toUpperCase();
 const tables = [];
+const perLocaleTables = new Set();
 for (const [path, { ids, structural }] of impureArrays) {
-  const node = path.split('.').reduce((n, seg) => n[seg], trees.en);
-  const rows = node.map((el, i) => {
-    const props = [`id: '${ids[i]}'`];
-    for (const k of structural) if (el[k]) props.push(`${k}: ${el[k].__code}`);
-    return `  { ${props.join(', ')} },`;
-  });
-  tables.push(`const ${tableName(path)} = [\n${rows.join('\n')}\n];`);
+  const rowsFor = (locale) => {
+    const node = path.split('.').reduce((n, seg) => n[seg], trees[locale]);
+    return node.map((el, i) => {
+      const props = [`id: '${ids[i]}'`];
+      for (const k of structural) if (el[k]) props.push(`${k}: ${el[k].__code}`);
+      return `    { ${props.join(', ')} },`;
+    });
+  };
+  const en = rowsFor('en');
+  const it = rowsFor('it');
+  if (en.join('\n') === it.join('\n')) {
+    tables.push(`const ${tableName(path)} = [\n${en.map((r) => r.slice(2)).join('\n')}\n];`);
+  } else {
+    perLocaleTables.add(path);
+    tables.push(
+      `// The two locales use different components here. Both are kept, so the\n` +
+      `// page renders what it renders today — see the Issue.\n` +
+      `const ${tableName(path)} = {\n  en: [\n${en.join('\n')}\n  ],\n  it: [\n${it.join('\n')}\n  ],\n};`);
+  }
+}
+
+// A destructured callback — `.map(({ icon: Icon, value, label }) => …)` — takes
+// the copy properties out of scope entirely, and there is nothing left to
+// rewrite into a catalogue read. It is reported rather than half-transformed.
+{
+  const bad = [];
+  const visit = (node) => {
+    if (
+      ts.isCallExpression(node) &&
+      ts.isPropertyAccessExpression(node.expression) &&
+      node.expression.name.text === 'map'
+    ) {
+      const path = node.expression.expression.getText().replace(`${bindingName}.`, '');
+      const cb = node.arguments[0];
+      if (
+        impureArrays.has(path) && cb &&
+        (ts.isArrowFunction(cb) || ts.isFunctionExpression(cb)) &&
+        cb.parameters[0] && !ts.isIdentifier(cb.parameters[0].name)
+      ) bad.push(`  ${path}: ${cb.parameters[0].getText()}`);
+    }
+    ts.forEachChild(node, visit);
+  };
+  visit(sf);
+  if (bad.length) {
+    console.error(`${file}: ${bad.length} map callback(s) destructure a list whose copy is moving.`);
+    console.error(bad.join('\n'));
+    console.error('  Give the callback a plain parameter first, so the copy reads can be rewritten.');
+    process.exit(1);
+  }
 }
 
 // `X.map((s) => …)` where X is one of those arrays: which param reads it.
@@ -438,26 +536,34 @@ for (const path of headlines) {
   const b = bindingName;
 
   // {c.h.before}<span …>{c.h.highlight1}</span>{c.h.middle}<span …>{c.h.highlight2}</span>{c.h.after}
-  const jsx = new RegExp(
-    `\\{${b}\\.${p}\\.before\\}(<(\\w+)[^>]*>)\\{${b}\\.${p}\\.highlight1\\}</\\2>` +
-    `\\{${b}\\.${p}\\.middle\\}(<(\\w+)[^>]*>)\\{${b}\\.${p}\\.highlight2\\}</\\4>` +
-    `\\{${b}\\.${p}\\.after\\}`, 'g');
-  for (const m of src.matchAll(jsx)) {
+  // The whole run of {c.h.part} reads and the wrappers between them, however
+  // many highlights the story has.
+  // A highlight is sometimes guarded — `{c.h.highlight3 && <span>…</span>}` —
+  // because not every story has a third one. Both forms are part of the run.
+  const run = new RegExp(
+    `(?:\\{${b}\\.${p}\\.(?:before|middle\\d*|after\\d*)\\}|` +
+    `<(\\w+)[^>]*>\\{${b}\\.${p}\\.highlight\\d*\\}</\\1>|` +
+    `\\{${b}\\.${p}\\.highlight\\d* && <(\\w+)[^>]*>\\{${b}\\.${p}\\.highlight\\d*\\}</\\2>\\})+`, 'g');
+  for (const m of src.matchAll(run)) {
+    if (!m[0].includes('highlight')) continue;
+    const wrappers = [...m[0].matchAll(/(<(\w+)[^>]*>)\{[^}]*\.highlight\d*\}<\/\2>/g)];
+    if (wrappers.length === 0) continue;
+    const chunkLines = wrappers.map((w, i) => {
+      const tag = i === 0 ? 'hl' : `hl${i + 1}`;
+      return `                      ${tag}: (chunks) => ${w[1]}{chunks}</${w[2]}>,`;
+    });
     replacements.push({
       start: m.index,
       end: m.index + m[0].length,
-      text: `{t.rich('${path}', {\n` +
-        `                      hl: (chunks) => ${m[1]}{chunks}</${m[2]}>,\n` +
-        `                      hl2: (chunks) => ${m[3]}{chunks}</${m[4]}>,\n` +
-        `                    })}`,
+      text: `{t.rich('${path}', {\n${chunkLines.join('\n')}\n                    })}`,
     });
-    handled.push(`${path} (rendered)`);
+    handled.push(`${path} (rendered, ${wrappers.length} highlight${wrappers.length > 1 ? 's' : ''})`);
   }
 
   // `${c.h.before}${c.h.highlight1}${c.h.middle || ''}…` — the same sentence,
   // reassembled for a <title>, where the tags must not appear.
   const meta = new RegExp(
-    `\\$\\{${b}\\.${p}\\.before\\}(?:\\$\\{${b}\\.${p}\\.\\w+(?: \\|\\| '')?\\})+`, 'g');
+    `(?:\\$\\{${b}\\.${p}\\.\\w+(?: \\|\\| '')?\\}){2,}`, 'g');
   for (const m of src.matchAll(meta)) {
     replacements.push({
       start: m.index,
@@ -504,6 +610,11 @@ for (const { node, parts } of reads) {
     node.parent.operatorToken.kind === ts.SyntaxKind.AmpersandAmpersandToken &&
     node.parent.left === node;
 
+  if (emptyPaths.has(key) && !trailing.length) {
+    replacements.push({ start: node.getStart(), end: node.getEnd(), text: "''" });
+    continue;
+  }
+
   const chunks = richChunks.get(key);
   const call = isGuard
     ? `t.has('${key}')`
@@ -514,7 +625,8 @@ for (const { node, parts } of reads) {
         // A self-closing chunk has nothing to wrap, so it takes no argument.
         : `    ${c.tag}: () => ${c.jsx},`).join('\n') +
       `\n  })`
-    : impureArrays.has(key) ? tableName(key)
+    : impureArrays.has(key)
+      ? (perLocaleTables.has(key) ? `(${tableName(key)}[lang] ?? ${tableName(key)}.en)` : tableName(key))
     : arrayPaths.has(key) || objectPaths.has(key) ? `t.raw('${key}')` : `t('${key}')`;
   replacements.push({
     start: node.getStart(),

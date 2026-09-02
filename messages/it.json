@@ -1253,6 +1253,2025 @@
         "accent": "People Strategy?"
       },
       "headline": "Come il primo beauty retailer europeo ha reso visibili le competenze di <hl>2.200 persone</hl> su 370 store in <hl2>5 settimane</hl2>"
+    },
+    "eataly": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Eataly continua a crescere a ritmi serrati, soprattutto con le nuove aperture in Nord America. Con Skillvue, ha valutato migliaia di candidati per la mobilità internazionale in poche settimane, abbattendo le tempistiche medie del settore.",
+      "heroMetrics": [
+        {
+          "value": "1.300+",
+          "label": "candidature processate via AI pre-screening"
+        },
+        {
+          "value": "22",
+          "label": "risorse interne pronte a ricollocarsi"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Food Retail"
+          },
+          {
+            "label": "Dipendenti",
+            "value": "Oltre 5.300"
+          },
+          {
+            "label": "Fatturato",
+            "value": "684 mln €"
+          },
+          {
+            "label": "Presenza globale",
+            "value": "53+ punti vendita in 16 Paesi"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Un brand che cresce 20 volte più veloce del suo settore ha bisogno di trovare i talenti giusti alla stessa velocità",
+        "paragraph": "Eataly non è un operatore qualsiasi del food italiano. Con <b>€684M di ricavi, una crescita del 47% in tre anni</b>, e una revenue per employee doppia rispetto alla media di settore, è l'unico brand italiano del food con una presenza internazionale reale in <b>16 Paesi</b>. Dal 2022 sta accelerando su tutti i fronti: nuovi flagship in Nord America (dove si genera il <b>60% dei ricavi</b>), nuovi format compatti — Eataly Caffè in hub urbani e Eataly Collection negli aeroporti —, un piano da <b>€100M per il Medio Oriente</b>, e il primo Eataly at Sea con MSC Cruises.<br></br><br></br> Questa crescita richiede figure manageriali capaci di incarnare i valori del brand in contesti multiculturali: Head Chef, Director of Store Operations, General Manager capaci di portare l'autenticità italiana a Philadelphia, Toronto e Miami. Ma il settore della ristorazione non produce sempre il talento che serve. Con <b>258.000 posti vacanti, un turnover operativo del 50–70% e un tempo medio di reperimento di 4,5 mesi</b>, la carenza di figure qualificate è il vincolo più critico al piano di espansione. Nasce da qui il <b>Progetto Career Passport</b>, per trasformare questo vincolo in un vantaggio competitivo.",
+        "summary": "Il Career Passport è stato il primo capitolo per la costruzione di una talent strategy sempre più solida e innovativa attorno al concetto di mobilità internazionale e crescita, orientata a rendere il brand Eataly una piattaforma globale del Made in Italy."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Crescere a questa velocità espone un collo di bottiglia: trovare le persone giuste, in tempo",
+        "intro": "La campagna Career Passport ha generato oltre mille candidature esterne da sommare a tutte le application interne per 3 posizioni chiave.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "expansionSpeedOutpaces": {
+            "title": "La velocità dell’espansione supera la capacity di selezione",
+            "text": "20+ nuovi store in pipeline in Nord America, aperture simultanee su più mercati, date fissate. La campagna Career Passport ha generato 1.300+ candidature per 3 posizioni e decine di candidature interne che lo screening manuale non poteva reggere."
+          },
+          "profileRareArtisanal": {
+            "title": "Il profilo cercato è raro: artigianale + manageriale + internazionale",
+            "text": "Eataly cerca persone capaci di replicare l’autenticità artigianale italiana su scala globale. Leadership, gestione del personale, inglese fluente, disponibilità alla mobilità: un profilo composito e difficilmente reperibile."
+          },
+          "costErrorAmplified": {
+            "title": "Il costo dell’errore è amplificato dalla crescita",
+            "text": "Per un’azienda che investe milioni nell’espansione internazionale e ha aperture store con date fissate, ogni posizione scoperta costa €20.000–€40.000 in mancati ricavi per trimestre. A questa scala, la qualità della selezione è una variabile di P&L."
+          }
+        },
+        "hrChallenges": {
+          "fairnessAtVolumes": {
+            "title": "Ricerca di equità su volumi mai gestiti prima",
+            "text": "Migliaia di candidature da canali interni ed esterni da processare. Senza uno strumento strutturato, il rischio era valutare in modo disomogeneo: nel settore il 38,1% dei mismatch deriva proprio da assessment non standardizzati."
+          },
+          "filteringBlockingRequirements": {
+            "title": "Necessità di filtrare da subito i requisiti bloccanti",
+            "text": "Disponibilità al trasferimento, range retributivo, esperienza internazionale: in un settore dove il costo di sostituzione di un manager è il 65–90% della RAL, investire ore di colloquio su candidati non idonei era un lusso che la velocità del piano non consentiva."
+          },
+          "hiringProcessAs": {
+            "title": "Il processo di selezione come leva di employer branding",
+            "text": "Per attrarre i migliori, Eataly doveva comunicare il valore del suo brand anche attraverso il processo di selezione: innovazione, attenzione alla persona, l’unicità dell’opportunità internazionale."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "process1300": {
+            "text": "Processare 1.300+ candidature in settimane, non mesi: comprimere i tempi di pre-screening per stare al passo con un piano di aperture che non aspetta."
+          },
+          "mapAllKey": {
+            "text": "Mappare tutti i fattori chiave già al pre-screening: Leadership, gestione del personale, lingua inglese, aspirazione alla mobilità internazionale. Valutare tutto prima del primo colloquio umano, per concentrare l’investimento di tempo sui candidati con il più alto potenziale di successo."
+          },
+          "ensureFairnessGrowth": {
+            "text": "Garantire equità e possibilità di crescita su scala: ogni candidato valutato con lo stesso rigore e la stessa profondità, costruendo un processo difendibile e trasparente sia all’interno che all’esterno."
+          },
+          "turnHiringInto": {
+            "text": "Trasformare la selezione in un acceleratore dell’espansione: non solo trovare persone, ma costruire una macchina di talent acquisition che regga la scala di un brand che sta raddoppiando la presenza in Nord America e punta a 40 nuovi store in Medio Oriente."
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI con Skillvue per il progetto Career Passport",
+        "intro": "Skillvue è stato integrato nel processo di selezione esterna del progetto Eataly Career Passport — il programma di global mobility lanciato per supportare l’espansione in Nord America. Dopo che una campagna omnichannel ha raccolto oltre 1.300 candidature, Skillvue ha gestito il pre-screening con un assessment basato su domande filtro e domande situazionali calibrate sui ruoli specifici (Head Chef, Director of Store Operations, General Manager of Restaurant).",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "leadershipPeopleManagement": {
+            "label": "Leadership e gestione del personale"
+          },
+          "englishLanguage": {
+            "label": "Lingua inglese"
+          },
+          "opennessInternationalMobility": {
+            "label": "Predisposizione alla mobilità internazionale"
+          }
+        }
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Cosa è cambiato e perché conta.",
+        "subtitle": "I risultati del progetto Skillvue × Eataly Career Passport.",
+        "metrics": [
+          {
+            "value": "1.300+",
+            "label": "Candidature processate"
+          },
+          {
+            "value": "13",
+            "label": "Risorse esterne in shortlist"
+          },
+          {
+            "value": "22",
+            "label": "Risorse interne pronte a ricollocarsi"
+          }
+        ],
+        "qualitative": {
+          "clearResultsMatter": {
+            "title": "Risultati chiari in poche settimane",
+            "text": "In un settore dove trovare un manager qualificato richiede in media 4,5 mesi, Skillvue ha permesso di processare l’intero volume di candidature e arrivare a una shortlist pronta per i colloqui in poche settimane, abilitando il piano di aperture senza ritardi."
+          },
+          "transfersAlreadyUnderway": {
+            "title": "Trasferimenti già avviati da Europa a Nord America",
+            "text": "Da Londra a Boston, da Stoccolma a Philadelphia, da Monaco a West Palm Beach, da Roma a Toronto — Eataly sta costruendo una pipeline di talento internazionale che porta l’autenticità italiana nei nuovi mercati. Un risultato tangibile del Career Passport."
+          },
+          "employerBrandingRecognised": {
+            "title": "Employer branding premiato",
+            "text": "Il progetto è stato riconosciuto come di altissimo valore nel 2025, anno di lancio, e per questo motivo viene portato avanti anche nel 2026. In un settore dove la competizione per il talento è strutturalmente sfavorevole alla ristorazione, Eataly ha dimostrato che un processo di selezione innovativo è esso stesso un asset di brand."
+          }
+        }
+      },
+      "vision": {
+        "badge": "EVOLUZIONE 2026",
+        "title": "L’espansione continua. La macchina di talent acquisition anche.",
+        "intro": "Eataly è nel pieno di una trasformazione da brand mono-formato a piattaforma multi-formato globale. Il Career Passport è stato il primo capitolo per la costruzione di una talent strategy sempre più solida e innovativa, orientata a rendere il brand Eataly una piattaforma globale del Made in Italy."
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "adr",
+            "company": "Aeroporti di Roma",
+            "tag": "Aviation · Mobilità Interna",
+            "headline": "Aeroporti di Roma: come sviluppare un’organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi"
+          },
+          {
+            "id": "ins-mercato",
+            "company": "In's Mercato",
+            "tag": "Retail GDO · Mobilità Interna",
+            "headline": "In's Mercato: come ha costruito una pipeline interna di Store Manager"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti <hl>ad alto potenziale</hl>"
+    },
+    "eataly-2": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Insieme a Skillvue, Eataly ha avviato un percorso di digital transformation per integrare AI e human touch nel recruiting e sostenere così l'espansione del business.",
+      "heroMetrics": [
+        {
+          "value": "1.000+",
+          "label": "candidature processate"
+        },
+        {
+          "value": "50",
+          "label": "punti vendita diretti"
+        },
+        {
+          "value": "15",
+          "label": "Paesi"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Food Retail"
+          },
+          {
+            "label": "Dipendenti",
+            "value": "Oltre 5.300"
+          },
+          {
+            "label": "Fatturato",
+            "value": "684 mln €"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Un brand che cresce a ritmi serrati ha bisogno di trovare i talenti giusti alla stessa velocità",
+        "paragraph": "Eataly non è un operatore qualsiasi del food italiano. Con una <b>crescita del 47% in tre anni</b> e una presenza internazionale reale in <b>15 Paesi</b>, è l'unico brand del food Made in Italy a operare su scala globale. Dal 2022 sta accelerando su tutti i fronti: <b>nuovi flagship in Nord America</b>, nuovi format compatti in hub urbani e aeroporti, un piano di espansione in <b>Medio Oriente</b> e la prima esperienza a bordo delle navi da crociera.<br></br><br></br> Questa crescita richiede figure professionali capaci di incarnare i valori del brand in contesti multiculturali — dai profili manageriali come <b>Head Chef, Director of Store Operations e General Manager</b>, fino ai profili più junior che rappresentano la <b>prossima generazione di talento Eataly</b>. In uno scenario in cui il mondo del lavoro è diventato più <b>dinamico, digitale e in continua trasformazione</b>, l'obiettivo era chiaro: semplificare e rendere più efficienti i processi di recruiting, senza perdere la <b>qualità, l'autenticità e l'attenzione alla persona</b> che da sempre contraddistinguono il brand. Nasce da qui il <b>Progetto Career Passport</b>, primo capitolo per la costruzione di una <b>talent strategy</b> sempre più solida e innovativa, orientata a rendere Eataly una piattaforma globale del Made in Italy."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Crescere a questa velocità significa ripensare il modo di lavorare",
+        "intro": "La campagna Career Passport ha generato oltre mille candidature per 3 posizioni chiave. Una scala che, per essere gestita, richiedeva non solo nuovi strumenti, ma un nuovo modo di lavorare.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "expansionSpeedOutpaces": {
+            "title": "La velocità dell'espansione supera la capacity di selezione",
+            "text": "20+ nuovi store in pipeline in Nord America, aperture simultanee su più mercati, date fissate. Lo screening manuale non reggeva più i ritmi e il livello di profondità richiesti."
+          },
+          "profileRareArtisanal": {
+            "title": "Il profilo cercato è raro: artigianale + manageriale + internazionale",
+            "text": "Eataly cerca chi sa replicare l'autenticità artigianale su scala globale. Leadership, gestione del personale, inglese fluente, mobilità internazionale: un profilo composito e difficile da trovare."
+          },
+          "growthAmplifiesWeight": {
+            "title": "La crescita amplifica il peso specifico della selezione",
+            "text": "Per un'azienda con aperture store su date fissate, ogni posizione scoperta è un problema operativo e di costi. A questa scala, la qualità della selezione è ancora più cruciale."
+          }
+        },
+        "hrChallenges": {
+          "newMoreAgile": {
+            "title": "Servono nuovi modi di lavorare, più agili e data-driven",
+            "text": "Gestire questi volumi richiedeva evolvere il team HR: da un approccio tradizionale a una mentalità agile, guidata dai dati e capace di adattarsi ai cambiamenti del business."
+          },
+          "fairnessObjectivityAt": {
+            "title": "Ricerca di equità e oggettività su volumi mai gestiti prima",
+            "text": "Senza uno strumento strutturato, il rischio era valutare in modo disomogeneo. Nel settore, il 38,1% dei mismatch deriva proprio da assessment non standardizzati."
+          },
+          "filteringBlockingRequirements": {
+            "title": "Necessità di filtrare da subito i requisiti bloccanti",
+            "text": "Disponibilità al trasferimento, range retributivo, esperienza internazionale: requisiti bloccanti da verificare al primo contatto, prima di investire tempo su candidati non idonei."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "mapAllKey": {
+            "text": "Mappare tutti i fattori chiave già al pre-screening: Leadership, gestione del personale, lingua inglese, aspirazione alla mobilità internazionale. Valutare tutto ancora prima del colloquio, per concentrare l'investimento di tempo successivo in una conversazione più mirata, personalizzata, e guidata da informazioni chiave."
+          },
+          "ensureFairnessReduce": {
+            "text": "Garantire equità e ridurre i bias in modo strutturale: ogni candidato valutato con lo stesso rigore e la stessa profondità, costruendo un processo difendibile e trasparente sia all'interno che all'esterno, grazie a strumenti psicometricamente validati."
+          },
+          "integrateAiHuman": {
+            "text": "Integrare AI e human touch senza mai perdere l'autenticità del brand: usare la tecnologia come abilitatore — non come sostituzione — del valore umano che da sempre contraddistingue Eataly, per processi più efficaci, inclusivi e consapevoli."
+          },
+          "processApplicationsWeeks": {
+            "text": "Processare le candidature in settimane, non mesi: comprimere i tempi di pre-screening per stare al passo con un piano di aperture che non aspetta, semplificando radicalmente il flusso di screening del team HR."
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI con Skillvue per il progetto Career Passport",
+        "intro": "Skillvue è stato integrato nel processo di selezione esterna del progetto Eataly Career Passport — il programma di global mobility lanciato per supportare l'espansione in Nord America. Dopo che una campagna omnichannel ha raccolto oltre 1.000 candidature, Skillvue ha gestito il pre-screening con un assessment basato su domande filtro e domande situazionali calibrate sui ruoli specifici (Head Chef, Director of Store Operations, General Manager of Restaurant).",
+        "intro2": "L'obiettivo non era sostituire il giudizio umano, ma potenziarlo: lasciare all'AI il lavoro di standardizzazione su larga scala e restituire al team HR tempo e dati di qualità per concentrarsi su ciò che conta davvero: il confronto umano successivo.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "leadership": {
+            "label": "Leadership"
+          },
+          "peopleManagement": {
+            "label": "Gestione del personale"
+          },
+          "opennessInternationalMobility": {
+            "label": "Predisposizione alla mobilità internazionale"
+          }
+        }
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Cosa è cambiato e perché conta.",
+        "subtitle": "I risultati del progetto Skillvue × Eataly Career Passport.",
+        "metrics": [
+          {
+            "value": "1.000+",
+            "label": "candidature processate in poche settimane"
+          },
+          {
+            "value": "Time‑to‑hire ridotto",
+            "label": "nonostante gli alti volumi"
+          },
+          {
+            "value": "Più dati a disposizione",
+            "label": "per le decisioni che contano davvero"
+          }
+        ],
+        "qualitative": {
+          "hrTeamProductivity": {
+            "title": "Produttività del team HR aumentata",
+            "text": "Liberato dallo screening manuale, il team Talent Acquisition ha dedicato più tempo alle fasi ad alto valore: colloqui, valutazioni finali, relazione con i candidati."
+          },
+          "significantReductionHiring": {
+            "title": "Riduzione significativa dei bias nella selezione",
+            "text": "Gli strumenti psicometricamente validati hanno ridotto il peso dei bias cognitivi, garantendo standard di valutazione coerenti su tutti i candidati, indipendentemente dal valutatore."
+          },
+          "authenticityHumanTouch": {
+            "title": "L'autenticità del tocco umano è rimasta intatta",
+            "text": "L'AI ha gestito standardizzazione e scala; le persone hanno gestito relazione, contesto e lettura del potenziale. Un processo più efficiente, ma mai impersonale."
+          }
+        }
+      },
+      "vision": {
+        "badge": "EVOLUZIONE 2026",
+        "title": "L'espansione continua. La macchina di talent acquisition anche.",
+        "intro": "Il Career Passport è stato il primo capitolo per la costruzione di una talent strategy sempre più solida e innovativa, orientata a rendere il brand Eataly una piattaforma globale del Made in Italy.",
+        "nextGen": "Nel 2026 la collaborazione prosegue con il progetto NextGen, focalizzato su candidati junior con 270+ profili già inclusi nell'assessment di lingua inglese (livello B2) e soft skill. Un segnale chiaro della volontà di Eataly di continuare a integrare AI e human touch come leva strutturale di una talent strategy consapevole, inclusiva e scalabile."
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "adr",
+            "company": "Aeroporti di Roma",
+            "tag": "Aviation · Mobilità Interna",
+            "headline": "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi"
+          },
+          {
+            "id": "ins-mercato",
+            "company": "In's Mercato",
+            "tag": "Retail GDO · Mobilità Interna",
+            "headline": "In's Mercato: come ha costruito una pipeline interna di Store Manager"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti <hl>ad alto potenziale</hl>"
+    },
+    "eataly-3": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con il supporto di Skillvue, Eataly ha ottimizzato la valutazione delle competenze in fase di pre-screening, gestendo oltre 1.000 candidature senza rinunciare alla qualità di valutazione, alla vicinanza alla persona e all'autenticità del brand in ogni fase del processo.",
+      "heroMetrics": [
+        {
+          "value": "1.000+",
+          "label": "candidature processate"
+        },
+        {
+          "value": "50",
+          "label": "punti vendita diretti"
+        },
+        {
+          "value": "15",
+          "label": "Paesi"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Food Retail"
+          },
+          {
+            "label": "Dipendenti",
+            "value": "Oltre 5.300"
+          },
+          {
+            "label": "Fatturato",
+            "value": "684 mln €"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Un brand di respiro globale che non rinuncia alla sua identità",
+        "paragraph": "Eataly non è un operatore qualsiasi del food italiano. Con una <b>crescita del 47% in tre anni</b> e una presenza internazionale reale in <b>15 Paesi</b>, è l'unico brand del food Made in Italy a operare su scala globale. Dal 2022 sta accelerando su tutti i fronti: <b>nuovi flagship in Nord America</b>, nuovi format compatti in hub urbani e aeroporti e un piano di espansione in <b>Medio Oriente</b>.<br></br><br></br> Questa crescita richiede figure professionali capaci di incamerare i valori del brand in contesti multiculturali — dai profili manageriali come <b>Head Chef, Director of Store Operations e General Manager</b>, fino ai profili più junior che rappresentano la <b>prossima generazione di talento Eataly</b>. In uno scenario in cui il mondo del lavoro è diventato più <b>dinamico, digitale e in continua trasformazione</b>, l'obiettivo era chiaro: semplificare e rendere più efficienti i processi di recruiting, senza perdere la <b>qualità, l'autenticità e l'attenzione alla persona</b> che da sempre contraddistinguono il brand. Nasce da qui il <b>Progetto Eataly Career Passport</b>, primo capitolo per la costruzione di una <b>talent strategy</b> sempre più solida e innovativa, orientata a rendere Eataly un riferimento globale del Made in Italy."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Crescere a questa velocità significa ripensare il modo di lavorare",
+        "intro": "La campagna Eataly Career Passport ha generato oltre mille candidature per 3 posizioni chiave. Un volume che, per essere gestito, richiedeva non solo nuovi strumenti, ma anche un nuovo approccio.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "paceExpansionDemanded": {
+            "title": "La velocità di espansione richiedeva nuove strategie nel processo di selezione",
+            "text": "10+ nuovi store in pipeline in Nord America, aperture simultanee su più mercati, date fissate. Andava potenziato lo screening per coniugare alti volumi e maggiore profondità di analisi."
+          },
+          "searchWasChallenging": {
+            "title": "La ricerca era sfidante: competenze operative, visione manageriale e respiro internazionale",
+            "text": "Eataly cerca chi sa replicare l'autenticità della cultura enogastronomica italiana su scala globale: un profilo che combina leadership, gestione dei team, inglese fluente e mobilità internazionale."
+          },
+          "growthDemandedEven": {
+            "title": "La crescita richiedeva un impegno ancora maggiore rispetto a prima nella selezione",
+            "text": "In un contesto di forte crescita, ogni inserimento ha un impatto diretto su operatività e costi: per questo la qualità della selezione diventa ancora più strategica."
+          }
+        },
+        "hrChallenges": {
+          "newMoreData": {
+            "title": "Serviva un nuovo modo di lavorare, più data-driven",
+            "text": "La gestione di questi volumi ha spinto il team HR a evolvere verso un approccio agile, guidato dai dati e allineato alla dinamicità del business."
+          },
+          "softSkillsHad": {
+            "title": "Andava acceso il riflettore sulle soft skill fin da prima del colloquio",
+            "text": "Proprio in virtù della specificità dei ruoli ricercati, l'analisi delle soft skill più rilevanti non poteva essere rimandata a una fase successiva."
+          },
+          "despitePaceFeedback": {
+            "title": "Nonostante la velocità, andava preservato il momento di feedback ai candidati",
+            "text": "Era fondamentale poter restituire a ciascun candidato un'analisi dettagliata rispetto al possesso di competenze chiave per il ruolo dopo il primo screening."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Obiettivi di collaborazione",
+        "items": {
+          "mapAllKey": {
+            "text": "Mappare fin dal pre-screening tutti i fattori chiave: leadership, gestione del personale, conoscenza dell'inglese e disponibilità alla mobilità internazionale, per arrivare al colloquio con informazioni già strutturate e concentrare il tempo su una conversazione più mirata, personalizzata e di valore."
+          },
+          "maintainingHighStandard": {
+            "text": "Mantenere alto lo standard di equità: l'equità per Eataly non è un obiettivo, è una garanzia. Ogni candidato doveva essere valutato attraverso strumenti psicometricamente validati, così da rendere il processo di selezione trasparente e libero da bias strutturali."
+          },
+          "integrateAiHuman": {
+            "text": "Integrare AI e human touch senza mai perdere l'autenticità del brand: usare la tecnologia come abilitatore — non come sostituzione del valore umano che da sempre contraddistingue Eataly, per processi più efficaci, inclusivi e consapevoli."
+          },
+          "processApplicationsLess": {
+            "text": "Processare le candidature in minor tempo senza comprimere la qualità: la velocità non deve essere il risultato di una semplificazione, ma di un'architettura progettata per scalare e mantenere al contempo profondità e qualità di analisi."
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI con Skillvue per il progetto Career Passport",
+        "intro": "Skillvue è stato integrato nel processo di selezione di <b>Eataly Career Passport</b>, il programma di global mobility lanciato per supportare l'<b>espansione in Nord America</b>. Dopo una campagna omnichannel che <b>ha raccolto oltre 1.000 candidature</b>, Skillvue ha gestito il pre-screening con un assessment basato su <b>domande filtro e domande situazionali</b> calibrate sui ruoli specifici (<b>Head Chef, Director of Store Operations, General Manager of Restaurant</b>).",
+        "intro2": "L'obiettivo non era <b>sostituire il giudizio umano, ma liberarlo</b>. All'AI il lavoro di standardizzazione su larga scala; al team HR i dati per concentrarsi su ciò che <b>nessun algoritmo può sostituire</b>: la valutazione umana che segue.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "leadership": {
+            "label": "Leadership"
+          },
+          "peopleManagement": {
+            "label": "Gestione del personale"
+          },
+          "opennessInternationalMobility": {
+            "label": "Predisposizione alla mobilità internazionale"
+          }
+        }
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Cosa è cambiato e perché conta.",
+        "subtitle": "I risultati del progetto Skillvue × Eataly Career Passport.",
+        "metrics": [
+          {
+            "value": "1.000+",
+            "label": "candidature processate in poche settimane"
+          },
+          {
+            "value": "Time‑to‑hire ridotto",
+            "label": "nonostante gli alti volumi"
+          },
+          {
+            "value": "Più dati a disposizione",
+            "label": "per le decisioni che contano davvero"
+          }
+        ],
+        "qualitative": {
+          "hrTeamProductivity": {
+            "title": "Produttività del team HR aumentata",
+            "text": "Liberato dallo screening manuale, il team Talent Acquisition ha dedicato più tempo alle fasi ad alto valore: colloqui, valutazioni finali, relazione con i candidati."
+          },
+          "significantReductionHiring": {
+            "title": "Riduzione significativa dei bias nella selezione",
+            "text": "Gli strumenti psicometricamente validati hanno ridotto il peso dei bias cognitivi, garantendo standard di valutazione coerenti su tutti i candidati, indipendentemente dal valutatore."
+          },
+          "authenticityHumanTouch": {
+            "title": "L'autenticità del tocco umano è rimasta intatta",
+            "text": "L'AI ha gestito standardizzazione e scala; le persone hanno gestito relazione, contesto e lettura del potenziale. Un processo più efficiente, ma mai impersonale."
+          }
+        }
+      },
+      "vision": {
+        "badge": "EVOLUZIONE 2026",
+        "title": "Una collaborazione che cresce",
+        "intro": "Il programma <b>Eataly Career Passport</b> ha rappresentato il primo tassello di un <b>percorso di mobilità internazionale</b> dedicato ai profili manageriali. Nel 2026, la collaborazione si estende con <b>Eataly NextGen</b>, rivolto ai profili junior: <b>270+ candidati</b> valutati in un assessment strutturato di <b>lingua inglese (livello B2) e soft skill</b>. Un segnale concreto della volontà di Eataly di consolidare l'integrazione tra <b>AI e human touch</b> come fondamento di una <b>talent strategy inclusiva e scalabile</b>."
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "adr",
+            "company": "Aeroporti di Roma",
+            "tag": "Aviation · Mobilità Interna",
+            "headline": "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi"
+          },
+          {
+            "id": "ins-mercato",
+            "company": "In's Mercato",
+            "tag": "Retail GDO · Mobilità Interna",
+            "headline": "In's Mercato: come ha costruito una pipeline interna di Store Manager"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Eataly: come Integrare <hl>Intelligenza Artificiale e tocco umano</hl> per costruire processi di selezione più efficaci, inclusivi e consapevoli"
+    },
+    "fidia-farmaceutici": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue, Fidia sta trasformando la propria infrastruttura HR in un sistema di talent intelligence globale, capace di mappare le competenze di centinaia di Medical Representative e tradurle in piani di sviluppo e decisioni di talent management basate sui dati.",
+      "heroMetrics": [
+        {
+          "value": "1.700",
+          "label": "dipendenti"
+        },
+        {
+          "value": "120+",
+          "label": "Paesi"
+        },
+        {
+          "value": "400+",
+          "label": "dipendenti già inclusi in assessment"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Farmaceutico"
+          },
+          {
+            "label": "Fatturato",
+            "value": ">500M€"
+          },
+          {
+            "label": "Dipendenti",
+            "value": "1.700"
+          },
+          {
+            "label": "Paesi",
+            "value": "120+"
+          },
+          {
+            "label": "Filiali",
+            "value": "17"
+          },
+          {
+            "label": "Use Case",
+            "value": "Learning & Development"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Un leader mondiale dell'innovazione farmaceutica con una rete vendita da conoscere a fondo",
+        "paragraph": "Fidia Farmaceutici è un'azienda italiana con <b>80 anni di competenza scientifica</b>, leader mondiale nella ricerca, sviluppo, produzione e commercializzazione di prodotti innovativi a base di <b>acido ialuronico e suoi derivati</b> (<b>1.250+ brevetti</b>) in aree strategiche quali joint care, skin care, eye care, specialty care e health&wellness care. Fidia distribuisce i propri prodotti in <b>120+ paesi nel mondo</b>, grazie a un consolidato network di partner e distributori e filiali commerciali in mercati strategici.<br></br><br></br> La sua rete commerciale è altrettanto articolata: è infatti composta da centinaia di <b>Medical Representative</b> distribuiti non solo al di fuori dei confini nazionali, in <b>Europa</b>, ma anche in <b>USA e Medio Oriente</b>. Questi professionisti sono il punto di contatto tra la scienza di Fidia e l'utenza finale, e in un momento caratterizzato da una parte dalla <b>forte crescita ed espansione internazionale</b> dell'organizzazione e dall'altra dall'<b>evoluzione delle competenze</b> richieste dal mercato del lavoro, conoscerne le capacità in modo strutturato diventava sempre più un <b>prerequisito strategico</b> per poter direzionare al meglio le evoluzioni del modello commerciale."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "La transizione commerciale doveva andare di pari passo con una trasformazione in ottica skills-based",
+        "intro": "Fidia partiva da una realtà comune a molte multinazionali: una rete vendita capace e distribuita, ma valutata per forza di cose in modo frammentato, e molto complicata da gestire nel momento in cui erano necessari aggiornamenti radicali nel modello di vendita. Serviva uno shift nell'approccio alla gestione delle competenze, che permettesse di creare una base dati utile a prendere decisioni di talent management strategiche per il futuro su scala globale.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "networkDevelopmentRequired": {
+            "title": "Lo sviluppo della rete richiedeva più dati",
+            "text": "Accompagnare la rete verso una reale crescita personale, cruciale per l'evoluzione del modello commerciale e per l'employability futura, richiedeva dati strutturati sulle competenze reali di ogni professionista."
+          },
+          "thereWasNo": {
+            "title": "Mancava un sistema di gestione cross-country",
+            "text": "Valutare senza distorsioni una rete multilingue può essere complesso. Bisognava garantire la stessa qualità di misurazione in ogni mercato, con criteri uniformi e risultati confrontabili."
+          },
+          "scalableInfrastructureWas": {
+            "title": "Serviva un'infrastruttura scalabile",
+            "text": "Serviva un sistema di valutazione replicabile su ruoli e regioni diverse, per porre le basi per un'estensione del progetto a tutta la popolazione di Fidia e ad altre fasi del talent lifecycle, senza dover ripartire da zero."
+          }
+        },
+        "hrChallenges": {
+          "retentionNeededBe": {
+            "title": "La retention andava ottimizzata",
+            "text": "Servivano modelli psicometrici avanzati per riconoscere i profili ad alto potenziale, predire con accuratezza e oggettività i loro need futuri e garantirne una reale crescita all'interno dell'azienda."
+          },
+          "assessmentTrainingNeeded": {
+            "title": "Valutazione e formazione andavano integrate",
+            "text": "I risultati dell'assessment dovevano alimentare i sistemi di formazione interni. Ogni gap andava tradotto in un'azione formativa concreta, misurabile e allineata alle priorità di sviluppo."
+          },
+          "gettingAheadMarket": {
+            "title": "Bisognava lavorare d'anticipo sul mercato",
+            "text": "La funzione HR doveva lavorare proattivamente per prepararsi alle trasformazioni in corso nel mercato del lavoro, assicurando che l'organizzazione disponesse di tutte le competenze necessarie allo sviluppo futuro."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Gli obiettivi della collaborazione",
+        "items": {
+          "item": {
+            "text": "<b>Ottenere</b> una fotografia oggettiva, standardizzata e confrontabile delle competenze di tutti i MR, indipendentemente dal Paese."
+          },
+          "item2": {
+            "text": "<b>Identificare</b> i profili ad alto potenziale da inserire in percorsi di crescita e sviluppo."
+          },
+          "item3": {
+            "text": "<b>Gestire</b> la complessità dell'assessment multilingue garantendo equità e comparabilità dei risultati senza sacrificare l'autenticità delle risposte."
+          },
+          "item4": {
+            "text": "<b>Creare</b> un collegamento diretto tra i risultati dell'assessment e i piani formativi individuali portati avanti da Fidia."
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI costruito ad hoc sul modello Fidia",
+        "intro": "Il team di Fidia e quello di Skillvue hanno lavorato insieme per costruire un sistema di assessment che partisse dal business reale: le situazioni concrete che un MR Fidia affronta ogni giorno, in ogni mercato.",
+        "solutionObjectives": [],
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skillsNote": "Il modello è strutturato su tre layer sovrapposti, dal più trasversale al più specifico per ruolo, ancorato al framework VOLA (Vision, Ownership, Leadership, Accountability) già in uso in Fidia.",
+        "skills": {
+          "foundationBehavioralLayer": {
+            "label": "Foundation Behavioral Layer",
+            "sublabel": "Layer 1 — Base comportamentale trasversale, framework VOLA"
+          },
+          "medicalScientificSkills": {
+            "label": "Medical Scientific Skills",
+            "sublabel": "Layer 2 — Competenze scientifico-mediche per MR in specialty pharma"
+          },
+          "salesSystemSkills": {
+            "label": "Sales System Skills",
+            "sublabel": "Layer 3 — Competenze di sistema commerciale su misura Fidia"
+          }
+        },
+        "multilingualItems": []
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Dove stiamo andando",
+        "subtitle": "I risultati attesi del progetto Skillvue × Fidia Farmaceutici.",
+        "metrics": [],
+        "qualitative": {
+          "firstObjectivePicture": {
+            "title": "La prima fotografia oggettiva della rete vendita globale in 12 lingue",
+            "text": "Per la prima volta, Fidia avrà una visione strutturata e confrontabile delle competenze di tutti i suoi MR nel mondo — costruita con gli stessi criteri in ogni Paese, indipendentemente dalla lingua o dalla cultura commerciale locale."
+          },
+          "transitionSupportedBy": {
+            "title": "Una transizione supportata dai dati",
+            "text": "Fidia saprà su quali figure lavorare, con quali percorsi e con quali priorità per assicurare che l'evoluzione del business e del modello commerciale siano supportate dalla presenza in azienda dei migliori professionisti."
+          },
+          "developmentTrainingFinally": {
+            "title": "Sviluppo e formazione finalmente collegati",
+            "text": "I gap rilevati dall'assessment dialogheranno direttamente con i sistemi di formazione interni. La connessione tra valutazione e percorso formativo chiuderà un loop che prima restava aperto."
+          },
+          "buildingFutureBoth": {
+            "title": "Preparazione al futuro, per le persone e per l'azienda",
+            "text": "Il lavoro avviato costruirà le basi per l'impostazione di un modello di sviluppo costante del talento, orientato a garantire una piena realizzazione di ogni persona, maggiore employability e maggiore responsività alle trasformazioni del mercato."
+          }
+        }
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "adr",
+            "company": "Aeroporti di Roma",
+            "tag": "Aviation · Mobilità Interna",
+            "headline": "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone ripartendo dal potenziale interno"
+          },
+          {
+            "id": "europ-assistance",
+            "company": "Europ Assistance",
+            "tag": "Financial Services · Hiring",
+            "headline": "Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Fidia Farmaceutici: come fotografare su scala globale le <hl>reali competenze della rete vendita</hl> per supportare la <hl2>crescita futura</hl2>"
+    },
+    "europ-assistance": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue, Europ Assistance ha trasformato il pre-screening dei candidati in un processo scalabile e strategico per l'intero talent lifecycle, lavorando sulla valorizzazione delle competenze trasversali fin dal primo step della selezione.",
+      "heroMetrics": [
+        {
+          "value": "10.000",
+          "label": "centri nella rete in Italia"
+        },
+        {
+          "value": "900+",
+          "label": "dipendenti"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "companyName": "Europ Assistance (ora Redion)",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Financial Services"
+          },
+          {
+            "label": "Gruppo",
+            "value": "Generali"
+          },
+          {
+            "label": "Centri nella rete in Italia",
+            "value": "10.000"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "In un business fondato sull'interazione umana, la qualità della selezione non può accettare compromessi.",
+        "paragraph": "Europ Assistance, parte del <b>Gruppo Generali</b> e da pochissimo rientrata insieme a Generali Employee Benefits sotto il nuovo brand di global care <b>Redion</b>, è uno dei leader mondiali nei servizi di assistenza e assicurazione viaggi. La sua è una crescita costante: è in corso infatti l'espansione delle operazioni in nuovi mercati e la convergenza con Generali Care in un <b>hub integrato di assistenza</b>.<br></br><br></br>In Italia, opera con un modello di business fondato sulla qualità dell'interazione umana: <b>assistenza 24/7, gestione sinistri, customer care multilingue</b>. <b>La scelta e la crescita delle persone</b> rappresenta un punto chiave per il corretto funzionamento e l'espansione del business, soprattutto vista l'instabilità del settore assicurativo, che <b>non sempre riesce ad attrarre i profili più qualificati</b> e al tempo stesso richiede <b>profili professionali molto specifici e capaci di evolvere nel tempo</b>. In questo contesto, ogni assunzione sbagliata costa di più e ogni persona giusta che resta vale ancora di più."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Migliaia di candidature, 2 picchi stagionali, 3 persone nel team recruiting.",
+        "intro": "Le assunzioni di Europ Assistance Italia si concentrano in due picchi stagionali l'anno, generando volumi nell'ordine delle migliaia di candidature in pochi mesi. Per i ruoli di assistenza e customer care, le soft skill sono il primo predittore di successo — problem solving, orientamento al cliente, gestione dello stress — ma sono completamente invisibili nel CV.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "needGrowAt": {
+            "title": "Necessità di crescere al ritmo del business",
+            "text": "Le esigenze crescevano costantemente e la velocità di risposta richiesta aumentava. Essere più veloci ed efficaci per HR nel raggiungere i risultati attesi era diventata una necessità operativa."
+          },
+          "managingComplexityAt": {
+            "title": "Gestione complessa nei picchi stagionali",
+            "text": "Con volumi elevati concentrati in finestre temporali ristrette, non c'era margine per processi lenti. Ogni ritardo si traduceva in posizioni scoperte nel momento in cui il business ne aveva più bisogno."
+          },
+          "needGreaterForesight": {
+            "title": "Richiesta di maggiore anticipo sui need futuri",
+            "text": "Identificare già nel pre-screening le competenze predittive di crescita era fondamentale per portarsi a casa informazioni utili alla costruzione di una pipeline di talento interna."
+          }
+        },
+        "hrChallenges": {
+          "tooMuchTime": {
+            "title": "Troppo tempo intrappolato nello screening",
+            "text": "Con migliaia di candidature da gestire, lo screening manuale assorbiva la maggior parte delle risorse disponibili, lasciando poco spazio all'analisi approfondita e alla relazione con i candidati."
+          },
+          "difficultyIdentifyingFuture": {
+            "title": "Difficoltà di individuazione del potenziale futuro",
+            "text": "Portare in azienda persone con il potenziale giusto per percorsi di sviluppo interno richiedeva dati strutturati che il CV da solo non era in grado di fornire."
+          },
+          "nicheProfilesHard": {
+            "title": "Profili di nicchia difficili da intercettare",
+            "text": "Alcuni ruoli strategici richiedevano competenze molto specifiche, difficili da rilevare tramite CV. Senza strumenti di valutazione oggettivi, il processo si allungava e il rischio di mancato match aumentava."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "scalePreScreening": {
+            "text": "Scalare il pre-screening senza scalare il team: gestire migliaia di candidature con 3 FTE, liberando i recruiter dallo screening per concentrarli su colloqui e valutazione del potenziale"
+          },
+          "makeSoftSkills": {
+            "text": "Rendere visibili le soft skill dal primo step: dati oggettivi su competenze trasversali e lingua inglese prima di impegnare ore di tempo del team recruiting"
+          },
+          "leverageAiAs": {
+            "text": "Sfruttare l'AI come supporto al recruiter: garantendo maggiore velocità ed efficacia decisionale e mantenendo pieno controllo decisionale in ogni step"
+          },
+          "selectPotentialNot": {
+            "text": "Selezionare per il potenziale, non solo per la performance immediata: identificare candidati con competenze promettenti e indicative di una futura crescita all'interno dell'organizzazione"
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI con Skillvue",
+        "intro": "Skillvue è stato integrato nel processo di selezione di Europ Assistance Italia come primo step strutturato del funnel, gestendo il pre-screening su più profili e su più sedi geografiche. Il deployment è ricorrente, legato soprattutto ai due picchi stagionali annuali.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "roleSpecificHard": {
+            "title": "Hard skill role-specific",
+            "text": "es. Compensation & Benefits sui ruoli HR"
+          },
+          "softSkills": {
+            "title": "Soft skill",
+            "text": "problem solving, orientamento al cliente, orientamento agli obiettivi, teamworking"
+          },
+          "englishLanguage": {
+            "title": "Lingua inglese",
+            "text": "test B1/B2/C1, competenza critica per un'azienda che opera in 39 paesi e gestisce assistenza multilingue"
+          }
+        },
+        "methodologyLabel": "COME È STATO COSTRUITO",
+        "methodology": [
+          {
+            "title": "Assessment in autonomia come primo step",
+            "text": "Dopo la candidatura, ogni candidato completa l'assessment in autonomia da qualsiasi dispositivo — telefono, tablet o laptop."
+          },
+          {
+            "title": "Report strutturato per il recruiter",
+            "text": "Il team HR riceve una prima analisi oggettiva e approfondita delle competenze. Il primo colloquio è basato sui dati, non su impressioni."
+          },
+          {
+            "title": "Human-in-the-loop a ogni fase",
+            "text": "Il team HR mantiene pieno controllo decisionale in ogni fase. I dati Skillvue strutturano e informano il giudizio, senza mai sostituire la valutazione del recruiter."
+          }
+        ]
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Cosa sta cambiando.",
+        "pillars": {
+          "higherQualityCandidates": {
+            "value": "Candidati<br></br>più qualificati",
+            "label": "meno rumore, più segnali concreti per il team HR"
+          },
+          "dataDrivenDecisions": {
+            "value": "Più tempo<br></br>per ciò che conta",
+            "label": "colloqui più personalizzati e mirati, basati su dati reali"
+          },
+          "talentPipelineFuture": {
+            "value": "Pipeline di talento<br></br>per il futuro",
+            "label": "si seleziona guardando già al domani, non solo al fit immediato"
+          }
+        },
+        "qualitative": {
+          "visibilityTruePotential": {
+            "title": "Visibilità sul potenziale fin dal primo step",
+            "text": "HR e line manager dispongono di dati strutturati sulle soft skill di ogni candidato già prima del colloquio — non solo fit immediato, ma segnali concreti di crescita nel tempo."
+          },
+          "moreTimeHigh": {
+            "title": "Recruiter liberati per il lavoro ad alto valore",
+            "text": "Il tempo recuperato è reinvestito in colloqui più approfonditi e analisi del potenziale — attività che incidono direttamente sulla qualità delle assunzioni e sulla retention."
+          },
+          "enhancedCandidateExperience": {
+            "title": "Candidate experience ottimizzata",
+            "text": "L'assessment pre-colloquio offre un momento di maggiore espressione personale rispetto al solo invio di CV: quando viene data la possibilità di mettersi alla prova, i candidati rispondono positivamente."
+          }
+        }
+      },
+      "quote": {
+        "text": "Credo che selezione e sviluppo debbano parlare la stessa lingua: il dato raccolto oggi diventa la base per lo sviluppo di domani.",
+        "author": "Nicole Cerruti",
+        "role": "Recruitment Manager, Europ Assistance Italia"
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "carrefour",
+            "company": "Carrefour",
+            "tag": "Retail GDO · Hiring at Scale",
+            "headline": "Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Europ Assistance: come riconoscere il <hl>potenziale che resiste alla prova del tempo</hl> in un business fondato sulla <hl2>componente umana</hl2>"
+    },
+    "europ-assistance-2": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue, Europ Assistance ha trasformato il pre-screening da collo di bottiglia a vantaggio competitivo, estendendo il modello alla mappatura delle competenze interne.",
+      "heroMetrics": [
+        {
+          "value": "+24%",
+          "label": "assunzioni anno su anno"
+        },
+        {
+          "value": "-18%",
+          "label": "colloqui necessari"
+        },
+        {
+          "value": "4.5/5",
+          "label": "candidate experience feedback"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Financial Services"
+          },
+          {
+            "label": "Gruppo",
+            "value": "Generali"
+          },
+          {
+            "label": "Fatturato",
+            "value": "~1,5 mld €"
+          },
+          {
+            "label": "Centri assistenza in Italia",
+            "value": "4.300"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "In un business fondato sull'interazione umana, la qualità di chi assumi si traduce nella qualità del servizio.",
+        "paragraph": "Europ Assistance, parte del <b>Gruppo Generali</b>, è uno dei leader mondiali nei servizi di assistenza e assicurazione viaggi. La sua è una crescita costante: è in corso infatti l'espansione delle operazioni in nuovi mercati e la convergenza con Generali Care in un <b>hub integrato da €5,3 miliardi</b>.<br></br><br></br>In Italia, opera con un modello di business fondato sulla qualità dell'interazione umana: assistenza 24/7, gestione sinistri, customer care multilingue. La scelta e la crescita delle persone rappresenta un punto chiave per il corretto funzionamento e l'espansione del business, soprattutto vista l'instabilità del mercato del lavoro assicurativo, caratterizzato da tassi di turnover in crescita e un gap retributivo con fintech e consulting che penalizza l'attrattività per i profili più qualificati. In questo contesto, ogni assunzione sbagliata costa di più e ogni persona giusta che resta vale ancora di più."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Migliaia di candidature, due picchi stagionali, 3 persone nel team recruiting.",
+        "intro": "Le assunzioni di Europ Assistance Italia si concentrano in due picchi stagionali l'anno, generando volumi nell'ordine delle migliaia di candidature in pochi mesi. Per i ruoli di assistenza e customer care, le soft skill sono il primo predittore di successo — problem solving, orientamento al cliente, gestione dello stress — ma sono completamente invisibili nel CV.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "needManageSeasonal": {
+            "title": "Necessità di gestire i picchi stagionali",
+            "text": "Le assunzioni si concentrano in due picchi stagionali l'anno, generando volumi nell'ordine delle migliaia di candidature in pochi mesi, gestite da 3 persone nel team recruiting."
+          },
+          "noVisibilityGrowth": {
+            "title": "Nessuna visibilità sul potenziale di crescita",
+            "text": "La selezione valutava solo il fit immediato. Europ Assistance cercava qualcosa di più: identificare fin dal primo step le soft skill predittive di crescita futura, per fornire ai line manager visibilità su come una persona potrà svilupparsi nel tempo."
+          }
+        },
+        "hrChallenges": {
+          "decisiveSoftSkills": {
+            "title": "Le soft skill decisive sono invisibili nel CV",
+            "text": "Problem solving, orientamento al cliente e gestione dello stress sono il primo predittore di successo nei ruoli di assistenza — ma sono completamente invisibili nel CV."
+          },
+          "hrTimeWas": {
+            "title": "Il tempo HR era intrappolato nello screening",
+            "text": "I recruiter dedicavano la maggior parte delle ore a telefonate introduttive e filtri manuali. Metà dei candidati che superavano il primo filtro non aveva però le competenze necessarie."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "scalePreScreening": {
+            "text": "Scalare il pre-screening senza scalare il team: gestire migliaia di candidature con 3 FTE, liberando i recruiter dallo screening per concentrarli su colloqui e valutazione del potenziale"
+          },
+          "makeSoftSkills": {
+            "text": "Rendere visibili le soft skill dal primo step: dati oggettivi su competenze trasversali e lingua inglese prima di qualsiasi interazione umana"
+          },
+          "buildFairDefensible": {
+            "text": "Costruire un processo equo e difendibile: AI come supporto al recruiter, non sostituto — human-in-the-loop a ogni fase, riduzione del bias"
+          },
+          "selectPotentialNot": {
+            "text": "Selezionare per il potenziale, non solo per il fit: identificare candidati con competenze che li rendano impiegabili per crescita interna e ruoli futuri"
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI con Skillvue",
+        "intro": "Skillvue è stato integrato nel processo di selezione di Europ Assistance Italia come primo step strutturato del funnel, gestendo il pre-screening su più profili e su più sedi geografiche. Il deployment è ricorrente, legato soprattutto ai due picchi stagionali annuali.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "softSkills": {
+            "title": "Soft skill",
+            "text": "problem solving, orientamento al cliente, orientamento agli obiettivi, teamworking"
+          },
+          "englishLanguage": {
+            "title": "Lingua inglese",
+            "text": "test B1/B2/C1, competenza critica per un'azienda che opera in 39 paesi e gestisce assistenza multilingue"
+          },
+          "roleSpecificHard": {
+            "title": "Hard skill role-specific",
+            "text": "es. Compensation & Benefits sui ruoli HR"
+          }
+        },
+        "methodologyLabel": "COME È STATO COSTRUITO",
+        "methodology": [
+          {
+            "title": "Assessment in autonomia come primo step",
+            "text": "Dopo la candidatura, ogni candidato completa l'assessment da qualsiasi dispositivo, telefono o laptop."
+          },
+          {
+            "title": "Report strutturato per il recruiter",
+            "text": "Il team HR riceve una prima analisi oggettiva e approfondita delle competenze. Il primo colloquio è basato sui dati, non su impressioni."
+          },
+          {
+            "title": "Human-in-the-loop a ogni fase",
+            "text": "Il team mantiene pieno controllo decisionale; i dati Skillvue informano, non decidono al posto del recruiter."
+          }
+        ]
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Key Metrics & Impatto",
+        "subtitle": "I risultati misurabili ottenuti da Europ Assistance attraverso l'adozione di Skillvue nei processi di selezione.",
+        "metrics": [
+          {
+            "value": "+24%",
+            "label": "Assunzioni anno su anno"
+          },
+          {
+            "value": "-18%",
+            "label": "Colloqui necessari"
+          },
+          {
+            "value": "76%",
+            "label": "Tasso di successo colloquio-assunzione"
+          }
+        ],
+        "qualitative": {
+          "visibilityPotentialFrom": {
+            "title": "Visibilità sul potenziale fin dal primo step",
+            "text": "Per la prima volta, HR e line manager dispongono di dati strutturati sulle soft skill di ogni candidato prima ancora del colloquio. Non solo \"assumi/non assumere\", ma informazioni su come una persona potrà crescere nel tempo."
+          },
+          "recruitersFreedHigh": {
+            "title": "Recruiter liberati per il lavoro ad alto valore",
+            "text": "Il tempo recuperato è investito in colloqui approfonditi, analisi del potenziale e collaborazione con i line manager — attività che incidono direttamente sulla qualità delle assunzioni e sulla retention."
+          },
+          "positiveCandidateExperience": {
+            "title": "Candidate experience positiva su tutte le fasce d'età",
+            "text": "Punteggio 4.5/5 su esperienza, usabilità e comunicazione. Un dato rilevante in un contesto dove il bacino di candidati comprende fasce d'età da 18 a 64 anni e livelli di familiarità tecnologica molto diversi."
+          }
+        }
+      },
+      "vision": {
+        "badge": "EVOLUZIONE 2026",
+        "title": "Da hiring tool a talent intelligence partner",
+        "intro": "Quando i risultati sul recruiting hanno dimostrato che Skillvue poteva scalare qualità e velocità contemporaneamente, si è passati subito a valutare una fase di espansione sugli step successivi del talent lifecycle. Nel 2026, Europ Assistance estende Skillvue alla mappatura delle competenze interne.",
+        "objective": "Mappatura sul modello di leadership \"We IMPACT\" — 5 competenze di leadership valutate su 3 livelli di seniority (Line Manager, Manager of Managers, Senior Leader).",
+        "bullets": [
+          "Assessment personalizzati sul modello Europ Assistance — calibrati sul modello di competenze specifico, con indicatori comportamentali validati psicometricamente",
+          "Da selezione a pianificazione della successione — i dati di competenza alimentano percorsi di sviluppo individuali, career planning e succession readiness"
+        ]
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "carrefour",
+            "company": "Carrefour",
+            "tag": "Retail GDO · Hiring at Scale",
+            "headline": "Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione"
+          },
+          {
+            "id": "mediaset",
+            "company": "Mediaset",
+            "tag": "Media & Telecom · Hiring",
+            "headline": "Da 3000 candidature a 15 top talent: come selezionare e far crescere il talento su scala"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Come ottenere un tasso di successo delle assunzioni del <hl>76%</hl> in un business fondato sulla <hl2>componente umana</hl2>"
+    },
+    "mediaset": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue Mediaset ha standardizzato lo step di pre-screening di migliaia di candidature di profili junior al progetto Grape, creando una base di dati strutturati sulle caratteristiche di ogni candidato per facilitare il processo di selezione.",
+      "heroMetrics": [
+        {
+          "value": "3.000+",
+          "label": "candidature processate"
+        },
+        {
+          "value": "5 settimane",
+          "label": "gestione end-to-end"
+        },
+        {
+          "value": "4/5",
+          "label": "candidate satisfaction"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Media & Telecom"
+          },
+          {
+            "label": "Gruppo",
+            "value": "MFE-MEDIAFOREUROPE"
+          },
+          {
+            "label": "Fatturato",
+            "value": "circa 4,03 miliardi €"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Il contesto del progetto",
+        "paragraph": "Mediaset, parte del gruppo <b>MFE-MEDIAFOREUROPE</b>, è il principale broadcaster commerciale privato in Italia e sta vivendo una fase di evoluzione senza precedenti. Con l'acquisizione di ProSiebenSat.1 e la partecipazione in Impresa, <b>MFE-MEDIAFOREUROPE</b> è diventato il primo broadcaster privato a controllare operazioni in tre grandi mercati europei, raggiungendo <b>oltre 220 milioni di persone in sei paesi</b>.<br></br><br></br> È in questo scenario di innovazione e crescita che nasce il <b>progetto Grape</b> (Graduate Program Experience): il programma di selezione di neo laureati e profili junior da inserire in diverse funzioni aziendali. In contesti come questo, identificare in maniera predittiva il talento diventa una leva strategica davvero irrinunciabile per garantire una buona riuscita del progetto. Ma come farlo quando si ricevono migliaia di candidature?"
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Migliaia di candidati e tanti CV che da soli non rivelavano il potenziale nascosto",
+        "intro": "Il Progetto Grape ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l'obiettivo di individuare in sei settimane un numero significativo di candidati qualificati da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell'assessment.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "europeanGroupExpansion": {
+            "title": "La crescita europea del Gruppo rende urgente costruire una pipeline di talento",
+            "text": "MFE-MEDIAFOREUROPE sta espandendo il proprio perimetro su scala europea. Grape non è solo un programma di assunzione: è un significativo tassello che intende contribuire all'identificazione di profili junior che possano crescere con il Gruppo rispondendo alle sue esigenze future."
+          },
+          "businessNeedsWere": {
+            "title": "Le necessità di business rischiavano di scontrarsi con il carico operativo HR",
+            "text": "Per rispettare il ritmo desiderato di profili valutati e tenere il passo con gli inserimenti serviva un filtro diverso da quello manuale, capace di operare su scala senza sacrificare la qualità o far passare sotto traccia profili ad alto potenziale."
+          },
+          "chosenToolHad": {
+            "title": "Lo strumento scelto doveva adattarsi a un ecosistema multi-fase",
+            "text": "Lo strumento di valutazione scelto per la gestione della fase iniziale del progetto doveva produrre output auditabili, comparabili e utilizzabili anche nelle fasi successive del Progetto Grape."
+          }
+        },
+        "hrChallenges": {
+          "newApproachHiring": {
+            "title": "La nuova gestione della selezione rispondeva a un più ampio cambiamento culturale",
+            "text": "Il processo di trasformazione culturale in corso in Mediaset richiedeva a HR un cambio di passo già dalla fase di Talent Attraction e Acquisition: portare a bordo le persone giuste diventava una leva davvero strategica e una misura del successo di quel cambiamento."
+          },
+          "evaluationModelBuilt": {
+            "title": "Serviva un modello di valutazione incentrato sulla predittività",
+            "text": "I profili junior che vengono inseriti in percorsi come questo hanno spesso curriculum poco differenzianti. Soft skill come problem solving, ragionamento logico e motivazione, le variabili che predicono il vero potenziale, dovevano emergere al di là del semplice CV."
+          },
+          "firstBrandTouchpoint": {
+            "title": "Il primo contatto con il brand doveva rispecchiarne identità e valori",
+            "text": "Mediaset è uno dei brand più riconoscibili d'Italia e, in un mercato caratterizzato dalla forte competizione con tech company e piattaforme digitali per gli stessi profili, pone molta attenzione agli aspetti di employer branding anche in fase di attrazione e selezione."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "item": {
+            "text": "<b>Gestire il volume di candidature nei tempi dettati dal business</b> — l'obiettivo era individuare ogni settimana un considerevole numero di candidati ad alto potenziale, senza perdere qualità nella valutazione."
+          },
+          "item2": {
+            "text": "<b>Rendere visibili le soft skill dal primo step</b> — realizzare una mappatura affidabile dei profili dei candidati, con dati oggettivi prodotti dall'AI e validati sul modello Mediaset."
+          },
+          "item3": {
+            "text": "<b>Garantire un'esperienza candidato all'altezza del brand</b> — il primo contatto con Mediaset doveva essere positivo, intuitivo e accessibile anche per chi non aveva mai usato questo formato di assessment."
+          },
+          "item4": {
+            "text": "<b>Integrare lo strumento nel processo esistente</b> — gli output dovevano essere compatibili con il flusso multi-fase e utilizzabili come benchmark per sviluppi futuri della strategia di selezione."
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "AI Pre-screening con Skillvue",
+        "intro": "Skillvue è stato integrato come primo filtro del Progetto GRAPE, combinando l'analisi di soft skill, ragionamento logico e domande di conoscenza generale. Il ranking viene validato dal team HR sul modello di competenze Mediaset; i profili idonei avanzano alle fasi successive.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "softSkillsCalibrated": {
+            "label": "Soft skill — calibrate sul modello Mediaset"
+          },
+          "logicalReasoningStructured": {
+            "label": "Ragionamento logico — test strutturati"
+          },
+          "knowledgeQuestionsRole": {
+            "label": "Domande di conoscenza — role-relevant"
+          }
+        }
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Key Metrics & Impatto",
+        "subtitle": "Skillvue è stato integrato come primo filtro del Progetto Grape, combinando l'analisi di soft skill, ragionamento logico e domande di conoscenza generale. Il ranking viene validato dal team HR sul modello di competenze Mediaset; i profili idonei avanzano alle fasi successive.",
+        "metrics": [
+          {
+            "value": "3.000+",
+            "label": "candidature processate"
+          },
+          {
+            "value": "4/5",
+            "label": "Soddisfazione candidati"
+          },
+          {
+            "value": "79%",
+            "label": "Conversion rate assessment"
+          }
+        ],
+        "qualitative": {
+          "visibilityIntoPotential": {
+            "title": "Visibilità sul potenziale dei profili junior in ingresso",
+            "text": "Prima di Skillvue, le decisioni venivano prese sulla base della valutazione soggettiva dei singoli recruiter; ora si ragiona in ottica condivisa e con parametri comuni e standardizzati."
+          },
+          "moreEfficientHiring": {
+            "title": "Un processo di selezione più efficiente, con shortlist qualificate",
+            "text": "Le fasi successive del processo di selezione partono da una base informativa solida. Il risultato: un funnel più efficiente e decisioni più consapevoli e data-driven ad ogni step."
+          },
+          "assessmentsCustomisedMediaset": {
+            "title": "Assessment customizzati sulle reali esigenze di Mediaset",
+            "text": "Instaurando un rapporto collaborativo fin dall'inizio, Skillvue e Mediaset hanno proposto ai candidati degli assessment validati dal team HR e aderenti alle aspettative di Mediaset."
+          }
+        }
+      },
+      "quote": {
+        "text": "Il supporto di Skillvue ci ha assicurato di poter raccogliere informazioni aggiuntive soprattutto sullo stile comportamentale, sul modo in cui le persone affrontano diversi tipi di situazioni.",
+        "author": "Luca Villari",
+        "role": "Head of Talent Acquisition and Talent Development, Mediaset"
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "carrefour",
+            "company": "Carrefour",
+            "tag": "Retail GDO · Hiring at Scale",
+            "headline": "Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione"
+          },
+          {
+            "id": "adr",
+            "company": "Aeroporti di Roma",
+            "tag": "Aviation · Mobilità Interna",
+            "headline": "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi."
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "<hl>GRAPE</hl>, la Graduate Program Experience di Mediaset: come selezionare e accompagnare <hl2>giovani di valore</hl2> guardando al <hl3>potenziale futuro</hl3>"
+    },
+    "mediaset-1": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue Mediaset ha standardizzato lo step di pre-screening di migliaia di candidature di profili junior al progetto Grape, creando una base di dati strutturati sulle caratteristiche di ogni candidato per facilitare il processo di selezione.",
+      "heroMetrics": [
+        {
+          "value": "3.000+",
+          "label": "candidature processate"
+        },
+        {
+          "value": "5 settimane",
+          "label": "gestione end-to-end"
+        },
+        {
+          "value": "4/5",
+          "label": "candidate satisfaction"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Media & Telecom"
+          },
+          {
+            "label": "Gruppo",
+            "value": "MFE-MEDIAFOREUROPE"
+          },
+          {
+            "label": "Fatturato",
+            "value": "circa 4,03 miliardi €"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Il contesto del progetto",
+        "paragraph": "Mediaset, parte del gruppo <b>MFE-MEDIAFOREUROPE</b>, è il principale broadcaster commerciale privato in Italia e sta vivendo una fase di evoluzione senza precedenti. Con l'acquisizione di ProSiebenSat.1 e la partecipazione in Impresa, <b>MFE-MEDIAFOREUROPE</b> è diventato il primo broadcaster privato a controllare operazioni in tre grandi mercati europei, raggiungendo <b>oltre 220 milioni di persone in sei paesi</b>.<br></br><br></br> È in questo scenario di innovazione e crescita che nasce il <b>progetto Grape</b> (Graduate Program Experience): il programma di selezione di neo laureati e profili junior da inserire in diverse funzioni aziendali. In contesti come questo, identificare in maniera predittiva il talento diventa una leva strategica davvero irrinunciabile per garantire una buona riuscita del progetto. Ma come farlo quando si ricevono migliaia di candidature?"
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Migliaia di candidati e tanti CV che da soli non rivelavano il potenziale nascosto",
+        "intro": "Il Progetto Grape ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l'obiettivo di individuare in sei settimane un numero significativo di candidati qualificati da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell'assessment.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "groupSExpansion": {
+            "title": "La crescita europea del Gruppo rende urgente costruire una pipeline di talento",
+            "text": "MFE-MEDIAFOREUROPE sta espandendo il proprio perimetro su scala europea. Grape non è solo un programma di assunzione: è un significativo tassello che intende contribuire all'identificazione di profili junior che possano crescere con il Gruppo rispondendo alle sue esigenze future."
+          },
+          "businessNeedsWere": {
+            "title": "Le necessità di business rischiavano di scontrarsi con il carico operativo HR",
+            "text": "Per rispettare il ritmo desiderato di profili valutati e tenere il passo con gli inserimenti serviva un filtro diverso da quello manuale, capace di operare su scala senza sacrificare la qualità o far passare sotto traccia profili ad alto potenziale."
+          },
+          "chosenToolHad": {
+            "title": "Lo strumento scelto doveva adattarsi a un ecosistema multi-fase",
+            "text": "Lo strumento di valutazione scelto per la gestione della fase iniziale del progetto doveva produrre output auditabili, comparabili e utilizzabili anche nelle fasi successive del Progetto Grape."
+          }
+        },
+        "hrChallenges": {
+          "newApproachHiring": {
+            "title": "La nuova gestione della selezione rispondeva a un più ampio cambiamento culturale",
+            "text": "Il processo di trasformazione culturale in corso in Mediaset richiedeva a HR un cambio di passo già dalla fase di Talent Attraction e Acquisition: portare a bordo le persone giuste diventava una leva davvero strategica e una misura del successo di quel cambiamento."
+          },
+          "evaluationModelBuilt": {
+            "title": "Serviva un modello di valutazione incentrato sulla predittività",
+            "text": "I profili junior che vengono inseriti in percorsi come questo hanno spesso curriculum poco differenzianti. Soft skill come problem solving, ragionamento logico e motivazione, le variabili che predicono il vero potenziale, dovevano emergere al di là del semplice CV."
+          },
+          "firstBrandTouchpoint": {
+            "title": "Il primo contatto con il brand doveva rispecchiarne identità e valori",
+            "text": "Mediaset è uno dei brand più riconoscibili d'Italia e, in un mercato caratterizzato dalla forte competizione con tech company e piattaforme digitali per gli stessi profili, pone molta attenzione agli aspetti di employer branding anche in fase di attrazione e selezione."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "item": {
+            "text": "<b>Gestire il volume di candidature nei tempi dettati dal business</b> — l'obiettivo era individuare ogni settimana un considerevole numero di candidati ad alto potenziale, senza perdere qualità nella valutazione."
+          },
+          "item2": {
+            "text": "<b>Rendere visibili le soft skill dal primo step</b> — realizzare una mappatura affidabile dei profili dei candidati, con dati oggettivi prodotti dall'AI e validati sul modello Mediaset."
+          },
+          "item3": {
+            "text": "<b>Garantire un'esperienza candidato all'altezza del brand</b> — il primo contatto con Mediaset doveva essere positivo, intuitivo e accessibile anche per chi non aveva mai usato questo formato di assessment."
+          },
+          "item4": {
+            "text": "<b>Integrare lo strumento nel processo esistente</b> — gli output dovevano essere compatibili con il flusso multi-fase e utilizzabili come benchmark per sviluppi futuri della strategia di selezione."
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "AI Pre-screening con Skillvue",
+        "intro": "Skillvue è stato integrato come primo filtro del Progetto GRAPE, combinando l'analisi di soft skill, ragionamento logico e domande di conoscenza generale. Il ranking viene validato dal team HR sul modello di competenze Mediaset; i profili idonei avanzano alle fasi successive.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "softSkillsCalibrated": {
+            "label": "Soft skill — calibrate sul modello Mediaset"
+          },
+          "logicalReasoningStructured": {
+            "label": "Ragionamento logico — test strutturati"
+          },
+          "knowledgeQuestionsRole": {
+            "label": "Domande di conoscenza — role-relevant"
+          }
+        }
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Key Metrics & Impatto",
+        "subtitle": "Skillvue è stato integrato come primo filtro del Progetto Grape, combinando l'analisi di soft skill, ragionamento logico e domande di conoscenza generale. Il ranking viene validato dal team HR sul modello di competenze Mediaset; i profili idonei avanzano alle fasi successive.",
+        "metrics": [
+          {
+            "value": "3.000+",
+            "label": "candidature processate"
+          },
+          {
+            "value": "4/5",
+            "label": "Soddisfazione candidati"
+          },
+          {
+            "value": "79%",
+            "label": "Conversion rate assessment"
+          }
+        ],
+        "qualitative": {
+          "visibilityIntoPotential": {
+            "title": "Visibilità sul potenziale dei profili junior in ingresso",
+            "text": "Prima di Skillvue, le decisioni venivano prese sulla base della valutazione soggettiva dei singoli recruiter; ora si ragiona in ottica condivisa e con parametri comuni e standardizzati."
+          },
+          "moreEfficientHiring": {
+            "title": "Un processo di selezione più efficiente, con shortlist qualificate",
+            "text": "Le fasi successive del processo di selezione partono da una base informativa solida. Il risultato: un funnel più efficiente e decisioni più consapevoli e data-driven ad ogni step."
+          },
+          "assessmentsCustomisedMediaset": {
+            "title": "Assessment customizzati sulle reali esigenze di Mediaset",
+            "text": "Instaurando un rapporto collaborativo fin dall'inizio, Skillvue e Mediaset hanno proposto ai candidati degli assessment validati dal team HR e aderenti alle aspettative di Mediaset."
+          }
+        }
+      },
+      "quote": {
+        "text": "Il supporto di Skillvue ci ha assicurato di poter raccogliere informazioni aggiuntive soprattutto sullo stile comportamentale, sul modo in cui le persone affrontano diversi tipi di situazioni.",
+        "author": "Luca Villari",
+        "role": "Head of Talent Acquisition and Talent Development, Mediaset"
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "carrefour",
+            "company": "Carrefour",
+            "tag": "Retail GDO · Hiring at Scale",
+            "headline": "Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione"
+          },
+          {
+            "id": "adr",
+            "company": "Aeroporti di Roma",
+            "tag": "Aviation · Mobilità Interna",
+            "headline": "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi."
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "<hl>GRAPE</hl>, la Graduate Program Experience di Mediaset: come selezionare e accompagnare <hl2>giovani di valore</hl2> guardando al <hl3>potenziale futuro</hl3>"
+    },
+    "mediaset-2": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue Mediaset ha standardizzato lo step di pre-screening di migliaia di candidature di profili junior al progetto Grape, creando una base di dati strutturati sulle caratteristiche di ogni candidato per facilitare il processo di selezione.",
+      "heroMetrics": [
+        {
+          "value": "3.000+",
+          "label": "candidature processate"
+        },
+        {
+          "value": "5 settimane",
+          "label": "gestione end-to-end"
+        },
+        {
+          "value": "4/5",
+          "label": "candidate satisfaction"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Media & Telecom"
+          },
+          {
+            "label": "Gruppo",
+            "value": "MFE-MEDIAFOREUROPE"
+          },
+          {
+            "label": "Fatturato",
+            "value": "circa 4,03 miliardi €"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Il contesto del progetto",
+        "paragraph": "Mediaset, parte del gruppo <b>MFE-MEDIAFOREUROPE</b>, è il principale broadcaster commerciale privato in Italia e sta vivendo una fase di evoluzione senza precedenti. Con l'acquisizione di ProSiebenSat.1 e la partecipazione in Impresa, <b>MFE-MEDIAFOREUROPE</b> è diventato il primo broadcaster privato a controllare operazioni in tre grandi mercati europei, raggiungendo <b>oltre 220 milioni di persone in sei paesi</b>.<br></br><br></br> È in questo scenario di innovazione e crescita che nasce il <b>progetto Grape</b> (Graduate Program Experience): il programma di selezione di neo laureati e profili junior da inserire in diverse funzioni aziendali. In contesti come questo, identificare in maniera predittiva il talento diventa una leva strategica davvero irrinunciabile per garantire una buona riuscita del progetto. Ma come farlo quando si ricevono migliaia di candidature?"
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Migliaia di candidati e tanti CV che da soli non rivelavano il potenziale nascosto",
+        "intro": "Il Progetto Grape ha generato oltre 3.000 candidature. Il team HR dedicato si è posto l'obiettivo di individuare in sei settimane un numero significativo di candidati qualificati da portare avanti nelle fasi successive del processo, mantenendo alto il livello della candidate experience e senza rinunciare alla profondità dell'assessment.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "groupSExpansion": {
+            "title": "La crescita europea del Gruppo rende urgente costruire una pipeline di talento",
+            "text": "MFE-MEDIAFOREUROPE sta espandendo il proprio perimetro su scala europea. Grape non è solo un programma di assunzione: è un significativo tassello che intende contribuire all'identificazione di profili junior che possano crescere con il Gruppo rispondendo alle sue esigenze future."
+          },
+          "businessNeedsWere": {
+            "title": "Le necessità di business rischiavano di scontrarsi con il carico operativo HR",
+            "text": "Per rispettare il ritmo desiderato di profili valutati e tenere il passo con gli inserimenti serviva un filtro diverso da quello manuale, capace di operare su scala senza sacrificare la qualità o far passare sotto traccia profili ad alto potenziale."
+          },
+          "chosenToolHad": {
+            "title": "Lo strumento scelto doveva adattarsi a un ecosistema multi-fase",
+            "text": "Lo strumento di valutazione scelto per la gestione della fase iniziale del progetto doveva produrre output auditabili, comparabili e utilizzabili anche nelle fasi successive del Progetto Grape."
+          }
+        },
+        "hrChallenges": {
+          "newApproachHiring": {
+            "title": "La nuova gestione della selezione rispondeva a un più ampio cambiamento culturale",
+            "text": "Il processo di trasformazione culturale in corso in Mediaset richiedeva a HR un cambio di passo già dalla fase di Talent Attraction e Acquisition: portare a bordo le persone giuste diventava una leva davvero strategica e una misura del successo di quel cambiamento."
+          },
+          "evaluationModelBuilt": {
+            "title": "Serviva un modello di valutazione incentrato sulla predittività",
+            "text": "I profili junior che vengono inseriti in percorsi come questo hanno spesso curriculum poco differenzianti. Soft skill come problem solving, ragionamento logico e motivazione, le variabili che predicono il vero potenziale, dovevano emergere al di là del semplice CV."
+          },
+          "firstBrandTouchpoint": {
+            "title": "Il primo contatto con il brand doveva rispecchiarne identità e valori",
+            "text": "Mediaset è uno dei brand più riconoscibili d'Italia e, in un mercato caratterizzato dalla forte competizione con tech company e piattaforme digitali per gli stessi profili, pone molta attenzione agli aspetti di employer branding anche in fase di attrazione e selezione."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "item": {
+            "text": "<b>Gestire il volume di candidature nei tempi dettati dal business</b> — l'obiettivo era individuare ogni settimana un considerevole numero di candidati ad alto potenziale, senza perdere qualità nella valutazione."
+          },
+          "item2": {
+            "text": "<b>Rendere visibili le soft skill dal primo step</b> — realizzare una mappatura affidabile dei profili dei candidati, con dati oggettivi prodotti dall'AI e validati sul modello Mediaset."
+          },
+          "item3": {
+            "text": "<b>Garantire un'esperienza candidato all'altezza del brand</b> — il primo contatto con Mediaset doveva essere positivo, intuitivo e accessibile anche per chi non aveva mai usato questo formato di assessment."
+          },
+          "item4": {
+            "text": "<b>Integrare lo strumento nel processo esistente</b> — gli output dovevano essere compatibili con il flusso multi-fase e utilizzabili come benchmark per sviluppi futuri della strategia di selezione."
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "AI Pre-screening con Skillvue",
+        "intro": "Skillvue è stato integrato come primo filtro del Progetto GRAPE, combinando l'analisi di soft skill, ragionamento logico e domande di conoscenza generale. Il ranking viene validato dal team HR sul modello di competenze Mediaset; i profili idonei avanzano alle fasi successive.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "softSkillsCalibrated": {
+            "label": "Soft skill — calibrate sul modello Mediaset"
+          },
+          "logicalReasoningStructured": {
+            "label": "Ragionamento logico — test strutturati"
+          },
+          "knowledgeQuestionsRole": {
+            "label": "Domande di conoscenza — role-relevant"
+          }
+        }
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Key Metrics & Impatto",
+        "subtitle": "Skillvue è stato integrato come primo filtro del Progetto Grape, combinando l'analisi di soft skill, ragionamento logico e domande di conoscenza generale. Il ranking viene validato dal team HR sul modello di competenze Mediaset; i profili idonei avanzano alle fasi successive.",
+        "metrics": [
+          {
+            "value": "3.000+",
+            "label": "candidature processate"
+          },
+          {
+            "value": "4/5",
+            "label": "Soddisfazione candidati"
+          },
+          {
+            "value": "79%",
+            "label": "Conversion rate assessment"
+          }
+        ],
+        "qualitative": {
+          "visibilityIntoPotential": {
+            "title": "Visibilità sul potenziale dei profili junior in ingresso",
+            "text": "Prima di Skillvue, le decisioni venivano prese sulla base della valutazione soggettiva dei singoli recruiter; ora si ragiona in ottica condivisa e con parametri comuni e standardizzati."
+          },
+          "moreEfficientHiring": {
+            "title": "Un processo di selezione più efficiente, con shortlist qualificate",
+            "text": "Le fasi successive del processo di selezione partono da una base informativa solida. Il risultato: un funnel più efficiente e decisioni più consapevoli e data-driven ad ogni step."
+          },
+          "assessmentsCustomisedMediaset": {
+            "title": "Assessment customizzati sulle reali esigenze di Mediaset",
+            "text": "Instaurando un rapporto collaborativo fin dall'inizio, Skillvue e Mediaset hanno proposto ai candidati degli assessment validati dal team HR e aderenti alle aspettative di Mediaset."
+          }
+        }
+      },
+      "quote": {
+        "text": "Skillvue ha supportato Mediaset nella raccolta di insight strutturati sui talenti, migliorando la velocità e l’efficacia dello screening dei candidati.",
+        "author": "Luca Villari",
+        "role": "Head of Recruiting and People Development, Mediaset"
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "carrefour",
+            "company": "Carrefour",
+            "tag": "Retail GDO · Hiring at Scale",
+            "headline": "Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione"
+          },
+          {
+            "id": "adr",
+            "company": "Aeroporti di Roma",
+            "tag": "Aviation · Mobilità Interna",
+            "headline": "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi."
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "<hl>GRAPE</hl>, la Graduate Program Experience di Mediaset: come selezionare e accompagnare <hl2>giovani di valore</hl2> guardando al <hl3>potenziale futuro</hl3>"
+    },
+    "subdued": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue, Subdued ha costruito un processo di selezione coerente e scalabile su più mercati, con lo stesso rigore in ogni paese e un turnover dimezzato.",
+      "heroMetrics": [
+        {
+          "value": "-40%",
+          "label": "Time-to-hire"
+        },
+        {
+          "value": "-50%",
+          "label": "Turnover"
+        },
+        {
+          "value": "80%",
+          "label": "Candidati qualificati dopo lo skills screening"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "Retail"
+          },
+          {
+            "label": "Paesi",
+            "value": "Italia, Irlanda, UK, Paesi Bassi, Svezia, Francia"
+          },
+          {
+            "label": "Dipendenti",
+            "value": "1.000+"
+          },
+          {
+            "label": "Punti vendita",
+            "value": "130+ monomarca"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Il contesto del progetto",
+        "paragraph": "Subdued è un brand italiano di fashion retail. Fondato in Italia, oggi opera con oltre <b>130 negozi monomarca</b> in continua espansione, <b>più di 1.000 dipendenti</b> e una presenza in crescita su più continenti. <br></br><br></br> La traiettoria di crescita è eccezionale: il fatturato del brand è <b>quasi raddoppiato tra il 2022 e il 2024</b> e più della metà dei ricavi arriva dai mercati internazionali, che danno ottimi segnali per il futuro con aperture in corso negli Stati Uniti, in Medio Oriente, nel Sud-Est asiatico, in Corea e in Cina. <br></br><br></br> In questo scenario, la capacità di selezionare le persone giuste al ritmo delle aperture diventa <b>il vincolo operativo numero uno</b>. Ogni nuovo negozio richiede un team formato capace di rappresentare il brand e il suo DNA italiano davanti a un pubblico Gen Z in mercati culturalmente diversi, ma il team HR è composto da <b>1-3 persone per ciascuno dei paesi di attività</b>. Con i metodi tradizionali, l'equazione non regge."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Il problema strutturale",
+        "intro": "Tante figure chiave da selezionare, turnover alto e un team HR snello che non poteva scalare con l'espansione senza un sistema strutturato.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "highStorePerformance": {
+            "title": "Alta performance in store: la selezione è il punto di partenza",
+            "text": "Per scalare il business, non bastava assumere velocemente: servivano insight predittivi per identificare i candidati con più alto potenziale commerciale e garantire performance elevate fin dall'ingresso in store."
+          },
+          "structurallyHighTurnover": {
+            "title": "Un turnover strutturalmente alto",
+            "text": "Nel fashion retail il turnover è fisiologicamente elevato. Per un brand dove l'esperienza in negozio è parte della vendita, ogni assunzione sbagliata moltiplicava ulteriormente questo rischio."
+          },
+          "oneBrandNo": {
+            "title": "Un brand, nessuno standard condiviso in Europa",
+            "text": "Ogni paese valutava con criteri diversi, in lingue diverse. Non esisteva un framework comune: \"la persona giusta per Subdued\" significava cose diverse a Milano e a Londra. Serviva un modello HR sostenibile e replicabile su tutta la rete commerciale europea."
+          }
+        },
+        "hrChallenges": {
+          "cvInsufficientFilter": {
+            "title": "Il CV: uno strumento insufficiente",
+            "text": "Il 50% dei candidati che superavano il primo screening si rivelava privo delle soft skill necessarie per il lavoro in store. Comunicazione, vendita e predisposizione al cliente: invisibili sulla carta."
+          },
+          "manualScreeningWas": {
+            "title": "Lo screening manuale erode il tempo strategico",
+            "text": "Senza un filtro strutturato, ogni candidato richiedeva un forte investimento di tempo per il pre-screening — un carico che sottraeva risorse preziose ad attività più strategiche, dall'employer branding allo sviluppo del team."
+          },
+          "earlyTurnoverSignal": {
+            "title": "Early turnover: segnale di un processo poco predittivo",
+            "text": "Un processo di selezione poco predittivo generava assunzioni sbagliate, con alto turnover nei primi mesi. Il costo di ogni errore era difficilmente sostenibile con una rete in rapida espansione."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "surfaceSkillsPotential": {
+            "text": "Mettere in luce competenze e potenziale su scala: valutare comunicazione, vendita e teamworking prima del colloquio, con dati oggettivi su ogni candidato"
+          },
+          "freeTeamFrom": {
+            "text": "Liberare il team dall'operatività: ridurre le ore di screening per recuperare tempo per attività strategiche, employer branding e sviluppo"
+          },
+          "createCrossEurope": {
+            "text": "Creare uno standard cross-europe: stessi criteri di valutazione su Italia, Irlanda, UK, Paesi Bassi, Svezia e Francia, adattati per lingua e ruolo, senza moltiplicare le risorse HR"
+          },
+          "transformHrInto": {
+            "text": "Trasformare HR in vero agente di cambiamento: creare un'infrastruttura di selezione capace di supportare la crescita del business, rendendo HR un business partner a tutti gli effetti"
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI con Skillvue",
+        "intro": "Il team HR di Subdued ha lavorato direttamente con Skillvue per selezionare le skill più rilevanti per i profili di store e costruire un assessment strutturato, erogato via WhatsApp — una scelta progettuale chiave per garantire un'esperienza frictionless e un buon tasso di completamento.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "communication": {
+            "label": "Comunicazione"
+          },
+          "sellingAbility": {
+            "label": "Capacità di vendita"
+          },
+          "teamworking": {
+            "label": "Teamworking"
+          }
+        },
+        "methodologyLabel": "COME È STATO COSTRUITO",
+        "methodology": [
+          {
+            "title": "Invio del link all'assessment Skillvue via WhatsApp",
+            "text": "Una scelta progettuale chiave per garantire un'esperienza frictionless e un buon tasso di completamento."
+          },
+          {
+            "title": "Il candidato completa l'assessment",
+            "text": "Video presentation + domande comportamentali strutturate su comunicazione, vendita e teamwork. Massimo 15 minuti, da qualunque device, entro una deadline definita."
+          },
+          {
+            "title": "Skillvue genera un report dettagliato",
+            "text": "Punteggio per competenza, compatibilità complessiva, aree di forza e miglioramento che l'HR utilizza per la gestione del colloquio in persona."
+          }
+        ]
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Key Metrics & Impatto",
+        "subtitle": "I risultati misurabili ottenuti da Subdued attraverso l'adozione di Skillvue nei processi di selezione.",
+        "metrics": [
+          {
+            "value": "-70%",
+            "label": "Ore di pre-screening"
+          },
+          {
+            "value": "80%",
+            "label": "Candidati qualificati dopo lo skills screening"
+          },
+          {
+            "value": "-50%",
+            "label": "Turnover"
+          },
+          {
+            "value": "6",
+            "label": "Paesi coperti"
+          }
+        ],
+        "qualitative": {
+          "unexpectedEmployerBranding": {
+            "title": "L'employer branding inatteso",
+            "text": "Il risultato che nessuno aveva previsto: il processo di selezione innovativo è diventato esso stesso un elemento di attrazione, un vantaggio competitivo concreto nel mercato del lavoro retail."
+          },
+          "humanLoopAlways": {
+            "title": "Human-in-the-loop, sempre",
+            "text": "Il primo colloquio in persona è ora più mirato e personalizzato, basato sui dati del report. Il recruiter arriva preparato. Il candidato si sente ascoltato. La connessione umana è preservata."
+          },
+          "europeanConsolidationProject": {
+            "title": "Consolidamento europeo del progetto",
+            "text": "L'Italia è stata il primo mercato a implementare l'infrastruttura Skillvue, diventando il modello di riferimento per il gruppo e guidando i team HR di UK, Irlanda, Paesi Bassi, Svezia e Francia. Un esempio virtuoso di standardizzazione di processo a partire dal lavoro di un team \"pilota\"."
+          }
+        }
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "carrefour",
+            "company": "Carrefour",
+            "tag": "Retail GDO · Hiring at Scale",
+            "headline": "Carrefour: come proteggere i margini su 1.200 punti vendita ottimizzando il KPI chiave del processo di selezione"
+          },
+          {
+            "id": "europ-assistance",
+            "company": "Europ Assistance",
+            "tag": "Insurance · Hiring",
+            "headline": "Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana"
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Subdued: come creare uno <hl>standard di selezione unico e scalabile</hl> per una rete internazionale di <hl2>130+ negozi</hl2>"
+    },
+    "unicomm": {
+      "breadcrumb": "Clienti",
+      "badge": "CUSTOMER STORY",
+      "subtitle": "Con Skillvue, Unicomm sta trasformando la propria infrastruttura HR in un sistema skills-based agile, capace di rispondere alle necessità di selezione, conferma e sviluppo su tutta la rete.",
+      "heroMetrics": [
+        {
+          "value": "250",
+          "label": "punti vendita coinvolti"
+        },
+        {
+          "value": "7",
+          "label": "insegne"
+        },
+        {
+          "value": "3",
+          "label": "processi attivati in parallelo"
+        }
+      ],
+      "ctaPrimary": "Contattaci",
+      "ctaSecondary": "Scopri di più",
+      "clientCard": {
+        "label": "SCHEDA CLIENTE",
+        "facts": [
+          {
+            "label": "Settore",
+            "value": "GDO"
+          },
+          {
+            "label": "Gruppo",
+            "value": "Gruppo Unicomm"
+          },
+          {
+            "label": "Fatturato",
+            "value": "+3,5 mld €"
+          },
+          {
+            "label": "Dipendenti",
+            "value": "8.000+"
+          },
+          {
+            "label": "Punti vendita diretti",
+            "value": "250+"
+          },
+          {
+            "label": "Use Case",
+            "value": "Hiring, Learning & Development, Internal Mobility"
+          }
+        ]
+      },
+      "context": {
+        "badge": "CONTESTO",
+        "title": "Un gruppo in continua e forte crescita ha bisogno di persone pronte alla stessa velocità.",
+        "paragraph": "<b>Gruppo Unicomm</b>, parte di <b>Selex Gruppo Commerciale</b>, è una delle principali realtà della <b>Grande Distribuzione Organizzata</b> italiana. Negli ultimi 3 anni il gruppo ha registrato una <b>crescita quasi doppia</b> rispetto alla media di settore, con l'obiettivo dichiarato di proseguire lavorando all'apertura di nuovi punti vendita, all'integrazione strategica con <b>Etruria Retail</b> e alla realizzazione di nuove infrastrutture logistiche. In questo scenario di espansione accelerata, la capacità di selezionare, confermare e sviluppare le persone giuste diventa una priorità tanto per HR quanto per il business — soprattutto considerando che nel mercato del lavoro della GDO italiana il <b>50% delle posizioni</b> è classificato come \"difficile da chiudere\" e uno store manager richiede in media <b>90-120 giorni</b> di ricerca."
+      },
+      "challenge": {
+        "badge": "LA SFIDA",
+        "title": "Non bastava ottimizzare: serviva costruire dalle fondamenta.",
+        "intro": "Unicomm partiva da una infrastruttura HR ancora poco digitalizzata, e lo faceva nel momento di crescita più intensa della propria storia.",
+        "businessLabel": "BUSINESS CHALLENGES",
+        "hrLabel": "HR & PEOPLE CHALLENGES",
+        "businessChallenges": {
+          "distributedNetworkFragmented": {
+            "title": "Rete distribuita, criteri frammentati",
+            "text": "Due candidati con lo stesso potenziale potevano avere percorsi diversi per mancanza di un framework comune. In un settore dove la variazione di performance tra uno store manager può valere il 15-25% del fatturato di un punto vendita, l'assenza di criteri oggettivi era un rischio commerciale."
+          },
+          "threeCriticalBusiness": {
+            "title": "Tre processi critici per il business da attivare contemporaneamente",
+            "text": "Unicomm doveva attivarsi simultaneamente sulle selezioni per le nuove aperture, le conferme di decine di neoassunti al mese, e lo sviluppo interno attraverso l'Academy per la progressione a capo reparto e store manager."
+          }
+        },
+        "hrChallenges": {
+          "hrDigitizationStill": {
+            "title": "Una digitalizzazione HR ancora agli inizi",
+            "text": "Selezione, conferme del personale e percorsi di sviluppo venivano gestiti in modo manuale ed erano affidati alle capacità dei singoli responsabili di negozio o area. Non esisteva una visione d'insieme sul talento degli oltre 8.000 dipendenti."
+          },
+          "changeManagementNo": {
+            "title": "Change management senza precedenti digitali",
+            "text": "Introdurre assessment digitali in un'organizzazione che non aveva mai utilizzato strumenti tecnologici per la gestione delle persone significava dover promuovere una trasformazione profonda, a tutti i livelli."
+          }
+        }
+      },
+      "objectives": {
+        "badge": "OBIETTIVI DI COLLABORAZIONE",
+        "title": "Cosa doveva cambiare",
+        "items": {
+          "standardizeAssessmentsAcross": {
+            "text": "Standardizzare le valutazioni su tutta la rete: stessi criteri, stesso framework di competenze, indipendentemente dall'insegna, dal punto vendita o dal singolo responsabile"
+          },
+          "adoptCompleteSkills": {
+            "text": "Adottare un approccio skills-based completo: valutazioni calibrate per obiettivo (hiring, conferma, sviluppo) e per ruolo/reparto, con un mix di soft e hard skill"
+          },
+          "buildSectorSpecific": {
+            "text": "Costruire competenze di valutazione specifiche per la GDO: sviluppare assessment ad hoc laddove il modello Unicomm lo richiedeva"
+          },
+          "leadRealChange": {
+            "text": "Guidare un change management reale: trasformare la cultura HR dell'organizzazione, non solo introdurre uno strumento"
+          }
+        }
+      },
+      "solution": {
+        "badge": "LA SOLUZIONE",
+        "title": "Assessment AI su tre filoni in parallelo, calibrato sul modello Unicomm.",
+        "intro": "Skillvue è stato integrato come partner per la costruzione del talent lifecycle di Unicomm, lavorando con la Direzione Risorse Umane guidata da Giuseppe Curci, Direttore Risorse Umane Gruppo, per allineare la piattaforma al modello di competenze aziendale e alle specificità della GDO.",
+        "skillsLabel": "COMPETENZE VALUTATE",
+        "skills": {
+          "groceryRetailTechnical": {
+            "title": "Competenze tecniche GDO",
+            "text": "differenziate per reparto e livello di responsabilità (ruolo client-facing o meno, livello da addetto vendita a gerente)"
+          },
+          "tailoredSoftSkills": {
+            "title": "Soft skill specifiche",
+            "text": "sviluppate ad hoc sul modello Unicomm (es. orientamento al servizio in contesti GDO, gestione del team su turni)"
+          }
+        },
+        "methodologyLabel": "STRUTTURA DEL PROGETTO — TRE FILONI IN PARALLELO",
+        "methodology": [
+          {
+            "title": "Hiring",
+            "text": "Selezione per le posizioni aperte sulle diverse insegne del Gruppo, con assessment calibrati sul ruolo specifico."
+          },
+          {
+            "title": "Conferme",
+            "text": "Decine di collaboratori al mese da valutare per la conferma a tempo indeterminato, con criteri strutturati e tracciabili."
+          },
+          {
+            "title": "03 — Sviluppo",
+            "text": "Due momenti l'anno per la progressione a capo reparto o store manager, tramite Academy interna basata su dati di competenza oggettivi."
+          }
+        ]
+      },
+      "results": {
+        "badge": "RISULTATI",
+        "title": "Cosa sta cambiando.",
+        "metrics": [
+          {
+            "value": "250",
+            "label": "Punti vendita coinvolti"
+          },
+          {
+            "value": "7",
+            "label": "Insegne"
+          },
+          {
+            "value": "3",
+            "label": "Processi attivati in parallelo"
+          }
+        ],
+        "qualitative": {
+          "fromZeroIntegrated": {
+            "title": "Da zero a sistema integrato",
+            "text": "Unicomm è passata dall'assenza totale di strumenti digitali HR a un talent lifecycle strutturato che copre selezione, conferme e sviluppo in un unico sistema. Non un'ottimizzazione incrementale, ma un salto di paradigma realizzato durante la fase di crescita più intensa del Gruppo."
+          },
+          "industryRelevantSkills": {
+            "title": "Competenze GDO finalmente misurabili",
+            "text": "Le soft skill specifiche del settore vengono ora valutate con strumenti calibrati sul modello Unicomm, non con assessment generici. Misurare queste competenze è una leva di business, non un mero esercizio HR."
+          },
+          "decisionsBasedData": {
+            "title": "Decisioni basate su dati, non su impressioni",
+            "text": "Gli assessment producono informazioni strutturate che supportano le decisioni manageriali senza sostituirle. I manager decidono con più dati, e questo alza il livello della decisione."
+          },
+          "ongoingChangeManagement": {
+            "title": "Un percorso di change management in corso",
+            "text": "La trasformazione culturale è ancora in atto, ma le fondamenta sono solide: il sistema è operativo, i tre filoni avanzano in parallelo, e l'organizzazione sta costruendo la familiarità con un approccio skills-based che prima non esisteva."
+          }
+        }
+      },
+      "related": {
+        "title": "Storie correlate",
+        "stories": [
+          {
+            "id": "ins-mercato",
+            "company": "In's Mercato",
+            "tag": "Retail GDO · Mobilità Interna",
+            "headline": "Come In's Mercato ha costruito una pipeline interna di Store Manager"
+          },
+          {
+            "id": "adr",
+            "company": "Aeroporti di Roma",
+            "tag": "Aviation · Mobilità Interna",
+            "headline": "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi."
+          }
+        ],
+        "cta": "Leggi la storia"
+      },
+      "finalCta": {
+        "headline": "Pronto a trasformare la tua",
+        "accent": "People Strategy?"
+      },
+      "headline": "Come Unicomm sta costruendo una nuova <hl>gestione del talento</hl> su una rete di <hl2>250 punti vendita</hl2> in costante aumento"
     }
   },
   "home": {

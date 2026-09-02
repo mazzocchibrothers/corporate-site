@@ -1,5 +1,6 @@
 ﻿// @ts-nocheck
 import React, { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, Heart, CheckCircle, Clock } from 'lucide-react';
@@ -24,269 +25,6 @@ function Section({ children, className = '' }) {
 
 // ─── BILINGUAL CONTENT ────────────────────────────────────────────────────────
 
-const content = {
-  it: {
-    breadcrumb: 'Clienti',
-    badge: 'CUSTOMER STORY',
-    headline: {
-      before: 'Eataly: come alimentare un piano di espansione globale selezionando e mobilitando talenti ',
-      highlight1: 'ad alto potenziale',
-      middle: '',
-      highlight2: '',
-      after: '',
-    },
-    subtitle: "Insieme a Skillvue, Eataly ha avviato un percorso di digital transformation per integrare AI e human touch nel recruiting e sostenere così l'espansione del business.",
-    heroMetrics: [
-      { value: '1.000+', label: 'candidature processate' },
-      { value: '50', label: 'punti vendita diretti' },
-      { value: '15', label: 'Paesi' },
-    ],
-    ctaPrimary: 'Contattaci',
-    ctaSecondary: 'Scopri di più',
-    clientCard: {
-      label: 'SCHEDA CLIENTE',
-      facts: [
-        { label: 'Settore', value: 'Food Retail' },
-        { label: 'Dipendenti', value: 'Oltre 5.300' },
-        { label: 'Fatturato', value: '684 mln €' },
-        { label: 'Use Case', value: 'Hiring' },
-      ],
-    },
-    context: {
-      badge: 'CONTESTO',
-      title: 'Un brand che cresce a ritmi serrati ha bisogno di trovare i talenti giusti alla stessa velocità',
-      paragraph: <>
-        Eataly non è un operatore qualsiasi del food italiano. Con una <strong className="text-[#121212]/80 font-semibold">crescita del 47% in tre anni</strong> e una presenza internazionale reale in <strong className="text-[#121212]/80 font-semibold">15 Paesi</strong>, è l'unico brand del food Made in Italy a operare su scala globale. Dal 2022 sta accelerando su tutti i fronti: <strong className="text-[#121212]/80 font-semibold">nuovi flagship in Nord America</strong>, nuovi format compatti in hub urbani e aeroporti, un piano di espansione in <strong className="text-[#121212]/80 font-semibold">Medio Oriente</strong> e la prima esperienza a bordo delle navi da crociera.<br /><br />
-        Questa crescita richiede figure professionali capaci di incarnare i valori del brand in contesti multiculturali — dai profili manageriali come <strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations e General Manager</strong>, fino ai profili più junior che rappresentano la <strong className="text-[#121212]/80 font-semibold">prossima generazione di talento Eataly</strong>. In uno scenario in cui il mondo del lavoro è diventato più <strong className="text-[#121212]/80 font-semibold">dinamico, digitale e in continua trasformazione</strong>, l'obiettivo era chiaro: semplificare e rendere più efficienti i processi di recruiting, senza perdere la <strong className="text-[#121212]/80 font-semibold">qualità, l'autenticità e l'attenzione alla persona</strong> che da sempre contraddistinguono il brand. Nasce da qui il <strong className="text-[#121212]/80 font-semibold">Progetto Career Passport</strong>, primo capitolo per la costruzione di una <strong className="text-[#121212]/80 font-semibold">talent strategy</strong> sempre più solida e innovativa, orientata a rendere Eataly una piattaforma globale del Made in Italy.
-      </>,
-      summary: '',
-    },
-    challenge: {
-      badge: 'LA SFIDA',
-      title: "Crescere a questa velocità significa ripensare il modo di lavorare",
-      intro: "La campagna Career Passport ha generato oltre mille candidature per 3 posizioni chiave. Una scala che, per essere gestita, richiedeva non solo nuovi strumenti, ma un nuovo modo di lavorare.",
-      businessLabel: 'BUSINESS CHALLENGES',
-      hrLabel: 'HR & PEOPLE CHALLENGES',
-      businessChallenges: [
-        {
-          icon: Zap,
-          title: "La velocità dell'espansione supera la capacity di selezione",
-          text: "20+ nuovi store in pipeline in Nord America, aperture simultanee su più mercati, date fissate. Lo screening manuale non reggeva più i ritmi e il livello di profondità richiesti.",
-        },
-        {
-          icon: Layers,
-          title: 'Il profilo cercato è raro: artigianale + manageriale + internazionale',
-          text: "Eataly cerca chi sa replicare l'autenticità artigianale su scala globale. Leadership, gestione del personale, inglese fluente, mobilità internazionale: un profilo composito e difficile da trovare.",
-        },
-        {
-          icon: TrendingUp,
-          title: 'La crescita amplifica il peso specifico della selezione',
-          text: "Per un'azienda con aperture store su date fissate, ogni posizione scoperta è un problema operativo e di costi. A questa scala, la qualità della selezione è ancora più cruciale.",
-        },
-      ],
-      hrChallenges: [
-        {
-          icon: Zap,
-          title: 'Servono nuovi modi di lavorare, più agili e data-driven',
-          text: "Gestire questi volumi richiedeva evolvere il team HR: da un approccio tradizionale a una mentalità agile, guidata dai dati e capace di adattarsi ai cambiamenti del business.",
-        },
-        {
-          icon: Scale,
-          title: 'Ricerca di equità e oggettività su volumi mai gestiti prima',
-          text: "Senza uno strumento strutturato, il rischio era valutare in modo disomogeneo. Nel settore, il 38,1% dei mismatch deriva proprio da assessment non standardizzati.",
-        },
-        {
-          icon: Target,
-          title: 'Necessità di filtrare da subito i requisiti bloccanti',
-          text: "Disponibilità al trasferimento, range retributivo, esperienza internazionale: requisiti bloccanti da verificare al primo contatto, prima di investire tempo su candidati non idonei.",
-        },
-      ],
-    },
-    objectives: {
-      badge: 'OBIETTIVI DI COLLABORAZIONE',
-      title: 'Cosa doveva cambiare',
-      items: [
-        { icon: Eye, text: "Mappare tutti i fattori chiave già al pre-screening: Leadership, gestione del personale, lingua inglese, aspirazione alla mobilità internazionale. Valutare tutto ancora prima del colloquio, per concentrare l'investimento di tempo successivo in una conversazione più mirata, personalizzata, e guidata da informazioni chiave." },
-        { icon: Scale, text: "Garantire equità e ridurre i bias in modo strutturale: ogni candidato valutato con lo stesso rigore e la stessa profondità, costruendo un processo difendibile e trasparente sia all'interno che all'esterno, grazie a strumenti psicometricamente validati." },
-        { icon: Heart, text: "Integrare AI e human touch senza mai perdere l'autenticità del brand: usare la tecnologia come abilitatore — non come sostituzione — del valore umano che da sempre contraddistingue Eataly, per processi più efficaci, inclusivi e consapevoli." },
-        { icon: Zap, text: "Processare le candidature in settimane, non mesi: comprimere i tempi di pre-screening per stare al passo con un piano di aperture che non aspetta, semplificando radicalmente il flusso di screening del team HR." },
-      ],
-    },
-    solution: {
-      badge: 'LA SOLUZIONE',
-      title: 'Assessment AI con Skillvue per il progetto Career Passport',
-      intro: "Skillvue è stato integrato nel processo di selezione esterna del progetto Eataly Career Passport — il programma di global mobility lanciato per supportare l'espansione in Nord America. Dopo che una campagna omnichannel ha raccolto oltre 1.000 candidature, Skillvue ha gestito il pre-screening con un assessment basato su domande filtro e domande situazionali calibrate sui ruoli specifici (Head Chef, Director of Store Operations, General Manager of Restaurant).",
-      intro2: "L'obiettivo non era sostituire il giudizio umano, ma potenziarlo: lasciare all'AI il lavoro di standardizzazione su larga scala e restituire al team HR tempo e dati di qualità per concentrarsi su ciò che conta davvero: il confronto umano successivo.",
-      skillsLabel: 'COMPETENZE VALUTATE',
-      skills: [
-        { icon: Users, label: 'Leadership' },
-        { icon: Shield, label: 'Gestione del personale' },
-        { icon: Target, label: 'Predisposizione alla mobilità internazionale' },
-      ],
-    },
-    results: {
-      badge: 'RISULTATI',
-      title: 'Cosa è cambiato e perché conta.',
-      subtitle: 'I risultati del progetto Skillvue × Eataly Career Passport.',
-      metrics: [
-        { value: '1.000+', label: 'candidature processate in poche settimane' },
-        { value: 'Time‑to‑hire ridotto', label: 'nonostante gli alti volumi' },
-        { value: 'Più dati a disposizione', label: 'per le decisioni che contano davvero' },
-      ],
-      qualitative: [
-        { icon: TrendingUp, title: 'Produttività del team HR aumentata', text: "Liberato dallo screening manuale, il team Talent Acquisition ha dedicato più tempo alle fasi ad alto valore: colloqui, valutazioni finali, relazione con i candidati." },
-        { icon: Scale, title: 'Riduzione significativa dei bias nella selezione', text: "Gli strumenti psicometricamente validati hanno ridotto il peso dei bias cognitivi, garantendo standard di valutazione coerenti su tutti i candidati, indipendentemente dal valutatore." },
-        { icon: Heart, title: "L'autenticità del tocco umano è rimasta intatta", text: "L'AI ha gestito standardizzazione e scala; le persone hanno gestito relazione, contesto e lettura del potenziale. Un processo più efficiente, ma mai impersonale." },
-      ],
-    },
-    vision: {
-      badge: 'EVOLUZIONE 2026',
-      title: "L'espansione continua. La macchina di talent acquisition anche.",
-      intro: "Il Career Passport è stato il primo capitolo per la costruzione di una talent strategy sempre più solida e innovativa, orientata a rendere il brand Eataly una piattaforma globale del Made in Italy.",
-      nextGen: "Nel 2026 la collaborazione prosegue con il progetto NextGen, focalizzato su candidati junior con 270+ profili già inclusi nell'assessment di lingua inglese (livello B2) e soft skill. Un segnale chiaro della volontà di Eataly di continuare a integrare AI e human touch come leva strutturale di una talent strategy consapevole, inclusiva e scalabile.",
-    },
-    related: {
-      title: 'Storie correlate',
-      stories: [
-        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation · Mobilità Interna', headline: "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone per eseguire un piano da 9 miliardi" },
-        { id: 'ins-mercato', company: "In's Mercato", tag: 'Retail GDO · Mobilità Interna', headline: "In's Mercato: come ha costruito una pipeline interna di Store Manager" },
-      ],
-      cta: 'Leggi la storia',
-    },
-    finalCta: { headline: 'Pronto a trasformare la tua', accent: 'People Strategy?' },
-  },
-
-  en: {
-    breadcrumb: 'Customers',
-    badge: 'CUSTOMER STORY',
-    headline: {
-      before: 'Eataly: how to fuel a global expansion plan by identifying and mobilising ',
-      highlight1: 'high-potential talent',
-      middle: '',
-      highlight2: '',
-      after: '',
-    },
-    subtitle: "Eataly has embarked on a digital transformation journey to integrate AI and human touch in recruiting, supporting its global business expansion.",
-    heroMetrics: [
-      { value: '1,000+', label: 'applications processed' },
-      { value: '50', label: 'direct stores' },
-      { value: '15', label: 'countries' },
-    ],
-    ctaPrimary: 'Contact Us',
-    ctaSecondary: 'Learn More',
-    clientCard: {
-      label: 'CLIENT PROFILE',
-      facts: [
-        { label: 'Industry', value: 'Food Retail' },
-        { label: 'Employees', value: '5,300+' },
-        { label: 'Revenue', value: '€684M' },
-        { label: 'Use Case', value: 'Hiring' },
-      ],
-    },
-    context: {
-      badge: 'CONTEXT',
-      title: 'A brand growing fast needs to find the right talent at the same speed',
-      paragraph: <>
-        Eataly is no ordinary player in Italian food. With <strong className="text-[#121212]/80 font-semibold">47% growth over three years</strong> and a truly international presence across <strong className="text-[#121212]/80 font-semibold">15 countries</strong>, it is the only Italian food brand operating at global scale. Since 2022 it has been accelerating on all fronts: <strong className="text-[#121212]/80 font-semibold">new flagships in North America</strong>, new compact formats in urban hubs and airports, an expansion plan in the <strong className="text-[#121212]/80 font-semibold">Middle East</strong>, and the first at-sea experience on cruise ships.<br /><br />
-        This growth requires talent capable of embodying the brand's values in multicultural contexts — from managerial profiles like <strong className="text-[#121212]/80 font-semibold">Head Chef, Director of Store Operations and General Manager</strong>, to more junior profiles representing the <strong className="text-[#121212]/80 font-semibold">next generation of Eataly talent</strong>. In a world of work that has become more <strong className="text-[#121212]/80 font-semibold">dynamic, digital and constantly evolving</strong>, the goal was clear: simplify and make recruiting processes more efficient, without losing the <strong className="text-[#121212]/80 font-semibold">quality, authenticity and care for people</strong> that have always defined the brand. This is the origin of the <strong className="text-[#121212]/80 font-semibold">Career Passport Project</strong> — the first chapter in building a <strong className="text-[#121212]/80 font-semibold">talent strategy</strong> that is increasingly solid, innovative and oriented towards making Eataly a global platform for Made in Italy.
-      </>,
-      summary: '',
-    },
-    challenge: {
-      badge: 'THE CHALLENGE',
-      title: 'Growing at this pace means rethinking the way we work',
-      intro: "The Career Passport campaign generated over a thousand applications for 3 key roles. A scale that required not just new tools, but a new way of working.",
-      businessLabel: 'BUSINESS CHALLENGES',
-      hrLabel: 'HR & PEOPLE CHALLENGES',
-      businessChallenges: [
-        {
-          icon: Zap,
-          title: 'Expansion speed outpaces hiring capacity',
-          text: "20+ new stores in the pipeline in North America, simultaneous openings, fixed dates. Manual screening was no longer enough to sustain this pace with the depth of quality required.",
-        },
-        {
-          icon: Layers,
-          title: 'The profile is rare: artisanal + managerial + international',
-          text: "Eataly looks for people who can replicate Italian artisanal authenticity at global scale. Leadership, team management, fluent English, willingness to relocate: genuinely hard to find.",
-        },
-        {
-          icon: TrendingUp,
-          title: 'Growth amplifies the weight of every hiring decision',
-          text: "For a company with fixed store opening dates, every unfilled role is an operational and financial problem. At this scale, hiring quality is more critical than ever.",
-        },
-      ],
-      hrChallenges: [
-        {
-          icon: Zap,
-          title: 'New, more agile and data-driven ways of working are needed',
-          text: "Managing these volumes required evolving how the HR team works: from a traditional approach to an agile, data-driven mindset capable of adapting to business changes.",
-        },
-        {
-          icon: Scale,
-          title: 'Fairness and objectivity at volumes never managed before',
-          text: "Without a structured tool, the risk was inconsistent evaluation. In the sector, 38.1% of mismatches come precisely from non-standardised assessments.",
-        },
-        {
-          icon: Target,
-          title: 'Filtering blocking requirements from the start',
-          text: "Relocation availability, salary range, international experience: blocking requirements to assess at the first touchpoint, before investing interview time on unsuitable candidates.",
-        },
-      ],
-    },
-    objectives: {
-      badge: 'COLLABORATION OBJECTIVES',
-      title: 'What needed to change',
-      items: [
-        { icon: Eye, text: "Map all key factors at the pre-screening stage: Leadership, team management, English language, aspiration for international mobility. Assess everything before the first interview, to focus subsequent time investment on a more targeted, personalised conversation guided by key data." },
-        { icon: Scale, text: "Ensure fairness and reduce bias structurally: every candidate evaluated with the same rigour and depth, building a process that is defensible and transparent both internally and externally, using psychometrically validated tools." },
-        { icon: Heart, text: "Integrate AI and human touch without ever losing the brand's authenticity: use technology as an enabler — not a replacement — of the human value that has always defined Eataly, for more effective, inclusive and conscious processes." },
-        { icon: Zap, text: "Process applications in weeks, not months: compress pre-screening timelines to keep pace with an opening plan that can't wait, radically simplifying the HR team's screening workflow." },
-      ],
-    },
-    solution: {
-      badge: 'THE SOLUTION',
-      title: 'AI-scaled Assessment with Skillvue for the Career Passport project',
-      intro: "Skillvue was integrated into the external hiring process of the Eataly Career Passport project — the global mobility programme launched to support expansion in North America. After an omnichannel campaign collected over 1,000 applications, Skillvue managed the pre-screening with an assessment combining filter questions and situational questions calibrated to specific roles (Head Chef, Director of Store Operations, General Manager of Restaurant).",
-      intro2: "The goal was not to replace human judgement, but to enhance it: let AI handle standardisation at scale, and give the HR team back the time and quality data to focus on what truly matters — the human conversation that follows.",
-      skillsLabel: 'SKILLS ASSESSED',
-      skills: [
-        { icon: Users, label: 'Leadership' },
-        { icon: Shield, label: 'People management' },
-        { icon: Target, label: 'Openness to international mobility' },
-      ],
-    },
-    results: {
-      badge: 'RESULTS',
-      title: 'What changed and why it matters.',
-      subtitle: 'Outcomes of the Skillvue \u00d7 Eataly Career Passport project.',
-      metrics: [
-        { value: '1,000+', label: 'applications processed in a few weeks' },
-        { value: 'Time‑to‑hire reduced', label: 'despite high volumes' },
-        { value: 'More data available', label: 'for the decisions that matter most' },
-      ],
-      qualitative: [
-        { icon: TrendingUp, title: 'HR team productivity increased', text: "Freed from manual screening, the Talent Acquisition team dedicated more time to high-value stages: interviews, final assessments, and candidate relationships." },
-        { icon: Scale, title: 'Significant reduction in hiring bias', text: "Psychometrically validated tools reduced the weight of cognitive bias, ensuring consistent assessment standards across all candidates regardless of evaluator." },
-        { icon: Heart, title: 'The authenticity of the human touch remained intact', text: "AI handled standardisation and scale; people managed relationship, context and reading of potential. A more efficient process that never felt impersonal." },
-      ],
-    },
-    vision: {
-      badge: 'EVOLUTION 2026',
-      title: 'The expansion continues. So does the talent acquisition machine.',
-      intro: "The Career Passport was the first chapter in building an increasingly solid and innovative talent strategy, aimed at making the Eataly brand a global platform for Made in Italy.",
-      nextGen: "In 2026, the collaboration continues with the NextGen project, focused on junior candidates with 270+ profiles already included in the English language (B2 level) and soft skills assessment. A clear signal of Eataly's commitment to integrating AI and human touch as a structural lever of a conscious, inclusive and scalable talent strategy.",
-    },
-    related: {
-      title: 'Related Stories',
-      stories: [
-        { id: 'adr', company: 'Aeroporti di Roma', tag: 'Aviation \u00b7 Internal Mobility', headline: 'Aeroporti di Roma: how to develop an organisation of nearly 5,000 people to execute a \u20ac9 billion plan' },
-        { id: 'ins-mercato', company: "In's Mercato", tag: 'Large-scale distribution \u00b7 Internal Mobility', headline: "In's Mercato: how it built an internal pipeline of Store Managers" },
-      ],
-      cta: 'Read the story',
-    },
-    finalCta: { headline: 'Ready to transform your', accent: 'People Strategy?' },
-  },
-};
 
 // ─── PAGE COMPONENT ───────────────────────────────────────────────────────────
 
@@ -295,12 +33,45 @@ const content = {
 // routes.json, and i18n/messages.ts turns it into the namespaces to load.
 export const getStaticProps = messagesFor('customers/eataly-2');
 
+// Structure the catalogue cannot hold: ids and the components the page
+// renders for each row. The words that went with them are in messages/.
+const CHALLENGE_BUSINESS_CHALLENGES = [
+  { id: 'expansionSpeedOutpaces', icon: Zap },
+  { id: 'profileRareArtisanal', icon: Layers },
+  { id: 'growthAmplifiesWeight', icon: TrendingUp },
+];
+
+const CHALLENGE_HR_CHALLENGES = [
+  { id: 'newMoreAgile', icon: Zap },
+  { id: 'fairnessObjectivityAt', icon: Scale },
+  { id: 'filteringBlockingRequirements', icon: Target },
+];
+
+const OBJECTIVES_ITEMS = [
+  { id: 'mapAllKey', icon: Eye },
+  { id: 'ensureFairnessReduce', icon: Scale },
+  { id: 'integrateAiHuman', icon: Heart },
+  { id: 'processApplicationsWeeks', icon: Zap },
+];
+
+const SOLUTION_SKILLS = [
+  { id: 'leadership', icon: Users },
+  { id: 'peopleManagement', icon: Shield },
+  { id: 'opennessInternationalMobility', icon: Target },
+];
+
+const RESULTS_QUALITATIVE = [
+  { id: 'hrTeamProductivity', icon: TrendingUp },
+  { id: 'significantReductionHiring', icon: Scale },
+  { id: 'authenticityHumanTouch', icon: Heart },
+];
+
 export default function EatalyStoryPage() {
   const router = useRouter();
   const { lang } = useLanguage();
-  const c = lang === 'it' ? content.it : content.en;
-  const metaTitle = `${c.headline.before}${c.headline.highlight1}${c.headline.middle || ''}${c.headline.highlight2 || ''}${c.headline.after || ''} | Skillvue`;
-  const metaDesc = c.subtitle.length > 160 ? c.subtitle.substring(0, 157) + '...' : c.subtitle;
+  const t = useTranslations('customers.eataly-2');
+  const metaTitle = `${t('headline').replace(/<\/?hl\d*>/g, '')} | Skillvue`;
+  const metaDesc = t('subtitle').length > 160 ? t('subtitle').substring(0, 157) + '...' : t('subtitle');
 
   return (
     <>
@@ -324,7 +95,7 @@ export default function EatalyStoryPage() {
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             {/* Breadcrumb */}
             <motion.div className="mb-10 flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{c.breadcrumb}</Button>
+              <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{t('breadcrumb')}</Button>
               <span className="text-white/20">/</span>
               <span className="text-[13px] text-white/[0.65]">Eataly</span>
             </motion.div>
@@ -334,14 +105,17 @@ export default function EatalyStoryPage() {
               <div className="lg:col-span-7">
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
                   <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-8 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
-                    {c.badge}
+                    {t('badge')}
                   </span>
                   <h1 className="text-[48px] md:text-[44px] font-semibold tracking-[-0.02em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
-                    {c.headline.before}<span style={{ color: '#7b7df9' }}>{c.headline.highlight1}</span>{c.headline.middle}{c.headline.highlight2 && <span style={{ color: '#7b7df9' }}>{c.headline.highlight2}</span>}{c.headline.after}
+                    {t.rich('headline', {
+                      hl: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+                      hl2: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+                    })}
                   </h1>
-                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{c.subtitle}</p>
+                  <p className="text-[17px] text-white/[0.60] leading-[1.75] mb-12 max-w-2xl">{t('subtitle')}</p>
                   <div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4 mb-12">
-                    {c.heroMetrics.map(m => (
+                    {t.raw('heroMetrics').map(m => (
                       <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-3 py-3 md:px-6 md:py-4">
                         <span className="block text-white text-[19px] break-words stat-value md:text-[1.7rem]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                         <span className="text-[13px] text-white/[0.55] mt-1 block">{m.label}</span>
@@ -350,10 +124,10 @@ export default function EatalyStoryPage() {
                   </div>
                   <div className="flex flex-wrap gap-4">
                     <Button variant="primary" mode="dark" onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}>
-                      {c.ctaPrimary}
+                      {t('ctaPrimary')}
                     </Button>
                     <Button variant="secondary" mode="dark" onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })}>
-                      {c.ctaSecondary}
+                      {t('ctaSecondary')}
                     </Button>
                   </div>
                 </motion.div>
@@ -367,12 +141,12 @@ export default function EatalyStoryPage() {
                       <img src="/logos/Eataly-logo.png" alt="Eataly logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
-                      <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{c.clientCard.label}</span>
+                      <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{t('clientCard.label')}</span>
                       <p className="text-[18px] font-bold text-white/90">Eataly</p>
                     </div>
                   </div>
                   <div className="divide-y divide-white/[0.08]">
-                    {c.clientCard.facts.map(s => (
+                    {t.raw('clientCard.facts').map(s => (
                       <div key={s.label} className="py-4 first:pt-0 last:pb-0">
                         <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
                         <p className="text-[14px] text-white/[0.65] leading-[1.6]">{s.value}</p>
@@ -391,43 +165,46 @@ export default function EatalyStoryPage() {
 
             {/* CONTEXT */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.context.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-6">{c.context.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{c.context.paragraph}</p>
-              {c.context.summary && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85]">{c.context.summary}</p>}
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('context.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-6">{t('context.title')}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{t.rich('context.paragraph', {
+    b: (chunks) => <strong className="text-[#121212]/80 font-semibold">{chunks}</strong>,
+    br: () => <br />,
+  })}</p>
+              {t.has('context').summary && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85]">{t.raw('context').summary}</p>}
             </Section>
 
             {/* CHALLENGE */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{c.challenge.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.challenge.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{c.challenge.intro}</p>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{t('challenge.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('challenge.title')}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{t('challenge.intro')}</p>
 
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.businessLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('challenge.businessLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
-                  {c.challenge.businessChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                  {CHALLENGE_BUSINESS_CHALLENGES.map((ch) => (
+                    <div key={t(`challenge.businessChallenges.${ch.id}.title`)} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`challenge.businessChallenges.${ch.id}.title`)}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`challenge.businessChallenges.${ch.id}.text`)}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.challenge.hrLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('challenge.hrLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
-                  {c.challenge.hrChallenges.map((ch) => (
-                    <div key={ch.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                  {CHALLENGE_HR_CHALLENGES.map((ch) => (
+                    <div key={t(`challenge.hrChallenges.${ch.id}.title`)} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(234,88,12,0.1)' }}>
                         <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{ch.title}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{ch.text}</p>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`challenge.hrChallenges.${ch.id}.title`)}</h4>
+                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`challenge.hrChallenges.${ch.id}.text`)}</p>
                     </div>
                   ))}
                 </div>
@@ -436,11 +213,11 @@ export default function EatalyStoryPage() {
 
             {/* OBJECTIVES */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.objectives.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{c.objectives.title}</h2>
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('objectives.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{t('objectives.title')}</h2>
               <div className="grid md:grid-cols-2 gap-5">
-                {c.objectives.items.map((o, i) => {
-                  const [title, ...rest] = o.text.split(':');
+                {OBJECTIVES_ITEMS.map((o, i) => {
+                  const [title, ...rest] = t(`objectives.items.${o.id}.text`).split(':');
                   const desc = rest.join(':').trim();
                   return (
                     <div key={i} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -457,19 +234,19 @@ export default function EatalyStoryPage() {
 
             {/* SOLUTION */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{c.solution.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.solution.title}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-4">{c.solution.intro}</p>
-              {c.solution.intro2 && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.solution.intro2}</p>}
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('solution.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('solution.title')}</h2>
+              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-4">{t('solution.intro')}</p>
+              {t.has('solution.intro2') && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('solution.intro2')}</p>}
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{c.solution.skillsLabel}</span>
+                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('solution.skillsLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
-                  {c.solution.skills.map((s) => (
-                    <div key={s.label} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
+                  {SOLUTION_SKILLS.map((s) => (
+                    <div key={t(`solution.skills.${s.id}.label`)} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                         <s.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
-                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{s.label}</h4>
+                      <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`solution.skills.${s.id}.label`)}</h4>
                     </div>
                   ))}
                 </div>
@@ -478,13 +255,13 @@ export default function EatalyStoryPage() {
 
             {/* RESULTS */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{c.results.badge}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.results.title}</h2>
-              {c.results.subtitle && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{c.results.subtitle}</p>}
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{t('results.badge')}</span>
+              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('results.title')}</h2>
+              {t.has('results.subtitle') && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('results.subtitle')}</p>}
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
                 {[Users, Clock, TrendingUp].map((Icon, i) => {
-                  const m = c.results.metrics[i];
+                  const m = t.raw('results.metrics')[i];
                   return (
                     <div key={m.label} className="rounded-2xl border p-8" style={{ background: '#b7f5d8', borderColor: '#93e0bb' }}>
                       <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: 'rgba(6,78,59,0.14)' }}>
@@ -498,13 +275,13 @@ export default function EatalyStoryPage() {
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {c.results.qualitative.map((q) => (
-                  <div key={q.title} className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
+                {RESULTS_QUALITATIVE.map((q) => (
+                  <div key={t(`results.qualitative.${q.id}.title`)} className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
                     <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: '#e3f9ec' }}>
                       <q.icon className="h-[22px] w-[22px]" style={{ color: '#10b981' }} />
                     </div>
-                    <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{q.title}</h4>
-                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{q.text}</p>
+                    <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{t(`results.qualitative.${q.id}.title`)}</h4>
+                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{t(`results.qualitative.${q.id}.text`)}</p>
                   </div>
                 ))}
               </div>
@@ -514,11 +291,11 @@ export default function EatalyStoryPage() {
             <Section>
               <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10">
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
-                  {c.vision.badge}
+                  {t('vision.badge')}
                 </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{c.vision.title}</h2>
-                <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8]">{c.vision.intro}</p>
-                {c.vision.nextGen && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mt-4">{c.vision.nextGen}</p>}
+                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('vision.title')}</h2>
+                <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8]">{t('vision.intro')}</p>
+                {t.has('vision.nextGen') && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mt-4">{t('vision.nextGen')}</p>}
               </div>
             </Section>
 
@@ -530,15 +307,15 @@ export default function EatalyStoryPage() {
         {/* RELATED STORIES */}
         <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{c.related.title}</h3>
+            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{t('related.title')}</h3>
             <div className="grid md:grid-cols-2 gap-5">
-              {c.related.stories.map(s => (
+              {t.raw('related.stories').map(s => (
                 <button key={s.id} onClick={() => { router.push(`${href('customers', lang)}/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
                   <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
                   <h4 className="text-[24px] font-semibold text-white/90 mb-4">{s.company}</h4>
                   <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
                   <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
-                    {c.related.cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    {t('related.cta')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
               ))}
@@ -546,7 +323,7 @@ export default function EatalyStoryPage() {
           </div>
         </section>
 
-        <SolutionFinalCTA headline={c.finalCta.headline} accentWord={c.finalCta.accent} />
+        <SolutionFinalCTA headline={t('finalCta.headline')} accentWord={t('finalCta.accent')} />
         <Footer />
       </main>
     </>

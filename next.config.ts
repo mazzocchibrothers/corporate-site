@@ -25,6 +25,25 @@ const nextConfig: NextConfig = {
     // replacement is decided in #135, before the switch.
     optimizeCss: { noscriptFallback: true },
   },
+  // The one rewrite that is not about locale, and so did not move to next-intl
+  // pathnames with the others (#126): /customers/mediaset serves the mediaset-2
+  // cut of the story. It was dropped with the locale rewrites, which silently
+  // changed what that URL renders — found by diffing against production (#113).
+  //
+  // Which cut should be live is a content question, recorded on #113. This
+  // restores what the site serves today.
+  // beforeFiles, not the default afterFiles: pages/customers/mediaset.tsx
+  // exists, so an afterFiles rewrite would never fire — the page matches first
+  // and the alias is silently ignored.
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: '/customers/mediaset', destination: '/customers/mediaset-2' },
+        { source: '/it/customers/mediaset', destination: '/it/customers/mediaset-2' },
+      ],
+    };
+  },
+
   async headers() {
     const oneYearImmutable = 'public, max-age=31536000, immutable';
     const thirtyDays = 'public, max-age=2592000, stale-while-revalidate=86400';
