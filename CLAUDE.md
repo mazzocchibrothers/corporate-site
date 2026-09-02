@@ -122,6 +122,12 @@ For a raw `<a href>`, use `href(id, locale)` from `@/i18n/routes`.
   page compiles and silently loses every utility it uses.
 - **Big metric numbers** use the `.stat-value` class (~24 files). Its
   font-weight lives only in `globals.css` — change it there, never per-file.
+- **Scroll animations are `<Reveal>`, not framer-motion.** The site has one
+  animation — fade in, rise, once, on scroll into view — and
+  `components/ui/reveal.tsx` is it: an IntersectionObserver and a CSS
+  transition. framer-motion costs ~38 KB gz on a page that loads it, so reach
+  for it only when the thing is genuinely state-driven (an exit animation, a
+  carousel, an animated value). Ten files still do, correctly.
 - **CSS delivery** is decided and measured: one external sheet, no `inlineCss`.
   See `harness/docs/conventions.md`.
 - **`assets/` is build input, not `public/`.** The two Mona Sans ttf weights
