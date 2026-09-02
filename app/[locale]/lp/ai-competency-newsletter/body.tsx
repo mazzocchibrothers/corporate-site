@@ -9,7 +9,6 @@ import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { Download, ArrowRight, ArrowDown, Check } from 'lucide-react';
 import { href } from '@/i18n/routes';
 
-const TITLE = 'Skillvue — AI Competency One-Pager';
 const GRAD = 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)';
 
 // --- HubSpot download tracking (Option A: silent Forms Submission on download) ---

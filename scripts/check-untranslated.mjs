@@ -94,10 +94,8 @@ const DELIBERATE = [
   ['customers.mediaset-2.related.', 'industry names'],
   ['customers.subdued.related.', 'industry names'],
   ['customers.unicomm.related.', 'industry names'],
-  // The three one-pagers are an English PDF served at a bilingual URL (#142).
-  ['lp.supermarkets.', 'an English one-pager, served under both locales'],
-  ['lp.ai-competency.', 'an English one-pager, served under both locales'],
-  ['lp.ai-competency-newsletter.', 'an English one-pager, served under both locales'],
+  // The lab that publishes the one-pager, which is its name.
+  ['lp.ai-competency-newsletter.footNote', 'the name of the lab'],
   // Landing-page microcopy shared by Italian-only pages.
   ['shared.lp.', 'used only by the Italian-only landing pages'],
   // Event names are the events' own names.
@@ -106,7 +104,6 @@ const DELIBERATE = [
   ['blog.attitude-vs-competence.methods.', 'named methodologies (BEI, STAR)'],
   // Product surface named in English on both sites.
   ['solutions.talent-acquisition.taFunnel.', 'product surface named in English on the Italian page too'],
-  ['solutions.project-resourcing.prHero.body', 'English copy on the Italian page (#142)'],
 ];
 
 const allowed = (path) =>

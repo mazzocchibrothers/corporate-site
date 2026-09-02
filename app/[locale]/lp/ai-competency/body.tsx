@@ -8,8 +8,6 @@ import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { Download, Lock, Check, ChevronDown } from 'lucide-react';
 
-const TITLE = 'Skillvue — AI Competency One-Pager';
-
 const HS_PORTAL_ID = '48438018';
 const HS_REGION = 'na1';
 

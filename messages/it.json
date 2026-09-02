@@ -4842,12 +4842,12 @@
         "pdf": "/skillvue-supermarkets-one-pager-it.pdf"
       },
       "meta": {
-        "title": "Skillvue — Supermarkets One-Pager",
-        "description": "The Skills Operating System for supermarkets — objective skills data across the retail talent lifecycle."
+        "title": "Skillvue — One-Pager GDO",
+        "description": "Il Sistema Operativo delle Competenze per la GDO: dati oggettivi sulle competenze lungo tutto il ciclo di vita del talento nel retail."
       }
     },
     "ai-competency": {
-      "badge": "AI COMPETENCY ASSESSMENT",
+      "badge": "VALUTAZIONE COMPETENZE AI",
       "titleLead": "L'AI non ti sostituirà, ma chi saprà usarla in ",
       "titleHighlight": "modo intelligente",
       "titleTail": " sì.",
@@ -4865,11 +4865,11 @@
         "page2": "/ai-competency-page-it-2.avif"
       },
       "meta": {
-        "title": "Skillvue — AI Competency One-Pager",
-        "description": "Skillvue AI Competency One-Pager"
+        "title": "Skillvue — One-Pager AI Competency",
+        "description": "One-Pager Skillvue sulla valutazione delle competenze AI: come verificarle davvero invece di darle per dichiarate."
       },
-      "altPage1": "AI Competency One-Pager — page 1",
-      "altPage2": "AI Competency One-Pager — page 2"
+      "altPage1": "One-Pager AI Competency — pagina 1",
+      "altPage2": "One-Pager AI Competency — pagina 2"
     },
     "ai-competency-newsletter": {
       "badge": "VALUTAZIONE COMPETENZE AI",
@@ -4968,8 +4968,8 @@
         "pdf": "/skillvue-ai-competency-one-pager-nl-it.pdf"
       },
       "meta": {
-        "title": "Skillvue — AI Competency One-Pager",
-        "description": "Skillvue AI Competency One-Pager"
+        "title": "Skillvue — One-Pager AI Competency",
+        "description": "One-Pager Skillvue sulla valutazione delle competenze AI: come verificarle davvero invece di darle per dichiarate."
       }
     },
     "europ-assistance": {
@@ -7081,7 +7081,7 @@
       },
       "prHero": {
         "heading": "Assegna le persone ai progetti in base a capacità verificate, <span>non alla semplice disponibilità.</span>",
-        "body": "Skillvue gives project leaders and resourcing teams an objective view of who has the skills to deliver, replacing \"who's free\" with \"who's fit.\" Reduce delivery risk, improve team composition, and stop staffing in the dark.",
+        "body": "Skillvue dà ai project leader e ai team di resourcing una visione oggettiva di chi ha le competenze per portare a termine il lavoro, sostituendo il “chi è libero” con il “chi è adatto”. Riduci il rischio di delivery, componi team migliori e smetti di assegnare le persone alla cieca.",
         "cta": "Prenota una Demo"
       },
       "prHowSolves": {
