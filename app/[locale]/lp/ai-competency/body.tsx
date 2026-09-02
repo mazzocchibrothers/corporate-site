@@ -184,13 +184,13 @@ export default function AiCompetencyPage() {
                   {/* Scrolling content */}
                   <div ref={scrollRef} onScroll={handleDocScroll} className="absolute inset-0 overflow-y-auto overflow-x-hidden">
                     {/* Page 1 — free */}
-                    <img ref={page1Ref} src={t('assets.page1')} alt="AI Competency One-Pager — page 1" className="block w-full select-none" draggable={false} />
+                    <img ref={page1Ref} src={t('assets.page1')} alt={t('altPage1')} className="block w-full select-none" draggable={false} />
 
                     {/* Page 2 — scrollable but obscured until unlocked */}
                     <div className="relative">
                       <img
                         src={t('assets.page2')}
-                        alt="AI Competency One-Pager — page 2"
+                        alt={t('altPage2')}
                         className="block w-full transition-[filter] duration-500"
                         style={unlocked ? {} : { filter: 'blur(6px)', userSelect: 'none', pointerEvents: 'none' }}
                         draggable={false}
@@ -232,7 +232,7 @@ export default function AiCompetencyPage() {
         </section>
 
         <div className="compact-logos">
-          <TrustLogosBar lang={lang} />
+          <TrustLogosBar />
         </div>
       </div>
 

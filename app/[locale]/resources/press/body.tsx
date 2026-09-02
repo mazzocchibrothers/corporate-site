@@ -264,10 +264,10 @@ export default function PressPage() {
                 className="mb-8 md:mb-12"
               >
                 <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">
-                  Stampa italiana
+                  {t('italianKicker')}
                 </span>
                 <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
-                  Skillvue sui media italiani
+                  {t('italianHeading')}
                 </h2>
               </motion.div>
 

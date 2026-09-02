@@ -1,6 +1,7 @@
 // @ts-nocheck
 'use client';
 
+import { useTranslations } from 'next-intl';
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import SkillvueLogo from '@/components/landing/SkillvueLogo';
@@ -91,6 +92,7 @@ const economics = [
 
 
 export default function HiddenCostRecruiting() {
+  const t = useTranslations('lp.hidden-cost-recruiting');
   const formRef = useRef(null);
   const formSectionRef = useRef(null);
   const [formLoaded, setFormLoaded] = useState(false);
@@ -130,11 +132,10 @@ export default function HiddenCostRecruiting() {
         style={{ backdropFilter: 'blur(20px)', backgroundColor: 'rgba(0,0,0,0.35)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="flex items-center gap-3">
           <SkillvueLogo size={28} className="text-white" />
-          <span className="text-white/90 font-semibold text-[15px] tracking-[-0.03em]">Skillvue</span>
+          <span className="text-white/90 font-semibold text-[15px] tracking-[-0.03em]">{t('text')}</span>
         </div>
         <Button variant="primary" mode="light" icon={null} onClick={scrollToForm}>
-          Download Free
-        </Button>
+          {t('text2')}</Button>
       </nav>
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
@@ -146,13 +147,9 @@ export default function HiddenCostRecruiting() {
               variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
               className="inline-flex items-center gap-2 mb-8"
             >
-              <span
-                className="px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.25em] uppercase text-white"
-                style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
-              >
-                WP-I1 · INSURANCE · 2026
-              </span>
-            </motion.div>
+              {t.rich('text3', {
+          s: (chunks) => <span className="px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.25em] uppercase text-white" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
+        })}</motion.div>
 
             {/* Title */}
             <motion.h1
@@ -160,10 +157,10 @@ export default function HiddenCostRecruiting() {
               className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-6"
               style={{ lineHeight: 1.1 }}
             >
-              Hidden Cost of{' '}
-              <span className="gradient-text">Non-Predictive</span>
-              <br />Recruiting
-            </motion.h1>
+              {t.rich('text4', {
+          s: (chunks) => <span className="gradient-text">{chunks}</span>,
+          br: () => <br />,
+        })}</motion.h1>
 
             {/* Subtitle */}
             <motion.p
@@ -171,28 +168,28 @@ export default function HiddenCostRecruiting() {
               className="text-[18px] text-white/55 leading-[1.75] mb-10 max-w-[560px]"
               style={{ fontWeight: 300 }}
             >
-              How to identify and measure the behavioural profile of the high-performance hybrid insurance agent
-            </motion.p>
+              {t('text5')}</motion.p>
 
             {/* Metadata */}
             <motion.div
               variants={fadeUp} initial="hidden" animate="visible" custom={0.4}
               className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-white/40 mb-14"
             >
-              <span>By <strong className="text-white/60">Skillvue</strong></span>
-              <span className="w-px h-3 bg-white/15 hidden sm:block" />
-              <span>~7 min read</span>
-              <span className="w-px h-3 bg-white/15 hidden sm:block" />
-              <span>CHRO · Chief Distribution Officer · Head of Agency Network</span>
-            </motion.div>
+              {t.rich('text6', {
+          s: (chunks) => <span>{chunks}</span>,
+          b: (chunks) => <strong className="text-white/60">{chunks}</strong>,
+          s2: (chunks) => <span className="w-px h-3 bg-white/15 hidden sm:block">{chunks}</span>,
+          s3: (chunks) => <span>{chunks}</span>,
+          s4: (chunks) => <span className="w-px h-3 bg-white/15 hidden sm:block">{chunks}</span>,
+          s5: (chunks) => <span>{chunks}</span>,
+        })}</motion.div>
 
             {/* CTA */}
             <motion.div
               variants={fadeUp} initial="hidden" animate="visible" custom={0.5}
             >
               <Button variant="primary" mode="light" onClick={scrollToForm}>
-                Download the Free Whitepaper
-              </Button>
+                {t('text7')}</Button>
             </motion.div>
           </div>
 
@@ -229,16 +226,14 @@ export default function HiddenCostRecruiting() {
           >
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-5"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              The Problem in Numbers
-            </p>
+              {t('body')}</p>
             <p className="text-[18px] lg:text-[20px] text-white/80 leading-[1.75]" style={{ fontWeight: 300 }}>
-              In an agency network of <strong className="text-white/95">2,000 agents</strong> with an annual turnover of{' '}
-              <strong className="text-white/95">20% to 25%</strong>, the estimated cost of non-predictive selection ranges
-              between <strong className="text-white/95">€15 and €25 million per year</strong>. This figure includes recruiting and
-              training expenses, lost production in the first 12 months, and the negative impact on{' '}
-              <strong className="text-white/95">portfolio retention</strong> — all without yet considering the reputational
-              damage caused by an inadequate advisor in direct contact with the client.
-            </p>
+              {t.rich('body2', {
+          b: (chunks) => <strong className="text-white/95">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-white/95">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-white/95">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-white/95">{chunks}</strong>,
+        })}</p>
           </motion.div>
         </div>
       </section>
@@ -253,11 +248,9 @@ export default function HiddenCostRecruiting() {
           >
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-4"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Inside the Whitepaper
-            </p>
+              {t('body3')}</p>
             <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15]">
-              What you'll discover
-            </h2>
+              {t('heading')}</h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -289,12 +282,11 @@ export default function HiddenCostRecruiting() {
           >
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-4"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Research-Backed Framework
-            </p>
+              {t('body4')}</p>
             <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-semibold tracking-[-0.03em] text-white/95 leading-[1.15] max-w-[600px]">
-              4 key behavioural{' '}
-              <span className="gradient-text">dimensions</span>
-            </h2>
+              {t.rich('heading2', {
+          s: (chunks) => <span className="gradient-text">{chunks}</span>,
+        })}</h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -317,7 +309,7 @@ export default function HiddenCostRecruiting() {
                 {/* Progress bar */}
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-[11px] text-white/30 tracking-wide">Relevance for hybrid agent</span>
+                    <span className="text-[11px] text-white/30 tracking-wide">{t('text8')}</span>
                     <span className="text-[12px] font-semibold text-white/60">{d.pct}%</span>
                   </div>
                   <div className="h-1.5 rounded-full bg-white/[0.08]">
@@ -342,8 +334,7 @@ export default function HiddenCostRecruiting() {
           >
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-8"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Economics in Brief
-            </p>
+              {t('body5')}</p>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {economics.map((e, i) => (
                 <div key={i}>
@@ -359,8 +350,9 @@ export default function HiddenCostRecruiting() {
             </div>
             <div className="mt-10 pt-8 border-t border-white/[0.06]">
               <p className="text-[15px] text-white/60 leading-[1.7]" style={{ fontWeight: 300 }}>
-                <em className="text-white/80 not-italic">The question isn't whether AI can change how we hire — it's who can leverage it to make better decisions.</em>
-              </p>
+                {t.rich('body6', {
+          i: (chunks) => <em className="text-white/80 not-italic">{chunks}</em>,
+        })}</p>
             </div>
           </motion.div>
         </div>
@@ -376,17 +368,13 @@ export default function HiddenCostRecruiting() {
               <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                 <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-5"
                   style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                  Free Download
-                </p>
+                  {t('body7')}</p>
                 <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
-                  Get your free copy of the{' '}
-                  <span className="italic" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                    whitepaper
-                  </span>
-                </h2>
+                  {t.rich('heading3', {
+          s: (chunks) => <span className="italic" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</h2>
                 <p className="text-[16px] text-[#0D0D0D]/55 leading-[1.75] mb-8" style={{ fontWeight: 300 }}>
-                  An operational guide for CHROs and distribution leaders who must decide, today, how to select the people who will build tomorrow's agency network.
-                </p>
+                  {t('body8')}</p>
                 <ul className="space-y-3">
                   {[
                     'Why unstructured interviews have a predictive validity of only 0.38',
@@ -417,8 +405,8 @@ export default function HiddenCostRecruiting() {
                 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0.15}
                 className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10 shadow-sm"
               >
-                <h3 className="text-[18px] font-semibold text-[#0D0D0D] mb-2">Download the Whitepaper</h3>
-                <p className="text-[13px] text-[#0D0D0D]/45 mb-8">Free · No credit card required · Instant access</p>
+                <h3 className="text-[18px] font-semibold text-[#0D0D0D] mb-2">{t('heading4')}</h3>
+                <p className="text-[13px] text-[#0D0D0D]/45 mb-8">{t('body9')}</p>
                 <div
                   id="lp-hubspot-form"
                   ref={formRef}
@@ -426,7 +414,7 @@ export default function HiddenCostRecruiting() {
                 />
                 {!formLoaded && (
                   <div className="flex items-center justify-center h-[380px]">
-                    <div className="text-[13px] text-[#0D0D0D]/30">Loading form…</div>
+                    <div className="text-[13px] text-[#0D0D0D]/30">{t('text9')}</div>
                   </div>
                 )}
               </motion.div>
@@ -446,18 +434,15 @@ export default function HiddenCostRecruiting() {
             >
               <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-5"
                 style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                About Skillvue
-              </p>
+                {t('body10')}</p>
               <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-white/95 leading-[1.15] mb-6">
-                AI-powered talent intelligence,{' '}
-                <span className="gradient-text">science-backed</span>
-              </h2>
+                {t.rich('heading5', {
+          s: (chunks) => <span className="gradient-text">{chunks}</span>,
+        })}</h2>
               <p className="text-[16px] text-white/50 leading-[1.8] mb-4" style={{ fontWeight: 300 }}>
-                Skillvue is a talent intelligence platform that blends psychometrics with modern LLMs to deliver customized, scalable behavioural verifications — aligned to each company's specific leadership model and skills framework.
-              </p>
+                {t('body11')}</p>
               <p className="text-[16px] text-white/50 leading-[1.8]" style={{ fontWeight: 300 }}>
-                We serve mid-to-large enterprises across Europe where talent decisions are high-stakes. Our platform works across the full talent lifecycle — from candidate screening to organizational transformation readiness — fully compliant with the EU AI Act.
-              </p>
+                {t('body12')}</p>
             </motion.div>
             <motion.div
               variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0.15}
@@ -465,14 +450,13 @@ export default function HiddenCostRecruiting() {
             >
               <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8">
                 <p className="text-[14px] text-white/40 italic leading-[1.75] mb-6">
-                  "The gap between latent traits and observed behaviour in high-variability contexts is the systematic blind spot of traditional selection methods."
-                </p>
+                  {t('body13')}</p>
                 <div className="flex items-center gap-3">
                   <div
                     className="w-px h-8 rounded-full"
                     style={{ background: 'linear-gradient(180deg, #4B4DF7, #FF5F24)' }}
                   />
-                  <span className="text-[13px] text-white/50">WP-I1 · Insurance · 2026</span>
+                  <span className="text-[13px] text-white/50">{t('text10')}</span>
                 </div>
               </div>
             </motion.div>
@@ -485,15 +469,17 @@ export default function HiddenCostRecruiting() {
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <SkillvueLogo size={22} className="text-white/40" />
-            <span className="text-[13px] text-white/30">© {new Date().getFullYear()} Skillvue. All rights reserved.</span>
+            <span className="text-[13px] text-white/30">{t('copyright', { year: new Date().getFullYear() })}</span>
           </div>
           <div className="flex items-center gap-6 text-[12px]">
             <Button asChild variant="tertiary" mode="dark" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
-            </Button>
+              {t.rich('text11', {
+          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+        })}</Button>
             <Button asChild variant="tertiary" mode="dark" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai">skillvue.ai</a>
-            </Button>
+              {t.rich('text12', {
+          a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
+        })}</Button>
           </div>
         </div>
       </footer>

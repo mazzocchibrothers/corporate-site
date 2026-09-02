@@ -1,6 +1,7 @@
 // @ts-nocheck
 'use client';
 
+import { useTranslations } from 'next-intl';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
@@ -50,6 +51,8 @@ const featureCards = [
 ];
 
 function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
+  const t = useTranslations('lp.il-turnover-nei-negozi-del-lusso');
+  const tl = useTranslations('shared.lp');
   const [form, setForm] = useState({ nome: '', cognome: '', email: '' });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -104,41 +107,37 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
         style={{ borderBottom: '1px solid rgba(0,0,0,0.07)', boxShadow: '0 1px 12px rgba(0,0,0,0.05)' }}>
         <div className="flex items-center gap-2.5">
           <SkillvueIcon size={26} />
-          <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">Skillvue</span>
+          <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">{t('text')}</span>
         </div>
         <Button variant="primary" mode="light" onClick={scrollToForm}>
-          Scarica il Report
-        </Button>
+          {t('text2')}</Button>
       </nav>
 
       <section className="pt-[88px] pb-16 px-6 lg:px-10">
         <div className="max-w-[760px] mx-auto text-center pt-16">
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.05}>
-            <span className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8"
-              style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>
-              Retail Lusso · 2026
-            </span>
-          </motion.div>
+            {t.rich('text3', {
+          s: (chunks) => <span className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
+        })}</motion.div>
 
           <motion.h1 variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
             className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.1] mb-6">
-            Il turnover nei negozi del lusso:{' '}
-            <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              il costo nascosto
-            </span>
-          </motion.h1>
+            {t.rich('text4', {
+          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</motion.h1>
 
           <motion.p variants={fadeUp} initial="hidden" animate="visible" custom={0.18}
             className="text-[17px] text-[#0D0D0D]/55 leading-[1.7] mb-4" style={{ fontWeight: 300 }}>
-            La selezione non efficace nei flagship store e il suo impatto sul business
-          </motion.p>
+            {t('text5')}</motion.p>
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.24}
             className="flex items-center justify-center gap-6 text-[12px] text-[#0D0D0D]/35 mb-12">
-            <span>A cura di <strong className="text-[#0D0D0D]/55">Skillvue</strong></span>
-            <span className="w-px h-3 bg-[#0D0D0D]/15" />
-            <span>~8 min read</span>
-          </motion.div>
+            {t.rich('text6', {
+          s: (chunks) => <span>{chunks}</span>,
+          b: (chunks) => <strong className="text-[#0D0D0D]/55">{chunks}</strong>,
+          s2: (chunks) => <span className="w-px h-3 bg-[#0D0D0D]/15">{chunks}</span>,
+          s3: (chunks) => <span>{chunks}</span>,
+        })}</motion.div>
 
             {/* Logo marquee */}
             {(() => {
@@ -181,8 +180,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.3}>
             <Button variant="primary" mode="light" onClick={scrollToForm}>
-              Scarica il Report Completo
-            </Button>
+              {t('text7')}</Button>
           </motion.div>
         </div>
       </section>
@@ -208,10 +206,9 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
       <section className="py-16 px-6 lg:px-10 bg-white">
         <div className="max-w-[1100px] mx-auto">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-12">
-            <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] mb-3">Cosa troverai nel report</h2>
+            <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] mb-3">{t('heading')}</h2>
             <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
-              Un'analisi operativa della struttura economica del turnover nei flagship store e degli strumenti predittivi per ridurre l'errore di hiring nella sua fase più critica.
-            </p>
+              {t('body')}</p>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-5">
             {featureCards.map((f, i) => (
@@ -232,8 +229,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
-                Scarica il report completo
-              </h2>
+                {t('heading2')}</h2>
               <ul className="space-y-3 mb-8">
                 {[
                   'La struttura economica del turnover nei flagship store europei',
@@ -253,15 +249,15 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
               </ul>
               <p className="flex items-center gap-2 text-[12px] text-[#0D0D0D]/30">
                 <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                I tuoi dati sono al sicuro. Niente spam.
+                {tl('dataSafe')}
               </p>
             </motion.div>
 
             <motion.div ref={formRef} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0.1}
               className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10"
               style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}>
-              <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">Compila per scaricare il PDF</h3>
-              <p className="text-[13px] text-[#0D0D0D]/35 mb-7">Gratuito · Accesso immediato</p>
+              <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">{t('heading3')}</h3>
+              <p className="text-[13px] text-[#0D0D0D]/35 mb-7">{t('body2')}</p>
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-10 text-center gap-4">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center"
@@ -269,16 +265,15 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                     <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                   </div>
                   <div>
-                    <p className="text-[16px] font-semibold text-[#0D0D0D] mb-1">Il whitepaper si è aperto in una nuova scheda.</p>
-                    <p className="text-[13px] text-[#0D0D0D]/40">Controlla il tuo browser se non lo vedi subito.</p>
+                    <p className="text-[16px] font-semibold text-[#0D0D0D] mb-1">{t('body3')}</p>
+                    <p className="text-[13px] text-[#0D0D0D]/40">{t('body4')}</p>
                   </div>
                   <Button
                     variant="secondary"
                     mode="light"
                     onClick={() => window.open('/lp/il-turnover-nei-negozi-del-lusso?access=true', '_blank')}
                   >
-                    Apri di nuovo
-                  </Button>
+                    {t('text8')}</Button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -296,7 +291,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                         className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none focus-visible:ring-2 focus-visible:ring-[#4B4DF7]/60 focus-visible:border-[#4B4DF7] transition-all"
                         style={{ borderColor: errors[key] ? '#EF4444' : 'rgba(0,0,0,0.12)', background: '#FAFAFA' }} />
                       {errors[key] && <p className="text-[11px] text-red-500 mt-1">{errors[key]}</p>}
-                      {key === 'email' && !errors.email && <p className="text-[11px] text-[#0D0D0D]/25 mt-1">Richiesta email aziendale (non personale)</p>}
+                      {key === 'email' && !errors.email && <p className="text-[11px] text-[#0D0D0D]/25 mt-1">{t('body5')}</p>}
                     </div>
                   ))}
                   <Button
@@ -308,7 +303,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                     icon={submitting ? null : undefined}
                   >
                     {submitting ? (
-                      <><svg className="animate-spin" width="16" height="16" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>Caricamento…</>
+                      <><svg className="animate-spin" width="16" height="16" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>{tl('loading')}</>
                     ) : (
                       'Scarica il Report'
                     )}
@@ -324,15 +319,17 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
         <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2.5">
             <SkillvueIcon size={20} />
-            <span className="text-[12px] text-[#0D0D0D]/30">© {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati.</span>
+            <span className="text-[12px] text-[#0D0D0D]/30">{tl('copyright', { year: new Date().getFullYear() })}</span>
           </div>
           <div className="flex items-center gap-5 text-[12px]">
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
-            </Button>
+              {t.rich('text9', {
+          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+        })}</Button>
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai">skillvue.ai</a>
-            </Button>
+              {t.rich('text10', {
+          a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
+        })}</Button>
           </div>
         </div>
       </footer>
@@ -408,6 +405,8 @@ function NumberedItem({ n, title, children }: { n: number; title: string; childr
 }
 
 function WhitepaperLayer() {
+  const t = useTranslations('lp.il-turnover-nei-negozi-del-lusso');
+  const tl = useTranslations('shared.lp');
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
@@ -418,18 +417,16 @@ function WhitepaperLayer() {
         style={{ borderBottom: '1px solid rgba(0,0,0,0.07)', boxShadow: '0 1px 8px rgba(0,0,0,0.04)' }}>
         <div className="flex items-center gap-2.5">
           <SkillvueIcon size={24} />
-          <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.03em]">Skillvue</span>
+          <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.03em]">{t('text11')}</span>
         </div>
         <div className="flex items-center gap-3">
           <Button asChild variant="secondary" mode="light">
             <a href="/WP-L2-ITA.pdf" download="Il-Turnover-Negozi-Lusso-Skillvue.pdf">
-              <Download aria-hidden="true" />
-              Scarica PDF
-            </a>
+              <Download aria-hidden="true" />{tl('downloadPdf')}</a>
           </Button>
           <Button asChild variant="primary" mode="light">
             <a href="https://www.skillvue.ai/contact-us" target="_blank" rel="noopener noreferrer">
-              Contattaci
+              {tl('contact')}
               <ArrowRight aria-hidden="true" />
             </a>
           </Button>
@@ -443,49 +440,70 @@ function WhitepaperLayer() {
           <div className="px-10 pt-12 pb-8 text-center border-b border-black/[0.06]">
             <span className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-7"
               style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>
-              RETAIL LUSSO · 2026
-            </span>
+              {t('text12')}</span>
             <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.2] mb-2">
-              Il turnover nei negozi del lusso:
-              <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                il costo nascosto
-              </span>
-            </h1>
-            <p className="text-[15px] text-[#0D0D0D]/45 italic mt-3 mb-6">La selezione non efficace nei flagship store e il suo impatto sul business</p>
+              {t.rich('heading4', {
+          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</h1>
+            <p className="text-[15px] text-[#0D0D0D]/45 italic mt-3 mb-6">{t('body6')}</p>
             <div className="w-10 h-px mx-auto mb-5" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-            <p className="text-[13px] text-[#0D0D0D]/40"><em>Settore:</em> Retail Lusso · <em>Destinatari:</em> CHRO, Head of Retail Operations, CFO</p>
-            <p className="text-[13px] text-[#0D0D0D]/40 mt-1"><em>Lettura:</em> circa 8 minuti</p>
-            <p className="text-[13px] text-[#0D0D0D]/40 mt-1">A cura di{' '}
-              <span style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>Skillvue</span>
-            </p>
+            <p className="text-[13px] text-[#0D0D0D]/40">{t.rich('body7', {
+          i: (chunks) => <em>{chunks}</em>,
+          i2: (chunks) => <em>{chunks}</em>,
+        })}</p>
+            <p className="text-[13px] text-[#0D0D0D]/40 mt-1">{t.rich('body8', {
+          i: (chunks) => <em>{chunks}</em>,
+        })}</p>
+            <p className="text-[13px] text-[#0D0D0D]/40 mt-1">{t.rich('body9', {
+          s: (chunks) => <span style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>{chunks}</span>,
+        })}</p>
           </div>
 
           {/* Body */}
           <div className="px-10 py-10">
 
-            <InfoBox title="Executive Summary">
-              <p>Nel retail del lusso, un flagship store non è un punto vendita. È una <strong className="text-[#0D0D0D]/80">dichiarazione di identità</strong>. Nei principali flagship europei, tra il <strong className="text-[#0D0D0D]/80">30% e il 40%</strong> del personale di front line <strong className="text-[#0D0D0D]/80">lascia l'organizzazione entro 12 mesi</strong> dall'assunzione.</p>
-              <p className="mt-3">Il costo diretto è almeno <strong className="text-[#0D0D0D]/80">1,5 volte lo stipendio annuo per ogni sostituzione</strong>. Ma il costo reale è altrove: nelle relazioni personali con una clientela il cui <strong className="text-[#0D0D0D]/80">lifetime value può superare le centinaia di migliaia di euro</strong>. In un settore dove meno dell'1% dei clienti genera oltre il 20% del fatturato, ogni uscita è una discontinuità che il business non può permettersi di non quantificare.</p>
+            <InfoBox title={t('heading8')}>
+              <p>{t.rich('body10', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</p>
+              <p className="mt-3">{t.rich('body11', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</p>
             </InfoBox>
 
             <div className="grid grid-cols-3 gap-4 my-8">
-              <StatBox value="30–40%" label="Turnover entro 12 mesi" />
-              <StatBox value="1,5–2x" label="Costo di sostituzione" />
-              <StatBox value="51%" label="Advisor che valuta l'uscita (CXG)" />
+              <StatBox value="30–40%" label={t('label')} />
+              <StatBox value="1,5–2x" label={t('label2')} />
+              <StatBox value="51%" label={t('label3')} />
             </div>
 
-            <SectionHeading num="1" title="Dove si costruisce e si perde il valore" />
-            <Para>Il mercato globale dei beni di lusso personali ha raggiunto i <strong className="text-[#0D0D0D]/80">358 miliardi di euro nel 2025</strong>, secondo il Bain Luxury Study, con il <strong className="text-[#0D0D0D]/80">canale fisico che continua a rappresentare circa l'80% delle transazioni</strong>. Le maison stanno concentrando gli investimenti su un numero minore di flagship di dimensioni maggiori: la superficie media dei monobrand store è cresciuta del 30% negli ultimi anni.</Para>
-            <Para>Un flagship non è un negozio. È <strong className="text-[#0D0D0D]/80">l'espressione fisica del posizionamento del brand</strong>, il luogo dove si concretizzano le relazioni con la clientela più strategica. Il client advisor, in questo modello, non è un addetto alla vendita. È il <strong className="text-[#0D0D0D]/80">depositario di un patrimonio relazionale</strong> che rappresenta una quota crescente del valore di ogni singolo punto vendita.</Para>
-            <Para>La tensione di fondo è evidente: mentre il settore investe risorse senza precedenti nella creazione di esperienze fisiche d'eccellenza, <strong className="text-[#0D0D0D]/80">il processo con cui seleziona le persone che dovranno incarnare quella stessa eccellenza rimane il meno strutturato dell'intera catena del valore</strong>. Le maison controllano il design degli interni con una precisione millimetrica, ma affidano la scelta di chi abiterà quegli spazi <strong className="text-[#0D0D0D]/80">a colloqui non strutturati e alla percezione soggettiva di un Retail Manager</strong>.</Para>
+            <SectionHeading num="1" title={t('heading9')} />
+            <Para>{t.rich('text13', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
+            <Para>{t.rich('text14', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
+            <Para>{t.rich('text15', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-            <Quote>"Selezionare per esperienza settoriale misura la conformità ai codici appresi. Non la predisposizione comportamentale che li rende autentici".</Quote>
+            <Quote>{t('text16')}</Quote>
 
-            <Para>Esiste poi un <strong className="text-[#0D0D0D]/80">bias cognitivo</strong> raramente esplicitato: la tendenza a utilizzare il background pregresso in una maison come unico proxy dell'allineamento comportamentale al brand. Un candidato proveniente da una boutique concorrente può replicare certi comportamenti in superficie, <strong className="text-[#0D0D0D]/80">senza necessariamente possedere i tratti che rendono quella postura autentica e duratura</strong>. I clienti di fascia alta percepiscono la differenza tra un protocollo recitato e una reale attitudine relazionale.</Para>
+            <Para>{t.rich('text17', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-6">
-              <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">La concentrazione del valore nei flagship store</p>
-              <p className="text-[12px] text-[#0D0D0D]/35 italic mb-5">La relazione advisor-cliente nel lusso è un asset strategico con un valore economico concentrato</p>
+              <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">{t('body12')}</p>
+              <p className="text-[12px] text-[#0D0D0D]/35 italic mb-5">{t('body13')}</p>
               <div className="grid grid-cols-3 gap-4 text-center">
                 {[
                   { value: '<1%', label: 'dei clienti genera il 20% della spesa globale nel lusso personale', color: '#4B4DF7' },
@@ -498,16 +516,22 @@ function WhitepaperLayer() {
                   </div>
                 ))}
               </div>
-              <p className="text-[11px] text-[#0D0D0D]/30 italic mt-4">Fonti: Bain & Company / Altagamma, 2024–2025; CXG, "The Advisor Effect", 2024.</p>
+              <p className="text-[11px] text-[#0D0D0D]/30 italic mt-4">{t('body14')}</p>
             </div>
 
-            <SectionHeading num="2" title="Il costo che nessuno sta calcolando" />
-            <Para>Le stime più citate nella letteratura HR collocano il costo di sostituzione di un dipendente tra il <strong className="text-[#0D0D0D]/80">50% e il 200% dello stipendio annuo</strong>, a seconda della seniority. Nel <strong className="text-[#0D0D0D]/80">luxury retail il moltiplicatore è strutturalmente più elevato</strong>, per ragioni che non hanno a che fare con il livello retributivo in sé, ma con la natura del ruolo.</Para>
-            <Para>Un client advisor in un flagship non può essere considerato intercambiabile. La sua formazione richiede mesi, non settimane. I programmi di onboarding dei principali gruppi del lusso prevedono <strong className="text-[#0D0D0D]/80">dalle 8 alle 10 settimane di formazione iniziale</strong>, seguiti da periodi di mentorship di 6 mesi o più. La conoscenza del prodotto, della storia del brand, dei codici relazionali, delle dinamiche di clienteling <strong className="text-[#0D0D0D]/80">non si acquisisce con un manuale</strong>.</Para>
+            <SectionHeading num="2" title={t('heading10')} />
+            <Para>{t.rich('text18', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
+            <Para>{t.rich('text19', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
-              <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">Impatto sui costi dell'abbandono di un client advisor in flagship</p>
-              <p className="text-[12px] text-[#0D0D0D]/35 italic mb-5">Il costo complessivo supera tipicamente 1,5 volte lo stipendio annuo lordo</p>
+              <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">{t('body15')}</p>
+              <p className="text-[12px] text-[#0D0D0D]/35 italic mb-5">{t('body16')}</p>
               <div className="space-y-3">
                 {[
                   { label: 'Formazione e onboarding', pct: 35, color: '#FF6550' },
@@ -526,20 +550,31 @@ function WhitepaperLayer() {
                   </div>
                 ))}
               </div>
-              <p className="text-[11px] text-[#0D0D0D]/30 italic mt-4">Fonte: SHRM; Gallup, 2019; Work Institute, 2024. Il moltiplicatore sale fino a 2x per profili senior con portafoglio clienti consolidato.</p>
+              <p className="text-[11px] text-[#0D0D0D]/30 italic mt-4">{t('body17')}</p>
             </div>
 
-            <Para>La voce più sottovalutata riguarda la <strong className="text-[#0D0D0D]/80">produttività</strong>. Un nuovo assunto nel retail impiega mediamente <strong className="text-[#0D0D0D]/80">28 settimane per raggiungere la piena produttività</strong>. Nel lusso, questo ciclo si allunga ulteriormente: un advisor appena inserito può padroneggiare il prodotto in tre mesi, ma non avrà un <strong className="text-[#0D0D0D]/80">portafoglio clienti consolidato prima di due anni</strong>.</Para>
+            <Para>{t.rich('text20', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-            <Quote>"Il costo reale del turnover nel lusso non è la sostituzione. È la discontinuità relazionale con una clientela che non perdona le interruzioni".</Quote>
+            <Quote>{t('text21')}</Quote>
 
-            <SectionHeading num="3" title="L'equazione nascosta: selezione predittiva e retention" />
-            <Para>La maggior parte delle strategie di retention nel luxury retail si concentra a valle del problema: programmi di engagement, percorsi di carriera, incentivi economici. Interventi necessari, ma che agiscono su un bacino già contaminato da <strong className="text-[#0D0D0D]/80">errori di selezione che avrebbero potuto essere evitati</strong> con sistemi di valutazione strutturati.</Para>
-            <Para>La meta-analisi di Schmidt e Hunter quantifica la capacità predittiva di ciascun metodo. Il <strong className="text-[#0D0D0D]/80">colloquio non strutturato</strong> — ancora lo strumento dominante nella selezione del lusso — ha una <strong className="text-[#0D0D0D]/80">validità di 0,38 su una scala da 0 a 1</strong>. Il colloquio strutturato migliora a 0,51. Ma è la combinazione di <strong className="text-[#0D0D0D]/80">verification comportamentali e colloquio strutturato</strong> a raggiungere valori compositi che <strong className="text-[#0D0D0D]/80">superano 0,58</strong>.</Para>
+            <SectionHeading num="3" title={t('heading11')} />
+            <Para>{t.rich('text22', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
+            <Para>{t.rich('text23', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-6">
-              <p className="text-[12px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">Validità predittiva</p>
-              <p className="text-[11px] text-[#0D0D0D]/35 italic mb-5">Scala 0–1</p>
+              <p className="text-[12px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">{t('body18')}</p>
+              <p className="text-[11px] text-[#0D0D0D]/35 italic mb-5">{t('body19')}</p>
               <div className="space-y-4">
                 {[
                   { label: 'Colloquio non strutturato', val: 0.38, pct: 38, color: '#EF4444' },
@@ -560,17 +595,30 @@ function WhitepaperLayer() {
                   </div>
                 ))}
               </div>
-              <p className="text-[11px] text-[#0D0D0D]/30 italic mt-4">Fonte: Schmidt & Hunter, 1998; Campion et al., 1997</p>
+              <p className="text-[11px] text-[#0D0D0D]/30 italic mt-4">{t('body20')}</p>
             </div>
 
-            <Para>I dati sul campo confermano la teoria. Le aziende che utilizzano verification comportamentale strutturato pre-assunzione registrano un <strong className="text-[#0D0D0D]/80">turnover inferiore del 39%</strong> rispetto a quelle che non li adottano. Hogan Verifications documenta riduzioni del turnover nel retail <strong className="text-[#0D0D0D]/80">fino al 61%</strong> con l'introduzione di verification strutturati. Il colloquio, anche ben condotto, è vulnerabile al <strong className="text-[#0D0D0D]/80">faking behavior</strong>: nel lusso, dove i candidati conoscono perfettamente i codici del settore, questo rischio è massimo.</Para>
+            <Para>{t.rich('text24', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-            <InfoBox title="Caso anonimo: chi investe in formazione dimezza il turnover" accent>
-              <p>Un <strong className="text-[#0D0D0D]/80">gruppo del lusso europeo</strong> con oltre <strong className="text-[#0D0D0D]/80">8.000 dipendenti</strong> e circa <strong className="text-[#0D0D0D]/80">280 negozi diretti</strong> ha ridotto il turnover volontario dal <strong className="text-[#0D0D0D]/80">13,4% al 10,1% in due anni</strong>, portandolo a meno di un terzo della media di settore (30–35%). Il programma interno di brand academy — che combina formazione sul prodotto, coaching sul clienteling e mentorship con advisor senior — ha prodotto un <strong className="text-[#0D0D0D]/80">tasso di uscita inferiore di 8 punti percentuali</strong> tra chi vi ha partecipato. L'investimento in formazione è cresciuto del <strong className="text-[#0D0D0D]/80">48% in un solo anno</strong>, con oltre 35 ore medie erogate per persona.</p>
+            <InfoBox title={t('heading12')} accent>
+              <p>{t.rich('body21', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b5: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b6: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</p>
             </InfoBox>
 
-            <SectionHeading num="4" title="I quattro rischi che il turnover amplifica" />
-            <Para>Il turnover nei flagship store non è solo un costo di sostituzione. È un <strong className="text-[#0D0D0D]/80">moltiplicatore di rischi</strong> che agiscono su dimensioni diverse e che, combinati, possono erodere il vantaggio competitivo di una maison in modo silenzioso ma sistematico.</Para>
+            <SectionHeading num="4" title={t('heading13')} />
+            <Para>{t.rich('text25', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <div className="grid grid-cols-2 gap-4 my-6">
               {[
@@ -585,7 +633,7 @@ function WhitepaperLayer() {
                       style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                       {item.n}
                     </span>
-                    <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#0D0D0D]/35">Impatto</span>
+                    <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#0D0D0D]/35">{t('text26')}</span>
                   </div>
                   <p className="text-[13px] font-semibold text-[#0D0D0D]/80 mb-2">{item.title}</p>
                   <p className="text-[12.5px] text-[#0D0D0D]/55 leading-[1.65]">{item.body}</p>
@@ -593,23 +641,32 @@ function WhitepaperLayer() {
               ))}
             </div>
 
-            <Para>La <strong className="text-[#0D0D0D]/80">Direttiva UE sulla Trasparenza Retributiva (2023/970)</strong>, da recepire entro il <strong className="text-[#0D0D0D]/80">7 giugno 2026</strong>, impone la pubblicazione dei range salariali negli annunci e il reporting del gender pay gap. L'<strong className="text-[#0D0D0D]/80">EU AI Act (Regolamento 2024/1689)</strong> classifica i sistemi di selezione come ad alto rischio, richiedendo supervisione umana, trasparenza e test anti-bias da agosto 2026. La <strong className="text-[#0D0D0D]/80">CSRD</strong> obbliga a seguire lo standard <strong className="text-[#0D0D0D]/80">ESRS S1 (Own Workforce)</strong>, con oltre 30 metriche sul personale, inclusi i tassi di turnover.</Para>
+            <Para>{t.rich('text27', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b5: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-            <SectionHeading num="5" title="Tre implicazioni per la strategia di retention" />
+            <SectionHeading num="5" title={t('heading14')} />
 
-            <NumberedItem n={1} title="Spostare l'investimento a monte: dalla retention alla selezione predittiva">
-              La maggior parte dei budget destinati alla retention viene investita dopo l'assunzione. Queste iniziative sono necessarie, ma intervengono quando l'errore di selezione è già stato commesso. Il punto di massimo ROI, nel ciclo di vita del dipendente, <strong className="text-[#0D0D0D]/80">si colloca prima della firma del contratto</strong>.
-            </NumberedItem>
-            <NumberedItem n={2} title="Costruire il profilo comportamentale sui top performer, non sulle job description">
-              <strong className="text-[#0D0D0D]/80">Mappare empiricamente i top performer attuali</strong> per isolare i pattern comportamentali che distinguono chi resta e performa da chi abbandona produce risultati spesso controintuitivi. L'esperienza settoriale misura la conformità ai codici appresi, non la predisposizione naturale.
-            </NumberedItem>
-            <NumberedItem n={3} title="Quantificare il costo del turnover come KPI di business, non come metrica HR">
-              Tradurre il tasso di turnover in <strong className="text-[#0D0D0D]/80">costo per punto vendita, in perdita stimata di fatturato VIP</strong>, in incremento del costo medio per transazione consente di spostare la conversazione dalla funzione HR al tavolo del CFO.
-            </NumberedItem>
+            <NumberedItem n={1} title={t('heading15')}>
+              {t.rich('text28', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
+            <NumberedItem n={2} title={t('heading16')}>
+              {t.rich('text29', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
+            <NumberedItem n={3} title={t('heading17')}>
+              {t.rich('text30', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
-            <Quote>"La qualità della selezione è diventata un fattore competitivo di primo piano: non solo per la funzione HR, ma per il business nel suo complesso".</Quote>
+            <Quote>{t('text31')}</Quote>
 
-            <SectionHeading title="3 domande per il tuo comitato di direzione" />
+            <SectionHeading title={t('heading18')} />
             {[
               { n: '1', title: 'Quanto costa realmente il turnover nei tuoi flagship store?', body: 'Non il costo medio di settore, ma il costo specifico della tua organizzazione. Includi il recruiting, la formazione, il ramp-up di produttività e la perdita stimata di fatturato legata alla discontinuità relazionale con i clienti VIP. Se la tua funzione HR non è in grado di rispondere a questa domanda con un numero, è probabile che il problema sia più grande di quanto il management attualmente percepisce.' },
               { n: '2', title: 'Il tuo processo di selezione è in grado di distinguere chi resterà da chi se ne andrà?', body: 'Se il turnover del primo anno nei tuoi negozi supera il 25%, il problema non è la retention. È la selezione. Chiedi alla tua funzione Talent Acquisition quale sia la validità predittiva degli strumenti che utilizza. Se la risposta è un colloquio non strutturato, la ricerca scientifica indica che stai operando con un margine di errore del 62%.' },
@@ -626,27 +683,37 @@ function WhitepaperLayer() {
               </div>
             ))}
 
-            <Quote>"La domanda non è se la scienza supportata dall'AI cambierà il modo in cui selezioniamo le persone. La domanda è chi sarà in grado di usarla per prendere decisioni migliori di quelle che prenderebbe senza di essa".</Quote>
+            <Quote>{t('text32')}</Quote>
 
             <div className="border-t border-black/[0.07] pt-8 mt-8">
-              <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">Next step</h3>
-              <Para>Se la tua organizzazione sta affrontando <strong className="text-[#0D0D0D]/80">tassi di turnover elevati nei flagship store</strong> o sta ripensando il modello di selezione per i ruoli retail, il punto di partenza più utile è una conversazione basata sui dati che già possiedi: quanto incide oggi il turnover del primo anno? Qual è il <strong className="text-[#0D0D0D]/80">costo reale per sostituzione</strong>, includendo la perdita di relazioni con i clienti VIP? Quali sono i comportamenti misurabili che distinguono <strong className="text-[#0D0D0D]/80">i tuoi top performer</strong> da chi abbandona entro 12 mesi?</Para>
+              <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">{t('heading5')}</h3>
+              <Para>{t.rich('text33', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <Button asChild variant="primary" mode="light" className="mt-2">
                 <a href="https://www.skillvue.ai/contact-us" target="_blank" rel="noopener noreferrer">
-                  Contattaci per una conversazione esplorativa
+                  {tl('exploratoryCall')}
                   <ArrowRight aria-hidden="true" />
                 </a>
               </Button>
             </div>
 
             <div className="border-t border-black/[0.07] pt-8 mt-8">
-              <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">About Skillvue</h3>
-              <Para>Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di <strong className="text-[#0D0D0D]/80">talent intelligence</strong> basata sull'AI che aggiunge una dimensione dinamica e oggettiva ai dati HR: trasformiamo informazioni statiche in <strong className="text-[#0D0D0D]/80">insight predittivi</strong> che permettono di prendere decisioni migliori nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.</Para>
-              <Para>A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue <strong className="text-[#0D0D0D]/80">combina la solidità della scienza psicometrica con la potenza dei moderni LLM</strong> per creare un <strong className="text-[#0D0D0D]/80">co-pilota AI scientificamente fondato</strong>, allineato al modello di leadership e al quadro di competenze specifico di ciascuna azienda.</Para>
+              <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">{t('heading6')}</h3>
+              <Para>{t.rich('text34', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
+              <Para>{t.rich('text35', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
             </div>
 
             <div className="border-t border-black/[0.07] pt-8 mt-8">
-              <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-4">Fonti e riferimenti</h3>
+              <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-4">{t('heading7')}</h3>
               <ul className="space-y-2">
                 {[
                   'Bain & Company / Altagamma, Luxury Study 2024 e 2025: "Finding a New Longevity for Luxury".',
@@ -669,10 +736,10 @@ function WhitepaperLayer() {
             </div>
 
             <div className="border-t border-black/[0.07] pt-6 mt-8 flex items-center justify-between">
-              <span className="text-[11px] text-[#0D0D0D]/25">Retail Lusso · 2026</span>
+              <span className="text-[11px] text-[#0D0D0D]/25">{t('text36')}</span>
               <div className="flex items-center gap-2">
                 <SkillvueIcon size={16} />
-                <span className="text-[11px] text-[#0D0D0D]/25">Skillvue</span>
+                <span className="text-[11px] text-[#0D0D0D]/25">{t('text37')}</span>
               </div>
             </div>
           </div>
@@ -681,14 +748,16 @@ function WhitepaperLayer() {
 
       <div className="py-6 px-6 text-center">
         <p className="text-[12px] text-[#0D0D0D]/30">
-          © {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati. ·{' '}
+          {tl('copyright', { year: new Date().getFullYear() })} ·{' '}
           <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-            <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
-          </Button>
+            {t.rich('text38', {
+          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+        })}</Button>
           {' '}·{' '}
           <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-            <a href="https://www.skillvue.ai">skillvue.ai</a>
-          </Button>
+            {t.rich('text39', {
+          a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
+        })}</Button>
         </p>
       </div>
     </div>

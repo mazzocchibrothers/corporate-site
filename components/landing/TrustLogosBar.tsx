@@ -15,16 +15,12 @@ const clientLogos = [
   { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2' },
 ];
 
-const trustLogosIt = clientLogos;
-const trustLogosEn = clientLogos;
 
-interface TrustLogosBarProps {
-  lang: 'en' | 'it';
-}
-
-export default function TrustLogosBar({ lang }: TrustLogosBarProps) {
-  const baseLogos = lang === 'en' ? trustLogosEn : trustLogosIt;
-  const trustLogos = [...baseLogos, ...baseLogos];
+// No `lang` prop any more: the two locales used to pick from `trustLogosEn` /
+// `trustLogosIt`, both of which were assigned the same array, so the branch
+// chose between a value and itself.
+export default function TrustLogosBar() {
+  const trustLogos = [...clientLogos, ...clientLogos];
 
   return (
     <div className="relative z-10 overflow-hidden">

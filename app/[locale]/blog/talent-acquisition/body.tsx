@@ -59,7 +59,7 @@ export default function BlogArticle9() {
             </Button>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
-                <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">Talent Acquisition</span>
+                <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{t('tag')}</span>
                 <span className="text-[13px] text-white/35">{t('text')}</span>
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('text2')}</span>
               </div>
@@ -103,8 +103,8 @@ export default function BlogArticle9() {
                   <thead>
                     <tr className="border-b border-[#121212]/[0.08]">
                       <th className="py-3 pr-4 text-[12px] font-bold text-[#121212]/40 tracking-[0.1em] uppercase">{t('columnHeader')}</th>
-                      <th className="py-3 pr-4 text-[12px] font-bold text-[#121212]/40 tracking-[0.1em] uppercase">Recruiting</th>
-                      <th className="py-3 text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.1em] uppercase">Talent Acquisition</th>
+                      <th className="py-3 pr-4 text-[12px] font-bold text-[#121212]/40 tracking-[0.1em] uppercase">{t('colRecruiting')}</th>
+                      <th className="py-3 text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.1em] uppercase">{t('colTalentAcquisition')}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -153,7 +153,7 @@ export default function BlogArticle9() {
               <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-10">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
-                  <h3 className="text-[16px] font-semibold text-[#121212]">Key Takeaway</h3>
+                  <h3 className="text-[16px] font-semibold text-[#121212]">{t('takeaway')}</h3>
                 </div>
                 <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
                   {t('body5')}

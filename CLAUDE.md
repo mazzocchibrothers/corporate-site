@@ -67,9 +67,11 @@ and it also fails if the page has no title, or if two pages share one.
 
 ## Copy — `messages/{en,it}.json`
 
-Zero hardcoded copy. Every string is in the catalogue under the route's
+Zero hardcoded copy, and `npm run check:hardcoded` is what makes that a fact
+rather than a claim. Every string is in the catalogue under the route's
 namespace, read with `useTranslations` in a client component or
-`getTranslations` on the server.
+`getTranslations` on the server. The one exception is a name — a company, a
+person — listed in `scripts/check-hardcoded.mjs`.
 
 - **Italian apostrophes: curly `’`, never straight `'`.** Before `<` or `{` a
   straight quote is an ICU escape — `l'<b>x</b>` renders the tag as visible text

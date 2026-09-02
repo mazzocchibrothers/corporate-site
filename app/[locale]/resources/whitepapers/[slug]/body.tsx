@@ -117,7 +117,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                     {wp.topic.map(tag => (
                       <span key={tag} className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{tag}</span>
                     ))}
-                    <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-white/40 border border-white/[0.08] tracking-wide">White Paper</span>
+                    <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-white/40 border border-white/[0.08] tracking-wide">{t('badge')}</span>
                   </div>
                   <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]" style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}>
                     {t(`items.${slug}.title`)}

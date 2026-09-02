@@ -1,6 +1,7 @@
 // @ts-nocheck
 'use client';
 
+import { useTranslations } from 'next-intl';
 import React, { useEffect } from 'react';
 import { Download, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -89,6 +90,8 @@ function InfoBox({ title, children }: { title: string; children: React.ReactNode
 
 
 export default function CareerAspirationInsuranceWhitepaper() {
+  const t = useTranslations('lp.career-aspiration-insurance.whitepaper');
+  const tl = useTranslations('shared.lp');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -107,7 +110,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
         >
           <div className="flex items-center gap-2.5">
             <SkillvueIcon size={24} />
-            <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.01em]">Skillvue</span>
+            <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.01em]">{t('text')}</span>
           </div>
           <div className="flex items-center gap-3">
             <Button asChild variant="secondary" mode="light">
@@ -115,9 +118,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
                 href="/WP-I2-ITA.pdf"
                 download="Career-Aspiration-Intelligence-Insurance-Skillvue.pdf"
               >
-                <Download aria-hidden="true" />
-                Scarica PDF
-              </a>
+                <Download aria-hidden="true" />{tl('downloadPdf')}</a>
             </Button>
             <Button asChild variant="primary" mode="light">
               <a
@@ -125,7 +126,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Contattaci
+                {tl('contact')}
                 <ArrowRight aria-hidden="true" />
               </a>
             </Button>
@@ -142,65 +143,59 @@ export default function CareerAspirationInsuranceWhitepaper() {
                 className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-7"
                 style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
               >
-                INSURANCE · 2026
-              </span>
+                {t('text2')}</span>
               <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
-                Career Aspiration Intelligence
-                <span
-                  className="block"
-                  style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
-                >
-                  nel settore assicurativo
-                </span>
-              </h1>
+                {t.rich('heading', {
+          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</h1>
               <p className="text-[15px] text-[#0D0D0D]/45 italic mt-3 mb-6">
-                Perché misurare le aspirazioni aiuta a prevedere chi rimane e chi eccelle
-              </p>
+                {t('body')}</p>
               <div className="w-10 h-px mx-auto mb-5" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
               <p className="text-[13px] text-[#0D0D0D]/40">
-                <em>Settore:</em> Insurance
-              </p>
-              <p className="text-[13px] text-[#0D0D0D]/40 mt-1"><em>Lettura:</em> circa 6 minuti</p>
+                {t.rich('body2', {
+          i: (chunks) => <em>{chunks}</em>,
+        })}</p>
+              <p className="text-[13px] text-[#0D0D0D]/40 mt-1">{t.rich('body3', {
+          i: (chunks) => <em>{chunks}</em>,
+        })}</p>
               <p className="text-[13px] text-[#0D0D0D]/40 mt-1">
-                A cura di{' '}
-                <span style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>
-                  Skillvue
-                </span>
-              </p>
+                {t.rich('body4', {
+          s: (chunks) => <span style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>{chunks}</span>,
+        })}</p>
             </div>
 
             {/* Document Body */}
             <div className="px-10 py-10">
 
               {/* Executive Summary */}
-              <InfoBox title="Executive Summary">
+              <InfoBox title={t('heading5')}>
                 <p className="mb-3">
-                  Nel settore assicurativo europeo il <strong className="text-[#0D0D0D]/80">67% dei CHRO</strong> indica la{' '}
-                  <strong className="text-[#0D0D0D]/80">retention</strong> del middle management come una{' '}
-                  <strong className="text-[#0D0D0D]/80">priorità HR critica</strong> per il biennio 2025–2026. Eppure la variabile
-                  che più fortemente predice chi rimane e chi eccelle — le aspirazioni di carriera —{' '}
-                  <strong className="text-[#0D0D0D]/80">è sistematicamente assente</strong> dai processi di talent management.
-                </p>
+                  {t.rich('body5', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</p>
                 <p>
-                  Questo documento analizza <strong className="text-[#0D0D0D]/80">perché misurare le aspirazioni</strong> genera
-                  un reale <strong className="text-[#0D0D0D]/80">vantaggio predittivo</strong>, quali implicazioni operative
-                  comporta per talent review, succession planning e leadership development e come sviluppare questa capacità in
-                  modo scalabile e <strong className="text-[#0D0D0D]/80">conforme all'EU AI Act</strong>.
-                </p>
+                  {t.rich('body6', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</p>
               </InfoBox>
 
               {/* Cover stats */}
               <div className="grid grid-cols-2 gap-4 my-8">
-                <StatBox value="75%" label="Del turnover è prevenibile con azioni mirate" />
-                <StatBox value="67%" label="Retention come priorità critica per i CHRO" />
-                <StatBox value="20-25%" label="Turnover annuo rete agenziale" />
-                <StatBox value="1,5-2x" label="Costo di sostituzione vs. retribuzione annua" />
+                <StatBox value="75%" label={t('label')} />
+                <StatBox value="67%" label={t('label2')} />
+                <StatBox value="20-25%" label={t('label3')} />
+                <StatBox value="1,5-2x" label={t('label4')} />
               </div>
 
               {/* TURNOVER PREVENIBILE */}
               <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
-                <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">TURNOVER PREVENIBILE:</p>
-                <p className="text-[13px] text-[#0D0D0D]/40 mb-5 italic">la maggior parte delle uscite si può anticipare</p>
+                <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">{t('body7')}</p>
+                <p className="text-[13px] text-[#0D0D0D]/40 mb-5 italic">{t('body8')}</p>
                 <div className="flex items-center gap-8">
                   {/* Donut chart visual */}
                   <div className="relative flex-shrink-0">
@@ -228,90 +223,75 @@ export default function CareerAspirationInsuranceWhitepaper() {
                       className="text-[13px] font-semibold mb-3"
                       style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                     >
-                      Il driver №1 della retention non è la retribuzione, ma lo sviluppo di carriera.
-                    </p>
+                      {t('body9')}</p>
                     <div className="flex flex-col gap-1.5 text-[12px] text-[#0D0D0D]/45">
-                      <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }} />Prevenibile (75%)</span>
-                      <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-gray-200 inline-block" />Non prevenibile (25%)</span>
-                    </div>
-                    <p className="text-[11px] text-[#0D0D0D]/25 mt-3 italic">Fonte: Work Institute, Retention Report 2024</p>
+                      {t.rich('text3', {
+          s: (chunks) => <span className="flex items-center gap-1.5">{chunks}</span>,
+          s2: (chunks) => <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}>{chunks}</span>,
+          s3: (chunks) => <span className="flex items-center gap-1.5">{chunks}</span>,
+          s4: (chunks) => <span className="w-2.5 h-2.5 rounded-full bg-gray-200 inline-block">{chunks}</span>,
+        })}</div>
+                    <p className="text-[11px] text-[#0D0D0D]/25 mt-3 italic">{t('body10')}</p>
                   </div>
                 </div>
               </div>
 
               <Para>
-                Questi numeri convergono su un punto: la maggior parte delle uscite volontarie non è inevitabile. Sono il risultato
-                di un <strong className="text-[#0D0D0D]/80">mismatch tra aspirazioni e opportunità percepite</strong>, che rimane
-                invisibile finché non compaiono i segnali terminali. La performance review e le engagement survey misurano bene il
-                presente, ma non possono predire dove una persona vuole arrivare, né se l'organizzazione è percepita come il veicolo
-                credibile per raggiungere quella meta.
-              </Para>
+                {t.rich('text4', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <Para>
-                <strong className="text-[#0D0D0D]/80">Avremmo potuto prevederlo?</strong> È la domanda che emerge spesso dopo
-                alcune di queste uscite. La risposta onesta, nella maggior parte dei casi, è sì. Ma per farlo occorreva misurare
-                qualcosa che quasi nessun sistema HR misura in modo strutturato: le aspirazioni di carriera. La{' '}
-                <strong className="text-[#0D0D0D]/80">Career Aspiration Intelligence</strong> mappa il futuro — ossia dove vuole
-                andare questa persona e quanto è probabile che la tua organizzazione faccia ancora parte del suo percorso tra 18 mesi.
-              </Para>
+                {t.rich('text5', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
               {/* Section 1 */}
-              <SectionHeading num="1" title="Perché il settore assicurativo è un caso a sé" />
+              <SectionHeading num="1" title={t('heading6')} />
               <Para>
-                Ci sono tre dinamiche convergenti che rendono il problema aspirazionale particolarmente acuto nei gruppi assicurativi europei:
-              </Para>
+                {t('text6')}</Para>
 
-              <SubHeading title="1. La trasformazione del profilo professionale" />
+              <SubHeading title={t('heading7')} />
               <Para>
-                La digitalizzazione progressiva e l'avanzata dei modelli <strong className="text-[#0D0D0D]/80">embedded insurance</strong>{' '}
-                rendono <strong className="text-[#0D0D0D]/80">obsoleti i profili distributivi tradizionali</strong> e creano domanda di{' '}
-                <strong className="text-[#0D0D0D]/80">figure ibride</strong> capaci di navigare simultaneamente il canale digitale e la
-                relazione consulenziale con il cliente. McKinsey ha identificato nel ridisegno dei modelli distributivi assicurativi una
-                delle priorità strategiche più urgenti del settore per il 2024–2026. Un agente che ha costruito la propria identità
-                professionale sul modello tradizionale si trova in un percorso di{' '}
-                <strong className="text-[#0D0D0D]/80">ridefinizione della propria aspirazione</strong>, e le organizzazioni che non
-                intercettano questa ridefinizione la scopriranno solo attraverso le dimissioni.
-              </Para>
+                {t.rich('text7', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <SubHeading title="2. La competizione per il talento manageriale" />
+              <SubHeading title={t('heading8')} />
               <Para>
-                I profili di middle management ad <strong className="text-[#0D0D0D]/80">alto potenziale</strong> nel settore assicurativo
-                hanno oggi un'offerta crescente di alternative: le insurtech offrono traiettorie di crescita più rapide, le piattaforme
-                digitali esposizione internazionale, le società di consulenza varietà progettuale. Le grandi compagnie competitive su
-                salary e benefit si trovano a{' '}
-                <strong className="text-[#0D0D0D]/80">perdere profili non per ragioni economiche, ma per ragioni aspirazionali</strong>:
-                la percezione che la traiettoria di crescita disponibile altrove sia più ambiziosa.
-              </Para>
+                {t.rich('text8', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <SubHeading title="3. I cicli lunghi di formazione del capitale umano" />
+              <SubHeading title={t('heading9')} />
               <Para>
-                Un responsabile di agenzia, un talent developer di area, un key account manager assicurativo accumula{' '}
-                <strong className="text-[#0D0D0D]/80">know-how relazionale, regolatorio e di portafoglio</strong> che non si costruisce
-                in pochi mesi. Quando questa figura lascia, la perdita non è solo di un ruolo: è di un{' '}
-                <strong className="text-[#0D0D0D]/80">asset di conoscenza</strong> che richiede anni per essere ricostruito. Il{' '}
-                <strong className="text-[#0D0D0D]/80">costo reale di sostituzione</strong>, stimato da Deloitte tra{' '}
-                <strong className="text-[#0D0D0D]/80">1,5x e 2x la retribuzione annua lorda</strong> per ruoli manageriali, è
-                sistematicamente sottostimato perché i costi indiretti rimangono fuori dai modelli contabili standard.
-              </Para>
+                {t.rich('text9', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
               <Quote source="Gartner HR Research, 2023">
-                "Le organizzazioni che misurano le aspirazioni in modo strutturato e le integrano nelle decisioni di talent management,
-                riportano tassi di retention del management superiori fino al 20–25% rispetto alla media di settore."
-              </Quote>
+                {t('text10')}</Quote>
 
               {/* Section 2 */}
-              <SectionHeading num="2" title="Cosa significa davvero misurare le aspirazioni" />
+              <SectionHeading num="2" title={t('heading10')} />
               <Para>
-                L'aspirazione di carriera è un <strong className="text-[#0D0D0D]/80">costrutto psicologico</strong> che rappresenta il
-                grado in cui una persona <strong className="text-[#0D0D0D]/80">immagina e pianifica</strong> attivamente il proprio{' '}
-                <strong className="text-[#0D0D0D]/80">successo professionale</strong> a lungo termine. Misurare le aspirazioni non
-                equivale a chiedere "dove ti vedi tra cinque anni". Questa domanda produce risposte che riflettono le aspettative
-                percepite dell'interlocutore più che le aspirazioni reali. Il suo valore predittivo è basso per definizione.
-              </Para>
+                {t.rich('text11', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <Para>
-                Un <strong className="text-[#0D0D0D]/80">approccio strutturato</strong> per misurare le aspirazioni opera su cinque{' '}
-                <strong className="text-[#0D0D0D]/80">dimensioni distinte</strong>, ciascuna con una diversa capacità predittiva rispetto
-                ai comportamenti organizzativi futuri:
-              </Para>
+                {t.rich('text12', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
               {/* 5 dimensions */}
               <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-6">
@@ -319,8 +299,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
                   className="text-[12px] font-bold tracking-[0.2em] uppercase mb-5 text-center"
                   style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                 >
-                  I 5 indicatori della Career Aspiration Inventory
-                </p>
+                  {t('body11')}</p>
                 <div className="space-y-3">
                   {[
                     { d: 'Immaginare un futuro desiderato', desc: 'Una visione definita e chiara della traiettoria professionale aumenta la motivazione e guida il comportamento orientato all\'obiettivo.' },
@@ -351,76 +330,61 @@ export default function CareerAspirationInsuranceWhitepaper() {
               </div>
 
               {/* Section 3 */}
-              <SectionHeading num="3" title="Predire chi rimane: la ricerca dietro il dato" />
+              <SectionHeading num="3" title={t('heading11')} />
 
               <div className="grid grid-cols-3 gap-4 my-6">
-                <StatBox value="42%" label="del turnover è prevenibile secondo i dipendenti stessi · Work Institute, 2024" />
-                <StatBox value="№1" label="causa di abbandono: sviluppo carriera (17,4%), davanti a stipendio · Work Institute, 2024" />
-                <StatBox value="94%" label="rimarrebbe più a lungo in un'org. che investe nella propria crescita · LinkedIn, 2024" />
+                <StatBox value="42%" label={t('label5')} />
+                <StatBox value="№1" label={t('label6')} />
+                <StatBox value="94%" label={t('label7')} />
               </div>
 
               <Para>
-                Il corpus di ricerca sul legame tra aspirazioni e retention è cresciuto significativamente nell'ultimo decennio. La{' '}
-                <em>Self-Determination Theory</em> (SDT) di Deci e Ryan identifica tre bisogni fondamentali la cui soddisfazione predice
-                comportamenti di engagement e retention: <strong className="text-[#0D0D0D]/80">autonomia</strong> (il senso che le
-                proprie azioni riflettono valori e aspirazioni autentici), <strong className="text-[#0D0D0D]/80">competenza</strong> (la
-                percezione di crescita efficace) e <strong className="text-[#0D0D0D]/80">relazionalità</strong> (il senso di connessione
-                significativa con il contesto). Di questi tre bisogni, l'{' '}
-                <strong className="text-[#0D0D0D]/80">aspirazione di carriera è il predittore più diretto</strong> della soddisfazione
-                del bisogno di autonomia, il più fortemente correlato alla retention volontaria nei meta-studi disponibili.
-              </Para>
+                {t.rich('text13', {
+          i: (chunks) => <em>{chunks}</em>,
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <Para>
-                Il calo di engagement è spesso interpretato come causa di turnover. In realtà è frequentemente{' '}
-                <strong className="text-[#0D0D0D]/80">effetto di un disallineamento aspirazionale già in corso</strong>: la persona ha
-                perso la convinzione che l'organizzazione possa soddisfare le proprie aspirazioni, e l'engagement si riduce di
-                conseguenza. Intervenire sull'engagement senza affrontare il disallineamento sottostante equivale a trattare un sintomo
-                senza diagnosticare la patologia.
-              </Para>
+                {t.rich('text14', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
               {/* Section 4 */}
-              <SectionHeading num="4" title="Predire chi eccelle: aspiration-performance alignment" />
+              <SectionHeading num="4" title={t('heading12')} />
               <Para>
-                Il <strong className="text-[#0D0D0D]/80">legame tra aspirazioni di carriera e performance individuale</strong> è meno
-                intuitivo della relazione con la retention, ma altrettanto documentato. La <em>Self-Determination Theory</em> mostra che
-                la motivazione intrinseca è il predittore più robusto di{' '}
-                <strong className="text-[#0D0D0D]/80">performance duratura, apprendimento accelerato</strong> e comportamento proattivo
-                nelle organizzazioni.
-              </Para>
+                {t.rich('text15', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          i: (chunks) => <em>{chunks}</em>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <Para>
-                Nel contesto assicurativo, questo si traduce in una considerazione pratica: due manager con lo stesso profilo di
-                competenze e lo stesso livello di performance storica possono avere traiettorie future molto diverse, a seconda che il
-                ruolo in cui si trovano sia allineato o meno con le loro aspirazioni.{' '}
-                <strong className="text-[#0D0D0D]/80">Confondere la performance passata con il potenziale futuro è uno degli errori
-                più diffusi nei sistemi di talent management</strong>, e la misurazione strutturata delle aspirazioni è uno degli
-                strumenti più efficaci per ridurlo.
-              </Para>
+                {t.rich('text16', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
               <Quote>
-                "Quando un manager decide di andarsene, raramente si tratta di un evento improvviso. Il problema non è la mancanza
-                di segnali, ma la natura degli stessi: spesso ci si limita a monitorare le performance attuali, ignorando che le sue
-                aspirazioni si sono già spostate altrove da tempo."
-              </Quote>
+                {t('text17')}</Quote>
 
               {/* Section 5 */}
-              <SectionHeading num="5" title="Implicazioni operative: dove cambia il lavoro HR" />
+              <SectionHeading num="5" title={t('heading13')} />
               <Para>
-                Integrare la Career Aspiration Intelligence nei processi HR assicurativi{' '}
-                <strong className="text-[#0D0D0D]/80">non richiede di sostituire i sistemi esistenti</strong>. Richiede di{' '}
-                <strong className="text-[#0D0D0D]/80">aggiungere una dimensione</strong> che attualmente manca e di comprendere come
-                questa dimensione modifica la <strong className="text-[#0D0D0D]/80">qualità delle decisioni</strong> in tre aree critiche:
-              </Para>
+                {t.rich('text18', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <SubHeading title="1. Talent review e succession planning" />
+              <SubHeading title={t('heading14')} />
               <Para>
-                Il processo di talent review tradizionale si articola su due assi: la{' '}
-                <strong className="text-[#0D0D0D]/80">performance</strong> storica e il{' '}
-                <strong className="text-[#0D0D0D]/80">potenziale</strong> stimato dal management. In questa configurazione, tuttavia,
-                il potenziale rimane spesso una <strong className="text-[#0D0D0D]/80">valutazione soggettiva, basata su osservazioni
-                comportamentali non strutturate e soggetta a inevitabili bias cognitivi</strong>.
-              </Para>
+                {t.rich('text19', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <p className="text-[13.5px] font-semibold text-[#0D0D0D]/70 mb-3" style={{ fontStyle: 'italic' }}>
-                Integrare le aspirazioni individuali nella talent review trasforma la valutazione da statica a predittiva attraverso tre vantaggi concreti:
-              </p>
+                {t('body12')}</p>
               <ul className="space-y-2.5 mb-5">
                 {[
                   { bold: 'prevenzione del disallineamento:', text: 'identifica i profili tecnicamente idonei ma con ambizioni divergenti. Questo riduce il rischio di nomine che, dopo un\'iniziale alta performance, sfociano inevitabilmente in burnout, disimpegno o dimissioni.' },
@@ -434,35 +398,26 @@ export default function CareerAspirationInsuranceWhitepaper() {
                 ))}
               </ul>
 
-              <SubHeading title="2. Leadership development e programmi di formazione" />
+              <SubHeading title={t('heading15')} />
               <Para>
-                I programmi di sviluppo manageriale che <strong className="text-[#0D0D0D]/80">ignorano le aspirazioni</strong> dei
-                partecipanti producono un effetto paradossale: aumentano le competenze senza aumentare la propensione a restare.
-                Mappare le aspirazioni prima di definire i contenuti dei programmi consente una{' '}
-                <strong className="text-[#0D0D0D]/80">personalizzazione</strong> che va oltre la segmentazione per ruolo o seniority.
-                Due partecipanti con lo stesso ruolo e la stessa performance possono avere aspirazioni radicalmente diverse e beneficiare
-                di percorsi di sviluppo radicalmente diversi. Questa personalizzazione ha{' '}
-                <strong className="text-[#0D0D0D]/80">effetti misurabili sull'engagement</strong> con i programmi e sulla retention dei
-                partecipanti nell'anno successivo.
-              </Para>
+                {t.rich('text20', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <SubHeading title="3. Conversazioni di sviluppo: qualità vs frequenza" />
+              <SubHeading title={t('heading16')} />
               <Para>
-                La conversazione di sviluppo è il momento in cui l'organizzazione e il dipendente{' '}
-                <strong className="text-[#0D0D0D]/80">negoziano implicitamente il futuro</strong>. Nella maggior parte dei casi,
-                questa conversazione avviene in{' '}
-                <strong className="text-[#0D0D0D]/80">assenza di dati strutturati</strong> sulle aspirazioni. Disporre di una
-                mappatura aspirazionale strutturata cambia la natura di questa conversazione: da review del passato a confronto
-                esplicito tra traiettoria desiderata e opportunità disponibili. Questo livello di{' '}
-                <strong className="text-[#0D0D0D]/80">trasparenza</strong> ha un doppio effetto: riduce il rischio di uscite «di
-                sorpresa» e aumenta la percezione di essere visti dall'organizzazione.
-              </Para>
+                {t.rich('text21', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
               {/* 4-step cycle */}
               <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
                 <p className="text-[12px] font-bold text-[#0D0D0D]/50 text-center mb-6 uppercase tracking-[0.15em]">
-                  Dal dato aspirazionale all'intervento HR: il ciclo operativo
-                </p>
+                  {t('body13')}</p>
                 <div className="grid grid-cols-4 gap-3">
                   {[
                     { num: '01', title: 'Verification conversazionale', sub: 'Agentic-AI, domande aperte' },
@@ -487,25 +442,18 @@ export default function CareerAspirationInsuranceWhitepaper() {
                 </div>
               </div>
 
-              <InfoBox title="Implicazione per il Head of Leadership Development">
+              <InfoBox title={t('heading17')}>
                 <p>
-                  Un rischio che questo approccio introduce va esplicitato: mappare le aspirazioni crea aspettative. Se
-                  un'organizzazione rileva che un manager aspira a un percorso specifico e poi non riesce a offrirlo, l'effetto
-                  può essere peggiore del silenzio. La{' '}
-                  <strong className="text-[#0D0D0D]/75">Career Aspiration Intelligence deve essere accompagnata da un sistema di
-                  risposta organizzativa</strong>, non basta raccogliere dati se non si è pronti ad agire su di essi. Questo richiede{' '}
-                  <strong className="text-[#0D0D0D]/75">allineamento</strong> tra HR, business line e senior management sulle
-                  opportunità realmente disponibili.
-                </p>
+                  {t.rich('body14', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/75">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/75">{chunks}</strong>,
+        })}</p>
               </InfoBox>
 
               {/* 3 domande */}
-              <SectionHeading title="3 domande per il tuo comitato di direzione" />
+              <SectionHeading title={t('heading18')} />
               <Para>
-                Prima ancora di scegliere gli strumenti, le organizzazioni assicurative sono chiamate a rispondere a quesiti
-                strategici che definiscono il perimetro del problema. Questo framework nasce come punto di partenza per una
-                riflessione interna profonda.
-              </Para>
+                {t('text22')}</Para>
 
               {[
                 {
@@ -545,58 +493,44 @@ export default function CareerAspirationInsuranceWhitepaper() {
               {/* Next step */}
               <div className="mt-10 mb-8">
                 <div className="w-8 h-0.5 rounded mb-3" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-                <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D] mb-4">Next step</h2>
+                <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D] mb-4">{t('heading2')}</h2>
               </div>
               <Para>
-                Se la vostra organizzazione sta ripensando i processi di talent management, o se volete esplorare come{' '}
-                <strong className="text-[#0D0D0D]/80">mappare le aspirazioni di carriera del vostro middle management</strong> rispetto
-                alle traiettorie di sviluppo effettivamente disponibili, Skillvue può supportarvi con un verification scalabile e
-                pienamente conforme all'EU AI Act, progettato sulle specificità del vostro contesto assicurativo.
-              </Para>
+                {t.rich('text23', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <p className="text-[14px] text-[#0D0D0D]/50 mb-8">
-                Contattaci per una conversazione esplorativa:{' '}
-                <a
-                  href="https://www.skillvue.ai/contact-us"
-                  className="hover:opacity-70 transition-opacity"
-                  style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}
-                >
-                  skillvue.ai/contact-us
-                </a>
-              </p>
+                {t.rich('body15', {
+          a: (chunks) => <a href="https://www.skillvue.ai/contact-us" className="hover:opacity-70 transition-opacity" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>{chunks}</a>,
+        })}</p>
 
               {/* Final stats */}
               <div className="grid grid-cols-2 gap-4 mb-10">
-                <StatBox value=">€1M" label="Risparmio annuo potenziale" />
-                <StatBox value="33%" label="Miglioramento retention stimato" />
-                <StatBox value="70-80%" label="Accuratezza succession planning" />
-                <StatBox value="51%" label="Riduzione del turnover nelle organizzazioni con alto engagement" />
+                <StatBox value=">€1M" label={t('label8')} />
+                <StatBox value="33%" label={t('label9')} />
+                <StatBox value="70-80%" label={t('label10')} />
+                <StatBox value="51%" label={t('label11')} />
               </div>
 
               {/* About Skillvue */}
               <div className="border-t border-black/[0.07] pt-10 mt-10">
                 <div className="w-8 h-0.5 rounded mb-4" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-                <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">About Skillvue</h3>
+                <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">{t('heading3')}</h3>
                 <Para>
-                  Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di{' '}
-                  <strong className="text-[#0D0D0D]/80">talent intelligence</strong> basata sull'AI che aggiunge una dimensione
-                  dinamica e oggettiva ai dati HR: trasformiamo informazioni statiche in{' '}
-                  <strong className="text-[#0D0D0D]/80">insight predittivi</strong> che permettono di prendere decisioni migliori
-                  nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.
-                </Para>
+                  {t.rich('text24', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
                 <Para>
-                  Assistiamo aziende di medie e grandi dimensioni in tutta Europa, realtà dove le decisioni sui talenti hanno un
-                  impatto strategico elevato e costi molto significativi. A differenza delle suite HR generiche o degli strumenti
-                  di verification unidimensionali, Skillvue{' '}
-                  <strong className="text-[#0D0D0D]/80">combina la solidità della scienza psicometrica con la potenza dei moderni
-                  LLM</strong> per creare un <strong className="text-[#0D0D0D]/80">copilota AI scientificamente fondato</strong>,
-                  in grado di fornire valutazioni personalizzate e scalabili, allineate al modello di leadership e al quadro di
-                  competenze specifico di ciascuna azienda.
-                </Para>
+                  {t.rich('text25', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               </div>
 
               {/* References */}
               <div className="border-t border-black/[0.07] pt-8 mt-8">
-                <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-4">Fonti e riferimenti</h3>
+                <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-4">{t('heading4')}</h3>
                 <ul className="space-y-2">
                   {[
                     'Mercer. (2024). Global Talent Trends Study 2024. Marsh McLennan.',
@@ -615,10 +549,10 @@ export default function CareerAspirationInsuranceWhitepaper() {
 
               {/* Footer */}
               <div className="border-t border-black/[0.07] pt-6 mt-8 flex items-center justify-between">
-                <span className="text-[11px] text-[#0D0D0D]/25">Insurance · 2026</span>
+                <span className="text-[11px] text-[#0D0D0D]/25">{t('text26')}</span>
                 <div className="flex items-center gap-2">
                   <SkillvueIcon size={16} />
-                  <span className="text-[11px] text-[#0D0D0D]/25">Skillvue</span>
+                  <span className="text-[11px] text-[#0D0D0D]/25">{t('text27')}</span>
                 </div>
               </div>
 
@@ -629,14 +563,16 @@ export default function CareerAspirationInsuranceWhitepaper() {
         {/* Page footer */}
         <div className="py-6 px-6 text-center">
           <p className="text-[12px] text-[#0D0D0D]/30">
-            © {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati. ·{' '}
+            {tl('copyright', { year: new Date().getFullYear() })} ·{' '}
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
-            </Button>
+              {t.rich('text28', {
+          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+        })}</Button>
             {' '}·{' '}
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai">skillvue.ai</a>
-            </Button>
+              {t.rich('text29', {
+          a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
+        })}</Button>
           </p>
         </div>
       </div>

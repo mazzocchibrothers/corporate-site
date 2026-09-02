@@ -1,6 +1,7 @@
 // @ts-nocheck
 'use client';
 
+import { useTranslations } from 'next-intl';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
@@ -70,6 +71,8 @@ const featureCards = [
 ];
 
 function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
+  const t = useTranslations('lp.la-crisi-delle-competenze');
+  const tl = useTranslations('shared.lp');
   const [form, setForm] = useState({ nome: '', cognome: '', email: '' });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -134,54 +137,45 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
       >
         <div className="flex items-center gap-2.5">
           <SkillvueIcon size={26} />
-          <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">Skillvue</span>
+          <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">{t('text')}</span>
         </div>
         <Button variant="primary" mode="light" onClick={scrollToForm}>
-          Scarica il Report
-        </Button>
+          {t('text2')}</Button>
       </nav>
 
       {/* HERO */}
       <section className="pt-[88px] pb-16 px-6 lg:px-10">
         <div className="max-w-[760px] mx-auto text-center pt-16">
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.05}>
-            <span
-              className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8"
-              style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
-            >
-              Banking · 2026
-            </span>
-          </motion.div>
+            {t.rich('text3', {
+          s: (chunks) => <span className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
+        })}</motion.div>
 
           <motion.h1
             variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
             className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.1] mb-6"
           >
-            La crisi delle competenze obsolete{' '}
-            <span
-              className="block"
-              style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
-            >
-              nelle banche europee
-            </span>
-          </motion.h1>
+            {t.rich('text4', {
+          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</motion.h1>
 
           <motion.p
             variants={fadeUp} initial="hidden" animate="visible" custom={0.18}
             className="text-[17px] text-[#0D0D0D]/55 leading-[1.7] mb-4"
             style={{ fontWeight: 300 }}
           >
-            Come costruire un sistema di talent intelligence continua nel settore bancario
-          </motion.p>
+            {t('text5')}</motion.p>
 
           <motion.div
             variants={fadeUp} initial="hidden" animate="visible" custom={0.24}
             className="flex items-center justify-center gap-6 text-[12px] text-[#0D0D0D]/35 mb-12"
           >
-            <span>A cura di <strong className="text-[#0D0D0D]/55">Skillvue</strong></span>
-            <span className="w-px h-3 bg-[#0D0D0D]/15" />
-            <span>~8 min read</span>
-          </motion.div>
+            {t.rich('text6', {
+          s: (chunks) => <span>{chunks}</span>,
+          b: (chunks) => <strong className="text-[#0D0D0D]/55">{chunks}</strong>,
+          s2: (chunks) => <span className="w-px h-3 bg-[#0D0D0D]/15">{chunks}</span>,
+          s3: (chunks) => <span>{chunks}</span>,
+        })}</motion.div>
 
             {/* Logo marquee */}
             {(() => {
@@ -224,8 +218,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.3}>
             <Button variant="primary" mode="light" onClick={scrollToForm}>
-              Scarica il Report Completo
-            </Button>
+              {t('text7')}</Button>
           </motion.div>
         </div>
       </section>
@@ -264,11 +257,9 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             className="text-center mb-12"
           >
             <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] mb-3">
-              Cosa troverai nel report
-            </h2>
+              {t('heading')}</h2>
             <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
-              Una guida strategica per i leader HR del settore bancario che vogliono costruire un sistema di talent intelligence realmente continuo e conforme all'AI Act.
-            </p>
+              {t('body')}</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-5">
@@ -299,8 +290,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             {/* Left */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
-                Scarica il report completo
-              </h2>
+                {t('heading2')}</h2>
               <ul className="space-y-3 mb-8">
                 {[
                   'Perché il 59% della forza lavoro bancaria ha bisogno di reskilling immediato o profondo',
@@ -326,7 +316,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
-                I tuoi dati sono al sicuro. Niente spam.
+                {tl('dataSafe')}
               </p>
             </motion.div>
 
@@ -337,8 +327,8 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
               className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10"
               style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}
             >
-              <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">Compila per scaricare il PDF</h3>
-              <p className="text-[13px] text-[#0D0D0D]/35 mb-7">Gratuito · Accesso immediato</p>
+              <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">{t('heading3')}</h3>
+              <p className="text-[13px] text-[#0D0D0D]/35 mb-7">{t('body2')}</p>
 
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-10 text-center gap-4">
@@ -351,26 +341,26 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-[16px] font-semibold text-[#0D0D0D] mb-1">Il whitepaper si è aperto in una nuova scheda.</p>
-                    <p className="text-[13px] text-[#0D0D0D]/40">Controlla il tuo browser se non lo vedi subito.</p>
+                    <p className="text-[16px] font-semibold text-[#0D0D0D] mb-1">{t('body3')}</p>
+                    <p className="text-[13px] text-[#0D0D0D]/40">{t('body4')}</p>
                   </div>
                   <Button
                     variant="secondary"
                     mode="light"
                     onClick={() => window.open('/lp/la-crisi-delle-competenze?access=true', '_blank')}
                   >
-                    Apri di nuovo
-                  </Button>
+                    {t('text8')}</Button>
                 </div>
               ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-[12px] font-medium text-[#0D0D0D]/60 mb-1.5">
-                    Nome <span className="text-red-400">*</span>
-                  </label>
+                    {t.rich('label', {
+          s: (chunks) => <span className="text-red-400">{chunks}</span>,
+        })}</label>
                   <input
                     type="text"
-                    placeholder="Il tuo nome"
+                    placeholder={t('label4')}
                     value={form.nome}
                     onChange={e => { setForm(f => ({ ...f, nome: e.target.value })); setErrors(er => ({ ...er, nome: '' })); }}
                     className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none focus-visible:ring-2 focus-visible:ring-[#4B4DF7]/60 focus-visible:border-[#4B4DF7] transition-all"
@@ -381,11 +371,12 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
 
                 <div>
                   <label className="block text-[12px] font-medium text-[#0D0D0D]/60 mb-1.5">
-                    Cognome <span className="text-red-400">*</span>
-                  </label>
+                    {t.rich('label2', {
+          s: (chunks) => <span className="text-red-400">{chunks}</span>,
+        })}</label>
                   <input
                     type="text"
-                    placeholder="Il tuo cognome"
+                    placeholder={t('label5')}
                     value={form.cognome}
                     onChange={e => { setForm(f => ({ ...f, cognome: e.target.value })); setErrors(er => ({ ...er, cognome: '' })); }}
                     className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none focus-visible:ring-2 focus-visible:ring-[#4B4DF7]/60 focus-visible:border-[#4B4DF7] transition-all"
@@ -396,18 +387,19 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
 
                 <div>
                   <label className="block text-[12px] font-medium text-[#0D0D0D]/60 mb-1.5">
-                    Email Lavorativa <span className="text-red-400">*</span>
-                  </label>
+                    {t.rich('label3', {
+          s: (chunks) => <span className="text-red-400">{chunks}</span>,
+        })}</label>
                   <input
                     type="email"
-                    placeholder="nome@azienda.com"
+                    placeholder={t('label6')}
                     value={form.email}
                     onChange={e => { setForm(f => ({ ...f, email: e.target.value })); setErrors(er => ({ ...er, email: '' })); }}
                     className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none focus-visible:ring-2 focus-visible:ring-[#4B4DF7]/60 focus-visible:border-[#4B4DF7] transition-all"
                     style={{ borderColor: errors.email ? '#EF4444' : 'rgba(0,0,0,0.12)', background: '#FAFAFA' }}
                   />
                   {errors.email && <p className="text-[11px] text-red-500 mt-1">{errors.email}</p>}
-                  {!errors.email && <p className="text-[11px] text-[#0D0D0D]/25 mt-1">Richiesta email aziendale (non personale)</p>}
+                  {!errors.email && <p className="text-[11px] text-[#0D0D0D]/25 mt-1">{t('body5')}</p>}
                 </div>
 
                 <Button
@@ -423,9 +415,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                       <svg className="animate-spin" width="16" height="16" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                      </svg>
-                      Caricamento…
-                    </>
+                      </svg>{tl('loading')}</>
                   ) : (
                     'Scarica il Report'
                   )}
@@ -442,15 +432,17 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
         <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2.5">
             <SkillvueIcon size={20} />
-            <span className="text-[12px] text-[#0D0D0D]/30">© {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati.</span>
+            <span className="text-[12px] text-[#0D0D0D]/30">{tl('copyright', { year: new Date().getFullYear() })}</span>
           </div>
           <div className="flex items-center gap-5 text-[12px]">
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
-            </Button>
+              {t.rich('text9', {
+          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+        })}</Button>
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai">skillvue.ai</a>
-            </Button>
+              {t.rich('text10', {
+          a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
+        })}</Button>
           </div>
         </div>
       </footer>
@@ -552,6 +544,8 @@ function NumberedItem({ n, title, children }: { n: number; title: string; childr
 }
 
 function WhitepaperLayer() {
+  const t = useTranslations('lp.la-crisi-delle-competenze');
+  const tl = useTranslations('shared.lp');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -568,7 +562,7 @@ function WhitepaperLayer() {
       >
         <div className="flex items-center gap-2.5">
           <SkillvueIcon size={24} />
-          <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.03em]">Skillvue</span>
+          <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.03em]">{t('text11')}</span>
         </div>
         <div className="flex items-center gap-3">
           <Button asChild variant="secondary" mode="light">
@@ -576,9 +570,7 @@ function WhitepaperLayer() {
               href="/WP-B2-ITA.pdf"
               download="La-Crisi-Competenze-Obsolete-Banche-Europee-Skillvue.pdf"
             >
-              <Download aria-hidden="true" />
-              Scarica PDF
-            </a>
+              <Download aria-hidden="true" />{tl('downloadPdf')}</a>
           </Button>
           <Button asChild variant="primary" mode="light">
             <a
@@ -586,7 +578,7 @@ function WhitepaperLayer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Contattaci
+              {tl('contact')}
               <ArrowRight aria-hidden="true" />
             </a>
           </Button>
@@ -603,63 +595,57 @@ function WhitepaperLayer() {
               className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-7"
               style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
             >
-              BANKING · 2026
-            </span>
+              {t('text12')}</span>
             <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.2] mb-2">
-              La crisi delle competenze obsolete nelle banche europee:
-              <span
-                className="block"
-                style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
-              >
-                costruire un sistema di talent intelligence continua
-              </span>
-            </h1>
+              {t.rich('heading4', {
+          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</h1>
             <p className="text-[15px] text-[#0D0D0D]/45 italic mt-3 mb-6">
-              Come costruire un sistema di talent intelligence continua nel settore bancario
-            </p>
+              {t('body6')}</p>
             <div className="w-10 h-px mx-auto mb-5" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
             <p className="text-[13px] text-[#0D0D0D]/40">
-              <em>Settore:</em> Banking · <em>Destinatari:</em> CHRO, Head of L&D, Chief Talent Officer
-            </p>
-            <p className="text-[13px] text-[#0D0D0D]/40 mt-1"><em>Lettura:</em> circa 8 minuti</p>
+              {t.rich('body7', {
+          i: (chunks) => <em>{chunks}</em>,
+          i2: (chunks) => <em>{chunks}</em>,
+        })}</p>
+            <p className="text-[13px] text-[#0D0D0D]/40 mt-1">{t.rich('body8', {
+          i: (chunks) => <em>{chunks}</em>,
+        })}</p>
             <p className="text-[13px] text-[#0D0D0D]/40 mt-1">
-              A cura di{' '}
-              <span style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>
-                Skillvue
-              </span>
-            </p>
+              {t.rich('body9', {
+          s: (chunks) => <span style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>{chunks}</span>,
+        })}</p>
           </div>
 
           {/* Document Body */}
           <div className="px-10 py-10">
 
             {/* Problem box */}
-            <InfoBox title="Il problema in numeri">
+            <InfoBox title={t('heading8')}>
               <p>
-                Entro il 2030, il <strong className="text-[#0D0D0D]/80">39%</strong> dei ruoli nel settore bancario europeo richiederà un{' '}
-                <strong className="text-[#0D0D0D]/80">reskilling</strong>. Il <strong className="text-[#0D0D0D]/80">ciclo di vita</strong>{' '}
-                medio di una competenza tecnica è ormai <strong className="text-[#0D0D0D]/80">inferiore ai tre anni</strong>. Eppure, la
-                maggior parte delle organizzazioni bancarie continua a operare con{' '}
-                <strong className="text-[#0D0D0D]/80">sistemi di gestione dei talenti frammentati</strong>, spesso non in grado di
-                rilevare questi cambiamenti in tempo reale. Il <strong className="text-[#0D0D0D]/80">costo</strong> non è solo
-                operativo, è strategico.
-              </p>
+                {t.rich('body10', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b5: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b6: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</p>
             </InfoBox>
 
             {/* Cover stats */}
             <div className="grid grid-cols-2 gap-4 my-8">
-              <StatBox value="39%" label="dei ruoli bancari richiederà reskilling" />
-              <StatBox value="<1-2 anni" label="ciclo di vita medio competenza tecnica" />
-              <StatBox value="28%" label="riduzione tempi di talent deployment" />
-              <StatBox value="0,38" label="validità predittiva colloquio non strutturato" />
+              <StatBox value="39%" label={t('label7')} />
+              <StatBox value="<1-2 anni" label={t('label8')} />
+              <StatBox value="28%" label={t('label9')} />
+              <StatBox value="0,38" label={t('label10')} />
             </div>
 
             {/* Reskilling urgency visual */}
             <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
-              <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">Urgenza del reskilling nel settore bancario</p>
+              <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">{t('body11')}</p>
               <p className="text-[12px] text-[#0D0D0D]/35 italic mb-5">
-                Quota della forza lavoro che avrà bisogno di percorsi di formazione strutturati per far fronte all'evoluzione tecnologica e normativa
-              </p>
+                {t('body12')}</p>
               <div className="flex items-center gap-6">
                 <div className="relative w-24 h-24 flex-shrink-0">
                   <svg viewBox="0 0 36 36" className="w-24 h-24 -rotate-90">
@@ -677,158 +663,121 @@ function WhitepaperLayer() {
                     </defs>
                   </svg>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-[1.1rem] font-bold" style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>59%</span>
-                  </div>
+                    {t.rich('text13', {
+          s: (chunks) => <span className="text-[1.1rem] font-bold" style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</div>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }} />
-                    <span className="text-[12px] text-[#0D0D0D]/60">Lavoratori che necessitano di aggiornamento immediato o profondo (<strong>59%</strong>)</span>
+                    <span className="text-[12px] text-[#0D0D0D]/60">{t.rich('text14', {
+          b: (chunks) => <strong>{chunks}</strong>,
+        })}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 rounded-full flex-shrink-0 bg-black/[0.1]" />
-                    <span className="text-[12px] text-[#0D0D0D]/60">Lavoratori con skill attualmente allineate (<strong>41%</strong>)</span>
+                    <span className="text-[12px] text-[#0D0D0D]/60">{t.rich('text15', {
+          b: (chunks) => <strong>{chunks}</strong>,
+        })}</span>
                   </div>
                 </div>
               </div>
-              <p className="text-[11px] text-[#0D0D0D]/25 mt-4 italic">Fonte: World Economic Forum (WEF), "The Future of Jobs Report 2025"</p>
+              <p className="text-[11px] text-[#0D0D0D]/25 mt-4 italic">{t('body13')}</p>
             </div>
 
             <Para>
-              Nel banking europeo, i processi di talent management hanno accumulato negli anni strumenti, certificazioni e
-              cicli valutativi. Il problema non è la quantità di dati disponibili, ma il fatto che{' '}
-              <strong className="text-[#0D0D0D]/80">guardano sempre al passato, vengono aggiornati raramente e non
-              comunicano tra loro</strong>. Nel frattempo, la trasformazione digitale e la pressione del quadro normativo ha
-              ridisegnato i profili professionali critici a una velocità che nessun sistema episodico riesce a seguire.
-            </Para>
+              {t.rich('text16', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Para>
-              Questo documento indica come colmare il divario: quali limiti strutturali rendono i sistemi attuali inadeguati,
-              quali requisiti deve soddisfare un sistema di talent intelligence realmente continuo e con quali criteri valutare
-              se gli strumenti oggi in uso sono all'altezza della sfida.
-            </Para>
+              {t('text17')}</Para>
 
             {/* Section 1 */}
-            <SectionHeading num="1" title="Quando il reskilling diventa una questione di sopravvivenza" />
+            <SectionHeading num="1" title={t('heading9')} />
 
             <Para>
-              L'industria bancaria europea sta affrontando una{' '}
-              <strong className="text-[#0D0D0D]/80">trasformazione profonda del capitale umano</strong>. Secondo l'OCSE,
-              la vita media di una skill tecnica si aggira ormai tra i{' '}
-              <strong className="text-[#0D0D0D]/80">12 e i 18 mesi</strong>: ciò che impariamo oggi rischia di diventare
-              obsoleto in meno di due anni. Nel settore bancario, dove le piattaforme tecnologiche evolvono rapidamente e le
-              aspettative normative cambiano di continuo, questo orizzonte è spesso ancora più breve.
-            </Para>
+              {t.rich('text18', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Para>
-              Tre dinamiche stanno accelerando questo processo: la <strong className="text-[#0D0D0D]/80">digitalizzazione dei
-              servizi</strong>, la <strong className="text-[#0D0D0D]/80">crescente pressione regolatoria</strong> e l'
-              <strong className="text-[#0D0D0D]/80">ingresso dell'AI nei processi operativi</strong>. Il risultato è che
-              competenze consolidate diventano obsolete più rapidamente di quanto le organizzazioni riescano a rilevare. In
-              questo contesto, garantire la conformità alla{' '}
-              <strong className="text-[#0D0D0D]/80">normativa europea sull'AI (EU AI Act)</strong> diventa parte integrante
-              della gestione del talento, non solo un requisito legale.
-            </Para>
+              {t.rich('text19', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Para>
-              Il <em>Future of Jobs Report 2025</em> del World Economic Forum stima che entro il 2030 il{' '}
-              <strong className="text-[#0D0D0D]/80">39% delle competenze attuali sarà superato</strong> e che oltre un miliardo
-              di persone dovranno aggiornare le proprie skill per restare competitive. Per i gruppi bancari europei, questo
-              implica una ricalibratura significativa delle competenze. Non si tratta semplicemente di formazione continua, ma
-              di un cambiamento strutturale nel modo in cui il lavoro bancario viene progettato e svolto.
-            </Para>
+              {t.rich('text20', {
+          i: (chunks) => <em>{chunks}</em>,
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Para>
-              La pressione proviene da più fronti. Da un lato, cloud, automazione dei processi e modelli di credit scoring
-              basati su machine learning stanno ridefinendo i profili tecnici. Dall'altro, l'evoluzione del quadro regolatorio,
-              dall'EU AI Act alla normativa <strong className="text-[#0D0D0D]/80">EBA sul Fit & Proper</strong> fino ai
-              requisiti DORA sulla resilienza operativa, richiede competenze di compliance e gestione del rischio sempre più
-              centrali nel funzionamento delle banche.
-            </Para>
+              {t.rich('text21', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Para>
-              La risposta più diffusa è investire nella formazione. È necessario, ma{' '}
-              <strong className="text-[#0D0D0D]/80">non sufficiente</strong>. La formazione interviene su ciò che è già noto
-              essere carente. La domanda strategica è un'altra: come possono sapere le banche in tempo reale quale parte del
-              loro capitale umano è ancora allineata alle esigenze operative e strategiche? Prima ancora che di sviluppo, è un
-              problema di intelligence.
-            </Para>
+              {t.rich('text22', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Quote source="World Economic Forum. (2025). The Future of Jobs Report 2025.">
-              "La vita media di una skill tecnica si aggira addirittura intorno ai 12-18 mesi. Entro il 2030 il 39% delle
-              competenze attuali sarà superato e che oltre un miliardo di persone dovranno aggiornare le proprie skill per
-              restare competitive."
-            </Quote>
+              {t('text23')}</Quote>
 
             {/* Section 2 */}
-            <SectionHeading num="2" title="Perché i sistemi tradizionali non vedono il problema" />
+            <SectionHeading num="2" title={t('heading10')} />
 
             <Para>
-              Per decenni, la fotografia del capitale umano bancario{' '}
-              <strong className="text-[#0D0D0D]/80">si è fondata principalmente su due strumenti</strong>: la valutazione
-              annuale della performance e la misurazione dell'output formativo. Entrambi sono{' '}
-              <strong className="text-[#0D0D0D]/80">per loro natura episodici</strong>, strutturati per guardare indietro,
-              progettati per misurare ciò che è già stato fatto{' '}
-              <strong className="text-[#0D0D0D]/80">piuttosto che anticipare ciò che sarà necessario</strong>.
-            </Para>
+              {t.rich('text24', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Para>
-              Le valutazioni annuali della performance{' '}
-              <strong className="text-[#0D0D0D]/80">riflettono inevitabilmente il bias del momento in cui i target vengono
-              definiti</strong>. Non sono progettate per segnalare quando un profilo professionale sta progressivamente
-              diventando ridondante rispetto alle esigenze dell'organizzazione, né per rilevare l'emergere di gap
-              comportamentali e cognitivi che influenzeranno la capacità di adattarsi a nuovi contesti operativi.
-            </Para>
+              {t.rich('text25', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Para>
-              Il monitoraggio della formazione, dal canto suo,{' '}
-              <strong className="text-[#0D0D0D]/80">misura tipicamente l'erogazione</strong> (ore erogate, moduli completati,
-              certificazioni acquisite) ma raramente l'<strong className="text-[#0D0D0D]/80">apprendimento reale</strong> o la{' '}
-              <strong className="text-[#0D0D0D]/80">trasferibilità operativa delle competenze</strong>. La{' '}
-              <strong className="text-[#0D0D0D]/80">distanza</strong> tra sapere dichiarato e competenza effettivamente
-              applicata è <strong className="text-[#0D0D0D]/80">una delle lacune più costose</strong> e meno presidiate dei
-              sistemi HR tradizionali.
-            </Para>
+              {t.rich('text26', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b5: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-            <InfoBox title="Il dato di Deloitte">
+            <InfoBox title={t('heading11')}>
               <p>
-                Deloitte ha documentato in diversi rapporti (2022–2024) come la maggior parte delle grandi organizzazioni
-                bancarie europee operi ancora con <strong className="text-[#0D0D0D]/75">sistemi di talent data disomogenei</strong>:
-                informazioni sulle competenze disperse tra HRIS, LMS, sistemi di performance management e database manuali non
-                integrati. Il risultato è che il CHRO di un gruppo con diecimila dipendenti non è in grado di rispondere con
-                precisione a domande come: quanti collaboratori in area corporate banking hanno competenze aggiornate in materia
-                di IFRS 17? Qual è il tasso di obsolescenza delle competenze data analytics nelle funzioni di risk management?
-              </p>
+                {t.rich('body14', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/75">{chunks}</strong>,
+        })}</p>
             </InfoBox>
 
             {/* Section 3 */}
-            <SectionHeading num="3" title="La componente comportamentale: la più difficile da misurare, la più decisiva" />
+            <SectionHeading num="3" title={t('heading12')} />
 
             <Quote source="BCG, How to Build Organizational Resilience, 2022">
-              "Il vantaggio competitivo delle organizzazioni adattive non risiede più nello stock di competenze statiche, ma
-              nella velocità di apprendimento continuo del proprio capitale umano in scenari volatili."
-            </Quote>
+              {t('text27')}</Quote>
 
             <Para>
-              La discussione sul reskilling bancario tende a concentrarsi sulle{' '}
-              <strong className="text-[#0D0D0D]/80">competenze tecniche</strong>: data literacy, conoscenza normativa, utilizzo
-              di piattaforme digitali. È una prospettiva necessaria ma parziale. Le organizzazioni che stanno navigando con
-              maggiore efficacia la trasformazione non sono quelle con il maggior numero di certificati interni: sono quelle in
-              grado di identificare collaboratori con profili comportamentali capaci di apprendere in contesti ambigui,
-              adattarsi rapidamente al cambiamento di priorità, gestire la complessità normativa senza paralisi decisionale.
-            </Para>
+              {t.rich('text28', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Para>
-              BCG identifica come fattore discriminante non tanto il numero di competenze tecnico-specifiche possedute dai
-              collaboratori, quanto la presenza di quelle che definisce{' '}
-              <strong className="text-[#0D0D0D]/80">"adjacent capabilities"</strong>: capacità cognitivo-comportamentali
-              trasversali che abilitano il trasferimento di expertise tra contesti diversi. La{' '}
-              <strong className="text-[#0D0D0D]/80">learning agility</strong>, la{' '}
-              <strong className="text-[#0D0D0D]/80">capacità di gestire l'incertezza</strong>, la{' '}
-              <strong className="text-[#0D0D0D]/80">proattività nel presidio informativo</strong> del contesto regolatorio:
-              sono queste le competenze che differenzieranno chi sarà ancora ad alto valore nel 2028 da chi vedrà il proprio
-              profilo svuotarsi di rilevanza.
-            </Para>
+              {t.rich('text29', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             {/* 3 critical capabilities */}
             <div className="grid grid-cols-3 gap-4 my-8">
@@ -850,76 +799,71 @@ function WhitepaperLayer() {
             </div>
 
             <Para>
-              Il problema è che queste competenze sono notoriamente difficili da misurare con gli strumenti convenzionali.
-              Il{' '}
-              <strong className="text-[#0D0D0D]/80">colloquio strutturato tradizionale ha limiti documentati</strong> nella
-              valutazione della learning agility e della resilienza cognitiva. I test di personalità standardizzati misurano
-              tratti stabili, <strong className="text-[#0D0D0D]/80">non comportamenti adattativi</strong> in contesto.
-              L'osservazione manageriale diretta è{' '}
-              <strong className="text-[#0D0D0D]/80">soggetta a bias</strong> di affinità e presenta varianza significativa
-              tra valutatori diversi.
-            </Para>
+              {t.rich('text30', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             {/* Section 4 */}
-            <SectionHeading num="4" title="Verso una talent intelligence ricorrente: cosa significa in pratica" />
+            <SectionHeading num="4" title={t('heading13')} />
 
             <Para>
-              L'approccio che si sta affermando tra i grandi gruppi bancari internazionali non consiste nel fare verification
-              più frequenti o formare di più:{' '}
-              <strong className="text-[#0D0D0D]/80">consiste nel costruire un sistema di intelligence sul capitale umano</strong>{' '}
-              che sia continuo, integrato e azionabile.
-            </Para>
+              {t.rich('text31', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Para>
-              Gartner ha introdotto in questo ambito il concetto di "talent intelligence platform", un'infrastruttura che{' '}
-              <strong className="text-[#0D0D0D]/80">aggrega dati su competenze, performance, aspirazioni professionali e
-              comportamenti osservati</strong> per produrre una visione chiara e dinamica del capitale umano disponibile.
-              Secondo l'analisi Gartner del 2024, le organizzazioni che adottano approcci di questo tipo riportano una{' '}
-              <strong className="text-[#0D0D0D]/80">riduzione media del 28% nei tempi di talent deployment</strong> e una
-              migliore capacità predittiva rispetto al turnover volontario qualificato.
-            </Para>
+              {t.rich('text32', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             {/* Predictive validity comparison */}
             <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-6">
-              <p className="text-[12px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">Validità predittiva a confronto</p>
-              <p className="text-[11px] text-[#0D0D0D]/35 italic mb-5">Correlazione con il potenziale delle persone e la loro performance lavorativa futura</p>
+              <p className="text-[12px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">{t('body15')}</p>
+              <p className="text-[11px] text-[#0D0D0D]/35 italic mb-5">{t('body16')}</p>
               <div className="space-y-4">
                 <div>
                   <div className="flex justify-between text-[12px] mb-1.5">
-                    <span className="text-[#0D0D0D]/55">Valutazione tradizionale non strutturata</span>
-                    <span className="font-bold text-[#EF4444]">0.38</span>
-                  </div>
+                    {t.rich('text33', {
+          s: (chunks) => <span className="text-[#0D0D0D]/55">{chunks}</span>,
+          s2: (chunks) => <span className="font-bold text-[#EF4444]">{chunks}</span>,
+        })}</div>
                   <div className="h-6 rounded-lg bg-black/[0.05] overflow-hidden">
                     <div className="h-full rounded-lg flex items-center justify-end pr-2" style={{ width: '38%', background: '#EF4444' }}>
-                      <span className="text-white text-[11px] font-bold">0.38</span>
-                    </div>
+                      {t.rich('text34', {
+          s: (chunks) => <span className="text-white text-[11px] font-bold">{chunks}</span>,
+        })}</div>
                   </div>
                 </div>
                 <div>
                   <div className="flex justify-between text-[12px] mb-1.5">
-                    <span className="text-[#0D0D0D]/55">Valutazione comportamentale strutturata</span>
-                    <span className="font-bold text-[#4B4DF7]">0.54</span>
-                  </div>
+                    {t.rich('text35', {
+          s: (chunks) => <span className="text-[#0D0D0D]/55">{chunks}</span>,
+          s2: (chunks) => <span className="font-bold text-[#4B4DF7]">{chunks}</span>,
+        })}</div>
                   <div className="h-6 rounded-lg bg-black/[0.05] overflow-hidden">
                     <div className="h-full rounded-lg flex items-center justify-end pr-2" style={{ width: '54%', background: 'linear-gradient(90deg, #4B4DF7, #7B4DFF)' }}>
-                      <span className="text-white text-[11px] font-bold">0.54</span>
-                    </div>
+                      {t.rich('text36', {
+          s: (chunks) => <span className="text-white text-[11px] font-bold">{chunks}</span>,
+        })}</div>
                   </div>
                 </div>
               </div>
-              <p className="text-[11px] text-[#0D0D0D]/25 mt-4 italic">Fonte: Schmidt & Hunter (1998, aggiornata nel 2016).</p>
+              <p className="text-[11px] text-[#0D0D0D]/25 mt-4 italic">{t('body17')}</p>
             </div>
 
             {/* Episodic vs Recurrent table */}
-            <InfoBox title="Verification episodico vs. Talent Intelligence Ricorrente">
-              <p className="text-[12px] text-[#0D0D0D]/45 mb-4">Confronto su dimensioni operative chiave</p>
+            <InfoBox title={t('heading14')}>
+              <p className="text-[12px] text-[#0D0D0D]/45 mb-4">{t('body18')}</p>
               <div className="overflow-x-auto">
                 <table className="w-full text-[12px]">
                   <thead>
                     <tr className="border-b border-black/[0.08]">
-                      <th className="text-left py-2 pr-4 text-[#0D0D0D]/60 font-semibold">Dimensione</th>
-                      <th className="text-left py-2 pr-4 font-semibold" style={{ color: '#FF5F24' }}>Approccio episodico</th>
-                      <th className="text-left py-2 font-semibold" style={{ color: '#4B4DF7' }}>Talent Intelligence Ricorrente</th>
+                      <th className="text-left py-2 pr-4 text-[#0D0D0D]/60 font-semibold">{t('columnHeader')}</th>
+                      <th className="text-left py-2 pr-4 font-semibold" style={{ color: '#FF5F24' }}>{t('columnHeader2')}</th>
+                      <th className="text-left py-2 font-semibold" style={{ color: '#4B4DF7' }}>{t('columnHeader3')}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-black/[0.05]">
@@ -943,108 +887,78 @@ function WhitepaperLayer() {
             </InfoBox>
 
             <Para>
-              Questo trasforma radicalmente il ruolo della{' '}
-              <strong className="text-[#0D0D0D]/80">funzione People nelle banche</strong>: da gestore di processi
-              amministrativi di performance a{' '}
-              <strong className="text-[#0D0D0D]/80">provider di intelligenza organizzativa</strong>, capace di guidare le
-              decisioni strategiche del top management. Molti responsabili HR dichiarano di voler compiere questa transizione,
-              ma pochi ci riescono davvero, principalmente{' '}
-              <strong className="text-[#0D0D0D]/80">a causa della mancanza di tecnologie e metodologie adeguate</strong>.
-            </Para>
+              {t.rich('text37', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             {/* Section 5 */}
-            <SectionHeading num="5" title="Il vincolo della compliance e l'explainability come requisito non negoziabile" />
+            <SectionHeading num="5" title={t('heading15')} />
 
             <Para>
-              Qualsiasi sistema di talent intelligence che{' '}
-              <strong className="text-[#0D0D0D]/80">utilizzi componenti di intelligenza artificiale</strong> nel contesto
-              bancario europeo si confronta oggi con un quadro normativo particolarmente esigente. L'EU AI Act classifica i
-              sistemi AI utilizzati per decisioni relative al{' '}
-              <strong className="text-[#0D0D0D]/80">talent management</strong>, inclusi verification, scoring di competenze e
-              sistemi di valutazione del potenziale, come{' '}
-              <strong className="text-[#0D0D0D]/80">sistemi ad alto rischio</strong> (Articolo 6, Allegato III).
-            </Para>
+              {t.rich('text38', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Para>
-              Questo implica obblighi precisi:{' '}
-              <strong className="text-[#0D0D0D]/80">trasparenza sulle logiche algoritmiche, documentazione tecnica robusta,
-              supervisione umana garantita nelle fasi decisionali critiche, monitoraggio continuativo dei rischi di bias</strong>.
-              Per le banche, già abituate a operare in contesti di elevata pressione regolatoria, questi requisiti non sono una
-              novità concettuale, ma implicano una scelta consapevole dei sistemi HR adottati.
-            </Para>
+              {t.rich('text39', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-            <InfoBox title="Implicazione operativa diretta" accent>
+            <InfoBox title={t('heading16')} accent>
               <p>
-                Soluzioni di verification che operano come black box, producono score ma non forniscono giustificazioni
-                comprensibili per ogni valutazione individuale, e di conseguenza{' '}
-                <strong className="text-[#0D0D0D]/75">non sono compatibili con il contesto regolatorio europeo</strong>. Sono
-                esposte a rischi di contestazione da parte sia dei collaboratori che degli organi di supervisione.{' '}
-                <strong className="text-[#0D0D0D]/75">L'explainability non è una feature desiderabile: è un requisito di
-                sistema.</strong>
-              </p>
+                {t.rich('body19', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/75">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/75">{chunks}</strong>,
+        })}</p>
             </InfoBox>
 
             <Para>
-              Allo stesso modo, la capacità di garantire l'intervento umano nelle fasi conclusive del processo valutativo, il
-              cosiddetto <strong className="text-[#0D0D0D]/80">Human in the Loop</strong>, non può essere simulata attraverso
-              procedure formali di approvazione che in pratica ratificano sistematicamente le raccomandazioni algoritmiche.
-              Richiede che il sistema sia progettato per riconoscere le situazioni in cui il giudizio umano deve prevalere,
-              e per{' '}
-              <strong className="text-[#0D0D0D]/80">rendere trasparente il contesto informativo entro cui tale giudizio è
-              esercitato</strong>.
-            </Para>
+              {t.rich('text40', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             {/* Section 6 */}
-            <SectionHeading num="6" title="Tre criteri per valutare un sistema di talent intelligence nel banking" />
+            <SectionHeading num="6" title={t('heading17')} />
 
             <Para>
-              Quando si valuta un sistema di verification AI per contesti bancari, tre dimensioni si rivelano determinanti sia
-              rispetto ai requisiti dell'AI Act sia rispetto alla qualità delle decisioni sul capitale umano:
-            </Para>
+              {t('text41')}</Para>
 
-            <NumberedItem n={1} title="Giustificazione per competenza, non per punteggio aggregato">
-              Un sistema maturo produce, per ogni profilo valutato, una{' '}
-              <strong className="text-[#0D0D0D]/80">spiegazione strutturata degli elementi rilevati</strong>: non uno score
-              finale, ma un'evidenza competenza per competenza, con indicazione dell'intensità del segnale e della sua origine.
-              Questa granularità è il requisito legale e, al tempo stesso, lo strumento di lavoro più utile per chi prende
-              decisioni sul capitale umano. Se il sistema non sa spiegare il proprio output, non è né conforme né utile.
-            </NumberedItem>
+            <NumberedItem n={1} title={t('heading18')}>
+              {t.rich('text42', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
-            <NumberedItem n={2} title="Gestione trasparente dell'incertezza">
-              Non tutti i profili possono essere valutati con lo stesso grado di affidabilità. I segnali possono essere
-              ambigui, le risposte insufficienti, il contesto non adatto.{' '}
-              <strong className="text-[#0D0D0D]/80">Un sistema di qualità non forza una valutazione</strong> quando i dati
-              disponibili non la supportano: segnala l'ambiguità e restituisce la decisione al giudizio umano. Questo non è
-              un limite del sistema, ma la sua{' '}
-              <strong className="text-[#0D0D0D]/80">garanzia strutturale di correttezza</strong>.
-            </NumberedItem>
+            <NumberedItem n={2} title={t('heading19')}>
+              {t.rich('text43', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
-            <NumberedItem n={3} title="Audit trail completo e verificabile">
-              Ogni verification deve produrre un log verificabile: quando è stato condotto, su quale versione del sistema, con
-              quali parametri, con quale output, con quale eventuale attivazione della soglia di incertezza e con quale
-              conferma di supervisione umana. Questo log serve per rispondere a un audit esterno, ma soprattutto per{' '}
-              <strong className="text-[#0D0D0D]/80">monitorare la consistenza del sistema nel tempo</strong> e documentare
-              che il processo è sotto controllo.
-            </NumberedItem>
+            <NumberedItem n={3} title={t('heading20')}>
+              {t.rich('text44', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
-            <InfoBox title="In sintesi">
+            <InfoBox title={t('heading21')}>
               <p>
-                Explainability delle decisioni, gestione trasparente dell'incertezza e audit trail completo non sono requisiti
-                aggiuntivi rispetto alla funzionalità del sistema: sono indicatori della sua maturità tecnica. Un sistema che
-                li soddisfa fa anche selezione e sviluppo migliori.{' '}
-                <strong className="text-[#0D0D0D]/75">Conformità normativa e qualità della decisione tendono a coincidere.</strong>
-              </p>
+                {t.rich('body20', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/75">{chunks}</strong>,
+        })}</p>
             </InfoBox>
 
             {/* 3 Strategic Questions */}
-            <SectionHeading title="3 domande per il tuo comitato di direzione" />
+            <SectionHeading title={t('heading22')} />
 
             <Para>
-              Prima ancora di scegliere gli strumenti, le banche sono chiamate a{' '}
-              <strong className="text-[#0D0D0D]/80">rispondere a quesiti strategici</strong> che definiscono il perimetro del
-              problema. Questo framework nasce come <strong className="text-[#0D0D0D]/80">punto di partenza</strong> per una
-              riflessione interna profonda.
-            </Para>
+              {t.rich('text45', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <div className="space-y-5 my-8">
               {[
@@ -1087,23 +1001,23 @@ function WhitepaperLayer() {
 
             {/* Retention impact */}
             <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
-              <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">Impatto sulla retention</p>
-              <p className="text-[12px] text-[#0D0D0D]/35 italic mb-6">Retention a 18 mesi dall'inserimento</p>
+              <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">{t('body21')}</p>
+              <p className="text-[12px] text-[#0D0D0D]/35 italic mb-6">{t('body22')}</p>
               <div className="flex items-end gap-6 justify-center">
                 <div className="text-center">
                   <div className="text-[2rem] font-semibold md:font-bold mb-2" style={{ color: '#EF4444' }}>62%</div>
                   <div className="w-16 bg-red-100 rounded-t-lg mx-auto" style={{ height: '80px' }}>
                     <div className="w-full h-full rounded-t-lg" style={{ background: 'rgba(239,68,68,0.3)' }} />
                   </div>
-                  <p className="text-[11px] text-[#0D0D0D]/40 mt-2">Approccio tradizionale</p>
+                  <p className="text-[11px] text-[#0D0D0D]/40 mt-2">{t('body23')}</p>
                 </div>
                 <div className="text-center">
                   <div className="text-[2rem] font-semibold md:font-bold mb-2" style={{ background: 'linear-gradient(135deg, #4B4DF7, #22C55E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>85%</div>
                   <div className="w-16 rounded-t-lg mx-auto" style={{ height: '110px', background: 'rgba(34,197,94,0.25)' }} />
-                  <p className="text-[11px] text-[#0D0D0D]/40 mt-2">Con talent intelligence strutturata</p>
+                  <p className="text-[11px] text-[#0D0D0D]/40 mt-2">{t('body24')}</p>
                 </div>
               </div>
-              <p className="text-[11px] text-[#0D0D0D]/25 mt-5 italic text-center">Fonte: McKinsey Global Institute, 2024</p>
+              <p className="text-[11px] text-[#0D0D0D]/25 mt-5 italic text-center">{t('body25')}</p>
             </div>
 
             {/* Next step */}
@@ -1111,20 +1025,16 @@ function WhitepaperLayer() {
               className="rounded-2xl p-8 my-10 text-center"
               style={{ background: 'linear-gradient(135deg, rgba(75,77,247,0.06), rgba(255,95,36,0.06))', border: '1px solid rgba(75,77,247,0.12)' }}
             >
-              <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-3">Next step</h3>
+              <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-3">{t('heading5')}</h3>
               <p className="text-[14px] text-[#0D0D0D]/60 leading-[1.7] mb-6 max-w-[500px] mx-auto">
-                Se la tua organizzazione sta valutando come strutturare un sistema di talent intelligence continua, conforme
-                all'AI Act e calibrato sulle specificità del settore bancario, Skillvue può supportarti con skill verification
-                predittivi, scalabili e certificati, conformi alla normativa, al GDPR e allo standard ISO 27001,
-                personalizzati sulle specificità del tuo contesto bancario.
-              </p>
+                {t('body26')}</p>
               <Button asChild variant="primary" mode="light">
                 <a
                   href="https://www.skillvue.ai/contact-us"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Contattaci per una conversazione esplorativa
+                  {tl('exploratoryCall')}
                   <ArrowRight aria-hidden="true" />
                 </a>
               </Button>
@@ -1132,25 +1042,22 @@ function WhitepaperLayer() {
 
             {/* About Skillvue */}
             <div className="border-t border-black/[0.07] pt-8 mt-8">
-              <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">About Skillvue</h3>
+              <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">{t('heading6')}</h3>
               <Para>
-                Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di{' '}
-                <strong className="text-[#0D0D0D]/80">talent intelligence</strong> basata sull'AI che aggiunge una dimensione
-                dinamica e oggettiva ai dati HR: trasformiamo informazioni statiche in{' '}
-                <strong className="text-[#0D0D0D]/80">insight predittivi</strong> che permettono di prendere decisioni migliori
-                nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.
-              </Para>
+                {t.rich('text46', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <Para>
-                A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue{' '}
-                <strong className="text-[#0D0D0D]/80">combina la solidità della scienza psicometrica con la potenza dei moderni
-                LLM</strong> per creare un <strong className="text-[#0D0D0D]/80">copilota AI scientificamente fondato</strong>,
-                allineato al modello di leadership e al quadro di competenze specifico di ciascuna azienda.
-              </Para>
+                {t.rich('text47', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
             </div>
 
             {/* References */}
             <div className="border-t border-black/[0.07] pt-8 mt-8">
-              <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-4">Fonti e riferimenti</h3>
+              <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-4">{t('heading7')}</h3>
               <ul className="space-y-2">
                 {[
                   'BCE — Supervisory Priorities 2024–2026. Banca Centrale Europea, dicembre 2023.',
@@ -1170,10 +1077,10 @@ function WhitepaperLayer() {
 
             {/* Footer */}
             <div className="border-t border-black/[0.07] pt-6 mt-8 flex items-center justify-between">
-              <span className="text-[11px] text-[#0D0D0D]/25">Banking · 2026</span>
+              <span className="text-[11px] text-[#0D0D0D]/25">{t('text48')}</span>
               <div className="flex items-center gap-2">
                 <SkillvueIcon size={16} />
-                <span className="text-[11px] text-[#0D0D0D]/25">Skillvue</span>
+                <span className="text-[11px] text-[#0D0D0D]/25">{t('text49')}</span>
               </div>
             </div>
 
@@ -1184,14 +1091,16 @@ function WhitepaperLayer() {
       {/* Page footer */}
       <div className="py-6 px-6 text-center">
         <p className="text-[12px] text-[#0D0D0D]/30">
-          © {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati. ·{' '}
+          {tl('copyright', { year: new Date().getFullYear() })} ·{' '}
           <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-            <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
-          </Button>
+            {t.rich('text50', {
+          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+        })}</Button>
           {' '}·{' '}
           <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-            <a href="https://www.skillvue.ai">skillvue.ai</a>
-          </Button>
+            {t.rich('text51', {
+          a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
+        })}</Button>
         </p>
       </div>
     </div>

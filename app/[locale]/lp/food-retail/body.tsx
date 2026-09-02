@@ -125,7 +125,7 @@ export default function FoodRetailPage() {
             </div>
           </div>
         </section>
-        <TrustLogosBar lang={lang} />
+        <TrustLogosBar />
       </div>
       <Footer />
     </>

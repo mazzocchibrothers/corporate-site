@@ -1,6 +1,7 @@
 // @ts-nocheck
 'use client';
 
+import { useTranslations } from 'next-intl';
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -66,6 +67,8 @@ const featureCards = [
 
 
 export default function IlCostoInvisibileVetrina() {
+  const t = useTranslations('lp.il-costo-invisibile');
+  const tl = useTranslations('shared.lp');
   const formRef = useRef<HTMLDivElement>(null);
 
   const scrollToForm = () => {
@@ -103,54 +106,45 @@ export default function IlCostoInvisibileVetrina() {
         >
           <div className="flex items-center gap-2.5">
             <SkillvueIcon size={26} />
-            <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">Skillvue</span>
+            <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">{t('text')}</span>
           </div>
           <Button variant="primary" mode="light" onClick={scrollToForm}>
-            Scarica il Report
-          </Button>
+            {t('text2')}</Button>
         </nav>
 
         {/* HERO */}
         <section className="pt-[88px] pb-16 px-6 lg:px-10">
           <div className="max-w-[760px] mx-auto text-center pt-16">
             <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.05}>
-              <span
-                className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8"
-                style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
-              >
-                Insurance · 2026
-              </span>
-            </motion.div>
+              {t.rich('text3', {
+          s: (chunks) => <span className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
+        })}</motion.div>
 
             <motion.h1
               variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
               className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.1] mb-6"
             >
-              Il costo invisibile{' '}
-              <span
-                className="block"
-                style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
-              >
-                della selezione non predittiva
-              </span>
-            </motion.h1>
+              {t.rich('text4', {
+          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</motion.h1>
 
             <motion.p
               variants={fadeUp} initial="hidden" animate="visible" custom={0.18}
               className="text-[17px] text-[#0D0D0D]/55 leading-[1.7] mb-4"
               style={{ fontWeight: 300 }}
             >
-              Come identificare e misurare il profilo comportamentale dell'agente assicurativo ibrido ad alta performance
-            </motion.p>
+              {t('text5')}</motion.p>
 
             <motion.div
               variants={fadeUp} initial="hidden" animate="visible" custom={0.24}
               className="flex items-center justify-center gap-6 text-[12px] text-[#0D0D0D]/35 mb-12"
             >
-              <span>A cura di <strong className="text-[#0D0D0D]/55">Skillvue</strong></span>
-              <span className="w-px h-3 bg-[#0D0D0D]/15" />
-              <span>~7 min read</span>
-            </motion.div>
+              {t.rich('text6', {
+          s: (chunks) => <span>{chunks}</span>,
+          b: (chunks) => <strong className="text-[#0D0D0D]/55">{chunks}</strong>,
+          s2: (chunks) => <span className="w-px h-3 bg-[#0D0D0D]/15">{chunks}</span>,
+          s3: (chunks) => <span>{chunks}</span>,
+        })}</motion.div>
 
             {/* Logo marquee */}
             {(() => {
@@ -191,8 +185,7 @@ export default function IlCostoInvisibileVetrina() {
 
             <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.3}>
               <Button variant="primary" mode="light" onClick={scrollToForm}>
-                Scarica il Report Completo
-              </Button>
+                {t('text7')}</Button>
             </motion.div>
           </div>
         </section>
@@ -231,11 +224,9 @@ export default function IlCostoInvisibileVetrina() {
               className="text-center mb-12"
             >
               <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] mb-3">
-                Cosa troverai nel report
-              </h2>
+                {t('heading')}</h2>
               <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
-                Una guida operativa per chi deve decidere come selezionare, oggi, le persone che costruiranno la rete agenziale di domani.
-              </p>
+                {t('body')}</p>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-5">
@@ -266,8 +257,7 @@ export default function IlCostoInvisibileVetrina() {
               {/* Left */}
               <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                 <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
-                  Scarica il report completo
-                </h2>
+                  {t('heading2')}</h2>
                 <ul className="space-y-3 mb-8">
                   {[
                     'Perché il colloquio non strutturato ha una validità predittiva di appena 0,38',
@@ -293,7 +283,7 @@ export default function IlCostoInvisibileVetrina() {
                   <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
-                  I tuoi dati sono al sicuro. Niente spam.
+                  {tl('dataSafe')}
                 </p>
               </motion.div>
 
@@ -304,8 +294,8 @@ export default function IlCostoInvisibileVetrina() {
                 className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10"
                 style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}
               >
-                <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">Compila per scaricare il PDF</h3>
-                <p className="text-[13px] text-[#0D0D0D]/35 mb-7">Gratuito · Accesso immediato</p>
+                <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">{t('heading3')}</h3>
+                <p className="text-[13px] text-[#0D0D0D]/35 mb-7">{t('body2')}</p>
 
                 <div id="hs-form-container" />
               </motion.div>
@@ -318,15 +308,17 @@ export default function IlCostoInvisibileVetrina() {
           <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-2.5">
               <SkillvueIcon size={20} />
-              <span className="text-[12px] text-[#0D0D0D]/30">© {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati.</span>
+              <span className="text-[12px] text-[#0D0D0D]/30">{tl('copyright', { year: new Date().getFullYear() })}</span>
             </div>
             <div className="flex items-center gap-5 text-[12px]">
               <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-                <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
-              </Button>
+                {t.rich('text8', {
+          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+        })}</Button>
               <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-                <a href="https://www.skillvue.ai">skillvue.ai</a>
-              </Button>
+                {t.rich('text9', {
+          a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
+        })}</Button>
             </div>
           </div>
         </footer>

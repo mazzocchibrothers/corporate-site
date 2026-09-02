@@ -223,7 +223,7 @@ export default function SupermarketsPage() {
           <p className="text-[11px] font-medium tracking-[0.16em] uppercase text-white/25 mt-10 text-center">{t('footNote')}</p>
         </div>
 
-        <TrustLogosBar lang={lang} />
+        <TrustLogosBar />
       </main>
 
       <Footer />

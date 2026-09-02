@@ -269,7 +269,28 @@ findAliases(sf);
 // ── Rewrites ───────────────────────────────────────────────────────────────
 const inlineLists = new Map();
 const inlineParams = new Map();
+
+/**
+ * Key names already taken in this namespace.
+ *
+ * Without this the numbering restarts at 1 on every run, so a file that was
+ * partially migrated by one of the other codemods gets a second `text` and a
+ * second `cta` holding different words. It does not silently overwrite — the
+ * write step refuses on collision — but it refuses *after* rewriting the page,
+ * which leaves the file pointing at keys that were never written. That is
+ * exactly what ins-mercato did.
+ */
 const used = new Map();
+{
+  const existing = JSON.parse(readFileSync(join(ROOT, 'messages/en.json'), 'utf8'));
+  const node = namespace.split('.').reduce((o, k) => (o ?? {})[k], existing) ?? {};
+  for (const key of Object.keys(node)) {
+    const [, role, n] = /^([a-zA-Z]+?)(\d*)$/.exec(key) ?? [];
+    if (!role) continue;
+    used.set(role, Math.max(used.get(role) ?? 0, n ? Number(n) : 1));
+  }
+}
+
 const nextKey = (node) => {
   const role = roleOf(node);
   const n = (used.get(role) ?? 0) + 1;

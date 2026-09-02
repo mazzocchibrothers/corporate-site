@@ -11,84 +11,22 @@ import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
-const articles = [
-  {
-    id: 11,
-    image: '/newsletter-august-cover.jpg',
-    href: '/blog/newsletter-august-2026',
-    en: { title: 'The August Newsletter', date: 'August 2026', tag: 'Newsletter' },
-    it: { title: 'La newsletter di agosto', date: 'Agosto 2026', tag: 'Newsletter' },
-  },
-  {
-    id: 10,
-    image: '/newsletter-july-cover.png',
-    href: '/blog/newsletter-july-2026',
-    en: { title: 'The July Newsletter', date: 'July 2026', tag: 'Newsletter' },
-    it: { title: 'La newsletter di luglio', date: 'Luglio 2026', tag: 'Newsletter' },
-  },
-  {
-    id: 1,
-    image: 'https://images.unsplash.com/photo-1713865469900-d12502a39875?w=600&h=400&fit=crop',
-    href: '/blog/attitude-vs-competence',
-    en: { title: 'Attitude vs. Competence: How to Evaluate a Candidate', date: 'March 13, 2026', tag: 'Talent Acquisition' },
-    it: { title: 'Attitudine vs. Competenza: Come Valutare un Candidato', date: '13 Marzo 2026', tag: 'Talent Acquisition' },
-  },
-  {
-    id: 2,
-    image: 'https://images.unsplash.com/photo-1758519288480-1489c17b1519?w=600&h=400&fit=crop',
-    href: '/blog/recruitment-biases',
-    en: { title: 'The 8 Most Common Recruitment Biases (and How to Avoid Them)', date: 'March 10, 2026', tag: 'Hiring' },
-    it: { title: 'Gli 8 Bias di Selezione più Comuni (e Come Evitarli)', date: '10 Marzo 2026', tag: 'Hiring' },
-  },
-  {
-    id: 3,
-    image: 'https://images.unsplash.com/photo-1745847768380-2caeadbb3b71?w=600&h=400&fit=crop',
-    href: '/blog/negotiation-techniques',
-    en: { title: 'The 7 Most Effective Negotiation Techniques at Work', date: 'March 4, 2026', tag: 'Performance' },
-    it: { title: 'Le 7 Tecniche di Negoziazione più Efficaci sul Lavoro', date: '4 Marzo 2026', tag: 'Performance' },
-  },
-  {
-    id: 4,
-    image: 'https://images.unsplash.com/photo-1545005785-a4a5554b8efe?w=600&h=400&fit=crop',
-    href: '/blog/accountability',
-    en: { title: 'What Is Accountability and Why It Improves Work Performance', date: 'February 27, 2026', tag: 'Culture' },
-    it: { title: "Cos'è l'Accountability e Perché Migliora le Performance Lavorative", date: '27 Febbraio 2026', tag: 'Cultura' },
-  },
-  {
-    id: 5,
-    image: 'https://images.unsplash.com/photo-1685541088069-66baf0b2d753?w=600&h=400&fit=crop',
-    href: '/blog/critical-thinking',
-    en: { title: 'What Is Critical Thinking and How to Verify This Skill', date: 'February 25, 2026', tag: 'Science' },
-    it: { title: 'Cos\'è il Critical Thinking e Come Valutare questa Competenza', date: '25 Febbraio 2026', tag: 'Scienza' },
-  },
-  {
-    id: 6,
-    image: 'https://images.unsplash.com/photo-1758519288548-046187014c85?w=600&h=400&fit=crop',
-    href: '/blog/corporate-onboarding',
-    en: { title: 'Corporate Onboarding: A Complete Process Guide', date: 'February 23, 2026', tag: 'Onboarding' },
-    it: { title: "Corporate Onboarding: La Guida Completa al Processo", date: '23 Febbraio 2026', tag: 'Onboarding' },
-  },
-  {
-    id: 7,
-    image: 'https://images.unsplash.com/photo-1752650735509-58f11eaa2e10?w=600&h=400&fit=crop',
-    href: '/blog/managerial-skills',
-    en: { title: 'Managerial Skills: What They Are and How to Identify Them', date: 'February 23, 2026', tag: 'Leadership' },
-    it: { title: 'Competenze Manageriali: Cosa Sono e Come Identificarle', date: '23 Febbraio 2026', tag: 'Leadership' },
-  },
-  {
-    id: 8,
-    image: 'https://images.unsplash.com/photo-1544477989-b64060e53f36?w=600&h=400&fit=crop',
-    href: '/blog/social-skills',
-    en: { title: 'Social Skills: What They Are and Why They Matter at Work', date: 'February 18, 2026', tag: 'Soft Skills' },
-    it: { title: 'Social Skills: Cosa Sono e Perché Contano sul Lavoro', date: '18 Febbraio 2026', tag: 'Soft Skills' },
-  },
-  {
-    id: 9,
-    image: 'https://images.unsplash.com/photo-1726842172813-55c6e284f8b5?w=600&h=400&fit=crop',
-    href: '/blog/talent-acquisition',
-    en: { title: 'Talent Acquisition: What It Is, How It Works, Why It Matters', date: 'February 12, 2026', tag: 'Talent Acquisition' },
-    it: { title: 'Talent Acquisition: Cos\'è, Come Funziona, Perché È Importante', date: '12 Febbraio 2026', tag: 'Talent Acquisition' },
-  },
+// Structure: the card's image and where it links. The title, the date and the
+// tag are copy and live in messages/ under blog.articles, keyed on the same
+// slug as the post itself — so the card and the page it opens are neighbours in
+// the catalogue instead of an `id: 11` in a module array.
+const ARTICLES = [
+  { id: 'newsletter-august-2026', image: '/newsletter-august-cover.jpg', href: '/blog/newsletter-august-2026' },
+  { id: 'newsletter-july-2026', image: '/newsletter-july-cover.png', href: '/blog/newsletter-july-2026' },
+  { id: 'attitude-vs-competence', image: 'https://images.unsplash.com/photo-1713865469900-d12502a39875?w=600&h=400&fit=crop', href: '/blog/attitude-vs-competence' },
+  { id: 'recruitment-biases', image: 'https://images.unsplash.com/photo-1758519288480-1489c17b1519?w=600&h=400&fit=crop', href: '/blog/recruitment-biases' },
+  { id: 'negotiation-techniques', image: 'https://images.unsplash.com/photo-1745847768380-2caeadbb3b71?w=600&h=400&fit=crop', href: '/blog/negotiation-techniques' },
+  { id: 'accountability', image: 'https://images.unsplash.com/photo-1545005785-a4a5554b8efe?w=600&h=400&fit=crop', href: '/blog/accountability' },
+  { id: 'critical-thinking', image: 'https://images.unsplash.com/photo-1685541088069-66baf0b2d753?w=600&h=400&fit=crop', href: '/blog/critical-thinking' },
+  { id: 'corporate-onboarding', image: 'https://images.unsplash.com/photo-1758519288548-046187014c85?w=600&h=400&fit=crop', href: '/blog/corporate-onboarding' },
+  { id: 'managerial-skills', image: 'https://images.unsplash.com/photo-1752650735509-58f11eaa2e10?w=600&h=400&fit=crop', href: '/blog/managerial-skills' },
+  { id: 'social-skills', image: 'https://images.unsplash.com/photo-1544477989-b64060e53f36?w=600&h=400&fit=crop', href: '/blog/social-skills' },
+  { id: 'talent-acquisition', image: 'https://images.unsplash.com/photo-1726842172813-55c6e284f8b5?w=600&h=400&fit=crop', href: '/blog/talent-acquisition' },
 ];
 
 
@@ -98,7 +36,6 @@ export default function BlogPage() {
   const t = useTranslations('blog');
   const router = useRouter();
   const renderArticle = (article, i) => {
-    const c = lang === 'it' ? article.it : article.en;
     return (
       <motion.article
         key={article.id}
@@ -111,23 +48,23 @@ export default function BlogPage() {
         onClick={() => { if (article.href) { router.push(article.href); window.scrollTo(0, 0); } }}
       >
         <div className="aspect-[16/10] overflow-hidden">
-          {article.cover === 'gradient' ? (
+          {!article.image ? (
             <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-700" style={{ background: 'linear-gradient(135deg, #cdc6f5 0%, #e6d5ea 55%, #f8ddc9 100%)' }}>
               <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
             </div>
           ) : (
-            <img src={article.image} alt={c.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img src={article.image} alt={t(`articles.${article.id}.title`)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           )}
         </div>
         <div className="p-5 md:p-7 flex-1 flex flex-col">
           <div className="flex items-center gap-3 mb-3 md:mb-4">
             <span className="inline-flex px-3 py-1 rounded-full text-[11px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.04] tracking-wide">
-              {c.tag}
+              {t(`articles.${article.id}.tag`)}
             </span>
-            <span className="text-[12px] text-[#121212]/30">{c.date}</span>
+            <span className="text-[12px] text-[#121212]/30">{t(`articles.${article.id}.date`)}</span>
           </div>
           <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212] leading-snug mb-3 md:mb-4">
-            {c.title}
+            {t(`articles.${article.id}.title`)}
           </h3>
           <span className="text-[13px] font-semibold text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
             {t('text')} <ArrowRight className="h-4 w-4" />
@@ -178,7 +115,7 @@ export default function BlogPage() {
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {articles.map((article, i) => renderArticle(article, i))}
+              {ARTICLES.map((article, i) => renderArticle(article, i))}
             </div>
           </div>
         </section>

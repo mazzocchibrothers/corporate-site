@@ -34,6 +34,10 @@ const steps = [
 
 export default function HowSkillvueWorks() {
   const t = useTranslations('product-overview');
+  // The carousel's arrow labels are read aloud, not shown, and they are the same
+  // two words on every carousel — so they live in `shared`, not in this page's
+  // namespace.
+  const ta = useTranslations('shared');
   const [active, setActive] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
@@ -102,14 +106,14 @@ export default function HowSkillvueWorks() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setActive((p) => (p - 1 + steps.length) % steps.length)}
-              aria-label="Previous step"
+              aria-label={ta('a11y.previous')}
               className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/10 text-white/40 hover:text-white/80 hover:border-white/25 transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
             <button
               onClick={() => setActive((p) => (p + 1) % steps.length)}
-              aria-label="Next step"
+              aria-label={ta('a11y.next')}
               className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/15 text-white/60 hover:text-white/90 hover:border-white/30 transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
               <ChevronRight className="h-4 w-4" />

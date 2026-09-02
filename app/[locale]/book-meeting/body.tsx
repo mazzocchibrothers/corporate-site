@@ -101,7 +101,7 @@ export default function BookMeetingPage() {
           </div>
         </div>
       </section>
-        <TrustLogosBar lang={lang} />
+        <TrustLogosBar />
       </div>
       <Footer />
     </>

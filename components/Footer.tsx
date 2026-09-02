@@ -127,7 +127,7 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Skillvue. {t('footer.rights')}
             </p>
             <p className="text-[12px] md:text-[13px] text-white/40">
-              Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568
+              {t('footer.legalAddress')}
             </p>
           </div>
           <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">

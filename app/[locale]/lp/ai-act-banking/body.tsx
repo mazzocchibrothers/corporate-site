@@ -1,6 +1,7 @@
 // @ts-nocheck
 'use client';
 
+import { useTranslations } from 'next-intl';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
@@ -70,6 +71,8 @@ const featureCards = [
 ];
 
 function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
+  const t = useTranslations('lp.ai-act-banking');
+  const tl = useTranslations('shared.lp');
   const [form, setForm] = useState({ nome: '', cognome: '', email: '' });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -134,54 +137,45 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
       >
         <div className="flex items-center gap-2.5">
           <SkillvueIcon size={26} />
-          <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">Skillvue</span>
+          <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">{t('text')}</span>
         </div>
         <Button variant="primary" mode="light" onClick={scrollToForm}>
-          Scarica il Report
-        </Button>
+          {t('text2')}</Button>
       </nav>
 
       {/* HERO */}
       <section className="pt-[88px] pb-16 px-6 lg:px-10">
         <div className="max-w-[760px] mx-auto text-center pt-16">
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.05}>
-            <span
-              className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8"
-              style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
-            >
-              Banking · 2026
-            </span>
-          </motion.div>
+            {t.rich('text3', {
+          s: (chunks) => <span className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
+        })}</motion.div>
 
           <motion.h1
             variants={fadeUp} initial="hidden" animate="visible" custom={0.1}
             className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.1] mb-6"
           >
-            AI Act-compliant nel Banking:{' '}
-            <span
-              className="block"
-              style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
-            >
-              da obbligo regolatorio a vantaggio competitivo
-            </span>
-          </motion.h1>
+            {t.rich('text4', {
+          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</motion.h1>
 
           <motion.p
             variants={fadeUp} initial="hidden" animate="visible" custom={0.18}
             className="text-[17px] text-[#0D0D0D]/55 leading-[1.7] mb-4"
             style={{ fontWeight: 300 }}
           >
-            Come trasformare la scadenza del 2 agosto 2026 in una decisione strategica concreta per il tuo istituto bancario
-          </motion.p>
+            {t('text5')}</motion.p>
 
           <motion.div
             variants={fadeUp} initial="hidden" animate="visible" custom={0.24}
             className="flex items-center justify-center gap-6 text-[12px] text-[#0D0D0D]/35 mb-12"
           >
-            <span>A cura di <strong className="text-[#0D0D0D]/55">Skillvue</strong></span>
-            <span className="w-px h-3 bg-[#0D0D0D]/15" />
-            <span>~5 min read</span>
-          </motion.div>
+            {t.rich('text6', {
+          s: (chunks) => <span>{chunks}</span>,
+          b: (chunks) => <strong className="text-[#0D0D0D]/55">{chunks}</strong>,
+          s2: (chunks) => <span className="w-px h-3 bg-[#0D0D0D]/15">{chunks}</span>,
+          s3: (chunks) => <span>{chunks}</span>,
+        })}</motion.div>
 
             {/* Logo marquee */}
             {(() => {
@@ -224,8 +218,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.3}>
             <Button variant="primary" mode="light" onClick={scrollToForm}>
-              Scarica il Report Completo
-            </Button>
+              {t('text7')}</Button>
           </motion.div>
         </div>
       </section>
@@ -264,11 +257,9 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             className="text-center mb-12"
           >
             <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] mb-3">
-              Cosa troverai nel report
-            </h2>
+              {t('heading')}</h2>
             <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
-              Una guida operativa per trasformare una scadenza regolamentare in una decisione strategica concreta per il settore bancario.
-            </p>
+              {t('body')}</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-5">
@@ -299,8 +290,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
             {/* Left */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
-                Scarica il report completo
-              </h2>
+                {t('heading2')}</h2>
               <ul className="space-y-3 mb-8">
                 {[
                   'La classificazione AI Act e gli obblighi reali per le banche deployer',
@@ -326,7 +316,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
-                I tuoi dati sono al sicuro. Niente spam.
+                {tl('dataSafe')}
               </p>
             </motion.div>
 
@@ -337,8 +327,8 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
               className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10"
               style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}
             >
-              <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">Compila per scaricare il PDF</h3>
-              <p className="text-[13px] text-[#0D0D0D]/35 mb-7">Gratuito · Accesso immediato</p>
+              <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">{t('heading3')}</h3>
+              <p className="text-[13px] text-[#0D0D0D]/35 mb-7">{t('body2')}</p>
 
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-10 text-center gap-4">
@@ -351,26 +341,26 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-[16px] font-semibold text-[#0D0D0D] mb-1">Il whitepaper si è aperto in una nuova scheda.</p>
-                    <p className="text-[13px] text-[#0D0D0D]/40">Controlla il tuo browser se non lo vedi subito.</p>
+                    <p className="text-[16px] font-semibold text-[#0D0D0D] mb-1">{t('body3')}</p>
+                    <p className="text-[13px] text-[#0D0D0D]/40">{t('body4')}</p>
                   </div>
                   <Button
                     variant="secondary"
                     mode="light"
                     onClick={() => window.open('/lp/ai-act-banking?access=true', '_blank')}
                   >
-                    Apri di nuovo
-                  </Button>
+                    {t('text8')}</Button>
                 </div>
               ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-[12px] font-medium text-[#0D0D0D]/60 mb-1.5">
-                    Nome <span className="text-red-400">*</span>
-                  </label>
+                    {t.rich('label', {
+          s: (chunks) => <span className="text-red-400">{chunks}</span>,
+        })}</label>
                   <input
                     type="text"
-                    placeholder="Il tuo nome"
+                    placeholder={t('label4')}
                     value={form.nome}
                     onChange={e => { setForm(f => ({ ...f, nome: e.target.value })); setErrors(er => ({ ...er, nome: '' })); }}
                     className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none focus-visible:ring-2 focus-visible:ring-[#4B4DF7]/60 focus-visible:border-[#4B4DF7] transition-all"
@@ -381,11 +371,12 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
 
                 <div>
                   <label className="block text-[12px] font-medium text-[#0D0D0D]/60 mb-1.5">
-                    Cognome <span className="text-red-400">*</span>
-                  </label>
+                    {t.rich('label2', {
+          s: (chunks) => <span className="text-red-400">{chunks}</span>,
+        })}</label>
                   <input
                     type="text"
-                    placeholder="Il tuo cognome"
+                    placeholder={t('label5')}
                     value={form.cognome}
                     onChange={e => { setForm(f => ({ ...f, cognome: e.target.value })); setErrors(er => ({ ...er, cognome: '' })); }}
                     className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none focus-visible:ring-2 focus-visible:ring-[#4B4DF7]/60 focus-visible:border-[#4B4DF7] transition-all"
@@ -396,18 +387,19 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
 
                 <div>
                   <label className="block text-[12px] font-medium text-[#0D0D0D]/60 mb-1.5">
-                    Email Lavorativa <span className="text-red-400">*</span>
-                  </label>
+                    {t.rich('label3', {
+          s: (chunks) => <span className="text-red-400">{chunks}</span>,
+        })}</label>
                   <input
                     type="email"
-                    placeholder="nome@azienda.com"
+                    placeholder={t('label6')}
                     value={form.email}
                     onChange={e => { setForm(f => ({ ...f, email: e.target.value })); setErrors(er => ({ ...er, email: '' })); }}
                     className="w-full px-4 py-2.5 rounded-lg border text-[14px] text-[#0D0D0D] outline-none focus-visible:ring-2 focus-visible:ring-[#4B4DF7]/60 focus-visible:border-[#4B4DF7] transition-all"
                     style={{ borderColor: errors.email ? '#EF4444' : 'rgba(0,0,0,0.12)', background: '#FAFAFA' }}
                   />
                   {errors.email && <p className="text-[11px] text-red-500 mt-1">{errors.email}</p>}
-                  {!errors.email && <p className="text-[11px] text-[#0D0D0D]/25 mt-1">Richiesta email aziendale (non personale)</p>}
+                  {!errors.email && <p className="text-[11px] text-[#0D0D0D]/25 mt-1">{t('body5')}</p>}
                 </div>
 
                 <Button
@@ -423,9 +415,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                       <svg className="animate-spin" width="16" height="16" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                      </svg>
-                      Caricamento…
-                    </>
+                      </svg>{tl('loading')}</>
                   ) : (
                     'Scarica il Report'
                   )}
@@ -442,15 +432,17 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
         <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2.5">
             <SkillvueIcon size={20} />
-            <span className="text-[12px] text-[#0D0D0D]/30">© {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati.</span>
+            <span className="text-[12px] text-[#0D0D0D]/30">{tl('copyright', { year: new Date().getFullYear() })}</span>
           </div>
           <div className="flex items-center gap-5 text-[12px]">
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
-            </Button>
+              {t.rich('text9', {
+          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+        })}</Button>
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai">skillvue.ai</a>
-            </Button>
+              {t.rich('text10', {
+          a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
+        })}</Button>
           </div>
         </div>
       </footer>
@@ -552,6 +544,8 @@ function NumberedItem({ n, title, children }: { n: number; title: string; childr
 }
 
 function WhitepaperLayer() {
+  const t = useTranslations('lp.ai-act-banking');
+  const tl = useTranslations('shared.lp');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -568,7 +562,7 @@ function WhitepaperLayer() {
       >
         <div className="flex items-center gap-2.5">
           <SkillvueIcon size={24} />
-          <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.03em]">Skillvue</span>
+          <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.03em]">{t('text11')}</span>
         </div>
         <div className="flex items-center gap-3">
           <Button asChild variant="secondary" mode="light">
@@ -576,9 +570,7 @@ function WhitepaperLayer() {
               href="/WP-B1-ITA.pdf"
               download="AI-Act-compliant-Banking-Skillvue.pdf"
             >
-              <Download aria-hidden="true" />
-              Scarica PDF
-            </a>
+              <Download aria-hidden="true" />{tl('downloadPdf')}</a>
           </Button>
           <Button asChild variant="primary" mode="light">
             <a
@@ -586,7 +578,7 @@ function WhitepaperLayer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Contattaci
+              {tl('contact')}
               <ArrowRight aria-hidden="true" />
             </a>
           </Button>
@@ -603,58 +595,50 @@ function WhitepaperLayer() {
               className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-7"
               style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
             >
-              BANKING · 2026
-            </span>
+              {t('text12')}</span>
             <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.2] mb-2">
-              AI Act-compliant nel Banking:
-              <span
-                className="block"
-                style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
-              >
-                da obbligo regolatorio a vantaggio competitivo
-              </span>
-            </h1>
+              {t.rich('heading4', {
+          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</h1>
             <div className="w-10 h-px mx-auto mb-5 mt-5" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
             <p className="text-[13px] text-[#0D0D0D]/40">
-              <em>Settore:</em> Banking · <em>Destinatari:</em> HR Leader, Compliance, Executive
-            </p>
-            <p className="text-[13px] text-[#0D0D0D]/40 mt-1"><em>Lettura:</em> circa 5 minuti</p>
+              {t.rich('body6', {
+          i: (chunks) => <em>{chunks}</em>,
+          i2: (chunks) => <em>{chunks}</em>,
+        })}</p>
+            <p className="text-[13px] text-[#0D0D0D]/40 mt-1">{t.rich('body7', {
+          i: (chunks) => <em>{chunks}</em>,
+        })}</p>
             <p className="text-[13px] text-[#0D0D0D]/40 mt-1">
-              A cura di{' '}
-              <span style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>
-                Skillvue
-              </span>
-            </p>
+              {t.rich('body8', {
+          s: (chunks) => <span style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>{chunks}</span>,
+        })}</p>
           </div>
 
           {/* Document Body */}
           <div className="px-10 py-10">
 
-            <InfoBox title="Il problema in numeri">
+            <InfoBox title={t('heading6')}>
               <p>
-                Entro il <strong className="text-[#0D0D0D]/80">2 agosto 2026</strong>, tutti i sistemi AI utilizzati per screening, ranking e
-                decisioni di assunzione dovranno essere <strong className="text-[#0D0D0D]/80">conformi all'EU AI Act</strong>. Le banche
-                europee che oggi li utilizzano senza aver avviato un processo strutturato di adeguamento
-                operano con un rischio sanzionatorio che può arrivare al{' '}
-                <strong className="text-[#0D0D0D]/80">3% del fatturato globale annuo</strong> (art. 99, c. 3, Regolamento UE 2024/1689).
-                Ma la sanzione è la parte più visibile del problema. Il rischio reputazionale, in un settore
-                come il banking, pesa di più.
-              </p>
+                {t.rich('body9', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</p>
             </InfoBox>
 
             <div className="grid grid-cols-2 gap-4 my-8">
-              <StatBox value="2026" label="Scadenza AI Act sistemi ad alto rischio" />
-              <StatBox value="68%" label="dei CHRO europei: priorità AI governance HR (Deloitte 2025)" />
-              <StatBox value="3%" label="Fatturato globale — sanzione massima per deployer" />
-              <StatBox value="0,38" label="Validità predittiva colloquio non strutturato" />
+              <StatBox value="2026" label={t('label7')} />
+              <StatBox value="68%" label={t('label8')} />
+              <StatBox value="3%" label={t('label9')} />
+              <StatBox value="0,38" label={t('label10')} />
             </div>
 
             {/* Systems exposure chart */}
             <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
               <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">
-                Sistemi di AI coinvolti nel processo di selezione bancario
-              </p>
-              <p className="text-[12px] text-[#0D0D0D]/35 italic mb-5">Livello di esposizione ai requisiti AI Act</p>
+                {t('body10')}</p>
+              <p className="text-[12px] text-[#0D0D0D]/35 italic mb-5">{t('body11')}</p>
               <div className="space-y-3">
                 {[
                   { label: 'Tool di screening CV', pct: 90, color: '#FF6550' },
@@ -675,68 +659,48 @@ function WhitepaperLayer() {
               </div>
             </div>
 
-            <SectionHeading num="1" title="La classificazione che cambia tutto" />
+            <SectionHeading num="1" title={t('heading7')} />
             <Para>
-              Il Regolamento UE 2024/1689, pubblicato in Gazzetta Ufficiale il 12 luglio 2024 ed entrato
-              in vigore il 1° agosto 2024, ha costruito un sistema di classificazione del rischio per i sistemi
-              AI. La categoria ad alto rischio comprende esplicitamente, all'Allegato III punto 4,{' '}
-              <strong className="text-[#0D0D0D]/80">i sistemi impiegati per valutare candidati e lavoratori in processi di screening,
-              ranking e assunzione.</strong>
-            </Para>
+              {t.rich('text13', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
             <Para>
-              Questa classificazione non è neutra. Comporta una serie di{' '}
-              <strong className="text-[#0D0D0D]/80">obblighi</strong> che vanno ben oltre la gestione dei dati personali già prevista dal
-              GDPR: documentazione tecnica approfondita del sistema, registri di log per garantire la
-              tracciabilità di ogni decisione, valutazione della conformità prima della messa in servizio,
-              supervisione umana garantita per legge, trasparenza verso i soggetti che interagiscono con
-              il sistema, monitoraggio post-mercato continuativo.
-            </Para>
+              {t.rich('text14', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-            <InfoBox title="Nota regolamentare">
+            <InfoBox title={t('heading8')}>
               <p>
-                I provider di sistemi AI ad alto rischio devono essere registrati nella banca dati EU prima
-                della messa in servizio. Le banche, in quanto deployer,{' '}
-                <strong className="text-[#0D0D0D]/80">sono responsabili dell'uso corretto e devono verificare che i sistemi che
-                impiegano siano conformi</strong>. La catena della responsabilità è condivisa ma non delegabile.
-              </p>
+                {t.rich('body12', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</p>
             </InfoBox>
 
-            <SectionHeading num="2" title="Il rischio più rilevante non è solo la sanzione" />
+            <SectionHeading num="2" title={t('heading9')} />
             <Para>
-              Le sanzioni previste dall'AI Act per l'utilizzo di sistemi non conformi possono arrivare fino
-              al <strong className="text-[#0D0D0D]/80">3% del fatturato globale annuo</strong> per le violazioni degli obblighi applicabili agli
-              utilizzatori (Regolamento UE 2024/1689, art. 99, c. 3). Ma concentrarsi esclusivamente sulla
-              componente sanzionatoria rischia di oscurare una dimensione più rilevante per le funzioni
-              HR e per il management strategico delle banche europee.
-            </Para>
+              {t.rich('text15', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
             <Para>
-              Il <strong className="text-[#0D0D0D]/80">rischio reputazionale</strong> associato a un{' '}
-              <strong className="text-[#0D0D0D]/80">processo di selezione non trasparente o non spiegabile</strong> è, in un settore come
-              il banking, potenzialmente più costoso di qualsiasi multa. Le banche operano in un
-              ecosistema di fiducia regolato: la vigilanza BCE, le linee guida EBA sul{' '}
-              <strong className="text-[#0D0D0D]/80">Fit & Proper</strong> e i requisiti di idoneità per le figure chiave presuppongono tutti
-              che i processi di valutazione delle persone siano{' '}
-              <strong className="text-[#0D0D0D]/80">documentabili, giustificabili e privi di bias sistematici</strong>.
-            </Para>
+              {t.rich('text16', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
             <Para>
-              C'è poi una <strong className="text-[#0D0D0D]/80">dimensione competitiva</strong> che riguarda direttamente il{' '}
-              <strong className="text-[#0D0D0D]/80">mercato del lavoro</strong>. I candidati qualificati, in particolare nella fascia 25–35 anni
-              che le banche europee cercano di attrarre con crescente urgenza, sono sempre più attenti
-              a come le organizzazioni gestiscono i loro dati e a quanto siano trasparenti nei processi di
-              valutazione. Un'organizzazione che sa comunicare chiaramente come funziona il suo
-              sistema di verification AI, perché prende certe decisioni e come garantisce equità,{' '}
-              <strong className="text-[#0D0D0D]/80">costruisce un vantaggio nella talent attraction</strong> che non è facilmente
-              quantificabile ma è reale e persistente.
-            </Para>
+              {t.rich('text17', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             {/* Predictive validity chart */}
             <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
               <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">
-                Validità predittiva a confronto
-              </p>
+                {t('body13')}</p>
               <p className="text-[12px] text-[#0D0D0D]/35 italic mb-5">
-                Correlazione con la performance lavorativa futura · Fonte: Schmidt &amp; Hunter (1998, aggiornata nel 2016)
-              </p>
+                {t('body14')}</p>
               <div className="space-y-4">
                 {[
                   { label: 'Colloquio non strutturato', val: 0.38, pct: 38, color: '#FF6550' },
@@ -763,59 +727,35 @@ function WhitepaperLayer() {
             <SectionHeading num="3" title={'Cosa significa davvero "high-risk AI compliance" per chi seleziona'} />
 
             <Quote source="McKinsey Global Institute, The State of AI in 2024">
-              "Le organizzazioni che investono in processi di selezione strutturati e trasparenti
-              registrano tassi di retention dei neoassunti superiori del 23% rispetto alla media di
-              settore".
-            </Quote>
+              {t('text18')}</Quote>
 
             <Para>
-              Semplificare la compliance AI Act a una checklist di documenti da produrre è l'errore più
-              diffuso nelle organizzazioni che si stanno avvicinando alla scadenza. L'AI Act richiede
-              qualcosa di strutturalmente diverso: che i sistemi ad alto rischio siano progettati e utilizzati
-              in modo da garantire una{' '}
-              <strong className="text-[#0D0D0D]/80">supervisione umana non formale, lungo tutto il processo decisionale.</strong>
-            </Para>
+              {t.rich('text19', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-            <SubHeading title="Spiegabilità delle singole decisioni" />
+            <SubHeading title={t('heading10')} />
             <Para>
-              Ogni decisione o raccomandazione generata da un sistema AI nella selezione del personale
-              deve essere spiegabile in termini comprensibili. Non è sufficiente che il sistema funzioni
-              bene in media: deve essere possibile spiegare{' '}
-              <strong className="text-[#0D0D0D]/80">perché uno specifico candidato ha ricevuto un determinato punteggio, quali
-              competenze sono state rilevate e con quale logica</strong>. Nelle banche, questa trasparenza è
-              anche un prerequisito per la tenuta in caso di audit regolatorio. Un responsabile HR che
-              non sa spiegare perché un candidato è stato escluso non ha un problema di sistema: ha un
-              problema di governance.
-            </Para>
+              {t.rich('text20', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-            <SubHeading title="Supervisione umana come requisito strutturale" />
+            <SubHeading title={t('heading11')} />
             <Para>
-              L'AI Act richiede che i sistemi ad alto rischio{' '}
-              <strong className="text-[#0D0D0D]/80">permettano all'operatore umano di intervenire, correggere o bloccare una
-              decisione automatizzata</strong>. Per la selezione del personale, questo significa che nessuna
-              esclusione può avvenire senza una validazione umana documentata. I sistemi che operano
-              come black box, generando un output finale senza possibilità di intervento, non
-              soddisfano questo requisito nella sua sostanza.
-            </Para>
+              {t.rich('text21', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
             <Para>
-              La gestione dell'incertezza è parte integrante di questo pilastro. Quando il sistema rileva
-              che i segnali disponibili non sono sufficienti per una valutazione affidabile, la risposta
-              corretta non è produrre comunque uno score: è{' '}
-              <strong className="text-[#0D0D0D]/80">segnalare l'ambiguità e restituire la decisione al giudizio umano</strong>. Questo
-              meccanismo, spesso chiamato in letteratura tecnica{' '}
-              <strong className="text-[#0D0D0D]/80">soglia di non-applicabilità</strong>, è al tempo stesso un requisito normativo e un
-              indicatore della maturità del sistema.
-            </Para>
+              {t.rich('text22', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-            <SubHeading title="Bias testing documentato" />
+            <SubHeading title={t('heading12')} />
             <Para>
-              L'AI Act richiede che i sistemi ad alto rischio siano testati per{' '}
-              <strong className="text-[#0D0D0D]/80">rilevare discriminazioni sistematiche</strong>, con documentazione dei risultati e
-              meccanismi di correzione. Per un sistema di selezione, questo significa test di bias su
-              variabili protette: genere, età, nazionalità, origine etnica. Le banche europee, già soggette
-              a vincoli stringenti di non-discriminazione nell'accesso al credito, hanno la cultura per
-              ragionare in questi termini. Manca spesso l'applicazione ai processi HR.
-            </Para>
+              {t.rich('text23', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             {/* Three pillars */}
             <div className="grid grid-cols-3 gap-3 my-8">
@@ -837,236 +777,186 @@ function WhitepaperLayer() {
               ))}
             </div>
 
-            <InfoBox title="Esempio operativo" accent>
+            <InfoBox title={t('heading13')} accent>
               <p>
-                Un sistema che genera uno score complessivo di selezione senza{' '}
-                <strong className="text-[#0D0D0D]/80">produrre una giustificazione per competenza</strong>, senza meccanismi per
-                gestire valutazioni incerte, e senza log verificabili{' '}
-                <strong className="text-[#0D0D0D]/80">non è AI Act-compliant</strong>. Molti sistemi oggi in uso nelle banche europee
-                non soddisfano questi requisiti nella loro configurazione standard. La differenza tra un
-                sistema conforme e uno non conforme non è nella qualità dei risultati, ma in{' '}
-                <strong className="text-[#0D0D0D]/80">come il processo è governato, controllato e documentato</strong>.
-              </p>
+                {t.rich('body15', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</p>
             </InfoBox>
 
-            <SectionHeading num="4" title="HR e Compliance: perché la sfida coinvolge entrambi" />
+            <SectionHeading num="4" title={t('heading14')} />
             <Para>
-              In molte banche europee, il progetto di adeguamento all'AI Act è partito dalla funzione
-              Legal o Compliance, con il CHRO coinvolto in una fase successiva. Questo approccio ha
-              generato, in diversi casi, soluzioni tecnicamente corrette ma poco integrate con le esigenze
-              operative dell'HR: sistemi conformi sulla carta, ma difficili da usare o che rallentano i
-              processi selettivi.
-            </Para>
+              {t('text24')}</Para>
             <Para>
-              Il modello che si sta affermando nelle organizzazioni più avanzate prevede una{' '}
-              <strong className="text-[#0D0D0D]/80">co-governance strutturata tra le due funzioni</strong>. La funzione Compliance
-              garantisce la tenuta legale del processo e la gestione del rischio regolatorio. La funzione HR
-              garantisce che le misure di compliance non compromettano l'efficacia della selezione, anzi
-              le utilizzi come leva per innalzarne la qualità complessiva.
-            </Para>
+              {t.rich('text25', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
             <Para>
-              Il concetto di <strong className="text-[#0D0D0D]/80">compliance by design</strong>, già familiare nel banking per GDPR e
-              cybersecurity, si applica oggi ai sistemi AI per la gestione del capitale umano con la stessa
-              logica.
-            </Para>
+              {t.rich('text26', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <Quote source="Deloitte, Global Human Capital Trends 2025">
-              "Il 68% dei CHRO europei considera la governance dei sistemi AI in HR come una
-              priorità strategica per il biennio 2025–2026. Non è solo compliance: è la consapevolezza
-              che la qualità delle decisioni sul capitale umano dipende sempre più dalla qualità degli
-              strumenti utilizzati per supportarle, e che quella qualità deve essere dimostrabile".
-            </Quote>
+              {t('text27')}</Quote>
 
-            <SectionHeading num="5" title="Tre criteri per valutare un sistema di selezione AI nel banking" />
+            <SectionHeading num="5" title={t('heading15')} />
             <Para>
-              Quando si valuta un fornitore di verification AI per contesti bancari, tre dimensioni si
-              rivelano determinanti sia rispetto ai requisiti dell'AI Act sia rispetto alla qualità delle
-              decisioni di selezione:
-            </Para>
+              {t('text28')}</Para>
 
-            <NumberedItem n={1} title="Giustificazione per competenza, non per punteggio aggregato">
-              Un sistema maturo produce, per ogni candidato valutato, una{' '}
-              <strong className="text-[#0D0D0D]/80">spiegazione strutturata degli elementi rilevati</strong>: non uno score finale, ma
-              un'evidenza competenza per competenza, con indicazione dell'intensità del segnale e della
-              sua origine nell'interazione. Se il sistema non sa spiegare il proprio output a chi lo usa,{' '}
-              <strong className="text-[#0D0D0D]/80">non è né conforme né utile</strong>.
-            </NumberedItem>
+            <NumberedItem n={1} title={t('heading16')}>
+              {t.rich('text29', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
-            <NumberedItem n={2} title="Gestione trasparente dell'incertezza">
-              Un sistema di qualità non forza una valutazione quando i dati disponibili non la supportano:
-              segnala l'ambiguità e restituisce la decisione al selezionatore umano. Questo non è un
-              limite del sistema ma la sua{' '}
-              <strong className="text-[#0D0D0D]/80">garanzia strutturale di correttezza</strong>. È anche la forma più concreta di
-              Human-in-the-Loop richiesta dall'AI Act.
-            </NumberedItem>
+            <NumberedItem n={2} title={t('heading17')}>
+              {t.rich('text30', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
-            <NumberedItem n={3} title="Audit trail completo e verificabile">
-              Ogni verification deve produrre un log verificabile:{' '}
-              <strong className="text-[#0D0D0D]/80">quando è stato condotto, su quale versione del sistema, con quali parametri,
-              con quale output, con quale eventuale attivazione della soglia di incertezza e con quale
-              conferma di supervisione umana</strong>. Un sistema che non lo produce non può essere
-              considerato conforme.
-            </NumberedItem>
+            <NumberedItem n={3} title={t('heading18')}>
+              {t.rich('text31', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
             {/* Retention chart */}
             <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
               <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">
-                Impatto sulla retention
-              </p>
+                {t('body16')}</p>
               <p className="text-[12px] text-[#0D0D0D]/35 italic mb-6">
-                Retention del primo anno dei neoassunti · Fonte: McKinsey Global Institute, 2024
-              </p>
+                {t('body17')}</p>
               <div className="flex items-end justify-center gap-12">
                 <div className="text-center">
                   <div className="w-20 mx-auto rounded-t-lg mb-2" style={{ height: '88px', background: '#FF6550' }} />
                   <div className="text-[1.6rem] font-bold text-[#FF6550]">62%</div>
-                  <div className="text-[11px] text-[#0D0D0D]/40 mt-1 leading-snug">Selezione<br />tradizionale</div>
+                  <div className="text-[11px] text-[#0D0D0D]/40 mt-1 leading-snug">{t.rich('text32', {
+          br: () => <br />,
+        })}</div>
                 </div>
                 <div className="text-center">
                   <div className="w-20 mx-auto rounded-t-lg mb-2" style={{ height: '121px', background: '#4B4DF7' }} />
                   <div className="text-[1.6rem] font-bold text-[#4B4DF7]">85%</div>
-                  <div className="text-[11px] text-[#0D0D0D]/40 mt-1 leading-snug">Selezione strutturata<br />con strumenti AI</div>
+                  <div className="text-[11px] text-[#0D0D0D]/40 mt-1 leading-snug">{t.rich('text33', {
+          br: () => <br />,
+        })}</div>
                 </div>
               </div>
             </div>
 
-            <InfoBox title="In sintesi">
+            <InfoBox title={t('heading19')}>
               <p>
-                Explainability delle decisioni, gestione trasparente dell'incertezza e audit trail completo
-                non sono requisiti aggiuntivi rispetto alla funzionalità del sistema:{' '}
-                <strong className="text-[#0D0D0D]/80">sono indicatori della sua maturità tecnica</strong>. Un sistema che li soddisfa fa
-                anche selezione migliore. La conformità normativa e la qualità della decisione tendono a
-                coincidere.
-              </p>
+                {t.rich('body18', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</p>
             </InfoBox>
 
-            <SectionHeading num="6" title="Tra scadenza normativa e opportunità strategica" />
+            <SectionHeading num="6" title={t('heading20')} />
             <Para>
-              Le banche europee non partono da zero rispetto a questa sfida. Il settore ha una lunga
-              esperienza di adeguamento normativo complesso, da MiFID II a Basilea III fino a DORA, e
-              ha sviluppato internamente competenze di compliance management che poche altre industry
-              possono vantare.
-            </Para>
+              {t('text34')}</Para>
             <Para>
-              Il <strong className="text-[#0D0D0D]/80">paradosso</strong> dell'AI Act nel banking è che{' '}
-              <strong className="text-[#0D0D0D]/80">le organizzazioni con la maggiore esposizione al rischio di non-conformità sono
-              spesso quelle che hanno investito di più nell'automazione dei processi HR negli ultimi
-              anni</strong>. Chi ha adottato soluzioni early-stage, quando il quadro normativo era ancora in
-              formazione, si trova oggi a dover rivalutare quei sistemi alla luce di requisiti che non erano
-              contemplati al momento dell'acquisto.
-            </Para>
+              {t.rich('text35', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
             <Para>
-              La scadenza normativa <strong className="text-[#0D0D0D]/80">crea però una finestra di riflessione strategica</strong> che
-              raramente si apre nel ciclo ordinario dell'HR management. Le banche che stanno
-              affrontando la compliance AI Act come un progetto strutturato, non come una risposta
-              reattiva a un audit,{' '}
-              <strong className="text-[#0D0D0D]/80">stanno compiendo una ricognizione approfondita dei propri processi di
-              valutazione del talento</strong>. E in molti casi stanno scoprendo gap che avevano già un impatto
-              sulla qualità delle decisioni di selezione, indipendentemente dalla normativa.
-            </Para>
+              {t.rich('text36', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
             <div className="rounded-xl border border-black/[0.08] p-6 my-8 text-center">
               <div className="flex items-center justify-center gap-6">
                 <p className="text-[1.15rem] font-bold italic" style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                  Conformità<br />AI Act
-                </p>
+                  {t.rich('body19', {
+          br: () => <br />,
+        })}</p>
                 <span className="text-[1.5rem] font-bold" style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>=</span>
                 <p className="text-[1.15rem] font-bold italic" style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                  Qualità<br />decisionale
-                </p>
+                  {t.rich('body20', {
+          br: () => <br />,
+        })}</p>
               </div>
               <p className="text-[12px] text-[#0D0D0D]/35 italic mt-3">
-                Conformità normativa e qualità delle decisioni si rafforzano a vicenda.
-              </p>
+                {t('body21')}</p>
             </div>
 
             <Para>
-              <strong className="text-[#0D0D0D]/80">La conformità normativa diventa così il punto di ingresso verso una domanda più
-              profonda:</strong> i nostri strumenti di verification sono in grado di misurare ciò che conta
-              davvero, in modo oggettivo, spiegabile e ripetibile?
-            </Para>
+              {t.rich('text37', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
             <Para>
-              La differenza tra le banche che trasformeranno questa scadenza in vantaggio competitivo e
-              quelle che la gestiranno come un costo è, in buona misura, una differenza di approccio. Le
-              prime stanno connettendo il progetto di adeguamento all'AI Act con la trasformazione più
-              ampia dei processi di talent acquisition, adottando criteri di acquisto più esigenti e
-              costruendo verso candidati, regolatori e investitori una narrazione che valorizza la
-              trasparenza come elemento di differenziazione.
-            </Para>
+              {t('text38')}</Para>
 
             {/* Economics summary */}
             <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
               <p className="text-[11px] font-bold tracking-[0.2em] uppercase mb-4" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                Gli economics in sintesi
-              </p>
+                {t('body22')}</p>
               <ul className="space-y-2 text-[13.5px] text-[#0D0D0D]/65 leading-snug">
-                <li><strong className="text-[#0D0D0D]/80">Differenziale di retention con selezione strutturata AI:</strong>{' '}<span style={{ color: '#4B4DF7', fontWeight: 700 }}>+23%</span></li>
-                <li><strong className="text-[#0D0D0D]/80">Priorità strategica AI governance HR per CHRO europei:</strong>{' '}<span style={{ color: '#4B4DF7', fontWeight: 700 }}>68%</span></li>
-                <li><strong className="text-[#0D0D0D]/80">Sanzione massima per deployer non conformi:</strong>{' '}<span style={{ color: '#FF6550', fontWeight: 700 }}>fino al 3%</span> (del fatturato globale annuo o 15 milioni di euro, il maggiore tra i due)</li>
-                <li><strong className="text-[#0D0D0D]/80">Scadenza sistemi ad alto rischio (Allegato III):</strong>{' '}<span style={{ color: '#FF6550', fontWeight: 700 }}>2 agosto 2026</span></li>
-                <li><strong className="text-[#0D0D0D]/80">Validità predittiva del colloquio non strutturato:</strong>{' '}<span style={{ color: '#FF6550', fontWeight: 700 }}>0,38</span> (su scala 0-1) vs. verification comportamentali strutturati con validità 0,54</li>
+                <li>{t.rich('item', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          s: (chunks) => <span style={{ color: '#4B4DF7', fontWeight: 700 }}>{chunks}</span>,
+        })}</li>
+                <li>{t.rich('item2', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          s: (chunks) => <span style={{ color: '#4B4DF7', fontWeight: 700 }}>{chunks}</span>,
+        })}</li>
+                <li>{t.rich('item3', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          s: (chunks) => <span style={{ color: '#FF6550', fontWeight: 700 }}>{chunks}</span>,
+        })}</li>
+                <li>{t.rich('item4', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          s: (chunks) => <span style={{ color: '#FF6550', fontWeight: 700 }}>{chunks}</span>,
+        })}</li>
+                <li>{t.rich('item5', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          s: (chunks) => <span style={{ color: '#FF6550', fontWeight: 700 }}>{chunks}</span>,
+        })}</li>
               </ul>
             </div>
 
-            <SectionHeading title="3 domande per il tuo comitato di direzione" />
+            <SectionHeading title={t('heading21')} />
             <Para>
-              Prima ancora di scegliere gli strumenti, le banche sono chiamate a{' '}
-              <strong className="text-[#0D0D0D]/80">rispondere a quesiti strategici</strong> che definiscono il perimetro del problema.
-              Questo framework nasce come <strong className="text-[#0D0D0D]/80">punto di partenza</strong> per una riflessione interna
-              profonda.
-            </Para>
+              {t.rich('text39', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-            <NumberedItem n={1} title="I sistemi AI che sta usando la tua banca oggi sopravviverebbero a un audit?">
-              Non un audit ipotetico, ma una{' '}
-              <strong className="text-[#0D0D0D]/80">richiesta concreta di documentazione da parte dell'autorità di vigilanza
-              nazionale</strong>. Cosa produrrebbe il tuo team domani mattina? Il log di ogni verification
-              condotto, la versione del modello usata, la giustificazione per ogni candidato escluso, la
-              conferma della supervisione umana.{' '}
-              <strong className="text-[#0D0D0D]/80">Se la risposta a questa domanda richiede più di 24 ore di ricerca interna</strong>, il
-              sistema non è conforme nel senso che l'AI Act intende.
-            </NumberedItem>
+            <NumberedItem n={1} title={t('heading22')}>
+              {t.rich('text40', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
-            <NumberedItem n={2} title="La qualità della tua selezione è misurabile e migliorabile?">
-              I <strong className="text-[#0D0D0D]/80">KPI tradizionali</strong> misurano output: posizioni coperte, tempo alla copertura,
-              costo per assunzione. Non misurano la qualità predittiva del processo. Quanti candidati
-              selezionati negli ultimi tre anni sono ancora in azienda a 18 mesi? Qual è il tasso di
-              mis-hire nelle posizioni critiche? Senza questi dati,{' '}
-              <strong className="text-[#0D0D0D]/80">è impossibile valutare se un investimento in verification AI stia producendo
-              valore reale</strong> o semplicemente velocità.
-            </NumberedItem>
+            <NumberedItem n={2} title={t('heading23')}>
+              {t.rich('text41', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
-            <NumberedItem n={3} title="Chi governa internamente questo processo?">
-              L'adeguamento all'AI Act richiede una <strong className="text-[#0D0D0D]/80">governance</strong> che nella maggior parte delle
-              banche europee non esiste ancora per i sistemi HR. Non si tratta di creare una nuova
-              funzione, ma di{' '}
-              <strong className="text-[#0D0D0D]/80">chiarire chi ha la responsabilità del monitoraggio dei sistemi AI in uso</strong>, chi
-              valida i report di bias testing, chi può bloccare un sistema che mostra segnali di deriva.
-              Questa chiarezza è un prerequisito della compliance, non una sua conseguenza.
-            </NumberedItem>
+            <NumberedItem n={3} title={t('heading24')}>
+              {t.rich('text42', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
             <Quote>
-              "La compliance normativa, quando affrontata con rigore metodologico, ha spesso il
-              valore secondario di migliorare la qualità dei processi che norma. Non è un effetto
-              collaterale: è una conseguenza strutturale del fatto che le buone pratiche di trasparenza
-              e accountability sono anche buone pratiche di management".
-            </Quote>
+              {t('text43')}</Quote>
 
             {/* Next step */}
             <div className="mt-10 pt-8 border-t border-black/[0.07]">
-              <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-3">Next step</h3>
+              <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-3">{t('heading5')}</h3>
               <Para>
-                Se la tua organizzazione sta valutando come adeguare i processi di selezione e talent
-                management all'AI Act, Skillvue può supportarti con skill verification predittivi, scalabili e
-                certificati, conformi alla normativa, al GDPR e allo standard internazionale ISO 27001,
-                personalizzati sulle specificità del tuo contesto bancario.
-              </Para>
+                {t('text44')}</Para>
               <Button asChild variant="primary" mode="light">
                 <a
                   href="https://www.skillvue.ai/contact-us"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Contattaci per una conversazione esplorativa
+                  {tl('exploratoryCall')}
                   <ArrowRight aria-hidden="true" />
                 </a>
               </Button>
@@ -1074,14 +964,14 @@ function WhitepaperLayer() {
 
             {/* Sources */}
             <div className="mt-10 pt-6 border-t border-black/[0.07]">
-              <p className="text-[11px] font-bold text-[#0D0D0D]/30 uppercase tracking-[0.18em] mb-3">Fonti e riferimenti</p>
+              <p className="text-[11px] font-bold text-[#0D0D0D]/30 uppercase tracking-[0.18em] mb-3">{t('body23')}</p>
               <ul className="space-y-1.5 text-[11.5px] text-[#0D0D0D]/35 italic leading-snug">
-                <li>EU AI Act — Regolamento UE 2024/1689. Gazzetta Ufficiale UE, 12 luglio 2024. In vigore dal 1° agosto 2024; applicazione progressiva fino al 2 agosto 2026 per i sistemi ad alto rischio (Allegato III). Sanzioni art. 99, c. 3.</li>
-                <li>McKinsey Global Institute — The State of AI in 2024: Generative AI's Breakout Year. McKinsey & Company, 2024.</li>
-                <li>Deloitte — Global Human Capital Trends 2025. Deloitte Insights, 2025.</li>
-                <li>EBA — Guidelines on the verification of the suitability of members of the management body and key function holders (EBA/GL/2021/06). European Banking Authority, 2021.</li>
-                <li>BCE — Supervisory Priorities 2024–2026. Banca Centrale Europea, dicembre 2023.</li>
-                <li>Schmidt, F.L. & Hunter, J.E. (1998, aggiornata 2016). The validity and utility of selection methods in personnel psychology. Psychological Bulletin.</li>
+                <li>{t('item6')}</li>
+                <li>{t('item7')}</li>
+                <li>{t('item8')}</li>
+                <li>{t('item9')}</li>
+                <li>{t('item10')}</li>
+                <li>{t('item11')}</li>
               </ul>
             </div>
           </div>
@@ -1093,15 +983,17 @@ function WhitepaperLayer() {
         <div className="max-w-[760px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2.5">
             <SkillvueIcon size={20} />
-            <span className="text-[12px] text-[#0D0D0D]/30">© {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati.</span>
+            <span className="text-[12px] text-[#0D0D0D]/30">{tl('copyright', { year: new Date().getFullYear() })}</span>
           </div>
           <div className="flex items-center gap-5 text-[12px]">
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
-            </Button>
+              {t.rich('text45', {
+          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+        })}</Button>
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai">skillvue.ai</a>
-            </Button>
+              {t.rich('text46', {
+          a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
+        })}</Button>
           </div>
         </div>
       </footer>

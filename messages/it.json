@@ -51,7 +51,8 @@
         "privacy": "Privacy Policy",
         "cookies": "Cookie Policy",
         "dataProcessing": "Trattamento dati personali"
-      }
+      },
+      "legalAddress": "Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568"
     }
   },
   "about": {
@@ -197,7 +198,11 @@
       "meta": {
         "title": "Che cos'è l'accountability e perché migliora le performance lavorative | Skillvue",
         "description": "Quando un progetto si blocca, una scadenza slitta o un errore rimbalza tra funzioni senza che nessuno se ne faccia carico, la parola mancante è spesso una so..."
-      }
+      },
+      "tag": "Cultura",
+      "takeaway": "In sintesi",
+      "ownership": "Ownership",
+      "accountability": "Accountability"
     },
     "attitude-vs-competence": {
       "whenAttitude": {
@@ -272,7 +277,10 @@
       "meta": {
         "title": "Attitudine vs. Competenza: come valutare un candidato | Skillvue",
         "description": "Dovresti assumere qualcuno che sa già fare il lavoro, o qualcuno che sembra avere il potenziale per impararlo?"
-      }
+      },
+      "tag": "Talent Acquisition",
+      "takeaway": "In sintesi",
+      "versus": "vs."
     },
     "corporate-onboarding": {
       "phases": {
@@ -357,7 +365,9 @@
       "meta": {
         "title": "Corporate Onboarding: guida completa al processo | Skillvue",
         "description": "Circa il 50% dei candidati selezionati si ritira prima di iniziare. Ogni onboarding fallito significa ripetere i costi di selezione, perdere tempo del manage..."
-      }
+      },
+      "tag": "Onboarding",
+      "takeaway": "In sintesi"
     },
     "critical-thinking": {
       "indicators": {
@@ -496,7 +506,8 @@
       "meta": {
         "title": "Competenze manageriali: cosa sono e come identificarle | Skillvue",
         "description": "Promuovere un buon professionista a manager è una delle decisioni più delicate che si possano prendere. Le competenze richieste cambiano radicalmente."
-      }
+      },
+      "tag": "Leadership"
     },
     "negotiation-techniques": {
       "techniques": {
@@ -579,7 +590,8 @@
       "meta": {
         "title": "Le 7 tecniche di negoziazione più efficaci al lavoro | Skillvue",
         "description": "Per anni abbiamo pensato alla negoziazione come a qualcosa di commerciale. In realtà, negozi ogni giorno al lavoro: priorità, budget, obiettivi, condizioni."
-      }
+      },
+      "tag": "Performance"
     },
     "newsletter-july-2026": {
       "onClick": "/prenota-incontro",
@@ -811,7 +823,8 @@
       "meta": {
         "title": "Gli 8 bias di selezione più comuni (e come evitarli) | Skillvue",
         "description": "Hai mai scartato un candidato nei primi cinque minuti di un colloquio? O deciso quasi subito che era \"quello giusto\"?"
-      }
+      },
+      "tag": "Selezione"
     },
     "social-skills": {
       "socialSkills": {
@@ -880,7 +893,9 @@
       "meta": {
         "title": "Social Skills: cosa sono e perché contano nel lavoro | Skillvue",
         "description": "Le social skill non riguardano l'essere socievoli. Riguardano il modo in cui una persona si comporta nelle interazioni professionali, soprattutto quando il c..."
-      }
+      },
+      "tag": "Soft Skills",
+      "takeaway": "In sintesi"
     },
     "talent-acquisition": {
       "differences": {
@@ -951,7 +966,11 @@
       "meta": {
         "title": "Talent Acquisition: cos'è, come funziona, perché conta | Skillvue",
         "description": "Quante assunzioni, pur essendo \"giuste sulla carta,\" iniziano a mostrare crepe dopo pochi mesi? Il ruolo è coperto, il CV era coerente, il colloquio è andato..."
-      }
+      },
+      "tag": "Talent Acquisition",
+      "takeaway": "In sintesi",
+      "colRecruiting": "Recruiting",
+      "colTalentAcquisition": "Talent Acquisition"
     },
     "newsletter-august-2026": {
       "tag": "Newsletter",
@@ -1082,6 +1101,63 @@
     "meta": {
       "title": "Blog & Approfondimenti | Skillvue",
       "description": "Approfondimenti, ricerche e prospettive sulla talent intelligence, AI nelle risorse umane e il futuro delle decisioni sulle persone."
+    },
+    "articles": {
+      "newsletter-august-2026": {
+        "title": "La newsletter di agosto",
+        "date": "Agosto 2026",
+        "tag": "Newsletter"
+      },
+      "newsletter-july-2026": {
+        "title": "La newsletter di luglio",
+        "date": "Luglio 2026",
+        "tag": "Newsletter"
+      },
+      "attitude-vs-competence": {
+        "title": "Attitudine vs. Competenza: Come Valutare un Candidato",
+        "date": "13 Marzo 2026",
+        "tag": "Talent Acquisition"
+      },
+      "recruitment-biases": {
+        "title": "Gli 8 Bias di Selezione più Comuni (e Come Evitarli)",
+        "date": "10 Marzo 2026",
+        "tag": "Hiring"
+      },
+      "negotiation-techniques": {
+        "title": "Le 7 Tecniche di Negoziazione più Efficaci sul Lavoro",
+        "date": "4 Marzo 2026",
+        "tag": "Performance"
+      },
+      "accountability": {
+        "title": "Cos'è l'Accountability e Perché Migliora le Performance Lavorative",
+        "date": "27 Febbraio 2026",
+        "tag": "Cultura"
+      },
+      "critical-thinking": {
+        "title": "Cos'è il Critical Thinking e Come Valutare questa Competenza",
+        "date": "25 Febbraio 2026",
+        "tag": "Scienza"
+      },
+      "corporate-onboarding": {
+        "title": "Corporate Onboarding: La Guida Completa al Processo",
+        "date": "23 Febbraio 2026",
+        "tag": "Onboarding"
+      },
+      "managerial-skills": {
+        "title": "Competenze Manageriali: Cosa Sono e Come Identificarle",
+        "date": "23 Febbraio 2026",
+        "tag": "Leadership"
+      },
+      "social-skills": {
+        "title": "Social Skills: Cosa Sono e Perché Contano sul Lavoro",
+        "date": "18 Febbraio 2026",
+        "tag": "Soft Skills"
+      },
+      "talent-acquisition": {
+        "title": "Talent Acquisition: Cos'è, Come Funziona, Perché È Importante",
+        "date": "12 Febbraio 2026",
+        "tag": "Talent Acquisition"
+      }
     }
   },
   "book-meeting": {
@@ -4275,6 +4351,201 @@
       "meta": {
         "title": "Come In’s Mercato ha costruito una pipeline interna di Store Manager | Skillvue",
         "description": "La crescita della rete dipende dalla capacità di avere figure manageriali formate nel momento in cui servono. Con Skillvue, In’s ha trasformato la gestione del talento da reattiva a predittiva."
+      },
+      "cta3": "Clienti",
+      "heading2": "Come In's Mercato ha costruito una <s>pipeline interna</s> di Store Manager",
+      "body": "La crescita della rete dipende dalla capacità di avere figure manageriali formate nel momento in cui servono. Con Skillvue, In's ha trasformato la gestione del talento da reattiva a predittiva.",
+      "cta4": "Contattaci",
+      "cta5": "Scopri di più",
+      "text9": "SCHEDA CLIENTE",
+      "src": "https://www.youtube.com/embed/GE_fLi5IeyU?autoplay=1&mute=1&rel=0&modestbranding=1",
+      "text10": "CONTESTO",
+      "heading3": "Il contesto del progetto",
+      "body2": "In's Mercato è una delle principali insegne hard discount italiane, con un fatturato di <b>1,5 miliardi di euro</b>, oltre <b>4.200 dipendenti</b> e una rete di più di <b>570 punti vendita</b>. L'azienda è in una fase di forte <b>espansione immobiliare</b>, con un piano di nuove aperture che pone un <b>vincolo operativo preciso</b>: senza Store Manager qualificati, pronti e pienamente allineati alla cultura aziendale, i nuovi negozi rischiano di sottoperformare. La crescita della rete dipende direttamente dalla capacità di avere figure manageriali formate nel momento in cui servono.",
+      "text11": "LA SFIDA",
+      "heading4": "Il problema strutturale",
+      "body3": "In's Mercato è un'azienda in forte crescita. Con oltre 570 punti vendita e un piano di sviluppo immobiliare attivo, il business aveva un vincolo operativo che precedeva qualsiasi considerazione HR.",
+      "text12": "OBIETTIVI DI COLLABORAZIONE",
+      "heading5": "Cosa doveva cambiare",
+      "text13": "LA SOLUZIONE",
+      "heading6": "Assessment AI con Skillvue",
+      "body4": "Skillvue ha abilitato un assessment strutturato, basato sul framework di soft skill che In's aveva già costruito internamente per il profilo di Store Manager.",
+      "text14": "COMPETENZE VALUTATE",
+      "text15": "COME È STATO COSTRUITO",
+      "text16": "RISULTATI",
+      "heading7": "Key Metrics & Impatto",
+      "body5": "I risultati quantitativi e qualitativi del progetto Skillvue x In's Mercato.",
+      "body6": "Assessment AI completati",
+      "body7": "su ~1.000 collaboratori coinvolti",
+      "body8": "Top Talent identificati",
+      "body9": "Top 10% emerso dall'assessment",
+      "body10": "~42 profili pronti al ruolo",
+      "body11": "~48 profili in upskilling",
+      "body12": "Il 47% e 53% si riferiscono ai 90 Top Talent identificati",
+      "body13": "Tasso di completamento",
+      "body14": "Completamento al netto delle cause esterne (dimissioni, malattia)",
+      "text17": "48 non terminate per cause esterne",
+      "body15": "Il funnel di selezione",
+      "text18": "EVOLUZIONE 2026",
+      "heading8": "Da sviluppo interno a talent strategy integrata",
+      "body16": "Quando l'assessment sullo sviluppo interno ha iniziato a produrre risultati concreti e scalabili, la scelta naturale è stata estenderlo anche alla selezione esterna, eliminando la discontinuità tra \"chi cerchiamo\" e \"come lo facciamo crescere\".",
+      "body17": "Costruire un ciclo unico e coerente in cui ogni persona, dal primo giorno, viene valutata, orientata e accompagnata con la stessa logica.",
+      "clientCard": {
+        "industry": {
+          "label": "Settore",
+          "value": "GDO - Hard Discount"
+        },
+        "revenue": {
+          "label": "Fatturato",
+          "value": "1,5 mld €"
+        },
+        "employees": {
+          "label": "Dipendenti",
+          "value": "4.200"
+        },
+        "stores": {
+          "label": "Punti vendita",
+          "value": "+570"
+        },
+        "useCase": {
+          "label": "Caso d’uso",
+          "value": "Internal Mobility"
+        }
+      },
+      "funnel": {
+        "involved": {
+          "label": "Coinvolti"
+        },
+        "completed": {
+          "label": "Assessment completati"
+        },
+        "topTalent": {
+          "label": "Top Talent identificati"
+        },
+        "roleReady": {
+          "label": "Role-Ready (47%)"
+        },
+        "inDevelopment": {
+          "label": "In Development (53%)"
+        }
+      },
+      "videoTitle": "Intervista In’s Mercato",
+      "skills": {
+        "customerOrientation": {
+          "label": "Orientamento all'altro"
+        },
+        "leadership": {
+          "label": "Leadership"
+        },
+        "resilience": {
+          "label": "Resilienza"
+        },
+        "organizationPlanning": {
+          "label": "Organizzazione e Pianificazione"
+        },
+        "cognitiveFlexibility": {
+          "label": "Flessibilità cognitiva"
+        },
+        "goalOrientation": {
+          "label": "Orientamento agli obiettivi"
+        }
+      },
+      "businessPains": {
+        "expansionHeldBack": {
+          "title": "Espansione frenata dalla mancanza di Store Manager",
+          "desc": "Un piano di nuove aperture attivo, ma senza figure manageriali qualificate, pronte e allineate alla cultura aziendale, ogni nuovo punto vendita rischia di sottoperformare."
+        },
+        "storePerformance": {
+          "title": "Performance degli store e ritorno sugli investimenti",
+          "desc": "Ogni nuova apertura è un investimento significativo: senza lo Store Manager giusto a presidiarla, quel punto vendita non esprime il suo potenziale. Perdere persone di valore non intercettate in tempo significa compromettere la redditività."
+        },
+        "externalHiring": {
+          "title": "Dipendenza dal mercato esterno",
+          "desc": "Rincorrere il fabbisogno con selezione esterna significa costi più alti, tempi di inserimento più lunghi e un rischio concreto di mismatch culturale, in un settore dove trovare profili formati è sempre più difficile."
+        }
+      },
+      "hrPains": {
+        "invisibleTalent": {
+          "title": "Invisibilità del talento in rete",
+          "desc": "Nessuna visibilità oggettiva sulle competenze di migliaia di addetti vendita distribuiti su oltre 570 punti vendita: le decisioni sul potenziale si basavano su numeri di vendita e percezioni soggettive."
+        },
+        "fragmentedEvaluations": {
+          "title": "Valutazioni frammentate e non confrontabili",
+          "desc": "Ogni manager di negozio valutava con criteri propri, ogni area funzionava con logiche diverse: due persone con lo stesso potenziale potevano avere percorsi completamente diversi, non per merito ma per fortuna geografica."
+        },
+        "reactiveManagement": {
+          "title": "Gestione reattiva del talento, non predittiva",
+          "desc": "Senza visibilità strutturata sul potenziale interno, ogni posizione chiave da coprire si trasformava in un processo di selezione esterna. Un doppio costo: tempi e investimenti per reclutare, più il rischio di perdere talenti già in azienda non valorizzati."
+        }
+      },
+      "objectives": {
+        "sharedReading": {
+          "label": "Ottenere una lettura comune e oggettiva del potenziale su tutta la rete: stessi criteri, stesso linguaggio, indipendentemente dal territorio o dal singolo responsabile"
+        },
+        "internalPipeline": {
+          "label": "Costruire una pipeline interna di Store Manager pronti: per sostenere il piano di aperture senza dipendere da un mercato esterno sempre più competitivo e costoso"
+        },
+        "storeRoi": {
+          "label": "Massimizzare la performance dei punti vendita e il ritorno sugli investimenti in nuove aperture: garantendo che ogni store sia presidiato da uno Store Manager qualificato e allineato alla cultura aziendale"
+        },
+        "anticipateNeeds": {
+          "label": "Anticipare il fabbisogno di ruoli chiave con mesi di anticipo: passando da una logica emergenziale a una capacità predittiva di pianificazione del talento"
+        }
+      },
+      "methodologyCards": {
+        "mobileFirst": {
+          "title": "Assessment da mobile",
+          "text": "~30 minuti da cellulare, svolto durante l'orario di lavoro come attività retribuita. 1.000 persone coinvolte su 570 punti vendita."
+        },
+        "neutralBaseline": {
+          "title": "Base neutra",
+          "text": "Popolazione target scelta senza segnalazioni pregresse di alto potenziale: addetti vendita con 18-48 mesi di anzianità. Una fotografia oggettiva del talento reale, non una conferma delle impressioni esistenti."
+        },
+        "communicationLever": {
+          "title": "Comunicazione come leva di engagement",
+          "text": "Attività retribuita, svolta in orario di lavoro e posizionata come investimento sullo sviluppo professionale. Non un esame, ma un'opportunità con un impatto diretto sulla partecipazione e sulla percezione positiva dell'intero progetto."
+        }
+      },
+      "impactCards": {
+        "internalPipeline": {
+          "title": "Costruzione pipeline interna",
+          "text": "Per la prima volta, In's dispone di una mappatura oggettiva del potenziale sulla rete e può pianificare le aperture con la certezza di avere figure qualificate disponibili."
+        },
+        "reactiveToPredictive": {
+          "title": "Da logica reattiva a predittiva",
+          "text": "Lo sviluppo delle persone è stato collegato direttamente al piano di espansione immobiliare: la pipeline interna diventa un asset di business che abilita la crescita."
+        },
+        "culturalImpact": {
+          "title": "Impatto culturale significativo",
+          "text": "I partecipanti alle giornate in presenza sono tornati nei punti vendita raccontando l'esperienza, generando un effetto di contaminazione positiva e percezione di meritocrazia."
+        },
+        "internalMobility": {
+          "title": "Mobilità interna facilitata",
+          "text": "Il progetto ha aperto opportunità non solo verticali (addetto vendita → Store Manager) ma anche trasversali tra divisioni, ad esempio verso ruoli logistici nei depositi."
+        }
+      },
+      "quote": {
+        "text": "Il progetto ha trasformato la gestione del talento da reattiva a predittiva, collegando direttamente la people strategy al piano di espansione: ogni nuova apertura può ora contare su una pipeline interna di figure pronte, invece di rincorrere il fabbisogno sul mercato esterno.",
+        "author": "Mirko Tortolano",
+        "role": "HR Director — In's Mercato"
+      },
+      "visionBullets": [
+        "Stessi criteri e stesso framework di competenze dalla selezione allo sviluppo: chi entra viene già valutato con la logica con cui verrà accompagnato domani",
+        "Assessment via WhatsApp: nella GDO non è una scelta di comodo, è una scelta strategica. Abbatte ogni barriera di accesso e porta i tassi di completamento a livelli che altri strumenti non raggiungono",
+        "Estensione della valutazione agli Store Manager in carica, per identificare i profili pronti al ruolo di Area Manager",
+        "Selezione, sviluppo e formazione integrati in un sistema continuo. Non più processi separati, ma un'unica talent strategy che funziona come asset di business"
+      ],
+      "businessChallengesLabel": "SFIDE DI BUSINESS",
+      "hrChallengesLabel": "SFIDE HR & PEOPLE",
+      "diagram": {
+        "title": "Talent Pipeline",
+        "step1": "STEP 1",
+        "step2": "STEP 2",
+        "roleReady": "Role-Ready",
+        "inDevelopment": "In Development",
+        "kicker": "CUSTOMER STORY",
+        "ready": "✓ READY",
+        "growing": "↗ GROWING"
       }
     }
   },
@@ -4286,7 +4557,10 @@
     "hero": {
       "cta": "Scopri la Scienza",
       "text": "I Nostri Clienti",
-      "cta2": "Prenota una Demo"
+      "cta2": "Prenota una Demo",
+      "heading": "Lo <g>Skills OS</g><br></br>della tua organizzazione",
+      "body": "Skillvue mappa, misura e riporta dati oggettivi sulle competenze: costruito sul tuo framework interno, fondato sulla scienza, potenziato dall’AI e integrato nei sistemi HR che già utilizzi, per trasformare ogni decisione sul talento, dall’assunzione allo sviluppo.",
+      "videoTitle": "Video di prodotto Skillvue"
     },
     "problem": {
       "painCards": {
@@ -4575,7 +4849,9 @@
       "meta": {
         "title": "Skillvue — AI Competency One-Pager",
         "description": "Skillvue AI Competency One-Pager"
-      }
+      },
+      "altPage1": "AI Competency One-Pager — page 1",
+      "altPage2": "AI Competency One-Pager — page 2"
     },
     "ai-competency-newsletter": {
       "badge": "VALUTAZIONE COMPETENZE AI",
@@ -4881,13 +5157,218 @@
       "meta": {
         "title": "AI Act-compliant nel Banking: da obbligo regolatorio a vantaggio competitivo | Skillvue",
         "description": "Entro il 2 agosto 2026 ogni sistema AI usato per screening e decisioni di assunzione dovrà essere conforme all’EU AI Act. Come arrivarci con un vantaggio, non con una sanzione."
-      }
+      },
+      "text": "Skillvue",
+      "text2": "Scarica il Report",
+      "text3": "<s> Banking · 2026 </s>",
+      "text4": "AI Act-compliant nel Banking: <s> da obbligo regolatorio a vantaggio competitivo </s>",
+      "text5": "Come trasformare la scadenza del 2 agosto 2026 in una decisione strategica concreta per il tuo istituto bancario",
+      "text6": "<s>A cura di <b>Skillvue</b></s><s2></s2><s3>~5 min read</s3>",
+      "text7": "Scarica il Report Completo",
+      "heading": "Cosa troverai nel report",
+      "body": "Una guida operativa per trasformare una scadenza regolamentare in una decisione strategica concreta per il settore bancario.",
+      "heading2": "Scarica il report completo",
+      "heading3": "Compila per scaricare il PDF",
+      "body2": "Gratuito · Accesso immediato",
+      "body3": "Il whitepaper si è aperto in una nuova scheda.",
+      "body4": "Controlla il tuo browser se non lo vedi subito.",
+      "text8": "Apri di nuovo",
+      "label": "Nome <s>*</s>",
+      "label2": "Cognome <s>*</s>",
+      "label3": "Email Lavorativa <s>*</s>",
+      "body5": "Richiesta email aziendale (non personale)",
+      "text9": "<a>Privacy Policy</a>",
+      "text10": "<a>skillvue.ai</a>",
+      "text11": "Skillvue",
+      "text12": "BANKING · 2026",
+      "heading4": "AI Act-compliant nel Banking: <s> da obbligo regolatorio a vantaggio competitivo </s>",
+      "body6": "<i>Settore:</i> Banking · <i2>Destinatari:</i2> HR Leader, Compliance, Executive",
+      "body7": "<i>Lettura:</i> circa 5 minuti",
+      "body8": "A cura di <s> Skillvue </s>",
+      "body9": "Entro il <b>2 agosto 2026</b>, tutti i sistemi AI utilizzati per screening, ranking e decisioni di assunzione dovranno essere <b2>conformi all'EU AI Act</b2>. Le banche europee che oggi li utilizzano senza aver avviato un processo strutturato di adeguamento operano con un rischio sanzionatorio che può arrivare al <b3>3% del fatturato globale annuo</b3> (art. 99, c. 3, Regolamento UE 2024/1689). Ma la sanzione è la parte più visibile del problema. Il rischio reputazionale, in un settore come il banking, pesa di più.",
+      "body10": "Sistemi di AI coinvolti nel processo di selezione bancario",
+      "body11": "Livello di esposizione ai requisiti AI Act",
+      "text13": "Il Regolamento UE 2024/1689, pubblicato in Gazzetta Ufficiale il 12 luglio 2024 ed entrato in vigore il 1° agosto 2024, ha costruito un sistema di classificazione del rischio per i sistemi AI. La categoria ad alto rischio comprende esplicitamente, all'Allegato III punto 4, <b>i sistemi impiegati per valutare candidati e lavoratori in processi di screening, ranking e assunzione.</b>",
+      "text14": "Questa classificazione non è neutra. Comporta una serie di <b>obblighi</b> che vanno ben oltre la gestione dei dati personali già prevista dal GDPR: documentazione tecnica approfondita del sistema, registri di log per garantire la tracciabilità di ogni decisione, valutazione della conformità prima della messa in servizio, supervisione umana garantita per legge, trasparenza verso i soggetti che interagiscono con il sistema, monitoraggio post-mercato continuativo.",
+      "body12": "I provider di sistemi AI ad alto rischio devono essere registrati nella banca dati EU prima della messa in servizio. Le banche, in quanto deployer, <b>sono responsabili dell'uso corretto e devono verificare che i sistemi che impiegano siano conformi</b>. La catena della responsabilità è condivisa ma non delegabile.",
+      "text15": "Le sanzioni previste dall'AI Act per l'utilizzo di sistemi non conformi possono arrivare fino al <b>3% del fatturato globale annuo</b> per le violazioni degli obblighi applicabili agli utilizzatori (Regolamento UE 2024/1689, art. 99, c. 3). Ma concentrarsi esclusivamente sulla componente sanzionatoria rischia di oscurare una dimensione più rilevante per le funzioni HR e per il management strategico delle banche europee.",
+      "text16": "Il <b>rischio reputazionale</b> associato a un <b2>processo di selezione non trasparente o non spiegabile</b2> è, in un settore come il banking, potenzialmente più costoso di qualsiasi multa. Le banche operano in un ecosistema di fiducia regolato: la vigilanza BCE, le linee guida EBA sul <b3>Fit & Proper</b3> e i requisiti di idoneità per le figure chiave presuppongono tutti che i processi di valutazione delle persone siano <b4>documentabili, giustificabili e privi di bias sistematici</b4>.",
+      "text17": "C'è poi una <b>dimensione competitiva</b> che riguarda direttamente il <b2>mercato del lavoro</b2>. I candidati qualificati, in particolare nella fascia 25–35 anni che le banche europee cercano di attrarre con crescente urgenza, sono sempre più attenti a come le organizzazioni gestiscono i loro dati e a quanto siano trasparenti nei processi di valutazione. Un'organizzazione che sa comunicare chiaramente come funziona il suo sistema di verification AI, perché prende certe decisioni e come garantisce equità, <b3>costruisce un vantaggio nella talent attraction</b3> che non è facilmente quantificabile ma è reale e persistente.",
+      "body13": "Validità predittiva a confronto",
+      "body14": "Correlazione con la performance lavorativa futura · Fonte: Schmidt & Hunter (1998, aggiornata nel 2016)",
+      "text18": "\"Le organizzazioni che investono in processi di selezione strutturati e trasparenti registrano tassi di retention dei neoassunti superiori del 23% rispetto alla media di settore\".",
+      "text19": "Semplificare la compliance AI Act a una checklist di documenti da produrre è l'errore più diffuso nelle organizzazioni che si stanno avvicinando alla scadenza. L'AI Act richiede qualcosa di strutturalmente diverso: che i sistemi ad alto rischio siano progettati e utilizzati in modo da garantire una <b>supervisione umana non formale, lungo tutto il processo decisionale.</b>",
+      "text20": "Ogni decisione o raccomandazione generata da un sistema AI nella selezione del personale deve essere spiegabile in termini comprensibili. Non è sufficiente che il sistema funzioni bene in media: deve essere possibile spiegare <b>perché uno specifico candidato ha ricevuto un determinato punteggio, quali competenze sono state rilevate e con quale logica</b>. Nelle banche, questa trasparenza è anche un prerequisito per la tenuta in caso di audit regolatorio. Un responsabile HR che non sa spiegare perché un candidato è stato escluso non ha un problema di sistema: ha un problema di governance.",
+      "text21": "L'AI Act richiede che i sistemi ad alto rischio <b>permettano all'operatore umano di intervenire, correggere o bloccare una decisione automatizzata</b>. Per la selezione del personale, questo significa che nessuna esclusione può avvenire senza una validazione umana documentata. I sistemi che operano come black box, generando un output finale senza possibilità di intervento, non soddisfano questo requisito nella sua sostanza.",
+      "text22": "La gestione dell'incertezza è parte integrante di questo pilastro. Quando il sistema rileva che i segnali disponibili non sono sufficienti per una valutazione affidabile, la risposta corretta non è produrre comunque uno score: è <b>segnalare l'ambiguità e restituire la decisione al giudizio umano</b>. Questo meccanismo, spesso chiamato in letteratura tecnica <b2>soglia di non-applicabilità</b2>, è al tempo stesso un requisito normativo e un indicatore della maturità del sistema.",
+      "text23": "L'AI Act richiede che i sistemi ad alto rischio siano testati per <b>rilevare discriminazioni sistematiche</b>, con documentazione dei risultati e meccanismi di correzione. Per un sistema di selezione, questo significa test di bias su variabili protette: genere, età, nazionalità, origine etnica. Le banche europee, già soggette a vincoli stringenti di non-discriminazione nell'accesso al credito, hanno la cultura per ragionare in questi termini. Manca spesso l'applicazione ai processi HR.",
+      "body15": "Un sistema che genera uno score complessivo di selezione senza <b>produrre una giustificazione per competenza</b>, senza meccanismi per gestire valutazioni incerte, e senza log verificabili <b2>non è AI Act-compliant</b2>. Molti sistemi oggi in uso nelle banche europee non soddisfano questi requisiti nella loro configurazione standard. La differenza tra un sistema conforme e uno non conforme non è nella qualità dei risultati, ma in <b3>come il processo è governato, controllato e documentato</b3>.",
+      "text24": "In molte banche europee, il progetto di adeguamento all'AI Act è partito dalla funzione Legal o Compliance, con il CHRO coinvolto in una fase successiva. Questo approccio ha generato, in diversi casi, soluzioni tecnicamente corrette ma poco integrate con le esigenze operative dell'HR: sistemi conformi sulla carta, ma difficili da usare o che rallentano i processi selettivi.",
+      "text25": "Il modello che si sta affermando nelle organizzazioni più avanzate prevede una <b>co-governance strutturata tra le due funzioni</b>. La funzione Compliance garantisce la tenuta legale del processo e la gestione del rischio regolatorio. La funzione HR garantisce che le misure di compliance non compromettano l'efficacia della selezione, anzi le utilizzi come leva per innalzarne la qualità complessiva.",
+      "text26": "Il concetto di <b>compliance by design</b>, già familiare nel banking per GDPR e cybersecurity, si applica oggi ai sistemi AI per la gestione del capitale umano con la stessa logica.",
+      "text27": "\"Il 68% dei CHRO europei considera la governance dei sistemi AI in HR come una priorità strategica per il biennio 2025–2026. Non è solo compliance: è la consapevolezza che la qualità delle decisioni sul capitale umano dipende sempre più dalla qualità degli strumenti utilizzati per supportarle, e che quella qualità deve essere dimostrabile\".",
+      "text28": "Quando si valuta un fornitore di verification AI per contesti bancari, tre dimensioni si rivelano determinanti sia rispetto ai requisiti dell'AI Act sia rispetto alla qualità delle decisioni di selezione:",
+      "text29": "Un sistema maturo produce, per ogni candidato valutato, una <b>spiegazione strutturata degli elementi rilevati</b>: non uno score finale, ma un'evidenza competenza per competenza, con indicazione dell'intensità del segnale e della sua origine nell'interazione. Se il sistema non sa spiegare il proprio output a chi lo usa, <b2>non è né conforme né utile</b2>.",
+      "text30": "Un sistema di qualità non forza una valutazione quando i dati disponibili non la supportano: segnala l'ambiguità e restituisce la decisione al selezionatore umano. Questo non è un limite del sistema ma la sua <b>garanzia strutturale di correttezza</b>. È anche la forma più concreta di Human-in-the-Loop richiesta dall'AI Act.",
+      "text31": "Ogni verification deve produrre un log verificabile: <b>quando è stato condotto, su quale versione del sistema, con quali parametri, con quale output, con quale eventuale attivazione della soglia di incertezza e con quale conferma di supervisione umana</b>. Un sistema che non lo produce non può essere considerato conforme.",
+      "body16": "Impatto sulla retention",
+      "body17": "Retention del primo anno dei neoassunti · Fonte: McKinsey Global Institute, 2024",
+      "text32": "Selezione<br></br>tradizionale",
+      "text33": "Selezione strutturata<br></br>con strumenti AI",
+      "body18": "Explainability delle decisioni, gestione trasparente dell'incertezza e audit trail completo non sono requisiti aggiuntivi rispetto alla funzionalità del sistema: <b>sono indicatori della sua maturità tecnica</b>. Un sistema che li soddisfa fa anche selezione migliore. La conformità normativa e la qualità della decisione tendono a coincidere.",
+      "text34": "Le banche europee non partono da zero rispetto a questa sfida. Il settore ha una lunga esperienza di adeguamento normativo complesso, da MiFID II a Basilea III fino a DORA, e ha sviluppato internamente competenze di compliance management che poche altre industry possono vantare.",
+      "text35": "Il <b>paradosso</b> dell'AI Act nel banking è che <b2>le organizzazioni con la maggiore esposizione al rischio di non-conformità sono spesso quelle che hanno investito di più nell'automazione dei processi HR negli ultimi anni</b2>. Chi ha adottato soluzioni early-stage, quando il quadro normativo era ancora in formazione, si trova oggi a dover rivalutare quei sistemi alla luce di requisiti che non erano contemplati al momento dell'acquisto.",
+      "text36": "La scadenza normativa <b>crea però una finestra di riflessione strategica</b> che raramente si apre nel ciclo ordinario dell'HR management. Le banche che stanno affrontando la compliance AI Act come un progetto strutturato, non come una risposta reattiva a un audit, <b2>stanno compiendo una ricognizione approfondita dei propri processi di valutazione del talento</b2>. E in molti casi stanno scoprendo gap che avevano già un impatto sulla qualità delle decisioni di selezione, indipendentemente dalla normativa.",
+      "body19": "Conformità<br></br>AI Act",
+      "body20": "Qualità<br></br>decisionale",
+      "body21": "Conformità normativa e qualità delle decisioni si rafforzano a vicenda.",
+      "text37": "<b>La conformità normativa diventa così il punto di ingresso verso una domanda più profonda:</b> i nostri strumenti di verification sono in grado di misurare ciò che conta davvero, in modo oggettivo, spiegabile e ripetibile?",
+      "text38": "La differenza tra le banche che trasformeranno questa scadenza in vantaggio competitivo e quelle che la gestiranno come un costo è, in buona misura, una differenza di approccio. Le prime stanno connettendo il progetto di adeguamento all'AI Act con la trasformazione più ampia dei processi di talent acquisition, adottando criteri di acquisto più esigenti e costruendo verso candidati, regolatori e investitori una narrazione che valorizza la trasparenza come elemento di differenziazione.",
+      "body22": "Gli economics in sintesi",
+      "item": "<b>Differenziale di retention con selezione strutturata AI:</b> <s>+23%</s>",
+      "item2": "<b>Priorità strategica AI governance HR per CHRO europei:</b> <s>68%</s>",
+      "item3": "<b>Sanzione massima per deployer non conformi:</b> <s>fino al 3%</s> (del fatturato globale annuo o 15 milioni di euro, il maggiore tra i due)",
+      "item4": "<b>Scadenza sistemi ad alto rischio (Allegato III):</b> <s>2 agosto 2026</s>",
+      "item5": "<b>Validità predittiva del colloquio non strutturato:</b> <s>0,38</s> (su scala 0-1) vs. verification comportamentali strutturati con validità 0,54",
+      "text39": "Prima ancora di scegliere gli strumenti, le banche sono chiamate a <b>rispondere a quesiti strategici</b> che definiscono il perimetro del problema. Questo framework nasce come <b2>punto di partenza</b2> per una riflessione interna profonda.",
+      "text40": "Non un audit ipotetico, ma una <b>richiesta concreta di documentazione da parte dell'autorità di vigilanza nazionale</b>. Cosa produrrebbe il tuo team domani mattina? Il log di ogni verification condotto, la versione del modello usata, la giustificazione per ogni candidato escluso, la conferma della supervisione umana. <b2>Se la risposta a questa domanda richiede più di 24 ore di ricerca interna</b2>, il sistema non è conforme nel senso che l'AI Act intende.",
+      "text41": "I <b>KPI tradizionali</b> misurano output: posizioni coperte, tempo alla copertura, costo per assunzione. Non misurano la qualità predittiva del processo. Quanti candidati selezionati negli ultimi tre anni sono ancora in azienda a 18 mesi? Qual è il tasso di mis-hire nelle posizioni critiche? Senza questi dati, <b2>è impossibile valutare se un investimento in verification AI stia producendo valore reale</b2> o semplicemente velocità.",
+      "text42": "L'adeguamento all'AI Act richiede una <b>governance</b> che nella maggior parte delle banche europee non esiste ancora per i sistemi HR. Non si tratta di creare una nuova funzione, ma di <b2>chiarire chi ha la responsabilità del monitoraggio dei sistemi AI in uso</b2>, chi valida i report di bias testing, chi può bloccare un sistema che mostra segnali di deriva. Questa chiarezza è un prerequisito della compliance, non una sua conseguenza.",
+      "text43": "\"La compliance normativa, quando affrontata con rigore metodologico, ha spesso il valore secondario di migliorare la qualità dei processi che norma. Non è un effetto collaterale: è una conseguenza strutturale del fatto che le buone pratiche di trasparenza e accountability sono anche buone pratiche di management\".",
+      "heading5": "Next step",
+      "text44": "Se la tua organizzazione sta valutando come adeguare i processi di selezione e talent management all'AI Act, Skillvue può supportarti con skill verification predittivi, scalabili e certificati, conformi alla normativa, al GDPR e allo standard internazionale ISO 27001, personalizzati sulle specificità del tuo contesto bancario.",
+      "body23": "Fonti e riferimenti",
+      "item6": "EU AI Act — Regolamento UE 2024/1689. Gazzetta Ufficiale UE, 12 luglio 2024. In vigore dal 1° agosto 2024; applicazione progressiva fino al 2 agosto 2026 per i sistemi ad alto rischio (Allegato III). Sanzioni art. 99, c. 3.",
+      "item7": "McKinsey Global Institute — The State of AI in 2024: Generative AI's Breakout Year. McKinsey & Company, 2024.",
+      "item8": "Deloitte — Global Human Capital Trends 2025. Deloitte Insights, 2025.",
+      "item9": "EBA — Guidelines on the verification of the suitability of members of the management body and key function holders (EBA/GL/2021/06). European Banking Authority, 2021.",
+      "item10": "BCE — Supervisory Priorities 2024–2026. Banca Centrale Europea, dicembre 2023.",
+      "item11": "Schmidt, F.L. & Hunter, J.E. (1998, aggiornata 2016). The validity and utility of selection methods in personnel psychology. Psychological Bulletin.",
+      "text45": "<a>Privacy Policy</a>",
+      "text46": "<a>skillvue.ai</a>",
+      "label4": "Il tuo nome",
+      "label5": "Il tuo cognome",
+      "label6": "nome@azienda.com",
+      "heading6": "Il problema in numeri",
+      "label7": "Scadenza AI Act sistemi ad alto rischio",
+      "label8": "dei CHRO europei: priorità AI governance HR (Deloitte 2025)",
+      "label9": "Fatturato globale — sanzione massima per deployer",
+      "label10": "Validità predittiva colloquio non strutturato",
+      "heading7": "La classificazione che cambia tutto",
+      "heading8": "Nota regolamentare",
+      "heading9": "Il rischio più rilevante non è solo la sanzione",
+      "heading10": "Spiegabilità delle singole decisioni",
+      "heading11": "Supervisione umana come requisito strutturale",
+      "heading12": "Bias testing documentato",
+      "heading13": "Esempio operativo",
+      "heading14": "HR e Compliance: perché la sfida coinvolge entrambi",
+      "heading15": "Tre criteri per valutare un sistema di selezione AI nel banking",
+      "heading16": "Giustificazione per competenza, non per punteggio aggregato",
+      "heading17": "Gestione trasparente dell'incertezza",
+      "heading18": "Audit trail completo e verificabile",
+      "heading19": "In sintesi",
+      "heading20": "Tra scadenza normativa e opportunità strategica",
+      "heading21": "3 domande per il tuo comitato di direzione",
+      "heading22": "I sistemi AI che sta usando la tua banca oggi sopravviverebbero a un audit?",
+      "heading23": "La qualità della tua selezione è misurabile e migliorabile?",
+      "heading24": "Chi governa internamente questo processo?"
     },
     "arte-di-misurare-allineamento": {
       "meta": {
         "title": "L'arte di misurare l'allineamento al brand — Skillvue",
         "description": "La valutazione comportamentale nella selezione del personale nel lusso: come misurare l’allineamento al brand prima del primo colloquio."
-      }
+      },
+      "text": "Skillvue",
+      "text2": "Scarica il Report",
+      "text3": "<s> Retail Lusso · 2026 </s>",
+      "text4": "L'arte di misurare <s> l'allineamento al brand </s>",
+      "text5": "La valutazione comportamentale nella selezione del personale nel lusso",
+      "text6": "<s>A cura di <b>Skillvue</b></s><s2></s2><s3>~5 min read</s3>",
+      "text7": "Scarica il Report Completo",
+      "heading": "Cosa troverai nel report",
+      "body": "Un'analisi operativa per chi guida la Talent Strategy nelle maison del lusso e deve capire dove il processo di selezione lascia scoperto il brand.",
+      "heading2": "Scarica il report completo",
+      "heading3": "Compila per scaricare il PDF",
+      "body2": "Gratuito · Accesso immediato",
+      "body3": "Il whitepaper si è aperto in una nuova scheda.",
+      "body4": "Controlla il tuo browser se non lo vedi subito.",
+      "text8": "Apri di nuovo",
+      "label": "Nome <s>*</s>",
+      "label2": "Cognome <s>*</s>",
+      "label3": "Email Lavorativa <s>*</s>",
+      "body5": "Richiesta email aziendale (non personale)",
+      "text9": "<a>Privacy Policy</a>",
+      "text10": "<a>skillvue.ai</a>",
+      "text11": "Skillvue",
+      "text12": "RETAIL LUSSO · 2026",
+      "heading4": "L'arte di misurare <s> l'allineamento al brand </s>",
+      "body6": "La valutazione comportamentale nella selezione del personale nel lusso",
+      "body7": "<i>Settore:</i> Retail Lusso · <i2>Destinatari:</i2> CHRO, HR Director, Chief People Officer",
+      "body8": "<i>Lettura:</i> circa 5 minuti",
+      "body9": "A cura di <s> Skillvue </s>",
+      "body10": "Nei flagship store delle principali maison europee, una quota compresa tra il <b>30% e il 40%</b> del personale di front line abbandona l'organizzazione entro appena <b2>12 mesi</b2> dall'assunzione. Il fenomeno si polarizza su quei profili selezionati attraverso <b3>metodologie tradizionali</b3>, specialmente nei mercati ad alta crescita dove la pressione sull'hiring sacrifica la profondità della valutazione sull'altare della velocità. La causa principale di questa emorragia rimane un <b4>punto cieco</b4>, raramente misurata nell'unico momento in cui potrebbe essere prevenuta: <b5>la fase di selezione</b5>.",
+      "body11": "Anatomia del costo di turnover nel lusso",
+      "body12": "Il costo per sostituzione di un front-liner supera tipicamente 1,5x lo stipendio annuo",
+      "body13": "Fonte: Society for Human Resource Management (SHRM), analisi settore retail premium. Il moltiplicatore 1,5x sale fino a 2x per profili di fascia senior.",
+      "text13": "Quando si analizzano i motivi di uscita, emergono due pattern ricorrenti: il <b>mismatch culturale</b> — quando la persona non si identifica nei valori del brand — e la difficoltà nella <b2>gestione relazionale della clientela di fascia alta</b2>, un ambito che richiede un registro comportamentale estremamente sofisticato, quasi impossibile da intercettare attraverso un semplice colloquio strutturato tradizionale.",
+      "text14": "Entrambi questi fenomeni sollevano un interrogativo cruciale: quanto di ciò che determina il disallineamento era già osservabile prima della firma del contratto?",
+      "text15": "La risposta, supportata da oltre trent'anni di ricerca scientifica, è netta: molto più di quanto le organizzazioni siano attualmente attrezzate a decodificare. Il limite non risiede nel talento dei candidati, ma nella <b>capacità di misurazione predittiva</b> dei processi di selezione attuali.",
+      "text16": "Il settore del lusso ha costruito nel corso di decenni un’<b>identità di brand tra le più solide e riconoscibili</b> del panorama industriale globale. Eppure, paradossalmente, questa solidità convive con una <b2>fragilità strutturale</b2>: più il brand cresce, più dipende da un numero crescente di persone che ne incarnano i valori ogni giorno, e meno riesce a garantire che queste persone siano state selezionate con criteri all'altezza di quella stessa identità.",
+      "text17": "L'espansione geografica, in particolare nei mercati asiatici e mediorientali, ha accelerato un fenomeno di <b>hiring ad alta intensità</b> senza precedenti nella storia di questi brand. Un client advisor a Chengdu o a Dubai rappresenta il brand esattamente come uno a Via Montenapoleone. La differenza è che a Chengdu e a Dubai il processo di selezione è esposto a <b2>pressioni di volume, scarsità di profili qualificati e minore presidio diretto</b2>  da parte del management centrale.",
+      "body14": "Il punto di frattura della catena del valore",
+      "body15": "Coerenza tra l'identità di brand dichiarata e i criteri effettivi applicati per area operativa",
+      "text18": "GAP CRITICO",
+      "body16": "Rappresentazione qualitativa basata su benchmark settoriali.",
+      "text19": "Nel luxury retail, la dinamica è profondamente diversa rispetto ad altri settori. Il personale di front line non solo eroga un servizio al cliente, ma <b>incarna una vera e propria in-store experience</b>. L'ultimo report <i>Global Powers of Luxury Goods</i> di Deloitte conferma come la <b2>customer experience</b2> sia ormai il fattore competitivo determinante per il segmento UHNWI, superando persino il valore intrinseco del prodotto.",
+      "text20": "In questo ecosistema, un'interazione mal gestita, un tono di voce fuori registro o una minima disattenzione verso un cliente ad alto potenziale non rappresentano semplici inefficienze: <b>sono un colpo diretto alla brand equity</b>.",
+      "text21": "Il costo di un <b>falso positivo</b> — un candidato inserito che si rivela inadatto — è strutturalmente più elevato nel lusso rispetto a qualunque altro comparto del retail. L'impatto di una risorsa non allineata <b2>erode l'esperienza del cliente molto prima di tradursi in un calo visibile dei KPI di performance</b2>.",
+      "text22": "L’<b>eleganza relazionale</b>, la discrezione intesa come postura naturale e la capacità di gestire la prossimità con una clientela d'élite sono qualità che la ricerca scientifica classifica come <b2>tratti stabili</b2> — predisposizioni modificabili solo in minima parte dagli interventi formativi post assunzione.",
+      "text23": "\"In questo contesto, la vera sfida per le Maison non è accertare l'esistenza di tali dimensioni, quanto piuttosto dotarsi di strumenti capaci di misurarle oggettivamente prima dell'inserimento in organico.\"",
+      "text24": "Esiste un bias cognitivo profondamente radicato nelle funzioni HR del lusso: il <b>bias da esperienza settoriale</b> — la tendenza a utilizzare il background pregresso in una Maison come unico proxy dell'allineamento comportamentale al brand. Tale euristica nasconde un errore strutturale che diventa sempre più oneroso con l'evolversi del mercato.",
+      "text25": "L'esperienza misura la conformità ai codici appresi, non la predisposizione naturale. Un candidato reduce da anni in una boutique concorrente può replicare certi comportamenti in superficie, ma non necessariamente possiede i tratti che rendono tale postura autentica e duratura. I clienti di fascia alta percepiscono la differenza tra un protocollo recitato e una reale attitudine relazionale.",
+      "text26": "Il pool di talenti con esperienza diretta nel lusso è fisiologicamente limitato e sempre più conteso. Un modello di selezione focalizzato esclusivamente sul settore esclude profili d'eccellenza provenienti dall'hospitality di alto livello, dal private banking o dalle arti performative — figure che spesso vantano predisposizioni comportamentali superiori pur non avendo mai gestito la vendita di un prodotto fisico.",
+      "text27": "Reclutare sistematicamente per somiglianza con i profili esistenti porta alla creazione di workforce che replicano pattern identici nel tempo. Questo immobilismo culturale impedisce di intercettare efficacemente le nuove sensibilità dei mercati emergenti e le aspettative delle nuove generazioni di consumatori, per i quali l'autenticità conta molto più della pura forma.",
+      "text28": "L'EU AI Act (Regolamento UE 2024/1689) classifica i sistemi di AI per la selezione del personale come applicazioni ad alto rischio. Ma il rischio non riguarda solo chi usa AI: coinvolge ogni processo di recruiting che non sia documentabile, auditabile e coerente nei criteri applicati. Le organizzazioni prive di una metodologia strutturata si troveranno esposte a un rischio di compliance oggi non ancora percepito come prioritario nel lusso.",
+      "text29": "Il colloquio di selezione non è uno strumento sbagliato. È uno strumento con una <b>validità predittiva nota</b>, che la ricerca ha quantificato con precisione, e che viene sistematicamente sovrastimata dalle organizzazioni che lo usano come strumento primario o esclusivo.",
+      "text30": "La meta-analisi di <b>Schmidt e Hunter</b> attribuisce al colloquio non strutturato una validità di appena <b2>0,38</b2>. Il colloquio strutturato eleva il parametro a <b3>0,51</b3>, mentre gli <b4>verification comportamentali situazionali</b4> raggiungono picchi tra <b5>0,40 e 0,58</b5> per le posizioni ad alta componente relazionale.",
+      "body17": "Validità predittiva a confronto",
+      "body18": "Scala 0–1 · Correlazione con la performance lavorativa futura",
+      "body19": "Fonte: Schmidt & Hunter, 1998; Campion et al., 1997",
+      "text31": "Il quadro è ulteriormente complicato dal <b>faking behavior</b>: Levashina e Campion (2007) hanno dimostrato che nei colloqui la tendenza a fornire <b2>risposte socialmente desiderabili</b2> è sistematica e difficilmente intercettabile. Nel lusso, dove i candidati padroneggiano i codici del settore e arrivano estremamente preparati, questo rischio è massimo.",
+      "text32": "Gli <b>verification comportamentali strutturati</b>, basati su scenari situazionali ancorati a comportamenti passati verificabili, riducono drasticamente lo spazio per la simulazione strategica, rendendo estremamente complesso costruire una maschera professionale non autentica.",
+      "text33": "\"Selezionare per esperienza settoriale misura la conformità ai codici appresi. Non la predisposizione comportamentale che li rende autentici.\"",
+      "text34": "Il primo passo verso una selezione realmente predittiva non è l'adozione di un software, ma la <b>costruzione di un profilo comportamentale target</b> calibrato empiricamente. Invece di basarsi su job description standard o sull'intuizione del Retail Manager, occorre <b2>mappare i top performer attuali</b2> per isolare i pattern che garantiscono l'eccellenza. I tratti percepiti come \"distintivi\" del brand raramente coincidono con quelli che predicono statisticamente la performance sul campo.",
+      "text35": "Invertire la sequenza del processo di selezione ottimizza la qualità dell'output. <b>Utilizzare l'verification comportamentale come screening iniziale</b>  permette di riservare il colloquio ai soli candidati già profilati. Il giudizio umano si concentra dove è più prezioso: la valutazione delle sfumature relazionali su una <b2>short list qualificata</b2>. Il responsabile di store cessa di essere un filtro amministrativo per diventare un decision maker informato.",
+      "text36": "Ogni candidato vive il processo di recruiting come un'anticipazione della cultura aziendale. Un iter rigoroso, coerente e rispettoso dei valori della Maison modella l'approccio che il futuro collaboratore avrà verso il cliente finale. La <b>candidate experience</b> non è un semplice esercizio di employer branding, ma una leva che impatta direttamente sulla qualità dell'onboarding.",
+      "text37": "\"La qualità della selezione è diventata un fattore competitivo di primo piano: non solo per la funzione HR, ma per il business nel suo complesso.\"",
+      "body20": "Rischi non misurati",
+      "body21": "Next Step",
+      "body22": "Se la tua organizzazione sta ripensando il modello di selezione per ruoli retail o sta affrontando sfide di brand alignment in mercati in crescita, il punto di partenza più utile è una conversazione basata sui dati che già possedete: quanto incide oggi il turnover del primo anno? Qual è il tasso reale di mismatch nei mercati in cui il presidio diretto è più complesso? Quali sono i comportamenti che distinguono davvero i tuoi top performer?",
+      "body23": "Skillvue può supportarti con gli <b>verification comportamentali predittivi e scalabili</b>, pienamente conformi all'EU AI Act, personalizzati sulle specificità del contesto del tuo brand.",
+      "body24": "Fonti e riferimenti",
+      "body25": "A cura di",
+      "text38": "Skillvue",
+      "text39": "<a>Privacy Policy</a>",
+      "text40": "<a>skillvue.ai</a>",
+      "label4": "Il tuo nome",
+      "label5": "Il tuo cognome",
+      "label6": "nome@azienda.com",
+      "heading5": "Executive Summary",
+      "label7": "Turnover entro 12 mesi",
+      "label8": "Mercato globale lusso 2025",
+      "label9": "Validità colloquio strutturato",
+      "heading6": "Il paradosso dell'identità di brand",
+      "heading7": "Cosa rende la selezione nel lusso strutturalmente diversa",
+      "heading8": "Il rischio che la maggior parte delle organizzazioni non sta misurando",
+      "heading9": "Conformità vs predisposizione naturale",
+      "heading10": "Pool demografico limitato",
+      "heading11": "Rischio di omologazione culturale",
+      "heading12": "Rischio regolatorio (EU AI Act)",
+      "heading13": "Perché il colloquio, anche ben condotto, non è sufficiente",
+      "heading14": "Tre implicazioni operative per la Talent Strategy",
+      "heading15": "1. Il profilo comportamentale target va costruito, non adottato",
+      "heading16": "2. Il colloquio come fase finale, non come filtro iniziale",
+      "heading17": "3. La selezione come touch point strategico del brand"
     },
     "career-aspiration-insurance": {
       "meta": {
@@ -4898,14 +5379,132 @@
         "meta": {
           "title": "Career Aspiration Intelligence nel settore assicurativo — Whitepaper | Skillvue",
           "description": "Perché misurare le aspirazioni aiuta a prevedere chi rimane e chi eccelle. Whitepaper Skillvue per il settore assicurativo."
-        }
-      }
+        },
+        "text": "Skillvue",
+        "text2": "INSURANCE · 2026",
+        "heading": "Career Aspiration Intelligence <s> nel settore assicurativo </s>",
+        "body": "Perché misurare le aspirazioni aiuta a prevedere chi rimane e chi eccelle",
+        "body2": "<i>Settore:</i> Insurance",
+        "body3": "<i>Lettura:</i> circa 6 minuti",
+        "body4": "A cura di <s> Skillvue </s>",
+        "body5": "Nel settore assicurativo europeo il <b>67% dei CHRO</b> indica la <b2>retention</b2> del middle management come una <b3>priorità HR critica</b3> per il biennio 2025–2026. Eppure la variabile che più fortemente predice chi rimane e chi eccelle — le aspirazioni di carriera — <b4>è sistematicamente assente</b4> dai processi di talent management.",
+        "body6": "Questo documento analizza <b>perché misurare le aspirazioni</b> genera un reale <b2>vantaggio predittivo</b2>, quali implicazioni operative comporta per talent review, succession planning e leadership development e come sviluppare questa capacità in modo scalabile e <b3>conforme all'EU AI Act</b3>.",
+        "body7": "TURNOVER PREVENIBILE:",
+        "body8": "la maggior parte delle uscite si può anticipare",
+        "body9": "Il driver №1 della retention non è la retribuzione, ma lo sviluppo di carriera.",
+        "text3": "<s><s2></s2>Prevenibile (75%)</s><s3><s4></s4>Non prevenibile (25%)</s3>",
+        "body10": "Fonte: Work Institute, Retention Report 2024",
+        "text4": "Questi numeri convergono su un punto: la maggior parte delle uscite volontarie non è inevitabile. Sono il risultato di un <b>mismatch tra aspirazioni e opportunità percepite</b>, che rimane invisibile finché non compaiono i segnali terminali. La performance review e le engagement survey misurano bene il presente, ma non possono predire dove una persona vuole arrivare, né se l'organizzazione è percepita come il veicolo credibile per raggiungere quella meta.",
+        "text5": "<b>Avremmo potuto prevederlo?</b> È la domanda che emerge spesso dopo alcune di queste uscite. La risposta onesta, nella maggior parte dei casi, è sì. Ma per farlo occorreva misurare qualcosa che quasi nessun sistema HR misura in modo strutturato: le aspirazioni di carriera. La <b2>Career Aspiration Intelligence</b2> mappa il futuro — ossia dove vuole andare questa persona e quanto è probabile che la tua organizzazione faccia ancora parte del suo percorso tra 18 mesi.",
+        "text6": "Ci sono tre dinamiche convergenti che rendono il problema aspirazionale particolarmente acuto nei gruppi assicurativi europei:",
+        "text7": "La digitalizzazione progressiva e l'avanzata dei modelli <b>embedded insurance</b>  rendono <b2>obsoleti i profili distributivi tradizionali</b2> e creano domanda di <b3>figure ibride</b3> capaci di navigare simultaneamente il canale digitale e la relazione consulenziale con il cliente. McKinsey ha identificato nel ridisegno dei modelli distributivi assicurativi una delle priorità strategiche più urgenti del settore per il 2024–2026. Un agente che ha costruito la propria identità professionale sul modello tradizionale si trova in un percorso di <b4>ridefinizione della propria aspirazione</b4>, e le organizzazioni che non intercettano questa ridefinizione la scopriranno solo attraverso le dimissioni.",
+        "text8": "I profili di middle management ad <b>alto potenziale</b> nel settore assicurativo hanno oggi un'offerta crescente di alternative: le insurtech offrono traiettorie di crescita più rapide, le piattaforme digitali esposizione internazionale, le società di consulenza varietà progettuale. Le grandi compagnie competitive su salary e benefit si trovano a <b2>perdere profili non per ragioni economiche, ma per ragioni aspirazionali</b2>: la percezione che la traiettoria di crescita disponibile altrove sia più ambiziosa.",
+        "text9": "Un responsabile di agenzia, un talent developer di area, un key account manager assicurativo accumula <b>know-how relazionale, regolatorio e di portafoglio</b> che non si costruisce in pochi mesi. Quando questa figura lascia, la perdita non è solo di un ruolo: è di un <b2>asset di conoscenza</b2> che richiede anni per essere ricostruito. Il <b3>costo reale di sostituzione</b3>, stimato da Deloitte tra <b4>1,5x e 2x la retribuzione annua lorda</b4> per ruoli manageriali, è sistematicamente sottostimato perché i costi indiretti rimangono fuori dai modelli contabili standard.",
+        "text10": "\"Le organizzazioni che misurano le aspirazioni in modo strutturato e le integrano nelle decisioni di talent management, riportano tassi di retention del management superiori fino al 20–25% rispetto alla media di settore.\"",
+        "text11": "L'aspirazione di carriera è un <b>costrutto psicologico</b> che rappresenta il grado in cui una persona <b2>immagina e pianifica</b2> attivamente il proprio <b3>successo professionale</b3> a lungo termine. Misurare le aspirazioni non equivale a chiedere \"dove ti vedi tra cinque anni\". Questa domanda produce risposte che riflettono le aspettative percepite dell'interlocutore più che le aspirazioni reali. Il suo valore predittivo è basso per definizione.",
+        "text12": "Un <b>approccio strutturato</b> per misurare le aspirazioni opera su cinque <b2>dimensioni distinte</b2>, ciascuna con una diversa capacità predittiva rispetto ai comportamenti organizzativi futuri:",
+        "body11": "I 5 indicatori della Career Aspiration Inventory",
+        "text13": "Il corpus di ricerca sul legame tra aspirazioni e retention è cresciuto significativamente nell'ultimo decennio. La <i>Self-Determination Theory</i> (SDT) di Deci e Ryan identifica tre bisogni fondamentali la cui soddisfazione predice comportamenti di engagement e retention: <b>autonomia</b> (il senso che le proprie azioni riflettono valori e aspirazioni autentici), <b2>competenza</b2> (la percezione di crescita efficace) e <b3>relazionalità</b3> (il senso di connessione significativa con il contesto). Di questi tre bisogni, l' <b4>aspirazione di carriera è il predittore più diretto</b4> della soddisfazione del bisogno di autonomia, il più fortemente correlato alla retention volontaria nei meta-studi disponibili.",
+        "text14": "Il calo di engagement è spesso interpretato come causa di turnover. In realtà è frequentemente <b>effetto di un disallineamento aspirazionale già in corso</b>: la persona ha perso la convinzione che l'organizzazione possa soddisfare le proprie aspirazioni, e l'engagement si riduce di conseguenza. Intervenire sull'engagement senza affrontare il disallineamento sottostante equivale a trattare un sintomo senza diagnosticare la patologia.",
+        "text15": "Il <b>legame tra aspirazioni di carriera e performance individuale</b> è meno intuitivo della relazione con la retention, ma altrettanto documentato. La <i>Self-Determination Theory</i> mostra che la motivazione intrinseca è il predittore più robusto di <b2>performance duratura, apprendimento accelerato</b2> e comportamento proattivo nelle organizzazioni.",
+        "text16": "Nel contesto assicurativo, questo si traduce in una considerazione pratica: due manager con lo stesso profilo di competenze e lo stesso livello di performance storica possono avere traiettorie future molto diverse, a seconda che il ruolo in cui si trovano sia allineato o meno con le loro aspirazioni. <b>Confondere la performance passata con il potenziale futuro è uno degli errori più diffusi nei sistemi di talent management</b>, e la misurazione strutturata delle aspirazioni è uno degli strumenti più efficaci per ridurlo.",
+        "text17": "\"Quando un manager decide di andarsene, raramente si tratta di un evento improvviso. Il problema non è la mancanza di segnali, ma la natura degli stessi: spesso ci si limita a monitorare le performance attuali, ignorando che le sue aspirazioni si sono già spostate altrove da tempo.\"",
+        "text18": "Integrare la Career Aspiration Intelligence nei processi HR assicurativi <b>non richiede di sostituire i sistemi esistenti</b>. Richiede di <b2>aggiungere una dimensione</b2> che attualmente manca e di comprendere come questa dimensione modifica la <b3>qualità delle decisioni</b3> in tre aree critiche:",
+        "text19": "Il processo di talent review tradizionale si articola su due assi: la <b>performance</b> storica e il <b2>potenziale</b2> stimato dal management. In questa configurazione, tuttavia, il potenziale rimane spesso una <b3>valutazione soggettiva, basata su osservazioni comportamentali non strutturate e soggetta a inevitabili bias cognitivi</b3>.",
+        "body12": "Integrare le aspirazioni individuali nella talent review trasforma la valutazione da statica a predittiva attraverso tre vantaggi concreti:",
+        "text20": "I programmi di sviluppo manageriale che <b>ignorano le aspirazioni</b> dei partecipanti producono un effetto paradossale: aumentano le competenze senza aumentare la propensione a restare. Mappare le aspirazioni prima di definire i contenuti dei programmi consente una <b2>personalizzazione</b2> che va oltre la segmentazione per ruolo o seniority. Due partecipanti con lo stesso ruolo e la stessa performance possono avere aspirazioni radicalmente diverse e beneficiare di percorsi di sviluppo radicalmente diversi. Questa personalizzazione ha <b3>effetti misurabili sull'engagement</b3> con i programmi e sulla retention dei partecipanti nell'anno successivo.",
+        "text21": "La conversazione di sviluppo è il momento in cui l'organizzazione e il dipendente <b>negoziano implicitamente il futuro</b>. Nella maggior parte dei casi, questa conversazione avviene in <b2>assenza di dati strutturati</b2> sulle aspirazioni. Disporre di una mappatura aspirazionale strutturata cambia la natura di questa conversazione: da review del passato a confronto esplicito tra traiettoria desiderata e opportunità disponibili. Questo livello di <b3>trasparenza</b3> ha un doppio effetto: riduce il rischio di uscite «di sorpresa» e aumenta la percezione di essere visti dall'organizzazione.",
+        "body13": "Dal dato aspirazionale all'intervento HR: il ciclo operativo",
+        "body14": "Un rischio che questo approccio introduce va esplicitato: mappare le aspirazioni crea aspettative. Se un'organizzazione rileva che un manager aspira a un percorso specifico e poi non riesce a offrirlo, l'effetto può essere peggiore del silenzio. La <b>Career Aspiration Intelligence deve essere accompagnata da un sistema di risposta organizzativa</b>, non basta raccogliere dati se non si è pronti ad agire su di essi. Questo richiede <b2>allineamento</b2> tra HR, business line e senior management sulle opportunità realmente disponibili.",
+        "text22": "Prima ancora di scegliere gli strumenti, le organizzazioni assicurative sono chiamate a rispondere a quesiti strategici che definiscono il perimetro del problema. Questo framework nasce come punto di partenza per una riflessione interna profonda.",
+        "heading2": "Next step",
+        "text23": "Se la vostra organizzazione sta ripensando i processi di talent management, o se volete esplorare come <b>mappare le aspirazioni di carriera del vostro middle management</b> rispetto alle traiettorie di sviluppo effettivamente disponibili, Skillvue può supportarvi con un verification scalabile e pienamente conforme all'EU AI Act, progettato sulle specificità del vostro contesto assicurativo.",
+        "body15": "Contattaci per una conversazione esplorativa: <a> skillvue.ai/contact-us </a>",
+        "heading3": "About Skillvue",
+        "text24": "Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di <b>talent intelligence</b> basata sull'AI che aggiunge una dimensione dinamica e oggettiva ai dati HR: trasformiamo informazioni statiche in <b2>insight predittivi</b2> che permettono di prendere decisioni migliori nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.",
+        "text25": "Assistiamo aziende di medie e grandi dimensioni in tutta Europa, realtà dove le decisioni sui talenti hanno un impatto strategico elevato e costi molto significativi. A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue <b>combina la solidità della scienza psicometrica con la potenza dei moderni LLM</b> per creare un <b2>copilota AI scientificamente fondato</b2>, in grado di fornire valutazioni personalizzate e scalabili, allineate al modello di leadership e al quadro di competenze specifico di ciascuna azienda.",
+        "heading4": "Fonti e riferimenti",
+        "text26": "Insurance · 2026",
+        "text27": "Skillvue",
+        "text28": "<a>Privacy Policy</a>",
+        "text29": "<a>skillvue.ai</a>",
+        "heading5": "Executive Summary",
+        "label": "Del turnover è prevenibile con azioni mirate",
+        "label2": "Retention come priorità critica per i CHRO",
+        "label3": "Turnover annuo rete agenziale",
+        "label4": "Costo di sostituzione vs. retribuzione annua",
+        "heading6": "Perché il settore assicurativo è un caso a sé",
+        "heading7": "1. La trasformazione del profilo professionale",
+        "heading8": "2. La competizione per il talento manageriale",
+        "heading9": "3. I cicli lunghi di formazione del capitale umano",
+        "heading10": "Cosa significa davvero misurare le aspirazioni",
+        "heading11": "Predire chi rimane: la ricerca dietro il dato",
+        "label5": "del turnover è prevenibile secondo i dipendenti stessi · Work Institute, 2024",
+        "label6": "causa di abbandono: sviluppo carriera (17,4%), davanti a stipendio · Work Institute, 2024",
+        "label7": "rimarrebbe più a lungo in un'org. che investe nella propria crescita · LinkedIn, 2024",
+        "heading12": "Predire chi eccelle: aspiration-performance alignment",
+        "heading13": "Implicazioni operative: dove cambia il lavoro HR",
+        "heading14": "1. Talent review e succession planning",
+        "heading15": "2. Leadership development e programmi di formazione",
+        "heading16": "3. Conversazioni di sviluppo: qualità vs frequenza",
+        "heading17": "Implicazione per il Head of Leadership Development",
+        "heading18": "3 domande per il tuo comitato di direzione",
+        "label8": "Risparmio annuo potenziale",
+        "label9": "Miglioramento retention stimato",
+        "label10": "Accuratezza succession planning",
+        "label11": "Riduzione del turnover nelle organizzazioni con alto engagement"
+      },
+      "text": "Skillvue",
+      "text2": "Scarica il Report",
+      "text3": "<s> Insurance · 2026 </s>",
+      "text4": "Career Aspiration Intelligence <s> nel settore assicurativo </s>",
+      "text5": "Perché misurare le aspirazioni aiuta a prevedere chi rimane e chi eccelle",
+      "text6": "<s>A cura di <b>Skillvue</b></s><s2></s2><s3>~6 min read</s3>",
+      "text7": "Scarica il Report Completo",
+      "heading": "Cosa troverai nel report",
+      "body": "Un'analisi completa su come il settore assicurativo può trasformare la retention del management misurando la variabile più predittiva: le aspirazioni di carriera.",
+      "heading2": "Scarica il report completo",
+      "heading3": "Compila per scaricare il PDF",
+      "body2": "Gratuito · Accesso immediato",
+      "text8": "<a>Privacy Policy</a>",
+      "text9": "<a>skillvue.ai</a>"
     },
     "hidden-cost-recruiting": {
       "meta": {
         "title": "Hidden Cost of Non-Predictive Recruiting | Skillvue",
         "description": "An operational guide for CHROs and distribution leaders who must decide, today, how to select the people who will build tomorrow’s agency network."
-      }
+      },
+      "text": "Skillvue",
+      "text2": "Download Free",
+      "text3": "<s> WP-I1 · INSURANCE · 2026 </s>",
+      "text4": "Hidden Cost of <s>Non-Predictive</s><br></br>Recruiting",
+      "text5": "How to identify and measure the behavioural profile of the high-performance hybrid insurance agent",
+      "text6": "<s>By <b>Skillvue</b></s><s2></s2><s3>~7 min read</s3><s4></s4><s5>CHRO · Chief Distribution Officer · Head of Agency Network</s5>",
+      "text7": "Download the Free Whitepaper",
+      "body": "The Problem in Numbers",
+      "body2": "In an agency network of <b>2,000 agents</b> with an annual turnover of <b2>20% to 25%</b2>, the estimated cost of non-predictive selection ranges between <b3>€15 and €25 million per year</b3>. This figure includes recruiting and training expenses, lost production in the first 12 months, and the negative impact on <b4>portfolio retention</b4> — all without yet considering the reputational damage caused by an inadequate advisor in direct contact with the client.",
+      "body3": "Inside the Whitepaper",
+      "heading": "What you'll discover",
+      "body4": "Research-Backed Framework",
+      "heading2": "4 key behavioural <s>dimensions</s>",
+      "text8": "Relevance for hybrid agent",
+      "body5": "Economics in Brief",
+      "body6": "<i>The question isn't whether AI can change how we hire — it's who can leverage it to make better decisions.</i>",
+      "body7": "Free Download",
+      "heading3": "Get your free copy of the <s> whitepaper </s>",
+      "body8": "An operational guide for CHROs and distribution leaders who must decide, today, how to select the people who will build tomorrow's agency network.",
+      "heading4": "Download the Whitepaper",
+      "body9": "Free · No credit card required · Instant access",
+      "text9": "Loading form…",
+      "body10": "About Skillvue",
+      "heading5": "AI-powered talent intelligence, <s>science-backed</s>",
+      "body11": "Skillvue is a talent intelligence platform that blends psychometrics with modern LLMs to deliver customized, scalable behavioural verifications — aligned to each company's specific leadership model and skills framework.",
+      "body12": "We serve mid-to-large enterprises across Europe where talent decisions are high-stakes. Our platform works across the full talent lifecycle — from candidate screening to organizational transformation readiness — fully compliant with the EU AI Act.",
+      "body13": "\"The gap between latent traits and observed behaviour in high-variability contexts is the systematic blind spot of traditional selection methods.\"",
+      "text10": "WP-I1 · Insurance · 2026",
+      "text11": "<a>Privacy Policy</a>",
+      "text12": "<a>skillvue.ai</a>",
+      "copyright": "© {year} Skillvue. All rights reserved."
     },
     "il-costo-invisibile": {
       "meta": {
@@ -4916,26 +5515,419 @@
         "meta": {
           "title": "Il costo invisibile della selezione non predittiva — Whitepaper | Skillvue",
           "description": "Come identificare e misurare il profilo comportamentale dell’agente assicurativo ibrido ad alta performance. Whitepaper Skillvue."
-        }
-      }
+        },
+        "text": "Skillvue",
+        "text2": "INSURANCE · 2026",
+        "heading": "Il costo invisibile <s> della selezione non predittiva </s>",
+        "body": "Come identificare e misurare il profilo comportamentale dell'agente assicurativo ibrido ad alta performance",
+        "body2": "<i>Settore:</i> Insurance",
+        "body3": "<i>Lettura:</i> circa 7 minuti",
+        "body4": "A cura di <s> Skillvue </s>",
+        "body5": "In una rete agenziale di <b>2.000 agenti</b> con un <b2>turnover annuo del 20% o 25%</b2>, il costo stimato della <b3>selezione non predittiva</b3> si colloca tra i <b4>15 e i 25 milioni di euro l'anno</b4>. Questa cifra comprende le spese di recruiting e formazione, la <b5>mancata produzione</b5> nei primi 12 mesi e l'impatto negativo sulla <b6>retention del portafoglio</b6>: il tutto senza ancora considerare il <b7>danno reputazionale</b7> causato da un consulente inadeguato nel rapporto diretto con il cliente.",
+        "body6": "Dettaglio costo della selezione non predittiva",
+        "body7": "Distribuzione % per voce di costo",
+        "text3": "Questo documento non è una rassegna accademica sul futuro dell'agente assicurativo. È una <b>guida operativa</b> dedicata a chi deve decidere <b2>come selezionare, oggi, le persone che costruiranno la rete di domani</b2>. Il documento analizza il <b3>profilo comportamentale</b3> dell'agente ibrido ad alta performance, spiega le ragioni per cui i metodi tradizionali non riescono a identificarlo e mostra come la <b4>valutazione comportamentale strutturata</b4> stia già producendo <b5>risultati misurabili</b5> nelle principali reti agenziali europee.",
+        "text4": "Il settore assicurativo europeo ha affrontato nell'ultimo quinquennio una <b>transizione strutturale</b> del proprio modello distributivo. Secondo i dati <b2>EIOPA 2023</b2>, la penetrazione digitale ha superato <b3>il 30% dei nuovi contratti retail</b3> in diversi mercati dell'Europa occidentale: tuttavia, il digitale non ha sostituito l'agente, lo ha radicalmente ridefinito.",
+        "text5": "L’<b>agente ibrido</b> è il profilo emergente che i grandi gruppi assicurativi europei stanno cercando di costruire. Non è un venditore con un tablet, ma un <b2>consulente evoluto</b2> che combina una <b3>competenza relazionale profonda</b3> con l'abilità di operare fluidamente in <b4>ecosistemi omnicanale</b4>. Deloitte, nel suo <i>Insurance Industry Outlook 2024</i>, lo descrive come \"<b5>trusted advisor</b5>\": una figura che presidia la relazione nel lungo periodo, interpreta bisogni latenti e mantiene la fiducia del cliente anche nei momenti di sinistro o di cambiamento di vita.",
+        "text6": "Parallelamente, la <b>normativa IDD</b> (<i>Insurance Distribution Directive</i>) ha innalzato l'asticella, introducendo rigorosi requisiti di <b2>trasparenza</b2>, gestione dei conflitti di interesse e <b3>formazione continua</b3>. Questi obblighi non interpellano solo le competenze tecniche dell'agente, ma la sua <b4>struttura comportamentale profonda</b4>.",
+        "text7": "Il risultato è evidente: i classici strumenti di selezione faticano a identificare questo profilo. I tratti distintivi di un agente ibrido ad alta performance non emergono da un curriculum vitae, né possono essere intercettati attraverso un semplice colloquio non strutturato.",
+        "body8": "Validità predittiva a confronto",
+        "body9": "Correlazione con la performance lavorativa futura",
+        "text8": "<s>Colloquio non strutturato</s><s2>0.38</s2>",
+        "text9": "<s>0.38</s>",
+        "text10": "<s>Valutazione comportamentale strutturata</s><s2>0.54</s2>",
+        "text11": "<s>0.54</s>",
+        "body10": "Fonte: Schmidt & Hunter (1998, aggiornata nel 2016).",
+        "text12": "La ricerca e i <b>benchmark di settore</b> convergono su quattro dimensioni comportamentali che predicono con precisione l'efficacia del <b2>consulente assicurativo</b2> nel nuovo modello distributivo:",
+        "text13": "Non si tratta di un tratto della personalità astratto, ma di <b>pattern comportamentali osservabili</b>: la capacità di analizzare le interazioni dopo un rifiuto, la ricerca attiva di feedback e la tendenza a non generalizzare i singoli insuccessi. Gli agenti resilienti <b2>recuperano più in fretta i cali di produttività</b2> e garantiscono la stabilità del portafoglio anche nelle fasi di mercato più sfavorevoli.",
+        "text14": "I profili orientati alla consulenza costruiscono relazioni con un <b>life-time value nettamente superiore</b>. Il problema: questa distinzione non è rilevabile nei colloqui tradizionali. La discrepanza tra le <b2>risposte dichiarate</b2> e il <b3>comportamento reale</b3> sotto pressione è un dato statisticamente documentato che solo una valutazione strutturata può far emergere.",
+        "text15": "La capacità di muoversi con coerenza tra interazione fisica, digitale e telefonica è oggi una <b>competenza chiave</b>. I top performer si distinguono per una minore resistenza al cambiamento del workflow e per un approccio comunicativo capace di adattarsi naturalmente al canale scelto dal cliente.",
+        "text16": "Gli agenti ad alta performance intercettano le <b>preoccupazioni non dichiarate</b>, leggendo le tensioni tra esigenze di protezione e vincoli di budget. Accenture (2024) ha identificato questa capacità come il <b2>differenziale più significativo</b2> tra i consulenti di fascia media e i veri top performer.",
+        "body11": "Le 4 dimensioni comportamentali chiave",
+        "body12": "Rilevanza per la performance dell'agente ibrido",
+        "text17": "Oggi, la maggior parte dei processi di selezione nelle reti agenziali si affida ancora a un mix di colloqui non strutturati, analisi delle esperienze pregresse e, talvolta, test di personalità standardizzati. Tuttavia, questi strumenti mostrano <b>tre limiti critici</b>:",
+        "text18": "Limite",
+        "text19": "Causa",
+        "text20": "Impatto sulla selezione",
+        "text21": "Secondo la meta-analisi di <i>Schmidt & Hunter (1998, aggiornata nel 2016)</i>, il colloquio non strutturato ha <b>una correlazione di appena 0,38</b> con la performance lavorativa futura. Questo valore crolla ulteriormente nei ruoli che richiedono <b2>competenze relazionali complesse</b2>.",
+        "text22": "I test di personalità tradizionali fotografano un tratto latente, ma <b>non dicono nulla sul comportamento situazionale</b>. La personalità è il potenziale, ma il comportamento è ciò che produce risultati in agenzia.",
+        "text23": "Le reti agenziali dei grandi gruppi europei gestiscono migliaia di inserimenti ogni anno. Senza gli strumenti adeguati, assicurare <b>standard di qualità uniformi su larga scala</b> rimane un'aspirazione teorica.",
+        "text24": "Le metodologie di <b>behavioral verification</b> hanno raggiunto oggi una maturità tale da poter essere applicate su larga scala. Il cuore di questo approccio risiede nel passaggio fondamentale dalla valutazione dichiarativa (\"cosa farebbe?\") alla <b2>valutazione osservazionale</b2> (\"come agisce effettivamente?\").",
+        "text25": "Il candidato affronta situazioni lavorative reali basate su metodologie come la <b>Behavioral Event Interview</b> e il <b2>Situational Judgment Test</b2>. Studi condotti in contesti di vendita complessa mostrano una <b3>validità predittiva superiore a 0,54</b3>, un valore significativamente più alto rispetto al colloquio tradizionale.",
+        "body13": "<b>Scenario:</b> Un cliente over-65, con un portafoglio concentrato su una polizza vita rivalutabile, chiede di riallocare verso un prodotto unit-linked dopo aver letto un articolo online sulle performance dei mercati. Il contesto è caratterizzato da forte volatilità.",
+        "body14": "Cosa misura lo strumento:",
+        "text26": "\"La distanza tra tratto latente e comportamento osservato in contesti ad alta variabilità è il punto cieco sistematico dei metodi di selezione tradizionali. Riempire questo vuoto con dati strutturati e comparabili è la sfida metodologica centrale per le direzioni HR nel settore assicurativo.\"",
+        "text27": "L'integrazione di tecnologie per l'elaborazione del linguaggio naturale ha potenziato enormemente questa metodologia. L’<b>AI non sostituisce il giudizio umano</b>. Lo affianca fornendo <b2>dati oggettivi e misurabili</b2> che arricchiscono la comprensione del profilo comportamentale.",
+        "text28": "L’<b>EU AI Act</b> (Regolamento UE 2024/1689) classifica i sistemi di valutazione basati su intelligenza artificiale come sistemi ad alto rischio, imponendo requisiti rigorosi di <b2>trasparenza algoritmica, supervisione umana e spiegabilità delle decisioni</b2>. Per le organizzazioni che adottano strumenti già allineati, questo quadro normativo diventa un <b3>vantaggio competitivo</b3>.",
+        "text29": "\"I sistemi di AI sono sviluppati e utilizzati in modo da consentire un'adeguata tracciabilità e spiegabilità delle decisioni; devono garantire diversità, non discriminazione ed equità, evitando effetti discriminatori e pregiudizi ingiusti; e devono essere progettati in modo da poter essere efficacemente supervisionati da persone fisiche durante il periodo in cui sono in uso.\"",
+        "text30": "L'adozione della <b>valutazione comportamentale strutturata</b> nelle reti agenziali produce effetti misurabili su tre dimensioni:",
+        "text31": "L'aumento della validità predittiva dallo 0,38 a oltre lo <b>0,54</b> si traduce in una drastica <b2>riduzione dei mis-hire</b2> nei primi 12 mesi: meno agenti che abbandonano la rete prima di raggiungere il break-even di produttività, meno portafogli clienti orfani e meno costi di re-recruiting.",
+        "text32": "Selezionare profili allineati al modello ibrido accelera il <b>time-to-productivity</b> e migliora le metriche di <b2>cross-selling e retention</b2>. Il differenziale tra i migliori e i peggiori performer in termini di <b3>life-time value del portafoglio</b3> è tipicamente di <b4>3 o 5 volte superiore</b4>.",
+        "text33": "Gli strumenti basati sull'AI e supportati dall'analisi del linguaggio naturale sono progettati per operare con <b>coerenza su scala geografica e linguistica</b>, rispettando le specificità culturali locali.",
+        "item": "<b>Costo medio di un inserimento non efficace:</b> <s>€35.000–50.000</s>",
+        "item2": "<b>Turnover del primo anno nelle reti agenziali europee:</b> <s>20–30%</s>",
+        "item3": "<b>Potenziale di riduzione del mis-hire rate:</b> <s>25–40%</s>",
+        "body15": "<b>Implicazione:</b> Per una rete di 2.000 agenti, l'impatto economico annuo stimato è di diversi milioni di euro.",
+        "text34": "Prima ancora di scegliere gli strumenti, le organizzazioni assicurative sono chiamate a rispondere a quesiti strategici che definiscono il perimetro del problema.",
+        "heading2": "Next step",
+        "text35": "Se la tua organizzazione sta ripensando il modello di selezione della rete agenziale, o se desidera mappare il profilo comportamentale degli agenti rispetto al modello ibrido, Skillvue può supportarti con <b>verification comportamentali predittivi</b>, scalabili e pienamente conformi all'EU AI Act, personalizzati sulle specificità del tuo contesto assicurativo.",
+        "body16": "Contattaci per una conversazione esplorativa: <a> skillvue.ai/contact-us </a>",
+        "text36": "\"La domanda non è se la scienza supportata dall'AI cambierà il modo in cui selezioniamo le persone. La domanda è chi sarà in grado di usarla per prendere decisioni migliori di quelle che prenderebbe senza di essa.\"",
+        "heading3": "About Skillvue",
+        "text37": "Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di <b>talent intelligence</b> basata sull'AI che aggiunge una dimensione dinamica e oggettiva ai dati HR: trasformiamo informazioni statiche in <b2>insight predittivi</b2> che permettono di prendere decisioni migliori nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.",
+        "text38": "A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue <b>combina la solidità della scienza psicometrica con la potenza dei moderni LLM</b> per creare un <b2>copilota AI scientificamente fondato</b2>, allineato al modello di leadership e al quadro di competenze specifico di ciascuna azienda.",
+        "heading4": "Fonti e riferimenti",
+        "text39": "Insurance · 2026",
+        "text40": "Skillvue",
+        "text41": "<a>Privacy Policy</a>",
+        "text42": "<a>skillvue.ai</a>",
+        "heading5": "Il problema in numeri",
+        "label": "Costo selezione non predittiva / anno",
+        "label2": "Agenti nella rete di riferimento",
+        "label3": "Turnover annuo rete agenziale",
+        "label4": "Validità predittiva verification",
+        "heading6": "Agente Ibrido: il nuovo profilo emergente",
+        "heading7": "Tratti distintivi di un agente ibrido ad alta performance",
+        "heading8": "Resilienza sotto pressione commerciale",
+        "heading9": "Orientamento alla consulenza vs. vendita transazionale",
+        "heading10": "Adattabilità omnicanale",
+        "heading11": "Ascolto attivo e lettura dei segnali impliciti",
+        "heading12": "Perché il processo di selezione attuale non è più efficace",
+        "heading13": "1. Bassa validità predittiva",
+        "heading14": "2. La distinzione tra tratto e comportamento",
+        "heading15": "3. Non scalabilità",
+        "heading16": "La misurazione del talento mediante una valutazione comportamentale strutturata",
+        "heading17": "Esempio: uno scenario di valutazione per l'agente ibrido",
+        "heading18": "Il quadro normativo come acceleratore",
+        "heading19": "Dall'verification all'impatto: risultati attesi",
+        "heading20": "1. Qualità della selezione",
+        "heading21": "2. Produttività della rete",
+        "heading22": "3. Scalabilità e coerenza cross-market",
+        "heading23": "Gli economics in sintesi",
+        "heading24": "3 domande per il tuo comitato di direzione",
+        "label5": "Costo per un inserimento fallito",
+        "label6": "Riduzione mis-hire rate",
+        "label7": "Turnover primo anno",
+        "label8": "Differenziale top vs. low performer"
+      },
+      "text": "Skillvue",
+      "text2": "Scarica il Report",
+      "text3": "<s> Insurance · 2026 </s>",
+      "text4": "Il costo invisibile <s> della selezione non predittiva </s>",
+      "text5": "Come identificare e misurare il profilo comportamentale dell'agente assicurativo ibrido ad alta performance",
+      "text6": "<s>A cura di <b>Skillvue</b></s><s2></s2><s3>~7 min read</s3>",
+      "text7": "Scarica il Report Completo",
+      "heading": "Cosa troverai nel report",
+      "body": "Una guida operativa per chi deve decidere come selezionare, oggi, le persone che costruiranno la rete agenziale di domani.",
+      "heading2": "Scarica il report completo",
+      "heading3": "Compila per scaricare il PDF",
+      "body2": "Gratuito · Accesso immediato",
+      "text8": "<a>Privacy Policy</a>",
+      "text9": "<a>skillvue.ai</a>"
     },
     "il-turnover-nei-negozi-del-lusso": {
       "meta": {
         "title": "Il turnover nei negozi del lusso: il costo nascosto | Skillvue",
         "description": "La selezione non efficace nei flagship store e il suo impatto sul business. Analisi della struttura economica del turnover e degli strumenti predittivi per ridurlo. Whitepaper gratuito di Skillvue."
-      }
+      },
+      "text": "Skillvue",
+      "text2": "Scarica il Report",
+      "text3": "<s> Retail Lusso · 2026 </s>",
+      "text4": "Il turnover nei negozi del lusso: <s> il costo nascosto </s>",
+      "text5": "La selezione non efficace nei flagship store e il suo impatto sul business",
+      "text6": "<s>A cura di <b>Skillvue</b></s><s2></s2><s3>~8 min read</s3>",
+      "text7": "Scarica il Report Completo",
+      "heading": "Cosa troverai nel report",
+      "body": "Un'analisi operativa della struttura economica del turnover nei flagship store e degli strumenti predittivi per ridurre l'errore di hiring nella sua fase più critica.",
+      "heading2": "Scarica il report completo",
+      "heading3": "Compila per scaricare il PDF",
+      "body2": "Gratuito · Accesso immediato",
+      "body3": "Il whitepaper si è aperto in una nuova scheda.",
+      "body4": "Controlla il tuo browser se non lo vedi subito.",
+      "text8": "Apri di nuovo",
+      "body5": "Richiesta email aziendale (non personale)",
+      "text9": "<a>Privacy Policy</a>",
+      "text10": "<a>skillvue.ai</a>",
+      "text11": "Skillvue",
+      "text12": "RETAIL LUSSO · 2026",
+      "heading4": "Il turnover nei negozi del lusso: <s> il costo nascosto </s>",
+      "body6": "La selezione non efficace nei flagship store e il suo impatto sul business",
+      "body7": "<i>Settore:</i> Retail Lusso · <i2>Destinatari:</i2> CHRO, Head of Retail Operations, CFO",
+      "body8": "<i>Lettura:</i> circa 8 minuti",
+      "body9": "A cura di <s>Skillvue</s>",
+      "body10": "Nel retail del lusso, un flagship store non è un punto vendita. È una <b>dichiarazione di identità</b>. Nei principali flagship europei, tra il <b2>30% e il 40%</b2> del personale di front line <b3>lascia l'organizzazione entro 12 mesi</b3> dall'assunzione.",
+      "body11": "Il costo diretto è almeno <b>1,5 volte lo stipendio annuo per ogni sostituzione</b>. Ma il costo reale è altrove: nelle relazioni personali con una clientela il cui <b2>lifetime value può superare le centinaia di migliaia di euro</b2>. In un settore dove meno dell'1% dei clienti genera oltre il 20% del fatturato, ogni uscita è una discontinuità che il business non può permettersi di non quantificare.",
+      "text13": "Il mercato globale dei beni di lusso personali ha raggiunto i <b>358 miliardi di euro nel 2025</b>, secondo il Bain Luxury Study, con il <b2>canale fisico che continua a rappresentare circa l'80% delle transazioni</b2>. Le maison stanno concentrando gli investimenti su un numero minore di flagship di dimensioni maggiori: la superficie media dei monobrand store è cresciuta del 30% negli ultimi anni.",
+      "text14": "Un flagship non è un negozio. È <b>l'espressione fisica del posizionamento del brand</b>, il luogo dove si concretizzano le relazioni con la clientela più strategica. Il client advisor, in questo modello, non è un addetto alla vendita. È il <b2>depositario di un patrimonio relazionale</b2> che rappresenta una quota crescente del valore di ogni singolo punto vendita.",
+      "text15": "La tensione di fondo è evidente: mentre il settore investe risorse senza precedenti nella creazione di esperienze fisiche d'eccellenza, <b>il processo con cui seleziona le persone che dovranno incarnare quella stessa eccellenza rimane il meno strutturato dell'intera catena del valore</b>. Le maison controllano il design degli interni con una precisione millimetrica, ma affidano la scelta di chi abiterà quegli spazi <b2>a colloqui non strutturati e alla percezione soggettiva di un Retail Manager</b2>.",
+      "text16": "\"Selezionare per esperienza settoriale misura la conformità ai codici appresi. Non la predisposizione comportamentale che li rende autentici\".",
+      "text17": "Esiste poi un <b>bias cognitivo</b> raramente esplicitato: la tendenza a utilizzare il background pregresso in una maison come unico proxy dell'allineamento comportamentale al brand. Un candidato proveniente da una boutique concorrente può replicare certi comportamenti in superficie, <b2>senza necessariamente possedere i tratti che rendono quella postura autentica e duratura</b2>. I clienti di fascia alta percepiscono la differenza tra un protocollo recitato e una reale attitudine relazionale.",
+      "body12": "La concentrazione del valore nei flagship store",
+      "body13": "La relazione advisor-cliente nel lusso è un asset strategico con un valore economico concentrato",
+      "body14": "Fonti: Bain & Company / Altagamma, 2024–2025; CXG, \"The Advisor Effect\", 2024.",
+      "text18": "Le stime più citate nella letteratura HR collocano il costo di sostituzione di un dipendente tra il <b>50% e il 200% dello stipendio annuo</b>, a seconda della seniority. Nel <b2>luxury retail il moltiplicatore è strutturalmente più elevato</b2>, per ragioni che non hanno a che fare con il livello retributivo in sé, ma con la natura del ruolo.",
+      "text19": "Un client advisor in un flagship non può essere considerato intercambiabile. La sua formazione richiede mesi, non settimane. I programmi di onboarding dei principali gruppi del lusso prevedono <b>dalle 8 alle 10 settimane di formazione iniziale</b>, seguiti da periodi di mentorship di 6 mesi o più. La conoscenza del prodotto, della storia del brand, dei codici relazionali, delle dinamiche di clienteling <b2>non si acquisisce con un manuale</b2>.",
+      "body15": "Impatto sui costi dell'abbandono di un client advisor in flagship",
+      "body16": "Il costo complessivo supera tipicamente 1,5 volte lo stipendio annuo lordo",
+      "body17": "Fonte: SHRM; Gallup, 2019; Work Institute, 2024. Il moltiplicatore sale fino a 2x per profili senior con portafoglio clienti consolidato.",
+      "text20": "La voce più sottovalutata riguarda la <b>produttività</b>. Un nuovo assunto nel retail impiega mediamente <b2>28 settimane per raggiungere la piena produttività</b2>. Nel lusso, questo ciclo si allunga ulteriormente: un advisor appena inserito può padroneggiare il prodotto in tre mesi, ma non avrà un <b3>portafoglio clienti consolidato prima di due anni</b3>.",
+      "text21": "\"Il costo reale del turnover nel lusso non è la sostituzione. È la discontinuità relazionale con una clientela che non perdona le interruzioni\".",
+      "text22": "La maggior parte delle strategie di retention nel luxury retail si concentra a valle del problema: programmi di engagement, percorsi di carriera, incentivi economici. Interventi necessari, ma che agiscono su un bacino già contaminato da <b>errori di selezione che avrebbero potuto essere evitati</b> con sistemi di valutazione strutturati.",
+      "text23": "La meta-analisi di Schmidt e Hunter quantifica la capacità predittiva di ciascun metodo. Il <b>colloquio non strutturato</b> — ancora lo strumento dominante nella selezione del lusso — ha una <b2>validità di 0,38 su una scala da 0 a 1</b2>. Il colloquio strutturato migliora a 0,51. Ma è la combinazione di <b3>verification comportamentali e colloquio strutturato</b3> a raggiungere valori compositi che <b4>superano 0,58</b4>.",
+      "body18": "Validità predittiva",
+      "body19": "Scala 0–1",
+      "body20": "Fonte: Schmidt & Hunter, 1998; Campion et al., 1997",
+      "text24": "I dati sul campo confermano la teoria. Le aziende che utilizzano verification comportamentale strutturato pre-assunzione registrano un <b>turnover inferiore del 39%</b> rispetto a quelle che non li adottano. Hogan Verifications documenta riduzioni del turnover nel retail <b2>fino al 61%</b2> con l'introduzione di verification strutturati. Il colloquio, anche ben condotto, è vulnerabile al <b3>faking behavior</b3>: nel lusso, dove i candidati conoscono perfettamente i codici del settore, questo rischio è massimo.",
+      "body21": "Un <b>gruppo del lusso europeo</b> con oltre <b2>8.000 dipendenti</b2> e circa <b3>280 negozi diretti</b3> ha ridotto il turnover volontario dal <b4>13,4% al 10,1% in due anni</b4>, portandolo a meno di un terzo della media di settore (30–35%). Il programma interno di brand academy — che combina formazione sul prodotto, coaching sul clienteling e mentorship con advisor senior — ha prodotto un <b5>tasso di uscita inferiore di 8 punti percentuali</b5> tra chi vi ha partecipato. L'investimento in formazione è cresciuto del <b6>48% in un solo anno</b6>, con oltre 35 ore medie erogate per persona.",
+      "text25": "Il turnover nei flagship store non è solo un costo di sostituzione. È un <b>moltiplicatore di rischi</b> che agiscono su dimensioni diverse e che, combinati, possono erodere il vantaggio competitivo di una maison in modo silenzioso ma sistematico.",
+      "text26": "Impatto",
+      "text27": "La <b>Direttiva UE sulla Trasparenza Retributiva (2023/970)</b>, da recepire entro il <b2>7 giugno 2026</b2>, impone la pubblicazione dei range salariali negli annunci e il reporting del gender pay gap. L’<b3>EU AI Act (Regolamento 2024/1689)</b3> classifica i sistemi di selezione come ad alto rischio, richiedendo supervisione umana, trasparenza e test anti-bias da agosto 2026. La <b4>CSRD</b4> obbliga a seguire lo standard <b5>ESRS S1 (Own Workforce)</b5>, con oltre 30 metriche sul personale, inclusi i tassi di turnover.",
+      "text28": "La maggior parte dei budget destinati alla retention viene investita dopo l'assunzione. Queste iniziative sono necessarie, ma intervengono quando l'errore di selezione è già stato commesso. Il punto di massimo ROI, nel ciclo di vita del dipendente, <b>si colloca prima della firma del contratto</b>.",
+      "text29": "<b>Mappare empiricamente i top performer attuali</b> per isolare i pattern comportamentali che distinguono chi resta e performa da chi abbandona produce risultati spesso controintuitivi. L'esperienza settoriale misura la conformità ai codici appresi, non la predisposizione naturale.",
+      "text30": "Tradurre il tasso di turnover in <b>costo per punto vendita, in perdita stimata di fatturato VIP</b>, in incremento del costo medio per transazione consente di spostare la conversazione dalla funzione HR al tavolo del CFO.",
+      "text31": "\"La qualità della selezione è diventata un fattore competitivo di primo piano: non solo per la funzione HR, ma per il business nel suo complesso\".",
+      "text32": "\"La domanda non è se la scienza supportata dall'AI cambierà il modo in cui selezioniamo le persone. La domanda è chi sarà in grado di usarla per prendere decisioni migliori di quelle che prenderebbe senza di essa\".",
+      "heading5": "Next step",
+      "text33": "Se la tua organizzazione sta affrontando <b>tassi di turnover elevati nei flagship store</b> o sta ripensando il modello di selezione per i ruoli retail, il punto di partenza più utile è una conversazione basata sui dati che già possiedi: quanto incide oggi il turnover del primo anno? Qual è il <b2>costo reale per sostituzione</b2>, includendo la perdita di relazioni con i clienti VIP? Quali sono i comportamenti misurabili che distinguono <b3>i tuoi top performer</b3> da chi abbandona entro 12 mesi?",
+      "heading6": "About Skillvue",
+      "text34": "Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di <b>talent intelligence</b> basata sull'AI che aggiunge una dimensione dinamica e oggettiva ai dati HR: trasformiamo informazioni statiche in <b2>insight predittivi</b2> che permettono di prendere decisioni migliori nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.",
+      "text35": "A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue <b>combina la solidità della scienza psicometrica con la potenza dei moderni LLM</b> per creare un <b2>co-pilota AI scientificamente fondato</b2>, allineato al modello di leadership e al quadro di competenze specifico di ciascuna azienda.",
+      "heading7": "Fonti e riferimenti",
+      "text36": "Retail Lusso · 2026",
+      "text37": "Skillvue",
+      "text38": "<a>Privacy Policy</a>",
+      "text39": "<a>skillvue.ai</a>",
+      "heading8": "Executive Summary",
+      "label": "Turnover entro 12 mesi",
+      "label2": "Costo di sostituzione",
+      "label3": "Advisor che valuta l'uscita (CXG)",
+      "heading9": "Dove si costruisce e si perde il valore",
+      "heading10": "Il costo che nessuno sta calcolando",
+      "heading11": "L'equazione nascosta: selezione predittiva e retention",
+      "heading12": "Caso anonimo: chi investe in formazione dimezza il turnover",
+      "heading13": "I quattro rischi che il turnover amplifica",
+      "heading14": "Tre implicazioni per la strategia di retention",
+      "heading15": "Spostare l'investimento a monte: dalla retention alla selezione predittiva",
+      "heading16": "Costruire il profilo comportamentale sui top performer, non sulle job description",
+      "heading17": "Quantificare il costo del turnover come KPI di business, non come metrica HR",
+      "heading18": "3 domande per il tuo comitato di direzione"
     },
     "la-crisi-delle-competenze": {
       "meta": {
         "title": "La crisi delle competenze obsolete nelle banche europee | Skillvue",
         "description": "Come costruire un sistema di talent intelligence continua nel settore bancario, contro l’obsolescenza delle competenze."
-      }
+      },
+      "text": "Skillvue",
+      "text2": "Scarica il Report",
+      "text3": "<s> Banking · 2026 </s>",
+      "text4": "La crisi delle competenze obsolete <s> nelle banche europee </s>",
+      "text5": "Come costruire un sistema di talent intelligence continua nel settore bancario",
+      "text6": "<s>A cura di <b>Skillvue</b></s><s2></s2><s3>~8 min read</s3>",
+      "text7": "Scarica il Report Completo",
+      "heading": "Cosa troverai nel report",
+      "body": "Una guida strategica per i leader HR del settore bancario che vogliono costruire un sistema di talent intelligence realmente continuo e conforme all'AI Act.",
+      "heading2": "Scarica il report completo",
+      "heading3": "Compila per scaricare il PDF",
+      "body2": "Gratuito · Accesso immediato",
+      "body3": "Il whitepaper si è aperto in una nuova scheda.",
+      "body4": "Controlla il tuo browser se non lo vedi subito.",
+      "text8": "Apri di nuovo",
+      "label": "Nome <s>*</s>",
+      "label2": "Cognome <s>*</s>",
+      "label3": "Email Lavorativa <s>*</s>",
+      "body5": "Richiesta email aziendale (non personale)",
+      "text9": "<a>Privacy Policy</a>",
+      "text10": "<a>skillvue.ai</a>",
+      "text11": "Skillvue",
+      "text12": "BANKING · 2026",
+      "heading4": "La crisi delle competenze obsolete nelle banche europee: <s> costruire un sistema di talent intelligence continua </s>",
+      "body6": "Come costruire un sistema di talent intelligence continua nel settore bancario",
+      "body7": "<i>Settore:</i> Banking · <i2>Destinatari:</i2> CHRO, Head of L&D, Chief Talent Officer",
+      "body8": "<i>Lettura:</i> circa 8 minuti",
+      "body9": "A cura di <s> Skillvue </s>",
+      "body10": "Entro il 2030, il <b>39%</b> dei ruoli nel settore bancario europeo richiederà un <b2>reskilling</b2>. Il <b3>ciclo di vita</b3>  medio di una competenza tecnica è ormai <b4>inferiore ai tre anni</b4>. Eppure, la maggior parte delle organizzazioni bancarie continua a operare con <b5>sistemi di gestione dei talenti frammentati</b5>, spesso non in grado di rilevare questi cambiamenti in tempo reale. Il <b6>costo</b6> non è solo operativo, è strategico.",
+      "body11": "Urgenza del reskilling nel settore bancario",
+      "body12": "Quota della forza lavoro che avrà bisogno di percorsi di formazione strutturati per far fronte all'evoluzione tecnologica e normativa",
+      "text13": "<s>59%</s>",
+      "text14": "Lavoratori che necessitano di aggiornamento immediato o profondo (<b>59%</b>)",
+      "text15": "Lavoratori con skill attualmente allineate (<b>41%</b>)",
+      "body13": "Fonte: World Economic Forum (WEF), \"The Future of Jobs Report 2025\"",
+      "text16": "Nel banking europeo, i processi di talent management hanno accumulato negli anni strumenti, certificazioni e cicli valutativi. Il problema non è la quantità di dati disponibili, ma il fatto che <b>guardano sempre al passato, vengono aggiornati raramente e non comunicano tra loro</b>. Nel frattempo, la trasformazione digitale e la pressione del quadro normativo ha ridisegnato i profili professionali critici a una velocità che nessun sistema episodico riesce a seguire.",
+      "text17": "Questo documento indica come colmare il divario: quali limiti strutturali rendono i sistemi attuali inadeguati, quali requisiti deve soddisfare un sistema di talent intelligence realmente continuo e con quali criteri valutare se gli strumenti oggi in uso sono all'altezza della sfida.",
+      "text18": "L'industria bancaria europea sta affrontando una <b>trasformazione profonda del capitale umano</b>. Secondo l'OCSE, la vita media di una skill tecnica si aggira ormai tra i <b2>12 e i 18 mesi</b2>: ciò che impariamo oggi rischia di diventare obsoleto in meno di due anni. Nel settore bancario, dove le piattaforme tecnologiche evolvono rapidamente e le aspettative normative cambiano di continuo, questo orizzonte è spesso ancora più breve.",
+      "text19": "Tre dinamiche stanno accelerando questo processo: la <b>digitalizzazione dei servizi</b>, la <b2>crescente pressione regolatoria</b2> e l' <b3>ingresso dell'AI nei processi operativi</b3>. Il risultato è che competenze consolidate diventano obsolete più rapidamente di quanto le organizzazioni riescano a rilevare. In questo contesto, garantire la conformità alla <b4>normativa europea sull'AI (EU AI Act)</b4> diventa parte integrante della gestione del talento, non solo un requisito legale.",
+      "text20": "Il <i>Future of Jobs Report 2025</i> del World Economic Forum stima che entro il 2030 il <b>39% delle competenze attuali sarà superato</b> e che oltre un miliardo di persone dovranno aggiornare le proprie skill per restare competitive. Per i gruppi bancari europei, questo implica una ricalibratura significativa delle competenze. Non si tratta semplicemente di formazione continua, ma di un cambiamento strutturale nel modo in cui il lavoro bancario viene progettato e svolto.",
+      "text21": "La pressione proviene da più fronti. Da un lato, cloud, automazione dei processi e modelli di credit scoring basati su machine learning stanno ridefinendo i profili tecnici. Dall'altro, l'evoluzione del quadro regolatorio, dall'EU AI Act alla normativa <b>EBA sul Fit & Proper</b> fino ai requisiti DORA sulla resilienza operativa, richiede competenze di compliance e gestione del rischio sempre più centrali nel funzionamento delle banche.",
+      "text22": "La risposta più diffusa è investire nella formazione. È necessario, ma <b>non sufficiente</b>. La formazione interviene su ciò che è già noto essere carente. La domanda strategica è un'altra: come possono sapere le banche in tempo reale quale parte del loro capitale umano è ancora allineata alle esigenze operative e strategiche? Prima ancora che di sviluppo, è un problema di intelligence.",
+      "text23": "\"La vita media di una skill tecnica si aggira addirittura intorno ai 12-18 mesi. Entro il 2030 il 39% delle competenze attuali sarà superato e che oltre un miliardo di persone dovranno aggiornare le proprie skill per restare competitive.\"",
+      "text24": "Per decenni, la fotografia del capitale umano bancario <b>si è fondata principalmente su due strumenti</b>: la valutazione annuale della performance e la misurazione dell'output formativo. Entrambi sono <b2>per loro natura episodici</b2>, strutturati per guardare indietro, progettati per misurare ciò che è già stato fatto <b3>piuttosto che anticipare ciò che sarà necessario</b3>.",
+      "text25": "Le valutazioni annuali della performance <b>riflettono inevitabilmente il bias del momento in cui i target vengono definiti</b>. Non sono progettate per segnalare quando un profilo professionale sta progressivamente diventando ridondante rispetto alle esigenze dell'organizzazione, né per rilevare l'emergere di gap comportamentali e cognitivi che influenzeranno la capacità di adattarsi a nuovi contesti operativi.",
+      "text26": "Il monitoraggio della formazione, dal canto suo, <b>misura tipicamente l'erogazione</b> (ore erogate, moduli completati, certificazioni acquisite) ma raramente l’<b2>apprendimento reale</b2> o la <b3>trasferibilità operativa delle competenze</b3>. La <b4>distanza</b4> tra sapere dichiarato e competenza effettivamente applicata è <b5>una delle lacune più costose</b5> e meno presidiate dei sistemi HR tradizionali.",
+      "body14": "Deloitte ha documentato in diversi rapporti (2022–2024) come la maggior parte delle grandi organizzazioni bancarie europee operi ancora con <b>sistemi di talent data disomogenei</b>: informazioni sulle competenze disperse tra HRIS, LMS, sistemi di performance management e database manuali non integrati. Il risultato è che il CHRO di un gruppo con diecimila dipendenti non è in grado di rispondere con precisione a domande come: quanti collaboratori in area corporate banking hanno competenze aggiornate in materia di IFRS 17? Qual è il tasso di obsolescenza delle competenze data analytics nelle funzioni di risk management?",
+      "text27": "\"Il vantaggio competitivo delle organizzazioni adattive non risiede più nello stock di competenze statiche, ma nella velocità di apprendimento continuo del proprio capitale umano in scenari volatili.\"",
+      "text28": "La discussione sul reskilling bancario tende a concentrarsi sulle <b>competenze tecniche</b>: data literacy, conoscenza normativa, utilizzo di piattaforme digitali. È una prospettiva necessaria ma parziale. Le organizzazioni che stanno navigando con maggiore efficacia la trasformazione non sono quelle con il maggior numero di certificati interni: sono quelle in grado di identificare collaboratori con profili comportamentali capaci di apprendere in contesti ambigui, adattarsi rapidamente al cambiamento di priorità, gestire la complessità normativa senza paralisi decisionale.",
+      "text29": "BCG identifica come fattore discriminante non tanto il numero di competenze tecnico-specifiche possedute dai collaboratori, quanto la presenza di quelle che definisce <b>\"adjacent capabilities\"</b>: capacità cognitivo-comportamentali trasversali che abilitano il trasferimento di expertise tra contesti diversi. La <b2>learning agility</b2>, la <b3>capacità di gestire l'incertezza</b3>, la <b4>proattività nel presidio informativo</b4> del contesto regolatorio: sono queste le competenze che differenzieranno chi sarà ancora ad alto valore nel 2028 da chi vedrà il proprio profilo svuotarsi di rilevanza.",
+      "text30": "Il problema è che queste competenze sono notoriamente difficili da misurare con gli strumenti convenzionali. Il <b>colloquio strutturato tradizionale ha limiti documentati</b> nella valutazione della learning agility e della resilienza cognitiva. I test di personalità standardizzati misurano tratti stabili, <b2>non comportamenti adattativi</b2> in contesto. L'osservazione manageriale diretta è <b3>soggetta a bias</b3> di affinità e presenta varianza significativa tra valutatori diversi.",
+      "text31": "L'approccio che si sta affermando tra i grandi gruppi bancari internazionali non consiste nel fare verification più frequenti o formare di più: <b>consiste nel costruire un sistema di intelligence sul capitale umano</b>  che sia continuo, integrato e azionabile.",
+      "text32": "Gartner ha introdotto in questo ambito il concetto di \"talent intelligence platform\", un'infrastruttura che <b>aggrega dati su competenze, performance, aspirazioni professionali e comportamenti osservati</b> per produrre una visione chiara e dinamica del capitale umano disponibile. Secondo l'analisi Gartner del 2024, le organizzazioni che adottano approcci di questo tipo riportano una <b2>riduzione media del 28% nei tempi di talent deployment</b2> e una migliore capacità predittiva rispetto al turnover volontario qualificato.",
+      "body15": "Validità predittiva a confronto",
+      "body16": "Correlazione con il potenziale delle persone e la loro performance lavorativa futura",
+      "text33": "<s>Valutazione tradizionale non strutturata</s><s2>0.38</s2>",
+      "text34": "<s>0.38</s>",
+      "text35": "<s>Valutazione comportamentale strutturata</s><s2>0.54</s2>",
+      "text36": "<s>0.54</s>",
+      "body17": "Fonte: Schmidt & Hunter (1998, aggiornata nel 2016).",
+      "body18": "Confronto su dimensioni operative chiave",
+      "columnHeader": "Dimensione",
+      "columnHeader2": "Approccio episodico",
+      "columnHeader3": "Talent Intelligence Ricorrente",
+      "text37": "Questo trasforma radicalmente il ruolo della <b>funzione People nelle banche</b>: da gestore di processi amministrativi di performance a <b2>provider di intelligenza organizzativa</b2>, capace di guidare le decisioni strategiche del top management. Molti responsabili HR dichiarano di voler compiere questa transizione, ma pochi ci riescono davvero, principalmente <b3>a causa della mancanza di tecnologie e metodologie adeguate</b3>.",
+      "text38": "Qualsiasi sistema di talent intelligence che <b>utilizzi componenti di intelligenza artificiale</b> nel contesto bancario europeo si confronta oggi con un quadro normativo particolarmente esigente. L'EU AI Act classifica i sistemi AI utilizzati per decisioni relative al <b2>talent management</b2>, inclusi verification, scoring di competenze e sistemi di valutazione del potenziale, come <b3>sistemi ad alto rischio</b3> (Articolo 6, Allegato III).",
+      "text39": "Questo implica obblighi precisi: <b>trasparenza sulle logiche algoritmiche, documentazione tecnica robusta, supervisione umana garantita nelle fasi decisionali critiche, monitoraggio continuativo dei rischi di bias</b>. Per le banche, già abituate a operare in contesti di elevata pressione regolatoria, questi requisiti non sono una novità concettuale, ma implicano una scelta consapevole dei sistemi HR adottati.",
+      "body19": "Soluzioni di verification che operano come black box, producono score ma non forniscono giustificazioni comprensibili per ogni valutazione individuale, e di conseguenza <b>non sono compatibili con il contesto regolatorio europeo</b>. Sono esposte a rischi di contestazione da parte sia dei collaboratori che degli organi di supervisione. <b2>L'explainability non è una feature desiderabile: è un requisito di sistema.</b2>",
+      "text40": "Allo stesso modo, la capacità di garantire l'intervento umano nelle fasi conclusive del processo valutativo, il cosiddetto <b>Human in the Loop</b>, non può essere simulata attraverso procedure formali di approvazione che in pratica ratificano sistematicamente le raccomandazioni algoritmiche. Richiede che il sistema sia progettato per riconoscere le situazioni in cui il giudizio umano deve prevalere, e per <b2>rendere trasparente il contesto informativo entro cui tale giudizio è esercitato</b2>.",
+      "text41": "Quando si valuta un sistema di verification AI per contesti bancari, tre dimensioni si rivelano determinanti sia rispetto ai requisiti dell'AI Act sia rispetto alla qualità delle decisioni sul capitale umano:",
+      "text42": "Un sistema maturo produce, per ogni profilo valutato, una <b>spiegazione strutturata degli elementi rilevati</b>: non uno score finale, ma un'evidenza competenza per competenza, con indicazione dell'intensità del segnale e della sua origine. Questa granularità è il requisito legale e, al tempo stesso, lo strumento di lavoro più utile per chi prende decisioni sul capitale umano. Se il sistema non sa spiegare il proprio output, non è né conforme né utile.",
+      "text43": "Non tutti i profili possono essere valutati con lo stesso grado di affidabilità. I segnali possono essere ambigui, le risposte insufficienti, il contesto non adatto. <b>Un sistema di qualità non forza una valutazione</b> quando i dati disponibili non la supportano: segnala l'ambiguità e restituisce la decisione al giudizio umano. Questo non è un limite del sistema, ma la sua <b2>garanzia strutturale di correttezza</b2>.",
+      "text44": "Ogni verification deve produrre un log verificabile: quando è stato condotto, su quale versione del sistema, con quali parametri, con quale output, con quale eventuale attivazione della soglia di incertezza e con quale conferma di supervisione umana. Questo log serve per rispondere a un audit esterno, ma soprattutto per <b>monitorare la consistenza del sistema nel tempo</b> e documentare che il processo è sotto controllo.",
+      "body20": "Explainability delle decisioni, gestione trasparente dell'incertezza e audit trail completo non sono requisiti aggiuntivi rispetto alla funzionalità del sistema: sono indicatori della sua maturità tecnica. Un sistema che li soddisfa fa anche selezione e sviluppo migliori. <b>Conformità normativa e qualità della decisione tendono a coincidere.</b>",
+      "text45": "Prima ancora di scegliere gli strumenti, le banche sono chiamate a <b>rispondere a quesiti strategici</b> che definiscono il perimetro del problema. Questo framework nasce come <b2>punto di partenza</b2> per una riflessione interna profonda.",
+      "body21": "Impatto sulla retention",
+      "body22": "Retention a 18 mesi dall'inserimento",
+      "body23": "Approccio tradizionale",
+      "body24": "Con talent intelligence strutturata",
+      "body25": "Fonte: McKinsey Global Institute, 2024",
+      "heading5": "Next step",
+      "body26": "Se la tua organizzazione sta valutando come strutturare un sistema di talent intelligence continua, conforme all'AI Act e calibrato sulle specificità del settore bancario, Skillvue può supportarti con skill verification predittivi, scalabili e certificati, conformi alla normativa, al GDPR e allo standard ISO 27001, personalizzati sulle specificità del tuo contesto bancario.",
+      "heading6": "About Skillvue",
+      "text46": "Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di <b>talent intelligence</b> basata sull'AI che aggiunge una dimensione dinamica e oggettiva ai dati HR: trasformiamo informazioni statiche in <b2>insight predittivi</b2> che permettono di prendere decisioni migliori nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.",
+      "text47": "A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue <b>combina la solidità della scienza psicometrica con la potenza dei moderni LLM</b> per creare un <b2>copilota AI scientificamente fondato</b2>, allineato al modello di leadership e al quadro di competenze specifico di ciascuna azienda.",
+      "heading7": "Fonti e riferimenti",
+      "text48": "Banking · 2026",
+      "text49": "Skillvue",
+      "text50": "<a>Privacy Policy</a>",
+      "text51": "<a>skillvue.ai</a>",
+      "label4": "Il tuo nome",
+      "label5": "Il tuo cognome",
+      "label6": "nome@azienda.com",
+      "heading8": "Il problema in numeri",
+      "label7": "dei ruoli bancari richiederà reskilling",
+      "label8": "ciclo di vita medio competenza tecnica",
+      "label9": "riduzione tempi di talent deployment",
+      "label10": "validità predittiva colloquio non strutturato",
+      "heading9": "Quando il reskilling diventa una questione di sopravvivenza",
+      "heading10": "Perché i sistemi tradizionali non vedono il problema",
+      "heading11": "Il dato di Deloitte",
+      "heading12": "La componente comportamentale: la più difficile da misurare, la più decisiva",
+      "heading13": "Verso una talent intelligence ricorrente: cosa significa in pratica",
+      "heading14": "Verification episodico vs. Talent Intelligence Ricorrente",
+      "heading15": "Il vincolo della compliance e l'explainability come requisito non negoziabile",
+      "heading16": "Implicazione operativa diretta",
+      "heading17": "Tre criteri per valutare un sistema di talent intelligence nel banking",
+      "heading18": "Giustificazione per competenza, non per punteggio aggregato",
+      "heading19": "Gestione trasparente dell'incertezza",
+      "heading20": "Audit trail completo e verificabile",
+      "heading21": "In sintesi",
+      "heading22": "3 domande per il tuo comitato di direzione"
     },
     "scalare-l-eccellenza": {
       "meta": {
         "title": "Scalare l'eccellenza senza perdere l'esclusività — Skillvue",
         "description": "AI verification per la selezione stagionale ad alto volume nel lusso: scalare senza perdere l’esclusività."
-      }
+      },
+      "text": "Skillvue",
+      "text2": "Scarica il Report",
+      "text3": "<s> Retail Lusso · 2026 </s>",
+      "text4": "Scalare l'eccellenza <s> senza perdere l'esclusività </s>",
+      "text5": "AI verification per la selezione stagionale ad alto volume nel lusso",
+      "text6": "<s>A cura di <b>Skillvue</b></s><s2></s2><s3>~6 min read</s3>",
+      "text7": "Scarica il Report Completo",
+      "heading": "Cosa troverai nel report",
+      "body": "Un'analisi operativa per chi guida la strategia di hiring nelle maison del lusso e deve gestire volumi stagionali senza compromettere i propri standard.",
+      "heading2": "Scarica il report completo",
+      "heading3": "Compila per scaricare il PDF",
+      "body2": "Gratuito · Accesso immediato",
+      "body3": "Il whitepaper si è aperto in una nuova scheda.",
+      "body4": "Controlla il tuo browser se non lo vedi subito.",
+      "text8": "Apri di nuovo",
+      "label": "Nome <s>*</s>",
+      "label2": "Cognome <s>*</s>",
+      "label3": "Email Lavorativa <s>*</s>",
+      "body5": "Richiesta email aziendale (non personale)",
+      "text9": "<a>Privacy Policy</a>",
+      "text10": "<a>skillvue.ai</a>",
+      "text11": "Skillvue",
+      "text12": "RETAIL LUSSO · 2026",
+      "heading4": "Scalare l'eccellenza <s> senza perdere l'esclusività </s>",
+      "body6": "AI verification per la selezione stagionale ad alto volume nel lusso",
+      "body7": "<i>Settore:</i> Retail Lusso · <i2>Destinatari:</i2> Head of Talent Acquisition, CHRO, COO Retail",
+      "body8": "<i>Lettura:</i> circa 6 minuti",
+      "body9": "A cura di <s> Skillvue </s>",
+      "body10": "Nel lusso, vendiamo tempo e attenzione: ogni interazione in boutique è <b>un atto di narrazione del brand</b>. Eppure, quando i volumi di assunzione accelerano per l'apertura di nuovi flagship o per i picchi stagionali, le maison si trovano spesso davanti a un bivio: scegliere tra la velocità operativa e la qualità del talento. È un compromesso che <b2>l'integrità del brand non può permettersi</b2>.",
+      "body11": "Questo documento esplora come la tecnologia di verification basata sulla scienza psicometrica e potenziata dall'intelligenza artificiale possa consentire alle maison di <b>processare volumi elevati di candidature senza mai abbassare la soglia di eccellenza</b> che il brand richiede.",
+      "text13": "Esiste un paradosso poco discusso nei piani industriali delle maison: la crescita del network retail, che dovrebbe amplificare il racconto del brand, è spesso <b>il momento in cui quel racconto diventa più fragile</b>. L'apertura di un nuovo flagship, il lancio di una collezione cruise in un mercato emergente, la campagna natalizia che richiede centinaia di figure stagionali in poche settimane: tutti eventi che generano un <b2>fabbisogno di talento impossibile da soddisfare con i metodi tradizionali di recruiting del lusso</b2>.",
+      "text14": "Il settore ha storicamente costruito le proprie squadre attraverso il passaparola e la cooptazione da brand concorrenti, una pratica che presuppone tempi lunghi e volumi contenuti. Ma <b>questa logica non regge</b> quando un gruppo con oltre 200.000 dipendenti a livello mondiale deve gestire simultaneamente espansioni retail in Medio Oriente, Sud-Est asiatico e America Latina, ciascuna con standard di servizio non negoziabili.",
+      "text15": "La tensione è reale. Da un lato, il mercato dei beni di lusso personali ha raggiunto i 358 miliardi di euro nel 2025 secondo Bain e Altagamma, con i margini EBIT compressi al 15–16%, livelli che non si vedevano dal 2009. Dall'altro, <b>la base clienti si è contratta da 400 milioni a circa 340 milioni di consumatori tra il 2022 e il 2025</b>: meno clienti, spesa più concentrata in alto, e una tolleranza per le esperienze mediocri vicina allo zero.",
+      "body12": "I Very Important Client, che rappresentano appena il <b>2% della base consumatori</b>, generano oggi il <b2>45% degli acquisti globali nel lusso</b2>, in crescita dal 35% nel 2021. Il 64% dei VIC dichiara che la relazione con il proprio client advisor è il fattore determinante per tornare in un brand. Il <b3>68% cambierebbe maison</b3> se l'advisor si trasferisse a un concorrente.",
+      "body13": "Fonti: Bain & Company / Altagamma, Luxury Report 2024; BCG / Altagamma, True-Luxury Global Consumer Insights 2024",
+      "text16": "In questo contesto, la qualità del personale frontline <b>non è solo un problema del dipartimento HR: è un rischio strategico</b>. Quando il volume di assunzioni cresce, la pressione si scarica sui processi di selezione, e la tentazione di abbassare i criteri per rispettare le timeline di apertura diventa quasi irresistibile. Il risultato è un effetto a catena: <b2>profili meno allineati al brand, turnover più elevato, costi di sostituzione che si accumulano</b2>, e un'esperienza in boutique che non regge il confronto con la promessa che il brand fa al mercato.",
+      "text17": "Un direttore HR nel lusso lo sa: <b>assumere un client advisor non è come assumere un addetto alla vendita nel mass market</b>. Il profilo richiesto è ibrido, raro e difficile da valutare con gli strumenti tradizionali. Lo studio Comité Colbert e MAD del 2025 fotografa una realtà che pochi settori condividono: il <b2>60% delle maison francesi dichiara difficoltà nel reperire candidati per i ruoli in boutique</b2>, e la percentuale sale al <b3>93%</b3> quando si tratta di posizioni manageriali in store.",
+      "text18": "Tuttavia, ad oggi le competenze richieste si sono moltiplicate. Un client advisor deve padroneggiare il digitale (clienteling via CRM, comunicazione via social, analisi dati delle preferenze del cliente), dimostrare <b>intelligenza emotiva elevata</b> (empatia, capacità di adattamento, gestione del conflitto), e incarnare i codici culturali del brand in ogni micro-interazione. Le soft skill emotive distinguono un advisor \"sufficiente\" da uno \"eccezionale\", ma <b2>sono le più difficili da misurare in fase di recruiting</b2>  e le più costose da formare internamente.",
+      "body14": "Criticità nel recruiting luxury retail",
+      "body15": "% delle maison intervistate",
+      "body16": "Fonti: Comité Colbert / MAD, 2025; CXG, The Advisor Effect, 2024",
+      "text19": "Il problema <b>si amplifica nelle fasi di alto volume</b>. Quando una maison deve inserire 150 figure stagionali in sei settimane per la campagna natalizia,  il team Talent Acquisition si trova davanti a migliaia di candidature da processare con risorse limitate. Il colloquio tradizionale, strumento principale della selezione nel lusso, <b2>non scala</b2>. E lo store manager, già sovraccarico dalla gestione operativa del picco, viene coinvolto in sessioni di colloquio che sottraggono ore al floor e alla relazione con i clienti.",
+      "text20": "Il U.S. Bureau of Labor Statistics riporta un tasso di turnover annuo nel retail superiore al 60%. Nel lusso europeo, il dato medio si attesta intorno al 15% secondo il Comité Colbert, ma raggiunge punte del 60% in mercati come il Sud-Est asiatico. Il costo di una sostituzione, secondo il U.S. Department of Labor, <b>equivale al 30% del salario annuo della posizione</b>. Su scala, queste cifre trasformano il turnover da inevitabile a insostenibile.",
+      "body17": "Quando un profilo stagionale non possiede le competenze comportamentali adeguate al brand, l'effetto non si limita alla singola interazione: compromette la percezione del servizio per i colleghi che compensano le lacune, riduce la conversion rate del punto vendita nei periodi di massimo traffico, e, in caso di interazione con un VIC, può generare una perdita di cliente che vale multipli dello scontrino singolo. <b>Il danno è tanto più grave quanto più è invisibile ai sistemi di reporting tradizionali.</b>",
+      "text21": "Il dato di CXG merita un approfondimento che ne riveli la portata strategica: <b>il 78% dei clienti del lusso dichiara che una singola interazione negativa con un advisor può portarli ad abbandonare un acquisto</b>. Non a rimandarlo. Ad abbandonarlo. In un settore dove il canale direct-to-consumer rappresenta oltre il 53% dei ricavi secondo Bain, ogni interazione fallita ha un costo misurabile.",
+      "text22": "L'indagine CXG su 12.000 dipendenti di 12 brand del lusso ha rivelato un ecosistema interno in tensione: solo il <b>38%</b> dei collaboratori percepisce il proprio ambiente di lavoro come motivante; appena il <b2>31%</b2> crede di avere prospettive di crescita all'interno del brand; oltre il <b3>40%</b3> lamenta mancanza di empowerment. In USA e Francia, la percentuale di chi pianifica di lasciare sale al <b4>60%</b4>.",
+      "text23": "Il punto critico è che la selezione ad alto volume non è un problema di screening dei curriculum vitae.  I CV, nel retail del lusso, <b>raccontano poco delle competenze che realmente predicono il successo in boutique</b>. La letteratura scientifica sulla validità predittiva degli strumenti di selezione è chiara: Frank Schmidt e John Hunter, nella loro meta-analisi che ha sintetizzato 85 anni di ricerca, hanno dimostrato che il colloquio non strutturato ha una validità predittiva di 0,38, mentre gli verification comportamentali strutturati 0,58. In un contesto dove le competenze da misurare sono prevalentemente comportamentali e relazionali, <b2>l'verification comportamentale strutturato diventa lo strumento più efficace che sia anche scalabile.</b2>",
+      "text24": "L'intelligenza artificiale applicata alla selezione non è una novità, ma il suo utilizzo nel lusso incontra resistenze specifiche. La preoccupazione è comprensibile: come può un algoritmo valutare l'eleganza relazionale, la sensibilità culturale, la capacità di leggere le emozioni inespresse di un cliente? La risposta sta nella <b>distinzione tra automazione e augmentation</b>. I sistemi di verification di nuova generazione basati su modelli linguistici di grandi dimensioni (LLM) non sostituiscono il giudizio umano, ma <b2>lo informano restituendo gli insight oggettivi</b2>  fondamentali per prendere le decisioni strategiche.",
+      "text25": "Il 77% delle maison prevede di integrare l'AI nel talent management entro tre anni, secondo lo studio Comité Colbert e MAD. Ma le organizzazioni che lo hanno già fatto riportano risultati misurabili: <b>volumi di recruiting più alti e turnover significativamente ridotto</b>. La finestra temporale per chi vuole muoversi prima della concorrenza si sta chiudendo.",
+      "text26": "Sarebbe riduttivo inquadrare l'AI verification come una soluzione per il picco stagionale. Il vero valore emerge quando lo strumento <b>diventa parte integrante dell'infrastruttura di selezione del brand</b>, operativo 365 giorni l'anno. In questa configurazione, ogni candidatura, che arrivi a luglio per una posizione permanente o a ottobre per il rinforzo natalizio, viene processata con gli stessi criteri, la stessa velocità e la stessa qualità di analisi.",
+      "text27": "I dati di Bain suggeriscono che il futuro del retail nel lusso è fatto di meno punti vendita ma <b>più grandi, più immersivi, più orientati all'esperienza</b>. La riduzione della superficie retail totale di 25.000 metri quadri nei soli ultimi sei mesi del 2025 segnala una razionalizzazione in corso. In questo scenario, ogni flagship diventa un asset critico, e <b2>la qualità del team che lo anima è il primo differenziale competitivo</b2>.",
+      "body18": "Un gruppo europeo del lusso con oltre 8.000 dipendenti ha introdotto un sistema di AI verification per gestire le candidature stagionali. Il volume processato è cresciuto significativamente senza incremento proporzionale delle risorse HR dedicate, mentre gli indicatori di qualità delle assunzioni (retention a 6 mesi, valutazione del supervisore diretto, punteggio NPS interno) sono rimasti <b>stabili o in miglioramento</b> rispetto ai cicli gestiti con metodo tradizionale.",
+      "body19": "Dati anonimizzati. I KPI specifici sono disponibili su richiesta direttamente da Skillvue.",
+      "text28": "La normativa europea, peraltro, spinge nella stessa direzione. Il Regolamento UE 2024/1689 (AI Act), entrato in vigore nell'agosto 2024, classifica i sistemi di AI utilizzati nel recruiting tra i sistemi ad alto rischio, imponendo <b>requisiti di trasparenza, documentazione tecnica, supervisione umana e audit periodici</b>. Questo significa che le maison che adottano strumenti di AI verification devono scegliere piattaforme progettate per essere conformi by design: <b2>un vincolo che, in realtà, è anche una garanzia di qualità del processo decisionale.</b2>",
+      "text29": "\"Il mercato rimane resiliente ma non immune alle complessità macroeconomiche. Le esperienze e le emozioni sono diventate il vero motore della crescita del lusso.\"",
+      "text30": "I dati raccolti in questo documento convergono su tre implicazioni operative che ogni organizzazione del lusso con fabbisogni di hiring stagionale dovrebbe considerare.",
+      "text31": "Il turnover nel lusso non è solo un costo amministrativo (pari al 30% della RAL secondo lo U.S. Dept. of Labor), ma un rischio reputazionale. Un Client Advisor stagionale privo del giusto DNA di brand mette a rischio il patrimonio più grande: la relazione con i VIC. Se il 68% dei clienti è pronto a seguire l'advisor presso la concorrenza, l'verification comportamentale non è più un costo, ma <b>l'unica assicurazione sostenibile contro assunzioni errate</b>.",
+      "text32": "Con il 93% delle maison che fatica a reperire profili manageriali (Comité Colbert/MAD, 2025), lo Store Manager sovraccarico rischia di scivolare verso criteri di selezione puramente discrezionali. Un sistema di verification che garantisce standard oggettivi non è solo una scelta di equità, ma è <b>lo strumento per proteggere la promessa del brand durante l'espansione</b>. Come confermato dalla meta-analisi di Schmidt e Hunter, gli strumenti strutturati hanno un potere predittivo sulla performance futura nettamente superiore ai colloqui informali.",
+      "text33": "Oggi è un'opportunità, domani sarà lo standard di mercato. Se l'87% delle maison non ha ancora integrato l'AI, il 77% si prepara a farlo a breve. Chi si muove ora non sta solo comprando software, sta costruendo <b>un vantaggio generazionale su due fronti</b>: accesso prioritario ai profili migliori (grazie a una candidate experience più rapida e accessibile) e una curva di apprendimento organizzativo che i concorrenti dovranno percorrere con anni di ritardo.",
+      "heading5": "3 domande per il tuo comitato di direzione",
+      "body20": "Prima di avviare qualsiasi iniziativa di retention o di riprogettazione del processo di selezione, ci sono tre domande che vale la pena portare al tavolo del comitato di direzione.",
+      "body21": "Next Step",
+      "body22": "Se la tua organizzazione sta affrontando tassi di turnover elevati nei flagship store o sta ripensando il modello di selezione per i ruoli retail, e desidera esplorare come mantenere standard qualitativi costanti anche durante i picchi di hiring stagionale, Skillvue può supportarti con verification comportamentali predittivi e scalabili, <b>pienamente conformi agli obblighi normativi e personalizzati sulle specificità del tuo brand</b>, per identificare cosa sia realmente misurabile e dove il processo attuale presenti i margini di errore più elevati.",
+      "text34": "\"Nel lusso, ogni assunzione è una dichiarazione di intenti. Chi sceglie di scalare senza misurare, sta scommettendo il proprio brand su una variabile che non controlla. Chi sceglie di misurare prima di scalare, sta costruendo l'unico vantaggio competitivo che la concorrenza non può copiare: la coerenza.\"",
+      "body23": "About Skillvue",
+      "body24": "Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di <b>talent intelligence</b> basata sull'AI che aggiunge una dimensione dinamica e oggettiva ai dati HR: trasformiamo informazioni statiche in <b2>insight predittivi</b2> che permettono di prendere decisioni migliori nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.",
+      "body25": "A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue combina la solidità della scienza psicometrica con la potenza dei moderni LLM per creare un <b>co-pilota AI scientificamente fondato</b>, in grado di fornire valutazioni personalizzate e scalabili, allineate al modello di leadership e al quadro di competenze specifico di ciascuna azienda.",
+      "body26": "Fonti e riferimenti",
+      "body27": "A cura di",
+      "text35": "Skillvue",
+      "text36": "<a>Privacy Policy</a>",
+      "text37": "<a>skillvue.ai</a>",
+      "label4": "Il tuo nome",
+      "label5": "Il tuo cognome",
+      "label6": "nome@azienda.com",
+      "heading6": "Executive Summary",
+      "label7": "Client Advisor che valuta l'uscita (CXG, 2024)",
+      "label8": "VIC che seguirebbe il proprio advisor (Bain, 2024)",
+      "label9": "Maison senza AI nel recruiting (Comité Colbert/MAD, 2025)",
+      "heading7": "Il privilegio fragile: quando il volume mette alla prova l'identità del brand",
+      "heading8": "VIC: La concentrazione che rende ogni interazione decisiva",
+      "heading9": "L'equazione impossibile: velocità, scala e sensibilità del brand",
+      "heading10": "Cosa si perde quando si assume in fretta: l'anatomia del costo invisibile",
+      "heading11": "L'effetto domino di un'assunzione stagionale non allineata",
+      "heading12": "Scalare senza diluire: la promessa dell'verification intelligente",
+      "label10": "Validità predittiva del colloquio non strutturato (Schmidt & Hunter)",
+      "label11": "Validità predittiva dell'verification comportamentale strutturato",
+      "heading13": "Oltre il picco: costruire un'infrastruttura di selezione permanente",
+      "heading14": "Caso anonimo: metriche di volume e qualità nel picco stagionale",
+      "heading15": "Tre implicazioni per la strategia di selezione ad alto volume",
+      "heading16": "Il costo del mancato screening attitudinale supera di gran lunga l'investimento in tecnologie di valutazione",
+      "heading17": "La coerenza dei criteri di selezione è un vantaggio competitivo",
+      "heading18": "Il margine di manovra strategica si restringe: l'innovazione nel recruiting non è più opzionale"
     }
   },
   "privacy-policy": {
@@ -4943,7 +5935,220 @@
     "meta": {
       "title": "Informativa sul trattamento dei dati personali | Skillvue",
       "description": "Sito Web — resa ai sensi dell’art. 13 del Regolamento UE 2016/679 (GDPR)."
+    },
+    "heading": "Informativa sul trattamento dei dati personali",
+    "body": "Sito Web — resa ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR)",
+    "body2": "Il Titolare del trattamento informa ai sensi del regolamento UE 2016/679 (\"GDPR\") e della vigente normativa in materia di protezione dei Dati Personali che i Suoi Dati (in seguito, \"Dati\"), nell'ambito del Sito Web <a>https://www.skillvue.ai/it</a> e degli eventuali sottodomini (in seguito \"Sito\") nonché nell'ambito dell'utilizzo dei servizi offerti dal Titolare, saranno trattati con le modalità e per le finalità seguenti.",
+    "body3": "Ove non diversamente indicato, quanto contenuto nella presente informativa dovrà intendersi applicabile solo ai Dati Personali trattati nell'ambito dell'utilizzo del Sito Web e dei suoi sottodomini. Resta inteso che per i trattamenti di Dati Personali effettuati per finalità diverse da quelle di seguito indicate troveranno applicazione le informative sul trattamento relative ai servizi di volta in volta considerati.",
+    "body4": "Titolare del trattamento è Algojob S.r.l., P.IVA 11656370969, operante con il brand Skillvue, con sede legale in Via Molino delle Armi n. 11 — 20123 Milano (MI) (di seguito anche \"Skillvue\" o \"la Società\"), in persona del legale rappresentante pro tempore.",
+    "body5": "Contatti del Titolare:",
+    "item": "PEC: think-up@legalmail.it",
+    "item2": "E-mail per questioni privacy: <a>privacy@skillvue.ai</a>",
+    "body6": "Il Titolare ha designato un Responsabile della Protezione dei Dati (RPD/DPO), contattabile per tutte le questioni relative al trattamento dei dati personali e all'esercizio dei diritti ai sensi del GDPR al seguente indirizzo e-mail: <a>dpo@skillvue.ai</a>",
+    "body7": "La presente informativa si rivolge agli Utenti del sito web.",
+    "body8": "Skillvue tratta le seguenti categorie di dati personali:",
+    "item3": "dati identificativi (nome, cognome);",
+    "item4": "dati di contatto professionali (indirizzo e-mail, numero di telefono);",
+    "item5": "dati di navigazione (indirizzo IP).",
+    "body9": "I dati personali sono trattati per le seguenti finalità, ciascuna fondata su una propria base giuridica:",
+    "body10": "<b>Finalità:</b> raccogliere e gestire le richieste di informazioni, contatto o prenotazione di demo inviate dall'Utente tramite i moduli presenti sul Sito, al fine di fornire riscontro alla richiesta, illustrare i servizi offerti da Skillvue e, ove applicabile, avviare le trattative precontrattuali.",
+    "body11": "<b>Base giuridica:</b> esecuzione di un contratto di cui l'interessato è parte o esecuzione di misure precontrattuali adottate su richiesta dell'interessato stesso (art. 6, par. 1, lett. b, GDPR).",
+    "body12": "<b>Finalità:</b> garantire il corretto funzionamento tecnico del Sito, prevenire e rilevare eventuali malfunzionamenti, errori o attacchi informatici, analizzare le modalità di utilizzo del Sito da parte degli Utenti al fine di migliorare l'esperienza di navigazione, ottimizzare le prestazioni e la fruibilità dei contenuti e dei servizi offerti. A tale scopo vengono trattati, in particolare, i dati di navigazione automaticamente generati dai sistemi informatici e dai protocolli di comunicazione utilizzati per l'accesso al Sito (quali l'indirizzo IP, il tipo di browser, il sistema operativo, le pagine visitate e i relativi orari di accesso).",
+    "body13": "<b>Base giuridica:</b> il legittimo interesse del Titolare (art. 6, par. 1, lett. f, GDPR).",
+    "body14": "<b>Finalità:</b> conservare e trattare i dati personali del cliente raccolti nell'ambito del rapporto intercorso nella misura in cui ciò risulti necessario per accertare, esercitare o difendere un diritto del Titolare in sede stragiudiziale e/o giudiziale.",
+    "body15": "<b>Base giuridica:</b> legittimo interesse del Titolare (art. 6, par. 1, lett. f, GDPR), consistente nella tutela dei propri diritti e interessi legittimi in sede stragiudiziale e giudiziale. Tale base giuridica è riconosciuta espressamente dal considerando 49 GDPR e dalle Linee guida EDPB, che individuano la difesa in giudizio come interesse legittimo prevalente, proporzionato e non suscettibile di essere bilanciato in senso sfavorevole al Titolare in presenza di una controversia effettiva o ragionevolmente prevedibile. Il trattamento per questa finalità è limitato ai dati strettamente pertinenti alla controversia e cessa non appena la stessa si conclude o il rischio di contenzioso viene meno.",
+    "body16": "<b>Finalità:</b> invio di newsletter, aggiornamenti di prodotto, comunicazioni commerciali, inviti a eventi e webinar, comunicazione di offerte o novità relative ai servizi di Skillvue.",
+    "body17": "<b>Base giuridica:</b> consenso libero, specifico, informato e inequivocabile dell'interessato (art. 6, par. 1, lett. a, GDPR; art. 130 D.Lgs. 196/2003). Il consenso è revocabile in qualsiasi momento, con effetto per il futuro, tramite le modalità indicate al successivo paragrafo 11 e/o cliccando sul link di disiscrizione presente in ogni comunicazione.",
+    "body18": "Il trattamento dei Suoi Dati è effettuato, sia in modalità cartacea che informatizzata in modo da minimizzare il rischio di distruzione, perdita (compresa la perdita accidentale), accesso/utilizzo non autorizzati o utilizzo incompatibile con la finalità iniziale della raccolta. Ciò viene conseguito con le misure di sicurezza tecniche e organizzative attuate dal Titolare.",
+    "body19": "Nell'ambito dei rapporti con i clienti, Skillvue non adotta processi decisionali unicamente automatizzati ai sensi dell'art. 22 GDPR che producano effetti giuridici o incidano in modo analogamente significativo sugli interessati.",
+    "body20": "Il conferimento dei dati per le finalità di cui ai paragrafi 4.1, 4.2 e 4.3 è necessario per la conclusione e l'esecuzione del rapporto e per l'adempimento degli obblighi di legge: il rifiuto comporta l'impossibilità di instaurare o proseguire il rapporto.",
+    "body21": "Il conferimento dei dati per le finalità di marketing (paragrafo 4.4) è facoltativo: il rifiuto o la revoca del consenso non comporta alcuna conseguenza sul rapporto contrattuale in corso.",
+    "body22": "I dati personali possono essere comunicati, nei limiti di quanto strettamente necessario, alle seguenti categorie di destinatari:",
+    "item6": "dipendenti e/o collaboratori, debitamente istruiti e autorizzati al trattamento ai sensi degli artt. 29 GDPR e 2-quaterdecies D. Lgs. 196/2003;",
+    "item7": "soggetti nominati quali responsabili del trattamento ex art. 28 GDPR;",
+    "item8": "autorità pubbliche, autorità giudiziarie, autorità di controllo e altri soggetti pubblici, quando la comunicazione è imposta dalla legge o necessaria all'accertamento di diritti.",
+    "body23": "L'elenco aggiornato dei responsabili del trattamento può essere richiesto al Titolare ai contatti indicati al paragrafo 1.",
+    "body24": "I dati personali sono prevalentemente trattati all'interno dello Spazio Economico Europeo. Alcuni dei fornitori tecnologici di cui Skillvue si avvale in qualità di responsabili del trattamento appartengono a gruppi multinazionali con sede principale al di fuori dell'Unione europea (in particolare negli Stati Uniti d'America). Qualora si verifichino trasferimenti extra-UE nell'ambito dei servizi resi da tali responsabili, Skillvue garantisce che gli stessi avvengano nel rispetto del Capo V GDPR, in particolare sulla base di:",
+    "item9": "decisione di adeguatezza della Commissione europea ai sensi dell'art. 45 GDPR (EU-U.S. Data Privacy Framework) per i fornitori certificati ed iscritti nel registro pubblico mantenuto dal Dipartimento del Commercio statunitense;",
+    "item10": "in subordine, Clausole Contrattuali Standard approvate dalla Commissione europea ai sensi dell'art. 46, par. 2, lett. c, GDPR, integrate, ove necessario sulla base di apposita valutazione di impatto sui trasferimenti, da misure supplementari conformi alle Raccomandazioni EDPB 01/2020.",
+    "body25": "L'elenco aggiornato dei responsabili del trattamento, con indicazione delle relative localizzazioni e delle garanzie applicate, può essere richiesto al Titolare ai contatti indicati al paragrafo 1.",
+    "body26": "I dati personali sono conservati per i seguenti periodi:",
+    "body27": "<b>4.1 Gestione richieste tramite form Demo:</b> i dati raccolti attraverso i moduli di contatto e richiesta demo sono conservati per il tempo strettamente necessario a dare riscontro alla richiesta e, ove l'interessato diventi cliente, per tutta la durata del rapporto contrattuale. In assenza di successivo rapporto contrattuale, i dati sono cancellati o anonimizzati entro 24 (ventiquattro) mesi dalla data di ricezione della richiesta, salvo che l'interessato abbia espresso il consenso al trattamento per finalità di marketing di cui al punto 4.4.",
+    "body28": "<b>4.2 Gestione del Sito e funzioni operative:</b> i dati di navigazione (incluso l'indirizzo IP) raccolti per finalità di gestione tecnica e sicurezza del Sito sono conservati per un periodo non superiore a 6 (sei) mesi dalla data di raccolta, salvo necessità di conservazione ulteriore in caso di accertate violazioni della sicurezza o illeciti informatici, nel qual caso i dati potranno essere trattenuti per il tempo necessario all'espletamento delle relative procedure.",
+    "body29": "<b>4.3 Difesa in giudizio:</b> in deroga ai termini ordinari di cui ai punti precedenti, i dati strettamente pertinenti a una controversia pendente o ragionevolmente prevedibile sono conservati per il tempo necessario alla sua definizione e, in ogni caso, non oltre 10 (dieci) anni dalla cessazione del rapporto, in applicazione del termine di prescrizione ordinaria ex art. 2946 c.c. Decorso tale termine, i dati sono cancellati o anonimizzati. In assenza di controversia pendente o concretamente prevedibile, questa finalità non può essere invocata per trattenere i dati oltre i termini ordinari.",
+    "body30": "<b>4.4 Marketing diretto:</b> fino a revoca del consenso da parte dell'interessato e comunque non oltre 24 mesi dall'ultimo contatto utile, fatta salva la possibilità di rinnovare il consenso.",
+    "body31": "Al termine dei suddetti periodi, i dati sono cancellati o resi anonimi, salvi eventuali obblighi legali di conservazione ulteriore.",
+    "body32": "L'interessato può esercitare in qualsiasi momento, ai sensi degli artt. 15-22 GDPR, i seguenti diritti:",
+    "item11": "<b>diritto di accesso</b> (art. 15): ottenere conferma dell'esistenza del trattamento e ricevere copia dei dati personali trattati;",
+    "item12": "<b>diritto di rettifica</b> (art. 16): ottenere la correzione di dati inesatti o l'integrazione di dati incompleti;",
+    "item13": "<b>diritto alla cancellazione</b> (art. 17): ottenere la cancellazione dei dati personali nei casi previsti dalla norma;",
+    "item14": "<b>diritto di limitazione del trattamento</b> (art. 18);",
+    "item15": "<b>diritto alla portabilità dei dati</b> (art. 20), ove applicabile;",
+    "item16": "<b>diritto di opposizione al trattamento</b> (art. 21), in particolare al trattamento per finalità di marketing diretto;",
+    "item17": "<b>diritto di revocare il consenso</b> in qualsiasi momento (art. 7, par. 3), senza che ciò pregiudichi la liceità del trattamento basata sul consenso prestato prima della revoca.",
+    "body33": "Per esercitare i diritti e per proporre reclamo al Garante per la protezione dei dati personali ( <a>www.garanteprivacy.it</a> ), può scrivere a <a2>privacy@skillvue.ai</a2> o al DPO a <a3>dpo@skillvue.ai</a3> . Skillvue risponde alle richieste degli interessati entro un mese dalla ricezione, estensibile di ulteriori due mesi in caso di particolare complessità, ai sensi dell'art. 12, par. 3, GDPR.",
+    "body34": "Ultimo aggiornamento: 25 giugno 2026",
+    "sections": {
+      "s1": "Titolare del trattamento",
+      "s2": "Responsabile della Protezione dei Dati (RPD/DPO)",
+      "s3": "Categorie di interessati e di dati trattati",
+      "s4": "Finalità e basi giuridiche del trattamento",
+      "s5": "Modalità del trattamento",
+      "s6": "Processi decisionali automatizzati",
+      "s7": "Natura del conferimento e conseguenze del rifiuto",
+      "s8": "Destinatari e comunicazione dei dati",
+      "s9": "Trasferimenti extra-UE",
+      "s10": "Tempi di conservazione",
+      "s11": "Diritti dell'interessato"
+    },
+    "subsections": {
+      "s41": "Gestione delle richieste di informazioni pervenute tramite form per la Demo",
+      "s42": "Gestione del Sito e delle sue funzioni operative, per controllarne il corretto funzionamento, per migliorare la qualità dei servizi offerti ed ottimizzare la funzionalità del Sito",
+      "s43": "Accertamento, esercizio o difesa dei diritti del Titolare in sede stragiudiziale e/o giudiziale",
+      "s44": "Marketing diretto: invio di comunicazioni commerciali"
     }
+  },
+  "privacy-policy-algo": {
+    "meta": {
+      "title": "Trattamento dati personali | Skillvue",
+      "description": "Le informative di Skillvue sul trattamento dei dati personali — Sito Web e Software Skillvue."
+    },
+    "text": "Legal",
+    "heading": "Trattamento dati personali",
+    "body": "Le informative di Skillvue sul trattamento dei dati personali — Sito Web e Software Skillvue",
+    "text2": "Informativa · Sito Web",
+    "heading2": "Informativa sul trattamento dei dati personali",
+    "body2": "Resa ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR)",
+    "body3": "Il Titolare del trattamento informa ai sensi del regolamento UE 2016/679 (\"GDPR\") e della vigente normativa in materia di protezione dei Dati Personali che i Suoi Dati (in seguito, \"Dati\"), nell'ambito del Sito Web <a>https://www.skillvue.ai/it</a> e degli eventuali sottodomini (in seguito \"Sito\") nonché nell'ambito dell'utilizzo dei servizi offerti dal Titolare, saranno trattati con le modalità e per le finalità seguenti.",
+    "body4": "Ove non diversamente indicato, quanto contenuto nella presente informativa dovrà intendersi applicabile solo ai Dati Personali trattati nell'ambito dell'utilizzo del Sito Web e dei suoi sottodomini. Resta inteso che per i trattamenti di Dati Personali effettuati per finalità diverse da quelle di seguito indicate troveranno applicazione le informative sul trattamento relative ai servizi di volta in volta considerati.",
+    "body5": "Titolare del trattamento è Algojob S.r.l., P.IVA 11656370969, operante con il brand Skillvue, con sede legale in Via Molino delle Armi n. 11 — 20123 Milano (MI) (di seguito anche \"Skillvue\" o \"la Società\"), in persona del legale rappresentante pro tempore.",
+    "body6": "Contatti del Titolare:",
+    "item": "PEC: think-up@legalmail.it",
+    "item2": "E-mail per questioni privacy: <a>privacy@skillvue.ai</a>",
+    "body7": "Il Titolare ha designato un Responsabile della Protezione dei Dati (RPD/DPO), contattabile per tutte le questioni relative al trattamento dei dati personali e all'esercizio dei diritti ai sensi del GDPR al seguente indirizzo e-mail: <a>dpo@skillvue.ai</a>",
+    "body8": "La presente informativa si rivolge agli Utenti del sito web.",
+    "body9": "Skillvue tratta le seguenti categorie di dati personali:",
+    "item3": "dati identificativi (nome, cognome);",
+    "item4": "dati di contatto professionali (indirizzo e-mail, numero di telefono);",
+    "item5": "dati di navigazione (indirizzo IP).",
+    "body10": "I dati personali sono trattati per le seguenti finalità, ciascuna fondata su una propria base giuridica:",
+    "body11": "<b>4.1 Gestione delle richieste di informazioni pervenute tramite form per la Demo.</b> Finalità: raccogliere e gestire le richieste di informazioni, contatto o prenotazione di demo inviate dall'Utente tramite i moduli presenti sul Sito, al fine di fornire riscontro alla richiesta, illustrare i servizi offerti da Skillvue e, ove applicabile, avviare le trattative precontrattuali. Base giuridica: esecuzione di un contratto di cui l'interessato è parte o esecuzione di misure precontrattuali adottate su richiesta dell'interessato stesso (art. 6, par. 1, lett. b, GDPR).",
+    "body12": "<b>4.2 Gestione del Sito e delle sue funzioni operative.</b> Finalità: garantire il corretto funzionamento tecnico del Sito, prevenire e rilevare eventuali malfunzionamenti, errori o attacchi informatici, analizzare le modalità di utilizzo del Sito da parte degli Utenti al fine di migliorare l'esperienza di navigazione, ottimizzare le prestazioni e la fruibilità dei contenuti e dei servizi offerti. A tale scopo vengono trattati, in particolare, i dati di navigazione automaticamente generati dai sistemi informatici e dai protocolli di comunicazione utilizzati per l'accesso al Sito (quali l'indirizzo IP, il tipo di browser, il sistema operativo, le pagine visitate e i relativi orari di accesso). Base giuridica: il legittimo interesse del Titolare (art. 6, par. 1, lett. f, GDPR).",
+    "body13": "<b>4.3 Accertamento, esercizio o difesa dei diritti del Titolare in sede stragiudiziale e/o giudiziale.</b> Finalità: conservare e trattare i dati personali del cliente raccolti nell'ambito del rapporto intercorso nella misura in cui ciò risulti necessario per accertare, esercitare o difendere un diritto del Titolare in sede stragiudiziale e/o giudiziale. Base giuridica: legittimo interesse del Titolare (art. 6, par. 1, lett. f, GDPR), consistente nella tutela dei propri diritti e interessi legittimi in sede stragiudiziale e giudiziale. Tale base giuridica è riconosciuta espressamente dal considerando 49 GDPR e dalle Linee guida EDPB, che individuano la difesa in giudizio come interesse legittimo prevalente, proporzionato e non suscettibile di essere bilanciato in senso sfavorevole al Titolare in presenza di una controversia effettiva o ragionevolmente prevedibile. Il trattamento per questa finalità è limitato ai dati strettamente pertinenti alla controversia e cessa non appena la stessa si conclude o il rischio di contenzioso viene meno.",
+    "body14": "<b>4.4 Marketing diretto: invio di comunicazioni commerciali.</b> Finalità: invio di newsletter, aggiornamenti di prodotto, comunicazioni commerciali, inviti a eventi e webinar, comunicazione di offerte o novità relative ai servizi di Skillvue. Base giuridica: consenso libero, specifico, informato e inequivocabile dell'interessato (art. 6, par. 1, lett. a, GDPR; art. 130 D.Lgs. 196/2003). Il consenso è revocabile in qualsiasi momento, con effetto per il futuro, tramite le modalità indicate al successivo paragrafo 11 e/o cliccando sul link di disiscrizione presente in ogni comunicazione.",
+    "body15": "Il trattamento dei Suoi Dati è effettuato, sia in modalità cartacea che informatizzata in modo da minimizzare il rischio di distruzione, perdita (compresa la perdita accidentale), accesso/utilizzo non autorizzati o utilizzo incompatibile con la finalità iniziale della raccolta. Ciò viene conseguito con le misure di sicurezza tecniche e organizzative attuate dal Titolare.",
+    "body16": "Nell'ambito dei rapporti con i clienti, Skillvue non adotta processi decisionali unicamente automatizzati ai sensi dell'art. 22 GDPR che producano effetti giuridici o incidano in modo analogamente significativo sugli interessati.",
+    "body17": "Il conferimento dei dati per le finalità di cui ai paragrafi 4.1, 4.2 e 4.3 è necessario per la conclusione e l'esecuzione del rapporto e per l'adempimento degli obblighi di legge: il rifiuto comporta l'impossibilità di instaurare o proseguire il rapporto.",
+    "body18": "Il conferimento dei dati per le finalità di marketing (paragrafo 4.4) è facoltativo: il rifiuto o la revoca del consenso non comporta alcuna conseguenza sul rapporto contrattuale in corso.",
+    "body19": "I dati personali possono essere comunicati, nei limiti di quanto strettamente necessario, alle seguenti categorie di destinatari:",
+    "item6": "dipendenti e/o collaboratori, debitamente istruiti e autorizzati al trattamento ai sensi degli artt. 29 GDPR e 2-quaterdecies D. Lgs. 196/2003;",
+    "item7": "soggetti nominati quali responsabili del trattamento ex art. 28 GDPR;",
+    "item8": "autorità pubbliche, autorità giudiziarie, autorità di controllo e altri soggetti pubblici, quando la comunicazione è imposta dalla legge o necessaria all'accertamento di diritti.",
+    "body20": "L'elenco aggiornato dei responsabili del trattamento può essere richiesto al Titolare ai contatti indicati al paragrafo 1.",
+    "body21": "I dati personali sono prevalentemente trattati all'interno dello Spazio Economico Europeo. Alcuni dei fornitori tecnologici di cui Skillvue si avvale in qualità di responsabili del trattamento appartengono a gruppi multinazionali con sede principale al di fuori dell'Unione europea (in particolare negli Stati Uniti d'America). Qualora si verifichino trasferimenti extra-UE nell'ambito dei servizi resi da tali responsabili, Skillvue garantisce che gli stessi avvengano nel rispetto del Capo V GDPR, in particolare sulla base di:",
+    "item9": "decisione di adeguatezza della Commissione europea ai sensi dell'art. 45 GDPR (EU-U.S. Data Privacy Framework) per i fornitori certificati ed iscritti nel registro pubblico mantenuto dal Dipartimento del Commercio statunitense;",
+    "item10": "in subordine, Clausole Contrattuali Standard approvate dalla Commissione europea ai sensi dell'art. 46, par. 2, lett. c, GDPR, integrate, ove necessario sulla base di apposita valutazione di impatto sui trasferimenti, da misure supplementari conformi alle Raccomandazioni EDPB 01/2020.",
+    "body22": "L'elenco aggiornato dei responsabili del trattamento, con indicazione delle relative localizzazioni e delle garanzie applicate, può essere richiesto al Titolare ai contatti indicati al paragrafo 1.",
+    "body23": "I dati personali sono conservati per i seguenti periodi:",
+    "body24": "<b>4.1 Gestione richieste tramite form Demo:</b> i dati raccolti attraverso i moduli di contatto e richiesta demo sono conservati per il tempo strettamente necessario a dare riscontro alla richiesta e, ove l'interessato diventi cliente, per tutta la durata del rapporto contrattuale. In assenza di successivo rapporto contrattuale, i dati sono cancellati o anonimizzati entro 24 (ventiquattro) mesi dalla data di ricezione della richiesta, salvo che l'interessato abbia espresso il consenso al trattamento per finalità di marketing di cui al punto 4.4.",
+    "body25": "<b>4.2 Gestione del Sito e funzioni operative:</b> i dati di navigazione (incluso l'indirizzo IP) raccolti per finalità di gestione tecnica e sicurezza del Sito sono conservati per un periodo non superiore a 6 (sei) mesi dalla data di raccolta, salvo necessità di conservazione ulteriore in caso di accertate violazioni della sicurezza o illeciti informatici, nel qual caso i dati potranno essere trattenuti per il tempo necessario all'espletamento delle relative procedure.",
+    "body26": "<b>4.3 Difesa in giudizio:</b> in deroga ai termini ordinari di cui ai punti precedenti, i dati strettamente pertinenti a una controversia pendente o ragionevolmente prevedibile sono conservati per il tempo necessario alla sua definizione e, in ogni caso, non oltre 10 (dieci) anni dalla cessazione del rapporto, in applicazione del termine di prescrizione ordinaria ex art. 2946 c.c. Decorso tale termine, i dati sono cancellati o anonimizzati. In assenza di controversia pendente o concretamente prevedibile, questa finalità non può essere invocata per trattenere i dati oltre i termini ordinari.",
+    "body27": "<b>4.4 Marketing diretto:</b> fino a revoca del consenso da parte dell'interessato e comunque non oltre 24 mesi dall'ultimo contatto utile, fatta salva la possibilità di rinnovare il consenso.",
+    "body28": "Al termine dei suddetti periodi, i dati sono cancellati o resi anonimi, salvi eventuali obblighi legali di conservazione ulteriore.",
+    "body29": "L'interessato può esercitare in qualsiasi momento, ai sensi degli artt. 15-22 GDPR, i seguenti diritti:",
+    "item11": "<b>diritto di accesso</b> (art. 15): ottenere conferma dell'esistenza del trattamento e ricevere copia dei dati personali trattati;",
+    "item12": "<b>diritto di rettifica</b> (art. 16): ottenere la correzione di dati inesatti o l'integrazione di dati incompleti;",
+    "item13": "<b>diritto alla cancellazione</b> (art. 17): ottenere la cancellazione dei dati personali nei casi previsti dalla norma;",
+    "item14": "<b>diritto di limitazione del trattamento</b> (art. 18);",
+    "item15": "<b>diritto alla portabilità dei dati</b> (art. 20), ove applicabile;",
+    "item16": "<b>diritto di opposizione al trattamento</b> (art. 21), in particolare al trattamento per finalità di marketing diretto;",
+    "item17": "<b>diritto di revocare il consenso</b> in qualsiasi momento (art. 7, par. 3), senza che ciò pregiudichi la liceità del trattamento basata sul consenso prestato prima della revoca.",
+    "body30": "Per esercitare i diritti e per proporre reclamo al Garante per la protezione dei dati personali (<a>www.garanteprivacy.it</a>), può scrivere a <a2>privacy@skillvue.ai</a2> o al DPO a <a3>dpo@skillvue.ai</a3>. Skillvue risponde alle richieste degli interessati entro un mese dalla ricezione, estensibile di ulteriori due mesi in caso di particolare complessità, ai sensi dell'art. 12, par. 3, GDPR.",
+    "body31": "Ultimo aggiornamento: 25 giugno 2026",
+    "text3": "Informativa · Software Skillvue",
+    "text4": "Versione italiana",
+    "heading3": "Informativa sul trattamento di dati personali svolto tramite il software Skillvue",
+    "body32": "Algojob S.r.l. (\"Algojob\" o \"Skillvue\") ha sviluppato un software basato sull'intelligenza artificiale denominato <b>Skillvue</b>, che consente alle aziende di analizzare e valutare le competenze trasversali, tecniche e comportamentali di candidati e dipendenti (\"Interessati\"). Le competenze vengono rilevate attraverso \"analisi AI di interviste e test a risposta multipla\" con supervisione umana.",
+    "body33": "Algojob S.r.l., Via Molino delle Armi 11, 20123 Milano, Italia",
+    "item18": "Codice Fiscale: 11656370969",
+    "item19": "P.IVA: 11656370969",
+    "item20": "Registro Imprese: MI – 2617568",
+    "item21": "Email: <a>privacy@skillvue.ai</a>",
+    "body34": "Dati raccolti tramite la piattaforma Skillvue nel corso di processi di selezione, mobilità interna o talent management.",
+    "item22": "Vettori computazionali anonimizzati derivanti dall'analisi AI delle trascrizioni dei colloqui",
+    "item23": "Video/audio dei colloqui",
+    "item24": "Dati comportamentali derivanti dall'analisi AI delle risposte trascritte",
+    "item25": "Dati sulle competenze identificate tramite analisi AI",
+    "body35": "<b>Addestramento e sviluppo AI:</b> Il sistema identifica i concetti chiave espressi dal candidato e li associa a indicatori comportamentali per ciascuna competenza. Il trattamento si basa sul legittimo interesse nell'addestrare l'AI tramite supervisione umana per produrre risultati migliori e più coerenti.",
+    "body36": "<b>Ricerca e sviluppo:</b> Studi e ricerche nel campo dell'intelligenza artificiale, basati sul legittimo interesse.",
+    "body37": "I dati sono trattati con mezzi elettronici e algoritmi AI, con misure di sicurezza adeguate a garantire riservatezza, integrità e disponibilità. Skillvue non è coinvolta in processi decisionali automatizzati con effetti giuridici; tali decisioni spettano esclusivamente alle aziende clienti. I dati sono protetti mediante misure tecniche, organizzative e legali.",
+    "body38": "I dati sono conservati per un periodo massimo di <b>24 mesi</b> dalla raccolta sul cloud privato Amazon di Skillvue (con sede nell'UE) per finalità di addestramento AI e ricerca. Trascorso tale termine, i dati vengono anonimizzati in modo irreversibile o cancellati.",
+    "item26": "Personale autorizzato e formato",
+    "item27": "Amazon (responsabile del trattamento, nell'UE)",
+    "item28": "Autorità e istituzioni che ne abbiano diritto per legge",
+    "body39": "I dati sono conservati nell'UE. I trasferimenti al di fuori dell'UE avvengono solo in presenza di: paese destinatario ritenuto adeguato dalla Commissione europea, oppure Clausole Contrattuali Standard (con eventuali misure supplementari).",
+    "body40": "Ai sensi del GDPR, gli interessati possono:",
+    "item29": "Ottenere conferma dell'esistenza dei propri dati e accedere al relativo contenuto",
+    "item30": "Richiedere la cancellazione o la limitazione del trattamento",
+    "item31": "Esercitare il diritto di opposizione al trattamento basato sul legittimo interesse \"per motivi connessi alla propria situazione particolare\"",
+    "item32": "Proporre reclamo all'Autorità Garante per la protezione dei dati personali o ricorrere all'autorità giudiziaria",
+    "body41": "Per esercitare i propri diritti: <a>privacy@skillvue.ai</a>",
+    "text5": "English version",
+    "heading4": "Information on the processing of personal data carried out through the Skillvue software",
+    "body42": "Algojob S.r.l. developed AI-based software called <b>Algo Interview</b>, allowing companies to pre-screen candidates for recruitment processes through skills analysis. Skills are detected through \"AI analysis of video interviews and multiple-choice tests\" with human supervision.",
+    "body43": "Algojob S.r.l., Via Molino delle Armi 11, 20123 Milan, Italy",
+    "item33": "Tax Code: 11656370969",
+    "item34": "VAT: 11656370969",
+    "item35": "Company Register: MI – 2617568",
+    "item36": "Email: <a>privacy@skillvue.ai</a>",
+    "body44": "Data collected via the Skillvue platform during recruitment, internal mobility, or talent management processes.",
+    "item37": "Image and audio from video interviews",
+    "item38": "Behavioral data from AI analysis of transcribed interview text",
+    "item39": "Competency data identified through AI analysis",
+    "body45": "<b>AI Training:</b> The company using Skillvue specifies the profile sought, the job, and required skills; the system learns through human-supervised correction of AI outputs. Processing is based on legitimate interest in training AI to produce increasingly consistent results. Data provision is optional.",
+    "body46": "<b>Research & Development:</b> Studies in artificial intelligence based on legitimate interest. Data provision is optional.",
+    "body47": "Data processed via electronic means and AI algorithms with appropriate security measures. Skillvue uses an algorithm pre-trained on a set of inputs with known outputs (training data). The system processes data through machine learning, recognizing connections between inputs and outputs using data external to the training sets.",
+    "body48": "Data stored for a maximum period of <b>24 months</b> from collection on Skillvue's private Amazon cloud (EU-located) for AI training and research purposes.",
+    "item40": "Authorized, trained personnel",
+    "item41": "Amazon (data processor within EU)",
+    "item42": "Authorities and institutions with legal access rights",
+    "body49": "Data retained within the EU. Transfers outside the EU occur only where the recipient country has been deemed adequate by the EU Commission, or Standard Contractual Clauses (with supplementary measures where required) are in place.",
+    "body50": "Under GDPR, individuals may:",
+    "item43": "Receive confirmation of personal data existence and access its content",
+    "item44": "Request erasure or restriction of processing",
+    "item45": "Exercise the right to object to processing based on legitimate interest at any time, for reasons related to their particular situation",
+    "item46": "Lodge a complaint with the Data Protection Authority or seek judicial remedy",
+    "body51": "To exercise your rights: <a>privacy@skillvue.ai</a>",
+    "body52": "Last updated: April 2025",
+    "heading5": "1. Titolare del trattamento",
+    "heading6": "2. Responsabile della Protezione dei Dati (RPD/DPO)",
+    "heading7": "3. Categorie di interessati e di dati trattati",
+    "heading8": "4. Finalità e basi giuridiche del trattamento",
+    "heading9": "5. Modalità del trattamento",
+    "heading10": "6. Processi decisionali automatizzati",
+    "heading11": "7. Natura del conferimento e conseguenze del rifiuto",
+    "heading12": "8. Destinatari e comunicazione dei dati",
+    "heading13": "9. Trasferimenti extra-UE",
+    "heading14": "10. Tempi di conservazione",
+    "heading15": "11. Diritti dell'interessato",
+    "heading16": "Titolare del trattamento",
+    "heading17": "Fonte dei dati",
+    "heading18": "Dati trattati",
+    "heading19": "Finalità del trattamento e base giuridica",
+    "heading20": "Modalità di trattamento",
+    "heading21": "Conservazione dei dati",
+    "heading22": "Destinatari dei dati",
+    "heading23": "Trasferimenti internazionali",
+    "heading24": "Diritti dell'interessato",
+    "heading25": "Data Controller",
+    "heading26": "Data Source",
+    "heading27": "Processed Data",
+    "heading28": "Processing Purposes & Lawfulness",
+    "heading29": "Data Processing Methods",
+    "heading30": "Data Retention",
+    "heading31": "Data Recipients",
+    "heading32": "International Transfers",
+    "heading33": "Data Subject Rights"
   },
   "product-overview": {
     "hero": {
@@ -5192,7 +6397,9 @@
       "meta": {
         "title": "Skillvue sui media",
         "description": "Scopri come le principali testate internazionali raccontano l'ascesa dell'intelligenza dei talenti potenziata dall'intelligenza artificiale."
-      }
+      },
+      "italianKicker": "Stampa italiana",
+      "italianHeading": "Skillvue sui media italiani"
     },
     "whitepapers": {
       "items": {
@@ -5384,7 +6591,8 @@
       "meta": {
         "title": "White Paper & Report | Skillvue",
         "description": "Ricerche e approfondimenti per ripensare il modo in cui selezioni, sviluppi e gestisci il talento. Esplora la nostra libreria e scarica le risorse che ti ser..."
-      }
+      },
+      "badge": "White Paper"
     }
   },
   "science": {
@@ -5581,6 +6789,19 @@
     },
     "solutionFinalCTA": {
       "cta": "Prenota una Demo"
+    },
+    "a11y": {
+      "previous": "Precedente",
+      "next": "Successivo"
+    },
+    "lp": {
+      "copyright": "© {year} Skillvue S.r.l. — Tutti i diritti riservati.",
+      "dataSafe": "I tuoi dati sono al sicuro. Niente spam.",
+      "downloadPdf": "Scarica PDF",
+      "contact": "Contattaci",
+      "loading": "Caricamento…",
+      "exploratoryCall": "Contattaci per una conversazione esplorativa",
+      "requestCall": "Richiedi una conversazione esplorativa"
     }
   },
   "solutions": {
@@ -6076,12 +7297,6 @@
       },
       "text": "Pronto ad assumere con",
       "text2": "fiducia?"
-    }
-  },
-  "privacy-policy-algo": {
-    "meta": {
-      "title": "Trattamento dati personali | Skillvue",
-      "description": "Le informative di Skillvue sul trattamento dei dati personali — Sito Web e Software Skillvue."
     }
   }
 }

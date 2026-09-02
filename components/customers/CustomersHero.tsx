@@ -39,15 +39,12 @@ const clientLogos = [
   { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2' },
 ];
 
-const logoFilesIt = clientLogos;
-const logoFilesEn = clientLogos;
 
 export default function CustomersHero() {
   const lang = useLocale();
   const t = useTranslations('customers');
-  const baseLogos = lang === 'en' ? logoFilesEn : logoFilesIt;
   // Repeat to keep the track wider than any viewport (no visible gap on wide screens)
-  const logoFiles = [...baseLogos, ...baseLogos];
+  const logoFiles = [...clientLogos, ...clientLogos];
   return (
     <section id="customers-hero" data-testid="customers-hero" className="relative pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-24 lg:py-32">

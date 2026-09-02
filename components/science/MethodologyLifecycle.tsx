@@ -55,6 +55,10 @@ const principles = [
 
 export default function MethodologyLifecycle() {
   const t = useTranslations('science');
+  // The carousel's arrow labels are read aloud, not shown, and they are the same
+  // two words on every carousel — so they live in `shared`, not in this page's
+  // namespace.
+  const ta = useTranslations('shared');
   const [active, setActive] = useState(0);
   const [activePrinciple, setActivePrinciple] = useState(0);
   const ref = useRef(null);
@@ -144,14 +148,14 @@ export default function MethodologyLifecycle() {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setActivePrinciple((p) => (p - 1 + principles.length) % principles.length)}
-                aria-label="Previous principle"
+                aria-label={ta('a11y.previous')}
                 className="flex items-center justify-center h-8 w-8 rounded-full border border-white/10 text-white/40 active:text-white/80 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
               <button
                 onClick={() => setActivePrinciple((p) => (p + 1) % principles.length)}
-                aria-label="Next principle"
+                aria-label={ta('a11y.next')}
                 className="flex items-center justify-center h-8 w-8 rounded-full border border-white/15 text-white/60 active:text-white/90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
               >
                 <ChevronRight className="h-4 w-4" />

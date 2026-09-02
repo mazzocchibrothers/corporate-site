@@ -67,6 +67,10 @@ export default function AdrStory() {
 }
 ```
 
+No copy in either file — `check:hardcoded` fails on a readable string in the
+code, and the only exception is a name (a company, a person), listed in that
+script.
+
 No copy in either file. No `<Head>` — `generateMetadata` emits the title, the
 description and the canonical, and a bare `<link rel="preload">` rendered in the
 body is hoisted into `<head>` by React 19 if a page needs one of its own.

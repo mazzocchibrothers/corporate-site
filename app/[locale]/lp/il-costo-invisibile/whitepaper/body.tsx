@@ -1,6 +1,7 @@
 // @ts-nocheck
 'use client';
 
+import { useTranslations } from 'next-intl';
 import React, { useEffect } from 'react';
 import { Download, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -111,6 +112,8 @@ function NumberedItem({ n, title, children }: { n: number; title: string; childr
 
 
 export default function IlCostoInvisibileWhitepaper() {
+  const t = useTranslations('lp.il-costo-invisibile.whitepaper');
+  const tl = useTranslations('shared.lp');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -129,7 +132,7 @@ export default function IlCostoInvisibileWhitepaper() {
         >
           <div className="flex items-center gap-2.5">
             <SkillvueIcon size={24} />
-            <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.01em]">Skillvue</span>
+            <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.01em]">{t('text')}</span>
           </div>
           <div className="flex items-center gap-3">
             <Button asChild variant="secondary" mode="light">
@@ -137,9 +140,7 @@ export default function IlCostoInvisibileWhitepaper() {
                 href="/WP-I1-ITA.pdf"
                 download="Il-Costo-Invisibile-Selezione-Non-Predittiva-Skillvue.pdf"
               >
-                <Download aria-hidden="true" />
-                Scarica PDF
-              </a>
+                <Download aria-hidden="true" />{tl('downloadPdf')}</a>
             </Button>
             <Button asChild variant="primary" mode="light">
               <a
@@ -147,7 +148,7 @@ export default function IlCostoInvisibileWhitepaper() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Contattaci
+                {tl('contact')}
                 <ArrowRight aria-hidden="true" />
               </a>
             </Button>
@@ -164,62 +165,56 @@ export default function IlCostoInvisibileWhitepaper() {
                 className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-7"
                 style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
               >
-                INSURANCE · 2026
-              </span>
+                {t('text2')}</span>
               <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
-                Il costo invisibile
-                <span
-                  className="block"
-                  style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
-                >
-                  della selezione non predittiva
-                </span>
-              </h1>
+                {t.rich('heading', {
+          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</h1>
               <p className="text-[15px] text-[#0D0D0D]/45 italic mt-3 mb-6">
-                Come identificare e misurare il profilo comportamentale dell'agente assicurativo ibrido ad alta performance
-              </p>
+                {t('body')}</p>
               <div className="w-10 h-px mx-auto mb-5" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
               <p className="text-[13px] text-[#0D0D0D]/40">
-                <em>Settore:</em> Insurance
-              </p>
-              <p className="text-[13px] text-[#0D0D0D]/40 mt-1"><em>Lettura:</em> circa 7 minuti</p>
+                {t.rich('body2', {
+          i: (chunks) => <em>{chunks}</em>,
+        })}</p>
+              <p className="text-[13px] text-[#0D0D0D]/40 mt-1">{t.rich('body3', {
+          i: (chunks) => <em>{chunks}</em>,
+        })}</p>
               <p className="text-[13px] text-[#0D0D0D]/40 mt-1">
-                A cura di{' '}
-                <span style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>
-                  Skillvue
-                </span>
-              </p>
+                {t.rich('body4', {
+          s: (chunks) => <span style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>{chunks}</span>,
+        })}</p>
             </div>
 
             {/* Document Body */}
             <div className="px-10 py-10">
 
               {/* Problem box */}
-              <InfoBox title="Il problema in numeri">
+              <InfoBox title={t('heading5')}>
                 <p>
-                  In una rete agenziale di <strong className="text-[#0D0D0D]/80">2.000 agenti</strong> con un{' '}
-                  <strong className="text-[#0D0D0D]/80">turnover annuo del 20% o 25%</strong>, il costo stimato della{' '}
-                  <strong className="text-[#0D0D0D]/80">selezione non predittiva</strong> si colloca tra i{' '}
-                  <strong className="text-[#0D0D0D]/80">15 e i 25 milioni di euro l'anno</strong>. Questa cifra comprende le spese
-                  di recruiting e formazione, la <strong className="text-[#0D0D0D]/80">mancata produzione</strong> nei primi 12 mesi
-                  e l'impatto negativo sulla <strong className="text-[#0D0D0D]/80">retention del portafoglio</strong>: il tutto senza
-                  ancora considerare il <strong className="text-[#0D0D0D]/80">danno reputazionale</strong> causato da un consulente
-                  inadeguato nel rapporto diretto con il cliente.
-                </p>
+                  {t.rich('body5', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b5: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b6: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b7: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</p>
               </InfoBox>
 
               {/* Cover stats */}
               <div className="grid grid-cols-2 gap-4 my-8">
-                <StatBox value="€15-25M" label="Costo selezione non predittiva / anno" />
-                <StatBox value="2.000" label="Agenti nella rete di riferimento" />
-                <StatBox value="20-25%" label="Turnover annuo rete agenziale" />
-                <StatBox value="0,54" label="Validità predittiva verification" />
+                <StatBox value="€15-25M" label={t('label')} />
+                <StatBox value="2.000" label={t('label2')} />
+                <StatBox value="20-25%" label={t('label3')} />
+                <StatBox value="0,54" label={t('label4')} />
               </div>
 
               {/* Cost breakdown */}
               <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
-                <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">Dettaglio costo della selezione non predittiva</p>
-                <p className="text-[12px] text-[#0D0D0D]/35 italic mb-5">Distribuzione % per voce di costo</p>
+                <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">{t('body6')}</p>
+                <p className="text-[12px] text-[#0D0D0D]/35 italic mb-5">{t('body7')}</p>
                 <div className="space-y-3">
                   {[
                     { label: 'Mancata produzione nei primi 12 mesi', pct: 45, color: '#FF6550' },
@@ -241,123 +236,113 @@ export default function IlCostoInvisibileWhitepaper() {
               </div>
 
               <Para>
-                Questo documento non è una rassegna accademica sul futuro dell'agente assicurativo. È una{' '}
-                <strong className="text-[#0D0D0D]/80">guida operativa</strong> dedicata a chi deve decidere{' '}
-                <strong className="text-[#0D0D0D]/80">come selezionare, oggi, le persone che costruiranno la rete di domani</strong>.
-                Il documento analizza il <strong className="text-[#0D0D0D]/80">profilo comportamentale</strong> dell'agente ibrido
-                ad alta performance, spiega le ragioni per cui i metodi tradizionali non riescono a identificarlo e mostra come la{' '}
-                <strong className="text-[#0D0D0D]/80">valutazione comportamentale strutturata</strong> stia già producendo{' '}
-                <strong className="text-[#0D0D0D]/80">risultati misurabili</strong> nelle principali reti agenziali europee.
-              </Para>
+                {t.rich('text3', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b5: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
               {/* Section 1 */}
-              <SectionHeading num="1" title="Agente Ibrido: il nuovo profilo emergente" />
+              <SectionHeading num="1" title={t('heading6')} />
               <Para>
-                Il settore assicurativo europeo ha affrontato nell'ultimo quinquennio una{' '}
-                <strong className="text-[#0D0D0D]/80">transizione strutturale</strong> del proprio modello distributivo. Secondo i
-                dati <strong className="text-[#0D0D0D]/80">EIOPA 2023</strong>, la penetrazione digitale ha superato{' '}
-                <strong className="text-[#0D0D0D]/80">il 30% dei nuovi contratti retail</strong> in diversi mercati dell'Europa
-                occidentale: tuttavia, il digitale non ha sostituito l'agente, lo ha radicalmente ridefinito.
-              </Para>
+                {t.rich('text4', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <Para>
-                L'<strong className="text-[#0D0D0D]/80">agente ibrido</strong> è il profilo emergente che i grandi gruppi
-                assicurativi europei stanno cercando di costruire. Non è un venditore con un tablet, ma un{' '}
-                <strong className="text-[#0D0D0D]/80">consulente evoluto</strong> che combina una{' '}
-                <strong className="text-[#0D0D0D]/80">competenza relazionale profonda</strong> con l'abilità di operare fluidamente
-                in <strong className="text-[#0D0D0D]/80">ecosistemi omnicanale</strong>. Deloitte, nel suo{' '}
-                <em>Insurance Industry Outlook 2024</em>, lo descrive come "<strong className="text-[#0D0D0D]/80">trusted advisor</strong>":
-                una figura che presidia la relazione nel lungo periodo, interpreta bisogni latenti e mantiene la fiducia del cliente
-                anche nei momenti di sinistro o di cambiamento di vita.
-              </Para>
+                {t.rich('text5', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          i: (chunks) => <em>{chunks}</em>,
+          b5: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <Para>
-                Parallelamente, la <strong className="text-[#0D0D0D]/80">normativa IDD</strong> (<em>Insurance Distribution Directive</em>)
-                ha innalzato l'asticella, introducendo rigorosi requisiti di{' '}
-                <strong className="text-[#0D0D0D]/80">trasparenza</strong>, gestione dei conflitti di interesse e{' '}
-                <strong className="text-[#0D0D0D]/80">formazione continua</strong>. Questi obblighi non interpellano solo le
-                competenze tecniche dell'agente, ma la sua{' '}
-                <strong className="text-[#0D0D0D]/80">struttura comportamentale profonda</strong>.
-              </Para>
+                {t.rich('text6', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          i: (chunks) => <em>{chunks}</em>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <Para>
-                Il risultato è evidente: i classici strumenti di selezione faticano a identificare questo profilo. I tratti
-                distintivi di un agente ibrido ad alta performance non emergono da un curriculum vitae, né possono essere
-                intercettati attraverso un semplice colloquio non strutturato.
-              </Para>
+                {t('text7')}</Para>
 
               {/* Predictive validity comparison */}
               <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-6">
-                <p className="text-[12px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">Validità predittiva a confronto</p>
-                <p className="text-[11px] text-[#0D0D0D]/35 italic mb-5">Correlazione con la performance lavorativa futura</p>
+                <p className="text-[12px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">{t('body8')}</p>
+                <p className="text-[11px] text-[#0D0D0D]/35 italic mb-5">{t('body9')}</p>
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between text-[12px] mb-1.5">
-                      <span className="text-[#0D0D0D]/55">Colloquio non strutturato</span>
-                      <span className="font-bold text-[#EF4444]">0.38</span>
-                    </div>
+                      {t.rich('text8', {
+          s: (chunks) => <span className="text-[#0D0D0D]/55">{chunks}</span>,
+          s2: (chunks) => <span className="font-bold text-[#EF4444]">{chunks}</span>,
+        })}</div>
                     <div className="h-6 rounded-lg bg-black/[0.05] overflow-hidden">
                       <div className="h-full rounded-lg flex items-center justify-end pr-2" style={{ width: '38%', background: '#EF4444' }}>
-                        <span className="text-white text-[11px] font-bold">0.38</span>
-                      </div>
+                        {t.rich('text9', {
+          s: (chunks) => <span className="text-white text-[11px] font-bold">{chunks}</span>,
+        })}</div>
                     </div>
                   </div>
                   <div>
                     <div className="flex justify-between text-[12px] mb-1.5">
-                      <span className="text-[#0D0D0D]/55">Valutazione comportamentale strutturata</span>
-                      <span className="font-bold text-[#4B4DF7]">0.54</span>
-                    </div>
+                      {t.rich('text10', {
+          s: (chunks) => <span className="text-[#0D0D0D]/55">{chunks}</span>,
+          s2: (chunks) => <span className="font-bold text-[#4B4DF7]">{chunks}</span>,
+        })}</div>
                     <div className="h-6 rounded-lg bg-black/[0.05] overflow-hidden">
                       <div className="h-full rounded-lg flex items-center justify-end pr-2" style={{ width: '54%', background: 'linear-gradient(90deg, #4B4DF7, #7B4DFF)' }}>
-                        <span className="text-white text-[11px] font-bold">0.54</span>
-                      </div>
+                        {t.rich('text11', {
+          s: (chunks) => <span className="text-white text-[11px] font-bold">{chunks}</span>,
+        })}</div>
                     </div>
                   </div>
                 </div>
-                <p className="text-[11px] text-[#0D0D0D]/25 mt-4 italic">Fonte: Schmidt & Hunter (1998, aggiornata nel 2016).</p>
+                <p className="text-[11px] text-[#0D0D0D]/25 mt-4 italic">{t('body10')}</p>
               </div>
 
               {/* Section 2 */}
-              <SectionHeading num="2" title="Tratti distintivi di un agente ibrido ad alta performance" />
+              <SectionHeading num="2" title={t('heading7')} />
               <Para>
-                La ricerca e i <strong className="text-[#0D0D0D]/80">benchmark di settore</strong> convergono su quattro dimensioni
-                comportamentali che predicono con precisione l'efficacia del{' '}
-                <strong className="text-[#0D0D0D]/80">consulente assicurativo</strong> nel nuovo modello distributivo:
-              </Para>
+                {t.rich('text12', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <NumberedItem n={1} title="Resilienza sotto pressione commerciale">
-                Non si tratta di un tratto della personalità astratto, ma di <strong className="text-[#0D0D0D]/80">pattern comportamentali
-                osservabili</strong>: la capacità di analizzare le interazioni dopo un rifiuto, la ricerca attiva di feedback e la
-                tendenza a non generalizzare i singoli insuccessi. Gli agenti resilienti{' '}
-                <strong className="text-[#0D0D0D]/80">recuperano più in fretta i cali di produttività</strong> e garantiscono la
-                stabilità del portafoglio anche nelle fasi di mercato più sfavorevoli.
-              </NumberedItem>
+              <NumberedItem n={1} title={t('heading8')}>
+                {t.rich('text13', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
-              <NumberedItem n={2} title="Orientamento alla consulenza vs. vendita transazionale">
-                I profili orientati alla consulenza costruiscono relazioni con un{' '}
-                <strong className="text-[#0D0D0D]/80">life-time value nettamente superiore</strong>. Il problema: questa distinzione
-                non è rilevabile nei colloqui tradizionali. La discrepanza tra le{' '}
-                <strong className="text-[#0D0D0D]/80">risposte dichiarate</strong> e il{' '}
-                <strong className="text-[#0D0D0D]/80">comportamento reale</strong> sotto pressione è un dato statisticamente
-                documentato che solo una valutazione strutturata può far emergere.
-              </NumberedItem>
+              <NumberedItem n={2} title={t('heading9')}>
+                {t.rich('text14', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
-              <NumberedItem n={3} title="Adattabilità omnicanale">
-                La capacità di muoversi con coerenza tra interazione fisica, digitale e telefonica è oggi una{' '}
-                <strong className="text-[#0D0D0D]/80">competenza chiave</strong>. I top performer si distinguono per una minore
-                resistenza al cambiamento del workflow e per un approccio comunicativo capace di adattarsi naturalmente al canale
-                scelto dal cliente.
-              </NumberedItem>
+              <NumberedItem n={3} title={t('heading10')}>
+                {t.rich('text15', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
-              <NumberedItem n={4} title="Ascolto attivo e lettura dei segnali impliciti">
-                Gli agenti ad alta performance intercettano le{' '}
-                <strong className="text-[#0D0D0D]/80">preoccupazioni non dichiarate</strong>, leggendo le tensioni tra esigenze di
-                protezione e vincoli di budget. Accenture (2024) ha identificato questa capacità come il{' '}
-                <strong className="text-[#0D0D0D]/80">differenziale più significativo</strong> tra i consulenti di fascia media e i
-                veri top performer.
-              </NumberedItem>
+              <NumberedItem n={4} title={t('heading11')}>
+                {t.rich('text16', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</NumberedItem>
 
               {/* 4 dimensions bar chart */}
               <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-6">
-                <p className="text-[12px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">Le 4 dimensioni comportamentali chiave</p>
-                <p className="text-[11px] text-[#0D0D0D]/35 italic mb-5">Rilevanza per la performance dell'agente ibrido</p>
+                <p className="text-[12px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">{t('body11')}</p>
+                <p className="text-[11px] text-[#0D0D0D]/35 italic mb-5">{t('body12')}</p>
                 <div className="space-y-3">
                   {[
                     { label: 'Orientamento consulenziale', pct: 92 },
@@ -379,19 +364,18 @@ export default function IlCostoInvisibileWhitepaper() {
               </div>
 
               {/* Section 3 */}
-              <SectionHeading num="3" title="Perché il processo di selezione attuale non è più efficace" />
+              <SectionHeading num="3" title={t('heading12')} />
               <Para>
-                Oggi, la maggior parte dei processi di selezione nelle reti agenziali si affida ancora a un mix di colloqui non
-                strutturati, analisi delle esperienze pregresse e, talvolta, test di personalità standardizzati. Tuttavia, questi
-                strumenti mostrano <strong className="text-[#0D0D0D]/80">tre limiti critici</strong>:
-              </Para>
+                {t.rich('text17', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
               {/* Limits table */}
               <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] overflow-hidden my-6">
                 <div className="grid grid-cols-3 bg-black/[0.04] text-[11px] font-bold uppercase tracking-[0.12em] text-[#0D0D0D]/50">
-                  <div className="p-3 border-r border-black/[0.06]">Limite</div>
-                  <div className="p-3 border-r border-black/[0.06]">Causa</div>
-                  <div className="p-3">Impatto sulla selezione</div>
+                  <div className="p-3 border-r border-black/[0.06]">{t('text18')}</div>
+                  <div className="p-3 border-r border-black/[0.06]">{t('text19')}</div>
+                  <div className="p-3">{t('text20')}</div>
                 </div>
                 {[
                   {
@@ -418,52 +402,46 @@ export default function IlCostoInvisibileWhitepaper() {
                 ))}
               </div>
 
-              <SubHeading title="1. Bassa validità predittiva" />
+              <SubHeading title={t('heading13')} />
               <Para>
-                Secondo la meta-analisi di <em>Schmidt & Hunter (1998, aggiornata nel 2016)</em>, il colloquio non strutturato ha{' '}
-                <strong className="text-[#0D0D0D]/80">una correlazione di appena 0,38</strong> con la performance lavorativa futura.
-                Questo valore crolla ulteriormente nei ruoli che richiedono{' '}
-                <strong className="text-[#0D0D0D]/80">competenze relazionali complesse</strong>.
-              </Para>
+                {t.rich('text21', {
+          i: (chunks) => <em>{chunks}</em>,
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <SubHeading title="2. La distinzione tra tratto e comportamento" />
+              <SubHeading title={t('heading14')} />
               <Para>
-                I test di personalità tradizionali fotografano un tratto latente, ma{' '}
-                <strong className="text-[#0D0D0D]/80">non dicono nulla sul comportamento situazionale</strong>. La personalità è
-                il potenziale, ma il comportamento è ciò che produce risultati in agenzia.
-              </Para>
+                {t.rich('text22', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <SubHeading title="3. Non scalabilità" />
+              <SubHeading title={t('heading15')} />
               <Para>
-                Le reti agenziali dei grandi gruppi europei gestiscono migliaia di inserimenti ogni anno. Senza gli strumenti
-                adeguati, assicurare{' '}
-                <strong className="text-[#0D0D0D]/80">standard di qualità uniformi su larga scala</strong> rimane un'aspirazione
-                teorica.
-              </Para>
+                {t.rich('text23', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
               {/* Section 4 */}
-              <SectionHeading num="4" title="La misurazione del talento mediante una valutazione comportamentale strutturata" />
+              <SectionHeading num="4" title={t('heading16')} />
               <Para>
-                Le metodologie di <strong className="text-[#0D0D0D]/80">behavioral verification</strong> hanno raggiunto oggi una
-                maturità tale da poter essere applicate su larga scala. Il cuore di questo approccio risiede nel passaggio
-                fondamentale dalla valutazione dichiarativa ("cosa farebbe?") alla{' '}
-                <strong className="text-[#0D0D0D]/80">valutazione osservazionale</strong> ("come agisce effettivamente?").
-              </Para>
+                {t.rich('text24', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <Para>
-                Il candidato affronta situazioni lavorative reali basate su metodologie come la{' '}
-                <strong className="text-[#0D0D0D]/80">Behavioral Event Interview</strong> e il{' '}
-                <strong className="text-[#0D0D0D]/80">Situational Judgment Test</strong>. Studi condotti in contesti di vendita
-                complessa mostrano una <strong className="text-[#0D0D0D]/80">validità predittiva superiore a 0,54</strong>, un
-                valore significativamente più alto rispetto al colloquio tradizionale.
-              </Para>
+                {t.rich('text25', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <InfoBox title="Esempio: uno scenario di valutazione per l'agente ibrido">
+              <InfoBox title={t('heading17')}>
                 <p className="mb-3">
-                  <strong className="text-[#0D0D0D]/75">Scenario:</strong> Un cliente over-65, con un portafoglio concentrato su
-                  una polizza vita rivalutabile, chiede di riallocare verso un prodotto unit-linked dopo aver letto un articolo
-                  online sulle performance dei mercati. Il contesto è caratterizzato da forte volatilità.
-                </p>
-                <p className="font-semibold text-[#0D0D0D]/70 mb-2">Cosa misura lo strumento:</p>
+                  {t.rich('body13', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/75">{chunks}</strong>,
+        })}</p>
+                <p className="font-semibold text-[#0D0D0D]/70 mb-2">{t('body14')}</p>
                 <ul className="space-y-1.5">
                   {[
                     'Come il candidato bilancia il rischio di perdere il cliente con il dovere di consulenza adeguata — orientamento consulenziale',
@@ -480,83 +458,79 @@ export default function IlCostoInvisibileWhitepaper() {
               </InfoBox>
 
               <Quote>
-                "La distanza tra tratto latente e comportamento osservato in contesti ad alta variabilità è il punto cieco
-                sistematico dei metodi di selezione tradizionali. Riempire questo vuoto con dati strutturati e comparabili è
-                la sfida metodologica centrale per le direzioni HR nel settore assicurativo."
-              </Quote>
+                {t('text26')}</Quote>
 
               <Para>
-                L'integrazione di tecnologie per l'elaborazione del linguaggio naturale ha potenziato enormemente questa
-                metodologia. L'<strong className="text-[#0D0D0D]/80">AI non sostituisce il giudizio umano</strong>. Lo affianca
-                fornendo <strong className="text-[#0D0D0D]/80">dati oggettivi e misurabili</strong> che arricchiscono la
-                comprensione del profilo comportamentale.
-              </Para>
+                {t.rich('text27', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <SubHeading title="Il quadro normativo come acceleratore" />
+              <SubHeading title={t('heading18')} />
               <Para>
-                L'<strong className="text-[#0D0D0D]/80">EU AI Act</strong> (Regolamento UE 2024/1689) classifica i sistemi di
-                valutazione basati su intelligenza artificiale come sistemi ad alto rischio, imponendo requisiti rigorosi di{' '}
-                <strong className="text-[#0D0D0D]/80">trasparenza algoritmica, supervisione umana e spiegabilità delle decisioni</strong>.
-                Per le organizzazioni che adottano strumenti già allineati, questo quadro normativo diventa un{' '}
-                <strong className="text-[#0D0D0D]/80">vantaggio competitivo</strong>.
-              </Para>
+                {t.rich('text28', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
               <Quote source="Regolamento (UE) 2024/1689 — Art. 10, 13, 14">
-                "I sistemi di AI sono sviluppati e utilizzati in modo da consentire un'adeguata tracciabilità e spiegabilità delle
-                decisioni; devono garantire diversità, non discriminazione ed equità, evitando effetti discriminatori e pregiudizi
-                ingiusti; e devono essere progettati in modo da poter essere efficacemente supervisionati da persone fisiche durante
-                il periodo in cui sono in uso."
-              </Quote>
+                {t('text29')}</Quote>
 
               {/* Section 5 */}
-              <SectionHeading num="5" title="Dall'verification all'impatto: risultati attesi" />
+              <SectionHeading num="5" title={t('heading19')} />
               <Para>
-                L'adozione della <strong className="text-[#0D0D0D]/80">valutazione comportamentale strutturata</strong> nelle reti
-                agenziali produce effetti misurabili su tre dimensioni:
-              </Para>
+                {t.rich('text30', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <SubHeading title="1. Qualità della selezione" />
+              <SubHeading title={t('heading20')} />
               <Para>
-                L'aumento della validità predittiva dallo 0,38 a oltre lo{' '}
-                <strong className="text-[#0D0D0D]/80">0,54</strong> si traduce in una drastica{' '}
-                <strong className="text-[#0D0D0D]/80">riduzione dei mis-hire</strong> nei primi 12 mesi: meno agenti che abbandonano
-                la rete prima di raggiungere il break-even di produttività, meno portafogli clienti orfani e meno costi di
-                re-recruiting.
-              </Para>
+                {t.rich('text31', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <SubHeading title="2. Produttività della rete" />
+              <SubHeading title={t('heading21')} />
               <Para>
-                Selezionare profili allineati al modello ibrido accelera il{' '}
-                <strong className="text-[#0D0D0D]/80">time-to-productivity</strong> e migliora le metriche di{' '}
-                <strong className="text-[#0D0D0D]/80">cross-selling e retention</strong>. Il differenziale tra i migliori e i
-                peggiori performer in termini di <strong className="text-[#0D0D0D]/80">life-time value del portafoglio</strong> è
-                tipicamente di <strong className="text-[#0D0D0D]/80">3 o 5 volte superiore</strong>.
-              </Para>
+                {t.rich('text32', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b4: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <SubHeading title="3. Scalabilità e coerenza cross-market" />
+              <SubHeading title={t('heading22')} />
               <Para>
-                Gli strumenti basati sull'AI e supportati dall'analisi del linguaggio naturale sono progettati per operare con{' '}
-                <strong className="text-[#0D0D0D]/80">coerenza su scala geografica e linguistica</strong>, rispettando le
-                specificità culturali locali.
-              </Para>
+                {t.rich('text33', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
 
-              <InfoBox title="Gli economics in sintesi" accent>
+              <InfoBox title={t('heading23')} accent>
                 <ul className="space-y-1.5">
-                  <li><strong className="text-[#0D0D0D]/75">Costo medio di un inserimento non efficace:</strong> <span style={{ color: '#FF5F24', fontWeight: 600 }}>€35.000–50.000</span></li>
-                  <li><strong className="text-[#0D0D0D]/75">Turnover del primo anno nelle reti agenziali europee:</strong> <span style={{ color: '#FF5F24', fontWeight: 600 }}>20–30%</span></li>
-                  <li><strong className="text-[#0D0D0D]/75">Potenziale di riduzione del mis-hire rate:</strong> <span style={{ color: '#FF5F24', fontWeight: 600 }}>25–40%</span></li>
+                  <li>{t.rich('item', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/75">{chunks}</strong>,
+          s: (chunks) => <span style={{ color: '#FF5F24', fontWeight: 600 }}>{chunks}</span>,
+        })}</li>
+                  <li>{t.rich('item2', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/75">{chunks}</strong>,
+          s: (chunks) => <span style={{ color: '#FF5F24', fontWeight: 600 }}>{chunks}</span>,
+        })}</li>
+                  <li>{t.rich('item3', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/75">{chunks}</strong>,
+          s: (chunks) => <span style={{ color: '#FF5F24', fontWeight: 600 }}>{chunks}</span>,
+        })}</li>
                 </ul>
                 <p className="mt-3 text-[#0D0D0D]/60">
-                  <strong className="text-[#0D0D0D]/75">Implicazione:</strong> Per una rete di 2.000 agenti, l'impatto economico annuo stimato è di diversi milioni di euro.
-                </p>
+                  {t.rich('body15', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/75">{chunks}</strong>,
+        })}</p>
               </InfoBox>
 
               {/* 3 domande */}
-              <SectionHeading title="3 domande per il tuo comitato di direzione" />
+              <SectionHeading title={t('heading24')} />
               <Para>
-                Prima ancora di scegliere gli strumenti, le organizzazioni assicurative sono chiamate a rispondere a quesiti
-                strategici che definiscono il perimetro del problema.
-              </Para>
+                {t('text34')}</Para>
 
               {[
                 {
@@ -596,60 +570,47 @@ export default function IlCostoInvisibileWhitepaper() {
               {/* Next step */}
               <div className="mt-10 mb-8">
                 <div className="w-8 h-0.5 rounded mb-3" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-                <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D] mb-4">Next step</h2>
+                <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D] mb-4">{t('heading2')}</h2>
               </div>
               <Para>
-                Se la tua organizzazione sta ripensando il modello di selezione della rete agenziale, o se desidera mappare il
-                profilo comportamentale degli agenti rispetto al modello ibrido, Skillvue può supportarti con{' '}
-                <strong className="text-[#0D0D0D]/80">verification comportamentali predittivi</strong>, scalabili e pienamente
-                conformi all'EU AI Act, personalizzati sulle specificità del tuo contesto assicurativo.
-              </Para>
+                {t.rich('text35', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               <p className="text-[14px] text-[#0D0D0D]/50 mb-8">
-                Contattaci per una conversazione esplorativa:{' '}
-                <a
-                  href="https://www.skillvue.ai/contact-us"
-                  className="hover:opacity-70 transition-opacity"
-                  style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}
-                >
-                  skillvue.ai/contact-us
-                </a>
-              </p>
+                {t.rich('body16', {
+          a: (chunks) => <a href="https://www.skillvue.ai/contact-us" className="hover:opacity-70 transition-opacity" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>{chunks}</a>,
+        })}</p>
 
               {/* Final stats */}
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <StatBox value="€35-50k" label="Costo per un inserimento fallito" />
-                <StatBox value="25-40%" label="Riduzione mis-hire rate" />
-                <StatBox value="20-30%" label="Turnover primo anno" />
-                <StatBox value="3-5x" label="Differenziale top vs. low performer" />
+                <StatBox value="€35-50k" label={t('label5')} />
+                <StatBox value="25-40%" label={t('label6')} />
+                <StatBox value="20-30%" label={t('label7')} />
+                <StatBox value="3-5x" label={t('label8')} />
               </div>
 
               <Quote>
-                "La domanda non è se la scienza supportata dall'AI cambierà il modo in cui selezioniamo le persone.
-                La domanda è chi sarà in grado di usarla per prendere decisioni migliori di quelle che prenderebbe senza di essa."
-              </Quote>
+                {t('text36')}</Quote>
 
               {/* About Skillvue */}
               <div className="border-t border-black/[0.07] pt-10 mt-10">
                 <div className="w-8 h-0.5 rounded mb-4" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-                <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">About Skillvue</h3>
+                <h3 className="text-[1.1rem] font-semibold text-[#0D0D0D] mb-4">{t('heading3')}</h3>
                 <Para>
-                  Skillvue dà vita ai processi di gestione delle persone. Siamo una piattaforma di{' '}
-                  <strong className="text-[#0D0D0D]/80">talent intelligence</strong> basata sull'AI che aggiunge una dimensione
-                  dinamica e oggettiva ai dati HR: trasformiamo informazioni statiche in{' '}
-                  <strong className="text-[#0D0D0D]/80">insight predittivi</strong> che permettono di prendere decisioni migliori
-                  nel recruiting, nel performance management, nella mobilità interna e nella formazione e sviluppo.
-                </Para>
+                  {t.rich('text37', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
                 <Para>
-                  A differenza delle suite HR generiche o degli strumenti di verification unidimensionali, Skillvue{' '}
-                  <strong className="text-[#0D0D0D]/80">combina la solidità della scienza psicometrica con la potenza dei moderni
-                  LLM</strong> per creare un <strong className="text-[#0D0D0D]/80">copilota AI scientificamente fondato</strong>,
-                  allineato al modello di leadership e al quadro di competenze specifico di ciascuna azienda.
-                </Para>
+                  {t.rich('text38', {
+          b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+          b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
+        })}</Para>
               </div>
 
               {/* References */}
               <div className="border-t border-black/[0.07] pt-8 mt-8">
-                <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-4">Fonti e riferimenti</h3>
+                <h3 className="text-[1rem] font-semibold text-[#0D0D0D] mb-4">{t('heading4')}</h3>
                 <ul className="space-y-2">
                   {[
                     'McKinsey & Company (2023). The future of work in financial services: automation, reskilling, and redistribution.',
@@ -667,10 +628,10 @@ export default function IlCostoInvisibileWhitepaper() {
 
               {/* Footer */}
               <div className="border-t border-black/[0.07] pt-6 mt-8 flex items-center justify-between">
-                <span className="text-[11px] text-[#0D0D0D]/25">Insurance · 2026</span>
+                <span className="text-[11px] text-[#0D0D0D]/25">{t('text39')}</span>
                 <div className="flex items-center gap-2">
                   <SkillvueIcon size={16} />
-                  <span className="text-[11px] text-[#0D0D0D]/25">Skillvue</span>
+                  <span className="text-[11px] text-[#0D0D0D]/25">{t('text40')}</span>
                 </div>
               </div>
 
@@ -681,14 +642,16 @@ export default function IlCostoInvisibileWhitepaper() {
         {/* Page footer */}
         <div className="py-6 px-6 text-center">
           <p className="text-[12px] text-[#0D0D0D]/30">
-            © {new Date().getFullYear()} Skillvue S.r.l. — Tutti i diritti riservati. ·{' '}
+            {tl('copyright', { year: new Date().getFullYear() })} ·{' '}
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai/privacy-policy">Privacy Policy</a>
-            </Button>
+              {t.rich('text41', {
+          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+        })}</Button>
             {' '}·{' '}
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
-              <a href="https://www.skillvue.ai">skillvue.ai</a>
-            </Button>
+              {t.rich('text42', {
+          a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
+        })}</Button>
           </p>
         </div>
       </div>

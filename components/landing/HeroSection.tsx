@@ -22,16 +22,15 @@ const clientLogos = [
   { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2', width: 112 },
 ];
 
-const trustLogosIt = clientLogos;
-const trustLogosEn = clientLogos;
 
 export default function HeroSection() {
   const lang = useLocale();
   const t = useTranslations('home');
-  const baseLogos = lang === 'en' ? trustLogosEn : trustLogosIt;
   // Repeat the set so the marquee track is always wider than any viewport,
-  // eliminating any visible gap before the duplicate kicks in.
-  const trustLogos = [...baseLogos, ...baseLogos];
+  // eliminating any visible gap before the duplicate kicks in. The two locales
+  // used to pick from `trustLogosEn` / `trustLogosIt`; both were assigned the
+  // same array, so the branch chose between a value and itself.
+  const trustLogos = [...clientLogos, ...clientLogos];
 
   return (
     <section
@@ -60,26 +59,19 @@ export default function HeroSection() {
                 className="hero-fade-up relative text-[48px] md:text-[clamp(2.5rem,4.6vw,4rem)] font-semibold tracking-[-0.02em] text-white"
                 style={{ lineHeight: 1.08, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
               >
-                {lang === 'en' ? (
-                  <>
-                    <span className="md:whitespace-nowrap">The Skills</span><br />
-                    <span className="italic font-bold gradient-text md:whitespace-nowrap">Operating System</span><br />
-                    <span className="md:whitespace-nowrap">for your organization</span>
-                  </>
-                ) : (
-                  <>
-                    Lo <span className="italic font-bold gradient-text">Skills OS</span><br />
-                    della tua organizzazione
-                  </>
-                )}
+                {t.rich('hero.heading', {
+                  l: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
+                  g: (chunks) => (
+                    <span className="italic font-bold gradient-text md:whitespace-nowrap">{chunks}</span>
+                  ),
+                  br: () => <br />,
+                })}
               </h1>
               <p
                 className="hero-fade-up hero-delay-1 relative text-[15px] md:text-[17px] text-white/75 leading-[1.65] mt-6 md:mt-8 max-w-lg md:max-w-xl font-normal md:font-light"
                 style={{ textShadow: '0 1px 8px rgba(0,0,0,0.2)' }}
               >
-                {lang === 'en'
-                  ? 'Skillvue is the objective skills data layer for your enterprise, tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run, so every talent decision, from hiring to transformation, is finally the right one.'
-                  : 'Skillvue mappa, misura e riporta dati oggettivi sulle competenze: costruito sul tuo framework interno, fondato sulla scienza, potenziato dall’AI e integrato nei sistemi HR che già utilizzi, per trasformare ogni decisione sul talento, dall’assunzione allo sviluppo.'}
+                {t('hero.body')}
               </p>
 
               <div className="hero-fade-up hero-delay-1 relative flex flex-wrap items-center gap-4 mt-8 md:mt-10">
@@ -103,7 +95,7 @@ export default function HeroSection() {
               >
                 <LiteYouTubeEmbed
                   videoId="g2Ju7COKZrM"
-                  title="Skillvue product video"
+                  title={t('hero.videoTitle')}
                   className="absolute inset-0 w-full h-full"
                 />
               </div>

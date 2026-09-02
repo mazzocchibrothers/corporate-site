@@ -90,11 +90,20 @@ trip over all 61 routes catches what eight hand-picked cases do not.
 | `check:messages` | `en`/`it` key drift, an Italian array one item short, an ICU escape eating a tag, an empty string passing as a translation |
 | `check:navigation` | an Italian link losing its prefix or its slug; the language switcher failing to round-trip |
 | `check:dead` | a component nothing imports, an import nothing renders |
+| `check:hardcoded` | copy that is in the code rather than in the catalogue |
 | `build` | everything the above cannot see |
 
 Each was written after the defect it guards had already shipped at least once.
-That is the bar for adding a ninth: name the failure, then write the check that
+That is the bar for adding a tenth: name the failure, then write the check that
 would have caught it.
+
+`check:hardcoded` is the one to read if you only read one. It exists because
+"zero hardcoded copy" was reported as done and was not — not as a lie, as an
+unmeasured belief. Three codemods had moved every shape they could read, all
+the gates were green, and 1,919 readable strings were still in the JSX: an
+entire customer story, the homepage's own h1, eleven landing pages and a legal
+text. Nothing counted them, so nobody knew. **A claim nothing measures is a
+claim, not a fact.**
 
 ### What is still uncovered
 
