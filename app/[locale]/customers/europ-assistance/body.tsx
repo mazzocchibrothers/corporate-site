@@ -5,7 +5,7 @@ import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
-import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench, UserCheck, ClipboardCheck, Workflow, Clock, Smile, CaseSensitive, PencilRuler, Brain } from 'lucide-react';
+import { ArrowRight, Users, Shield, TrendingUp, Target, Layers, Zap, Eye, BarChart3, CheckCircle, Wrench, UserCheck, ClipboardCheck, Workflow, Clock, Smile, CaseSensitive, PencilRuler, Brain } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
@@ -48,35 +48,20 @@ const SOLUTION_SKILLS = [
   { id: 'englishLanguage', icon: CaseSensitive },
 ];
 
-// The two locales use different components here. Both are kept, so the
-// page renders what it renders today — see the Issue.
-const RESULTS_PILLARS = {
-  en: [
-    { id: 'higherQualityCandidates', icon: UserCheck },
-    { id: 'dataDrivenDecisions', icon: ClipboardCheck },
-    { id: 'talentPipelineFuture', icon: Workflow },
-  ],
-  it: [
-    { id: 'higherQualityCandidates', icon: Target },
-    { id: 'dataDrivenDecisions', icon: Zap },
-    { id: 'talentPipelineFuture', icon: TrendingUp },
-  ],
-};
+// The two locales rendered different icons for the same rows in production
+// (six of them — issue #113). Confirmed drift, not intent: unified on the
+// English set for both locales (#144 review).
+const RESULTS_PILLARS = [
+  { id: 'higherQualityCandidates', icon: UserCheck },
+  { id: 'dataDrivenDecisions', icon: ClipboardCheck },
+  { id: 'talentPipelineFuture', icon: Workflow },
+];
 
-// The two locales use different components here. Both are kept, so the
-// page renders what it renders today — see the Issue.
-const RESULTS_QUALITATIVE = {
-  en: [
-    { id: 'visibilityTruePotential', icon: Eye },
-    { id: 'moreTimeHigh', icon: Clock },
-    { id: 'enhancedCandidateExperience', icon: Smile },
-  ],
-  it: [
-    { id: 'visibilityTruePotential', icon: BarChart3 },
-    { id: 'moreTimeHigh', icon: Scale },
-    { id: 'enhancedCandidateExperience', icon: Heart },
-  ],
-};
+const RESULTS_QUALITATIVE = [
+  { id: 'visibilityTruePotential', icon: Eye },
+  { id: 'moreTimeHigh', icon: Clock },
+  { id: 'enhancedCandidateExperience', icon: Smile },
+];
 
 export default function EuropAssistanceStoryPage() {
   const router = useRouter();
@@ -287,7 +272,7 @@ export default function EuropAssistanceStoryPage() {
               <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{t('results.title')}</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                {(RESULTS_PILLARS[lang] ?? RESULTS_PILLARS.en).map((p) => {
+                {RESULTS_PILLARS.map((p) => {
                   const Icon = p.icon;
                   return (
                   <div key={t(`results.pillars.${p.id}.label`)} className="rounded-2xl border p-8" style={{ background: '#b7f5d8', borderColor: '#93e0bb' }}>
@@ -301,7 +286,7 @@ export default function EuropAssistanceStoryPage() {
                   </div>
                   );
                 })}
-                {(RESULTS_QUALITATIVE[lang] ?? RESULTS_QUALITATIVE.en).map((q) => (
+                {RESULTS_QUALITATIVE.map((q) => (
                   <div key={t(`results.qualitative.${q.id}.title`)} className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
                     <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-6" style={{ background: '#e3f9ec' }}>
                       <q.icon className="h-[22px] w-[22px]" style={{ color: '#10b981' }} />
