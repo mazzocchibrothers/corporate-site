@@ -224,6 +224,21 @@ const ids = routes.map((r) => r.id);
 const dupIds = ids.filter((id, i) => ids.indexOf(id) !== i);
 assert.deepEqual(dupIds, [], `${REGISTRY}: duplicate route id(s): ${dupIds.join(', ')}`);
 
+// canonicalRoute() in i18n/routes.ts falls back silently — byId(x) ?? route —
+// on an id it can't resolve, so a typo'd or stale canonicalOf would point the
+// canonical <link> and the sitemap exclusion at nothing and nobody would know
+// (#144 review). Catch it here instead.
+const idSet = new Set(ids);
+const badCanonicalOf = routes.filter(
+  (r) => r.canonicalOf !== undefined && !idSet.has(r.canonicalOf),
+);
+assert.deepEqual(
+  badCanonicalOf.map((r) => r.id),
+  [],
+  `${REGISTRY}: canonicalOf points at an id that does not exist: ` +
+    badCanonicalOf.map((r) => `${r.id} -> '${r.canonicalOf}'`).join(', '),
+);
+
 for (const route of routes) {
   assert.ok(
     Object.keys(route.paths).length > 0,
