@@ -13,8 +13,10 @@ import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
+import { BASE_URL } from '@/i18n/urls';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   icons: {
     icon: [
       { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
