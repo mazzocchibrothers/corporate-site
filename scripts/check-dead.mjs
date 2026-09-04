@@ -34,10 +34,17 @@ function walk(dir) {
   );
 }
 
+// Comments are stripped first: a leftover `// import Foo from '@/components/x'`
+// left behind after deleting the call site otherwise still counts as a use,
+// which defeats the exact bug class (#136) this script exists to catch (#144
+// review). Same stripper as check-client.mjs.
+const strip = (src) =>
+  src.replace(/\/\*[\s\S]*?\*\//g, '').replace(/(^|[^:])\/\/.*$/gm, '$1');
+
 const components = walk('components').filter((p) => !NOT_OURS(p));
 const sources = [...walk('components'), ...walk('app')].map((p) => ({
   path: p,
-  text: readFileSync(join(ROOT, p), 'utf8'),
+  text: strip(readFileSync(join(ROOT, p), 'utf8')),
 }));
 
 // ── Nothing imports it ─────────────────────────────────────────────────────

@@ -117,7 +117,11 @@ export function alternatesFor(route: RouteLike): Record<string, string> {
  * of a second copy of the rule.
  */
 export function localizePathIn(routes: RouteLike[], path: string, locale: Locale): string {
-  const [pathname, suffix = ''] = path.split(/(?=[?#])/);
+  const [rawPathname, suffix = ''] = path.split(/(?=[?#])/);
+  // A trailing slash otherwise matches a route's own path as its own parent
+  // below (`/customers/adr/`.startsWith('/customers/adr/')), producing
+  // `/it/clienti/adr/` instead of the canonical `/it/clienti/adr` (#144 review).
+  const pathname = rawPathname.length > 1 && rawPathname.endsWith('/') ? rawPathname.slice(0, -1) : rawPathname;
 
   const exact = routes.find((r) => r.paths.en === pathname);
   if (exact) return (pathFor(exact, locale) ?? pathname) + suffix;
@@ -144,6 +148,26 @@ export function localizePathIn(routes: RouteLike[], path: string, locale: Locale
 }
 
 /**
+ * The route whose content is at `pathname` in `locale` — exact match, or by
+ * dynamic-child parent, the same matching internalPathIn does below.
+ *
+ * Exposed separately so the language switcher can check locale coverage of
+ * the *current* page directly: internalPathIn's English-keyed result has no
+ * representation for a route with no English page, so probing through it for
+ * "does the target locale have this page" always looked like yes (#144
+ * review — the switcher sent a monolingual page's visitor to a 404).
+ */
+export function routeAt(routes: RouteLike[], path: string, locale: Locale): RouteLike | undefined {
+  const pathname = path.length > 1 && path.endsWith('/') ? path.slice(0, -1) : path;
+  const exact = routes.find((r) => r.paths[locale] === pathname);
+  if (exact) return exact;
+  return routes
+    .filter((r) => r.paths[locale] !== undefined)
+    .filter((r) => pathname.startsWith(`${r.paths[locale]}/`))
+    .sort((a, b) => b.paths[locale]!.length - a.paths[locale]!.length)[0];
+}
+
+/**
  * The reverse of localizePathIn: the URL a visitor is on, back to the internal
  * English-keyed path the registry is written in. `/it/clienti/adr` becomes
  * `/customers/adr`.
@@ -156,7 +180,9 @@ export function localizePathIn(routes: RouteLike[], path: string, locale: Locale
 export function internalPathIn(routes: RouteLike[], path: string, locale: Locale): string {
   const [prefixed, suffix = ''] = path.split(/(?=[?#])/);
   // Strip the prefix the visitor sees; the registry is written without it.
-  const pathname = locale === 'en' ? prefixed : prefixed.replace(/^\/it(?=\/|$)/, '') || '/';
+  const stripped = locale === 'en' ? prefixed : prefixed.replace(/^\/it(?=\/|$)/, '') || '/';
+  // Same trailing-slash normalization as localizePathIn, for the same reason.
+  const pathname = stripped.length > 1 && stripped.endsWith('/') ? stripped.slice(0, -1) : stripped;
 
   const exact = routes.find((r) => r.paths[locale] === pathname);
   if (exact) return (exact.paths.en ?? pathname) + suffix;

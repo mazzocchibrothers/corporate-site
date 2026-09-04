@@ -20,7 +20,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 // Node 24 runs the TypeScript directly, so this asserts against the same
 // function the site navigates with.
-import { internalPathIn, localizePathIn } from '../i18n/urls.ts';
+import { internalPathIn, localizePathIn, routeAt } from '../i18n/urls.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const routes = JSON.parse(readFileSync(join(ROOT, 'i18n/routes.json'), 'utf8'));
@@ -74,6 +74,20 @@ assert.equal(
 // /lp/hidden-cost-recruiting is English-only. Localizing it would hand the
 // visitor a URL that 404s; the decision to hide the link belongs to the caller.
 assert.equal(at('/lp/hidden-cost-recruiting', 'it'), '/lp/hidden-cost-recruiting');
+
+// ── A trailing slash does not become its own parent (#144 review) ─────────
+// Regression for a bug where '/customers/adr/'.startsWith('/customers/adr/')
+// matched the route as a "parent" of its own trailing-slash form, producing
+// '/it/clienti/adr/' instead of the canonical '/it/clienti/adr'.
+assert.equal(at('/customers/adr/', 'it'), '/it/clienti/adr');
+assert.equal(internalPathIn(routes, '/it/clienti/adr/', 'it'), '/customers/adr');
+
+// ── routeAt sees a route's locale coverage without the English-keyed detour
+// (#144 review) — this is what the language switcher checks before
+// switching, so a monolingual route's other-locale button can be routed home
+// instead of to a 404.
+assert.equal(routeAt(routes, '/lp/hidden-cost-recruiting', 'en')?.id, 'lp/hidden-cost-recruiting');
+assert.equal(routeAt(routes, '/lp/hidden-cost-recruiting', 'en')?.paths.it, undefined);
 
 // ── External URLs are not paths ───────────────────────────────────────────
 assert.equal(at('https://www.linkedin.com/company/skillvue/', 'it'),

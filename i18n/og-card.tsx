@@ -26,13 +26,17 @@ export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 const FONTS = join(process.cwd(), 'assets/fonts');
-const font = (weight: 400 | 600) =>
-  readFileSync(join(FONTS, weight === 600 ? 'MonaSans-SemiBold.ttf' : 'MonaSans-Regular.ttf'));
+// Read once at module load: ogFor() runs once per route per locale (~122
+// times across the build), and the two ttf weights never change between
+// calls — re-reading them on every render was 244 redundant readFileSync
+// calls for three files that are byte-identical every time (#144 review).
+const FONT_REGULAR = readFileSync(join(FONTS, 'MonaSans-Regular.ttf'));
+const FONT_SEMIBOLD = readFileSync(join(FONTS, 'MonaSans-SemiBold.ttf'));
 
 const BRAND = 'linear-gradient(135deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%)';
 
 /** The wordmark, inlined: satori cannot fetch, so the file becomes a data URI. */
-const wordmark = () =>
+const WORDMARK =
   'data:image/svg+xml;base64,' +
   readFileSync(join(process.cwd(), 'public/logos/Skillvue_logo_solid_white.svg')).toString('base64');
 
@@ -82,7 +86,7 @@ export function ogCard({ title, eyebrow }: { title: string; eyebrow?: string }) 
             padding: '64px 72px 60px',
           }}
         >
-          <img src={wordmark()} height={44} width={176} alt="" />
+          <img src={WORDMARK} height={44} width={176} alt="" />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {/* Only where it says something the wordmark above does not. A
                 card for /about labelled SKILLVUE under the Skillvue logo is
@@ -122,8 +126,8 @@ export function ogCard({ title, eyebrow }: { title: string; eyebrow?: string }) 
     {
       ...size,
       fonts: [
-        { name: 'Mona Sans', data: font(400), weight: 400, style: 'normal' },
-        { name: 'Mona Sans', data: font(600), weight: 600, style: 'normal' },
+        { name: 'Mona Sans', data: FONT_REGULAR, weight: 400, style: 'normal' },
+        { name: 'Mona Sans', data: FONT_SEMIBOLD, weight: 600, style: 'normal' },
       ],
     },
   );
