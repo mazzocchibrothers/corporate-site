@@ -37,7 +37,7 @@ const content = {
     heroMetrics: [
       { value: '30K', label: 'Candidature ricevute e processate' },
       { value: '-30%', label: 'Riduzione dei colloqui non in linea grazie a Skillvue' },
-      { value: 'Drastica', label: 'Ottimizzazione dei tempi di lavoro del recruiter' },
+      { value: 'Significativa', label: 'Ottimizzazione dei tempi di lavoro del recruiter' },
     ],
     ctaPrimary: 'Contattaci',
     ctaSecondary: 'Scopri di più',
@@ -48,7 +48,7 @@ const content = {
         { label: 'Gruppo', value: 'Credito Emiliano' },
         { label: 'Utile netto', value: '+620M€' },
         { label: 'Dipendenti', value: '5.000+' },
-        { label: 'Filiali', value: '600+' },
+        { label: 'Filiali e centri imprese', value: '600+' },
         { label: 'Use Case', value: 'Hiring' },
       ],
     },
@@ -98,7 +98,7 @@ const content = {
         {
           icon: Target,
           title: 'La qualità della selezione doveva essere il più possibile omogenea per tutto il Gruppo',
-          text: "Garantire standard di screening uniformi per un Gruppo che è distribuito su oltre 600 filiali in 19 regioni era una sfida operativa e di equità. Senza un filtro centralizzato e strutturato, la qualità della selezione rischiava di variare.",
+          text: "Garantire standard di screening uniformi per un Gruppo che è distribuito su oltre 600 filiali e centri imprese in 19 regioni era una sfida operativa e di equità. Senza un filtro centralizzato e strutturato, la qualità della selezione rischiava di variare.",
         },
       ],
     },
@@ -129,7 +129,7 @@ const content = {
       metrics: [
         { value: '30K', label: <><strong className="text-[#0b3b28] font-semibold">Candidature ricevute e processate</strong><br />ogni anno, con velocità ed efficacia</> },
         { value: '-30%', label: <><strong className="text-[#0b3b28] font-semibold">Riduzione dei colloqui non in linea</strong><br />al secondo step</> },
-        { value: 'Drastica', label: <><strong className="text-[#0b3b28] font-semibold">Ottimizzazione dei tempi</strong><br />di lavoro del recruiter</> },
+        { value: 'Significativa', label: <><strong className="text-[#0b3b28] font-semibold">Ottimizzazione dei tempi</strong><br />di lavoro del recruiter</> },
       ],
       qualitative: [
         { icon: Eye, title: 'Più candidati possono dimostrare il proprio valore', text: <>L'assessment ha dato a più persone la possibilità di far emergere <strong className="text-[#121212]/90 font-semibold">competenze reali oltre i limiti del CV</strong>. Profili ad alto potenziale che prima rischiavano di perdersi nel volume ora vengono <strong className="text-[#121212]/90 font-semibold">intercettati efficacemente e rapidamente</strong>.</> },
@@ -162,7 +162,7 @@ const content = {
     heroMetrics: [
       { value: '30K', label: 'Applications received and processed' },
       { value: '-30%', label: 'Reduction in unsuccessful interviews thanks to Skillvue' },
-      { value: 'Drastic', label: <>Recruiter time<br />optimization</> },
+      { value: 'Significant', label: <>Recruiter time<br />optimization</> },
     ],
     ctaPrimary: 'Contact Us',
     ctaSecondary: 'Learn More',
@@ -173,7 +173,7 @@ const content = {
         { label: 'Group', value: 'Credito Emiliano' },
         { label: 'Net profit', value: '+€620M' },
         { label: 'Employees', value: '5,000+' },
-        { label: 'Branches', value: '600+' },
+        { label: 'Branches and business centres', value: '600+' },
         { label: 'Use Case', value: 'Hiring' },
       ],
     },
@@ -223,7 +223,7 @@ const content = {
         {
           icon: Target,
           title: 'Selection quality needed to be as consistent as possible across the Group',
-          text: "Guaranteeing uniform screening standards for a Group distributed across 600+ branches in 19 regions was both an operational and a fairness challenge. Without a centralised, structured filter, hiring quality risked becoming inconsistent.",
+          text: "Guaranteeing uniform screening standards for a Group distributed across 600+ branches and business centres in 19 regions was both an operational and a fairness challenge. Without a centralised, structured filter, hiring quality risked becoming inconsistent.",
         },
       ],
     },
@@ -254,7 +254,7 @@ const content = {
       metrics: [
         { value: '30K', label: <><strong className="text-[#0b3b28] font-semibold">Applications received and processed</strong><br />every year, quickly and effectively</> },
         { value: '-30%', label: <><strong className="text-[#0b3b28] font-semibold">Reduction in unsuccessful interviews</strong><br />at the second step</> },
-        { value: 'Drastic', label: <><strong className="text-[#0b3b28] font-semibold">Recruiter time</strong><br />optimization</> },
+        { value: 'Significant', label: <><strong className="text-[#0b3b28] font-semibold">Recruiter time</strong><br />optimization</> },
       ],
       qualitative: [
         { icon: Eye, title: 'More candidates can demonstrate their value', text: <>The assessment gave more people the opportunity to surface <strong className="text-[#121212]/90 font-semibold">real skills beyond the CV</strong>. High-potential profiles that previously risked getting lost in the volume are now <strong className="text-[#121212]/90 font-semibold">identified effectively and quickly</strong>.</> },
