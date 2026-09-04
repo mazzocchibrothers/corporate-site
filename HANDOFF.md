@@ -54,14 +54,14 @@ All new/updated story pages follow the **same bilingual pattern**:
 - **Metrics:** 79% completion rate (1,917/2,436), 4.1/5 candidate satisfaction (77% gave 4-5/5)
 - **Vision:** Expanded to Junior HR Business Partner selection (1,500+ applications)
 - **Use cases tagged:** `['Hiring']`
-- **Assets:** `/public/logos/mediaset-logo.png` ✅, `/public/logos/mediaset-background-explore-stories.jpg` ✅
+- **Assets:** `/public/logos/mediaset-logo.avif` ✅, `/public/logos/mediaset-background-explore-stories.jpg` ✅
 
 #### `pages/customers/unicomm.tsx` ✅ NEW
 - **Hero:** "How Unicomm digitized the entire talent lifecycle starting from zero"
 - 3 parallel streams: hiring + confirmations + internal development (academy)
 - 7 retail brands, 270+ stores, 7,000+ employees, 7 regions
 - **Use cases tagged:** `['Hiring', 'Learning & Development', 'Internal Mobility']`
-- **Assets:** `/public/logos/unicomm-logo.jpg` ✅, `/public/logos/unicomm-background-explore-stories.jpg` ✅
+- **Assets:** `/public/logos/unicomm-logo.avif` ✅, `/public/logos/unicomm-background-explore-stories.jpg` ✅
 
 #### `pages/customers/adr.tsx` ✅ UPDATED (bilingual revision)
 - **Use cases tagged:** `['Hiring', 'Internal Mobility']`

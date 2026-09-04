@@ -1,28 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
-import Lottie from 'lottie-react';
-import { Button } from '@/components/ui/button';
+'use client';
 
-const ANIM_EN = 'https://cdn.lottielab.com/l/3FJ5CBuSY6Ebq8.json';
-const ANIM_IT = 'https://cdn.lottielab.com/l/9E2vegrr5hs33N.json';
-const EMBED_EN = 'https://cdn.lottielab.com/l/3FJ5CBuSY6Ebq8.html';
-const EMBED_IT = 'https://cdn.lottielab.com/l/9E2vegrr5hs33N.html';
+import React, { useState, useEffect } from 'react';
+import { Reveal } from '@/components/ui/reveal';
+import { useLocale, useTranslations } from 'next-intl';
+import { ArrowRight } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
+
+// lottie-react is 84 KB gzipped — a third of this page's JavaScript, and the
+// heaviest chunk on the site. It cannot draw anything until the animation JSON
+// comes back from lottielab's CDN below, so loading it with the page buys
+// nothing: it is dead weight on the critical path of the one route that has it.
+// ssr:false because the player touches the DOM on mount and the page is
+// prerendered.
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+
+// The hero animation has text baked into it, so there is one per language.
+// Both URLs live in the catalogue with the copy they belong to — an asset that
+// changes with the language is a translation, whatever its file extension.
 
 export default function ProductHero() {
-  const { t, lang } = useLanguage();
+  const lang = useLocale();
+  const t = useTranslations('product-overview');
   const [animData, setAnimData] = useState(null);
   const [useFallback, setUseFallback] = useState(false);
 
   useEffect(() => {
-    const url = lang === 'it' ? ANIM_IT : ANIM_EN;
+    const url = t('hero.animation');
     setAnimData(null);
     fetch(url)
       .then(r => r.json())
       .then(setAnimData)
       .catch(() => setUseFallback(true));
-  }, [lang]);
+  }, [t]);
 
   return (
     <section id="product-hero" data-testid="product-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px]">
@@ -31,52 +42,51 @@ export default function ProductHero() {
 
           {/* Left: text + CTA */}
           <div>
-            <motion.h1
+            <Reveal
+              as="h1"
+              y={40}
+              duration={0.8}
+              delay={0.3}
               className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-6 md:mb-10"
               style={{ lineHeight: 1.1 }}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              {t('One platform.')}<br />
-              {t('Every talent decision.')}<br />
-              <span className="font-bold gradient-text">{t('Objective data.')}</span>
-            </motion.h1>
+            >{t.rich('hero.heading', {
+              br: () => <br />,
+              span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+            })}</Reveal>
 
-            <motion.div
+            <Reveal
+              y={20}
+              duration={0.8}
+              delay={0.5}
               className="flex flex-col items-start gap-5 md:gap-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-xl font-normal md:font-light">
-                {t('Skillvue is the AI-powered talent intelligence platform that turns static HR processes into predictive, objective insights. Verify skills, predict potential, and make every people decision defensible.')}
-              </p>
+              <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-xl font-normal md:font-light">{t('hero.body')}</p>
 
               <Button asChild variant="primary" mode="dark">
                 <a
-                  href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+                  href={href('book-meeting', lang)}
                   data-testid="product-hero-book-demo"
                 >
-                  <span>{t('Book a Demo')}</span>
+                  <span>{t('hero.cta')}</span>
                   <ArrowRight aria-hidden="true" />
                 </a>
               </Button>
-            </motion.div>
+            </Reveal>
           </div>
 
           {/* Right: Lottie animation */}
-          <motion.div
+          <Reveal
+            y={0}
+            x={30}
+            duration={0.9}
+            delay={0.5}
             className="w-full"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 0.5 }}
           >
             {!useFallback && animData ? (
               <Lottie animationData={animData} loop autoplay style={{ width: '100%' }} />
             ) : useFallback ? (
               <iframe
-                src={lang === 'it' ? EMBED_IT : EMBED_EN}
+                src={t('hero.animationEmbed')}
                 title="Skillvue product demo"
                 className="w-full aspect-square border-0"
                 allowFullScreen
@@ -84,7 +94,7 @@ export default function ProductHero() {
             ) : (
               <div className="w-full aspect-square" />
             )}
-          </motion.div>
+          </Reveal>
 
         </div>
       </div>

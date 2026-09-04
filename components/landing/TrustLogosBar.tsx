@@ -15,16 +15,12 @@ const clientLogos = [
   { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2' },
 ];
 
-const trustLogosIt = clientLogos;
-const trustLogosEn = clientLogos;
 
-interface TrustLogosBarProps {
-  lang: 'en' | 'it';
-}
-
-export default function TrustLogosBar({ lang }: TrustLogosBarProps) {
-  const baseLogos = lang === 'en' ? trustLogosEn : trustLogosIt;
-  const trustLogos = [...baseLogos, ...baseLogos];
+// No `lang` prop any more: the two locales used to pick from `trustLogosEn` /
+// `trustLogosIt`, both of which were assigned the same array, so the branch
+// chose between a value and itself.
+export default function TrustLogosBar() {
+  const trustLogos = [...clientLogos, ...clientLogos];
 
   return (
     <div className="relative z-10 overflow-hidden">
@@ -53,7 +49,7 @@ export default function TrustLogosBar({ lang }: TrustLogosBarProps) {
                   data-testid={`trust-logo-${logo.name.toLowerCase().replace(/\s+/g, '-')}`}
                   className="shrink-0 opacity-[0.55]"
                 >
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={logo.src}
                     alt={logo.name}
                     className="h-6 w-auto object-contain"
@@ -65,7 +61,7 @@ export default function TrustLogosBar({ lang }: TrustLogosBarProps) {
             <div className="marquee-content flex items-center gap-8 md:gap-16 shrink-0 pr-8 md:pr-16" aria-hidden="true">
               {trustLogos.map((logo, i) => (
                 <div key={`b-${i}-${logo.name}`} className="shrink-0 opacity-[0.45]">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={logo.src}
                     alt=""
                     className="h-6 w-auto object-contain"

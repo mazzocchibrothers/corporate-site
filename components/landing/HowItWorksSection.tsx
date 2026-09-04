@@ -1,37 +1,40 @@
+'use client';
+
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { m, useInView, AnimatePresence } from 'framer-motion';
 import { Map, Brain, CheckCircle } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 
+// The keywords are ids, not copy: the copy is in the catalogue, keyed on them.
+// They used to be English strings passed through t(), and none of the twelve
+// was in the dictionary — so the Italian site rendered them in English while
+// looking, at the call site, as though it did not.
 const steps = [
   {
+    id: 'map',
     num: '01',
-    title: 'Map',
     icon: Map,
     accent: '#4B4DF7',
-    desc: 'Verify skills, mindset, and readiness across candidates and employees using AI-powered psychometric verifications, customized to your leadership model and deployable at scale across 50+ languages.',
-    keywords: ['Skills', 'Mindset', 'Readiness', '50+ languages'],
+    keywords: ['skills', 'mindset', 'readiness', 'languages'],
   },
   {
+    id: 'predict',
     num: '02',
-    title: 'Predict',
     icon: Brain,
     accent: '#7577F8',
-    desc: 'AI co-pilots surface who is ready now, who can be developed in 3-6 months, and where gaps will block your strategy, before they become expensive surprises.',
-    keywords: ['Ready now', '3-6 months', 'Gap analysis', 'AI co-pilot'],
+    keywords: ['readyNow', 'months', 'gapAnalysis', 'coPilot'],
   },
   {
+    id: 'decide',
     num: '03',
-    title: 'Decide',
     icon: CheckCircle,
     accent: '#FF5F24',
-    desc: 'Every hire, promotion, and transformation investment is backed by objective, auditable data. GDPR-compliant. Defensible to boards, regulators, and investors.',
-    keywords: ['Objective data', 'Auditable', 'GDPR', 'Defensible'],
+    keywords: ['objectiveData', 'auditable', 'gdpr', 'defensible'],
   },
 ];
 
 export default function HowItWorksSection() {
-  const { t, lang } = useLanguage();
+  const t = useTranslations('home');
   const [active, setActive] = useState(0);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-80px' });
@@ -57,10 +60,9 @@ export default function HowItWorksSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.6rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#1A1A2E]">
-            {t('From verification to action')}{' '}
-            <span className="italic font-bold gradient-text-on-light">{t('in three steps')}</span>
-          </h2>
+          <h2 className="text-[clamp(1.6rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#1A1A2E]">{t.rich('howItWorks.heading', {
+            span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+          })}</h2>
         </m.div>
 
         {/* 3 step cards — horizontal scroll on mobile, 3-col grid on desktop */}
@@ -130,7 +132,7 @@ export default function HowItWorksSection() {
                         animate={{ color: isActive ? 'rgba(255,255,255,0.95)' : 'rgba(26,26,46,0.85)' }}
                         transition={{ duration: 0.5 }}
                       >
-                        {t(step.title)}
+                        {t(`howItWorks.steps.${step.id}.title`)}
                       </m.h3>
 
                       <m.p
@@ -138,7 +140,7 @@ export default function HowItWorksSection() {
                         animate={{ color: isActive ? 'rgba(255,255,255,0.5)' : '#7A7A7A' }}
                         transition={{ duration: 0.5 }}
                       >
-                        {t(step.desc)}
+                        {t(`howItWorks.steps.${step.id}.desc`)}
                       </m.p>
 
                     {/* Keyword tags */}
@@ -155,7 +157,7 @@ export default function HowItWorksSection() {
                           transition={{ duration: 0.5 }}
                           style={{ border: '1px solid' }}
                         >
-                          {t(kw)}
+                          {t(`howItWorks.steps.${step.id}.keywords.${kw}`)}
                         </m.span>
                       ))}
                     </div>

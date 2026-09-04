@@ -1,0 +1,323 @@
+// @ts-nocheck
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { Reveal } from '@/components/ui/reveal';
+import React, { useRef, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+
+function SkillvueIcon({ size = 24 }: { size?: number }) {
+  return (
+    <img
+      src="/skillvue-logomark.svg"
+      alt="Skillvue"
+      width={size}
+      height={size}
+      style={{ display: 'inline-block', flexShrink: 0 }}
+    />
+  );
+}
+
+const FADE = { y: 24, duration: 0.65, ease: 'cubic-bezier(0.22, 1, 0.36, 1)' };
+
+const heroStats = [
+  { value: '€15-25M', label: 'Costo della selezione non predittiva per anno' },
+  { value: '2.000', label: 'Agenti nella rete di riferimento' },
+  { value: '20-25%', label: 'Turnover annuo rete agenziale' },
+  { value: '0,54', label: 'Validità predittiva della valutazione comportamentale' },
+];
+
+const featureCards = [
+  {
+    icon: (
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: 'Il costo invisibile in numeri',
+    desc: 'In una rete di 2.000 agenti con il 20-25% di turnover, il costo stimato della selezione non predittiva è tra €15 e €25 milioni l\'anno — senza contare il danno reputazionale.',
+  },
+  {
+    icon: (
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    ),
+    title: 'Il profilo dell\'agente ibrido',
+    desc: '4 dimensioni comportamentali predicono con precisione l\'efficacia dell\'agente ibrido: resilienza, orientamento consulenziale, adattabilità omnicanale e ascolto attivo.',
+  },
+  {
+    icon: (
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+    ),
+    title: 'Dall\'verification all\'impatto',
+    desc: 'La valutazione comportamentale strutturata riduce il mis-hire rate del 25-40% e produce un differenziale di 3-5x tra i top e i low performer nel valore del portafoglio.',
+  },
+];
+
+
+
+export default function IlCostoInvisibileVetrina() {
+  const t = useTranslations('lp.il-costo-invisibile');
+  const tl = useTranslations('shared.lp');
+  const formRef = useRef<HTMLDivElement>(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//js.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
+    script.async = true;
+    script.onload = () => {
+      if ((window as any).hbspt) {
+        (window as any).hbspt.forms.create({
+          portalId: '48438018',
+          formId: '385c68eb-b69e-4485-9af5-2d70eedb1dd9',
+          region: 'na1',
+          target: '#hs-form-container',
+          redirectUrl: window.location.origin + '/lp/il-costo-invisibile/whitepaper',
+        });
+      }
+    };
+    document.head.appendChild(script);
+    return () => { script.remove(); };
+  }, []);
+
+  return (
+    <>
+
+      <div style={{ background: '#F8F8FA', minHeight: '100vh', fontFamily: 'inherit' }}>
+        {/* NAVBAR */}
+        <nav
+          className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 lg:px-10 py-4 bg-white"
+          style={{ borderBottom: '1px solid rgba(0,0,0,0.07)', boxShadow: '0 1px 12px rgba(0,0,0,0.05)' }}
+        >
+          <div className="flex items-center gap-2.5">
+            <SkillvueIcon size={26} />
+            <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">{t('text')}</span>
+          </div>
+          <Button variant="primary" mode="light" onClick={scrollToForm}>
+            {t('text2')}</Button>
+        </nav>
+
+        {/* HERO */}
+        <section className="pt-[88px] pb-16 px-6 lg:px-10">
+          <div className="max-w-[760px] mx-auto text-center pt-16">
+            <Reveal {...FADE} delay={0.05}>
+              {t.rich('text3', {
+          s: (chunks) => <span className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
+        })}</Reveal>
+
+            <Reveal
+              {...FADE}
+              delay={0.1}
+              as="h1"
+              className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.1] mb-6"
+            >
+              {t.rich('text4', {
+          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+        })}</Reveal>
+
+            <Reveal
+              {...FADE}
+              delay={0.18}
+              as="p"
+              className="text-[17px] text-[#0D0D0D]/55 leading-[1.7] mb-4"
+              style={{ fontWeight: 300 }}
+            >
+              {t('text5')}</Reveal>
+
+            <Reveal
+              {...FADE}
+              delay={0.24}
+              className="flex items-center justify-center gap-6 text-[12px] text-[#0D0D0D]/35 mb-12"
+            >
+              {t.rich('text6', {
+          s: (chunks) => <span>{chunks}</span>,
+          b: (chunks) => <strong className="text-[#0D0D0D]/55">{chunks}</strong>,
+          s2: (chunks) => <span className="w-px h-3 bg-[#0D0D0D]/15">{chunks}</span>,
+          s3: (chunks) => <span>{chunks}</span>,
+        })}</Reveal>
+
+            {/* Logo marquee */}
+            {(() => {
+              const logos = [
+                { src: '/logos/generali.avif', alt: 'Generali' },
+                { src: '/logos/reale-mutua.avif', alt: 'Reale Mutua' },
+                { src: '/logos/unipol.svg', alt: 'Unipol' },
+                { src: '/logos/plenitude.png', alt: 'Plenitude', square: true },
+                { src: '/logos/windtre.svg', alt: 'WindTre Business' },
+              ];
+              const logoStyle = { filter: 'brightness(0)', opacity: 0.55 } as const;
+              const LogoSet = ({ ariaHidden }: { ariaHidden?: boolean }) => (
+                <div className="shrink-0 flex items-center gap-10" aria-hidden={ariaHidden || undefined}>
+                  {logos.map((logo, i) => (
+                    <div key={i} className="shrink-0 flex items-center justify-center" style={{ width: 168, height: logo.square ? 80 : 48 }}>
+                      <img loading="lazy" decoding="async" src={logo.src} alt={ariaHidden ? '' : logo.alt} style={{ maxWidth: '90%', maxHeight: '90%', objectFit: 'contain', ...logoStyle }} />
+                    </div>
+                  ))}
+                </div>
+              );
+              return (
+                <Reveal
+                  {...FADE}
+                  delay={0.27}
+                  className="relative overflow-hidden mb-10 mx-auto"
+                  style={{
+                    maxWidth: 700,
+                    maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                    WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                  }}
+                >
+                  <div className="lp-marquee flex items-center" style={{ width: 'max-content' }}>
+                    <LogoSet />
+                    <LogoSet ariaHidden />
+                  </div>
+                </Reveal>
+              );
+            })()}
+
+            <Reveal {...FADE} delay={0.3}>
+              <Button variant="primary" mode="light" onClick={scrollToForm}>
+                {t('text7')}</Button>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* STATS */}
+        <section className="pb-16 px-6 lg:px-10">
+          <div className="max-w-[1100px] mx-auto">
+            <Reveal {...FADE} className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {heroStats.map((s, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl bg-white border border-black/[0.06] p-6 text-center"
+                  style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.05)' }}
+                >
+                  <div
+                    className="text-[2rem] font-semibold md:font-bold tracking-[-0.03em] mb-1.5"
+                    style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+                  >
+                    {s.value}
+                  </div>
+                  <div className="text-[12px] text-[#0D0D0D]/45 leading-snug">{s.label}</div>
+                </div>
+              ))}
+            </Reveal>
+          </div>
+        </section>
+
+        {/* WHAT'S INSIDE */}
+        <section className="py-16 px-6 lg:px-10 bg-white">
+          <div className="max-w-[1100px] mx-auto">
+            <Reveal {...FADE} className="text-center mb-12">
+              <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] mb-3">
+                {t('heading')}</h2>
+              <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
+                {t('body')}</p>
+            </Reveal>
+
+            <div className="grid md:grid-cols-3 gap-5">
+              {featureCards.map((f, i) => (
+                <Reveal
+                  {...FADE}
+                  delay={i * 0.08}
+                  key={i}
+                  className="rounded-2xl border border-black/[0.07] bg-[#F8F8FA] p-7"
+                >
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center mb-5 text-white"
+                    style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
+                  >
+                    {f.icon}
+                  </div>
+                  <h3 className="text-[15px] font-semibold text-[#0D0D0D] mb-2 leading-snug">{f.title}</h3>
+                  <p className="text-[13px] text-[#0D0D0D]/50 leading-[1.65]">{f.desc}</p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FORM SECTION */}
+        <section className="py-20 px-6 lg:px-10 bg-[#F8F8FA]">
+          <div className="max-w-[1100px] mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Left */}
+              <Reveal {...FADE}>
+                <h2 className="text-[clamp(1.8rem,3vw,2.4rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
+                  {t('heading2')}</h2>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    'Perché il colloquio non strutturato ha una validità predittiva di appena 0,38',
+                    'Le 4 dimensioni comportamentali che predicono il top performer assicurativo',
+                    'Come la valutazione strutturata riduce il mis-hire rate del 25-40%',
+                    'Il quadro normativo EU AI Act come vantaggio competitivo',
+                    '3 domande strategiche per il tuo comitato di direzione',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-[14px] text-[#0D0D0D]/60 leading-snug">
+                      <div
+                        className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                        style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
+                      >
+                        <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="flex items-center gap-2 text-[12px] text-[#0D0D0D]/30">
+                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                  {tl('dataSafe')}
+                </p>
+              </Reveal>
+
+              {/* Right: Form */}
+              <Reveal
+                {...FADE}
+                delay={0.1}
+                ref={formRef}
+                className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10"
+                style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}
+              >
+                <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">{t('heading3')}</h3>
+                <p className="text-[13px] text-[#0D0D0D]/35 mb-7">{t('body2')}</p>
+
+                <div id="hs-form-container" />
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTER */}
+        <footer className="py-6 px-6 lg:px-10 bg-white border-t border-black/[0.06]">
+          <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="flex items-center gap-2.5">
+              <SkillvueIcon size={20} />
+              <span className="text-[12px] text-[#0D0D0D]/30">{tl('copyright', { year: new Date().getFullYear() })}</span>
+            </div>
+            <div className="flex items-center gap-5 text-[12px]">
+              <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+                {t.rich('text8', {
+          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+        })}</Button>
+              <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+                {t.rich('text9', {
+          a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
+        })}</Button>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </>
+  );
+}

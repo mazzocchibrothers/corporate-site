@@ -3,6 +3,11 @@ import type { Config } from 'tailwindcss';
 const config: Config = {
   darkMode: ['class'],
   content: [
+    // app/ is not optional: Tailwind only emits a class it has seen in a
+    // scanned file, so a page moved to app/[locale]/ without this glob keeps
+    // compiling and loses every utility it uses. Nothing warns — the page just
+    // renders unstyled. Found before the move (#135), not during it (#137).
+    './app/**/*.{js,jsx,ts,tsx}',
     './pages/**/*.{js,jsx,ts,tsx}',
     './components/**/*.{js,jsx,ts,tsx}',
     './i18n/**/*.{js,jsx,ts,tsx}',

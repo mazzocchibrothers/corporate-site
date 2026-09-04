@@ -1,35 +1,35 @@
-import React, { useRef } from 'react';
-import { m, useInView } from 'framer-motion';
+'use client';
+
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
+import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, ShieldIcon, Languages, Globe } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 export default function CTASection() {
-  const { t, lang } = useLanguage();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const lang = useLocale();
+  const t = useTranslations('home');
 
 
   return (
-    <section id="cta" data-testid="cta-section" className="relative pt-20 pb-16 md:pt-28 md:pb-20 lg:pt-36 lg:pb-24" ref={ref}>
+    <section id="cta" data-testid="cta-section" className="relative pt-20 pb-16 md:pt-28 md:pb-20 lg:pt-36 lg:pb-24">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-        <m.div
+        <Reveal
+          y={40}
+          duration={0.8}
           className="mb-8 md:mb-8"
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white/90 max-w-4xl">
-            {t('Ready to make talent decisions')}{' '}
-            <span className="italic font-bold gradient-text">{t('you can defend?')}</span>
-          </h2>
-        </m.div>
+          <h2 className="text-[clamp(1.5rem,3.5vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white/90 max-w-4xl">{t.rich('cta.heading', {
+            span: (chunks) => <span className="italic font-bold gradient-text">{chunks}</span>,
+          })}</h2>
+        </Reveal>
 
-        <m.div
+        <Reveal
+          y={20}
+          duration={0.8}
+          delay={0.2}
           className="grid grid-cols-2 lg:grid-cols-12 gap-5 md:gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
         >
           {/* Track A — Demo CTA */}
           <div
@@ -38,20 +38,16 @@ export default function CTASection() {
           >
             <div className="absolute top-0 right-0 w-[300px] h-[300px] rounded-full bg-[#4B4DF7]/[0.06] blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
             <div className="relative">
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase">{t('Ready to explore')}</span>
-              <h3 className="text-[20px] md:text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/85 mt-3 md:mt-5 mb-2 md:mb-4 leading-tight">
-                {t('Book a 30-min Demo')}
-              </h3>
-              <p className="text-[12px] md:text-[17px] text-white/[0.65] mb-5 md:mb-8 max-w-md leading-[1.5] md:leading-normal">
-                {t('See Skillvue live with your specific use case')}
-              </p>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase">{t('cta.text')}</span>
+              <h3 className="text-[20px] md:text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/85 mt-3 md:mt-5 mb-2 md:mb-4 leading-tight">{t('cta.heading2')}</h3>
+              <p className="text-[12px] md:text-[17px] text-white/[0.65] mb-5 md:mb-8 max-w-md leading-[1.5] md:leading-normal">{t('cta.body')}</p>
             </div>
             <Button asChild variant="primary" mode="dark" className="w-full md:w-auto md:max-w-sm">
               <a
-                href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+                href={href('book-meeting', lang)}
                 data-testid="cta-book-demo"
               >
-                <span>{t('Book a Demo')}</span>
+                <span>{t('cta.cta')}</span>
                 <ArrowRight aria-hidden="true" />
               </a>
             </Button>
@@ -62,7 +58,7 @@ export default function CTASection() {
             data-testid="cta-track-b"
             className="col-span-2 md:col-span-1 lg:col-span-6 group relative rounded-2xl md:rounded-3xl border border-white/[0.04] hover:border-white/[0.08] bg-white/[0.01] backdrop-blur-sm transition-all duration-700 p-5 md:p-10"
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-5 md:mb-10 block">{t('Our Customers')}</span>
+            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-5 md:mb-10 block">{t('cta.text2')}</span>
             {(() => {
               const ctaLogos = [
                     { name: 'Moncler', src: '/logos/client-moncler.svg' },
@@ -79,7 +75,7 @@ export default function CTASection() {
                 <div className="grid grid-cols-3 gap-x-4 gap-y-5 md:gap-x-10 md:gap-y-8 mb-3 md:mb-8">
                   {ctaLogos.map((logo) => (
                     <div key={logo.name} className="flex items-center justify-center h-8 md:h-12">
-                      <img
+                      <img loading="lazy" decoding="async"
                         src={logo.src}
                         alt={logo.name}
                         className="h-6 w-auto object-contain opacity-[0.45] hover:opacity-[0.75] transition-opacity duration-500"
@@ -91,7 +87,7 @@ export default function CTASection() {
               );
             })()}
           </div>
-        </m.div>
+        </Reveal>
       </div>
     </section>
   );

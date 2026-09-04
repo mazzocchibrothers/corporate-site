@@ -1,77 +1,62 @@
-import React, { useRef } from 'react';
-import { m, useInView } from 'framer-motion';
+'use client';
+
+import React from 'react';
+import { Reveal } from '@/components/ui/reveal';
+import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 
 const stats = [
   {
+    id: 'savedAnnually',
     value: '4.5M',
-    label: 'saved annually',
-    sublabel: 'in failed hire costs',
-    footnote: 'Based on 300 hires, 30% lower failure rate, 50K average cost per failure',
   },
   {
+    id: 'monthsFaster',
     value: '6-9',
-    label: 'months faster',
-    sublabel: 'strategic execution',
-    footnote: 'When the right people are in the right roles from day one',
   },
   {
+    id: 'roi',
     value: '10-30x',
-    label: 'ROI',
-    sublabel: 'in 18-24 months',
-    footnote: 'With payback typically in 6-12 months',
   },
 ];
 
 export default function ROISection() {
-  const { t, lang } = useLanguage();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const lang = useLocale();
+  const t = useTranslations('home');
   return (
     <section
       id="roi"
       data-testid="roi-section"
       className="section-breathe relative pt-12 pb-2 lg:pt-16 lg:pb-2 md:flex md:items-center md:min-h-screen"
-      ref={ref}
     >
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         {/* Header */}
         {/* Header row: title left + CTA right */}
-        <m.div
-          className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 md:gap-6 lg:gap-8 mb-10 md:mb-16 lg:mb-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">
-            {t('People are your biggest cost.')}{' '}
-            <span className="italic font-bold gradient-text-warm-on-light">
-              {t('They can also be your biggest return.')}
-            </span>
-          </h2>
+        <Reveal duration={0.7} className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 md:gap-6 lg:gap-8 mb-10 md:mb-16 lg:mb-20">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">{t.rich('roi.heading', {
+            span: (chunks) => <span className="italic font-bold gradient-text-warm-on-light">{chunks}</span>,
+          })}</h2>
           <Button asChild variant="primary" mode="light" className="shrink-0">
             <a
-              href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'}
+              href={href('book-meeting', lang)}
               data-testid="roi-cta"
             >
-              {t('Book a Demo')}
+              {t('roi.cta')}
               <ArrowRight aria-hidden="true" />
             </a>
           </Button>
-        </m.div>
+        </Reveal>
 
         {/* 3-column stat cards — horizontal scroll on mobile, 3-col grid on desktop */}
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 lg:gap-5 mb-10 md:mb-16">
           {stats.map((stat, i) => (
-            <m.div
+            <Reveal
+              delay={0.15 + i * 0.12}
               key={stat.value}
               data-testid={`roi-stat-${stat.value}`}
               className="group bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-10 flex flex-col"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.12, ease: 'easeOut' }}
             >
               {/* Stat number */}
               <span
@@ -89,13 +74,13 @@ export default function ROISection() {
                 <h3
                   className="text-[15px] md:text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-2 md:mb-4"
                 >
-                  {t(stat.label)} <span className="font-normal text-[#7A7A7A]">{t(stat.sublabel)}</span>
+                  {t(`roi.stats.${stat.id}.label`)} <span className="font-normal text-[#7A7A7A]">{t(`roi.stats.${stat.id}.sublabel`)}</span>
                 </h3>
                 <p className="text-[13px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-relaxed">
-                  {t(stat.footnote)}
+                  {t(`roi.stats.${stat.id}.footnote`)}
                 </p>
               </div>
-            </m.div>
+            </Reveal>
           ))}
         </div>
 

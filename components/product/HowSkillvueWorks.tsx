@@ -1,40 +1,54 @@
-import React, { useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+'use client';
+
+import React, { useState } from 'react';
+import { Reveal } from '@/components/ui/reveal';
+import { useTranslations } from 'next-intl';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 
 const steps = [
-  { num: '01', title: 'Information Gathering', what: 'We learn your organization: competency frameworks, HR processes, systems, documentation.', capability: 'Context, process, and data ingestion' },
-  { num: '02', title: 'Jobs-People-Skills Mapping', what: 'We digest your organizational landscape into a dynamic skill taxonomy.', capability: 'Skill taxonomy generation, talent demand-supply mapping, market & AI impact view' },
-  { num: '03', title: 'Verification Generation', what: 'We create verifications skill by skill. deeply contextualized to your roles and framework.', capability: 'AI-generated items, expert validation, continuous adaptation' },
-  { num: '04', title: 'Verification Delivery', what: 'We meet people where they are, through the channels where adoption is highest.', capability: 'Web apps, WhatsApp, MS Teams, Slack. audio, video, written, MCQs' },
-  { num: '05', title: 'Evaluation & Scoring', what: 'AI agents recommend scores rooted in science. Humans keep control over the final decision.', capability: 'Scoring explainability, human-in-the-loop review' },
-  { num: '06', title: 'Reporting & Insights', what: 'Ready-to-use analytics for immediate consumption; integrations with core HR for full potential.', capability: 'Skillvue reporting platform + native integrations (ATS, LMS, HRIS, PMS)' },
+  {
+    id: 'informationGathering',
+    num: '01',
+  },
+  {
+    id: 'jobsPeopleSkills',
+    num: '02',
+  },
+  {
+    id: 'verificationGeneration',
+    num: '03',
+  },
+  {
+    id: 'verificationDelivery',
+    num: '04',
+  },
+  {
+    id: 'evaluationScoring',
+    num: '05',
+  },
+  {
+    id: 'reportingInsights',
+    num: '06',
+  },
 ];
 
 export default function HowSkillvueWorks() {
-  const { t } = useLanguage();
+  const t = useTranslations('product-overview');
+  // The carousel's arrow labels are read aloud, not shown, and they are the same
+  // two words on every carousel — so they live in `shared`, not in this page's
+  // namespace.
+  const ta = useTranslations('shared');
   const [active, setActive] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="how-skillvue-works" data-testid="how-skillvue-works" className="relative py-16 md:py-20 lg:py-28" ref={ref}>
+    <section id="how-skillvue-works" data-testid="how-skillvue-works" className="relative py-16 md:py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-        <motion.div
-          className="mb-8 md:mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-4xl mb-4 md:mb-6">
-            {t('From your context to actionable intelligence')}{' '}
-            <span className="font-bold gradient-text">{t('in six steps')}</span>
-          </h2>
-          <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">
-            {t("Skillvue doesn't ask you to change how you work. We start by learning your organization and deliver insights where your teams already operate.")}
-          </p>
-        </motion.div>
+        <Reveal duration={0.7} className="mb-8 md:mb-16">
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-4xl mb-4 md:mb-6">{t.rich('howSkillvueWorks.heading', {
+            span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+          })}</h2>
+          <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">{t('howSkillvueWorks.body')}</p>
+        </Reveal>
 
         {/* Timeline — grid 3x2 on mobile, inline on desktop */}
         <div className="grid grid-cols-3 gap-2 mb-8 md:flex md:items-center md:gap-2 md:mb-12 md:overflow-x-auto md:pb-2">
@@ -55,27 +69,26 @@ export default function HowSkillvueWorks() {
         </div>
 
         {/* Active step card */}
-        <motion.div
+        <Reveal
+          y={15}
+          duration={0.4}
           key={active}
           className="rounded-xl md:rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-10"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
         >
           <div className="grid lg:grid-cols-2 gap-5 md:gap-10">
             <div>
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-2 md:mb-4 block">{t('STEP')} {steps[active].num}</span>
-              <h3 className="text-[18px] md:text-[clamp(1.5rem,2.5vw,2rem)] font-semibold text-white/90 mb-3 md:mb-5 leading-[1.2]">{t(steps[active].title)}</h3>
-              <p className="text-[14px] md:text-[16px] text-white/[0.65] leading-[1.6] md:leading-[1.75]">{t(steps[active].what)}</p>
+              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-2 md:mb-4 block">{t('howSkillvueWorks.text')} {steps[active].num}</span>
+              <h3 className="text-[18px] md:text-[clamp(1.5rem,2.5vw,2rem)] font-semibold text-white/90 mb-3 md:mb-5 leading-[1.2]">{t(`howSkillvueWorks.steps.${steps[active].id}.title`)}</h3>
+              <p className="text-[14px] md:text-[16px] text-white/[0.65] leading-[1.6] md:leading-[1.75]">{t(`howSkillvueWorks.steps.${steps[active].id}.what`)}</p>
             </div>
             <div>
               <div className="rounded-lg md:rounded-xl bg-white/[0.04] border border-white/[0.06] p-4 md:p-6 w-full">
-                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-2 md:mb-3 block">{t('KEY CAPABILITY')}</span>
-                <p className="text-[13px] md:text-[15px] text-white/[0.65] leading-[1.5] md:leading-[1.7]">{t(steps[active].capability)}</p>
+                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-2 md:mb-3 block">{t('howSkillvueWorks.text2')}</span>
+                <p className="text-[13px] md:text-[15px] text-white/[0.65] leading-[1.5] md:leading-[1.7]">{t(`howSkillvueWorks.steps.${steps[active].id}.capability`)}</p>
               </div>
             </div>
           </div>
-        </motion.div>
+        </Reveal>
 
         {/* Nav arrows */}
         <div className="flex items-center justify-between mt-5 md:mt-8">
@@ -85,14 +98,14 @@ export default function HowSkillvueWorks() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setActive((p) => (p - 1 + steps.length) % steps.length)}
-              aria-label="Previous step"
+              aria-label={ta('a11y.previous')}
               className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/10 text-white/40 hover:text-white/80 hover:border-white/25 transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
             <button
               onClick={() => setActive((p) => (p + 1) % steps.length)}
-              aria-label="Next step"
+              aria-label={ta('a11y.next')}
               className="group flex items-center justify-center h-9 w-9 md:h-11 md:w-11 rounded-full border border-white/15 text-white/60 hover:text-white/90 hover:border-white/30 transition-all duration-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
               <ChevronRight className="h-4 w-4" />

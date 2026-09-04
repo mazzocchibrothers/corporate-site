@@ -1,8 +1,11 @@
+'use client';
+
 import React from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import LiteYouTubeEmbed from '@/components/landing/LiteYouTubeEmbed';
+import { href } from '@/i18n/routes';
 
 const clientLogos = [
   { name: 'Unicredit', src: '/logos/client-unicredit.svg', width: 221 },
@@ -19,15 +22,15 @@ const clientLogos = [
   { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2', width: 112 },
 ];
 
-const trustLogosIt = clientLogos;
-const trustLogosEn = clientLogos;
 
 export default function HeroSection() {
-  const { t, lang } = useLanguage();
-  const baseLogos = lang === 'en' ? trustLogosEn : trustLogosIt;
+  const lang = useLocale();
+  const t = useTranslations('home');
   // Repeat the set so the marquee track is always wider than any viewport,
-  // eliminating any visible gap before the duplicate kicks in.
-  const trustLogos = [...baseLogos, ...baseLogos];
+  // eliminating any visible gap before the duplicate kicks in. The two locales
+  // used to pick from `trustLogosEn` / `trustLogosIt`; both were assigned the
+  // same array, so the branch chose between a value and itself.
+  const trustLogos = [...clientLogos, ...clientLogos];
 
   return (
     <section
@@ -56,39 +59,34 @@ export default function HeroSection() {
                 className="hero-fade-up relative text-[48px] md:text-[clamp(2.5rem,4.6vw,4rem)] font-semibold tracking-[-0.02em] text-white"
                 style={{ lineHeight: 1.08, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
               >
-                {lang === 'en' ? (
-                  <>
-                    <span className="md:whitespace-nowrap">The Skills</span><br />
-                    <span className="italic font-bold gradient-text md:whitespace-nowrap">Operating System</span><br />
-                    <span className="md:whitespace-nowrap">for your organization</span>
-                  </>
-                ) : (
-                  <>
-                    Lo <span className="italic font-bold gradient-text">Skills OS</span><br />
-                    della tua organizzazione
-                  </>
-                )}
+                {/* Two gradient tags, not one: the English headline sets its
+                    span to md:whitespace-nowrap and the Italian one does not,
+                    and a single handler quietly gave the class to both. */}
+                {t.rich('hero.heading', {
+                  l: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
+                  g: (chunks) => (
+                    <span className="italic font-bold gradient-text md:whitespace-nowrap">{chunks}</span>
+                  ),
+                  gw: (chunks) => <span className="italic font-bold gradient-text">{chunks}</span>,
+                  br: () => <br />,
+                })}
               </h1>
               <p
                 className="hero-fade-up hero-delay-1 relative text-[15px] md:text-[17px] text-white/75 leading-[1.65] mt-6 md:mt-8 max-w-lg md:max-w-xl font-normal md:font-light"
                 style={{ textShadow: '0 1px 8px rgba(0,0,0,0.2)' }}
               >
-                {lang === 'en'
-                  ? 'Skillvue is the objective skills data layer for your enterprise, tailored to your competency framework, grounded in science, scaled by AI, embedded into the HR systems you already run, so every talent decision, from hiring to transformation, is finally the right one.'
-                  : 'Skillvue mappa, misura e riporta dati oggettivi sulle competenze: costruito sul tuo framework interno, fondato sulla scienza, potenziato dall’AI e integrato nei sistemi HR che già utilizzi, per trasformare ogni decisione sul talento, dall’assunzione allo sviluppo.'}
+                {t('hero.body')}
               </p>
 
               <div className="hero-fade-up hero-delay-1 relative flex flex-wrap items-center gap-4 mt-8 md:mt-10">
                 <Button asChild variant="primary" mode="dark">
-                  <a href={lang === 'it' ? '/prenota-incontro' : '/book-meeting'} data-testid="hero-book-demo">
-                    {t('Book a Demo')}
+                  <a href={href('book-meeting', lang)} data-testid="hero-book-demo">
+                    {t('hero.cta2')}
                     <ArrowRight aria-hidden="true" />
                   </a>
                 </Button>
                 <Button asChild variant="secondary" mode="dark">
-                  <a href="/science" data-testid="hero-our-science">
-                    {t('See the Science')}
-                  </a>
+                  <a href="/science" data-testid="hero-our-science">{t('hero.cta')}</a>
                 </Button>
               </div>
             </div>
@@ -101,7 +99,7 @@ export default function HeroSection() {
               >
                 <LiteYouTubeEmbed
                   videoId="g2Ju7COKZrM"
-                  title="Skillvue product video"
+                  title={t('hero.videoTitle')}
                   className="absolute inset-0 w-full h-full"
                 />
               </div>
@@ -135,9 +133,7 @@ export default function HeroSection() {
             <span
               className="inline-flex items-center px-6 py-2.5 text-[15px] text-white/70 whitespace-nowrap"
               style={{ fontWeight: 300, letterSpacing: '0.02em' }}
-            >
-              {t('Our Customers')}
-            </span>
+            >{t('hero.text')}</span>
           </div>
 
           {/* Scrolling marquee with mask fade on both edges */}

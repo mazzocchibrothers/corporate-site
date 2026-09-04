@@ -1,0 +1,61 @@
+# The gates, on every PR.
+#
+# The list of checks is NOT written here. scripts/gates.mjs derives it from the
+# `check:*` scripts in package.json, and harness/init.sh reads the same output —
+# so a gate added locally cannot be missing in CI, which is the only way a
+# "green" local run and a green PR can mean different things.
+#
+# What each gate catches is in harness/docs/verification.md. The short version:
+# a duplicate key in the dictionary, a route missing from the registry, a page
+# served by neither router, a client boundary in the wrong place, a message key
+# no page can render, and an Italian apostrophe that only `next build` sees.
+
+name: gates
+
+on:
+  pull_request:
+  push:
+    branches: [main, app-router]
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      # Node 24: scripts/check-routes.mjs imports i18n/urls.ts directly, so the
+      # check and the site build their URLs with the same function. That needs
+      # native type stripping.
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Gates
+        run: |
+          set -eu
+          # Process substitution, not a pipe: a `while read` on the far side of
+          # a pipe runs in a subshell, and getting its failure back out is the
+          # kind of shell subtlety that ends with a gate that cannot go red.
+          # Same loop as harness/init.sh, and it runs on bash 3.2 too, so the
+          # step can be dry-run on a Mac.
+          gates=()
+          while IFS= read -r line; do
+            [ -n "$line" ] && gates+=("$line")
+          done < <(node scripts/gates.mjs)
+          if [ ${#gates[@]} -eq 0 ]; then
+            echo "::error::scripts/gates.mjs returned no gates — nothing would be checked"
+            exit 1
+          fi
+          for gate in "${gates[@]}"; do
+            echo "::group::npm run $gate"
+            npm run "$gate"
+            echo "::endgroup::"
+          done
+
+      # Slow, and the only gate that catches a stray straight apostrophe in an
+      # Italian string: tsc walks past it because the file carries @ts-nocheck.
+      # check:build is `next build` plus a failure on any warning it prints.
+      - run: npm run check:build
