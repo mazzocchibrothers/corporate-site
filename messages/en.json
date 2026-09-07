@@ -1937,7 +1937,7 @@
           "label": "Reduction in unsuccessful interviews thanks to Skillvue"
         },
         {
-          "value": "Drastic",
+          "value": "Significant",
           "label": "Recruiter time optimization"
         }
       ],
@@ -1963,7 +1963,7 @@
             "value": "5,000+"
           },
           {
-            "label": "Branches",
+            "label": "Branches and business centres",
             "value": "600+"
           },
           {
@@ -2008,7 +2008,7 @@
           },
           "selectionQualityNeeded": {
             "title": "Selection quality needed to be as consistent as possible across the Group",
-            "text": "Guaranteeing uniform screening standards for a Group distributed across 600+ branches in 19 regions was both an operational and a fairness challenge. Without a centralised, structured filter, hiring quality risked becoming inconsistent."
+            "text": "Guaranteeing uniform screening standards for a Group distributed across 600+ branches and business centres in 19 regions was both an operational and a fairness challenge. Without a centralised, structured filter, hiring quality risked becoming inconsistent."
           }
         }
       },
@@ -2060,7 +2060,7 @@
             "label": "<b>Reduction in unsuccessful interviews</b><br></br>at the second step"
           },
           "drastic": {
-            "value": "Drastic",
+            "value": "Significant",
             "label": "<b>Recruiter time</b><br></br>optimization"
           }
         },

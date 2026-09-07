@@ -1937,7 +1937,7 @@
           "label": "Riduzione dei colloqui non in linea grazie a Skillvue"
         },
         {
-          "value": "Drastica",
+          "value": "Significativa",
           "label": "Ottimizzazione dei tempi di lavoro del recruiter"
         }
       ],
@@ -1963,7 +1963,7 @@
             "value": "5.000+"
           },
           {
-            "label": "Filiali",
+            "label": "Filiali e centri imprese",
             "value": "600+"
           },
           {
@@ -2008,7 +2008,7 @@
           },
           "selectionQualityNeeded": {
             "title": "La qualità della selezione doveva essere il più possibile omogenea per tutto il Gruppo",
-            "text": "Garantire standard di screening uniformi per un Gruppo che è distribuito su oltre 600 filiali in 19 regioni era una sfida operativa e di equità. Senza un filtro centralizzato e strutturato, la qualità della selezione rischiava di variare."
+            "text": "Garantire standard di screening uniformi per un Gruppo che è distribuito su oltre 600 filiali e centri imprese in 19 regioni era una sfida operativa e di equità. Senza un filtro centralizzato e strutturato, la qualità della selezione rischiava di variare."
           }
         }
       },
@@ -2060,7 +2060,7 @@
             "label": "<b>Riduzione dei colloqui non in linea</b><br></br>al secondo step"
           },
           "drastic": {
-            "value": "Drastica",
+            "value": "Significativa",
             "label": "<b>Ottimizzazione dei tempi</b><br></br>di lavoro del recruiter"
           }
         },
