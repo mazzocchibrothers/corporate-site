@@ -313,7 +313,7 @@ const disallow = readFileSync(join(ROOT, 'public/robots.txt'), 'utf8')
   .filter(Boolean);
 
 const submitted = routes
-  .filter((r) => r.canonicalOf === undefined && !r.id.startsWith('lp/'))
+  .filter((r) => r.canonicalOf === undefined && !r.id.startsWith('lp/') && r.noindex !== true)
   .flatMap((r) => localesOf(r).map((locale) => new URL(urlFor(r, locale)).pathname));
 
 const contradictions = submitted.filter((path) =>
@@ -327,6 +327,60 @@ assert.deepEqual(
     contradictions.map((p) => '  ' + p).join('\n') +
     '\nDrop them from the sitemap or stop disallowing them — submitting a URL ' +
     'you block gets it indexed as a blank result, which is worse than either.',
+);
+
+// ── A noindex route says so in both places, and only in those ──────────────
+// `"noindex": true` in the registry has to reach two places to mean anything:
+// the page's own robots meta, and the sitemap. Both are read from the field,
+// and neither failure is visible — a page that quietly stops emitting the tag
+// looks exactly like one that emits it.
+const noindexRoutes = routes.filter((r) => r.noindex === true);
+
+if (noindexRoutes.length > 0) {
+  for (const [file, why] of [
+    [
+      'i18n/metadata.ts',
+      'so the pages emit no robots tag at all and every noindex route is indexable. ' +
+        'Return robots: { index: false, follow: false } for it.',
+    ],
+    [
+      'app/sitemap.ts',
+      'so a noindex route is still submitted to Google while its own page asks not to be ' +
+        'indexed. Add the `continue`, next to the one for the landing pages.',
+    ],
+  ]) {
+    assert.match(
+      readFileSync(join(ROOT, file), 'utf8'),
+      /route\.noindex/,
+      `${file} does not read route.noindex, ${why}`,
+    );
+  }
+}
+
+// And robots.txt must NOT block them — this assertion is deliberately the
+// opposite way round from the one above, and it is the one someone will
+// eventually "fix" backwards.
+//
+// Disallow and noindex cancel each other out. A URL blocked in robots.txt is
+// never fetched, so the noindex in its <head> is never read; found linked from
+// anywhere off-site, Google can then index it as a bare, contentless result —
+// the outcome neither instruction asked for, and the one described a few lines
+// up for /lp/. These links are made to be forwarded by mail, so "it ends up
+// public somewhere" is precisely the case the noindex exists to cover, and a
+// Disallow is precisely what would stop it working. The crawl budget argument
+// does not apply either: nothing on the site links to a noindex section.
+const blocked = noindexRoutes.flatMap((r) =>
+  localesOf(r)
+    .map((locale) => new URL(urlFor(r, locale)).pathname)
+    .filter((path) => disallow.some((rule) => path.startsWith(rule) || `${path}/`.startsWith(rule)))
+    .map((path) => `  ${r.id}: ${path}`),
+);
+assert.deepEqual(
+  blocked,
+  [],
+  `${blocked.length} noindex route(s) are also blocked in robots.txt:\n${blocked.join('\n')}\n` +
+    'Drop the Disallow. A crawler that may not fetch the page cannot read the noindex on it, ' +
+    'and the URL gets indexed empty instead of not at all.',
 );
 
 const monolingual = routes.filter((r) => Object.keys(r.paths).length === 1);

@@ -4568,6 +4568,53 @@
       }
     }
   },
+  "demo": {
+    "meta": {
+      "title": "Dashboard demo | Skillvue",
+      "description": "Tre dashboard interattive costruite su programmi di assessment reali, de-brandizzate e senza alcun dato individuale. Si condividono via link, fuori dall’indice."
+    },
+    "hero": {
+      "eyebrow": "Demo interattiva",
+      "heading": "Il risultato di un assessment, <span>prima di farlo</span>",
+      "body": "Tre dashboard nate su programmi reali dei nostri clienti, private del marchio e di ogni dato individuale. Quello che resta è la forma del risultato: come si distribuisce una popolazione, dove sono i divari e su cosa puntano i numeri.",
+      "note": "Questa pagina non è indicizzata e nessun link del sito porta qui: la stai leggendo perché qualcuno te l’ha mandata."
+    },
+    "dashboards": {
+      "heading": "Tre programmi, tre domande",
+      "retail": {
+        "sector": "Retail",
+        "title": "Capability degli store manager",
+        "body": "Una rete di punti vendita valutata con lo stesso schema dall’inizio alla fine: come si distribuisce la capability sul territorio e quali negozi si portano dietro il divario."
+      },
+      "salesNetwork": {
+        "sector": "Assicurazioni",
+        "title": "Prontezza della rete vendita",
+        "body": "Una rete di agenti misurata prima di una spinta commerciale: chi è pronto a vendere la nuova gamma e chi passa prima dalla formazione."
+      },
+      "crossCountry": {
+        "sector": "Manifatturiero",
+        "title": "Mappa dei talenti cross-country",
+        "body": "Un solo schema di competenze applicato in sei paesi, perché l’HR di gruppo possa confrontare popolazioni che prima non erano confrontabili."
+      }
+    },
+    "status": {
+      "comingSoon": "In arrivo"
+    },
+    "preview": {
+      "heading": "Come si legge un risultato",
+      "body": "Ogni dashboard è fatta di pochi tipi di grafico, e questo è il più semplice: una competenza per riga e il punteggio medio che la popolazione ha raggiunto su quella competenza.",
+      "ariaLabel": "Grafico a barre dei punteggi medi per competenza",
+      "axis": "Punteggio medio",
+      "skills": [
+        "Comunicazione",
+        "Problem solving",
+        "Leadership di team",
+        "Adattabilità",
+        "Spinta commerciale"
+      ],
+      "caption": "Valori illustrativi. Le tre dashboard girano su dati aggregati, senza alcun record individuale."
+    }
+  },
   "home": {
     "meta": {
       "title": "Skillvue | Piattaforma di Talent Intelligence con AI",

@@ -47,6 +47,22 @@ export type Route = {
    * sitemap.
    */
   canonicalOf?: string;
+  /**
+   * Keep this route out of the index: no sitemap entry, and a
+   * `robots: noindex, nofollow` on the page itself.
+   *
+   * It is a field rather than a per-page `<meta>` because the two halves have
+   * to agree — a URL submitted in the sitemap and marked noindex is the same
+   * contradiction as one submitted and blocked in robots.txt. The site reads
+   * it in exactly two places — i18n/metadata.ts and app/sitemap.ts — and
+   * scripts/check-routes.mjs asserts that both still do, and that robots.txt
+   * does *not* also block the route: a page a crawler may not fetch is a page
+   * whose noindex a crawler never reads.
+   *
+   * The landing pages are noindex by three uncoordinated mechanisms and are
+   * deliberately not retrofitted here — that is #148.
+   */
+  noindex?: boolean;
 };
 
 export const routes: Route[] = data as Route[];

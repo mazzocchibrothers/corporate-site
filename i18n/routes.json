@@ -237,6 +237,14 @@
     }
   },
   {
+    "id": "demo",
+    "paths": {
+      "en": "/demo",
+      "it": "/demo"
+    },
+    "noindex": true
+  },
+  {
     "id": "index",
     "paths": {
       "en": "/",
