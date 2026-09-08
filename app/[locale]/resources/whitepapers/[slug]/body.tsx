@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import React, { useEffect, useRef } from 'react';
@@ -52,7 +51,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
   const router = useRouter();
   const lang = useLocale();
   const t = useTranslations('resources.whitepapers');
-  const formRef = useRef(null);
+  const formRef = useRef<HTMLDivElement>(null);
 
   const wp = whitepapers.find(w => w.slug === slug);
   // A form GUID identifies a HubSpot form, not a translation of one, so it
@@ -61,7 +60,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
   const formId = wp ? (lang === 'it' ? wp.hubspotFormIT : wp.hubspotFormEN) : null;
   const related = wp ? wp.relatedSlugs
     .map(s => whitepapers.find(w => w.slug === s))
-    .filter(Boolean)
+    .filter((paper): paper is (typeof whitepapers)[number] => paper !== undefined)
     .slice(0, 3) : [];
 
   useEffect(() => {

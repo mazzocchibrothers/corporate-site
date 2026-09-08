@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import React from 'react';
@@ -74,14 +73,14 @@ const oneTeamPhotos = [
 // Auto-scrolls continuously; dragging (mouse or touch) takes over and follows the pointer,
 // then auto-scroll resumes from wherever the drag left off.
 function DraggableMarquee({ photos }) {
-  const trackRef = React.useRef(null);
+  const trackRef = React.useRef<HTMLDivElement>(null);
   const offsetRef = React.useRef(0);
   const loopWidthRef = React.useRef(0);
   const draggingRef = React.useRef(false);
   const dragStartXRef = React.useRef(0);
   const dragStartOffsetRef = React.useRef(0);
-  const rafRef = React.useRef(null);
-  const lastTimeRef = React.useRef(null);
+  const rafRef = React.useRef<number | null>(null);
+  const lastTimeRef = React.useRef<number | null>(null);
 
   const LOOP_SECONDS = 60;
 
@@ -109,8 +108,7 @@ function DraggableMarquee({ photos }) {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const tick = (time) => {
-      if (lastTimeRef.current == null) lastTimeRef.current = time;
-      const dt = (time - lastTimeRef.current) / 1000;
+      const dt = (time - (lastTimeRef.current ?? time)) / 1000;
       lastTimeRef.current = time;
       if (!draggingRef.current && !reduceMotion && loopWidthRef.current) {
         offsetRef.current = wrap(offsetRef.current + (loopWidthRef.current / LOOP_SECONDS) * dt);

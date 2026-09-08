@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import React from 'react';
@@ -29,6 +28,7 @@ const ARTICLES = [
   { id: 'talent-acquisition', image: 'https://images.unsplash.com/photo-1726842172813-55c6e284f8b5?w=600&h=400&fit=crop', href: '/blog/talent-acquisition' },
 ];
 
+const unsplash = (src, width) => src.replace('w=600', `w=${width}`);
 
 
 export default function BlogPage() {
@@ -52,7 +52,7 @@ export default function BlogPage() {
               <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
             </div>
           ) : (
-            <img src={article.image} alt={t(`articles.${article.id}.title`)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img src={article.image} srcSet={article.image.startsWith('https://images.unsplash.com/') ? `${unsplash(article.image, 400)} 400w, ${unsplash(article.image, 800)} 800w, ${unsplash(article.image, 1200)} 1200w` : undefined} alt={t(`articles.${article.id}.title`)} loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           )}
         </div>
         <div className="p-5 md:p-7 flex-1 flex flex-col">

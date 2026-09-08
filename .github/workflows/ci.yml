@@ -59,3 +59,17 @@ jobs:
       # Italian string: tsc walks past it because the file carries @ts-nocheck.
       # check:build is `next build` plus a failure on any warning it prints.
       - run: npm run check:build
+
+      - name: Browser smoke
+        run: |
+          set -eu
+          npx playwright install --with-deps chromium
+          npm run start > /tmp/skillvue.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for _ in $(seq 1 30); do
+            curl -fsS http://localhost:3000/ > /dev/null && break
+            sleep 1
+          done
+          curl -fsS http://localhost:3000/ > /dev/null
+          npm run test:smoke

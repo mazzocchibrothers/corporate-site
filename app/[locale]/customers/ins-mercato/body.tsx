@@ -1,16 +1,14 @@
-// @ts-nocheck
 'use client';
 
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
-import Footer from '@/components/Footer';
 import { ArrowRight, Target, TrendingUp, Layers, Eye, Scale, Zap, Heart, Users, Shield, CheckCircle } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import Navbar from '@/components/landing/Navbar';
-import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import { CustomerStoryFooter, CustomerStorySection as Section } from '@/components/customers/CustomerStoryTemplate';
 
 
 
@@ -60,14 +58,10 @@ const IMPACT = [
   { id: 'internalMobility', icon: Layers },
 ];
 
-function Section({ children, className = '' }) {
-  return (
-    <Reveal y={25} duration={0.6} className={className}>
-      {children}
-    </Reveal>
-  );
-}
-
+const RELATED_STORIES = [
+  { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
+  { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: 'Subdued: building a single scalable hiring standard for a network of 130+ stores' },
+];
 
 
 // Structure the catalogue cannot hold: which facts the client card shows and in
@@ -508,32 +502,14 @@ export default function InsMercatoStoryPage() {
           </div>
         </section>
 
-        <div className="fade-into-dark" />
-
-        {/* Related Stories */}
-        <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{t('heading')}</h3>
-            <div className="grid md:grid-cols-2 gap-5">
-              {[
-                { id: 'carrefour', company: 'Carrefour', tag: 'Large-scale distribution · Hiring at Scale', headline: 'Carrefour: how to protect margins across 1,200 stores by optimising the key hiring KPI' },
-                { id: 'subdued', company: 'Subdued', tag: 'Fashion Retail · Hiring', headline: 'Subdued: building a single scalable hiring standard for a network of 130+ stores' },
-              ].map(s => (
-                <button key={s.id} onClick={() => { router.push(`${href('customers', lang)}/${s.id}`); window.scrollTo(0,0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
-                  <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
-                  <h4 className="text-[24px] font-semibold text-white/90 mb-4">{s.company}</h4>
-                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
-                  <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
-                    {t('cta2')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <SolutionFinalCTA headline={t('text4')} accentWord={t('text5')} />
-        <Footer />
+        <CustomerStoryFooter
+          title={t('heading')}
+          cta={t('cta2')}
+          stories={RELATED_STORIES}
+          customersHref={href('customers', lang)}
+          finalHeading={t('text4')}
+          finalAccent={t('text5')}
+        />
       </main>
     </>
   );

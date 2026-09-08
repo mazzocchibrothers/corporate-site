@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import { useTranslations } from 'next-intl';
@@ -86,8 +85,8 @@ const economics = [
 
 export default function HiddenCostRecruiting() {
   const t = useTranslations('lp.hidden-cost-recruiting');
-  const formRef = useRef(null);
-  const formSectionRef = useRef(null);
+  const formRef = useRef<HTMLDivElement>(null);
+  const formSectionRef = useRef<HTMLElement>(null);
   const [formLoaded, setFormLoaded] = useState(false);
 
   useEffect(() => {

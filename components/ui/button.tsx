@@ -60,7 +60,7 @@ type ButtonBaseProps = VariantProps<typeof buttonVariants> & {
         asChild: true;
         // Radix's Slot takes exactly one child, so `icon`/`iconPosition` have no
         // effect here — embed your own icon inside the element passed as `children`.
-        icon?: never;
+        icon?: null;
         iconPosition?: never;
       }
     | {

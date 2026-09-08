@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { ogFor } from '@/i18n/og-card';
 
 export { size, contentType } from '@/i18n/og-card';

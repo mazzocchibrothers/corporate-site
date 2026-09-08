@@ -13,10 +13,9 @@ import { Button } from '@/components/ui/button';
 // through href(), which is what retired the hrefIt flags — an Italian slug is
 // declared in the registry once and every link in the site follows it.
 const navLinks = [
-  { id: 'platform', anchor: '#hero', items: ['product-overview', 'science'] },
+  { id: 'platform', items: ['product-overview', 'science'] },
   {
     id: 'solutions',
-    anchor: '#solutions',
     items: [
       'solutions/talent-acquisition',
       'solutions/performance-management',
@@ -28,7 +27,6 @@ const navLinks = [
   { id: 'customers', route: 'customers', items: null },
   {
     id: 'resources',
-    anchor: '#',
     items: ['resources/whitepapers', 'blog', 'resources/press', 'about', 'careers'],
   },
 ];
@@ -53,9 +51,10 @@ export default function Navbar() {
   const [onLightSection, setOnLightSection] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-  const lastScrollY = useRef(0);
   const ticking = useRef(false);
-  const closeTimeout = useRef<any>(null);
+  const closeTimeout = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const desktopTriggerRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   const hasDropdown = !!(openMenu && navLinks.find(l => l.id === openMenu)?.items);
@@ -66,10 +65,8 @@ export default function Navbar() {
       if (!ticking.current) {
         window.requestAnimationFrame(() => {
           const currentY = window.scrollY;
-          const heroThreshold = window.innerHeight * 0.6;
           setScrolled(currentY > 50);
           setHidden(false);
-          lastScrollY.current = currentY;
 
           const probeY = 82;
           const el = document.elementFromPoint(window.innerWidth / 2, probeY);
@@ -96,6 +93,46 @@ export default function Navbar() {
     }
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const menu = mobileMenuRef.current;
+    const previousFocus = document.activeElement as HTMLElement | null;
+    const focusable = () => Array.from(menu?.querySelectorAll<HTMLElement>('a[href], button:not([disabled])') ?? []);
+    const focusFirst = () => focusable()[0]?.focus();
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setMobileOpen(false);
+        setMobileExpanded(null);
+        return;
+      }
+
+      if (event.key !== 'Tab') return;
+      const elements = focusable();
+      if (!elements.length) return;
+      const first = elements[0];
+      const last = elements[elements.length - 1];
+
+      if (!menu?.contains(document.activeElement) || (!event.shiftKey && document.activeElement === last)) {
+        event.preventDefault();
+        first.focus();
+      } else if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      }
+    };
+
+    focusFirst();
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      previousFocus?.focus();
+    };
+  }, [mobileOpen]);
+
+  useEffect(() => () => clearTimeout(closeTimeout.current), []);
 
   const handleEnter = useCallback((label: string) => {
     clearTimeout(closeTimeout.current);
@@ -132,6 +169,13 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-40 ${hidden && !mobileOpen ? '-translate-y-full' : 'translate-y-0'}`}
       style={{ transition: 'transform 0.5s cubic-bezier(0.25,0.1,0.25,1)' }}
       onMouseLeave={handleLeave}
+      onKeyDown={(event) => {
+        if (event.key === 'Escape' && openMenu) {
+          event.preventDefault();
+          setOpenMenu(null);
+          desktopTriggerRef.current?.focus();
+        }
+      }}
     >
       {/* Navbar bar */}
       <nav
@@ -170,28 +214,25 @@ export default function Navbar() {
                 onMouseEnter={() => handleEnter(link.id)}
                 onMouseLeave={handleLeave}
               >
-                <a
-                  href={link.route ? href(link.route, lang) : link.anchor}
-                  data-testid={`nav-link-${link.id}`}
-                  className="text-[15px] font-light tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300"
-                  style={{
-                    color: menuActive
-                      ? (openMenu === link.id ? '#ffffff' : 'rgba(255,255,255,0.5)')
-                      : (openMenu === link.id ? textColor : textMuted),
-                  }}
-                  onClick={(e) => {
-                    if (link.items) {
-                      e.preventDefault();
-                      return;
-                    }
-                    if (link.route) {
-                      e.preventDefault();
-                      navigateTo(href(link.route, lang));
-                    }
-                  }}
-                >
-                  {t(`nav.${link.id}`)}
-                  {link.items && (
+                {link.items ? (
+                  <button
+                    type="button"
+                    id={`desktop-trigger-${link.id}`}
+                    data-testid={`nav-link-${link.id}`}
+                    aria-expanded={openMenu === link.id}
+                    aria-controls="desktop-menu"
+                    className="text-[15px] font-light tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                    style={{ color: menuActive ? (openMenu === link.id ? '#ffffff' : 'rgba(255,255,255,0.5)') : (openMenu === link.id ? textColor : textMuted) }}
+                    onFocus={(event) => {
+                      desktopTriggerRef.current = event.currentTarget;
+                      handleEnter(link.id);
+                    }}
+                    onClick={(event) => {
+                      desktopTriggerRef.current = event.currentTarget;
+                      setOpenMenu(openMenu === link.id ? null : link.id);
+                    }}
+                  >
+                    {t(`nav.${link.id}`)}
                     <ChevronDown
                       className="h-3.5 w-3.5"
                       style={{
@@ -200,8 +241,21 @@ export default function Navbar() {
                         transition: 'transform 0.4s cubic-bezier(0.25,0.1,0.25,1), opacity 0.3s ease',
                       }}
                     />
-                  )}
-                </a>
+                  </button>
+                ) : (
+                  <a
+                    href={href(link.route!, lang)}
+                    data-testid={`nav-link-${link.id}`}
+                    className="text-[15px] font-light tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                    style={{ color: menuActive ? 'rgba(255,255,255,0.5)' : textMuted }}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      navigateTo(href(link.route!, lang));
+                    }}
+                  >
+                    {t(`nav.${link.id}`)}
+                  </a>
+                )}
               </div>
             ))}
           </div>
@@ -254,6 +308,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
             data-testid="mobile-menu-toggle"
           >
             {mobileOpen ? (
@@ -268,6 +323,10 @@ export default function Navbar() {
       {/* Desktop dropdown panel */}
       <div
         className="hidden lg:block"
+        id="desktop-menu"
+        role="region"
+        aria-hidden={!hasDropdown}
+        aria-labelledby={openMenu ? `desktop-trigger-${openMenu}` : undefined}
         style={{
           backgroundColor: '#000000',
           borderTop: '1px solid rgba(255,255,255,0.04)',
@@ -311,6 +370,11 @@ export default function Navbar() {
       {/* Mobile fullscreen menu */}
       {mobileOpen && (
         <div
+          ref={mobileMenuRef}
+          id="mobile-navigation"
+          role="dialog"
+          aria-modal="true"
+          aria-label={t('nav.menu')}
           className="lg:hidden absolute left-0 right-0"
           style={{
             top: '80px',
@@ -324,7 +388,10 @@ export default function Navbar() {
               {navLinks.map((link) => (
                 <div key={link.id}>
                   <button
-                    className="w-full flex items-center justify-between py-4 border-b border-white/[0.06]"
+                    type="button"
+                    className="w-full flex items-center justify-between py-4 border-b border-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                    aria-expanded={link.items ? mobileExpanded === link.id : undefined}
+                    aria-controls={mobileExpanded === link.id ? `mobile-menu-${link.id}` : undefined}
                     onClick={() => {
                       if (link.items) {
                         setMobileExpanded(mobileExpanded === link.id ? null : link.id);
@@ -347,11 +414,11 @@ export default function Navbar() {
 
                   {/* Expanded sub-items */}
                   {link.items && mobileExpanded === link.id && (
-                    <div className="pl-4 pb-2">
+                    <div id={`mobile-menu-${link.id}`} className="pl-4 pb-2">
                       {link.items.filter(id => !(lang === 'it' && HIDDEN_IN_IT.has(id))).map((id) => (
                         <button
                           key={id}
-                          className="w-full text-left py-3 text-[16px] text-white/60 hover:text-white transition-colors duration-200"
+                          className="w-full text-left py-3 text-[16px] text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
                           onClick={() => navigateTo(href(id, lang))}
                         >
                           {t(`nav.links.${labelKey(id)}`)}

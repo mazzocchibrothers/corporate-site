@@ -1,24 +1,14 @@
-// @ts-nocheck
 'use client';
 
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
-import Footer from '@/components/Footer';
 import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench, Smile } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import Navbar from '@/components/landing/Navbar';
-import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
-
-function Section({ children, className = '' }) {
-  return (
-    <Reveal y={25} duration={0.6} className={className}>
-      {children}
-    </Reveal>
-  );
-}
+import { CustomerStoryFooter, CustomerStorySection as Section } from '@/components/customers/CustomerStoryTemplate';
 
 
 // Structure the catalogue cannot hold: ids and the components the page
@@ -218,17 +208,9 @@ export default function Mediaset2StoryPage() {
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
                     <p className="text-[15px] text-[#121212]/70 leading-[1.65]">
-                      {typeof t.rich(`objectives.items.${o.id}.text`, {
-    b: (chunks) => <strong>{chunks}</strong>,
-  }) === 'string' && t.rich(`objectives.items.${o.id}.text`, {
-    b: (chunks) => <strong>{chunks}</strong>,
-  }).includes(':') ? <><strong className="font-bold text-[#121212]/90">{t.rich(`objectives.items.${o.id}.text`, {
-    b: (chunks) => <strong>{chunks}</strong>,
-  }).split(':')[0]}</strong>:{t.rich(`objectives.items.${o.id}.text`, {
-    b: (chunks) => <strong>{chunks}</strong>,
-  }).split(':').slice(1).join(':')}</> : t.rich(`objectives.items.${o.id}.text`, {
-    b: (chunks) => <strong>{chunks}</strong>,
-  })}
+                      {t.rich(`objectives.items.${o.id}.text`, {
+                        b: (chunks) => <strong>{chunks}</strong>,
+                      })}
                     </p>
                   </div>
                 ))}
@@ -311,29 +293,15 @@ export default function Mediaset2StoryPage() {
           </div>
         </section>
 
-        <div className="fade-into-dark" />
-
-        {/* RELATED STORIES */}
-        <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-            <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{t('related.title')}</h3>
-            <div className="grid md:grid-cols-2 gap-5">
-              {t.raw('related.stories').map(s => (
-                <button key={s.id} onClick={() => { router.push(`${href('customers', lang)}/${s.id}`); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
-                  <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
-                  <h4 className="text-[24px] font-semibold text-white/90 mb-4">{s.company}</h4>
-                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
-                  <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
-                    {t('related.cta')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <SolutionFinalCTA headline={t('finalCta.headline')} accentWord={t('finalCta.accent')} />
-        <Footer />
+        <CustomerStoryFooter
+          title={t('related.title')}
+          cta={t('related.cta')}
+          stories={t.raw('related.stories')}
+          customersHref={href('customers', lang)}
+          finalHeading={t('finalCta.headline')}
+          finalAccent={t('finalCta.accent')}
+          containerClassName="px-8 lg:px-12"
+        />
       </main>
     </>
   );

@@ -21,13 +21,14 @@ change here is almost always **a page**, and the risk is almost always
    ```
    app/[locale]/customers/adr/
      page.tsx    server. The same eight lines on every route.
-     body.tsx    the page. 'use client'.
+     body.tsx    the page. Server by default.
    ```
 
    `page.tsx` does what only the server can: `generateMetadata` calling
    `buildMetadata(routeId, locale)`, and a `NextIntlClientProvider` narrowed to
-   the route's namespaces. `body.tsx` is the page, and it is a client component
-   because framer-motion, `useEffect` and `useRouter` all live in it.
+   the route's namespaces. `body.tsx` stays a Server Component unless it
+   directly needs browser state or an event handler; motion and other
+   interactivity belong in their smallest client component.
 
    **Never widen that provider.** One rendered without `messages` inherits the
    whole catalogue from `i18n/request.ts` and serializes it into the document —
@@ -129,13 +130,24 @@ change here is almost always **a page**, and the risk is almost always
    "fix" it by loading Inter.
 
 9. **No new dependency for what a few lines do.**
-   `package.json` already carries framer-motion, embla, recharts, lottie,
-   react-hook-form, zod and 25 Radix packages. Reach for what's installed.
+   `package.json` already carries framer-motion, lottie, class-variance-authority
+   and the Radix Slot primitive. Reach for what's installed.
    A new dependency needs a line on the Issue saying what it replaces.
 
 10. **Deliberate shortcuts are marked.**
     A `// ponytail:` comment naming the ceiling and the upgrade path. A shortcut
     nobody wrote down reads as ignorance to the next person.
+
+## Images
+
+- LCP candidates use native `<img>` with intrinsic dimensions, `loading="eager"`,
+  `fetchPriority="high"`, and `decoding="async"`.
+- Below-the-fold photography is lazy-decoded inside an aspect-ratio container;
+  Unsplash cards use `srcSet` and `sizes`.
+- SVG logos and decorative blurred backgrounds remain native images: they are
+  small or non-content, so an optimizer wrapper adds no value.
+
+`check:images` protects the representative LCP and content-card rules.
 
 ## What has guardrails now, and what still does not
 

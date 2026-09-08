@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import React, { useState, useMemo } from 'react';
@@ -25,7 +24,7 @@ export default function WhitepapersPage() {
   const [selProcess, setSelProcess] = useState(null);
   const published = whitepapers
     .filter(w => w.published && w.languageAvailability.includes(lang))
-    .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
 
   // Dynamic filter options from published papers
   const industries = [...new Set(published.flatMap(w => w.industry))];
@@ -102,7 +101,7 @@ export default function WhitepapersPage() {
                     <div className="rounded-2xl overflow-hidden mb-5">
                       {w.coverBg ? (
                         <div className="aspect-[4/5] relative overflow-hidden">
-                          <img src={w.coverBg} alt="" className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-50" />
+                          <img src={w.coverBg} alt="" loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-50" />
                           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
                           <div className="relative z-10 flex flex-col justify-between h-full p-6 md:p-8">
                             <div>
@@ -117,7 +116,7 @@ export default function WhitepapersPage() {
                         </div>
                       ) : (
                         <div className="aspect-[4/5] overflow-hidden">
-                          <img loading="lazy" decoding="async" src={w.coverImage} alt={t(`items.${w.slug}.title`)} className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700" />
+                          <img loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" src={w.coverImage} alt={t(`items.${w.slug}.title`)} className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700" />
                         </div>
                       )}
                     </div>

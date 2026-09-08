@@ -37,24 +37,6 @@ const SIGNALS = [
   [/\b(window|document|localStorage|sessionStorage|navigator|matchMedia|IntersectionObserver|ResizeObserver)\b/, 'browser APIs'],
 ];
 
-// Dependencies whose importer has to carry the directive itself.
-//
-// Two different reasons, both found by building a Server Component that
-// imports every file this check calls server-capable:
-//
-//   react-day-picker, embla-carousel-react  ship no 'use client' at all and
-//     call createContext at module scope:
-//     `TypeError: (0 , q.createContext) is not a function`
-//
-//   cmdk, vaul  do ship it, but the shadcn wrapper reads `.displayName` off
-//     the primitive at module scope, and on the server that is a client
-//     reference, not a component:
-//     `TypeError: Cannot read properties of undefined (reading 'displayName')`
-//
-// Radix does not belong here: its own 'use client' is enough, and 40 wrappers
-// around it render on the server today. That was measured, not assumed.
-const CLIENT_DEPS = ['react-day-picker', 'embla-carousel-react', 'cmdk', 'vaul'];
-
 const walk = (dir) =>
   readdirSync(join(ROOT, dir), { withFileTypes: true }).flatMap((e) =>
     e.isDirectory()
@@ -83,9 +65,6 @@ for (const file of DIRS.flatMap(walk)) {
   const src = readFileSync(join(ROOT, file), 'utf8');
   const clean = strip(src);
   const reasons = SIGNALS.filter(([re]) => re.test(clean)).map(([, why]) => why);
-  for (const dep of CLIENT_DEPS) {
-    if (new RegExp(`from ['"]${dep}['"]`).test(clean)) reasons.push(`${dep} (client-only dependency)`);
-  }
   const has = HAS_DIRECTIVE.test(src);
 
   if (reasons.length > 0) client += 1;
@@ -93,7 +72,7 @@ for (const file of DIRS.flatMap(walk)) {
   if (reasons.length > 0 && !has) {
     if (FIX) {
       // After the leading comment block, not above it: `// @ts-nocheck` has to
-      // stay in the first comments to be honoured, and 97 files open with it.
+      // stay in the first comments to be honoured.
       const lines = src.split('\n');
       let at = 0;
       while (at < lines.length && (lines[at].trim() === '' || lines[at].trim().startsWith('//'))) at += 1;

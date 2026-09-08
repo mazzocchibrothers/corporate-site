@@ -1,14 +1,11 @@
-// @ts-nocheck
-'use client';
-
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
-import { useTranslations } from 'next-intl';
+import { getLocale, getTranslations } from 'next-intl/server';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Clock, BookOpen, Search, Building2, Users, BarChart3, GitBranch, Target } from 'lucide-react';
-import { useRouter } from '@/i18n/navigation';
+import { ArrowLeft, ArrowRight, Clock, BookOpen, Search, Building2, Users, BarChart3, GitBranch, Target } from 'lucide-react';
+import { href } from '@/i18n/routes';
 
 
 
@@ -34,9 +31,9 @@ const STRATEGY_STEPS = [
   { id: 'measureWhatTruly', icon: Target },
 ];
 
-export default function BlogArticle9() {
-  const router = useRouter();
-  const t = useTranslations('blog.talent-acquisition');
+export default async function BlogArticle9() {
+  const locale = await getLocale();
+  const t = await getTranslations('blog.talent-acquisition');
 
 
   return (
@@ -47,15 +44,12 @@ export default function BlogArticle9() {
           <img src="https://images.unsplash.com/photo-1726842172813-55c6e284f8b5?w=1400&h=600&fit=crop" alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.12]" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/30" />
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-20 lg:py-28">
-            <Button
+            <Button asChild
               variant="tertiary"
               mode="dark"
-              iconPosition="left"
-              icon={<ArrowLeft aria-hidden />}
-              onClick={() => { router.push('/blog'); window.scrollTo(0, 0); }}
               className="mb-10"
             >
-              {t('cta')}
+              <a href={href('blog', locale)}><ArrowLeft aria-hidden />{t('cta')}</a>
             </Button>
             <Reveal duration={0.7} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
@@ -175,12 +169,11 @@ export default function BlogArticle9() {
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {t('body6')}
               </p>
-              <Button
+              <Button asChild
                 variant="primary"
                 mode="dark"
-                onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
               >
-                {t('cta2')}
+                <a href={href('book-meeting', locale)}>{t('cta2')}<ArrowRight aria-hidden /></a>
               </Button>
             </Reveal>
           </div>

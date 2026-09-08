@@ -47,6 +47,9 @@ export default function LiteYouTubeEmbed({ videoId, title, className }: LiteYouT
           width={1280}
           height={720}
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          sizes="(min-width: 1024px) 50vw, 100vw"
           onError={() => setPosterFailed(true)}
           className="absolute inset-0 w-full h-full object-cover"
         />

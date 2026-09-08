@@ -1,4 +1,3 @@
-// @ts-nocheck
 // The structured data, derived from the registry and the catalogue.
 //
 // The site had none. Google could read the pages but not what they *are*: no
@@ -12,7 +11,7 @@
 
 import { getTranslations } from 'next-intl/server';
 import { BASE_URL, ogImageUrl, urlFor, type Locale } from './urls';
-import { canonicalRoute, routes } from './routes';
+import { canonicalRoute, routes, type Route } from './routes';
 import { namespaceOf } from './messages';
 
 /** The brand, named once so every article can point at it instead of repeating it. */
@@ -60,12 +59,12 @@ function isoDate(human: string): string | undefined {
  * `/customers` is in the registry. `/lp/food-retail` gets no trail, because
  * `/lp` is not a page — a breadcrumb naming a URL that 404s is worse than none.
  */
-async function breadcrumbs(route, locale: Locale) {
+async function breadcrumbs(route: Route, locale: Locale) {
   const path = route.paths[locale]!;
   if (path === '/') return undefined;
 
   const segments = path.split('/').filter(Boolean);
-  const trail = [];
+  const trail: Route[] = [];
   for (let i = 1; i < segments.length; i++) {
     const prefix = '/' + segments.slice(0, i).join('/');
     const ancestor = routes.find((r) => r.paths[locale] === prefix);
@@ -73,15 +72,18 @@ async function breadcrumbs(route, locale: Locale) {
   }
 
   const home = routes.find((r) => r.id === 'index');
-  const items = [];
+  if (!home) return undefined;
+  const items: Array<{ '@type': string; position: number; name: string; item: string }> = [];
   let position = 1;
   for (const r of [home, ...trail, route]) {
     const t = await getTranslations({ locale, namespace: `${namespaceOf(r.id)}.meta` });
+    const item = urlFor(canonicalRoute(r), locale) ?? urlFor(r, locale);
+    if (!item) continue;
     items.push({
       '@type': 'ListItem',
       position: position++,
       name: r.id === 'index' ? 'Skillvue' : shortName(t('title')),
-      item: urlFor(canonicalRoute(r), locale) ?? urlFor(r, locale),
+      item,
     });
   }
   return { '@type': 'BreadcrumbList', itemListElement: items };
