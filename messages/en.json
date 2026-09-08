@@ -4639,14 +4639,7 @@
         "eyebrow": "Stay close",
         "heading": "Get in touch with",
         "headingAccent": "our team.",
-        "paragraph": "We'll share relevant insights about Skillvue, our community and the topics we explore together.",
-        "fullName": "Full name",
-        "workEmail": "Work email",
-        "message": "Anything you'd like to share? (optional)",
-        "send": "Send",
-        "sending": "Sending…",
-        "sent": "Thanks — we'll be in touch.",
-        "error": "Something went wrong. Please try again."
+        "paragraph": "We'll share relevant insights about Skillvue, our community and the topics we explore together."
       }
     }
   },

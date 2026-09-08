@@ -1,25 +1,19 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   ArrowUpRight,
   Calendar,
-  Loader2,
   MapPin,
   Mic,
   Play,
   Quote,
-  Send,
 } from 'lucide-react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
 import { Reveal } from '@/components/ui/reveal';
 import { href } from '@/i18n/routes';
-
-const HUBSPOT_PORTAL_ID = '48438018';
-const HUBSPOT_FORM_ID = 'YOUR_TALENT_PIONEERS_FORM_ID'; // TODO: replace with real form ID
 
 const BRAND_GRADIENT = 'linear-gradient(90deg, #A1A2FF 0%, #FF5656 50%, #FFAF64 100%)';
 const EYEBROW = 'text-[12px] font-medium uppercase tracking-[1.2px]';
@@ -268,86 +262,40 @@ function DayToDayCarousel({
   );
 }
 
-function ContactForm({ t }: { t: ReturnType<typeof useTranslations> }) {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+// The site's general contact form, confirmed by the team as the right one to
+// reuse here rather than standing up a dedicated form. The English form id
+// happens to match book-meeting's; the Italian one does not.
+const CONTACT_FORM_IDS: Record<string, string> = {
+  en: '950f4b2b-ed50-4ef7-94f9-2b34c4b19ecc',
+  it: 'd841a6fe-99a0-46cd-af9c-389b8df01855',
+};
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('sending');
-    try {
-      const res = await fetch(
-        `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            fields: [
-              { name: 'firstname', value: form.name },
-              { name: 'email', value: form.email },
-              { name: 'message', value: form.message },
-            ],
-            context: {
-              pageUri: typeof window !== 'undefined' ? window.location.href : '',
-              pageName: 'Talent Pioneers',
-            },
-          }),
-        },
-      );
-      setStatus(res.ok ? 'sent' : 'error');
-    } catch {
-      setStatus('error');
-    }
-  };
+function ContactForm({ lang }: { lang: string }) {
+  const formRef = useRef<HTMLDivElement>(null);
 
-  if (status === 'sent') {
-    return (
-      <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-white/[0.14] bg-white/[0.06] px-6 py-14 text-center">
-        <p className="text-[16px] font-semibold text-white/95">{t('contact.sent')}</p>
-      </div>
-    );
-  }
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//js.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
+    script.async = true;
+    script.onload = () => {
+      if (window.hbspt && formRef.current) {
+        window.hbspt.forms.create({
+          portalId: '48438018',
+          formId: CONTACT_FORM_IDS[lang] ?? CONTACT_FORM_IDS.en,
+          region: 'na1',
+          target: '#talent-pioneers-hubspot-form',
+        });
+      }
+    };
+    document.body.appendChild(script);
 
-  return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <input
-          type="text"
-          required
-          placeholder={t('contact.fullName')}
-          value={form.name}
-          onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-          className="w-full rounded-xl border border-white/[0.14] bg-white/[0.06] px-4 py-3.5 text-[15px] text-white placeholder:text-white/40 outline-none transition-colors focus-visible:border-white/40"
-        />
-        <input
-          type="email"
-          required
-          placeholder={t('contact.workEmail')}
-          value={form.email}
-          onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-          className="w-full rounded-xl border border-white/[0.14] bg-white/[0.06] px-4 py-3.5 text-[15px] text-white placeholder:text-white/40 outline-none transition-colors focus-visible:border-white/40"
-        />
-      </div>
-      <textarea
-        placeholder={t('contact.message')}
-        rows={3}
-        value={form.message}
-        onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
-        className="w-full resize-none rounded-xl border border-white/[0.14] bg-white/[0.06] px-4 py-3.5 text-[15px] text-white placeholder:text-white/40 outline-none transition-colors focus-visible:border-white/40"
-      />
-      <div className="pt-1">
-        <Button type="submit" variant="primary" mode="dark" disabled={status === 'sending'} icon={null}>
-          {status === 'sending' ? (
-            <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
-          ) : (
-            <Send className="h-4 w-4" aria-hidden="true" />
-          )}
-          {t('contact.send')}
-        </Button>
-        {status === 'error' && <p className="pt-2 text-[13px] text-red-400">{t('contact.error')}</p>}
-      </div>
-    </form>
-  );
+    return () => {
+      if (script.parentNode) script.parentNode.removeChild(script);
+    };
+  }, [lang]);
+
+  return <div id="talent-pioneers-hubspot-form" ref={formRef} style={{ minHeight: 300 }} />;
 }
 
 export default function TalentPioneersPage() {
@@ -578,7 +526,7 @@ export default function TalentPioneersPage() {
                   </h2>
                   <p className="pt-5 max-w-[539px] text-[18px] font-light leading-[1.7] text-white/70">{t('contact.paragraph')}</p>
                 </div>
-                <ContactForm t={t} />
+                <ContactForm lang={lang} />
               </div>
             </Reveal>
           </div>
