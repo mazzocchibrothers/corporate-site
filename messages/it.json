@@ -4600,7 +4600,6 @@
       }
     },
     "status": {
-      "comingSoon": "In arrivo",
       "open": "Apri la dashboard"
     },
     "preview": {
@@ -4990,6 +4989,240 @@
       "closing": {
         "heading": "Come è fatta questa pagina",
         "body": "Ogni numero qui è una statistica di gruppo, calcolata una volta fuori da questo sito su dati che in questo sito non sono mai entrati. Gli headcount sono arrotondati al multiplo di cinque, nessun gruppo che porta un punteggio contiene meno di venticinque persone, e le aree di conoscenza sono nominate per quello che misurano invece che per il settore del cliente. La dashboard di origine ha una tabella partecipanti con nome e cognome dentro; qui non c’è nulla del genere, in nessuna forma.",
+        "back": "Torna alle dashboard demo"
+      }
+    },
+    "cross-country": {
+      "meta": {
+        "title": "Mappa dei talenti cross-country — dashboard demo | Skillvue",
+        "description": "Un solo schema di competenze applicato a una popolazione distribuita su più paesi, letto insieme alle aspirazioni di crescita e all’apertura a spostarsi. Solo aggregati: nessun dato individuale."
+      },
+      "hero": {
+        "eyebrow": "Demo interattiva",
+        "heading": "Un solo schema, <span>popolazioni che non erano confrontabili</span>",
+        "body": "Un HR di gruppo che valuta oltre confine di solito ha un profilo per paese e nessun modo di metterli affiancati. Questo è che cosa si vede quando lo stesso schema viene applicato a tutti insieme: le competenze, i comportamenti che ci stanno sotto, e che cosa le persone dicono di volere dopo.",
+        "note": "Solo aggregati. Su questa pagina non c’è nessuna persona e nessun record individuale: ogni cifra è una statistica di gruppo, calcolata una volta fuori da questo sito."
+      },
+      "population": {
+        "heading": "Di chi si parla",
+        "invited": {
+          "label": "Persone invitate",
+          "note": "L’intera popolazione nel perimetro del programma."
+        },
+        "evaluated": {
+          "label": "Assessment completati",
+          "note": "Ogni media di questa pagina è calcolata su queste persone e su nessun’altra."
+        },
+        "completion": {
+          "label": "Tasso di completamento",
+          "note": "Abbastanza alto perché i risultati descrivano la popolazione e non chi è arrivato in fondo."
+        },
+        "rounding": "Gli headcount sono arrotondati al multiplo di cinque perché nessun conteggio identifichi qualcuno, mentre le percentuali sono calcolate sulla popolazione reale: dividendo gli uni per le altre il conto non torna, e sbaglia di un soffio."
+      },
+      "matching": {
+        "heading": "Skill matching rispetto allo schema",
+        "body": "Quanto ogni persona aderisce al profilo su cui il suo ruolo è stato mappato, in fasce da dieci punti. Il cliente ha messo l’asticella a {threshold}, e cade quasi esattamente in mezzo a questa popolazione: il {below}% sotto, il {above}% da lì in su.",
+        "series": "Quota dei valutati",
+        "axis": "% dei valutati",
+        "axisScore": "Skill matching",
+        "ariaLabel": "Grafico a barre della quota di persone valutate in ciascuna fascia da dieci punti di skill matching",
+        "mean": "Media",
+        "median": "Mediana",
+        "caption": "Un’asticella messa dov’è questa non dice che la popolazione è bocciata. La taglia a metà, che è quello che di solito fa un’asticella scritta a partire dal ruolo e non da chi lo ricopre — ed è il motivo per cui la forma qui sopra dice più del numero singolo."
+      },
+      "groups": {
+        "heading": "Tre gruppi, non tre pari",
+        "body": "La popolazione è distribuita in modo molto disomogeneo, quindi esce come tre gruppi invece che come un elenco. Due sono singoli paesi abbastanza grandi da stare in piedi da soli; il terzo accorpa i rimanenti, perché diversi di quelli avevano troppe poche persone per essere pubblicati — o per essere resi anonimi.",
+        "names": {
+          "primary": "Gruppo maggiore",
+          "secondary": "Secondo gruppo",
+          "others": "Tutti gli altri paesi"
+        },
+        "series": "Skill matching medio",
+        "axis": "Skill matching",
+        "ariaLabel": "Grafico a barre dello skill matching medio di ciascuno dei tre gruppi di paesi",
+        "people": "Persone",
+        "caption": "Le tre medie stanno dentro {spread} punti l’una dall’altra, e il gruppo che segna il valore più alto è anche il più piccolo: {small} persone contro {large}. Una differenza di quell’ordine su un gruppo di quella taglia non è una scoperta su un paese; è l’aspetto che ha una forbice così stretta quando i campioni stanno a più di un fattore otto di distanza."
+      },
+      "frames": {
+        "heading": "Dove sta la popolazione",
+        "body": "Due schemi sulle stesse persone: quattro competenze di sintesi e le nove aree che l’assessment misura in dettaglio. Scegline uno e i due pannelli si ridisegnano.",
+        "label": "Schema",
+        "options": {
+          "competencies": "Quattro competenze",
+          "framework": "Nove aree di dettaglio"
+        },
+        "means": {
+          "heading": "Punteggio medio",
+          "series": "Media",
+          "ariaLabel": "Grafico a barre del punteggio medio di ciascuna voce dello schema selezionato",
+          "caption": "Le quattro competenze stanno dentro {narrow} l’una dall’altra e le nove aree si distendono su {wide}. Fare la media fino a quattro numeri è ciò che appiattisce una popolazione; è nel dettaglio che un programma trova qualcosa da fare."
+        },
+        "bands": {
+          "heading": "Come è fatta quella media",
+          "axis": "% dei valutati",
+          "ariaLabel": "Grafico a barre impilate della quota di valutati in ciascuna fascia di giudizio, per ogni voce dello schema selezionato",
+          "caption": "La stessa media può essere una popolazione ammassata al centro o una spaccata ai due estremi, e solo questa vista le distingue."
+        }
+      },
+      "competencies": {
+        "vision": "Visione",
+        "openness": "Apertura",
+        "leadership": "Leadership",
+        "accountability": "Responsabilità"
+      },
+      "framework": {
+        "marketAwareness": "Conoscenza del mercato",
+        "customerCentricApproach": "Approccio centrato sul cliente",
+        "customerRelationshipManagement": "Gestione della relazione con il cliente",
+        "communicationInfluence": "Comunicazione e influenza",
+        "emotionalIntelligence": "Intelligenza emotiva",
+        "negotiation": "Negoziazione",
+        "relationshipBuilding": "Costruzione di relazioni",
+        "solutionsOriented": "Orientamento alla soluzione",
+        "digitalTools": "Strumenti digitali"
+      },
+      "bands": {
+        "veryPoor": "Molto sotto",
+        "belowAverage": "Sotto la media",
+        "adequate": "Adeguato",
+        "good": "Buono",
+        "excellent": "Eccellente"
+      },
+      "drivers": {
+        "heading": "I comportamenti che ci stanno sotto",
+        "body": "Ogni competenza è misurata a partire da comportamenti osservati, e la media di quei comportamenti è il punteggio della competenza. Scegline una per vedere di che cosa è fatta.",
+        "label": "Competenza",
+        "series": "Punteggio medio",
+        "ariaLabel": "Grafico a barre del punteggio medio di ciascun comportamento della competenza selezionata",
+        "caption": "I comportamenti sotto una competenza si distendono molto più di quanto le competenze si distendano fra loro. È il livello a cui si scrive un piano di sviluppo: il punteggio di una competenza dice dove guardare, non che cosa fare.",
+        "names": {
+          "monitoringMarkets": "Monitora i mercati",
+          "identifyingOpportunities": "Individua le opportunità",
+          "anticipatingTrends": "Anticipa le tendenze",
+          "focusingOnCustomers": "Si concentra sul cliente",
+          "settingQualityStandards": "Fissa standard di qualità",
+          "workingSystematically": "Lavora in modo sistematico",
+          "maintainingQualityProcesses": "Mantiene i processi di qualità",
+          "maintainingProductivity": "Mantiene la produttività",
+          "applyingTechnicalExpertise": "Applica competenze tecniche",
+          "developingTechnicalExpertise": "Sviluppa competenze tecniche",
+          "usingTechnology": "Usa la tecnologia",
+          "speakingFluently": "Si esprime con scioltezza",
+          "explainingConcepts": "Spiega i concetti",
+          "articulatingKeyPoints": "Argomenta i punti chiave",
+          "publicSpeaking": "Parla in pubblico",
+          "projectingCredibility": "Trasmette credibilità",
+          "respondingToTheAudience": "Risponde all’interlocutore",
+          "showingConsideration": "Mostra considerazione",
+          "showingEmpathy": "Mostra empatia",
+          "stabilisingEmotions": "Resta stabile sotto tensione",
+          "toleratingCriticism": "Accetta le critiche",
+          "managingConflict": "Gestisce il conflitto",
+          "promotingIdeas": "Promuove le idee",
+          "gainingAgreement": "Ottiene consenso",
+          "navigatingPolitics": "Si muove fra gli equilibri interni",
+          "buildingRelationships": "Costruisce relazioni",
+          "developingNetworks": "Sviluppa reti di contatti",
+          "relatingAcrossLevels": "Si relaziona a ogni livello",
+          "understandingOthers": "Capisce gli altri",
+          "listeningToOthers": "Ascolta gli altri",
+          "consultingOthers": "Consulta gli altri",
+          "supportingOthers": "Sostiene gli altri",
+          "caringForOthers": "Si prende cura degli altri",
+          "learningQuickly": "Impara in fretta",
+          "acceptingNewIdeas": "Accoglie idee nuove",
+          "thinkingQuickly": "Ragiona rapidamente",
+          "supportingOrganisationalLearning": "Sostiene l’apprendimento dell’organizzazione",
+          "evaluatingInformation": "Valuta le informazioni",
+          "testingAssumptions": "Mette alla prova le ipotesi",
+          "producingSolutions": "Produce soluzioni",
+          "formingJudgements": "Si forma un giudizio",
+          "demonstratingSystemsThinking": "Ragiona per sistemi",
+          "adaptingToSituations": "Si adatta alle situazioni",
+          "gatheringInformation": "Raccoglie informazioni",
+          "adaptingInterpersonalStyle": "Adatta lo stile relazionale",
+          "managingAmbiguity": "Gestisce l’ambiguità"
+        }
+      },
+      "mobility": {
+        "heading": "Apertura a spostarsi",
+        "body": "Alla domanda se si trasferirebbero, il {yes}% ha detto sì e il {no}% ha detto no; il {maybe}% nel mezzo ha detto che ci penserebbe, che è una risposta diversa e va tenuta separata dalla prima.",
+        "series": "Quota dei valutati",
+        "axis": "% dei valutati",
+        "ariaLabel": "Grafico a barre della quota di valutati per ciascun livello di apertura a trasferirsi",
+        "items": {
+          "veryWilling": "Molto disponibile",
+          "willing": "Disponibile",
+          "openToConsidering": "Ci penserebbe",
+          "somewhatReluctant": "Poco convinto",
+          "notInterested": "Non interessato"
+        },
+        "caption": "Sommare la fascia centrale alle due alla sua sinistra darebbe un numero più di quattro volte il primo, e non vorrebbe dire la stessa cosa. Il centro è dove una conversazione può spostare qualcuno; non è un impegno già preso."
+      },
+      "areas": {
+        "heading": "Dove le persone preferirebbero lavorare",
+        "body": "Le funzioni indicate rispondendo a dove vorrebbero spostarsi. Si poteva dare più di una risposta, quindi le quote sommano al {total}% — circa {each} aree indicate a testa in media — e non si possono leggere come una ripartizione della popolazione.",
+        "series": "Quota che l’ha indicata",
+        "axis": "% che l’ha indicata",
+        "ariaLabel": "Grafico a barre della quota di valutati che ha indicato ciascuna area funzionale",
+        "items": {
+          "sales": "Vendite",
+          "technicalSpecialist": "Specialista tecnico",
+          "marketing": "Marketing",
+          "operations": "Operations",
+          "hr": "Persone e organizzazione",
+          "finance": "Finance"
+        },
+        "caption": "Due aree sono indicate da più di metà della popolazione ciascuna, cosa possibile solo perché la domanda permetteva di indicarne più d’una. Ogni barra va letta da sola: è la quota che ha indicato quell’area, non la quota che l’ha scelta al posto delle altre."
+      },
+      "growth": {
+        "heading": "In che direzione vogliono crescere",
+        "body": "Qui una risposta a testa, quindi queste sì che ripartiscono la popolazione. Le tre opzioni vere escono vicine fra loro, e la più grande non è quella che un organigramma prevederebbe.",
+        "series": "Quota dei valutati",
+        "axis": "% dei valutati",
+        "ariaLabel": "Grafico a barre della quota di valutati che desidera ciascuna direzione di crescita",
+        "items": {
+          "crossFunctional": "Spostarsi fra funzioni",
+          "deepenExpertise": "Approfondire il proprio mestiere",
+          "teamManagement": "Gestire un team",
+          "noPreference": "Nessuna preferenza"
+        },
+        "caption": "Meno di tre su dieci vogliono gestire un team. Un piano di successione che dia per scontato che chi ha ambizione voglia una scala manageriale sta pianificando per un gruppo che questa popolazione non ha."
+      },
+      "howToRead": {
+        "heading": "Come si leggono questi risultati",
+        "body": "Sei cose che sono ovvie per chi ha già lavorato con questo schema, e per niente ovvie a una prima lettura.",
+        "items": {
+          "matching": {
+            "question": "Che cos’è lo skill matching, e che cosa vuol dire l’asticella a {threshold}?",
+            "answer": "È quanto il profilo valutato di una persona aderisce al profilo su cui il ruolo è stato mappato — non è un voto in centesimi. L’asticella è del cliente ed è tarata sul ruolo, non su chi lo ricopre: una popolazione che le sta intorno è il punto di partenza normale, non un cattivo risultato."
+          },
+          "scale": {
+            "question": "Che cosa vogliono dire i punteggi e le cinque fasce?",
+            "answer": "Ogni competenza è misurata sulla stessa scala a cinque livelli, e le fasce sono quella scala a parole. Il punteggio è la media dei comportamenti osservati che ci stanno sotto, ed è per questo che due aree con la stessa media possono avere forme completamente diverse."
+          },
+          "groups": {
+            "question": "Perché tre gruppi, e perché non confrontarli direttamente?",
+            "answer": "Perché non sono la stessa cosa. Due sono singoli paesi abbastanza grandi da stare da soli; il terzo accorpa i rimanenti. Fra loro c’è più di un fattore otto di taglia, quindi pochi punti di differenza dicono molto meno di quanto direbbe lo stesso scarto fra due gruppi di pari dimensione."
+          },
+          "areas": {
+            "question": "Perché le aree preferite sommano a più di cento?",
+            "answer": "Perché si poteva indicarne più d’una: ogni barra è la quota che ha indicato quell’area e la colonna non è la ripartizione di niente. La domanda sulla direzione di crescita ammetteva una sola risposta, e quella invece ripartisce la popolazione."
+          },
+          "mobility": {
+            "question": "Perché «ci penserebbe» non viene contato come un sì?",
+            "answer": "Perché non lo è. Sommarlo trasformerebbe uno su sette in due su tre, e un numero costruito così si sfascia nel momento in cui qualcuno chiede che cosa fosse la domanda."
+          },
+          "counts": {
+            "question": "Perché gli headcount non tornano con le percentuali?",
+            "answer": "Ogni headcount qui è arrotondato al multiplo di cinque perché nessun conteggio possa identificare qualcuno, mentre ogni percentuale è calcolata sulla cifra vera. L’arrotondamento è il punto; il piccolo scarto è quello che costa."
+          }
+        }
+      },
+      "closing": {
+        "heading": "Come è fatta questa pagina",
+        "body": "Ogni numero qui è una statistica di gruppo, calcolata una volta fuori da questo sito su dati che in questo sito non sono mai entrati. Gli headcount sono arrotondati al multiplo di cinque, nessun gruppo pubblicato contiene meno di venticinque persone, i paesi sono raggruppati invece che nominati, e una funzione è nominata per quello che fa invece che per il settore a cui appartiene. La dashboard di origine ha una tabella partecipanti con dentro i nomi; qui non c’è nulla del genere, in nessuna forma.",
         "back": "Torna alle dashboard demo"
       }
     }

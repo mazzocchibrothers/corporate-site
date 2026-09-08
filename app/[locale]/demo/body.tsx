@@ -21,7 +21,7 @@ import { href } from '@/i18n/routes';
 const DASHBOARDS = [
   { id: 'retail', Icon: Store, route: 'demo/retail' },
   { id: 'salesNetwork', Icon: Users, route: 'demo/sales-network' },
-  { id: 'crossCountry', Icon: Globe, route: undefined },
+  { id: 'crossCountry', Icon: Globe, route: 'demo/cross-country' },
 ];
 
 // The preview chart's numbers. Illustrative, and said to be illustrative in
@@ -123,23 +123,18 @@ export default function DemoHub() {
                   <p className="text-[14px] text-white/[0.55] leading-[1.7] mb-6">
                     {t(`dashboards.${id}.body`)}
                   </p>
-                  {/* A card without a route is a dashboard not built yet, and
-                      it stays a badge: a card that navigates nowhere reads as a
-                      broken site rather than as a roadmap. */}
-                  {route ? (
-                    <a
-                      href={href(route, lang)}
-                      className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-3 py-1.5 text-[12px] font-semibold text-white/70 transition-colors duration-300 hover:text-white hover:border-white/[0.25]"
-                    >
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#5DDBA4]" />
-                      {t('status.open')}
-                    </a>
-                  ) : (
-                    <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-3 py-1.5 text-[12px] font-semibold text-white/50">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#FFAF64]" />
-                      {t('status.comingSoon')}
-                    </span>
-                  )}
+                  {/* All three dashboards exist now, so the "coming soon" badge
+                      and its message are gone rather than kept dead for a fourth
+                      card that may never come. A card added without a route
+                      fails at prerender inside href(), which is the loud
+                      failure this repo prefers over a silently missing link. */}
+                  <a
+                    href={href(route, lang)}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-3 py-1.5 text-[12px] font-semibold text-white/70 transition-colors duration-300 hover:text-white hover:border-white/[0.25]"
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#5DDBA4]" />
+                    {t('status.open')}
+                  </a>
                 </Reveal>
               ))}
             </div>

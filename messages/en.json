@@ -4600,7 +4600,6 @@
       }
     },
     "status": {
-      "comingSoon": "Coming soon",
       "open": "Open the dashboard"
     },
     "preview": {
@@ -4990,6 +4989,240 @@
       "closing": {
         "heading": "How this page was made",
         "body": "Every number here is a group statistic, computed once outside this website from data that never entered it. Headcounts are rounded to the nearest five, no group carrying a score holds fewer than twenty-five people, and the knowledge areas are named for what they test rather than for the client's sector. The source dashboard has a participant table with a first name and a surname in it; there is nothing of that kind here, in any form.",
+        "back": "Back to the demo dashboards"
+      }
+    },
+    "cross-country": {
+      "meta": {
+        "title": "Cross-country talent map — demo dashboard | Skillvue",
+        "description": "One competency frame applied to a population spread across several countries, with growth aspirations and openness to moving read alongside it. Aggregates only: every individual record removed."
+      },
+      "hero": {
+        "eyebrow": "Interactive demo",
+        "heading": "One frame, <span>populations that were not comparable</span>",
+        "body": "A group HR team assessing across borders usually has one profile per country and no way to put them side by side. This is what it looks like when the same frame is applied to all of them at once — competencies, the behaviours under them, and what people say they want next.",
+        "note": "Aggregates only. No person and no individual record is on this page: every figure is a group statistic, computed once outside this website."
+      },
+      "population": {
+        "heading": "Who this is about",
+        "invited": {
+          "label": "People invited",
+          "note": "The full population in scope for the programme."
+        },
+        "evaluated": {
+          "label": "Assessments completed",
+          "note": "Every average on this page is computed on these, and on no one else."
+        },
+        "completion": {
+          "label": "Completion rate",
+          "note": "High enough that the results describe the population rather than the people who happened to finish."
+        },
+        "rounding": "Headcounts are rounded to the nearest five so that no count identifies anyone, while the percentages are computed on the real population — divide one into the other and it will be a fraction out."
+      },
+      "matching": {
+        "heading": "Skill matching against the frame",
+        "body": "How closely each person matches the profile their role was mapped to, in ten-point bands. The client set the bar at {threshold}, and it falls almost exactly in the middle of this population: {below}% below it, {above}% at or above.",
+        "series": "Share of those assessed",
+        "axis": "% of those assessed",
+        "axisScore": "Skill matching",
+        "ariaLabel": "Bar chart of the share of assessed people in each ten-point band of skill matching",
+        "mean": "Mean",
+        "median": "Median",
+        "caption": "A bar set where this one is does not say the population failed. It splits it in half, which is what a bar written from the role rather than from the people in it usually does — and it is the reason the shape above says more than the single number underneath it."
+      },
+      "groups": {
+        "heading": "Three groups, not three equals",
+        "body": "The population is spread unevenly, so it ships as three groups rather than as a list. Two of them are single countries large enough to stand on their own; the third pools the remainder, because several of those held too few people to publish — or to anonymise.",
+        "names": {
+          "primary": "Largest group",
+          "secondary": "Second group",
+          "others": "All other countries"
+        },
+        "series": "Mean skill matching",
+        "axis": "Skill matching",
+        "ariaLabel": "Bar chart of mean skill matching for each of the three country groups",
+        "people": "People",
+        "caption": "The three means sit within {spread} points of each other, and the group scoring highest is also the smallest — {small} people against {large}. A gap that size on a group that size is not a finding about a country; it is what a spread this narrow looks like when the samples are more than eight times apart."
+      },
+      "frames": {
+        "heading": "Where the population stands",
+        "body": "Two frames over the same people: four headline competencies, and the nine areas the assessment scores in detail. Pick one and both panels redraw.",
+        "label": "Frame",
+        "options": {
+          "competencies": "Four competencies",
+          "framework": "Nine detailed areas"
+        },
+        "means": {
+          "heading": "Average score",
+          "series": "Average",
+          "ariaLabel": "Bar chart of the average score for each item in the selected frame",
+          "caption": "The four competencies land within {narrow} of each other and the nine areas spread over {wide}. Averaging up to four numbers is what flattens a population; the detail is where a programme finds something to do."
+        },
+        "bands": {
+          "heading": "How that average is made up",
+          "axis": "% of those assessed",
+          "ariaLabel": "Stacked bar chart of the share of assessed people in each rating band, for every item in the selected frame",
+          "caption": "The same average can be a population clustered in the middle or one split at both ends, and only this view tells them apart."
+        }
+      },
+      "competencies": {
+        "vision": "Vision",
+        "openness": "Openness",
+        "leadership": "Leadership",
+        "accountability": "Accountability"
+      },
+      "framework": {
+        "marketAwareness": "Market awareness",
+        "customerCentricApproach": "Customer-centric approach",
+        "customerRelationshipManagement": "Customer relationship management",
+        "communicationInfluence": "Communication and influence",
+        "emotionalIntelligence": "Emotional intelligence",
+        "negotiation": "Negotiation",
+        "relationshipBuilding": "Relationship building",
+        "solutionsOriented": "Solutions orientation",
+        "digitalTools": "Digital tools"
+      },
+      "bands": {
+        "veryPoor": "Well below",
+        "belowAverage": "Below average",
+        "adequate": "Adequate",
+        "good": "Good",
+        "excellent": "Excellent"
+      },
+      "drivers": {
+        "heading": "The behaviours underneath",
+        "body": "Each competency is scored from observed behaviours, and the average of those behaviours is the competency's score. Pick one to see what it is made of.",
+        "label": "Competency",
+        "series": "Average score",
+        "ariaLabel": "Bar chart of the average score on each behaviour of the selected competency",
+        "caption": "The behaviours under one competency spread far wider than the competencies spread among themselves. That is the level a development plan is written at — a competency score tells you where to look, not what to do.",
+        "names": {
+          "monitoringMarkets": "Monitors markets",
+          "identifyingOpportunities": "Identifies opportunities",
+          "anticipatingTrends": "Anticipates trends",
+          "focusingOnCustomers": "Focuses on customers",
+          "settingQualityStandards": "Sets quality standards",
+          "workingSystematically": "Works systematically",
+          "maintainingQualityProcesses": "Maintains quality processes",
+          "maintainingProductivity": "Maintains productivity",
+          "applyingTechnicalExpertise": "Applies technical expertise",
+          "developingTechnicalExpertise": "Develops technical expertise",
+          "usingTechnology": "Uses technology",
+          "speakingFluently": "Speaks fluently",
+          "explainingConcepts": "Explains concepts",
+          "articulatingKeyPoints": "Articulates key points",
+          "publicSpeaking": "Speaks in public",
+          "projectingCredibility": "Projects credibility",
+          "respondingToTheAudience": "Responds to the audience",
+          "showingConsideration": "Shows consideration",
+          "showingEmpathy": "Shows empathy",
+          "stabilisingEmotions": "Stays even under strain",
+          "toleratingCriticism": "Takes criticism",
+          "managingConflict": "Manages conflict",
+          "promotingIdeas": "Promotes ideas",
+          "gainingAgreement": "Gains agreement",
+          "navigatingPolitics": "Navigates politics",
+          "buildingRelationships": "Builds relationships",
+          "developingNetworks": "Develops networks",
+          "relatingAcrossLevels": "Relates across levels",
+          "understandingOthers": "Understands others",
+          "listeningToOthers": "Listens to others",
+          "consultingOthers": "Consults others",
+          "supportingOthers": "Supports others",
+          "caringForOthers": "Cares for others",
+          "learningQuickly": "Learns quickly",
+          "acceptingNewIdeas": "Accepts new ideas",
+          "thinkingQuickly": "Thinks quickly",
+          "supportingOrganisationalLearning": "Supports organisational learning",
+          "evaluatingInformation": "Evaluates information",
+          "testingAssumptions": "Tests assumptions",
+          "producingSolutions": "Produces solutions",
+          "formingJudgements": "Forms judgements",
+          "demonstratingSystemsThinking": "Thinks in systems",
+          "adaptingToSituations": "Adapts to situations",
+          "gatheringInformation": "Gathers information",
+          "adaptingInterpersonalStyle": "Adapts interpersonal style",
+          "managingAmbiguity": "Manages ambiguity"
+        }
+      },
+      "mobility": {
+        "heading": "Openness to moving",
+        "body": "Asked whether they would relocate. {yes}% said yes outright and {no}% said no; the {maybe}% in between said they would consider it, which is a different answer and worth keeping separate from the first.",
+        "series": "Share of those assessed",
+        "axis": "% of those assessed",
+        "ariaLabel": "Bar chart of the share of assessed people at each level of openness to relocating",
+        "items": {
+          "veryWilling": "Very willing",
+          "willing": "Willing",
+          "openToConsidering": "Would consider it",
+          "somewhatReluctant": "Somewhat reluctant",
+          "notInterested": "Not interested"
+        },
+        "caption": "Adding the middle to the two on its left would give a number more than four times the size of the first, and it would not mean the same thing. The middle is where a conversation can move someone; it is not a commitment already made."
+      },
+      "areas": {
+        "heading": "Where people would rather work",
+        "body": "The functions people named when asked where they would want to move. More than one answer was allowed, so the shares add to {total}% — about {each} areas named per person on average — and they cannot be read as a split of the population.",
+        "series": "Share who named it",
+        "axis": "% who named it",
+        "ariaLabel": "Bar chart of the share of assessed people who named each functional area",
+        "items": {
+          "sales": "Sales",
+          "technicalSpecialist": "Technical specialist",
+          "marketing": "Marketing",
+          "operations": "Operations",
+          "hr": "People and organisation",
+          "finance": "Finance"
+        },
+        "caption": "Two areas are named by more than half the population each, which is only possible because the question let people name several. Read each bar on its own: it is the share who named that area, not the share who chose it over the others."
+      },
+      "growth": {
+        "heading": "Which direction they want to grow in",
+        "body": "One answer each this time, so these do split the population. The three real options come out close together, and the largest of them is not the one an org chart would predict.",
+        "series": "Share of those assessed",
+        "axis": "% of those assessed",
+        "ariaLabel": "Bar chart of the share of assessed people wanting each direction of growth",
+        "items": {
+          "crossFunctional": "Move across functions",
+          "deepenExpertise": "Go deeper in their field",
+          "teamManagement": "Manage a team",
+          "noPreference": "No preference"
+        },
+        "caption": "Fewer than three in ten want to manage a team. A succession plan that assumes the ambitious ones want a management ladder is planning for a group this population does not have."
+      },
+      "howToRead": {
+        "heading": "How to read the results",
+        "body": "Six things that are obvious once someone has worked with this frame, and are not obvious at all on a first read.",
+        "items": {
+          "matching": {
+            "question": "What is skill matching, and what does the bar at {threshold} mean?",
+            "answer": "It is how closely one person's assessed profile matches the profile the role was mapped to — not a mark out of a hundred. The bar is the client's, set from the role rather than from the people in it, so a population sitting around it is the normal starting point rather than a bad result."
+          },
+          "scale": {
+            "question": "What do the scores and the five bands mean?",
+            "answer": "Every competency is scored on the same five-point scale, and the bands are that scale in words. The score is the average of the observed behaviours underneath it, which is why two areas with the same average can have completely different shapes."
+          },
+          "groups": {
+            "question": "Why three groups, and why not compare them directly?",
+            "answer": "Because they are not the same kind of thing. Two are single countries big enough to stand alone; the third pools the rest. They differ in size by more than a factor of eight, so a few points between them says much less than the same gap between two groups of equal size would."
+          },
+          "areas": {
+            "question": "Why do the preferred areas add up to more than a hundred?",
+            "answer": "People could name more than one, so every bar is the share who named that area and the column is not a split of anything. The direction-of-growth question allowed one answer, and that one does split the population."
+          },
+          "mobility": {
+            "question": "Why is “would consider it” kept out of the yes?",
+            "answer": "Because it is not one. Folding it in would turn one in seven into two in three, and a number built that way falls apart the moment someone asks what was actually asked."
+          },
+          "counts": {
+            "question": "Why do the headcounts not divide into the percentages?",
+            "answer": "Every headcount here is rounded to the nearest five so that no count can identify anyone, while every percentage is computed on the real figure. The rounding is the point; the small mismatch is what it costs."
+          }
+        }
+      },
+      "closing": {
+        "heading": "How this page was made",
+        "body": "Every number here is a group statistic, computed once outside this website from data that never entered it. Headcounts are rounded to the nearest five, no published group holds fewer than twenty-five people, the countries are grouped rather than named, and one function is named for what it does rather than for the sector it belongs to. The source dashboard has a participant table with names in it; there is nothing of that kind here, in any form.",
         "back": "Back to the demo dashboards"
       }
     }
