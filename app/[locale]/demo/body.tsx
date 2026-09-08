@@ -104,9 +104,19 @@ export default function DemoHub() {
                   className="rounded-xl md:rounded-2xl border border-white/[0.08] bg-white/[0.04] p-6 md:p-8"
                 >
                   <Icon className="h-6 w-6 text-white/30 mb-6" />
-                  <span className="text-[12px] font-semibold tracking-[0.14em] uppercase text-white/35 block mb-3">
-                    {t(`dashboards.${id}.sector`)}
-                  </span>
+                  {/* A card names its sector only if the catalogue gives it one.
+                      crossCountry has none: its real sector is Pharma, and
+                      customers/fidia-farmaceutici is the only pharmaceutical
+                      story on the site — so the label walks a reader from an
+                      anonymised dashboard to the customer whose aggregates it
+                      shows (issue 176). Reading the key rather than a flag means the
+                      fourth card gets this for free: write a sector, it shows;
+                      leave it out, it doesn't. */}
+                  {t.has(`dashboards.${id}.sector`) ? (
+                    <span className="text-[12px] font-semibold tracking-[0.14em] uppercase text-white/35 block mb-3">
+                      {t(`dashboards.${id}.sector`)}
+                    </span>
+                  ) : null}
                   <h3 className="text-[19px] md:text-[21px] font-semibold text-white/90 mb-3 leading-tight">
                     {t(`dashboards.${id}.title`)}
                   </h3>
