@@ -16,6 +16,7 @@
     "check:hardcoded": "node scripts/check-hardcoded.mjs",
     "check:colors": "node scripts/check-colors.mjs",
     "check:images": "node scripts/check-images.mjs",
+    "check:talent-pioneers-carousel": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-talent-pioneers-carousel.mjs",
     "check:untranslated": "node scripts/check-untranslated.mjs",
     "check:build": "node scripts/build-clean.mjs",
     "check:assets": "node scripts/check-assets.mjs",

@@ -1,7 +1,4 @@
-'use client';
-
-import React, { useEffect, useRef } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
+import { getLocale, getTranslations } from 'next-intl/server';
 import {
   ArrowUpRight,
   Calendar,
@@ -14,12 +11,16 @@ import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { Reveal } from '@/components/ui/reveal';
 import { href } from '@/i18n/routes';
+import TalentPioneersCarousel from '@/components/customers/TalentPioneersCarousel';
+import TalentPioneersContactForm from '@/components/customers/TalentPioneersContactForm';
 
 const EYEBROW = 'text-[12px] font-medium uppercase tracking-[1.2px]';
 
 type DayToDayItem =
   | { id: string; kind: 'story'; storyRoute: string; bgImage: string; podcast?: boolean }
   | { id: string; kind: 'quote' };
+
+type Translate = (key: string) => string;
 
 // The design alternates real customer stories (each a link to its full case
 // study) with anonymised Talent Pioneers member quotes that have no page of
@@ -60,12 +61,10 @@ function DayToDayCard({
   item,
   t,
   lang,
-  duplicate = false,
 }: {
   item: DayToDayItem;
-  t: ReturnType<typeof useTranslations>;
+  t: Translate;
   lang: string;
-  duplicate?: boolean;
 }) {
   if (item.kind === 'quote') {
     return (
@@ -85,13 +84,14 @@ function DayToDayCard({
   return (
     <a
       href={href(item.storyRoute, lang)}
-      tabIndex={duplicate ? -1 : undefined}
       className="group shrink-0 w-[300px] md:w-[340px] h-[420px] md:h-[453px] rounded-2xl border border-white/[0.08] overflow-hidden relative"
     >
       <img
         src={item.bgImage}
         alt=""
         draggable={false}
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 size-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20" />
@@ -121,185 +121,30 @@ function DayToDayCard({
   );
 }
 
-// Auto-scrolls continuously, pauses on hover, and dragging (mouse or touch)
-// takes over and follows the pointer — same behavior as the About page's team
-// photo marquee. A drag that moves more than a few pixels suppresses the click
-// that follows it, so dragging a card never accidentally opens its story.
-const CLICK_SUPPRESS_THRESHOLD = 6;
-
 function DayToDayCarousel({
   items,
   t,
   lang,
 }: {
   items: DayToDayItem[];
-  t: ReturnType<typeof useTranslations>;
+  t: Translate;
   lang: string;
 }) {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const offsetRef = useRef(0);
-  const loopWidthRef = useRef(0);
-  const draggingRef = useRef(false);
-  const pausedRef = useRef(false);
-  const dragStartXRef = useRef(0);
-  const dragStartOffsetRef = useRef(0);
-  const dragDistanceRef = useRef(0);
-  const suppressClickRef = useRef(false);
-  const capturedRef = useRef(false);
-  const rafRef = useRef<number | null>(null);
-  const lastTimeRef = useRef<number | null>(null);
-
-  const LOOP_SECONDS = 45;
-
-  const applyTransform = () => {
-    if (trackRef.current) trackRef.current.style.transform = `translateX(${-offsetRef.current}px)`;
-  };
-
-  const wrap = (value: number) => {
-    const w = loopWidthRef.current;
-    if (!w) return value;
-    return ((value % w) + w) % w;
-  };
-
-  useEffect(() => {
-    const measure = () => {
-      if (trackRef.current) loopWidthRef.current = trackRef.current.scrollWidth / 2;
-    };
-    measure();
-    window.addEventListener('resize', measure);
-
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    const tick = (time: number) => {
-      const dt = (time - (lastTimeRef.current ?? time)) / 1000;
-      lastTimeRef.current = time;
-      if (!draggingRef.current && !pausedRef.current && !reduceMotion && loopWidthRef.current) {
-        offsetRef.current = wrap(offsetRef.current + (loopWidthRef.current / LOOP_SECONDS) * dt);
-        applyTransform();
-      }
-      rafRef.current = requestAnimationFrame(tick);
-    };
-    rafRef.current = requestAnimationFrame(tick);
-
-    return () => {
-      window.removeEventListener('resize', measure);
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-    };
-  }, []);
-
-  // Pointer capture is deferred until the drag actually crosses the click
-  // threshold below — capturing on every pointerdown (even a plain click)
-  // redirects the click that follows to the capturing container instead of
-  // the link the user's cursor is over, silently breaking navigation.
-  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    draggingRef.current = true;
-    dragStartXRef.current = e.clientX;
-    dragStartOffsetRef.current = offsetRef.current;
-    dragDistanceRef.current = 0;
-    e.currentTarget.style.cursor = 'grabbing';
-  };
-
-  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (!draggingRef.current) return;
-    const dx = e.clientX - dragStartXRef.current;
-    dragDistanceRef.current = Math.abs(dx);
-    if (!capturedRef.current && dragDistanceRef.current > CLICK_SUPPRESS_THRESHOLD) {
-      e.currentTarget.setPointerCapture(e.pointerId);
-      capturedRef.current = true;
-    }
-    offsetRef.current = wrap(dragStartOffsetRef.current - dx);
-    applyTransform();
-  };
-
-  const endDrag = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (!draggingRef.current) return;
-    draggingRef.current = false;
-    e.currentTarget.style.cursor = 'grab';
-    if (dragDistanceRef.current > CLICK_SUPPRESS_THRESHOLD) suppressClickRef.current = true;
-    if (capturedRef.current) {
-      e.currentTarget.releasePointerCapture(e.pointerId);
-      capturedRef.current = false;
-    }
-  };
-
-  const handleClickCapture = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (suppressClickRef.current) {
-      e.preventDefault();
-      e.stopPropagation();
-      suppressClickRef.current = false;
-    }
-  };
+  const cards = () => items.map((item) => <DayToDayCard key={item.id} item={item} t={t} lang={lang} />);
 
   return (
-    <div
-      className="relative w-full overflow-hidden select-none"
-      style={{
-        maskImage: 'linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%)',
-        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%)',
-        cursor: 'grab',
-        touchAction: 'pan-y',
-      }}
-      onPointerDown={handlePointerDown}
-      onPointerMove={handlePointerMove}
-      onPointerUp={endDrag}
-      onPointerCancel={endDrag}
-      onPointerLeave={endDrag}
-      onMouseEnter={() => { pausedRef.current = true; }}
-      onMouseLeave={() => { pausedRef.current = false; }}
-      onClickCapture={handleClickCapture}
-    >
-      <div ref={trackRef} className="flex items-stretch" style={{ width: 'max-content', willChange: 'transform' }}>
-        {[0, 1].map((copy) => (
-          <div key={copy} className="flex items-stretch gap-5 shrink-0 pr-5" aria-hidden={copy === 1}>
-            {items.map((item) => (
-              <DayToDayCard key={`${copy}-${item.id}`} item={item} t={t} lang={lang} duplicate={copy === 1} />
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
+    <TalentPioneersCarousel>
+      <div className="flex items-stretch gap-5 shrink-0 pr-5">{cards()}</div>
+      <div className="flex items-stretch gap-5 shrink-0 pr-5" aria-hidden inert>{cards()}</div>
+    </TalentPioneersCarousel>
   );
 }
 
-// The site's general contact form, confirmed by the team as the right one to
-// reuse here rather than standing up a dedicated form. The English form id
-// happens to match book-meeting's; the Italian one does not.
-const CONTACT_FORM_IDS: Record<string, string> = {
-  en: '950f4b2b-ed50-4ef7-94f9-2b34c4b19ecc',
-  it: 'd841a6fe-99a0-46cd-af9c-389b8df01855',
-};
-
-function ContactForm({ lang }: { lang: string }) {
-  const formRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '//js.hsforms.net/forms/embed/v2.js';
-    script.charset = 'utf-8';
-    script.async = true;
-    script.onload = () => {
-      if (window.hbspt && formRef.current) {
-        window.hbspt.forms.create({
-          portalId: '48438018',
-          formId: CONTACT_FORM_IDS[lang] ?? CONTACT_FORM_IDS.en,
-          region: 'na1',
-          target: '#talent-pioneers-hubspot-form',
-        });
-      }
-    };
-    document.body.appendChild(script);
-
-    return () => {
-      if (script.parentNode) script.parentNode.removeChild(script);
-    };
-  }, [lang]);
-
-  return <div id="talent-pioneers-hubspot-form" ref={formRef} style={{ minHeight: 300 }} />;
-}
-
-export default function TalentPioneersPage() {
-  const t = useTranslations('customers.talent-pioneers');
-  const lang = useLocale();
+export default async function TalentPioneersPage() {
+  const [t, lang] = await Promise.all([
+    getTranslations('customers.talent-pioneers'),
+    getLocale(),
+  ]);
 
   return (
     <>
@@ -356,6 +201,8 @@ export default function TalentPioneersPage() {
               <img
                 src="/logos/talent-pioneers-why.avif"
                 alt=""
+                loading="lazy"
+                decoding="async"
                 className="aspect-[1304/870] w-full rounded-3xl object-cover"
               />
             </Reveal>
@@ -404,7 +251,7 @@ export default function TalentPioneersPage() {
                     style={{ backgroundImage: 'linear-gradient(148deg, #4B4DF7 0%, #7B4DFF 52%, #FF5656 100%)' }}
                   >
                     {chapter.bgImage && (
-                      <img src={chapter.bgImage} alt="" className="absolute inset-0 size-full object-cover" />
+                      <img src={chapter.bgImage} alt="" loading="lazy" decoding="async" className="absolute inset-0 size-full object-cover" />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/85" style={{ backgroundImage: 'linear-gradient(to bottom, transparent 43%, rgba(0,0,0,0.85))' }} />
                     <div className="relative flex flex-col items-start gap-2">
@@ -455,7 +302,7 @@ export default function TalentPioneersPage() {
                     key={stage.id}
                     className="relative flex aspect-[248/310] items-end overflow-hidden rounded-2xl border border-white/[0.08] p-5"
                   >
-                    <img src={stage.bgImage} alt="" className="absolute inset-0 size-full object-cover" />
+                    <img src={stage.bgImage} alt="" loading="lazy" decoding="async" className="absolute inset-0 size-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/50" />
                     <p className="relative text-[15px] font-bold text-white">{t(`stages.past.${stage.id}`)}</p>
                   </div>
@@ -513,7 +360,7 @@ export default function TalentPioneersPage() {
                   </h2>
                   <p className="pt-5 max-w-[539px] text-[18px] font-light leading-[1.7] text-white/70">{t('contact.paragraph')}</p>
                 </div>
-                <ContactForm lang={lang} />
+                <TalentPioneersContactForm />
               </div>
             </Reveal>
           </div>
