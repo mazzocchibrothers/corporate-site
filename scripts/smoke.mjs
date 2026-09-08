@@ -47,6 +47,42 @@ try {
   await italian.waitForFunction(() => location.pathname === '/', undefined, { timeout: 5_000 });
   await italian.close();
 
+  // The Credem card in the customer listing. Two things can break here without
+  // a single request going red: the card's headline is a catalogue key of its
+  // own (customers.explore.stories.credem), separate from the story page's
+  // copy, so a missing one renders the key path as visible text; and the card
+  // builds its href from the active locale, so an English path on the Italian
+  // listing still navigates — to a URL with no Italian page behind it.
+  const listing = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+  listing.setDefaultNavigationTimeout(10_000);
+
+  for (const [path, headline] of [
+    ['/customers', /^Gruppo Credem: how to find the best talent among 30,000 applications/],
+    ['/it/clienti', /^Gruppo Credem: come trovare i migliori talenti tra 30\.000 candidature/],
+  ]) {
+    const response = await visit(listing, path);
+    assert.equal(response?.status(), 200, `${path} should render`);
+    const credem = listing.getByTestId('story-credem');
+    await credem.scrollIntoViewIfNeeded({ timeout: 10_000 });
+    // <Reveal> renders at opacity 0 and flips it in a useEffect, so an opaque
+    // card is both the visibility assertion and the proof that the component
+    // hydrated — which is what attached the onClick the click below needs.
+    await listing.waitForFunction(
+      () => getComputedStyle(document.querySelector('[data-testid="story-credem"]')).opacity === '1',
+      undefined,
+      { timeout: 10_000 },
+    );
+    assert.match(await credem.locator('h3').innerText(), headline, `${path} should show the Credem headline from the catalogue`);
+  }
+
+  // Still on the Italian listing, so the card has to reach the Italian story.
+  await Promise.all([
+    listing.waitForURL('**/clienti/credem'),
+    listing.getByTestId('story-credem').click(),
+  ]);
+  assert.match(await listing.locator('h1').innerText(), /^Gruppo Credem/, 'the Credem card should open the Italian story');
+  await listing.close();
+
   const mobile = await browser.newPage({ viewport: { width: 390, height: 844 } });
   mobile.setDefaultNavigationTimeout(10_000);
   await visit(mobile, '/');
@@ -60,4 +96,4 @@ try {
   await browser.close();
 }
 
-console.log('[OK] browser smoke: navigation, locale and mobile menu');
+console.log('[OK] browser smoke: navigation, locale, customer listing and mobile menu');

@@ -41,7 +41,7 @@ const SOLUTION_SKILLS = [
 const RESULTS_METRICS = [
   { id: 'n30k' },
   { id: 'n30' },
-  { id: 'drastic' },
+  { id: 'recruiterTime' },
 ];
 
 const RESULTS_QUALITATIVE = [
