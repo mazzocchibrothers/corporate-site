@@ -557,10 +557,16 @@ export default function CrossCountryDemo() {
 
           <Panel
             title={t('mobility.heading')}
+            // Four numbers, not three. `somewhatReluctant` used to be added to
+            // `notInterested` and called the no — which is the same move as
+            // adding "would consider it" to the yes, in the sentence that
+            // explains why we do not do that. Reluctance is hesitation; it
+            // belongs in the middle with the maybes, not at an end.
             body={t('mobility.body', {
               yes: n(mobility.veryWilling + mobility.willing),
               maybe: n(mobility.openToConsidering),
-              no: n(mobility.somewhatReluctant + mobility.notInterested),
+              reluctant: n(mobility.somewhatReluctant),
+              no: n(mobility.notInterested),
             })}
             note={t('mobility.caption')}
           >

@@ -5000,7 +5000,7 @@
       "hero": {
         "eyebrow": "Demo interattiva",
         "heading": "Un solo schema, <span>popolazioni che non erano confrontabili</span>",
-        "body": "Un HR di gruppo che valuta oltre confine di solito ha un profilo per paese e nessun modo di metterli affiancati. Questo è che cosa si vede quando lo stesso schema viene applicato a tutti insieme: le competenze, i comportamenti che ci stanno sotto, e che cosa le persone dicono di volere dopo.",
+        "body": "Un HR di gruppo che valuta oltre confine di solito ha un profilo per paese e nessun modo di metterli affiancati. Ecco che cosa si vede quando lo stesso schema viene applicato a tutti insieme: le competenze, i comportamenti che ci stanno sotto, e che cosa le persone dicono di volere dopo.",
         "note": "Solo aggregati. Su questa pagina non c’è nessuna persona e nessun record individuale: ogni cifra è una statistica di gruppo, calcolata una volta fuori da questo sito."
       },
       "population": {
@@ -5056,7 +5056,7 @@
           "heading": "Punteggio medio",
           "series": "Media",
           "ariaLabel": "Grafico a barre del punteggio medio di ciascuna voce dello schema selezionato",
-          "caption": "Le quattro competenze stanno dentro {narrow} l’una dall’altra e le nove aree si distendono su {wide}. Fare la media fino a quattro numeri è ciò che appiattisce una popolazione; è nel dettaglio che un programma trova qualcosa da fare."
+          "caption": "Le quattro competenze stanno dentro {narrow} l’una dall’altra e le nove aree si distendono su {wide}. Ridurre una popolazione a quattro medie è ciò che la appiattisce; è nel dettaglio che un programma trova qualcosa da fare."
         },
         "bands": {
           "heading": "Come è fatta quella media",
@@ -5147,7 +5147,7 @@
       },
       "mobility": {
         "heading": "Apertura a spostarsi",
-        "body": "Alla domanda se si trasferirebbero, il {yes}% ha detto sì e il {no}% ha detto no; il {maybe}% nel mezzo ha detto che ci penserebbe, che è una risposta diversa e va tenuta separata dalla prima.",
+        "body": "Alla domanda se si trasferirebbero, il {yes}% ha detto sì e il {no}% ha detto no. Tutti gli altri stanno nel mezzo: il {maybe}% ci penserebbe e il {reluctant}% è poco convinto senza però rifiutare. Nessuno dei due appartiene a un estremo.",
         "series": "Quota dei valutati",
         "axis": "% dei valutati",
         "ariaLabel": "Grafico a barre della quota di valutati per ciascun livello di apertura a trasferirsi",
@@ -5158,7 +5158,7 @@
           "somewhatReluctant": "Poco convinto",
           "notInterested": "Non interessato"
         },
-        "caption": "Sommare la fascia centrale alle due alla sua sinistra darebbe un numero più di quattro volte il primo, e non vorrebbe dire la stessa cosa. Il centro è dove una conversazione può spostare qualcuno; non è un impegno già preso."
+        "caption": "Sommare il centro ai sì darebbe un numero più di quattro volte il primo, e sommare i poco convinti ai no gonfierebbe quell’estremo di metà. Nessuna delle due somme è la domanda che è stata fatta. Il centro è dove una conversazione può spostare qualcuno: non è un impegno già preso, e non è nemmeno un rifiuto."
       },
       "areas": {
         "heading": "Dove le persone preferirebbero lavorare",

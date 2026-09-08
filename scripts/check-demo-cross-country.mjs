@@ -214,6 +214,38 @@ assert.ok(
   'The mean and the median have separated; the page shows them together without comment.',
 );
 
+// The three headline figures in .stat-value are the first numbers a reader
+// sees, so they get rules rather than only the digest: "the page draws it and
+// never names it" is the case for pinning a value, and it does not apply to
+// something printed at 44px with a label under it.
+//
+// The completion rate against its own two headcounts.
+const completion = (cc.population.evaluated / cc.population.invited) * 100;
+assert.ok(
+  Math.abs(completion - cc.population.evaluatedPct) <= 0.1,
+  `population.evaluatedPct is ${cc.population.evaluatedPct} but ${cc.population.evaluated} of ` +
+    `${cc.population.invited} is ${completion.toFixed(2)}. All three are on screen together.`,
+);
+// The mean against the distribution drawn under it, from the bin midpoints.
+const binMean =
+  sum(
+    distribution.map((share, i) => share * (i * binWidth + binWidth / 2)),
+  ) / 100;
+assert.ok(
+  Math.abs(binMean - cc.skillMatching.mean) <= 0.5,
+  `The distribution averages ${binMean.toFixed(2)} but skillMatching.mean says ` +
+    `${cc.skillMatching.mean}. The chart and the number above it disagree.`,
+);
+// And the median inside the band where the distribution crosses halfway.
+let cumulative = 0;
+const medianBin = distribution.findIndex((share) => (cumulative += share) >= 50);
+assert.ok(
+  cc.skillMatching.median >= medianBin * binWidth &&
+    cc.skillMatching.median <= (medianBin + 1) * binWidth,
+  `skillMatching.median is ${cc.skillMatching.median}, outside the ` +
+    `${medianBin * binWidth}-${(medianBin + 1) * binWidth} band where the distribution crosses half.`,
+);
+
 // groups.caption: the three means are within a few points, and the highest
 // scoring group is also the smallest.
 const matchings = GROUPS.map((g) => cc.countryGroups[g].skillMatching);
@@ -222,14 +254,19 @@ assert.ok(
   spread < 10,
   `The group means spread over ${spread.toFixed(1)} points. groups.caption calls that narrow.`,
 );
+// "the group scoring highest is also the smallest" — assert that, not the
+// weaker "highest is not the largest" it used to say. With three groups those
+// come apart on the middle one: moving `others` up by 3.7, less than the 5.2
+// spread the page prints itself, made the sentence false and left this green.
 const best = GROUPS.reduce((a, b) =>
   cc.countryGroups[b].skillMatching > cc.countryGroups[a].skillMatching ? b : a,
 );
-const largest = GROUPS.reduce((a, b) => (cc.countryGroups[b].n > cc.countryGroups[a].n ? b : a));
-assert.notEqual(
+const smallest = GROUPS.reduce((a, b) => (cc.countryGroups[b].n < cc.countryGroups[a].n ? b : a));
+assert.equal(
   best,
-  largest,
-  'The highest-scoring group is now also the largest; groups.caption says the opposite.',
+  smallest,
+  `The highest-scoring group is '${best}' and the smallest is '${smallest}'; groups.caption says ` +
+    'they are the same one.',
 );
 // howToRead.groups: "they differ in size by a factor of eight".
 const sizeRatio =
@@ -282,6 +319,27 @@ assert.ok(
 assert.ok(
   yes < 25,
   `${yes.toFixed(1)}% say yes outright. The section is written around that being a small share.`,
+);
+
+// The same rule, in the other direction, and it is here because the page did
+// not have it: `somewhatReluctant` was being added to `notInterested` and
+// called the no — the identical aggregation the paragraph above refuses on the
+// yes side, in the same sentence. Guarding one end and not the other is how it
+// got through, so both ends are guarded now.
+const no = cc.mobility.notInterested;
+const reluctant = cc.mobility.somewhatReluctant;
+assert.ok(
+  (no + reluctant) / no > 1.4,
+  `Folding reluctance into the no would take ${no}% to ${(no + reluctant).toFixed(1)}%, a factor ` +
+    `of ${((no + reluctant) / no).toFixed(2)}. mobility.caption says it would inflate that end by ` +
+    'half again.',
+);
+// Neither end may claim the middle, because the middle is most of the
+// population — which is the fact both halves of the caption rest on.
+assert.ok(
+  cc.mobility.openToConsidering + reluctant > 50,
+  `The two middle answers hold ${(cc.mobility.openToConsidering + reluctant).toFixed(1)}%. The ` +
+    'section is written around the middle being where most of the population is.',
 );
 
 // growth.caption: fewer than three in ten want to manage a team, and it is not

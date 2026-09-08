@@ -5028,7 +5028,7 @@
         "ariaLabel": "Bar chart of the share of assessed people in each ten-point band of skill matching",
         "mean": "Mean",
         "median": "Median",
-        "caption": "A bar set where this one is does not say the population failed. It splits it in half, which is what a bar written from the role rather than from the people in it usually does — and it is the reason the shape above says more than the single number underneath it."
+        "caption": "A bar set where this one is does not say the population failed. It splits it in half, which is what a bar written from the role rather than from the people in it usually does — and it is the reason the shape below says more than the two numbers above it."
       },
       "groups": {
         "heading": "Three groups, not three equals",
@@ -5056,7 +5056,7 @@
           "heading": "Average score",
           "series": "Average",
           "ariaLabel": "Bar chart of the average score for each item in the selected frame",
-          "caption": "The four competencies land within {narrow} of each other and the nine areas spread over {wide}. Averaging up to four numbers is what flattens a population; the detail is where a programme finds something to do."
+          "caption": "The four competencies land within {narrow} of each other and the nine areas spread over {wide}. Reducing a population to four averages is what flattens it; the detail is where a programme finds something to do."
         },
         "bands": {
           "heading": "How that average is made up",
@@ -5147,7 +5147,7 @@
       },
       "mobility": {
         "heading": "Openness to moving",
-        "body": "Asked whether they would relocate. {yes}% said yes outright and {no}% said no; the {maybe}% in between said they would consider it, which is a different answer and worth keeping separate from the first.",
+        "body": "Asked whether they would relocate, {yes}% said yes outright and {no}% said no. Everyone else is in the middle: {maybe}% would consider it and {reluctant}% leaned against without refusing. Neither of those two belongs at either end.",
         "series": "Share of those assessed",
         "axis": "% of those assessed",
         "ariaLabel": "Bar chart of the share of assessed people at each level of openness to relocating",
@@ -5158,7 +5158,7 @@
           "somewhatReluctant": "Somewhat reluctant",
           "notInterested": "Not interested"
         },
-        "caption": "Adding the middle to the two on its left would give a number more than four times the size of the first, and it would not mean the same thing. The middle is where a conversation can move someone; it is not a commitment already made."
+        "caption": "Folding the middle into the yes would give a number more than four times the size of it, and folding the reluctant into the no would inflate that end by half again. Neither is what was asked. The middle is where a conversation can move someone: it is not a commitment already made, and it is not a refusal either."
       },
       "areas": {
         "heading": "Where people would rather work",
