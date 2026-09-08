@@ -4699,7 +4699,7 @@
           "heading": "Competenze e risultato, affiancati",
           "ariaLabel": "Grafico a barre raggruppate che confronta la quota sopra soglia e il tasso di conversione di ogni gruppo del taglio selezionato",
           "axis": "Percentuale",
-          "caption": "Sono entrambe percentuali, quindi stanno sullo stesso asse. Vanno letti come due fatti sullo stesso gruppo, non come causa ed effetto: il gruppo con più persone sopra soglia raramente è quello che converte meglio."
+          "caption": "Sono entrambe percentuali, quindi stanno sullo stesso asse. Su canale, location e area lo stesso gruppo guida tutte e due: fra gruppi, competenze e risultato si muovono insieme. Il tier è l’unico taglio in cui si separano — quello con più persone sopra soglia non è quello che converte meglio. Quello che non regge è il passaggio dal gruppo al singolo negozio e alla singola persona, dove il legame sparisce."
         },
         "kpis": {
           "heading": "Che cosa dicono i numeri dei negozi",

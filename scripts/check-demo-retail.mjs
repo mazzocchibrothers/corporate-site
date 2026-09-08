@@ -51,12 +51,15 @@ const label = (path) => {
 
 // ── Every composed key the page builds ─────────────────────────────────────
 // The ids come from the data, exactly as the page derives them at runtime.
-const CUTS = {
-  channel: Object.keys(retail.context.channel),
-  location: Object.keys(retail.context.location),
-  tier: Object.keys(retail.context.tier),
-  area: Object.keys(retail.areas),
+const CUT_GROUPS = {
+  channel: retail.context.channel,
+  location: retail.context.location,
+  tier: retail.context.tier,
+  area: retail.areas,
 };
+const CUTS = Object.fromEntries(
+  Object.entries(CUT_GROUPS).map(([cut, groups]) => [cut, Object.keys(groups)]),
+);
 
 for (const [cut, ids] of Object.entries(CUTS)) {
   label(`cuts.options.${cut}`);
@@ -179,10 +182,39 @@ for (const [key, r] of [
   );
 }
 
+// cuts.results.caption names which cuts have one group leading both bars and
+// which does not. The first version of that caption said the two rankings
+// rarely agree, which was false on three of the four cuts and visibly false to
+// anyone clicking the pills — overselling the *absence* of a link, which on
+// this page costs as much as overselling the link. This is the assertion that
+// was missing when it shipped.
+const leaderOf = (groups, key) =>
+  Object.entries(groups).reduce((a, b) => (b[1][key] > a[1][key] ? b : a))[0];
+const diverging = Object.entries(CUT_GROUPS)
+  .filter(([, g]) => leaderOf(g, 'aboveThresholdPct') !== leaderOf(g, 'conversionRate'))
+  .map(([cut]) => cut);
+assert.deepEqual(
+  diverging,
+  ['tier'],
+  `cuts.results.caption names store tier as the one cut whose two rankings disagree. ` +
+    `The cuts that now disagree are: ${diverging.join(', ') || 'none'}.`,
+);
+
 // seniority.heading: "tenure buys results, not competency".
 const bands = Object.values(retail.seniority);
 const sph = bands.map((b) => b.relativeSph);
 const skills = bands.map((b) => b.skill);
+// "climbs steadily" is a claim about every step, not about the two ends: with
+// only the endpoints compared, any middle band could be moved anywhere and the
+// chart would still be captioned as a steady climb (reviewer's mutation test —
+// this was the one surviving mutation of nineteen).
+const dips = sph.flatMap((v, i) => (i > 0 && v < sph[i - 1] ? [`${i - 1}->${i}`] : []));
+assert.deepEqual(
+  dips,
+  [],
+  `Relative sales per hour falls between tenure bands (${dips.join(', ')}). ` +
+    'seniority.body says it climbs steadily.',
+);
 assert.ok(
   sph.at(-1) - sph[0] >= 0.1,
   `Relative sales per hour rises by ${(sph.at(-1) - sph[0]).toFixed(2)} across the tenure bands. ` +
@@ -229,5 +261,5 @@ assert.equal(
 
 console.log(
   `[OK] demo retail: ${Object.values(CUTS).flat().length} group labels across ` +
-    `${Object.keys(CUTS).length} cuts, and 9 copy claims still true of the data`,
+    `${Object.keys(CUTS).length} cuts, and every copy claim still true of the data`,
 );

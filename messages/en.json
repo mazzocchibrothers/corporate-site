@@ -4699,7 +4699,7 @@
           "heading": "Skill and result, side by side",
           "ariaLabel": "Grouped bar chart comparing the share above threshold and the conversion rate of each group in the selected cut",
           "axis": "Percent",
-          "caption": "Both bars are percentages, so they sit on one axis. Read them as two facts about the same group, not as cause and effect — the group with the highest share above threshold is rarely the one converting best."
+          "caption": "Both bars are percentages, so they sit on one axis. On channel, location and area the same group leads both of them: between groups, competency and result do move together. Store tier is the one cut where they part — the tier with the most people above threshold is not the tier converting best. What does not survive is the step down from the group to the single store and the single person, where the link is gone."
         },
         "kpis": {
           "heading": "What the stores report",
