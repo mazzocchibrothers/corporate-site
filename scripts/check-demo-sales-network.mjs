@@ -360,7 +360,14 @@ assert.ok(
     'network has the technical ground.',
 );
 
+// Two lines, because they are two mechanisms with two different powers and one
+// combined number would read as a quality measure it is not. The digest catches
+// every value and knows nothing about what any of them means; the rules below it
+// catch only what the copy claims, and are the half that can say which sentence
+// a refreshed extract broke. Reported together, "everything is covered" is what
+// a reader takes away — and the semantic half is far weaker than that.
+console.log(`[OK] demo sales network: extract pinned by digest (every value, no meaning)`);
 console.log(
   `[OK] demo sales network: ${SOFT.length + HARD.length + DRIVERS.length} composed labels across ` +
-    `${FAMILIES.length} families, and every copy claim still true of the data`,
+    `${FAMILIES.length} families, and every claim the copy makes still true of the data`,
 );
