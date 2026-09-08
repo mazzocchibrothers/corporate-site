@@ -4974,7 +4974,7 @@
           },
           "softHighHardLow": {
             "name": "Comportamento avanti alla conoscenza",
-            "description": "I comportamenti ci sono, la base tecnica no. È di gran lunga il gruppo più piccolo, che è poi lo stesso fatto della soglia tecnica superata da quasi tutti."
+            "description": "I comportamenti ci sono, la base tecnica no. È il gruppo più piccolo, che è poi lo stesso fatto della soglia tecnica superata da quasi tutti."
           },
           "softLowHardHigh": {
             "name": "Conoscenza avanti al comportamento",
