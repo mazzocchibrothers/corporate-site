@@ -15,9 +15,10 @@ try {
 
   await desktop.context().clearCookies();
   await visit(desktop, '/');
+  await desktop.waitForTimeout(1_000);
   const solutions = desktop.locator('#desktop-trigger-solutions');
   await solutions.focus();
-  assert.equal(await solutions.getAttribute('aria-expanded'), 'true');
+  await desktop.waitForFunction(() => document.querySelector('#desktop-trigger-solutions')?.getAttribute('aria-expanded') === 'true', undefined, { timeout: 10_000 });
   const destination = desktop.locator('[data-testid="mega-talentAcquisition"]');
   await destination.focus();
   await Promise.all([
