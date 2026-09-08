@@ -23,7 +23,7 @@ export default function TAImpact() {
   const t = useTranslations('solutions.talent-acquisition');
 
   return (
-    <section id="ta-impact" data-testid="ta-impact" className="relative pb-20 lg:pb-24" style={{ background: '#F5F5FA' }}>
+    <section id="ta-impact" data-testid="ta-impact" className="relative pb-20 lg:pb-24" style={{ background: '#F7F7F7' }}>
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-8 md:mb-16">
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('taImpact.heading', {

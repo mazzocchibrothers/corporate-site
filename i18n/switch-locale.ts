@@ -31,6 +31,17 @@ export function useSwitchLocale() {
       // switch to then, and guessing '/' would move the visitor off the page.
       if (pathname === null) return;
 
+      // proxy.ts runs locale *detection* on '/' only, so a first-time visitor
+      // lands on their browser's language. next-intl's middleware sets
+      // NEXT_LOCALE on every request to whatever locale it resolved — so after
+      // visiting /it that cookie is 'it', and an explicit switch back to
+      // English lands on '/', the one path detection still applies to: it
+      // reads the stale cookie and immediately redirects back to /it, and the
+      // button appears to do nothing. next-intl's own Link/useRouter keep this
+      // cookie in sync automatically; this hook bypasses those, so it has to
+      // do it here instead.
+      document.cookie = `NEXT_LOCALE=${locale};path=/;max-age=31536000;samesite=lax`;
+
       // A route with no content in the target locale (10 Italian-only pages,
       // 1 English-only one) has nothing to switch to — internalPathIn +
       // localizePathIn round-trip through an English-keyed path that doesn't
