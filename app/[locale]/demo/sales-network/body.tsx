@@ -192,7 +192,7 @@ export default function SalesNetworkDemo() {
     // the derivations as well would say the same thing twice.
   }, [t, lang, family, skill]);
 
-  const { funnel, overview } = salesNetwork;
+  const { funnel, overview, quadrants } = salesNetwork;
   const covered = FAMILIES.reduce((sum, f) => sum + salesNetwork.families[f].n, 0);
 
   const headline: Array<{ id: string; value: string; args: Record<string, string> }> = [
@@ -291,11 +291,13 @@ export default function SalesNetworkDemo() {
             />
           </Panel>
 
-          <Panel
-            title={t('families.heading')}
-            body={t('families.body')}
-            note={t('families.coverage', { covered: n(covered, 0), assessed: n(funnel.assessed, 0) })}
-          >
+          <Panel title={t('families.heading')} body={t('families.body')}>
+            {/* Above the cards, not under them: 85 and 90 are there to be added
+                up, and a reader who does that before being told they do not
+                reach 185 has found a hole instead of being shown one. */}
+            <p className="text-[13px] text-white/40 leading-[1.7] max-w-3xl mb-6">
+              {t('families.coverage', { covered: n(covered, 0), assessed: n(funnel.assessed, 0) })}
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {FAMILIES.map((f, i) => (
                 <div key={f} className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-5">
@@ -421,7 +423,10 @@ export default function SalesNetworkDemo() {
 
           <Panel
             title={t('quadrants.heading')}
-            body={t('quadrants.body')}
+            body={t('quadrants.body', {
+              hardCleared: n(quadrants.softHighHardHigh + quadrants.softLowHardHigh),
+              softCleared: n(quadrants.softHighHardHigh + quadrants.softHighHardLow),
+            })}
             note={t('quadrants.caption', {
               soft: n(overview.softThreshold, 0),
               hard: n(overview.hardThreshold, 0),

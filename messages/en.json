@@ -4870,7 +4870,7 @@
           "good": "Good",
           "high": "High"
         },
-        "caption": "The two middle bands hold most of the network. Nothing here says one band is a pass and another is a fail — the bands are the client's frame, and the shape is what a development budget is sized against."
+        "caption": "More than four in five sit in the two middle bands. Nothing here says one band is a pass and another a fail — the bands are the client's frame, and the shape is what a development budget is sized against."
       },
       "families": {
         "heading": "Two job families, two different jobs",
@@ -4962,7 +4962,7 @@
       },
       "quadrants": {
         "heading": "Behaviour and knowledge, crossed",
-        "body": "Each person clears the soft skill bar, the technical one, both or neither. Crossing the two is the reading the whole programme exists for: the same average score means four different interventions depending on which side of each line it sits.",
+        "body": "Each person clears the behavioural bar, the technical one, both or neither. The two bars turn out to do very different work: {hardCleared}% are over the technical one and {softCleared}% over the behavioural one, so almost the whole network has the technical ground and behaviour is what separates it.",
         "axisSoft": "Soft skills",
         "axisHard": "Technical knowledge",
         "high": "at or above {threshold}",
@@ -4970,22 +4970,22 @@
         "items": {
           "softHighHardHigh": {
             "name": "Ready on both",
-            "description": "Clears both bars. Half the network, and the group a programme should be learning from rather than teaching."
+            "description": "Over both bars. Because almost everyone is over the technical one, this is in practice the half of the network that is over the behavioural one — read it as a behavioural result, not as a double distinction."
           },
           "softHighHardLow": {
             "name": "Behaviour ahead of knowledge",
-            "description": "The behaviours are there and the technical ground is not. The smallest group, and the cheapest to close: knowledge is what training is actually good at."
+            "description": "The behaviours are there and the technical ground is not. The smallest group by a distance, which is the same fact as the technical bar being cleared by almost everyone."
           },
           "softLowHardHigh": {
             "name": "Knowledge ahead of behaviour",
-            "description": "Knows the material, does not yet show the behaviours in front of a customer. The large group, and the slow one — this is coaching and field work, not a course."
+            "description": "Knows the material, does not yet show the behaviours in front of a customer. The other large group, and the slow one — this is coaching and field work, not a course."
           },
           "softLowHardLow": {
             "name": "Below both",
             "description": "Under both bars. Small enough to handle one conversation at a time rather than with a programme."
           }
         },
-        "caption": "The two bars are the client's, not ours: soft skills at {soft} and technical knowledge at {hard}. Move either line and these four numbers move with it, which is the point of showing where the lines are instead of only what falls each side."
+        "caption": "The two bars are the client's, not ours: behaviour at {soft} and technical knowledge at {hard}. Where a bar sits decides what it can tell you — this technical one is cleared by almost everyone, so it sorts nobody, and the reading worth having is the behavioural one. Move either line and these four numbers move with it."
       },
       "closing": {
         "heading": "How this page was made",

@@ -19,6 +19,7 @@
 // Run: npm run check:demo-sales-network
 
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join } from 'node:path';
@@ -120,6 +121,30 @@ const sums = (name, values) => {
 };
 sums('bands', Object.values(sn.bands));
 sums('quadrants', Object.values(sn.quadrants));
+
+// ── The extract is frozen ──────────────────────────────────────────────────
+// Every rule below reads the data and asserts something *about* it, which is
+// the right shape for catching a refreshed extract that contradicts the page's
+// copy — and the wrong shape for catching a single value moved on its own. A
+// behavioural driver has no sentence written about it: the page draws all 33 of
+// them and says nothing, so no derived rule can pin one. Asserting the mean of
+// a competency's behaviours came close and still absorbed a full point moved on
+// a three-behaviour competency, because a mean divides it by three.
+//
+// So the values are pinned outright. These extracts are one-off anonymised
+// artefacts, not a feed: changing a number is a decision, and this is what
+// makes it one. On a legitimate refresh, update the digest — and re-read the
+// copy, because the assertions below are what tell you which sentences the new
+// numbers have broken.
+const DIGEST = '6e06ad8faf0f60cb5ed5916c15acb2d9252f94a04a1767eb0f5c9aa4d34840dd';
+const digest = createHash('sha256').update(JSON.stringify(sn)).digest('hex');
+assert.equal(
+  digest,
+  DIGEST,
+  'data/demo/sales-network.ts has changed. If that was deliberate, put the new digest in this ' +
+    `file (${digest}) and check every claim below against the new numbers — several sentences on ` +
+    'the page name figures that are no longer what they were.',
+);
 
 // ── The scales hold ────────────────────────────────────────────────────────
 // Four structural rules, all of them things the page draws rather than says.
@@ -245,10 +270,14 @@ assert.ok(
   atBaseOrAbove > 90,
   `${atBaseOrAbove.toFixed(1)}% sit at base or above. bands.body says more than nine in ten.`,
 );
-// bands.caption: "the two middle bands hold most of the network".
+// bands.caption: "more than four in five sit in the two middle bands". The
+// bound is the sentence's, not a bound that any majority would satisfy — at
+// `> 50` this survived the share dropping to 55%, with the caption still
+// claiming four in five.
+const middle = sn.bands.base + sn.bands.good;
 assert.ok(
-  sn.bands.base + sn.bands.good > 50,
-  'The two middle bands no longer hold most of the network; bands.caption says they do.',
+  middle > 80,
+  `The two middle bands hold ${middle.toFixed(1)}%. bands.caption says more than four in five.`,
 );
 
 // families.coverage: the two published families do not cover the assessed total.
@@ -309,6 +338,26 @@ assert.deepEqual(
 assert.ok(
   sn.quadrants.softHighHardHigh >= 45 && sn.quadrants.softHighHardHigh <= 55,
   `Ready-on-both is ${sn.quadrants.softHighHardHigh}%; its description calls it half the network.`,
+);
+
+// quadrants.body and quadrants.caption: the two bars are cleared by very
+// different shares, and that gap is the section's whole argument — the
+// technical bar sorts nobody, the behavioural one halves the network. Read the
+// same figure as "half the network clears both" and it becomes a claim of
+// double excellence resting on a floor 94% are already over, which the bands
+// section contradicts two panels down (9.8% in the top band).
+const hardCleared = sn.quadrants.softHighHardHigh + sn.quadrants.softLowHardHigh;
+const softCleared = sn.quadrants.softHighHardHigh + sn.quadrants.softHighHardLow;
+assert.ok(
+  hardCleared - softCleared > 25,
+  `The technical bar is cleared by ${hardCleared.toFixed(1)}% and the behavioural one by ` +
+    `${softCleared.toFixed(1)}%. The section is written around those being far apart; at this ` +
+    'distance "over both" would have to be described as something other than a behavioural result.',
+);
+assert.ok(
+  hardCleared > 85,
+  `The technical bar is cleared by ${hardCleared.toFixed(1)}%. The copy says almost the whole ` +
+    'network has the technical ground.',
 );
 
 console.log(

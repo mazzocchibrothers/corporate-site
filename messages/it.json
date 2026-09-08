@@ -4870,7 +4870,7 @@
           "good": "Buono",
           "high": "Alto"
         },
-        "caption": "Le due fasce centrali tengono quasi tutta la rete. Niente qui dice che una fascia sia promossa e un’altra bocciata — le fasce sono lo schema del cliente, e la forma è ciò su cui si dimensiona un budget di sviluppo."
+        "caption": "Più di quattro su cinque stanno nelle due fasce centrali. Niente qui dice che una fascia sia promossa e un’altra bocciata — le fasce sono lo schema del cliente, e la forma è ciò su cui si dimensiona un budget di sviluppo."
       },
       "families": {
         "heading": "Due famiglie professionali, due mestieri diversi",
@@ -4962,7 +4962,7 @@
       },
       "quadrants": {
         "heading": "Comportamento e conoscenza, incrociati",
-        "body": "Ogni persona supera la soglia soft, quella tecnica, tutte e due o nessuna. Incrociarle è la lettura per cui esiste tutto il programma: lo stesso punteggio medio vuol dire quattro interventi diversi a seconda da che parte di ciascuna linea cade.",
+        "body": "Ogni persona supera la soglia comportamentale, quella tecnica, tutte e due o nessuna. Le due soglie fanno un lavoro molto diverso: il {hardCleared}% è sopra quella tecnica e il {softCleared}% sopra quella comportamentale, quindi la base tecnica ce l’ha quasi tutta la rete e ciò che la separa è il comportamento.",
         "axisSoft": "Soft skill",
         "axisHard": "Conoscenze tecniche",
         "high": "da {threshold} in su",
@@ -4970,22 +4970,22 @@
         "items": {
           "softHighHardHigh": {
             "name": "Pronti su entrambi",
-            "description": "Superano tutte e due le soglie. Metà della rete, ed è il gruppo da cui un programma dovrebbe imparare invece che quello a cui insegnare."
+            "description": "Sopra entrambe le soglie. Siccome quella tecnica la supera quasi chiunque, in pratica è la metà di rete che sta sopra quella comportamentale: va letto come un risultato di comportamento, non come una doppia eccellenza."
           },
           "softHighHardLow": {
             "name": "Comportamento avanti alla conoscenza",
-            "description": "I comportamenti ci sono, la base tecnica no. È il gruppo più piccolo, ed è il più economico da chiudere: la conoscenza è ciò in cui la formazione funziona davvero."
+            "description": "I comportamenti ci sono, la base tecnica no. È di gran lunga il gruppo più piccolo, che è poi lo stesso fatto della soglia tecnica superata da quasi tutti."
           },
           "softLowHardHigh": {
             "name": "Conoscenza avanti al comportamento",
-            "description": "Sanno la materia, ma davanti al cliente i comportamenti non si vedono ancora. È il gruppo grande, ed è quello lento: qui servono coaching e affiancamento, non un corso."
+            "description": "Sanno la materia, ma davanti al cliente i comportamenti non si vedono ancora. È l’altro gruppo grande, ed è quello lento: qui servono coaching e affiancamento, non un corso."
           },
           "softLowHardLow": {
             "name": "Sotto entrambe",
             "description": "Sotto tutte e due le soglie. Abbastanza pochi da gestirli una conversazione alla volta invece che con un programma."
           }
         },
-        "caption": "Le due soglie sono del cliente, non nostre: soft skill a {soft} e conoscenze tecniche a {hard}. Sposta una delle due linee e questi quattro numeri si spostano con lei, che è il motivo per cui mostriamo dove sono le linee e non solo che cosa cade da ciascuna parte."
+        "caption": "Le due soglie sono del cliente, non nostre: comportamento a {soft} e conoscenze tecniche a {hard}. Dove sta una soglia decide che cosa può dirti — questa tecnica la supera quasi chiunque, quindi non separa nessuno, e la lettura che serve è quella comportamentale. Sposta una delle due linee e questi quattro numeri si spostano con lei."
       },
       "closing": {
         "heading": "Come è fatta questa pagina",
