@@ -253,6 +253,14 @@
     "noindex": true
   },
   {
+    "id": "demo/sales-network",
+    "paths": {
+      "en": "/demo/sales-network",
+      "it": "/demo/rete-vendita"
+    },
+    "noindex": true
+  },
+  {
     "id": "index",
     "paths": {
       "en": "/",

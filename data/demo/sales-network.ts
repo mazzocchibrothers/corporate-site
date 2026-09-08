@@ -10,8 +10,9 @@
 //     as a name. The labels these keys stand for live in `messages/`.
 //   - every headcount is rounded to the nearest 5, so no count is a fingerprint.
 //   - a group carrying a score holds at least 25 people.
-//     One job family holds fewer than that and is not broken out, so the
-//     family headcounts do not sum to the assessed total.
+//     Two job families hold fewer than that and are not broken out — one
+//     merged, one suppressed — so the family headcounts do not sum to the
+//     assessed total. The page says so rather than leaving a reader to find it.
 //   - knowledge-area keys are renamed away from the sector the source names.
 
 export const salesNetwork = {

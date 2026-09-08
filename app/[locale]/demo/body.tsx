@@ -20,7 +20,7 @@ import { href } from '@/i18n/routes';
 // its card stays a badge rather than becoming a link to nowhere.
 const DASHBOARDS = [
   { id: 'retail', Icon: Store, route: 'demo/retail' },
-  { id: 'salesNetwork', Icon: Users, route: undefined },
+  { id: 'salesNetwork', Icon: Users, route: 'demo/sales-network' },
   { id: 'crossCountry', Icon: Globe, route: undefined },
 ];
 
