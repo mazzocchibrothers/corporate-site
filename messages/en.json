@@ -4826,6 +4826,172 @@
         "body": "Every number here is a group statistic, computed once outside this website from data that never entered it. Headcounts are rounded to the nearest five, no group carrying a score holds fewer than 25 people, and the areas are numbered rather than named. There is no store table, no ranking and no individual record — not hidden, absent.",
         "back": "Back to the demo dashboards"
       }
+    },
+    "sales-network": {
+      "meta": {
+        "title": "Sales network readiness — demo dashboard | Skillvue",
+        "description": "A sales network assessed on soft skills and technical knowledge at once, read by job family, competency and behavioural driver. Aggregates only: every individual record removed."
+      },
+      "hero": {
+        "eyebrow": "Interactive demo · Telco",
+        "heading": "Two questions asked at once: <span>can they, and do they</span>",
+        "body": "A sales network measured on behaviour and on technical knowledge in the same programme, so that the two answers can be read against each other instead of one at a time. What follows is where the network sits on both, and what the split looks like once you stop averaging it.",
+        "note": "Aggregates only. No person and no individual record is on this page: every figure is a group statistic, computed once outside this website."
+      },
+      "population": {
+        "heading": "What was measured",
+        "assessed": {
+          "label": "People assessed",
+          "note": "Out of {candidates} in scope. The remaining {notAssessed} did not complete the assessment."
+        },
+        "conversion": {
+          "label": "Assessment conversion",
+          "note": "As the programme reported it. It is not the ratio of the two headcounts beside it — see the note below."
+        },
+        "matchingMean": {
+          "label": "Mean skill matching",
+          "note": "How closely the population matches the competency profile its roles were mapped to."
+        },
+        "matchingMedian": {
+          "label": "Median skill matching",
+          "note": "Within half a point of the mean, so the distribution has no long tail dragging it."
+        },
+        "rounding": "Headcounts here are rounded to the nearest five, so that no count identifies anyone. The percentages are computed on the real population — divide them back into the figures beside them and they will not come out."
+      },
+      "bands": {
+        "heading": "Where the network sits",
+        "body": "Skill matching split into four bands. More than nine in ten sit at base or above, and the question a programme has to answer is which of the two middle bands it is buying movement in.",
+        "series": "Share of the population",
+        "axis": "% of the assessed",
+        "ariaLabel": "Bar chart of the share of the assessed population in each skill matching band",
+        "items": {
+          "belowThreshold": "Below threshold",
+          "base": "Base",
+          "good": "Good",
+          "high": "High"
+        },
+        "caption": "More than four in five sit in the two middle bands. Nothing here says one band is a pass and another a fail — the bands are the client's frame, and the shape is what a development budget is sized against."
+      },
+      "families": {
+        "heading": "Two job families, two different jobs",
+        "body": "Managers and accounts were not assessed on the same competencies, and that is not a gap in the data — it is the frame. Almost nothing overlaps, so the two columns below are two profiles, not two scores on one scale.",
+        "names": {
+          "salesManager": "Sales manager",
+          "salesAccount": "Sales account"
+        },
+        "labels": {
+          "people": "People",
+          "skillMatching": "Skill matching",
+          "soft": "Soft skills",
+          "hard": "Technical knowledge"
+        },
+        "coverage": "These two families hold {covered} of the {assessed} people assessed. The rest sit in families too small to publish on their own — below the twenty-five-person floor every figure here obeys — so they are inside every total on this page and broken out in none of them.",
+        "overlap": "Exactly one soft skill was measured on both families, and two of the knowledge areas. That is why there is no single ranking of the two."
+      },
+      "profile": {
+        "heading": "The profile, family by family",
+        "body": "Pick a family and the three panels redraw: its soft skills, its technical knowledge areas, and the behaviours underneath whichever competency you open.",
+        "label": "Job family",
+        "soft": {
+          "heading": "Soft skills",
+          "series": "Average score",
+          "ariaLabel": "Bar chart of the average score on each soft skill for the selected job family",
+          "caption": "The average of these is the family's soft skill score in the table above."
+        },
+        "hard": {
+          "heading": "Technical knowledge",
+          "series": "Average score",
+          "ariaLabel": "Bar chart of the average score on each technical knowledge area for the selected job family",
+          "caption": "Knowledge areas are named for what they test, not for the sector the client works in."
+        },
+        "drivers": {
+          "heading": "What sits underneath",
+          "label": "Competency",
+          "series": "Average score",
+          "ariaLabel": "Bar chart of the average score on each behavioural driver of the selected competency",
+          "caption": "Each competency is scored from several observed behaviours, and they do not move together: inside a single competency the behaviours can sit more than a point apart, which that competency's own average hides. This is the level a development plan is actually written at."
+        }
+      },
+      "skills": {
+        "strategicThinking": "Strategic thinking",
+        "teamManagement": "Team management",
+        "engageInspire": "Engage and inspire",
+        "decisionMaking": "Decision making",
+        "influence": "Influence",
+        "resilience": "Resilience",
+        "drive": "Drive"
+      },
+      "knowledge": {
+        "referenceMarket": "Reference market",
+        "partnerManagement": "Partner management",
+        "offeringPositioning": "Offering and positioning",
+        "networkProfitability": "Network profitability",
+        "technicalDomainKnowledge": "Technical domain knowledge",
+        "complexNegotiation": "Complex negotiation",
+        "marketSegmentation": "Market segmentation",
+        "complexSellingTechniques": "Complex selling techniques"
+      },
+      "drivers": {
+        "workWithEnthusiasm": "Works with enthusiasm",
+        "pursuePersonalDevelopment": "Pursues personal development",
+        "showAmbition": "Shows ambition",
+        "anticipateDevelopments": "Anticipates developments",
+        "alignStrategies": "Aligns strategies",
+        "defineTheVision": "Defines the vision",
+        "validateStrategies": "Validates strategies",
+        "coordinateAction": "Coordinates action",
+        "delegate": "Delegates",
+        "takeDecisions": "Takes decisions",
+        "takeResponsibility": "Takes responsibility",
+        "crossFunctionalAwareness": "Works across functions",
+        "superviseBehaviour": "Supervises behaviour",
+        "coaching": "Coaches",
+        "valuePeople": "Values people",
+        "motivatePeople": "Motivates people",
+        "developPeople": "Develops people",
+        "spotTalent": "Spots talent",
+        "executePlans": "Executes plans",
+        "actWithConfidence": "Acts with confidence",
+        "actOnOwnInitiative": "Acts on own initiative",
+        "haveImpact": "Has impact",
+        "frameConversations": "Frames the conversation",
+        "appealToEmotions": "Appeals to emotions",
+        "handlePressure": "Handles pressure",
+        "balanceWorkAndLife": "Balances work and life",
+        "stayPositive": "Stays positive"
+      },
+      "quadrants": {
+        "heading": "Behaviour and knowledge, crossed",
+        "body": "Each person clears the behavioural bar, the technical one, both or neither. The two bars turn out to do very different work: {hardCleared}% are over the technical one and {softCleared}% over the behavioural one, so almost the whole network has the technical ground and behaviour is what separates it.",
+        "axisSoft": "Soft skills",
+        "axisHard": "Technical knowledge",
+        "high": "at or above {threshold}",
+        "low": "below {threshold}",
+        "items": {
+          "softHighHardHigh": {
+            "name": "Ready on both",
+            "description": "Over both bars. Because almost everyone is over the technical one, this is in practice the half of the network that is over the behavioural one — read it as a behavioural result, not as a double distinction."
+          },
+          "softHighHardLow": {
+            "name": "Behaviour ahead of knowledge",
+            "description": "The behaviours are there and the technical ground is not. The smallest group, which is the same fact as the technical bar being cleared by almost everyone."
+          },
+          "softLowHardHigh": {
+            "name": "Knowledge ahead of behaviour",
+            "description": "Knows the material, does not yet show the behaviours in front of a customer. The other large group, and the slow one — this is coaching and field work, not a course."
+          },
+          "softLowHardLow": {
+            "name": "Below both",
+            "description": "Under both bars. Small enough to handle one conversation at a time rather than with a programme."
+          }
+        },
+        "caption": "The two bars are the client's, not ours: behaviour at {soft} and technical knowledge at {hard}. Where a bar sits decides what it can tell you — this technical one is cleared by almost everyone, so it sorts nobody, and the reading worth having is the behavioural one. Move either line and these four numbers move with it."
+      },
+      "closing": {
+        "heading": "How this page was made",
+        "body": "Every number here is a group statistic, computed once outside this website from data that never entered it. Headcounts are rounded to the nearest five, no group carrying a score holds fewer than twenty-five people, and the knowledge areas are named for what they test rather than for the client's sector. The source dashboard has a participant table with a first name and a surname in it; there is nothing of that kind here, in any form.",
+        "back": "Back to the demo dashboards"
+      }
     }
   },
   "home": {

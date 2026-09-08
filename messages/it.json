@@ -4826,6 +4826,172 @@
         "body": "Ogni numero qui è una statistica di gruppo, calcolata una volta fuori da questo sito su dati che in questo sito non sono mai entrati. Gli headcount sono arrotondati al multiplo di cinque, nessun gruppo che porta un punteggio contiene meno di 25 persone, e le aree sono numerate invece che nominate. Non c’è nessuna tabella dei negozi, nessuna classifica e nessun record individuale — non nascosti, assenti.",
         "back": "Torna alle dashboard demo"
       }
+    },
+    "sales-network": {
+      "meta": {
+        "title": "Prontezza della rete vendita — dashboard demo | Skillvue",
+        "description": "Una rete vendita valutata insieme su soft skill e conoscenze tecniche, letta per famiglia professionale, competenza e driver comportamentale. Solo aggregati: nessun dato individuale."
+      },
+      "hero": {
+        "eyebrow": "Demo interattiva · Telco",
+        "heading": "Due domande insieme: <span>sanno farlo, e lo fanno</span>",
+        "body": "Una rete vendita misurata sul comportamento e sulle conoscenze tecniche nello stesso programma, così che le due risposte si possano leggere una contro l’altra invece che una per volta. Quello che segue è dove sta la rete su entrambe, e che forma ha la divisione quando si smette di fare medie.",
+        "note": "Solo aggregati. Su questa pagina non c’è nessuna persona e nessun record individuale: ogni cifra è una statistica di gruppo, calcolata una volta fuori da questo sito."
+      },
+      "population": {
+        "heading": "Che cosa è stato misurato",
+        "assessed": {
+          "label": "Persone valutate",
+          "note": "Su {candidates} nel perimetro. Le altre {notAssessed} non hanno completato l’assessment."
+        },
+        "conversion": {
+          "label": "Conversione dell’assessment",
+          "note": "Come l’ha riportata il programma. Non è il rapporto fra i due headcount qui accanto — vedi la nota sotto."
+        },
+        "matchingMean": {
+          "label": "Skill matching medio",
+          "note": "Quanto la popolazione aderisce al profilo di competenze su cui i suoi ruoli sono stati mappati."
+        },
+        "matchingMedian": {
+          "label": "Skill matching mediano",
+          "note": "A meno di mezzo punto dalla media: la distribuzione non ha una coda lunga che la tira da una parte."
+        },
+        "rounding": "Gli headcount qui sono arrotondati al multiplo di cinque, perché nessun conteggio identifichi qualcuno. Le percentuali invece sono calcolate sulla popolazione reale: se le si divide per le cifre qui accanto non tornano."
+      },
+      "bands": {
+        "heading": "Dove sta la rete",
+        "body": "Lo skill matching diviso in quattro fasce. Più di nove su dieci stanno da «base» in su, e la domanda a cui un programma deve rispondere è in quale delle due fasce centrali sta comprando movimento.",
+        "series": "Quota della popolazione",
+        "axis": "% dei valutati",
+        "ariaLabel": "Grafico a barre della quota di popolazione valutata in ciascuna fascia di skill matching",
+        "items": {
+          "belowThreshold": "Sotto soglia",
+          "base": "Base",
+          "good": "Buono",
+          "high": "Alto"
+        },
+        "caption": "Più di quattro su cinque stanno nelle due fasce centrali. Niente qui dice che una fascia sia promossa e un’altra bocciata — le fasce sono lo schema del cliente, e la forma è ciò su cui si dimensiona un budget di sviluppo."
+      },
+      "families": {
+        "heading": "Due famiglie professionali, due mestieri diversi",
+        "body": "Manager e account non sono stati valutati sulle stesse competenze, e non è un buco nei dati: è lo schema. Quasi nulla si sovrappone, quindi le due colonne qui sotto sono due profili, non due punteggi sulla stessa scala.",
+        "names": {
+          "salesManager": "Sales manager",
+          "salesAccount": "Sales account"
+        },
+        "labels": {
+          "people": "Persone",
+          "skillMatching": "Skill matching",
+          "soft": "Soft skill",
+          "hard": "Conoscenze tecniche"
+        },
+        "coverage": "Queste due famiglie tengono {covered} delle {assessed} persone valutate. Le altre stanno in famiglie troppo piccole per essere pubblicate da sole — sotto la soglia di venticinque persone che ogni cifra qui rispetta — quindi sono dentro tutti i totali di questa pagina e spacchettate in nessuno.",
+        "overlap": "Una sola soft skill è stata misurata su entrambe le famiglie, e due delle aree di conoscenza. È per questo che non esiste una classifica unica delle due."
+      },
+      "profile": {
+        "heading": "Il profilo, famiglia per famiglia",
+        "body": "Scegli una famiglia e i tre pannelli si ridisegnano: le sue soft skill, le sue aree di conoscenza tecnica, e i comportamenti sotto la competenza che apri.",
+        "label": "Famiglia professionale",
+        "soft": {
+          "heading": "Soft skill",
+          "series": "Punteggio medio",
+          "ariaLabel": "Grafico a barre del punteggio medio di ciascuna soft skill per la famiglia professionale selezionata",
+          "caption": "La media di queste è il punteggio soft skill della famiglia nella tabella qui sopra."
+        },
+        "hard": {
+          "heading": "Conoscenze tecniche",
+          "series": "Punteggio medio",
+          "ariaLabel": "Grafico a barre del punteggio medio di ciascuna area di conoscenza tecnica per la famiglia professionale selezionata",
+          "caption": "Le aree di conoscenza sono nominate per quello che misurano, non per il settore in cui lavora il cliente."
+        },
+        "drivers": {
+          "heading": "Che cosa c’è sotto",
+          "label": "Competenza",
+          "series": "Punteggio medio",
+          "ariaLabel": "Grafico a barre del punteggio medio di ciascun driver comportamentale della competenza selezionata",
+          "caption": "Ogni competenza è misurata da più comportamenti osservati, e non si muovono insieme: dentro una stessa competenza i comportamenti possono stare a più di un punto di distanza, cosa che la media della competenza nasconde. È il livello a cui un piano di sviluppo si scrive davvero."
+        }
+      },
+      "skills": {
+        "strategicThinking": "Pensiero strategico",
+        "teamManagement": "Gestione del team",
+        "engageInspire": "Coinvolgere e ispirare",
+        "decisionMaking": "Capacità decisionale",
+        "influence": "Influenza",
+        "resilience": "Resilienza",
+        "drive": "Spinta personale"
+      },
+      "knowledge": {
+        "referenceMarket": "Mercato di riferimento",
+        "partnerManagement": "Gestione dei partner",
+        "offeringPositioning": "Offerta e posizionamento",
+        "networkProfitability": "Redditività della rete",
+        "technicalDomainKnowledge": "Conoscenza tecnica di dominio",
+        "complexNegotiation": "Negoziazione complessa",
+        "marketSegmentation": "Segmentazione del mercato",
+        "complexSellingTechniques": "Tecniche di vendita complessa"
+      },
+      "drivers": {
+        "workWithEnthusiasm": "Lavora con entusiasmo",
+        "pursuePersonalDevelopment": "Cerca la propria crescita",
+        "showAmbition": "Mostra ambizione",
+        "anticipateDevelopments": "Anticipa gli sviluppi",
+        "alignStrategies": "Allinea le strategie",
+        "defineTheVision": "Definisce la visione",
+        "validateStrategies": "Valida le strategie",
+        "coordinateAction": "Coordina l’azione",
+        "delegate": "Delega",
+        "takeDecisions": "Prende decisioni",
+        "takeResponsibility": "Si prende la responsabilità",
+        "crossFunctionalAwareness": "Lavora fra funzioni diverse",
+        "superviseBehaviour": "Vigila sui comportamenti",
+        "coaching": "Fa coaching",
+        "valuePeople": "Dà valore alle persone",
+        "motivatePeople": "Motiva le persone",
+        "developPeople": "Fa crescere le persone",
+        "spotTalent": "Riconosce il talento",
+        "executePlans": "Esegue i piani",
+        "actWithConfidence": "Agisce con sicurezza",
+        "actOnOwnInitiative": "Agisce di propria iniziativa",
+        "haveImpact": "Ha impatto",
+        "frameConversations": "Imposta la conversazione",
+        "appealToEmotions": "Fa leva sulle emozioni",
+        "handlePressure": "Regge la pressione",
+        "balanceWorkAndLife": "Tiene insieme lavoro e vita",
+        "stayPositive": "Resta positivo"
+      },
+      "quadrants": {
+        "heading": "Comportamento e conoscenza, incrociati",
+        "body": "Ogni persona supera la soglia comportamentale, quella tecnica, tutte e due o nessuna. Le due soglie fanno un lavoro molto diverso: il {hardCleared}% è sopra quella tecnica e il {softCleared}% sopra quella comportamentale, quindi la base tecnica ce l’ha quasi tutta la rete e ciò che la separa è il comportamento.",
+        "axisSoft": "Soft skill",
+        "axisHard": "Conoscenze tecniche",
+        "high": "da {threshold} in su",
+        "low": "sotto {threshold}",
+        "items": {
+          "softHighHardHigh": {
+            "name": "Pronti su entrambi",
+            "description": "Sopra entrambe le soglie. Siccome quella tecnica la supera quasi chiunque, in pratica è la metà di rete che sta sopra quella comportamentale: va letto come un risultato di comportamento, non come una doppia eccellenza."
+          },
+          "softHighHardLow": {
+            "name": "Comportamento avanti alla conoscenza",
+            "description": "I comportamenti ci sono, la base tecnica no. È il gruppo più piccolo, che è poi lo stesso fatto della soglia tecnica superata da quasi tutti."
+          },
+          "softLowHardHigh": {
+            "name": "Conoscenza avanti al comportamento",
+            "description": "Sanno la materia, ma davanti al cliente i comportamenti non si vedono ancora. È l’altro gruppo grande, ed è quello lento: qui servono coaching e affiancamento, non un corso."
+          },
+          "softLowHardLow": {
+            "name": "Sotto entrambe",
+            "description": "Sotto tutte e due le soglie. Abbastanza pochi da gestirli una conversazione alla volta invece che con un programma."
+          }
+        },
+        "caption": "Le due soglie sono del cliente, non nostre: comportamento a {soft} e conoscenze tecniche a {hard}. Dove sta una soglia decide che cosa può dirti — questa tecnica la supera quasi chiunque, quindi non separa nessuno, e la lettura che serve è quella comportamentale. Sposta una delle due linee e questi quattro numeri si spostano con lei."
+      },
+      "closing": {
+        "heading": "Come è fatta questa pagina",
+        "body": "Ogni numero qui è una statistica di gruppo, calcolata una volta fuori da questo sito su dati che in questo sito non sono mai entrati. Gli headcount sono arrotondati al multiplo di cinque, nessun gruppo che porta un punteggio contiene meno di venticinque persone, e le aree di conoscenza sono nominate per quello che misurano invece che per il settore del cliente. La dashboard di origine ha una tabella partecipanti con nome e cognome dentro; qui non c’è nulla del genere, in nessuna forma.",
+        "back": "Torna alle dashboard demo"
+      }
     }
   },
   "home": {
