@@ -36,6 +36,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // belong in search is a marketing call; this only stops the contradiction.
     if (route.id.startsWith("lp/")) continue;
 
+    // The registry's own answer to the same question, for routes that are not
+    // landing pages: the demo dashboards are outbound material sent to one
+    // prospect at a time, and the page tells Google the same thing through
+    // `robots: noindex` in i18n/metadata.ts. Submitting it here would be the
+    // sitemap arguing with the page.
+    if (route.noindex) continue;
+
     const languages = alternatesFor(route);
 
     // A dynamic route's registry entry stands for N real URLs. Substituting the

@@ -4571,6 +4571,53 @@
       }
     }
   },
+  "demo": {
+    "meta": {
+      "title": "Demo dashboards | Skillvue",
+      "description": "Three interactive dashboards built for live assessment programmes, de-branded and stripped of every individual record. Shared by link, not indexed."
+    },
+    "hero": {
+      "eyebrow": "Interactive demo",
+      "heading": "The output of an assessment, <span>before you run one</span>",
+      "body": "Three dashboards our customer team built for real programmes, with the brand taken out and every individual record removed. What is left is the shape of the result: how a population distributes, where the gaps sit, and what the numbers point at.",
+      "note": "This page is not indexed and nothing on the site links to it. You are reading it because someone sent you the link."
+    },
+    "dashboards": {
+      "heading": "Three programmes, three questions",
+      "retail": {
+        "sector": "Retail",
+        "title": "Store manager capability",
+        "body": "A store network assessed on one frame end to end: how capability distributes across the estate, and which stores carry the gap."
+      },
+      "salesNetwork": {
+        "sector": "Insurance",
+        "title": "Sales network readiness",
+        "body": "An agent network measured before a commercial push: who is ready to sell the new range, and who goes through the training first."
+      },
+      "crossCountry": {
+        "sector": "Manufacturing",
+        "title": "Cross-country talent map",
+        "body": "One competency frame applied in six countries, so a group HR team can compare populations that were never comparable before."
+      }
+    },
+    "status": {
+      "comingSoon": "Coming soon"
+    },
+    "preview": {
+      "heading": "How a result reads",
+      "body": "Every dashboard is made of a handful of chart types, and this is the plainest of them: one competency per row, and the average score the population reached on it.",
+      "ariaLabel": "Bar chart of average scores by competency",
+      "axis": "Average score",
+      "skills": [
+        "Communication",
+        "Problem solving",
+        "Team leadership",
+        "Adaptability",
+        "Commercial drive"
+      ],
+      "caption": "Illustrative figures. The three dashboards run on aggregated data, with every individual record removed."
+    }
+  },
   "home": {
     "meta": {
       "title": "Skillvue | AI Talent Intelligence Platform",
