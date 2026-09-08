@@ -4587,17 +4587,17 @@
       "retail": {
         "sector": "Retail",
         "title": "Capability degli store manager",
-        "body": "Una rete di punti vendita valutata con lo stesso schema dall’inizio alla fine: come si distribuisce la capability sul territorio e quali negozi si portano dietro il divario."
+        "body": "Una rete di punti vendita valutata con lo stesso schema dall’inizio alla fine: come si distribuisce la capability fra canale, location e tier, e dove sta il divario."
       },
       "salesNetwork": {
-        "sector": "Assicurazioni",
+        "sector": "Telco",
         "title": "Prontezza della rete vendita",
-        "body": "Una rete di agenti misurata prima di una spinta commerciale: chi è pronto a vendere la nuova gamma e chi passa prima dalla formazione."
+        "body": "Una rete vendita misurata insieme su soft skill e conoscenze tecniche: chi è pronto a vendere e chi passa prima dalla formazione."
       },
       "crossCountry": {
-        "sector": "Manifatturiero",
+        "sector": "Pharma",
         "title": "Mappa dei talenti cross-country",
-        "body": "Un solo schema di competenze applicato in sei paesi, perché l’HR di gruppo possa confrontare popolazioni che prima non erano confrontabili."
+        "body": "Un solo schema di competenze applicato a tutti i paesi coinvolti, perché l’HR di gruppo possa confrontare popolazioni che prima non erano confrontabili."
       }
     },
     "status": {
