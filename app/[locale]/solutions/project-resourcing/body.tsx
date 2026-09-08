@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';

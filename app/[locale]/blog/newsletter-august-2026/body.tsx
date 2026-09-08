@@ -1,14 +1,10 @@
-// @ts-nocheck
-'use client';
-
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
-import { useLocale, useTranslations } from 'next-intl';
+import { getLocale, getTranslations } from 'next-intl/server';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Clock, ImageIcon } from 'lucide-react';
-import { useRouter } from '@/i18n/navigation';
 import { href, localizePath } from '@/i18n/routes';
 
 // ─── Fill these in when the assets/links are ready ──────────────────────────
@@ -47,7 +43,7 @@ function renderRich(text) {
 }
 
 function Img({ src, label, soon }) {
-  if (src) return <img src={src} alt={label} className="block w-full rounded-2xl my-8" />;
+  if (src) return <img src={src} alt={label} loading="lazy" decoding="async" sizes="(min-width: 768px) 780px, 100vw" className="block w-full rounded-2xl my-8" />;
   return (
     <div className="my-8 w-full rounded-2xl flex flex-col items-center justify-center gap-2 text-center px-6"
       style={{ aspectRatio: '16 / 10', background: 'linear-gradient(135deg, #ece9fb 0%, #f7e6dc 100%)', border: '1px dashed rgba(75,77,247,0.25)' }}>
@@ -92,10 +88,9 @@ function EventCard({ event, localize }) {
 }
 
 
-export default function AugustNewsletter() {
-  const router = useRouter();
-  const lang = useLocale();
-  const t = useTranslations('blog.newsletter-august-2026');
+export default async function AugustNewsletter() {
+  const lang = await getLocale();
+  const t = await getTranslations('blog.newsletter-august-2026');
   // An IMAGES entry is either one shared file or { en, it } when the artwork
   // carries baked-in copy.
   const imgSrc = (key) => { const v = IMAGES[key]; return typeof v === 'string' ? v : (v[lang] ?? v.en); };
@@ -115,12 +110,8 @@ export default function AugustNewsletter() {
             <div className="absolute top-10 right-[-200px] w-[600px] h-[600px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(255,86,86,0.10) 0%, rgba(255,86,86,0) 60%)' }} />
           </div>
           <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 w-full py-16 lg:py-24">
-            <Button
-              variant="tertiary" mode="dark" iconPosition="left" icon={<ArrowLeft aria-hidden />}
-              onClick={() => { router.push('/blog'); window.scrollTo(0, 0); }}
-              className="mb-10"
-            >
-              {t('back')}
+            <Button asChild variant="tertiary" mode="dark" className="mb-10">
+              <a href={href('blog', lang)}><ArrowLeft aria-hidden />{t('back')}</a>
             </Button>
             <Reveal duration={0.7} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
@@ -178,8 +169,8 @@ export default function AugustNewsletter() {
                 {t('finalTitle')} <span className="gradient-text">{t('finalTitleHighlight')}</span>
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">{t('finalBody')}</p>
-              <Button variant="primary" mode="dark" onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}>
-                {t('finalButton')}
+              <Button asChild variant="primary" mode="dark">
+                <a href={href('book-meeting', lang)}>{t('finalButton')}<ArrowRight aria-hidden /></a>
               </Button>
             </Reveal>
           </div>

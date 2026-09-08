@@ -1,4 +1,3 @@
-// @ts-nocheck
 // The share card: one 1200x630 image per page, rendered at build time.
 //
 // Before this the site had no og:image at all, so every link posted to

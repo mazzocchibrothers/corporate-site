@@ -5,18 +5,14 @@
 
 ## Starting point: this repo has almost no automated safety net
 
-Verified fact, not an opinion. There is no ESLint config and no `lint` script;
-no jest, no vitest, no `*.spec.ts`, no `test` script; Playwright sits in
-`devDependencies` with zero test files; there is no `.github/workflows/`.
-TypeScript runs `strict: false` with `// @ts-nocheck` on 157 of 186 `.tsx`
-files.
+There is no ESLint, Jest or Vitest setup. Static gates cover routing and
+catalogue integrity; `test:smoke` uses the installed Playwright package against
+a production build for the critical browser journeys. TypeScript remains
+`strict: false`, but no app source is excluded with `// @ts-nocheck`.
 
-So: **`npm run build` catches syntax errors and broken imports. It does not
-catch a missing Italian translation, a route absent from the sitemap, a
-language switcher that 404s, or a wrong `hreflang`.** Those are exactly this
-repo's recurring failures, and they are caught by Level 2 and Level 3 below,
-never by Level 1 alone. Do not read a green `init.sh` as "the change is
-correct" — read it as "the change compiles".
+`npm run build` catches syntax errors and broken imports. It does not catch a
+missing Italian translation, a route absent from the sitemap, or a wrong
+`hreflang`; those belong to the static gates and browser smoke below.
 
 ## Level 1 — Gates (mandatory, every feature)
 

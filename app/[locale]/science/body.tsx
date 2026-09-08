@@ -1,4 +1,3 @@
-// @ts-nocheck
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import ScienceHero from '@/components/science/ScienceHero';

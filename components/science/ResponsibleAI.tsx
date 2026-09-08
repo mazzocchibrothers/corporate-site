@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import React, { useState } from 'react';
@@ -50,7 +49,7 @@ const faqs = [
 
 export default function ResponsibleAI() {
   const t = useTranslations('science');
-  const [openIdx, setOpenIdx] = useState(null);
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   const renderPillar = (p, i) => {
     const Icon = p.icon;

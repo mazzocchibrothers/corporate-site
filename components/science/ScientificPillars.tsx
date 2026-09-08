@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { getTranslations } from 'next-intl/server';
 import { Brain, Ruler } from 'lucide-react';
 import { IconTile } from '@/components/ui/icon-tile';

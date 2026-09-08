@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import React, { useEffect, useRef } from 'react';
@@ -23,7 +22,7 @@ const PARAGRAPHS = [
 export default function FoodRetailPage() {
   const lang = useLocale();
   const t = useTranslations('lp.food-retail');
-  const formRef = useRef(null);
+  const formRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const formId = FORM_IDS[lang] ?? FORM_IDS.en;

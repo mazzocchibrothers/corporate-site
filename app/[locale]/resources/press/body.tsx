@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import React from 'react';
@@ -409,7 +408,7 @@ export default function PressPage() {
                         alt={inv.name}
                         className="object-contain"
                         style={{
-                          filter: inv.customFilter || 'brightness(0) invert(1)',
+                          filter: 'brightness(0) invert(1)',
                           opacity: 0.5,
                           height: inv.h,
                         }}

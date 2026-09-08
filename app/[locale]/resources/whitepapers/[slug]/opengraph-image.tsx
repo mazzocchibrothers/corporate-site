@@ -1,4 +1,3 @@
-// @ts-nocheck
 // The only share card that is not one route, one image: four URLs share this
 // namespace, so the title comes from the whitepaper's own meta rather than the
 // route's — the same reason generateMetadata in page.tsx overrides it.

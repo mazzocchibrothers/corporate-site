@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -25,9 +24,9 @@ export default function AiCompetencyPage() {
 
   const [unlocked, setUnlocked] = useState(false);
   const [showLock, setShowLock] = useState(false);
-  const formRef = useRef(null);
-  const scrollRef = useRef(null);
-  const page1Ref = useRef(null);
+  const formRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const page1Ref = useRef<HTMLImageElement>(null);
 
   const handleDocScroll = () => {
     const el = scrollRef.current;
