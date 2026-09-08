@@ -5,20 +5,23 @@
 // will be — the chart wrapper is loaded with ssr: false, which is only legal
 // inside the client graph.
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Globe, Store, Users } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Reveal } from '@/components/ui/reveal';
 import DemoView from '@/components/demo/DemoView';
 import Chart from '@/components/demo/charts/Chart';
+import { href } from '@/i18n/routes';
 
-// Structure the catalogue cannot hold: which icon belongs to which card. The
-// copy is keyed by the same id under `demo.dashboards`.
+// Structure the catalogue cannot hold: which icon belongs to which card, and
+// which route it opens. The copy is keyed by the same id under
+// `demo.dashboards`; a `route` of undefined is a dashboard not built yet, and
+// its card stays a badge rather than becoming a link to nowhere.
 const DASHBOARDS = [
-  { id: 'retail', Icon: Store },
-  { id: 'salesNetwork', Icon: Users },
-  { id: 'crossCountry', Icon: Globe },
+  { id: 'retail', Icon: Store, route: 'demo/retail' },
+  { id: 'salesNetwork', Icon: Users, route: undefined },
+  { id: 'crossCountry', Icon: Globe, route: undefined },
 ];
 
 // The preview chart's numbers. Illustrative, and said to be illustrative in
@@ -27,6 +30,7 @@ const DASHBOARDS = [
 const PREVIEW_SCORES = [82, 74, 69, 61, 54];
 
 export default function DemoHub() {
+  const lang = useLocale();
   const t = useTranslations('demo');
 
   return (
@@ -90,7 +94,7 @@ export default function DemoHub() {
             </Reveal>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-              {DASHBOARDS.map(({ id, Icon }, i) => (
+              {DASHBOARDS.map(({ id, Icon, route }, i) => (
                 <Reveal
                   key={id}
                   as="article"
@@ -100,22 +104,42 @@ export default function DemoHub() {
                   className="rounded-xl md:rounded-2xl border border-white/[0.08] bg-white/[0.04] p-6 md:p-8"
                 >
                   <Icon className="h-6 w-6 text-white/30 mb-6" />
-                  <span className="text-[12px] font-semibold tracking-[0.14em] uppercase text-white/35 block mb-3">
-                    {t(`dashboards.${id}.sector`)}
-                  </span>
+                  {/* A card names its sector only if the catalogue gives it one.
+                      crossCountry has none: its real sector is Pharma, and
+                      customers/fidia-farmaceutici is the only pharmaceutical
+                      story on the site — so the label walks a reader from an
+                      anonymised dashboard to the customer whose aggregates it
+                      shows (issue 176). Reading the key rather than a flag means the
+                      fourth card gets this for free: write a sector, it shows;
+                      leave it out, it doesn't. */}
+                  {t.has(`dashboards.${id}.sector`) ? (
+                    <span className="text-[12px] font-semibold tracking-[0.14em] uppercase text-white/35 block mb-3">
+                      {t(`dashboards.${id}.sector`)}
+                    </span>
+                  ) : null}
                   <h3 className="text-[19px] md:text-[21px] font-semibold text-white/90 mb-3 leading-tight">
                     {t(`dashboards.${id}.title`)}
                   </h3>
                   <p className="text-[14px] text-white/[0.55] leading-[1.7] mb-6">
                     {t(`dashboards.${id}.body`)}
                   </p>
-                  {/* Not a link: these three pages do not exist yet,
-                      and a card that navigates nowhere reads as a broken site
-                      rather than as a roadmap. */}
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-3 py-1.5 text-[12px] font-semibold text-white/50">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#FFAF64]" />
-                    {t('status.comingSoon')}
-                  </span>
+                  {/* A card without a route is a dashboard not built yet, and
+                      it stays a badge: a card that navigates nowhere reads as a
+                      broken site rather than as a roadmap. */}
+                  {route ? (
+                    <a
+                      href={href(route, lang)}
+                      className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-3 py-1.5 text-[12px] font-semibold text-white/70 transition-colors duration-300 hover:text-white hover:border-white/[0.25]"
+                    >
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#5DDBA4]" />
+                      {t('status.open')}
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-3 py-1.5 text-[12px] font-semibold text-white/50">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#FFAF64]" />
+                      {t('status.comingSoon')}
+                    </span>
+                  )}
                 </Reveal>
               ))}
             </div>

@@ -4595,13 +4595,13 @@
         "body": "A sales network measured on soft skills and technical knowledge together: who is ready to sell, and who goes through the training first."
       },
       "crossCountry": {
-        "sector": "Pharma",
         "title": "Cross-country talent map",
         "body": "One competency frame applied across every country in scope, so a group HR team can compare populations that were never comparable before."
       }
     },
     "status": {
-      "comingSoon": "Coming soon"
+      "comingSoon": "Coming soon",
+      "open": "Open the dashboard"
     },
     "preview": {
       "heading": "How a result reads",
@@ -4616,6 +4616,216 @@
         "Commercial drive"
       ],
       "caption": "Illustrative figures. The three dashboards run on aggregated data, with every individual record removed."
+    },
+    "retail": {
+      "meta": {
+        "title": "Store network capability — demo dashboard | Skillvue",
+        "description": "A retail network assessed on one competency frame end to end, read by channel, location, store tier and tenure. Aggregates only: every individual record removed."
+      },
+      "hero": {
+        "eyebrow": "Interactive demo · Retail",
+        "heading": "A store network, read on one frame <span>from end to end</span>",
+        "body": "Every sales advisor in the network was assessed on the same five competency areas, and the result was put next to the numbers the stores already report: conversion, units per ticket, average ticket, sales per hour. What follows is what that comparison says — including where it says nothing.",
+        "note": "Aggregates only. No store, no person and no individual record is on this page: every figure is a group statistic, computed once outside this website."
+      },
+      "population": {
+        "heading": "What was measured",
+        "advisors": {
+          "label": "Sales advisors assessed",
+          "note": "The population every cut on this page is computed on. The {managers} store managers were assessed on a frame of their own and are not in these figures."
+        },
+        "stores": {
+          "label": "Stores in scope",
+          "note": "Of which {outlets} are outlets."
+        },
+        "aboveThreshold": {
+          "label": "Above the mastery threshold",
+          "note": "The share of advisors scoring above {threshold} on the overall competency score."
+        },
+        "conversion": {
+          "label": "Network conversion rate",
+          "note": "Averaged across the stores in scope."
+        }
+      },
+      "distribution": {
+        "heading": "Where the network sits",
+        "body": "One bar per five-point band of the overall competency score, and the share of advisors who landed in it. The shape is the first thing a programme is sized against: a wide middle, and a thin tail past the threshold.",
+        "series": "Share of advisors",
+        "axisScore": "Competency score",
+        "axisShare": "% of advisors",
+        "ariaLabel": "Bar chart of the share of sales advisors in each five-point band of the competency score",
+        "caption": "{above}% of advisors score above {threshold}. That is a share, not a ranking — and it is the number a development budget is built on."
+      },
+      "cuts": {
+        "heading": "The same network, cut four ways",
+        "body": "Channel, location, store tier and area are four questions asked of one population. Pick one and the panels below redraw.",
+        "label": "Cut by",
+        "options": {
+          "channel": "Channel",
+          "location": "Location",
+          "tier": "Store tier",
+          "area": "Area"
+        },
+        "groups": {
+          "channel": {
+            "fullPrice": "Full price",
+            "outlet": "Outlet"
+          },
+          "location": {
+            "mall": "Shopping centre",
+            "highStreet": "High street"
+          },
+          "tier": {
+            "tier1": "Tier 1",
+            "tier2": "Tier 2",
+            "tier3": "Tier 3"
+          },
+          "area": {
+            "area1": "Area 1",
+            "area2": "Area 2",
+            "area3": "Area 3",
+            "area4": "Area 4",
+            "area5": "Area 5"
+          }
+        },
+        "areaNote": "Areas are numbered by headcount, largest first. The number says nothing about who they are and nothing about how they rank.",
+        "skills": {
+          "heading": "Competency profile",
+          "ariaLabel": "Radar chart of the five competency areas, one line per group in the selected cut",
+          "caption": "The five areas on one scale. The profiles differ in level more than in shape: the same competencies lead everywhere, and the distance between groups is a matter of a few points.",
+          "unavailable": "The area cut is published as headcount and result only. A competency profile per area is not part of this extract."
+        },
+        "results": {
+          "heading": "Skill and result, side by side",
+          "ariaLabel": "Grouped bar chart comparing the share above threshold and the conversion rate of each group in the selected cut",
+          "axis": "Percent",
+          "caption": "Both bars are percentages, so they sit on one axis. On channel, location and area the same group leads both of them: between groups, competency and result do move together. Store tier is the one cut where they part — the tier with the most people above threshold is not the tier converting best. What does not survive is the step down from the group to the single store and the single person, where the link is gone."
+        },
+        "kpis": {
+          "heading": "What the stores report",
+          "caption": "Store KPIs for the same groups, over the assessment perimeter."
+        },
+        "labels": {
+          "people": "Advisors",
+          "stores": "Stores",
+          "skill": "Competency score",
+          "aboveThreshold": "Above threshold",
+          "conversionRate": "Conversion rate",
+          "unitsPerTicket": "Units per ticket",
+          "averageTicket": "Average ticket",
+          "salesPerHour": "Sales per hour",
+          "visitsPerDay": "Visits per day",
+          "turnover": "Turnover"
+        }
+      },
+      "skills": {
+        "customerSalesExcellence": "Customer & sales excellence",
+        "brandStorytelling": "Brand storytelling",
+        "collaborationTeamContribution": "Collaboration & team contribution",
+        "agilityExecution": "Agility & execution",
+        "productKnowledge": "Product knowledge"
+      },
+      "map": {
+        "heading": "Skill and revenue, on the same axes",
+        "body": "Every point is one of the groups above — a channel, a location, a tier, an area — with its share above threshold on one axis and its conversion rate on the other. If competency drove conversion the points would line up. They do not.",
+        "ariaLabel": "Scatter chart of the aggregated groups, share above threshold against conversion rate",
+        "axisX": "% above threshold",
+        "axisY": "Conversion rate %",
+        "stores": {
+          "label": "Competency and conversion, store by store",
+          "note": "Across {n} stores."
+        },
+        "people": {
+          "label": "Competency and sales, advisor by advisor",
+          "note": "Across {n} advisors."
+        },
+        "caption": "Two coefficients close to zero, and they belong on the page rather than in a drawer: on this network competency does not predict the till on its own, and a dashboard claiming otherwise would be wrong in a way a prospect can check in ten seconds. What the data does carry is everything below — who is already ahead, where the profile differs, and which group needs which intervention."
+      },
+      "segments": {
+        "heading": "Five segments, five different conversations",
+        "body": "Crossing competency against commercial result splits the network into five groups. The split earns its keep in the second line of each card: what to do about a group is not the same thing five times.",
+        "share": "of the network",
+        "items": {
+          "benchmark": {
+            "name": "Benchmark",
+            "description": "Above the line on the assessment and on the commercial numbers.",
+            "action": "Make the method explicit and turn it into the training content everyone else gets."
+          },
+          "resultWithoutMethod": {
+            "name": "Result without method",
+            "description": "Delivering the numbers with a competency profile that does not explain them.",
+            "action": "Find out what they actually do on the floor before the next intake is asked to copy it."
+          },
+          "skillWithoutResult": {
+            "name": "Skill without result",
+            "description": "The assessment says they can; the till says they are not.",
+            "action": "The obstacle is rarely competency here. Look at shift, footfall and floor allocation before booking a course."
+          },
+          "priorityDevelopment": {
+            "name": "Priority development",
+            "description": "Below the line on both, with enough of a base to move.",
+            "action": "Structured development, aimed at the two areas their own profile is weakest on."
+          },
+          "toActivate": {
+            "name": "To activate",
+            "description": "Bottom of both scales.",
+            "action": "A conversation before a programme: this is the group where a change of role is on the table."
+          }
+        },
+        "chart": {
+          "heading": "The mix moves by area",
+          "ariaLabel": "Stacked bar chart of the five segments as a share of each area",
+          "axis": "% of the advisors in the area",
+          "caption": "The same five segments, area by area. One area is more than half result-without-method; another carries the largest priority-development share of all five. Those two need different budgets, not more of the same."
+        }
+      },
+      "top": {
+        "heading": "The top performers, and the gap that is not there",
+        "body": "{n} advisors sit in the top commercial band. On sales per hour and on the share above threshold they are clearly ahead. On the competency areas themselves the distance is small — and on one of the five it runs the other way.",
+        "series": {
+          "top": "Top performers",
+          "rest": "Everyone else"
+        },
+        "ariaLabel": "Grouped bar chart of the five competency areas, top performers against everyone else",
+        "stats": {
+          "salesPerHour": "Sales per hour",
+          "aboveThreshold": "% above threshold",
+          "relativeSph": "Sales per hour vs network average"
+        },
+        "caption": "The commercial gap is real and large. The competency gap is neither.",
+        "caveat": "On the overall competency score the difference — {top} against {rest} — does not clear statistical significance (p = {p}). It is on the page because leaving it out would be choosing the flattering half."
+      },
+      "seniority": {
+        "heading": "Tenure buys results, not competency",
+        "body": "Seven tenure bands, two lines. Sales per hour relative to the network average climbs steadily the longer someone has been there. The competency score does not follow it.",
+        "buckets": {
+          "lt3m": "Under 3 months",
+          "m3to12": "3–12 months",
+          "y1to2": "1–2 years",
+          "y2to5": "2–5 years",
+          "y5to10": "5–10 years",
+          "y10to20": "10–20 years",
+          "gt20": "Over 20 years"
+        },
+        "series": {
+          "skill": "Competency score",
+          "relativeSph": "Sales per hour vs network average"
+        },
+        "skillChart": {
+          "ariaLabel": "Line chart of the competency score across seven tenure bands"
+        },
+        "sphChart": {
+          "ariaLabel": "Line chart of sales per hour relative to the network average, across seven tenure bands"
+        },
+        "axisSkill": "Competency score",
+        "axisSph": "Relative sales per hour",
+        "caption": "Correlation between tenure and competency: {skill}. Between tenure and the commercial KPIs: {kpi}. The first is the useful one — it means the people who have been here longest are not automatically the ones to learn from, which is the whole reason an assessment is run instead of an org chart being read."
+      },
+      "closing": {
+        "heading": "How this page was made",
+        "body": "Every number here is a group statistic, computed once outside this website from data that never entered it. Headcounts are rounded to the nearest five, no group carrying a score holds fewer than 25 people, and the areas are numbered rather than named. There is no store table, no ranking and no individual record — not hidden, absent.",
+        "back": "Back to the demo dashboards"
+      }
     }
   },
   "home": {
