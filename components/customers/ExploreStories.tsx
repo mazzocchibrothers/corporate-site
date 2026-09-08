@@ -41,13 +41,10 @@ const allStories = [
     id: 'fidia-farmaceutici', company: 'Fidia Farmaceutici', industry: 'pharmaceutical', useCases: ['learningDevelopment'],
     bgImage: '/logos/fidia-farmaceutici explore stories.avif',
   },
-  // Temporarily removed from listing pending approval (restore when ready):
-  // {
-  //   id: 'credem', company: 'Gruppo Credem', industry: 'Financial Services', useCases: ['Hiring'],
-  //   headlineIt: 'Gruppo Credem: come trovare i migliori talenti tra 30.000 candidature per seguire la crescita del business',
-  //   headlineEn: 'Gruppo Credem: how to find the best talent among 30,000 applications to support business growth',
-  //   bgImage: '/logos/credem_customer_story_cover.avif',
-  // },
+  {
+    id: 'credem', company: 'Gruppo Credem', industry: 'financialServices', useCases: ['hiring'],
+    bgImage: '/logos/credem_customer_story_cover.avif',
+  },
   // douglas, eataly
 ];
 
