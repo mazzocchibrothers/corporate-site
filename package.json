@@ -20,6 +20,7 @@
     "check:build": "node scripts/build-clean.mjs",
     "check:assets": "node scripts/check-assets.mjs",
     "check:demo-event": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-demo-event.mjs",
+    "check:demo-anonymity": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-demo-anonymity.mjs",
     "test:smoke": "node scripts/smoke.mjs"
   },
   "dependencies": {
