@@ -245,6 +245,14 @@
     "noindex": true
   },
   {
+    "id": "demo/retail",
+    "paths": {
+      "en": "/demo/retail-network",
+      "it": "/demo/rete-retail"
+    },
+    "noindex": true
+  },
+  {
     "id": "index",
     "paths": {
       "en": "/",

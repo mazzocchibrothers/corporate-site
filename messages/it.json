@@ -4601,7 +4601,8 @@
       }
     },
     "status": {
-      "comingSoon": "In arrivo"
+      "comingSoon": "In arrivo",
+      "open": "Apri la dashboard"
     },
     "preview": {
       "heading": "Come si legge un risultato",
@@ -4616,6 +4617,216 @@
         "Spinta commerciale"
       ],
       "caption": "Valori illustrativi. Le tre dashboard girano su dati aggregati, senza alcun record individuale."
+    },
+    "retail": {
+      "meta": {
+        "title": "Capability della rete retail — dashboard demo | Skillvue",
+        "description": "Una rete di punti vendita valutata con un solo schema di competenze, letta per canale, location, tier e anzianità. Solo aggregati: nessun dato individuale."
+      },
+      "hero": {
+        "eyebrow": "Demo interattiva · Retail",
+        "heading": "Una rete di negozi, letta con un solo schema <span>dall’inizio alla fine</span>",
+        "body": "Ogni sales advisor della rete è stato valutato sulle stesse cinque aree di competenza, e il risultato è stato messo accanto ai numeri che i negozi già producono: conversione, pezzi per scontrino, scontrino medio, vendite per ora. Quello che segue è ciò che quel confronto dice — compreso dove non dice nulla.",
+        "note": "Solo aggregati. Su questa pagina non c’è nessun negozio, nessuna persona e nessun record individuale: ogni cifra è una statistica di gruppo, calcolata una volta fuori da questo sito."
+      },
+      "population": {
+        "heading": "Che cosa è stato misurato",
+        "advisors": {
+          "label": "Sales advisor valutati",
+          "note": "La popolazione su cui è calcolato ogni taglio di questa pagina. I {managers} store manager sono stati valutati su uno schema diverso e non entrano in queste cifre."
+        },
+        "stores": {
+          "label": "Punti vendita nel perimetro",
+          "note": "Di cui {outlets} outlet."
+        },
+        "aboveThreshold": {
+          "label": "Sopra la soglia di padronanza",
+          "note": "La quota di advisor che supera {threshold} sul punteggio complessivo di competenze."
+        },
+        "conversion": {
+          "label": "Tasso di conversione della rete",
+          "note": "Media sui punti vendita nel perimetro."
+        }
+      },
+      "distribution": {
+        "heading": "Dove sta la rete",
+        "body": "Una barra ogni cinque punti di punteggio complessivo, e la quota di advisor finita in quella fascia. La forma è la prima cosa su cui si dimensiona un programma: un centro molto largo e una coda sottile oltre la soglia.",
+        "series": "Quota di advisor",
+        "axisScore": "Punteggio di competenze",
+        "axisShare": "% di advisor",
+        "ariaLabel": "Grafico a barre della quota di sales advisor in ciascuna fascia di cinque punti del punteggio di competenze",
+        "caption": "Il {above}% degli advisor supera {threshold}. È una quota, non una classifica — ed è il numero su cui si costruisce un budget di sviluppo."
+      },
+      "cuts": {
+        "heading": "La stessa rete, tagliata in quattro modi",
+        "body": "Canale, location, tier del punto vendita e area sono quattro domande poste alla stessa popolazione. Scegline una e i pannelli qui sotto si ridisegnano.",
+        "label": "Taglia per",
+        "options": {
+          "channel": "Canale",
+          "location": "Location",
+          "tier": "Tier del negozio",
+          "area": "Area"
+        },
+        "groups": {
+          "channel": {
+            "fullPrice": "Full price",
+            "outlet": "Outlet"
+          },
+          "location": {
+            "mall": "Centro commerciale",
+            "highStreet": "Strada"
+          },
+          "tier": {
+            "tier1": "Tier 1",
+            "tier2": "Tier 2",
+            "tier3": "Tier 3"
+          },
+          "area": {
+            "area1": "Area 1",
+            "area2": "Area 2",
+            "area3": "Area 3",
+            "area4": "Area 4",
+            "area5": "Area 5"
+          }
+        },
+        "areaNote": "Le aree sono numerate per headcount, dalla più grande alla più piccola. Il numero non dice nulla su chi siano e nulla su come si posizionino.",
+        "skills": {
+          "heading": "Profilo di competenze",
+          "ariaLabel": "Grafico radar delle cinque aree di competenza, una linea per ciascun gruppo del taglio selezionato",
+          "caption": "Le cinque aree sulla stessa scala. I profili differiscono più nel livello che nella forma: le competenze che guidano sono le stesse ovunque, e la distanza fra i gruppi è di pochi punti.",
+          "unavailable": "Il taglio per area è pubblicato solo come headcount e risultato. Un profilo di competenze per area non fa parte di questo estratto."
+        },
+        "results": {
+          "heading": "Competenze e risultato, affiancati",
+          "ariaLabel": "Grafico a barre raggruppate che confronta la quota sopra soglia e il tasso di conversione di ogni gruppo del taglio selezionato",
+          "axis": "Percentuale",
+          "caption": "Sono entrambe percentuali, quindi stanno sullo stesso asse. Vanno letti come due fatti sullo stesso gruppo, non come causa ed effetto: il gruppo con più persone sopra soglia raramente è quello che converte meglio."
+        },
+        "kpis": {
+          "heading": "Che cosa dicono i numeri dei negozi",
+          "caption": "I KPI di negozio per gli stessi gruppi, sul perimetro dell’assessment."
+        },
+        "labels": {
+          "people": "Advisor",
+          "stores": "Negozi",
+          "skill": "Punteggio competenze",
+          "aboveThreshold": "Sopra soglia",
+          "conversionRate": "Tasso di conversione",
+          "unitsPerTicket": "Pezzi per scontrino",
+          "averageTicket": "Scontrino medio",
+          "salesPerHour": "Vendite per ora",
+          "visitsPerDay": "Visite al giorno",
+          "turnover": "Turnover"
+        }
+      },
+      "skills": {
+        "customerSalesExcellence": "Eccellenza cliente e vendita",
+        "brandStorytelling": "Racconto del brand",
+        "collaborationTeamContribution": "Collaborazione e contributo al team",
+        "agilityExecution": "Agilità ed esecuzione",
+        "productKnowledge": "Conoscenza di prodotto"
+      },
+      "map": {
+        "heading": "Competenze e fatturato, sugli stessi assi",
+        "body": "Ogni punto è uno dei gruppi qui sopra — un canale, una location, un tier, un’area — con la quota sopra soglia su un asse e il tasso di conversione sull’altro. Se le competenze guidassero la conversione, i punti si allineerebbero. Non lo fanno.",
+        "ariaLabel": "Grafico a dispersione dei gruppi aggregati, quota sopra soglia contro tasso di conversione",
+        "axisX": "% sopra soglia",
+        "axisY": "Tasso di conversione %",
+        "stores": {
+          "label": "Competenze e conversione, negozio per negozio",
+          "note": "Su {n} punti vendita."
+        },
+        "people": {
+          "label": "Competenze e vendite, persona per persona",
+          "note": "Su {n} advisor."
+        },
+        "caption": "Due coefficienti vicini allo zero, e il loro posto è sulla pagina e non in un cassetto: su questa rete le competenze da sole non predicono la cassa, e una dashboard che sostenesse il contrario si smonterebbe in dieci secondi in mano a chi la riceve. Quello che i dati reggono davvero è tutto ciò che segue: chi è già avanti, dove il profilo cambia, e quale gruppo ha bisogno di quale intervento."
+      },
+      "segments": {
+        "heading": "Cinque segmenti, cinque conversazioni diverse",
+        "body": "Incrociando competenze e risultato commerciale la rete si divide in cinque gruppi. La divisione si paga nella seconda riga di ogni scheda: che cosa fare di un gruppo non è la stessa cosa cinque volte.",
+        "share": "della rete",
+        "items": {
+          "benchmark": {
+            "name": "Benchmark",
+            "description": "Sopra la linea sia nell’assessment sia nei numeri commerciali.",
+            "action": "Rendere esplicito il metodo e trasformarlo nel contenuto formativo che ricevono tutti gli altri."
+          },
+          "resultWithoutMethod": {
+            "name": "Risultato senza metodo",
+            "description": "Portano i numeri con un profilo di competenze che non li spiega.",
+            "action": "Capire che cosa fanno davvero in negozio, prima di chiedere alla prossima leva di copiarlo."
+          },
+          "skillWithoutResult": {
+            "name": "Competenze senza risultato",
+            "description": "L’assessment dice che sanno farlo, la cassa dice che non sta succedendo.",
+            "action": "Qui l’ostacolo raramente è la competenza. Guardare turni, affluenza e assegnazione al reparto prima di comprare un corso."
+          },
+          "priorityDevelopment": {
+            "name": "Sviluppo prioritario",
+            "description": "Sotto la linea su entrambi i fronti, ma con una base sufficiente per muoversi.",
+            "action": "Sviluppo strutturato, puntato sulle due aree in cui il loro profilo è più debole."
+          },
+          "toActivate": {
+            "name": "Da attivare",
+            "description": "In fondo a entrambe le scale.",
+            "action": "Una conversazione prima di un programma: è il gruppo in cui un cambio di ruolo è sul tavolo."
+          }
+        },
+        "chart": {
+          "heading": "Il mix cambia da area ad area",
+          "ariaLabel": "Grafico a barre impilate dei cinque segmenti come quota di ciascuna area",
+          "axis": "% degli advisor dell’area",
+          "caption": "Gli stessi cinque segmenti, area per area. Un’area è per più della metà «risultato senza metodo»; un’altra ha la quota di sviluppo prioritario più alta di tutte e cinque. Sono due budget diversi, non più dose dello stesso."
+        }
+      },
+      "top": {
+        "heading": "I top performer, e il divario che non c’è",
+        "body": "{n} advisor stanno nella fascia commerciale alta. Su vendite per ora e su quota sopra soglia sono nettamente avanti. Sulle aree di competenza in sé la distanza è piccola — e su una delle cinque va nella direzione opposta.",
+        "series": {
+          "top": "Top performer",
+          "rest": "Il resto della rete"
+        },
+        "ariaLabel": "Grafico a barre raggruppate delle cinque aree di competenza, top performer contro il resto della rete",
+        "stats": {
+          "salesPerHour": "Vendite per ora",
+          "aboveThreshold": "% sopra soglia",
+          "relativeSph": "Vendite per ora sulla media di rete"
+        },
+        "caption": "Il divario commerciale è reale e largo. Quello di competenze non lo è.",
+        "caveat": "Sul punteggio complessivo di competenze la differenza — {top} contro {rest} — non raggiunge la significatività statistica (p = {p}). Sta sulla pagina perché toglierla vorrebbe dire scegliere la metà che conviene."
+      },
+      "seniority": {
+        "heading": "L’anzianità porta risultati, non competenze",
+        "body": "Sette fasce di anzianità, due linee. Le vendite per ora rispetto alla media di rete salgono man mano che l’anzianità cresce. Il punteggio di competenze non le segue.",
+        "buckets": {
+          "lt3m": "Meno di 3 mesi",
+          "m3to12": "3–12 mesi",
+          "y1to2": "1–2 anni",
+          "y2to5": "2–5 anni",
+          "y5to10": "5–10 anni",
+          "y10to20": "10–20 anni",
+          "gt20": "Oltre 20 anni"
+        },
+        "series": {
+          "skill": "Punteggio competenze",
+          "relativeSph": "Vendite per ora sulla media di rete"
+        },
+        "skillChart": {
+          "ariaLabel": "Grafico a linee del punteggio di competenze su sette fasce di anzianità"
+        },
+        "sphChart": {
+          "ariaLabel": "Grafico a linee delle vendite per ora rispetto alla media di rete, su sette fasce di anzianità"
+        },
+        "axisSkill": "Punteggio competenze",
+        "axisSph": "Vendite per ora relative",
+        "caption": "Correlazione fra anzianità e competenze: {skill}. Fra anzianità e KPI commerciali: {kpi}. La prima è quella che serve — significa che chi è in azienda da più tempo non è automaticamente la persona da cui imparare, ed è esattamente il motivo per cui si fa un assessment invece di leggere un organigramma."
+      },
+      "closing": {
+        "heading": "Come è fatta questa pagina",
+        "body": "Ogni numero qui è una statistica di gruppo, calcolata una volta fuori da questo sito su dati che in questo sito non sono mai entrati. Gli headcount sono arrotondati al multiplo di cinque, nessun gruppo che porta un punteggio contiene meno di 25 persone, e le aree sono numerate invece che nominate. Non c’è nessuna tabella dei negozi, nessuna classifica e nessun record individuale — non nascosti, assenti.",
+        "back": "Torna alle dashboard demo"
+      }
     }
   },
   "home": {
