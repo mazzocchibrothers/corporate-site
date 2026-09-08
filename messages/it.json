@@ -4631,7 +4631,7 @@
         "heading": "Che cosa è stato misurato",
         "advisors": {
           "label": "Sales advisor valutati",
-          "note": "La popolazione su cui è calcolato ogni taglio di questa pagina. I {managers} store manager sono stati valutati su uno schema diverso e non entrano in queste cifre."
+          "note": "La popolazione su cui è calcolato ogni taglio di questa pagina. Gli store manager, {managers}, sono stati valutati su uno schema diverso e non entrano in queste cifre."
         },
         "stores": {
           "label": "Punti vendita nel perimetro",
@@ -4653,7 +4653,7 @@
         "axisScore": "Punteggio di competenze",
         "axisShare": "% di advisor",
         "ariaLabel": "Grafico a barre della quota di sales advisor in ciascuna fascia di cinque punti del punteggio di competenze",
-        "caption": "Il {above}% degli advisor supera {threshold}. È una quota, non una classifica — ed è il numero su cui si costruisce un budget di sviluppo."
+        "caption": "{above}% degli advisor supera {threshold}. È una quota, non una classifica — ed è il numero su cui si costruisce un budget di sviluppo."
       },
       "cuts": {
         "heading": "La stessa rete, tagliata in quattro modi",
@@ -4884,7 +4884,7 @@
           "soft": "Soft skill",
           "hard": "Conoscenze tecniche"
         },
-        "coverage": "Queste due famiglie tengono {covered} delle {assessed} persone valutate. Le altre stanno in famiglie troppo piccole per essere pubblicate da sole — sotto la soglia di venticinque persone che ogni cifra qui rispetta — quindi sono dentro tutti i totali di questa pagina e spacchettate in nessuno.",
+        "coverage": "Queste due famiglie tengono {covered} persone valutate su {assessed}. Le altre stanno in famiglie troppo piccole per essere pubblicate da sole — sotto la soglia di venticinque persone che ogni cifra qui rispetta — quindi sono dentro tutti i totali di questa pagina e spacchettate in nessuno.",
         "overlap": "Una sola soft skill è stata misurata su entrambe le famiglie, e due delle aree di conoscenza. È per questo che non esiste una classifica unica delle due."
       },
       "profile": {
@@ -4961,7 +4961,7 @@
       },
       "quadrants": {
         "heading": "Comportamento e conoscenza, incrociati",
-        "body": "Ogni persona supera la soglia comportamentale, quella tecnica, tutte e due o nessuna. Le due soglie fanno un lavoro molto diverso: il {hardCleared}% è sopra quella tecnica e il {softCleared}% sopra quella comportamentale, quindi la base tecnica ce l’ha quasi tutta la rete e ciò che la separa è il comportamento.",
+        "body": "Ogni persona supera la soglia comportamentale, quella tecnica, tutte e due o nessuna. Le due soglie fanno un lavoro molto diverso: {hardCleared}% è sopra quella tecnica e {softCleared}% sopra quella comportamentale, quindi la base tecnica ce l’ha quasi tutta la rete e ciò che la separa è il comportamento.",
         "axisSoft": "Soft skill",
         "axisHard": "Conoscenze tecniche",
         "high": "da {threshold} in su",
@@ -5021,14 +5021,14 @@
       },
       "matching": {
         "heading": "Skill matching rispetto allo schema",
-        "body": "Quanto ogni persona aderisce al profilo su cui il suo ruolo è stato mappato, in fasce da dieci punti. Il cliente ha messo l’asticella a {threshold}, e cade quasi esattamente in mezzo a questa popolazione: il {below}% sotto, il {above}% da lì in su.",
+        "body": "Quanto ogni persona aderisce al profilo su cui il suo ruolo è stato mappato, in fasce da dieci punti. Il cliente ha messo l’asticella a {threshold}, e cade quasi esattamente in mezzo a questa popolazione: {below}% sotto, {above}% da lì in su.",
         "series": "Quota dei valutati",
         "axis": "% dei valutati",
         "axisScore": "Skill matching",
         "ariaLabel": "Grafico a barre della quota di persone valutate in ciascuna fascia da dieci punti di skill matching",
         "mean": "Media",
         "median": "Mediana",
-        "caption": "Un’asticella messa dov’è questa non dice che la popolazione è bocciata. La taglia a metà, che è quello che di solito fa un’asticella scritta a partire dal ruolo e non da chi lo ricopre — ed è il motivo per cui la forma qui sopra dice più del numero singolo."
+        "caption": "Un’asticella messa dov’è questa non dice che la popolazione è bocciata. La taglia a metà, che è quello che di solito fa un’asticella scritta a partire dal ruolo e non da chi lo ricopre — ed è il motivo per cui la forma della distribuzione dice più delle due cifre qui sopra."
       },
       "groups": {
         "heading": "Tre gruppi, non tre pari",
@@ -5147,7 +5147,7 @@
       },
       "mobility": {
         "heading": "Apertura a spostarsi",
-        "body": "Alla domanda se si trasferirebbero, il {yes}% ha detto sì e il {no}% ha detto no. Tutti gli altri stanno nel mezzo: il {maybe}% ci penserebbe e il {reluctant}% è poco convinto senza però rifiutare. Nessuno dei due appartiene a un estremo.",
+        "body": "Alla domanda se si trasferirebbero, {yes}% ha detto sì e {no}% ha detto no. Tutti gli altri stanno nel mezzo: {maybe}% ci penserebbe e {reluctant}% è poco convinto senza però rifiutare. Nessuno dei due appartiene a un estremo.",
         "series": "Quota dei valutati",
         "axis": "% dei valutati",
         "ariaLabel": "Grafico a barre della quota di valutati per ciascun livello di apertura a trasferirsi",
@@ -5162,7 +5162,7 @@
       },
       "areas": {
         "heading": "Dove le persone preferirebbero lavorare",
-        "body": "Le funzioni indicate rispondendo a dove vorrebbero spostarsi. Si poteva dare più di una risposta, quindi le quote sommano al {total}% — circa {each} aree indicate a testa in media — e non si possono leggere come una ripartizione della popolazione.",
+        "body": "Le funzioni indicate rispondendo a dove vorrebbero spostarsi. Si poteva dare più di una risposta, quindi le quote sommano a {total}% — circa {each} aree indicate a testa in media — e non si possono leggere come una ripartizione della popolazione.",
         "series": "Quota che l’ha indicata",
         "axis": "% che l’ha indicata",
         "ariaLabel": "Grafico a barre della quota di valutati che ha indicato ciascuna area funzionale",

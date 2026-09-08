@@ -5028,7 +5028,7 @@
         "ariaLabel": "Bar chart of the share of assessed people in each ten-point band of skill matching",
         "mean": "Mean",
         "median": "Median",
-        "caption": "A bar set where this one is does not say the population failed. It splits it in half, which is what a bar written from the role rather than from the people in it usually does — and it is the reason the shape below says more than the two numbers above it."
+        "caption": "A bar set where this one is does not say the population failed. It splits it in half, which is what a bar written from the role rather than from the people in it usually does — and it is the reason the shape of the distribution says more than the two figures above it."
       },
       "groups": {
         "heading": "Three groups, not three equals",

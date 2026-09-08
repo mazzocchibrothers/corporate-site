@@ -96,6 +96,39 @@ const stale = [
 ];
 assert.deepEqual(stale, [], `Labels with nothing behind them:\n${stale.join('\n')}`);
 
+// ── No Italian article welded in front of a variable number ────────────────
+// "il {reluctant}%" reads "il 11,0%", which is wrong Italian, and it was wrong
+// only because that share happens to be eleven. The article is fixed and the
+// number is not, so every one of these is one refresh away from the same
+// defect: eight, eleven, eighty, or anything starting with a vowel sound breaks
+// it. Twelve of them existed across the three dashboards and one had already
+// gone wrong.
+//
+// ponytail: scoped to `demo` because that is what has been audited. The rule is
+// general to Italian copy — move it to check:messages after sweeping the other
+// namespaces.
+const ARTICLE_BEFORE_NUMBER =
+  /\b(?:il|lo|la|le|i|gli|un|uno|una|del|dello|della|dei|degli|delle|al|allo|alla|nel|nello|nella|dal|dalla|sul|sulla|col)\s+\{/gi;
+const welded = [];
+const walk = (node, path) => {
+  for (const [key, value] of Object.entries(node)) {
+    const at = path ? `${path}.${key}` : key;
+    if (typeof value === 'string') {
+      for (const m of value.matchAll(ARTICLE_BEFORE_NUMBER)) welded.push(`  ${at}: "${m[0].trim()}…"`);
+    } else if (value && typeof value === 'object') {
+      walk(value, at);
+    }
+  }
+};
+walk(JSON.parse(readFileSync(join(ROOT, 'messages/it.json'), 'utf8')).demo, 'demo');
+assert.deepEqual(
+  welded,
+  [],
+  `${welded.length} Italian article(s) sit directly in front of an interpolated value:\n` +
+    `${welded.join('\n')}\n` +
+    'The article cannot agree with a number it does not know. Drop it, or put a word between them.',
+);
+
 // ── The shape the page's controls are built on ─────────────────────────────
 // Both frames are drawn by one pair of charts, so every item in either has to
 // carry the same fields, and every band has to exist in every item — a stacked
@@ -219,12 +252,24 @@ assert.ok(
 // never names it" is the case for pinning a value, and it does not apply to
 // something printed at 44px with a label under it.
 //
-// The completion rate against its own two headcounts.
-const completion = (cc.population.evaluated / cc.population.invited) * 100;
+// The completion rate against its own two headcounts — inside the window the
+// rounding can produce, not to two decimal places.
+//
+// The headcounts are rounded to the nearest five and the percentage is computed
+// on the true figures, which is what `population.rounding` spends a paragraph
+// telling the reader. A rule demanding the two divide exactly would contradict
+// that paragraph, and would go red on a refresh with a message the page itself
+// disproves — teaching whoever meets it that the gate is the thing that is
+// wrong. So the bound is derived from the rounding rather than picked: the true
+// ratio cannot be outside what these two counts allow.
+const ROUNDING = 5;
+const widest = ((cc.population.evaluated + ROUNDING / 2) / (cc.population.invited - ROUNDING / 2)) * 100;
+const narrowest = ((cc.population.evaluated - ROUNDING / 2) / (cc.population.invited + ROUNDING / 2)) * 100;
 assert.ok(
-  Math.abs(completion - cc.population.evaluatedPct) <= 0.1,
-  `population.evaluatedPct is ${cc.population.evaluatedPct} but ${cc.population.evaluated} of ` +
-    `${cc.population.invited} is ${completion.toFixed(2)}. All three are on screen together.`,
+  cc.population.evaluatedPct >= narrowest && cc.population.evaluatedPct <= widest,
+  `population.evaluatedPct is ${cc.population.evaluatedPct}, outside the ` +
+    `${narrowest.toFixed(1)}-${widest.toFixed(1)} the two headcounts allow once their rounding to ` +
+    `the nearest ${ROUNDING} is taken into account. All three figures are on screen together.`,
 );
 // The mean against the distribution drawn under it, from the bin midpoints.
 const binMean =
@@ -328,11 +373,16 @@ assert.ok(
 // got through, so both ends are guarded now.
 const no = cc.mobility.notInterested;
 const reluctant = cc.mobility.somewhatReluctant;
+// Two-sided, because "by half again" is a ratio and not a floor. One-sided at
+// 1.4 this survived a constant-sum redistribution — notInterested 21.8 to 15.0
+// and somewhatReluctant 11.0 to 17.8 gives 2.19 — and since these five shares
+// must total 100, a constant-sum redistribution is the only shape a refresh of
+// this field can take. The uncovered side was the only one that could happen.
+const inflation = (no + reluctant) / no;
 assert.ok(
-  (no + reluctant) / no > 1.4,
+  inflation > 1.4 && inflation < 1.6,
   `Folding reluctance into the no would take ${no}% to ${(no + reluctant).toFixed(1)}%, a factor ` +
-    `of ${((no + reluctant) / no).toFixed(2)}. mobility.caption says it would inflate that end by ` +
-    'half again.',
+    `of ${inflation.toFixed(2)}. mobility.caption says half again, which is 1.5.`,
 );
 // Neither end may claim the middle, because the middle is most of the
 // population — which is the fact both halves of the caption rest on.
