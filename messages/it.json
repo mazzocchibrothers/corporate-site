@@ -2063,7 +2063,7 @@
             "value": "-30%",
             "label": "<b>Riduzione dei colloqui non in linea</b><br></br>al secondo step"
           },
-          "drastic": {
+          "recruiterTime": {
             "value": "Significativa",
             "label": "<b>Ottimizzazione dei tempi</b><br></br>di lavoro del recruiter"
           }
@@ -2108,7 +2108,7 @@
       "headline": "Gruppo Credem: come trovare i migliori talenti tra <hl>30.000 candidature</hl> per seguire la <hl2>crescita del business</hl2>",
       "meta": {
         "title": "Gruppo Credem: come trovare i migliori talenti tra 30.000 candidature per seguire la crescita del business | Skillvue",
-        "description": "Con Skillvue, Gruppo Credem processa ogni anno decine di migliaia di candidature mantenendo alta la qualità della candidate experience e riducendo significat..."
+        "description": "Con Skillvue, Gruppo Credem processa 30.000 candidature l’anno, tutelando la candidate experience e riducendo del 30% i colloqui non in linea al secondo step."
       }
     },
     "douglas": {

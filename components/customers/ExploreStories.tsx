@@ -45,7 +45,9 @@ const allStories = [
     id: 'credem', company: 'Gruppo Credem', industry: 'financialServices', useCases: ['hiring'],
     bgImage: '/logos/credem_customer_story_cover.avif',
   },
-  // douglas, eataly
+  // Not listed yet, pending client approval: douglas, eataly. Listing one
+  // means adding explore.stories.<id>.headline to en.json and it.json too —
+  // the entry here carries ids and an image, and no copy at all.
 ];
 
 // Still derived from the stories, so a new story cannot arrive without its
