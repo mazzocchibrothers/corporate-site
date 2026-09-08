@@ -4586,18 +4586,18 @@
       "heading": "Three programmes, three questions",
       "retail": {
         "sector": "Retail",
-        "title": "Store manager capability",
-        "body": "A store network assessed on one frame end to end: how capability distributes across the estate, and which stores carry the gap."
+        "title": "Store network capability",
+        "body": "A store network assessed on one frame end to end: how capability distributes across channel, location and store tier, and where the gap sits."
       },
       "salesNetwork": {
-        "sector": "Insurance",
+        "sector": "Telco",
         "title": "Sales network readiness",
-        "body": "An agent network measured before a commercial push: who is ready to sell the new range, and who goes through the training first."
+        "body": "A sales network measured on soft skills and technical knowledge together: who is ready to sell, and who goes through the training first."
       },
       "crossCountry": {
-        "sector": "Manufacturing",
+        "sector": "Pharma",
         "title": "Cross-country talent map",
-        "body": "One competency frame applied in six countries, so a group HR team can compare populations that were never comparable before."
+        "body": "One competency frame applied across every country in scope, so a group HR team can compare populations that were never comparable before."
       }
     },
     "status": {
