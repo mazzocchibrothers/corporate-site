@@ -10,8 +10,10 @@
 //     as a name. The labels these keys stand for live in `messages/`.
 //   - every headcount is rounded to the nearest 5, so no count is a fingerprint.
 //   - a group carrying a score holds at least 25 people.
-//     Countries are collapsed into three groups: the list of them, and a
-//     group of five, would both identify the customer.
+//     The eight countries ship as three buckets. The two largest stand on
+//     their own and clear the floor; the remaining six are pooled, because
+//     three of them held fewer than ten people. None is named: the list of
+//     countries would identify the customer on its own.
 //   - the industry-specific function name is generalised as
 //     `technicalSpecialist`.
 

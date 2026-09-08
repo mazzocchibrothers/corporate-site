@@ -11,8 +11,9 @@
 //     as a name. The labels these keys stand for live in `messages/`.
 //   - every headcount is rounded to the nearest 5, so no count is a fingerprint.
 //   - a group carrying a score holds at least 25 people.
-//     Area managers become `area1`…`area5` in a stable order, and the mapping
-//     to the five real names is kept nowhere.
+//     Area managers become `area1`…`area5`, ordered by descending headcount
+//     rather than by name: the mapping is kept nowhere, and an alphabetical
+//     order would have let anyone holding the five names rebuild it.
 //   - the per-area segment mix ships as a share, never as a cell count.
 
 export const retail = {
@@ -36,32 +37,19 @@ export const retail = {
   },
   areas: {
     area1: {
-      n: 85,
-      stores: 25,
-      aboveThresholdPct: 13.1,
-      conversionRate: 11.22,
+      n: 140,
+      stores: 30,
+      aboveThresholdPct: 24.5,
+      conversionRate: 9.82,
       segments: {
-        benchmark: 6.0,
-        resultWithoutMethod: 35.7,
-        skillWithoutResult: 6.0,
-        priorityDevelopment: 45.2,
-        toActivate: 7.1,
-      },
-    },
-    area2: {
-      n: 90,
-      stores: 20,
-      aboveThresholdPct: 12.4,
-      conversionRate: 9.09,
-      segments: {
-        benchmark: 7.9,
-        resultWithoutMethod: 52.8,
-        skillWithoutResult: 4.5,
-        priorityDevelopment: 32.6,
+        benchmark: 15.1,
+        resultWithoutMethod: 45.3,
+        skillWithoutResult: 9.4,
+        priorityDevelopment: 28.1,
         toActivate: 2.2,
       },
     },
-    area3: {
+    area2: {
       n: 135,
       stores: 35,
       aboveThresholdPct: 23.4,
@@ -74,7 +62,7 @@ export const retail = {
         toActivate: 2.9,
       },
     },
-    area4: {
+    area3: {
       n: 105,
       stores: 25,
       aboveThresholdPct: 25.2,
@@ -87,17 +75,30 @@ export const retail = {
         toActivate: 6.8,
       },
     },
-    area5: {
-      n: 140,
-      stores: 30,
-      aboveThresholdPct: 24.5,
-      conversionRate: 9.82,
+    area4: {
+      n: 90,
+      stores: 20,
+      aboveThresholdPct: 12.4,
+      conversionRate: 9.09,
       segments: {
-        benchmark: 15.1,
-        resultWithoutMethod: 45.3,
-        skillWithoutResult: 9.4,
-        priorityDevelopment: 28.1,
+        benchmark: 7.9,
+        resultWithoutMethod: 52.8,
+        skillWithoutResult: 4.5,
+        priorityDevelopment: 32.6,
         toActivate: 2.2,
+      },
+    },
+    area5: {
+      n: 85,
+      stores: 25,
+      aboveThresholdPct: 13.1,
+      conversionRate: 11.22,
+      segments: {
+        benchmark: 6.0,
+        resultWithoutMethod: 35.7,
+        skillWithoutResult: 6.0,
+        priorityDevelopment: 45.2,
+        toActivate: 7.1,
       },
     },
   },
