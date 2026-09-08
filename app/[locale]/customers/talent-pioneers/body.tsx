@@ -1,0 +1,590 @@
+'use client';
+
+import React, { useEffect, useRef, useState } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
+import {
+  ArrowUpRight,
+  Calendar,
+  Loader2,
+  MapPin,
+  Mic,
+  Play,
+  Quote,
+  Send,
+} from 'lucide-react';
+import Navbar from '@/components/landing/Navbar';
+import Footer from '@/components/Footer';
+import { Button } from '@/components/ui/button';
+import { Reveal } from '@/components/ui/reveal';
+import { href } from '@/i18n/routes';
+
+const HUBSPOT_PORTAL_ID = '48438018';
+const HUBSPOT_FORM_ID = 'YOUR_TALENT_PIONEERS_FORM_ID'; // TODO: replace with real form ID
+
+const BRAND_GRADIENT = 'linear-gradient(90deg, #A1A2FF 0%, #FF5656 50%, #FFAF64 100%)';
+const EYEBROW = 'text-[12px] font-medium uppercase tracking-[1.2px]';
+
+type DayToDayItem =
+  | { id: string; kind: 'story'; storyRoute: string; bgImage: string; podcast?: boolean }
+  | { id: string; kind: 'quote' };
+
+// The design alternates real customer stories (each a link to its full case
+// study) with anonymised Talent Pioneers member quotes that have no page of
+// their own. Order and kind are layout, not copy, so they live in code and
+// only the strings come from the catalogue.
+const DAY_TO_DAY_ITEMS: DayToDayItem[] = [
+  { id: 'credem', kind: 'story', storyRoute: 'customers/credem', bgImage: '/logos/credem_customer_story_cover.avif' },
+  { id: 'carrefour', kind: 'quote' },
+  { id: 'europAssistance', kind: 'story', storyRoute: 'customers/europ-assistance', bgImage: '/logos/europ-assistance-background-explore-stories.avif' },
+  { id: 'subdued', kind: 'quote' },
+  { id: 'fidiaFarmaceutici', kind: 'story', storyRoute: 'customers/fidia-farmaceutici', bgImage: '/logos/fidia-farmaceutici explore stories.avif' },
+  { id: 'luca', kind: 'quote' },
+  { id: 'unicomm', kind: 'story', storyRoute: 'customers/unicomm', bgImage: '/logos/unicomm-background-explore-stories.avif', podcast: true },
+  { id: 'alberto', kind: 'quote' },
+];
+
+const CHAPTERS = [
+  { id: 'chapter01', bgImage: '/logos/talent-pioneers-chapter-01.avif' },
+  { id: 'chapter02', bgImage: '/logos/talent-pioneers-chapter-02.avif' },
+];
+
+const PAST_STAGES = [
+  { id: 'hrTechEurope', bgImage: '/logos/talent-pioneers-stage-hrtech-europe.avif' },
+  { id: 'hrTechnologiesUk', bgImage: '/logos/talent-pioneers-stage-hrtech-uk.avif' },
+  { id: 'retailSummit', bgImage: '/logos/talent-pioneers-stage-retail-summit.avif' },
+  { id: 'hrCoreBarcelona', bgImage: '/logos/talent-pioneers-stage-hrcore-barcelona.avif' },
+  { id: 'hrCoreNordics', bgImage: '/logos/talent-pioneers-stage-hrcore-nordics.avif' },
+];
+
+const UPCOMING_EVENTS = [
+  { id: 'fairCultures', url: 'https://www.faircultures.com/' },
+  { id: 'retailExecutiveSummit', url: 'https://www.retailexecutivesummit.it/' },
+  { id: 'lavoroSostenibile', url: 'https://www.lavorosostenibile.com/' },
+  { id: 'forumHr', url: 'https://comunicazioneitaliana.it/eventi/forum-hr-26' },
+];
+
+function DayToDayCard({
+  item,
+  t,
+  lang,
+  duplicate = false,
+}: {
+  item: DayToDayItem;
+  t: ReturnType<typeof useTranslations>;
+  lang: string;
+  duplicate?: boolean;
+}) {
+  if (item.kind === 'quote') {
+    return (
+      <div className="shrink-0 w-[300px] md:w-[340px] h-[420px] md:h-[453px] rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7 flex flex-col">
+        <Quote className="h-7 w-7 text-white/70 mb-5" aria-hidden="true" />
+        <p className="text-[15px] md:text-[16px] font-light text-white/85 leading-[1.55]">
+          &ldquo;{t(`dayToDay.items.${item.id}.quote`)}&rdquo;
+        </p>
+        <div className="mt-auto pt-5">
+          <p className="text-[16px] md:text-[17px] font-bold text-white/90">{t(`dayToDay.items.${item.id}.title`)}</p>
+          <p className="text-[13px] text-[#6b7dff] pt-1">{t(`dayToDay.items.${item.id}.name`)}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <a
+      href={href(item.storyRoute, lang)}
+      tabIndex={duplicate ? -1 : undefined}
+      className="group shrink-0 w-[300px] md:w-[340px] h-[420px] md:h-[453px] rounded-2xl border border-white/[0.08] overflow-hidden relative"
+    >
+      <img
+        src={item.bgImage}
+        alt=""
+        draggable={false}
+        className="absolute inset-0 size-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20" />
+      <p className="absolute left-4 top-4 text-[11px] font-medium uppercase tracking-[1.5px] text-white/70">
+        {t(`dayToDay.items.${item.id}.company`)}
+      </p>
+      {item.podcast && (
+        <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full border border-white/15 bg-black/40 backdrop-blur-sm px-3 py-1.5">
+          <Mic className="h-3 w-3 text-white/85" aria-hidden="true" />
+          <span className="text-[11px] font-semibold uppercase tracking-[0.3px] text-white/85">{t('dayToDay.podcastBadge')}</span>
+        </div>
+      )}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="flex size-14 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
+          <Play className="h-5 w-5 pl-0.5 text-[#121212]" fill="currentColor" aria-hidden="true" />
+        </div>
+      </div>
+      <div className="absolute left-5 bottom-5 right-5">
+        <p className="text-[18px] md:text-[19px] font-bold text-white">{t(`dayToDay.items.${item.id}.title`)}</p>
+        <p className="text-[13px] text-[#6b7dff] pt-1">{t(`dayToDay.items.${item.id}.name`)}</p>
+        <div className="flex items-center gap-1.5 pt-3">
+          <span className="text-[12px] font-medium text-white/60">{t('dayToDay.watchClip')}</span>
+          <ArrowUpRight className="h-3.5 w-3.5 text-white/60" aria-hidden="true" />
+        </div>
+      </div>
+    </a>
+  );
+}
+
+// Auto-scrolls continuously, pauses on hover, and dragging (mouse or touch)
+// takes over and follows the pointer — same behavior as the About page's team
+// photo marquee. A drag that moves more than a few pixels suppresses the click
+// that follows it, so dragging a card never accidentally opens its story.
+const CLICK_SUPPRESS_THRESHOLD = 6;
+
+function DayToDayCarousel({
+  items,
+  t,
+  lang,
+}: {
+  items: DayToDayItem[];
+  t: ReturnType<typeof useTranslations>;
+  lang: string;
+}) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const offsetRef = useRef(0);
+  const loopWidthRef = useRef(0);
+  const draggingRef = useRef(false);
+  const pausedRef = useRef(false);
+  const dragStartXRef = useRef(0);
+  const dragStartOffsetRef = useRef(0);
+  const dragDistanceRef = useRef(0);
+  const suppressClickRef = useRef(false);
+  const capturedRef = useRef(false);
+  const rafRef = useRef<number | null>(null);
+  const lastTimeRef = useRef<number | null>(null);
+
+  const LOOP_SECONDS = 45;
+
+  const applyTransform = () => {
+    if (trackRef.current) trackRef.current.style.transform = `translateX(${-offsetRef.current}px)`;
+  };
+
+  const wrap = (value: number) => {
+    const w = loopWidthRef.current;
+    if (!w) return value;
+    return ((value % w) + w) % w;
+  };
+
+  useEffect(() => {
+    const measure = () => {
+      if (trackRef.current) loopWidthRef.current = trackRef.current.scrollWidth / 2;
+    };
+    measure();
+    window.addEventListener('resize', measure);
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const tick = (time: number) => {
+      const dt = (time - (lastTimeRef.current ?? time)) / 1000;
+      lastTimeRef.current = time;
+      if (!draggingRef.current && !pausedRef.current && !reduceMotion && loopWidthRef.current) {
+        offsetRef.current = wrap(offsetRef.current + (loopWidthRef.current / LOOP_SECONDS) * dt);
+        applyTransform();
+      }
+      rafRef.current = requestAnimationFrame(tick);
+    };
+    rafRef.current = requestAnimationFrame(tick);
+
+    return () => {
+      window.removeEventListener('resize', measure);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, []);
+
+  // Pointer capture is deferred until the drag actually crosses the click
+  // threshold below — capturing on every pointerdown (even a plain click)
+  // redirects the click that follows to the capturing container instead of
+  // the link the user's cursor is over, silently breaking navigation.
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    draggingRef.current = true;
+    dragStartXRef.current = e.clientX;
+    dragStartOffsetRef.current = offsetRef.current;
+    dragDistanceRef.current = 0;
+    e.currentTarget.style.cursor = 'grabbing';
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!draggingRef.current) return;
+    const dx = e.clientX - dragStartXRef.current;
+    dragDistanceRef.current = Math.abs(dx);
+    if (!capturedRef.current && dragDistanceRef.current > CLICK_SUPPRESS_THRESHOLD) {
+      e.currentTarget.setPointerCapture(e.pointerId);
+      capturedRef.current = true;
+    }
+    offsetRef.current = wrap(dragStartOffsetRef.current - dx);
+    applyTransform();
+  };
+
+  const endDrag = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!draggingRef.current) return;
+    draggingRef.current = false;
+    e.currentTarget.style.cursor = 'grab';
+    if (dragDistanceRef.current > CLICK_SUPPRESS_THRESHOLD) suppressClickRef.current = true;
+    if (capturedRef.current) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+      capturedRef.current = false;
+    }
+  };
+
+  const handleClickCapture = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (suppressClickRef.current) {
+      e.preventDefault();
+      e.stopPropagation();
+      suppressClickRef.current = false;
+    }
+  };
+
+  return (
+    <div
+      className="relative w-full overflow-hidden select-none"
+      style={{
+        maskImage: 'linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%)',
+        cursor: 'grab',
+        touchAction: 'pan-y',
+      }}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={endDrag}
+      onPointerCancel={endDrag}
+      onPointerLeave={endDrag}
+      onMouseEnter={() => { pausedRef.current = true; }}
+      onMouseLeave={() => { pausedRef.current = false; }}
+      onClickCapture={handleClickCapture}
+    >
+      <div ref={trackRef} className="flex items-stretch" style={{ width: 'max-content', willChange: 'transform' }}>
+        {[0, 1].map((copy) => (
+          <div key={copy} className="flex items-stretch gap-5 shrink-0 pr-5" aria-hidden={copy === 1}>
+            {items.map((item) => (
+              <DayToDayCard key={`${copy}-${item.id}`} item={item} t={t} lang={lang} duplicate={copy === 1} />
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ContactForm({ t }: { t: ReturnType<typeof useTranslations> }) {
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('sending');
+    try {
+      const res = await fetch(
+        `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fields: [
+              { name: 'firstname', value: form.name },
+              { name: 'email', value: form.email },
+              { name: 'message', value: form.message },
+            ],
+            context: {
+              pageUri: typeof window !== 'undefined' ? window.location.href : '',
+              pageName: 'Talent Pioneers',
+            },
+          }),
+        },
+      );
+      setStatus(res.ok ? 'sent' : 'error');
+    } catch {
+      setStatus('error');
+    }
+  };
+
+  if (status === 'sent') {
+    return (
+      <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-white/[0.14] bg-white/[0.06] px-6 py-14 text-center">
+        <p className="text-[16px] font-semibold text-white/95">{t('contact.sent')}</p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <input
+          type="text"
+          required
+          placeholder={t('contact.fullName')}
+          value={form.name}
+          onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
+          className="w-full rounded-xl border border-white/[0.14] bg-white/[0.06] px-4 py-3.5 text-[15px] text-white placeholder:text-white/40 outline-none transition-colors focus-visible:border-white/40"
+        />
+        <input
+          type="email"
+          required
+          placeholder={t('contact.workEmail')}
+          value={form.email}
+          onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+          className="w-full rounded-xl border border-white/[0.14] bg-white/[0.06] px-4 py-3.5 text-[15px] text-white placeholder:text-white/40 outline-none transition-colors focus-visible:border-white/40"
+        />
+      </div>
+      <textarea
+        placeholder={t('contact.message')}
+        rows={3}
+        value={form.message}
+        onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
+        className="w-full resize-none rounded-xl border border-white/[0.14] bg-white/[0.06] px-4 py-3.5 text-[15px] text-white placeholder:text-white/40 outline-none transition-colors focus-visible:border-white/40"
+      />
+      <div className="pt-1">
+        <Button type="submit" variant="primary" mode="dark" disabled={status === 'sending'} icon={null}>
+          {status === 'sending' ? (
+            <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+          ) : (
+            <Send className="h-4 w-4" aria-hidden="true" />
+          )}
+          {t('contact.send')}
+        </Button>
+        {status === 'error' && <p className="pt-2 text-[13px] text-red-400">{t('contact.error')}</p>}
+      </div>
+    </form>
+  );
+}
+
+export default function TalentPioneersPage() {
+  const t = useTranslations('customers.talent-pioneers');
+  const lang = useLocale();
+
+  return (
+    <>
+      <Navbar />
+      <main>
+        {/* Hero */}
+        <section className="min-h-screen flex flex-col justify-center px-5 md:px-8 lg:px-12 pt-24 pb-16">
+          <div className="max-w-[1400px] mx-auto w-full grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+            <Reveal y={24}>
+              <p className={`${EYEBROW} text-[#6b7dff]`}>{t('hero.eyebrow')}</p>
+              <h1 className="pt-6 text-[48px] md:text-[64px] font-semibold leading-[1.05] tracking-[-1.6px] text-white/95">
+                {t.rich('hero.headline', {
+                  hl: (chunks) => (
+                    <span className="whitespace-nowrap bg-clip-text text-transparent" style={{ backgroundImage: BRAND_GRADIENT }}>
+                      {chunks}
+                    </span>
+                  ),
+                })}
+              </h1>
+              <p className="pt-6 max-w-[576px] text-[18px] leading-[1.4] text-white/65">{t('hero.subtitle')}</p>
+            </Reveal>
+            <Reveal y={24} delay={0.1}>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="aspect-square w-full rounded-[40px] object-cover"
+              >
+                <source src="/logos/talent-pioneers-hero.webm" type="video/webm" />
+                <source src="/logos/talent-pioneers-hero.mp4" type="video/mp4" />
+              </video>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* Why Talent Pioneers */}
+        <section className="section-breathe min-h-screen flex flex-col justify-center bg-[#F7F7F7] px-5 md:px-8 lg:px-12 py-16 md:py-24">
+          <div className="max-w-[1400px] mx-auto w-full grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+            <Reveal y={24}>
+              <p className={`${EYEBROW} text-[#4b4df7]`}>{t('why.eyebrow')}</p>
+              <div className="pt-8 flex flex-col gap-6 text-[22px] md:text-[24px] font-semibold leading-[1.25] tracking-[-0.48px]">
+                <p className="text-[#1e1e1e]">
+                  {t.rich('why.paragraph1', {
+                    dim: (chunks) => <span className="font-medium text-[#4b4b4b]">{chunks}</span>,
+                  })}
+                </p>
+                <p className="text-[#1e1e1e]">
+                  {t.rich('why.paragraph2', {
+                    dim: (chunks) => <span className="font-medium text-[#4b4b4b]">{chunks}</span>,
+                  })}
+                </p>
+              </div>
+            </Reveal>
+            <Reveal y={24} delay={0.1}>
+              <img
+                src="/logos/talent-pioneers-why.avif"
+                alt=""
+                className="aspect-[1304/870] w-full rounded-3xl object-cover"
+              />
+            </Reveal>
+          </div>
+        </section>
+
+        {/* The day-to-day */}
+        <section className="min-h-screen flex flex-col justify-center px-5 md:px-8 lg:px-12 py-16 md:py-24">
+          <div className="max-w-[1400px] mx-auto w-full">
+            <Reveal y={24} className="max-w-[768px]">
+              <p className={`${EYEBROW} text-[#6b7dff]`}>{t('dayToDay.eyebrow')}</p>
+              <h2 className="pt-6 text-[32px] md:text-[52px] font-semibold leading-[1.08] tracking-[-1.04px] text-white/95">
+                {t.rich('dayToDay.heading', {
+                  accent: (chunks) => (
+                    <span
+                      className="block bg-clip-text font-bold text-transparent"
+                      style={{ backgroundImage: 'linear-gradient(172deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%)' }}
+                    >
+                      {chunks}
+                    </span>
+                  ),
+                })}
+              </h2>
+            </Reveal>
+            <Reveal y={24} delay={0.1} className="pt-12">
+              <DayToDayCarousel items={DAY_TO_DAY_ITEMS} t={t} lang={lang} />
+            </Reveal>
+          </div>
+        </section>
+
+        {/* The Chapters */}
+        <section className="section-breathe min-h-screen flex flex-col justify-center bg-[#F7F7F7] px-5 md:px-8 lg:px-12 py-16 md:py-24">
+          <div className="max-w-[1400px] mx-auto w-full">
+            <Reveal y={24} className="max-w-[768px]">
+              <p className={`${EYEBROW} text-[#4b4df7]`}>{t('chapters.eyebrow')}</p>
+              <h2 className="pt-6 text-[32px] md:text-[48px] font-semibold leading-[1.1] tracking-[-0.96px]">
+                <span className="block text-[#121212]">{t('chapters.heading')}</span>
+                <span
+                  className="block bg-clip-text text-transparent"
+                  style={{ backgroundImage: 'linear-gradient(90deg, #4B4DF7 0%, #FF5656 50%, #FFAF64 100%)' }}
+                >
+                  {t('chapters.headingAccent')}
+                </span>
+              </h2>
+              <p className="pt-5 max-w-[768px] text-[18px] font-medium leading-[1.7] text-[#121212]/80">{t('chapters.paragraph')}</p>
+            </Reveal>
+            <div className="pt-12 grid md:grid-cols-2 gap-8">
+              {CHAPTERS.map((chapter, i) => (
+                <Reveal key={chapter.id} y={24} delay={i * 0.1}>
+                  <div
+                    className="relative flex aspect-[636/397] w-full items-end justify-between overflow-hidden rounded-2xl p-8"
+                    style={{ backgroundImage: 'linear-gradient(148deg, #4B4DF7 0%, #7B4DFF 52%, #FF5656 100%)' }}
+                  >
+                    {chapter.bgImage && (
+                      <img src={chapter.bgImage} alt="" className="absolute inset-0 size-full object-cover" />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/85" style={{ backgroundImage: 'linear-gradient(to bottom, transparent 43%, rgba(0,0,0,0.85))' }} />
+                    <div className="relative flex flex-col items-start gap-2">
+                      <img src="/logos/skillvue-wordmark.svg" alt="Skillvue" className="h-4 w-auto shrink-0" />
+                      <p className="text-[24px] md:text-[32px] font-bold uppercase text-white">Talent Pioneers</p>
+                    </div>
+                    <p className="relative text-[13px] font-semibold uppercase tracking-[1.95px] text-white/90">
+                      {t(`chapters.items.${chapter.id}.number`)}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-5 pt-5">
+                    <span className="flex items-center gap-1.5 text-[13px] text-[#121212]/55">
+                      <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
+                      {t(`chapters.items.${chapter.id}.date`)}
+                    </span>
+                    <span className="flex items-center gap-1.5 text-[13px] text-[#121212]/55">
+                      <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
+                      {t(`chapters.items.${chapter.id}.location`)}
+                    </span>
+                  </div>
+                  <p className="max-w-[448px] pt-3 text-[17px] leading-[1.55] text-[#121212]/80">
+                    {t(`chapters.items.${chapter.id}.description`)}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* On the biggest stages */}
+        <section className="px-5 md:px-8 lg:px-12 py-16 md:py-24">
+          <div className="max-w-[1400px] mx-auto w-full">
+            <Reveal y={24} className="max-w-[768px]">
+              <p className={`${EYEBROW} text-[#9b9dfb]`}>{t('stages.eyebrow')}</p>
+              <h2 className="pt-6 text-[32px] md:text-[48px] font-semibold leading-[1.1] tracking-[-0.96px]">
+                <span className="block text-white/90">{t('stages.heading')}</span>
+                <span
+                  className="block bg-clip-text text-transparent"
+                  style={{ backgroundImage: 'linear-gradient(90deg, #9192FF 0%, #FF5656 32%, #FFAF64 64%)' }}
+                >
+                  {t('stages.headingAccent')}
+                </span>
+              </h2>
+            </Reveal>
+
+            <Reveal y={24} delay={0.1} className="pt-16">
+              <p className="text-[11px] font-bold uppercase tracking-[1.54px] text-[#9b9dfb]">{t('stages.pastLabel')}</p>
+              <div className="pt-5 grid grid-cols-2 md:grid-cols-5 gap-4">
+                {PAST_STAGES.map((stage) => (
+                  <div
+                    key={stage.id}
+                    className="relative flex aspect-[248/310] items-end overflow-hidden rounded-2xl border border-white/[0.08] p-5"
+                  >
+                    <img src={stage.bgImage} alt="" className="absolute inset-0 size-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/50" />
+                    <p className="relative text-[15px] font-bold text-white">{t(`stages.past.${stage.id}`)}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal y={24} delay={0.15} className="pt-16">
+              <p className="text-[11px] font-bold uppercase tracking-[1.54px] text-[#9b9dfb]">{t('stages.upcomingLabel')}</p>
+              <div className="pt-4 border-t border-white/[0.07]">
+                {UPCOMING_EVENTS.map((event) => (
+                  <a
+                    key={event.id}
+                    href={event.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col gap-2 border-b border-white/[0.07] py-5 sm:flex-row sm:items-center sm:gap-8"
+                  >
+                    <span className="w-32 shrink-0 font-mono text-[13px] tracking-[0.65px] text-white/45">
+                      {t(`stages.upcoming.${event.id}.date`)}
+                    </span>
+                    <span className="flex-1 text-[16px] font-semibold text-white/85">
+                      {t(`stages.upcoming.${event.id}.title`)}{' '}
+                      <span className="font-normal text-white/45">— {t(`stages.upcoming.${event.id}.location`)}</span>
+                    </span>
+                    <span className="flex shrink-0 items-center gap-1.5 text-[13px] font-medium text-[#9b9dfb]">
+                      {t('stages.visitWebsite')}
+                      <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* Get in touch */}
+        <section className="px-5 md:px-8 lg:px-12 py-16 md:py-24">
+          <div className="max-w-[1400px] mx-auto w-full">
+            <Reveal
+              y={24}
+              className="rounded-[32px] border border-[#4e4e4e] p-8 md:p-20"
+              style={{
+                backgroundImage:
+                  'linear-gradient(15deg, rgba(146,147,255,0.05) 3%, rgba(255,255,255,0.05) 52%, rgba(255,127,73,0.1) 95%), linear-gradient(90deg, #0d0d0d, #0d0d0d)',
+              }}
+            >
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <p className={`${EYEBROW} text-[#6b7dff]`}>{t('contact.eyebrow')}</p>
+                  <h2 className="pt-6 text-[36px] md:text-[48px] font-semibold leading-[1.1] tracking-[-0.96px]">
+                    <span className="block text-white/95">{t('contact.heading')}</span>
+                    <span className="block bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(268deg, #FFAF64 53%, #FF5656 75%, #4B4DF7 97%)' }}>
+                      {t('contact.headingAccent')}
+                    </span>
+                  </h2>
+                  <p className="pt-5 max-w-[539px] text-[18px] font-light leading-[1.7] text-white/70">{t('contact.paragraph')}</p>
+                </div>
+                <ContactForm t={t} />
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

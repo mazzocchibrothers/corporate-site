@@ -100,6 +100,8 @@ const DELIBERATE = [
   ['shared.lp.', 'used only by the Italian-only landing pages'],
   // Event names are the events' own names.
   ['blog.newsletter-august-2026.sections.2.events.', 'event names'],
+  ['customers.talent-pioneers.stages.past.', 'conference names'],
+  ['customers.talent-pioneers.stages.upcoming.forumHr.title', "the event's own name"],
   // A named interview methodology.
   ['blog.attitude-vs-competence.methods.', 'named methodologies (BEI, STAR)'],
   // Product surface named in English on both sites.
