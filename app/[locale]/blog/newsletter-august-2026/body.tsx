@@ -165,7 +165,7 @@ export default async function AugustNewsletter() {
           <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 text-center">
             <Reveal duration={0.7}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('finalKicker')}</span>
-              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
+              <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.02em]">
                 {t('finalTitle')} <span className="gradient-text">{t('finalTitleHighlight')}</span>
               </h2>
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">{t('finalBody')}</p>

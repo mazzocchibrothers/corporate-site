@@ -176,7 +176,7 @@ export default function InsMercatoStoryPage() {
             {/* Context */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('text10')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('heading3')}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('heading3')}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-6">
                 {t.rich('body2', {
     b: (chunks) => <strong className="text-[#121212]/80 font-semibold">{chunks}</strong>,
@@ -188,7 +188,7 @@ export default function InsMercatoStoryPage() {
             {/* Challenge */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{t('text11')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('heading4')}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('heading4')}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">
                 {t('body3')
                 }
@@ -226,7 +226,7 @@ export default function InsMercatoStoryPage() {
             {/* Objectives */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('text12')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{t('heading5')}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-10">{t('heading5')}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {OBJECTIVES.map((o) => {
                   const [title, ...rest] = t(`objectives.${o.id}.label`).split(':');
@@ -247,7 +247,7 @@ export default function InsMercatoStoryPage() {
             {/* Solution */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('text13')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('heading6')}</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('heading6')}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">
                 {t('body4')
                 }
@@ -282,7 +282,7 @@ export default function InsMercatoStoryPage() {
             {/* Results */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{t('text16')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">
+              <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">
                 {t('heading7')}
               </h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">
@@ -445,7 +445,7 @@ export default function InsMercatoStoryPage() {
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
                   {t('text18')}
                 </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">
+                <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">
                   {t('heading8')}
                 </h2>
                 <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-8">

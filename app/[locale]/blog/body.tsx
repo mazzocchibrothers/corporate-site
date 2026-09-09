@@ -110,7 +110,7 @@ export default function BlogPage() {
         <section id="articles" className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
             <Reveal y={20} duration={0.6} className="mb-8 md:mb-12">
-              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading2')}</h2>
+              <h2 className="text-[clamp(1.5rem,3vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading2')}</h2>
             </Reveal>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
