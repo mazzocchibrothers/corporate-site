@@ -14,7 +14,7 @@ export default function ScienceHero() {
     <section id="science-hero" data-testid="science-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px] overflow-hidden">
       <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full py-10 md:py-16 lg:py-0">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
-          <div className="lg:col-span-7 flex flex-col gap-8 md:gap-10">
+          <div className="lg:col-span-7 flex flex-col gap-6 md:gap-8">
             <Reveal
               as="h1"
               y={40}
@@ -30,9 +30,9 @@ export default function ScienceHero() {
               y={20}
               duration={0.8}
               delay={0.5}
-              className="flex flex-col gap-6"
+              className="flex flex-col gap-8 md:gap-10"
             >
-              <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-md lg:max-w-lg font-normal md:font-light">
+              <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-xl lg:max-w-2xl font-normal md:font-light">
                 {t('hero.body')}
               </p>
               <Button asChild variant="primary" mode="dark" className="self-start gap-8">
