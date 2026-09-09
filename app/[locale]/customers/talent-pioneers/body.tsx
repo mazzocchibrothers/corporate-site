@@ -15,7 +15,6 @@ import Footer from '@/components/Footer';
 import { Reveal } from '@/components/ui/reveal';
 import { href } from '@/i18n/routes';
 
-const BRAND_GRADIENT = 'linear-gradient(90deg, #A1A2FF 0%, #FF5656 50%, #FFAF64 100%)';
 const EYEBROW = 'text-[12px] font-medium uppercase tracking-[1.2px]';
 
 type DayToDayItem =
@@ -314,9 +313,7 @@ export default function TalentPioneersPage() {
               <h1 className="pt-6 text-[48px] md:text-[64px] font-semibold leading-[1.05] tracking-[-1.6px] text-white/95">
                 {t.rich('hero.headline', {
                   hl: (chunks) => (
-                    <span className="whitespace-nowrap bg-clip-text text-transparent" style={{ backgroundImage: BRAND_GRADIENT }}>
-                      {chunks}
-                    </span>
+                    <span className="gradient-text whitespace-nowrap">{chunks}</span>
                   ),
                 })}
               </h1>
@@ -368,16 +365,13 @@ export default function TalentPioneersPage() {
         {/* The day-to-day */}
         <section className="min-h-screen flex flex-col justify-center px-5 md:px-8 lg:px-12 py-16 md:py-24">
           <div className="max-w-[1400px] mx-auto w-full">
-            <Reveal y={24} className="max-w-[768px]">
+            <Reveal y={24} className="w-full">
               <p className={`${EYEBROW} text-[#6b7dff]`}>{t('dayToDay.eyebrow')}</p>
               <h2 className="pt-6 text-[32px] md:text-[52px] font-semibold leading-[1.08] tracking-[-1.04px] text-white/95">
                 {t.rich('dayToDay.heading', {
                   accent: (chunks) => (
-                    <span
-                      className="block bg-clip-text font-bold text-transparent"
-                      style={{ backgroundImage: 'linear-gradient(172deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%)' }}
-                    >
-                      {chunks}
+                    <span className="block">
+                      <span className="gradient-text font-bold">{chunks}</span>
                     </span>
                   ),
                 })}
@@ -392,15 +386,12 @@ export default function TalentPioneersPage() {
         {/* The Chapters */}
         <section className="section-breathe min-h-screen flex flex-col justify-center bg-[#F7F7F7] px-5 md:px-8 lg:px-12 py-16 md:py-24">
           <div className="max-w-[1400px] mx-auto w-full">
-            <Reveal y={24} className="max-w-[768px]">
+            <Reveal y={24} className="w-full">
               <p className={`${EYEBROW} text-[#4b4df7]`}>{t('chapters.eyebrow')}</p>
               <h2 className="pt-6 text-[32px] md:text-[48px] font-semibold leading-[1.1] tracking-[-0.96px]">
                 <span className="block text-[#121212]">{t('chapters.heading')}</span>
-                <span
-                  className="block bg-clip-text text-transparent"
-                  style={{ backgroundImage: 'linear-gradient(90deg, #4B4DF7 0%, #FF5656 50%, #FFAF64 100%)' }}
-                >
-                  {t('chapters.headingAccent')}
+                <span className="block">
+                  <span className="gradient-text">{t('chapters.headingAccent')}</span>
                 </span>
               </h2>
               <p className="pt-5 max-w-[768px] text-[18px] font-medium leading-[1.7] text-[#121212]/80">{t('chapters.paragraph')}</p>
@@ -446,15 +437,12 @@ export default function TalentPioneersPage() {
         {/* On the biggest stages */}
         <section className="px-5 md:px-8 lg:px-12 py-16 md:py-24">
           <div className="max-w-[1400px] mx-auto w-full">
-            <Reveal y={24} className="max-w-[768px]">
+            <Reveal y={24} className="w-full">
               <p className={`${EYEBROW} text-[#9b9dfb]`}>{t('stages.eyebrow')}</p>
               <h2 className="pt-6 text-[32px] md:text-[48px] font-semibold leading-[1.1] tracking-[-0.96px]">
                 <span className="block text-white/90">{t('stages.heading')}</span>
-                <span
-                  className="block bg-clip-text text-transparent"
-                  style={{ backgroundImage: 'linear-gradient(90deg, #9192FF 0%, #FF5656 32%, #FFAF64 64%)' }}
-                >
-                  {t('stages.headingAccent')}
+                <span className="block">
+                  <span className="gradient-text">{t('stages.headingAccent')}</span>
                 </span>
               </h2>
             </Reveal>
@@ -517,11 +505,10 @@ export default function TalentPioneersPage() {
             >
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <p className={`${EYEBROW} text-[#6b7dff]`}>{t('contact.eyebrow')}</p>
-                  <h2 className="pt-6 text-[36px] md:text-[48px] font-semibold leading-[1.1] tracking-[-0.96px]">
+                  <h2 className="text-[36px] md:text-[48px] font-semibold leading-[1.1] tracking-[-0.96px]">
                     <span className="block text-white/95">{t('contact.heading')}</span>
-                    <span className="block bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(268deg, #FFAF64 53%, #FF5656 75%, #4B4DF7 97%)' }}>
-                      {t('contact.headingAccent')}
+                    <span className="block">
+                      <span className="gradient-text">{t('contact.headingAccent')}</span>
                     </span>
                   </h2>
                   <p className="pt-5 max-w-[539px] text-[18px] font-light leading-[1.7] text-white/70">{t('contact.paragraph')}</p>
