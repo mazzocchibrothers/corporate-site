@@ -70,7 +70,7 @@ export default function ScienceTeam() {
         {/* Section title */}
         <Reveal duration={0.7} className="mb-8 md:mb-12">
           <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('team.heading', {
-            span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
         </Reveal>
 

@@ -20,8 +20,8 @@ export default function CTASection() {
           duration={0.8}
           className="mb-8 md:mb-8"
         >
-          <h2 className="text-[clamp(1.5rem,3.5vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white/90 max-w-4xl">{t.rich('cta.heading', {
-            span: (chunks) => <span className="italic font-bold gradient-text">{chunks}</span>,
+          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-4xl">{t.rich('cta.heading', {
+            span: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
           })}</h2>
         </Reveal>
 

@@ -44,7 +44,7 @@ export default function ProblemSection() {
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <AnimatedSection className="mb-4 md:mb-6">
           <h2 className="text-[clamp(1.6rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('problem.heading', {
-            span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
         </AnimatedSection>
 

@@ -13,8 +13,8 @@ export default function LDIntegration() {
     <section id="ld-integration" data-testid="ld-integration" className="relative py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <Reveal duration={0.7} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-10">
-          <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-semibold text-white/90 mb-6">{t.rich('ldIntegration.heading', {
-            span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+          <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-6 tracking-[-0.02em]">{t.rich('ldIntegration.heading', {
+            span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
           <p className="text-[16px] text-white/[0.65] leading-[1.75] max-w-3xl mb-10">{t('ldIntegration.body')}</p>
           <div className="flex flex-wrap gap-3">

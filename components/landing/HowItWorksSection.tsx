@@ -61,7 +61,7 @@ export default function HowItWorksSection() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-[clamp(1.6rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('howItWorks.heading', {
-            span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
         </m.div>
 

@@ -32,7 +32,7 @@ export default function IMHowSolves() {
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
         <Reveal duration={0.7} className="max-w-3xl mb-12 md:mb-16">
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212]">{t.rich('imHowSolves.heading', {
-            span: (chunks) => <span className="font-bold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
         </Reveal>
 
