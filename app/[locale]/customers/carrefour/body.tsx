@@ -135,7 +135,7 @@ export default function CarrefourStoryPage() {
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('context.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-6">{t('context.title')}</h2>
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-6">{t('context.title')}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{t.rich('context.paragraph', {
     b: (chunks) => <strong className="text-[#121212]/80 font-semibold">{chunks}</strong>,
     br: () => <br />,
@@ -145,7 +145,7 @@ export default function CarrefourStoryPage() {
             {/* CHALLENGE */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{t('challenge.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('challenge.title')}</h2>
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('challenge.title')}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{t('challenge.intro')}</p>
 
               <div className="mb-10">
@@ -182,7 +182,7 @@ export default function CarrefourStoryPage() {
             {/* OBJECTIVES */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('objectives.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-10">{t('objectives.title')}</h2>
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-10">{t('objectives.title')}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {OBJECTIVES_ITEMS.map((o, i) => {
                   const [title, ...rest] = t(`objectives.items.${o.id}.text`).split(':');
@@ -203,7 +203,7 @@ export default function CarrefourStoryPage() {
             {/* SOLUTION */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('solution.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('solution.title')}</h2>
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('solution.title')}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('solution.intro')}</p>
 
               <div className="mb-12">
@@ -237,7 +237,7 @@ export default function CarrefourStoryPage() {
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{t('results.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('results.title')}</h2>
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('results.title')}</h2>
               {t.has('results.subtitle') && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('results.subtitle')}</p>}
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">

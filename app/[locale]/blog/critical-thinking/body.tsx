@@ -177,7 +177,7 @@ export default async function BlogArticle5() {
               as="h2"
               y={20}
               duration={0.6}
-              className="text-[clamp(1.5rem,3vw,3rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]"
+              className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]"
             >
               {t('heading8')}
             </Reveal>

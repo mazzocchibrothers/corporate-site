@@ -283,7 +283,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left */}
             <Reveal {...FADE}>
-              <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.15] mb-6">
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.15] mb-6">
                 {t('heading2')}</h2>
               <ul className="space-y-3 mb-8">
                 {[

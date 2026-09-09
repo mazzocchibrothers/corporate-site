@@ -208,7 +208,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
               <div className="w-16 h-16 rounded-2xl bg-[#4B4DF7]/[0.12] border border-[#4B4DF7]/[0.15] flex items-center justify-center mx-auto mb-6">
                 <FileText className="h-7 w-7 text-[#4B4DF7]" />
               </div>
-              <h2 className="text-[clamp(1.5rem,3vw,3rem)] font-semibold text-white/90 mb-3 tracking-[-0.02em]">{t('detail.heading')}</h2>
+              <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-3 tracking-[-0.02em]">{t('detail.heading')}</h2>
               <p className="text-[15px] text-white/40">{t('detail.body2')}</p>
             </Reveal>
             <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10">
@@ -221,7 +221,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
         {related.length > 0 && (
           <section className="relative pt-8 pb-2 lg:pt-10 lg:pb-2">
             <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-              <h2 className="text-[clamp(1.5rem,3vw,3rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]">{t('detail.heading2')}</h2>
+              <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]">{t('detail.heading2')}</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {related.map((rw, i) => {
                   return (
