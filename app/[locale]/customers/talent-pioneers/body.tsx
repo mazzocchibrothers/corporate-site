@@ -214,7 +214,7 @@ export default async function TalentPioneersPage() {
           <div className="max-w-[1400px] mx-auto w-full">
             <Reveal y={24} className="w-full">
               <p className={`${EYEBROW} text-[#6b7dff]`}>{t('dayToDay.eyebrow')}</p>
-              <h2 className="pt-6 text-[32px] md:text-[52px] font-semibold leading-[1.08] tracking-[-1.04px] text-white/95">
+              <h2 className="pt-6 text-[32px] md:text-[48px] font-semibold leading-[1.08] tracking-[-0.96px] text-white/95">
                 {t.rich('dayToDay.heading', {
                   accent: (chunks) => (
                     <span className="block">
