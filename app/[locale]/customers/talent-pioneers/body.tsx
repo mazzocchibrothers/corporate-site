@@ -218,7 +218,7 @@ export default async function TalentPioneersPage() {
                 {t.rich('dayToDay.heading', {
                   accent: (chunks) => (
                     <span className="block">
-                      <span className="gradient-text font-bold">{chunks}</span>
+                      <span className="gradient-text">{chunks}</span>
                     </span>
                   ),
                 })}
