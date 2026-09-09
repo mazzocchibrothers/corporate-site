@@ -65,9 +65,9 @@ export default function HeroSection() {
                 {t.rich('hero.heading', {
                   l: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
                   g: (chunks) => (
-                    <span className="italic font-bold gradient-text md:whitespace-nowrap">{chunks}</span>
+                    <span className="italic font-semibold gradient-text md:whitespace-nowrap">{chunks}</span>
                   ),
-                  gw: (chunks) => <span className="italic font-bold gradient-text">{chunks}</span>,
+                  gw: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
                   br: () => <br />,
                 })}
               </h1>

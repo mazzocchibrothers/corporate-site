@@ -76,7 +76,7 @@ export default function BookMeetingPage() {
                 className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-4"
                 style={{ lineHeight: 1.1 }}
               >{t.rich('heading', {
-                span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+                span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
               })}</h1>
 
               <p className="text-[16px] text-white/[0.55] leading-[1.65] max-w-md" style={{ fontWeight: 300 }}>

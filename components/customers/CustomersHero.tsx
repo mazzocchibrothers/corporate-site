@@ -55,7 +55,7 @@ export default function CustomersHero() {
           className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-8 max-w-5xl"
           style={{ lineHeight: 1.15 }}
         >{t.rich('hero.heading', {
-          span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+          span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
         })}</Reveal>
         <Reveal
           as="p"

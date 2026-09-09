@@ -141,7 +141,7 @@ export default function AiCompetencyPage() {
                 </span>
                 <h1 className="text-[23px] font-semibold md:text-[30px] md:font-bold tracking-[-0.02em] text-white/95 mb-2.5" style={{ lineHeight: 1.12 }}>
                   {t('titleLead')}
-                  <span className="font-bold gradient-text" style={{ display: 'inline', backgroundImage: 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)' }}>
+                  <span className="font-semibold md:font-bold gradient-text" style={{ display: 'inline', backgroundImage: 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)' }}>
                     {t('titleHighlight')}
                   </span>
                   {t('titleTail')}

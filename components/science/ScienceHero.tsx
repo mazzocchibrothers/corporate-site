@@ -24,7 +24,7 @@ export default function ScienceHero() {
               style={{ lineHeight: 1.1 }}
             >{t.rich('hero.heading', {
               br: () => <br />,
-              span: (chunks) => <span className="italic font-bold gradient-text">{chunks}</span>,
+              span: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
             })}</Reveal>
             <Reveal
               y={20}
