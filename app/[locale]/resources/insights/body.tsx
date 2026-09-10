@@ -28,55 +28,36 @@ export default function InsightsPage() {
     .filter(w => w.published && w.languageAvailability.includes(lang as 'en' | 'it'))
     .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
 
+  const renderTags = (w: { industry: string[]; topic: string[] }) => (
+    <div className="flex flex-wrap gap-1.5">
+      {[...w.industry, ...w.topic].map(tag => (
+        <span key={tag} className="inline-flex px-3 py-1 rounded-full text-[10px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.04] tracking-wide whitespace-nowrap">{tag}</span>
+      ))}
+    </div>
+  );
+
   const renderCard = (w: (typeof published)[number], i: number) => (
     <Reveal
       y={20}
       delay={i * 0.1}
       key={w.slug}
-      className="group cursor-pointer flex flex-col h-full"
+      className="group cursor-pointer flex flex-col h-full bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden"
       onClick={() => { router.push(`/resources/insights/${w.slug}`); window.scrollTo(0, 0); }}
     >
-      {/* Cover image in a rounded container */}
-      <div className="rounded-2xl overflow-hidden mb-5">
-        {w.coverBg ? (
-          <div className="aspect-[4/5] relative overflow-hidden">
-            <img src={w.coverBg} alt="" loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-50" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
-            <div className="relative z-10 flex flex-col justify-between h-full p-6 md:p-8">
-              <div>
-                <div className="flex items-center gap-2.5 mb-6 md:mb-8">
-                  <img loading="lazy" decoding="async" src="/logos/skillvue-logomark.svg" alt="Skillvue" className="h-7 w-7" style={{ filter: 'brightness(0) invert(1)' }} />
-                  <span className="text-white/90 text-[15px] font-semibold">Skillvue</span>
-                </div>
-                <h3 className="text-[clamp(1.5rem,3vw,2.8rem)] font-semibold text-white leading-[1.1] mb-5">{t(`items.${w.slug}.title`)}</h3>
-              </div>
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.15em] uppercase">{t('text2')}</span>
-            </div>
-          </div>
-        ) : (
-          <div className="aspect-[4/5] overflow-hidden">
-            <img loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" src={w.coverImage} alt={t(`items.${w.slug}.title`)} className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700" />
-          </div>
-        )}
+      <div className="aspect-[16/9] overflow-hidden shrink-0">
+        <img src={w.coverBg ?? w.coverImage} alt="" loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
       </div>
-
-      {/* Tags */}
-      <div className="flex flex-wrap gap-1.5 mb-3 content-start">
-        {w.industry.map(tag => (
-          <span key={tag} className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.04] tracking-wide h-fit">{tag}</span>
-        ))}
-        {w.topic.map(tag => (
-          <span key={tag} className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold text-[#121212]/55 border border-[#121212]/10 tracking-wide h-fit">{tag}</span>
-        ))}
+      <div className="flex flex-col gap-4 p-6 flex-1">
+        <div className="flex flex-col gap-2">
+          <span className="text-[11px] font-medium text-[#4B4DF7] tracking-[0.1em] uppercase">{t('text2')}</span>
+          <h3 className="text-[18px] font-semibold text-[#121212] leading-snug">{t(`items.${w.slug}.title`)}</h3>
+          <p className="text-[14px] text-[#121212]/60 leading-[1.4] line-clamp-3">{t(`items.${w.slug}.shortDesc`)}</p>
+        </div>
+        {renderTags(w)}
+        <span className="text-[16px] font-medium text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
+          {labels('read')} <ArrowRight className="h-4 w-4" />
+        </span>
       </div>
-
-      {/* Description */}
-      <p className="text-[14px] md:text-[15px] text-[#121212]/55 leading-[1.7] line-clamp-3 mb-4">{t(`items.${w.slug}.shortDesc`)}</p>
-
-      {/* CTA */}
-      <span className="text-[14px] font-semibold text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
-        {labels('read')} <ArrowRight className="h-4 w-4" />
-      </span>
     </Reveal>
   );
 
@@ -87,40 +68,23 @@ export default function InsightsPage() {
         y={20}
         delay={i * 0.1}
         key={w.slug}
-        className="group cursor-pointer flex flex-col h-full"
+        className="group cursor-pointer flex flex-col h-full bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden"
       >
         <a href={fileUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col h-full">
-          <div className="rounded-2xl overflow-hidden mb-5">
-            <div className="aspect-[4/5] relative overflow-hidden">
-              <img src={w.coverBg} alt="" loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-50" />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
-              <div className="relative z-10 flex flex-col justify-between h-full p-6 md:p-8">
-                <div>
-                  <div className="flex items-center gap-2.5 mb-6 md:mb-8">
-                    <img loading="lazy" decoding="async" src="/logos/skillvue-logomark.svg" alt="Skillvue" className="h-7 w-7" style={{ filter: 'brightness(0) invert(1)' }} />
-                    <span className="text-white/90 text-[15px] font-semibold">Skillvue</span>
-                  </div>
-                  <h3 className="text-[clamp(1.5rem,3vw,2.8rem)] font-semibold text-white leading-[1.1] mb-5">{t(`onePagers.${w.slug}.title`)}</h3>
-                </div>
-                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.15em] uppercase">{t('onePagerBadge')}</span>
-              </div>
+          <div className="aspect-[16/9] overflow-hidden shrink-0">
+            <img src={w.coverBg ?? w.coverImage} alt="" loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div className="flex flex-col gap-4 p-6 flex-1">
+            <div className="flex flex-col gap-2">
+              <span className="text-[11px] font-medium text-[#4B4DF7] tracking-[0.1em] uppercase">{t('onePagerBadge')}</span>
+              <h3 className="text-[18px] font-semibold text-[#121212] leading-snug">{t(`onePagers.${w.slug}.title`)}</h3>
+              <p className="text-[14px] text-[#121212]/60 leading-[1.4] line-clamp-3">{t(`onePagers.${w.slug}.shortDesc`)}</p>
             </div>
+            {renderTags(w)}
+            <span className="text-[16px] font-medium text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
+              {labels('read')} <ArrowRight className="h-4 w-4" />
+            </span>
           </div>
-
-          <div className="flex flex-wrap gap-1.5 mb-3 content-start">
-            {w.industry.map(tag => (
-              <span key={tag} className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.04] tracking-wide h-fit">{tag}</span>
-            ))}
-            {w.topic.map(tag => (
-              <span key={tag} className="inline-flex px-3 py-1.5 rounded-full text-[11px] font-semibold text-[#121212]/55 border border-[#121212]/10 tracking-wide h-fit">{tag}</span>
-            ))}
-          </div>
-
-          <p className="text-[14px] md:text-[15px] text-[#121212]/55 leading-[1.7] line-clamp-3 mb-4">{t(`onePagers.${w.slug}.shortDesc`)}</p>
-
-          <span className="text-[14px] font-semibold text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
-            {labels('read')} <ArrowRight className="h-4 w-4" />
-          </span>
         </a>
       </Reveal>
     );
@@ -138,7 +102,6 @@ export default function InsightsPage() {
                 <span className="text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.25em] uppercase mb-8 block">{t('text')}</span>
                 <h1 className="font-semibold text-white/95 mb-8 text-[48px] md:text-[64px]" style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}>{t.rich('heading', {
                   br: () => <br />,
-                  span: (chunks) => <span className="gradient-text">{chunks}</span>,
                 })}</h1>
                 <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>{t('body')}</p>
                 <Button asChild variant="tertiary" mode="dark" icon={null}>
