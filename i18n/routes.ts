@@ -40,11 +40,11 @@ export type Route = {
    * second telling of `customers/eataly`, and `lp/ai-competency-newsletter` is
    * the one-pager as the newsletter links to it.
    *
-   * Nothing on the site links to them — /customers lists the base stories only
-   * — but they were in the sitemap with the same title as the page they are a
-   * cut of, which makes them compete with it in search rather than support it.
-   * So they keep their URL, point their canonical at the base, and leave the
-   * sitemap.
+   * Nothing on the site links to them — /customers/customer-stories lists the
+   * base stories only — but they were in the sitemap with the same title as
+   * the page they are a cut of, which makes them compete with it in search
+   * rather than support it. So they keep their URL, point their canonical at
+   * the base, and leave the sitemap.
    */
   canonicalOf?: string;
   /**
@@ -63,6 +63,14 @@ export type Route = {
    * deliberately not retrofitted here — that is #148.
    */
   noindex?: boolean;
+  /**
+   * This route used to live at a different URL per locale. next.config.ts
+   * turns each into a permanent redirect so old links and search results land
+   * on the current one instead of 404ing — see `customers` for the only
+   * occurrence today (it moved to /customers/customer-stories to make room
+   * for Talent Pioneers under the same nav item).
+   */
+  redirectFrom?: Partial<Record<Locale, string>>;
 };
 
 export const routes: Route[] = data as Route[];
@@ -123,5 +131,4 @@ export const canonicalRoute = (route: Route): Route =>
 /** Whether a route has content in a locale — what hideInIT was guessing at. */
 export const hasLocale = (id: string, locale: string): boolean =>
   byId(id)?.paths[locale as Locale] !== undefined;
-
 
