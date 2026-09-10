@@ -13,7 +13,7 @@ export const whitepapers = [
     topic: ['Motivation & Career Aspirations', 'Skills Verification'],
     hrProcess: ['Talent Acquisition', 'Performance Management'],
     coverImage: '/logos/wp-beyond-skills-en.avif',
-    coverBg: '/logos/wp-beyond-skills-bg.avif',
+    coverBg: '/covers/insight-beyond-skills.avif',
     hubspotFormEN: '9df1d718-fd1d-4ad3-8b27-7e3065400e57',
     hubspotFormIT: '6b9dc8cf-8b5a-484d-9071-eb8f8ac8464c',
     takeawayCount: 4,
