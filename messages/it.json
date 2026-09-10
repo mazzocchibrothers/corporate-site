@@ -16,7 +16,7 @@
         "learningDevelopment": "Learning & Development",
         "internalMobility": "Mobilità Interna",
         "projectResourcing": "Project Resourcing",
-        "whitepapers": "White Paper",
+        "insights": "Insights",
         "blog": "Blog",
         "press": "Stampa",
         "about": "Chi Siamo",
@@ -46,7 +46,7 @@
         "talentPioneers": "Talent Pioneers",
         "bookMeeting": "Prenota una Demo",
         "blog": "Blog",
-        "whitepapers": "White Papers",
+        "insights": "Insights",
         "press": "Press",
         "about": "Chi siamo",
         "careers": "Lavora con noi"
@@ -7150,7 +7150,7 @@
       "italianKicker": "Stampa italiana",
       "italianHeading": "Skillvue sui media italiani"
     },
-    "whitepapers": {
+    "insights": {
       "items": {
         "beyond-skills": {
           "title": "Beyond Skills. Misurare aspirazioni e motivazione",
@@ -7305,6 +7305,416 @@
             "title": "Turnover nelle reti vendita | Skillvue",
             "description": "Numeri, cause profonde e strategie basate sugli verification per combattere il turnover nelle reti commerciali."
           }
+        },
+        "predictive-workforce-planning-fashion-retail": {
+          "title": "Workforce Planning Predittivo per i Picchi Stagionali del Fashion Retail Europeo",
+          "shortDesc": "Come i retailer fashion europei possono trasformare le assunzioni stagionali da corsa ai volumi a vantaggio predittivo, prima delle scadenze normative del 2026.",
+          "fullDesc": "Questo approfondimento analizza perché la pianificazione stagionale dell'organico nel fashion retail europeo non può più basarsi solo su volumi e velocità di copertura. Sulla base di dati di turnover, ricerche sulla carenza di organico e la convergenza regolatoria del 2026 (Pay Transparency Directive, AI Act, CSRD), mostra come la qualità predittiva della selezione dei candidati stia diventando una variabile diretta di margine e conformità. Ripercorre inoltre la letteratura scientifica più recente sulla validità predittiva dei metodi di selezione, spiegando perché il colloquio strutturato ha superato i test di general mental ability come predittore principale, e cosa questo comporta per scalare la qualità delle assunzioni su centinaia di ruoli stagionali.",
+          "heroDesc": "Turnover del personale di vendita oltre il 75%, tre regolamenti europei che arrivano nel giro di nove settimane, e un trimestre di picco che non perdona più le scelte affrettate: il modo in cui il fashion retail seleziona i collaboratori stagionali sta diventando silenziosamente il prossimo campo di battaglia sul margine.",
+          "takeaways": {
+            "t1": "Il turnover del personale di vendita nei punti vendita retail ha raggiunto il 75,8% annuo, e la sola carenza di organico costa l'8,56% delle vendite e il 7,02% della profittabilità nei picchi.",
+            "t2": "Tra giugno e agosto 2026 convergono la Pay Transparency Directive, le regole ad alto rischio dell'AI Act e la rendicontazione CSRD, trasformando gli strumenti di selezione stagionale in infrastrutture di conformità.",
+            "t3": "Una nuova ricerca del 2022 ha ribaltato decenni di scienza della selezione: il colloquio strutturato, non il general mental ability, è oggi il predittore più efficace (0,42 contro 0,31).",
+            "t4": "Solo il 21% delle organizzazioni ha raggiunto una maturità alta nel workforce planning, contro il 14% dell'anno precedente, lasciando la maggior parte dei retailer scoperta in vista del picco stagionale."
+          },
+          "chapters": {
+            "c1": {
+              "title": "Il Picco Non È Più un Evento",
+              "desc": "Il Q4 concentra circa il 19% delle vendite annuali del retail e continua a crescere a doppia cifra ogni anno, eppure le assunzioni stagionali sono ancora gestite con strumenti pensati per riempire i turni, non per anticipare i profili giusti."
+            },
+            "c2": {
+              "title": "L'Erosione Invisibile del Margine",
+              "desc": "Il turnover del personale di vendita ha raggiunto il 75,8% annuo, e la sola carenza di organico costa ai negozi l'8,56% delle vendite e il 7,02% della profittabilità nei picchi, una perdita sistemica mai isolata in una riga di conto economico."
+            },
+            "c3": {
+              "title": "Il Triangolo Regolatorio del 2026",
+              "desc": "Tra giugno e agosto 2026 convergono la Pay Transparency Directive, le regole ad alto rischio dell'AI Act e la rendicontazione CSRD, trasformando gli strumenti di selezione stagionale in infrastrutture di conformità."
+            },
+            "c4": {
+              "title": "La Nuova Gerarchia della Validità Predittiva",
+              "desc": "Uno studio del 2022 ha ribaltato decenni di scienza della selezione, portando il colloquio strutturato al primo posto tra i predittori (0,42) e il General Mental Ability allo 0,31."
+            },
+            "c5": {
+              "title": "Dal Forecasting di Volumi al Forecasting di Performance",
+              "desc": "Con fino al 40% dei lavoratori retail da riqualificare e il 30-35% delle attività delle funzioni consumer automatizzabile entro il 2030, la pianificazione stagionale passa dal coprire turni al prevedere quali profili reggeranno la pressione."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "75,8%",
+              "label": "Turnover annuo del personale di vendita nei punti vendita"
+            },
+            "s2": {
+              "value": "8,56%",
+              "label": "Vendite perse per carenza di organico nei picchi"
+            },
+            "s3": {
+              "value": "0,42",
+              "label": "Validità predittiva del colloquio strutturato, oggi il predittore principale"
+            }
+          },
+          "meta": {
+            "title": "Workforce Planning Predittivo per i Picchi Stagionali del Fashion Retail Europeo | Skillvue",
+            "description": "Come i retailer fashion europei possono trasformare le assunzioni stagionali da corsa ai volumi a vantaggio predittivo, prima delle scadenze normative del 2026."
+          }
+        },
+        "pay-transparency-compensation-architecture-fashion-retail": {
+          "title": "Pay Transparency e Compensation Architecture nel Fashion Retail",
+          "shortDesc": "Come la Direttiva UE 2023/970 trasforma la trasparenza retributiva in un obbligo strutturale per il fashion retail — e perché la job architecture sarà il vero banco di prova nel 2027.",
+          "fullDesc": "Questo approfondimento esamina la Direttiva UE 2023/970 sulla trasparenza retributiva e le sue implicazioni per il fashion retail, uno dei settori più femminilizzati d'Europa. Ripercorre la timeline di compliance, la soglia del 5% che attiva il joint pay assessment, e cosa rivelano i gender pay gap report di Primark e Inditex nel Regno Unito sulla distribuzione per genere nei quartili retributivi. Si conclude con una proposta concreta per costruire una job architecture basata sui quattro criteri della Direttiva — competenze, sforzo, responsabilità e condizioni di lavoro — prima della scadenza del primo report obbligatorio nel 2027.",
+          "heroDesc": "Il 7 giugno 2026 si è chiusa la stagione opaca della negoziazione retributiva in Europa. Nel fashion retail, dove le donne sono il 62% del workforce ma si concentrano nei quartili meno pagati, la domanda non è se prepararsi alla Direttiva 2023/970 — è se la tua struttura organizzativa può reggere l'esposizione alla luce.",
+          "takeaways": {
+            "t1": "La soglia del 5% si applica per categoria di lavoro, non sulla media aziendale: puoi sembrare compliant nel complesso e attivare comunque un joint pay assessment.",
+            "t2": "L'onere della prova si ribalta: in caso di contenzioso, è il datore di lavoro a dover dimostrare che le differenze sono oggettive e neutre rispetto al genere, con risarcimenti senza tetto massimo.",
+            "t3": "Solo 1 impresa fashion italiana su 5 monitora oggi le disparità salariali di genere — e l'82% dei CEO ritiene che le opportunità di carriera siano già paritarie.",
+            "t4": "Il report del 2027 si baserà sui dati retributivi del 2026: la finestra utile per costruire una job architecture difendibile è contata in trimestri, non in anni."
+          },
+          "chapters": {
+            "c1": {
+              "title": "Sette Giorni di Giugno",
+              "desc": "Come si sviluppa la timeline di compliance europea, dall'adozione della Direttiva nel 2023 al primo report obbligatorio del 2027."
+            },
+            "c2": {
+              "title": "Il Numero 5 e la Geometria del Rischio",
+              "desc": "Perché la soglia del 5% si applica per categoria di lavoro — e come l'onere della prova si sposta sui datori di lavoro."
+            },
+            "c3": {
+              "title": "Quartile Inferiore, Quartile Superiore",
+              "desc": "Cosa rivelano i gender pay gap report UK di Primark e Inditex sulla posizione delle donne nella piramide retributiva del fashion retail."
+            },
+            "c4": {
+              "title": "Dalla Disclosure al Disegno",
+              "desc": "Perché una job architecture fondata su competenze, sforzo, responsabilità e condizioni di lavoro trasforma un obbligo di reporting in un sistema difendibile."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "62%",
+              "label": "Quota di donne nel workforce retail europeo, contro il 46% media UE"
+            },
+            "s2": {
+              "value": "5%",
+              "label": "Gap retributivo per categoria che attiva il joint pay assessment"
+            },
+            "s3": {
+              "value": "1 su 5",
+              "label": "Imprese fashion italiane che monitorano oggi le disparità salariali di genere"
+            }
+          },
+          "meta": {
+            "title": "Pay Transparency e Compensation Architecture nel Fashion Retail | Skillvue",
+            "description": "Come la Direttiva UE 2023/970 trasforma la trasparenza retributiva in un obbligo strutturale per il fashion retail — e perché la job architecture sarà il vero banco di prova nel 2027."
+          }
+        },
+        "top-performing-medical-sales-representative": {
+          "title": "Il Medical Sales Representative ad Alta Performance",
+          "shortDesc": "Perché curriculum e colloqui basati sull'impressione non riescono a predire le performance degli Informatori Scientifici del Farmaco, e come un modello comportamentale oggettivo può risolverlo.",
+          "fullDesc": "Questo approfondimento analizza perché la selezione dell'Informatore Scientifico del Farmaco (ISF) in Europa si basi ancora su laurea scientifica, esperienza pregressa e colloquio non strutturato - strumenti che decenni di ricerca collocano tra i predittori più deboli della performance sul campo. Basandosi sulle meta-analisi di Schmidt & Hunter e di Sackett et al., quantifica il divario di validità predittiva tra i metodi di selezione tradizionali e l'assessment comportamentale strutturato. Analizza inoltre il costo economico degli errori di selezione, dal turnover del 35% annuo ai costi di rimpiazzo a sei cifre, e descrive come il passaggio a un ruolo commerciale ibrido e digitale stia alzando ulteriormente la posta in gioco.",
+          "heroDesc": "I tuoi ISF vengono assunti per una laurea e una buona impressione al colloquio: i due predittori più deboli della performance commerciale mai misurati dalla scienza. Ecco cosa distingue davvero un top performer da chi lascia entro 12 mesi.",
+          "takeaways": {
+            "t1": "Il colloquio non strutturato, ancora la norma nella selezione degli ISF, ha una validità predittiva di appena 0,19, la più bassa tra tutti i metodi di selezione misurati.",
+            "t2": "Combinare colloquio strutturato e assessment comportamentale porta la validità predittiva a 0,42-0,58, i risultati più alti registrati dalla ricerca.",
+            "t3": "Le reti vendita farmaceutiche perdono il 35% degli ISF ogni anno, con il 44% che lascia entro 24 mesi, ben prima di raggiungere la piena produttività.",
+            "t4": "Un singolo errore di selezione costa tra 82.000 e 160.000 euro di rimpiazzo, a cui si aggiunge la perdita di relazioni con i medici durante una vacancy media di 6,2 mesi."
+          },
+          "chapters": {
+            "c1": {
+              "title": "L'invisibilità di un Problema da Miliardi",
+              "desc": "Perché il profilo comportamentale - il fattore che più determina la performance dell'ISF - resta l'unica variabile mai misurata nella selezione farmaceutica."
+            },
+            "c2": {
+              "title": "Quello che la Scienza Sa e l'Industria Ignora",
+              "desc": "Le meta-analisi di Schmidt & Hunter e di Sackett et al. collocano il colloquio non strutturato come il metodo meno valido e l'assessment comportamentale strutturato come il più valido."
+            },
+            "c3": {
+              "title": "Bias Cognitivi e Selezione",
+              "desc": "Come il colloquio non strutturato porta Area e District Manager ad assumere per affinità invece che sulle competenze che realmente predicono il successo."
+            },
+            "c4": {
+              "title": "L'ISF Ibrido",
+              "desc": "Come il dialogo scientifico sempre più digitale introduca nuove competenze comportamentali - empatia digitale, rigore nel follow-up asincrono - mai intercettate dal colloquio tradizionale."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "950K",
+              "label": "Addetti pharma diretti in Europa"
+            },
+            "s2": {
+              "value": "35%",
+              "label": "Turnover medio annuo nelle reti vendita farmaceutiche"
+            },
+            "s3": {
+              "value": "120",
+              "unit": "€K+",
+              "label": "Costo reale di un singolo errore di selezione ISF"
+            }
+          },
+          "meta": {
+            "title": "Il Medical Sales Representative ad Alta Performance | Skillvue",
+            "description": "Perché curriculum e colloqui basati sull'impressione non riescono a predire le performance degli Informatori Scientifici del Farmaco, e come un modello comportamentale oggettivo può risolverlo."
+          }
+        },
+        "medrep-lifecycle-skill-based-assessment": {
+          "title": "Il ciclo di vita del Medical Sales Representative: dalla selezione allo sviluppo con un approccio skill-based continuo",
+          "shortDesc": "Le aziende farmaceutiche investono 8.000-15.000 euro l'anno per formare ogni ISF, ma meno del 10% misura se quella formazione cambia comportamenti o risultati.",
+          "fullDesc": "Questo approfondimento analizza il gap di misurazione nella formazione della forza vendita farmaceutica, usando il modello Kirkpatrick per mostrare dove la valutazione si ferma sistematicamente prima del cambiamento comportamentale o dell'impatto di business. Propone un framework di assessment longitudinale e skill-based applicato a quattro checkpoint nel ciclo di vita dell'ISF — ingresso, sei mesi, dodici mesi e promozione ad Area Manager — per rendere le decisioni di formazione e promozione basate su evidenze. Quantifica inoltre il costo finanziario dell'attuale gap valutativo legato al turnover e collega l'approccio ai requisiti di compliance dell'EU AI Act, del Codice EFPIA e della CSRD.",
+          "heroDesc": "Il settore pharma spende 8.000-15.000 euro l'anno per formare ogni ISF — da 6 a 12 volte la media cross-settore — ma meno di un'azienda su dieci riesce a dimostrare che questo si traduce in un comportamento diverso davanti al medico. E se il budget formativo potesse finalmente dimostrare il proprio valore?",
+          "takeaways": {
+            "t1": "Meno del 10% delle organizzazioni misura se la formazione degli ISF cambia il comportamento sul campo o i risultati di business: la maggior parte si ferma a gradimento del corso e test nozionistici (Livelli 1-2 di Kirkpatrick).",
+            "t2": "Il 44% degli ISF lascia l'azienda entro i primi due anni, spesso per un disallineamento comportamentale individuabile in fase di selezione, non per l'insostenibilità del ruolo.",
+            "t3": "Promuovere ad Area Manager l'ISF con le migliori vendite è una scommessa sul passato: competenze individuali come autonomia e orientamento al risultato personale non predicono la capacità di coaching o delega.",
+            "t4": "Un assessment longitudinale a quattro checkpoint (Day 1, 6 mesi, 12 mesi, promozione) potrebbe far risparmiare a una rete di 100 ISF circa 4,3 milioni di euro in tre anni riducendo il turnover."
+          },
+          "chapters": {
+            "c1": {
+              "title": "Il punto cieco della misurazione",
+              "desc": "Perché il modello Kirkpatrick rivela che la valutazione della formazione pharma si ferma quasi sempre prima di verificare il cambiamento comportamentale o i risultati di business."
+            },
+            "c2": {
+              "title": "Il costo invisibile della formazione senza evidenza",
+              "desc": "Come il turnover del 35% annuo e un investimento di 8-15K euro per ISF si combinano in un ciclo milionario di assunzione, formazione e perdita di talenti."
+            },
+            "c3": {
+              "title": "Quattro fasi, un sistema",
+              "desc": "Un framework di assessment longitudinale che segue gli ISF all'ingresso, a 6 mesi, a 12 mesi e alla promozione per costruire un profilo comportamentale continuo."
+            },
+            "c4": {
+              "title": "La trappola della performance",
+              "desc": "Perché promuovere ad Area Manager il miglior venditore solo in base ai risultati commerciali ignora le competenze diverse richieste da coaching e leadership di team."
+            },
+            "c5": {
+              "title": "Impatto finanziario e compliance normativa",
+              "desc": "Il modello del risparmio milionario da riduzione del turnover, e come l'assessment longitudinale risponde ai requisiti di EU AI Act, Codice EFPIA e CSRD."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "<10%",
+              "label": "delle aziende farmaceutiche misura se la formazione degli ISF cambia realmente il comportamento sul campo o i risultati di business"
+            },
+            "s2": {
+              "value": "44%",
+              "label": "degli ISF abbandona l'azienda entro i primi due anni di attività"
+            },
+            "s3": {
+              "value": "4,3",
+              "unit": "€M",
+              "label": "risparmio potenziale in 3 anni per una rete di 100 ISF grazie all'assessment longitudinale"
+            }
+          },
+          "meta": {
+            "title": "Il ciclo di vita del Medical Sales Representative: dalla selezione allo sviluppo con un approccio skill-based continuo | Skillvue",
+            "description": "Le aziende farmaceutiche investono 8.000-15.000 euro l'anno per formare ogni ISF, ma meno del 10% misura se quella formazione cambia comportamenti o risultati."
+          }
+        },
+        "seasonal-hiring-beauty-retail-conversion-rate": {
+          "title": "Selezione ad Alto Volume nel Beauty Retail: Come la Qualità dell'Advisor Stagionale Guida il Conversion Rate",
+          "shortDesc": "Perché la qualità della selezione stagionale dei beauty advisor nel Q4 determina il conversion rate dei punti vendita, e quali metodi predicono davvero la performance.",
+          "fullDesc": "Questo approfondimento analizza perché il picco di selezione stagionale del quarto trimestre sia l'anello più fragile del funnel di vendita nel beauty retail, dato che tempi compressi spingono i punti vendita verso interviste non strutturate, pur essendo il metodo di selezione meno predittivo disponibile. Quantifica il divario di validità predittiva tra interviste strutturate e non strutturate usando la meta-analisi di Sackett et al. (2022), e collega questo divario al conversion rate, al fatturato e al margine su scala flagship. Delinea inoltre gli obblighi di compliance previsti dall'AI Act europeo (Regolamento 2024/1689), che classificherà come ad alto rischio i tool AI impiegati per la selezione del personale a partire da agosto 2026.",
+          "heroDesc": "Ogni Q4 le insegne beauty affidano le decisioni di hiring più critiche per il margine al metodo di selezione che la scienza indica come il meno predittivo. Ecco cosa costa — e cosa cambia con la scadenza dell'AI Act europeo.",
+          "takeaways": {
+            "t1": "Le interviste strutturate hanno una validità predittiva superiore del 100% rispetto a quelle non strutturate (r=0,42 vs r=0,19, Sackett et al. 2022) — eppure la pressione di tempo del Q4 continua a spingere verso il metodo più debole.",
+            "t2": "Il 75% dei clienti dichiara che spenderebbe di più dopo un servizio in store di alta qualità: la qualità del beauty advisor è una variabile di margine, non solo di servizio.",
+            "t3": "Solo LVMH prevede di assumere 22.000 persone entro fine 2025, in gran parte sales associate — una scala per cui la maggior parte delle catene stagionali è dimensionata sul Q1, non sul Q4.",
+            "t4": "Dal 2 agosto 2026 l'AI Act europeo (Reg. 2024/1689) classifica i tool AI di selezione come ad alto rischio, con sanzioni fino a 15 milioni di euro o il 3% del fatturato globale, trasformando il vendor selection HR-AI in una scelta di compliance."
+          },
+          "chapters": {
+            "c1": {
+              "title": "Stagionalità del Q4: peso strategico e criteri fragili",
+              "desc": "Tre mesi dell'anno decidono se il budget annuale viene raggiunto, proprio mentre i criteri di selezione si frammentano sotto la pressione del tempo."
+            },
+            "c2": {
+              "title": "La scala del fenomeno",
+              "desc": "Le catene beauty sono dimensionate per il Q1, non per il Q4: il volume di selezione stagionale abbatte il rapporto candidati/posizione e accorcia le interviste."
+            },
+            "c3": {
+              "title": "Validità predittiva dei metodi di selezione",
+              "desc": "Cinque decenni di meta-analisi mostrano che le interviste comportamentali strutturate sono il predittore più forte della performance, eppure restano le meno usate sotto la pressione del Q4."
+            },
+            "c4": {
+              "title": "Il ruolo del beauty advisor nel conversion funnel",
+              "desc": "La qualità dell'advisor non è un dettaglio di servizio ma una leva di margine, che si trasferisce direttamente sul conversion rate e sul fatturato di Q4."
+            },
+            "c5": {
+              "title": "Il quadro regolatorio europeo",
+              "desc": "Il Regolamento UE 2024/1689 classifica i tool AI di selezione come ad alto rischio dal 2 agosto 2026, trasformando il vendor selection HR-AI in una scelta di compliance."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "100%",
+              "label": "Maggiore validità predittiva delle interviste strutturate vs. non strutturate (Sackett et al., 2022)"
+            },
+            "s2": {
+              "value": "75%",
+              "label": "Dei clienti spenderebbe di più dopo un servizio in store di alta qualità"
+            },
+            "s3": {
+              "value": "22.000",
+              "label": "Nuove assunzioni previste da LVMH entro fine 2025, in gran parte sales associate"
+            }
+          },
+          "meta": {
+            "title": "Selezione ad Alto Volume nel Beauty Retail: Come la Qualità dell'Advisor Stagionale Guida il Conversion Rate | Skillvue",
+            "description": "Perché la qualità della selezione stagionale dei beauty advisor nel Q4 determina il conversion rate dei punti vendita, e quali metodi predicono davvero la performance."
+          }
+        },
+        "beauty-advice-international-customer": {
+          "title": "La consulenza beauty per il cliente internazionale",
+          "shortDesc": "Multilinguismo, lettura tecnica di skin tone e undertone e costruzione di routine credibili: le competenze misurabili che decidono il valore di uno store nel traffico turistico internazionale in crescita.",
+          "fullDesc": "Mentre il traffico turistico internazionale cambia la composizione della clientela nei beauty store europei, questo approfondimento analizza le tre competenze che decidono la qualità della consulenza in negozio: padronanza linguistica, lettura tecnica di skin tone e undertone, capacità di costruire routine credibili. Quantifica inoltre lo skill gap crescente nella forza vendita beauty, le nuove norme UE che rendono auditabili le decisioni HR, e l'impatto economico, in termini di ricavi e costi, di una consulenza fatta bene.",
+          "heroDesc": "Tre clienti su quattro che oggi attraversano la soglia di un beauty store europeo provengono da un contesto linguistico e culturale diverso dal nostro — e la capacità di servirli bene non è un tratto individuale, è un insieme di competenze misurabili e sviluppabili.",
+          "takeaways": {
+            "t1": "Il tax free shopping italiano viaggia al 163% dei livelli pre-pandemia, e tre quarti di chi entra in un beauty store nelle principali città turistiche europee arriva da contesti linguistici e culturali diversi.",
+            "t2": "Il 76% dei consumatori preferisce ricevere informazioni nella propria lingua madre, e il 40% non acquista mai da chi non gliele offre.",
+            "t3": "La difficoltà di reperimento per gli operatori della cura estetica in Italia ha raggiunto il 69,3% a maggio 2025, e un mis-hire può costare dal 30% al 250% dello stipendio del primo anno.",
+            "t4": "Le aziende leader nella personalizzazione generano fino al 40% in più di fatturato (McKinsey), mentre AI Act, Pay Transparency Directive e CSRD rendono auditabili le decisioni HR sulla forza vendita."
+          },
+          "chapters": {
+            "c1": {
+              "title": "La geografia del traffico che entra in store",
+              "desc": "I flussi turistici internazionali stanno cambiando chi entra in un beauty store, richiedendo insieme competenze tecniche, linguistiche e relazionali."
+            },
+            "c2": {
+              "title": "Le tre dimensioni della consulenza qualificata",
+              "desc": "Padronanza linguistica, lettura tecnica di pelle e capello e costruzione di routine credibili sono le tre competenze osservabili che determinano la qualità della consulenza."
+            },
+            "c3": {
+              "title": "Lo skill gap nella forza vendita beauty",
+              "desc": "La difficoltà di reperimento per i ruoli beauty ha raggiunto un massimo storico in Italia, e i mis-hire hanno un costo elevato e misurabile."
+            },
+            "c4": {
+              "title": "Il perimetro normativo europeo",
+              "desc": "AI Act, Pay Transparency Directive e CSRD stanno trasformando le decisioni HR di assunzione e sviluppo in processi auditabili e documentati."
+            },
+            "c5": {
+              "title": "Il valore economico di una consulenza qualificata",
+              "desc": "Una consulenza qualificata paga su entrambi i lati del conto economico, aumentando i ricavi e riducendo i costi legati a resi e clienti persi."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "163%",
+              "label": "Volume tax free Italia rispetto ai livelli pre-pandemia 2019"
+            },
+            "s2": {
+              "value": "76%",
+              "label": "Consumatori che preferiscono essere serviti nella propria lingua madre"
+            },
+            "s3": {
+              "value": "69,3%",
+              "label": "Difficoltà di reperimento per gli operatori della cura estetica in Italia, maggio 2025"
+            }
+          },
+          "meta": {
+            "title": "La consulenza beauty per il cliente internazionale | Skillvue",
+            "description": "Multilinguismo, lettura tecnica di skin tone e undertone e costruzione di routine credibili: le competenze misurabili che decidono il valore di uno store nel traffico turistico internazionale in crescita."
+          }
+        },
+        "nis2-ai-act-telco-hr-compliance": {
+          "title": "NIS2 e AI Act: il doppio binario regolatorio che ridisegna la HR tech nel settore TLC",
+          "shortDesc": "Come le regole di cybersecurity NIS2 e gli obblighi ad alto rischio dell'AI Act europeo si sovrappongono oggi sugli stessi sistemi HR delle telco, e cosa devono fare i team compliance.",
+          "fullDesc": "Questo approfondimento analizza come, dal 2026, gli operatori telco europei si trovino ad affrontare due regimi di compliance cumulativi sugli stessi sistemi HR basati su AI: gli obblighi di cybersecurity NIS2 vigilati da ACN e i requisiti ad alto rischio dell'AI Act per i sistemi employment dell'Allegato III, vigilati dalle autorità di market surveillance. Il documento ripercorre la cronologia regolatoria, propone un test a tre domande per mappare quali strumenti HR rientrano nel perimetro, illustra il regime sanzionatorio cumulato e un modello di governance per costruire un fascicolo unico e pronto per l'audit per ogni sistema.",
+          "heroDesc": "Dal 2026 un solo strumento HR basato su AI nella tua azienda telco può attivare sia un audit ACN sulla cybersecurity sia un'ispezione di market surveillance dell'AI Act, con sanzioni cumulabili e responsabilità personale per il board. La domanda non è quale normativa rispettare per prima. È se le tue evidenze reggono a entrambe insieme.",
+          "takeaways": {
+            "t1": "NIS2 e AI Act si applicano oggi simultaneamente alla maggior parte degli strumenti HR AI in uso nelle telco europee - scoring ATS, video assessment, workforce analytics - con due autorità di vigilanza distinte e sanzioni cumulabili.",
+            "t2": "Gli obblighi formativi si sovrappongono in modo strutturale: la formazione cyber NIS2 e la formazione AI literacy dell'AI Act devono coprire le stesse persone, recruiter e membri del board, o nessuno dei due obblighi è pienamente soddisfatto.",
+            "t3": "Le sanzioni sono cumulabili e severe: fino a 10 milioni di euro o il 2% del fatturato per i soggetti essenziali NIS2, fino a 35 milioni o il 7% per le pratiche proibite dell'AI Act.",
+            "t4": "L'unica strada sostenibile è un fascicolo documentale unico per ogni sistema HR AI, che regga sia a un audit ACN sia a un'ispezione di market surveillance dell'AI Act senza duplicare la raccolta delle evidenze."
+          },
+          "chapters": {
+            "c1": {
+              "title": "La coincidenza che nessuno aveva pianificato",
+              "desc": "Due obblighi formativi distinti - la formazione cyber NIS2 e l'AI literacy dell'AI Act - convergono sulle stesse persone: recruiter, HRBP e membri del board."
+            },
+            "c2": {
+              "title": "Mappare il perimetro regolatorio",
+              "desc": "Un test a tre domande per capire quali strumenti HR AI, dallo scoring degli ATS ai video assessment, rientrano nell'Allegato III come sistemi ad alto rischio."
+            },
+            "c3": {
+              "title": "Il costo della non conformità",
+              "desc": "Le sanzioni NIS2 e AI Act sono cumulabili, fino a 35 milioni di euro o il 7% del fatturato quando entrambi i regimi si applicano allo stesso sistema."
+            },
+            "c4": {
+              "title": "Dalla sovrapposizione alla convergenza",
+              "desc": "Come costruire un fascicolo documentale unico per ogni sistema HR AI che regga sia a un audit ACN sia a un'ispezione di market surveillance dell'AI Act."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "10",
+              "unit": "M€ / 2%",
+              "label": "Sanzione massima NIS2 per i soggetti essenziali come i fornitori di reti TLC, o il 2% del fatturato mondiale"
+            },
+            "s2": {
+              "value": "15",
+              "unit": "M€ / 3%",
+              "label": "Sanzione massima AI Act per inadempimenti del deployer sui sistemi HR ad alto rischio, o il 3% del fatturato mondiale"
+            },
+            "s3": {
+              "value": "30-40%",
+              "label": "Tasso di assunzioni inefficaci nelle grandi imprese (oltre 1.000 dipendenti) target della piattaforma Skillvue"
+            }
+          },
+          "meta": {
+            "title": "NIS2 e AI Act: il doppio binario regolatorio che ridisegna la HR tech nel settore TLC | Skillvue",
+            "description": "Come le regole di cybersecurity NIS2 e gli obblighi ad alto rischio dell'AI Act europeo si sovrappongono oggi sugli stessi sistemi HR delle telco, e cosa devono fare i team compliance."
+          }
+        },
+        "telco-cybersecurity-nis2-talent-strategy": {
+          "title": "Cybersecurity Skills Gap nel Settore Telco: Dalla Compliance NIS2 alla Strategia di Talento",
+          "shortDesc": "La NIS2 ha reso la cybersecurity una priorità di governance per gli operatori telco: ENISA colloca oggi il talento qualificato tra le leve chiave del vantaggio competitivo duraturo.",
+          "fullDesc": "Questo approfondimento analizza come la Direttiva NIS2 abbia elevato la cybersecurity al rango di asset strategico di governance per gli operatori telco, il settore che ENISA valuta come il più rilevante a livello sistemico in Europa (9,7/10). Ripercorre gli obblighi normativi che ridisegnano la supervisione del board e la gestione degli incidenti, i dati di mercato dietro la crescente carenza di talento cyber in Europa, e come i principali operatori — Deutsche Telekom, Orange, Telefónica Tech e TIM — stiano costruendo pipeline interne per competere su un talento cyber scarso. Si chiude con le evidenze su pianificazione della successione e metodi di selezione strutturati che distinguono gli operatori capaci di catturare un vantaggio duraturo.",
+          "heroDesc": "ENISA ha appena collocato la disponibilità di talento cyber qualificato al secondo posto tra le leve critiche per la resilienza digitale europea — davanti ai sistemi legacy e alle vulnerabilità non patchate. Per il settore telecom, quello con il punteggio di rilevanza sistemica più alto d'Europa, non è una nota a margine: è il vantaggio competitivo dei prossimi cinque anni.",
+          "takeaways": {
+            "t1": "ENISA colloca oggi il talento cyber qualificato al 2° posto tra le leve critiche per la resilienza digitale europea, davanti ai sistemi non aggiornati.",
+            "t2": "La NIS2 porta la cybersecurity nell'agenda del CdA, allo stesso livello dei rischi finanziari e reputazionali, con scadenze di notifica a 24h/72h/30 giorni.",
+            "t3": "Le organizzazioni con organico cyber adeguato risparmiano 1,76 milioni di dollari per breach evitato, ma le posizioni SOC richiedono in media 7 mesi per essere coperte.",
+            "t4": "La selezione strutturata (test cognitivo + work sample + intervista comportamentale) raggiunge il 63% di validità predittiva contro il 38% dell'intervista non strutturata — un miglioramento del 66%."
+          },
+          "chapters": {
+            "c1": {
+              "title": "Il Riposizionamento Strategico delle Competenze Cyber",
+              "desc": "La previsione ENISA al 2030 colloca oggi la disponibilità di talento qualificato al secondo posto tra le leve di resilienza cyber europea, subito dopo la supply chain."
+            },
+            "c2": {
+              "title": "La Cybersecurity Entra nella Governance Strategica",
+              "desc": "La NIS2 rende la cybersecurity una questione di governance a livello di CdA, con tempistiche di notifica armonizzate e obblighi di formazione sulla sicurezza."
+            },
+            "c3": {
+              "title": "Una Nuova Aritmetica per il Talento Cyber",
+              "desc": "I dati su attraction, retention, costo dei breach e tempi di copertura SOC mostrano perché volume e qualità delle assunzioni cyber sono diventati una leva strategica."
+            },
+            "c4": {
+              "title": "Quattro Operatori, Quattro Modelli di Leadership Cyber",
+              "desc": "Come Deutsche Telekom, Orange, Telefónica Tech e TIM/Telsy costruiscono capacità cyber su scala attraverso pipeline di talento distinte."
+            },
+            "c5": {
+              "title": "La Successione come Leva di Continuità Strategica",
+              "desc": "Perché la pianificazione della successione documentata e i metodi di selezione strutturati e predittivi sono le leve meno capitalizzate per pipeline di leadership cyber durature."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "9,7",
+              "unit": "/10",
+              "label": "Punteggio di rilevanza sistemica ENISA per il settore telecom — il più alto in Europa"
+            },
+            "s2": {
+              "value": "1,76mln",
+              "unit": "$",
+              "label": "Valore aggiuntivo catturato per breach evitato dalle aziende con organico cyber adeguato"
+            },
+            "s3": {
+              "value": "63%",
+              "label": "Validità predittiva della selezione strutturata (test cognitivo + work sample + intervista comportamentale) contro il 38% dell'intervista non strutturata"
+            }
+          },
+          "meta": {
+            "title": "Cybersecurity Skills Gap nel Settore Telco: Dalla Compliance NIS2 alla Strategia di Talento | Skillvue",
+            "description": "La NIS2 ha reso la cybersecurity una priorità di governance per gli operatori telco: ENISA colloca oggi il talento qualificato tra le leve chiave del vantaggio competitivo duraturo."
+          }
         }
       },
       "filters": {
@@ -7314,34 +7724,52 @@
         "industry": "Settore",
         "topic": "Area Tematica",
         "hrProcess": "Processo",
-        "noResults": "Nessun whitepaper corrisponde ai filtri selezionati. Prova a modificare la selezione.",
+        "noResults": "Nessun insight corrisponde ai filtri selezionati. Prova a modificare la selezione.",
         "read": "Leggi"
       },
       "text": "Risorse",
-      "heading": "White Paper<br></br>& <span>Report</span>",
+      "heading": "Ricerche e <span>approfondimenti</span><br></br>di settore",
       "body": "Ricerche e approfondimenti per ripensare il modo in cui selezioni, sviluppi e gestisci il talento. Esplora la nostra libreria e scarica le risorse che ti servono.",
       "cta": "Esplora la libreria",
-      "text2": "White Paper",
+      "text2": "Insight",
       "heading2": "Vuoi vedere la scienza in azione?",
       "body2": "Prenota una demo con il nostro team e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
       "cta2": "Prenota una Demo",
       "detail": {
-        "body": "White Paper non trovato.",
-        "cta": "Torna ai White Paper",
+        "body": "Insight non trovato.",
+        "cta": "Torna a Insights",
         "cta2": "Scarica Gratis",
-        "heading": "Scarica il White Paper Completo",
+        "heading": "Scarica l'Insight Completo",
         "body2": "Compila il modulo e te lo invieremo direttamente nella tua inbox.",
-        "heading2": "Altri White Paper",
+        "heading2": "Altri Insight",
         "heading3": "Vuoi vedere la scienza in azione?",
         "body3": "Prenota una demo con il nostro team e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
         "cta3": "Prenota una Demo",
         "insideHeading": "Cosa <span>Contiene</span>"
       },
       "meta": {
-        "title": "White Paper & Report | Skillvue",
+        "title": "Ricerche e Approfondimenti di Settore | Skillvue",
         "description": "Ricerche e approfondimenti per ripensare il modo in cui selezioni, sviluppi e gestisci il talento. Esplora la nostra libreria e scarica le risorse che ti ser..."
       },
-      "badge": "White Paper"
+      "badge": "Insight",
+      "onePagersHeading": "One Pager",
+      "onePagersBody": "Panoramiche rapide e condivisibili, da aprire o scaricare subito — nessun modulo richiesto.",
+      "insightsHeading": "Insights",
+      "onePagerBadge": "One Pager",
+      "onePagers": {
+        "luxury": {
+          "title": "Skillvue per il Lusso",
+          "shortDesc": "Rendi ogni decisione sul talento eccellente quanto il tuo brand: proteggi le relazioni con i clienti, il know-how artigianale e le performance degli advisor con dati oggettivi sulle competenze."
+        },
+        "supermarkets": {
+          "title": "Skillvue per la GDO",
+          "shortDesc": "Il sistema operativo delle competenze per la tua rete vendita: assunzioni, promozioni e reskilling supportati da dati oggettivi."
+        },
+        "financial-institutions": {
+          "title": "Skillvue per gli Istituti Finanziari",
+          "shortDesc": "Il sistema operativo delle competenze per la tua forza lavoro bancaria: assunzioni, successione e reskilling per l'era dell'AI."
+        }
+      }
     }
   },
   "science": {

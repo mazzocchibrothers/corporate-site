@@ -63,6 +63,13 @@ export type Route = {
    * deliberately not retrofitted here — that is #148.
    */
   noindex?: boolean;
+  /**
+   * This route used to live at a different URL per locale. next.config.ts
+   * turns each into a permanent redirect so old links and search results land
+   * on the current one instead of 404ing — see `resources/insights`, which
+   * moved from `resources/whitepapers` when White Papers was renamed Insights.
+   */
+  redirectFrom?: Partial<Record<Locale, string>>;
 };
 
 export const routes: Route[] = data as Route[];

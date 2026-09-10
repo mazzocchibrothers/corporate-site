@@ -22,13 +22,13 @@ const footerGroups = [
     ],
   },
   { id: 'customers', links: ['customers', 'customers/talent-pioneers', 'book-meeting'] },
-  { id: 'resources', links: ['blog', 'resources/whitepapers', 'resources/press', 'about', 'careers'] },
+  { id: 'resources', links: ['blog', 'resources/insights', 'resources/press', 'about', 'careers'] },
 ];
 
 // English-only content, not advertised to Italian visitors. Same list and same
 // reason as the navbar: it is an editorial decision, not something the registry
 // knows, until #116 declares those routes English-only.
-const HIDDEN_IN_IT = new Set(['blog', 'resources/whitepapers']);
+const HIDDEN_IN_IT = new Set(['blog', 'resources/insights']);
 
 /** 'solutions/talent-acquisition' -> 'talentAcquisition', the label's key. */
 const labelKey = (id: string) =>

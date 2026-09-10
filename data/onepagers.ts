@@ -1,0 +1,41 @@
+// Structure only, same convention as data/whitepapers.ts — every string a
+// visitor reads lives in the catalogue under resources.insights.onePagers,
+// keyed on the slug. One-pagers link straight to the PDF: no dedicated page,
+// no HubSpot gate.
+export const onepagers = [
+  {
+    slug: 'luxury',
+    published: true,
+    publishDate: '2026-08-04',
+    languageAvailability: ['en'],
+    industry: ['Luxury Fashion'],
+    topic: ['Client Retention', 'Succession Planning'],
+    coverImage: '/covers/onepager-luxury.avif',
+    coverBg: '/covers/onepager-luxury.avif',
+    fileUrlEN: '/skillvue-one-pager-luxury.pdf',
+  },
+  {
+    slug: 'supermarkets',
+    published: true,
+    publishDate: '2026-06-30',
+    languageAvailability: ['en', 'it'],
+    industry: ['Retail'],
+    topic: ['Talent Acquisition', 'Store Manager Pipelines'],
+    coverImage: '/covers/onepager-supermarkets.avif',
+    coverBg: '/covers/onepager-supermarkets.avif',
+    fileUrlEN: '/skillvue-one-pager-supermarkets.pdf',
+    fileUrlIT: '/skillvue-one-pager-supermarkets-it.pdf',
+  },
+  {
+    slug: 'financial-institutions',
+    published: true,
+    publishDate: '2026-06-11',
+    languageAvailability: ['en', 'it'],
+    industry: ['Financial Services'],
+    topic: ['Reskilling', 'Succession Planning'],
+    coverImage: '/covers/onepager-financial-institutions.avif',
+    coverBg: '/covers/onepager-financial-institutions.avif',
+    fileUrlEN: '/skillvue-one-pager-financial-institutions.pdf',
+    fileUrlIT: '/skillvue-one-pager-financial-institutions-it.pdf',
+  },
+];

@@ -16,7 +16,7 @@
         "learningDevelopment": "Development",
         "internalMobility": "Mobility",
         "projectResourcing": "Project Resourcing",
-        "whitepapers": "White Papers",
+        "insights": "Insights",
         "blog": "Blog",
         "press": "Press",
         "about": "About",
@@ -46,7 +46,7 @@
         "talentPioneers": "Talent Pioneers",
         "bookMeeting": "Book a Demo",
         "blog": "Blog",
-        "whitepapers": "White Papers",
+        "insights": "Insights",
         "press": "Press",
         "about": "About",
         "careers": "Careers"
@@ -7150,7 +7150,7 @@
       "italianKicker": "Italian press",
       "italianHeading": "Skillvue in the Italian media"
     },
-    "whitepapers": {
+    "insights": {
       "items": {
         "beyond-skills": {
           "title": "Beyond Skills. Measuring Aspirations and Motivation",
@@ -7305,6 +7305,416 @@
             "title": "Turnover in Sales Networks | Skillvue",
             "description": "Key figures, root causes, and verification-based strategies to fight turnover in sales networks."
           }
+        },
+        "predictive-workforce-planning-fashion-retail": {
+          "title": "Predictive Workforce Planning for Seasonal Peaks in European Fashion Retail",
+          "shortDesc": "How Europe's fashion retailers can turn seasonal hiring from a volume race into a predictive advantage, ahead of 2026's regulatory deadlines.",
+          "fullDesc": "This insight examines why seasonal workforce planning in European fashion retail can no longer rely on volume and speed of coverage alone. Drawing on turnover data, understaffing research, and the 2026 regulatory convergence (Pay Transparency Directive, AI Act, CSRD), it shows how the predictive quality of candidate selection is becoming a direct margin and compliance variable. It also revisits the latest science on predictive validity of selection methods, explaining why structured interviews have overtaken general mental ability tests as the top predictor, and what this means for scaling quality hiring across hundreds of seasonal roles.",
+          "heroDesc": "Sales-staff turnover above 75%, three EU regulations landing within nine weeks of each other, and a peak quarter that no longer forgives guesswork: the way fashion retailers select seasonal staff is quietly becoming their next margin battleground.",
+          "takeaways": {
+            "t1": "Sales-staff turnover in retail stores has reached 75.8% a year, with understaffing alone costing stores 8.56% of sales and 7.02% of profitability during peaks.",
+            "t2": "Between June and August 2026, the Pay Transparency Directive, the AI Act's high-risk rules, and CSRD reporting converge, turning seasonal hiring tools into compliance infrastructure.",
+            "t3": "New 2022 research overturned decades of selection science: the structured interview, not general mental ability, is now the single most predictive hiring method (0.42 vs 0.31).",
+            "t4": "Only 21% of organizations have reached high maturity in workforce planning, up from 14% a year earlier, leaving most retailers exposed heading into peak season."
+          },
+          "chapters": {
+            "c1": {
+              "title": "The Peak Is No Longer an Event",
+              "desc": "Q4 now concentrates about 19% of annual retail sales and keeps growing double-digit every year, yet seasonal hiring is still run with tools built to fill shifts, not to anticipate which profiles will perform."
+            },
+            "c2": {
+              "title": "The Invisible Erosion of Margin",
+              "desc": "Sales-staff turnover has hit 75.8% a year, and understaffing alone costs stores 8.56% of sales and 7.02% of profitability at peak, a loss that is systemic but never isolated on a P&L line."
+            },
+            "c3": {
+              "title": "The 2026 Regulatory Triangle",
+              "desc": "Between June and August 2026 the Pay Transparency Directive, the AI Act's high-risk rules, and CSRD reporting converge, turning the tools used to select seasonal staff into compliance infrastructure."
+            },
+            "c4": {
+              "title": "The New Hierarchy of Predictive Validity",
+              "desc": "A 2022 study overturned decades of selection science, moving the structured interview to the top predictor of hiring success (0.42) and General Mental Ability down to 0.31."
+            },
+            "c5": {
+              "title": "From Volume Forecasting to Performance Forecasting",
+              "desc": "As up to 40% of retail workers face reskilling and 30-35% of consumer-function activities become automatable by 2030, seasonal planning shifts from covering shifts to predicting which profiles hold up under pressure."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "75.8%",
+              "label": "Annual turnover of sales staff in retail stores"
+            },
+            "s2": {
+              "value": "8.56%",
+              "label": "Sales lost to understaffing during peak weeks"
+            },
+            "s3": {
+              "value": "0.42",
+              "label": "Predictive validity of the structured interview, now the top hiring predictor"
+            }
+          },
+          "meta": {
+            "title": "Predictive Workforce Planning for Seasonal Peaks in European Fashion Retail | Skillvue",
+            "description": "How Europe's fashion retailers can turn seasonal hiring from a volume race into a predictive advantage, ahead of 2026's regulatory deadlines."
+          }
+        },
+        "pay-transparency-compensation-architecture-fashion-retail": {
+          "title": "Pay Transparency and Compensation Architecture in Fashion Retail",
+          "shortDesc": "How EU Directive 2023/970 turns pay transparency into a structural mandate for fashion retailers — and why your job architecture is the real test in 2027.",
+          "fullDesc": "This insight examines EU Directive 2023/970 on pay transparency and what it means for fashion retail, one of Europe's most feminised sectors. It walks through the compliance timeline, the 5% pay-gap threshold that triggers joint pay assessments, and what UK gender pay gap reports from Primark and Inditex reveal about quartile distribution by gender. It closes with a practical case for building a job architecture based on the Directive's four criteria — skills, effort, responsibility, and working conditions — before the first mandatory report is filed in 2027.",
+          "heroDesc": "On 7 June 2026, the era of opaque pay negotiation in Europe closed. In fashion retail, where women make up 62% of the workforce yet cluster in the lowest-paid quartiles, the question isn't whether to prepare for Directive 2023/970 — it's whether your organisational structure can survive being made visible.",
+          "takeaways": {
+            "t1": "The 5% threshold applies per job category, not company average — you can look compliant overall and still trigger a joint pay assessment.",
+            "t2": "The burden of proof flips: in a pay discrimination dispute, employers must prove differences are objective and gender-neutral, with uncapped damages.",
+            "t3": "Only 1 in 5 Italian fashion companies currently monitor gender pay disparities — and 82% of CEOs believe career opportunities are already equal.",
+            "t4": "The 2027 report will be based on 2026 pay data — the window to build a defensible job architecture is measured in quarters, not years."
+          },
+          "chapters": {
+            "c1": {
+              "title": "Seven Days in June",
+              "desc": "How the EU compliance timeline unfolds, from the Directive's 2023 adoption to the first mandatory report in 2027."
+            },
+            "c2": {
+              "title": "The Number 5 and the Geometry of Risk",
+              "desc": "Why the 5% pay-gap threshold applies per job category — and how the burden of proof shifts onto employers."
+            },
+            "c3": {
+              "title": "Lower Quartile, Upper Quartile",
+              "desc": "What UK gender pay gap reports from Primark and Inditex reveal about where women sit on the fashion retail pay pyramid."
+            },
+            "c4": {
+              "title": "From Disclosure to Design",
+              "desc": "Why a job architecture built on skills, effort, responsibility and working conditions turns a reporting obligation into a defensible system."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "62%",
+              "label": "Share of women in the European retail workforce, vs 46% EU average"
+            },
+            "s2": {
+              "value": "5%",
+              "label": "Pay gap per category that triggers a joint pay assessment"
+            },
+            "s3": {
+              "value": "1 in 5",
+              "label": "Italian fashion companies that currently monitor gender pay disparities"
+            }
+          },
+          "meta": {
+            "title": "Pay Transparency and Compensation Architecture in Fashion Retail | Skillvue",
+            "description": "How EU Directive 2023/970 turns pay transparency into a structural mandate for fashion retailers — and why your job architecture is the real test in 2027."
+          }
+        },
+        "top-performing-medical-sales-representative": {
+          "title": "The Top-Performing Medical Sales Representative",
+          "shortDesc": "Why CV screening and gut-feel interviews keep failing to predict top pharmaceutical sales performers, and what an evidence-based behavioral model can fix.",
+          "fullDesc": "This insight examines why Medical Sales Representative (MedRep) hiring across Europe still relies on scientific degrees, prior experience, and unstructured interviews - tools that decades of research rank among the weakest predictors of on-the-job performance. Drawing on meta-analyses by Schmidt & Hunter and Sackett et al., it quantifies the predictive-validity gap between traditional hiring methods and structured, behavior-based assessment. It also breaks down the financial toll of hiring mismatches, from 35% annual turnover to six-figure replacement costs, and outlines how the shift toward hybrid, digital-first sales roles is raising the stakes further.",
+          "heroDesc": "Your MedReps are hired on a degree and a good first impression - the two weakest predictors of sales performance science has ever measured. Here's what actually separates a top performer from a 12-month exit.",
+          "takeaways": {
+            "t1": "Unstructured interviews - still the norm in MedRep hiring - have a predictive validity of just 0.19, the lowest of any selection method measured.",
+            "t2": "Combining structured interviews with behavioral assessment lifts predictive validity to 0.42-0.58, the strongest results found in the research.",
+            "t3": "Pharma sales forces lose 35% of MedReps every year, with 44% leaving within 24 months, well before reaching full productivity.",
+            "t4": "A single hiring mismatch costs €82K-€160K in replacement costs, plus lost physician relationships during an average 6.2-month territory vacancy."
+          },
+          "chapters": {
+            "c1": {
+              "title": "The Billion-Euro Blind Spot",
+              "desc": "Why the behavioral profile - the single biggest driver of MedRep performance - remains the one thing pharma hiring never measures."
+            },
+            "c2": {
+              "title": "What Science Knows and the Industry Ignores",
+              "desc": "Meta-analyses from Schmidt & Hunter and Sackett et al. rank unstructured interviews as the least valid hiring method - and structured behavioral assessment as the most valid."
+            },
+            "c3": {
+              "title": "Cognitive Biases and Hiring",
+              "desc": "How unstructured interviews let Area and District Managers hire for affinity rather than for the competencies that actually predict success."
+            },
+            "c4": {
+              "title": "The Hybrid MedRep",
+              "desc": "How digital-first scientific dialogue is adding new behavioral competencies - digital empathy, asynchronous rigor - that traditional interviews never assess."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "950K",
+              "label": "Direct pharmaceutical employees in Europe"
+            },
+            "s2": {
+              "value": "35%",
+              "label": "Average annual turnover in pharmaceutical sales forces"
+            },
+            "s3": {
+              "value": "120",
+              "unit": "€K+",
+              "label": "Real cost of a single MedRep hiring mistake"
+            }
+          },
+          "meta": {
+            "title": "The Top-Performing Medical Sales Representative | Skillvue",
+            "description": "Why CV screening and gut-feel interviews keep failing to predict top pharmaceutical sales performers, and what an evidence-based behavioral model can fix."
+          }
+        },
+        "medrep-lifecycle-skill-based-assessment": {
+          "title": "The Life Cycle of the Medical Rep: From Hiring to Development with a Continuous Skill-Based Approach",
+          "shortDesc": "Pharma companies invest €8,000-15,000 a year training each Medical Rep, yet fewer than 10% ever measure whether that training changes behavior or results.",
+          "fullDesc": "This insight examines the measurement gap in pharmaceutical sales force training, using the Kirkpatrick model to show where evaluation systematically stops before reaching behavioral change or business impact. It proposes a longitudinal, skill-based assessment framework applied at four checkpoints in the Medical Rep's lifecycle — entry, six months, twelve months, and promotion to Area Manager — to turn training and promotion decisions into evidence-based practices. It also quantifies the financial cost of the current evaluation gap through turnover, and connects the approach to EU AI Act, EFPIA, and CSRD compliance requirements.",
+          "heroDesc": "Pharma spends €8,000-15,000 a year training every Medical Rep — six to twelve times the cross-industry average — yet fewer than one in ten companies can prove any of it changes what happens in front of a physician. What if your training budget could finally show its work?",
+          "takeaways": {
+            "t1": "Fewer than 10% of organizations measure whether MedRep training changes field behavior or business results — most stop at course satisfaction and knowledge tests (Kirkpatrick Levels 1-2).",
+            "t2": "44% of Medical Reps leave within their first two years, often due to a behavioral misalignment that could have been caught at hiring, not role unsustainability.",
+            "t3": "Promoting top-selling MedReps to Area Manager is a bet on the past: individual selling skills like autonomy and personal results focus don't predict coaching or delegation ability.",
+            "t4": "A four-checkpoint longitudinal assessment (Day 1, 6 months, 12 months, promotion) could save a 100-person MedRep network an estimated €4.3M over three years by reducing turnover."
+          },
+          "chapters": {
+            "c1": {
+              "title": "The Measurement Blind Spot",
+              "desc": "Why the Kirkpatrick model reveals that pharma training evaluation almost always stops before verifying behavior change or business results."
+            },
+            "c2": {
+              "title": "The Hidden Cost of Training Without Evidence",
+              "desc": "How 35% annual turnover and €8-15K per-MedRep training spend combine into a multi-million euro cycle of hiring, training, and losing talent."
+            },
+            "c3": {
+              "title": "Four Phases, One System",
+              "desc": "A longitudinal assessment framework tracking MedReps at entry, 6 months, 12 months, and promotion to build a continuous behavioral profile."
+            },
+            "c4": {
+              "title": "The Performance Trap",
+              "desc": "Why promoting top sellers to Area Manager based on sales results alone ignores the different skills coaching and team leadership require."
+            },
+            "c5": {
+              "title": "Financial Impact and Regulatory Compliance",
+              "desc": "Modeling the multi-million euro savings from reduced turnover, and how longitudinal assessment meets EU AI Act, EFPIA, and CSRD requirements."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "<10%",
+              "label": "of pharma companies measure whether MedRep training actually changes field behavior or business results"
+            },
+            "s2": {
+              "value": "44%",
+              "label": "of Medical Reps leave the company within their first two years on the job"
+            },
+            "s3": {
+              "value": "4.3",
+              "unit": "€M",
+              "label": "potential 3-year savings for a 100-person MedRep network from longitudinal assessment"
+            }
+          },
+          "meta": {
+            "title": "The Life Cycle of the Medical Rep: From Hiring to Development with a Continuous Skill-Based Approach | Skillvue",
+            "description": "Pharma companies invest €8,000-15,000 a year training each Medical Rep, yet fewer than 10% ever measure whether that training changes behavior or results."
+          }
+        },
+        "seasonal-hiring-beauty-retail-conversion-rate": {
+          "title": "High-Volume Hiring in Beauty Retail: How Seasonal Advisor Quality Drives Conversion Rate",
+          "shortDesc": "Why Q4 seasonal hiring quality for beauty advisors directly drives store conversion rate, and which selection methods actually predict performance.",
+          "fullDesc": "This insight examines why the fourth quarter's seasonal hiring surge is the most fragile link in beauty retail's sales funnel, as compressed timelines push stores toward unstructured interviews even though these are the least predictive selection method available. It quantifies the predictive-validity gap between structured and unstructured interviews using the Sackett et al. (2022) meta-analysis, and connects that gap to conversion rate, revenue and margin at flagship-store scale. It also outlines the compliance obligations under the EU AI Act (Regulation 2024/1689), which will classify AI tools used for staff selection as high-risk from August 2026.",
+          "heroDesc": "Every Q4, beauty retailers hand their most margin-critical hiring decisions to the selection method the science says is least predictive. Here's what that costs — and what changes when the EU AI Act deadline arrives.",
+          "takeaways": {
+            "t1": "Structured interviews are 100% more predictive of future job performance than unstructured ones (r=0.42 vs r=0.19, Sackett et al. 2022) — yet Q4 time pressure keeps pushing hiring toward the weaker method.",
+            "t2": "75% of customers say they'd spend more after high-quality in-store service, making beauty advisor quality a margin variable, not just a service one.",
+            "t3": "LVMH alone plans to hire 22,000 people by the end of 2025, mostly sales roles — a scale most seasonal chains are organizationally sized for Q1, not Q4, to handle.",
+            "t4": "From 2 August 2026, the EU AI Act (Reg. 2024/1689) classifies AI hiring tools as high-risk, with fines up to €15M or 3% of global turnover, turning HR-AI vendor selection into a compliance decision."
+          },
+          "chapters": {
+            "c1": {
+              "title": "Q4 Seasonality: Strategic Weight, Fragile Criteria",
+              "desc": "Three months of the year decide whether the annual budget is hit, yet this is exactly when selection criteria fragment under time pressure."
+            },
+            "c2": {
+              "title": "The Scale of the Phenomenon",
+              "desc": "Beauty chains are organizationally sized for Q1, not Q4, so seasonal hiring volume collapses the candidates-per-position ratio and shortens interviews."
+            },
+            "c3": {
+              "title": "Predictive Validity of Selection Methods",
+              "desc": "Five decades of meta-analysis show structured behavioural interviews are the strongest predictor of job performance, yet remain the least used under Q4 pressure."
+            },
+            "c4": {
+              "title": "The Beauty Advisor's Role in the Conversion Funnel",
+              "desc": "Advisor quality is not a service detail but a margin driver, transferring directly into store conversion rate and Q4 revenue."
+            },
+            "c5": {
+              "title": "The European Regulatory Framework",
+              "desc": "Regulation (EU) 2024/1689 classifies AI hiring tools as high-risk from August 2026, turning HR-AI vendor selection into a compliance decision."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "100%",
+              "label": "Higher predictive validity of structured vs. unstructured interviews (Sackett et al., 2022)"
+            },
+            "s2": {
+              "value": "75%",
+              "label": "Of customers would spend more after high-quality in-store service"
+            },
+            "s3": {
+              "value": "22,000",
+              "label": "New hires planned by LVMH by end of 2025, mostly sales roles"
+            }
+          },
+          "meta": {
+            "title": "High-Volume Hiring in Beauty Retail: How Seasonal Advisor Quality Drives Conversion Rate | Skillvue",
+            "description": "Why Q4 seasonal hiring quality for beauty advisors directly drives store conversion rate, and which selection methods actually predict performance."
+          }
+        },
+        "beauty-advice-international-customer": {
+          "title": "Beauty Advice for the International Customer",
+          "shortDesc": "Multilingualism, technical skin-tone reading and credible routine-building are the measurable skills deciding a beauty store's value amid surging international tourist traffic.",
+          "fullDesc": "As international tourist traffic reshapes who walks into Europe's beauty stores, this insight breaks down the three skills that decide the quality of in-store advice: linguistic fluency, technical reading of skin tone and undertone, and the ability to build credible routines. It quantifies the growing skill gap in the beauty salesforce, the new EU rules that make HR decisions auditable, and the revenue and cost impact of getting advice right.",
+          "heroDesc": "Three out of four customers who cross a European beauty store's threshold today come from a different linguistic and cultural background — and the ability to serve them well is not a personality trait, it's a measurable, trainable skill set.",
+          "takeaways": {
+            "t1": "Italian tax-free shopping runs at 163% of pre-pandemic levels, and three quarters of beauty-store customers in Europe's top tourist cities come from different linguistic and cultural backgrounds.",
+            "t2": "76% of consumers prefer to be served in their mother tongue, and 40% never buy from a brand that does not offer it.",
+            "t3": "Recruitment difficulty for beauty-care operators in Italy hit 69.3% in May 2025, and a mis-hire can cost between 30% and 250% of first-year salary.",
+            "t4": "Personalization leaders generate up to 40% more revenue than slower peers, while the AI Act, Pay Transparency Directive and CSRD now make HR decisions on the salesforce auditable."
+          },
+          "chapters": {
+            "c1": {
+              "title": "The Geography of Traffic Entering the Store",
+              "desc": "International tourist flows are reshaping who walks into a beauty store, demanding technical, linguistic and relational skills all at once."
+            },
+            "c2": {
+              "title": "The Three Dimensions of Qualified Advice",
+              "desc": "Linguistic fluency, technical reading of skin and hair, and credible routine-building are the three observable skills that determine advice quality."
+            },
+            "c3": {
+              "title": "The Skill Gap in the Beauty Salesforce",
+              "desc": "Recruitment difficulty for beauty-care roles has hit a record high in Italy, and mis-hires carry a steep, measurable cost."
+            },
+            "c4": {
+              "title": "The European Regulatory Perimeter",
+              "desc": "The AI Act, Pay Transparency Directive and CSRD are turning HR hiring and development decisions into auditable, documented processes."
+            },
+            "c5": {
+              "title": "The Economic Value of Qualified Advice",
+              "desc": "Qualified advice pays off on both sides of the P&L, lifting revenue while cutting the costs tied to returns and lost customers."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "163%",
+              "label": "Italian tax-free shopping volume versus pre-pandemic 2019 levels"
+            },
+            "s2": {
+              "value": "76%",
+              "label": "Consumers who prefer to be served in their mother tongue"
+            },
+            "s3": {
+              "value": "69.3%",
+              "label": "Recruitment difficulty for beauty-care operators in Italy, May 2025"
+            }
+          },
+          "meta": {
+            "title": "Beauty Advice for the International Customer | Skillvue",
+            "description": "Multilingualism, technical skin-tone reading and credible routine-building are the measurable skills deciding a beauty store's value amid surging international tourist traffic."
+          }
+        },
+        "nis2-ai-act-telco-hr-compliance": {
+          "title": "NIS2 and AI Act: The Dual Regulatory Track Reshaping HR Tech in Telecom",
+          "shortDesc": "How NIS2 cybersecurity rules and the EU AI Act's high-risk obligations now overlap on the same HR systems in European telecom companies, and what compliance teams must do about it.",
+          "fullDesc": "This insight examines how, from 2026, European telecom operators face two cumulative compliance regimes on the same HR AI systems: NIS2 cybersecurity obligations enforced by ACN, and the EU AI Act's high-risk requirements for Annex III employment systems enforced by AI Act market surveillance authorities. It walks through the regulatory timeline, a three-question test for mapping which HR tools fall in scope, the cumulative sanctioning regime, and a governance model for building a single audit-ready dossier per system.",
+          "heroDesc": "From 2026, a single AI-based HR tool in your telecom company can trigger both an ACN cybersecurity audit and an AI Act market surveillance inspection, with cumulative fines and personal liability for your board. The question isn't which regulation to comply with first. It's whether your evidence holds up to both at once.",
+          "takeaways": {
+            "t1": "NIS2 and the AI Act now apply simultaneously to most HR AI tools used by European telcos - ATS scoring, video assessments, workforce analytics - with two separate supervisory authorities and cumulative fines.",
+            "t2": "Training obligations overlap structurally: NIS2 cyber training and AI Act literacy training must cover the same recruiters and board members, or neither obligation is fully met.",
+            "t3": "Fines are cumulative and severe: up to 10 million euros or 2% of turnover under NIS2 for essential entities, and up to 35 million euros or 7% under the AI Act for prohibited practices.",
+            "t4": "The only sustainable path is a single documentary dossier per HR AI system that satisfies both an ACN audit and an AI Act market surveillance inspection without duplicating evidence collection."
+          },
+          "chapters": {
+            "c1": {
+              "title": "The Coincidence No One Planned For",
+              "desc": "Two separate training obligations - NIS2 cyber training and AI Act literacy - converge on the same recruiters, HRBPs and board members."
+            },
+            "c2": {
+              "title": "Mapping the Regulatory Perimeter",
+              "desc": "A three-question test to determine which HR AI tools, from ATS scoring to video assessments, fall under Annex III as high-risk."
+            },
+            "c3": {
+              "title": "The Cost of Non-Compliance",
+              "desc": "NIS2 and AI Act fines are cumulative, reaching up to 35 million euros or 7% of turnover when both regimes apply to the same system."
+            },
+            "c4": {
+              "title": "From Overlap to Convergence",
+              "desc": "How to build a single documentary dossier per HR AI system that satisfies both an ACN audit and an AI Act market surveillance inspection."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "10",
+              "unit": "M€ / 2%",
+              "label": "Maximum NIS2 fine for essential entities like telco network providers, or 2% of worldwide turnover"
+            },
+            "s2": {
+              "value": "15",
+              "unit": "M€ / 3%",
+              "label": "Maximum AI Act fine for deployer non-compliance on high-risk HR systems, or 3% of worldwide turnover"
+            },
+            "s3": {
+              "value": "30-40%",
+              "label": "Mis-hire rate at large enterprises (1,000+ employees) that Skillvue's assessment platform targets"
+            }
+          },
+          "meta": {
+            "title": "NIS2 and AI Act: The Dual Regulatory Track Reshaping HR Tech in Telecom | Skillvue",
+            "description": "How NIS2 cybersecurity rules and the EU AI Act's high-risk obligations now overlap on the same HR systems in European telecom companies, and what compliance teams must do about it."
+          }
+        },
+        "telco-cybersecurity-nis2-talent-strategy": {
+          "title": "The Cybersecurity Skills Gap in Telco: From NIS2 Compliance to a Talent Strategy",
+          "shortDesc": "NIS2 has turned cybersecurity into a board-level priority for telecom operators, and ENISA now ranks qualified talent as the top lever for building lasting competitive advantage.",
+          "fullDesc": "This insight examines how the NIS2 Directive has elevated cybersecurity to a strategic governance asset for telecom operators, the sector ENISA rates as having the highest systemic relevance in Europe (9.7/10). It walks through the regulatory obligations reshaping board oversight and incident response, the market data behind Europe's growing cyber talent shortage, and how leading operators — Deutsche Telekom, Orange, Telefónica Tech and TIM — are building internal pipelines to compete for scarce cyber talent. It closes with the evidence on succession planning and structured selection methods that separate operators who capture a lasting advantage from those who don't.",
+          "heroDesc": "ENISA just ranked the availability of qualified cyber talent as the second most critical lever for Europe's digital resilience — ahead of legacy systems and unpatched vulnerabilities. For telecom, the sector with the highest systemic relevance score in Europe, that's not a footnote: it's the next five years of competitive advantage.",
+          "takeaways": {
+            "t1": "ENISA now ranks qualified cyber talent as the 2nd most critical lever for European digital resilience, ahead of unpatched systems.",
+            "t2": "NIS2 puts cybersecurity on the board agenda, on par with financial and reputational risk, with 24h/72h/30-day incident notification deadlines.",
+            "t3": "Organizations with an adequately sized cyber workforce save $1.76M per breach avoided, yet SOC roles take 7 months on average to fill.",
+            "t4": "Structured selection (cognitive test + work sample + behavioral interview) hits 63% predictive validity vs. 38% for unstructured interviews — a 66% improvement."
+          },
+          "chapters": {
+            "c1": {
+              "title": "The Strategic Repositioning of Cyber Skills",
+              "desc": "ENISA's 2030 forecast now ranks qualified talent as the second most critical lever for European cyber resilience, right after supply chain risk."
+            },
+            "c2": {
+              "title": "Cybersecurity Enters Strategic Governance",
+              "desc": "NIS2 makes cybersecurity a board-level governance matter, with harmonized incident notification timelines and mandatory security training obligations."
+            },
+            "c3": {
+              "title": "A New Arithmetic for Cyber Talent",
+              "desc": "Data on attraction, retention, breach cost and SOC hiring timelines shows why the volume and quality of cyber hiring have become a strategic lever."
+            },
+            "c4": {
+              "title": "Four Operators, Four Models of Cyber Leadership",
+              "desc": "How Deutsche Telekom, Orange, Telefónica Tech and TIM/Telsy are each building cyber capability at scale through distinct talent pipelines."
+            },
+            "c5": {
+              "title": "Succession as a Lever of Strategic Continuity",
+              "desc": "Why documented succession planning and structured, predictive selection methods are the most under-capitalized levers for lasting cyber leadership pipelines."
+            }
+          },
+          "stats": {
+            "s1": {
+              "value": "9.7",
+              "unit": "/10",
+              "label": "ENISA systemic relevance score for the telecom sector — the highest in Europe"
+            },
+            "s2": {
+              "value": "1.76M",
+              "unit": "$",
+              "label": "Extra value captured per breach avoided by firms with an adequately sized cyber workforce"
+            },
+            "s3": {
+              "value": "63%",
+              "label": "Predictive validity of structured selection (cognitive test + work sample + behavioral interview), vs. 38% for unstructured interviews"
+            }
+          },
+          "meta": {
+            "title": "The Cybersecurity Skills Gap in Telco: From NIS2 Compliance to a Talent Strategy | Skillvue",
+            "description": "NIS2 has turned cybersecurity into a board-level priority for telecom operators, and ENISA now ranks qualified talent as the top lever for building lasting competitive advantage."
+          }
         }
       },
       "filters": {
@@ -7314,34 +7724,52 @@
         "industry": "Industry",
         "topic": "Topic",
         "hrProcess": "HR Process",
-        "noResults": "No whitepapers match your current filters. Try adjusting your selection.",
+        "noResults": "No insights match your current filters. Try adjusting your selection.",
         "read": "Read"
       },
       "text": "Resources",
-      "heading": "White Papers<br></br>& <span>Reports</span>",
+      "heading": "Industry <span>insights</span><br></br>and research",
       "body": "Research-backed insights to help you rethink how you hire, develop, and manage talent. Browse our library and download the resources that matter to you.",
       "cta": "Explore the library",
-      "text2": "White Paper",
+      "text2": "Insight",
       "heading2": "Want to see the science in action?",
       "body2": "Book a demo with our team and discover how Skillvue turns talent decisions into a competitive advantage.",
       "cta2": "Book a Demo",
       "detail": {
-        "body": "White Paper not found.",
-        "cta": "Back to White Papers",
+        "body": "Insight not found.",
+        "cta": "Back to Insights",
         "cta2": "Download Free",
-        "heading": "Get the Full White Paper",
+        "heading": "Get the Full Insight",
         "body2": "Fill the form below and we'll send it straight to your inbox.",
-        "heading2": "More White Papers",
+        "heading2": "More Insights",
         "heading3": "Want to see the science in action?",
         "body3": "Book a demo with our team and discover how Skillvue turns talent decisions into a competitive advantage.",
         "cta3": "Book a Demo",
         "insideHeading": "What's <span>Inside</span>"
       },
       "meta": {
-        "title": "White Papers & Reports | Skillvue",
+        "title": "Industry Insights & Research | Skillvue",
         "description": "Research-backed insights to help you rethink how you hire, develop, and manage talent. Browse our library and download the resources that matter to you."
       },
-      "badge": "White Paper"
+      "badge": "Insight",
+      "onePagersHeading": "One Pagers",
+      "onePagersBody": "Quick, shareable overviews you can open or download directly — no form required.",
+      "insightsHeading": "Insights",
+      "onePagerBadge": "One Pager",
+      "onePagers": {
+        "luxury": {
+          "title": "Skillvue for Luxury Fashion",
+          "shortDesc": "Make every talent decision as excellent as your brand: protecting client relationships, craft knowledge and advisor performance with objective skills data."
+        },
+        "supermarkets": {
+          "title": "Skillvue for Supermarkets",
+          "shortDesc": "The skills operating system for your retail workforce: objective hiring, promotion and reskilling decisions across the entire store network."
+        },
+        "financial-institutions": {
+          "title": "Skillvue for Financial Institutions",
+          "shortDesc": "The skills operating system for your banking workforce: objective hiring, succession planning and reskilling for the AI era."
+        }
+      }
     }
   },
   "science": {
