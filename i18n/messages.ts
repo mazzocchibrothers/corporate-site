@@ -14,6 +14,8 @@
 // sitemap and the hreflang tags key off, so a page cannot drift into using a
 // namespace no route claims.
 
+import routes from './routes.json' with { type: 'json' };
+
 /**
  * Namespaces every page renders.
  *
@@ -67,6 +69,50 @@ export function pick(source: Record<string, unknown>, dotted: string) {
   return out;
 }
 
+/** The inverse of `pick`: the same object without one dotted path.
+ *  Exported for scripts/check-messages.mjs, like `pick`. */
+export function omit(source: Record<string, unknown>, dotted: string) {
+  const [head, ...rest] = dotted.split('.');
+  if (!(head in source)) return source;
+
+  const out = { ...source };
+  if (rest.length === 0) {
+    delete out[head];
+    return out;
+  }
+
+  const child = out[head];
+  if (typeof child !== 'object' || child === null || Array.isArray(child)) return source;
+  out[head] = omit(child as Record<string, unknown>, rest.join('.'));
+  return out;
+}
+
+/**
+ * The namespaces of the routes nested *under* this one.
+ *
+ * `demo` is a hub listing three dashboards, and the dashboards are routes of
+ * their own — so their copy sits at `demo.retail`, `demo.sales-network`,
+ * `demo.cross-country`, inside the hub’s namespace. Picking `demo` picked all
+ * of it: 32 KB of catalogue in a document that renders 2 KB of it, growing by
+ * one dashboard every time one is added, and invisible to harness/measure-js.mjs
+ * because it is payload and not JavaScript.
+ *
+ * This is the same defect CLAUDE.md describes for a provider rendered without
+ * `messages`, reached from the other side: nobody widened anything, the
+ * namespace hierarchy is wide by construction. So the cut is here rather than
+ * in a naming convention — it holds for any nested route, and a fourth
+ * dashboard inherits it without anyone remembering to.
+ *
+ * A dynamic segment is not a nested route: `resources/whitepapers/[slug]` and
+ * its index share one namespace (see `namespaceOf`), which is deliberate, and
+ * `startsWith` on a strict prefix leaves them alone.
+ */
+function nestedNamespaces(namespace: string): string[] {
+  return (routes as { id: string }[])
+    .map((route) => namespaceOf(route.id))
+    .filter((other) => other.startsWith(`${namespace}.`));
+}
+
 /**
  * Deep-merges the picked namespaces.
  *
@@ -104,6 +150,8 @@ export async function messagesForRoute(routeId: string, locale: string | undefin
   const all = (await import(`../messages/${locale ?? 'en'}.json`, { with: { type: 'json' } }))
     .default;
 
-  const wanted = [...SHARED, namespaceOf(routeId)];
-  return wanted.reduce<Record<string, unknown>>((acc, ns) => merge(acc, pick(all, ns)), {});
+  const namespace = namespaceOf(routeId);
+  const wanted = [...SHARED, namespace];
+  const picked = wanted.reduce<Record<string, unknown>>((acc, ns) => merge(acc, pick(all, ns)), {});
+  return nestedNamespaces(namespace).reduce((acc, ns) => omit(acc, ns), picked);
 }
