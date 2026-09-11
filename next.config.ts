@@ -24,7 +24,8 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
-  // Permanent redirects for every Italian slug, generated from the registry.
+  // Permanent redirects for every Italian slug, generated from the registry,
+  // plus one entry per route that moved (`redirectFrom` in routes.json).
   //
   // next-intl already sends /it/customers/adr to /it/clienti/adr — but with a
   // 307, which tells Google the move is temporary and to keep indexing the old
@@ -35,26 +36,49 @@ const nextConfig: NextConfig = {
   // from its English one, which is two today and becomes every route as #119
   // translates them. Adding a slug to i18n/routes.json is the whole change.
   async redirects() {
-    return routes
+    // The registry writes a dynamic segment as [slug]; Next's matcher wants
+    // :slug. Without this the one dynamic route's redirect silently never
+    // matches, and its old Italian URLs fall through to next-intl's 307.
+    //
+    // The pattern on the source excludes one value. `opengraph-image` is
+    // Next's own file-convention name, never a slug, and the share card of
+    // the *parent* index sits at exactly that path: without the exclusion
+    // /it/resources/insights/opengraph-image read as :slug and 308'd to
+    // the Italian URL, so the insights index served its card from behind
+    // a redirect while every other card served directly.
+    const asMatcher = (p: string) => p.replace(/\[(\w+)\]/g, ':$1((?!opengraph-image$)[^/]+)');
+    const asDestination = (p: string) => p.replace(/\[(\w+)\]/g, ':$1');
+
+    const localeSlugRedirects = routes
       .flatMap((r) => {
         const { en, it } = r.paths as { en?: string; it?: string };
         return en !== undefined && it !== undefined && en !== it ? [{ en, it }] : [];
       })
       .map(({ en, it }) => ({
-        // The registry writes a dynamic segment as [slug]; Next's matcher wants
-        // :slug. Without this the one dynamic route's redirect silently never
-        // matches, and its old Italian URLs fall through to next-intl's 307.
-        //
-        // The pattern on the source excludes one value. `opengraph-image` is
-        // Next's own file-convention name, never a slug, and the share card of
-        // the *parent* index sits at exactly that path: without the exclusion
-        // /it/resources/whitepapers/opengraph-image read as :slug and 308'd to
-        // the Italian URL, so the whitepapers index served its card from behind
-        // a redirect while every other card served directly.
-        source: `/it${en.replace(/\[(\w+)\]/g, ':$1((?!opengraph-image$)[^/]+)')}`,
-        destination: `/it${it.replace(/\[(\w+)\]/g, ':$1')}`,
+        source: `/it${asMatcher(en)}`,
+        destination: `/it${asDestination(it)}`,
         permanent: true,
       }));
+
+    // A route that moved keeps its old URL alive as a 308 to the new one, per
+    // locale — see `redirectFrom` on the `resources/insights` entries
+    // (i18n/routes.ts). Dynamic segments go through the same [slug] -> :slug
+    // rewrite as the Italian-slug redirects above.
+    const movedRouteRedirects = routes.flatMap((r) => {
+      const { en, it } = r.paths as { en?: string; it?: string };
+      const from = (r as { redirectFrom?: { en?: string; it?: string } }).redirectFrom;
+      if (!from) return [];
+      const entries: { source: string; destination: string; permanent: true }[] = [];
+      if (from.en !== undefined && en !== undefined) {
+        entries.push({ source: asMatcher(from.en), destination: asDestination(en), permanent: true });
+      }
+      if (from.it !== undefined && it !== undefined) {
+        entries.push({ source: `/it${asMatcher(from.it)}`, destination: `/it${asDestination(it)}`, permanent: true });
+      }
+      return entries;
+    });
+
+    return [...localeSlugRedirects, ...movedRouteRedirects];
   },
 
   async headers() {

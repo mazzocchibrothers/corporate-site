@@ -27,18 +27,18 @@ const navLinks: { id: string; route?: string; items: string[] | null }[] = [
   { id: 'customers', items: ['customers', 'customers/talent-pioneers'] },
   {
     id: 'resources',
-    items: ['resources/whitepapers', 'blog', 'resources/press', 'about', 'careers'],
+    items: ['resources/insights', 'blog', 'resources/press', 'about', 'careers'],
   },
 ];
 
 // English-only content we do not advertise to Italian visitors.
 //
 // This is NOT derivable from the registry, and the difference matters:
-// /it/blog and /it/resources/whitepapers both return 200 and render English,
+// /it/blog and /it/resources/insights both return 200 and render English,
 // so the registry is right that they have an Italian URL. Hiding them is a
 // separate, editorial decision. #116 is where it gets settled — once those
 // routes are declared English-only, this list goes and hasLocale() replaces it.
-const HIDDEN_IN_IT = new Set(['resources/whitepapers', 'blog']);
+const HIDDEN_IN_IT = new Set(['resources/insights', 'blog']);
 
 /** 'solutions/talent-acquisition' -> 'talentAcquisition', the label's key. */
 const labelKey = (id: string) =>

@@ -17,7 +17,7 @@ export default async function Image({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const t = await getTranslations({ locale, namespace: `resources.whitepapers.items.${slug}.meta` });
+  const t = await getTranslations({ locale, namespace: `resources.insights.items.${slug}.meta` });
   const og = await getTranslations({ locale, namespace: 'shared.ogEyebrow' });
   return ogCard({ title: t('title'), eyebrow: og('resources') });
 }

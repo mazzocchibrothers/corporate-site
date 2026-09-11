@@ -34,12 +34,73 @@ const CHAPTERS: Record<string, { num: string; icon: any }[]> = {
     { num: '03', icon: Users },
     { num: '04', icon: TrendingUp },
   ],
+  'predictive-workforce-planning-fashion-retail': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: TrendingUp },
+    { num: '03', icon: BookOpen },
+    { num: '04', icon: Brain },
+    { num: '05', icon: Users },
+  ],
+  'pay-transparency-compensation-architecture-fashion-retail': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: Brain },
+    { num: '03', icon: Users },
+    { num: '04', icon: TrendingUp },
+  ],
+  'top-performing-medical-sales-representative': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: Brain },
+    { num: '03', icon: Users },
+    { num: '04', icon: TrendingUp },
+  ],
+  'medrep-lifecycle-skill-based-assessment': [
+    { num: '01', icon: BookOpen },
+    { num: '02', icon: TrendingUp },
+    { num: '03', icon: Brain },
+    { num: '04', icon: Users },
+    { num: '05', icon: Zap },
+  ],
+  'seasonal-hiring-beauty-retail-conversion-rate': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: Users },
+    { num: '03', icon: Brain },
+    { num: '04', icon: TrendingUp },
+    { num: '05', icon: BookOpen },
+  ],
+  'beauty-advice-international-customer': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: Brain },
+    { num: '03', icon: Users },
+    { num: '04', icon: BookOpen },
+    { num: '05', icon: TrendingUp },
+  ],
+  'nis2-ai-act-telco-hr-compliance': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: Brain },
+    { num: '03', icon: TrendingUp },
+    { num: '04', icon: Users },
+  ],
+  'telco-cybersecurity-nis2-talent-strategy': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: BookOpen },
+    { num: '03', icon: TrendingUp },
+    { num: '04', icon: Users },
+    { num: '05', icon: Brain },
+  ],
 };
 
 const STAT_COUNT: Record<string, number> = {
   'beyond-skills': 3,
   'future-leaders': 3,
   'sales-network-turnover': 3,
+  'predictive-workforce-planning-fashion-retail': 3,
+  'pay-transparency-compensation-architecture-fashion-retail': 3,
+  'top-performing-medical-sales-representative': 3,
+  'medrep-lifecycle-skill-based-assessment': 3,
+  'seasonal-hiring-beauty-retail-conversion-rate': 3,
+  'beauty-advice-international-customer': 3,
+  'nis2-ai-act-telco-hr-compliance': 3,
+  'telco-cybersecurity-nis2-talent-strategy': 3,
 };
 
 
@@ -50,7 +111,7 @@ const STAT_COUNT: Record<string, number> = {
 export default function WhitepaperDetailPage({ slug }: { slug: string }) {
   const router = useRouter();
   const lang = useLocale();
-  const t = useTranslations('resources.whitepapers');
+  const t = useTranslations('resources.insights');
   const formRef = useRef<HTMLDivElement>(null);
 
   const wp = whitepapers.find(w => w.slug === slug);
@@ -102,7 +163,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
           )}
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full pb-20 lg:pb-28 pt-32">
             <Button
-              onClick={() => { router.push('/resources/whitepapers'); window.scrollTo(0, 0); }}
+              onClick={() => { router.push('/resources/insights'); window.scrollTo(0, 0); }}
               variant="tertiary"
               mode="dark"
               icon={<ArrowLeft aria-hidden />}
@@ -230,7 +291,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                       delay={i * 0.1}
                       key={rw.slug}
                       className="group flex gap-6 items-center p-5 rounded-2xl border border-white/[0.05] hover:border-white/[0.12] hover:bg-white/[0.03] transition-all duration-500 cursor-pointer"
-                      onClick={() => { router.push(`/resources/whitepapers/${rw.slug}`); window.scrollTo(0, 0); }}
+                      onClick={() => { router.push(`/resources/insights/${rw.slug}`); window.scrollTo(0, 0); }}
                     >
                       {rw.coverBg && (
                         <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0 relative">

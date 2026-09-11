@@ -13,7 +13,7 @@ import { ogImageUrl } from '@/i18n/urls';
 import JsonLd from '@/i18n/json-ld';
 import Body from './body';
 
-const ROUTE = 'resources/whitepapers/[slug]';
+const ROUTE = 'resources/insights/[slug]';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props) {
 
   // The registry holds one entry for N real URLs, so the canonical and the
   // alternates come back with the segment still bracketed —
-  // /resources/whitepapers/[slug]. Every whitepaper would name a URL that does
+  // /resources/insights/[slug]. Every whitepaper would name a URL that does
   // not exist as its canonical, which tells Google to index none of them.
   // app/sitemap.ts fills the slug the same way.
   const fill = (url: string) => url.replace('[slug]', slug);
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props) {
   // Four URLs share this route's namespace, so buildMetadata alone would give
   // the index's title to all three whitepapers and to the index — one title on
   // four pages, which is the defect #138 exists to remove, reintroduced.
-  const t = await getTranslations(`resources.whitepapers.items.${slug}.meta`);
+  const t = await getTranslations(`resources.insights.items.${slug}.meta`);
 
   // The card too: one image per whitepaper, not the route's bracketed one.
   const card = fill(ogImageUrl(routes, routes.find((r) => r.id === ROUTE)!, locale as 'en' | 'it')!);

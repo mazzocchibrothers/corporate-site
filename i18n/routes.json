@@ -406,15 +406,23 @@
     }
   },
   {
-    "id": "resources/whitepapers",
+    "id": "resources/insights",
     "paths": {
+      "en": "/resources/insights",
+      "it": "/risorse/insights"
+    },
+    "redirectFrom": {
       "en": "/resources/whitepapers",
       "it": "/risorse/whitepaper"
     }
   },
   {
-    "id": "resources/whitepapers/[slug]",
+    "id": "resources/insights/[slug]",
     "paths": {
+      "en": "/resources/insights/[slug]",
+      "it": "/risorse/insights/[slug]"
+    },
+    "redirectFrom": {
       "en": "/resources/whitepapers/[slug]",
       "it": "/risorse/whitepaper/[slug]"
     }
