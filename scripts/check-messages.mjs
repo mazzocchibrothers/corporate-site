@@ -15,7 +15,9 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const { messagesForRoute, namespaceOf, pick, merge } = await import(join(ROOT, 'i18n/messages.ts'));
+const { messagesForRoute, namespaceOf, pick, merge, omit } = await import(
+  join(ROOT, 'i18n/messages.ts'),
+);
 
 // ── Route id -> namespace ──────────────────────────────────────────────────
 assert.equal(namespaceOf('index'), 'home', 'the homepage namespace is `home`, not `index`');
@@ -76,6 +78,28 @@ assert.deepEqual(
 );
 assert.deepEqual(pick(catalogue, 'nope.at.all'), {}, 'an absent path picks nothing');
 assert.deepEqual(pick(catalogue, 'home.meta.title.deeper'), {}, 'walking past a leaf picks nothing');
+
+// `omit` on its own: it is what keeps a hub from carrying its children.
+assert.deepEqual(
+  omit({ demo: { hero: 1, retail: { a: 1 } } }, 'demo.retail'),
+  { demo: { hero: 1 } },
+  'omit removes the nested path and leaves its siblings',
+);
+assert.deepEqual(
+  omit({ demo: { hero: 1 } }, 'demo.retail'),
+  { demo: { hero: 1 } },
+  'omitting an absent path changes nothing',
+);
+assert.deepEqual(
+  omit({ demo: { hero: 1 } }, 'demo'),
+  {},
+  'a one-segment path removes the namespace itself',
+);
+assert.deepEqual(
+  omit({ demo: { hero: 'text' } }, 'demo.hero.deeper'),
+  { demo: { hero: 'text' } },
+  'walking past a leaf omits nothing — it must not replace the leaf with an object',
+);
 
 // ── The catalogue obeys its own conventions ────────────────────────────────
 // Documented in harness/docs/conventions.md. Three of the four rules there are
@@ -226,6 +250,57 @@ assert.deepEqual(
     'Use the curly apostrophe (\u2019). ICU reads the straight one as an escape and renders the ' +
     'tag as text.',
 );
+
+// ── A hub does not carry its children ──────────────────────────────────────
+// A route nested under another shares its namespace: the three demo dashboards
+// live at `demo.retail`, `demo.sales-network`, `demo.cross-country`, inside the
+// hub's own `demo`. Picking the hub's namespace picked all of them — 32 KB of
+// catalogue serialized into a document that renders 2 KB of it, and one
+// dashboard more every time one was added (#179).
+//
+// harness/measure-js.mjs cannot see this: it weighs JavaScript, and this is
+// payload. So it is asserted here, for every nested route rather than for the
+// three that have the shape today — the fourth dashboard must inherit the rule
+// without anyone remembering it exists.
+const routeList = JSON.parse(readFileSync(join(ROOT, 'i18n/routes.json'), 'utf8'));
+const pairs = routeList.flatMap((parent) =>
+  routeList
+    .filter((child) => namespaceOf(child.id).startsWith(`${namespaceOf(parent.id)}.`))
+    .map((child) => [parent, child]),
+);
+assert.ok(
+  pairs.length > 0,
+  'no nested routes found — the rule below would pass vacuously, so the derivation is wrong',
+);
+
+for (const locale of ['en', 'it']) {
+  for (const [parent, child] of pairs) {
+    const childNs = namespaceOf(child.id);
+    const leaked = leaves(await messagesForRoute(parent.id, locale))
+      .map(([key]) => key)
+      .filter((key) => key === childNs || key.startsWith(`${childNs}.`));
+    assert.deepEqual(
+      leaked,
+      [],
+      `${locale}: the document of /${parent.id} carries ${leaked.length} key(s) belonging to ` +
+        `/${child.id}:\n${leaked.map((k) => `  ${k}`).join('\n')}\n` +
+        'A route nested under another must not ship its copy. See nestedNamespaces() in i18n/messages.ts.',
+    );
+
+    // The other half: narrowing the parent must not have narrowed the child.
+    const catalogue = locale === 'en' ? catalogueEn : catalogueIt;
+    assert.deepEqual(
+      leaves(await messagesForRoute(child.id, locale))
+        .map(([key]) => key)
+        .filter((key) => key.startsWith(`${childNs}.`))
+        .sort(),
+      leaves(pick(catalogue, childNs))
+        .map(([key]) => key)
+        .sort(),
+      `${locale}: /${child.id} must still receive every key under ${childNs}`,
+    );
+  }
+}
 
 const onlyEn = en.filter((k) => !it.includes(k));
 const onlyIt = it.filter((k) => !en.includes(k));
