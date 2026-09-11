@@ -128,6 +128,13 @@ const colorsInCss = (source) => source.replace(/\/\*[\s\S]*?\*\//g, '').match(HE
 // rather than trusted. Above the line: colours that must stay visible, each one
 // a way the two strippers lost them. Below: prose that must not be mistaken for
 // a colour.
+//
+// The source goes into the failure message alongside the reason. `deepEqual`
+// prints the message and the two arrays but not the input that produced them,
+// and several of these reasons are fragments that continue the line before —
+// "nor does one inside a template literal" on its own, next to two lists of hex,
+// tells whoever is looking at a red gate nothing about what to fix (#189
+// review).
 for (const [source, expected, why] of [
   ['const s = "//js.hsforms.net/x"; const c = "#123456";', ['#123456'],
     'a protocol-relative URL in a string does not open a comment'],
@@ -147,16 +154,20 @@ for (const [source, expected, why] of [
     'a colour before a comment survives it'],
   ['const s = `background: linear-gradient(#123456, #654321)`;', ['#123456', '#654321'],
     'one template literal can carry more than one'],
+  ['const s = `a #123456 ${x} b #654321 ${y} c #abcdef`;', ['#123456', '#654321', '#abcdef'],
+    'a substitution splits the literal into head, middle and tail — all three count'],
   ['// Issue (#176), #168, #abc, and a fake #123456', [],
     'a line comment contributes nothing'],
   ['/* block comment with #123456 in it */', [],
     'and neither does a block comment'],
+  ['const a = <p>#123456</p>;', ['#123456'],
+    'JSX text counts too — a colour written as page text is still a colour'],
   ['const a = <a href="#cafe">x</a>;', [],
     'an href is an anchor, not a colour'],
   ['const a = <a href="#cafe" style={{ color: "#123456" }}>x</a>;', ['#123456'],
     'but skipping the href does not skip the rest of the tag'],
 ]) {
-  assert.deepEqual(colorsIn(source), expected, why);
+  assert.deepEqual(colorsIn(source), expected, `${why}\n  ${source}`);
 }
 
 // The CSS reader has far less to get wrong, but it is still what decides
@@ -169,7 +180,7 @@ for (const [source, expected, why] of [
   ['.a { color: #123456; } /* was #654321 */', ['#123456'],
     'and does not take the declaration before it away'],
 ]) {
-  assert.deepEqual(colorsInCss(source), expected, why);
+  assert.deepEqual(colorsInCss(source), expected, `${why}\n  ${source}`);
 }
 
 // `.tsx` only, not `.ts`.
