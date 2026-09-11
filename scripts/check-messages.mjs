@@ -100,6 +100,11 @@ assert.deepEqual(
   { demo: { hero: 'text' } },
   'walking past a leaf omits nothing — it must not replace the leaf with an object',
 );
+assert.deepEqual(
+  omit({ demo: { list: ['a'] } }, 'demo.list.0'),
+  { demo: { list: ['a'] } },
+  'an array is a value, not a path to walk into — an ICU message list is one message',
+);
 
 // ── The catalogue obeys its own conventions ────────────────────────────────
 // Documented in harness/docs/conventions.md. Three of the four rules there are
@@ -263,42 +268,66 @@ assert.deepEqual(
 // three that have the shape today — the fourth dashboard must inherit the rule
 // without anyone remembering it exists.
 const routeList = JSON.parse(readFileSync(join(ROOT, 'i18n/routes.json'), 'utf8'));
-const pairs = routeList.flatMap((parent) =>
-  routeList
-    .filter((child) => namespaceOf(child.id).startsWith(`${namespaceOf(parent.id)}.`))
-    .map((child) => [parent, child]),
-);
+const nests = routeList
+  .map((parent) => [
+    parent,
+    routeList.filter((child) => namespaceOf(child.id).startsWith(`${namespaceOf(parent.id)}.`)),
+  ])
+  .filter(([, children]) => children.length > 0);
 assert.ok(
-  pairs.length > 0,
-  'no nested routes found — the rule below would pass vacuously, so the derivation is wrong',
+  nests.length > 0,
+  'no nested routes found — the rules below would pass vacuously, so the derivation is wrong',
 );
 
 for (const locale of ['en', 'it']) {
-  for (const [parent, child] of pairs) {
-    const childNs = namespaceOf(child.id);
-    const leaked = leaves(await messagesForRoute(parent.id, locale))
-      .map(([key]) => key)
-      .filter((key) => key === childNs || key.startsWith(`${childNs}.`));
+  const catalogue = locale === 'en' ? catalogueEn : catalogueIt;
+
+  for (const [parent, children] of nests) {
+    const parentNs = namespaceOf(parent.id);
+    const childNamespaces = children.map((child) => namespaceOf(child.id));
+
+    // The half that is easy to forget, because the fix for the other one
+    // satisfies it by deleting: subtracting the children must leave the parent
+    // everything else. Without this, `omit(picked, parentNs)` — one plausible
+    // slip — passes green while the hub renders key paths where its copy was.
+    const under = (ns, key) => key === ns || key.startsWith(`${ns}.`);
     assert.deepEqual(
-      leaked,
-      [],
-      `${locale}: the document of /${parent.id} carries ${leaked.length} key(s) belonging to ` +
-        `/${child.id}:\n${leaked.map((k) => `  ${k}`).join('\n')}\n` +
-        'A route nested under another must not ship its copy. See nestedNamespaces() in i18n/messages.ts.',
+      leaves(await messagesForRoute(parent.id, locale))
+        .map(([key]) => key)
+        .filter((key) => under(parentNs, key))
+        .sort(),
+      leaves(pick(catalogue, parentNs))
+        .map(([key]) => key)
+        .filter((key) => !childNamespaces.some((childNs) => under(childNs, key)))
+        .sort(),
+      `${locale}: /${parent.id} must receive its own namespace, minus its children and nothing more`,
     );
 
-    // The other half: narrowing the parent must not have narrowed the child.
-    const catalogue = locale === 'en' ? catalogueEn : catalogueIt;
-    assert.deepEqual(
-      leaves(await messagesForRoute(child.id, locale))
+    for (const child of children) {
+      const childNs = namespaceOf(child.id);
+      const leaked = leaves(await messagesForRoute(parent.id, locale))
         .map(([key]) => key)
-        .filter((key) => key.startsWith(`${childNs}.`))
-        .sort(),
-      leaves(pick(catalogue, childNs))
-        .map(([key]) => key)
-        .sort(),
-      `${locale}: /${child.id} must still receive every key under ${childNs}`,
-    );
+        .filter((key) => under(childNs, key));
+      assert.deepEqual(
+        leaked,
+        [],
+        `${locale}: the document of /${parent.id} carries ${leaked.length} key(s) belonging to ` +
+          `/${child.id}:\n${leaked.map((k) => `  ${k}`).join('\n')}\n` +
+          'A route nested under another must not ship its copy. See nestedNamespaces() in i18n/messages.ts.',
+      );
+
+      // And narrowing the parent must not have narrowed the child.
+      assert.deepEqual(
+        leaves(await messagesForRoute(child.id, locale))
+          .map(([key]) => key)
+          .filter((key) => key.startsWith(`${childNs}.`))
+          .sort(),
+        leaves(pick(catalogue, childNs))
+          .map(([key]) => key)
+          .sort(),
+        `${locale}: /${child.id} must still receive every key under ${childNs}`,
+      );
+    }
   }
 }
 
