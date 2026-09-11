@@ -27,7 +27,6 @@
     },
     "footer": {
       "rights": "Tutti i diritti riservati.",
-      "researchPartner": "Partner della ricerca 2025/2026 dell’Osservatorio HR del Politecnico di Milano",
       "groups": {
         "platform": "Piattaforma",
         "solutions": "Soluzioni",
@@ -1264,6 +1263,7 @@
         "iso27001Certified": "Certificato ISO 27001",
         "euAiAct": "Conforme all’EU AI Act",
         "n50Languages": "50+ lingue",
+        "enterpriseReady": "Pensato per le grandi aziende",
         "builtEuropeanEnterprises": "Costruito per le aziende europee"
       },
       "heading": "Pronto a vedere cosa Skillvue può fare per la tua <span>organizzazione?</span>",
@@ -1273,6 +1273,7 @@
       "cta": "Prenota una Demo"
     },
     "hero": {
+      "eyebrow": "Storie clienti",
       "metrics": {
         "europeanEnterprises": {
           "label": "aziende europee"
@@ -1283,6 +1284,12 @@
         "roiWithin18": {
           "label": "ROI entro 18-24 mesi"
         },
+        "savedYearly": {
+          "label": "risparmiati ogni anno in costi di assunzioni sbagliate"
+        },
+        "fasterTimeToHire": {
+          "label": "time-to-hire più rapido"
+        },
         "hiringSuccessRate": {
           "label": "tasso di successo nelle assunzioni"
         }
@@ -1291,6 +1298,20 @@
       "body": "Oltre 50 aziende europee hanno sostituito sensazioni personali e giudizi non standardizzati con talent intelligence oggettiva per i propri processi di selezione, promozione e sviluppo. Queste sono le loro storie.",
       "cta": "Leggi le storie",
       "text": "I Nostri Clienti"
+    },
+    "testimonials": {
+      "eyebrow": "Testimonianze dei clienti",
+      "heading": "Come i leader hanno sostituito l'istinto con le <span>prove</span>",
+      "body": "Conversazioni reali con i leader HR dietro ai risultati.",
+      "watchVideo": "Guarda il video",
+      "interview": "intervista",
+      "footerText": "Scopri come si presentano le prove sul tuo framework di competenze",
+      "cta": "Prenota una Demo",
+      "cards": {
+        "unicomm": { "title": "Ricostruire la gestione dei talenti su 250+ punti vendita", "tags": "Selezione · Mobilità Interna · L&D" },
+        "mediaset": { "title": "Individuare e far crescere il potenziale dei neolaureati", "tags": "Selezione · Graduate Program" },
+        "europAssistance": { "title": "Selezionare per un potenziale che resiste alla prova del tempo", "tags": "Selezione" }
+      }
     },
     "roi": {
       "stats": {
@@ -1317,8 +1338,12 @@
     "exploreStories": {
       "heading": "Trova la tua <span>storia.</span>",
       "body": "Ogni sfida è diversa. Ogni contesto ha le sue particolarità. Scoprili uno ad uno!",
+      "filterLabel": "Filtra",
       "text": "Settore",
       "text2": "Caso d'uso",
+      "allIndustries": "Tutti i settori",
+      "allUseCases": "Tutti i casi d'uso",
+      "storiesCount": "{count} storie",
       "body2": "Nessuna storia corrisponde ancora a questi filtri.",
       "body3": "Potremmo avere un caso rilevante da condividere in privato.",
       "cta": "Book a demo"

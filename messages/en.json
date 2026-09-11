@@ -27,7 +27,6 @@
     },
     "footer": {
       "rights": "All rights reserved.",
-      "researchPartner": "Partner of the 2025/2026 research of Osservatorio HR Politecnico di Milano",
       "groups": {
         "platform": "Platform",
         "solutions": "Solutions",
@@ -1264,6 +1263,7 @@
         "iso27001Certified": "ISO 27001 certified",
         "euAiAct": "EU AI Act ready",
         "n50Languages": "50+ languages",
+        "enterpriseReady": "Enterprise-ready",
         "builtEuropeanEnterprises": "Built for European enterprises"
       },
       "heading": "Ready to see what Skillvue can do for your <span>organization?</span>",
@@ -1273,6 +1273,7 @@
       "cta": "Book a Demo"
     },
     "hero": {
+      "eyebrow": "Customer stories",
       "metrics": {
         "europeanEnterprises": {
           "label": "European enterprises"
@@ -1283,6 +1284,12 @@
         "roiWithin18": {
           "label": "ROI within 18-24 months"
         },
+        "savedYearly": {
+          "label": "saved yearly in failed-hire costs"
+        },
+        "fasterTimeToHire": {
+          "label": "faster time-to-hire"
+        },
         "hiringSuccessRate": {
           "label": "hiring success rate"
         }
@@ -1291,6 +1298,20 @@
       "body": "50+ European enterprises have replaced gut feel with objective talent intelligence. across hiring, promotion, development, and transformation readiness. These are their stories.",
       "cta": "Read the stories",
       "text": "Our Customers"
+    },
+    "testimonials": {
+      "eyebrow": "Customer Testimonials",
+      "heading": "How leaders replaced gut feel with <span>evidence</span>",
+      "body": "Real conversations with the talent leaders behind the results.",
+      "watchVideo": "Watch the video",
+      "interview": "interview",
+      "footerText": "See what the evidence looks like on your own competency framework",
+      "cta": "Book a Demo",
+      "cards": {
+        "unicomm": { "title": "Rebuilding talent management across 250+ stores", "tags": "Hiring · Internal Mobility · L&D" },
+        "mediaset": { "title": "Spotting and growing graduates potential", "tags": "Hiring · Graduate Program" },
+        "europAssistance": { "title": "Hiring for potential that stands the test of time", "tags": "Hiring" }
+      }
     },
     "roi": {
       "stats": {
@@ -1317,8 +1338,12 @@
     "exploreStories": {
       "heading": "Find your <span>story.</span>",
       "body": "Every challenge is different. Every context is specific. Filter by what matters to you.",
+      "filterLabel": "Filter",
       "text": "Industry",
       "text2": "Use Case",
+      "allIndustries": "All industries",
+      "allUseCases": "All use cases",
+      "storiesCount": "{count} stories",
       "body2": "No stories match these filters yet.",
       "body3": "We may have a relevant case to share privately.",
       "cta": "Book a demo"

@@ -24,7 +24,8 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
-  // Permanent redirects for every Italian slug, generated from the registry.
+  // Permanent redirects for every Italian slug, generated from the registry,
+  // plus one entry per route that moved (`redirectFrom` in routes.json).
   //
   // next-intl already sends /it/customers/adr to /it/clienti/adr — but with a
   // 307, which tells Google the move is temporary and to keep indexing the old
@@ -35,7 +36,7 @@ const nextConfig: NextConfig = {
   // from its English one, which is two today and becomes every route as #119
   // translates them. Adding a slug to i18n/routes.json is the whole change.
   async redirects() {
-    return routes
+    const localeSlugRedirects = routes
       .flatMap((r) => {
         const { en, it } = r.paths as { en?: string; it?: string };
         return en !== undefined && it !== undefined && en !== it ? [{ en, it }] : [];
@@ -55,6 +56,24 @@ const nextConfig: NextConfig = {
         destination: `/it${it.replace(/\[(\w+)\]/g, ':$1')}`,
         permanent: true,
       }));
+
+    // A route that moved keeps its old URL alive as a 308 to the new one, per
+    // locale — see `redirectFrom` on the `customers` entry (i18n/routes.ts).
+    const movedRouteRedirects = routes.flatMap((r) => {
+      const { en, it } = r.paths as { en?: string; it?: string };
+      const from = (r as { redirectFrom?: { en?: string; it?: string } }).redirectFrom;
+      if (!from) return [];
+      const entries: { source: string; destination: string; permanent: true }[] = [];
+      if (from.en !== undefined && en !== undefined) {
+        entries.push({ source: from.en, destination: en, permanent: true });
+      }
+      if (from.it !== undefined && it !== undefined) {
+        entries.push({ source: `/it${from.it}`, destination: `/it${it}`, permanent: true });
+      }
+      return entries;
+    });
+
+    return [...localeSlugRedirects, ...movedRouteRedirects];
   },
 
   async headers() {

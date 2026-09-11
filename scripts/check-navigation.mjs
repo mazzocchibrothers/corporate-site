@@ -34,7 +34,7 @@ assert.equal(at('/book-meeting', 'en'), '/book-meeting');
 // ── Italian gets the prefix, and the slug where there is one ───────────────
 assert.equal(at('/', 'it'), '/it');
 assert.equal(at('/blog', 'it'), '/it/blog');
-assert.equal(at('/customers', 'it'), '/it/clienti');
+assert.equal(at('/customers/customer-stories', 'it'), '/it/clienti/storie-di-successo');
 assert.equal(at('/customers/adr', 'it'), '/it/clienti/adr');
 assert.equal(at('/book-meeting', 'it'), '/it/prenota-incontro');
 assert.equal(at('/about', 'it'), '/it/chi-siamo');

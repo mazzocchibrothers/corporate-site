@@ -107,6 +107,10 @@
   {
     "id": "customers",
     "paths": {
+      "en": "/customers/customer-stories",
+      "it": "/clienti/storie-di-successo"
+    },
+    "redirectFrom": {
       "en": "/customers",
       "it": "/clienti"
     }
