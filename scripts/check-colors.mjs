@@ -21,6 +21,11 @@
 // definizione — e il parser di TypeScript sa già dire quali sono. È lo stesso
 // parser che gira in `npm run typecheck`, quindi non è una dipendenza nuova.
 //
+// Una cosa da sapere: `ts.createSourceFile` è tollerante agli errori, quindi un
+// file che non si parsa produce meno nodi invece di un'eccezione — lanciato a
+// mano su un sorgente a metà, questo gate direbbe verde. In `harness/init.sh`
+// `typecheck` gira prima, quindi non ci arriva mai rotto.
+//
 // Esegui: npm run check:colors
 
 import assert from 'node:assert/strict';
@@ -112,13 +117,32 @@ const walk = (dir) =>
         : [],
   );
 
+// Due perimetri diversi, di proposito.
+//
+// Un colore fuori palette è un errore solo dove la palette è la regola:
+// `app|components`. Ma *usato* conta più largo, perché la palette si legge come
+// la palette del sito, e un colore che il sito disegna da `i18n/og-card.tsx`
+// non è una voce morta. Con un perimetro solo, spostare un valore nella share
+// card — o in `styles/globals.css`, che CLAUDE.md incoraggia — farebbe dire al
+// gate di cancellare un colore che il sito sta disegnando. Un gate che dà un
+// consiglio falso è peggio di un gate che tace.
+//
+// ponytail: `styles/globals.css` non è ancora qui dentro. Il CSS non passa dal
+// parser TSX, e nessuna voce della palette vive solo lì oggi. Il giorno in cui
+// una ci vivrà, il gate dirà di cancellarla: aggiungere una lettura del CSS è
+// la toppa, non allargare la palette.
+const SCAN = ['app', 'components'];
+const ALSO_COUNTS_AS_USED = ['i18n'];
+
 const unexpected = [];
 const used = new Set();
-for (const file of ['app', 'components'].flatMap(walk)) {
-  for (const color of colorsIn(readFileSync(join(ROOT, file), 'utf8'), file)) {
-    const hex = color.toLowerCase();
-    used.add(hex);
-    if (!ALLOWED.has(hex)) unexpected.push(`${relative('.', file)}: ${color}`);
+for (const [dirs, enforce] of [[SCAN, true], [ALSO_COUNTS_AS_USED, false]]) {
+  for (const file of dirs.flatMap(walk)) {
+    for (const color of colorsIn(readFileSync(join(ROOT, file), 'utf8'), file)) {
+      const hex = color.toLowerCase();
+      used.add(hex);
+      if (enforce && !ALLOWED.has(hex)) unexpected.push(`${relative('.', file)}: ${color}`);
+    }
   }
 }
 
@@ -130,8 +154,9 @@ const unused = [...ALLOWED].filter((c) => !used.has(c));
 assert.deepEqual(
   unused,
   [],
-  `${unused.length} approved colour(s) no file uses:\n${unused.map((c) => `  ${c}`).join('\n')}\n` +
-    'Remove them. A value nobody draws is a value nobody checked.',
+  `${unused.length} approved colour(s) no file draws:\n${unused.map((c) => `  ${c}`).join('\n')}\n` +
+    'Either the code that used it is gone — remove the entry — or it was never a colour. ' +
+    'If you are adding one, add the entry in the same change as the code that draws it.',
 );
 
-console.log(`[OK] colors: ${ALLOWED.size} approved hex values, all of them in use`);
+console.log(`[OK] colors: ${ALLOWED.size} approved hex values, all of them drawn`);
