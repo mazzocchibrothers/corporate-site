@@ -231,11 +231,11 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
         {/* 3. What's Inside */}
         <section className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
-            <Reveal y={20} duration={0.6} className="mb-14">
-              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-[#121212] mb-4 tracking-[-0.02em]">
+            <Reveal y={20} duration={0.6} className="mb-14 grid lg:grid-cols-2 gap-6 lg:gap-16 items-start">
+              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">
                 {t.rich('detail.insideHeading', { span: (chunks) => <span className="gradient-text-on-light">{chunks}</span> })}
               </h2>
-              <p className="text-[16px] text-[#121212]/[0.45] max-w-xl">{t(`items.${slug}.fullDesc`)}</p>
+              <p className="text-[16px] text-[#121212]/[0.45] lg:pt-3">{t(`items.${slug}.fullDesc`)}</p>
             </Reveal>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {chapters.map((ch, i) => {
@@ -318,8 +318,11 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
 
         {/* 7. Bottom CTA */}
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <Reveal duration={0.7}>
+          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+            <Reveal
+              duration={0.7}
+              className="relative overflow-hidden rounded-[32px] border border-white/[0.08] bg-white/[0.05] backdrop-blur-sm px-8 py-16 md:px-16 md:py-20 text-center"
+            >
               <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">{t('detail.heading3')}</h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">{t('detail.body3')}</p>
               <Button
