@@ -20,7 +20,9 @@
         "blog": "Blog",
         "press": "Stampa",
         "about": "Chi Siamo",
-        "careers": "Carriere"
+        "careers": "Carriere",
+        "customers": "Storie di Successo",
+        "talentPioneers": "Talent Pioneers"
       }
     },
     "footer": {
@@ -41,6 +43,7 @@
         "internalMobility": "Internal Mobility",
         "projectResourcing": "Project Resourcing",
         "customers": "Storie di Successo",
+        "talentPioneers": "Talent Pioneers",
         "bookMeeting": "Prenota una Demo",
         "blog": "Blog",
         "whitepapers": "White Papers",
@@ -4568,6 +4571,74 @@
         "kicker": "CUSTOMER STORY",
         "ready": "✓ READY",
         "growing": "↗ GROWING"
+      }
+    },
+    "talent-pioneers": {
+      "meta": {
+        "title": "Talent Pioneers — La community dei leader del talento | Skillvue",
+        "description": "Una community privata di senior HR leader che sta ridefinendo come il talento viene scelto, riconosciuto e sviluppato attraverso approcci nuovi e pionieristici."
+      },
+      "hero": {
+        "eyebrow": "The Community",
+        "headline": "Conosci i nostri <hl>Talent Pioneers</hl>",
+        "subtitle": "Una community privata di senior HR leader che sta ridefinendo come il talento viene scelto, riconosciuto e sviluppato attraverso approcci nuovi e pionieristici. Uno spazio per chi non ha paura di affrontare conversazioni difficili su dove sta andando la People Strategy nel prossimo decennio."
+      },
+      "why": {
+        "eyebrow": "Perché Talent Pioneers",
+        "paragraph1": "Talent Pioneers nasce per offrire agli HR leader uno spazio di confronto sulle domande più difficili che l’HR si trova ad affrontare oggi, <dim>insieme a professionisti che spesso stanno già lavorando con gli strumenti e gli approcci che aiutano a rispondere a quelle domande. Sono il tipo di domande</dim> difficili da esplorare apertamente altrove.",
+        "paragraph2": "Vogliamo che i membri si confrontino su sfide comuni, <dim>condividano esperienze, si ispirino a vicenda con nuovi approcci da testare e raccontino come stanno superando gli ostacoli.</dim>"
+      },
+      "dayToDay": {
+        "eyebrow": "La quotidianità",
+        "heading": "Partiamo da ciò che conta di più per te <accent>nella tua realtà.</accent>",
+        "watchClip": "Guarda la clip",
+        "podcastBadge": "+ Podcast",
+        "items": {
+          "credem": { "company": "Credem", "title": "Hiring giovanile su larga scala", "name": "Giuliana" },
+          "carrefour": { "quote": "Skillvue ci ha permesso di rafforzare la nostra People Strategy, rendendo la mappatura delle competenze più rapida, efficace e data-driven.", "title": "People Strategy, data-driven", "name": "Carrefour" },
+          "europAssistance": { "company": "Europ Assistance", "title": "Gestione integrata del talento", "name": "Nicole" },
+          "subdued": { "quote": "Sono riuscita a ridurre il time-to-hire, mantenere un rapporto diretto con i candidati e recuperare tempo prezioso per attività strategiche a cui prima dovevo rinunciare.", "title": "Recuperare tempo nell’hiring", "name": "Subdued" },
+          "fidiaFarmaceutici": { "company": "Fidia Farmaceutici", "title": "Sviluppo della rete vendita", "name": "Gianluca" },
+          "luca": { "quote": "Una delle attività più importanti che stiamo portando avanti riguarda progetti di Change Management e trasformazione culturale, che spesso partono già dalla fase di Talent Acquisition: bisogna inserire le persone giuste, capaci di rispondere alle esigenze attuali, ma anche a quelle future.", "title": "Change management e hiring predittivo", "name": "Luca" },
+          "unicomm": { "company": "Unicomm", "title": "Organizzazione basata sulle competenze", "name": "Giuseppe" },
+          "alberto": { "quote": "L’assessment non è più visto solo come un passaggio necessario per una promozione: è parte di un sistema di sviluppo integrato che permette di costruire percorsi di crescita personalizzati.", "title": "L’assessment come crescita, non come giudizio", "name": "Alberto" }
+        }
+      },
+      "chapters": {
+        "eyebrow": "I Chapter",
+        "heading": "Creiamo lo spazio per discutere i temi che ti stanno più a cuore",
+        "headingAccent": "(e come risolverli).",
+        "paragraph": "I Talent Pioneers si incontrano di persona, in stanze ristrette, alcune volte l’anno. Ogni Chapter apre una domanda diversa.",
+        "items": {
+          "chapter01": { "number": "Chapter 01", "date": "16 giugno 2026", "location": "Milano · Palazzo Parigi", "description": "L’incontro ha esplorato come le organizzazioni possano riconoscere il talento reale nell’era dell’AI." },
+          "chapter02": { "number": "Chapter 02", "date": "29 settembre 2026", "location": "Milano · Château Monfort", "description": "La conversazione si concentra su cosa significhi davvero essere pronti e conformi all’AI." }
+        }
+      },
+      "stages": {
+        "eyebrow": "Sui palchi più importanti",
+        "heading": "La conversazione continua su alcuni dei palchi HR",
+        "headingAccent": "più importanti d’Europa.",
+        "pastLabel": "Partecipazioni passate",
+        "past": {
+          "hrTechEurope": "HR Tech Europe 2026",
+          "hrTechnologiesUk": "HR Technologies UK 2026",
+          "retailSummit": "Retail Summit 2026",
+          "hrCoreBarcelona": "HR Core Barcelona 2026",
+          "hrCoreNordics": "HR Core Nordics 2026"
+        },
+        "upcomingLabel": "In programma",
+        "visitWebsite": "Visita il sito",
+        "upcoming": {
+          "fairCultures": { "date": "1 ott 2026", "title": "Fair Cultures", "location": "Barcellona, TBS Education" },
+          "retailExecutiveSummit": { "date": "15-16 ott 2026", "title": "Retail Executive Summit", "location": "Cernobbio, Italia" },
+          "lavoroSostenibile": { "date": "20 ott 2026", "title": "Lavoro Sostenibile", "location": "Roma, Italia" },
+          "forumHr": { "date": "19-20 nov 2026", "title": "Forum HR — People & Culture", "location": "Milano, Italia" }
+        }
+      },
+      "contact": {
+        "heading": "Mettiti in contatto con",
+        "headingAccent": "il nostro team.",
+        "paragraph": "Condivideremo con te contenuti rilevanti su Skillvue, sulla nostra community e sui temi che esploriamo insieme."
       }
     }
   },

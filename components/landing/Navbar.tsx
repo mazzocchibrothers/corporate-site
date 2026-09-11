@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 // Nav structure: route ids, not paths. Each URL comes from i18n/routes.json
 // through href(), which is what retired the hrefIt flags — an Italian slug is
 // declared in the registry once and every link in the site follows it.
-const navLinks = [
+const navLinks: { id: string; route?: string; items: string[] | null }[] = [
   { id: 'platform', items: ['product-overview', 'science'] },
   {
     id: 'solutions',
@@ -24,7 +24,7 @@ const navLinks = [
       'solutions/project-resourcing',
     ],
   },
-  { id: 'customers', route: 'customers', items: null },
+  { id: 'customers', items: ['customers', 'customers/talent-pioneers'] },
   {
     id: 'resources',
     items: ['resources/whitepapers', 'blog', 'resources/press', 'about', 'careers'],

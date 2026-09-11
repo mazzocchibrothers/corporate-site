@@ -34,7 +34,6 @@ import { dirname, join, relative } from 'node:path';
 import ts from 'typescript';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-
 // The palette. Until #177 it also held #113, #116, #126, #136, #137, #138 and
 // #144: those are not colours, they are the numbers of Issues cited in as many
 // comments, added here to turn the gate green. It is the shape a false positive
@@ -56,12 +55,14 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 //   #3a1525   Its third stop, #0d0d1f, was already here — which says on its own
 //             that the other two were missing because of the gate's reach, not
 //             because anyone chose to leave them out.
+//   #1e1e1e, #4b4b4b, #6b7dff
+//             Talent Pioneers' body copy, eyebrow and gradients.
 const ALLOWED = new Set(
   (
     '#000000 #010102 #040404 #047857 #050508 #059669 #064e3b #08080c #0b3b28 #0d0d0d #0d0d1f ' +
-    '#0e0e0e #10b981 #111 #121212 #141516 #16163a #16a34a #1a1a2e #1a1a3f #201436 #222 ' +
-    '#22c55e #23234d #2a2350 #2d1a6b #3133e7 #3a1525 #3a1730 #4b4df7 #4e4e4e #4e6bff #5667ff ' +
-    '#5ddba4 #6366f8 #7577f8 #7a7a7a #7b4dff #7b7df9 #8385ff #848484 #8587ff #888888 #8a8cff ' +
+    '#0e0e0e #10b981 #111 #121212 #141516 #16163a #16a34a #1a1a2e #1a1a3f #1e1e1e #201436 #222 ' +
+    '#22c55e #23234d #2a2350 #2d1a6b #3133e7 #3a1525 #3a1730 #4b4b4b #4b4df7 #4e4e4e #4e6bff #5667ff ' +
+    '#5ddba4 #6366f8 #6b7dff #7577f8 #7a7a7a #7b4dff #7b7df9 #8385ff #848484 #8587ff #888888 #8a8cff ' +
     '#9395ff #93e0bb #9a9a9a #9b59b6 #9b9dfb #a8ecca #a9a9a9 #a9aaff #b7f5d8 #c7d2fe #cdc6f5 ' +
     '#d9603f #d97706 #e2e8f0 #e3f9ec #e5e7eb #e6d5ea #e6e6e6 #ea580c #ece9fb #ef4444 #f0f0f8 ' +
     '#f1f5f9 #f5f5f7 #f5f5fa #f7e6dc #f7f7f7 #f8ddc9 #f8f8fa #f8f8ff #fafafa #ff5656 #ff5b5b ' +

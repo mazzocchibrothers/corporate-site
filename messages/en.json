@@ -20,7 +20,9 @@
         "blog": "Blog",
         "press": "Press",
         "about": "About",
-        "careers": "Careers"
+        "careers": "Careers",
+        "customers": "Customer Stories",
+        "talentPioneers": "Talent Pioneers"
       }
     },
     "footer": {
@@ -41,6 +43,7 @@
         "internalMobility": "Internal Mobility",
         "projectResourcing": "Project Resourcing",
         "customers": "Customer Stories",
+        "talentPioneers": "Talent Pioneers",
         "bookMeeting": "Book a Demo",
         "blog": "Blog",
         "whitepapers": "White Papers",
@@ -4568,6 +4571,74 @@
         "kicker": "CUSTOMER STORY",
         "ready": "✓ READY",
         "growing": "↗ GROWING"
+      }
+    },
+    "talent-pioneers": {
+      "meta": {
+        "title": "Talent Pioneers — The Community for Talent Leaders | Skillvue",
+        "description": "A private community of senior HR leaders shaping how talent is chosen, recognized, and developed through new, pioneering approaches."
+      },
+      "hero": {
+        "eyebrow": "The Community",
+        "headline": "Meet our <hl>Talent Pioneers</hl>",
+        "subtitle": "A private community of senior HR leaders shaping how talent is chosen, recognized, and developed through new, pioneering approaches. A place for people who aren't afraid to have difficult conversations about where People Strategies are heading over the next decade."
+      },
+      "why": {
+        "eyebrow": "Why Talent Pioneers",
+        "paragraph1": "Talent Pioneers exists to give HR leaders a space for peer-to-peer conversations about the toughest questions facing HR today, <dim>among professionals who are often already working with the tools and approaches that help answer them. These are the kinds of questions that are</dim> difficult to explore openly anywhere else.",
+        "paragraph2": "We want members to discuss challenges, <dim>compare experiences, inspire one another with new approaches to test, and share how they're overcoming obstacles.</dim>"
+      },
+      "dayToDay": {
+        "eyebrow": "The day-to-day",
+        "heading": "We start from what matters the most to you <accent>in the day-to-day.</accent>",
+        "watchClip": "Watch the clip",
+        "podcastBadge": "+ Podcast",
+        "items": {
+          "credem": { "company": "Credem", "title": "Junior volume hiring", "name": "Giuliana" },
+          "carrefour": { "quote": "Skillvue has enabled us to strengthen our People Strategy, making skills mapping faster, more effective and data-driven.", "title": "People Strategy, data-driven", "name": "Carrefour" },
+          "europAssistance": { "company": "Europ Assistance", "title": "Integrated talent management", "name": "Nicole" },
+          "subdued": { "quote": "I was able to reduce time-to-hire, keep a direct relationship with candidates, and reclaim valuable time for strategic activities I previously had to sacrifice.", "title": "Reclaiming time to hire", "name": "Subdued" },
+          "fidiaFarmaceutici": { "company": "Fidia Farmaceutici", "title": "Sales network development", "name": "Gianluca" },
+          "luca": { "quote": "One of the biggest activities we are currently carrying out involves Change Management projects and cultural transformation, which often start at the Talent Acquisition stage — you need to onboard the right people who can respond to current needs, but also future ones.", "title": "Change management & predictive hiring", "name": "Luca" },
+          "unicomm": { "company": "Unicomm", "title": "Skills-based organisation", "name": "Giuseppe" },
+          "alberto": { "quote": "Assessment is no longer seen merely as a necessary step for a promotion: it is part of an integrated development system that enables the construction of personalised growth paths.", "title": "Assessment as growth, not judgment", "name": "Alberto" }
+        }
+      },
+      "chapters": {
+        "eyebrow": "The Chapters",
+        "heading": "We create the space to discuss your most pressing matters",
+        "headingAccent": "(and how to solve them).",
+        "paragraph": "Talent Pioneers meets in person, in small rooms, a few times a year. Each Chapter opens a different question.",
+        "items": {
+          "chapter01": { "number": "Chapter 01", "date": "16 June 2026", "location": "Milan · Palazzo Parigi", "description": "The room explored how organizations can recognize real talent in the age of AI." },
+          "chapter02": { "number": "Chapter 02", "date": "29 September 2026", "location": "Milan · Château Monfort", "description": "The conversation focuses on what it really means to be AI-ready and compliant." }
+        }
+      },
+      "stages": {
+        "eyebrow": "On the biggest stages",
+        "heading": "The conversation continues on some of the largest",
+        "headingAccent": "HR stages in Europe.",
+        "pastLabel": "Past appearances",
+        "past": {
+          "hrTechEurope": "HR Tech Europe 2026",
+          "hrTechnologiesUk": "HR Technologies UK 2026",
+          "retailSummit": "Retail Summit 2026",
+          "hrCoreBarcelona": "HR Core Barcelona 2026",
+          "hrCoreNordics": "HR Core Nordics 2026"
+        },
+        "upcomingLabel": "Upcoming",
+        "visitWebsite": "Visit website",
+        "upcoming": {
+          "fairCultures": { "date": "1 Oct 2026", "title": "Fair Cultures", "location": "Barcelona, TBS Education" },
+          "retailExecutiveSummit": { "date": "15-16 Oct 2026", "title": "Retail Executive Summit", "location": "Cernobbio, Italy" },
+          "lavoroSostenibile": { "date": "20 Oct 2026", "title": "Lavoro Sostenibile", "location": "Rome, Italy" },
+          "forumHr": { "date": "19-20 Nov 2026", "title": "Forum HR — People & Culture", "location": "Milan, Italy" }
+        }
+      },
+      "contact": {
+        "heading": "Get in touch with",
+        "headingAccent": "our team.",
+        "paragraph": "We'll share relevant insights about Skillvue, our community and the topics we explore together."
       }
     }
   },

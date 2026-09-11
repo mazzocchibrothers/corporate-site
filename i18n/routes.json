@@ -230,6 +230,13 @@
     }
   },
   {
+    "id": "customers/talent-pioneers",
+    "paths": {
+      "en": "/customers/talent-pioneers",
+      "it": "/clienti/talent-pioneers"
+    }
+  },
+  {
     "id": "customers/unicomm",
     "paths": {
       "en": "/customers/unicomm",
