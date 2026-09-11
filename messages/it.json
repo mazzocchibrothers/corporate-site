@@ -4594,14 +4594,46 @@
         "watchClip": "Guarda la clip",
         "podcastBadge": "+ Podcast",
         "items": {
-          "credem": { "company": "Credem", "title": "Hiring giovanile su larga scala", "name": "Giuliana" },
-          "carrefour": { "quote": "Skillvue ci ha permesso di rafforzare la nostra People Strategy, rendendo la mappatura delle competenze più rapida, efficace e data-driven.", "title": "People Strategy, data-driven", "name": "Carrefour" },
-          "europAssistance": { "company": "Europ Assistance", "title": "Gestione integrata del talento", "name": "Nicole" },
-          "subdued": { "quote": "Sono riuscita a ridurre il time-to-hire, mantenere un rapporto diretto con i candidati e recuperare tempo prezioso per attività strategiche a cui prima dovevo rinunciare.", "title": "Recuperare tempo nell’hiring", "name": "Subdued" },
-          "fidiaFarmaceutici": { "company": "Fidia Farmaceutici", "title": "Sviluppo della rete vendita", "name": "Gianluca" },
-          "luca": { "quote": "Una delle attività più importanti che stiamo portando avanti riguarda progetti di Change Management e trasformazione culturale, che spesso partono già dalla fase di Talent Acquisition: bisogna inserire le persone giuste, capaci di rispondere alle esigenze attuali, ma anche a quelle future.", "title": "Change management e hiring predittivo", "name": "Luca" },
-          "unicomm": { "company": "Unicomm", "title": "Organizzazione basata sulle competenze", "name": "Giuseppe" },
-          "alberto": { "quote": "L’assessment non è più visto solo come un passaggio necessario per una promozione: è parte di un sistema di sviluppo integrato che permette di costruire percorsi di crescita personalizzati.", "title": "L’assessment come crescita, non come giudizio", "name": "Alberto" }
+          "credem": {
+            "company": "Credem",
+            "title": "Hiring giovanile su larga scala",
+            "name": "Giuliana"
+          },
+          "carrefour": {
+            "quote": "Skillvue ci ha permesso di rafforzare la nostra People Strategy, rendendo la mappatura delle competenze più rapida, efficace e data-driven.",
+            "title": "People Strategy, data-driven",
+            "name": "Carrefour"
+          },
+          "europAssistance": {
+            "company": "Europ Assistance",
+            "title": "Gestione integrata del talento",
+            "name": "Nicole"
+          },
+          "subdued": {
+            "quote": "Sono riuscita a ridurre il time-to-hire, mantenere un rapporto diretto con i candidati e recuperare tempo prezioso per attività strategiche a cui prima dovevo rinunciare.",
+            "title": "Recuperare tempo nell’hiring",
+            "name": "Subdued"
+          },
+          "fidiaFarmaceutici": {
+            "company": "Fidia Farmaceutici",
+            "title": "Sviluppo della rete vendita",
+            "name": "Gianluca"
+          },
+          "luca": {
+            "quote": "Una delle attività più importanti che stiamo portando avanti riguarda progetti di Change Management e trasformazione culturale, che spesso partono già dalla fase di Talent Acquisition: bisogna inserire le persone giuste, capaci di rispondere alle esigenze attuali, ma anche a quelle future.",
+            "title": "Change management e hiring predittivo",
+            "name": "Luca"
+          },
+          "unicomm": {
+            "company": "Unicomm",
+            "title": "Organizzazione basata sulle competenze",
+            "name": "Giuseppe"
+          },
+          "alberto": {
+            "quote": "L’assessment non è più visto solo come un passaggio necessario per una promozione: è parte di un sistema di sviluppo integrato che permette di costruire percorsi di crescita personalizzati.",
+            "title": "L’assessment come crescita, non come giudizio",
+            "name": "Alberto"
+          }
         }
       },
       "chapters": {
@@ -4610,8 +4642,18 @@
         "headingAccent": "(e come risolverli).",
         "paragraph": "I Talent Pioneers si incontrano di persona, in stanze ristrette, alcune volte l’anno. Ogni Chapter apre una domanda diversa.",
         "items": {
-          "chapter01": { "number": "Chapter 01", "date": "16 giugno 2026", "location": "Milano · Palazzo Parigi", "description": "L’incontro ha esplorato come le organizzazioni possano riconoscere il talento reale nell’era dell’AI." },
-          "chapter02": { "number": "Chapter 02", "date": "29 settembre 2026", "location": "Milano · Château Monfort", "description": "La conversazione si concentra su cosa significhi davvero essere pronti e conformi all’AI." }
+          "chapter01": {
+            "number": "Chapter 01",
+            "date": "16 giugno 2026",
+            "location": "Milano · Palazzo Parigi",
+            "description": "L’incontro ha esplorato come le organizzazioni possano riconoscere il talento reale nell’era dell’AI."
+          },
+          "chapter02": {
+            "number": "Chapter 02",
+            "date": "29 settembre 2026",
+            "location": "Milano · Château Monfort",
+            "description": "La conversazione si concentra su cosa significhi davvero essere pronti e conformi all’AI."
+          }
         }
       },
       "stages": {
@@ -4629,10 +4671,26 @@
         "upcomingLabel": "In programma",
         "visitWebsite": "Visita il sito",
         "upcoming": {
-          "fairCultures": { "date": "1 ott 2026", "title": "Fair Cultures", "location": "Barcellona, TBS Education" },
-          "retailExecutiveSummit": { "date": "15-16 ott 2026", "title": "Retail Executive Summit", "location": "Cernobbio, Italia" },
-          "lavoroSostenibile": { "date": "20 ott 2026", "title": "Lavoro Sostenibile", "location": "Roma, Italia" },
-          "forumHr": { "date": "19-20 nov 2026", "title": "Forum HR — People & Culture", "location": "Milano, Italia" }
+          "fairCultures": {
+            "date": "1 ott 2026",
+            "title": "Fair Cultures",
+            "location": "Barcellona, TBS Education"
+          },
+          "retailExecutiveSummit": {
+            "date": "15-16 ott 2026",
+            "title": "Retail Executive Summit",
+            "location": "Cernobbio, Italia"
+          },
+          "lavoroSostenibile": {
+            "date": "20 ott 2026",
+            "title": "Lavoro Sostenibile",
+            "location": "Roma, Italia"
+          },
+          "forumHr": {
+            "date": "19-20 nov 2026",
+            "title": "Forum HR — People & Culture",
+            "location": "Milano, Italia"
+          }
         }
       },
       "contact": {
@@ -7739,7 +7797,7 @@
         "body": "Insight non trovato.",
         "cta": "Torna a Insights",
         "cta2": "Scarica Gratis",
-        "heading": "Scarica l'Insight Completo",
+        "heading": "Scarica l'Insight <span>Completo</span>",
         "body2": "Compila il modulo e te lo invieremo direttamente nella tua inbox.",
         "heading2": "Altri Insight",
         "heading3": "Vuoi vedere la scienza in azione?",

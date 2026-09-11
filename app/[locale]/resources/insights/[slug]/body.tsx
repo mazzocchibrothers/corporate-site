@@ -264,16 +264,20 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
 
         {/* 5. Download Form */}
         <section id="download-form" className="relative py-16 lg:py-20">
-          <div className="max-w-[700px] mx-auto px-8 lg:px-12">
-            <Reveal duration={0.7} className="text-center mb-10">
-              <div className="w-16 h-16 rounded-2xl bg-[#4B4DF7]/[0.12] border border-[#4B4DF7]/[0.15] flex items-center justify-center mx-auto mb-6">
-                <FileText className="h-7 w-7 text-[#4B4DF7]" />
-              </div>
-              <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-3 tracking-[-0.02em]">{t('detail.heading')}</h2>
-              <p className="text-[15px] text-white/40">{t('detail.body2')}</p>
-            </Reveal>
-            <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10">
-              <div id="wp-hubspot-form" ref={formRef} style={{ minHeight: '300px' }} />
+          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+              <Reveal duration={0.7}>
+                <div className="w-14 h-14 rounded-2xl bg-[#4B4DF7]/[0.12] border border-[#4B4DF7]/[0.15] flex items-center justify-center mb-6">
+                  <FileText className="h-6 w-6 text-[#4B4DF7]" />
+                </div>
+                <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-3 tracking-[-0.02em]">{t.rich('detail.heading', {
+                  span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+                })}</h2>
+                <p className="text-[15px] text-white/40">{t('detail.body2')}</p>
+              </Reveal>
+              <Reveal y={20} duration={0.7} delay={0.15} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10">
+                <div id="wp-hubspot-form" ref={formRef} style={{ minHeight: '300px' }} />
+              </Reveal>
             </div>
           </div>
         </section>
