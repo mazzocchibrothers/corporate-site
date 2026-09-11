@@ -9,17 +9,90 @@ const walk = (dir) => readdirSync(join(ROOT, dir), { withFileTypes: true }).flat
   entry.isDirectory() ? walk(join(dir, entry.name)) : entry.name.endsWith('.tsx') ? [join(dir, entry.name)] : [],
 );
 
-// Comments come out first. `#176` is a three-digit hex, and so is every Issue
-// number this repo encourages people to cite in a comment — the gate read them
-// as colours and went red on prose (#177). Same stripper as check-dead.mjs and
-// check-client.mjs; the `[^:]` is what keeps `https://` from looking like the
-// start of a line comment.
-const strip = (src) =>
-  src.replace(/\/\*[\s\S]*?\*\//g, '').replace(/(^|[^:])\/\/.*$/gm, '$1');
+// Comments come out first: `#176` is a three-digit hex, and so is every Issue
+// number this repo encourages people to cite in a comment, so the gate read
+// them as colours and went red on prose (#177).
+//
+// Not with a regex, though. The obvious stripper — the one check-dead.mjs uses
+// — treats `//` as the start of a comment unless a colon precedes it, and seven
+// files here embed the HubSpot script with a protocol-relative URL:
+//
+//     script.src = '//js.hsforms.net/forms/embed/v2.js';
+//
+// It would cut from that quote to the end of the line. Nothing is lost there
+// today, but this is the file whose entire job is to notice a colour, and a
+// stripper that can silently swallow one is a worse bug than the false positive
+// it was brought in to fix. So: one pass, tracking whether we are inside a
+// string. Comments become whitespace, everything else survives byte for byte.
+const stripComments = (src) => {
+  let out = '';
+  let quote = null; // the open string delimiter, or null when in code
+
+  for (let i = 0; i < src.length; i += 1) {
+    const c = src[i];
+
+    if (quote) {
+      out += c;
+      if (c === '\\') {
+        out += src[i + 1] ?? '';
+        i += 1;
+      } else if (c === quote) {
+        quote = null;
+      }
+      continue;
+    }
+
+    if (c === "'" || c === '"' || c === '`') {
+      quote = c;
+      out += c;
+      continue;
+    }
+
+    if (c === '/' && src[i + 1] === '/') {
+      while (i < src.length && src[i] !== '\n') i += 1;
+      out += '\n';
+      continue;
+    }
+
+    if (c === '/' && src[i + 1] === '*') {
+      const end = src.indexOf('*/', i + 2);
+      const comment = src.slice(i, end === -1 ? src.length : end + 2);
+      out += comment.replace(/[^\n]/g, ' '); // keep the newlines, drop the text
+      i += comment.length - 1;
+      continue;
+    }
+
+    out += c;
+  }
+
+  return out;
+};
+
+// The stripper is the one part of this gate that can make it lie, so it is
+// asserted rather than trusted: everything below is a colour that must still be
+// found, or prose that must not be mistaken for one.
+for (const [source, expected, why] of [
+  ['const s = "//js.hsforms.net/x"; const c = "#123456";', '#123456',
+    'a protocol-relative URL in a string does not open a comment'],
+  ['const s = `a //b`; const c = "#123456";', '#123456',
+    '…nor does one in a template literal'],
+  ['const s = "a/*b*/"; const c = "#123456";', '#123456',
+    '…nor does /* inside a string open a block comment'],
+  ['const s = "esc\\" d"; const c = "#123456";', '#123456',
+    'an escaped quote does not end the string'],
+  ['const c = "#123456"; // trailing comment', '#123456',
+    'a colour before a comment survives it'],
+  ['// Issue (#176), #168, #abc, and a fake #123456', null,
+    'a line comment contributes nothing — Issue numbers are three-digit hex (#177)'],
+  ['/* block comment with #123456 in it */', null, 'and neither does a block comment'],
+]) {
+  const found = stripComments(source).match(/#[0-9a-f]{3,8}\b/gi);
+  assert.deepEqual(found, expected === null ? null : [expected], why);
+}
 
 const unexpected = [];
 for (const file of ['app', 'components'].flatMap(walk)) {
-  const source = strip(readFileSync(join(ROOT, file), 'utf8'));
+  const source = stripComments(readFileSync(join(ROOT, file), 'utf8'));
   for (const color of source.match(/#[0-9a-f]{3,8}\b/gi) ?? []) {
     if (!ALLOWED.has(color.toLowerCase())) unexpected.push(`${relative('.', file)}: ${color}`);
   }
