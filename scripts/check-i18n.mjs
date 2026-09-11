@@ -54,9 +54,15 @@ const BINDING = /(?:const|let)\s+(\w+)\s*=\s*(?:await\s+)?(?:use|get)Translation
 // registry. Not checkable statically; counted so it stays visible.
 const DYNAMIC_NS = /(?:use|get)Translations\s*\(\s*(?!['"]|\))/g;
 
+// Both sets hold `file|namespace.key`, and both are Sets for the same reason:
+// the loop below runs once per `useTranslations` binding, so a file that
+// declares one twice — five of the lp/ pages do, once per component — sweeps
+// its own call sites twice. Counting the raw matches inflated the static side
+// by a fifth and left the two halves of the ratio measured differently (#177
+// review). One call site is one call site.
 const missing = [];
-const shapes = [];
-let checked = 0;
+const shapes = new Set();
+const checked = new Set();
 let dynamic = 0;
 
 for (const file of sources) {
@@ -73,18 +79,19 @@ for (const file of sources) {
     //
     // So they are listed, every run, with the shape the call site asks for.
     // Whoever writes one knows it is uncovered instead of assuming otherwise.
-    const template = new RegExp(`\\b${binding}(?:\\.rich)?\\(\\s*\`([^\`]*)\``, 'g');
+    const template = new RegExp(`\\b${binding}(?:\\.rich|\\.raw)?\\(\\s*\`([^\`]*)\``, 'g');
     for (const [, shape] of src.matchAll(template)) {
-      const entry = [relative('.', file), `${namespace}.${shape}`];
-      if (!shapes.some(([f, k]) => f === entry[0] && k === entry[1])) shapes.push(entry);
-      if (process.argv.includes('--list')) console.log(`  ${entry[0]}: ${entry[1]}`);
+      shapes.add(`${relative('.', file)}|${namespace}.${shape}`);
     }
 
-    // `t('key')` and `t.rich('key')` for this binding, string literals only.
-    const usage = new RegExp(`\\b${binding}(?:\\.rich)?\\(\\s*(['"])([^'"\`]+)\\1`, 'g');
+    // `t('key')`, `t.rich('key')` and `t.raw('key')` for this binding, string
+    // literals only. `.raw` was outside the regex until #177 and its 108 call
+    // sites went unchecked — it returns the message instead of formatting it,
+    // which changes nothing about whether the key has to exist.
+    const usage = new RegExp(`\\b${binding}(?:\\.rich|\\.raw)?\\(\\s*(['"])([^'"\`]+)\\1`, 'g');
     for (const [, , key] of src.matchAll(usage)) {
       const path = `${namespace}.${key}`;
-      checked += 1;
+      checked.add(`${relative('.', file)}|${path}`);
       for (const locale of ['en', 'it']) {
         if (!has(catalogues[locale], path)) {
           missing.push(`  ${relative('.', file)}: ${path} missing from messages/${locale}.json`);
@@ -104,19 +111,25 @@ assert.deepEqual(
 );
 
 console.log(
-  `[OK] messages: ${checked} key(s) used by call sites exist in en and it` +
+  `[OK] messages: ${checked.size} key(s) used by call sites exist in en and it` +
     (dynamic > 0 ? ` (${dynamic} dynamic namespace(s) not statically checkable)` : ''),
 );
-if (shapes.length > 0) {
-  const files = new Set(shapes.map(([file]) => file));
-  const worst = [...files]
-    .map((file) => [file, shapes.filter(([f]) => f === file).length])
+
+if (shapes.size > 0) {
+  const entries = [...shapes].map((s) => s.split('|')).sort();
+  const files = [...new Set(entries.map(([file]) => file))];
+  const worst = files
+    .map((file) => [file, entries.filter(([f]) => f === file).length])
     .sort((a, b) => b[1] - a[1])
     .slice(0, 3);
+  const share = Math.round((shapes.size / (shapes.size + checked.size)) * 1000) / 10;
+
   console.log(
-    `[--] ${shapes.length} key shape(s) in ${files.size} file(s) are built at runtime, so ` +
-      'nothing above covers them.\n' +
+    `[--] ${shapes.size} key shape(s) in ${files.length} file(s) are built at runtime, so ` +
+      `nothing above covers them — ${share}% of the call sites on the site.\n` +
       worst.map(([file, n]) => `     ${file} (${n})`).join('\n') +
-      '\n     Full list: node scripts/check-i18n.mjs --list',
+      (process.argv.includes('--list')
+        ? `\n${entries.map(([file, key]) => `     ${file}: ${key}`).join('\n')}`
+        : '\n     Full list: node scripts/check-i18n.mjs --list'),
   );
 }
