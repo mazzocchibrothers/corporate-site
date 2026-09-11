@@ -1,32 +1,31 @@
-// check-colors — ogni esadecimale che il sito disegna è nella palette.
+// check-colors — every hex the site draws is in the palette.
 //
-// Il gate cercava esadecimali nel testo grezzo dei .tsx, commenti inclusi.
-// `#176` è un esadecimale a tre cifre, e così ogni numero di Issue che questo
-// repo incoraggia a citare in un commento: il gate li leggeva come colori e
-// diventava rosso sulla prosa (#177).
+// This used to scan the raw text of the .tsx files, comments included. `#176`
+// is a three-digit hex, and so is every Issue number this repo encourages
+// people to cite in a comment: the gate read them as colours and went red on
+// prose (#177).
 //
-// La via ovvia è togliere i commenti prima di guardare. Non regge, provata due
-// volte. Una regex `(^|[^:])//.*$` taglia da un `//` dentro una stringa a fine
-// riga, e sette file qui caricano lo script HubSpot con un URL
-// protocol-relative — `script.src = '//js.hsforms.net/forms/embed/v2.js'` — che
-// non è preceduto da due punti. Uno scanner scritto a mano che tiene il conto
-// delle virgolette inciampa sul primo apostrofo spaiato in un testo JSX, che
-// apre una stringa mai chiusa e fa smettere di togliere i commenti da lì in
-// poi. Entrambi i modi falliscono in silenzio, e questo è il file il cui unico
-// compito è accorgersi di un colore: un verde di troppo qui non costa niente
-// finché non costa tutto.
+// The obvious fix is to strip comments before looking. It does not hold, tried
+// twice. A regex `(^|[^:])//.*$` cuts from a `//` inside a string to the end of
+// the line, and seven files here load the HubSpot script with a
+// protocol-relative URL — `script.src = '//js.hsforms.net/forms/embed/v2.js'` —
+// which no colon precedes. A hand-written scanner that tracks quotes trips on
+// the first unpaired apostrophe in JSX text, which opens a string that never
+// closes, and stops stripping comments from there on. Both fail silently, and
+// this is the file whose only job is to notice a colour: an extra green here
+// costs nothing until it costs everything.
 //
-// Quindi non si toglie niente. Un colore in un .tsx vive sempre dentro una
-// stringa, una template literal o un testo JSX — mai in un commento, per
-// definizione — e il parser di TypeScript sa già dire quali sono. È lo stesso
-// parser che gira in `npm run typecheck`, quindi non è una dipendenza nuova.
+// So nothing is stripped. A colour in a .tsx always lives inside a string, a
+// template literal or JSX text — never in a comment, by definition — and the
+// TypeScript parser already knows which is which. It is the same parser that
+// runs in `npm run typecheck`, so this is not a new dependency.
 //
-// Una cosa da sapere: `ts.createSourceFile` è tollerante agli errori, quindi un
-// file che non si parsa produce meno nodi invece di un'eccezione — lanciato a
-// mano su un sorgente a metà, questo gate direbbe verde. In `harness/init.sh`
-// `typecheck` gira prima, quindi non ci arriva mai rotto.
+// One thing to know: `ts.createSourceFile` is error-tolerant, so a file that
+// does not parse yields fewer nodes rather than an exception — run by hand
+// against a half-written source, this gate would say green. In
+// `harness/init.sh`, `typecheck` runs first, so it never gets there broken.
 //
-// Esegui: npm run check:colors
+// Run: npm run check:colors
 
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
@@ -36,26 +35,27 @@ import ts from 'typescript';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-// La palette. Fino a #177 conteneva anche #113, #116, #126, #136, #137, #138 e
-// #144: non sono colori, sono i numeri delle Issue citate in altrettanti
-// commenti, aggiunti qui per far tornare verde il gate. È la forma che prende
-// un falso positivo quando la via più corta per zittirlo è allargare la lista
-// di ciò che è lecito — e ogni voce aggiunta così è un colore vero che da quel
-// momento passa senza che nessuno lo guardi.
+// The palette. Until #177 it also held #113, #116, #126, #136, #137, #138 and
+// #144: those are not colours, they are the numbers of Issues cited in as many
+// comments, added here to turn the gate green. It is the shape a false positive
+// takes when the shortest way to silence it is to widen the list of what counts
+// as allowed — and every entry added that way is a real colour that passes from
+// then on with nobody looking at it.
 //
-// Le tre voci entrate con #189 sono il caso opposto, e vanno distinte da quelle:
-// non zittiscono un falso positivo, ammettono un colore che il sito disegnava
-// già e che era fuori dal perimetro del gate.
+// The three entries #189 added are the opposite case, and are worth telling
+// apart from those: they silence no false positive, they admit a colour the
+// site was already drawing from outside the gate's reach.
 //
-//   #ff8a5b   l'eyebrow della share card (i18n/og-card.tsx). Un arancio preso
-//             fra i due estremi caldi della gradiente brand, #ffaf64 e #ff5656.
-//             Non è una deriva: è lì da quando la card esiste, e ogni anteprima
-//             su LinkedIn e Slack lo mostra. Sostituirlo con un vicino già in
-//             lista avrebbe cambiato l'aspetto di ogni condivisione per far
-//             tornare i conti a un gate, che è il verso sbagliato.
-//   #2d1a6b   i due stop della gradiente hero su mobile (styles/globals.css).
-//   #3a1525   Il terzo stop, #0d0d1f, era già qui — il che dice da solo che la
-//             loro assenza era il perimetro e non una scelta.
+//   #ff8a5b   the share card's eyebrow (i18n/og-card.tsx). An orange taken from
+//             between the two warm ends of the brand gradient, #ffaf64 and
+//             #ff5656. Not drift: it has been there since the card existed, and
+//             every preview on LinkedIn and Slack shows it. Replacing it with a
+//             near neighbour already on the list would have changed how every
+//             share looks in order to satisfy a gate, which is backwards.
+//   #2d1a6b   the two stops of the mobile hero gradient (styles/globals.css).
+//   #3a1525   Its third stop, #0d0d1f, was already here — which says on its own
+//             that the other two were missing because of the gate's reach, not
+//             because anyone chose to leave them out.
 const ALLOWED = new Set(
   (
     '#000000 #010102 #040404 #047857 #050508 #059669 #064e3b #08080c #0b3b28 #0d0d0d #0d0d1f ' +
@@ -72,8 +72,8 @@ const ALLOWED = new Set(
 
 const HEX = /#[0-9a-f]{3,8}\b/gi;
 
-/** Ogni esadecimale che il file scrive dentro una stringa, una template literal
- *  o un testo JSX. Un commento non è nessuna delle tre. */
+/** Every hex the file writes inside a string, a template literal or JSX text.
+ *  A comment is none of the three. */
 const colorsIn = (source, file = 'probe.tsx') => {
   const found = [];
   const isLiteral = (node) =>
@@ -84,12 +84,12 @@ const colorsIn = (source, file = 'probe.tsx') => {
     ts.isTemplateTail(node) ||
     ts.isJsxText(node);
 
-  // Un `href` non è un posto dove sta un colore, è un posto dove sta un
-  // frammento: `<a href="#cafe">` è un ancoraggio, e letto come colore manda
-  // rosso il gate. Conta perché la via più corta per zittire quel rosso è
-  // aggiungere `#cafe` alla palette — lo stesso gesto che ci ha messo dentro
-  // sette numeri di Issue, e stavolta passerebbe anche l'asserzione nuova,
-  // visto che `#cafe` sarebbe davvero disegnato da qualche parte.
+  // An href is not a place a colour lives, it is a place a fragment lives:
+  // `<a href="#cafe">` is an anchor, and read as a colour it turns the gate
+  // red. It matters because the shortest way to silence that red is to add
+  // `#cafe` to the palette — the same gesture that put seven Issue numbers in
+  // it, and this time it would pass the new assertion too, since `#cafe` really
+  // would be drawn somewhere.
   const isHref = (node) =>
     ts.isJsxAttribute(node) && ts.isIdentifier(node.name) && node.name.text === 'href';
 
@@ -102,72 +102,71 @@ const colorsIn = (source, file = 'probe.tsx') => {
   return found;
 };
 
-/** In un `.css` non c'è ambiguità da risolvere: un `#` esadecimale è un colore
- *  e i commenti sono solo `/* *\/`. Il parser TSX non serve, e non servirebbe. */
-const colorsInCss = (source) =>
-  source.replace(/\/\*[\s\S]*?\*\//g, '').match(HEX) ?? [];
+/** A .css file has no ambiguity to resolve: a hex `#` is a colour and comments
+ *  are only `/* *\/`. The TSX parser is not needed, and would not help. */
+const colorsInCss = (source) => source.replace(/\/\*[\s\S]*?\*\//g, '').match(HEX) ?? [];
 
-// Il collettore è l'unica parte che può far mentire questo gate, quindi è
-// asserito invece che creduto. Sopra la riga: colori che devono restare
-// visibili, ognuno un modo in cui uno dei due stripper li perdeva. Sotto:
-// prosa che non deve essere scambiata per un colore.
+// The collector is the one part that can make this gate lie, so it is asserted
+// rather than trusted. Above the line: colours that must stay visible, each one
+// a way the two strippers lost them. Below: prose that must not be mistaken for
+// a colour.
 for (const [source, expected, why] of [
   ['const s = "//js.hsforms.net/x"; const c = "#123456";', ['#123456'],
-    'un URL protocol-relative in una stringa non apre un commento'],
+    'a protocol-relative URL in a string does not open a comment'],
   ['const s = `a //b`; const c = "#123456";', ['#123456'],
-    'e nemmeno uno dentro una template literal'],
+    'nor does one inside a template literal'],
   ['const s = "a/*b*/"; const c = "#123456";', ['#123456'],
-    'né /* dentro una stringa apre un commento a blocchi'],
+    'nor does /* inside a string open a block comment'],
   ['const f = () => <p>Don\'t worry</p>; const c = "#123456";', ['#123456'],
-    'un apostrofo in un testo JSX non apre una stringa'],
+    'an apostrophe in JSX text does not open a string'],
   ['const r = /^https?:\\/\\//; const c = "#123456";', ['#123456'],
-    'e nemmeno le barre dentro una espressione regolare'],
+    'nor do the slashes inside a regular expression'],
   ['const q = /[\'"]/; const c = "#123456";', ['#123456'],
-    'una virgoletta in una classe di caratteri non apre una stringa'],
+    'a quote in a character class does not open a string'],
   ['const s = u.split(/\\/\\//); const c = "#123456";', ['#123456'],
-    'due barre adiacenti in una espressione regolare non aprono un commento'],
-  ['const c = "#123456"; // commento in coda', ['#123456'],
-    'un colore prima di un commento sopravvive al commento'],
-  ['const s = `sfondo: linear-gradient(#123456, #654321)`;', ['#123456', '#654321'],
-    'una template literal può portarne più di uno'],
-  ['// Issue (#176), #168, #abc, e un finto #123456', [],
-    'un commento di riga non contribuisce niente'],
-  ['/* commento a blocchi con #123456 dentro */', [],
-    'e nemmeno un commento a blocchi'],
+    'two adjacent slashes in a regular expression do not open a comment'],
+  ['const c = "#123456"; // trailing comment', ['#123456'],
+    'a colour before a comment survives it'],
+  ['const s = `background: linear-gradient(#123456, #654321)`;', ['#123456', '#654321'],
+    'one template literal can carry more than one'],
+  ['// Issue (#176), #168, #abc, and a fake #123456', [],
+    'a line comment contributes nothing'],
+  ['/* block comment with #123456 in it */', [],
+    'and neither does a block comment'],
   ['const a = <a href="#cafe">x</a>;', [],
-    'un href è un ancoraggio, non un colore'],
+    'an href is an anchor, not a colour'],
   ['const a = <a href="#cafe" style={{ color: "#123456" }}>x</a>;', ['#123456'],
-    'ma saltare l’href non fa saltare il resto del tag'],
+    'but skipping the href does not skip the rest of the tag'],
 ]) {
   assert.deepEqual(colorsIn(source), expected, why);
 }
 
-// Il lettore CSS ha molto meno da sbagliare, ma è comunque lui a decidere se il
-// foglio di stile è coperto o solo dichiarato tale.
+// The CSS reader has far less to get wrong, but it is still what decides
+// whether the stylesheet is covered or only said to be.
 for (const [source, expected, why] of [
-  ['.a { background: #123456; }', ['#123456'], 'una dichiarazione'],
+  ['.a { background: #123456; }', ['#123456'], 'a declaration'],
   ['.a { background: radial-gradient(#123456 0%, #654321 40%); }', ['#123456', '#654321'],
-    'più stop in una gradiente'],
-  ['/* la gradiente vecchia era #123456 */', [], 'un commento CSS non contribuisce'],
-  ['.a { color: #123456; } /* era #654321 */', ['#123456'],
-    'e non si porta via la dichiarazione che lo precede'],
+    'several stops in one gradient'],
+  ['/* the old gradient was #123456 */', [], 'a CSS comment contributes nothing'],
+  ['.a { color: #123456; } /* was #654321 */', ['#123456'],
+    'and does not take the declaration before it away'],
 ]) {
   assert.deepEqual(colorsInCss(source), expected, why);
 }
 
-// `.tsx` e basta, non `.ts`.
+// `.tsx` only, not `.ts`.
 //
-// Un colore si disegna in un componente o in un foglio di stile; un `.ts` è
-// logica. Verificato invece che assunto: passando il parser su tutti i `.ts` di
-// `app components i18n lib hooks data scripts`, l'unico esadecimale dentro una
-// stringa è `#116` in `i18n/metadata.ts:67` — il numero di una Issue dentro il
-// testo di un assert, non un colore.
+// A colour is drawn in a component or in a stylesheet; a `.ts` is logic.
+// Verified rather than assumed: running the parser over every `.ts` in
+// `app components i18n lib hooks data scripts`, the only hex inside a string is
+// `#116` in `i18n/metadata.ts:67` — an Issue number in the text of an assert,
+// not a colour.
 //
-// ponytail: il giorno in cui un `.ts` terrà una costante di colore, questo gate
-// non la vedrà. La toppa non è allargare a `.ts` — dentro una stringa di
-// messaggio un riferimento a Issue è indistinguibile da un colore, ed è
-// esattamente il falso positivo che #177 ha passato due giri a togliere — ma
-// spostare la costante in un `.tsx` o nel CSS, dove il resto della palette vive.
+// ponytail: the day a `.ts` holds a colour constant, this gate will not see it.
+// The fix is not to widen to `.ts` — inside a message string an Issue reference
+// is indistinguishable from a colour, which is exactly the false positive #177
+// spent two rounds removing — but to move the constant into a `.tsx` or into
+// the CSS, where the rest of the palette lives.
 const walk = (dir) =>
   readdirSync(join(ROOT, dir), { withFileTypes: true }).flatMap((entry) =>
     entry.isDirectory()
@@ -177,17 +176,17 @@ const walk = (dir) =>
         : [],
   );
 
-// Il perimetro è il sito, non due directory su quattro.
+// The reach is the site, not two directories out of four.
 //
-// Fino a #189 erano `app` e `components`. Fuori restavano tre colori che il
-// sito disegna davvero e che nessun gate aveva mai guardato: l'eyebrow della
-// share card in `i18n/og-card.tsx`, e due stop della gradiente hero mobile in
-// `styles/globals.css`. La share card finisce in ogni anteprima su LinkedIn e
-// Slack, quindi non era un angolo morto teorico.
+// Until #189 it was `app` and `components`. Outside them sat three colours the
+// site really draws and no gate had ever looked at: the share card's eyebrow in
+// `i18n/og-card.tsx`, and two stops of the mobile hero gradient in
+// `styles/globals.css`. The share card ends up in every preview on LinkedIn and
+// Slack, so this was not a theoretical blind spot.
 //
-// Il difetto non era che tre colori sfuggissero. Era che la palette si legge
-// come la palette del sito mentre ne copriva metà: chi la leggeva credeva di
-// sapere quali colori il sito disegna, e non lo sapeva.
+// The defect was not that three colours escaped. It was that the palette reads
+// as the site's palette while covering half of it: whoever read it believed
+// they knew which colours the site draws, and did not.
 const SCAN = ['app', 'components', 'i18n'];
 const CSS = ['styles/globals.css'];
 
@@ -212,8 +211,8 @@ for (const file of CSS) {
 
 assert.deepEqual(unexpected, [], `Unexpected hex color(s):\n${unexpected.join('\n')}`);
 
-// Una voce che nessuno usa è una voce che nessuno ha verificato, ed è così che
-// i sette numeri di Issue sono rimasti nella lista per mesi.
+// An entry nobody uses is an entry nobody has checked, and that is how seven
+// Issue numbers stayed on the list for months.
 const unused = [...ALLOWED].filter((c) => !used.has(c));
 assert.deepEqual(
   unused,
