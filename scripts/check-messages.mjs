@@ -256,6 +256,97 @@ assert.deepEqual(
     'tag as text.',
 );
 
+// ── An Italian article cannot agree with a number it does not know ─────────
+// «il 21,8%» is right and «il 11,0%» is not — it is «l'11,0%», because eleven
+// reads as a vowel. So does eight, eighty, one. When the article is fixed in the
+// template and the number is interpolated, the sentence is correct only for the
+// values it happened to be written against, and one refresh of the data makes it
+// wrong with nothing to notice.
+//
+// Twelve of these existed across the three demo dashboards (#171): one already
+// wrong, eleven waiting. The rule lived in check:demo-cross-country because
+// `demo` was what had been audited; it moves here (#182) because the rule is
+// Italian's, not the dashboards'.
+//
+// The sweep of the other 59 namespaces found nothing, and the reason is worth
+// keeping: there are 40 interpolations in the whole Italian catalogue and 38 are
+// in the three dashboards — the rest of the site is static copy, where the
+// number is typed by hand with the right article already beside it. This check
+// is therefore preventive. It is here for the next interpolation someone writes,
+// which will otherwise have nobody looking at it.
+//
+// Both directions are wrong. A fixed `il` in front of a value that turns out to
+// be eleven, and a fixed `l'` in front of one that turns out to be twenty-one.
+//
+// An ICU tag is allowed to sit between the two. `il <b>{yes}</b>%` is the same
+// defect with markup in the middle, and it is the shape this copy reaches for
+// most: 506 messages in the Italian catalogue carry an ICU tag (en.json has 503),
+// and bolding the number is how the dashboards write one. Without this, the rule would be blind to the
+// likeliest way the next one gets written — a gate covering less than it claims,
+// which is the whole subject of #177 (found in review on #182).
+const ARTICLE_BEFORE_VALUE = new RegExp(
+  "(?:\\b(?:" +
+    'il|lo|la|i|gli|le|un|uno|una|' +
+    'del|dello|della|dei|degli|delle|' +
+    'al|allo|alla|ai|agli|alle|' +
+    'nel|nello|nella|nei|negli|nelle|' +
+    'dal|dallo|dalla|dai|dagli|dalle|' +
+    'sul|sullo|sulla|sui|sugli|sulle|col|coi' +
+    ')\\s+' +
+    // the elided forms take no space, and are the same defect sign-inverted
+    "|\\b(?:l|un|dell|all|nell|dall|sull)['’]\\s*" +
+    ')' +
+    // opening ICU tags do not separate the article from what it must agree with
+    '(?:<[a-zA-Z][a-zA-Z0-9]*>\\s*)*' +
+    '\\{',
+  'gi',
+);
+
+// The rule is asserted before it is used. Until now nothing tested it: a regex
+// that stopped matching would have left this gate green and silent, which is
+// the failure it exists to prevent, one level up. Each line below is a form the
+// catalogue really had, or a near miss that must stay legal.
+for (const [message, shouldMatch, why] of [
+  ['il {reluctant}%', true, 'the form #171 found wrong — «il 11,0%»'],
+  ['agli {yes} disposti', true, 'a plural articulated preposition'],
+  ['nelle {no} risposte', true, 'feminine plural'],
+  ['l\u2019{yes}% dichiara', true, 'the elided form: wrong when the value turns out to be twenty-one'],
+  ['dall\u2019{no}% in giù', true, 'an elided articulated preposition'],
+  ['coi {yes} casi', true, 'coi, which was missing while col was there'],
+  ['sull\u2019{yes}% dei casi', true, 'every elided form, not just the first two'],
+  ['il <b>{reluctant}</b>%', true, 'an ICU tag does not separate the two'],
+  ['nei <b><i>{yes}</i></b> casi', true, 'nor do two of them'],
+  ['fra <b>{yes}</b> e <b>{no}</b>', false, 'no article in front: legal'],
+  ['il totale è <b>{yes}</b>', false, 'an article not adjacent to the value: legal'],
+  ['il <b>numero</b> {x}', false, 'the tag branch skips tags, not the words inside them'],
+  ['il </b>{x}', false, 'a closing tag is not an opening one'],
+  ['quello {x}', false, 'a word ending in an article is not an article'],
+  ['bel {x}', false, 'nor is one that rhymes with a preposition'],
+]) {
+  assert.equal(
+    ARTICLE_BEFORE_VALUE.test(message),
+    shouldMatch,
+    `the article rule ${shouldMatch ? 'must' : 'must not'} match: ${why}\n  ${message}`,
+  );
+  ARTICLE_BEFORE_VALUE.lastIndex = 0; // the regex is /g; `test` carries state
+}
+
+const welded = values(JSON.parse(readFileSync(join(ROOT, 'messages/it.json'), 'utf8')))
+  .flatMap(([key, value]) =>
+    [...value.matchAll(ARTICLE_BEFORE_VALUE)].map(
+      (m) => `  it: ${key}\n      …${value.slice(Math.max(0, m.index - 40), m.index + 30)}…`,
+    ),
+  );
+assert.deepEqual(
+  welded,
+  [],
+  `${welded.length} Italian article(s) sit directly in front of an interpolated value:\n` +
+    `${welded.join('\n')}\n` +
+    'The article cannot agree with a number it does not know, so the sentence is correct only ' +
+    'until the data changes. Rewrite the sentence — do not elide by hand, that fixes the value ' +
+    'of today and leaves the defect for the value of tomorrow.',
+);
+
 // ── A hub does not carry its children ──────────────────────────────────────
 // A route nested under another shares its namespace: the three demo dashboards
 // live at `demo.retail`, `demo.sales-network`, `demo.cross-country`, inside the
