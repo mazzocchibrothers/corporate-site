@@ -69,7 +69,17 @@ const colorsIn = (source, file = 'probe.tsx') => {
     ts.isTemplateTail(node) ||
     ts.isJsxText(node);
 
+  // Un `href` non è un posto dove sta un colore, è un posto dove sta un
+  // frammento: `<a href="#cafe">` è un ancoraggio, e letto come colore manda
+  // rosso il gate. Conta perché la via più corta per zittire quel rosso è
+  // aggiungere `#cafe` alla palette — lo stesso gesto che ci ha messo dentro
+  // sette numeri di Issue, e stavolta passerebbe anche l'asserzione nuova,
+  // visto che `#cafe` sarebbe davvero disegnato da qualche parte.
+  const isHref = (node) =>
+    ts.isJsxAttribute(node) && ts.isIdentifier(node.name) && node.name.text === 'href';
+
   const visit = (node) => {
+    if (isHref(node)) return;
     if (isLiteral(node)) found.push(...((node.text ?? '').match(HEX) ?? []));
     ts.forEachChild(node, visit);
   };
@@ -104,6 +114,10 @@ for (const [source, expected, why] of [
     'un commento di riga non contribuisce niente'],
   ['/* commento a blocchi con #123456 dentro */', [],
     'e nemmeno un commento a blocchi'],
+  ['const a = <a href="#cafe">x</a>;', [],
+    'un href è un ancoraggio, non un colore'],
+  ['const a = <a href="#cafe" style={{ color: "#123456" }}>x</a>;', ['#123456'],
+    'ma saltare l’href non fa saltare il resto del tag'],
 ]) {
   assert.deepEqual(colorsIn(source), expected, why);
 }
