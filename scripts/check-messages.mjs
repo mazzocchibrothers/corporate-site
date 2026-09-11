@@ -277,6 +277,13 @@ assert.deepEqual(
 //
 // Both directions are wrong. A fixed `il` in front of a value that turns out to
 // be eleven, and a fixed `l'` in front of one that turns out to be twenty-one.
+//
+// An ICU tag is allowed to sit between the two. `il <b>{yes}</b>%` is the same
+// defect with markup in the middle, and it is the shape this copy reaches for
+// most: 506 messages in the catalogue carry an ICU tag, and bolding the number
+// is how the dashboards write one. Without this, the rule would be blind to the
+// likeliest way the next one gets written — a gate covering less than it claims,
+// which is the whole subject of #177 (found in review on #182).
 const ARTICLE_BEFORE_VALUE = new RegExp(
   "(?:\\b(?:" +
     'il|lo|la|i|gli|le|un|uno|una|' +
@@ -284,11 +291,14 @@ const ARTICLE_BEFORE_VALUE = new RegExp(
     'al|allo|alla|ai|agli|alle|' +
     'nel|nello|nella|nei|negli|nelle|' +
     'dal|dallo|dalla|dai|dagli|dalle|' +
-    'sul|sullo|sulla|sui|sugli|sulle|col' +
+    'sul|sullo|sulla|sui|sugli|sulle|col|coi' +
     ')\\s+' +
     // the elided forms take no space, and are the same defect sign-inverted
     "|\\b(?:l|un|dell|all|nell|dall|sull)['’]\\s*" +
-    ')\\{',
+    ')' +
+    // opening ICU tags do not separate the article from what it must agree with
+    '(?:<[a-zA-Z][a-zA-Z0-9]*>\\s*)*' +
+    '\\{',
   'gi',
 );
 
