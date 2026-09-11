@@ -102,8 +102,26 @@ const colorsIn = (source, file = 'probe.tsx') => {
   return found;
 };
 
-/** A .css file has no ambiguity to resolve: a hex `#` is a colour and comments
- *  are only `/* *\/`. The TSX parser is not needed, and would not help. */
+/** Every hex in a stylesheet, comments removed.
+ *
+ *  A .css file has far less ambiguity to resolve than a .tsx: a hex `#` is
+ *  almost always a colour, and comments are only `/* *\/`. The TSX parser is
+ *  not needed here, and would not help.
+ *
+ *  Almost, not always. Three forms would read as colours without being one: a
+ *  `content: "#abcdef"` string, an id selector that happens to be hex
+ *  (`#fade`, `#a1b2c3`), and `url(#facade)` for an SVG filter. None exists in
+ *  this stylesheet — the only id selector is `#emergent-badge`, there is no
+ *  `content:` declaration at all, and the one SVG filter passes its fragment
+ *  as `%23noise` inside a data URI (#189 review, checked form by form).
+ *
+ *  ponytail: no guard for them, because a guard would be code for a case that
+ *  does not exist. It is worth knowing that the id selector is the exact
+ *  analogue of the `href="#cafe"` the reader above skips by name, with the same
+ *  wrong way out behind it: the shortest fix for that red would be to add the
+ *  value to the palette, and the `unused` assertion would not catch it, because
+ *  the value really would appear. If one ever shows up, skip it the way `href`
+ *  is skipped — do not widen the palette. */
 const colorsInCss = (source) => source.replace(/\/\*[\s\S]*?\*\//g, '').match(HEX) ?? [];
 
 // The collector is the one part that can make this gate lie, so it is asserted
