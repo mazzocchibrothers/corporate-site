@@ -21,6 +21,7 @@
     "check:assets": "node scripts/check-assets.mjs",
     "check:demo-event": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-demo-event.mjs",
     "check:demo-anonymity": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-demo-anonymity.mjs",
+    "check:demo-cross-country": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-demo-cross-country.mjs",
     "check:demo-retail": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-demo-retail.mjs",
     "check:demo-sales-network": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-demo-sales-network.mjs",
     "test:smoke": "node scripts/smoke.mjs"

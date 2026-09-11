@@ -245,6 +245,14 @@
     "noindex": true
   },
   {
+    "id": "demo/cross-country",
+    "paths": {
+      "en": "/demo/cross-country",
+      "it": "/demo/cross-country"
+    },
+    "noindex": true
+  },
+  {
     "id": "demo/retail",
     "paths": {
       "en": "/demo/retail-network",
