@@ -9,9 +9,17 @@ const walk = (dir) => readdirSync(join(ROOT, dir), { withFileTypes: true }).flat
   entry.isDirectory() ? walk(join(dir, entry.name)) : entry.name.endsWith('.tsx') ? [join(dir, entry.name)] : [],
 );
 
+// Comments come out first. `#176` is a three-digit hex, and so is every Issue
+// number this repo encourages people to cite in a comment — the gate read them
+// as colours and went red on prose (#177). Same stripper as check-dead.mjs and
+// check-client.mjs; the `[^:]` is what keeps `https://` from looking like the
+// start of a line comment.
+const strip = (src) =>
+  src.replace(/\/\*[\s\S]*?\*\//g, '').replace(/(^|[^:])\/\/.*$/gm, '$1');
+
 const unexpected = [];
 for (const file of ['app', 'components'].flatMap(walk)) {
-  const source = readFileSync(join(ROOT, file), 'utf8');
+  const source = strip(readFileSync(join(ROOT, file), 'utf8'));
   for (const color of source.match(/#[0-9a-f]{3,8}\b/gi) ?? []) {
     if (!ALLOWED.has(color.toLowerCase())) unexpected.push(`${relative('.', file)}: ${color}`);
   }

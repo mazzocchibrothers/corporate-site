@@ -55,6 +55,7 @@ const BINDING = /(?:const|let)\s+(\w+)\s*=\s*(?:await\s+)?(?:use|get)Translation
 const DYNAMIC_NS = /(?:use|get)Translations\s*\(\s*(?!['"]|\))/g;
 
 const missing = [];
+const shapes = [];
 let checked = 0;
 let dynamic = 0;
 
@@ -63,6 +64,22 @@ for (const file of sources) {
   dynamic += [...src.matchAll(DYNAMIC_NS)].length;
 
   for (const [, binding, , namespace] of src.matchAll(BINDING)) {
+    // A key built at runtime — `t(`dashboards.${id}.sector`)`. There is nothing
+    // to look up: `${id}` could be anything, so no catalogue lookup can decide
+    // whether the key exists. What is wrong is staying quiet about it. In #176
+    // a key was deleted from both catalogues in the belief that this gate
+    // covered its call site; it did not, and it would have stayed green with
+    // the page rendering `demo.dashboards.crossCountry.sector` as text.
+    //
+    // So they are listed, every run, with the shape the call site asks for.
+    // Whoever writes one knows it is uncovered instead of assuming otherwise.
+    const template = new RegExp(`\\b${binding}(?:\\.rich)?\\(\\s*\`([^\`]*)\``, 'g');
+    for (const [, shape] of src.matchAll(template)) {
+      const entry = [relative('.', file), `${namespace}.${shape}`];
+      if (!shapes.some(([f, k]) => f === entry[0] && k === entry[1])) shapes.push(entry);
+      if (process.argv.includes('--list')) console.log(`  ${entry[0]}: ${entry[1]}`);
+    }
+
     // `t('key')` and `t.rich('key')` for this binding, string literals only.
     const usage = new RegExp(`\\b${binding}(?:\\.rich)?\\(\\s*(['"])([^'"\`]+)\\1`, 'g');
     for (const [, , key] of src.matchAll(usage)) {
@@ -90,3 +107,16 @@ console.log(
   `[OK] messages: ${checked} key(s) used by call sites exist in en and it` +
     (dynamic > 0 ? ` (${dynamic} dynamic namespace(s) not statically checkable)` : ''),
 );
+if (shapes.length > 0) {
+  const files = new Set(shapes.map(([file]) => file));
+  const worst = [...files]
+    .map((file) => [file, shapes.filter(([f]) => f === file).length])
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3);
+  console.log(
+    `[--] ${shapes.length} key shape(s) in ${files.size} file(s) are built at runtime, so ` +
+      'nothing above covers them.\n' +
+      worst.map(([file, n]) => `     ${file} (${n})`).join('\n') +
+      '\n     Full list: node scripts/check-i18n.mjs --list',
+  );
+}
