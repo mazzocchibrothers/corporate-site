@@ -51,7 +51,7 @@ export default function ProductHero() {
               style={{ lineHeight: 1.1 }}
             >{t.rich('hero.heading', {
               br: () => <br />,
-              span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+              span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
             })}</Reveal>
 
             <Reveal

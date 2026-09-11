@@ -408,7 +408,7 @@ export default function RetailDemo() {
               style={{ lineHeight: 1.15 }}
             >
               {t.rich('hero.heading', {
-                span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+                span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
               })}
             </Reveal>
             <Reveal

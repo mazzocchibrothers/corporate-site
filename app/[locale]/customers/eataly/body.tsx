@@ -136,7 +136,7 @@ export default function EatalyStoryPage() {
             {/* CONTEXT */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('context.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-6">{t('context.title')}</h2>
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-6">{t('context.title')}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{t.rich('context.paragraph', {
     b: (chunks) => <strong className="text-[#121212]/80 font-semibold">{chunks}</strong>,
     br: () => <br />,
@@ -147,7 +147,7 @@ export default function EatalyStoryPage() {
             {/* CHALLENGE */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{t('challenge.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('challenge.title')}</h2>
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('challenge.title')}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{t('challenge.intro')}</p>
 
               <div className="mb-10">
@@ -184,7 +184,7 @@ export default function EatalyStoryPage() {
             {/* OBJECTIVES */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('objectives.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-10">{t('objectives.title')}</h2>
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-10">{t('objectives.title')}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {OBJECTIVES_ITEMS.map((o, i) => {
                   const [title, ...rest] = t(`objectives.items.${o.id}.text`).split(':');
@@ -205,7 +205,7 @@ export default function EatalyStoryPage() {
             {/* SOLUTION */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('solution.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('solution.title')}</h2>
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('solution.title')}</h2>
               <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('solution.intro')}</p>
               <div>
                 <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('solution.skillsLabel')}</span>
@@ -225,7 +225,7 @@ export default function EatalyStoryPage() {
             {/* RESULTS */}
             <Section className="mb-24">
               <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{t('results.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('results.title')}</h2>
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('results.title')}</h2>
               {t.has('results.subtitle') && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('results.subtitle')}</p>}
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
@@ -262,7 +262,7 @@ export default function EatalyStoryPage() {
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
                   {t('vision.badge')}
                 </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-4">{t('vision.title')}</h2>
+                <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('vision.title')}</h2>
                 <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8]">{t('vision.intro')}</p>
               </div>
             </Section>

@@ -70,7 +70,7 @@ export default function FoodRetailPage() {
       {/* Inline so the highlight flows with the lead ("already" stays next to "is") and wraps naturally.
           Local gradient override pushes the purple further out so less of it shows. */}
       <span
-        className="font-bold gradient-text"
+        className="font-semibold md:font-bold gradient-text"
         style={{
           display: 'inline',
           backgroundImage: 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)',

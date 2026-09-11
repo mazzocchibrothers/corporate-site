@@ -200,7 +200,7 @@ export default function PressPage() {
               className="mb-8 md:mb-12"
             >
               <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">{t('text2')}</span>
-              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading2')}</h2>
+              <h2 className="text-[clamp(1.6rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading2')}</h2>
             </Reveal>
 
             {(() => {
@@ -255,7 +255,7 @@ export default function PressPage() {
                 <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">
                   {t('italianKicker')}
                 </span>
-                <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">
+                <h2 className="text-[clamp(1.6rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">
                   {t('italianHeading')}
                 </h2>
               </Reveal>
@@ -308,7 +308,7 @@ export default function PressPage() {
               className="mb-8 md:mb-12"
             >
               <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">{t('text3')}</span>
-              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading3')}</h2>
+              <h2 className="text-[clamp(1.6rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading3')}</h2>
             </Reveal>
 
             <div className="flex flex-col md:grid md:grid-cols-2 gap-3 md:gap-5 md:max-w-3xl">
@@ -355,7 +355,7 @@ export default function PressPage() {
               className="mb-8 md:mb-12"
             >
               <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-4 block">{t('text4')}</span>
-              <h2 className="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold text-white/90 tracking-[-0.02em]">{t('heading4')}</h2>
+              <h2 className="text-[clamp(1.6rem,4vw,3rem)] font-semibold text-white/90 tracking-[-0.02em]">{t('heading4')}</h2>
             </Reveal>
 
             <div className="flex flex-col gap-3 md:gap-4">

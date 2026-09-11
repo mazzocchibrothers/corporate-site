@@ -115,7 +115,7 @@ export default function CareersPage() {
                   className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
                   style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
                 >{t.rich('heading', {
-                  span: (chunks) => <span className="italic font-bold gradient-text-warm">{chunks}</span>,
+                  span: (chunks) => <span className="italic font-semibold gradient-text-warm">{chunks}</span>,
                 })}</h1>
                 <p className="text-[15px] md:text-[17px] text-white/55 leading-[1.7] mb-8 max-w-lg font-light">{t('body')}</p>
                 <div className="flex flex-wrap gap-3">
@@ -182,9 +182,9 @@ export default function CareersPage() {
               <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-6 block">{t('text2')}</span>
               <h2
                 className="font-semibold text-[#121212] mb-6"
-                style={{ fontSize: 'clamp(1.8rem, 4vw, 3.2rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
+                style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t.rich('heading2', {
-                span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+                span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
               })}</h2>
               <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.7] mb-8 max-w-2xl">{t('body2')}</p>
               <Button asChild variant="secondary" mode="light">
@@ -213,7 +213,7 @@ export default function CareersPage() {
                 className="font-semibold text-white/95 mb-4"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t.rich('heading3', {
-                span: (chunks) => <span className="italic font-bold gradient-text-warm">{chunks}</span>,
+                span: (chunks) => <span className="italic font-semibold gradient-text-warm">{chunks}</span>,
               })}</h2>
               <p className="text-[15px] md:text-[17px] text-white/50 leading-[1.7] font-light">{t('body3')}</p>
             </Reveal>
@@ -263,7 +263,7 @@ export default function CareersPage() {
               <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">{t('text4')}</span>
               <h2
                 className="font-semibold text-[#121212] mb-2"
-                style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.8rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
+                style={{ fontSize: 'clamp(1.6rem, 3.5vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t('heading4')}</h2>
               <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.6]">{t('body4')}</p>
             </Reveal>

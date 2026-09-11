@@ -177,7 +177,7 @@ export default async function BlogArticle5() {
               as="h2"
               y={20}
               duration={0.6}
-              className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]"
+              className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]"
             >
               {t('heading8')}
             </Reveal>
@@ -202,7 +202,7 @@ export default async function BlogArticle5() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <Reveal duration={0.7}>
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('text4')}</span>
-              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
+              <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.02em]">
                 {t.rich('heading9', {
     s: (chunks) => <span className="gradient-text">{chunks}</span>,
   })}

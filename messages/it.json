@@ -5348,7 +5348,7 @@
           "role": "Direttore HR"
         }
       },
-      "heading": "Fatti, non <span>promesse.</span>",
+      "heading": "<span>Fatti</span>, non promesse.",
       "body": "Le principali aziende globali prendono decisioni sul talento con fiducia.",
       "cta": "Prenota una Demo",
       "cta2": "Unisciti a oltre 50 aziende globali",
@@ -7319,7 +7319,7 @@
           "desc": "Dato che competenze e ruoli evolvono rapidamente, la misurazione deve evolvere con loro. Monitoraggio continuo e iterazione guidata dagli scienziati sono un must per rendere le nostre valutazioni accurate e difendibili."
         }
       },
-      "heading": "Un verification rigoroso per gestire un <span>lifecycle end-to-end</span>",
+      "heading": "Un verification <span>rigoroso</span> per gestire un lifecycle end-to-end",
       "text": "Passo"
     },
     "responsibleAI": {
@@ -7367,7 +7367,7 @@
           "a": "Sì. Ogni progetto parte dal tuo modello di competenze. Mappiamo il tuo framework di costrutti validati, generiamo item contestualizzati e li validiamo prima di andare live con l'verification."
         }
       },
-      "heading": "AI responsabile, costruita per le decisioni che più contano nella <span>gestione del talento</span>",
+      "heading": "<span>AI responsabile</span>, costruita per le decisioni che più contano nella gestione del talento",
       "heading2": "Q&A <span></span>"
     },
     "cta": {
@@ -7378,7 +7378,7 @@
       "cta": "Prenota una Demo"
     },
     "hero": {
-      "heading": "Scienza su cui puoi<br></br>basare<br></br><span>le tue decisioni</span>",
+      "heading": "<span>Scienza</span> su cui puoi<br></br>basare le tue decisioni",
       "cta": "Prenota una Demo",
       "body": "Valutare le persone è difficile. Per prendere decisioni sul talento di cui fidarsi, accuratezza e affidabilità non possono essere degli optional. Skillvue è costruito su basi psicometriche e psicologiche rigorose, che garantiscono output a prova di qualsiasi scrutinio."
     },
@@ -7397,7 +7397,7 @@
           "role": "People Scientist"
         }
       },
-      "heading": "Il team dietro la <span>scienza</span>",
+      "heading": "Il <span>team</span> dietro la scienza",
       "body": "collaboratori esterni dal mondo accademico, della consulenza HR e delle grandi corporate",
       "lead": {
         "role": "Head of AI & Science",

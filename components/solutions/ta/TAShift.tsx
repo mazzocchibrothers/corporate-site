@@ -28,8 +28,8 @@ export default function TAShift() {
     <section id="ta-shift" data-testid="ta-shift" className="relative py-20 lg:py-28 md:flex md:items-center">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full">
         <Reveal duration={0.7} className="mb-10 md:mb-20">
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white/90">{t.rich('taShift.heading', {
-            span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">{t.rich('taShift.heading', {
+            span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
         </Reveal>
 

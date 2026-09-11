@@ -16,7 +16,7 @@ export default function ProductCTA() {
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-6 md:mb-10">
           <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">{t.rich('cta.heading', {
-            span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
         </Reveal>
 

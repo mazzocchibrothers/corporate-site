@@ -22,7 +22,7 @@ export default function LDHero() {
           style={{ lineHeight: 1.15 }}
         >{t.rich('ldHero.heading', {
           br: () => <br />,
-          span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+          span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
         })}</Reveal>
         <Reveal
           y={20}

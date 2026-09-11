@@ -35,7 +35,7 @@ export default function EnterpriseTrust() {
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-12">
           <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-4 md:mb-6">{t.rich('enterpriseTrust.heading', {
-            span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
           <p className="text-[14px] md:text-[18px] text-[#7A7A7A] leading-[1.6] md:leading-[1.75] max-w-2xl">{t('enterpriseTrust.body')}</p>
         </Reveal>

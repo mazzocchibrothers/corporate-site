@@ -203,7 +203,7 @@ export default function SupermarketsPage() {
             style={{ background: 'linear-gradient(120deg, #1a1a3f 0%, #201436 45%, #3a1730 100%)' }}>
             <div className="pointer-events-none absolute -top-24 right-[-80px] w-[420px] h-[420px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(255,86,86,0.22) 0%, rgba(255,86,86,0) 65%)' }} />
             <div className="relative">
-              <h2 className="text-[26px] md:text-[38px] font-bold text-white tracking-[-0.02em] mb-3">{t('cta.title')}</h2>
+              <h2 className="text-[26px] md:text-[48px] font-semibold text-white tracking-[-0.02em] mb-3">{t('cta.title')}</h2>
               <p className="text-[15px] md:text-[16px] text-white/65 mb-8 max-w-xl mx-auto">{t('cta.body')}</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a href={href('book-meeting', lang)} onClick={() => track('book_bottom')}

@@ -244,7 +244,7 @@ export default function HiddenCostRecruiting() {
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-4"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               {t('body3')}</p>
-            <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15]">
+            <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.15]">
               {t('heading')}</h2>
           </Reveal>
 
@@ -276,7 +276,7 @@ export default function HiddenCostRecruiting() {
             <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-4"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               {t('body4')}</p>
-            <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-semibold tracking-[-0.03em] text-white/95 leading-[1.15] max-w-[600px]">
+            <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-white/95 leading-[1.15] max-w-[600px]">
               {t.rich('heading2', {
           s: (chunks) => <span className="gradient-text">{chunks}</span>,
         })}</h2>
@@ -360,7 +360,7 @@ export default function HiddenCostRecruiting() {
                 <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-5"
                   style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                   {t('body7')}</p>
-                <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.03em] text-[#0D0D0D] leading-[1.15] mb-6">
+                <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.15] mb-6">
                   {t.rich('heading3', {
           s: (chunks) => <span className="italic" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
         })}</h2>
@@ -424,7 +424,7 @@ export default function HiddenCostRecruiting() {
               <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-5"
                 style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 {t('body10')}</p>
-              <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-white/95 leading-[1.15] mb-6">
+              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold tracking-[-0.02em] text-white/95 leading-[1.15] mb-6">
                 {t.rich('heading5', {
           s: (chunks) => <span className="gradient-text">{chunks}</span>,
         })}</h2>

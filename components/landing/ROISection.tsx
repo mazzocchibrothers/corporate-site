@@ -36,7 +36,7 @@ export default function ROISection() {
         {/* Header row: title left + CTA right */}
         <Reveal duration={0.7} className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 md:gap-6 lg:gap-8 mb-10 md:mb-16 lg:mb-20">
           <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">{t.rich('roi.heading', {
-            span: (chunks) => <span className="italic font-bold gradient-text-warm-on-light">{chunks}</span>,
+            span: (chunks) => <span className="italic font-semibold gradient-text-warm-on-light">{chunks}</span>,
           })}</h2>
           <Button asChild variant="primary" mode="light" className="shrink-0">
             <a

@@ -21,7 +21,7 @@ export default function PRHero() {
           className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-10 max-w-5xl"
           style={{ lineHeight: 1.15 }}
         >{t.rich('prHero.heading', {
-          span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+          span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
         })}</Reveal>
         <Reveal
           y={20}

@@ -32,7 +32,7 @@ export default function CustomerStoriesSection() {
         {/* Header */}
         <Reveal duration={0.7} className="mb-8 md:mb-16">
           <h2 className="text-[clamp(1.6rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-3 md:mb-4">{t.rich('customerStories.heading', {
-            span: (chunks) => <span className="italic font-bold gradient-text">{chunks}</span>,
+            span: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
           })}</h2>
           <p className="text-[15px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">{t('customerStories.body')}</p>
         </Reveal>
@@ -97,7 +97,7 @@ export default function CustomerStoriesSection() {
           className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-8 lg:p-10"
         >
           <h3 className="text-[18px] md:text-[20px] font-semibold text-white/90 mb-3 md:mb-4">{t.rich('customerStories.heading2', {
-            span: (chunks) => <span className="italic font-bold gradient-text">{chunks}</span>,
+            span: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
           })}</h3>
           <p className="text-[14px] md:text-[15px] text-white/[0.65] leading-[1.6] md:leading-[1.75] mb-4 md:mb-6 max-w-3xl">{t('customerStories.body2')}</p>
           <div className="flex flex-wrap gap-2 md:gap-3">

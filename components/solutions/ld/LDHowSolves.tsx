@@ -60,7 +60,7 @@ export default function LDHowSolves() {
 
         <Reveal duration={0.7} className="max-w-3xl mb-12 md:mb-16">
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">{t.rich('ldHowSolves.heading', {
-            span: (chunks) => <span className="font-bold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
           <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.75]">{t('ldHowSolves.body')}</p>
         </Reveal>

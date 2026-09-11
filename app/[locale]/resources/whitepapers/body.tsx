@@ -156,7 +156,7 @@ export default function WhitepapersPage() {
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <Reveal duration={0.7}>
-              <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-semibold text-white/90 mb-4 leading-[1.2] max-w-2xl mx-auto">{t('heading2')}</h2>
+              <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-4 leading-[1.2] max-w-2xl mx-auto tracking-[-0.02em]">{t('heading2')}</h2>
               <p className="text-[16px] text-white/[0.45] mb-8 max-w-xl mx-auto">{t('body2')}</p>
               <Button
                 onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}

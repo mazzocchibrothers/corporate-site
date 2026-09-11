@@ -75,8 +75,8 @@ export default function ExploreStories() {
     <section id="explore" data-testid="explore-stories" className="relative py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-12">
-          <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">{t.rich('exploreStories.heading', {
-            span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+          <h2 className="text-[clamp(2.5rem,5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">{t.rich('exploreStories.heading', {
+            span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
           <p className="text-[20px] text-white/[0.65] leading-[1.75] max-w-2xl">{t('exploreStories.body')}</p>
         </Reveal>

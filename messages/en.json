@@ -5348,7 +5348,7 @@
           "role": "HR Director"
         }
       },
-      "heading": "Proof, not <span>promises.</span>",
+      "heading": "<span>Proof</span>, not promises.",
       "body": "Leading Global enterprises make talent decisions with confidence.",
       "cta": "Book a Demo",
       "cta2": "Join 50+ Global enterprises",
@@ -7319,7 +7319,7 @@
           "desc": "Because skills and roles evolve quickly, measurement must evolve with them. Continuous monitoring and scientist-led iteration keep signals accurate and defensible."
         }
       },
-      "heading": "A rigorous, end-to-end verification <span>lifecycle</span>",
+      "heading": "A <span>rigorous</span>, end-to-end verification lifecycle",
       "text": "Step"
     },
     "responsibleAI": {
@@ -7367,7 +7367,7 @@
           "a": "Yes. Every deployment starts with your competency model. We map your framework to validated constructs, generate contextualized items, and validate them against your population before going live."
         }
       },
-      "heading": "Responsible AI built for <span>high-stakes talent decisions</span>",
+      "heading": "<span>Responsible AI</span> built for high-stakes talent decisions",
       "heading2": "Frequently asked <span>questions</span>"
     },
     "cta": {
@@ -7378,7 +7378,7 @@
       "cta": "Book a Demo"
     },
     "hero": {
-      "heading": "Science you can stake<br></br>talent decisions<br></br><span>on.</span>",
+      "heading": "<span>Science</span> you can stake<br></br>talent decisions on.",
       "cta": "Book a Demo",
       "body": "Measuring people is hard. To make talent decisions you can trust, accuracy and reliability aren't optional. Skillvue is built on I/O psychology and psychometrics, ensuring every data point holds up to scrutiny."
     },
@@ -7397,7 +7397,7 @@
           "role": "People Scientist"
         }
       },
-      "heading": "The team behind the <span>science</span>",
+      "heading": "The <span>team</span> behind the science",
       "body": "External collaborators from academic, HR consulting and corporate world",
       "lead": {
         "role": "Head of AI & Science",
@@ -7417,7 +7417,7 @@
           "desc": "Psychometrics governs the design of every verification we build: which format, which scale, which scoring model. The goal is simple: maximize accuracy, minimize noise, and make sure results mean what they claim to mean."
         }
       },
-      "heading": "Two disciplines, one standard of <span>rigor</span>"
+      "heading": "Two disciplines, <span>one standard of rigor</span>"
     },
     "meta": {
       "title": "The Science Behind Skillvue | Psychometrics & AI",

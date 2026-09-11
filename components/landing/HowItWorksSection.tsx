@@ -60,8 +60,8 @@ export default function HowItWorksSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.6rem,4vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.03em] text-[#1A1A2E]">{t.rich('howItWorks.heading', {
-            span: (chunks) => <span className="italic font-bold gradient-text-on-light">{chunks}</span>,
+          <h2 className="text-[clamp(1.6rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('howItWorks.heading', {
+            span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
         </m.div>
 

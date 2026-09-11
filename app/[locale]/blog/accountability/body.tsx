@@ -205,7 +205,7 @@ export default async function BlogArticle4() {
               <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">
                 {t('text5')}
               </span>
-              <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.03em]">
+              <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.02em]">
                 {t.rich('heading7', {
     s: (chunks) => <span className="gradient-text">{chunks}</span>,
   })}
