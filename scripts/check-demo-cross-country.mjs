@@ -96,38 +96,10 @@ const stale = [
 ];
 assert.deepEqual(stale, [], `Labels with nothing behind them:\n${stale.join('\n')}`);
 
-// ── No Italian article welded in front of a variable number ────────────────
-// "il {reluctant}%" reads "il 11,0%", which is wrong Italian, and it was wrong
-// only because that share happens to be eleven. The article is fixed and the
-// number is not, so every one of these is one refresh away from the same
-// defect: eight, eleven, eighty, or anything starting with a vowel sound breaks
-// it. Twelve of them existed across the three dashboards and one had already
-// gone wrong.
-//
-// ponytail: scoped to `demo` because that is what has been audited. The rule is
-// general to Italian copy — move it to check:messages after sweeping the other
-// namespaces.
-const ARTICLE_BEFORE_NUMBER =
-  /\b(?:il|lo|la|le|i|gli|un|uno|una|del|dello|della|dei|degli|delle|al|allo|alla|nel|nello|nella|dal|dalla|sul|sulla|col)\s+\{/gi;
-const welded = [];
-const walk = (node, path) => {
-  for (const [key, value] of Object.entries(node)) {
-    const at = path ? `${path}.${key}` : key;
-    if (typeof value === 'string') {
-      for (const m of value.matchAll(ARTICLE_BEFORE_NUMBER)) welded.push(`  ${at}: "${m[0].trim()}…"`);
-    } else if (value && typeof value === 'object') {
-      walk(value, at);
-    }
-  }
-};
-walk(JSON.parse(readFileSync(join(ROOT, 'messages/it.json'), 'utf8')).demo, 'demo');
-assert.deepEqual(
-  welded,
-  [],
-  `${welded.length} Italian article(s) sit directly in front of an interpolated value:\n` +
-    `${welded.join('\n')}\n` +
-    'The article cannot agree with a number it does not know. Drop it, or put a word between them.',
-);
+// The Italian article welded in front of an interpolated value used to be
+// checked here, scoped to `demo` because `demo` was what had been audited. It
+// lives in check:messages now (#182): the rule is Italian's, not this
+// dashboard's, and the whole catalogue is swept instead of one namespace.
 
 // ── The shape the page's controls are built on ─────────────────────────────
 // Both frames are drawn by one pair of charts, so every item in either has to

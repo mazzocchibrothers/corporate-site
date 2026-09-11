@@ -256,6 +256,58 @@ assert.deepEqual(
     'tag as text.',
 );
 
+// ── An Italian article cannot agree with a number it does not know ─────────
+// «il 21,8%» is right and «il 11,0%» is not — it is «l'11,0%», because eleven
+// reads as a vowel. So does eight, eighty, one. When the article is fixed in the
+// template and the number is interpolated, the sentence is correct only for the
+// values it happened to be written against, and one refresh of the data makes it
+// wrong with nothing to notice.
+//
+// Twelve of these existed across the three demo dashboards (#171): one already
+// wrong, eleven waiting. The rule lived in check:demo-cross-country because
+// `demo` was what had been audited; it moves here (#182) because the rule is
+// Italian's, not the dashboards'.
+//
+// The sweep of the other 59 namespaces found nothing, and the reason is worth
+// keeping: there are 40 interpolations in the whole Italian catalogue and 38 are
+// in the three dashboards — the rest of the site is static copy, where the
+// number is typed by hand with the right article already beside it. This check
+// is therefore preventive. It is here for the next interpolation someone writes,
+// which will otherwise have nobody looking at it.
+//
+// Both directions are wrong. A fixed `il` in front of a value that turns out to
+// be eleven, and a fixed `l'` in front of one that turns out to be twenty-one.
+const ARTICLE_BEFORE_VALUE = new RegExp(
+  "(?:\\b(?:" +
+    'il|lo|la|i|gli|le|un|uno|una|' +
+    'del|dello|della|dei|degli|delle|' +
+    'al|allo|alla|ai|agli|alle|' +
+    'nel|nello|nella|nei|negli|nelle|' +
+    'dal|dallo|dalla|dai|dagli|dalle|' +
+    'sul|sullo|sulla|sui|sugli|sulle|col' +
+    ')\\s+' +
+    // the elided forms take no space, and are the same defect sign-inverted
+    "|\\b(?:l|un|dell|all|nell|dall|sull)['’]\\s*" +
+    ')\\{',
+  'gi',
+);
+
+const welded = values(JSON.parse(readFileSync(join(ROOT, 'messages/it.json'), 'utf8')))
+  .flatMap(([key, value]) =>
+    [...value.matchAll(ARTICLE_BEFORE_VALUE)].map(
+      (m) => `  it: ${key}\n      …${value.slice(Math.max(0, m.index - 40), m.index + 30)}…`,
+    ),
+  );
+assert.deepEqual(
+  welded,
+  [],
+  `${welded.length} Italian article(s) sit directly in front of an interpolated value:\n` +
+    `${welded.join('\n')}\n` +
+    'The article cannot agree with a number it does not know, so the sentence is correct only ' +
+    'until the data changes. Rewrite the sentence — do not elide by hand, that fixes the value ' +
+    'of today and leaves the defect for the value of tomorrow.',
+);
+
 // ── A hub does not carry its children ──────────────────────────────────────
 // A route nested under another shares its namespace: the three demo dashboards
 // live at `demo.retail`, `demo.sales-network`, `demo.cross-country`, inside the
