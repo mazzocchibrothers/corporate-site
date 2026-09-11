@@ -85,9 +85,12 @@ for (const file of sources) {
     }
 
     // `t('key')`, `t.rich('key')` and `t.raw('key')` for this binding, string
-    // literals only. `.raw` was outside the regex until #177 and its 108 call
-    // sites went unchecked — it returns the message instead of formatting it,
-    // which changes nothing about whether the key has to exist.
+    // literals only. `.raw` was outside the regex until #177, so 96 call sites
+    // went unchecked — it returns the message instead of formatting it, which
+    // changes nothing about whether the key has to exist. (96 is the delta of
+    // `checked`, 2280 to 2376; the raw occurrence count is 105, and an earlier
+    // draft of this comment said 108 — the same class of miscount the rest of
+    // this commit exists to fix.)
     const usage = new RegExp(`\\b${binding}(?:\\.rich|\\.raw)?\\(\\s*(['"])([^'"\`]+)\\1`, 'g');
     for (const [, , key] of src.matchAll(usage)) {
       const path = `${namespace}.${key}`;
