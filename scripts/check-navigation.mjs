@@ -54,8 +54,8 @@ for (const path of ['/it', '/it/blog', '/it/clienti/adr', '/it/prenota-incontro'
 
 // ── A URL under a dynamic route travels with its parent ───────────────────
 assert.equal(
-  at('/resources/whitepapers/beyond-skills', 'it'),
-  '/it/risorse/whitepaper/beyond-skills',
+  at('/resources/insights/beyond-skills', 'it'),
+  '/it/risorse/insights/beyond-skills',
 );
 // …and '/' must not act as everyone's parent. An unknown path is returned as
 // given, not prefixed on a guess.
@@ -66,8 +66,8 @@ assert.equal(at('/not-a-route', 'it'), '/not-a-route');
 assert.equal(at('/customers/adr?utm_source=nl', 'it'), '/it/clienti/adr?utm_source=nl');
 assert.equal(at('/book-meeting#form', 'it'), '/it/prenota-incontro#form');
 assert.equal(
-  at('/resources/whitepapers/beyond-skills?utm_medium=email', 'it'),
-  '/it/risorse/whitepaper/beyond-skills?utm_medium=email',
+  at('/resources/insights/beyond-skills?utm_medium=email', 'it'),
+  '/it/risorse/insights/beyond-skills?utm_medium=email',
 );
 
 // ── A route with no page in the target locale is left alone ───────────────
@@ -109,8 +109,8 @@ assert.equal(switchTo('/it', 'it', 'en'), '/');
 assert.equal(switchTo('/book-meeting', 'en', 'it'), '/it/prenota-incontro');
 assert.equal(switchTo('/it/prenota-incontro', 'it', 'en'), '/book-meeting');
 assert.equal(
-  switchTo('/it/risorse/whitepaper/beyond-skills', 'it', 'en'),
-  '/resources/whitepapers/beyond-skills',
+  switchTo('/it/risorse/insights/beyond-skills', 'it', 'en'),
+  '/resources/insights/beyond-skills',
 );
 assert.equal(switchTo('/about', 'en', 'it'), '/it/chi-siamo');
 assert.equal(switchTo('/it/chi-siamo', 'it', 'en'), '/about');

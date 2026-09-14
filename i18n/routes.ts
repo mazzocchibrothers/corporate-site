@@ -66,9 +66,10 @@ export type Route = {
   /**
    * This route used to live at a different URL per locale. next.config.ts
    * turns each into a permanent redirect so old links and search results land
-   * on the current one instead of 404ing — see `customers` for the only
-   * occurrence today (it moved to /customers/customer-stories to make room
-   * for Talent Pioneers under the same nav item).
+   * on the current one instead of 404ing — see `customers` (moved to
+   * /customers/customer-stories to make room for Talent Pioneers under the
+   * same nav item) and `resources/insights` (moved from `resources/whitepapers`
+   * when White Papers was renamed Insights).
    */
   redirectFrom?: Partial<Record<Locale, string>>;
 };

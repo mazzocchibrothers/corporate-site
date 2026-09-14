@@ -72,8 +72,8 @@ export function ogImageUrl(all: RouteLike[], route: RouteLike, locale: Locale): 
   const dir = route.paths.en ?? route.paths.it!;
 
   // One exception, and it is structural rather than a quirk of one route: a
-  // route with a dynamic child is shadowed by it. /resources/whitepapers has
-  // /resources/whitepapers/[slug] beneath it, so the internal path of its own
+  // route with a dynamic child is shadowed by it. /resources/insights has
+  // /resources/insights/[slug] beneath it, so the internal path of its own
   // card reads as a slug and redirects to the Italian URL. There the card does
   // resolve — next-intl rewrites the localised path back onto the directory —
   // so for a shadowed route the localised path is the one to name.
@@ -126,13 +126,13 @@ export function localizePathIn(routes: RouteLike[], path: string, locale: Locale
   const exact = routes.find((r) => r.paths.en === pathname);
   if (exact) return (pathFor(exact, locale) ?? pathname) + suffix;
 
-  // A URL under a dynamic route — /resources/whitepapers/beyond-skills — has no
+  // A URL under a dynamic route — /resources/insights/beyond-skills — has no
   // registry entry of its own; its parent does. Without this branch it is the
   // one link shape that keeps its English prefix in Italian, silently.
   //
   // The trailing slash in the test is what keeps '/' — which is a route — from
   // claiming every path on the site: no pathname starts with '//'. The longest
-  // match wins, so /resources/whitepapers/x is claimed by /resources/whitepapers
+  // match wins, so /resources/insights/x is claimed by /resources/insights
   // and not by /resources.
   const parent = routes
     .filter((r) => r.paths.en !== undefined)

@@ -34,12 +34,73 @@ const CHAPTERS: Record<string, { num: string; icon: any }[]> = {
     { num: '03', icon: Users },
     { num: '04', icon: TrendingUp },
   ],
+  'predictive-workforce-planning-fashion-retail': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: TrendingUp },
+    { num: '03', icon: BookOpen },
+    { num: '04', icon: Brain },
+    { num: '05', icon: Users },
+  ],
+  'pay-transparency-compensation-architecture-fashion-retail': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: Brain },
+    { num: '03', icon: Users },
+    { num: '04', icon: TrendingUp },
+  ],
+  'top-performing-medical-sales-representative': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: Brain },
+    { num: '03', icon: Users },
+    { num: '04', icon: TrendingUp },
+  ],
+  'medrep-lifecycle-skill-based-assessment': [
+    { num: '01', icon: BookOpen },
+    { num: '02', icon: TrendingUp },
+    { num: '03', icon: Brain },
+    { num: '04', icon: Users },
+    { num: '05', icon: Zap },
+  ],
+  'seasonal-hiring-beauty-retail-conversion-rate': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: Users },
+    { num: '03', icon: Brain },
+    { num: '04', icon: TrendingUp },
+    { num: '05', icon: BookOpen },
+  ],
+  'beauty-advice-international-customer': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: Brain },
+    { num: '03', icon: Users },
+    { num: '04', icon: BookOpen },
+    { num: '05', icon: TrendingUp },
+  ],
+  'nis2-ai-act-telco-hr-compliance': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: Brain },
+    { num: '03', icon: TrendingUp },
+    { num: '04', icon: Users },
+  ],
+  'telco-cybersecurity-nis2-talent-strategy': [
+    { num: '01', icon: Zap },
+    { num: '02', icon: BookOpen },
+    { num: '03', icon: TrendingUp },
+    { num: '04', icon: Users },
+    { num: '05', icon: Brain },
+  ],
 };
 
 const STAT_COUNT: Record<string, number> = {
   'beyond-skills': 3,
   'future-leaders': 3,
   'sales-network-turnover': 3,
+  'predictive-workforce-planning-fashion-retail': 3,
+  'pay-transparency-compensation-architecture-fashion-retail': 3,
+  'top-performing-medical-sales-representative': 3,
+  'medrep-lifecycle-skill-based-assessment': 3,
+  'seasonal-hiring-beauty-retail-conversion-rate': 3,
+  'beauty-advice-international-customer': 3,
+  'nis2-ai-act-telco-hr-compliance': 3,
+  'telco-cybersecurity-nis2-talent-strategy': 3,
 };
 
 
@@ -50,7 +111,7 @@ const STAT_COUNT: Record<string, number> = {
 export default function WhitepaperDetailPage({ slug }: { slug: string }) {
   const router = useRouter();
   const lang = useLocale();
-  const t = useTranslations('resources.whitepapers');
+  const t = useTranslations('resources.insights');
   const formRef = useRef<HTMLDivElement>(null);
 
   const wp = whitepapers.find(w => w.slug === slug);
@@ -102,7 +163,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
           )}
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full pb-20 lg:pb-28 pt-32">
             <Button
-              onClick={() => { router.push('/resources/whitepapers'); window.scrollTo(0, 0); }}
+              onClick={() => { router.push('/resources/insights'); window.scrollTo(0, 0); }}
               variant="tertiary"
               mode="dark"
               icon={<ArrowLeft aria-hidden />}
@@ -170,11 +231,11 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
         {/* 3. What's Inside */}
         <section className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
-            <Reveal y={20} duration={0.6} className="mb-14">
-              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-[#121212] mb-4 tracking-[-0.02em]">
+            <Reveal y={20} duration={0.6} className="mb-14 grid lg:grid-cols-2 gap-6 lg:gap-16 items-start">
+              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">
                 {t.rich('detail.insideHeading', { span: (chunks) => <span className="gradient-text-on-light">{chunks}</span> })}
               </h2>
-              <p className="text-[16px] text-[#121212]/[0.45] max-w-xl">{t(`items.${slug}.fullDesc`)}</p>
+              <p className="text-[16px] text-[#121212]/[0.45] lg:pt-3">{t(`items.${slug}.fullDesc`)}</p>
             </Reveal>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {chapters.map((ch, i) => {
@@ -203,16 +264,20 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
 
         {/* 5. Download Form */}
         <section id="download-form" className="relative py-16 lg:py-20">
-          <div className="max-w-[700px] mx-auto px-8 lg:px-12">
-            <Reveal duration={0.7} className="text-center mb-10">
-              <div className="w-16 h-16 rounded-2xl bg-[#4B4DF7]/[0.12] border border-[#4B4DF7]/[0.15] flex items-center justify-center mx-auto mb-6">
-                <FileText className="h-7 w-7 text-[#4B4DF7]" />
-              </div>
-              <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-3 tracking-[-0.02em]">{t('detail.heading')}</h2>
-              <p className="text-[15px] text-white/40">{t('detail.body2')}</p>
-            </Reveal>
-            <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10">
-              <div id="wp-hubspot-form" ref={formRef} style={{ minHeight: '300px' }} />
+          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <Reveal duration={0.7}>
+                <div className="w-14 h-14 rounded-2xl bg-[#4B4DF7]/[0.12] border border-[#4B4DF7]/[0.15] flex items-center justify-center mb-8">
+                  <FileText className="h-6 w-6 text-[#4B4DF7]" />
+                </div>
+                <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 tracking-[-0.02em]">{t.rich('detail.heading', {
+                  span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+                })}</h2>
+                <p className="text-[15px] text-white/40">{t('detail.body2')}</p>
+              </Reveal>
+              <Reveal y={20} duration={0.7} delay={0.15} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10">
+                <div id="wp-hubspot-form" ref={formRef} style={{ minHeight: '300px' }} />
+              </Reveal>
             </div>
           </div>
         </section>
@@ -230,7 +295,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                       delay={i * 0.1}
                       key={rw.slug}
                       className="group flex gap-6 items-center p-5 rounded-2xl border border-white/[0.05] hover:border-white/[0.12] hover:bg-white/[0.03] transition-all duration-500 cursor-pointer"
-                      onClick={() => { router.push(`/resources/whitepapers/${rw.slug}`); window.scrollTo(0, 0); }}
+                      onClick={() => { router.push(`/resources/insights/${rw.slug}`); window.scrollTo(0, 0); }}
                     >
                       {rw.coverBg && (
                         <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0 relative">
@@ -253,8 +318,11 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
 
         {/* 7. Bottom CTA */}
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <Reveal duration={0.7}>
+          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+            <Reveal
+              duration={0.7}
+              className="relative overflow-hidden rounded-[32px] border border-white/[0.08] bg-white/[0.05] backdrop-blur-sm px-8 py-16 md:px-16 md:py-20 text-center"
+            >
               <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">{t('detail.heading3')}</h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">{t('detail.body3')}</p>
               <Button

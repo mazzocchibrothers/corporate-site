@@ -16,7 +16,7 @@ import { whitepapers } from '@/data/whitepapers';
 // ponytail: one route has a dynamic segment, so it gets one expansion rather
 // than a generic mechanism. A second dynamic route is when that changes.
 const DYNAMIC: Record<string, string[]> = {
-  '/resources/whitepapers/[slug]': whitepapers.map((w) => w.slug),
+  '/resources/insights/[slug]': whitepapers.map((w) => w.slug),
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {

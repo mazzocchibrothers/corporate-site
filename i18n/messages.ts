@@ -34,7 +34,7 @@ const SHARED = ['common', 'shared'];
  *
  * - the homepage is `home` rather than the meaningless `index`
  * - a dynamic segment is dropped, not de-bracketed. `[slug]` is not a legal ICU
- *   key path, and `resources.whitepapers.slug` would be worse than illegal: it
+ *   key path, and `resources.insights.slug` would be worse than illegal: it
  *   would split one whitepaper's copy across two namespaces, because the card on
  *   the index and the page it links to render the same title.
  */

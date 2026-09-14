@@ -14,7 +14,7 @@ import { messagesForRoute } from '@/i18n/messages';
 import JsonLd from '@/i18n/json-ld';
 import Body from './body';
 
-const ROUTE = 'resources/whitepapers';
+const ROUTE = 'resources/insights';
 
 type Props = { params: Promise<{ locale: string }> };
 
