@@ -67,10 +67,14 @@ const HIDDEN_IN_IT = new Set(['resources/insights', 'blog']);
 const labelKey = (id: string) =>
   id.split('/').pop()!.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
 
+/** Drops a trailing slash so '/customers/adr' and '/customers/adr/' compare equal. */
+const withoutTrailingSlash = (path: string) => path.length > 1 ? path.replace(/\/$/, '') : path;
+
 export default function Navbar() {
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [openedMenus, setOpenedMenus] = useState<Set<string>>(new Set());
   const [onLightSection, setOnLightSection] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
@@ -159,6 +163,11 @@ export default function Navbar() {
   const handleEnter = useCallback((label: string) => {
     clearTimeout(closeTimeout.current);
     setOpenMenu(label);
+    // Mount a dropdown's panel the first time it opens, not on first paint —
+    // so a visitor who never touches "Solutions" never pays for its markup.
+    // Once mounted it stays mounted, so the close fade below has something to
+    // animate on every subsequent close.
+    setOpenedMenus((prev) => (prev.has(label) ? prev : new Set(prev).add(label)));
   }, []);
 
   const handleLeave = useCallback(() => {
@@ -283,8 +292,10 @@ export default function Navbar() {
                   </a>
                 )}
 
-                {/* Per-trigger floating dropdown card */}
-                {link.items && (
+                {/* Per-trigger floating dropdown card. Mounted lazily (see
+                    handleEnter) so it stays a no-op for the ~17 anchors across
+                    all four triggers until a visitor actually opens one. */}
+                {link.items && openedMenus.has(link.id) && (
                   <div
                     id={`desktop-menu-${link.id}`}
                     role="region"
@@ -295,7 +306,14 @@ export default function Navbar() {
                       opacity: openMenu === link.id ? 1 : 0,
                       visibility: openMenu === link.id ? 'visible' : 'hidden',
                       transform: openMenu === link.id ? 'translate(-50%, 0)' : 'translate(-50%, -6px)',
-                      transition: 'opacity 0.25s ease, transform 0.25s cubic-bezier(0.25,0.1,0.25,1)',
+                      // visibility flips instantly when opening, but only
+                      // after the fade finishes when closing — otherwise the
+                      // browser stops painting the card the instant openMenu
+                      // changes and the opacity/transform transition below
+                      // never gets to run.
+                      transition: openMenu === link.id
+                        ? 'opacity 0.25s ease, transform 0.25s cubic-bezier(0.25,0.1,0.25,1), visibility 0s'
+                        : 'opacity 0.25s ease, transform 0.25s cubic-bezier(0.25,0.1,0.25,1), visibility 0s 0.25s',
                       pointerEvents: openMenu === link.id ? 'auto' : 'none',
                     }}
                   >
@@ -310,7 +328,7 @@ export default function Navbar() {
                       {link.items.filter(id => !(lang === 'it' && HIDDEN_IN_IT.has(id))).map((id) => {
                         const key = labelKey(id);
                         const Icon = ICONS[key];
-                        const isActive = pathname === href(id, lang);
+                        const isActive = withoutTrailingSlash(pathname) === withoutTrailingSlash(href(id, lang));
                         // Solid colors, not alpha overlays — default is a flat
                         // muted gray, hover/active both resolve to the same
                         // flat on/off color instead of blending with the panel.
