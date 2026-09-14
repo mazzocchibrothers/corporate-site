@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useLocale } from 'next-intl';
+import { trackLead } from '@/components/shared/track-lead';
 
 const FORM_IDS: Record<string, string> = {
   en: '950f4b2b-ed50-4ef7-94f9-2b34c4b19ecc',
@@ -21,6 +22,7 @@ export default function TalentPioneersContactForm() {
         formId: FORM_IDS[lang] ?? FORM_IDS.en,
         region: 'na1',
         target: '#talent-pioneers-hubspot-form',
+        onFormSubmitted: () => trackLead('talent-pioneers'),
       });
     };
 

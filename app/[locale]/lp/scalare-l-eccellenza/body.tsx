@@ -5,6 +5,7 @@ import { Reveal } from '@/components/ui/reveal';
 import React, { useState, useEffect, useRef } from 'react';
 import { Download, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { trackLead } from '@/components/shared/track-lead';
 
 const HUBSPOT_PORTAL_ID = '48438018';
 const HUBSPOT_FORM_ID = 'YOUR_WP_L3_FORM_ID'; // TODO: replace with real form ID
@@ -112,6 +113,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
         }
       );
       if (!res.ok) throw new Error(`HubSpot submit failed: ${res.status}`);
+      trackLead('lp/scalare-l-eccellenza');
     } catch {
       setSubmitting(false);
       setSubmitError(true);
@@ -960,9 +962,6 @@ export default function ScalareEccellenzaPage() {
 
   return (
     <>
-      <>
-        <meta name="robots" content="noindex, nofollow" />
-      </>
         {unlocked ? (
           <Reveal y={0} duration={0.4} key="wp">
             <WhitepaperLayer />

@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { Download, Lock, Check, ChevronDown } from 'lucide-react';
+import { trackLead } from '@/components/shared/track-lead';
 
 const HS_PORTAL_ID = '48438018';
 const HS_REGION = 'na1';
@@ -49,7 +50,10 @@ export default function AiCompetencyPage() {
           formId,
           region: HS_REGION,
           target: '#lead-form',
-          onFormSubmitted: () => setUnlocked(true),
+          onFormSubmitted: () => {
+            trackLead('lp/ai-competency');
+            setUnlocked(true);
+          },
         });
       }
     };
@@ -74,10 +78,6 @@ export default function AiCompetencyPage() {
 
   return (
     <>
-      <>
-        <meta name="robots" content="noindex" />
-      </>
-
       {/* Brand styling for the embedded HubSpot form */}
       <style jsx global>{`
         /* Two-column, horizontal layout */

@@ -87,10 +87,9 @@ export async function buildMetadata(routeId: string, locale: string): Promise<Me
     title,
     description,
     alternates: { canonical, languages: alternatesFor(indexed) },
-    // Nine bodies render this tag by hand, and they do not agree: five say
-    // `noindex`, four say `noindex, nofollow`. A page copied from one of them
-    // inherits whichever it happened to copy. The registry says it once, here,
-    // for every locale of the route. Retrofitting those nine is #148.
+    // Bodies used to render this tag by hand, and they did not agree: some said
+    // `noindex`, some `noindex, nofollow`. The registry says it once, here, for
+    // every locale of the route.
     robots: route.noindex ? { index: false, follow: false } : undefined,
     openGraph: {
       title,

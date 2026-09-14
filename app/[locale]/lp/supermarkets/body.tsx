@@ -92,10 +92,6 @@ export default function SupermarketsPage() {
 
   return (
     <>
-      <>
-        <meta name="robots" content="noindex" />
-      </>
-
       <Navbar />
 
       <main className="relative" style={{ background: '#08080c' }}>

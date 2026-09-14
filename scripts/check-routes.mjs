@@ -313,7 +313,7 @@ const disallow = readFileSync(join(ROOT, 'public/robots.txt'), 'utf8')
   .filter(Boolean);
 
 const submitted = routes
-  .filter((r) => r.canonicalOf === undefined && !r.id.startsWith('lp/') && r.noindex !== true)
+  .filter((r) => r.canonicalOf === undefined && r.noindex !== true)
   .flatMap((r) => localesOf(r).map((locale) => new URL(urlFor(r, locale)).pathname));
 
 const contradictions = submitted.filter((path) =>

@@ -4,6 +4,8 @@ import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/ui/reveal';
 import React, { useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { trackLead } from '@/components/shared/track-lead';
+import { href } from '@/i18n/routes';
 
 function SkillvueIcon({ size = 24 }: { size?: number }) {
   return (
@@ -79,7 +81,10 @@ export default function CareerAspirationInsuranceVetrina() {
           formId: '0c51980d-9722-42e9-8807-ac011247ee3c',
           region: 'na1',
           target: '#hs-form-container',
-          redirectUrl: window.location.origin + '/lp/career-aspiration-insurance/whitepaper',
+          // The whitepaper page is Italian-only, so its URL carries /it — without it
+          // the redirect after a successful submit landed on a 404.
+          redirectUrl: window.location.origin + href('lp/career-aspiration-insurance/whitepaper', 'it'),
+          onFormSubmitted: () => trackLead('lp/career-aspiration-insurance'),
         });
       }
     };

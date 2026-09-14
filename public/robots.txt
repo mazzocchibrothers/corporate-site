@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /lp/
 Disallow: /api/
 
-Sitemap: https://skillvue.ai/sitemap.xml
+Sitemap: https://www.skillvue.ai/sitemap.xml

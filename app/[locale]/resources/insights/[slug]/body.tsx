@@ -10,6 +10,7 @@ import { ArrowRight, ArrowLeft, FileText, Download, BookOpen, Users, Brain, Zap,
 import { whitepapers } from '@/data/whitepapers';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import { trackLead } from '@/components/shared/track-lead';
 
 // The one dynamic route on the site. Its paths come from the same array the
 // sitemap expands, so a whitepaper cannot exist in one and not the other.
@@ -132,7 +133,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
     script.async = true;
     script.onload = () => {
       if (window.hbspt) {
-        window.hbspt.forms.create({ portalId: '48438018', formId, region: 'na1', target: '#wp-hubspot-form' });
+        window.hbspt.forms.create({ portalId: '48438018', formId, region: 'na1', target: '#wp-hubspot-form', onFormSubmitted: () => trackLead(`resources/insights/${slug}`) });
       }
     };
     document.body.appendChild(script);
