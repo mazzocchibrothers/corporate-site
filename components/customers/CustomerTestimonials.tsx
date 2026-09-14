@@ -56,7 +56,11 @@ export default function CustomerTestimonials() {
                 </div>
                 <div className="pt-4">
                   <h3 className="text-[24px] font-semibold leading-[1.4] text-[#1E1E1E] tracking-[-0.01em] mb-4">{t(`testimonials.cards.${c.id}.title`)}</h3>
-                  <span className="inline-flex rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-1 text-[12px] text-[#4B4B4B] mb-4">{t(`testimonials.cards.${c.id}.tags`)}</span>
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {(t.raw(`testimonials.cards.${c.id}.tags`) as string[]).map((tag) => (
+                      <span key={tag} className="inline-flex rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[12px] text-[#4B4B4B]">{tag}</span>
+                    ))}
+                  </div>
                   <div className="flex items-center gap-2 text-[14px] font-semibold text-[#4B4DF7]">
                     {t('testimonials.watchVideo')}
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />

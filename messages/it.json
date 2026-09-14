@@ -1308,9 +1308,9 @@
       "footerText": "Scopri come si presentano le prove sul tuo framework di competenze",
       "cta": "Prenota una Demo",
       "cards": {
-        "unicomm": { "title": "Ricostruire la gestione dei talenti su 250+ punti vendita", "tags": "Selezione · Mobilità Interna · L&D" },
-        "mediaset": { "title": "Individuare e far crescere il potenziale dei neolaureati", "tags": "Selezione · Graduate Program" },
-        "europAssistance": { "title": "Selezionare per un potenziale che resiste alla prova del tempo", "tags": "Selezione" }
+        "unicomm": { "title": "Ricostruire la gestione dei talenti su 250+ punti vendita", "tags": ["Selezione", "Mobilità Interna", "L&D"] },
+        "mediaset": { "title": "Individuare e far crescere il potenziale dei neolaureati", "tags": ["Selezione", "Graduate Program"] },
+        "europAssistance": { "title": "Selezionare per un potenziale che resiste alla prova del tempo", "tags": ["Selezione"] }
       }
     },
     "roi": {

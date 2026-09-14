@@ -31,7 +31,7 @@ export default function InsightsPage() {
   const renderTags = (w: { industry: string[]; topic: string[] }) => (
     <div className="flex flex-wrap gap-1.5">
       {[...w.industry, ...w.topic].map(tag => (
-        <span key={tag} className="inline-flex px-3 py-1 rounded-full text-[10px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.04] tracking-wide whitespace-nowrap">{tag}</span>
+        <span key={tag} className="inline-flex rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[12px] text-[#4B4B4B] whitespace-nowrap">{tag}</span>
       ))}
     </div>
   );
