@@ -57,8 +57,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       for (const locale of localesOf(route)) {
         entries.push({
           url: fill(urlFor(route, locale)!),
-          changeFrequency: 'monthly',
-          priority: route.id === 'index' ? 1.0 : 0.8,
           alternates: {
             languages: Object.fromEntries(
               Object.entries(languages).map(([k, v]) => [k, fill(v)]),
