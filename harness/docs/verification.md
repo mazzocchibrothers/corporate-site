@@ -18,21 +18,23 @@ missing Italian translation, a route absent from the sitemap, or a wrong
 
 `./harness/init.sh` runs all of them.
 
-The gates live in the `GATES` array of `init.sh`, one npm script name per gate.
-That array is the only list — it is not duplicated here, so this doc cannot
-drift from what actually runs. To see it, and to run one by hand:
+The gates are `typecheck` plus every `check:*` script in `package.json`, in
+declaration order. `scripts/gates.mjs` derives that list — it is not duplicated
+here or in `init.sh`, so nothing can drift from what actually runs. To see it,
+and to run one by hand:
 
 ```bash
-sed -n '/^GATES=(/,/^)/p' harness/init.sh   # the live list
-npm run typecheck                           # one of them
+node scripts/gates.mjs      # the live list
+npm run check:routes        # one of them
 ```
 
-The production build (`npm run build`) is a separate, slower tier, skipped by
+The production build (`npm run check:build`) is a separate, slower tier, skipped by
 `./harness/init.sh --fast`. Use `--fast` while iterating; **never** to declare
 an Issue done.
 
-CI runs the same list on every push, from `scripts/gates.mjs` — the runner and
-the workflow cannot disagree about what runs. Running `init.sh` locally is still
+CI runs the same list on every PR, from `scripts/gates.mjs`, then
+`check:build`, then `npm run test:smoke` (Playwright against `npm run start`).
+The runner and the workflow cannot disagree about what runs. Running `init.sh` locally is still
 not optional: it is how you find out before the push.
 
 ## Level 2 — One runnable check per piece of non-trivial logic (mandatory)
@@ -40,11 +42,13 @@ not optional: it is how you find out before the push.
 Non-trivial means: a branch, a loop, a parser, a filter, a locale mapping, a
 data transform. UI markup is not non-trivial; `localizePath()` is.
 
-Add `scripts/check-<feature>.mjs`, wire it as a `check:<feature>` script in
-`package.json`, and register it in the `GATES` array of `harness/init.sh`.
+Add `scripts/check-<feature>.mjs` and wire it as a `check:<feature>` script in
+`package.json`. That is all — `scripts/gates.mjs` picks it up. Logic worth
+checking lives in a `.ts` module the check imports
+(`components/customers/talent-pioneers-carousel.ts` is the model).
 
-- **`node:assert/strict`, no framework, no fixtures.** Do not install jest,
-  vitest or Playwright to add one assertion.
+- **`node:assert/strict`, no framework, no fixtures.** Do not install jest or
+  vitest to add one assertion. Playwright is installed for `test:smoke` only.
 - Runs **offline** — no network, no dev server.
 - Asserts the concrete result, not merely "it didn't throw".
 - Covers the degradation path, not only the happy one: the missing translation
@@ -75,11 +79,11 @@ not a reimplementation of it — `i18n/urls.ts` has no imports precisely so plai
 Node can run it. And **assert the property, not just the example**: the round
 trip over all 61 routes catches what eight hand-picked cases do not.
 
-### The eight gates, and what each one exists because of
+### The gates, and what each one exists because of
 
 | Gate | Guards against |
 |---|---|
-| `typecheck` | broken imports and the type errors `@ts-nocheck` does not hide |
+| `typecheck` | broken imports and null errors (`strictNullChecks`) |
 | `check:i18n` | a `t('…')` literal with no key in one of the catalogues |
 | `check:routes` | a route with no page, a page with no route, two directories for one route, a page with no title, two pages with one title, an hreflang pointing at a URL nothing serves |
 | `check:client` | a client component doing server work, and the reverse |
@@ -89,10 +93,14 @@ trip over all 61 routes catches what eight hand-picked cases do not.
 | `check:hardcoded` | copy that is in the code rather than in the catalogue |
 | `check:untranslated` | an Italian value that is still the English one |
 | `check:assets` | an image, font or PDF a page asks for that is not in `public/` |
+| `check:colors` | a hex outside the palette, or a palette entry nothing draws |
+| `check:images` | the LCP image losing `fetchPriority="high"`, a card image losing lazy decoding |
+| `check:talent-pioneers-carousel` | the carousel's wrap and click-suppression logic |
+| `check:demo-*` | personal data in `data/demo/`, a lost `?c=` token in the `demo_view` event, a dashboard whose labels are missing or whose copy no longer describes its data |
 | `check:build` | everything the above cannot see — **and any warning the build prints** |
 
 Each was written after the defect it guards had already shipped at least once.
-That is the bar for adding a tenth: name the failure, then write the check that
+That is the bar for adding the next one: name the failure, then write the check that
 would have caught it.
 
 `check:build` is the shortest lesson here. Next 16 deprecated the `middleware`
@@ -195,6 +203,8 @@ Then, in a browser, for **both** locales:
       are all there, in the right language, pointing at URLs that resolve.
 - [ ] If the page is in `ExploreStories`, its card appears under every filter
       its `useCases[]` declares.
+- [ ] Phone width and desktop both hold up — Italian copy is longer and breaks
+      layouts English does not.
 
 Record **as a comment on the Issue** what you actually saw — status codes,
 which URLs you opened, what the switcher did. Not what the code should do.

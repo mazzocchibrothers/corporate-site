@@ -17,22 +17,23 @@ do not edit code.
    implementer's progress comments), then verify it against `git diff` — do not
    take the comments' word for what was touched.
 3. For every changed file:
-   - Does it respect `architecture.md`? (content-object pattern, no new
-     `translations.ts` key, no new bare locale ternary, `components/ui/`
-     untouched, no per-file override of a centralized value)
-   - Does it respect `conventions.md`? (naming, page skeleton, `content` above
-     the component, per-locale `<Head>`, comment policy)
+   - Does it respect `architecture.md`? (copy in the catalogues, no bare locale
+     ternary, `components/ui/` primitives reused, no per-file override of a
+     centralized value, provider not widened)
+   - Does it respect `conventions.md`? (naming, the three-file page shape,
+     `<Reveal>` not framer-motion, comment policy)
+   - Does it respect the **Design system** in `CLAUDE.md`? (C7)
    - Does any non-trivial logic ship with its check, offline, asserting
      concrete results?
-4. **Check both locales carry the same keys.** A key in `content.it` missing
-   from `content.en` renders `undefined` in production and nothing catches it.
-   Read both objects; do not assume symmetry.
+4. **Read both locales' copy.** `check:messages` proves the keys match and
+   `check:untranslated` that Italian is not still English; neither proves the
+   Italian says the same thing. Read the diff of both catalogues.
 5. **Grep the diff for straight apostrophes** in Italian strings:
    `git diff | grep -nE "[a-zA-ZÀ-ÿ]'[a-zA-ZÀ-ÿ]"`. Any hit in a single-quoted
    string is a rejection.
-6. **If the Issue touched routing, walk C4 file by file.** Four files must
-   agree and the build checks none of them. An Issue that adds a route and
-   updates three of the four is a rejection, even with every gate green.
+6. **If the Issue touched routing, walk C4.** `check:routes` covers the
+   registry against the tree; it cannot tell whether the page is listed where
+   its section lists content, or whether `noindex`/`canonicalOf` were needed.
 7. Run `./harness/init.sh` — the full run, not `--fast`. It must end green.
 8. Walk `CHECKPOINTS.md`. Mark `[x]` what holds, `[ ]` what doesn't.
 9. Check the Issue's own Acceptance list, item by item. An unmet item is a
@@ -54,18 +55,19 @@ Your output is a **single block posted as a comment on the Issue**:
 
 ## Acceptance
 - [x] <item 1>
-- [ ] <item 3>  ← Reason: content.en has no `clientCard.facts`, IT only
+- [ ] <item 3>  ← Reason: messages/en.json has no `customers.adr.clientCard.facts`, IT only
 
 ## Checkpoints
 - C1: [x]
 - C2: [x]
-- C3: [ ]  ← Reason: pages/lp/food-retail.tsx:212 adds `lang === 'it' ? …` outside the content object
+- C3: [ ]  ← Reason: app/[locale]/lp/food-retail/body.tsx:212 adds a bare `lang === 'it' ? …`
 - C4: [x]
 - C5: [ ]  ← Reason: smoke test covered /customers/x, never /it/clienti/x
 - C6: [x]
+- C7: [ ]  ← Reason: blog/body.tsx drops the hero eyebrow Insights and Press still render
 
 ## Required changes (if any)
-1. Mirror `clientCard.facts` into `content.en` (europ-assistance.tsx:88).
+1. Add `customers.adr.clientCard.facts` to messages/en.json.
 2. ...
 ```
 
@@ -97,8 +99,8 @@ CHANGES_REQUESTED -> #<n> (verdict posted as an Issue comment)
 
 ## What green gates do NOT prove here
 
-This repo has no lint, no tests and `@ts-nocheck` on 157 of 186 files. A green
-`init.sh` means "it compiles" — it says nothing about a missing translation, a
-route absent from the sitemap, a switcher that 404s, or a wrong `hreflang`.
-Those are yours to catch by reading. Do not let a green run substitute for
+This repo has no lint and no unit tests. A green `init.sh` proves the catalogue,
+the registry and the build are consistent — it says nothing about Italian copy
+that says the wrong thing, a page that no longer looks like its siblings, or a
+switcher that lands somewhere useless. Those are yours to catch by reading. Do not let a green run substitute for
 steps 4-6.
