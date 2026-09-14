@@ -1,7 +1,12 @@
 'use client';
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
+import {
+  ChevronDown, Menu, X, ArrowRight,
+  AppWindow, Atom, UserSearch, UserCog, BookOpenCheck, Move, FolderKanban,
+  SquarePlay, UsersRound, Lightbulb, Rows3, Newspaper, Building2, Briefcase,
+} from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import { useRouter } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { useSwitchLocale } from '@/i18n/switch-locale';
@@ -31,6 +36,24 @@ const navLinks: { id: string; route?: string; items: string[] | null }[] = [
   },
 ];
 
+// One icon per dropdown item, keyed the same way as its label (see labelKey).
+const ICONS: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
+  productOverview: AppWindow,
+  science: Atom,
+  talentAcquisition: UserSearch,
+  performanceManagement: UserCog,
+  learningDevelopment: BookOpenCheck,
+  internalMobility: Move,
+  projectResourcing: FolderKanban,
+  customers: SquarePlay,
+  talentPioneers: UsersRound,
+  insights: Lightbulb,
+  blog: Rows3,
+  press: Newspaper,
+  about: Building2,
+  careers: Briefcase,
+};
+
 // English-only content we do not advertise to Italian visitors.
 //
 // This is NOT derivable from the registry, and the difference matters:
@@ -57,7 +80,6 @@ export default function Navbar() {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  const hasDropdown = !!(openMenu && navLinks.find(l => l.id === openMenu)?.items);
   const menuActive = !!openMenu;
 
   useEffect(() => {
@@ -144,17 +166,19 @@ export default function Navbar() {
   }, []);
 
   const lang = useLocale();
+  const pathname = usePathname();
   const switchLang = useSwitchLocale();
   const t = useTranslations('common');
 
-  const isLight = onLightSection && scrolled && !menuActive;
+  // Whether the open menu should read light-on-white or light-on-black is the
+  // same question the bar itself already answers — onLightSection && scrolled
+  // — so the dropdown follows it too instead of forcing black while open.
+  const isLight = onLightSection && scrolled;
 
   const textColor = isLight ? '#121212' : '#ffffff';
   const textMuted = isLight ? 'rgba(26,26,46,0.7)' : 'rgba(255,255,255,0.7)';
   const btnBorder = isLight ? 'rgba(26,26,46,0.15)' : 'rgba(255,255,255,0.15)';
-  const navCtaMode = !menuActive && isLight ? 'light' : 'dark';
-
-  const activeItems = hasDropdown ? navLinks.find(l => l.id === openMenu)?.items : null;
+  const navCtaMode = isLight ? 'light' : 'dark';
 
   const navigateTo = (path: string) => {
     setMobileOpen(false);
@@ -182,13 +206,15 @@ export default function Navbar() {
         data-testid="navbar"
         style={{
           transition: 'background-color 0.3s ease',
-          backgroundColor: menuActive || mobileOpen
+          backgroundColor: mobileOpen
             ? '#000000'
-            : isLight
-              ? 'rgba(245,245,250,0.92)'
-              : scrolled
-                ? 'rgba(13,13,31,0.78)'
-                : 'transparent',
+            : menuActive
+              ? (isLight ? '#ffffff' : '#000000')
+              : isLight
+                ? 'rgba(245,245,250,0.92)'
+                : scrolled
+                  ? 'rgba(13,13,31,0.78)'
+                  : 'transparent',
           backdropFilter: (menuActive || isLight || mobileOpen || scrolled) ? 'blur(40px) saturate(1.2)' : 'none',
           WebkitBackdropFilter: (menuActive || isLight || mobileOpen || scrolled) ? 'blur(40px) saturate(1.2)' : 'none',
           borderBottom: scrolled && !menuActive && !mobileOpen ? `1px solid ${isLight ? 'rgba(26,26,46,0.06)' : 'rgba(255,255,255,0.06)'}` : '1px solid transparent',
@@ -220,9 +246,9 @@ export default function Navbar() {
                     id={`desktop-trigger-${link.id}`}
                     data-testid={`nav-link-${link.id}`}
                     aria-expanded={openMenu === link.id}
-                    aria-controls="desktop-menu"
+                    aria-controls={`desktop-menu-${link.id}`}
                     className="text-[15px] font-light tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
-                    style={{ color: menuActive ? (openMenu === link.id ? '#ffffff' : 'rgba(255,255,255,0.5)') : (openMenu === link.id ? textColor : textMuted) }}
+                    style={{ color: openMenu === link.id ? textColor : textMuted }}
                     onFocus={(event) => {
                       desktopTriggerRef.current = event.currentTarget;
                       handleEnter(link.id);
@@ -247,7 +273,7 @@ export default function Navbar() {
                     href={href(link.route!, lang)}
                     data-testid={`nav-link-${link.id}`}
                     className="text-[15px] font-light tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
-                    style={{ color: menuActive ? 'rgba(255,255,255,0.5)' : textMuted }}
+                    style={{ color: textMuted }}
                     onClick={(event) => {
                       event.preventDefault();
                       navigateTo(href(link.route!, lang));
@@ -255,6 +281,65 @@ export default function Navbar() {
                   >
                     {t(`nav.${link.id}`)}
                   </a>
+                )}
+
+                {/* Per-trigger floating dropdown card */}
+                {link.items && (
+                  <div
+                    id={`desktop-menu-${link.id}`}
+                    role="region"
+                    aria-labelledby={`desktop-trigger-${link.id}`}
+                    aria-hidden={openMenu !== link.id}
+                    className="absolute left-1/2 -translate-x-1/2 top-full pt-3"
+                    style={{
+                      opacity: openMenu === link.id ? 1 : 0,
+                      visibility: openMenu === link.id ? 'visible' : 'hidden',
+                      transform: openMenu === link.id ? 'translate(-50%, 0)' : 'translate(-50%, -6px)',
+                      transition: 'opacity 0.25s ease, transform 0.25s cubic-bezier(0.25,0.1,0.25,1)',
+                      pointerEvents: openMenu === link.id ? 'auto' : 'none',
+                    }}
+                  >
+                    <div
+                      className="rounded-2xl border p-2 min-w-[220px]"
+                      style={{
+                        backgroundColor: isLight ? '#ffffff' : '#000000',
+                        borderColor: isLight ? 'rgba(18,18,18,0.08)' : 'rgba(255,255,255,0.08)',
+                        boxShadow: isLight ? '0 20px 40px rgba(18,18,18,0.12)' : '0 20px 40px rgba(0,0,0,0.4)',
+                      }}
+                    >
+                      {link.items.filter(id => !(lang === 'it' && HIDDEN_IN_IT.has(id))).map((id) => {
+                        const key = labelKey(id);
+                        const Icon = ICONS[key];
+                        const isActive = pathname === href(id, lang);
+                        // Solid colors, not alpha overlays — default is a flat
+                        // muted gray, hover/active both resolve to the same
+                        // flat on/off color instead of blending with the panel.
+                        const solidColor = isLight ? 'text-[#121212]' : 'text-white';
+                        const mutedColor = isLight ? 'text-[#7a7a7a]' : 'text-[#888888]';
+                        const hoverColor = isLight ? 'group-hover:text-[#121212]' : 'group-hover:text-white';
+                        const itemColorClass = isActive ? solidColor : `${mutedColor} ${hoverColor}`;
+                        return (
+                          <a
+                            key={id}
+                            href={href(id, lang)}
+                            data-testid={`mega-${key}`}
+                            className={`group flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 ${isActive ? '' : (isLight ? 'hover:bg-black/[0.04]' : 'hover:bg-white/[0.05]')}`}
+                            style={{ backgroundColor: isActive ? (isLight ? 'rgba(18,18,18,0.05)' : 'rgba(255,255,255,0.08)') : 'transparent' }}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setOpenMenu(null);
+                              navigateTo(href(id, lang));
+                            }}
+                          >
+                            {Icon && <Icon className={`h-[18px] w-[18px] shrink-0 transition-colors duration-200 ${itemColorClass}`} />}
+                            <span className={`text-[15px] font-medium whitespace-nowrap transition-colors duration-200 ${itemColorClass}`}>
+                              {t(`nav.links.${key}`)}
+                            </span>
+                          </a>
+                        );
+                      })}
+                    </div>
+                  </div>
                 )}
               </div>
             ))}
@@ -265,7 +350,7 @@ export default function Navbar() {
             {/* Language toggle */}
             <div
               className="flex items-center rounded-full overflow-hidden"
-              style={{ border: `1px solid ${menuActive ? 'rgba(255,255,255,0.15)' : btnBorder}` }}
+              style={{ border: `1px solid ${btnBorder}` }}
             >
               {(['en', 'it'] as const).map((l, i) => (
                 <button
@@ -273,11 +358,9 @@ export default function Navbar() {
                   onClick={() => switchLang(l)}
                   className="px-3 py-1.5 text-[13px] font-medium tracking-wide transition-all duration-200"
                   style={{
-                    color: lang === l
-                      ? (menuActive ? '#ffffff' : textColor)
-                      : (menuActive ? 'rgba(255,255,255,0.35)' : textMuted),
-                    borderLeft: i === 1 ? `1px solid ${menuActive ? 'rgba(255,255,255,0.15)' : btnBorder}` : 'none',
-                    background: lang === l ? (menuActive ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)') : 'transparent',
+                    color: lang === l ? textColor : textMuted,
+                    borderLeft: i === 1 ? `1px solid ${btnBorder}` : 'none',
+                    background: lang === l ? (isLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.08)') : 'transparent',
                   }}
                 >
                   {l.toUpperCase()}
@@ -319,53 +402,6 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
-
-      {/* Desktop dropdown panel */}
-      <div
-        className="hidden lg:block"
-        id="desktop-menu"
-        role="region"
-        aria-hidden={!hasDropdown}
-        aria-labelledby={openMenu ? `desktop-trigger-${openMenu}` : undefined}
-        style={{
-          backgroundColor: '#000000',
-          borderTop: '1px solid rgba(255,255,255,0.04)',
-          maxHeight: hasDropdown ? '400px' : '0px',
-          opacity: hasDropdown ? 1 : 0,
-          overflow: 'hidden',
-          transition: 'max-height 0.35s cubic-bezier(0.25,0.1,0.25,1), opacity 0.3s ease',
-        }}
-        onMouseEnter={() => clearTimeout(closeTimeout.current)}
-      >
-        {activeItems && (
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-5">
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              {activeItems.filter(id => !(lang === 'it' && HIDDEN_IN_IT.has(id))).map((id, idx) => (
-                <a
-                  key={id}
-                  href={href(id, lang)}
-                  data-testid={`mega-${labelKey(id)}`}
-                  className="group flex items-center gap-2.5 px-5 py-3 rounded-full border border-white/[0.06] hover:border-white/[0.14] hover:bg-white/[0.04] transition-all duration-200"
-                  style={{
-                    opacity: hasDropdown ? 1 : 0,
-                    transform: hasDropdown ? 'translateY(0)' : 'translateY(-4px)',
-                    transition: `opacity 0.3s ease ${idx * 0.04}s, transform 0.3s ease ${idx * 0.04}s, border-color 0.2s ease, background-color 0.2s ease`,
-                  }}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setOpenMenu(null);
-                    navigateTo(href(id, lang));
-                  }}
-                >
-                  <span className="text-[14px] font-medium text-white/90 group-hover:text-white transition-colors duration-200">
-                    {t(`nav.links.${labelKey(id)}`)}
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
 
       {/* Mobile fullscreen menu */}
       {mobileOpen && (
