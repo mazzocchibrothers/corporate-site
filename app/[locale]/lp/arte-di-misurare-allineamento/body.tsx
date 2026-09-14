@@ -67,7 +67,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
   const tl = useTranslations('shared.lp');
   const [form, setForm] = useState({ nome: '', cognome: '', email: '' });
   const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const formRef = useRef<HTMLDivElement>(null);
 
@@ -91,8 +91,9 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setSubmitting(true);
+    setSubmitError(false);
     try {
-      await fetch(
+      const res = await fetch(
         `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`,
         {
           method: 'POST',
@@ -110,14 +111,13 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
           }),
         }
       );
-    } catch (_) {
-      // fail silently — still grant access
+      if (!res.ok) throw new Error(`HubSpot submit failed: ${res.status}`);
+    } catch {
+      setSubmitting(false);
+      setSubmitError(true);
+      return;
     }
-    setSubmitting(false);
-    setSubmitted(true);
-    if (typeof window !== 'undefined') {
-      window.open('/lp/arte-di-misurare-allineamento?access=true', '_blank');
-    }
+    onUnlock();
   };
 
   return (
@@ -324,28 +324,6 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
               <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">{t('heading3')}</h3>
               <p className="text-[13px] text-[#0D0D0D]/35 mb-7">{t('body2')}</p>
 
-              {submitted ? (
-                <div className="flex flex-col items-center justify-center py-10 text-center gap-4">
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center"
-                    style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
-                  >
-                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-[16px] font-semibold text-[#0D0D0D] mb-1">{t('body3')}</p>
-                    <p className="text-[13px] text-[#0D0D0D]/40">{t('body4')}</p>
-                  </div>
-                  <Button
-                    variant="secondary"
-                    mode="light"
-                    onClick={() => window.open('/lp/arte-di-misurare-allineamento?access=true', '_blank')}
-                  >
-                    {t('text8')}</Button>
-                </div>
-              ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-[12px] font-medium text-[#0D0D0D]/60 mb-1.5">
@@ -414,8 +392,8 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                     'Scarica il Report'
                   )}
                 </Button>
+                {submitError && <p role="alert" className="text-[11px] text-red-500 mt-1">{t('submitError')}</p>}
               </form>
-              )}
             </Reveal>
           </div>
         </div>
