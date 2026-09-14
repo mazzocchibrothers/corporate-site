@@ -47,16 +47,16 @@ You may run several Issues at once, but only under strict rules:
    only after the previous has landed — so each rebases onto the real tree.
 
 **The scope trap specific to this repo.** Content pages are genuinely disjoint
-and parallelize well. But five files are shared by almost everything:
+and parallelize well. But a few files are shared by almost everything:
 
 ```
-next.config.ts            i18n/localePaths.ts       pages/sitemap.xml.tsx
-components/landing/Navbar.tsx                       i18n/translations.ts
+i18n/routes.json          messages/en.json          messages/it.json
+components/landing/Navbar.tsx                       styles/globals.css
 ```
 
-Two Issues that each *add a route* both touch the first four, however unrelated
-their pages are — they are **not** disjoint. Two Issues that each edit copy in a
-shared component both touch `translations.ts`. Check the files, not the topic.
+Two Issues that each *add a route* both touch `routes.json`, however unrelated
+their pages are — they are **not** disjoint. Two Issues that each add copy both
+touch the catalogues. Check the files, not the topic.
 
 If scopes are not disjoint, do not parallelize: run the Issues in sequence.
 
@@ -68,7 +68,7 @@ prose. You receive only a one-line reference (`done -> #<n>`,
 
 ## What you do NOT do
 
-- ❌ Edit any file under `pages/`, `components/`, `i18n/`, `styles/`, `public/`.
+- ❌ Edit any file under `app/`, `components/`, `i18n/`, `messages/`, `styles/`, `public/`.
 - ❌ Set `status:done` yourself — the merged `Closes #<n>` PR does that.
 - ❌ Run two Issues with overlapping Scope in parallel.
 - ❌ Accept a subagent result that arrives as chat prose with no Issue reference.

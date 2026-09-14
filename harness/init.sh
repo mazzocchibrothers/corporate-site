@@ -4,8 +4,8 @@
 # Run it at the START of a session and before declaring any Issue `done`.
 # If it fails, the session does not move forward.
 #
-# There is no CI in this repo: this script is not a local echo of a pipeline,
-# it is the only automated gate that exists. See harness/docs/verification.md
+# CI (.github/workflows/ci.yml) runs the same gates from scripts/gates.mjs;
+# this is how you find out before the push. See harness/docs/verification.md
 # for what it does *not* catch (localization, routing, SEO) and how those are
 # verified instead.
 #

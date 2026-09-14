@@ -231,8 +231,7 @@ for it when work spans several pages, several agents, or touches routing, i18n
 or the gates.
 
 The App Router migration is finished: there is no `app-router` branch and no
-`pages/` directory. Anything under `harness/` that still says to branch off or
-target `app-router` is out of date — the base is `main`.
+`pages/` directory. The base for every branch is `main`.
 
 ## Git
 
