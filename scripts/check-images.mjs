@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 const checks = [
   ['components/landing/LiteYouTubeEmbed.tsx', 'fetchPriority="high"'],
   ['app/[locale]/careers/body.tsx', 'fetchPriority="high"'],
-  ['app/[locale]/blog/body.tsx', 'srcSet={article.image.startsWith'],
+  ['app/[locale]/blog/body.tsx', 'loading="lazy" decoding="async"'],
   ['app/[locale]/resources/insights/body.tsx', 'loading="lazy" decoding="async"'],
 ];
 

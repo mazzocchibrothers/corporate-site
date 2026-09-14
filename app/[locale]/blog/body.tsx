@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
+import { HeroVideo } from '@/components/ui/hero-video';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -14,21 +15,22 @@ import { href } from '@/i18n/routes';
 // tag are copy and live in messages/ under blog.articles, keyed on the same
 // slug as the post itself — so the card and the page it opens are neighbours in
 // the catalogue instead of an `id: 11` in a module array.
-const ARTICLES = [
+const NEWSLETTERS = [
   { id: 'newsletter-august-2026', image: '/newsletter-august-cover.avif', href: '/blog/newsletter-august-2026' },
   { id: 'newsletter-july-2026', image: '/newsletter-july-cover.avif', href: '/blog/newsletter-july-2026' },
-  { id: 'attitude-vs-competence', image: 'https://images.unsplash.com/photo-1713865469900-d12502a39875?w=600&h=400&fit=crop', href: '/blog/attitude-vs-competence' },
-  { id: 'recruitment-biases', image: 'https://images.unsplash.com/photo-1758519288480-1489c17b1519?w=600&h=400&fit=crop', href: '/blog/recruitment-biases' },
-  { id: 'negotiation-techniques', image: 'https://images.unsplash.com/photo-1745847768380-2caeadbb3b71?w=600&h=400&fit=crop', href: '/blog/negotiation-techniques' },
-  { id: 'accountability', image: 'https://images.unsplash.com/photo-1545005785-a4a5554b8efe?w=600&h=400&fit=crop', href: '/blog/accountability' },
-  { id: 'critical-thinking', image: 'https://images.unsplash.com/photo-1685541088069-66baf0b2d753?w=600&h=400&fit=crop', href: '/blog/critical-thinking' },
-  { id: 'corporate-onboarding', image: 'https://images.unsplash.com/photo-1758519288548-046187014c85?w=600&h=400&fit=crop', href: '/blog/corporate-onboarding' },
-  { id: 'managerial-skills', image: 'https://images.unsplash.com/photo-1752650735509-58f11eaa2e10?w=600&h=400&fit=crop', href: '/blog/managerial-skills' },
-  { id: 'social-skills', image: 'https://images.unsplash.com/photo-1544477989-b64060e53f36?w=600&h=400&fit=crop', href: '/blog/social-skills' },
-  { id: 'talent-acquisition', image: 'https://images.unsplash.com/photo-1726842172813-55c6e284f8b5?w=600&h=400&fit=crop', href: '/blog/talent-acquisition' },
 ];
 
-const unsplash = (src, width) => src.replace('w=600', `w=${width}`);
+const ARTICLES = [
+  { id: 'attitude-vs-competence', image: '/covers/blog-attitude-vs-competence.avif', href: '/blog/attitude-vs-competence' },
+  { id: 'recruitment-biases', image: '/covers/blog-recruitment-biases.avif', href: '/blog/recruitment-biases' },
+  { id: 'negotiation-techniques', image: '/covers/blog-negotiation-techniques.avif', href: '/blog/negotiation-techniques' },
+  { id: 'accountability', image: '/covers/blog-accountability.avif', href: '/blog/accountability' },
+  { id: 'critical-thinking', image: '/covers/blog-critical-thinking.avif', href: '/blog/critical-thinking' },
+  { id: 'corporate-onboarding', image: '/covers/blog-corporate-onboarding.avif', href: '/blog/corporate-onboarding' },
+  { id: 'managerial-skills', image: '/covers/blog-managerial-skills.avif', href: '/blog/managerial-skills' },
+  { id: 'social-skills', image: '/covers/blog-social-skills.avif', href: '/blog/social-skills' },
+  { id: 'talent-acquisition', image: '/covers/blog-talent-acquisition.avif', href: '/blog/talent-acquisition' },
+];
 
 
 export default function BlogPage() {
@@ -52,7 +54,7 @@ export default function BlogPage() {
               <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
             </div>
           ) : (
-            <img src={article.image} srcSet={article.image.startsWith('https://images.unsplash.com/') ? `${unsplash(article.image, 400)} 400w, ${unsplash(article.image, 800)} 800w, ${unsplash(article.image, 1200)} 1200w` : undefined} alt={t(`articles.${article.id}.title`)} loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img src={article.image} alt={t(`articles.${article.id}.title`)} loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           )}
         </div>
         <div className="p-5 md:p-7 flex-1 flex flex-col">
@@ -80,35 +82,56 @@ export default function BlogPage() {
         {/* 1. Hero */}
         <section className="relative pt-[80px] min-h-screen flex items-center">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
-            <Reveal duration={0.7}>
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">{t('text2')}</span>
-              <h1
-                className="font-semibold text-white/95 mb-8 text-[48px] md:text-[64px]"
-                style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-              >{t.rich('heading', {
-                br: () => <br />,
-                span: (chunks) => <span className="gradient-text">{chunks}</span>,
-              })}</h1>
-              <p className="text-[20px] text-white/[0.45] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>{t('body')}</p>
-              <Button asChild variant="tertiary" mode="dark" icon={null}>
-                <a
-                  href="#articles"
-                  onClick={(e) => { e.preventDefault(); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' }); }}
-                  className="group inline-flex items-center gap-3"
-                >
-                  <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
-                    <ChevronDown className="!h-4 !w-4" />
-                  </span>
-                  {t('cta')}
-                </a>
-              </Button>
-            </Reveal>
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+              <Reveal duration={0.7} className="lg:col-span-7">
+                <h1
+                  className="font-semibold text-white/95 mb-8 text-[48px] md:text-[64px]"
+                  style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
+                >{t.rich('heading', {
+                  br: () => <br />,
+                  span: (chunks) => <span className="gradient-text">{chunks}</span>,
+                })}</h1>
+                <p className="text-[20px] text-white/[0.45] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>{t('body')}</p>
+                <Button asChild variant="tertiary" mode="dark" icon={null}>
+                  <a
+                    href="#articles"
+                    onClick={(e) => { e.preventDefault(); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' }); }}
+                    className="group inline-flex items-center gap-3"
+                  >
+                    <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
+                      <ChevronDown className="!h-4 !w-4" />
+                    </span>
+                    {t('cta')}
+                  </a>
+                </Button>
+              </Reveal>
+              <HeroVideo
+                poster="/videos/blog-hero-showcase-poster.jpg"
+                webmSrc="/videos/blog-hero-showcase.webm"
+                mp4Src="/videos/blog-hero-showcase.mp4"
+                className="flex justify-center lg:col-span-5"
+                videoClassName="w-full max-w-[380px] h-auto rounded-[32px]"
+              />
+            </div>
           </div>
         </section>
 
-        {/* 2. Article Grid */}
+        {/* 2. Newsletters */}
         <section id="articles" className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
+            <Reveal y={20} duration={0.6} className="mb-8 md:mb-12">
+              <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('headingNewsletters')}</h2>
+            </Reveal>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {NEWSLETTERS.map((article, i) => renderArticle(article, i))}
+            </div>
+          </div>
+        </section>
+
+        {/* 3. All Articles */}
+        <section className="section-breathe">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 pb-20 lg:pb-28">
             <Reveal y={20} duration={0.6} className="mb-8 md:mb-12">
               <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading2')}</h2>
             </Reveal>
@@ -119,10 +142,13 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* 3. Bottom CTA */}
-        <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <Reveal duration={0.7}>
+        {/* 4. Bottom CTA */}
+        <section className="relative py-20 lg:py-24">
+          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
+            <Reveal
+              duration={0.7}
+              className="relative overflow-hidden rounded-[32px] border border-white/[0.08] bg-white/[0.05] backdrop-blur-sm px-8 py-16 md:px-16 md:py-20 text-center"
+            >
               <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">{t('heading3')}</h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">{t('body2')}</p>
               <Button
