@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
 import { Reveal } from '@/components/ui/reveal';
 
 type Props = {
@@ -12,19 +15,29 @@ type Props = {
 };
 
 /** A muted, looping hero video with a webm source and an mp4 fallback for
- * Safari. Shared by every page whose hero pairs a headline with a looping
- * product/brand clip instead of a static image. */
+ * Safari, used by the Insights and Press page heroes. */
 export function HeroVideo({ poster, webmSrc, mp4Src, className, videoClassName, delay = 0.2 }: Props) {
+  const ref = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Respect the OS setting, the same way <Reveal> does: a visitor who has
+    // asked for reduced motion gets the poster frame, not an autoplaying
+    // loop — the one thing that setting exists to suppress.
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+      ref.current?.pause();
+    }
+  }, []);
+
   return (
     <Reveal y={0} duration={0.8} delay={delay} className={className}>
       <video
+        ref={ref}
         className={videoClassName}
         poster={poster}
         autoPlay
         loop
         muted
         playsInline
-        preload="metadata"
       >
         <source src={webmSrc} type="video/webm" />
         <source src={mp4Src} type="video/mp4" />
