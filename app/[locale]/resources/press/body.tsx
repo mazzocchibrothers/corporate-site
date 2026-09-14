@@ -157,23 +157,38 @@ export default function PressPage() {
           </div>
 
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-20 lg:py-28">
-            <Reveal duration={0.7} className="max-w-3xl">
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">{t('text')}</span>
-              <h1
-                className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
-                style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-              >{t.rich('heading', {
-                br: () => <br />,
-                span: (chunks) => <span className="gradient-text">{chunks}</span>,
-              })}</h1>
-              <p className="text-[18px] text-white/[0.45] leading-[1.8] max-w-lg mb-10" style={{ fontWeight: 300 }}>{t('body')}</p>
-              <Button asChild variant="tertiary" mode="dark">
-                <a href="mailto:press@skillvue.ai">
-                  <Mail aria-hidden />
-                  press@skillvue.ai
-                </a>
-              </Button>
-            </Reveal>
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+              <Reveal duration={0.7} className="lg:col-span-7">
+                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">{t('text')}</span>
+                <h1
+                  className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
+                  style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
+                >{t.rich('heading', {
+                  br: () => <br />,
+                  span: (chunks) => <span className="gradient-text">{chunks}</span>,
+                })}</h1>
+                <p className="text-[18px] text-white/[0.45] leading-[1.8] max-w-lg mb-10" style={{ fontWeight: 300 }}>{t('body')}</p>
+                <Button asChild variant="tertiary" mode="dark">
+                  <a href="mailto:press@skillvue.ai">
+                    <Mail aria-hidden />
+                    press@skillvue.ai
+                  </a>
+                </Button>
+              </Reveal>
+              <Reveal y={0} duration={0.8} delay={0.2} className="flex justify-center lg:col-span-5">
+                <video
+                  className="w-full max-w-[360px] h-auto rounded-[32px]"
+                  poster="/videos/press-hero-showcase-poster.jpg"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src="/videos/press-hero-showcase.webm" type="video/webm" />
+                  <source src="/videos/press-hero-showcase.mp4" type="video/mp4" />
+                </video>
+              </Reveal>
+            </div>
           </div>
         </section>
 
