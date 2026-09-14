@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
+import { HeroVideo } from '@/components/ui/hero-video';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -12,43 +13,31 @@ import { Button } from '@/components/ui/button';
 const pressArticles = [
   {
     publication: 'Tech.eu',
-    logo: '/logos/press-techeu.svg',
-    logoH: 28,
+    logo: '/logos/press-techeu-v2.svg',
     title: 'Skillvue secures $6.3M to develop comprehensive skills verification agents',
     url: 'https://tech.eu/2025/05/05/skillvue-secures-6-3m-to-develop-comprehensive-skills-assessment-agents/',
   },
   {
     publication: 'CFOtech UK',
-    logo: '/logos/press-cfotech.svg',
-    logoH: 28,
+    logo: '/logos/press-cfotech-v2.svg',
     title: 'Skillvue raises USD $6.3 million to scale AI skills platform',
     url: 'https://cfotech.co.uk/story/skillvue-raises-usd-6-3-million-to-scale-ai-skills-platform',
   },
   {
     publication: 'GlobeNewsWire',
-    logo: '/logos/press-globenewswire.svg',
-    logoH: 22,
+    logo: '/logos/press-globenewswire-v2.svg',
     title: 'Italian-based Skillvue raises $6.3M to transform how companies discover and develop hidden talent',
     url: 'https://www.globenewswire.com/NewsRoom/ReleaseNg/402135258',
   },
   {
-    publication: 'Business Insider',
-    logo: '/logos/press-businessinsider.svg',
-    logoH: 28,
-    title: 'Italian-based Skillvue raises $6.3M to transform how companies discover and develop hidden talent',
-    url: 'https://markets.businessinsider.com/news/stocks/italian-based-skillvue-raises-6-3m-to-transform-how-companies-discover-and-develop-hidden-talent-1034669096',
-  },
-  {
     publication: 'StartupRise UK',
-    logo: '/logos/press-startuprise.avif',
-    logoH: 28,
+    logo: '/logos/press-startuprise.svg',
     title: 'HRtech Startup Skillvue Raises €5.5 Mn Seed Funding',
     url: 'https://startuprise.co.uk/hrtech-startup-skillvue-raises-e5-5-mn-seed-funding/',
   },
   {
     publication: 'AI World EU',
-    logo: '/logos/press-aiworld.svg',
-    logoH: 26,
+    logo: '/logos/press-aiworld-v2.svg',
     title: 'Skillvue to rediscover the talent in your company',
     url: 'https://aiworld.eu/story/skillvue-to-rediscover-the-talent-in-your-company',
   },
@@ -103,15 +92,13 @@ const pressArticlesIt = [
 const interviews = [
   {
     publication: 'Forbes',
-    logo: '/logos/press-forbes.svg',
-    logoH: 32,
+    logo: '/logos/press-forbes-v2.svg',
     title: 'Meet The Start-Ups Who Say AI Will Transform Recruitment',
     url: 'https://www.forbes.com/sites/davidprosser/2025/05/05/meet-the-start-ups-who-say-ai-will-transform-recruitment/',
   },
   {
     publication: 'HRTech Edge',
-    logo: '/logos/press-hrtechedge.svg',
-    logoH: 28,
+    logo: '/logos/press-hrtechedge-v2.svg',
     title: 'Skillvue raises €5.5M to scale AI HR Agents',
     url: 'https://hrtechedge.com/interviews/skillvue-raises-e5-5m-to-scale-ai-hr-agents/',
   },
@@ -133,6 +120,10 @@ const investors = [
   { name: 'IFF', src: '/logos/investor-iff.svg', h: '42px' },
   { name: 'Ithaca', src: '/logos/investor-ithaca.svg', h: '42px' },
 ];
+
+// Every publication's logo renders at the same height, in both the coverage
+// grid and the interviews grid — one size, not a per-article logoH.
+const publicationLogoStyle = { height: '40px', maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' } as const;
 
 
 
@@ -171,23 +162,32 @@ export default function PressPage() {
           </div>
 
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-20 lg:py-28">
-            <Reveal duration={0.7} className="max-w-3xl">
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">{t('text')}</span>
-              <h1
-                className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
-                style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-              >{t.rich('heading', {
-                br: () => <br />,
-                span: (chunks) => <span className="gradient-text">{chunks}</span>,
-              })}</h1>
-              <p className="text-[18px] text-white/[0.45] leading-[1.8] max-w-lg mb-10" style={{ fontWeight: 300 }}>{t('body')}</p>
-              <Button asChild variant="tertiary" mode="dark">
-                <a href="mailto:press@skillvue.ai">
-                  <Mail aria-hidden />
-                  press@skillvue.ai
-                </a>
-              </Button>
-            </Reveal>
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+              <Reveal duration={0.7} className="lg:col-span-7">
+                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-8 block">{t('text')}</span>
+                <h1
+                  className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
+                  style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
+                >{t.rich('heading', {
+                  br: () => <br />,
+                  span: (chunks) => <span className="gradient-text">{chunks}</span>,
+                })}</h1>
+                <p className="text-[18px] text-white/[0.45] leading-[1.8] max-w-lg mb-10" style={{ fontWeight: 300 }}>{t('body')}</p>
+                <Button asChild variant="tertiary" mode="dark">
+                  <a href="mailto:press@skillvue.ai">
+                    <Mail aria-hidden />
+                    press@skillvue.ai
+                  </a>
+                </Button>
+              </Reveal>
+              <HeroVideo
+                poster="/videos/press-hero-showcase-poster.jpg"
+                webmSrc="/videos/press-hero-showcase.webm"
+                mp4Src="/videos/press-hero-showcase.mp4"
+                className="flex justify-center lg:col-span-5"
+                videoClassName="w-full max-w-[360px] h-auto rounded-[32px]"
+              />
+            </div>
           </div>
         </section>
 
@@ -220,7 +220,7 @@ export default function PressPage() {
                       <img
                         src={article.logo}
                         alt={article.publication}
-                        style={{ height: `${article.logoH}px`, maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' }}
+                        style={publicationLogoStyle}
                       />
                     </div>
                     <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
@@ -329,7 +329,7 @@ export default function PressPage() {
                       <img loading="lazy" decoding="async"
                         src={item.logo}
                         alt={item.publication}
-                        style={{ height: `${item.logoH}px`, maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' }}
+                        style={publicationLogoStyle}
                       />
                     </div>
                     <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
