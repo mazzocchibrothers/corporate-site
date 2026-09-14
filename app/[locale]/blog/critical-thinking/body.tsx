@@ -147,17 +147,17 @@ export default async function BlogArticle5() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-4 my-8">
-                <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.03] p-6">
+                <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white p-6">
                   <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{t('heading5')}</h3>
                   <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{t('body9')}</p>
                 </div>
-                <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-[#4B4DF7]/[0.03] p-6">
+                <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white p-6">
                   <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{t('heading6')}</h3>
                   <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{t('body10')}</p>
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-10">
+              <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-white p-8 my-10">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
                   <h3 className="text-[16px] font-semibold text-[#121212]">{t('heading7')}</h3>

@@ -54,12 +54,12 @@ export default function BlogPage() {
               <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
             </div>
           ) : (
-            <img src={article.image} alt={t(`articles.${article.id}.title`)} loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img src={article.image} alt={t(`articles.${article.id}.title`)} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
           )}
         </div>
         <div className="p-5 md:p-7 flex-1 flex flex-col">
           <div className="flex items-center gap-3 mb-3 md:mb-4">
-            <span className="inline-flex px-3 py-1 rounded-full text-[11px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.12] bg-[#4B4DF7]/[0.04] tracking-wide">
+            <span className="inline-flex rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[12px] text-[#4B4B4B] whitespace-nowrap">
               {t(`articles.${article.id}.tag`)}
             </span>
             <span className="text-[12px] text-[#121212]/30">{t(`articles.${article.id}.date`)}</span>
@@ -110,7 +110,7 @@ export default function BlogPage() {
                 webmSrc="/videos/blog-hero-showcase.webm"
                 mp4Src="/videos/blog-hero-showcase.mp4"
                 className="flex justify-center lg:col-span-5"
-                videoClassName="w-full max-w-[380px] h-auto rounded-[32px]"
+                videoClassName="w-full max-w-[360px] h-auto rounded-[32px]"
               />
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function BlogPage() {
               duration={0.7}
               className="relative overflow-hidden rounded-[32px] border border-white/[0.08] bg-white/[0.05] backdrop-blur-sm px-8 py-16 md:px-16 md:py-20 text-center"
             >
-              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">{t('heading3')}</h2>
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">{t('heading3')}</h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">{t('body2')}</p>
               <Button
                 onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
