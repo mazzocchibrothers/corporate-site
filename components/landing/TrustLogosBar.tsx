@@ -52,7 +52,7 @@ export default function TrustLogosBar() {
                   <img loading="lazy" decoding="async"
                     src={logo.src}
                     alt={logo.name}
-                    className="h-6 w-auto object-contain"
+                    className="h-5 w-auto object-contain"
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
@@ -64,7 +64,7 @@ export default function TrustLogosBar() {
                   <img loading="lazy" decoding="async"
                     src={logo.src}
                     alt=""
-                    className="h-6 w-auto object-contain"
+                    className="h-5 w-auto object-contain"
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
