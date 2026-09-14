@@ -20,17 +20,17 @@ You implement **one single** `harness` Issue, from start to verification.
 3. **Comment** on the Issue: `Plan: <3-5 bullets>` and your start time.
 4. **Implement** per `docs/conventions.md`, staying inside the Issue's
    Acceptance and its declared Scope.
-   - New bilingual copy goes in a **content object**, both locales, same keys.
-   - Never add a key to `i18n/translations.ts`. Never add a bare
-     `lang === 'it' ? … : …` outside a content object.
+   - New copy goes in `messages/en.json` and `messages/it.json` under the
+     route's namespace, same keys in both. Never a string in the JSX, never a
+     bare `lang === 'it' ? … : …`.
    - Italian apostrophes are `’`, never `'`.
-   - If the Issue adds or renames a route, **all four routing files** get
-     updated in the same change (`architecture.md` §5). The build will not tell
-     you when you forget one.
+   - If the Issue adds or renames a route, it starts in `i18n/routes.json`
+     (`architecture.md` §5); everything else derives from it.
+   - A visible change follows the **Design system** in `CLAUDE.md`.
 5. **Write the executable check** for any non-trivial logic you added —
    `node:assert/strict`, offline, as `scripts/check-<feature>.mjs`, wired to a
-   `check:*` npm script and registered in the `GATES` array of
-   `harness/init.sh`. Do not install a test framework. See
+   `check:*` npm script (`scripts/gates.mjs` picks it up). Do not install a
+   test framework. See
    `docs/verification.md`.
 6. **Verify** with `./harness/init.sh`. Red → back to step 4.
 7. **Smoke-test in both locales.** A page verified only in English is not
@@ -54,7 +54,7 @@ You implement **one single** `harness` Issue, from start to verification.
   the blocker on the Issue, set `status:blocked`, end the session.
 - Deliberate shortcuts get a `// ponytail:` comment naming the upgrade path.
 - No new dependency without a line on the Issue saying what it replaces. No
-  `// @ts-nocheck` added to silence a real error. No debug `console.log`. No AI
+  `// @ts-nocheck`. No debug `console.log`. No AI
   attribution in commits.
 
 ## Reporting to the leader
