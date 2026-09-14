@@ -12,9 +12,9 @@
         "productOverview": "Product",
         "science": "Science",
         "talentAcquisition": "Hiring",
-        "performanceManagement": "Performance",
-        "learningDevelopment": "Development",
-        "internalMobility": "Mobility",
+        "performanceManagement": "Performance Management",
+        "learningDevelopment": "Learning & Development",
+        "internalMobility": "Internal Mobility",
         "projectResourcing": "Project Resourcing",
         "insights": "Insights",
         "blog": "Blog",
@@ -1308,9 +1308,9 @@
       "footerText": "See what the evidence looks like on your own competency framework",
       "cta": "Book a Demo",
       "cards": {
-        "unicomm": { "title": "Rebuilding talent management across 250+ stores", "tags": "Hiring · Internal Mobility · L&D" },
-        "mediaset": { "title": "Spotting and growing graduates potential", "tags": "Hiring · Graduate Program" },
-        "europAssistance": { "title": "Hiring for potential that stands the test of time", "tags": "Hiring" }
+        "unicomm": { "title": "Rebuilding talent management across 250+ stores", "tags": ["Hiring", "Internal Mobility", "L&D"] },
+        "mediaset": { "title": "Spotting and growing graduates potential", "tags": ["Hiring", "Graduate Program"] },
+        "europAssistance": { "title": "Hiring for potential that stands the test of time", "tags": ["Hiring"] }
       }
     },
     "roi": {

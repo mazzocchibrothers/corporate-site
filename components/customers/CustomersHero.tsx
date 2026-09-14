@@ -100,48 +100,43 @@ export default function CustomersHero() {
           >
             {metrics.map((m) => (
               <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6">
-                <span className="block text-[#6B7DFF] mb-8 stat-value" style={{ fontSize: '2rem', lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                <span className="block text-[#6B7DFF] mb-8 stat-value text-[32px] md:text-[64px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
                 <span className="text-[13px] text-white/[0.65]">{t(`hero.metrics.${m.id}.label`)}</span>
               </div>
             ))}
           </Reveal>
         </div>
+      </div>
 
-        {/* Logo marquee. identical to homepage trust bar */}
-        </div>
-        <Reveal
-          y={0}
-          duration={0.8}
-          delay={0.8}
-          className="relative overflow-hidden mt-16"
-        >
-          <div className="flex items-center h-[80px]">
-            <div
-              className="flex-1 overflow-hidden relative"
-              style={{
-                maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
-              }}
-            >
-              <div className="marquee-track flex items-center">
-                <div className="marquee-content flex items-center gap-16 shrink-0 pr-16">
-                  {logoFiles.map((l, i) => (
-                    <div key={`a-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
-                      <img src={l.src} alt={l.name} className="h-8 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
-                    </div>
-                  ))}
-                </div>
-                <div className="marquee-content flex items-center gap-16 shrink-0 pr-16" aria-hidden="true">
-                  {logoFiles.map((l, i) => (
-                    <div key={`b-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
-                      <img src={l.src} alt="" className="h-8 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
-                    </div>
-                  ))}
-                </div>
+      {/* Logo marquee. identical to homepage trust bar */}
+      <div className="relative overflow-hidden mt-16">
+        <div className="flex items-center h-[80px]">
+          <div
+            className="flex-1 overflow-hidden relative"
+            style={{
+              maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+            }}
+          >
+            <div className="marquee-track flex items-center">
+              <div className="marquee-content flex items-center gap-16 shrink-0 pr-16">
+                {logoFiles.map((l, i) => (
+                  <div key={`a-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
+                    <img src={l.src} alt={l.name} className="h-6 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
+                  </div>
+                ))}
+              </div>
+              <div className="marquee-content flex items-center gap-16 shrink-0 pr-16" aria-hidden="true">
+                {logoFiles.map((l, i) => (
+                  <div key={`b-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
+                    <img src={l.src} alt="" className="h-6 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-        </Reveal>
+        </div>
+      </div>
     </section>
   );
 }

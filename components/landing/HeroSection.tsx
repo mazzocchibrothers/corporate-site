@@ -157,8 +157,8 @@ export default function HeroSection() {
                       src={logo.src}
                       alt={logo.name}
                       width={logo.width}
-                      height={32}
-                      className="h-8 w-auto object-contain"
+                      height={24}
+                      className="h-6 w-auto object-contain"
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
                   </div>
@@ -172,8 +172,8 @@ export default function HeroSection() {
                       src={logo.src}
                       alt=""
                       width={logo.width}
-                      height={32}
-                      className="h-8 w-auto object-contain"
+                      height={24}
+                      className="h-6 w-auto object-contain"
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
                   </div>

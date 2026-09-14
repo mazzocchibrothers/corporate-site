@@ -37,7 +37,7 @@ export default function IMProblem() {
         className="group rounded-2xl border border-[#4B4DF7]/[0.08] hover:border-[#4B4DF7]/[0.18] bg-white/60 hover:bg-white/90 p-6 md:p-10 transition-all duration-500 flex flex-col h-full"
       >
         <div className="flex items-center justify-between mb-6 md:mb-8">
-          <span className="text-[#121212] text-[32px] stat-value md:text-[clamp(2rem,4vw,3rem)]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{p.stat}</span>
+          <span className="text-[#121212] text-[32px] stat-value md:text-[64px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{p.stat}</span>
           <IconTile icon={Icon} mode="light" />
         </div>
         <h3 className="text-[18px] font-semibold text-[#121212] mb-2 md:mb-3">{t(`imProblem.pains.${p.id}.title`)}</h3>
