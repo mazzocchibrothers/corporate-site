@@ -12,43 +12,31 @@ import { Button } from '@/components/ui/button';
 const pressArticles = [
   {
     publication: 'Tech.eu',
-    logo: '/logos/press-techeu.svg',
-    logoH: 28,
+    logo: '/logos/press-techeu.svg?v=2',
     title: 'Skillvue secures $6.3M to develop comprehensive skills verification agents',
     url: 'https://tech.eu/2025/05/05/skillvue-secures-6-3m-to-develop-comprehensive-skills-assessment-agents/',
   },
   {
     publication: 'CFOtech UK',
-    logo: '/logos/press-cfotech.svg',
-    logoH: 28,
+    logo: '/logos/press-cfotech.svg?v=2',
     title: 'Skillvue raises USD $6.3 million to scale AI skills platform',
     url: 'https://cfotech.co.uk/story/skillvue-raises-usd-6-3-million-to-scale-ai-skills-platform',
   },
   {
     publication: 'GlobeNewsWire',
-    logo: '/logos/press-globenewswire.svg',
-    logoH: 22,
+    logo: '/logos/press-globenewswire.svg?v=2',
     title: 'Italian-based Skillvue raises $6.3M to transform how companies discover and develop hidden talent',
     url: 'https://www.globenewswire.com/NewsRoom/ReleaseNg/402135258',
   },
   {
-    publication: 'Business Insider',
-    logo: '/logos/press-businessinsider.svg',
-    logoH: 28,
-    title: 'Italian-based Skillvue raises $6.3M to transform how companies discover and develop hidden talent',
-    url: 'https://markets.businessinsider.com/news/stocks/italian-based-skillvue-raises-6-3m-to-transform-how-companies-discover-and-develop-hidden-talent-1034669096',
-  },
-  {
     publication: 'StartupRise UK',
-    logo: '/logos/press-startuprise.avif',
-    logoH: 28,
+    logo: '/logos/press-startuprise.svg?v=2',
     title: 'HRtech Startup Skillvue Raises €5.5 Mn Seed Funding',
     url: 'https://startuprise.co.uk/hrtech-startup-skillvue-raises-e5-5-mn-seed-funding/',
   },
   {
     publication: 'AI World EU',
-    logo: '/logos/press-aiworld.svg',
-    logoH: 26,
+    logo: '/logos/press-aiworld.svg?v=2',
     title: 'Skillvue to rediscover the talent in your company',
     url: 'https://aiworld.eu/story/skillvue-to-rediscover-the-talent-in-your-company',
   },
@@ -103,15 +91,13 @@ const pressArticlesIt = [
 const interviews = [
   {
     publication: 'Forbes',
-    logo: '/logos/press-forbes.svg',
-    logoH: 32,
+    logo: '/logos/press-forbes.svg?v=2',
     title: 'Meet The Start-Ups Who Say AI Will Transform Recruitment',
     url: 'https://www.forbes.com/sites/davidprosser/2025/05/05/meet-the-start-ups-who-say-ai-will-transform-recruitment/',
   },
   {
     publication: 'HRTech Edge',
-    logo: '/logos/press-hrtechedge.svg',
-    logoH: 28,
+    logo: '/logos/press-hrtechedge.svg?v=2',
     title: 'Skillvue raises €5.5M to scale AI HR Agents',
     url: 'https://hrtechedge.com/interviews/skillvue-raises-e5-5m-to-scale-ai-hr-agents/',
   },
@@ -220,7 +206,7 @@ export default function PressPage() {
                       <img
                         src={article.logo}
                         alt={article.publication}
-                        style={{ height: `${article.logoH}px`, maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' }}
+                        style={{ height: '40px', maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' }}
                       />
                     </div>
                     <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
@@ -329,7 +315,7 @@ export default function PressPage() {
                       <img loading="lazy" decoding="async"
                         src={item.logo}
                         alt={item.publication}
-                        style={{ height: `${item.logoH}px`, maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' }}
+                        style={{ height: '40px', maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' }}
                       />
                     </div>
                     <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
