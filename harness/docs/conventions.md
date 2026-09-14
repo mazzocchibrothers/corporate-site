@@ -5,10 +5,9 @@
 
 ## TypeScript
 
-- The repo runs `strict: false` / `noImplicitAny: false`, and most files open
-  with `// @ts-nocheck`. **Write code that would pass under strict anyway.**
-- Adding `// @ts-nocheck` to a *new* file is allowed only to match the shape of
-  the page you copied. Never add it to silence a real error in code you wrote.
+- The repo runs `strict: false` / `noImplicitAny: false` with
+  `strictNullChecks: true`. **Write code that would pass under strict anyway.**
+- No file carries `// @ts-nocheck` any more. Don't add one — fix the error.
 - Path alias is `@/*` → repo root. Use it: `@/components/landing/Navbar`, never
   a `../../..` chain.
 
@@ -19,7 +18,7 @@
 | Routes | one `kebab-case` directory, `page.tsx` + `body.tsx` | `app/[locale]/customers/europ-assistance/` |
 | Components | `PascalCase.tsx`, grouped by area | `components/customers/ExploreStories.tsx` |
 | Component dirs | the site area they serve | `landing/`, `product/`, `science/`, `solutions/`, `customers/`, `shared/` |
-| shadcn primitives | untouched, `kebab-case` | `components/ui/navigation-menu.tsx` |
+| House primitives | `kebab-case`, reused not re-implemented | `components/ui/reveal.tsx`, `hero-video.tsx` |
 | Public assets | `kebab-case`, AVIF for photos | `public/logos/adr-explore-stories.avif` |
 | Functions / vars | `camelCase` | `localizePath`, `activeUseCase` |
 
@@ -28,7 +27,8 @@ No spaces in new asset filenames. Two shipped assets have them
 
 ## Page shape
 
-Two files per route. Nothing else is a page.
+Three files per route — `page.tsx`, `body.tsx`, `opengraph-image.tsx`. Nothing
+else is a page.
 
 ```tsx
 // app/[locale]/customers/adr/page.tsx — server. The same on every route.
@@ -43,6 +43,7 @@ export default async function Page({ params }: Props) {
   setRequestLocale(locale);
   return (
     <NextIntlClientProvider locale={locale} messages={await messagesForRoute(ROUTE, locale)}>
+      <JsonLd routeId={ROUTE} locale={locale} />
       <Body />
     </NextIntlClientProvider>
   );
@@ -50,8 +51,9 @@ export default async function Page({ params }: Props) {
 ```
 
 ```tsx
-// app/[locale]/customers/adr/body.tsx — the page.
-// @ts-nocheck
+// app/[locale]/customers/adr/body.tsx — the page. 'use client' only because
+// it uses hooks; a page that only reads copy is a server component and calls
+// getTranslations instead (check:client decides).
 'use client';
 
 export default function AdrStory() {
@@ -163,12 +165,18 @@ why the boundaries in `check:client` are drawn where they are.
 
 ## Sections and animation
 
-`framer-motion` is the house animation library. The recurring reveal wrapper is
-a local `Section` component (`useInView`, `once: true`, `margin: '-80px'`,
-`opacity/y` transition, 0.6s) declared at the top of the page file. Copy it;
-don't invent a second reveal idiom, and don't extract it into a shared component
-without an Issue — 17 pages currently declare it locally and a half-migration is
-worse than either state.
+The site has one scroll animation — fade in, rise, once — and it is
+`<Reveal>` from `components/ui/reveal.tsx`: an IntersectionObserver and a CSS
+transition, usable from a server component. Don't declare a local `Section`
+wrapper and don't reach for framer-motion to reveal something; it costs ~38 KB
+gz on the page that loads it. framer-motion stays only where the motion is
+genuinely state-driven (an exit animation, a carousel, an animated value).
+
+Don't wrap a masked, animated element (the logo marquee) in `<Reveal>`: mobile
+Safari stops repainting it when an ancestor's transform toggles.
+
+What a heading, a metric, a pill or a hero looks like is the **Design system**
+section of `CLAUDE.md`. Match it rather than the page you happened to copy.
 
 ## Styling
 
@@ -192,9 +200,10 @@ worse than either state.
    are cuts of.
 3. Add the route to `i18n/routes.json`. The Italian slug is `/clienti/<slug>`.
 4. Register in `components/customers/ExploreStories.tsx` → `allStories`:
-   `id`, `company`, `industry`, `useCases[]`, `headlineIt`, `headlineEn`,
-   `bgImage`. The filter lists derive from this array; there is no second list.
-   A story missing from it is a page nothing links to — two already are.
+   `id`, `company`, `industry`, `useCases[]`, `bgImage` — the headline is copy
+   and lives in the catalogue. The filters on `/customers/customer-stories`
+   derive from this array; there is no second list. A story missing from it is
+   a page nothing links to.
 5. Assets in `public/logos/`, AVIF for the card background.
 
 The sitemap, the hreflang cluster, the canonical, the 308 from the old slug and
@@ -219,13 +228,12 @@ sitemap — otherwise it competes in search with the page it is a cut of.
 
 ## Git
 
-- One Issue → one branch → one PR. **During the App Router migration the base
-  is `app-router`, not `main`** — branch off it, rebase onto `origin/app-router`,
-  and target it in the PR. `main` receives exactly one merge, at the switch
-  (#120). See `harness/AGENTS.md` §2b.
+- One Issue → one branch off `origin/main` → one PR into `main`. See
+  `harness/AGENTS.md` §2b.
 - Conventional, scoped commit subjects in the imperative:
   `Add August newsletter (EN/IT) and supermarkets one-pager LP`.
-- PR body says `Closes #<n>`.
+- PR body says `Closes #<n>` when there is an Issue.
+- No AI attribution in commits, PR bodies or comments.
 
 ## CSS delivery
 

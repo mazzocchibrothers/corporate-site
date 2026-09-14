@@ -41,59 +41,32 @@ files and asset gaps that have since moved (it still calls `carrefour.tsx` a
 `t()` page; it isn't). When it disagrees with the code, **the code wins** —
 `HANDOFF.md` is frozen history, not a spec.
 
-## 2b. Branch model during the App Router migration
+## 2b. Branch model
 
-`app-router` is the integration branch. **`main` is touched once, at the end.**
+`main` is the only long-lived branch, and Vercel deploys it. The App Router
+migration that used an `app-router` integration branch is finished (#120):
+that branch and the old `pages/` directory are gone.
 
-```
-main         ●━━●━━●━━●━━●━━━━━━━━━━━━━━━━━━━●   ← marketing keeps shipping here
-              ╲                              ╱
-app-router     ●━━●━━●━━●━━●━━●━━●━━●━━●━━━━●    ← every Issue lands here
-                 ↑ one Issue = one branch off app-router, one PR back into it
-```
-
-- **Branch off `app-router`, PR into `app-router`.** Never into `main`.
-- **A PR that targets `main` during the migration is a mistake**, with one
-  exception: an urgent content fix the marketing team needs live. Those still go
-  to `main` — see the sync rule below.
-- Rebase onto `origin/app-router` before opening your PR, not onto `main`.
-
-### Syncing `main` in, and the trap in it
-
-Marketing keeps publishing while this runs, and everything they add lands in
-`pages/` — a directory this branch has deleted. So:
-
-```bash
-git checkout app-router && git merge origin/main
-npm run check:routes      # every route must be served by app/[locale]
-```
-
-The merge itself will be clean, because a new landing page is a new file. **That
-is the trap:** it arrives as `pages/<something>.tsx`, which this branch does not
-serve and git will not mention. `check:routes` is what catches it — it fails on
-a registry entry with no directory under `app/[locale]`, and a page under
-`pages/` is a page that still has to be re-created there, with its copy moved to
-`messages/` and its route added to `i18n/routes.json`.
-
-Sync weekly, not at the end. A month of unsynced content pages is a month of
-them discovered at once.
-
-### Before `app-router` merges into `main`
-
-The switch is the only moment the live site changes. See #120 — it is a gate,
-not a formality, and it is the last Issue in the backlog for that reason.
+- **One Issue → one branch off `origin/main` → one PR back into `main`.**
+- Rebase onto `origin/main` before opening the PR, and again before it merges
+  if another PR landed first.
+- CI (`.github/workflows/ci.yml`) runs the gates, `check:build` and the
+  Playwright smoke test on every PR. An org ruleset requires an approving
+  review before merge.
 
 ## 3. Hard rules (non-negotiable)
 
 - **One Issue per branch/worktree.** Never mix changes from different Issues.
 - **Never declare `done` with red gates.** `./harness/init.sh` must exit 0.
 - **Write down what you do** as **comments on your Issue**, in real time, not after.
-- **A route change touches four files, not one** (see
-  `docs/architecture.md` §Routing). Miss one and you ship a 404 or an SEO hole
-  instead of a build error — that failure has already happened here once.
-- **Never a straight `'` in an Italian string literal.** Use `’`. A straight
-  apostrophe inside a single-quoted JS string breaks the parser; this is the
-  single most frequent build breakage in this repo's history.
+- **A route change starts in `i18n/routes.json`** (see `docs/architecture.md`
+  §5). URL, slug redirect, canonical, hreflang and sitemap all derive from it,
+  and `check:routes` fails on a page with no entry or an entry with no page.
+- **Never a straight `'` in Italian copy.** Use `’`. Before `<` or `{` in a
+  catalogue value ICU reads it as an escape and eats the tag;
+  `check:messages` fails on it.
+- **A visible change matches the Design system in `CLAUDE.md`** — or updates
+  it, and every sibling page with it (`CHECKPOINTS.md` C7).
 - **If you don't know something, look in `harness/docs/`** before inventing it.
 
 ## 4. How to pick a task
@@ -111,15 +84,10 @@ not a formality, and it is the last Issue in the backlog for that reason.
 ## 5. Session close
 
 1. Run `./harness/init.sh` — all green.
-2. Open a PR **into `app-router`** whose body says `Closes #<n>`. One Issue per
-   branch/PR. Never into `main` — see §2b.
-3. After review approves and the PR merges into `app-router`: set `status:done`
+2. Open a PR **into `main`** whose body says `Closes #<n>`. One Issue per
+   branch/PR — see §2b.
+3. After review approves and the PR merges into `main`: set `status:done`
    (`gh issue edit <n> --remove-label status:in_progress --add-label status:done`).
-
-   **During this migration, `done` means landed on `app-router`, not merged to
-   `main`.** `main` receives exactly one merge, at the switch (#120). An Issue
-   that waited for that would sit `in_progress` for five weeks and the backlog
-   would stop telling you anything.
 4. Post a closing summary as an **Issue comment** (what shipped, what you ran,
    what you observed **in both locales**).
 5. **A merged branch leaves nothing behind** — remove its worktree, its local
