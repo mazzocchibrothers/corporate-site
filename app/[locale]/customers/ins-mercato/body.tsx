@@ -506,7 +506,7 @@ export default function InsMercatoStoryPage() {
           title={t('heading')}
           cta={t('cta2')}
           stories={RELATED_STORIES}
-          customersHref={href('customers', lang)}
+          lang={lang}
           finalHeading={t('text4')}
           finalAccent={t('text5')}
         />

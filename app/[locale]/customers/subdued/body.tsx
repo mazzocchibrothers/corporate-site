@@ -276,7 +276,7 @@ export default function SubduedStoryPage() {
           title={t('related.title')}
           cta={t('related.cta')}
           stories={t.raw('related.stories')}
-          customersHref={href('customers', lang)}
+          lang={lang}
           finalHeading={t('finalCta.headline')}
           finalAccent={t('finalCta.accent')}
           containerClassName="px-8 lg:px-12"

@@ -72,7 +72,7 @@ try {
       undefined,
       { timeout: 10_000 },
     );
-    assert.match(await credem.locator('h3').innerText(), headline, `${path} should show the Credem headline from the catalogue`);
+    assert.match(await credem.locator('p').innerText(), headline, `${path} should show the Credem headline from the catalogue`);
   }
 
   // Still on the Italian listing, so the card has to reach the Italian story.

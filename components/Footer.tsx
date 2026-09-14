@@ -90,10 +90,6 @@ export default function Footer() {
                 );
               })}
             </div>
-
-            <p className="text-[12px] md:text-[11px] text-white/45 leading-[1.5] text-center lg:text-left max-w-[180px]">
-              {t('footer.researchPartner')}
-            </p>
           </div>
 
           {/* Link sections — stacked on mobile with horizontal links, 4-col grid on desktop */}

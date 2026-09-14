@@ -61,9 +61,9 @@ const nextConfig: NextConfig = {
       }));
 
     // A route that moved keeps its old URL alive as a 308 to the new one, per
-    // locale — see `redirectFrom` on the `resources/insights` entries
-    // (i18n/routes.ts). Dynamic segments go through the same [slug] -> :slug
-    // rewrite as the Italian-slug redirects above.
+    // locale — see `redirectFrom` on the `customers` and `resources/insights`
+    // entries (i18n/routes.ts). Dynamic segments go through the same
+    // [slug] -> :slug rewrite as the Italian-slug redirects above.
     const movedRouteRedirects = routes.flatMap((r) => {
       const { en, it } = r.paths as { en?: string; it?: string };
       const from = (r as { redirectFrom?: { en?: string; it?: string } }).redirectFrom;

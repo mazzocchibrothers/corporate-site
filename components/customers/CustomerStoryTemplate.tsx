@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { Reveal } from '@/components/ui/reveal';
+import { href } from '@/i18n/routes';
 
 type RelatedStory = {
   id: string;
@@ -19,7 +20,7 @@ export function CustomerStoryFooter({
   title,
   cta,
   stories,
-  customersHref,
+  lang,
   finalHeading,
   finalAccent,
   containerClassName = 'px-5 md:px-8 lg:px-12',
@@ -27,7 +28,7 @@ export function CustomerStoryFooter({
   title: string;
   cta: string;
   stories: RelatedStory[];
-  customersHref: string;
+  lang: string;
   finalHeading: string;
   finalAccent: string;
   containerClassName?: string;
@@ -40,7 +41,7 @@ export function CustomerStoryFooter({
           <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{title}</h3>
           <div className="grid md:grid-cols-2 gap-5">
             {stories.map((story) => (
-              <a key={story.id} href={`${customersHref}/${story.id}`} className="group block text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
+              <a key={story.id} href={href(`customers/${story.id}`, lang)} className="group block text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
                 <span className="text-[14px] text-white/40 mb-4 block">{story.tag}</span>
                 <h4 className="text-[24px] font-semibold text-white/90 mb-4">{story.company}</h4>
                 <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{story.headline}</p>
