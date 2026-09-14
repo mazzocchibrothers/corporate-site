@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
+import { HeroVideo } from '@/components/ui/hero-video';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -117,19 +118,13 @@ export default function InsightsPage() {
                   </a>
                 </Button>
               </Reveal>
-              <Reveal y={0} duration={0.8} delay={0.2} className="flex justify-center lg:col-span-6">
-                <video
-                  className="w-full max-w-[560px] h-auto rounded-[40px]"
-                  poster="/videos/insights-hero-poster.jpg"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src="/videos/insights-hero.webm" type="video/webm" />
-                  <source src="/videos/insights-hero.mp4" type="video/mp4" />
-                </video>
-              </Reveal>
+              <HeroVideo
+                poster="/videos/insights-hero-poster.jpg"
+                webmSrc="/videos/insights-hero.webm"
+                mp4Src="/videos/insights-hero.mp4"
+                className="flex justify-center lg:col-span-6"
+                videoClassName="w-full max-w-[560px] h-auto rounded-[40px]"
+              />
             </div>
           </div>
         </section>
