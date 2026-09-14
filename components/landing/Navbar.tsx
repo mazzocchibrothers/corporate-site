@@ -217,13 +217,11 @@ export default function Navbar() {
           transition: 'background-color 0.3s ease',
           backgroundColor: mobileOpen
             ? '#000000'
-            : menuActive
-              ? (isLight ? '#ffffff' : '#000000')
-              : isLight
-                ? 'rgba(245,245,250,0.92)'
-                : scrolled
-                  ? 'rgba(13,13,31,0.78)'
-                  : 'transparent',
+            : isLight
+              ? '#ffffff'
+              : menuActive || scrolled
+                ? '#000000'
+                : 'transparent',
           backdropFilter: (menuActive || isLight || mobileOpen || scrolled) ? 'blur(40px) saturate(1.2)' : 'none',
           WebkitBackdropFilter: (menuActive || isLight || mobileOpen || scrolled) ? 'blur(40px) saturate(1.2)' : 'none',
           borderBottom: scrolled && !menuActive && !mobileOpen ? `1px solid ${isLight ? 'rgba(26,26,46,0.06)' : 'rgba(255,255,255,0.06)'}` : '1px solid transparent',
