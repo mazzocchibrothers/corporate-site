@@ -120,10 +120,10 @@
   },
   "blog": {
     "text": "Read more",
-    "text2": "Resources",
-    "heading": "Blog &<br></br><span>Insights</span>",
-    "body": "Insights, research, and perspectives on talent intelligence, AI in HR, and the future of people decisions.",
+    "heading": "Newsletters &<br></br><span>Articles</span>",
+    "body": "Learn more about the news & notes on talent, hiring, and skills from Skillvue.",
     "cta": "Explore articles",
+    "headingNewsletters": "Newsletters",
     "heading2": "All Articles",
     "heading3": "Want to go deeper? Talk to our team.",
     "body2": "Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.",
@@ -1120,8 +1120,8 @@
       }
     },
     "meta": {
-      "title": "Blog & Insights | Skillvue",
-      "description": "Insights, research, and perspectives on talent intelligence, AI in HR, and the future of people decisions."
+      "title": "Newsletters & Articles | Skillvue",
+      "description": "News and notes on talent, hiring and skills from Skillvue: monthly newsletters and in-depth articles."
     },
     "articles": {
       "newsletter-august-2026": {

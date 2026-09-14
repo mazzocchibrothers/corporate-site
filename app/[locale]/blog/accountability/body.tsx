@@ -185,7 +185,7 @@ export default async function BlogArticle4() {
                 })}
               </div>
 
-              <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-gradient-to-br from-[#4B4DF7]/[0.04] to-transparent p-8 my-12">
+              <div className="rounded-2xl border border-[#4B4DF7]/[0.12] bg-white p-8 my-12">
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
                   <h3 className="text-[16px] font-semibold text-[#121212]">{t('takeaway')}</h3>

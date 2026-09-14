@@ -120,10 +120,10 @@
   },
   "blog": {
     "text": "Leggi di più",
-    "text2": "Risorse",
-    "heading": "Blog &<br></br><span>Approfondimenti</span>",
-    "body": "Approfondimenti, ricerche e prospettive sulla talent intelligence, AI nelle risorse umane e il futuro delle decisioni sulle persone.",
+    "heading": "Newsletter &<br></br><span>Articoli</span>",
+    "body": "Scopri novità e approfondimenti di Skillvue su talento, selezione e competenze.",
     "cta": "Esplora gli articoli",
+    "headingNewsletters": "Newsletter",
     "heading2": "Tutti gli Articoli",
     "heading3": "Vuoi approfondire ulteriormente? Parla con il nostro team.",
     "body2": "Prenota una demo e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
@@ -1120,8 +1120,8 @@
       }
     },
     "meta": {
-      "title": "Blog & Approfondimenti | Skillvue",
-      "description": "Approfondimenti, ricerche e prospettive sulla talent intelligence, AI nelle risorse umane e il futuro delle decisioni sulle persone."
+      "title": "Newsletter & Articoli | Skillvue",
+      "description": "Novità e approfondimenti di Skillvue su talento, selezione e competenze: newsletter mensili e articoli."
     },
     "articles": {
       "newsletter-august-2026": {
