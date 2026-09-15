@@ -141,8 +141,12 @@ export async function ogFor(routeId: string, locale: string) {
   const t = await getTranslations({ locale, namespace: namespaceOf(routeId) });
   const og = await getTranslations({ locale, namespace: 'shared.ogEyebrow' });
   const section = routeId.includes('/') ? routeId.split('/')[0] : '';
+  // A route can override its section's default eyebrow — Talent Pioneers
+  // sits under customers/ for nav purposes but is a community, not a story.
+  const routeKey = routeId.replace(/[-/](\w)/g, (_, c: string) => c.toUpperCase());
+  const eyebrowKey = routeId.includes('/') && og.has(routeKey) ? routeKey : section;
   return ogCard({
     title: t('meta.title'),
-    eyebrow: og.has(section) ? og(section) : undefined,
+    eyebrow: og.has(eyebrowKey) ? og(eyebrowKey) : undefined,
   });
 }
