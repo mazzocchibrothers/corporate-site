@@ -73,9 +73,6 @@ export default function EatalyStoryPage() {
               {/* Main content */}
               <div className="lg:col-span-7">
                 <Reveal duration={0.7} delay={0.3}>
-                  <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-8 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
-                    {t('badge')}
-                  </span>
                   <h1 className="text-[48px] md:text-[44px] font-semibold tracking-[-0.02em] text-white/95 mb-8" style={{ lineHeight: 1.25 }}>
                     {t.rich('headline', {
                       hl: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,

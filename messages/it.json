@@ -1269,7 +1269,7 @@
       "heading": "Pronto a vedere cosa Skillvue può fare per la tua <span>organizzazione?</span>",
       "text": "Pronto per esplorare",
       "heading2": "Prenota una Demo",
-      "body": "Vedi Skillvue in azione con il tuo caso d'uso specifico",
+      "body": "Scopri le applicazioni di Skillvue al tuo caso d'uso specifico",
       "cta": "Prenota una Demo"
     },
     "hero": {
@@ -1288,24 +1288,24 @@
           "label": "risparmiati ogni anno in costi di assunzioni sbagliate"
         },
         "fasterTimeToHire": {
-          "label": "time-to-hire più rapido"
+          "label": "riduzione del time-to-hire"
         },
         "hiringSuccessRate": {
           "label": "tasso di successo nelle assunzioni"
         }
       },
       "heading": "Le decisioni che definiscono la tua organizzazione, finalmente supportate da <span>prove.</span>",
-      "body": "Oltre 50 aziende europee hanno sostituito sensazioni personali e giudizi non standardizzati con talent intelligence oggettiva per i propri processi di selezione, promozione e sviluppo. Queste sono le loro storie.",
+      "body": "Oltre 100 aziende europee hanno sostituito sensazioni e giudizi personali con dati oggettivi sulle competenze per prendere decisioni più efficaci nei propri processi di selezione, promozione e sviluppo. Queste sono le loro storie.",
       "cta": "Leggi le storie",
       "text": "I Nostri Clienti"
     },
     "testimonials": {
-      "eyebrow": "Testimonianze dei clienti",
-      "heading": "Come i leader hanno sostituito l'istinto con le <span>prove</span>",
-      "body": "Conversazioni reali con i leader HR dietro ai risultati.",
+      "eyebrow": "Customer Stories",
+      "heading": "Scopri come gli HR leader sostituiscono le decisioni basate sull’istinto con <span>prove concrete</span>",
+      "body": "Le storie dietro i risultati.",
       "watchVideo": "Guarda il video",
       "interview": "intervista",
-      "footerText": "Scopri come si presentano le prove sul tuo framework di competenze",
+      "footerText": "Scopri come portare oggettività nel tuo framework di competenze",
       "cta": "Prenota una Demo",
       "cards": {
         "unicomm": { "title": "Ricostruire la gestione dei talenti su 250+ punti vendita", "tags": ["Selezione", "Mobilità Interna", "L&D"] },
@@ -1331,7 +1331,7 @@
           "sub": "Con payback visibile tipicamente già nei primi 6-12 mesi"
         }
       },
-      "heading": "Le persone sono il tuo costo maggiore. <span>Possono anche essere il tuo ritorno maggiore.</span>",
+      "heading": "Le persone sono il tuo costo maggiore. <span>Ma possono anche essere il tuo ritorno maggiore.</span>",
       "body": "Ogni altra area ha un framework consolidato per il calcolo del ROI. Queste storie ti dimostrano che anche HR può averlo.",
       "cta": "Prenota una Demo"
     },
@@ -1372,7 +1372,7 @@
           "headline": "Subdued: come creare uno standard di selezione unico e scalabile per una rete internazionale di 130+ negozi"
         },
         "ins-mercato": {
-          "headline": "In's Mercato: come ha costruito una pipeline interna di Store Manager"
+          "headline": "In's Mercato: come costruire una pipeline interna di Store Manager"
         },
         "adr": {
           "headline": "Aeroporti di Roma: come sviluppare un'organizzazione da quasi 5.000 persone ripartendo dal potenziale interno"
@@ -1381,7 +1381,7 @@
           "headline": "Europ Assistance: come riconoscere il potenziale che resiste alla prova del tempo in un business fondato sulla componente umana"
         },
         "unicomm": {
-          "headline": "Come Unicomm sta costruendo una nuova gestione del talento su una rete di 250 punti vendita in costante aumento"
+          "headline": "Unicomm: come costruire una nuova gestione del talento su una rete di 250 punti vendita in costante aumento"
         },
         "mediaset": {
           "headline": "GRAPE, la Graduate Program Experience di Mediaset: come selezionare e accompagnare giovani di valore guardando al potenziale futuro"
@@ -1396,11 +1396,10 @@
     },
     "meta": {
       "title": "Storie di Successo | Skillvue",
-      "description": "Scopri come 50+ aziende europee come Unicredit e Carrefour hanno sostituito le decisioni intuitive sul talento con valutazioni AI obiettive. ROI 10–30x."
+      "description": "Scopri come 100+ aziende europee come Unicredit e Carrefour hanno sostituito le decisioni intuitive sul talento con valutazioni AI obiettive. ROI 10–30x."
     },
     "adr": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue, ADR ha trovato la chiave per rendere visibile il potenziale di quasi 5.000 persone, operativi inclusi, trasformando lo sviluppo del talento in leva strategica per la crescita.",
       "heroMetrics": [
         {
@@ -1594,8 +1593,7 @@
       }
     },
     "adr-2": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue, AdR ha trovato la chiave per rilevare e misurare il potenziale dell'intera organizzazione a partire dai ruoli più operativi, trasformando la cura e lo sviluppo del talento interno in una leva strategica per la soddisfazione dei crescenti bisogni organizzativi.",
       "heroMetrics": [
         {
@@ -1759,8 +1757,7 @@
       }
     },
     "carrefour": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "In un settore dove il costo del lavoro è 3.4x l'utile operativo, Carrefour Italia ha trasformato la selezione in una leva di profittabilità grazie a dati oggettivi sulle competenze.",
       "heroMetrics": [
         {
@@ -1956,8 +1953,7 @@
       }
     },
     "credem": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue, Gruppo Credem processa ogni anno decine di migliaia di candidature mantenendo alta la qualità della candidate experience e riducendo significativamente il numero di colloqui non in linea.",
       "heroMetrics": [
         {
@@ -2140,8 +2136,7 @@
       }
     },
     "douglas": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "2.500 dipendenti su quasi 400 punti vendita, nessuna visibilità sulle competenze, turnover elevato. Con Skillvue, Douglas ha creato il primo database completo di competenze dell'intera forza lavoro.",
       "heroMetrics": [
         {
@@ -2327,8 +2322,7 @@
       }
     },
     "eataly": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Eataly continua a crescere a ritmi serrati, soprattutto con le nuove aperture in Nord America. Con Skillvue, ha valutato migliaia di candidati per la mobilità internazionale in poche settimane, abbattendo le tempistiche medie del settore.",
       "heroMetrics": [
         {
@@ -2510,8 +2504,7 @@
       }
     },
     "eataly-2": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Insieme a Skillvue, Eataly ha avviato un percorso di digital transformation per integrare AI e human touch nel recruiting e sostenere così l'espansione del business.",
       "heroMetrics": [
         {
@@ -2694,8 +2687,7 @@
       }
     },
     "eataly-3": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con il supporto di Skillvue, Eataly ha ottimizzato la valutazione delle competenze in fase di pre-screening, gestendo oltre 1.000 candidature senza rinunciare alla qualità di valutazione, alla vicinanza alla persona e all'autenticità del brand in ogni fase del processo.",
       "heroMetrics": [
         {
@@ -2877,8 +2869,7 @@
       }
     },
     "fidia-farmaceutici": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue, Fidia sta trasformando la propria infrastruttura HR in un sistema di talent intelligence globale, capace di mappare le competenze di centinaia di Medical Representative e tradurle in piani di sviluppo e decisioni di talent management basate sui dati.",
       "heroMetrics": [
         {
@@ -3059,8 +3050,7 @@
       }
     },
     "europ-assistance": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue, Europ Assistance ha trasformato il pre-screening dei candidati in un processo scalabile e strategico per l'intero talent lifecycle, lavorando sulla valorizzazione delle competenze trasversali fin dal primo step della selezione.",
       "heroMetrics": [
         {
@@ -3249,8 +3239,7 @@
       }
     },
     "europ-assistance-2": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue, Europ Assistance ha trasformato il pre-screening da collo di bottiglia a vantaggio competitivo, estendendo il modello alla mappatura delle competenze interne.",
       "heroMetrics": [
         {
@@ -3450,8 +3439,7 @@
       }
     },
     "mediaset": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue Mediaset ha standardizzato lo step di pre-screening di migliaia di candidature di profili junior al progetto Grape, creando una base di dati strutturati sulle caratteristiche di ogni candidato per facilitare il processo di selezione.",
       "heroMetrics": [
         {
@@ -3632,8 +3620,7 @@
       }
     },
     "mediaset-1": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue Mediaset ha standardizzato lo step di pre-screening di migliaia di candidature di profili junior al progetto Grape, creando una base di dati strutturati sulle caratteristiche di ogni candidato per facilitare il processo di selezione.",
       "heroMetrics": [
         {
@@ -3814,8 +3801,7 @@
       }
     },
     "mediaset-2": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue Mediaset ha standardizzato lo step di pre-screening di migliaia di candidature di profili junior al progetto Grape, creando una base di dati strutturati sulle caratteristiche di ogni candidato per facilitare il processo di selezione.",
       "heroMetrics": [
         {
@@ -3996,8 +3982,7 @@
       }
     },
     "subdued": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue, Subdued ha costruito un processo di selezione coerente e scalabile su più mercati, con lo stesso rigore in ogni paese e un turnover dimezzato.",
       "heroMetrics": [
         {
@@ -4196,8 +4181,7 @@
       }
     },
     "unicomm": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue, Unicomm sta trasformando la propria infrastruttura HR in un sistema skills-based agile, capace di rispondere alle necessità di selezione, conferma e sviluppo su tutta la rete.",
       "heroMetrics": [
         {
@@ -5789,8 +5773,7 @@
       }
     },
     "europ-assistance": {
-      "breadcrumb": "Clienti",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Storie di Successo",
       "subtitle": "Con Skillvue, Europ Assistance ha trasformato il pre-screening dei candidati in un processo scalabile e strategico per l'intero talent lifecycle, mettendo le soft skill al centro fin dal primo step della selezione.",
       "heroMetrics": [
         {
