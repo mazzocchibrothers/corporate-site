@@ -106,6 +106,9 @@ const DELIBERATE = [
   ['blog.attitude-vs-competence.methods.', 'named methodologies (BEI, STAR)'],
   // Product surface named in English on both sites.
   ['solutions.talent-acquisition.taFunnel.', 'product surface named in English on the Italian page too'],
+  // HR jargon the client asked to keep in English on the Italian page too.
+  ['customers.talent-pioneers.dayToDay.items.carrefour.title', 'HR jargon kept in English on request'],
+  ['customers.talent-pioneers.dayToDay.items.unicomm.title', 'HR jargon kept in English on request'],
 ];
 
 const allowed = (path) =>

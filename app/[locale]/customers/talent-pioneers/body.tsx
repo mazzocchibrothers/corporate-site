@@ -18,7 +18,10 @@ type DayToDayItem =
   | { id: string; kind: 'story'; storyRoute: string; bgImage: string }
   | { id: string; kind: 'quote'; storyRoute: string };
 
-type Translate = ((key: string) => string) & { has: (key: string) => boolean };
+type Translate = ((key: string) => string) & {
+  has: (key: string) => boolean;
+  raw: (key: string) => unknown;
+};
 
 // The design alternates real customer stories with quotes from Talent
 // Pioneers members who are themselves customers — both link to that
@@ -34,19 +37,6 @@ const DAY_TO_DAY_ITEMS: DayToDayItem[] = [
   { id: 'unicomm', kind: 'story', storyRoute: 'customers/unicomm', bgImage: '/logos/unicomm-background-explore-stories.avif' },
   { id: 'alberto', kind: 'quote', storyRoute: 'customers/adr' },
 ];
-
-// The Figma design shows this one card's title split across two badges
-// ("Change management" / "predictive hiring") rather than one. Every other
-// card's title reads as a single phrase, so this is a named exception rather
-// than a generic parser over arbitrary catalogue strings.
-const TWO_PART_TITLE: Record<string, RegExp> = {
-  luca: /\s+(?:&|e)\s+/,
-};
-
-function titleBadges(id: string, title: string): string[] {
-  const split = TWO_PART_TITLE[id];
-  return split ? title.split(split) : [title];
-}
 
 const CHAPTERS = [
   { id: 'chapter01', bgImage: '/logos/talent-pioneers-chapter-01.avif' },
@@ -88,7 +78,7 @@ function CardFooter({
   return (
     <div className="flex w-full flex-col gap-4">
       <div className="flex flex-col">
-        {name && <p className="text-[14px] leading-[1.45] text-[#cbcbcb]">{name}</p>}
+        {name && <p className="text-[14px] leading-[1.45] text-white/80">{name}</p>}
         <p className="text-[24px] font-semibold leading-[1.25] tracking-[-0.48px] text-white/90">{company}</p>
       </div>
       <div className="flex items-center gap-1.5">
@@ -108,7 +98,8 @@ function DayToDayCard({
   t: Translate;
   lang: string;
 }) {
-  const badges = titleBadges(item.id, t(`dayToDay.items.${item.id}.title`));
+  const badgesKey = `dayToDay.items.${item.id}.titleBadges`;
+  const badges = t.has(badgesKey) ? (t.raw(badgesKey) as string[]) : [t(`dayToDay.items.${item.id}.title`)];
   const nameKey = `dayToDay.items.${item.id}.name`;
   const name = t.has(nameKey) ? t(nameKey) : undefined;
   const company = t(`dayToDay.items.${item.id}.company`);
@@ -117,7 +108,7 @@ function DayToDayCard({
     return (
       <a
         href={href(item.storyRoute, lang)}
-        className="group flex h-[420px] w-[300px] shrink-0 flex-col gap-6 rounded-2xl border border-[#2d2d2d] bg-white/[0.05] p-6 transition-colors duration-300 hover:border-white/20 md:h-[453px] md:w-[340px]"
+        className="group flex h-[420px] w-[300px] shrink-0 flex-col gap-6 rounded-2xl border border-white/[0.13] bg-white/[0.05] p-6 transition-colors duration-300 hover:border-white/20 md:h-[453px] md:w-[340px]"
       >
         <div className="flex w-full items-start gap-2">
           {badges.map((badge) => (
@@ -125,7 +116,7 @@ function DayToDayCard({
           ))}
         </div>
         <div className="flex w-full flex-1 flex-col gap-2">
-          <img src="/logos/talent-pioneers-quote-icon.svg" alt="" className="h-6 w-6" />
+          <img src="/logos/talent-pioneers-quote-icon.svg" alt="" loading="lazy" decoding="async" className="h-6 w-6" />
           <p className="text-[17px] font-medium italic leading-[1.4] tracking-[-0.17px] text-white/85">
             &ldquo;{t(`dayToDay.items.${item.id}.quote`)}&rdquo;
           </p>
@@ -259,10 +250,10 @@ export default async function TalentPioneersPage() {
           <div className="max-w-[1400px] mx-auto w-full">
             <Reveal y={24} className="w-full">
               <p className={`${EYEBROW} text-[#6b7dff]`}>{t('dayToDay.eyebrow')}</p>
-              <h2 className="pt-6 text-balance text-[32px] md:text-[48px] font-semibold leading-[1.08] tracking-[-0.96px] text-white/95">
+              <h2 className="pt-6 text-balance text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-white/95">
                 {t.rich('dayToDay.heading', {
                   accent: (chunks) => (
-                    <span className="gradient-text" style={{ letterSpacing: 'inherit' }}>{chunks}</span>
+                    <span className="gradient-text">{chunks}</span>
                   ),
                 })}
               </h2>
@@ -278,9 +269,9 @@ export default async function TalentPioneersPage() {
           <div className="max-w-[1400px] mx-auto w-full">
             <Reveal y={24} className="w-full">
               <p className={`${EYEBROW} text-[#4b4df7]`}>{t('chapters.eyebrow')}</p>
-              <h2 className="pt-6 text-balance text-[32px] md:text-[48px] font-semibold leading-[1.1] tracking-[-0.96px]">
+              <h2 className="pt-6 text-balance text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
                 <span className="text-[#121212]">{t('chapters.heading')}</span>{' '}
-                <span className="gradient-text" style={{ letterSpacing: 'inherit' }}>{t('chapters.headingAccent')}</span>
+                <span className="gradient-text">{t('chapters.headingAccent')}</span>
               </h2>
               <p className="pt-5 max-w-[768px] text-[18px] font-medium leading-[1.7] text-[#121212]/80">{t('chapters.paragraph')}</p>
             </Reveal>
@@ -299,9 +290,6 @@ export default async function TalentPioneersPage() {
                       <img src="/logos/skillvue-wordmark.svg" alt="Skillvue" className="h-4 w-auto shrink-0" />
                       <p className="text-[24px] md:text-[32px] font-bold uppercase text-white">{t(`chapters.items.${chapter.id}.label`)}</p>
                     </div>
-                    <p className="relative text-[13px] font-semibold uppercase tracking-[1.95px] text-white/90">
-                      {t(`chapters.items.${chapter.id}.number`)}
-                    </p>
                   </div>
                   <div className="flex items-center gap-5 pt-5">
                     <span className="flex items-center gap-1.5 text-[13px] text-[#121212]/55">
@@ -327,9 +315,9 @@ export default async function TalentPioneersPage() {
           <div className="max-w-[1400px] mx-auto w-full">
             <Reveal y={24} className="w-full">
               <p className={`${EYEBROW} text-[#9b9dfb]`}>{t('stages.eyebrow')}</p>
-              <h2 className="pt-6 text-balance text-[32px] md:text-[48px] font-semibold leading-[1.1] tracking-[-0.96px]">
+              <h2 className="pt-6 text-balance text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
                 <span className="text-white/90">{t('stages.heading')}</span>{' '}
-                <span className="gradient-text" style={{ letterSpacing: 'inherit' }}>{t('stages.headingAccent')}</span>
+                <span className="gradient-text">{t('stages.headingAccent')}</span>
               </h2>
             </Reveal>
 
@@ -387,9 +375,9 @@ export default async function TalentPioneersPage() {
             >
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h2 className="text-balance text-[36px] md:text-[48px] font-semibold leading-[1.1] tracking-[-0.96px]">
+                  <h2 className="text-balance text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
                     <span className="text-white/95">{t('contact.heading')}</span>{' '}
-                    <span className="gradient-text" style={{ letterSpacing: 'inherit' }}>{t('contact.headingAccent')}</span>
+                    <span className="gradient-text">{t('contact.headingAccent')}</span>
                   </h2>
                   <p className="pt-5 max-w-[539px] text-[18px] font-light leading-[1.7] text-white/70">{t('contact.paragraph')}</p>
                 </div>
