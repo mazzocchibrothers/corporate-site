@@ -8,6 +8,7 @@ import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { trackLead } from '@/components/shared/track-lead';
 
 // One HubSpot form per language. This page replaced two twin files —
 // book-meeting.tsx and prenota-incontro.tsx — which existed only because the
@@ -40,6 +41,7 @@ export default function BookMeetingPage() {
           formId: FORM_IDS[lang] ?? FORM_IDS.en,
           region: 'na1',
           target: '#hubspot-form',
+          onFormSubmitted: () => trackLead('book-meeting'),
         });
       }
     };

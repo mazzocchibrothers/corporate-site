@@ -29,18 +29,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // a title with the page they are a cut of.
     if (route.canonicalOf !== undefined) continue;
 
-    // robots.txt asks Google not to fetch /lp/, so a sitemap entry for one is
-    // the two files contradicting each other — and the outcome is worse than
-    // either alone: a URL that is submitted but uncrawlable gets indexed as a
-    // blank listing rather than not indexed at all. Whether the landing pages
-    // belong in search is a marketing call; this only stops the contradiction.
-    if (route.id.startsWith("lp/")) continue;
-
-    // The registry's own answer to the same question, for routes that are not
-    // landing pages: the demo dashboards are outbound material sent to one
-    // prospect at a time, and the page tells Google the same thing through
-    // `robots: noindex` in i18n/metadata.ts. Submitting it here would be the
-    // sitemap arguing with the page.
+    // The landing pages and the demo dashboards are outbound material — ads,
+    // mail, a link sent to one prospect — and the page tells Google the same
+    // thing through `robots: noindex` in i18n/metadata.ts. Submitting it here
+    // would be the sitemap arguing with the page.
     if (route.noindex) continue;
 
     const languages = alternatesFor(route);

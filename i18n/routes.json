@@ -194,7 +194,8 @@
     "paths": {
       "en": "/customers/fidia-farmaceutici",
       "it": "/clienti/fidia-farmaceutici"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "customers/ins-mercato",
@@ -290,14 +291,16 @@
     "id": "lp/ai-act-banking",
     "paths": {
       "it": "/lp/ai-act-banking"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/ai-competency",
     "paths": {
       "en": "/lp/ai-competency",
       "it": "/lp/ai-competency"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/ai-competency-newsletter",
@@ -305,82 +308,95 @@
       "en": "/lp/ai-competency-newsletter",
       "it": "/lp/ai-competency-newsletter"
     },
-    "canonicalOf": "lp/ai-competency"
+    "canonicalOf": "lp/ai-competency",
+    "noindex": true
   },
   {
     "id": "lp/arte-di-misurare-allineamento",
     "paths": {
       "it": "/lp/arte-di-misurare-allineamento"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/career-aspiration-insurance",
     "paths": {
       "it": "/lp/career-aspiration-insurance"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/career-aspiration-insurance/whitepaper",
     "paths": {
       "it": "/lp/career-aspiration-insurance/whitepaper"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/europ-assistance",
     "paths": {
       "en": "/lp/europ-assistance",
       "it": "/lp/europ-assistance"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/food-retail",
     "paths": {
       "en": "/lp/food-retail",
       "it": "/lp/food-retail"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/hidden-cost-recruiting",
     "paths": {
       "en": "/lp/hidden-cost-recruiting"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/il-costo-invisibile",
     "paths": {
       "it": "/lp/il-costo-invisibile"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/il-costo-invisibile/whitepaper",
     "paths": {
       "it": "/lp/il-costo-invisibile/whitepaper"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/il-turnover-nei-negozi-del-lusso",
     "paths": {
       "it": "/lp/il-turnover-nei-negozi-del-lusso"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/la-crisi-delle-competenze",
     "paths": {
       "it": "/lp/la-crisi-delle-competenze"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/scalare-l-eccellenza",
     "paths": {
       "it": "/lp/scalare-l-eccellenza"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "lp/supermarkets",
     "paths": {
       "en": "/lp/supermarkets",
       "it": "/lp/supermarkets"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "privacy-policy",

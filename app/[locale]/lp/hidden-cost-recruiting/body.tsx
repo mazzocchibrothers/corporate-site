@@ -5,6 +5,7 @@ import { Reveal } from '@/components/ui/reveal';
 import React, { useEffect, useRef, useState } from 'react';
 import SkillvueLogo from '@/components/landing/SkillvueLogo';
 import { Button } from '@/components/ui/button';
+import { trackLead } from '@/components/shared/track-lead';
 
 // TODO: Replace with the actual HubSpot form ID for this whitepaper
 const HUBSPOT_PORTAL_ID = '48438018';
@@ -103,6 +104,7 @@ export default function HiddenCostRecruiting() {
           region: 'na1',
           target: '#lp-hubspot-form',
           onFormReady: () => setFormLoaded(true),
+          onFormSubmitted: () => trackLead('lp/hidden-cost-recruiting'),
         });
       }
     };

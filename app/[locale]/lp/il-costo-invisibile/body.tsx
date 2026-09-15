@@ -4,6 +4,8 @@ import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/ui/reveal';
 import React, { useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { trackLead } from '@/components/shared/track-lead';
+import { href } from '@/i18n/routes';
 
 function SkillvueIcon({ size = 24 }: { size?: number }) {
   return (
@@ -79,7 +81,10 @@ export default function IlCostoInvisibileVetrina() {
           formId: '385c68eb-b69e-4485-9af5-2d70eedb1dd9',
           region: 'na1',
           target: '#hs-form-container',
-          redirectUrl: window.location.origin + '/lp/il-costo-invisibile/whitepaper',
+          // The whitepaper page is Italian-only, so its URL carries /it — without it
+          // the redirect after a successful submit landed on a 404.
+          redirectUrl: window.location.origin + href('lp/il-costo-invisibile/whitepaper', 'it'),
+          onFormSubmitted: () => trackLead('lp/il-costo-invisibile'),
         });
       }
     };

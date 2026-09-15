@@ -58,9 +58,6 @@ export type Route = {
    * scripts/check-routes.mjs asserts that both still do, and that robots.txt
    * does *not* also block the route: a page a crawler may not fetch is a page
    * whose noindex a crawler never reads.
-   *
-   * The landing pages are noindex by three uncoordinated mechanisms and are
-   * deliberately not retrofitted here — that is #148.
    */
   noindex?: boolean;
   /**

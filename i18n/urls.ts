@@ -19,7 +19,10 @@ export type RouteLike = {
   canonicalOf?: string;
 };
 
-export const BASE_URL = 'https://skillvue.ai';
+// www, because that is the host the site answers 200 on: Vercel sends the apex
+// to it. With the apex here every canonical, hreflang and sitemap entry named a
+// URL that redirects to the page it was supposed to be.
+export const BASE_URL = 'https://www.skillvue.ai';
 
 /** The locales a route actually has content in. */
 export const localesOf = (route: RouteLike): Locale[] =>

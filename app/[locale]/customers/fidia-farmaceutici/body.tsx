@@ -52,9 +52,6 @@ export default function FidiaFarmaceuticiStoryPage() {
 
   return (
     <>
-      <>
-        <meta name="robots" content="noindex" />
-      </>
       <Navbar />
       <main>
 

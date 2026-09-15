@@ -6,6 +6,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { trackLead } from '@/components/shared/track-lead';
 
 const HUBSPOT_PORTAL_ID = '48438018';
 const HUBSPOT_FORM_ID = 'YOUR_WP_L2_FORM_ID'; // TODO: replace with real form ID
@@ -89,6 +90,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
         }),
       });
       if (!res.ok) throw new Error(`HubSpot submit failed: ${res.status}`);
+      trackLead('lp/il-turnover-nei-negozi-del-lusso');
     } catch {
       setSubmitting(false);
       setSubmitError(true);

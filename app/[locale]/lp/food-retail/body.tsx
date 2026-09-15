@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
+import { trackLead } from '@/components/shared/track-lead';
 
 const FORM_IDS = {
   en: '824a40f6-57e6-46eb-bada-ca5d6f8122ea',
@@ -35,6 +36,7 @@ export default function FoodRetailPage() {
           formId,
           region: 'na1',
           target: '#lead-form',
+          onFormSubmitted: () => trackLead('lp/food-retail'),
         });
       }
     };
