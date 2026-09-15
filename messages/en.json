@@ -1295,7 +1295,7 @@
         }
       },
       "heading": "The decisions that define your organization. Finally backed by <span>proof.</span>",
-      "body": "50+ European enterprises have replaced gut feel with objective talent intelligence. across hiring, promotion, development, and transformation readiness. These are their stories.",
+      "body": "100+ European enterprises have replaced gut feel with objective talent intelligence across hiring, promotion, development, and transformation readiness. These are their stories.",
       "cta": "Read the stories",
       "text": "Our Customers"
     },
@@ -1396,11 +1396,10 @@
     },
     "meta": {
       "title": "Customer Stories | Skillvue",
-      "description": "See how 50+ European enterprises like Unicredit and Carrefour replaced gut-feel talent decisions with objective AI verifications. 10–30x ROI."
+      "description": "See how 100+ European enterprises like Unicredit and Carrefour replaced gut-feel talent decisions with objective AI verifications. 10–30x ROI."
     },
     "adr": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, ADR found the key to making the potential of nearly 5,000 people visible — operational staff included — turning talent development into a strategic lever for growth.",
       "heroMetrics": [
         {
@@ -1594,8 +1593,7 @@
       }
     },
     "adr-2": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, AdR found the key to detecting and measuring the potential of the entire organisation starting from the most operational roles, transforming the development of internal talent into a strategic lever for meeting growing organisational needs.",
       "heroMetrics": [
         {
@@ -1759,8 +1757,7 @@
       }
     },
     "carrefour": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "In a sector where labour cost is 3.4x operating profit, Carrefour Italia turned hiring into a real profitability lever thanks to clear, transparent data on skills.",
       "heroMetrics": [
         {
@@ -1956,8 +1953,7 @@
       }
     },
     "credem": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Gruppo Credem processes tens of thousands of applications every year while keeping candidate experience quality high and significantly reducing the number of unsuccessful interviews.",
       "heroMetrics": [
         {
@@ -2140,8 +2136,7 @@
       }
     },
     "douglas": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "2,500 employees across nearly 400 stores, zero visibility on skills, high turnover. With Skillvue, Douglas built the first complete skills database of its entire workforce.",
       "heroMetrics": [
         {
@@ -2327,8 +2322,7 @@
       }
     },
     "eataly": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "Eataly is growing fast, especially with new openings in North America. With Skillvue, it assessed thousands of candidates for international mobility in weeks, cutting through the sector's average timelines.",
       "heroMetrics": [
         {
@@ -2510,8 +2504,7 @@
       }
     },
     "eataly-2": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "Eataly has embarked on a digital transformation journey to integrate AI and human touch in recruiting, supporting its global business expansion.",
       "heroMetrics": [
         {
@@ -2694,8 +2687,7 @@
       }
     },
     "eataly-3": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue's support, Eataly optimised skills assessment at the pre-screening stage, managing over 1,000 applications without compromising on evaluation quality, closeness to candidates, or brand authenticity at any stage of the process.",
       "heroMetrics": [
         {
@@ -2877,8 +2869,7 @@
       }
     },
     "fidia-farmaceutici": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Fidia is transforming its HR infrastructure into a global talent intelligence system, capable of mapping the skills of hundreds of Medical Representatives in 12 languages and translating them into development plans and data-driven talent management decisions.",
       "heroMetrics": [
         {
@@ -3059,8 +3050,7 @@
       }
     },
     "europ-assistance": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Europ Assistance transformed candidate pre-screening into a scalable, strategic process for the entire talent lifecycle — developing cross-functional skills from the very first step of the recruitment journey.",
       "heroMetrics": [
         {
@@ -3249,8 +3239,7 @@
       }
     },
     "europ-assistance-2": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Europ Assistance transformed pre-screening from a bottleneck into a competitive advantage and is now extending the model to internal skills mapping.",
       "heroMetrics": [
         {
@@ -3450,8 +3439,7 @@
       }
     },
     "mediaset": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Mediaset standardised the pre-screening step across thousands of applications from junior profiles applying to Progetto GRAPE, building a structured dataset on the characteristics of every candidate to streamline the hiring process.",
       "heroMetrics": [
         {
@@ -3632,8 +3620,7 @@
       }
     },
     "mediaset-1": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Mediaset standardised the pre-screening step across thousands of applications from junior profiles applying to Progetto GRAPE, building a structured dataset on the characteristics of every candidate to streamline the hiring process.",
       "heroMetrics": [
         {
@@ -3814,8 +3801,7 @@
       }
     },
     "mediaset-2": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Mediaset standardised the pre-screening step across thousands of applications from junior profiles applying to Progetto GRAPE, building a structured dataset on the characteristics of every candidate to streamline the hiring process.",
       "heroMetrics": [
         {
@@ -3996,8 +3982,7 @@
       }
     },
     "subdued": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Subdued built a consistent, scalable evaluation process across multiple markets, allowing a lean HR team to apply the same hiring rigour in every country while halving turnover.",
       "heroMetrics": [
         {
@@ -4196,8 +4181,7 @@
       }
     },
     "unicomm": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Unicomm is transforming its HR infrastructure into an agile, skills-based system that responds to hiring, confirmation and internal development needs across its entire network.",
       "heroMetrics": [
         {
@@ -5789,8 +5773,7 @@
       }
     },
     "europ-assistance": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Europ Assistance turned candidate pre-screening into a scalable, strategic process for the entire talent lifecycle, putting soft skills at the center from the very first step of hiring.",
       "heroMetrics": [
         {
