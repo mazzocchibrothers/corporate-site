@@ -1381,7 +1381,7 @@
           "headline": "Europ Assistance: how to recognise the potential that stands the test of time in a business built on human interaction"
         },
         "unicomm": {
-          "headline": "How Unicomm is building a new talent management system across a network of 250 stores and growing"
+          "headline": "Unicomm: how to build a new talent management system across a network of 250 stores and growing"
         },
         "mediaset": {
           "headline": "GRAPE, Mediaset's Graduate Program Experience: how to identify and develop talented young people with an eye on future potential"
@@ -4386,7 +4386,7 @@
         "title": "How In’s Mercato built an internal pipeline of Store Managers | Skillvue",
         "description": "Network growth depends on having trained managerial talent ready when it’s needed. With Skillvue, In’s Mercato transformed talent management from reactive to predictive."
       },
-      "cta3": "Customers",
+      "cta3": "Customer Stories",
       "heading2": "How In’s Mercato built an <s>internal pipeline</s> of Store Managers",
       "body": "Network growth depends on having trained managerial talent ready when it's needed. With Skillvue, In’s Mercato transformed talent management from reactive to predictive.",
       "cta4": "Contact us",
@@ -4403,7 +4403,7 @@
       "heading5": "What needed to change",
       "text13": "THE SOLUTION",
       "heading6": "AI-scaled Assessment with Skillvue",
-      "body4": "Skillvue enabled a structured assessment based on the soft skill framework that In's had already built internally for the Store Manager profile.",
+      "body4": "Skillvue enabled a structured assessment based on the soft skill framework that In’s had already built internally for the Store Manager profile.",
       "text14": "SKILLS ASSESSED",
       "text15": "HOW IT WAS BUILT",
       "text16": "RESULTS",
@@ -4543,7 +4543,7 @@
       "impactCards": {
         "internalPipeline": {
           "title": "Construction of internal talent pipeline",
-          "text": "For the first time, In's has an objective map of potential across the network and can plan openings with the certainty of having qualified talent available."
+          "text": "For the first time, In’s has an objective map of potential across the network and can plan openings with the certainty of having qualified talent available."
         },
         "reactiveToPredictive": {
           "title": "From reactive to predictive",
@@ -4577,7 +4577,6 @@
         "step2": "STEP 2",
         "roleReady": "Role-Ready",
         "inDevelopment": "In Development",
-        "kicker": "CUSTOMER STORY",
         "ready": "✓ READY",
         "growing": "↗ GROWING"
       }
