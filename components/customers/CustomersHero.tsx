@@ -73,7 +73,7 @@ export default function CustomersHero() {
               y={20}
               duration={0.8}
               delay={0.5}
-              className="text-[18px] text-white/[0.65] leading-[1.75] max-w-2xl mb-10"
+              className="text-[18px] text-white/[0.65] leading-[1.75] mb-10"
               style={{ fontWeight: 300 }}
             >{t('hero.body')}</Reveal>
 
