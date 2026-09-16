@@ -28,13 +28,13 @@ type Translate = ((key: string) => string) & {
 // customer's full case study. Order, kind and routing are layout, not copy,
 // so they live in code and only the strings come from the catalogue.
 const DAY_TO_DAY_ITEMS: DayToDayItem[] = [
-  { id: 'credem', kind: 'story', storyRoute: 'customers/credem', bgImage: '/logos/credem_customer_story_cover.avif' },
+  { id: 'credem', kind: 'story', storyRoute: 'customers/credem', bgImage: '/logos/customer-story-cover-credem.avif' },
   { id: 'carrefour', kind: 'quote', storyRoute: 'customers/carrefour' },
-  { id: 'europAssistance', kind: 'story', storyRoute: 'customers/europ-assistance', bgImage: '/logos/europ-assistance-background-explore-stories.avif' },
+  { id: 'europAssistance', kind: 'story', storyRoute: 'customers/europ-assistance', bgImage: '/logos/customer-story-cover-europ-assistance.avif' },
   { id: 'subdued', kind: 'quote', storyRoute: 'customers/subdued' },
-  { id: 'fidiaFarmaceutici', kind: 'story', storyRoute: 'customers/fidia-farmaceutici', bgImage: '/logos/fidia-farmaceutici explore stories.avif' },
+  { id: 'fidiaFarmaceutici', kind: 'story', storyRoute: 'customers/fidia-farmaceutici', bgImage: '/logos/customer-story-cover-fidia-farmaceutici.avif' },
   { id: 'luca', kind: 'quote', storyRoute: 'customers/mediaset' },
-  { id: 'unicomm', kind: 'story', storyRoute: 'customers/unicomm', bgImage: '/logos/unicomm-background-explore-stories.avif' },
+  { id: 'unicomm', kind: 'story', storyRoute: 'customers/unicomm', bgImage: '/logos/customer-story-cover-unicomm.avif' },
   { id: 'alberto', kind: 'quote', storyRoute: 'customers/adr' },
 ];
 
