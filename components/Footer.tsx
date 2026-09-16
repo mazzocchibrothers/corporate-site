@@ -137,7 +137,11 @@ export default function Footer() {
                   ? 'https://www.iubenda.com/privacy-policy/75783964/cookie-policy'
                   : 'https://www.iubenda.com/privacy-policy/45750674/cookie-policy',
               },
-              { label: t('footer.legal.dataProcessing'), href: href('privacy-policy-algo', lang) },
+              // Italian-only content (#116) — no English path exists, so
+              // showing it to EN visitors would silently link to "/".
+              ...(lang === 'it'
+                ? [{ label: t('footer.legal.dataProcessing'), href: href('privacy-policy-algo', lang) }]
+                : []),
             ].map(({ label, href }) => (
               href.startsWith('http') ? (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
