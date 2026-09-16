@@ -21,6 +21,7 @@ const DYNAMIC: Record<string, string[]> = {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
+  const lastModified = new Date();
 
   for (const route of routes) {
     // An alternate cut of another story canonicalises to it, and a sitemap
@@ -49,6 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       for (const locale of localesOf(route)) {
         entries.push({
           url: fill(urlFor(route, locale)!),
+          lastModified,
           alternates: {
             languages: Object.fromEntries(
               Object.entries(languages).map(([k, v]) => [k, fill(v)]),
