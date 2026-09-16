@@ -19,9 +19,18 @@ const DYNAMIC: Record<string, string[]> = {
   '/resources/insights/[slug]': whitepapers.map((w) => w.slug),
 };
 
+// An insight carries a real publishDate; every other route has no stored
+// change date at all. For those, lastModified is the day the canonical host
+// moved to www.skillvue.ai (#202), which changed every one of their URLs —
+// not the build date, which would re-stamp all of them on every future
+// deploy regardless of whether that page actually changed.
+const PUBLISH_DATE: Record<string, Date> = Object.fromEntries(
+  whitepapers.map((w) => [w.slug, new Date(w.publishDate)]),
+);
+const HOST_MIGRATION_DATE = new Date('2026-09-15');
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
-  const lastModified = new Date();
 
   for (const route of routes) {
     // An alternate cut of another story canonicalises to it, and a sitemap
@@ -46,6 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     for (const slug of slugs) {
       const fill = (url: string) => (slug ? url.replace('[slug]', slug) : url);
+      const lastModified = slug ? PUBLISH_DATE[slug] : HOST_MIGRATION_DATE;
 
       for (const locale of localesOf(route)) {
         entries.push({
