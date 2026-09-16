@@ -8,9 +8,9 @@ import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
 const testimonials = [
-  { id: 'unicomm', name: 'Unicomm', routeId: 'customers/unicomm', bgImage: '/logos/unicomm-background-explore-stories.avif' },
-  { id: 'mediaset', name: 'Mediaset', routeId: 'customers/mediaset', bgImage: '/logos/mediaset-background-explore-stories (2).avif' },
-  { id: 'europAssistance', name: 'Europ Assistance', routeId: 'customers/europ-assistance', bgImage: '/logos/europ-assistance-background-explore-stories.avif' },
+  { id: 'unicomm', name: 'Unicomm', routeId: 'customers/unicomm', bgImage: '/logos/customer-story-cover-unicomm.avif' },
+  { id: 'mediaset', name: 'Mediaset', routeId: 'customers/mediaset', bgImage: '/logos/customer-story-cover-mediaset.avif' },
+  { id: 'europAssistance', name: 'Europ Assistance', routeId: 'customers/europ-assistance', bgImage: '/logos/customer-story-cover-europ-assistance.avif' },
 ];
 
 export default function CustomerTestimonials() {

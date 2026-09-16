@@ -91,7 +91,7 @@ export default function InsMercatoStoryPage() {
         {/* Hero */}
         <section className="relative pt-[80px] min-h-screen flex items-center">
           <div className="absolute inset-0 overflow-hidden">
-            <img src="/logos/insmercato-bg.avif" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
+            <img src="/logos/customer-story-cover-ins-mercato.avif" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }} />
             <div className="absolute inset-0 bg-black/40" />
           </div>
           <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-8 lg:py-10">
@@ -100,16 +100,13 @@ export default function InsMercatoStoryPage() {
                 {t('cta3')}
               </Button>
               <span className="text-white/20">/</span>
-              <span className="text-[13px] text-white/[0.65]">In's Mercato</span>
+              <span className="text-[13px] text-white/[0.65]">In’s Mercato</span>
             </Reveal>
 
             <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
               {/* Main content */}
               <div className="lg:col-span-7">
                 <Reveal duration={0.7} delay={0.3}>
-                  <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] md:text-[13px] font-medium tracking-[0.08em] uppercase mb-4 block w-fit text-white/85 border border-white/15" style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
-                    {t('diagram.kicker')}
-                  </span>
                   <h1 className="text-[48px] md:text-[44px] font-semibold tracking-[-0.02em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
                     {t.rich('heading2', {
     s: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
@@ -136,13 +133,13 @@ export default function InsMercatoStoryPage() {
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5">
                   <div className="flex items-center gap-3 mb-3 pb-3 border-b border-white/[0.08]">
                     <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">
-                      <img loading="lazy" decoding="async" src="/logos/ins-mercato-logo.png" alt="In's Mercato logo" className="w-full h-full object-contain " />
+                      <img loading="lazy" decoding="async" src="/logos/ins-mercato-logo.png" alt="In’s Mercato logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
                       <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">
                         {t('text9')}
                       </span>
-                      <p className="text-[16px] font-bold text-white/90">In's Mercato</p>
+                      <p className="text-[16px] font-bold text-white/90">In’s Mercato</p>
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">

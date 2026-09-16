@@ -78,7 +78,7 @@ export default function ExploreStories() {
           <h2 className="text-[clamp(2.5rem,5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90 mb-6">{t.rich('exploreStories.heading', {
             span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
-          <p className="text-[18px] text-white/[0.65] leading-[1.75] max-w-2xl">{t('exploreStories.body')}</p>
+          <p className="text-[18px] text-white/[0.65] leading-[1.75]">{t('exploreStories.body')}</p>
         </Reveal>
 
         {/* Filters */}

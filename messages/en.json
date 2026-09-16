@@ -1295,7 +1295,7 @@
         }
       },
       "heading": "The decisions that define your organization. Finally backed by <span>proof.</span>",
-      "body": "50+ European enterprises have replaced gut feel with objective talent intelligence. across hiring, promotion, development, and transformation readiness. These are their stories.",
+      "body": "100+ European enterprises have replaced gut feel with objective talent intelligence across hiring, promotion, development, and transformation readiness. These are their stories.",
       "cta": "Read the stories",
       "text": "Our Customers"
     },
@@ -1372,7 +1372,7 @@
           "headline": "Subdued: building a single scalable hiring standard for an international network of 130+ stores"
         },
         "ins-mercato": {
-          "headline": "In's Mercato: how it built an internal pipeline of Store Managers"
+          "headline": "In’s Mercato: how it built an internal pipeline of Store Managers"
         },
         "adr": {
           "headline": "Aeroporti di Roma: how to develop an organisation of nearly 5,000 people starting from internal potential"
@@ -1381,7 +1381,7 @@
           "headline": "Europ Assistance: how to recognise the potential that stands the test of time in a business built on human interaction"
         },
         "unicomm": {
-          "headline": "How Unicomm is building a new talent management system across a network of 250 stores and growing"
+          "headline": "Unicomm: how to build a new talent management system across a network of 250 stores and growing"
         },
         "mediaset": {
           "headline": "GRAPE, Mediaset's Graduate Program Experience: how to identify and develop talented young people with an eye on future potential"
@@ -1396,11 +1396,10 @@
     },
     "meta": {
       "title": "Customer Stories | Skillvue",
-      "description": "See how 50+ European enterprises like Unicredit and Carrefour replaced gut-feel talent decisions with objective AI verifications. 10–30x ROI."
+      "description": "See how 100+ European enterprises like Unicredit and Carrefour replaced gut-feel talent decisions with objective AI verifications. 10–30x ROI."
     },
     "adr": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, ADR found the key to making the potential of nearly 5,000 people visible — operational staff included — turning talent development into a strategic lever for growth.",
       "heroMetrics": [
         {
@@ -1576,9 +1575,9 @@
         "stories": [
           {
             "id": "ins-mercato",
-            "company": "In's Mercato",
+            "company": "In’s Mercato",
             "tag": "Large-scale distribution · Internal Mobility",
-            "headline": "How In's Mercato built an internal pipeline of Store Managers"
+            "headline": "How In’s Mercato built an internal pipeline of Store Managers"
           }
         ],
         "cta": "Read the story"
@@ -1594,8 +1593,7 @@
       }
     },
     "adr-2": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, AdR found the key to detecting and measuring the potential of the entire organisation starting from the most operational roles, transforming the development of internal talent into a strategic lever for meeting growing organisational needs.",
       "heroMetrics": [
         {
@@ -1741,9 +1739,9 @@
         "stories": [
           {
             "id": "ins-mercato",
-            "company": "In's Mercato",
+            "company": "In’s Mercato",
             "tag": "Large-scale distribution · Internal Mobility",
-            "headline": "How In's Mercato built an internal pipeline of Store Managers"
+            "headline": "How In’s Mercato built an internal pipeline of Store Managers"
           }
         ],
         "cta": "Read the story"
@@ -1759,8 +1757,7 @@
       }
     },
     "carrefour": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "In a sector where labour cost is 3.4x operating profit, Carrefour Italia turned hiring into a real profitability lever thanks to clear, transparent data on skills.",
       "heroMetrics": [
         {
@@ -1956,8 +1953,7 @@
       }
     },
     "credem": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Gruppo Credem processes tens of thousands of applications every year while keeping candidate experience quality high and significantly reducing the number of unsuccessful interviews.",
       "heroMetrics": [
         {
@@ -2140,8 +2136,7 @@
       }
     },
     "douglas": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "2,500 employees across nearly 400 stores, zero visibility on skills, high turnover. With Skillvue, Douglas built the first complete skills database of its entire workforce.",
       "heroMetrics": [
         {
@@ -2327,8 +2322,7 @@
       }
     },
     "eataly": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "Eataly is growing fast, especially with new openings in North America. With Skillvue, it assessed thousands of candidates for international mobility in weeks, cutting through the sector's average timelines.",
       "heroMetrics": [
         {
@@ -2492,9 +2486,9 @@
           },
           {
             "id": "ins-mercato",
-            "company": "In's Mercato",
+            "company": "In’s Mercato",
             "tag": "Large-scale distribution · Internal Mobility",
-            "headline": "In's Mercato: how it built an internal pipeline of Store Managers"
+            "headline": "In’s Mercato: how it built an internal pipeline of Store Managers"
           }
         ],
         "cta": "Read the story"
@@ -2510,8 +2504,7 @@
       }
     },
     "eataly-2": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "Eataly has embarked on a digital transformation journey to integrate AI and human touch in recruiting, supporting its global business expansion.",
       "heroMetrics": [
         {
@@ -2676,9 +2669,9 @@
           },
           {
             "id": "ins-mercato",
-            "company": "In's Mercato",
+            "company": "In’s Mercato",
             "tag": "Large-scale distribution · Internal Mobility",
-            "headline": "In's Mercato: how it built an internal pipeline of Store Managers"
+            "headline": "In’s Mercato: how it built an internal pipeline of Store Managers"
           }
         ],
         "cta": "Read the story"
@@ -2694,8 +2687,7 @@
       }
     },
     "eataly-3": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue's support, Eataly optimised skills assessment at the pre-screening stage, managing over 1,000 applications without compromising on evaluation quality, closeness to candidates, or brand authenticity at any stage of the process.",
       "heroMetrics": [
         {
@@ -2859,9 +2851,9 @@
           },
           {
             "id": "ins-mercato",
-            "company": "In's Mercato",
+            "company": "In’s Mercato",
             "tag": "Large-scale distribution · Internal Mobility",
-            "headline": "In's Mercato: how it built an internal pipeline of Store Managers"
+            "headline": "In’s Mercato: how it built an internal pipeline of Store Managers"
           }
         ],
         "cta": "Read the story"
@@ -2877,8 +2869,7 @@
       }
     },
     "fidia-farmaceutici": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Fidia is transforming its HR infrastructure into a global talent intelligence system, capable of mapping the skills of hundreds of Medical Representatives in 12 languages and translating them into development plans and data-driven talent management decisions.",
       "heroMetrics": [
         {
@@ -3059,8 +3050,7 @@
       }
     },
     "europ-assistance": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Europ Assistance transformed candidate pre-screening into a scalable, strategic process for the entire talent lifecycle — developing cross-functional skills from the very first step of the recruitment journey.",
       "heroMetrics": [
         {
@@ -3249,8 +3239,7 @@
       }
     },
     "europ-assistance-2": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Europ Assistance transformed pre-screening from a bottleneck into a competitive advantage and is now extending the model to internal skills mapping.",
       "heroMetrics": [
         {
@@ -3450,8 +3439,7 @@
       }
     },
     "mediaset": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Mediaset standardised the pre-screening step across thousands of applications from junior profiles applying to Progetto GRAPE, building a structured dataset on the characteristics of every candidate to streamline the hiring process.",
       "heroMetrics": [
         {
@@ -3632,8 +3620,7 @@
       }
     },
     "mediaset-1": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Mediaset standardised the pre-screening step across thousands of applications from junior profiles applying to Progetto GRAPE, building a structured dataset on the characteristics of every candidate to streamline the hiring process.",
       "heroMetrics": [
         {
@@ -3814,8 +3801,7 @@
       }
     },
     "mediaset-2": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Mediaset standardised the pre-screening step across thousands of applications from junior profiles applying to Progetto GRAPE, building a structured dataset on the characteristics of every candidate to streamline the hiring process.",
       "heroMetrics": [
         {
@@ -3996,8 +3982,7 @@
       }
     },
     "subdued": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Subdued built a consistent, scalable evaluation process across multiple markets, allowing a lean HR team to apply the same hiring rigour in every country while halving turnover.",
       "heroMetrics": [
         {
@@ -4196,8 +4181,7 @@
       }
     },
     "unicomm": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Unicomm is transforming its HR infrastructure into an agile, skills-based system that responds to hiring, confirmation and internal development needs across its entire network.",
       "heroMetrics": [
         {
@@ -4366,9 +4350,9 @@
         "stories": [
           {
             "id": "ins-mercato",
-            "company": "In's Mercato",
+            "company": "In’s Mercato",
             "tag": "Large-scale distribution · Internal Mobility",
-            "headline": "How In's Mercato built an internal pipeline of Store Managers"
+            "headline": "How In’s Mercato built an internal pipeline of Store Managers"
           },
           {
             "id": "adr",
@@ -4402,29 +4386,29 @@
         "title": "How In’s Mercato built an internal pipeline of Store Managers | Skillvue",
         "description": "Network growth depends on having trained managerial talent ready when it’s needed. With Skillvue, In’s Mercato transformed talent management from reactive to predictive."
       },
-      "cta3": "Customers",
-      "heading2": "How In's Mercato built an <s>internal pipeline</s> of Store Managers",
-      "body": "Network growth depends on having trained managerial talent ready when it's needed. With Skillvue, In's Mercato transformed talent management from reactive to predictive.",
+      "cta3": "Customer Stories",
+      "heading2": "How In’s Mercato built an <s>internal pipeline</s> of Store Managers",
+      "body": "Network growth depends on having trained managerial talent ready when it's needed. With Skillvue, In’s Mercato transformed talent management from reactive to predictive.",
       "cta4": "Contact us",
       "cta5": "Learn more",
       "text9": "CLIENT PROFILE",
       "src": "https://www.youtube.com/embed/nQhV9xScwOg?autoplay=1&mute=1&rel=0&modestbranding=1",
       "text10": "CONTEXT",
       "heading3": "The Company and The Context",
-      "body2": "In's Mercato is one of Italy's leading hard discount grocery chains, with <b>€1.5 billion in revenue</b>, over <b>4,200 employees</b>, and a network of more than <b>570 stores</b>. The company is in a phase of aggressive <b>real estate expansion</b>, with a new store opening plan that creates a clear <b>operational constraint</b>: without qualified Store Managers who are ready and fully aligned with the company culture, new stores risk underperforming. Network growth depends directly on having trained managerial talent available when it's needed.",
+      "body2": "In’s Mercato is one of Italy's leading hard discount grocery chains, with <b>€1.5 billion in revenue</b>, over <b>4,200 employees</b>, and a network of more than <b>570 stores</b>. The company is in a phase of aggressive <b>real estate expansion</b>, with a new store opening plan that creates a clear <b>operational constraint</b>: without qualified Store Managers who are ready and fully aligned with the company culture, new stores risk underperforming. Network growth depends directly on having trained managerial talent available when it's needed.",
       "text11": "THE CHALLENGE",
       "heading4": "The Structural Problem",
-      "body3": "In's Mercato is a fast-growing company. With over 570 stores and an active real estate development plan, the business faced an operational constraint that preceded any HR consideration.",
+      "body3": "In’s Mercato is a fast-growing company. With over 570 stores and an active real estate development plan, the business faced an operational constraint that preceded any HR consideration.",
       "text12": "COLLABORATION OBJECTIVES",
       "heading5": "What needed to change",
       "text13": "THE SOLUTION",
       "heading6": "AI-scaled Assessment with Skillvue",
-      "body4": "Skillvue enabled a structured assessment based on the soft skill framework that In's had already built internally for the Store Manager profile.",
+      "body4": "Skillvue enabled a structured assessment based on the soft skill framework that In’s had already built internally for the Store Manager profile.",
       "text14": "SKILLS ASSESSED",
       "text15": "HOW IT WAS BUILT",
       "text16": "RESULTS",
       "heading7": "Key Metrics & Impact",
-      "body5": "Quantitative and qualitative outcomes of the Skillvue x In's Mercato project.",
+      "body5": "Quantitative and qualitative outcomes of the Skillvue x In’s Mercato project.",
       "body6": "AI Assessments completed",
       "body7": "across ~1,000 employees involved",
       "body8": "Top Talent identified",
@@ -4479,7 +4463,7 @@
           "label": "In Development (53%)"
         }
       },
-      "videoTitle": "In's Mercato interview",
+      "videoTitle": "In’s Mercato interview",
       "skills": {
         "customerOrientation": {
           "label": "Customer Orientation"
@@ -4559,7 +4543,7 @@
       "impactCards": {
         "internalPipeline": {
           "title": "Construction of internal talent pipeline",
-          "text": "For the first time, In's has an objective map of potential across the network and can plan openings with the certainty of having qualified talent available."
+          "text": "For the first time, In’s has an objective map of potential across the network and can plan openings with the certainty of having qualified talent available."
         },
         "reactiveToPredictive": {
           "title": "From reactive to predictive",
@@ -4577,7 +4561,7 @@
       "quote": {
         "text": "The project transformed talent management from reactive to predictive, directly linking people strategy to the expansion plan: every new opening can now count on an internal pipeline of ready candidates, rather than chasing demand in the external market.",
         "author": "Mirko Tortolano",
-        "role": "HR Director — In's Mercato"
+        "role": "HR Director — In’s Mercato"
       },
       "visionBullets": [
         "Same criteria and skills framework from hiring to development: new hires are assessed from day one with the same logic used to develop them",
@@ -4593,7 +4577,6 @@
         "step2": "STEP 2",
         "roleReady": "Role-Ready",
         "inDevelopment": "In Development",
-        "kicker": "CUSTOMER STORY",
         "ready": "✓ READY",
         "growing": "↗ GROWING"
       }
@@ -5497,7 +5480,7 @@
           "role": "HR Manager"
         },
         "insMercato": {
-          "company": "In's Mercato",
+          "company": "In’s Mercato",
           "industry": "Large-Scale Retail",
           "quote": "Having a consistent skills verification, from external hiring to internal growth, meant delivering concrete solutions to our real challenges.",
           "author": "Mirko",
@@ -5507,7 +5490,7 @@
       "heading": "<span>Proof</span>, not promises.",
       "body": "Leading Global enterprises make talent decisions with confidence.",
       "cta": "Book a Demo",
-      "cta2": "Join 50+ Global enterprises",
+      "cta2": "Join 100+ Global enterprises",
       "heading2": "Built <span>enterprise-ready</span>",
       "body2": "100+ native integrations (Oracle, SAP, Workday, Greenhouse + more). Fully customisable to your processes, on your terms."
     },
@@ -5789,8 +5772,7 @@
       }
     },
     "europ-assistance": {
-      "breadcrumb": "Customers",
-      "badge": "CUSTOMER STORY",
+      "breadcrumb": "Customer Stories",
       "subtitle": "With Skillvue, Europ Assistance turned candidate pre-screening into a scalable, strategic process for the entire talent lifecycle, putting soft skills at the center from the very first step of hiring.",
       "heroMetrics": [
         {

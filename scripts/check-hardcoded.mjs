@@ -32,7 +32,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const NAMES = [
   'Skillvue', 'Algojob', 'Eataly', 'Mediaset', 'Carrefour', 'Douglas', 'Subdued', 'Unicomm',
   'Credem', 'Gruppo Credem', 'Europ Assistance', 'Fidia Farmaceutici', 'Aeroporti di Roma',
-  'ADR', 'AdR', "In's Mercato", 'Nicolò Mazzocchi', 'Simone Patera', 'LinkedIn', 'Italia',
+  'ADR', 'AdR', 'In’s Mercato', 'Nicolò Mazzocchi', 'Simone Patera', 'LinkedIn', 'Italia',
   'Talent Pioneers',
 ];
 // The words that may glue names together in an alt or a title.
