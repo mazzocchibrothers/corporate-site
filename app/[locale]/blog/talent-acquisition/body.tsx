@@ -169,12 +169,14 @@ export default async function BlogArticle9() {
               <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
                 {t('body6')}
               </p>
-              <Button asChild
-                variant="primary"
-                mode="dark"
-              >
-                <a href={href('book-meeting', locale)}>{t('cta2')}<ArrowRight aria-hidden /></a>
-              </Button>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Button asChild variant="primary" mode="dark">
+                  <a href={href('book-meeting', locale)}>{t('cta2')}<ArrowRight aria-hidden /></a>
+                </Button>
+                <Button asChild variant="secondary" mode="dark">
+                  <a href={href('solutions/talent-acquisition', locale)}>{t('cta3')}<ArrowRight aria-hidden /></a>
+                </Button>
+              </div>
             </Reveal>
           </div>
         </section>

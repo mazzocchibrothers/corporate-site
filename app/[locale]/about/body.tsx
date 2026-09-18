@@ -311,7 +311,7 @@ export default function AboutPage() {
                   const line1 = t('heroLine1').split(' ');
                   const line2 = t('heroLine2').split(' ');
                   return (
-                    <h1 className="text-[48px] md:text-[clamp(36px,4.2vw,64px)] font-semibold md:font-medium" style={{ fontFamily: 'Mona Sans, sans-serif', lineHeight: 1.1, color: '#fff', letterSpacing: '-1.28px', margin: 0, textAlign: 'center' }}>
+                    <div role="heading" aria-level={1} className="text-[48px] md:text-[clamp(36px,4.2vw,64px)] font-semibold md:font-medium" style={{ fontFamily: 'Mona Sans, sans-serif', lineHeight: 1.1, color: '#fff', letterSpacing: '-1.28px', margin: 0, textAlign: 'center' }}>
                       {line1.map((word, i) => (
                         <span key={`l1-${i}`} style={{ display: 'inline-block', opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(10px)', transition: 'opacity 0.7s ease-out, transform 0.7s ease-out', transitionDelay: heroVisible ? `${0.3 + i * 0.08}s` : '0s', marginRight: '0.25em' }}>{word}</span>
                       ))}
@@ -319,7 +319,7 @@ export default function AboutPage() {
                       {line2.map((word, i) => (
                         <span key={`l2-${i}`} style={{ display: 'inline-block', opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(10px)', transition: 'opacity 0.7s ease-out, transform 0.7s ease-out', transitionDelay: heroVisible ? `${0.3 + (line1.length + i) * 0.08}s` : '0s', marginRight: i < line2.length - 1 ? '0.25em' : 0 }}>{word}</span>
                       ))}
-                    </h1>
+                    </div>
                   );
                 })()}
               </div>
