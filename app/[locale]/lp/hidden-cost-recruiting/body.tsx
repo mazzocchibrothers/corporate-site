@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { href } from '@/i18n/routes';
 import { Reveal } from '@/components/ui/reveal';
 import React, { useEffect, useRef, useState } from 'react';
 import SkillvueLogo from '@/components/landing/SkillvueLogo';
@@ -466,7 +467,7 @@ export default function HiddenCostRecruiting() {
           <div className="flex items-center gap-6 text-[12px]">
             <Button asChild variant="tertiary" mode="dark" icon={null} className="text-[12px]">
               {t.rich('text11', {
-          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+          a: (chunks) => <a href={href('privacy-policy-algo', 'it')}>{chunks}</a>,
         })}</Button>
             <Button asChild variant="tertiary" mode="dark" icon={null} className="text-[12px]">
               {t.rich('text12', {

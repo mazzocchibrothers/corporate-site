@@ -312,7 +312,7 @@ export default function IlCostoInvisibileVetrina() {
             <div className="flex items-center gap-5 text-[12px]">
               <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
                 {t.rich('text8', {
-          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+          a: (chunks) => <a href={href('privacy-policy-algo', 'it')}>{chunks}</a>,
         })}</Button>
               <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
                 {t.rich('text9', {

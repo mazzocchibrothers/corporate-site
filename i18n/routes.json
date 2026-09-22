@@ -403,6 +403,10 @@
     "paths": {
       "en": "/privacy-policy-algo",
       "it": "/privacy-policy-algo"
+    },
+    "redirectFrom": {
+      "en": "/privacy-policy",
+      "it": "/privacy"
     }
   },
   {
