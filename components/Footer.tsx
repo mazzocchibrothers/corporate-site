@@ -4,7 +4,7 @@ import React from 'react';
 import { useRouter } from '@/i18n/navigation';
 import { Instagram, Facebook, Linkedin } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import { hasLocale, href } from '@/i18n/routes';
+import { href } from '@/i18n/routes';
 
 // Route ids, not paths — the URL for each comes from the registry through
 // href(), which is what retired the hrefIt flags. Labels come from the
@@ -128,7 +128,6 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
             {[
-              { label: t('footer.legal.privacy'), href: href('privacy-policy', lang) },
               {
                 label: t('footer.legal.cookies'),
                 // Two Iubenda policies, one per language — an external id, not a
@@ -137,11 +136,7 @@ export default function Footer() {
                   ? 'https://www.iubenda.com/privacy-policy/75783964/cookie-policy'
                   : 'https://www.iubenda.com/privacy-policy/45750674/cookie-policy',
               },
-              // Italian-only content (#116) — no English path exists, so
-              // showing it to EN visitors would silently link to "/".
-              ...(hasLocale('privacy-policy-algo', lang)
-                ? [{ label: t('footer.legal.dataProcessing'), href: href('privacy-policy-algo', lang) }]
-                : []),
+              { label: t('footer.legal.dataProcessing'), href: href('privacy-policy-algo', lang) },
             ].map(({ label, href }) => (
               href.startsWith('http') ? (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">

@@ -45,9 +45,9 @@ const MONOLINGUAL = routes
  * adding one because the check is inconvenient, translate the string instead.
  */
 const DELIBERATE = [
-  // The privacy policy exists in Italian only. Both URLs serve it, which is a
-  // content gap (there is no English text to serve), not a translation bug.
-  ['privacy-policy.', 'no English privacy policy exists — the Italian text serves both URLs'],
+  // The data-processing notices are Italian legal text, issued in Italian and
+  // published unchanged at both locale URLs — not a translation gap.
+  ['privacy-policy-algo.', 'Italian legal notices served identically at both locale URLs, not translated'],
   // Job titles are not translated in Italian business writing.
   ['customers.adr.results.quote.role', 'job title'],
   ['customers.adr-2.results.quote.role', 'job title'],
