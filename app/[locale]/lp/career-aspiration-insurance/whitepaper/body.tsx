@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { href } from '@/i18n/routes';
 import React, { useEffect } from 'react';
 import { Download, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -565,7 +566,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
             {tl('copyright', { year: new Date().getFullYear() })} ·{' '}
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
               {t.rich('text28', {
-          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+          a: (chunks) => <a href={href('privacy-policy-algo', 'it')}>{chunks}</a>,
         })}</Button>
             {' '}·{' '}
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">

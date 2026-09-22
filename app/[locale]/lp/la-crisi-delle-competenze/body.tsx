@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { href } from '@/i18n/routes';
 import { Reveal } from '@/components/ui/reveal';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -412,7 +413,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
           <div className="flex items-center gap-5 text-[12px]">
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
               {t.rich('text9', {
-          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+          a: (chunks) => <a href={href('privacy-policy-algo', 'it')}>{chunks}</a>,
         })}</Button>
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
               {t.rich('text10', {
@@ -1069,7 +1070,7 @@ function WhitepaperLayer() {
           {tl('copyright', { year: new Date().getFullYear() })} ·{' '}
           <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
             {t.rich('text50', {
-          a: (chunks) => <a href="https://www.skillvue.ai/privacy-policy">{chunks}</a>,
+          a: (chunks) => <a href={href('privacy-policy-algo', 'it')}>{chunks}</a>,
         })}</Button>
           {' '}·{' '}
           <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">

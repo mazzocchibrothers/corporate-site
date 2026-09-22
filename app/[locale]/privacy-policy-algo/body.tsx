@@ -189,179 +189,142 @@ export default function PrivacyPolicyAlgo() {
               {/* Notice-level divider */}
               <div className="h-px bg-[#121212]/[0.1] mb-20" />
 
-              {/* ══ NOTICE 2: SOFTWARE SKILLVUE (AI) ══ */}
-
-              {/* IT Version */}
-              <div className="mb-20">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-bold tracking-[0.1em] uppercase mb-4" style={{ background: 'rgba(75,77,247,0.08)', color: '#4B4DF7', border: '1px solid rgba(75,77,247,0.15)' }}>
-                  {t('text3')}</div>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-bold tracking-[0.1em] uppercase mb-8 ml-2" style={{ background: 'rgba(75,77,247,0.08)', color: '#4B4DF7', border: '1px solid rgba(75,77,247,0.15)' }}>
-                  {t('text4')}</div>
-
-                <h2 className="text-[clamp(1.4rem,2.5vw,1.9rem)] font-semibold text-[#121212] mb-8 leading-[1.3]">
-                  {t('heading3')}</h2>
-
-                <p className="text-[16px] text-[#121212]/70 leading-[1.85] mb-10">
-                  {t.rich('body32', {
-          b: (chunks) => <strong className="text-[#121212]/85 font-semibold">{chunks}</strong>,
-        })}</p>
-
-                <PolicySection title={t('heading16')}>
-                  <p>{t('body33')}</p>
-                  <ul>
-                    <li>{t('item18')}</li>
-                    <li>{t('item19')}</li>
-                    <li>{t('item20')}</li>
-                    <li>{t.rich('item21', {
-          a: (chunks) => <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
-        })}</li>
-                  </ul>
-                </PolicySection>
-
-                <PolicySection title={t('heading17')}>
-                  <p>{t('body34')}</p>
-                </PolicySection>
-
-                <PolicySection title={t('heading18')}>
-                  <ul>
-                    <li>{t('item22')}</li>
-                    <li>{t('item23')}</li>
-                    <li>{t('item24')}</li>
-                    <li>{t('item25')}</li>
-                  </ul>
-                </PolicySection>
-
-                <PolicySection title={t('heading19')}>
-                  <p>{t.rich('body35', {
-          b: (chunks) => <strong className="text-[#121212]/85 font-semibold">{chunks}</strong>,
-        })}</p>
-                  <p>{t.rich('body36', {
-          b: (chunks) => <strong className="text-[#121212]/85 font-semibold">{chunks}</strong>,
-        })}</p>
-                </PolicySection>
-
-                <PolicySection title={t('heading20')}>
-                  <p>{t('body37')}</p>
-                </PolicySection>
-
-                <PolicySection title={t('heading21')}>
-                  <p>{t.rich('body38', {
-          b: (chunks) => <strong className="text-[#121212]/85 font-semibold">{chunks}</strong>,
-        })}</p>
-                </PolicySection>
-
-                <PolicySection title={t('heading22')}>
-                  <ul>
-                    <li>{t('item26')}</li>
-                    <li>{t('item27')}</li>
-                    <li>{t('item28')}</li>
-                  </ul>
-                </PolicySection>
-
-                <PolicySection title={t('heading23')}>
-                  <p>{t('body39')}</p>
-                </PolicySection>
-
-                <PolicySection title={t('heading24')}>
-                  <p>{t('body40')}</p>
-                  <ul>
-                    <li>{t('item29')}</li>
-                    <li>{t('item30')}</li>
-                    <li>{t('item31')}</li>
-                    <li>{t('item32')}</li>
-                  </ul>
-                  <p>{t.rich('body41', {
-          a: (chunks) => <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
-        })}</p>
-                </PolicySection>
-              </div>
-
-              {/* Divider */}
-              <div className="h-px bg-[#121212]/[0.08] mb-20" />
-
-              {/* EN Version */}
+              {/* ══ NOTICE 2: CLIENTI ══ */}
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-bold tracking-[0.1em] uppercase mb-8" style={{ background: 'rgba(75,77,247,0.08)', color: '#4B4DF7', border: '1px solid rgba(75,77,247,0.15)' }}>
-                  {t('text5')}</div>
+                  {t('clientsBadge')}</div>
 
-                <h2 className="text-[clamp(1.4rem,2.5vw,1.9rem)] font-semibold text-[#121212] mb-8 leading-[1.3]">
-                  {t('heading4')}</h2>
+                <h2 className="text-[clamp(1.4rem,2.5vw,1.9rem)] font-semibold text-[#121212] mb-3 leading-[1.3]">
+                  {t('clientsHeading')}</h2>
+                <p className="text-[14px] text-[#121212]/40 mb-10">
+                  {t('clientsSubtitle')}</p>
 
-                <p className="text-[16px] text-[#121212]/70 leading-[1.85] mb-10">
-                  {t.rich('body42', {
-          b: (chunks) => <strong className="text-[#121212]/85 font-semibold">{chunks}</strong>,
-        })}</p>
-
-                <PolicySection title={t('heading25')}>
-                  <p>{t('body43')}</p>
+                <PolicySection title={t('clientsSection1Title')}>
+                  <p>{t('clientsSection1Body1')}</p>
+                  <p className="font-semibold text-[#121212]/80 mt-4">{t('clientsSection1Body2')}</p>
                   <ul>
-                    <li>{t('item33')}</li>
-                    <li>{t('item34')}</li>
-                    <li>{t('item35')}</li>
-                    <li>{t.rich('item36', {
+                    <li>{t('clientsSection1Item1')}</li>
+                    <li>{t.rich('clientsSection1Item2', {
           a: (chunks) => <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
         })}</li>
                   </ul>
                 </PolicySection>
 
-                <PolicySection title={t('heading26')}>
-                  <p>{t('body44')}</p>
+                <PolicySection title={t('clientsSection2Title')}>
+                  <p>{t.rich('clientsSection2Body1', {
+          a: (chunks) => <a href="mailto:dpo@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
+        })}</p>
                 </PolicySection>
 
-                <PolicySection title={t('heading27')}>
+                <PolicySection title={t('clientsSection3Title')}>
+                  <p>{t('clientsSection3Body1')}</p>
                   <ul>
-                    <li>{t('item37')}</li>
-                    <li>{t('item38')}</li>
-                    <li>{t('item39')}</li>
+                    <li>{t('clientsSection3Item1')}</li>
+                    <li>{t('clientsSection3Item2')}</li>
+                    <li>{t('clientsSection3Item3')}</li>
+                  </ul>
+                  <p className="mt-4">{t('clientsSection3Body2')}</p>
+                  <ul>
+                    <li>{t('clientsSection3Item4')}</li>
+                    <li>{t('clientsSection3Item5')}</li>
+                    <li>{t('clientsSection3Item6')}</li>
+                    <li>{t('clientsSection3Item7')}</li>
+                    <li>{t('clientsSection3Item8')}</li>
                   </ul>
                 </PolicySection>
 
-                <PolicySection title={t('heading28')}>
-                  <p>{t.rich('body45', {
-          b: (chunks) => <strong className="text-[#121212]/85 font-semibold">{chunks}</strong>,
-        })}</p>
-                  <p>{t.rich('body46', {
-          b: (chunks) => <strong className="text-[#121212]/85 font-semibold">{chunks}</strong>,
-        })}</p>
+                <PolicySection title={t('clientsSection4Title')}>
+                  <p>{t('clientsSection4Intro')}</p>
+
+                  <p className="font-semibold text-[#121212]/80 mt-5">{t('clientsSection4Sub1Label')}</p>
+                  <p>{t('clientsSection4Sub1Purpose')}</p>
+                  <p>{t('clientsSection4Sub1Basis')}</p>
+
+                  <p className="font-semibold text-[#121212]/80 mt-5">{t('clientsSection4Sub2Label')}</p>
+                  <p>{t('clientsSection4Sub2Purpose')}</p>
+                  <p>{t('clientsSection4Sub2Basis')}</p>
+
+                  <p className="font-semibold text-[#121212]/80 mt-5">{t('clientsSection4Sub3Label')}</p>
+                  <p>{t('clientsSection4Sub3Purpose')}</p>
+                  <p>{t('clientsSection4Sub3Basis')}</p>
+
+                  <p className="font-semibold text-[#121212]/80 mt-5">{t('clientsSection4Sub4Label')}</p>
+                  <p>{t('clientsSection4Sub4Purpose')}</p>
+                  <p>{t('clientsSection4Sub4Basis')}</p>
+                  <p>{t('clientsSection4Sub4Alt')}</p>
                 </PolicySection>
 
-                <PolicySection title={t('heading29')}>
-                  <p>{t('body47')}</p>
+                <PolicySection title={t('clientsSection5Title')}>
+                  <p>{t('clientsSection5Body1')}</p>
+                  <p>{t('clientsSection5Body2')}</p>
                 </PolicySection>
 
-                <PolicySection title={t('heading30')}>
-                  <p>{t.rich('body48', {
-          b: (chunks) => <strong className="text-[#121212]/85 font-semibold">{chunks}</strong>,
-        })}</p>
+                <PolicySection title={t('clientsSection6Title')}>
+                  <p>{t('clientsSection6Body1')}</p>
                 </PolicySection>
 
-                <PolicySection title={t('heading31')}>
+                <PolicySection title={t('clientsSection7Title')}>
+                  <p>{t('clientsSection7Body1')}</p>
+                  <p>{t('clientsSection7Body2')}</p>
+                </PolicySection>
+
+                <PolicySection title={t('clientsSection8Title')}>
+                  <p>{t('clientsSection8Body1')}</p>
                   <ul>
-                    <li>{t('item40')}</li>
-                    <li>{t('item41')}</li>
-                    <li>{t('item42')}</li>
+                    <li>{t('clientsSection8Item1')}</li>
+                    <li>{t('clientsSection8Item2')}</li>
+                    <li>{t('clientsSection8Item3')}</li>
+                    <li>{t('clientsSection8Item4')}</li>
+                    <li>{t('clientsSection8Item5')}</li>
                   </ul>
+                  <p className="mt-4">{t('clientsSection8Body2')}</p>
+                  <p>{t('clientsSection8Body3')}</p>
                 </PolicySection>
 
-                <PolicySection title={t('heading32')}>
-                  <p>{t('body49')}</p>
-                </PolicySection>
-
-                <PolicySection title={t('heading33')}>
-                  <p>{t('body50')}</p>
+                <PolicySection title={t('clientsSection9Title')}>
+                  <p>{t('clientsSection9Body1')}</p>
                   <ul>
-                    <li>{t('item43')}</li>
-                    <li>{t('item44')}</li>
-                    <li>{t('item45')}</li>
-                    <li>{t('item46')}</li>
+                    <li>{t('clientsSection9Item1')}</li>
+                    <li>{t('clientsSection9Item2')}</li>
                   </ul>
-                  <p>{t.rich('body51', {
-          a: (chunks) => <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
+                  <p className="mt-4">{t('clientsSection9Body2')}</p>
+                </PolicySection>
+
+                <PolicySection title={t('clientsSection10Title')}>
+                  <p>{t('clientsSection10Body1')}</p>
+                  <ul>
+                    <li>{t('clientsSection10Item1')}</li>
+                    <li>{t('clientsSection10Item2')}</li>
+                    <li>{t('clientsSection10Item3')}</li>
+                    <li>{t('clientsSection10Item4')}</li>
+                  </ul>
+                  <p className="mt-4">{t('clientsSection10Body2')}</p>
+                </PolicySection>
+
+                <PolicySection title={t('clientsSection11Title')}>
+                  <p>{t('clientsSection11Body1')}</p>
+                  <ul>
+                    <li>{t('clientsSection11Item1')}</li>
+                    <li>{t('clientsSection11Item2')}</li>
+                    <li>{t('clientsSection11Item3')}</li>
+                    <li>{t('clientsSection11Item4')}</li>
+                    <li>{t('clientsSection11Item5')}</li>
+                    <li>{t('clientsSection11Item6')}</li>
+                    <li>{t('clientsSection11Item7')}</li>
+                  </ul>
+                  <p className="mt-4">{t.rich('clientsSection11Body2', {
+          a: (chunks) => <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
+          a2: (chunks) => <a href="mailto:privacy@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
+          a3: (chunks) => <a href="mailto:dpo@skillvue.ai" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
         })}</p>
+                </PolicySection>
+
+                <PolicySection title={t('clientsSection12Title')}>
+                  <p>{t('clientsSection12Body1')}</p>
                 </PolicySection>
 
                 <p className="text-[13px] text-[#121212]/35 mt-12 pt-8 border-t border-[#121212]/[0.06]">
-                  {t('body52')}</p>
+                  {t('clientsFooterNote')}</p>
               </div>
 
             </Reveal>
