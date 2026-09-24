@@ -6917,9 +6917,7 @@
       "decide": "Skillvue Decide"
     },
     "platform": {
-      "eyebrow": "One platform, three products",
       "heading": "Objective skills flow from jobs,<br></br>to measurement, to decisions.",
-      "body": "Map, Assess and Decide are three connected products that share one skills language. Together they carry objective skills data across the whole talent lifecycle.",
       "explore": "Explore",
       "cards": {
         "map": "Build your skills-to-jobs architecture. Turn your roles and the market signals into one living skills map.",
@@ -6957,7 +6955,8 @@
           "title": "Explore and navigate",
           "body": "Intuitive visualization makes your skills architecture easy to read and navigate."
         }
-      }
+      },
+      "readMore": "Read more"
     },
     "assess": {
       "heading": "Verify skills, predict potential,<br></br>make every decision defensible.",

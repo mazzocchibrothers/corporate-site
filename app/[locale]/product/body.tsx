@@ -187,6 +187,20 @@ function Features({ product }: { product: Product }) {
   );
 }
 
+function ReadMore() {
+  const t = useTranslations('product');
+  const locale = useLocale();
+  return (
+    <a
+      href={href('product/skillvue-map', locale)}
+      className="group inline-flex h-[46px] shrink-0 items-center gap-2.5 whitespace-nowrap rounded-full border border-[#e5e7eb] bg-white pl-6 pr-[22px] text-[16px] font-medium text-[#121212] transition-colors hover:bg-[#f7f7f7]"
+    >
+      {t('map.readMore')}
+      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.8} aria-hidden="true" />
+    </a>
+  );
+}
+
 export default function SkillvueMapPage() {
   const t = useTranslations('product');
   const locale = useLocale();
@@ -199,7 +213,7 @@ export default function SkillvueMapPage() {
       <main>
         <div className="section-light">
           {/* Hero */}
-          <section className="pt-[120px] pb-12 lg:pt-[152px] lg:pb-20 text-center">
+          <section className="pt-[120px] pb-8 lg:pt-[152px] text-center">
             <Reveal duration={0.7} className={`${container} flex flex-col items-center`}>
               <h1 className="font-semibold text-[48px] md:text-[64px] text-[#121212] text-balance" style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}>
                 {t.rich('hero.heading', { br })}
@@ -223,13 +237,11 @@ export default function SkillvueMapPage() {
               y={32}
               scale={0.98}
               duration={0.9}
-              className="max-w-[1344px] mx-5 md:mx-8 lg:mx-auto rounded-[24px] md:rounded-[40px] px-4 pt-8 pb-4 md:px-12 md:pt-[52px] md:pb-12 text-center"
+              className="max-w-[1344px] mx-5 md:mx-8 lg:mx-auto rounded-[24px] md:rounded-[40px] px-4 pb-4 md:px-12 md:pb-12 text-center"
               style={{ background: 'linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.85) 18%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0) 62%), linear-gradient(90deg, #fdf1ea 0%, #f5f5f7 50%, #efeefd 100%)' }}
             >
-              <div className="text-[12px] font-medium uppercase tracking-[0.1em] text-[#4B4DF7]">{t('platform.eyebrow')}</div>
-              <h2 className={`mt-[18px] ${H2}`}>{t.rich('platform.heading', { br })}</h2>
-              <p className="mx-auto mt-[22px] max-w-[800px] text-[18px] leading-[1.4] text-[#4B4B4B] text-balance">{t('platform.body')}</p>
-              <div className="mt-10 grid gap-3 md:grid-cols-3 lg:gap-[42px]">
+              <h2 className={H2}>{t.rich('platform.heading', { br })}</h2>
+              <div className="mt-10 lg:mt-12 grid gap-3 md:grid-cols-3 lg:gap-[42px]">
                 {PRODUCTS.map((p) => (
                   <a
                     key={p}
@@ -253,10 +265,14 @@ export default function SkillvueMapPage() {
           <section id="map" className={section}>
             <div className={container}>
               <Reveal><Logo product="map" /></Reveal>
-              <Reveal delay={0.1}><h2 className={`mt-6 lg:mt-11 ${H2}`}>{t.rich('map.heading', { br })}</h2></Reveal>
+              <Reveal delay={0.1} className="mt-6 lg:mt-11 flex flex-wrap items-end justify-between gap-x-10 gap-y-6">
+                <h2 className={`min-w-0 flex-[1_1_560px] ${H2}`}>{t.rich('map.heading', { br })}</h2>
+                <ReadMore />
+              </Reveal>
               <ProblemSolution product="map" />
               <TabbedPanel product="map" tabs={MAP_TABS} />
               <Features product="map" />
+              <div className="mt-8 lg:mt-20 flex justify-center"><ReadMore /></div>
             </div>
           </section>
 
