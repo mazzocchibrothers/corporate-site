@@ -417,6 +417,13 @@
     }
   },
   {
+    "id": "product/skillvue-map",
+    "paths": {
+      "en": "/product/skillvue-map",
+      "it": "/prodotto/skillvue-map"
+    }
+  },
+  {
     "id": "resources/press",
     "paths": {
       "en": "/resources/press",

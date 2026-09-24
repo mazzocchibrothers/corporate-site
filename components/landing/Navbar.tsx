@@ -97,7 +97,7 @@ export default function Navbar() {
           const probeY = 82;
           const el = document.elementFromPoint(window.innerWidth / 2, probeY);
           if (el) {
-            const isLight = el.closest('.section-breathe') !== null;
+            const isLight = el.closest('.section-breathe, .section-light') !== null;
             setOnLightSection(isLight);
           }
 
@@ -106,8 +106,8 @@ export default function Navbar() {
         ticking.current = true;
       }
     };
-    // /product opens on a light section, so the bar has to know what it sits
-    // on before the first scroll, not only after it.
+    // A page can open on a light section (/product, /product/skillvue-map), so
+    // the bar has to know what it sits on before the first scroll, not only after it.
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
