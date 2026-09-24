@@ -38,7 +38,7 @@ const FLOW_INPUTS = [
 function Mockup({ src, alt, focus, video }: { src: string; alt: string; focus: readonly [number, number]; video?: string }) {
   const position = `${(focus[0] / 1344) * 100}% ${(focus[1] / 956) * 100}%`;
   return (
-    <div className="overflow-hidden rounded-lg border border-black/[0.12] bg-[#F7F7F7] aspect-square md:aspect-[4/3] lg:aspect-[1344/956]">
+    <div className="overflow-hidden rounded-xl border border-black/[0.12] bg-[#F7F7F7] aspect-square md:aspect-[4/3] lg:aspect-[1344/956]">
       {video ? (
         <div role="img" aria-label={alt} className="h-full" style={{ ['--focus' as string]: position }}>
           <HeroVideo
