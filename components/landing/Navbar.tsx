@@ -18,7 +18,7 @@ import { Button } from '@/components/ui/button';
 // through href(), which is what retired the hrefIt flags — an Italian slug is
 // declared in the registry once and every link in the site follows it.
 const navLinks: { id: string; route?: string; items: string[] | null }[] = [
-  { id: 'platform', items: ['product-overview', 'science'] },
+  { id: 'platform', items: ['product', 'science'] },
   {
     id: 'solutions',
     items: [
@@ -38,7 +38,7 @@ const navLinks: { id: string; route?: string; items: string[] | null }[] = [
 
 // One icon per dropdown item, keyed the same way as its label (see labelKey).
 const ICONS: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
-  productOverview: AppWindow,
+  product: AppWindow,
   science: Atom,
   talentAcquisition: UserSearch,
   performanceManagement: UserCog,
@@ -106,8 +106,8 @@ export default function Navbar() {
         ticking.current = true;
       }
     };
-    // A page can open on a light section (/product/skillvue-map), so the bar has
-    // to know what it sits on before the first scroll, not only after it.
+    // A page can open on a light section (/product, /product/skillvue-map), so
+    // the bar has to know what it sits on before the first scroll, not only after it.
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);

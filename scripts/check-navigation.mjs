@@ -39,7 +39,7 @@ assert.equal(at('/customers/adr', 'it'), '/it/clienti/adr');
 assert.equal(at('/book-meeting', 'it'), '/it/prenota-incontro');
 assert.equal(at('/about', 'it'), '/it/chi-siamo');
 assert.equal(at('/science', 'it'), '/it/scienza');
-assert.equal(at('/product-overview', 'it'), '/it/piattaforma');
+assert.equal(at('/product', 'it'), '/it/prodotto');
 assert.equal(at('/solutions/internal-mobility', 'it'), '/it/soluzioni/mobilita-interna');
 assert.equal(at('/resources/press', 'it'), '/it/risorse/stampa');
 

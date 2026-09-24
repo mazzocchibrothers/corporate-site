@@ -9,7 +9,7 @@
       "bookDemo": "Prenota una Demo",
       "menu": "Menu",
       "links": {
-        "productOverview": "Prodotto",
+        "product": "Prodotto",
         "science": "Scienza",
         "talentAcquisition": "Selezione",
         "performanceManagement": "Performance Management",
@@ -34,7 +34,7 @@
         "resources": "Risorse"
       },
       "links": {
-        "productOverview": "Prodotto",
+        "product": "Prodotto",
         "science": "Scienza",
         "talentAcquisition": "Hiring",
         "performanceManagement": "Performance Management",
@@ -6904,221 +6904,237 @@
     "heading14": "10. Tempi di conservazione",
     "heading15": "11. Diritti dell'interessato"
   },
-  "product-overview": {
-    "hero": {
-      "heading": "Una piattaforma.<br></br>Tutte le tue decisioni sulle persone.<br></br><span>Con dati oggettivi.</span>",
-      "body": "Skillvue è la piattaforma di talent intelligence basata su AI che trasforma i processi HR statici in insight predittivi e oggettivi. Valuta le competenze, ottieni una visione predittiva sul potenziale e rendi ogni decisione sulle persone più difendibile",
-      "cta": "Prenota una Demo",
-      "animation": "https://cdn.lottielab.com/l/9E2vegrr5hs33N.json",
-      "animationEmbed": "https://cdn.lottielab.com/l/9E2vegrr5hs33N.html"
-    },
-    "assessmentFormats": {
-      "layers": {
-        "interactionFormat": {
-          "title": "INTERACTION FORMAT",
-          "subtitle": "Come viene costruito l'verification",
-          "items": {
-            "structuredInterviews": {
-              "name": "Interviste\nstrutturate",
-              "desc": "Set di domande standardizzate per una valutazione comparabile ed equa"
-            },
-            "conversationFlows": {
-              "name": "Flussi\nconversazionali",
-              "desc": "Conversazioni guidate dall'AI che si adattano al contesto in tempo reale"
-            },
-            "closeEndedSurveys": {
-              "name": "Sondaggi\na risposta chiusa",
-              "desc": "Focus su item specifici per ottenere una misurazione oggettiva"
-            }
-          }
-        },
-        "assessmentMethod": {
-          "title": "ASSESSMENT METHOD",
-          "subtitle": "Cosa viene misurato",
-          "items": {
-            "behavioralEventInterview": {
-              "name": "Behavioral event\ninterview",
-              "desc": "Comportamenti passati come segnali predittori della performance futura"
-            },
-            "situationalJudgment": {
-              "name": "Giudizio\nSituazionale",
-              "desc": "Scenari realistici per testare il decision-making"
-            },
-            "declarativeKnowledge": {
-              "name": "Conoscenza\ndichiarativa",
-              "desc": "Quello che i candidati sanno: fatti, concetti, principi"
-            },
-            "proceduralKnowledge": {
-              "name": "Conoscenza\nprocedurale",
-              "desc": "Ciò che i candidati sanno fare: metodi e processi"
-            },
-            "conditionalKnowledge": {
-              "name": "Conoscenza\ncondizionale",
-              "desc": "Quando e perché: applicazione contestuale delle conoscenze"
-            }
-          }
-        },
-        "responseFormat": {
-          "title": "RESPONSE FORMAT",
-          "subtitle": "Come viene costruito l'verification",
-          "items": {
-            "audio": {
-              "name": "Audio",
-              "desc": "Risposte audio per un'esperienza di valutazione rapida ed efficace"
-            },
-            "video": {
-              "name": "Video",
-              "desc": "Input multimodale per vedere i partecipanti"
-            },
-            "written": {
-              "name": "Testo",
-              "desc": "Risposte a testo libero per gestire competenze che richiedono molta scrittura o per verification svolti in ufficio"
-            },
-            "scqsMcqs": {
-              "name": "Domande a\nscelta multipla",
-              "desc": "Scelta strutturata per scoring scalabile e oggettivo"
-            }
-          }
-        }
-      },
-      "heading": "Verification costruiti per far emergere le vere <span>capacità</span>"
-    },
-    "enterpriseTrust": {
-      "badges": {
-        "euAiAct": "EU AI Act",
-        "iso27001": "ISO 27001",
-        "gdpr": "GDPR",
-        "aicpaSoc2": "AICPA SOC 2"
-      },
-      "pillars": {
-        "customizability": {
-          "title": "Personalizzazione",
-          "desc": "Ogni componente, interno o rivolto ai candidati, si adatta ai tuoi processi, al tuo modello di leadership, ai tuoi workflow. Ci implementiamo alle tue condizioni, non alle nostre."
-        },
-        "security": {
-          "title": "Sicurezza",
-          "desc": "Certificati ISO 27001 e SOC 2. La protezione dei dati è integrata nella nostra architettura dal primo giorno."
-        },
-        "compliance": {
-          "title": "Conformità",
-          "desc": "Dal GDPR all'EU AI Act, costruiamo per gli ambienti normativi più esigenti così non devi preoccuparti del futuro."
-        }
-      },
-      "heading": "Costruito <span>per le grandi organizzazioni</span>",
-      "body": "Siamo rigorosi sulla scienza, flessibili su tutto il resto. Dalla personalizzazione profonda agli ambienti normativi più esigenti."
-    },
-    "howSkillvueWorks": {
-      "steps": {
-        "informationGathering": {
-          "title": "Raccolta Informazioni",
-          "what": "Impariamo dalla tua organizzazione: framework di competenze, processi HR, sistemi, documentazione.",
-          "capability": "Acquisizione di contesto, processi e dati"
-        },
-        "jobsPeopleSkills": {
-          "title": "Mappatura Ruoli-Persone-Competenze",
-          "what": "Trasformiamo il panorama organizzativo in una tassonomia dinamica delle competenze.",
-          "capability": "Generazione tassonomia competenze, mappatura domanda-offerta talenti, visione sull'impatto di mercato"
-        },
-        "verificationGeneration": {
-          "title": "Generazione Valutazioni",
-          "what": "Creiamo valutazioni competenza per competenza, con una profonda contestualizzazione con i tuoi ruoli e framework.",
-          "capability": "Item generati da AI, validazione esperti, adattamento continuo"
-        },
-        "verificationDelivery": {
-          "title": "Erogazione Valutazioni",
-          "what": "Incontriamo le persone dove sono, attraverso i canali dove l'adozione è più alta.",
-          "capability": "Web app, WhatsApp, MS Teams, Slack. Il tutto in formato audio, video, scritto"
-        },
-        "evaluationScoring": {
-          "title": "Valutazione & Scoring",
-          "what": "Gli agenti AI raccomandano punteggi basati sulla scienza. Gli esseri umani mantengono il controllo sulla decisione finale.",
-          "capability": "Spiegabilità dei punteggi, revisione human-in-the-loop"
-        },
-        "reportingInsights": {
-          "title": "Reporting & Insight",
-          "what": "Analytics pronti all'uso",
-          "capability": "Piattaforma reporting Skillvue + integrazioni native (ATS, LMS, HRIS, PMS)"
-        }
-      },
-      "heading": "Dal tuo contesto a insight chiari e immediatamente utilizzabili <span>in sei passi</span>",
-      "body": "Skillvue non ti chiede di cambiare il modo in cui lavori. Iniziamo imparando dalla tua organizzazione e forniamo insight dove i tuoi team già operano.",
-      "text": "PASSO",
-      "text2": "CAPACITÀ CHIAVE"
-    },
-    "integrationEcosystem": {
-      "heading": "Diamo vita ai tuoi <span>processi HR più strategici</span>",
-      "body": "Skillvue inserisce dati oggettivi sul talento e le competenze nel tuo stack esistente, trasformandoli da punto di blocco dei tuoi processi a benzina per le tue decisioni",
-      "body2": "Se ha un'API, ci possiamo integrare",
-      "systems": "Ci integriamo nativamente con 100+ tra i principali <acr>ATS</acr> · <acr>LMS</acr> · <acr>LXP</acr> · <acr>PMS</acr> · <acr>HRIS</acr>"
-    },
-    "cta": {
-      "heading": "Pronto a rendere ogni decisione sul talento <span>oggettiva?</span>",
-      "text": "Pronto per esplorare",
-      "heading2": "Prenota una Demo",
-      "body": "Vedi Skillvue in azione con il tuo caso d'uso specifico",
-      "cta": "Prenota una Demo"
-    },
-    "whatSkillvueDoes": {
-      "pillars": {
-        "talent-acquisition": {
-          "title": "Talent Acquisition",
-          "desc": "Sostituisci i colloqui basati sull'intuito con valutazioni AI che predicono la performance lavorativa. Scalabile da 10 a 10.000 candidati. Stesso rigore scientifico a ogni livello.",
-          "link": "Esplora Talent Acquisition"
-        },
-        "performance": {
-          "title": "Performance Management",
-          "desc": "Aggiungi un livello oggettivo ai cicli di performance. Le valutazioni strutturate riducono i bias, migliorano la calibrazione e danno ai manager un punto di partenza basato sui dati.",
-          "link": "Esplora Performance Management"
-        },
-        "learning": {
-          "title": "Learning & Development",
-          "desc": "Scopri esattamente dove sono le aree di miglioramento: a livello individuale, di team e di organizzazione. Finanzia programmi basati sull'evidenza, misura i progressi con precisione.",
-          "link": "Esplora Learning & Development"
-        },
-        "mobility": {
-          "title": "Mobilità Interna & Successione",
-          "desc": "Scopri chi è pronto per un nuovo ruolo oggi, chi può essere sviluppato in 6 mesi e dove si concentrano le aree più critiche per lo sviluppo",
-          "link": "Esplora Mobilità Interna"
-        }
-      },
-      "heading": "Dallo screening alla successione. Ogni decisione sul talento, <span>connessa.</span>",
-      "body": "La maggior parte delle organizzazioni gestisce selezione, performance, learning, development e mobilità su strumenti disconnessi con framework diversi. Skillvue li connette attraverso un unico linguaggio di competenze e un unico layer di dati."
-    },
-    "whatWeAssess": {
-      "dimensions": {
-        "suitability": {
-          "title": "Idoneità",
-          "subtitle": "Fit persona-ruolo",
-          "desc": "Valuta l'idoneità oggettiva: qualifiche, disponibilità, logistica, requisiti di base. Uno screening strutturato prima di valutazioni più approfondite."
-        },
-        "softSkills": {
-          "title": "Soft Skill",
-          "subtitle": "Competenze comportamentali",
-          "desc": "Comunicazione, collaborazione, problem-solving, leadership. Osservabili attraverso l'azione, radicate in pattern comportamentali stabili e tra i più forti predittori di performance a lungo termine."
-        },
-        "hardSkills": {
-          "title": "Hard Skill",
-          "subtitle": "Competenza tecnica",
-          "desc": "Competenze specifiche per area misurate rispetto a livelli di competenza definiti, basate su tassonomie strutturate rilevanti per il ruolo."
-        },
-        "potential": {
-          "title": "Potenziale",
-          "subtitle": "Capacità di crescita",
-          "desc": "Predice la capacità di crescere, adattarsi e affrontare maggiore complessità. Valutata attraverso tre dimensioni validate: agilità di apprendimento, motivazione intrinseca e aspirazione."
-        },
-        "traits": {
-          "title": "Tratti",
-          "subtitle": "Pattern disposizionali",
-          "desc": "Tratti di personalità stabili come apertura, coscienziosità, resilienza che modellano il fit culturale e la performance lavorativa. Basati sulla scienza Big Five."
-        }
-      },
-      "heading": "Cinque dimensioni per <span>valutazioni oggettive</span>",
-      "body": "Ogni persona viene valutata con un framework strutturato e supportato dalla scienza, che sia un candidato o un dipendente con 20 anni di esperienza.",
-      "cta": "Scopri la Scienza"
-    },
+  "product": {
     "meta": {
-      "title": "Piattaforma | Valutazioni Talent con AI | Skillvue",
-      "description": "Un'unica piattaforma per selezione, performance, L&D e successione. Valutazioni AI con scienza psicometrica e 100+ integrazioni con SAP, Workday e Oracle."
+      "title": "Skillvue Map | L’architettura delle skill in pochi giorni | Skillvue",
+      "description": "Skillvue Map combina i dati sui tuoi ruoli, i segnali di mercato e la scienza di Skillvue per costruire tassonomia delle skill e mappatura skill-ruoli in giorni, non mesi."
+    },
+    "cta": "Prenota una demo",
+    "hero": {
+      "titleLead": "Un’unica architettura delle skill,",
+      "titleTail": "in giorni, non in mesi.",
+      "body": "Skillvue Map combina i tuoi dati interni, i segnali di mercato e la nostra scienza per costruire la tua tassonomia delle skill e la mappatura skill-ruoli, in giorni, non in mesi, e le mantiene sempre aggiornate.",
+      "imageAlt": "Esplora skill di Skillvue Map: grafico a bolle dei cluster di skill con la skill International Taxation aperta e un pannello chat AI"
+    },
+    "problem": {
+      "eyebrow": "Il problema",
+      "title": "Le skill vivono in fogli di calcolo e job description sparsi.",
+      "body": "Hanno nomi diversi in ogni team e manca un modo condiviso per confrontarle. Costruire un’architettura delle skill con un approccio tradizionale richiede mesi di consulenza, e i risultati sono già superati al momento della consegna."
+    },
+    "solution": {
+      "eyebrow": "La soluzione",
+      "title": "Dal tuo contesto a una mappa delle skill sempre aggiornata.",
+      "body": "Skillvue Map unisce le tue informazioni interne ai segnali di mercato esterni e alla nostra scienza per generare la tua tassonomia e architettura delle skill, pronta in pochi giorni."
+    },
+    "how": {
+      "eyebrow": "Come funziona",
+      "title": "Come funziona Skillvue Map",
+      "body": "Skillvue Map combina le informazioni sui tuoi ruoli con la market intelligence e i framework scientifici di Skillvue, e genera in pochi giorni una mappa delle skill unificata e su misura, offrendo ai tuoi esperti un’architettura validata esternamente da rivedere, affinare e validare.",
+      "steps": [
+        {
+          "title": "Acquisisci",
+          "body": "I dati sui tuoi ruoli (job description, modelli di competenza, contesto di business) insieme alla market intelligence e ai framework di Skillvue."
+        },
+        {
+          "title": "Genera",
+          "body": "Definita la struttura dei ruoli, l’AI genera la prima mappatura delle skill in pochi minuti."
+        },
+        {
+          "title": "Valida",
+          "body": "Il team People Science di Skillvue e i tuoi esperti rivedono, affinano e validano ogni profilo nella piattaforma."
+        }
+      ],
+      "flowLabel": "Flusso",
+      "flow": {
+        "jobsData": "I dati sui tuoi ruoli",
+        "market": "Market intelligence",
+        "science": "Scienza Skillvue",
+        "ai": "Mappatura AI",
+        "ready": "Mappa delle skill pronta"
+      }
+    },
+    "features": {
+      "jobs": {
+        "eyebrow": "Feature 1",
+        "title": "Definisci cosa richiede ogni ruolo",
+        "body": "Titoli e job description raramente raccontano tutta la storia. Skillvue Map riporta i tuoi profili di ruolo in una struttura coerente e unificata, organizzando i ruoli in famiglie e individuando le sovrapposizioni nei nomi. Job description, modelli di competenza esistenti e contesto di business modellano la mappatura su come funziona la tua organizzazione.",
+        "points": [
+          "Skill richieste: le hard e soft skill rilevanti per il ruolo",
+          "Livelli di proficiency: quanto deve essere sviluppata ogni skill",
+          "Priorità delle skill: l’importanza relativa di ogni skill per quel ruolo"
+        ],
+        "imageAlt": "Architettura dei ruoli di Skillvue Map in vista elenco, con le famiglie di ruoli espanse"
+      },
+      "consistency": {
+        "eyebrow": "Feature 2",
+        "title": "Porta coerenza tra team e paesi",
+        "body": "Quando le skill vengono definite in modo indipendente dai vari dipartimenti, la stessa capacità compare con nomi diversi o con aspettative diverse senza un motivo chiaro. Skillvue Map applica definizioni di skill comuni a tutta l’architettura, tenendo conto dei requisiti dei singoli ruoli. Le informazioni della tua azienda definiscono il contesto interno; la market intelligence aggiunge prospettiva sui ruoli comparabili.",
+        "points": [
+          "Framework di soft skill validati scientificamente",
+          "Definizioni di hard skill basate sul mercato",
+          "Un linguaggio comune delle skill tra business unit e sedi"
+        ],
+        "imageAlt": "Profilo di skill di Skillvue Map per il ruolo Digital Marketing Manager, con skill richieste, priorità e livelli di proficiency"
+      },
+      "mapping": {
+        "eyebrow": "Feature 3",
+        "title": "Accelera la mappatura. L’ultima parola resta ai tuoi esperti.",
+        "body": "Definita la struttura dei ruoli, Skillvue Map usa l’AI per generare una prima mappatura delle skill in pochi minuti. Il team People Science e gli esperti di dominio rivedono la mappatura proposta, e i team HR possono coinvolgere gli stakeholder di business nella validazione direttamente in piattaforma. L’automazione accelera il lavoro; il giudizio degli esperti garantisce che i profili rispecchino i ruoli che descrivono.",
+        "points": [
+          "Motivazione visibile per ogni raccomandazione",
+          "Suggerisci modifiche, aggiungi o rimuovi skill",
+          "Gli stakeholder di business validano in piattaforma"
+        ],
+        "imageAlt": "Vista Confronta ruoli di Skillvue Map: Regional Store Manager e Customer Service Supervisor a confronto"
+      },
+      "activation": {
+        "eyebrow": "Feature 4",
+        "title": "Metti al lavoro i requisiti dei ruoli in tutto Skillvue",
+        "body": "Parti da un ruolo per capirne i requisiti, oppure da una skill per vedere dove è richiesta e come variano le aspettative. Le viste visuale ed elenco aiutano i team a navigare la struttura, e le opzioni di export rendono la mappatura disponibile ad altri sistemi e processi.",
+        "points": [
+          "Navigazione da ruolo a skill e da skill a ruolo",
+          "Visualizzazione ed elenchi",
+          "Export verso altri sistemi"
+        ],
+        "imageAlt": "Elenco dei partecipanti in Skillvue Decide ordinato per corrispondenza delle skill, con un pannello chat AI"
+      }
+    },
+    "platform": {
+      "eyebrow": "Una piattaforma, tre prodotti",
+      "title": "Skill oggettive che fluiscono dai ruoli, alla misurazione, alle decisioni.",
+      "body": "Map, Assess e Decide sono tre prodotti connessi che condividono un unico linguaggio delle skill. Insieme portano dati oggettivi sulle skill lungo l’intero ciclo di vita del talento.",
+      "map": {
+        "name": "Skillvue Map",
+        "body": "Costruisci la tua architettura skill-ruoli. Trasforma i tuoi ruoli e i segnali di mercato in un’unica mappa delle skill sempre aggiornata."
+      },
+      "assess": {
+        "name": "Skillvue Assess",
+        "body": "Misura le skill attraverso conversazioni scientifiche e scalate con l’AI. Ogni risultato è validato, coerente ed equo."
+      },
+      "decide": {
+        "name": "Skillvue Decide",
+        "body": "Metti i dati oggettivi sulle skill al servizio di ogni decisione chiave sul talento. Struttura i workflow con l’agilità di un Copilot AI."
+      }
+    },
+    "demo": {
+      "title": "Guarda Skillvue Map in azione.",
+      "body": "Prenota una demo e scopri come trasformare i ruoli della tua organizzazione in profili di competenze unificati in Skillvue."
+    },
+    "skillvue-map": {
+      "hero": {
+        "heading": "Un’unica piattaforma.<br></br>Decisioni sui talenti, finalmente oggettive.",
+        "body": "Skillvue è il sistema operativo delle competenze. Un’unica fonte di dati oggettivi sulle skills, così ogni decisione, dall’assunzione alla crescita, è basata su prove concrete, non sull’intuito.",
+        "cta": "Prenota una Demo",
+        "science": "Scopri la nostra scienza"
+      },
+      "logos": {
+        "map": "Skillvue Map",
+        "assess": "Skillvue Assess",
+        "decide": "Skillvue Decide"
+      },
+      "platform": {
+        "eyebrow": "Un’unica piattaforma, tre prodotti",
+        "heading": "Le competenze oggettive fluiscono dai ruoli,<br></br>alla misurazione, alle decisioni.",
+        "body": "Map, Assess e Decide sono tre prodotti connessi che condividono un unico linguaggio delle competenze. Insieme portano dati oggettivi sulle skills attraverso l’intero ciclo di vita del talento.",
+        "explore": "Scopri",
+        "cards": {
+          "map": "Costruisci la tua architettura delle competenze. Trasforma i tuoi ruoli e i segnali di mercato in un’unica mappa dinamica delle competenze.",
+          "assess": "Misura le competenze tramite conversazioni scientifiche, scalate dall’intelligenza artificiale. Ogni risultato è validato, coerente e imparziale.",
+          "decide": "Metti i dati oggettivi sulle competenze al lavoro in ogni decisione chiave sui talenti. Struttura i flussi HR con l’agilità di un Copilota AI."
+        }
+      },
+      "problem": "Il problema",
+      "solution": "La soluzione",
+      "map": {
+        "heading": "Costruisci la tua architettura delle<br></br>competenze in giorni, non in mesi.",
+        "problemTitle": "Le competenze vivono in spreadsheet e job description sparsi.",
+        "problemBody": "Chiamate in modo diverso in ogni team, senza un modo condiviso per confrontarle. Costruire un’architettura delle competenze con un approccio tradizionale richiede mesi di consulenza, e i risultati sono già superati al momento della consegna.",
+        "solutionTitle": "Dal tuo contesto a una mappa delle competenze dinamica.",
+        "solutionBody": "Skillvue Map combina le tue informazioni interne con i segnali del mercato esterno e con la nostra scienza per generare la tassonomia delle tue competenze e la tua architettura, pronta in pochi giorni.",
+        "tabs": {
+          "jobs": "Architettura dei ruoli",
+          "skills": "Skills",
+          "compare": "Confronta ruoli"
+        },
+        "features": {
+          "data": {
+            "title": "I tuoi dati incontrano il mercato",
+            "body": "Una combinazione su misura di informazioni aziendali interne e segnali del mercato esterno."
+          },
+          "days": {
+            "title": "Mappatura in pochi giorni",
+            "body": "La mappatura semi-automatica delle competenze costruisce la tua architettura in giorni, non in mesi."
+          },
+          "experts": {
+            "title": "Gli esperti restano al controllo",
+            "body": "I tuoi esperti validano ogni profilo di competenze mentre l’AI accelera il lavoro."
+          },
+          "navigate": {
+            "title": "Esplora e naviga",
+            "body": "La visualizzazione intuitiva rende la tua architettura delle competenze facile da leggere e navigare."
+          }
+        }
+      },
+      "assess": {
+        "heading": "Verifica le competenze, prevedi il potenziale,<br></br>rendi ogni decisione difendibile.",
+        "problemTitle": "Le decisioni sui talenti si basano sull’intuito e su colloqui incoerenti.",
+        "problemBody": "Assunzioni, performance, crescita e mobilità valutano le persone in modo diverso. Il segnale è soggettivo, frammentato e impossibile da confrontare da un processo all’altro.",
+        "solutionTitle": "Dati oggettivi sulle competenze, connessi in ogni processo.",
+        "solutionBody": "Skillvue Assess misura le tue persone rispetto allo stesso framework scientifico, a qualsiasi scala, così ogni processo si basa su dati di competenze comparabili e oggettivi.",
+        "tabs": {
+          "interview": "Intervista",
+          "questions": "Domande"
+        },
+        "features": {
+          "context": {
+            "title": "Contestualizzato per te",
+            "body": "Skillvue apprende il tuo framework di competenze, i ruoli e i processi, così ogni assessment riflette la tua organizzazione, non un modello generico."
+          },
+          "science": {
+            "title": "Fondato sulla scienza",
+            "body": "Costruito su un framework strutturato e scientificamente validato, dalla psicologia dei Big Five a misure validate di agilità di apprendimento e motivazione."
+          },
+          "scale": {
+            "title": "Scalato dall’AI",
+            "body": "Assessment guidati dall’AI che si adattano in tempo reale, garantendo lo stesso rigore scientifico da 10 a 10.000 candidati."
+          },
+          "format": {
+            "title": "Qualsiasi formato, ottima esperienza",
+            "body": "Audio, video, testo scritto o risposta multipla, colloqui strutturati o conversazioni naturali: tutto pensato attorno a un’esperienza candidato fluida."
+          }
+        }
+      },
+      "decide": {
+        "heading": "Un unico linguaggio delle competenze per ogni decisione sui talenti.",
+        "lead": "Usa gli stessi dati oggettivi sulle competenze per assunzioni, performance, L&D e mobilità, così ogni team decide sulla stessa base di evidenze.",
+        "problemTitle": "I dati sulle competenze, quando disponibili, finiscono in strumenti isolati che non guidano le decisioni.",
+        "problemBody": "I responsabili delle assunzioni, gli HR business partner e i leader ricadono ancora sull’intuito, perché i dati vivono in altri sistemi, disconnessi dalla decisione che hanno davanti.",
+        "solutionTitle": "I dati sulle competenze, integrati in ogni decisione.",
+        "solutionBody": "Skillvue Decide mette i tuoi dati sulle competenze al lavoro esattamente dove avvengono le decisioni. Ci integriamo con i tuoi strumenti e incorporiamo i dati dove servono. Oppure acquisiamo i tuoi dati e strutturiamo i flussi decisionali direttamente nella nostra piattaforma.",
+        "features": {
+          "stack": {
+            "title": "Connetti il tuo stack",
+            "body": "Integrazioni con ATS, HCM, LMS e PMS. Se ha un’API, ci connettiamo."
+          },
+          "query": {
+            "title": "Interroga in linguaggio naturale",
+            "body": "Interroga i tuoi dati sulle competenze in linguaggio naturale e ottieni risposte che guidano la decisione all’istante."
+          },
+          "workflows": {
+            "title": "Costruisci flussi decisionali",
+            "body": "Struttura le decisioni su assunzioni, performance e mobilità attorno ai tuoi processi e al tuo modello di leadership, direttamente nella piattaforma."
+          }
+        }
+      },
+      "cta": {
+        "heading": "Pronto a rendere oggettiva ogni decisione sui talenti?",
+        "body": "Guarda Skillvue dal vivo sui tuoi ruoli, sul tuo framework e sul tuo caso d’uso.",
+        "cta": "Parliamone"
+      },
+      "meta": {
+        "title": "Prodotto | Skillvue Map, Assess e Decide | Skillvue",
+        "description": "Skillvue è il sistema operativo delle competenze: mappa la tua architettura delle competenze, misurale in modo oggettivo e porta i dati in ogni decisione sui talenti."
+      }
     }
   },
   "resources": {
@@ -8486,124 +8502,6 @@
       },
       "text": "Pronto ad assumere con",
       "text2": "fiducia?"
-    }
-  },
-  "product": {
-    "skillvue-map": {
-      "hero": {
-        "heading": "Un’unica piattaforma.<br></br>Decisioni sui talenti, finalmente oggettive.",
-        "body": "Skillvue è il sistema operativo delle competenze. Un’unica fonte di dati oggettivi sulle skills, così ogni decisione, dall’assunzione alla crescita, è basata su prove concrete, non sull’intuito.",
-        "cta": "Prenota una Demo",
-        "science": "Scopri la nostra scienza"
-      },
-      "logos": {
-        "map": "Skillvue Map",
-        "assess": "Skillvue Assess",
-        "decide": "Skillvue Decide"
-      },
-      "platform": {
-        "eyebrow": "Un’unica piattaforma, tre prodotti",
-        "heading": "Le competenze oggettive fluiscono dai ruoli,<br></br>alla misurazione, alle decisioni.",
-        "body": "Map, Assess e Decide sono tre prodotti connessi che condividono un unico linguaggio delle competenze. Insieme portano dati oggettivi sulle skills attraverso l’intero ciclo di vita del talento.",
-        "explore": "Scopri",
-        "cards": {
-          "map": "Costruisci la tua architettura delle competenze. Trasforma i tuoi ruoli e i segnali di mercato in un’unica mappa dinamica delle competenze.",
-          "assess": "Misura le competenze tramite conversazioni scientifiche, scalate dall’intelligenza artificiale. Ogni risultato è validato, coerente e imparziale.",
-          "decide": "Metti i dati oggettivi sulle competenze al lavoro in ogni decisione chiave sui talenti. Struttura i flussi HR con l’agilità di un Copilota AI."
-        }
-      },
-      "problem": "Il problema",
-      "solution": "La soluzione",
-      "map": {
-        "heading": "Costruisci la tua architettura delle<br></br>competenze in giorni, non in mesi.",
-        "problemTitle": "Le competenze vivono in spreadsheet e job description sparsi.",
-        "problemBody": "Chiamate in modo diverso in ogni team, senza un modo condiviso per confrontarle. Costruire un’architettura delle competenze con un approccio tradizionale richiede mesi di consulenza, e i risultati sono già superati al momento della consegna.",
-        "solutionTitle": "Dal tuo contesto a una mappa delle competenze dinamica.",
-        "solutionBody": "Skillvue Map combina le tue informazioni interne con i segnali del mercato esterno e con la nostra scienza per generare la tassonomia delle tue competenze e la tua architettura, pronta in pochi giorni.",
-        "tabs": {
-          "jobs": "Architettura dei ruoli",
-          "skills": "Skills",
-          "compare": "Confronta ruoli"
-        },
-        "features": {
-          "data": {
-            "title": "I tuoi dati incontrano il mercato",
-            "body": "Una combinazione su misura di informazioni aziendali interne e segnali del mercato esterno."
-          },
-          "days": {
-            "title": "Mappatura in pochi giorni",
-            "body": "La mappatura semi-automatica delle competenze costruisce la tua architettura in giorni, non in mesi."
-          },
-          "experts": {
-            "title": "Gli esperti restano al controllo",
-            "body": "I tuoi esperti validano ogni profilo di competenze mentre l’AI accelera il lavoro."
-          },
-          "navigate": {
-            "title": "Esplora e naviga",
-            "body": "La visualizzazione intuitiva rende la tua architettura delle competenze facile da leggere e navigare."
-          }
-        }
-      },
-      "assess": {
-        "heading": "Verifica le competenze, prevedi il potenziale,<br></br>rendi ogni decisione difendibile.",
-        "problemTitle": "Le decisioni sui talenti si basano sull’intuito e su colloqui incoerenti.",
-        "problemBody": "Assunzioni, performance, crescita e mobilità valutano le persone in modo diverso. Il segnale è soggettivo, frammentato e impossibile da confrontare da un processo all’altro.",
-        "solutionTitle": "Dati oggettivi sulle competenze, connessi in ogni processo.",
-        "solutionBody": "Skillvue Assess misura le tue persone rispetto allo stesso framework scientifico, a qualsiasi scala, così ogni processo si basa su dati di competenze comparabili e oggettivi.",
-        "tabs": {
-          "interview": "Intervista",
-          "questions": "Domande"
-        },
-        "features": {
-          "context": {
-            "title": "Contestualizzato per te",
-            "body": "Skillvue apprende il tuo framework di competenze, i ruoli e i processi, così ogni assessment riflette la tua organizzazione, non un modello generico."
-          },
-          "science": {
-            "title": "Fondato sulla scienza",
-            "body": "Costruito su un framework strutturato e scientificamente validato, dalla psicologia dei Big Five a misure validate di agilità di apprendimento e motivazione."
-          },
-          "scale": {
-            "title": "Scalato dall’AI",
-            "body": "Assessment guidati dall’AI che si adattano in tempo reale, garantendo lo stesso rigore scientifico da 10 a 10.000 candidati."
-          },
-          "format": {
-            "title": "Qualsiasi formato, ottima esperienza",
-            "body": "Audio, video, testo scritto o risposta multipla, colloqui strutturati o conversazioni naturali: tutto pensato attorno a un’esperienza candidato fluida."
-          }
-        }
-      },
-      "decide": {
-        "heading": "Un unico linguaggio delle competenze per ogni decisione sui talenti.",
-        "lead": "Usa gli stessi dati oggettivi sulle competenze per assunzioni, performance, L&D e mobilità, così ogni team decide sulla stessa base di evidenze.",
-        "problemTitle": "I dati sulle competenze, quando disponibili, finiscono in strumenti isolati che non guidano le decisioni.",
-        "problemBody": "I responsabili delle assunzioni, gli HR business partner e i leader ricadono ancora sull’intuito, perché i dati vivono in altri sistemi, disconnessi dalla decisione che hanno davanti.",
-        "solutionTitle": "I dati sulle competenze, integrati in ogni decisione.",
-        "solutionBody": "Skillvue Decide mette i tuoi dati sulle competenze al lavoro esattamente dove avvengono le decisioni. Ci integriamo con i tuoi strumenti e incorporiamo i dati dove servono. Oppure acquisiamo i tuoi dati e strutturiamo i flussi decisionali direttamente nella nostra piattaforma.",
-        "features": {
-          "stack": {
-            "title": "Connetti il tuo stack",
-            "body": "Integrazioni con ATS, HCM, LMS e PMS. Se ha un’API, ci connettiamo."
-          },
-          "query": {
-            "title": "Interroga in linguaggio naturale",
-            "body": "Interroga i tuoi dati sulle competenze in linguaggio naturale e ottieni risposte che guidano la decisione all’istante."
-          },
-          "workflows": {
-            "title": "Costruisci flussi decisionali",
-            "body": "Struttura le decisioni su assunzioni, performance e mobilità attorno ai tuoi processi e al tuo modello di leadership, direttamente nella piattaforma."
-          }
-        }
-      },
-      "cta": {
-        "heading": "Pronto a rendere oggettiva ogni decisione sui talenti?",
-        "body": "Guarda Skillvue dal vivo sui tuoi ruoli, sul tuo framework e sul tuo caso d’uso.",
-        "cta": "Parliamone"
-      },
-      "meta": {
-        "title": "Prodotto | Skillvue Map, Assess e Decide | Skillvue",
-        "description": "Skillvue è il sistema operativo delle competenze: mappa la tua architettura delle competenze, misurale in modo oggettivo e porta i dati in ogni decisione sui talenti."
-      }
     }
   }
 }

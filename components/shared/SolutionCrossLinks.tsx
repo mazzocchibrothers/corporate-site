@@ -36,7 +36,7 @@ export default function SolutionCrossLinks({ currentId }) {
         <Reveal y={20} duration={0.6}>
           {/* Mobile: vertical stack for Platform + Science */}
           <div className="md:hidden flex flex-col gap-3 mb-6">
-            <button onClick={() => handleNav('/product-overview')} className="group text-left rounded-xl border border-white/[0.08] bg-white/[0.03] active:bg-white/[0.06] p-5 transition-all duration-300">
+            <button onClick={() => handleNav('/product')} className="group text-left rounded-xl border border-white/[0.08] bg-white/[0.03] active:bg-white/[0.06] p-5 transition-all duration-300">
               <div className="flex items-center justify-between gap-3">
                 <div>{t.rich('solutionCrossLinks.cta', {
                   span: (chunks) => <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase block mb-1">{chunks}</span>,
@@ -58,7 +58,7 @@ export default function SolutionCrossLinks({ currentId }) {
 
           {/* Desktop: Platform + Science links */}
           <div className="hidden md:grid md:grid-cols-2 gap-4 mb-8">
-            <button onClick={() => handleNav('/product-overview')} className="group text-left rounded-xl border border-white/[0.08] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.14] p-6 transition-all duration-500">
+            <button onClick={() => handleNav('/product')} className="group text-left rounded-xl border border-white/[0.08] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.14] p-6 transition-all duration-500">
               <div className="flex items-center justify-between">
                 <div>{t.rich('solutionCrossLinks.cta3', {
                   span: (chunks) => <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase block mb-1">{chunks}</span>,
