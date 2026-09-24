@@ -327,6 +327,14 @@ html {
   margin-top: -1px;
 }
 
+/* ===== LIGHT SECTIONS (white — the product page, whose grey panels would
+   vanish on #F7F7F7). The navbar treats it as light, like .section-breathe. */
+.section-light {
+  position: relative;
+  background: #ffffff;
+  transform: translateZ(0);
+}
+
 /* ===== DARK SECTIONS (solid black bg, no animated bg bleed) ===== */
 .section-dark {
   position: relative;

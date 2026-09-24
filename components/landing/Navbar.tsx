@@ -97,7 +97,7 @@ export default function Navbar() {
           const probeY = 82;
           const el = document.elementFromPoint(window.innerWidth / 2, probeY);
           if (el) {
-            const isLight = el.closest('.section-breathe') !== null;
+            const isLight = el.closest('.section-breathe, .section-light') !== null;
             setOnLightSection(isLight);
           }
 
@@ -106,6 +106,9 @@ export default function Navbar() {
         ticking.current = true;
       }
     };
+    // A page can open on a light section (/product/skillvue-map), so the bar has
+    // to know what it sits on before the first scroll, not only after it.
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -180,9 +183,9 @@ export default function Navbar() {
   const t = useTranslations('common');
 
   // Whether the open menu should read light-on-white or light-on-black is the
-  // same question the bar itself already answers — onLightSection && scrolled
+  // same question the bar itself already answers — is it over a light section
   // — so the dropdown follows it too instead of forcing black while open.
-  const isLight = onLightSection && scrolled;
+  const isLight = onLightSection;
 
   const textColor = isLight ? '#121212' : '#ffffff';
   const textMuted = isLight ? 'rgba(26,26,46,0.7)' : 'rgba(255,255,255,0.7)';
