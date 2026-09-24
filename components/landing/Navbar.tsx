@@ -70,7 +70,8 @@ const labelKey = (id: string) =>
 /** Drops a trailing slash so '/customers/adr' and '/customers/adr/' compare equal. */
 const withoutTrailingSlash = (path: string) => path.length > 1 ? path.replace(/\/$/, '') : path;
 
-export default function Navbar() {
+/** `banner` renders a strip under the bar, inside the fixed header (the homepage's announcement). */
+export default function Navbar({ banner }: { banner?: React.ReactNode }) {
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -82,6 +83,7 @@ export default function Navbar() {
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const desktopTriggerRef = useRef<HTMLButtonElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   const menuActive = !!openMenu;
@@ -94,7 +96,8 @@ export default function Navbar() {
           setScrolled(currentY > 50);
           setHidden(false);
 
-          const probeY = 82;
+          // Just below the header — the bar alone, or the bar plus its banner.
+          const probeY = (headerRef.current?.offsetHeight ?? 80) + 2;
           const el = document.elementFromPoint(window.innerWidth / 2, probeY);
           if (el) {
             const isLight = el.closest('.section-breathe, .section-light') !== null;
@@ -202,6 +205,7 @@ export default function Navbar() {
 
   return (
     <div
+      ref={headerRef}
       className={`fixed top-0 left-0 right-0 z-40 ${hidden && !mobileOpen ? '-translate-y-full' : 'translate-y-0'}`}
       style={{ transition: 'transform 0.5s cubic-bezier(0.25,0.1,0.25,1)' }}
       onMouseLeave={handleLeave}
@@ -421,6 +425,8 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
+
+      {banner}
 
       {/* Mobile fullscreen menu */}
       {mobileOpen && (

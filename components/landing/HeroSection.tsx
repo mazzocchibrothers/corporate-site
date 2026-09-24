@@ -36,7 +36,8 @@ export default function HeroSection() {
     <section
       id="hero"
       data-testid="hero-section"
-      className="relative overflow-hidden flex flex-col justify-between pt-[80px]"
+      // 128px: the 80px bar plus the 48px Skillvue Map banner (app/[locale]/body.tsx).
+      className="relative overflow-hidden flex flex-col justify-between pt-[128px]"
       style={{ width: '100%', minHeight: '100vh' }}
     >
       {/* Hero content. layered above */}
