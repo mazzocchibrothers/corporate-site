@@ -4,6 +4,7 @@ import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { Reveal } from '@/components/ui/reveal';
 import { Button } from '@/components/ui/button';
+import { HeroVideo } from '@/components/ui/hero-video';
 import { href } from '@/i18n/routes';
 
 const CONTAINER = 'max-w-[1440px] mx-auto px-5 md:px-8 lg:px-12';
@@ -18,7 +19,7 @@ const FEATURES = [
   { id: 'jobs', image: 'map-job-architecture', focus: [620, 400] },
   { id: 'consistency', image: 'map-skill-profile', focus: [620, 420] },
   { id: 'mapping', image: 'map-compare-roles', focus: [700, 380] },
-  { id: 'activation', image: 'decide-participants', focus: [640, 420] },
+  { id: 'activation', image: 'decide-participants', focus: [640, 420], video: true },
 ] as const;
 
 const PRODUCTS = [
@@ -33,18 +34,34 @@ const FLOW_INPUTS = [
   { id: 'science', Icon: FlaskConical },
 ] as const;
 
-function Mockup({ src, alt, focus, priority = false }: { src: string; alt: string; focus: readonly [number, number]; priority?: boolean }) {
+// `video`, when set, is a screen recording with the capture as its first frame.
+function Mockup({ src, alt, focus, video }: { src: string; alt: string; focus: readonly [number, number]; video?: string }) {
+  const position = `${(focus[0] / 1344) * 100}% ${(focus[1] / 956) * 100}%`;
   return (
     <div className="overflow-hidden rounded-lg border border-black/[0.12] bg-[#F7F7F7] aspect-square md:aspect-[4/3] lg:aspect-[1344/956]">
-      <img
-        src={src}
-        alt={alt}
-        width={1344}
-        height={956}
-        className="block h-full w-full object-cover"
-        style={{ objectPosition: `${(focus[0] / 1344) * 100}% ${(focus[1] / 956) * 100}%` }}
-        {...(priority ? { fetchPriority: 'high' as const } : { loading: 'lazy' as const, decoding: 'async' as const })}
-      />
+      {video ? (
+        <div role="img" aria-label={alt} className="h-full" style={{ ['--focus' as string]: position }}>
+          <HeroVideo
+            poster={src}
+            webmSrc={`${video}.webm`}
+            mp4Src={`${video}.mp4`}
+            delay={0}
+            className="h-full"
+            videoClassName="block h-full w-full object-cover [object-position:var(--focus)]"
+          />
+        </div>
+      ) : (
+        <img
+          src={src}
+          alt={alt}
+          width={1344}
+          height={956}
+          className="block h-full w-full object-cover"
+          style={{ objectPosition: position }}
+          loading="lazy"
+          decoding="async"
+        />
+      )}
     </div>
   );
 }
@@ -68,6 +85,7 @@ export default async function ProductPage() {
   const locale = await getLocale();
   const t = await getTranslations('product.skillvue-map');
   const shot = (name: string) => `/product/${name}-${locale}.avif`;
+  const clip = (name: string) => `/product/${name}-${locale}`;
   const demo = (
     <Button asChild variant="primary" mode="light">
       <a href={href('book-meeting', locale)}>{t('cta')}</a>
@@ -89,7 +107,7 @@ export default async function ProductPage() {
               {demo}
             </Reveal>
             <Reveal y={40} duration={0.9} delay={0.3} className="mt-12 md:mt-16 lg:mt-20">
-              <Mockup src={shot('map-skills-explore')} alt={t('hero.imageAlt')} focus={[700, 520]} priority />
+              <Mockup src={shot('map-skills-explore')} video={clip('map-skills-explore')} alt={t('hero.imageAlt')} focus={[700, 520]} />
             </Reveal>
           </div>
         </section>
@@ -170,7 +188,7 @@ export default async function ProductPage() {
         </section>
 
         {/* Features */}
-        {FEATURES.map(({ id, image, focus }) => (
+        {FEATURES.map(({ id, image, focus, ...f }) => (
           <section key={id} className="py-16 md:py-[88px] lg:py-[112px]">
             <div className={CONTAINER}>
               <Reveal y={16}>
@@ -184,7 +202,7 @@ export default async function ProductPage() {
                 </div>
               </Reveal>
               <Reveal y={24} scale={0.96} duration={0.8} className="mt-12 md:mt-16 lg:mt-20">
-                <Mockup src={shot(image)} alt={t(`features.${id}.imageAlt`)} focus={focus} />
+                <Mockup src={shot(image)} video={'video' in f ? clip(image) : undefined} alt={t(`features.${id}.imageAlt`)} focus={focus} />
               </Reveal>
             </div>
           </section>
