@@ -64,7 +64,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-scroll-behavior="smooth">
       <head>
         {/* Preconnect to GTM, loaded on every page. The YouTube preconnects
             live on the homepage's own metadata — that's the only page with the
