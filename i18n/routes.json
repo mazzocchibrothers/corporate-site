@@ -410,10 +410,10 @@
     }
   },
   {
-    "id": "product-overview",
+    "id": "product",
     "paths": {
-      "en": "/product-overview",
-      "it": "/piattaforma"
+      "en": "/product",
+      "it": "/prodotto"
     }
   },
   {

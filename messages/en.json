@@ -9,7 +9,7 @@
       "bookDemo": "Book a Demo",
       "menu": "Menu",
       "links": {
-        "productOverview": "Product",
+        "product": "Product",
         "science": "Science",
         "talentAcquisition": "Hiring",
         "performanceManagement": "Performance Management",
@@ -34,7 +34,7 @@
         "resources": "Resources"
       },
       "links": {
-        "productOverview": "Product",
+        "product": "Product",
         "science": "Science",
         "talentAcquisition": "Hiring",
         "performanceManagement": "Performance Management",
@@ -6904,221 +6904,121 @@
     "heading14": "10. Tempi di conservazione",
     "heading15": "11. Diritti dell'interessato"
   },
-  "product-overview": {
-    "hero": {
-      "heading": "One platform.<br></br>Every talent decision.<br></br><span>Objective data.</span>",
-      "body": "Skillvue is the AI-powered talent intelligence platform that turns static HR processes into predictive, objective insights. Verify skills, predict potential, and make every people decision defensible.",
-      "cta": "Book a Demo",
-      "animation": "https://cdn.lottielab.com/l/3FJ5CBuSY6Ebq8.json",
-      "animationEmbed": "https://cdn.lottielab.com/l/3FJ5CBuSY6Ebq8.html"
-    },
-    "assessmentFormats": {
-      "layers": {
-        "interactionFormat": {
-          "title": "INTERACTION FORMAT",
-          "subtitle": "How is the verification delivered",
-          "items": {
-            "structuredInterviews": {
-              "name": "Structured interviews",
-              "desc": "Standardized question set for fair comparable evaluation"
-            },
-            "conversationFlows": {
-              "name": "Conversation flows",
-              "desc": "AI-driven dialogues that adapt in real time"
-            },
-            "closeEndedSurveys": {
-              "name": "Close-ended surveys",
-              "desc": "Targeted items for scalable objective measurement"
-            }
-          }
-        },
-        "assessmentMethod": {
-          "title": "ASSESSMENT METHOD",
-          "subtitle": "What is being measured",
-          "items": {
-            "behavioralEventInterview": {
-              "name": "Behavioral event interview",
-              "desc": "Past behavior as predictor of future performance"
-            },
-            "situationalJudgment": {
-              "name": "Situational Judgment",
-              "desc": "Real-world scenarios: testing decision making"
-            },
-            "declarativeKnowledge": {
-              "name": "Declarative knowledge",
-              "desc": "What candidates know: facts, concepts, principles"
-            },
-            "proceduralKnowledge": {
-              "name": "Procedural knowledge",
-              "desc": "Our candidates do it: methods and processes"
-            },
-            "conditionalKnowledge": {
-              "name": "Conditional knowledge",
-              "desc": "When and why: contextual application of knowledge"
-            }
-          }
-        },
-        "responseFormat": {
-          "title": "RESPONSE FORMAT",
-          "subtitle": "How is the verification delivered",
-          "items": {
-            "audio": {
-              "name": "Audio",
-              "desc": "Spoken responses for delivering a quick and effective interview experience"
-            },
-            "video": {
-              "name": "Video",
-              "desc": "Multimodal input for viewing participants' performance"
-            },
-            "written": {
-              "name": "Written",
-              "desc": "Free-text responses for handling writing-heavy skills or allowing in-room verifications"
-            },
-            "scqsMcqs": {
-              "name": "SCQs / MCQs",
-              "desc": "Structured choice for scalable objective scoring"
-            }
-          }
-        }
-      },
-      "heading": "Verification designed to surface <span>verified capabilities</span>"
-    },
-    "enterpriseTrust": {
-      "badges": {
-        "euAiAct": "EU AI Act",
-        "iso27001": "ISO 27001",
-        "gdpr": "GDPR",
-        "aicpaSoc2": "AICPA SOC 2"
-      },
-      "pillars": {
-        "customizability": {
-          "title": "Customizability",
-          "desc": "Every component, internal or candidate-facing, adapts to your processes, your leadership model, your workflows. We deploy on your terms, not ours."
-        },
-        "security": {
-          "title": "Security",
-          "desc": "ISO 27001 and SOC 2 certified. Data protection is embedded in our architecture from day one."
-        },
-        "compliance": {
-          "title": "Compliance",
-          "desc": "From GDPR to the EU AI Act, we build for the most demanding regulatory environments so you don't have to worry about what's next."
-        }
-      },
-      "heading": "Built <span>enterprise ready</span>",
-      "body": "We are opinionated about science, flexible about everything else. From deep customizability to the most demanding regulatory environments."
-    },
-    "howSkillvueWorks": {
-      "steps": {
-        "informationGathering": {
-          "title": "Information Gathering",
-          "what": "We learn your organization: competency frameworks, HR processes, systems, documentation.",
-          "capability": "Context, process, and data ingestion"
-        },
-        "jobsPeopleSkills": {
-          "title": "Jobs-People-Skills Mapping",
-          "what": "We digest your organizational landscape into a dynamic skill taxonomy.",
-          "capability": "Skill taxonomy generation, talent demand-supply mapping, market & AI impact view"
-        },
-        "verificationGeneration": {
-          "title": "Verification Generation",
-          "what": "We create verifications skill by skill — deeply contextualized to your roles and framework.",
-          "capability": "AI-generated items, expert validation, continuous adaptation"
-        },
-        "verificationDelivery": {
-          "title": "Verification Delivery",
-          "what": "We meet people where they are, through the channels where adoption is highest.",
-          "capability": "Web apps, WhatsApp, MS Teams, Slack — audio, video, written, MCQs"
-        },
-        "evaluationScoring": {
-          "title": "Evaluation & Scoring",
-          "what": "AI agents recommend scores rooted in science. Humans keep control over the final decision.",
-          "capability": "Scoring explainability, human-in-the-loop review"
-        },
-        "reportingInsights": {
-          "title": "Reporting & Insights",
-          "what": "Ready-to-use analytics for immediate consumption; integrations with core HR for full potential.",
-          "capability": "Skillvue reporting platform + native integrations (ATS, LMS, HRIS, PMS)"
-        }
-      },
-      "heading": "From your context to actionable intelligence <span>in six steps</span>",
-      "body": "Skillvue doesn't ask you to change how you work. We start by learning your organization and deliver insights where your teams already operate.",
-      "text": "STEP",
-      "text2": "KEY CAPABILITY"
-    },
-    "integrationEcosystem": {
-      "heading": "Giving life to your <span>core HR systems</span>",
-      "body": "Skillvue layers objective talent data into your existing stack, turning them from process gatekeepers into decision engines.",
-      "body2": "If it has an API, we connect.",
-      "systems": "Integrating with <acr>ATS</acr> · <acr>LMS</acr> · <acr>LXP</acr> · <acr>PMS</acr> · <acr>HRIS</acr> — 100+ native integrations"
-    },
-    "cta": {
-      "heading": "Ready to make every talent decision <span>objective?</span>",
-      "text": "Ready to explore",
-      "heading2": "Book a Demo",
-      "body": "See Skillvue live with your specific use case",
-      "cta": "Book a Demo"
-    },
-    "whatSkillvueDoes": {
-      "pillars": {
-        "talent-acquisition": {
-          "title": "Talent Acquisition",
-          "desc": "Replace gut-feel interviews with AI-powered verifications that predict on-the-job performance. Scalable from 10 to 10,000 candidates — same scientific rigor at every level.",
-          "link": "Explore Talent Acquisition"
-        },
-        "performance": {
-          "title": "Performance Management",
-          "desc": "Add an objective layer to performance cycles. Structured competency verifications reduce bias, improve calibration, and give managers a starting point grounded in data, not recency.",
-          "link": "Explore Performance Management"
-        },
-        "learning": {
-          "title": "Learning & Development",
-          "desc": "Know exactly where the skill gaps are: at individual, team, and organization level. Fund programs based on evidence, measure progress with before-and-after precision.",
-          "link": "Explore Learning & Development"
-        },
-        "mobility": {
-          "title": "Internal Mobility & Succession",
-          "desc": "See who is ready for a new role today, who can be developed in 6 months, and where critical knowledge is concentrated. Move from \"we think she might be ready\" to \"we know.\"",
-          "link": "Explore Internal Mobility"
-        }
-      },
-      "heading": "From screening to succession — every talent decision, <span>connected.</span>",
-      "body": "Most organizations run hiring, performance, L&D, and mobility on disconnected tools with different frameworks. Skillvue connects them through one skills language and one data layer so every decision compounds."
-    },
-    "whatWeAssess": {
-      "dimensions": {
-        "suitability": {
-          "title": "Suitability",
-          "subtitle": "Person-job fit",
-          "desc": "Evaluates objective eligibility: qualifications, availability, logistics, baseline requirements. A structured screening layer before deeper verification."
-        },
-        "softSkills": {
-          "title": "Soft Skills",
-          "subtitle": "Behavioral competencies",
-          "desc": "Communication, collaboration, problem-solving, leadership. Observable through action, rooted in stable behavioral patterns, and among the strongest predictors of long-term performance."
-        },
-        "hardSkills": {
-          "title": "Hard Skills",
-          "subtitle": "Technical proficiency",
-          "desc": "Domain-specific knowledge measured against defined proficiency levels, grounded in structured knowledge taxonomies relevant to the role."
-        },
-        "potential": {
-          "title": "Potential",
-          "subtitle": "Capacity to grow",
-          "desc": "Predicts capacity to grow, adapt, and take on greater complexity. Verified through three validated dimensions: learning agility, intrinsic motivation, and career aspiration."
-        },
-        "traits": {
-          "title": "Traits",
-          "subtitle": "Dispositional patterns",
-          "desc": "Stable personality traits — openness, conscientiousness, resilience — that shape cultural fit and sustained performance. Grounded in Big Five personality science."
-        }
-      },
-      "heading": "Five dimensions for <span>objective evaluations</span>",
-      "body": "Every person evaluated through a structured, science-backed framework — whether they're a candidate or a 20-year veteran.",
-      "cta": "Discover the Science"
-    },
+  "product": {
     "meta": {
-      "title": "Platform | AI-Powered Talent Verifications | Skillvue",
-      "description": "One platform for hiring, performance, L&D and succession planning. AI-powered verifications with psychometric science and 100+ integrations with SAP, Workday and Oracle."
+      "title": "Skillvue Map | Build Your Skills Architecture in Days | Skillvue",
+      "description": "Skillvue Map combines your jobs data, live market signals and Skillvue science to build your skills taxonomy and skills-to-jobs mapping in days, not months."
+    },
+    "cta": "Book a demo",
+    "hero": {
+      "titleLead": "Build your unified skills architecture",
+      "titleTail": "in days, not in months",
+      "body": "Skillvue Map combines your internal data, live market signals and our science to build your skills taxonomy and skills-to-jobs mapping, in days not months, and keeps them always updated.",
+      "imageAlt": "Skillvue Map Skills explorer: bubble chart of skill clusters with the International Taxation skill open and an AI chat panel"
+    },
+    "problem": {
+      "eyebrow": "The problem",
+      "title": "Skills live in scattered spreadsheets and job descriptions.",
+      "body": "Named differently in every team, with no shared way to compare them. Building a skills architecture with a traditional approach takes months of consulting, and the results are already out of date on delivery."
+    },
+    "solution": {
+      "eyebrow": "Solution",
+      "title": "From your context to a living skills map.",
+      "body": "Skillvue Map blends your internal information with external market signals and our science to generate your skills taxonomy and architecture, ready in days."
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "How Skillvue Map works",
+      "body": "Skillvue Map combines your jobs information with market intelligence and Skillvue’s scientific frameworks, and generates a unified, bespoke skills map in days, giving your experts an externally validated architecture to review, refine and validate.",
+      "steps": [
+        {
+          "title": "Ingest",
+          "body": "Your jobs data (job descriptions, competency frameworks, business context) plus market intelligence and Skillvue’s frameworks."
+        },
+        {
+          "title": "Generate",
+          "body": "Once the job structure is set, AI generates the initial skills mapping in minutes."
+        },
+        {
+          "title": "Validate",
+          "body": "Skillvue People Science and your experts review, refine and validate every profile in the platform."
+        }
+      ],
+      "flowLabel": "Flow",
+      "flow": {
+        "jobsData": "Your jobs data",
+        "market": "Market intelligence",
+        "science": "Skillvue science",
+        "ai": "AI mapping",
+        "ready": "Skills map ready"
+      }
+    },
+    "features": {
+      "jobs": {
+        "eyebrow": "Feature 1",
+        "title": "Define what each job requires",
+        "body": "Job titles and descriptions rarely tell the whole story. Skillvue Map brings your job profiles into a coherent, unified structure, organizing jobs into families and identifying overlaps in naming. Job descriptions, existing competency frameworks and business context shape the mapping around how your organization works.",
+        "points": [
+          "Required skills: the hard and soft skills relevant to the role",
+          "Proficiency levels: how developed each skill needs to be",
+          "Skill priorities: the relative importance of each skill for that role"
+        ],
+        "imageAlt": "Skillvue Map Job architecture list view with job families expanded"
+      },
+      "consistency": {
+        "eyebrow": "Feature 2",
+        "title": "Bring consistency across teams and countries",
+        "body": "When skills are defined independently across departments, the same capability appears under different names or carries different expectations without a clear reason. Skillvue Map applies common skill definitions across the architecture while accounting for the requirements of individual jobs. Your company’s information sets the internal context; market intelligence adds perspective on comparable jobs.",
+        "points": [
+          "Scientifically validated soft skill frameworks",
+          "Market-informed hard skill definitions",
+          "A common skills language across business units and locations"
+        ],
+        "imageAlt": "Skillvue Map skill profile for Digital Marketing Manager with required skills, priorities and proficiency"
+      },
+      "mapping": {
+        "eyebrow": "Feature 3",
+        "title": "Accelerate the mapping. Keep your experts in the driving seat.",
+        "body": "Once the job structure is established, Skillvue Map uses AI to generate an initial skills mapping in minutes. People Science and domain experts review the proposed mapping, and HR teams can involve business stakeholders in validation within the platform. Automation accelerates the work; expert judgment ensures the final decision is always with humans. The whole process is completed in days, not months.",
+        "points": [
+          "Rationale visible for every recommendation",
+          "Suggest changes, add or remove skills",
+          "Business stakeholders validate in the platform"
+        ],
+        "imageAlt": "Skillvue Map Compare Roles view: Regional Store Manager versus Customer Service Supervisor"
+      },
+      "activation": {
+        "eyebrow": "Feature 4",
+        "title": "Put jobs needs to work across Skillvue",
+        "body": "Start with a job to understand its needs, or start with a skill to see where it is needed and how expectations vary. Visual and list views help teams navigate the structure, and export options make the mapping available to other systems and processes.",
+        "points": [
+          "Job-to-skill and skill-to-job navigation",
+          "Visual and list views",
+          "Export to other systems"
+        ],
+        "imageAlt": "Skillvue Decide participants list ranked by skill match with an AI chat panel"
+      }
+    },
+    "platform": {
+      "eyebrow": "One platform, three products",
+      "title": "Objective skills flow from jobs, to measurement, to decisions.",
+      "body": "Map, Assess and Decide are three connected products that share one skills language. Together they carry objective skills data across the whole talent lifecycle.",
+      "map": {
+        "name": "Skillvue Map",
+        "body": "Build your skills-to-jobs architecture in days, not months. Turn your roles and the market signals into one living skills map."
+      },
+      "assess": {
+        "name": "Skillvue Assess",
+        "body": "Measure skills through science-based, AI-scaled conversations. Every result is validated, consistent and fair."
+      },
+      "decide": {
+        "name": "Skillvue Decide",
+        "body": "Put objective skills data at work into every key talent decision. Structure talent workflows with the agility of an AI Copilot."
+      }
+    },
+    "demo": {
+      "title": "See Skillvue Map in action.",
+      "body": "Book a demo to explore how your jobs can become clear, consistent skill profiles in Skillvue."
     }
   },
   "resources": {

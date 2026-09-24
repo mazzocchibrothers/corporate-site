@@ -18,7 +18,7 @@ import { Button } from '@/components/ui/button';
 // through href(), which is what retired the hrefIt flags — an Italian slug is
 // declared in the registry once and every link in the site follows it.
 const navLinks: { id: string; route?: string; items: string[] | null }[] = [
-  { id: 'platform', items: ['product-overview', 'science'] },
+  { id: 'platform', items: ['product', 'science'] },
   {
     id: 'solutions',
     items: [
@@ -38,7 +38,7 @@ const navLinks: { id: string; route?: string; items: string[] | null }[] = [
 
 // One icon per dropdown item, keyed the same way as its label (see labelKey).
 const ICONS: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
-  productOverview: AppWindow,
+  product: AppWindow,
   science: Atom,
   talentAcquisition: UserSearch,
   performanceManagement: UserCog,
@@ -106,6 +106,9 @@ export default function Navbar() {
         ticking.current = true;
       }
     };
+    // /product opens on a light section, so the bar has to know what it sits
+    // on before the first scroll, not only after it.
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -180,9 +183,9 @@ export default function Navbar() {
   const t = useTranslations('common');
 
   // Whether the open menu should read light-on-white or light-on-black is the
-  // same question the bar itself already answers — onLightSection && scrolled
+  // same question the bar itself already answers — is it over a light section
   // — so the dropdown follows it too instead of forcing black while open.
-  const isLight = onLightSection && scrolled;
+  const isLight = onLightSection;
 
   const textColor = isLight ? '#121212' : '#ffffff';
   const textMuted = isLight ? 'rgba(26,26,46,0.7)' : 'rgba(255,255,255,0.7)';

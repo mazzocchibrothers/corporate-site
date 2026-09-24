@@ -10,7 +10,7 @@ import { href } from '@/i18n/routes';
 // href(), which is what retired the hrefIt flags. Labels come from the
 // catalogue, keyed on the same ids.
 const footerGroups = [
-  { id: 'platform', links: ['product-overview', 'science'] },
+  { id: 'platform', links: ['product', 'science'] },
   {
     id: 'solutions',
     links: [
