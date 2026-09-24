@@ -6905,235 +6905,235 @@
     "heading15": "11. Diritti dell'interessato"
   },
   "product": {
-    "meta": {
-      "title": "Skillvue Map | Build Your Skills Architecture in Days | Skillvue",
-      "description": "Skillvue Map combines your jobs data, live market signals and Skillvue science to build your skills taxonomy and skills-to-jobs mapping in days, not months."
-    },
-    "cta": "Book a demo",
     "hero": {
-      "titleLead": "Build your unified skills architecture",
-      "titleTail": "in days, not in months",
-      "body": "Skillvue Map combines your internal data, live market signals and our science to build your skills taxonomy and skills-to-jobs mapping, in days not months, and keeps them always updated.",
-      "imageAlt": "Skillvue Map Skills explorer: bubble chart of skill clusters with the International Taxation skill open and an AI chat panel"
+      "heading": "One platform.<br></br>Every talent decision, finally objective.",
+      "body": "Skillvue is the skills operating system for talent. One unified source of objective skills data, so every decision, from hiring to growth, is grounded in evidence, not gut feel.",
+      "cta": "Book a Demo",
+      "science": "See our science"
     },
-    "problem": {
-      "eyebrow": "The problem",
-      "title": "Skills live in scattered spreadsheets and job descriptions.",
-      "body": "Named differently in every team, with no shared way to compare them. Building a skills architecture with a traditional approach takes months of consulting, and the results are already out of date on delivery."
-    },
-    "solution": {
-      "eyebrow": "Solution",
-      "title": "From your context to a living skills map.",
-      "body": "Skillvue Map blends your internal information with external market signals and our science to generate your skills taxonomy and architecture, ready in days."
-    },
-    "how": {
-      "eyebrow": "How it works",
-      "title": "How Skillvue Map works",
-      "body": "Skillvue Map combines your jobs information with market intelligence and Skillvue’s scientific frameworks, and generates a unified, bespoke skills map in days, giving your experts an externally validated architecture to review, refine and validate.",
-      "steps": [
-        {
-          "title": "Ingest",
-          "body": "Your jobs data (job descriptions, competency frameworks, business context) plus market intelligence and Skillvue’s frameworks."
-        },
-        {
-          "title": "Generate",
-          "body": "Once the job structure is set, AI generates the initial skills mapping in minutes."
-        },
-        {
-          "title": "Validate",
-          "body": "Skillvue People Science and your experts review, refine and validate every profile in the platform."
-        }
-      ],
-      "flowLabel": "Flow",
-      "flow": {
-        "jobsData": "Your jobs data",
-        "market": "Market intelligence",
-        "science": "Skillvue science",
-        "ai": "AI mapping",
-        "ready": "Skills map ready"
-      }
-    },
-    "features": {
-      "jobs": {
-        "eyebrow": "Feature 1",
-        "title": "Define what each job requires",
-        "body": "Job titles and descriptions rarely tell the whole story. Skillvue Map brings your job profiles into a coherent, unified structure, organizing jobs into families and identifying overlaps in naming. Job descriptions, existing competency frameworks and business context shape the mapping around how your organization works.",
-        "points": [
-          "Required skills: the hard and soft skills relevant to the role",
-          "Proficiency levels: how developed each skill needs to be",
-          "Skill priorities: the relative importance of each skill for that role"
-        ],
-        "imageAlt": "Skillvue Map Job architecture list view with job families expanded"
-      },
-      "consistency": {
-        "eyebrow": "Feature 2",
-        "title": "Bring consistency across teams and countries",
-        "body": "When skills are defined independently across departments, the same capability appears under different names or carries different expectations without a clear reason. Skillvue Map applies common skill definitions across the architecture while accounting for the requirements of individual jobs. Your company’s information sets the internal context; market intelligence adds perspective on comparable jobs.",
-        "points": [
-          "Scientifically validated soft skill frameworks",
-          "Market-informed hard skill definitions",
-          "A common skills language across business units and locations"
-        ],
-        "imageAlt": "Skillvue Map skill profile for Digital Marketing Manager with required skills, priorities and proficiency"
-      },
-      "mapping": {
-        "eyebrow": "Feature 3",
-        "title": "Accelerate the mapping. Keep your experts in the driving seat.",
-        "body": "Once the job structure is established, Skillvue Map uses AI to generate an initial skills mapping in minutes. People Science and domain experts review the proposed mapping, and HR teams can involve business stakeholders in validation within the platform. Automation accelerates the work; expert judgment ensures the final decision is always with humans. The whole process is completed in days, not months.",
-        "points": [
-          "Rationale visible for every recommendation",
-          "Suggest changes, add or remove skills",
-          "Business stakeholders validate in the platform"
-        ],
-        "imageAlt": "Skillvue Map Compare Roles view: Regional Store Manager versus Customer Service Supervisor"
-      },
-      "activation": {
-        "eyebrow": "Feature 4",
-        "title": "Put jobs needs to work across Skillvue",
-        "body": "Start with a job to understand its needs, or start with a skill to see where it is needed and how expectations vary. Visual and list views help teams navigate the structure, and export options make the mapping available to other systems and processes.",
-        "points": [
-          "Job-to-skill and skill-to-job navigation",
-          "Visual and list views",
-          "Export to other systems"
-        ],
-        "imageAlt": "Skillvue Decide participants list ranked by skill match with an AI chat panel"
-      }
+    "logos": {
+      "map": "Skillvue Map",
+      "assess": "Skillvue Assess",
+      "decide": "Skillvue Decide"
     },
     "platform": {
       "eyebrow": "One platform, three products",
-      "title": "Objective skills flow from jobs, to measurement, to decisions.",
+      "heading": "Objective skills flow from jobs,<br></br>to measurement, to decisions.",
       "body": "Map, Assess and Decide are three connected products that share one skills language. Together they carry objective skills data across the whole talent lifecycle.",
-      "map": {
-        "name": "Skillvue Map",
-        "body": "Build your skills-to-jobs architecture in days, not months. Turn your roles and the market signals into one living skills map."
-      },
-      "assess": {
-        "name": "Skillvue Assess",
-        "body": "Measure skills through science-based, AI-scaled conversations. Every result is validated, consistent and fair."
-      },
-      "decide": {
-        "name": "Skillvue Decide",
-        "body": "Put objective skills data at work into every key talent decision. Structure talent workflows with the agility of an AI Copilot."
+      "explore": "Explore",
+      "cards": {
+        "map": "Build your skills-to-jobs architecture. Turn your roles and the market signals into one living skills map.",
+        "assess": "Measure skills through science-based, AI-scaled conversations. Every result is validated, consistent and fair.",
+        "decide": "Put objective skills data to work in every key talent decision. Structure talent workflows with the agility of an AI Copilot."
       }
     },
-    "demo": {
-      "title": "See Skillvue Map in action.",
-      "body": "Book a demo to explore how your jobs can become clear, consistent skill profiles in Skillvue."
+    "problem": "The problem",
+    "solution": "The solution",
+    "map": {
+      "heading": "Build your unified skills architecture<br></br>in days, not months.",
+      "problemTitle": "Skills live in scattered spreadsheets and job descriptions.",
+      "problemBody": "Named differently in every team, with no shared way to compare them. Building a skills architecture with a traditional approach takes months of consulting, and the results are already out of date on delivery.",
+      "solutionTitle": "From your context to a living skills map.",
+      "solutionBody": "Skillvue Map blends your internal information with external market signals and our science to generate your skills taxonomy and architecture, ready in days.",
+      "tabs": {
+        "jobs": "Job architecture",
+        "skills": "Skills",
+        "compare": "Compare Roles"
+      },
+      "features": {
+        "data": {
+          "title": "Your data, meet the market",
+          "body": "A tailored blend of internal company information and external market signals."
+        },
+        "days": {
+          "title": "Mapping in days",
+          "body": "Semi-automatic skills mapping builds your architecture in days, not months."
+        },
+        "experts": {
+          "title": "Experts stay in control",
+          "body": "Your experts validate every skills profile while AI accelerates the work."
+        },
+        "navigate": {
+          "title": "Explore and navigate",
+          "body": "Intuitive visualization makes your skills architecture easy to read and navigate."
+        }
+      }
+    },
+    "assess": {
+      "heading": "Verify skills, predict potential,<br></br>make every decision defensible.",
+      "problemTitle": "Talent decisions run on gut feel and inconsistent interviews.",
+      "problemBody": "Hiring, performance, growth and mobility each read people differently. The signal is subjective, fragmented and impossible to compare from one process to the next.",
+      "solutionTitle": "Objective skills data, connected across every process.",
+      "solutionBody": "Skillvue Assess measures your people against the same science-based framework, at any scale, so every process draws on comparable, objective skills data.",
+      "tabs": {
+        "interview": "Interview",
+        "questions": "Questions"
+      },
+      "features": {
+        "context": {
+          "title": "Contextualized to you",
+          "body": "Skillvue learns your competency framework, roles and processes, so every assessment reflects your organization, not a generic template."
+        },
+        "science": {
+          "title": "Science-grounded",
+          "body": "Built on a structured, science-backed framework, from Big Five personality science to validated measures of learning agility and motivation."
+        },
+        "scale": {
+          "title": "AI-scaled",
+          "body": "AI-driven assessments that adapt in real time, delivering the same scientific rigor from 10 to 10,000 candidates."
+        },
+        "format": {
+          "title": "Any format, great UX",
+          "body": "Audio, video, written or multiple choice, structured interviews or natural conversations, all built around a smooth candidate experience."
+        }
+      }
+    },
+    "decide": {
+      "heading": "One skills language for every talent decision.",
+      "lead": "Use the same objective skills data across hiring, performance, L&D and mobility, so every team decides on the same evidence.",
+      "problemTitle": "Skills data, when available, ends up in siloed tools that do not drive decisions.",
+      "problemBody": "Hiring managers, HR business partners and leaders still fall back on gut feel, because the data lives in other systems, disconnected from the decision in front of them.",
+      "solutionTitle": "Skills data, built into every decision.",
+      "solutionBody": "Skillvue Decide puts your skills data to work exactly where decisions happen. We integrate with your tools and embed skills data where it’s needed. Or we ingest your data and structure the decision workflows directly in our platform, so every key talent decision follows straight from the evidence.",
+      "features": {
+        "stack": {
+          "title": "Connect your stack",
+          "body": "Integrations with your ATS, HCM, LMS and PMS. If it has an API, we connect."
+        },
+        "query": {
+          "title": "Query naturally",
+          "body": "Query your skills data in plain language, and get answers that guide the decision instantly."
+        },
+        "workflows": {
+          "title": "Build workflows",
+          "body": "Structure hiring, performance and mobility decisions around your own processes and leadership model, directly in the platform."
+        }
+      }
+    },
+    "cta": {
+      "heading": "Ready to make every talent decision objective?",
+      "body": "See Skillvue live on your own roles, framework and use case.",
+      "cta": "Let’s talk"
+    },
+    "meta": {
+      "title": "Product | Skillvue Map, Assess and Decide | Skillvue",
+      "description": "Skillvue is the skills operating system for talent: map your skills architecture, measure skills objectively and bring skills data into every talent decision."
     },
     "skillvue-map": {
-      "hero": {
-        "heading": "One platform.<br></br>Every talent decision, finally objective.",
-        "body": "Skillvue is the skills operating system for talent. One unified source of objective skills data, so every decision, from hiring to growth, is grounded in evidence, not gut feel.",
-        "cta": "Book a Demo",
-        "science": "See our science"
+      "meta": {
+        "title": "Skillvue Map | Build Your Skills Architecture in Days | Skillvue",
+        "description": "Skillvue Map combines your jobs data, live market signals and Skillvue science to build your skills taxonomy and skills-to-jobs mapping in days, not months."
       },
-      "logos": {
-        "map": "Skillvue Map",
-        "assess": "Skillvue Assess",
-        "decide": "Skillvue Decide"
+      "cta": "Book a demo",
+      "hero": {
+        "titleLead": "Build your unified skills architecture",
+        "titleTail": "in days, not in months",
+        "body": "Skillvue Map combines your internal data, live market signals and our science to build your skills taxonomy and skills-to-jobs mapping, in days not months, and keeps them always updated.",
+        "imageAlt": "Skillvue Map Skills explorer: bubble chart of skill clusters with the International Taxation skill open and an AI chat panel"
+      },
+      "problem": {
+        "eyebrow": "The problem",
+        "title": "Skills live in scattered spreadsheets and job descriptions.",
+        "body": "Named differently in every team, with no shared way to compare them. Building a skills architecture with a traditional approach takes months of consulting, and the results are already out of date on delivery."
+      },
+      "solution": {
+        "eyebrow": "Solution",
+        "title": "From your context to a living skills map.",
+        "body": "Skillvue Map blends your internal information with external market signals and our science to generate your skills taxonomy and architecture, ready in days."
+      },
+      "how": {
+        "eyebrow": "How it works",
+        "title": "How Skillvue Map works",
+        "body": "Skillvue Map combines your jobs information with market intelligence and Skillvue’s scientific frameworks, and generates a unified, bespoke skills map in days, giving your experts an externally validated architecture to review, refine and validate.",
+        "steps": [
+          {
+            "title": "Ingest",
+            "body": "Your jobs data (job descriptions, competency frameworks, business context) plus market intelligence and Skillvue’s frameworks."
+          },
+          {
+            "title": "Generate",
+            "body": "Once the job structure is set, AI generates the initial skills mapping in minutes."
+          },
+          {
+            "title": "Validate",
+            "body": "Skillvue People Science and your experts review, refine and validate every profile in the platform."
+          }
+        ],
+        "flowLabel": "Flow",
+        "flow": {
+          "jobsData": "Your jobs data",
+          "market": "Market intelligence",
+          "science": "Skillvue science",
+          "ai": "AI mapping",
+          "ready": "Skills map ready"
+        }
+      },
+      "features": {
+        "jobs": {
+          "eyebrow": "Feature 1",
+          "title": "Define what each job requires",
+          "body": "Job titles and descriptions rarely tell the whole story. Skillvue Map brings your job profiles into a coherent, unified structure, organizing jobs into families and identifying overlaps in naming. Job descriptions, existing competency frameworks and business context shape the mapping around how your organization works.",
+          "points": [
+            "Required skills: the hard and soft skills relevant to the role",
+            "Proficiency levels: how developed each skill needs to be",
+            "Skill priorities: the relative importance of each skill for that role"
+          ],
+          "imageAlt": "Skillvue Map Job architecture list view with job families expanded"
+        },
+        "consistency": {
+          "eyebrow": "Feature 2",
+          "title": "Bring consistency across teams and countries",
+          "body": "When skills are defined independently across departments, the same capability appears under different names or carries different expectations without a clear reason. Skillvue Map applies common skill definitions across the architecture while accounting for the requirements of individual jobs. Your company’s information sets the internal context; market intelligence adds perspective on comparable jobs.",
+          "points": [
+            "Scientifically validated soft skill frameworks",
+            "Market-informed hard skill definitions",
+            "A common skills language across business units and locations"
+          ],
+          "imageAlt": "Skillvue Map skill profile for Digital Marketing Manager with required skills, priorities and proficiency"
+        },
+        "mapping": {
+          "eyebrow": "Feature 3",
+          "title": "Accelerate the mapping. Keep your experts in the driving seat.",
+          "body": "Once the job structure is established, Skillvue Map uses AI to generate an initial skills mapping in minutes. People Science and domain experts review the proposed mapping, and HR teams can involve business stakeholders in validation within the platform. Automation accelerates the work; expert judgment ensures the final decision is always with humans. The whole process is completed in days, not months.",
+          "points": [
+            "Rationale visible for every recommendation",
+            "Suggest changes, add or remove skills",
+            "Business stakeholders validate in the platform"
+          ],
+          "imageAlt": "Skillvue Map Compare Roles view: Regional Store Manager versus Customer Service Supervisor"
+        },
+        "activation": {
+          "eyebrow": "Feature 4",
+          "title": "Put jobs needs to work across Skillvue",
+          "body": "Start with a job to understand its needs, or start with a skill to see where it is needed and how expectations vary. Visual and list views help teams navigate the structure, and export options make the mapping available to other systems and processes.",
+          "points": [
+            "Job-to-skill and skill-to-job navigation",
+            "Visual and list views",
+            "Export to other systems"
+          ],
+          "imageAlt": "Skillvue Decide participants list ranked by skill match with an AI chat panel"
+        }
       },
       "platform": {
         "eyebrow": "One platform, three products",
-        "heading": "Objective skills flow from jobs,<br></br>to measurement, to decisions.",
+        "title": "Objective skills flow from jobs, to measurement, to decisions.",
         "body": "Map, Assess and Decide are three connected products that share one skills language. Together they carry objective skills data across the whole talent lifecycle.",
-        "explore": "Explore",
-        "cards": {
-          "map": "Build your skills-to-jobs architecture. Turn your roles and the market signals into one living skills map.",
-          "assess": "Measure skills through science-based, AI-scaled conversations. Every result is validated, consistent and fair.",
-          "decide": "Put objective skills data to work in every key talent decision. Structure talent workflows with the agility of an AI Copilot."
-        }
-      },
-      "problem": "The problem",
-      "solution": "The solution",
-      "map": {
-        "heading": "Build your unified skills architecture<br></br>in days, not months.",
-        "problemTitle": "Skills live in scattered spreadsheets and job descriptions.",
-        "problemBody": "Named differently in every team, with no shared way to compare them. Building a skills architecture with a traditional approach takes months of consulting, and the results are already out of date on delivery.",
-        "solutionTitle": "From your context to a living skills map.",
-        "solutionBody": "Skillvue Map blends your internal information with external market signals and our science to generate your skills taxonomy and architecture, ready in days.",
-        "tabs": {
-          "jobs": "Job architecture",
-          "skills": "Skills",
-          "compare": "Compare Roles"
+        "map": {
+          "name": "Skillvue Map",
+          "body": "Build your skills-to-jobs architecture in days, not months. Turn your roles and the market signals into one living skills map."
         },
-        "features": {
-          "data": {
-            "title": "Your data, meet the market",
-            "body": "A tailored blend of internal company information and external market signals."
-          },
-          "days": {
-            "title": "Mapping in days",
-            "body": "Semi-automatic skills mapping builds your architecture in days, not months."
-          },
-          "experts": {
-            "title": "Experts stay in control",
-            "body": "Your experts validate every skills profile while AI accelerates the work."
-          },
-          "navigate": {
-            "title": "Explore and navigate",
-            "body": "Intuitive visualization makes your skills architecture easy to read and navigate."
-          }
-        }
-      },
-      "assess": {
-        "heading": "Verify skills, predict potential,<br></br>make every decision defensible.",
-        "problemTitle": "Talent decisions run on gut feel and inconsistent interviews.",
-        "problemBody": "Hiring, performance, growth and mobility each read people differently. The signal is subjective, fragmented and impossible to compare from one process to the next.",
-        "solutionTitle": "Objective skills data, connected across every process.",
-        "solutionBody": "Skillvue Assess measures your people against the same science-based framework, at any scale, so every process draws on comparable, objective skills data.",
-        "tabs": {
-          "interview": "Interview",
-          "questions": "Questions"
+        "assess": {
+          "name": "Skillvue Assess",
+          "body": "Measure skills through science-based, AI-scaled conversations. Every result is validated, consistent and fair."
         },
-        "features": {
-          "context": {
-            "title": "Contextualized to you",
-            "body": "Skillvue learns your competency framework, roles and processes, so every assessment reflects your organization, not a generic template."
-          },
-          "science": {
-            "title": "Science-grounded",
-            "body": "Built on a structured, science-backed framework, from Big Five personality science to validated measures of learning agility and motivation."
-          },
-          "scale": {
-            "title": "AI-scaled",
-            "body": "AI-driven assessments that adapt in real time, delivering the same scientific rigor from 10 to 10,000 candidates."
-          },
-          "format": {
-            "title": "Any format, great UX",
-            "body": "Audio, video, written or multiple choice, structured interviews or natural conversations, all built around a smooth candidate experience."
-          }
+        "decide": {
+          "name": "Skillvue Decide",
+          "body": "Put objective skills data at work into every key talent decision. Structure talent workflows with the agility of an AI Copilot."
         }
       },
-      "decide": {
-        "heading": "One skills language for every talent decision.",
-        "lead": "Use the same objective skills data across hiring, performance, L&D and mobility, so every team decides on the same evidence.",
-        "problemTitle": "Skills data, when available, ends up in siloed tools that do not drive decisions.",
-        "problemBody": "Hiring managers, HR business partners and leaders still fall back on gut feel, because the data lives in other systems, disconnected from the decision in front of them.",
-        "solutionTitle": "Skills data, built into every decision.",
-        "solutionBody": "Skillvue Decide puts your skills data to work exactly where decisions happen. We integrate with your tools and embed skills data where it’s needed. Or we ingest your data and structure the decision workflows directly in our platform, so every key talent decision follows straight from the evidence.",
-        "features": {
-          "stack": {
-            "title": "Connect your stack",
-            "body": "Integrations with your ATS, HCM, LMS and PMS. If it has an API, we connect."
-          },
-          "query": {
-            "title": "Query naturally",
-            "body": "Query your skills data in plain language, and get answers that guide the decision instantly."
-          },
-          "workflows": {
-            "title": "Build workflows",
-            "body": "Structure hiring, performance and mobility decisions around your own processes and leadership model, directly in the platform."
-          }
-        }
-      },
-      "cta": {
-        "heading": "Ready to make every talent decision objective?",
-        "body": "See Skillvue live on your own roles, framework and use case.",
-        "cta": "Let’s talk"
-      },
-      "meta": {
-        "title": "Product | Skillvue Map, Assess and Decide | Skillvue",
-        "description": "Skillvue is the skills operating system for talent: map your skills architecture, measure skills objectively and bring skills data into every talent decision."
+      "demo": {
+        "title": "See Skillvue Map in action.",
+        "body": "Book a demo to explore how your jobs can become clear, consistent skill profiles in Skillvue."
       }
     }
   },
