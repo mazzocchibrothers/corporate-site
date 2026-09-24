@@ -2,6 +2,9 @@
 
 import React from 'react';
 import { LazyMotion } from 'framer-motion';
+import { useLocale, useTranslations } from 'next-intl';
+import { ArrowUpRight } from 'lucide-react';
+import { href } from '@/i18n/routes';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import HeroSection from '@/components/landing/HeroSection';
@@ -16,6 +19,8 @@ const loadMotionFeatures = () => import('@/lib/motion-features').then((res) => r
 
 
 export default function HomePage() {
+  const t = useTranslations('home.banner');
+  const locale = useLocale();
 
   return (
     <>
@@ -26,7 +31,20 @@ export default function HomePage() {
         <link rel="preconnect" href="https://i.ytimg.com" />
         <link rel="preconnect" href="https://www.youtube-nocookie.com" />
       </>
-      <Navbar />
+      <Navbar
+        banner={
+          <div className="h-12 flex items-center justify-center gap-4 px-5 bg-[#ece9fb] text-[14px] md:text-[16px]">
+            <span className="text-[#121212]">{t('text')}</span>
+            <a
+              href={href('product/skillvue-map', locale)}
+              className="inline-flex items-center gap-1 font-semibold text-[#4b4df7] border-b-2 border-[#4b4df7] hover:text-[#3133e7] hover:border-[#3133e7] transition-colors"
+            >
+              {t('cta')}
+              <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+            </a>
+          </div>
+        }
+      />
       <LazyMotion features={loadMotionFeatures} strict>
         <main>
           <HeroSection />
