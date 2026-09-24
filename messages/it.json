@@ -6917,9 +6917,7 @@
       "decide": "Skillvue Decide"
     },
     "platform": {
-      "eyebrow": "Un’unica piattaforma, tre prodotti",
       "heading": "Le competenze oggettive fluiscono dai ruoli,<br></br>alla misurazione, alle decisioni.",
-      "body": "Map, Assess e Decide sono tre prodotti connessi che condividono un unico linguaggio delle competenze. Insieme portano dati oggettivi sulle skills attraverso l’intero ciclo di vita del talento.",
       "explore": "Scopri",
       "cards": {
         "map": "Costruisci la tua architettura delle competenze. Trasforma i tuoi ruoli e i segnali di mercato in un’unica mappa dinamica delle competenze.",
@@ -6957,7 +6955,8 @@
           "title": "Esplora e naviga",
           "body": "La visualizzazione intuitiva rende la tua architettura delle competenze facile da leggere e navigare."
         }
-      }
+      },
+      "readMore": "Scopri di più"
     },
     "assess": {
       "heading": "Verifica le competenze, prevedi il potenziale,<br></br>rendi ogni decisione difendibile.",
