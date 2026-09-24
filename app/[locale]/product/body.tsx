@@ -79,26 +79,23 @@ function Recording({ name, label }: { name: string; label: string }) {
   }, []);
 
   return (
-    // The recordings are 16:9 and carry their own browser frame, so they are
-    // centred in the frame around them, never cropped. The rounded clip hides
-    // the black the encoder left outside the window's rounded corners.
-    <div className="absolute inset-0 flex items-center">
-      <video
-        ref={ref}
-        key={locale}
-        className="block w-full aspect-video rounded-[1%/1.8%] object-cover"
-        poster={`/products/${name}-${locale}.avif`}
-        aria-label={label}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-      >
-        <source src={`/products/${name}-${locale}.webm`} type="video/webm" />
-        <source src={`/products/${name}-${locale}.mp4`} type="video/mp4" />
-      </video>
-    </div>
+    // The recordings share the captures' 1440x1024 aspect, so they fill the
+    // same frame; the rounded border is the design's, over the window's own.
+    <video
+      ref={ref}
+      key={locale}
+      className="absolute inset-0 block h-full w-full rounded-[1.528%/2.148%] border-[1.3px] border-[#d4d4d4] bg-white object-cover"
+      poster={`/products/${name}-${locale}.avif`}
+      aria-label={label}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="metadata"
+    >
+      <source src={`/products/${name}-${locale}.webm`} type="video/webm" />
+      <source src={`/products/${name}-${locale}.mp4`} type="video/mp4" />
+    </video>
   );
 }
 
@@ -297,7 +294,7 @@ export default function SkillvueMapPage() {
               </Reveal>
               <ProblemSolution product="decide" />
               <Reveal y={40} duration={0.9} className="mt-10 lg:mt-28 rounded-[24px] md:rounded-[40px] bg-[#f5f5f7] p-3 md:px-10 md:py-[38px]">
-                <div className="relative w-full aspect-video">
+                <div className="relative w-full aspect-[2520/1792]">
                   <Recording name={MEDIA.decide} label={t('logos.decide')} />
                 </div>
               </Reveal>
