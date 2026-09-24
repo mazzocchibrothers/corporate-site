@@ -79,19 +79,26 @@ function Recording({ name, label }: { name: string; label: string }) {
   }, []);
 
   return (
-    <video
-      ref={ref}
-      key={locale}
-      className="absolute inset-0 h-full w-full object-cover rounded-[1.5%/2.1%] border border-[#e5e7eb] bg-white"
-      poster={`/products/${name}-${locale}.avif`}
-      src={`/products/${name}-${locale}.mp4`}
-      aria-label={label}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="metadata"
-    />
+    // The recordings are 16:9 and carry their own browser frame, so they are
+    // centred in the frame around them, never cropped. The rounded clip hides
+    // the black the encoder left outside the window's rounded corners.
+    <div className="absolute inset-0 flex items-center">
+      <video
+        ref={ref}
+        key={locale}
+        className="block w-full aspect-video rounded-[1%/1.8%] object-cover"
+        poster={`/products/${name}-${locale}.avif`}
+        aria-label={label}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+      >
+        <source src={`/products/${name}-${locale}.webm`} type="video/webm" />
+        <source src={`/products/${name}-${locale}.mp4`} type="video/mp4" />
+      </video>
+    </div>
   );
 }
 
@@ -274,7 +281,7 @@ export default function SkillvueMapPage() {
               </Reveal>
               <ProblemSolution product="decide" />
               <Reveal y={40} duration={0.9} className="mt-10 lg:mt-28 rounded-[24px] md:rounded-[40px] bg-[#f5f5f7] p-3 md:px-10 md:py-[38px]">
-                <div className="relative w-full aspect-[2520/1792]">
+                <div className="relative w-full aspect-video">
                   <Recording name={MEDIA.decide} label={t('logos.decide')} />
                 </div>
               </Reveal>
