@@ -5,6 +5,7 @@ import { Reveal } from '@/components/ui/reveal';
 import React from 'react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
+import { BASE_URL } from '@/i18n/urls';
 
 
 
@@ -13,7 +14,7 @@ export default function PrivacyPolicyAlgo() {
   const locale = useLocale();
   // The website notice's own link text differs by locale (root domain in
   // English, the /it path in Italian) — the href must follow it.
-  const siteUrl = locale === 'en' ? 'https://www.skillvue.ai' : 'https://www.skillvue.ai/it';
+  const siteUrl = locale === 'en' ? BASE_URL : `${BASE_URL}/it`;
   return (
     <>
       <Navbar />

@@ -8,6 +8,7 @@ import Navbar from '@/components/landing/Navbar';
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
+import { BASE_URL } from '@/i18n/urls';
 
 function PolicySection({ num, title, children }: { num: string; title: string; children: React.ReactNode }) {
   return (
@@ -42,7 +43,7 @@ export default function PrivacyPolicyPage() {
   const router = useRouter();
   // The notice's own link text differs by locale (root domain in English,
   // the /it path in Italian) — the href must follow it.
-  const siteUrl = useLocale() === 'en' ? 'https://www.skillvue.ai' : 'https://www.skillvue.ai/it';
+  const siteUrl = useLocale() === 'en' ? BASE_URL : `${BASE_URL}/it`;
 
   return (
     <>
