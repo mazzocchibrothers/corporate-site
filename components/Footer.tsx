@@ -148,6 +148,17 @@ export default function Footer() {
                 </a>
               )
             ))}
+            {/* iubenda (loaded by GTM) shows no floating widget, so this is the way
+                back to the consent choices. The API, not the
+                iubenda-cs-preferences-link class: the class is bound once at load
+                and misses a footer re-mounted by a client-side navigation. */}
+            <button
+              type="button"
+              onClick={() => (window as any)._iub?.cs?.api?.openPreferences()}
+              className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0"
+            >
+              {t('footer.legal.cookiePreferences')}
+            </button>
           </div>
         </div>
       </div>
