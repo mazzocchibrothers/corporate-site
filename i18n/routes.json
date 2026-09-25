@@ -399,14 +399,17 @@
     "noindex": true
   },
   {
+    "id": "privacy-policy",
+    "paths": {
+      "en": "/privacy-policy",
+      "it": "/privacy"
+    }
+  },
+  {
     "id": "privacy-policy-algo",
     "paths": {
       "en": "/privacy-policy-algo",
       "it": "/privacy-policy-algo"
-    },
-    "redirectFrom": {
-      "en": "/privacy-policy",
-      "it": "/privacy"
     }
   },
   {

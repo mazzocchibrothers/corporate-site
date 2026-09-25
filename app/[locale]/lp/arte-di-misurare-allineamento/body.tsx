@@ -412,7 +412,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
           <div className="flex items-center gap-5 text-[12px]">
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
               {t.rich('text9', {
-          a: (chunks) => <a href={href('privacy-policy-algo', 'it')}>{chunks}</a>,
+          a: (chunks) => <a href={href('privacy-policy', 'it')}>{chunks}</a>,
         })}</Button>
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
               {t.rich('text10', {
@@ -923,7 +923,7 @@ function WhitepaperLayer() {
           <div className="flex items-center gap-5 text-[12px]">
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
               {t.rich('text39', {
-          a: (chunks) => <a href={href('privacy-policy-algo', 'it')}>{chunks}</a>,
+          a: (chunks) => <a href={href('privacy-policy', 'it')}>{chunks}</a>,
         })}</Button>
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
               {t.rich('text40', {

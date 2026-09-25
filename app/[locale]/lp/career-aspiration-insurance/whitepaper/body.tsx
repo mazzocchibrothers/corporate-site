@@ -566,7 +566,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
             {tl('copyright', { year: new Date().getFullYear() })} ·{' '}
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
               {t.rich('text28', {
-          a: (chunks) => <a href={href('privacy-policy-algo', 'it')}>{chunks}</a>,
+          a: (chunks) => <a href={href('privacy-policy', 'it')}>{chunks}</a>,
         })}</Button>
             {' '}·{' '}
             <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">

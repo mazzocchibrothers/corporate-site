@@ -467,7 +467,7 @@ export default function HiddenCostRecruiting() {
           <div className="flex items-center gap-6 text-[12px]">
             <Button asChild variant="tertiary" mode="dark" icon={null} className="text-[12px]">
               {t.rich('text11', {
-          a: (chunks) => <a href={href('privacy-policy-algo', 'it')}>{chunks}</a>,
+          a: (chunks) => <a href={href('privacy-policy', 'it')}>{chunks}</a>,
         })}</Button>
             <Button asChild variant="tertiary" mode="dark" icon={null} className="text-[12px]">
               {t.rich('text12', {
