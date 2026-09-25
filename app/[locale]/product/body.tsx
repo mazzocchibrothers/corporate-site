@@ -209,54 +209,57 @@ export default function SkillvueMapPage() {
       <Navbar />
       <main>
         <div className="section-light">
-          {/* Hero */}
-          <section className="pt-[120px] pb-8 lg:pt-[152px] text-center">
-            <Reveal duration={0.7} className={`${container} flex flex-col items-center`}>
-              <h1 className="font-semibold text-[48px] md:text-[64px] text-[#121212] text-balance" style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}>
-                {t.rich('hero.heading', { br })}
-              </h1>
-              <p className="mt-[26px] max-w-[760px] text-[18px] leading-[1.4] text-[#4B4B4B] text-balance">{t('hero.body')}</p>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-                <Button asChild variant="primary" mode="light" icon={null}>
-                  <a href={href('book-meeting', locale)}>{t('hero.cta')}</a>
-                </Button>
-                <a href={href('science', locale)} className="group flex items-center gap-3 text-[16px] font-medium text-[#4B4B4B] hover:text-[#121212] transition-colors">
-                  {t('hero.science')}
-                  <ArrowRight className="w-[18px] h-[18px] transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-                </a>
-              </div>
-            </Reveal>
-          </section>
-
-          {/* Platform: the three products */}
-          <section className="pb-14 lg:pb-20">
-            <Reveal
-              y={32}
-              scale={0.98}
-              duration={0.9}
-              className="max-w-[1344px] mx-5 md:mx-8 lg:mx-auto rounded-[24px] md:rounded-[40px] px-4 pb-4 md:px-12 md:pb-12 text-center"
-              style={{ background: 'linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.85) 18%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0) 62%), linear-gradient(90deg, #fdf1ea 0%, #f5f5f7 50%, #efeefd 100%)' }}
-            >
-              <h2 className={H2}>{t.rich('platform.heading', { br })}</h2>
-              <div className="mt-10 lg:mt-12 grid gap-3 md:grid-cols-3 lg:gap-[42px]">
-                {PRODUCTS.map((p) => (
-                  <a
-                    key={p}
-                    href={`#${p}`}
-                    onClick={(e) => scrollTo(e, p)}
-                    className="group flex flex-col items-center gap-[26px] rounded-2xl border border-[#e5e7eb] bg-white px-5 pt-6 pb-[22px] md:px-8 md:pt-8 md:pb-[30px] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(20,20,60,0.10),0_2px_6px_rgba(20,20,60,0.03)]"
-                  >
-                    <Logo product={p} />
-                    <p className="text-[16px] leading-[1.5] text-[#4B4B4B] text-balance">{t(`platform.cards.${p}`)}</p>
-                    <span className="mt-auto flex items-center gap-2 text-[16px] font-medium text-[#4B4DF7] group-hover:text-[#3133E7] transition-colors">
-                      {t('platform.explore')}
-                      <ArrowDown className="w-3.5 h-3.5 transition-transform group-hover:translate-y-0.5" strokeWidth={1.8} aria-hidden="true" />
-                    </span>
+          {/* Hero — the headline block and the three-products block together
+              make up the hero, sized to the viewport as one unit. */}
+          <div className="min-h-screen flex flex-col justify-center">
+            <section className="pt-[120px] pb-8 lg:pt-[152px] text-center">
+              <Reveal duration={0.7} className={`${container} flex flex-col items-center`}>
+                <h1 className="font-semibold text-[48px] md:text-[64px] text-[#121212] text-balance" style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}>
+                  {t.rich('hero.heading', { br })}
+                </h1>
+                <p className="mt-[26px] max-w-[760px] text-[18px] leading-[1.4] text-[#4B4B4B] text-balance">{t('hero.body')}</p>
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+                  <Button asChild variant="primary" mode="light" icon={null}>
+                    <a href={href('book-meeting', locale)}>{t('hero.cta')}</a>
+                  </Button>
+                  <a href={href('science', locale)} className="group flex items-center gap-3 text-[16px] font-medium text-[#4B4B4B] hover:text-[#121212] transition-colors">
+                    {t('hero.science')}
+                    <ArrowRight className="w-[18px] h-[18px] transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
                   </a>
-                ))}
-              </div>
-            </Reveal>
-          </section>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* Platform: the three products */}
+            <section className="pt-16 pb-14 lg:pt-24 lg:pb-20">
+              <Reveal
+                y={32}
+                scale={0.98}
+                duration={0.9}
+                className="max-w-[1344px] mx-5 md:mx-8 lg:mx-auto rounded-[24px] md:rounded-[40px] px-4 pb-4 md:px-12 md:pb-12 text-center"
+                style={{ background: 'linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.85) 18%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0) 62%), linear-gradient(90deg, #fdf1ea 0%, #f5f5f7 50%, #efeefd 100%)' }}
+              >
+                <h2 className={H2}>{t.rich('platform.heading', { br })}</h2>
+                <div className="mt-10 lg:mt-12 grid gap-3 md:grid-cols-3 lg:gap-[42px]">
+                  {PRODUCTS.map((p) => (
+                    <a
+                      key={p}
+                      href={`#${p}`}
+                      onClick={(e) => scrollTo(e, p)}
+                      className="group flex flex-col items-center gap-[26px] rounded-2xl border border-[#e5e7eb] bg-white px-5 pt-6 pb-[22px] md:px-8 md:pt-8 md:pb-[30px] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(20,20,60,0.10),0_2px_6px_rgba(20,20,60,0.03)]"
+                    >
+                      <Logo product={p} />
+                      <p className="text-[16px] leading-[1.5] text-[#4B4B4B] text-balance">{t(`platform.cards.${p}`)}</p>
+                      <span className="mt-auto flex items-center gap-2 text-[16px] font-medium text-[#4B4DF7] group-hover:text-[#3133E7] transition-colors">
+                        {t('platform.explore')}
+                        <ArrowDown className="w-3.5 h-3.5 transition-transform group-hover:translate-y-0.5" strokeWidth={1.8} aria-hidden="true" />
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </Reveal>
+            </section>
+          </div>
 
           {/* Map */}
           <section id="map" className={section}>

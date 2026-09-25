@@ -1,15 +1,20 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Reveal } from '@/components/ui/reveal';
 import React from 'react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
+import { BASE_URL } from '@/i18n/urls';
 
 
 
 export default function PrivacyPolicyAlgo() {
   const t = useTranslations('privacy-policy-algo');
+  const locale = useLocale();
+  // The website notice's own link text differs by locale (root domain in
+  // English, the /it path in Italian) — the href must follow it.
+  const siteUrl = locale === 'en' ? BASE_URL : `${BASE_URL}/it`;
   return (
     <>
       <Navbar />
@@ -53,7 +58,7 @@ export default function PrivacyPolicyAlgo() {
 
                 <p className="text-[16px] text-[#121212]/70 leading-[1.85] mb-6">
                   {t.rich('body3', {
-          a: (chunks) => <a href="https://www.skillvue.ai/it" target="_blank" rel="noopener noreferrer" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
+          a: (chunks) => <a href={siteUrl} target="_blank" rel="noopener noreferrer" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
         })}</p>
                 <p className="text-[16px] text-[#121212]/70 leading-[1.85] mb-10">
                   {t('body4')}</p>
@@ -186,6 +191,11 @@ export default function PrivacyPolicyAlgo() {
                   {t('body31')}</p>
               </div>
 
+              {/* NOTICE 2 (Clienti) is Italian-only — no English text exists
+                  for it yet, so it renders only for Italian visitors rather
+                  than showing untranslated Italian on the English page. */}
+              {locale === 'it' && (
+              <>
               {/* Notice-level divider */}
               <div className="h-px bg-[#121212]/[0.1] mb-20" />
 
@@ -326,6 +336,8 @@ export default function PrivacyPolicyAlgo() {
                 <p className="text-[13px] text-[#121212]/35 mt-12 pt-8 border-t border-[#121212]/[0.06]">
                   {t('clientsFooterNote')}</p>
               </div>
+              </>
+              )}
 
             </Reveal>
           </div>

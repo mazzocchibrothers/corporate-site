@@ -44,10 +44,17 @@ const MONOLINGUAL = routes
  * Adding a line here is a copy decision and should be made like one. If you are
  * adding one because the check is inconvenient, translate the string instead.
  */
+/**
+ * The client notice on privacy-policy-algo (keys prefixed 'clients', see
+ * app/[locale]/privacy-policy-algo/body.tsx) is Italian legal text, issued in
+ * Italian only and published unchanged at both locale URLs — not a
+ * translation gap. The website notice sharing that page's namespace, and the
+ * standalone privacy-policy page, both now carry real English text and are
+ * checked normally.
+ */
+const CLIENT_NOTICE_PREFIX = 'privacy-policy-algo.clients';
+
 const DELIBERATE = [
-  // The data-processing notices are Italian legal text, issued in Italian and
-  // published unchanged at both locale URLs — not a translation gap.
-  ['privacy-policy-algo.', 'Italian legal notices served identically at both locale URLs, not translated'],
   // Job titles are not translated in Italian business writing.
   ['customers.adr.results.quote.role', 'job title'],
   ['customers.adr-2.results.quote.role', 'job title'],
@@ -113,6 +120,7 @@ const DELIBERATE = [
 
 const allowed = (path) =>
   MONOLINGUAL.some((ns) => path === ns || path.startsWith(`${ns}.`)) ||
+  path.startsWith(CLIENT_NOTICE_PREFIX) ||
   DELIBERATE.some(([p]) => (p.endsWith('.') ? path.startsWith(p) : path === p));
 
 function* leaves(a, b, prefix = '') {

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from '@/i18n/navigation';
-import { Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { href } from '@/i18n/routes';
 
@@ -21,7 +21,7 @@ const footerGroups = [
       'solutions/project-resourcing',
     ],
   },
-  { id: 'customers', links: ['customers', 'customers/talent-pioneers', 'book-meeting'] },
+  { id: 'customers', links: ['customers', 'customers/talent-pioneers'] },
   { id: 'resources', links: ['blog', 'resources/insights', 'resources/press', 'about', 'careers'] },
 ];
 
@@ -35,8 +35,6 @@ const labelKey = (id: string) =>
   id.split('/').pop()!.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
 
 const socials = [
-  { icon: Instagram, href: 'https://www.instagram.com/skillvue.ai/', label: 'Instagram' },
-  { icon: Facebook, href: 'https://www.facebook.com/skillvue.ai', label: 'Facebook' },
   { icon: Linkedin, href: 'https://www.linkedin.com/company/skillvue/', label: 'LinkedIn' },
 ];
 
@@ -128,6 +126,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
             {[
+              { label: t('footer.legal.privacy'), href: href('privacy-policy', lang) },
               {
                 label: t('footer.legal.cookies'),
                 // Two Iubenda policies, one per language — an external id, not a
