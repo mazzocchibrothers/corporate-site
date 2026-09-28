@@ -22,7 +22,8 @@
         "about": "Chi Siamo",
         "careers": "Carriere",
         "customers": "Storie di Successo",
-        "talentPioneers": "Talent Pioneers"
+        "talentPioneers": "Talent Pioneers",
+        "partners": "Partner"
       }
     },
     "footer": {
@@ -43,6 +44,7 @@
         "projectResourcing": "Project Resourcing",
         "customers": "Storie di Successo",
         "talentPioneers": "Talent Pioneers",
+        "partners": "Partner",
         "blog": "Blog",
         "insights": "Insights",
         "press": "Press",
@@ -4730,6 +4732,41 @@
         "headingAccent": "il nostro team.",
         "paragraph": "Condivideremo con te contenuti rilevanti su Skillvue, sulla nostra community e sui temi che esploriamo insieme."
       }
+    },
+    "partners": {
+      "meta": {
+        "title": "Partner | Skillvue",
+        "description": "Scopri i partner commerciali e tecnologici di Skillvue, o diventa uno di loro."
+      },
+      "hero": {
+        "eyebrow": "Partner",
+        "heading": "Scopri i nostri partner",
+        "body": "I partner sono al centro della crescita di Skillvue.<br></br>Trova quello giusto per la tua organizzazione, oppure unisciti a noi.",
+        "cta": "Diventa partner"
+      },
+      "network": {
+        "heading": "La nostra rete di partner",
+        "filterLabel": "Filtra",
+        "categoryLabel": "Categoria",
+        "filters": {
+          "all": "Tutti",
+          "commercial": "Commerciali",
+          "integration": "Integrazione / Tech"
+        },
+        "items": {
+          "flowsparks": {
+            "name": "FLOWSPARKS",
+            "description": "FLOWSPARKS è la piattaforma di apprendimento che aiuta le organizzazioni che puntano seriamente sulla formazione a colmare più velocemente i gap di competenze.",
+            "cta": "Visita flowsparks.com"
+          }
+        }
+      },
+      "cta": {
+        "eyebrow": "Unisciti a noi",
+        "heading": "Cresci insieme a Skillvue come partner",
+        "body": "Commerciale o tecnologico, raccontaci come vorresti collaborare con noi.",
+        "cta": "Diventa partner"
+      }
     }
   },
   "demo": {
@@ -8585,5 +8622,14 @@
       "s43": "Accertamento, esercizio o difesa dei diritti del Titolare in sede stragiudiziale e/o giudiziale",
       "s44": "Marketing diretto: invio di comunicazioni commerciali"
     }
+  },
+  "become-a-partner": {
+    "meta": {
+      "title": "Diventa Partner | Skillvue",
+      "description": "Raccontaci come vorresti collaborare con Skillvue, a livello commerciale o tecnologico: il nostro team ti risponderà."
+    },
+    "back": "Partner",
+    "heading": "Diventa <span>Partner</span> di Skillvue",
+    "body": "Aiuta le organizzazioni ad assumere e far crescere le persone in base alle competenze, non alle supposizioni. Candidati qui e il nostro team Partnership ti contatterà entro 1 giorno lavorativo."
   }
 }
