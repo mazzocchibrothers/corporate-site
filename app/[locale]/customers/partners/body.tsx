@@ -11,8 +11,9 @@ import { href } from '@/i18n/routes';
 import { partners } from '@/data/partners';
 
 // Derived from the data, so a category with no partner in it yet cannot be
-// selected and render an empty grid.
-const CATEGORIES = Array.from(new Set(partners.map((p) => p.category)));
+// selected and render an empty grid. 'all' is filtered out in case a future
+// partner is ever miscategorised with that literal string.
+const CATEGORIES = Array.from(new Set(partners.map((p) => p.category))).filter((c) => (c as string) !== 'all');
 const FILTERS = ['all', ...CATEGORIES] as const;
 type Filter = (typeof FILTERS)[number];
 
@@ -28,10 +29,19 @@ export default function PartnersPage() {
   const [activeFilter, setActiveFilter] = useState<Filter>('all');
   const [filterOpen, setFilterOpen] = useState(false);
   const filterRef = useRef<HTMLDivElement>(null);
+  const filterTriggerRef = useRef<HTMLButtonElement>(null);
+
+  // Closing must give focus back to the trigger — otherwise a keyboard user
+  // who tabbed into the listbox loses focus to <body> when Escape or an
+  // option click unmounts the element they were on.
+  const closeFilter = (restoreFocus: boolean) => {
+    setFilterOpen(false);
+    if (restoreFocus) filterTriggerRef.current?.focus();
+  };
 
   useEffect(() => {
     if (!filterOpen) return;
-    const onKeyDown = (e: KeyboardEvent) => { if (e.key === 'Escape') setFilterOpen(false); };
+    const onKeyDown = (e: KeyboardEvent) => { if (e.key === 'Escape') closeFilter(true); };
     const onClickOutside = (e: MouseEvent) => {
       if (filterRef.current && !filterRef.current.contains(e.target as Node)) setFilterOpen(false);
     };
@@ -105,6 +115,7 @@ export default function PartnersPage() {
                 </span>
                 <div className="relative" ref={filterRef}>
                   <button
+                    ref={filterTriggerRef}
                     type="button"
                     onClick={() => setFilterOpen((o) => !o)}
                     aria-haspopup="listbox"
@@ -123,7 +134,7 @@ export default function PartnersPage() {
                           type="button"
                           role="option"
                           aria-selected={activeFilter === f}
-                          onClick={() => { setActiveFilter(f); setFilterOpen(false); }}
+                          onClick={() => { setActiveFilter(f); closeFilter(true); }}
                           className={`block w-full text-left px-4 py-2 text-[14px] transition-colors duration-200 ${activeFilter === f ? 'text-[#1E1E1E] bg-[#F7F7F7]' : 'text-[#4B4B4B] hover:text-[#1E1E1E] hover:bg-[#F7F7F7]'}`}
                         >
                           {t(`network.filters.${f}`)}
