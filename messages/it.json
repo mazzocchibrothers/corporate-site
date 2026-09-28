@@ -6970,7 +6970,7 @@
     "problem": "Il problema",
     "solution": "La soluzione",
     "map": {
-      "heading": "Costruisci la tua architettura delle<br></br>competenze in giorni, non in mesi.",
+      "heading": "Costruisci la tua architettura unificata delle<br></br>competenze in giorni, non in mesi.",
       "problemTitle": "Le competenze vivono in spreadsheet e job description sparsi.",
       "problemBody": "Chiamate in modo diverso in ogni team, senza un modo condiviso per confrontarle. Costruire un’architettura delle competenze con un approccio tradizionale richiede mesi di consulenza, e i risultati sono già superati al momento della consegna.",
       "solutionTitle": "Dal tuo contesto a una mappa delle competenze dinamica.",
@@ -7001,7 +7001,7 @@
       "readMore": "Scopri di più"
     },
     "assess": {
-      "heading": "Verifica le competenze, prevedi il potenziale,<br></br>rendi ogni decisione difendibile.",
+      "heading": "Valuta competenze e potenziale su misura,<br></br>con precisione scientifica, su qualsiasi scala.",
       "problemTitle": "Le decisioni sui talenti si basano sull’intuito e su colloqui incoerenti.",
       "problemBody": "Assunzioni, performance, crescita e mobilità valutano le persone in modo diverso. Il segnale è soggettivo, frammentato e impossibile da confrontare da un processo all’altro.",
       "solutionTitle": "Dati oggettivi sulle competenze, connessi in ogni processo.",
@@ -7030,8 +7030,7 @@
       }
     },
     "decide": {
-      "heading": "Un unico linguaggio delle competenze per ogni decisione sui talenti.",
-      "lead": "Usa gli stessi dati oggettivi sulle competenze per assunzioni, performance, L&D e mobilità, così ogni team decide sulla stessa base di evidenze.",
+      "heading": "Un unico linguaggio delle competenze.<br></br>Decisioni sui talenti difendibili, in modo semplice.",
       "problemTitle": "I dati sulle competenze, quando disponibili, finiscono in strumenti isolati che non guidano le decisioni.",
       "problemBody": "I responsabili delle assunzioni, gli HR business partner e i leader ricadono ancora sull’intuito, perché i dati vivono in altri sistemi, disconnessi dalla decisione che hanno davanti.",
       "solutionTitle": "I dati sulle competenze, integrati in ogni decisione.",

@@ -291,10 +291,7 @@ export default function SkillvueMapPage() {
           <section id="decide" className={section}>
             <div className={container}>
               <Reveal><Logo product="decide" /></Reveal>
-              <Reveal delay={0.1} className="mt-6 lg:mt-11 grid gap-6 lg:gap-0 lg:grid-cols-[minmax(0,713fr)_minmax(0,631fr)] items-start">
-                <h2 className={`max-w-[660px] lg:pr-8 ${H2}`}>{t('decide.heading')}</h2>
-                <p className="text-[18px] leading-[1.4] text-[#4B4B4B]">{t('decide.lead')}</p>
-              </Reveal>
+              <Reveal delay={0.1}><h2 className={`mt-6 lg:mt-11 ${H2}`}>{t.rich('decide.heading', { br })}</h2></Reveal>
               <ProblemSolution product="decide" />
               <Reveal y={40} duration={0.9} className="mt-10 lg:mt-28 rounded-[24px] md:rounded-[40px] bg-[#f5f5f7] p-3 md:px-10 md:py-[38px]">
                 <div className="relative w-full aspect-[2520/1792]">
