@@ -3,11 +3,11 @@
 import React, { useEffect, useRef } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
-import { useRouter } from '@/i18n/navigation';
 import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { href } from '@/i18n/routes';
 import { trackLead } from '@/components/shared/track-lead';
 
 // The "Partnership Request" HubSpot form, one per language.
@@ -21,8 +21,6 @@ export default function BecomeAPartnerPage() {
   const lang = useLocale();
   const t = useTranslations('become-a-partner');
   const formRef = useRef(null);
-
-  const router = useRouter();
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -60,19 +58,20 @@ export default function BecomeAPartnerPage() {
             {/* Left. Text */}
             <div className="lg:col-span-5">
               <Button
-                onClick={() => { router.back(); }}
+                asChild
                 variant="tertiary"
                 mode="dark"
-                icon={<ArrowLeft aria-hidden />}
-                iconPosition="left"
                 className="mb-6"
               >
-                {t('back')}
+                <a href={href('customers/partners', lang)}>
+                  <ArrowLeft aria-hidden />
+                  {t('back')}
+                </a>
               </Button>
 
               <h1
                 className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-4"
-                style={{ lineHeight: 1.1 }}
+                style={{ lineHeight: 1.05 }}
               >{t.rich('heading', {
                 span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
               })}</h1>
