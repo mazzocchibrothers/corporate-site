@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   ChevronDown, Menu, X, ArrowRight,
   AppWindow, Atom, UserSearch, UserCog, BookOpenCheck, Move, FolderKanban,
-  SquarePlay, UsersRound, Lightbulb, Rows3, Newspaper, Building2, Briefcase,
+  SquarePlay, UsersRound, Lightbulb, Rows3, Newspaper, Building2, Briefcase, Handshake,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useRouter } from '@/i18n/navigation';
@@ -29,7 +29,7 @@ const navLinks: { id: string; route?: string; items: string[] | null }[] = [
       'solutions/project-resourcing',
     ],
   },
-  { id: 'customers', items: ['customers', 'customers/talent-pioneers'] },
+  { id: 'customers', items: ['customers', 'customers/talent-pioneers', 'customers/partners'] },
   {
     id: 'resources',
     items: ['resources/insights', 'blog', 'resources/press', 'about', 'careers'],
@@ -47,6 +47,7 @@ const ICONS: Record<string, React.ComponentType<{ className?: string; style?: Re
   projectResourcing: FolderKanban,
   customers: SquarePlay,
   talentPioneers: UsersRound,
+  partners: Handshake,
   insights: Lightbulb,
   blog: Rows3,
   press: Newspaper,

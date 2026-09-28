@@ -21,7 +21,7 @@ const footerGroups = [
       'solutions/project-resourcing',
     ],
   },
-  { id: 'customers', links: ['customers', 'customers/talent-pioneers'] },
+  { id: 'customers', links: ['customers', 'customers/talent-pioneers', 'customers/partners'] },
   { id: 'resources', links: ['blog', 'resources/insights', 'resources/press', 'about', 'careers'] },
 ];
 

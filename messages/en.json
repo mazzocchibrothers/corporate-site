@@ -22,7 +22,8 @@
         "about": "About",
         "careers": "Careers",
         "customers": "Customer Stories",
-        "talentPioneers": "Talent Pioneers"
+        "talentPioneers": "Talent Pioneers",
+        "partners": "Partners"
       }
     },
     "footer": {
@@ -43,6 +44,7 @@
         "projectResourcing": "Project Resourcing",
         "customers": "Customer Stories",
         "talentPioneers": "Talent Pioneers",
+        "partners": "Partners",
         "blog": "Blog",
         "insights": "Insights",
         "press": "Press",
@@ -4730,6 +4732,41 @@
         "headingAccent": "our team.",
         "paragraph": "We'll share relevant insights about Skillvue, our community and the topics we explore together."
       }
+    },
+    "partners": {
+      "meta": {
+        "title": "Partners | Skillvue",
+        "description": "Meet Skillvue's commercial and technology partners, or become one yourself."
+      },
+      "hero": {
+        "eyebrow": "Partners",
+        "heading": "Meet our partners",
+        "body": "Partners are at the heart of how Skillvue grows.<br></br>Find the right one for your organisation, or join us.",
+        "cta": "Become a partner"
+      },
+      "network": {
+        "heading": "Our partner network",
+        "filterLabel": "Filter",
+        "categoryLabel": "Category",
+        "filters": {
+          "all": "All",
+          "commercial": "Commercial",
+          "integration": "Integration / Tech"
+        },
+        "items": {
+          "flowsparks": {
+            "name": "FLOWSPARKS",
+            "description": "FLOWSPARKS is the learning platform that helps organizations serious about learning close knowledge gaps faster.",
+            "cta": "Visit flowsparks.com"
+          }
+        }
+      },
+      "cta": {
+        "eyebrow": "Join us",
+        "heading": "Grow with Skillvue as a partner",
+        "body": "Commercial or technology, tell us how you would like to work together.",
+        "cta": "Become a partner"
+      }
     }
   },
   "demo": {
@@ -8585,5 +8622,14 @@
       "s43": "Establishment, exercise, or defense of legal claims of the Data Controller in out-of-court and/or judicial proceedings",
       "s44": "Direct Marketing: sending commercial communications"
     }
+  },
+  "become-a-partner": {
+    "meta": {
+      "title": "Become a Partner | Skillvue",
+      "description": "Tell us how you would like to partner with Skillvue, commercially or on the technology side, and our team will follow up."
+    },
+    "back": "Partners",
+    "heading": "Become a Skillvue <span>Partner</span>",
+    "body": "Help organizations hire and develop people based on skills, not guesswork. Apply here and our partnerships team will be in touch within 1 working day."
   }
 }

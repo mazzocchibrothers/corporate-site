@@ -91,6 +91,13 @@
     }
   },
   {
+    "id": "become-a-partner",
+    "paths": {
+      "en": "/become-a-partner",
+      "it": "/diventa-partner"
+    }
+  },
+  {
     "id": "book-meeting",
     "paths": {
       "en": "/book-meeting",
@@ -232,6 +239,13 @@
     "paths": {
       "en": "/customers/subdued",
       "it": "/clienti/subdued"
+    }
+  },
+  {
+    "id": "customers/partners",
+    "paths": {
+      "en": "/customers/partners",
+      "it": "/clienti/partner"
     }
   },
   {
