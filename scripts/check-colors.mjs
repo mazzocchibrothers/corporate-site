@@ -57,10 +57,10 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 //             because anyone chose to leave them out.
 //   #1e1e1e, #4b4b4b, #6b7dff
 //             Talent Pioneers' body copy, eyebrow and gradients.
-//   #ebebeb, #f3f4f5
-//             The tag-pill border and fill CLAUDE.md's design system section
-//             already documents ("Insights cards, Customer testimonials") but
-//             which, until the Partners page, no component had actually drawn.
+//   #ebebeb
+//             The Partners page's own card and dropdown borders — not the tag
+//             pill, which draws the two shades CLAUDE.md documents for it
+//             (#e5e7eb border, #f1f5f9 fill), already allowed above.
 //   #161616
 //             The Partners page (app/[locale]/customers/partners): the final
 //             CTA band's gradient base, same tone Figma names neutral/900.
@@ -72,7 +72,7 @@ const ALLOWED = new Set(
     '#5ddba4 #6366f8 #6b7dff #7577f8 #7a7a7a #7b4dff #7b7df9 #8385ff #848484 #8587ff #888888 #8a8cff ' +
     '#9395ff #93e0bb #9a9a9a #9b59b6 #9b9dfb #a8ecca #a9a9a9 #a9aaff #b7f5d8 #c7d2fe #cdc6f5 ' +
     '#d4d4d4 #d9603f #d97706 #e2e8f0 #e3f9ec #e5e7eb #e6d5ea #e6e6e6 #ea580c #ebebeb #ece9fb #ef4444 #efeefb #efeefd #f0f0f8 ' +
-    '#f1f5f9 #f3f4f5 #f5f5f7 #f5f5fa #f7e6dc #f7f7f7 #f8ddc9 #f8f8fa #f8f8ff #fafafa #fdf1ea #fdf3ec #ff5656 #ff5b5b ' +
+    '#f1f5f9 #f5f5f7 #f5f5fa #f7e6dc #f7f7f7 #f8ddc9 #f8f8fa #f8f8ff #fafafa #fdf1ea #fdf3ec #ff5656 #ff5b5b ' +
     '#ff5f24 #ff6262 #ff6550 #ff7a7a #ff7d49 #ff8447 #ff8a5b #ff8a8a #ff8c00 #ff8c42 #ff9a9a ' +
     '#ffaf64 #ffb74b #fff #ffffff'
   ).split(' '),

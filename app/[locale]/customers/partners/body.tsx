@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, ArrowUpRight, ChevronDown, ListFilter } from 'lucide-react';
 import Navbar from '@/components/landing/Navbar';
@@ -10,7 +10,11 @@ import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 import { partners } from '@/data/partners';
 
-const FILTERS = ['all', 'commercial', 'integration'] as const;
+// Derived from the data, so a category with no partner in it yet cannot be
+// selected and render an empty grid. 'all' is filtered out in case a future
+// partner is ever miscategorised with that literal string.
+const CATEGORIES = Array.from(new Set(partners.map((p) => p.category))).filter((c) => (c as string) !== 'all');
+const FILTERS = ['all', ...CATEGORIES] as const;
 type Filter = (typeof FILTERS)[number];
 
 const container = 'max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12';
@@ -24,6 +28,30 @@ export default function PartnersPage() {
   const lang = useLocale();
   const [activeFilter, setActiveFilter] = useState<Filter>('all');
   const [filterOpen, setFilterOpen] = useState(false);
+  const filterRef = useRef<HTMLDivElement>(null);
+  const filterTriggerRef = useRef<HTMLButtonElement>(null);
+
+  // Closing must give focus back to the trigger — otherwise a keyboard user
+  // who tabbed into the listbox loses focus to <body> when Escape or an
+  // option click unmounts the element they were on.
+  const closeFilter = (restoreFocus: boolean) => {
+    setFilterOpen(false);
+    if (restoreFocus) filterTriggerRef.current?.focus();
+  };
+
+  useEffect(() => {
+    if (!filterOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => { if (e.key === 'Escape') closeFilter(true); };
+    const onClickOutside = (e: MouseEvent) => {
+      if (filterRef.current && !filterRef.current.contains(e.target as Node)) setFilterOpen(false);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    document.addEventListener('mousedown', onClickOutside);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      document.removeEventListener('mousedown', onClickOutside);
+    };
+  }, [filterOpen]);
 
   const filtered = activeFilter === 'all' ? partners : partners.filter((p) => p.category === activeFilter);
 
@@ -36,26 +64,17 @@ export default function PartnersPage() {
           <div className="absolute inset-0" aria-hidden="true">
             {/* Same dimming as the customer-story hero photos: blur(8px) is
                 what actually darkens it — brightness alone still shows
-                bright highlights clearly. scale(1.1) hides the blurred edge. */}
+                bright highlights clearly. The oversized offset position
+                hides the blurred edge without needing a separate scale. */}
             <img
-              src="/logos/partners-hero.avif"
+              src="/logos/partners-hero-secondary.avif"
               alt=""
               loading="eager"
               decoding="async"
               fetchPriority="high"
-              className="absolute inset-0 size-full object-cover"
-              style={{ filter: 'blur(8px) brightness(0.25)', transform: 'scale(1.1)' }}
+              className="absolute -left-1/2 -top-[93%] h-[214%] w-[150%] max-w-none object-cover"
+              style={{ filter: 'blur(8px) brightness(0.25)' }}
             />
-            <div className="absolute inset-0 overflow-hidden">
-              <img
-                src="/logos/partners-hero-secondary.avif"
-                alt=""
-                loading="lazy"
-                decoding="async"
-                className="absolute -left-1/2 -top-[93%] h-[214%] w-[150%] max-w-none object-cover"
-                style={{ filter: 'blur(8px) brightness(0.25)' }}
-              />
-            </div>
           </div>
 
           <div className={`${container} relative z-10 w-full`}>
@@ -94,10 +113,13 @@ export default function PartnersPage() {
                   <ListFilter className="h-4 w-4" aria-hidden="true" />
                   {t('network.filterLabel')}
                 </span>
-                <div className="relative">
+                <div className="relative" ref={filterRef}>
                   <button
+                    ref={filterTriggerRef}
                     type="button"
                     onClick={() => setFilterOpen((o) => !o)}
+                    aria-haspopup="listbox"
+                    aria-expanded={filterOpen}
                     className="flex items-center gap-2.5 rounded-full border border-[#EBEBEB] bg-white pl-4 pr-3 py-2.5 text-[14px] font-semibold text-[#1E1E1E] hover:border-[#1E1E1E]/20 transition-colors duration-300"
                   >
                     <span className="text-[12px] font-medium text-[#4B4B4B] tracking-[0.08em] uppercase">{t('network.categoryLabel')}</span>
@@ -105,12 +127,14 @@ export default function PartnersPage() {
                     <ChevronDown className="h-4 w-4 text-[#4B4B4B]" aria-hidden="true" />
                   </button>
                   {filterOpen && (
-                    <div className="absolute z-20 mt-2 min-w-[200px] rounded-xl border border-[#EBEBEB] bg-white py-2 shadow-xl">
+                    <div role="listbox" className="absolute z-20 mt-2 min-w-[200px] rounded-xl border border-[#EBEBEB] bg-white py-2 shadow-xl">
                       {FILTERS.map((f) => (
                         <button
                           key={f}
                           type="button"
-                          onClick={() => { setActiveFilter(f); setFilterOpen(false); }}
+                          role="option"
+                          aria-selected={activeFilter === f}
+                          onClick={() => { setActiveFilter(f); closeFilter(true); }}
                           className={`block w-full text-left px-4 py-2 text-[14px] transition-colors duration-200 ${activeFilter === f ? 'text-[#1E1E1E] bg-[#F7F7F7]' : 'text-[#4B4B4B] hover:text-[#1E1E1E] hover:bg-[#F7F7F7]'}`}
                         >
                           {t(`network.filters.${f}`)}
@@ -145,7 +169,7 @@ export default function PartnersPage() {
                       <p className="text-[22px] font-semibold tracking-[-0.02em] text-[#1E1E1E]">
                         {t(`network.items.${p.slug}.name`)}
                       </p>
-                      <span className="rounded-full bg-[#F3F4F5] px-2.5 py-1 text-[12px] text-[#4B4B4B] whitespace-nowrap">
+                      <span className="rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[12px] text-[#4B4B4B] whitespace-nowrap">
                         {t(`network.filters.${p.category}`)}
                       </span>
                     </div>

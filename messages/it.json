@@ -4750,8 +4750,7 @@
         "categoryLabel": "Categoria",
         "filters": {
           "all": "Tutti",
-          "commercial": "Commerciali",
-          "integration": "Integrazione / Tech"
+          "commercial": "Commerciali"
         },
         "items": {
           "flowsparks": {
