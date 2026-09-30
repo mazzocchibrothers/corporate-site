@@ -1122,11 +1122,150 @@
         "description": "A new customer story with Gruppo Unicomm, a closer look at the workforce challenges in the retail industry, and our upcoming events across Europe."
       }
     },
+    "newsletter-september-2026": {
+      "tag": "Newsletter",
+      "date": "September 2026",
+      "readTime": "5 min read",
+      "title": "Skills, AI and better talent decisions: September at Skillvue",
+      "subtitle": "The launch of Skillvue Map, a new customer story with Gruppo Credem, our partnership with FLOWSPARKS and the second chapter of Talent Pioneers.",
+      "intro": [
+        "September brought new launches, partnerships and conversations around one increasingly important topic for HR leaders: building a clear, **shared skills foundation for better people decisions**."
+      ],
+      "introList": {
+        "label": "In this newsletter:",
+        "items": [
+          "the launch of Skillvue Map",
+          "a new customer story with Gruppo Credem",
+          "our new partnership with FLOWSPARKS",
+          "the second chapter of Talent Pioneers",
+          "the events of September"
+        ]
+      },
+      "sections": [
+        {
+          "img": "skillvueMap",
+          "heading": "Introducing Skillvue Map",
+          "body": [
+            "Building a skills-based organisation starts with a simple question: **what skills does each role actually require?**",
+            "Job descriptions, titles and competency frameworks are often fragmented across systems, teams and countries. Bringing them together into one consistent structure can require significant manual work.",
+            "We launched **Skillvue Map** to accelerate this process. By combining company context, market intelligence and scientific frameworks, it generates an **initial skills-to-jobs mapping in days**. HR and business experts can then review the recommendations, refine requirements and validate the final result.",
+            "Connected to Skillvue assessments, this shared architecture provides a consistent reference for comparing what a role requires with the skills people actually demonstrate, supporting decisions around **succession, learning and internal mobility**."
+          ],
+          "cta": {
+            "label": "Discover Skillvue Map",
+            "href": "skillvueMap",
+            "external": false
+          }
+        },
+        {
+          "img": "credem",
+          "heading": "New Customer Story: Gruppo Credem",
+          "body": [
+            "High-volume hiring creates a specific challenge: how do you understand potential when many candidates are at the beginning of their careers and **a CV only tells part of the story**?",
+            "In our latest customer story, **Gruppo Credem** shares how Skillvue supports the first stages of its selection process by bringing **structured skills data into screening**.",
+            "The goal is to give candidates more opportunities to demonstrate what they can actually do while helping recruiters prioritise profiles more effectively and **focus their time where it matters most**."
+          ],
+          "cta": {
+            "label": "Read the full customer story",
+            "href": "credem",
+            "external": false
+          }
+        },
+        {
+          "img": "flowsparks",
+          "heading": "New partnership with FLOWSPARKS",
+          "body": [
+            "Knowing which skills are missing is only the first step. The next step is building the training that closes those gaps.",
+            "That’s why we’re partnering with **FLOWSPARKS**, the e-learning platform built on instructional design. Skillvue shows exactly where the gaps are, for each person and each team. FLOWSPARKS turns each gap into **targeted digital training**. Then Skillvue reassesses on the same framework, so L&D teams can **show what the training actually changed**.",
+            "The partnership creates a clearer connection between skills measurement and development: identify the gap, build targeted learning around it, and measure progress against the same reference point."
+          ],
+          "cta": {
+            "label": "Discover the partnership",
+            "href": "flowsparks",
+            "external": false
+          }
+        },
+        {
+          "img": "talentPioneers",
+          "heading": "Talent Pioneers · Chapter 2",
+          "body": [
+            "On 29 September, we brought HR leaders together in Milan for the second chapter of **Talent Pioneers**, Skillvue’s private roundtable series dedicated to the changes reshaping talent and HR.",
+            "This chapter started from one question: **what does being ready for AI actually mean in practice?**",
+            "The conversation explored the skills people need as AI becomes part of everyday work, how organisations can improve the quality of decisions involving people, and **why human judgement remains essential** when AI enters HR processes.",
+            "One theme stood out in particular: knowing how to use AI is not only about mastering a tool. It also means knowing **when to trust it, when to question it** and how to maintain responsibility for the final decision."
+          ],
+          "cta": {
+            "label": "Discover Talent Pioneers",
+            "href": "talentPioneers",
+            "external": false
+          }
+        },
+        {
+          "img": "whereWeveBeen",
+          "heading": "September events",
+          "body": [
+            "September also gave us the opportunity to bring these conversations into different HR communities."
+          ],
+          "events": [
+            {
+              "name": "Transformational CHRO Assembly Europe",
+              "meta": "Amsterdam, 9–10 September",
+              "text": "At the **Transformational CHRO Assembly Europe in Amsterdam**, we joined senior HR leaders in discussions around some of the priorities currently shaping their agendas: succession planning, objective skills validation with human oversight, frontline hiring and integration with existing HR systems.",
+              "cta": {
+                "label": "Learn more",
+                "href": "chroAssembly",
+                "external": true
+              }
+            },
+            {
+              "name": "Open Data Heroes",
+              "meta": "Milan",
+              "text": "Back in Milan, **Open Data Heroes** brought together Skillvue, Credem, Politecnico di Milano and Digital Attitude to discuss **the value of skills in the age of machines** and how data and AI are changing the way organisations make people decisions.",
+              "cta": {
+                "label": "Learn more",
+                "href": "openDataHeroes",
+                "external": true
+              }
+            }
+          ]
+        }
+      ],
+      "closing": {
+        "heading": "Looking ahead",
+        "body": [
+          "Across product launches, customer experiences, partnerships and conversations with HR leaders, one idea keeps coming back: skills create value when organisations can turn them into a **shared foundation for action**.",
+          "We’ll continue sharing what we learn as companies bring skills closer to the decisions that shape hiring, development and people growth."
+        ]
+      },
+      "finalKicker": "Discover Skillvue",
+      "finalTitle": "Better talent decisions start with",
+      "finalTitleHighlight": "clearer skills.",
+      "finalBody": "Book a demo and see how Skillvue verifies skills and AI readiness across your organisation.",
+      "finalButton": "Book a Demo",
+      "back": "Back to Blog",
+      "imgSoon": "image coming",
+      "imgLabels": {
+        "skillvueMap": "Introducing Skillvue Map",
+        "credem": "Gruppo Credem",
+        "flowsparks": "Skillvue × FLOWSPARKS",
+        "talentPioneers": "Talent Pioneers · Chapter 2, Milan",
+        "whereWeveBeen": "September events"
+      },
+      "meta": {
+        "title": "Skillvue — The September Newsletter",
+        "description": "The launch of Skillvue Map, a new customer story with Gruppo Credem, our partnership with FLOWSPARKS and the second chapter of Talent Pioneers."
+      }
+    },
     "meta": {
       "title": "Newsletters & Articles | Skillvue",
       "description": "News and notes on talent, hiring and skills from Skillvue: monthly newsletters and in-depth articles."
     },
     "articles": {
+      "newsletter-september-2026": {
+        "title": "The September Newsletter",
+        "date": "September 2026",
+        "tag": "Newsletter"
+      },
       "newsletter-august-2026": {
         "title": "The August Newsletter",
         "date": "August 2026",
