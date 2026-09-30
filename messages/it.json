@@ -1145,7 +1145,7 @@
       "sections": [
         {
           "img": "skillvueMap",
-          "heading": "Skillvue Map è arrivata!",
+          "heading": "Skillvue Map è qui!",
           "body": [
             "Costruire un’organizzazione skills-based parte da una domanda semplice: **quali competenze richiede davvero ogni ruolo?**",
             "Job description, titoli e modelli di competenze sono spesso frammentati tra sistemi, team e Paesi diversi. Riunirli in un’unica struttura coerente può richiedere un lavoro manuale significativo.",
@@ -1160,7 +1160,7 @@
         },
         {
           "img": "credem",
-          "heading": "Gruppo Credem: selezionare con le competenze",
+          "heading": "Gruppo Credem: la selezione parte dalle competenze",
           "body": [
             "La selezione ad alto volume pone una sfida precisa: come si comprende il potenziale quando molti candidati sono all’inizio della carriera e **un CV racconta solo una parte della storia**?",
             "Nella nostra ultima customer story, **Gruppo Credem** racconta come Skillvue supporta le prime fasi del suo processo di selezione, portando **dati oggettivi sulle competenze nello screening**.",
@@ -1188,7 +1188,7 @@
         },
         {
           "img": "talentPioneers",
-          "heading": "Ci risiamo: Talent Pioneers!",
+          "heading": "Lo abbiamo fatto di nuovo: Talent Pioneers!",
           "body": [
             "Il 29 settembre abbiamo riunito a Milano gli HR leader per il secondo capitolo di **Talent Pioneers**, la serie di tavole rotonde private di Skillvue dedicata ai cambiamenti che stanno ridefinendo il talento e l’HR.",
             "Questo capitolo è partito da una domanda: **che cosa significa, in pratica, essere pronti all’AI?**",
@@ -1245,7 +1245,7 @@
       "back": "Torna al Blog",
       "imgSoon": "immagine in arrivo",
       "imgLabels": {
-        "skillvueMap": "Skillvue Map è arrivata!",
+        "skillvueMap": "Skillvue Map è qui!",
         "credem": "Gruppo Credem",
         "flowsparks": "Skillvue × FLOWSPARKS",
         "talentPioneers": "Talent Pioneers · Capitolo 2, Milano",
