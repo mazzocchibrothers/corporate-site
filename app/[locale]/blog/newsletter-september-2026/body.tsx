@@ -11,6 +11,7 @@ import { href, localizePath } from '@/i18n/routes';
 // Empty string '' → a labelled dashed placeholder box renders instead.
 // Put files in public/ as: /newsletter-september-<key>.<ext>
 const IMAGES = {
+  cover: '/covers/newsletter-september-2026.avif',
   skillvueMap: '/newsletter-september-skillvue-map.avif',
   credem: '/newsletter-september-credem.avif',
   flowsparks: '/newsletter-september-flowsparks.avif',
@@ -126,6 +127,9 @@ export default async function SeptemberNewsletter() {
         {/* BODY — light panel */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-6 md:px-8 lg:px-12 py-16 lg:py-20">
+            {/* Cover — the first thing in the body, so it loads eagerly */}
+            <img src={IMAGES.cover} alt={t.raw('imgLabels').cover} fetchPriority="high" decoding="async" sizes="(min-width: 768px) 780px, 100vw" className="block w-full rounded-2xl mb-12" />
+
             {/* Intro */}
             <Reveal y={20} duration={0.6} className="space-y-5">
               {t.raw('intro').map((p, i) => <p key={i} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
