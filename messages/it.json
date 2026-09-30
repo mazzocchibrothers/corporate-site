@@ -125,7 +125,7 @@
     "heading": "Newsletter &<br></br><span>Articoli</span>",
     "body": "Scopri novità e approfondimenti di Skillvue su talento, selezione e competenze.",
     "cta": "Esplora gli articoli",
-    "headingNewsletters": "Newsletter",
+    "headingNewsletters": "Newsletter: The Skills Signal",
     "heading2": "Tutti gli Articoli",
     "heading3": "Vuoi approfondire ulteriormente? Parla con il nostro team.",
     "body2": "Prenota una demo e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
@@ -1262,17 +1262,17 @@
     },
     "articles": {
       "newsletter-september-2026": {
-        "title": "La newsletter di settembre",
+        "title": "Settembre",
         "date": "Settembre 2026",
         "tag": "Newsletter"
       },
       "newsletter-august-2026": {
-        "title": "La newsletter di agosto",
+        "title": "Agosto",
         "date": "Agosto 2026",
         "tag": "Newsletter"
       },
       "newsletter-july-2026": {
-        "title": "La newsletter di luglio",
+        "title": "Luglio",
         "date": "Luglio 2026",
         "tag": "Newsletter"
       },

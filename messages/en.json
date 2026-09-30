@@ -125,7 +125,7 @@
     "heading": "Newsletters &<br></br><span>Articles</span>",
     "body": "Learn more about the news & notes on talent, hiring, and skills from Skillvue.",
     "cta": "Explore articles",
-    "headingNewsletters": "Newsletters",
+    "headingNewsletters": "Newsletters: The Skills Signal",
     "heading2": "All Articles",
     "heading3": "Want to go deeper? Talk to our team.",
     "body2": "Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.",
@@ -1262,17 +1262,17 @@
     },
     "articles": {
       "newsletter-september-2026": {
-        "title": "The September Newsletter",
+        "title": "September",
         "date": "September 2026",
         "tag": "Newsletter"
       },
       "newsletter-august-2026": {
-        "title": "The August Newsletter",
+        "title": "August",
         "date": "August 2026",
         "tag": "Newsletter"
       },
       "newsletter-july-2026": {
-        "title": "The July Newsletter",
+        "title": "July",
         "date": "July 2026",
         "tag": "Newsletter"
       },
