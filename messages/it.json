@@ -1197,7 +1197,7 @@
           "cta": {
             "label": "Scopri Talent Pioneers",
             "href": "talentPioneers",
-            "external": false
+            "external": true
           }
         },
         {
