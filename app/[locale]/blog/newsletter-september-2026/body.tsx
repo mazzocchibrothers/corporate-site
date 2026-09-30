@@ -11,7 +11,7 @@ import { href, localizePath } from '@/i18n/routes';
 // Empty string '' → a labelled dashed placeholder box renders instead.
 // Put files in public/ as: /newsletter-september-<key>.<ext>
 const IMAGES = {
-  cover: '/covers/newsletter-september-2026.avif',
+  hero: '/covers/newsletter-september-2026-hero.avif',
   skillvueMap: '/newsletter-september-skillvue-map.avif',
   credem: '/newsletter-september-credem.avif',
   flowsparks: '/newsletter-september-flowsparks.avif',
@@ -101,19 +101,21 @@ export default async function SeptemberNewsletter() {
 
       <Navbar />
       <main>
-        {/* HERO — dark, on-brand */}
+        {/* HERO — the Skills Signal artwork as a full-bleed background, with the masthead set over it */}
         <section className="relative pt-[80px] overflow-hidden" style={{ background: '#08080c' }}>
-          <div className="pointer-events-none absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(75,77,247,0.18) 0%, rgba(75,77,247,0) 60%)' }} />
-            <div className="absolute top-10 right-[-200px] w-[600px] h-[600px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(255,86,86,0.10) 0%, rgba(255,86,86,0) 60%)' }} />
-          </div>
-          <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 w-full py-16 lg:py-24">
-            <Button asChild variant="tertiary" mode="dark" className="mb-10">
+          <img src={IMAGES.hero} alt="" aria-hidden fetchPriority="high" decoding="async" sizes="100vw" className="absolute inset-0 w-full h-full object-cover object-left" />
+          <div className="pointer-events-none absolute inset-0" style={{ background: 'linear-gradient(90deg, rgba(8,8,12,0.55) 0%, rgba(8,8,12,0.15) 60%, rgba(8,8,12,0) 100%)' }} />
+          <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 w-full py-16 lg:py-28">
+            <Button asChild variant="tertiary" mode="dark" className="mb-12 lg:mb-20">
               <a href={href('blog', lang)}><ArrowLeft aria-hidden />{t('back')}</a>
             </Button>
-            {/* The cover artwork is the hero: it carries the masthead, so the H1 is kept for search and screen readers only. */}
+            {/* The masthead is the visual title; the H1 carries the issue's real title for search and screen readers. */}
             <h1 className="sr-only">{t('title')}</h1>
-            <img src={IMAGES.cover} alt={t.raw('imgLabels').cover} fetchPriority="high" decoding="async" sizes="(min-width: 1280px) 1200px, 100vw" className="block w-full max-w-[1200px] rounded-2xl" />
+            <Reveal duration={0.7} className="max-w-3xl">
+              <p className="text-[13px] md:text-[15px] font-medium uppercase tracking-[0.18em] text-[#6B7DFF] mb-6">{t('masthead.kicker')}</p>
+              <p aria-hidden className="font-semibold text-white text-[clamp(3.5rem,9vw,7.5rem)]" style={{ lineHeight: 0.95, letterSpacing: '-0.03em' }}>{t('masthead.name')}</p>
+              <p className="mt-8 max-w-xl text-[20px] md:text-[26px] text-white/[0.85] leading-[1.35]">{t('masthead.tagline')}</p>
+            </Reveal>
           </div>
         </section>
 

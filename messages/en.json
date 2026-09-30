@@ -1123,6 +1123,11 @@
       }
     },
     "newsletter-september-2026": {
+      "masthead": {
+        "kicker": "Newsletter · September",
+        "name": "The Skills Signal",
+        "tagline": "Cutting through the noise on skills, talent and HR tech"
+      },
       "title": "Skills, AI and better talent decisions: September at Skillvue",
       "intro": [
         "September brought new launches, partnerships and conversations around one increasingly important topic for HR leaders: building a clear, **shared skills foundation for better people decisions**."
@@ -1240,7 +1245,6 @@
       "back": "Back to Blog",
       "imgSoon": "image coming",
       "imgLabels": {
-        "cover": "The Skills Signal · September newsletter",
         "skillvueMap": "Skillvue Map is here!",
         "credem": "Gruppo Credem",
         "flowsparks": "Skillvue × FLOWSPARKS",
