@@ -107,6 +107,7 @@ const DELIBERATE = [
   ['shared.lp.', 'used only by the Italian-only landing pages'],
   // Event names are the events' own names.
   ['blog.newsletter-august-2026.sections.2.events.', 'event names'],
+  ['blog.newsletter-september-2026.sections.4.events.0.name', "the event's own name"],
   ['customers.talent-pioneers.stages.past.', 'conference names'],
   ['customers.talent-pioneers.stages.upcoming.forumHr.title', "the event's own name"],
   // A named interview methodology.

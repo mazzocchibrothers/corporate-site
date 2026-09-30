@@ -70,6 +70,14 @@
     }
   },
   {
+    "id": "blog/newsletter-september-2026",
+    "paths": {
+      "en": "/blog/newsletter-september-2026",
+      "it": "/blog/newsletter-september-2026"
+    },
+    "noindex": true
+  },
+  {
     "id": "blog/recruitment-biases",
     "paths": {
       "en": "/blog/recruitment-biases",
