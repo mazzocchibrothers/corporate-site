@@ -116,6 +116,7 @@ export default async function SeptemberNewsletter() {
                 <span className="text-[13px] text-white/35">{t('date')}</span>
                 <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('readTime')}</span>
               </div>
+              <p className="-mt-2 mb-6 text-[15px] italic text-white/[0.55]">{t('tagline')}</p>
               <h1 className="font-semibold text-white/95 mb-6 text-[40px] md:text-[60px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t('title')}</h1>
               <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>{t('subtitle')}</p>
             </Reveal>
