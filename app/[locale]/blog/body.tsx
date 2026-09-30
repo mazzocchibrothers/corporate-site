@@ -16,6 +16,7 @@ import { href } from '@/i18n/routes';
 // slug as the post itself — so the card and the page it opens are neighbours in
 // the catalogue instead of an `id: 11` in a module array.
 const NEWSLETTERS = [
+  { id: 'newsletter-september-2026', image: '/covers/newsletter-september-2026.avif', href: '/blog/newsletter-september-2026' },
   { id: 'newsletter-august-2026', image: '/newsletter-august-cover.avif', href: '/blog/newsletter-august-2026' },
   { id: 'newsletter-july-2026', image: '/newsletter-july-cover.avif', href: '/blog/newsletter-july-2026' },
 ];

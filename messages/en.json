@@ -125,7 +125,7 @@
     "heading": "Newsletters &<br></br><span>Articles</span>",
     "body": "Learn more about the news & notes on talent, hiring, and skills from Skillvue.",
     "cta": "Explore articles",
-    "headingNewsletters": "Newsletters",
+    "headingNewsletters": "Newsletters: The Skills Signal",
     "heading2": "All Articles",
     "heading3": "Want to go deeper? Talk to our team.",
     "body2": "Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.",
@@ -1123,11 +1123,12 @@
       }
     },
     "newsletter-september-2026": {
-      "tag": "Newsletter",
-      "date": "September 2026",
-      "readTime": "5 min read",
+      "masthead": {
+        "kicker": "Newsletter · September",
+        "name": "The Skills Signal",
+        "tagline": "Cutting through the noise on skills, talent and HR tech"
+      },
       "title": "Skills, AI and better talent decisions: September at Skillvue",
-      "subtitle": "The launch of Skillvue Map, a new customer story with Gruppo Credem, our partnership with FLOWSPARKS and the second chapter of Talent Pioneers.",
       "intro": [
         "September brought new launches, partnerships and conversations around one increasingly important topic for HR leaders: building a clear, **shared skills foundation for better people decisions**."
       ],
@@ -1144,11 +1145,11 @@
       "sections": [
         {
           "img": "skillvueMap",
-          "heading": "Introducing Skillvue Map",
+          "heading": "Skillvue Map is here!",
           "body": [
             "Building a skills-based organisation starts with a simple question: **what skills does each role actually require?**",
             "Job descriptions, titles and competency frameworks are often fragmented across systems, teams and countries. Bringing them together into one consistent structure can require significant manual work.",
-            "We launched **Skillvue Map** to accelerate this process. By combining company context, market intelligence and scientific frameworks, it generates an **initial skills-to-jobs mapping in days**. HR and business experts can then review the recommendations, refine requirements and validate the final result.",
+            "We launched **Skillvue Map** to accelerate this process, combining company context, market intelligence and scientific frameworks. With Skillvue Map, a **unified, always updated skills map can be built in days, not months**. Crucially, HR and business experts remain in control of reviewing and validating the results.",
             "Connected to Skillvue assessments, this shared architecture provides a consistent reference for comparing what a role requires with the skills people actually demonstrate, supporting decisions around **succession, learning and internal mobility**."
           ],
           "cta": {
@@ -1159,10 +1160,10 @@
         },
         {
           "img": "credem",
-          "heading": "New Customer Story: Gruppo Credem",
+          "heading": "Gruppo Credem: hiring with skills",
           "body": [
             "High-volume hiring creates a specific challenge: how do you understand potential when many candidates are at the beginning of their careers and **a CV only tells part of the story**?",
-            "In our latest customer story, **Gruppo Credem** shares how Skillvue supports the first stages of its selection process by bringing **structured skills data into screening**.",
+            "In our latest customer story, **Gruppo Credem** shares how Skillvue supports the first stages of its selection process by bringing **objective skills data into screening**.",
             "The goal is to give candidates more opportunities to demonstrate what they can actually do while helping recruiters prioritise profiles more effectively and **focus their time where it matters most**."
           ],
           "cta": {
@@ -1173,7 +1174,7 @@
         },
         {
           "img": "flowsparks",
-          "heading": "New partnership with FLOWSPARKS",
+          "heading": "FLOWSPARKS is our new partner",
           "body": [
             "Knowing which skills are missing is only the first step. The next step is building the training that closes those gaps.",
             "That’s why we’re partnering with **FLOWSPARKS**, the e-learning platform built on instructional design. Skillvue shows exactly where the gaps are, for each person and each team. FLOWSPARKS turns each gap into **targeted digital training**. Then Skillvue reassesses on the same framework, so L&D teams can **show what the training actually changed**.",
@@ -1187,7 +1188,7 @@
         },
         {
           "img": "talentPioneers",
-          "heading": "Talent Pioneers · Chapter 2",
+          "heading": "We did it again: Talent Pioneers!",
           "body": [
             "On 29 September, we brought HR leaders together in Milan for the second chapter of **Talent Pioneers**, Skillvue’s private roundtable series dedicated to the changes reshaping talent and HR.",
             "This chapter started from one question: **what does being ready for AI actually mean in practice?**",
@@ -1197,12 +1198,12 @@
           "cta": {
             "label": "Discover Talent Pioneers",
             "href": "talentPioneers",
-            "external": false
+            "external": true
           }
         },
         {
           "img": "whereWeveBeen",
-          "heading": "September events",
+          "heading": "We can’t stop moving",
           "body": [
             "September also gave us the opportunity to bring these conversations into different HR communities."
           ],
@@ -1233,8 +1234,7 @@
       "closing": {
         "heading": "Looking ahead",
         "body": [
-          "Across product launches, customer experiences, partnerships and conversations with HR leaders, one idea keeps coming back: skills create value when organisations can turn them into a **shared foundation for action**.",
-          "We’ll continue sharing what we learn as companies bring skills closer to the decisions that shape hiring, development and people growth."
+          "Across product launches, customer experiences, partnerships and conversations with HR leaders, one idea keeps coming back: skills create value when organisations can turn them into a **shared foundation for action**."
         ]
       },
       "finalKicker": "Discover Skillvue",
@@ -1245,7 +1245,7 @@
       "back": "Back to Blog",
       "imgSoon": "image coming",
       "imgLabels": {
-        "skillvueMap": "Introducing Skillvue Map",
+        "skillvueMap": "Skillvue Map is here!",
         "credem": "Gruppo Credem",
         "flowsparks": "Skillvue × FLOWSPARKS",
         "talentPioneers": "Talent Pioneers · Chapter 2, Milan",
@@ -1262,17 +1262,17 @@
     },
     "articles": {
       "newsletter-september-2026": {
-        "title": "The September Newsletter",
+        "title": "September",
         "date": "September 2026",
         "tag": "Newsletter"
       },
       "newsletter-august-2026": {
-        "title": "The August Newsletter",
+        "title": "August",
         "date": "August 2026",
         "tag": "Newsletter"
       },
       "newsletter-july-2026": {
-        "title": "The July Newsletter",
+        "title": "July",
         "date": "July 2026",
         "tag": "Newsletter"
       },
