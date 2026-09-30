@@ -4,7 +4,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ArrowRight, Clock, ImageIcon } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ImageIcon } from 'lucide-react';
 import { href, localizePath } from '@/i18n/routes';
 
 // ─── Fill these in when the assets/links are ready ──────────────────────────
@@ -111,25 +111,15 @@ export default async function SeptemberNewsletter() {
             <Button asChild variant="tertiary" mode="dark" className="mb-10">
               <a href={href('blog', lang)}><ArrowLeft aria-hidden />{t('back')}</a>
             </Button>
-            <Reveal duration={0.7} className="max-w-3xl">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{t('tag')}</span>
-                <span className="text-[13px] text-white/35">{t('date')}</span>
-                <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('readTime')}</span>
-              </div>
-              <p className="-mt-2 mb-6 text-[15px] italic text-white/[0.55]">{t('tagline')}</p>
-              <h1 className="font-semibold text-white/95 mb-6 text-[40px] md:text-[60px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t('title')}</h1>
-              <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>{t('subtitle')}</p>
-            </Reveal>
+            {/* The cover artwork is the hero: it carries the masthead, so the H1 is kept for search and screen readers only. */}
+            <h1 className="sr-only">{t('title')}</h1>
+            <img src={IMAGES.cover} alt={t.raw('imgLabels').cover} fetchPriority="high" decoding="async" sizes="(min-width: 1280px) 1200px, 100vw" className="block w-full max-w-[1200px] rounded-2xl" />
           </div>
         </section>
 
         {/* BODY — light panel */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-6 md:px-8 lg:px-12 py-16 lg:py-20">
-            {/* Cover — the first thing in the body, so it loads eagerly */}
-            <img src={IMAGES.cover} alt={t.raw('imgLabels').cover} fetchPriority="high" decoding="async" sizes="(min-width: 768px) 780px, 100vw" className="block w-full rounded-2xl mb-12" />
-
             {/* Intro */}
             <Reveal y={20} duration={0.6} className="space-y-5">
               {t.raw('intro').map((p, i) => <p key={i} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
