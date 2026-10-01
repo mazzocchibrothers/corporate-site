@@ -162,8 +162,10 @@ reintroduce per-page variants.
 - **Resources page heroes** (Insights, Press) are a `lg:grid-cols-12` grid: copy
   on the left, a `<HeroVideo>` on the right (webm + mp4 + poster in
   `public/videos/`).
-- **Navbar and its dropdowns** are flat `#ffffff` on light sections and
-  `#000000` on dark ones — no translucent tints.
+- **Navbar** is flat `#ffffff` on light sections and `#000000` on dark ones —
+  no translucent tints. Its **dropdown panels** are `#ffffff` on light sections
+  too, but `#1e1e1e` on dark — a dark-mode dropdown flush against the navbar's
+  own `#000000` reads as invisible but for its border.
 - **Dark text on light sections** is `#121212` and its opacity variants. Light
   section background is `.section-breathe` (`#F7F7F7`).
 - **Colours:** every hex drawn in `app/`, `components/`, `i18n/` and

@@ -116,7 +116,7 @@ export default function AiCompetencyNewsletterPage() {
             <p className="text-[16px] md:text-[18px] text-white/65 leading-[1.55] mt-5 max-w-2xl">{t('subhead')}</p>
             <div className="flex flex-col sm:flex-row gap-3 mt-8">
               <a href={t('assets.pdf')} download onClick={() => handleDownload('download')} data-testid="download-cta"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-semibold text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-medium text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
                 <Download className="h-[18px] w-[18px]" /> {t('download')}
               </a>
             </div>
@@ -236,11 +236,11 @@ export default function AiCompetencyNewsletterPage() {
               <p className="text-[15px] md:text-[16px] text-white/65 mb-8 max-w-xl mx-auto">{t('cta.body')}</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a href={href('book-meeting', lang)} onClick={() => track('book_bottom')}
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[15px] font-semibold text-[#1a1a3f] bg-white hover:opacity-90 transition-all duration-300">
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[15px] font-medium text-[#1a1a3f] bg-white hover:opacity-90 transition-all duration-300">
                   {t('cta.button')} <ArrowRight className="h-4 w-4" />
                 </a>
                 <a href={t('assets.pdf')} download onClick={() => handleDownload('download_bottom')}
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[15px] font-semibold text-white border border-white/20 hover:bg-white/[0.08] transition-all duration-300">
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[15px] font-medium text-white border border-white/20 hover:bg-white/[0.08] transition-all duration-300">
                   <Download className="h-[18px] w-[18px]" /> {t('download')}
                 </a>
               </div>

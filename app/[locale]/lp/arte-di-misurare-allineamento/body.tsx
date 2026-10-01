@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { href } from '@/i18n/routes';
 import { Reveal } from '@/components/ui/reveal';
 import React, { useState, useEffect, useRef } from 'react';
-import { Download, ArrowRight } from 'lucide-react';
+import { Download, ArrowRight, Check, Lock, Loader2, BarChart3, ShieldCheck, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { trackLead } from '@/components/shared/track-lead';
 
@@ -37,27 +37,21 @@ const heroStats = [
 const featureCards = [
   {
     icon: (
-      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
+      <Sparkles width={22} height={22} strokeWidth={1.8} />
     ),
     title: 'Il paradosso dell\'identità di brand',
     desc: 'Le maison del lusso sono tra le organizzazioni più attente al dettaglio al mondo. Eppure il processo con cui selezionano le persone che incarnano il brand rimane il meno strutturato dell\'intera catena del valore.',
   },
   {
     icon: (
-      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
+      <BarChart3 width={22} height={22} strokeWidth={1.8} />
     ),
     title: 'Perché il colloquio non basta',
     desc: 'Il colloquio strutturato raggiunge una validità di 0,51. L\'verification comportamentale situazionale arriva a 0,58 per i ruoli ad alta componente relazionale. Nel lusso, dove il costo del falso positivo è strutturalmente più alto, il margine conta.',
   },
   {
     icon: (
-      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
+      <ShieldCheck width={22} height={22} strokeWidth={1.8} />
     ),
     title: 'I rischi non misurati',
     desc: 'Quattro rischi strutturali che la maggior parte delle maison non sta misurando: dal bias da esperienza settoriale al rischio regolatorio EU AI Act, fino all\'omologazione culturale che blocca l\'adattamento ai nuovi mercati.',
@@ -300,18 +294,14 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                       className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                       style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
                     >
-                      <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={3}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
+                      <Check width={10} height={10} color="white" strokeWidth={3} />
                     </div>
                     {item}
                   </li>
                 ))}
               </ul>
               <p className="flex items-center gap-2 text-[12px] text-[#0D0D0D]/30">
-                <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
+                <Lock width={13} height={13} strokeWidth={2} />
                 {tl('dataSafe')}
               </p>
             </Reveal>
@@ -387,10 +377,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 >
                   {submitting ? (
                     <>
-                      <svg className="animate-spin" width="16" height="16" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                      </svg>{tl('loading')}</>
+                      <Loader2 className="animate-spin" width={16} height={16} />{tl('loading')}</>
                   ) : (
                     'Scarica il Report'
                   )}

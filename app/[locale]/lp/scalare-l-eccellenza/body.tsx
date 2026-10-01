@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { href } from '@/i18n/routes';
 import { Reveal } from '@/components/ui/reveal';
 import React, { useState, useEffect, useRef } from 'react';
-import { Download, ArrowRight } from 'lucide-react';
+import { Download, ArrowRight, Check, Lock, Loader2, CircleDollarSign, ShieldCheck, Building2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { trackLead } from '@/components/shared/track-lead';
 
@@ -37,27 +37,21 @@ const heroStats = [
 const featureCards = [
   {
     icon: (
-      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
+      <Building2 width={22} height={22} strokeWidth={1.8} />
     ),
     title: 'Il paradosso della crescita nel lusso',
     desc: 'L\'apertura di nuovi flagship, il lancio di collezioni cruise, la campagna natalizia: tutti eventi che generano un fabbisogno di talento impossibile da soddisfare con i metodi tradizionali del recruiting del lusso, mettendo a rischio l\'identità di brand.',
   },
   {
     icon: (
-      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
+      <CircleDollarSign width={22} height={22} strokeWidth={1.8} />
     ),
     title: 'L\'anatomia del costo invisibile',
     desc: 'Il 78% dei clienti del lusso abbandona un acquisto dopo una singola interazione negativa con un advisor. Ogni assunzione sbagliata non è più solo un costo operativo: è un danno reputazionale misurabile che i sistemi di reporting tradizionali non catturano.',
   },
   {
     icon: (
-      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
+      <ShieldCheck width={22} height={22} strokeWidth={1.8} />
     ),
     title: 'La promessa dell\'verification intelligente',
     desc: 'Come processare centinaia di candidature stagionali senza abbassare la soglia di eccellenza del brand: la distinzione tra automazione e augmentation, e perché l\'verification comportamentale strutturato (0,58 di validità predittiva) è l\'unico strumento scalabile.',
@@ -300,18 +294,14 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                       className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                       style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
                     >
-                      <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={3}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
+                      <Check width={10} height={10} color="white" strokeWidth={3} />
                     </div>
                     {item}
                   </li>
                 ))}
               </ul>
               <p className="flex items-center gap-2 text-[12px] text-[#0D0D0D]/30">
-                <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
+                <Lock width={13} height={13} strokeWidth={2} />
                 {tl('dataSafe')}
               </p>
             </Reveal>
@@ -387,10 +377,7 @@ function VetrinaLayer({ onUnlock }: { onUnlock: () => void }) {
                 >
                   {submitting ? (
                     <>
-                      <svg className="animate-spin" width="16" height="16" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                      </svg>{tl('loading')}</>
+                      <Loader2 className="animate-spin" width={16} height={16} />{tl('loading')}</>
                   ) : (
                     'Scarica il Report'
                   )}
