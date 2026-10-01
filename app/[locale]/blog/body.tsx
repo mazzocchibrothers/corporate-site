@@ -6,33 +6,37 @@ import { HeroVideo } from '@/components/ui/hero-video';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { ArrowRight, ChevronDown, Newspaper } from 'lucide-react';
+import { ArrowDown, ArrowRight, Newspaper } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
-// Structure: the card's image and where it links. The title, the date and the
-// tag are copy and live in messages/ under blog.articles, keyed on the same
-// slug as the post itself — so the card and the page it opens are neighbours in
-// the catalogue instead of an `id: 11` in a module array.
+// Structure: the card's image. The title, the date and the tag are copy and
+// live in messages/ under blog.articles, keyed on the same slug as the post
+// itself — so the card and the page it opens are neighbours in the catalogue
+// instead of an `id: 11` in a module array. The link is the registry's
+// `blog/<id>` route, localized by href().
+//
+// Each card is an <a>, not a clickable <article>: a real link is reachable with
+// Tab, announced as a link by screen readers, and opens in a new tab on
+// cmd/middle-click.
 const NEWSLETTERS = [
-  { id: 'newsletter-september-2026', image: '/covers/newsletter-september-2026.avif', href: '/blog/newsletter-september-2026' },
-  { id: 'newsletter-august-2026', image: '/newsletter-august-cover.avif', href: '/blog/newsletter-august-2026' },
-  { id: 'newsletter-july-2026', image: '/newsletter-july-cover.avif', href: '/blog/newsletter-july-2026' },
+  { id: 'newsletter-september-2026', image: '/newsletter-september-cover.avif' },
+  { id: 'newsletter-august-2026', image: '/newsletter-august-cover.avif' },
+  { id: 'newsletter-july-2026', image: '/newsletter-july-cover.avif' },
 ];
 
 const ARTICLES = [
-  { id: 'attitude-vs-competence', image: '/covers/blog-attitude-vs-competence.avif', href: '/blog/attitude-vs-competence' },
-  { id: 'recruitment-biases', image: '/covers/blog-recruitment-biases.avif', href: '/blog/recruitment-biases' },
-  { id: 'negotiation-techniques', image: '/covers/blog-negotiation-techniques.avif', href: '/blog/negotiation-techniques' },
-  { id: 'accountability', image: '/covers/blog-accountability.avif', href: '/blog/accountability' },
-  { id: 'critical-thinking', image: '/covers/blog-critical-thinking.avif', href: '/blog/critical-thinking' },
-  { id: 'corporate-onboarding', image: '/covers/blog-corporate-onboarding.avif', href: '/blog/corporate-onboarding' },
-  { id: 'managerial-skills', image: '/covers/blog-managerial-skills.avif', href: '/blog/managerial-skills' },
-  { id: 'social-skills', image: '/covers/blog-social-skills.avif', href: '/blog/social-skills' },
-  { id: 'talent-acquisition', image: '/covers/blog-talent-acquisition.avif', href: '/blog/talent-acquisition' },
+  { id: 'attitude-vs-competence', image: '/covers/blog-attitude-vs-competence.avif' },
+  { id: 'recruitment-biases', image: '/covers/blog-recruitment-biases.avif' },
+  { id: 'negotiation-techniques', image: '/covers/blog-negotiation-techniques.avif' },
+  { id: 'accountability', image: '/covers/blog-accountability.avif' },
+  { id: 'critical-thinking', image: '/covers/blog-critical-thinking.avif' },
+  { id: 'corporate-onboarding', image: '/covers/blog-corporate-onboarding.avif' },
+  { id: 'managerial-skills', image: '/covers/blog-managerial-skills.avif' },
+  { id: 'social-skills', image: '/covers/blog-social-skills.avif' },
+  { id: 'talent-acquisition', image: '/covers/blog-talent-acquisition.avif' },
 ];
-
 
 export default function BlogPage() {
   const lang = useLocale();
@@ -41,13 +45,13 @@ export default function BlogPage() {
   const renderArticle = (article, i) => {
     return (
       <Reveal
-        as="article"
+        as="a"
         y={20}
         delay={Math.min(i * 0.06, 0.4)}
         key={article.id}
-        className="group rounded-2xl border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] h-full flex flex-col"
+        href={href(`blog/${article.id}`, lang)}
+        className="group rounded-2xl border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-500 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] h-full flex flex-col"
         data-testid={`blog-article-${article.id}`}
-        onClick={() => { if (article.href) { router.push(article.href); window.scrollTo(0, 0); } }}
       >
         <div className="aspect-[16/10] overflow-hidden">
           {!article.image ? (
@@ -68,10 +72,40 @@ export default function BlogPage() {
           <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212] leading-snug mb-3 md:mb-4">
             {t(`articles.${article.id}.title`)}
           </h3>
-          <span className="text-[13px] font-semibold text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+          <span className="text-[15px] font-medium text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100 transition-opacity duration-300">
             {t('text')} <ArrowRight className="h-4 w-4" />
           </span>
         </div>
+      </Reveal>
+    );
+  };
+
+  const renderNewsletter = (newsletter, i) => {
+    const [month, year] = t(`articles.${newsletter.id}.date`).split(' ');
+    return (
+      <Reveal
+        as="a"
+        y={20}
+        delay={Math.min(i * 0.06, 0.4)}
+        key={newsletter.id}
+        href={href(`blog/${newsletter.id}`, lang)}
+        className="group relative block aspect-[16/10] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.08]"
+        data-testid={`newsletter-${newsletter.id}`}
+      >
+        {!newsletter.image ? (
+          <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-700" style={{ background: 'linear-gradient(135deg, #cdc6f5 0%, #e6d5ea 55%, #f8ddc9 100%)' }}>
+            <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
+          </div>
+        ) : (
+          <img src={newsletter.image} alt={t(`articles.${newsletter.id}.title`)} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        )}
+        {/* The date sits on the cover, so shade its lower edge — a cover's
+            own bottom is often a pale shirt or a lit wall. */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2a2350]/75 via-[#2a2350]/10 via-45% to-transparent" />
+        <p className="absolute bottom-5 left-5 md:bottom-6 md:left-6 text-[22px] md:text-[24px] font-semibold leading-none tracking-[-0.01em] text-white">{month}, {year}</p>
+        {/* The arrow says the card opens. Touch has no hover, so mobile shows
+            it always; desktop brings it in on hover. */}
+        <ArrowRight aria-hidden="true" className="absolute bottom-5 right-5 h-6 w-6 text-white transition-all duration-300 md:bottom-6 md:right-6 md:-translate-x-1 md:opacity-0 md:group-hover:translate-x-0 md:group-hover:opacity-100 md:group-focus-visible:translate-x-0 md:group-focus-visible:opacity-100" strokeWidth={2} />
       </Reveal>
     );
   };
@@ -93,18 +127,14 @@ export default function BlogPage() {
                   span: (chunks) => <span className="gradient-text">{chunks}</span>,
                 })}</h1>
                 <p className="text-[20px] text-white/[0.45] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>{t('body')}</p>
-                <Button asChild variant="tertiary" mode="dark" icon={null}>
-                  <a
-                    href="#articles"
-                    onClick={(e) => { e.preventDefault(); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' }); }}
-                    className="group inline-flex items-center gap-3"
-                  >
-                    <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
-                      <ChevronDown className="!h-4 !w-4" />
-                    </span>
-                    {t('cta')}
-                  </a>
-                </Button>
+                <a
+                  href="#articles"
+                  onClick={(e) => { e.preventDefault(); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="group inline-flex items-center gap-4 px-8 py-5 text-[15px] font-medium tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
+                >
+                  <span>{t('cta')}</span>
+                  <ArrowDown className="h-4 w-4 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-y-1 transition-all duration-500" strokeWidth={2} />
+                </a>
               </Reveal>
               <HeroVideo
                 poster="/videos/blog-hero-showcase-poster.jpg"
@@ -120,12 +150,32 @@ export default function BlogPage() {
         {/* 2. Newsletters */}
         <section id="articles" className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
-            <Reveal y={20} duration={0.6} className="mb-8 md:mb-12">
-              <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('headingNewsletters')}</h2>
+            <Reveal y={20} duration={0.6} className="mb-10 md:mb-14">
+              <div className="relative overflow-hidden rounded-3xl bg-[#030101] flex flex-col md:flex-row md:items-stretch justify-between gap-2 md:gap-8">
+                <div className="relative z-10 flex flex-col justify-center px-8 py-10 md:px-14 md:py-14 md:flex-[38]">
+                  <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#9B9DFB]">{t('newsletterBanner.eyebrow')}</p>
+                  <h2 className="mt-4 text-[clamp(2.25rem,6vw,5rem)] font-medium leading-[1] tracking-[-0.03em] text-white">
+                    {t('newsletterBanner.title')}
+                  </h2>
+                </div>
+                {/* 32:15, not the video's 16:9: the box is shorter than the
+                    frame at the same width, so object-cover keeps the video
+                    at full width and trims only the empty band above and
+                    below the shape — cropped, never scaled down. */}
+                <div className="relative z-10 mb-6 aspect-[32/15] w-full md:mb-0 md:flex-[62]">
+                  <HeroVideo
+                    poster="/videos/newsletter-signal-poster.jpg"
+                    webmSrc="/videos/newsletter-signal.webm"
+                    mp4Src="/videos/newsletter-signal.mp4"
+                    className="absolute inset-0"
+                    videoClassName="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
             </Reveal>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {NEWSLETTERS.map((article, i) => renderArticle(article, i))}
+              {NEWSLETTERS.map((newsletter, i) => renderNewsletter(newsletter, i))}
             </div>
           </div>
         </section>

@@ -3,7 +3,7 @@
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { Linkedin } from 'lucide-react';
+import { LinkedinIcon } from '@/components/ui/linkedin-icon';
 
 const lead = {
   name: 'Dr. Tony Lee, Ph.D.',
@@ -101,7 +101,7 @@ export default function ScienceTeam() {
                 rel="noopener noreferrer"
                 className="hidden"
               >
-                <Linkedin className="h-4 w-4" /> LinkedIn
+                <LinkedinIcon className="h-4 w-4" /> LinkedIn
               </a>
             </div>
           </div>

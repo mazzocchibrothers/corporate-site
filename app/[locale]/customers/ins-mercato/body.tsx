@@ -3,7 +3,7 @@
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
-import { ArrowRight, Target, TrendingUp, Layers, Eye, Scale, Zap, Heart, Users, Shield, CheckCircle } from 'lucide-react';
+import { ArrowDown, ArrowRight, Target, TrendingUp, Layers, Eye, Scale, Zap, Heart, Users, Shield, CheckCircle, Info } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
@@ -121,7 +121,7 @@ export default function InsMercatoStoryPage() {
                     <Button variant="primary" mode="dark" onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}>
                       {t('cta4')}
                     </Button>
-                    <Button variant="secondary" mode="dark" onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })}>
+                    <Button variant="secondary" mode="dark" icon={<ArrowDown aria-hidden />} onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })}>
                       {t('cta5')}
                     </Button>
                   </div>
@@ -354,7 +354,7 @@ export default function InsMercatoStoryPage() {
 
                   {/* Footnote */}
                   <p className="text-[11px] text-[#121212]/30 flex items-center gap-1.5">
-                    <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 7v4M8 5.5v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                    <Info className="w-3.5 h-3.5 shrink-0" strokeWidth={1.5} />
                     {t('body12')}
                   </p>
                 </div>

@@ -4,7 +4,7 @@ import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
-import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench, Clock, Search } from 'lucide-react';
+import { ArrowDown, ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, BarChart3, Heart, CheckCircle, Wrench, Clock, Search } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
@@ -96,7 +96,7 @@ export default function EuropAssistanceLandingPage() {
                     <Button variant="primary" mode="dark" onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}>
                       {t('ctaPrimary')}
                     </Button>
-                    <Button variant="secondary" mode="dark" onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })}>
+                    <Button variant="secondary" mode="dark" icon={<ArrowDown aria-hidden />} onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })}>
                       {t('ctaSecondary')}
                     </Button>
                   </div>

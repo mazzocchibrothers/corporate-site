@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from '@/i18n/navigation';
-import { Linkedin } from 'lucide-react';
+import { LinkedinIcon } from '@/components/ui/linkedin-icon';
 import { useLocale, useTranslations } from 'next-intl';
 import { href } from '@/i18n/routes';
 
@@ -35,7 +35,7 @@ const labelKey = (id: string) =>
   id.split('/').pop()!.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
 
 const socials = [
-  { icon: Linkedin, href: 'https://www.linkedin.com/company/skillvue/', label: 'LinkedIn' },
+  { icon: LinkedinIcon, href: 'https://www.linkedin.com/company/skillvue/', label: 'LinkedIn' },
 ];
 
 export default function Footer() {

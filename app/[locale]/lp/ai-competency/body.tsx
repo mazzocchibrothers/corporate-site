@@ -156,7 +156,7 @@ export default function AiCompetencyPage() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-[13px] text-white/80 mb-2.5">{t('unlockedMsg')}</p>
-                        <a href={t('assets.pdf')} download={t('assets.downloadName')} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-[13px] font-semibold text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
+                        <a href={t('assets.pdf')} download={t('assets.downloadName')} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-[15px] font-medium text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
                           <Download className="h-4 w-4" /> {t('download')}
                         </a>
                       </div>

@@ -1,5 +1,6 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import {
+  ArrowDown,
   ArrowUpRight,
   Calendar,
   MapPin,
@@ -199,6 +200,13 @@ export default async function TalentPioneersPage() {
                 })}
               </h1>
               <p className="pt-6 max-w-[576px] text-[18px] leading-[1.4] text-white/65">{t('hero.subtitle')}</p>
+              <a
+                href="#meet-the-pioneers"
+                className="group mt-8 inline-flex items-center gap-4 rounded-full border border-white/10 px-8 py-5 text-[15px] font-medium tracking-wide text-white transition-all duration-500 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08]"
+              >
+                <span>{t('hero.cta')}</span>
+                <ArrowDown className="h-4 w-4 text-white/30 transition-all duration-500 group-hover:translate-y-1 group-hover:text-[#9B9DFB]" strokeWidth={2} />
+              </a>
             </Reveal>
             <Reveal y={24} delay={0.1}>
               <video
@@ -246,7 +254,7 @@ export default async function TalentPioneersPage() {
         </section>
 
         {/* The day-to-day */}
-        <section className="min-h-screen flex flex-col justify-center px-5 md:px-8 lg:px-12 py-16 md:py-24">
+        <section id="meet-the-pioneers" className="min-h-screen flex flex-col justify-center px-5 md:px-8 lg:px-12 py-16 md:py-24">
           <div className="max-w-[1400px] mx-auto w-full">
             <Reveal y={24} className="w-full">
               <p className={`${EYEBROW} text-[#6b7dff]`}>{t('dayToDay.eyebrow')}</p>
@@ -288,8 +296,11 @@ export default async function TalentPioneersPage() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/85" style={{ backgroundImage: 'linear-gradient(to bottom, transparent 43%, rgba(0,0,0,0.85))' }} />
                     <div className="relative flex flex-col items-start gap-2">
                       <img src="/logos/skillvue-wordmark.svg" alt="Skillvue" className="h-4 w-auto shrink-0" />
-                      <p className="text-[24px] md:text-[32px] font-bold uppercase text-white">{t(`chapters.items.${chapter.id}.label`)}</p>
+                      <p className="text-[24px] md:text-[32px] font-bold uppercase text-white">{t('chapters.cardLabel')}</p>
                     </div>
+                    <p className="relative text-[13px] font-semibold uppercase tracking-[0.08em] text-white/70">
+                      {t(`chapters.items.${chapter.id}.label`)}
+                    </p>
                   </div>
                   <div className="flex items-center gap-5 pt-5">
                     <span className="flex items-center gap-1.5 text-[13px] text-[#121212]/55">

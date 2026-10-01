@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useTranslations } from 'next-intl';
-import { ArrowRight } from 'lucide-react';
+import { ArrowDown, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { useRouter } from '@/i18n/navigation';
@@ -126,7 +126,13 @@ export default function CareersPage() {
                     </a>
                   </Button>
                   <Button asChild variant="secondary" mode="dark">
-                    <a href="#life-at-skillvue">{t('cta2')}</a>
+                    <a
+                      href="#life-at-skillvue"
+                      onClick={(e) => { e.preventDefault(); document.getElementById('life-at-skillvue')?.scrollIntoView({ behavior: 'smooth' }); }}
+                    >
+                      {t('cta2')}
+                      <ArrowDown aria-hidden />
+                    </a>
                   </Button>
                 </div>
               </Reveal>

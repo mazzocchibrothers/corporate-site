@@ -159,11 +159,18 @@ reintroduce per-page variants.
   only in `styles/globals.css` — change it there, never per-file.
 - **Tag pills:** `rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5
   text-[12px] text-[#4B4B4B]` (Insights cards, Customer testimonials).
+- **Button labels** — primary, secondary and tertiary alike — are
+  `text-[15px] font-medium`, sentence case, never `uppercase` or tracked. A
+  hand-rolled tertiary CTA (a card's "Read the news", "Read interview") is
+  `text-[15px] font-medium text-[#4B4DF7]` with a `h-4 w-4` arrow, matching
+  the `tertiary` variant in `components/ui/button.tsx`.
 - **Resources page heroes** (Insights, Press) are a `lg:grid-cols-12` grid: copy
   on the left, a `<HeroVideo>` on the right (webm + mp4 + poster in
   `public/videos/`).
-- **Navbar and its dropdowns** are flat `#ffffff` on light sections and
-  `#000000` on dark ones — no translucent tints.
+- **Navbar** is flat `#ffffff` on light sections and `#000000` on dark ones —
+  no translucent tints. Its **dropdown panels** are `#ffffff` on light sections
+  too, but `#1e1e1e` on dark — a dark-mode dropdown flush against the navbar's
+  own `#000000` reads as invisible but for its border.
 - **Dark text on light sections** is `#121212` and its opacity variants. Light
   section background is `.section-breathe` (`#F7F7F7`).
 - **Colours:** every hex drawn in `app/`, `components/`, `i18n/` and

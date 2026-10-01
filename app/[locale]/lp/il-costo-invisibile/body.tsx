@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { BarChart3, Check, CircleDollarSign, Lock, User } from 'lucide-react';
 import { Reveal } from '@/components/ui/reveal';
 import React, { useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
@@ -31,27 +32,21 @@ const heroStats = [
 const featureCards = [
   {
     icon: (
-      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
+      <CircleDollarSign width={22} height={22} strokeWidth={1.8} />
     ),
     title: 'Il costo invisibile in numeri',
     desc: 'In una rete di 2.000 agenti con il 20-25% di turnover, il costo stimato della selezione non predittiva è tra €15 e €25 milioni l\'anno — senza contare il danno reputazionale.',
   },
   {
     icon: (
-      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-      </svg>
+      <User width={22} height={22} strokeWidth={1.8} />
     ),
     title: 'Il profilo dell\'agente ibrido',
     desc: '4 dimensioni comportamentali predicono con precisione l\'efficacia dell\'agente ibrido: resilienza, orientamento consulenziale, adattabilità omnicanale e ascolto attivo.',
   },
   {
     icon: (
-      <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
+      <BarChart3 width={22} height={22} strokeWidth={1.8} />
     ),
     title: 'Dall\'verification all\'impatto',
     desc: 'La valutazione comportamentale strutturata riduce il mis-hire rate del 25-40% e produce un differenziale di 3-5x tra i top e i low performer nel valore del portafoglio.',
@@ -269,18 +264,14 @@ export default function IlCostoInvisibileVetrina() {
                         className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                         style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
                       >
-                        <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={3}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
+                        <Check width={10} height={10} color="white" strokeWidth={3} />
                       </div>
                       {item}
                     </li>
                   ))}
                 </ul>
                 <p className="flex items-center gap-2 text-[12px] text-[#0D0D0D]/30">
-                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
+                  <Lock width={13} height={13} strokeWidth={2} />
                   {tl('dataSafe')}
                 </p>
               </Reveal>

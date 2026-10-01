@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   ChevronDown, Menu, X, ArrowRight,
   AppWindow, Atom, UserSearch, UserCog, BookOpenCheck, Move, FolderKanban,
-  SquarePlay, UsersRound, Lightbulb, Rows3, Newspaper, Building2, Briefcase, Handshake,
+  SquarePlay, UserGroup, Lightbulb, Rows3, Newspaper, Building2, Briefcase, Handshake,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useRouter } from '@/i18n/navigation';
@@ -46,7 +46,7 @@ const ICONS: Record<string, React.ComponentType<{ className?: string; style?: Re
   internalMobility: Move,
   projectResourcing: FolderKanban,
   customers: SquarePlay,
-  talentPioneers: UsersRound,
+  talentPioneers: UserGroup,
   partners: Handshake,
   insights: Lightbulb,
   blog: Rows3,
@@ -262,7 +262,7 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
                     data-testid={`nav-link-${link.id}`}
                     aria-expanded={openMenu === link.id}
                     aria-controls={`desktop-menu-${link.id}`}
-                    className="text-[15px] font-light tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                    className="text-[15px] font-normal tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
                     style={{ color: openMenu === link.id ? textColor : textMuted }}
                     onFocus={(event) => {
                       desktopTriggerRef.current = event.currentTarget;
@@ -287,7 +287,7 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
                   <a
                     href={href(link.route!, lang)}
                     data-testid={`nav-link-${link.id}`}
-                    className="text-[15px] font-light tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                    className="text-[15px] font-normal tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
                     style={{ color: textMuted }}
                     onClick={(event) => {
                       event.preventDefault();
@@ -326,7 +326,7 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
                     <div
                       className="rounded-2xl border p-2 min-w-[220px]"
                       style={{
-                        backgroundColor: isLight ? '#ffffff' : '#000000',
+                        backgroundColor: isLight ? '#ffffff' : '#1e1e1e',
                         borderColor: isLight ? 'rgba(18,18,18,0.08)' : 'rgba(255,255,255,0.08)',
                         boxShadow: isLight ? '0 20px 40px rgba(18,18,18,0.12)' : '0 20px 40px rgba(0,0,0,0.4)',
                       }}
@@ -356,7 +356,7 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
                             }}
                           >
                             {Icon && <Icon className={`h-[18px] w-[18px] shrink-0 transition-colors duration-200 ${itemColorClass}`} />}
-                            <span className={`text-[15px] font-medium whitespace-nowrap transition-colors duration-200 ${itemColorClass}`}>
+                            <span className={`text-[15px] font-normal whitespace-nowrap transition-colors duration-200 ${itemColorClass}`}>
                               {t(`nav.links.${key}`)}
                             </span>
                           </a>
@@ -396,7 +396,7 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
               asChild
               variant="primary"
               mode={navCtaMode}
-              className="text-[14px] tracking-wide"
+              className="tracking-wide"
             >
               <a
                 href={href('book-meeting', lang)}
