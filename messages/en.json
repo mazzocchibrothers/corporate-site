@@ -125,7 +125,10 @@
     "heading": "Newsletters &<br></br><span>Articles</span>",
     "body": "Learn more about the news & notes on talent, hiring, and skills from Skillvue.",
     "cta": "Explore articles",
-    "headingNewsletters": "Newsletters",
+    "newsletterBanner": {
+      "eyebrow": "Our Newsletters",
+      "title": "The Skills Signal"
+    },
     "heading2": "All Articles",
     "heading3": "Want to go deeper? Talk to our team.",
     "body2": "Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.",
@@ -4748,8 +4751,9 @@
       },
       "hero": {
         "eyebrow": "The Community",
-        "headline": "Meet our <hl>Talent Pioneers</hl>",
-        "subtitle": "A private community of senior HR leaders shaping how talent is chosen, recognized, and developed through new, pioneering approaches. A place for people who aren't afraid to have difficult conversations about where People Strategies are heading over the next decade."
+        "headline": "<hl>Talent Pioneers</hl>",
+        "subtitle": "A private community of senior HR leaders shaping how talent is chosen, recognized, and developed through new, pioneering approaches. A place for people who aren't afraid to have difficult conversations about where People Strategies are heading over the next decade.",
+        "cta": "Meet our Talent Pioneers"
       },
       "why": {
         "eyebrow": "Why Talent Pioneers",
@@ -4814,15 +4818,16 @@
         "heading": "We create the space to discuss your most pressing matters",
         "headingAccent": "(and how to solve them).",
         "paragraph": "Talent Pioneers meets in person, in small rooms, a few times a year. Each Chapter opens a different question.",
+        "cardLabel": "Talent Pioneers",
         "items": {
           "chapter01": {
-            "label": "Chapter 1",
+            "label": "Chapter 01",
             "date": "16 June 2026",
             "location": "Milan · Palazzo Parigi",
             "description": "The room explored how organizations can recognize real talent in the age of AI."
           },
           "chapter02": {
-            "label": "Chapter 2",
+            "label": "Chapter 02",
             "date": "29 September 2026",
             "location": "Milan · Château Monfort",
             "description": "The conversation focuses on what it really means to be AI-ready and compliant."
