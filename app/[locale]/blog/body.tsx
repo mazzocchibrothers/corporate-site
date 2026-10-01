@@ -11,26 +11,31 @@ import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 
-// Structure: the card's image and where it links. The title, the date and the
-// tag are copy and live in messages/ under blog.articles, keyed on the same
-// slug as the post itself — so the card and the page it opens are neighbours in
-// the catalogue instead of an `id: 11` in a module array.
+// Structure: the card's image. The title, the date and the tag are copy and
+// live in messages/ under blog.articles, keyed on the same slug as the post
+// itself — so the card and the page it opens are neighbours in the catalogue
+// instead of an `id: 11` in a module array. The link is the registry's
+// `blog/<id>` route, localized by href().
+//
+// Each card is an <a>, not a clickable <article>: a real link is reachable with
+// Tab, announced as a link by screen readers, and opens in a new tab on
+// cmd/middle-click.
 const NEWSLETTERS = [
-  { id: 'newsletter-september-2026', image: '/newsletter-september-cover.avif', href: '/blog/newsletter-september-2026' },
-  { id: 'newsletter-august-2026', image: '/newsletter-august-cover.avif', href: '/blog/newsletter-august-2026' },
-  { id: 'newsletter-july-2026', image: '/newsletter-july-cover.avif', href: '/blog/newsletter-july-2026' },
+  { id: 'newsletter-september-2026', image: '/newsletter-september-cover.avif' },
+  { id: 'newsletter-august-2026', image: '/newsletter-august-cover.avif' },
+  { id: 'newsletter-july-2026', image: '/newsletter-july-cover.avif' },
 ];
 
 const ARTICLES = [
-  { id: 'attitude-vs-competence', image: '/covers/blog-attitude-vs-competence.avif', href: '/blog/attitude-vs-competence' },
-  { id: 'recruitment-biases', image: '/covers/blog-recruitment-biases.avif', href: '/blog/recruitment-biases' },
-  { id: 'negotiation-techniques', image: '/covers/blog-negotiation-techniques.avif', href: '/blog/negotiation-techniques' },
-  { id: 'accountability', image: '/covers/blog-accountability.avif', href: '/blog/accountability' },
-  { id: 'critical-thinking', image: '/covers/blog-critical-thinking.avif', href: '/blog/critical-thinking' },
-  { id: 'corporate-onboarding', image: '/covers/blog-corporate-onboarding.avif', href: '/blog/corporate-onboarding' },
-  { id: 'managerial-skills', image: '/covers/blog-managerial-skills.avif', href: '/blog/managerial-skills' },
-  { id: 'social-skills', image: '/covers/blog-social-skills.avif', href: '/blog/social-skills' },
-  { id: 'talent-acquisition', image: '/covers/blog-talent-acquisition.avif', href: '/blog/talent-acquisition' },
+  { id: 'attitude-vs-competence', image: '/covers/blog-attitude-vs-competence.avif' },
+  { id: 'recruitment-biases', image: '/covers/blog-recruitment-biases.avif' },
+  { id: 'negotiation-techniques', image: '/covers/blog-negotiation-techniques.avif' },
+  { id: 'accountability', image: '/covers/blog-accountability.avif' },
+  { id: 'critical-thinking', image: '/covers/blog-critical-thinking.avif' },
+  { id: 'corporate-onboarding', image: '/covers/blog-corporate-onboarding.avif' },
+  { id: 'managerial-skills', image: '/covers/blog-managerial-skills.avif' },
+  { id: 'social-skills', image: '/covers/blog-social-skills.avif' },
+  { id: 'talent-acquisition', image: '/covers/blog-talent-acquisition.avif' },
 ];
 
 export default function BlogPage() {
@@ -40,13 +45,13 @@ export default function BlogPage() {
   const renderArticle = (article, i) => {
     return (
       <Reveal
-        as="article"
+        as="a"
         y={20}
         delay={Math.min(i * 0.06, 0.4)}
         key={article.id}
-        className="group rounded-2xl border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] h-full flex flex-col"
+        href={href(`blog/${article.id}`, lang)}
+        className="group rounded-2xl border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-500 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] h-full flex flex-col"
         data-testid={`blog-article-${article.id}`}
-        onClick={() => { if (article.href) { router.push(article.href); window.scrollTo(0, 0); } }}
       >
         <div className="aspect-[16/10] overflow-hidden">
           {!article.image ? (
@@ -67,7 +72,7 @@ export default function BlogPage() {
           <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212] leading-snug mb-3 md:mb-4">
             {t(`articles.${article.id}.title`)}
           </h3>
-          <span className="text-[15px] font-medium text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+          <span className="text-[15px] font-medium text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100 transition-opacity duration-300">
             {t('text')} <ArrowRight className="h-4 w-4" />
           </span>
         </div>
@@ -79,13 +84,13 @@ export default function BlogPage() {
     const [month, year] = t(`articles.${newsletter.id}.date`).split(' ');
     return (
       <Reveal
-        as="article"
+        as="a"
         y={20}
         delay={Math.min(i * 0.06, 0.4)}
         key={newsletter.id}
-        className="group relative aspect-[16/10] rounded-2xl overflow-hidden transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-[#4B4DF7]/[0.08]"
+        href={href(`blog/${newsletter.id}`, lang)}
+        className="group relative block aspect-[16/10] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.08]"
         data-testid={`newsletter-${newsletter.id}`}
-        onClick={() => { router.push(newsletter.href); window.scrollTo(0, 0); }}
       >
         {!newsletter.image ? (
           <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-700" style={{ background: 'linear-gradient(135deg, #cdc6f5 0%, #e6d5ea 55%, #f8ddc9 100%)' }}>
@@ -100,7 +105,7 @@ export default function BlogPage() {
         <p className="absolute bottom-5 left-5 md:bottom-6 md:left-6 text-[22px] md:text-[24px] font-semibold leading-none tracking-[-0.01em] text-white">{month}, {year}</p>
         {/* The arrow says the card opens. Touch has no hover, so mobile shows
             it always; desktop brings it in on hover. */}
-        <ArrowRight aria-hidden="true" className="absolute bottom-5 right-5 h-6 w-6 text-white transition-all duration-300 md:bottom-6 md:right-6 md:-translate-x-1 md:opacity-0 md:group-hover:translate-x-0 md:group-hover:opacity-100" strokeWidth={2} />
+        <ArrowRight aria-hidden="true" className="absolute bottom-5 right-5 h-6 w-6 text-white transition-all duration-300 md:bottom-6 md:right-6 md:-translate-x-1 md:opacity-0 md:group-hover:translate-x-0 md:group-hover:opacity-100 md:group-focus-visible:translate-x-0 md:group-focus-visible:opacity-100" strokeWidth={2} />
       </Reveal>
     );
   };
