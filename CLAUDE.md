@@ -159,6 +159,11 @@ reintroduce per-page variants.
   only in `styles/globals.css` — change it there, never per-file.
 - **Tag pills:** `rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5
   text-[12px] text-[#4B4B4B]` (Insights cards, Customer testimonials).
+- **Button labels** — primary, secondary and tertiary alike — are
+  `text-[15px] font-medium`, sentence case, never `uppercase` or tracked. A
+  hand-rolled tertiary CTA (a card's "Read the news", "Read interview") is
+  `text-[15px] font-medium text-[#4B4DF7]` with a `h-4 w-4` arrow, matching
+  the `tertiary` variant in `components/ui/button.tsx`.
 - **Resources page heroes** (Insights, Press) are a `lg:grid-cols-12` grid: copy
   on the left, a `<HeroVideo>` on the right (webm + mp4 + poster in
   `public/videos/`).

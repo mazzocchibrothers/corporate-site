@@ -123,7 +123,7 @@ const investors = [
 
 // Every publication's logo renders at the same height, in both the coverage
 // grid and the interviews grid — one size, not a per-article logoH.
-const publicationLogoStyle = { height: '40px', maxWidth: '160px', objectFit: 'contain', objectPosition: 'left center' } as const;
+const publicationLogoStyle = { height: '56px', maxWidth: '220px', objectFit: 'contain', objectPosition: 'left center' } as const;
 
 
 
@@ -213,28 +213,31 @@ export default function PressPage() {
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col justify-between rounded-2xl border border-[#121212]/[0.06] bg-white p-6 md:p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 h-full"
+                  className="group flex flex-col justify-between rounded-2xl border border-[#E5E7EB] bg-white p-5 md:p-7 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500 h-full"
                 >
                   <div>
-                    <div className="mb-5 md:mb-6 h-10 flex items-center">
+                    <div className="mb-3 md:mb-4 h-14 flex items-center">
                       <img
                         src={article.logo}
                         alt={article.publication}
                         style={publicationLogoStyle}
                       />
                     </div>
-                    <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
+                    <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65]">
                       {article.title}
                     </p>
                   </div>
-                  <div className="mt-5 md:mt-6 flex items-center justify-end">
-                    <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]/30 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                  {/* Same CTA as the interview cards: hover brings it in on
+                      desktop, mobile shows it always. */}
+                  <div className="mt-3 md:mt-4 flex items-center gap-1.5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">
+                    <span className="text-[15px] font-medium text-[#4B4DF7]">{t('ctaNews')}</span>
+                    <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]" />
                   </div>
                 </Reveal>
               );
               return (
                 <>
-                  <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 md:gap-5">
+                  <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                     {pressArticles.map((article, i) => renderCard(article, i))}
                   </div>
                 </>
@@ -270,26 +273,29 @@ export default function PressPage() {
                     href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col justify-between rounded-2xl border border-[#121212]/[0.06] bg-white p-6 md:p-8 hover:border-[#4B4DF7]/[0.18] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 h-full"
+                    className="group flex flex-col justify-between rounded-2xl border border-[#E5E7EB] bg-white p-5 md:p-7 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500 h-full"
                   >
                     <div>
-                      <div className="mb-4">
+                      <div className="mb-3">
                         <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.12em] uppercase">
                           {article.publication}
                         </span>
                       </div>
-                      <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
+                      <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65]">
                         {article.title}
                       </p>
                     </div>
-                    <div className="mt-5 md:mt-6 flex items-center justify-end">
-                      <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]/30 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                    {/* Same CTA as the interview cards: hover brings it in on
+                        desktop, mobile shows it always. */}
+                    <div className="mt-3 md:mt-4 flex items-center gap-1.5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">
+                      <span className="text-[15px] font-medium text-[#4B4DF7]">{t('ctaNews')}</span>
+                      <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]" />
                     </div>
                   </Reveal>
                 );
                 return (
                   <>
-                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 md:gap-5">
+                    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                       {pressArticlesIt.map((article, i) => renderCard(article, i))}
                     </div>
                   </>
@@ -311,7 +317,7 @@ export default function PressPage() {
               <h2 className="text-[clamp(1.6rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading3')}</h2>
             </Reveal>
 
-            <div className="flex flex-col md:grid md:grid-cols-2 gap-3 md:gap-5 md:max-w-3xl">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
               {interviews.map((item, i) => (
                 <Reveal
                   as="a"
@@ -321,24 +327,25 @@ export default function PressPage() {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col justify-between rounded-2xl border border-[#4B4DF7]/[0.10] bg-white p-6 md:p-8 hover:border-[#4B4DF7]/[0.25] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.06] transition-all duration-500"
-                  style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f8f8ff 100%)' }}
+                  className="group flex flex-col justify-between rounded-2xl border border-[#E5E7EB] bg-white p-5 md:p-7 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500 h-full"
                 >
                   <div>
-                    <div className="mb-5 md:mb-6 h-10 flex items-center">
+                    <div className="mb-3 md:mb-4 h-14 flex items-center">
                       <img loading="lazy" decoding="async"
                         src={item.logo}
                         alt={item.publication}
                         style={publicationLogoStyle}
                       />
                     </div>
-                    <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65] group-hover:text-[#121212] transition-colors duration-300">
+                    <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65]">
                       {item.title}
                     </p>
                   </div>
-                  <div className="mt-5 md:mt-6 flex items-center gap-2">
-                    <span className="text-[12px] font-semibold text-[#4B4DF7]/50 tracking-[0.08em] uppercase group-hover:text-[#4B4DF7]/80 transition-colors duration-300">{t('cta')}</span>
-                    <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]/40 group-hover:text-[#4B4DF7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                  {/* Hover brings the CTA in on desktop; touch has no hover, so
+                      mobile shows it always. */}
+                  <div className="mt-3 md:mt-4 flex items-center gap-1.5 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">
+                    <span className="text-[15px] font-medium text-[#4B4DF7]">{t('cta')}</span>
+                    <ArrowUpRight className="h-4 w-4 text-[#4B4DF7]" />
                   </div>
                 </Reveal>
               ))}
