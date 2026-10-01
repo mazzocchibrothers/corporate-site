@@ -6,7 +6,7 @@ import { HeroVideo } from '@/components/ui/hero-video';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { ArrowRight, ChevronDown, Newspaper } from 'lucide-react';
+import { ArrowDown, ArrowRight, Newspaper } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
@@ -16,6 +16,7 @@ import { href } from '@/i18n/routes';
 // slug as the post itself — so the card and the page it opens are neighbours in
 // the catalogue instead of an `id: 11` in a module array.
 const NEWSLETTERS = [
+  { id: 'newsletter-september-2026', image: '/newsletter-september-cover.avif', href: '/blog/newsletter-september-2026' },
   { id: 'newsletter-august-2026', image: '/newsletter-august-cover.avif', href: '/blog/newsletter-august-2026' },
   { id: 'newsletter-july-2026', image: '/newsletter-july-cover.avif', href: '/blog/newsletter-july-2026' },
 ];
@@ -31,7 +32,6 @@ const ARTICLES = [
   { id: 'social-skills', image: '/covers/blog-social-skills.avif', href: '/blog/social-skills' },
   { id: 'talent-acquisition', image: '/covers/blog-talent-acquisition.avif', href: '/blog/talent-acquisition' },
 ];
-
 
 export default function BlogPage() {
   const lang = useLocale();
@@ -75,6 +75,34 @@ export default function BlogPage() {
     );
   };
 
+  const renderNewsletter = (newsletter, i) => {
+    const [month, year] = t(`articles.${newsletter.id}.date`).split(' ');
+    return (
+      <Reveal
+        as="article"
+        y={20}
+        delay={Math.min(i * 0.06, 0.4)}
+        key={newsletter.id}
+        className="group rounded-2xl border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04]"
+        data-testid={`newsletter-${newsletter.id}`}
+        onClick={() => { router.push(newsletter.href); window.scrollTo(0, 0); }}
+      >
+        <div className="aspect-[16/10] overflow-hidden">
+          {!newsletter.image ? (
+            <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-700" style={{ background: 'linear-gradient(135deg, #cdc6f5 0%, #e6d5ea 55%, #f8ddc9 100%)' }}>
+              <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
+            </div>
+          ) : (
+            <img src={newsletter.image} alt={t(`articles.${newsletter.id}.title`)} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          )}
+        </div>
+        <div className="p-5 md:p-7">
+          <p className="text-[16px] md:text-[18px] font-semibold text-[#121212]">{month}, {year}</p>
+        </div>
+      </Reveal>
+    );
+  };
+
   return (
     <>
       <Navbar />
@@ -92,18 +120,14 @@ export default function BlogPage() {
                   span: (chunks) => <span className="gradient-text">{chunks}</span>,
                 })}</h1>
                 <p className="text-[20px] text-white/[0.45] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>{t('body')}</p>
-                <Button asChild variant="tertiary" mode="dark" icon={null}>
-                  <a
-                    href="#articles"
-                    onClick={(e) => { e.preventDefault(); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' }); }}
-                    className="group inline-flex items-center gap-3"
-                  >
-                    <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
-                      <ChevronDown className="!h-4 !w-4" />
-                    </span>
-                    {t('cta')}
-                  </a>
-                </Button>
+                <a
+                  href="#articles"
+                  onClick={(e) => { e.preventDefault(); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="group inline-flex items-center gap-4 px-8 py-5 text-[15px] font-medium tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
+                >
+                  <span>{t('cta')}</span>
+                  <ArrowDown className="h-4 w-4 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-y-1 transition-all duration-500" strokeWidth={2} />
+                </a>
               </Reveal>
               <HeroVideo
                 poster="/videos/blog-hero-showcase-poster.jpg"
@@ -119,12 +143,44 @@ export default function BlogPage() {
         {/* 2. Newsletters */}
         <section id="articles" className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
-            <Reveal y={20} duration={0.6} className="mb-8 md:mb-12">
-              <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('headingNewsletters')}</h2>
+            <Reveal y={20} duration={0.6} className="mb-10 md:mb-14">
+              <div className="relative overflow-hidden rounded-3xl bg-[#0d0d0d] flex flex-col md:flex-row md:items-stretch justify-between gap-8">
+                <div className="relative z-10 flex flex-col justify-center px-8 py-10 md:px-14 md:py-14 md:flex-[38]">
+                  <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#9B9DFB]">{t('newsletterBanner.eyebrow')}</p>
+                  <h2 className="mt-4 text-[clamp(2.25rem,6vw,5rem)] font-medium leading-[1] tracking-[-0.03em] text-white">
+                    {t('newsletterBanner.title')}
+                  </h2>
+                </div>
+                <div className="relative z-10 h-48 w-full md:h-auto md:flex-[62]">
+                  <HeroVideo
+                    poster="/videos/newsletter-signal-poster.jpg"
+                    webmSrc="/videos/newsletter-signal.webm"
+                    mp4Src="/videos/newsletter-signal.mp4"
+                    className="h-full w-full"
+                    videoClassName="h-full w-full object-cover"
+                  />
+                  {/* The video's own background isn't quite #0d0d0d, so its
+                      leading edge shows a seam against the banner — fade the
+                      banner's own colour over it rather than chase an exact
+                      match to a backdrop that isn't flat across the frame.
+                      Top edge stacked above it on mobile, left edge beside it
+                      on desktop. */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-16 md:hidden"
+                    style={{ background: 'linear-gradient(to bottom, #0d0d0d 0%, rgba(13,13,13,0) 100%)' }}
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/4 md:block"
+                    style={{ background: 'linear-gradient(to right, #0d0d0d 0%, rgba(13,13,13,0) 100%)' }}
+                  />
+                </div>
+              </div>
             </Reveal>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {NEWSLETTERS.map((article, i) => renderArticle(article, i))}
+              {NEWSLETTERS.map((newsletter, i) => renderNewsletter(newsletter, i))}
             </div>
           </div>
         </section>

@@ -60,7 +60,7 @@ function CtaLink({ label, href, newTab }) {
       <a
         href={href}
         {...(newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-        className="inline-flex items-center gap-2 rounded-full bg-[#4B4DF7] text-white text-[14px] font-semibold px-6 py-3.5 transition-colors duration-300 hover:bg-[#3133E7]"
+        className="inline-flex items-center gap-2 rounded-full bg-[#4B4DF7] text-white text-[15px] font-medium px-6 py-3.5 transition-colors duration-300 hover:bg-[#3133E7]"
       >
         {label} <ArrowRight className="h-4 w-4" />
       </a>
