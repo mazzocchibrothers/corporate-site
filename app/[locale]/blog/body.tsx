@@ -67,7 +67,7 @@ export default function BlogPage() {
           <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212] leading-snug mb-3 md:mb-4">
             {t(`articles.${article.id}.title`)}
           </h3>
-          <span className="text-[13px] font-semibold text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+          <span className="text-[15px] font-medium text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
             {t('text')} <ArrowRight className="h-4 w-4" />
           </span>
         </div>
@@ -83,22 +83,24 @@ export default function BlogPage() {
         y={20}
         delay={Math.min(i * 0.06, 0.4)}
         key={newsletter.id}
-        className="group rounded-2xl border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04]"
+        className="group relative aspect-[16/10] rounded-2xl overflow-hidden transition-all duration-500 cursor-pointer hover:shadow-lg hover:shadow-[#4B4DF7]/[0.08]"
         data-testid={`newsletter-${newsletter.id}`}
         onClick={() => { router.push(newsletter.href); window.scrollTo(0, 0); }}
       >
-        <div className="aspect-[16/10] overflow-hidden">
-          {!newsletter.image ? (
-            <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-700" style={{ background: 'linear-gradient(135deg, #cdc6f5 0%, #e6d5ea 55%, #f8ddc9 100%)' }}>
-              <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
-            </div>
-          ) : (
-            <img src={newsletter.image} alt={t(`articles.${newsletter.id}.title`)} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-          )}
-        </div>
-        <div className="p-5 md:p-7">
-          <p className="text-[16px] md:text-[18px] font-semibold text-[#121212]">{month}, {year}</p>
-        </div>
+        {!newsletter.image ? (
+          <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-700" style={{ background: 'linear-gradient(135deg, #cdc6f5 0%, #e6d5ea 55%, #f8ddc9 100%)' }}>
+            <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
+          </div>
+        ) : (
+          <img src={newsletter.image} alt={t(`articles.${newsletter.id}.title`)} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        )}
+        {/* The date sits on the cover, so shade its lower edge — a cover's
+            own bottom is often a pale shirt or a lit wall. */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2a2350]/75 via-[#2a2350]/10 via-45% to-transparent" />
+        <p className="absolute bottom-5 left-5 md:bottom-6 md:left-6 text-[22px] md:text-[24px] font-semibold leading-none tracking-[-0.01em] text-white">{month}, {year}</p>
+        {/* The arrow says the card opens. Touch has no hover, so mobile shows
+            it always; desktop brings it in on hover. */}
+        <ArrowRight aria-hidden="true" className="absolute bottom-5 right-5 h-6 w-6 text-white transition-all duration-300 md:bottom-6 md:right-6 md:-translate-x-1 md:opacity-0 md:group-hover:translate-x-0 md:group-hover:opacity-100" strokeWidth={2} />
       </Reveal>
     );
   };
@@ -144,36 +146,24 @@ export default function BlogPage() {
         <section id="articles" className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
             <Reveal y={20} duration={0.6} className="mb-10 md:mb-14">
-              <div className="relative overflow-hidden rounded-3xl bg-[#0d0d0d] flex flex-col md:flex-row md:items-stretch justify-between gap-8">
+              <div className="relative overflow-hidden rounded-3xl bg-[#030101] flex flex-col md:flex-row md:items-stretch justify-between gap-2 md:gap-8">
                 <div className="relative z-10 flex flex-col justify-center px-8 py-10 md:px-14 md:py-14 md:flex-[38]">
                   <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#9B9DFB]">{t('newsletterBanner.eyebrow')}</p>
                   <h2 className="mt-4 text-[clamp(2.25rem,6vw,5rem)] font-medium leading-[1] tracking-[-0.03em] text-white">
                     {t('newsletterBanner.title')}
                   </h2>
                 </div>
-                <div className="relative z-10 h-48 w-full md:h-auto md:flex-[62]">
+                {/* 32:15, not the video's 16:9: the box is shorter than the
+                    frame at the same width, so object-cover keeps the video
+                    at full width and trims only the empty band above and
+                    below the shape — cropped, never scaled down. */}
+                <div className="relative z-10 mb-6 aspect-[32/15] w-full md:mb-0 md:flex-[62]">
                   <HeroVideo
                     poster="/videos/newsletter-signal-poster.jpg"
                     webmSrc="/videos/newsletter-signal.webm"
                     mp4Src="/videos/newsletter-signal.mp4"
-                    className="h-full w-full"
+                    className="absolute inset-0"
                     videoClassName="h-full w-full object-cover"
-                  />
-                  {/* The video's own background isn't quite #0d0d0d, so its
-                      leading edge shows a seam against the banner — fade the
-                      banner's own colour over it rather than chase an exact
-                      match to a backdrop that isn't flat across the frame.
-                      Top edge stacked above it on mobile, left edge beside it
-                      on desktop. */}
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-0 top-0 h-16 md:hidden"
-                    style={{ background: 'linear-gradient(to bottom, #0d0d0d 0%, rgba(13,13,13,0) 100%)' }}
-                  />
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/4 md:block"
-                    style={{ background: 'linear-gradient(to right, #0d0d0d 0%, rgba(13,13,13,0) 100%)' }}
                   />
                 </div>
               </div>
