@@ -6,7 +6,7 @@ import { HeroVideo } from '@/components/ui/hero-video';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { ArrowRight } from 'lucide-react';
+import { ArrowDown, ArrowRight } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { whitepapers } from '@/data/whitepapers';
 import { onepagers } from '@/data/onepagers';
@@ -105,18 +105,14 @@ export default function InsightsPage() {
                   br: () => <br />,
                 })}</h1>
                 <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>{t('body')}</p>
-                <Button asChild variant="tertiary" mode="dark" icon={null}>
-                  <a
-                    href="#wp-grid"
-                    onClick={(e) => { e.preventDefault(); document.getElementById('wp-grid')?.scrollIntoView({ behavior: 'smooth' }); }}
-                    className="group inline-flex items-center gap-3"
-                  >
-                    <span className="w-10 h-10 rounded-full border border-white/[0.1] flex items-center justify-center group-hover:border-white/[0.25] transition-all duration-300">
-                      <ArrowRight className="h-4 w-4 rotate-90" />
-                    </span>
-                    {t('cta')}
-                  </a>
-                </Button>
+                <a
+                  href="#wp-grid"
+                  onClick={(e) => { e.preventDefault(); document.getElementById('wp-grid')?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="group inline-flex items-center gap-4 px-8 py-5 text-[15px] font-medium tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
+                >
+                  <span>{t('cta')}</span>
+                  <ArrowDown className="h-4 w-4 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-y-1 transition-all duration-500" strokeWidth={2} />
+                </a>
               </Reveal>
               <HeroVideo
                 poster="/videos/insights-hero-poster.jpg"

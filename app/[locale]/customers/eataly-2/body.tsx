@@ -3,7 +3,7 @@
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
-import { ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, Heart, CheckCircle, Clock } from 'lucide-react';
+import { ArrowDown, ArrowRight, Users, Shield, Scale, TrendingUp, Target, Layers, Zap, Eye, Heart, CheckCircle, Clock } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
@@ -92,7 +92,7 @@ export default function EatalyStoryPage() {
                     <Button variant="primary" mode="dark" onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}>
                       {t('ctaPrimary')}
                     </Button>
-                    <Button variant="secondary" mode="dark" onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })}>
+                    <Button variant="secondary" mode="dark" icon={<ArrowDown aria-hidden />} onClick={() => document.getElementById('context-section')?.scrollIntoView({ behavior: 'smooth' })}>
                       {t('ctaSecondary')}
                     </Button>
                   </div>
