@@ -25,7 +25,7 @@ const LINKS = {
   // Internal pages (already live on the site)
   skillvueMap: '/product/skillvue-map',
   credem: '/customers/credem',
-  talentPioneers: '/customers/talent-pioneers',
+  talentPioneers: 'https://www.linkedin.com/feed/update/urn:li:activity:7511044551734730752',
 };
 // ────────────────────────────────────────────────────────────────────────────
 

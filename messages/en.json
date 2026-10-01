@@ -1200,7 +1200,7 @@
           "cta": {
             "label": "Discover Talent Pioneers",
             "href": "talentPioneers",
-            "external": false
+            "external": true
           }
         },
         {
