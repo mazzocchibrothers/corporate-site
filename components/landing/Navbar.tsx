@@ -55,15 +55,6 @@ const ICONS: Record<string, React.ComponentType<{ className?: string; style?: Re
   careers: Briefcase,
 };
 
-// English-only content we do not advertise to Italian visitors.
-//
-// This is NOT derivable from the registry, and the difference matters:
-// /it/blog and /it/resources/insights both return 200 and render English,
-// so the registry is right that they have an Italian URL. Hiding them is a
-// separate, editorial decision. #116 is where it gets settled — once those
-// routes are declared English-only, this list goes and hasLocale() replaces it.
-const HIDDEN_IN_IT = new Set(['resources/insights', 'blog']);
-
 /** 'solutions/talent-acquisition' -> 'talentAcquisition', the label's key. */
 const labelKey = (id: string) =>
   id.split('/').pop()!.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
@@ -331,7 +322,7 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
                         boxShadow: isLight ? '0 20px 40px rgba(18,18,18,0.12)' : '0 20px 40px rgba(0,0,0,0.4)',
                       }}
                     >
-                      {link.items.filter(id => !(lang === 'it' && HIDDEN_IN_IT.has(id))).map((id) => {
+                      {link.items.map((id) => {
                         const key = labelKey(id);
                         const Icon = ICONS[key];
                         const isActive = withoutTrailingSlash(pathname) === withoutTrailingSlash(href(id, lang));
@@ -477,7 +468,7 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
                   {/* Expanded sub-items */}
                   {link.items && mobileExpanded === link.id && (
                     <div id={`mobile-menu-${link.id}`} className="pl-4 pb-2">
-                      {link.items.filter(id => !(lang === 'it' && HIDDEN_IN_IT.has(id))).map((id) => (
+                      {link.items.map((id) => (
                         <button
                           key={id}
                           className="w-full text-left py-3 text-[16px] text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
