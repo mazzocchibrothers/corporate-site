@@ -1,13 +1,14 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import { useRouter } from '@/i18n/navigation';
 import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { IconTile } from '@/components/ui/icon-tile';
 import { href } from '@/i18n/routes';
 import { trackLead } from '@/components/shared/track-lead';
 
@@ -22,6 +23,7 @@ export default function HubspotLandingPage({
   formIds,
   leadSource,
   backRouteId,
+  thankYou,
 }: {
   /** The route's own message namespace, e.g. 'book-meeting'. */
   namespace: string;
@@ -31,11 +33,21 @@ export default function HubspotLandingPage({
   leadSource: string;
   /** Route id the back button links to. Omit to fall back to browser history. */
   backRouteId?: string;
+  /**
+   * Replace the form with the route's own `thankYou` copy once it is
+   * submitted, whatever the HubSpot form is set to do after submit — a form
+   * configured to redirect cannot send the visitor somewhere else.
+   */
+  thankYou?: boolean;
 }) {
   const lang = useLocale();
   const t = useTranslations(namespace);
   const formRef = useRef(null);
   const router = useRouter();
+  const [submitted, setSubmitted] = useState(false);
+  // A string, not `t`, in the effect's dependencies: the submit re-renders the
+  // page, and that must not tear the form down and build it again.
+  const inlineMessage = thankYou ? t('thankYou.heading') : undefined;
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -50,7 +62,13 @@ export default function HubspotLandingPage({
           formId: formIds[lang as 'en' | 'it'] ?? formIds.en,
           region: 'na1',
           target: '#hubspot-form',
-          onFormSubmitted: () => trackLead(leadSource),
+          onFormSubmitted: () => {
+            trackLead(leadSource);
+            if (thankYou) setSubmitted(true);
+          },
+          // Any non-empty message stops HubSpot following the form's redirect;
+          // the visitor sees the panel below, not this.
+          ...(inlineMessage && { inlineMessage }),
         });
       }
     };
@@ -61,7 +79,7 @@ export default function HubspotLandingPage({
         script.parentNode.removeChild(script);
       }
     };
-  }, [lang, formIds, leadSource]);
+  }, [lang, formIds, leadSource, thankYou, inlineMessage]);
 
   return (
     <>
@@ -109,12 +127,30 @@ export default function HubspotLandingPage({
               <div
                 className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-5 lg:p-6"
               >
+                {/* Hidden, not unmounted: HubSpot owns the nodes inside it. */}
                 <div
                   id="hubspot-form"
                   ref={formRef}
                   data-testid="hubspot-form"
+                  className={submitted ? 'hidden' : undefined}
                   style={{ minHeight: '400px' }}
                 />
+                {submitted && (
+                  <div
+                    role="status"
+                    data-testid="hubspot-form-thank-you"
+                    className="flex flex-col items-start justify-center gap-4 p-3"
+                    style={{ minHeight: '400px' }}
+                  >
+                    <IconTile icon={CheckCircle} />
+                    <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-white/95" style={{ lineHeight: 1.1 }}>
+                      {t('thankYou.heading')}
+                    </h2>
+                    <p className="text-[16px] text-white/[0.55] leading-[1.65] max-w-md" style={{ fontWeight: 300 }}>
+                      {t('thankYou.body')}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>

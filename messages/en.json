@@ -1333,7 +1333,11 @@
     },
     "back": "Back",
     "body": "Book a demo with our team to see how Skillvue can transform your hiring, performance, and development processes with science-backed talent intelligence.",
-    "heading": "Let's talk about your <span>talent strategy.</span>"
+    "heading": "Let's talk about your <span>talent strategy.</span>",
+    "thankYou": {
+      "heading": "Thank you for your request.",
+      "body": "We will be in touch shortly by email to arrange your demo."
+    }
   },
   "careers": {
     "meta": {
