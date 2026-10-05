@@ -1333,7 +1333,11 @@
     },
     "back": "Indietro",
     "body": "Prenota una demo con il nostro team per scoprire come Skillvue può trasformare i tuoi processi di selezione, performance e sviluppo grazie a dati chiari e oggettivi supportati dalla scienza.",
-    "heading": "Parliamo della tua <span>talent strategy.</span>"
+    "heading": "Parliamo della tua <span>talent strategy.</span>",
+    "thankYou": {
+      "heading": "Grazie per la tua richiesta.",
+      "body": "Ti ricontatteremo a breve via email per organizzare la tua demo."
+    }
   },
   "careers": {
     "meta": {
