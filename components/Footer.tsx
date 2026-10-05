@@ -25,11 +25,6 @@ const footerGroups = [
   { id: 'resources', links: ['blog', 'resources/insights', 'resources/press', 'about', 'careers'] },
 ];
 
-// English-only content, not advertised to Italian visitors. Same list and same
-// reason as the navbar: it is an editorial decision, not something the registry
-// knows, until #116 declares those routes English-only.
-const HIDDEN_IN_IT = new Set(['blog', 'resources/insights']);
-
 /** 'solutions/talent-acquisition' -> 'talentAcquisition', the label's key. */
 const labelKey = (id: string) =>
   id.split('/').pop()!.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
@@ -98,7 +93,7 @@ export default function Footer() {
                   {t(`footer.groups.${group.id}`)}
                 </h4>
                 <div className="flex flex-col items-center gap-4 md:items-start md:block md:space-y-4">
-                  {group.links.filter(id => !(lang === 'it' && HIDDEN_IN_IT.has(id))).map((id) => (
+                  {group.links.map((id) => (
                     <a
                       key={id}
                       href={href(id, lang)}
