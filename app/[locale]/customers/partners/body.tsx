@@ -148,43 +148,44 @@ export default function PartnersPage() {
 
             <div className="grid gap-6 md:grid-cols-3">
               {filtered.map((p) => (
-                <Reveal
-                  key={p.slug}
-                  y={20}
-                  className="rounded-[20px] border border-[#EBEBEB] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col"
-                >
-                  <div className="h-[220px] flex items-center justify-center border-b border-[#EBEBEB] px-8">
-                    <img
-                      src={p.logo}
-                      alt={t(`network.items.${p.slug}.name`)}
-                      width={p.logoWidth}
-                      height={p.logoHeight}
-                      loading="lazy"
-                      decoding="async"
-                      className="max-h-[64px] w-auto max-w-full object-contain"
-                    />
-                  </div>
-                  <div className="p-7 flex flex-col gap-4 flex-1">
-                    <div className="flex items-center justify-between gap-3">
-                      <p className="text-[22px] font-semibold tracking-[-0.02em] text-[#1E1E1E]">
-                        {t(`network.items.${p.slug}.name`)}
-                      </p>
-                      <span className="rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[12px] text-[#4B4B4B] whitespace-nowrap">
-                        {t(`network.filters.${p.category}`)}
-                      </span>
+                // <Reveal> sets an inline transition, which would override the
+                // card's own shadow transition — so the card is the child.
+                <Reveal key={p.slug} y={20}>
+                  <div className="group h-full rounded-[20px] border border-[#EBEBEB] bg-white overflow-hidden flex flex-col transition-shadow duration-500 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04]">
+                    <div className="h-[220px] flex items-center justify-center border-b border-[#EBEBEB] px-8">
+                      <img
+                        src={p.logo}
+                        alt={t(`network.items.${p.slug}.name`)}
+                        width={p.logoWidth}
+                        height={p.logoHeight}
+                        loading="lazy"
+                        decoding="async"
+                        style={{ maxHeight: p.logoMaxHeight }}
+                        className="w-auto max-w-full object-contain"
+                      />
                     </div>
-                    <p className="text-[16px] leading-[1.25] text-[#4B4B4B]">
-                      {t(`network.items.${p.slug}.description`)}
-                    </p>
-                    <a
-                      href={p.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-[#4B4DF7] hover:text-[#3133E7] transition-colors"
-                    >
-                      {t(`network.items.${p.slug}.cta`)}
-                      <ArrowUpRight className="size-4" aria-hidden="true" />
-                    </a>
+                    <div className="p-7 flex flex-col gap-4 flex-1">
+                      <div className="flex items-center justify-between gap-3">
+                        <p className="text-[22px] font-semibold tracking-[-0.02em] text-[#1E1E1E]">
+                          {t(`network.items.${p.slug}.name`)}
+                        </p>
+                        <span className="rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[12px] text-[#4B4B4B] whitespace-nowrap">
+                          {t(`network.filters.${p.category}`)}
+                        </span>
+                      </div>
+                      <p className="text-[16px] leading-[1.5] text-[#4B4B4B]">
+                        {t(`network.items.${p.slug}.description`)}
+                      </p>
+                      <a
+                        href={p.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-[#4B4DF7] hover:text-[#3133E7] transition-colors"
+                      >
+                        {t(`network.items.${p.slug}.cta`)}
+                        <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+                      </a>
+                    </div>
                   </div>
                 </Reveal>
               ))}

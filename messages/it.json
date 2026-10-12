@@ -4884,7 +4884,7 @@
     "partners": {
       "meta": {
         "title": "Partner | Skillvue",
-        "description": "Scopri i partner commerciali e tecnologici di Skillvue, o diventa uno di loro."
+        "description": "Scopri i partner di formazione e consulenza di Skillvue, o diventa uno di loro."
       },
       "hero": {
         "eyebrow": "Partner",
@@ -4895,16 +4895,22 @@
       "network": {
         "heading": "La nostra rete di partner",
         "filterLabel": "Filtra",
-        "categoryLabel": "Categoria",
+        "categoryLabel": "Tipo",
         "filters": {
-          "all": "Tutti",
-          "commercial": "Commerciali"
+          "all": "Tutti i partner",
+          "learning": "Formazione",
+          "consulting": "Consulenza"
         },
         "items": {
           "flowsparks": {
-            "name": "FLOWSPARKS",
+            "name": "Flowsparks",
             "description": "FLOWSPARKS è la piattaforma di apprendimento che aiuta le organizzazioni che puntano seriamente sulla formazione a colmare più velocemente i gap di competenze.",
-            "cta": "Visita flowsparks.com"
+            "cta": "Visita Flowsparks"
+          },
+          "easygenerator": {
+            "name": "Easygenerator",
+            "description": "Easygenerator è una suite di e-learning basata sull’AI che aiuta le organizzazioni a creare formazione su misura per l’azienda, su larga scala.",
+            "cta": "Visita Easygenerator"
           }
         }
       },
