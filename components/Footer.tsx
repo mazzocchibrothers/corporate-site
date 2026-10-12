@@ -59,8 +59,8 @@ export default function Footer() {
               <img
                 src="/logos/Skillvue_logo_solid_white.svg"
                 alt="Skillvue"
-                width={961}
-                height={240}
+                width={112}
+                height={28}
                 loading="lazy"
                 className="h-6 w-auto block border-0"
               />

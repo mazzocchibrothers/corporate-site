@@ -231,8 +231,8 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
             <img
               src={isLight ? '/logos/Skillvue_logo-on_light.svg' : '/logos/Skillvue_logo-on_dark.svg'}
               alt="Skillvue"
-              width={960}
-              height={240}
+              width={112}
+              height={28}
               className="h-7 w-auto block border-0"
             />
           </a>
