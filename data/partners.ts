@@ -29,6 +29,6 @@ export const partners: {
     logoWidth: 228,
     logoHeight: 81,
     logoMaxHeight: 84,
-    url: 'https://www.easygenerator.com',
+    url: 'https://www.easygenerator.com/en/',
   },
 ];
