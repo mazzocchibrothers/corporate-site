@@ -69,6 +69,11 @@ export default function HeroSection() {
                     <span className="italic font-semibold gradient-text md:whitespace-nowrap">{chunks}</span>
                   ),
                   gw: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
+                  // The Italian "Il" sits inside the gradient span (an inline-block, so an
+                  // article left outside it drops onto a line of its own) and is painted
+                  // white; `m` keeps "Il Sistema Operativo" on one line on desktop.
+                  w: (chunks) => <span className="[-webkit-text-fill-color:#ffffff]">{chunks}</span>,
+                  m: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
                   br: () => <br />,
                 })}
               </h1>
