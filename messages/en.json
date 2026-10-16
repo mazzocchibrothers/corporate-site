@@ -6854,6 +6854,171 @@
       "heading21": "In sintesi",
       "heading22": "3 domande per il tuo comitato di direzione"
     },
+    "measured-vs-inferred": {
+      "meta": {
+        "title": "Measured vs inferred skills data | Skillvue",
+        "description": "Inferred skills are signals, not a defensible measure. Skillvue measures what people demonstrate, with scientific evidence behind every score, and feeds the HR stack you already run."
+      },
+      "hero": {
+        "eyebrow": "Measured vs inferred",
+        "title": "Inferred skills are a signal, not a measure. <s>Talent decisions need defensible evidence.</s>",
+        "sub": "Most hiring, promotion and development decisions still run on self-reported skills, patchy inferred assessments and gut feel. Objective skills data gives a better answer to every one of them. Skillvue measures what people actually demonstrate, with a score, a justification and the scientific evidence behind every result, and feeds it into the stack you already run.",
+        "cta": "Book a 20-minute conversation",
+        "visual": {
+          "label": "Illustrative profile",
+          "tabInferred": "Inferred",
+          "tabMeasured": "Measured",
+          "evidence": "Evidence",
+          "rows": [
+            {
+              "name": "Hard skills",
+              "inferred": "Inferred from self-reported skills and work-tool activity",
+              "measured": "Case studies, coding, role-play simulations"
+            },
+            {
+              "name": "Soft skills",
+              "inferred": "Inferred from self-reported skills and work-tool activity",
+              "measured": "Behavioural event interviews, situational judgment"
+            },
+            {
+              "name": "Potential",
+              "inferred": "Not clearly inferrable from work-tool activity",
+              "measured": "Science-grounded assessment: who is ready now, who in 6 months."
+            },
+            {
+              "name": "Motivation",
+              "inferred": "Not clearly inferrable from work-tool activity",
+              "measured": "Behavioural assessment: who will drive change, who will resist it."
+            }
+          ],
+          "footerInferred": "Patchy signals, not a defensible measure.",
+          "footerMeasured": "A score, a justification and the scientific evidence, for every result."
+        }
+      },
+      "problem": {
+        "eyebrow": "Why skills programs stall",
+        "title": "The bottleneck isn’t technology. <s>It’s trust in the data.</s>",
+        "body": "Most enterprises have already invested in HRIS, ATS, LMS, performance and mobility tools. The infrastructure is there. What’s missing is skills data reliable enough to act on when a promotion, a succession plan or an internal move is on the line.",
+        "cards": [
+          {
+            "title": "A signal isn’t a defensible measure.",
+            "body": "Inferred signals are patchy, drawn from documents and system activity, and neither objective nor consistent. When a manager asks why someone is ready for a role, they are hard to defend."
+          },
+          {
+            "title": "Readiness isn’t in the system data.",
+            "body": "Potential and motivation don’t show up in HRIS records or work-tool activity, yet they decide who is actually ready for the next role."
+          },
+          {
+            "title": "Data gives people nothing back.",
+            "body": "When skills are inferred without employees taking part, there is nothing in it for them. With a transparent assessment, people take part and the results feed their development: a win for both."
+          }
+        ]
+      },
+      "compare": {
+        "eyebrow": "Inferred vs measured",
+        "title": "Same goal. <s>Very different data.</s>",
+        "intro": "Both approaches aim to give you a clear view of skills across the organisation. The difference is where the data comes from, and what it lets you do.",
+        "colInferred": "Inference-based platforms",
+        "colMeasured": "Skillvue",
+        "rows": [
+          {
+            "label": "Where the data comes from",
+            "inferred": "Signals inferred from self-reported skills and work-tool activity. The person isn’t assessed.",
+            "measured": "The person is measured directly, through behavioural event interviews, situational judgment and task-based items."
+          },
+          {
+            "label": "What a result means",
+            "inferred": "Patchy signals, not objective or consistent: not a defensible measure.",
+            "measured": "A score, a justification and the scientific evidence behind it, for each person."
+          },
+          {
+            "label": "Potential and motivation",
+            "inferred": "Not clearly inferrable from work-tool activity.",
+            "measured": "Who is ready now and who in 6 months; who will drive change and who will resist it."
+          },
+          {
+            "label": "Employee experience",
+            "inferred": "No proactive participation, and nothing back for employees.",
+            "measured": "A transparent assessment people are willing to take part in, that feeds their development."
+          }
+        ],
+        "midLine": "See what measured data adds to the tech stack you already run.",
+        "midCta": "Book a 20-minute conversation"
+      },
+      "stack": {
+        "eyebrow": "Works with your stack",
+        "title": "We don’t replace your platforms. <s>We feed them.</s>",
+        "body": "Skillvue is built to be the objective skills data layer underneath your tech stack, not another destination. Data flows both ways: your jobs and business data come in, and measured skills data flows back into the HR systems where critical decisions are made.",
+        "pathsLabel": "Three integration paths",
+        "paths": [
+          {
+            "title": "Your team, on our APIs.",
+            "body": "Your team or systems integrator builds on Skillvue’s open APIs."
+          },
+          {
+            "title": "Skillvue, on your APIs.",
+            "body": "We connect to your systems for you."
+          },
+          {
+            "title": "Through an HR API hub.",
+            "body": "One connection to a hub that already links your HR systems."
+          }
+        ],
+        "flow": {
+          "source": "Skillvue",
+          "sourceSub": "Objective skills data layer",
+          "inbound": "Jobs and business data",
+          "outbound": "Measured skills data",
+          "label": "Your stack",
+          "destinations": [
+            "Workday",
+            "SAP",
+            "Oracle",
+            "Cornerstone",
+            "Greenhouse",
+            "ChatGPT / Claude"
+          ]
+        }
+      },
+      "how": {
+        "eyebrow": "How it works",
+        "title": "One Skills Operating System. <s>Three steps.</s>",
+        "steps": [
+          {
+            "name": "Map",
+            "title": "What each role requires.",
+            "body": "Your job descriptions and frameworks, plus market data and Skillvue’s science, become a validated skills architecture: ready in days, kept live."
+          },
+          {
+            "name": "Assess",
+            "title": "What each person can demonstrate.",
+            "body": "Structured assessments built on your business strategy and competency model, delivered in multiple formats and scaled by AI, in 30+ languages."
+          },
+          {
+            "name": "Decide",
+            "title": "The evidence driving every talent decision.",
+            "body": "Dashboards, evidence-based reports and an agent you query in plain language."
+          }
+        ]
+      },
+      "questions": {
+        "eyebrow": "Before your next key decision",
+        "title": "Five questions to ask <s>any skills platform</s>",
+        "items": [
+          "Is the person assessed, or are their skills inferred from system signals?",
+          "When a manager asks “why”, can you show and explain the evidence for this person?",
+          "The EU AI Act classifies HR AI as high-risk. What explainability and documented validation stand behind the scores?",
+          "Can it tell you who has the potential and motivation for the next role?",
+          "Is the evaluation built on your business strategy and competency framework?"
+        ],
+        "cta": "Book a 20-minute conversation"
+      },
+      "final": {
+        "title": "Keep your stack. <s>Upgrade the data underneath it.</s>",
+        "body": "In 20 minutes, we’ll show how measured skills data fits into the platforms you already run, and what it improves in the talent decisions you make.",
+        "cta": "Book a 20-minute conversation"
+      }
+    },
     "scalare-l-eccellenza": {
       "meta": {
         "title": "Scalare l'eccellenza senza perdere l'esclusività — Skillvue",

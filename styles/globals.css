@@ -466,3 +466,23 @@ h2 .gradient-text {
   .animate-marquee-left,
   .animate-marquee-right { animation: none !important; }
 }
+
+/* ===== /lp/measured-vs-inferred. The inferred band is hatched and feathered
+   at both ends: an estimate has a range, not an edge. The stack flow's dots are
+   styled in StackFlow.tsx; only their paths live here, one per axis, and the
+   inbound lane runs them in reverse. ===== */
+.mvi-estimate {
+  background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.32) 0 3px, rgba(255, 255, 255, 0.08) 3px 7px);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 22%, black 78%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 22%, black 78%, transparent);
+}
+@keyframes mvi-flow-v {
+  0% { top: 0; opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+@keyframes mvi-flow-h {
+  0% { left: 0; opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
