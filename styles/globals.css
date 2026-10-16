@@ -466,3 +466,56 @@ h2 .gradient-text {
   .animate-marquee-left,
   .animate-marquee-right { animation: none !important; }
 }
+
+/* ===== /lp/measured-vs-inferred: the inferred estimate band and the two-way
+   stack flow. The band is hatched and feathered at both ends: an estimate has a
+   range, not an edge. ===== */
+.mvi-estimate {
+  background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.32) 0 3px, rgba(255, 255, 255, 0.08) 3px 7px);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 22%, black 78%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 22%, black 78%, transparent);
+}
+.mvi-flow-dot {
+  position: absolute;
+  left: -3px;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: #8385FF;
+  box-shadow: 0 0 10px rgba(99, 102, 248, 0.8);
+  animation: mvi-flow-down 1.8s linear infinite;
+}
+@keyframes mvi-flow-down {
+  0% { top: 0; opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+@keyframes mvi-flow-right {
+  0% { left: 0; opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+@keyframes mvi-flow-up {
+  0% { top: 100%; opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { top: 0; opacity: 0; }
+}
+@keyframes mvi-flow-left {
+  0% { left: 100%; opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { left: 0; opacity: 0; }
+}
+/* The inbound lane: the visitor's data coming in, grey against the accent. */
+.mvi-flow-dot.mvi-flow-in {
+  background: #a9a9a9;
+  box-shadow: none;
+  animation-name: mvi-flow-up;
+}
+@media (min-width: 768px) {
+  .mvi-flow-dot { top: -3px; left: 0; animation-name: mvi-flow-right; }
+  .mvi-flow-dot.mvi-flow-in { animation-name: mvi-flow-left; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mvi-flow-dot { display: none; }
+}
