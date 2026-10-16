@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { MODULES, SCENARIOS, LICENSE, calculate, normalizeInput } from '../app/[locale]/resources/roi-calculator/model.ts';
+import { MODULES, SCENARIOS, LICENSE, calculate, normalizeInput, reportContent } from '../app/[locale]/resources/roi-calculator/model.ts';
 
 const expected = { hiring: 275_000, promote: 640_000, develop: 270_000, derisk: 260_000 };
 for (const [module, config] of Object.entries(MODULES)) {
@@ -41,3 +41,28 @@ assert.deepEqual(submission.legalConsentOptions, { consent: {
 assert.equal(submission.context.pageUri, details.pageUri);
 assert.equal('skipValidation' in submission, false);
 console.log('[OK] ROI form: consent required, existing HubSpot fields, correct subscription, no skipped validation');
+
+const { createTranslator } = await import('next-intl');
+const { readFileSync } = await import('node:fs');
+for (const locale of ['en', 'it']) {
+  const messages = JSON.parse(readFileSync(new URL(`../messages/${locale}.json`, import.meta.url)));
+  const translate = createTranslator({ locale, messages, namespace: 'roi-calculator' });
+  for (const [module, config] of Object.entries(MODULES)) {
+    for (const scenario of Object.keys(SCENARIOS)) {
+      for (const industry of ['luxury', 'retail', 'banking', 'insurance', 'pharma', 'manufacturing', 'other', '']) {
+        const content = reportContent({ module, scenario, values: config.inputs.map(input => input.initial), locale, translate,
+          contact: { name: 'Zoë D’Angelo', company: 'Test Company & Partners', industry, date: new Date('2026-10-13T12:00:00Z') },
+          demoUrl: 'https://www.skillvue.ai/book-meeting' });
+        assert.ok(content.title.includes('Test Company & Partners'));
+        assert.ok(content.meta.includes('Zoë D’Angelo'));
+        assert.equal(content.inputs.length, 2);
+        assert.equal(content.drivers.length, module === 'hiring' ? 2 : 1);
+        assert.equal(content.sector === null, industry === 'other' || industry === '');
+        assert.equal(content.metrics[0].value, new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(expected[module] * SCENARIOS[scenario]));
+        assert.ok(!JSON.stringify(content).includes('roi-calculator.'), 'every report key is translated');
+        assert.ok(!JSON.stringify(content).includes('Moncler'), 'sample companies must never enter the personalised report');
+      }
+    }
+  }
+}
+console.log('[OK] PDF report content: all modules, scenarios, sectors and locales; personalised inputs and calculated values');

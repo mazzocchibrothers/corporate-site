@@ -69,6 +69,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 //             its video, so the frame meets the banner with no seam.
 const ALLOWED = new Set(
   (
+    '#14181f #d9daff #f6f7ff #e1e2ff #6b7280 #eef0f2 #555555 #777777 #444444 #f1f2ff #ececf8 #f6b24a #f4617e #8b5cf6 ' +
     '#000000 #010102 #030101 #040404 #047857 #050508 #059669 #064e3b #08080c #0b3b28 #0d0d0d #0d0d1f ' +
     '#0e0e0e #10b981 #111 #121212 #141516 #16163a #161616 #16a34a #1a1a2e #1a1a3f #1e1e1e #201436 #222 ' +
     '#22c55e #23234d #2a2350 #2d1a6b #3133e7 #3a1525 #3a1730 #4b4b4b #4b4df7 #4e4e4e #4e6bff #5667ff ' +

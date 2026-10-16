@@ -6,7 +6,9 @@ import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { trackLead } from '@/components/shared/track-lead';
 import { reportSubmission } from './report-submission';
-import { type Module, type Scenario } from './model';
+import { reportContent, type ReportContact, type Module, type Scenario } from './model';
+import { href } from '@/i18n/routes';
+import { BASE_URL } from '@/i18n/urls';
 import styles from './calculator.module.css';
 
 // The EN contact form accepts a single name; the IT form requires a separate surname.
@@ -22,6 +24,10 @@ export default function ReportForm({ onClose, module, scenario, values }: {
   const locale = useLocale();
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [status, setStatus] = useState<'idle' | 'pending' | 'error' | 'submitted'>('idle');
+
+  const [contact, setContact] = useState<ReportContact | null>(null);
+  const [downloading, setDownloading] = useState(false);
+  const [downloadError, setDownloadError] = useState(false);
 
   useEffect(() => {
     const dialog = dialogRef.current!;
@@ -63,9 +69,34 @@ export default function ReportForm({ onClose, module, scenario, values }: {
       });
       if (!response.ok) throw new Error('Submission failed');
       trackLead('roi-calculator');
+      setContact({ name: String(data.get('name') ?? '').trim(), company: String(data.get('company') ?? '').trim(), industry, date: new Date() });
       setStatus('submitted');
     } catch {
       setStatus('error');
+    }
+  }
+
+  async function download() {
+    if (!contact || downloading) return;
+    setDownloading(true);
+    setDownloadError(false);
+    try {
+      const { generateReportPDF } = await import('./report-pdf');
+      const content = reportContent({ contact, module, scenario, values, locale, translate: calculator,
+        demoUrl: new URL(href('book-meeting', locale), BASE_URL).href });
+      const blob = await generateReportPDF(content);
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'skillvue-roi-report.pdf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 60000);
+    } catch {
+      setDownloadError(true);
+    } finally {
+      setDownloading(false);
     }
   }
 
@@ -78,9 +109,11 @@ export default function ReportForm({ onClose, module, scenario, values }: {
         <p id="roi-report-description">{t('body')}</p>
         {status === 'submitted' ? <div>
           <p role="status">{t('success')}</p>
-          {/* shortcut: enable the download here when the report file or template is supplied. */}
-          <Button type="button" mode="dark" disabled icon={null} aria-describedby="roi-report-pending">{calculator('downloadReport')}</Button>
-          <p id="roi-report-pending" className={styles.formNote}>{t('reportPending')}</p>
+          <Button type="button" mode="dark" disabled={downloading} aria-busy={downloading} icon={null} onClick={download}>
+            {downloading ? t('generatingReport') : calculator('downloadReport')}
+          </Button>
+          <p className={styles.formNote}>{t('downloadHint')}</p>
+          {downloadError && <p role="alert">{t('downloadError')}</p>}
         </div> : <form className={styles.captureForm} onSubmit={submit}>
           <fieldset disabled={status === 'pending'}>
             <label htmlFor="roi-name">{t('name')}</label>

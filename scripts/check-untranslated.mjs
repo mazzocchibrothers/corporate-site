@@ -55,6 +55,7 @@ const MONOLINGUAL = routes
 const CLIENT_NOTICE_PREFIX = 'privacy-policy-algo.clients';
 
 const DELIBERATE = [
+  ['roi-calculator.report.copyright', 'copyright year, brand and domain are identical in both locales'],
   // Job titles are not translated in Italian business writing.
   ['customers.adr.results.quote.role', 'job title'],
   ['customers.adr-2.results.quote.role', 'job title'],
