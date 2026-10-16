@@ -9019,7 +9019,6 @@
       "heading": "Get your ROI report",
       "body": "Enter your details to download a report covering all four modules. Modules you haven’t changed use the calculator’s initial values.",
       "close": "Close",
-      "success": "Thank you. Your details have been received.",
       "name": "Name",
       "email": "Work email",
       "company": "Company",
@@ -9042,8 +9041,10 @@
       "submitting": "Sending…",
       "submitError": "We couldn’t send your details. Please try again.",
       "generatingReport": "Preparing PDF…",
-      "downloadHint": "Your download starts automatically. You can download another copy using the button above.",
-      "downloadError": "We couldn’t create the PDF. Please try again."
+      "downloadHint": "Your download will start automatically. If it doesn’t, use the button below.",
+      "downloadError": "We couldn’t create the PDF. Please try again.",
+      "readyHeading": "Your report is ready",
+      "downloadAgain": "Download again"
     },
     "report": {
       "title": "What Skillvue is worth to {company}",
