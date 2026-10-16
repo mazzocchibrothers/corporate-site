@@ -9028,11 +9028,31 @@
     },
     "reportForm": {
       "heading": "Get your ROI report",
-      "body": "Enter your details to request your personalised report.",
+      "body": "Enter your details and we’ll put together your personalised report.",
       "close": "Close",
-      "loadError": "The form could not be loaded. Please try again.",
-      "retry": "Try again",
-      "success": "Thank you. Your details have been received."
+      "success": "Thank you. Your details have been received.",
+      "name": "Name",
+      "email": "Work email",
+      "company": "Company",
+      "industry": "Industry",
+      "selectIndustry": "Select...",
+      "notSpecified": "Not specified",
+      "industries": {
+        "luxury": "Luxury & Fashion",
+        "retail": "Retail / Large-scale distribution",
+        "banking": "Banking",
+        "insurance": "Insurance",
+        "pharma": "Pharma",
+        "manufacturing": "Manufacturing",
+        "other": "Other"
+      },
+      "consent": "I have read Skillvue’s <a>Privacy Policy</a>; I consent to receiving communications from Skillvue and to the storage and use of my contact information.",
+      "processingConsent": "I agree to allow Skillvue to store and process my personal data.",
+      "unsubscribe": "You can unsubscribe from these communications at any time.",
+      "submit": "Get my report",
+      "submitting": "Sending…",
+      "submitError": "We couldn’t send your details. Please try again.",
+      "reportPending": "Your details have been received. The report will be available to download soon."
     }
   }
 }

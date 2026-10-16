@@ -153,7 +153,7 @@ export default function ROICalculator() {
           </section>
         </div>
       </main>
-      {reportOpen && <ReportForm onClose={() => setReportOpen(false)} />}
+      {reportOpen && <ReportForm onClose={() => setReportOpen(false)} module={module} scenario={scenario} values={values} />}
       <Footer />
     </>
   );
