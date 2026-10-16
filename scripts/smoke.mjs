@@ -125,6 +125,7 @@ try {
     const dialog = roi.getByRole('dialog');
     await dialog.getByRole('heading', { name: heading, exact: true }).waitFor();
     await dialog.locator('input[name=email]').waitFor({ state: 'visible' });
+    assert.ok((await dialog.locator('#roi-report-description').innerText()).includes(promote), 'the form identifies the selected report module');
     assert.equal(await dialog.locator('iframe').count(), 0, 'the mockup uses native form fields');
     const nameInput = dialog.locator('input[name=name]');
     assert.equal(await nameInput.evaluate((input) => input === document.activeElement), true, 'opening focuses the name field, not the close button');
@@ -159,12 +160,13 @@ try {
     ]);
     await dialog.getByRole('status').waitFor({ state: 'visible' });
     await dialog.getByRole('heading', { name: path.startsWith('/it/') ? 'Il tuo report è pronto' : 'Your report is ready', exact: true }).waitFor();
-    assert.equal(await dialog.getByText(/Modules you haven’t changed|I moduli non modificati/).count(), 0, 'confirmation hides the form instructions');
+    assert.equal(await dialog.getByText(/Enter your details|Inserisci i tuoi dati/).count(), 0, 'confirmation hides the form instructions');
     const payload = submissions.at(-1);
     assert.ok(payload.fields.some((field) => field.name === 'message' && field.value.includes('Test Company')));
     assert.equal(payload.legalConsentOptions.consent.communications[0].subscriptionTypeId, 527104760);
     assert.equal(payload.legalConsentOptions.consent.communications[0].value, true);
-    assert.ok(payload.fields.find((field) => field.name === 'message').value.includes('350'));
+    assert.ok(!payload.fields.find((field) => field.name === 'message').value.includes('350'), 'other module inputs are not submitted');
+    assert.ok(payload.fields.find((field) => field.name === 'message').value.includes(promote));
     assert.ok(payload.fields.find((field) => field.name === 'message').value.includes('5000'));
     assert.equal(download.suggestedFilename(), 'skillvue-roi-report.pdf');
     const stream = await download.createReadStream();
@@ -173,7 +175,7 @@ try {
     const document = Buffer.concat(chunks);
     assert.equal(document.subarray(0, 5).toString(), '%PDF-');
     assert.ok(document.length > 10000, 'PDF includes its fonts and logo');
-    assert.equal((document.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length, 4, 'the report includes one A4 page for each module');
+    assert.equal((document.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length, 1, 'the report includes only the selected module on one A4 page');
     if (!path.startsWith('/it/')) {
       await roi.evaluate(() => {
         const createObjectURL = URL.createObjectURL;

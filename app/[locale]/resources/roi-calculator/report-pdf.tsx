@@ -39,11 +39,10 @@ const styles = StyleSheet.create({
   priceNote: { fontWeight: 600, color: '#555555' },
 });
 
-export async function generateReportPDF(contents: ReturnType<typeof reportContent>[]) {
+export async function generateReportPDF(content: ReturnType<typeof reportContent>) {
   return pdf(
-    <Document title={contents[0].title} author="Skillvue" language={contents[0].locale}>
-      {contents.map((content) => (
-      <Page key={content.pill} size="A4" style={styles.page}>
+    <Document title={content.title} author="Skillvue" language={content.locale}>
+      <Page size="A4" style={styles.page}>
         <Svg height={6} style={{ marginHorizontal: -45 }} viewBox="0 0 595 6">
           <Defs><LinearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
             <Stop offset="0%" stopColor="#f6b24a" /><Stop offset="33%" stopColor="#f4617e" />
@@ -93,7 +92,6 @@ export async function generateReportPDF(contents: ReturnType<typeof reportConten
           <Text style={styles.copy}>{content.disclaimer} <Text style={styles.priceNote}>{content.priceNote}</Text>{'\n'}{content.copyright}</Text>
         </View>
       </Page>
-      ))}
     </Document>,
   ).toBlob();
 }
