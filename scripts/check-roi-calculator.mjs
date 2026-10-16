@@ -23,3 +23,21 @@ for (const [module, config] of Object.entries(MODULES)) {
 assert.equal(calculate('hiring', 300, 50_000, 'base').hard, 225_000,
   'Hiring failure reduction is relative to a 15% baseline, not ten percentage points');
 console.log('[OK] ROI calculator: all modules/scenarios match prototype; inputs clamp and snap');
+
+const { reportSubmission } = await import('../app/[locale]/resources/roi-calculator/report-submission.ts');
+const details = { name: ' Test Name ', email: ' test@example.invalid ', message: 'Company: Test Co\nIndustry: Retail', consent: true,
+  consentText: 'Marketing consent', processingText: 'Processing consent', pageUri: 'https://www.skillvue.ai/resources/roi-calculator', pageName: 'ROI' };
+assert.throws(() => reportSubmission({ ...details, consent: false }), /Consent required/);
+const submission = reportSubmission(details);
+assert.deepEqual(submission.fields, [
+  { name: 'firstname', value: 'Test Name' },
+  { name: 'email', value: 'test@example.invalid' },
+  { name: 'message', value: details.message },
+]);
+assert.deepEqual(submission.legalConsentOptions, { consent: {
+  consentToProcess: true, text: details.processingText,
+  communications: [{ value: true, subscriptionTypeId: 527104760, text: details.consentText }],
+} });
+assert.equal(submission.context.pageUri, details.pageUri);
+assert.equal('skipValidation' in submission, false);
+console.log('[OK] ROI form: consent required, existing HubSpot fields, correct subscription, no skipped validation');

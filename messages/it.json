@@ -9028,11 +9028,31 @@
     },
     "reportForm": {
       "heading": "Richiedi il tuo report ROI",
-      "body": "Inserisci i tuoi dati per richiedere il report personalizzato.",
+      "body": "Inserisci i tuoi dati e prepareremo il tuo report personalizzato.",
       "close": "Chiudi",
-      "loadError": "Non è stato possibile caricare il modulo. Riprova.",
-      "retry": "Riprova",
-      "success": "Grazie. Abbiamo ricevuto i tuoi dati."
+      "success": "Grazie. Abbiamo ricevuto i tuoi dati.",
+      "name": "Nome",
+      "email": "Email di lavoro",
+      "company": "Azienda",
+      "industry": "Settore",
+      "selectIndustry": "Seleziona...",
+      "notSpecified": "Non specificato",
+      "industries": {
+        "luxury": "Lusso e moda",
+        "retail": "Retail / Grande distribuzione",
+        "banking": "Bancario",
+        "insurance": "Assicurativo",
+        "pharma": "Farmaceutico",
+        "manufacturing": "Manifatturiero",
+        "other": "Altro"
+      },
+      "consent": "Ho letto l’<a>Informativa sulla privacy</a> di Skillvue; acconsento a ricevere comunicazioni da Skillvue e all’archiviazione e all’utilizzo delle mie informazioni di contatto.",
+      "processingConsent": "Consento a Skillvue di archiviare e elaborare i miei dati personali.",
+      "unsubscribe": "Puoi annullare l’iscrizione a queste comunicazioni in qualsiasi momento.",
+      "submit": "Ottieni il mio report",
+      "submitting": "Invio in corso…",
+      "submitError": "Non è stato possibile inviare i tuoi dati. Riprova.",
+      "reportPending": "Abbiamo ricevuto i tuoi dati. Il report sarà presto disponibile per il download."
     }
   }
 }

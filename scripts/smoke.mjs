@@ -84,24 +84,11 @@ try {
   await listing.close();
 
   const roi = await browser.newPage({ viewport: { width: 1280, height: 900 } });
-  await roi.addInitScript(() => {
-    window.hbspt = { forms: { create(options) {
-      const target = document.querySelector(options.target);
-      const form = document.createElement('form');
-      const input = document.createElement('input');
-      input.name = 'email'; input.type = 'email'; input.required = true;
-      const submit = document.createElement('button');
-      submit.textContent = 'Submit test contact'; submit.type = 'submit';
-      form.append(input, submit);
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        options.onFormSubmitted();
-      });
-      target.append(form);
-      target.dataset.formId = options.formId;
-      target.dataset.inlineMessage = options.inlineMessage;
-      options.onFormReady();
-    } } };
+  const submissions = [];
+  let rejectSubmission = true;
+  await roi.route('https://api.hsforms.com/submissions/v3/integration/submit/48438018/*', async (route) => {
+    submissions.push(route.request().postDataJSON());
+    await route.fulfill({ status: rejectSubmission ? 400 : 200, contentType: 'application/json', body: '{}' });
   });
   for (const [path, label, report, heading] of [
     ['/resources/roi-calculator', 'ROI calculator', 'Download report', 'Get your ROI report'],
@@ -118,11 +105,29 @@ try {
     await reportButton.click();
     const dialog = roi.getByRole('dialog', { name: heading });
     await dialog.locator('input[name=email]').waitFor({ state: 'visible' });
-    assert.ok(await roi.locator('#roi-report-hubspot-form').getAttribute('data-form-id'));
-    assert.ok(await roi.locator('#roi-report-hubspot-form').getAttribute('data-inline-message'));
+    assert.equal(await dialog.locator('iframe').count(), 0, 'the mockup uses native form fields');
+    await dialog.locator('input[name=name]').fill('Test Name');
     await dialog.locator('input[name=email]').fill('test@example.invalid');
-    await dialog.getByRole('button', { name: 'Submit test contact' }).click();
+    await dialog.locator('input[name=company]').fill('Test Company');
+    await dialog.locator('select[name=industry]').selectOption('retail');
+    const before = submissions.length;
+    await dialog.locator('button[type=submit]').click();
+    assert.equal(submissions.length, before, 'unchecked consent prevents submission');
+    assert.equal(await dialog.locator('input[name=consent]').evaluate((input) => input.validity.valueMissing), true);
+    await dialog.locator('input[name=consent]').check();
+    rejectSubmission = true;
+    await dialog.locator('button[type=submit]').click();
+    await dialog.getByRole('alert').waitFor({ state: 'visible' });
+    assert.equal(await dialog.locator('input[name=email]').inputValue(), 'test@example.invalid', 'retry keeps the entered details');
+    assert.equal(await roi.evaluate(() => (window.dataLayer ?? []).filter((event) => event.form === 'roi-calculator').length), 0);
+    rejectSubmission = false;
+    await dialog.locator('button[type=submit]').click();
     await dialog.getByRole('status').waitFor({ state: 'visible' });
+    const payload = submissions.at(-1);
+    assert.ok(payload.fields.some((field) => field.name === 'message' && field.value.includes('Test Company')));
+    assert.equal(payload.legalConsentOptions.consent.communications[0].subscriptionTypeId, 527104760);
+    assert.equal(payload.legalConsentOptions.consent.communications[0].value, true);
+    assert.equal(await dialog.getByRole('button', { name: report, exact: true }).isDisabled(), true, 'report file has not been supplied yet');
     assert.deepEqual(await roi.evaluate(() => window.dataLayer.filter((event) => event.form === 'roi-calculator').map(({ event, form }) => ({ event, form }))),
       [{ event: 'generate_lead', form: 'roi-calculator' }]);
     await roi.keyboard.press('Escape');

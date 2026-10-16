@@ -1,27 +1,27 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { X } from 'lucide-react';
-import styles from './calculator.module.css';
 import { Button } from '@/components/ui/button';
 import { trackLead } from '@/components/shared/track-lead';
+import { reportSubmission } from './report-submission';
+import { type Module, type Scenario } from './model';
+import styles from './calculator.module.css';
 
-// shortcut: reuse the contact forms until dedicated ROI forms are available.
-const FORM_IDS = {
-  en: process.env.NEXT_PUBLIC_ROI_REPORT_FORM_ID_EN || '950f4b2b-ed50-4ef7-94f9-2b34c4b19ecc',
-  it: process.env.NEXT_PUBLIC_ROI_REPORT_FORM_ID_IT || 'd841a6fe-99a0-46cd-af9c-389b8df01855',
-};
+// The EN contact form accepts a single name; the IT form requires a separate surname.
+const REPORT_ENDPOINT = 'https://api.hsforms.com/submissions/v3/integration/submit/48438018/950f4b2b-ed50-4ef7-94f9-2b34c4b19ecc';
 
-export default function ReportForm({ onClose }: { onClose: () => void }) {
+const INDUSTRIES = ['luxury', 'retail', 'banking', 'insurance', 'pharma', 'manufacturing', 'other'];
+
+export default function ReportForm({ onClose, module, scenario, values }: {
+  onClose: () => void; module: Module; scenario: Scenario; values: number[];
+}) {
   const t = useTranslations('roi-calculator.reportForm');
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const calculator = useTranslations('roi-calculator');
   const locale = useLocale();
-  const formId = FORM_IDS[locale];
-  const [failed, setFailed] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const successMessage = t('success');
-  const [attempt, setAttempt] = useState(0);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [status, setStatus] = useState<'idle' | 'pending' | 'error' | 'submitted'>('idle');
 
   useEffect(() => {
     const dialog = dialogRef.current!;
@@ -34,42 +34,40 @@ export default function ReportForm({ onClose }: { onClose: () => void }) {
     };
   }, []);
 
-  useEffect(() => {
-    let cancelled = false;
-    let timeout: ReturnType<typeof setTimeout>;
-    setFailed(false);
-    const createForm = () => {
-      if (cancelled || !window.hbspt) return;
-      window.hbspt.forms.create({
-        portalId: '48438018',
-        formId,
-        region: 'na1',
-        target: '#roi-report-hubspot-form',
-        onFormReady: () => clearTimeout(timeout),
-        inlineMessage: successMessage,
-        onFormSubmitted: () => {
-          trackLead('roi-calculator');
-          setSubmitted(true);
-        },
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (status === 'pending') return;
+    const data = new FormData(event.currentTarget);
+    const industry = String(data.get('industry') ?? '');
+    const message = [
+      calculator('eyebrow'),
+      `${t('company')}: ${String(data.get('company')).trim()}`,
+      `${t('industry')}: ${industry ? t(`industries.${industry}`) : t('notSpecified')}`,
+      `${calculator('useCase')}: ${calculator(`${module}.tab`)}`,
+      `${calculator('scenario')}: ${calculator(`scenarios.${scenario}`)}`,
+      `${calculator(`${module}.input1`)}: ${values[0]}`,
+      `${calculator(`${module}.input2`)}: ${values[1]}`,
+    ].join('\n');
+    setStatus('pending');
+    try {
+      const payload = reportSubmission({
+        name: String(data.get('name') ?? ''), email: String(data.get('email') ?? ''), message,
+        consent: data.get('consent') === 'on',
+        consentText: t.markup('consent', { a: (text) => text }),
+        processingText: t('processingConsent'),
+        pageUri: window.location.href, pageName: document.title,
       });
-    };
-    timeout = setTimeout(() => { if (!cancelled) setFailed(true); }, 15000);
-    const script = document.createElement('script');
-    if (window.hbspt) createForm();
-    else {
-      script.src = '//js.hsforms.net/forms/embed/v2.js';
-      script.async = true;
-      script.onload = createForm;
-      script.onerror = () => { if (!cancelled) setFailed(true); };
-      document.body.appendChild(script);
+      const response = await fetch(REPORT_ENDPOINT, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload), signal: AbortSignal.timeout(15000),
+      });
+      if (!response.ok) throw new Error('Submission failed');
+      trackLead('roi-calculator');
+      setStatus('submitted');
+    } catch {
+      setStatus('error');
     }
-    return () => {
-      cancelled = true;
-      clearTimeout(timeout);
-      script.remove();
-      document.getElementById('roi-report-hubspot-form')?.replaceChildren();
-    };
-  }, [formId, attempt, successMessage]);
+  }
 
   return (
     <dialog ref={dialogRef} className={styles.dialog} aria-labelledby="roi-report-title" aria-describedby="roi-report-description"
@@ -78,12 +76,35 @@ export default function ReportForm({ onClose }: { onClose: () => void }) {
         <button type="button" className={styles.close} onClick={onClose} aria-label={t('close')}><X aria-hidden="true" /></button>
         <h2 id="roi-report-title">{t('heading')}</h2>
         <p id="roi-report-description">{t('body')}</p>
-        <div id="roi-report-hubspot-form" hidden={submitted || failed} />
-        {submitted && <p role="status">{successMessage}</p>}
-        {failed && !submitted && <div role="alert">
-          <p>{t('loadError')}</p>
-          <Button mode="dark" icon={null} onClick={() => setAttempt((value) => value + 1)}>{t('retry')}</Button>
-        </div>}
+        {status === 'submitted' ? <div>
+          <p role="status">{t('success')}</p>
+          {/* shortcut: enable the download here when the report file or template is supplied. */}
+          <Button type="button" mode="dark" disabled icon={null} aria-describedby="roi-report-pending">{calculator('downloadReport')}</Button>
+          <p id="roi-report-pending" className={styles.formNote}>{t('reportPending')}</p>
+        </div> : <form className={styles.captureForm} onSubmit={submit}>
+          <fieldset disabled={status === 'pending'}>
+            <label htmlFor="roi-name">{t('name')}</label>
+            <input id="roi-name" name="name" type="text" autoComplete="name" required pattern=".*\S.*" maxLength={200} />
+            <label htmlFor="roi-email">{t('email')}</label>
+            <input id="roi-email" name="email" type="email" autoComplete="email" required maxLength={254} />
+            <label htmlFor="roi-company">{t('company')}</label>
+            <input id="roi-company" name="company" type="text" autoComplete="organization" required pattern=".*\S.*" maxLength={200} />
+            <label htmlFor="roi-industry">{t('industry')}</label>
+            <select id="roi-industry" name="industry" defaultValue="">
+              <option value="">{t('selectIndustry')}</option>
+              {INDUSTRIES.map((industry) => <option key={industry} value={industry}>{t(`industries.${industry}`)}</option>)}
+            </select>
+            <label className={styles.consent}>
+              <input type="checkbox" name="consent" required />
+              <span>{t.rich('consent', { a: (text) => <a href={locale === 'it' ? 'https://www.iubenda.com/privacy-policy/75783964' : 'https://www.iubenda.com/privacy-policy/45750674/full-legal'} target="_blank" rel="noopener noreferrer">{text}</a> })}</span>
+            </label>
+            <p className={styles.formNote}>{t('unsubscribe')}</p>
+            {status === 'error' && <p role="alert">{t('submitError')}</p>}
+            <Button className="w-full rounded-[9px] text-[14px] font-semibold" type="submit" mode="dark" icon={null}>
+              {t(status === 'pending' ? 'submitting' : 'submit')}
+            </Button>
+          </fieldset>
+        </form>}
       </div>
     </dialog>
   );

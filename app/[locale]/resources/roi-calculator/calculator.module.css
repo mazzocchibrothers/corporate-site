@@ -68,10 +68,19 @@
 @media (prefers-reduced-motion: reduce) {
   .arc, .needle { transition: none; }
 }
-.dialog { margin: auto; width: min(560px, calc(100% - 36px)); max-height: calc(100dvh - 40px); padding: 0; border: 1px solid rgb(255 255 255 / .15); border-radius: 20px; background: #141516; color: #fff; overflow-y: auto; }
+.dialog { margin: auto; width: min(400px, calc(100% - 36px)); max-height: calc(100dvh - 40px); padding: 0; border: 1px solid rgb(255 255 255 / .15); border-radius: 16px; background: #141516; color: #fff; overflow-y: auto; }
 .dialog::backdrop { background: rgb(0 0 0 / .75); backdrop-filter: blur(4px); }
-.dialogInner { padding: 30px; }
-.dialogInner h2 { font-size: 26px; font-weight: 600; padding-right: 28px; letter-spacing: -.02em; }
+.dialogInner { padding: 26px 28px; }
+.dialogInner h2 { font-size: 20px; font-weight: 600; padding-right: 28px; letter-spacing: -.02em; }
 .dialogInner p { margin: 10px 0 24px; color: rgb(255 255 255 / .65); font-size: 14px; }
 .close { float: right; padding: 4px; color: rgb(255 255 255 / .7); border-radius: 4px; }
 .close:focus-visible { outline: 2px solid #9395ff; outline-offset: 2px; }
+
+.captureForm label { display: block; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgb(255 255 255 / .65); margin-bottom: 5px; }
+.captureForm input:not([type=checkbox]), .captureForm select { width: 100%; background: #0d0d1f; border: 1px solid rgb(255 255 255 / .15); border-radius: 8px; padding: 10px 12px; color: #fff; font-size: 14px; margin-bottom: 13px; }
+.captureForm input:focus-visible, .captureForm select:focus-visible { outline: 2px solid #9395ff; outline-offset: 2px; }
+.captureForm .consent { display: flex; gap: 8px; align-items: flex-start; font-size: 11px; letter-spacing: 0; text-transform: none; line-height: 1.5; margin-top: 4px; }
+.consent input { margin-top: 3px; flex: none; accent-color: #4b4df7; }
+.consent a { color: #9395ff; text-decoration: underline; }
+.dialogInner .formNote { font-size: 11px; color: rgb(255 255 255 / .55); line-height: 1.5; margin: 12px 0; }
+.captureForm [role=alert] { font-size: 13px; }
