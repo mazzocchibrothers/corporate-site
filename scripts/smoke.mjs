@@ -111,7 +111,19 @@ try {
     const dialog = roi.getByRole('dialog', { name: heading });
     await dialog.locator('input[name=email]').waitFor({ state: 'visible' });
     assert.equal(await dialog.locator('iframe').count(), 0, 'the mockup uses native form fields');
-    await dialog.locator('input[name=name]').fill('Test Name');
+    const nameInput = dialog.locator('input[name=name]');
+    assert.equal(await nameInput.evaluate((input) => input === document.activeElement), true, 'opening focuses the name field, not the close button');
+    await nameInput.fill('Test Name');
+    await nameInput.press('Enter');
+    await dialog.waitFor({ state: 'visible' });
+    const nameBounds = await nameInput.boundingBox();
+    await roi.mouse.move(nameBounds.x + 40, nameBounds.y + nameBounds.height / 2);
+    await roi.mouse.down();
+    await roi.mouse.move(10, 10);
+    await roi.mouse.up();
+    await roi.mouse.click(10, 10);
+    await dialog.waitFor({ state: 'visible' });
+    assert.equal(await nameInput.inputValue(), 'Test Name', 'selecting text beyond the modal and clicking the backdrop keep the form and its values');
     await dialog.locator('input[name=email]').fill('test@example.invalid');
     await dialog.locator('input[name=company]').fill('Test Company');
     await dialog.locator('select[name=industry]').selectOption('retail');
@@ -149,6 +161,9 @@ try {
     await roi.keyboard.press('Escape');
     await roi.getByRole('dialog', { name: heading }).waitFor({ state: 'detached' });
     assert.equal(await reportButton.evaluate((button) => button === document.activeElement), true);
+    await reportButton.click();
+    await dialog.locator('button[aria-label]').click();
+    await dialog.waitFor({ state: 'detached' });
   }
 
   await roi.close();
