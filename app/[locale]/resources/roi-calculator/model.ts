@@ -89,7 +89,7 @@ export function reportContent({ contact, module, scenario, values, locale, trans
   return {
     title: t('report.title', { company: contact.company }),
     meta: t('report.preparedFor', { name: contact.name, date: new Intl.DateTimeFormat(locale === 'it' ? 'it' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).format(contact.date) }),
-    pill: sector ? t(`report.sectors.${sector}.label`) : t(`${module}.tab`),
+    pill: sector ? `${t(`${module}.tab`)} · ${t(`report.sectors.${sector}.label`)}` : t(`${module}.tab`),
     metrics: [
       { label: t(module === 'derisk' ? 'annualValue' : 'annualSavings'), value: euro(result.total) },
       { label: t('roi'), value: pct(result.roi / 100) },

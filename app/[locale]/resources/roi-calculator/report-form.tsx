@@ -6,7 +6,7 @@ import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { trackLead } from '@/components/shared/track-lead';
 import { reportSubmission } from './report-submission';
-import { reportContent, type ReportContact, type Module, type Scenario } from './model';
+import { MODULES, reportContent, type ReportContact, type Module, type Scenario } from './model';
 import { href } from '@/i18n/routes';
 import { BASE_URL } from '@/i18n/urls';
 import styles from './calculator.module.css';
@@ -16,8 +16,8 @@ const REPORT_ENDPOINT = 'https://api.hsforms.com/submissions/v3/integration/subm
 
 const INDUSTRIES = ['luxury', 'retail', 'banking', 'insurance', 'pharma', 'manufacturing', 'other'];
 
-export default function ReportForm({ onClose, module, scenario, values }: {
-  onClose: () => void; module: Module; scenario: Scenario; values: number[];
+export default function ReportForm({ onClose, scenario, values }: {
+  onClose: () => void; scenario: Scenario; values: Record<Module, number[]>;
 }) {
   const t = useTranslations('roi-calculator.reportForm');
   const calculator = useTranslations('roi-calculator');
@@ -50,10 +50,12 @@ export default function ReportForm({ onClose, module, scenario, values }: {
       calculator('eyebrow'),
       `${t('company')}: ${String(data.get('company')).trim()}`,
       `${t('industry')}: ${industry ? t(`industries.${industry}`) : t('notSpecified')}`,
-      `${calculator('useCase')}: ${calculator(`${module}.tab`)}`,
       `${calculator('scenario')}: ${calculator(`scenarios.${scenario}`)}`,
-      `${calculator(`${module}.input1`)}: ${values[0]}`,
-      `${calculator(`${module}.input2`)}: ${values[1]}`,
+      ...(Object.keys(MODULES) as Module[]).flatMap((module) => [
+        `${calculator('useCase')}: ${calculator(`${module}.tab`)}`,
+        `${calculator(`${module}.input1`)}: ${values[module][0]}`,
+        `${calculator(`${module}.input2`)}: ${values[module][1]}`,
+      ]),
     ].join('\n');
     setStatus('pending');
     try {
@@ -70,21 +72,25 @@ export default function ReportForm({ onClose, module, scenario, values }: {
       });
       if (!response.ok) throw new Error('Submission failed');
       trackLead('roi-calculator');
-      setContact({ name: String(data.get('name') ?? '').trim(), company: String(data.get('company') ?? '').trim(), industry, date: new Date() });
+      const details = { name: String(data.get('name') ?? '').trim(), company: String(data.get('company') ?? '').trim(), industry, date: new Date() };
+      setContact(details);
       setStatus('submitted');
+      await download(details);
     } catch {
       setStatus('error');
     }
   }
 
-  async function download() {
-    if (!contact || downloading) return;
+  async function download(details = contact) {
+    if (!details || downloading) return;
     setDownloading(true);
     setDownloadError(false);
     try {
       const { generateReportPDF } = await import('./report-pdf');
-      const content = reportContent({ contact, module, scenario, values, locale, translate: calculator,
-        demoUrl: new URL(href('book-meeting', locale), BASE_URL).href });
+      const content = (Object.keys(MODULES) as Module[]).map((module) => reportContent({
+        contact: details, module, scenario, values: values[module], locale, translate: calculator,
+        demoUrl: new URL(href('book-meeting', locale), BASE_URL).href,
+      }));
       const blob = await generateReportPDF(content);
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
@@ -110,7 +116,7 @@ export default function ReportForm({ onClose, module, scenario, values }: {
         <p id="roi-report-description">{t('body')}</p>
         {status === 'submitted' ? <div>
           <p role="status">{t('success')}</p>
-          <Button type="button" mode="dark" disabled={downloading} aria-busy={downloading} icon={null} onClick={download}>
+          <Button type="button" mode="dark" disabled={downloading} aria-busy={downloading} icon={null} onClick={() => download()}>
             {downloading ? t('generatingReport') : calculator('downloadReport')}
           </Button>
           <p className={styles.formNote}>{t('downloadHint')}</p>
