@@ -32,6 +32,11 @@ export default function SkillProfile() {
   const [mode, setMode] = useState<Mode>('inferred');
   const [auto, setAuto] = useState(true);
 
+  // A reader who asked for less motion gets the buttons, not the rotation.
+  useEffect(() => {
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) setAuto(false);
+  }, []);
+
   useEffect(() => {
     if (!inView || !auto) return;
     const id = setInterval(() => setMode((m) => (m === 'inferred' ? 'measured' : 'inferred')), CYCLE_MS);
@@ -42,8 +47,8 @@ export default function SkillProfile() {
   const measured = mode === 'measured';
 
   return (
-    <div ref={ref} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-6">
-      <div className="flex items-center justify-between gap-3 mb-6">
+    <div ref={ref} className="min-w-0 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-6">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
         <span className="text-[12px] text-white/40 whitespace-nowrap">{t('label')}</span>
         <div className="inline-flex rounded-full bg-white/[0.06] p-1" role="group">
           {(['inferred', 'measured'] as const).map((m) => (
@@ -103,10 +108,10 @@ export default function SkillProfile() {
               </div>
 
               <div className="grid mt-1.5">
-                <span className={`[grid-area:1/1] text-[12px] leading-[1.4] text-white/45 transition-opacity duration-300 ${measured ? 'opacity-0' : 'opacity-100'}`}>
+                <span aria-hidden={measured} className={`[grid-area:1/1] text-[12px] leading-[1.4] text-white/45 transition-opacity duration-300 ${measured ? 'opacity-0' : 'opacity-100'}`}>
                   {row.inferred}
                 </span>
-                <span className={`[grid-area:1/1] text-[12px] leading-[1.4] text-white/70 transition-opacity duration-300 ${measured ? 'opacity-100' : 'opacity-0'}`}>
+                <span aria-hidden={!measured} className={`[grid-area:1/1] text-[12px] leading-[1.4] text-white/70 transition-opacity duration-300 ${measured ? 'opacity-100' : 'opacity-0'}`}>
                   {row.measured}
                 </span>
               </div>
@@ -116,10 +121,10 @@ export default function SkillProfile() {
       </ul>
 
       <div className="grid mt-6 pt-4 border-t border-white/[0.08]">
-        <p className={`[grid-area:1/1] text-[13px] text-white/50 transition-opacity duration-300 ${measured ? 'opacity-0' : 'opacity-100'}`}>
+        <p aria-hidden={measured} className={`[grid-area:1/1] text-[13px] text-white/50 transition-opacity duration-300 ${measured ? 'opacity-0' : 'opacity-100'}`}>
           {t('footerInferred')}
         </p>
-        <p className={`[grid-area:1/1] text-[13px] text-white/85 transition-opacity duration-300 ${measured ? 'opacity-100' : 'opacity-0'}`}>
+        <p aria-hidden={!measured} className={`[grid-area:1/1] text-[13px] text-white/85 transition-opacity duration-300 ${measured ? 'opacity-100' : 'opacity-0'}`}>
           {t('footerMeasured')}
         </p>
       </div>

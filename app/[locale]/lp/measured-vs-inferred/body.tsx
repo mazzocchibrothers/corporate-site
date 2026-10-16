@@ -45,7 +45,9 @@ function Eyebrow({ light, children }: { light?: boolean; children: React.ReactNo
 
 function Cta({ to, mode, children }: { to: string; mode: 'light' | 'dark'; children: React.ReactNode }) {
   return (
-    <Button asChild variant="primary" mode={mode}>
+    // On a 320px screen the label is wider than the 280px between the gutters:
+    // a little less padding, and it may wrap rather than push the page wide.
+    <Button asChild variant="primary" mode={mode} className="max-w-full px-5 sm:px-6 whitespace-normal sm:whitespace-nowrap text-center">
       <a href={to}>
         {children}
         <ArrowRight aria-hidden="true" />
@@ -119,7 +121,7 @@ export default function MeasuredVsInferred() {
         <section className="relative pt-[80px]">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 pt-16 pb-16 lg:pt-24 lg:pb-24">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-            <div className="lg:col-span-7">
+            <div className="min-w-0 lg:col-span-7">
               <Reveal {...FADE} delay={0.1}><Eyebrow>{t('hero.eyebrow')}</Eyebrow></Reveal>
               <Reveal
                 {...FADE}
@@ -137,7 +139,7 @@ export default function MeasuredVsInferred() {
                 <Cta to={booking} mode="dark">{t('hero.cta')}</Cta>
               </Reveal>
             </div>
-            <Reveal {...FADE} delay={0.4} className="lg:col-span-5">
+            <Reveal {...FADE} delay={0.4} className="min-w-0 lg:col-span-5">
               <SkillProfile />
             </Reveal>
             </div>
