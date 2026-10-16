@@ -1,7 +1,7 @@
 'use client';
 
-// "We feed it", drawn as a two-way exchange: the visitor's jobs data and
-// frameworks flow in, measured skills data flows back out to the systems they
+// "We feed them", drawn as a two-way exchange: the visitor's jobs and business
+// data flow in, measured skills data flows back out to the systems they
 // already run. The destinations are the integration targets the messaging
 // names, nothing more.
 
@@ -15,7 +15,13 @@ function Lane({ dir, active }: { dir: 'out' | 'in'; active: boolean }) {
     <div className="relative h-full w-px md:h-px md:w-full" aria-hidden="true">
       <div className="absolute inset-0 bg-white/[0.12]" />
       {active && [0, 1, 2].map((d) => (
-        <span key={d} className={`mvi-flow-dot ${dir === 'in' ? 'mvi-flow-in' : ''}`} style={{ animationDelay: `${d * 0.6 + (dir === 'in' ? 0.3 : 0)}s` }} />
+        <span
+          key={d}
+          className={`absolute -left-[3px] top-0 md:-top-[3px] md:left-0 h-[7px] w-[7px] rounded-full motion-reduce:hidden animate-[mvi-flow-v_1.8s_linear_infinite] md:animate-[mvi-flow-h_1.8s_linear_infinite] ${
+            dir === 'in' ? 'bg-[#a9a9a9] [animation-direction:reverse] md:[animation-direction:reverse]' : 'bg-[#8385FF] shadow-[0_0_10px_rgba(99,102,248,0.8)]'
+          }`}
+          style={{ animationDelay: `${d * 0.6 + (dir === 'in' ? 0.3 : 0)}s` }}
+        />
       ))}
     </div>
   );
