@@ -23,7 +23,8 @@
         "careers": "Carriere",
         "customers": "Storie di Successo",
         "talentPioneers": "Talent Pioneers",
-        "partners": "Partner"
+        "partners": "Partner",
+        "roiCalculator": "Calcolatore ROI"
       }
     },
     "footer": {
@@ -8949,5 +8950,89 @@
     "back": "Partner",
     "heading": "Diventa <span>Partner</span> di Skillvue",
     "body": "Aiuta le organizzazioni ad assumere e far crescere le persone in base alle competenze, non alle supposizioni. Candidati qui e il nostro team Partnership ti contatterà entro 1 giorno lavorativo."
+  },
+  "roi-calculator": {
+    "meta": {
+      "title": "Calcolatore ROI del talento | Skillvue",
+      "description": "Stima il valore annuo di decisioni migliori su assunzioni, promozioni, successione dei leader e trasformazione con il calcolatore ROI di Skillvue."
+    },
+    "eyebrow": "Calcolatore ROI del talento",
+    "heading": "Quanto vale Skillvue per la tua organizzazione?",
+    "intro": "Scegli un caso d’uso, inserisci due numeri e scopri il ritorno annuo stimato per la tua organizzazione.",
+    "useCase": "Caso d’uso",
+    "positioning": "Il sistema operativo delle competenze",
+    "positioningBody": "Decisioni sul talento basate su evidenze scientifiche.",
+    "bookDemo": "Prenota una demo",
+    "downloadReport": "Scarica il report",
+    "results": "Risultati stimati",
+    "scenario": "Scenario",
+    "scenarios": {
+      "conservative": "Prudente",
+      "base": "Base",
+      "optimistic": "Ottimistico"
+    },
+    "annualSavings": "Risparmio annuo stimato",
+    "annualValue": "Valore annuo stimato",
+    "roi": "ROI",
+    "fit": "Con questi volumi il canone annuo supera il valore stimato: parliamone per capire se Skillvue è la soluzione giusta per te.",
+    "softDriver": "Tempo liberato per i recruiter",
+    "softDriverSub": "Tempo risparmiato nello screening",
+    "payback": "mesi per recuperare l’investimento",
+    "assumptions": "Ipotesi e metodologia",
+    "license": "Canone annuo ipotizzato: {amount}. Il prezzo della licenza sarà adattato alle tue esigenze.",
+    "disclaimer": "Queste cifre sono stime indicative. Escludono i costi di implementazione e formazione. Verificale con i dati dei tuoi team HR e Finance.",
+    "closing": "Dai concretezza a questi numeri con i tuoi dati.",
+    "hiring": {
+      "tab": "Assunzioni",
+      "heading": "Dai un valore ad <span>assunzioni migliori</span>.",
+      "body": "Scopri quanto puoi risparmiare ogni anno in tempo dei recruiter e costi delle assunzioni non riuscite.",
+      "input1": "Assunzioni all’anno",
+      "input2": "Retribuzione media",
+      "driver": "Costi delle assunzioni non riuscite evitati",
+      "driverSub": "Controvalore economico",
+      "assumptions": "Un’assunzione non riuscita costa 1× la retribuzione annua. Tasso di insuccesso di base: 15%. Riduzione relativa del numero di assunzioni non riuscite: {reduction}. Riduzione del tempo di screening: {screening}. 100 candidati per assunzione, 5 minuti per screening, costo del recruiter di 40 € all’ora.",
+      "caveat": "La riduzione si applica al numero di assunzioni non riuscite, non ai punti percentuali del tasso di insuccesso. Il tempo dei recruiter genera valore solo se viene reinvestito in altre attività."
+    },
+    "promote": {
+      "tab": "Promozioni",
+      "heading": "Dai un valore a <span>promozioni migliori</span>.",
+      "body": "Promuovi le persone giuste con fiducia e scopri il risparmio annuo di un minor numero di promozioni non riuscite.",
+      "input1": "Dipendenti totali",
+      "input2": "Retribuzione media · nuovo ruolo",
+      "driver": "Promozioni non riuscite evitate",
+      "driverSub": "Costi delle promozioni non riuscite evitati",
+      "assumptions": "Tasso annuo di promozione: 8%. Tasso di insuccesso di base: 40%. Riduzione relativa degli insuccessi: {reduction}. Una promozione non riuscita costa 1× la retribuzione annua.",
+      "caveat": "Il tasso di insuccesso di base delle transizioni di leadership è applicato a tutte le promozioni. Esclude il periodo di avviamento della persona promossa. Verifica con i tuoi dati."
+    },
+    "develop": {
+      "tab": "Sviluppo",
+      "heading": "Dai un valore alla tua <span>pipeline di leadership</span>.",
+      "body": "Scopri chi è pronto prima che si liberi un ruolo e quanto puoi risparmiare riducendo i tempi di copertura delle posizioni di leadership.",
+      "input1": "Dipendenti totali",
+      "input2": "Retribuzione media dei leader",
+      "driver": "Riduzione dei costi dei ruoli di leadership vacanti",
+      "driverSub": "Ruoli di leadership coperti prima",
+      "assumptions": "Quota di ruoli di leadership: 5%. Turnover annuo dei leader: 15%. Durata media delle posizioni vacanti: 4 mesi. Perdita di produttività: 100% della retribuzione mensile. Riduzione della durata: {duration}.",
+      "caveat": "Il modello stima una copertura più rapida dei ruoli di leadership grazie a una pipeline interna pronta. Esclude l’investimento in formazione per preparare i successori. La perdita di produttività è pari al 100% della retribuzione mensile."
+    },
+    "derisk": {
+      "tab": "Rischio",
+      "heading": "Dai un valore al <span>rischio di trasformazione</span>.",
+      "body": "Affronta le grandi trasformazioni partendo dalle competenze e scopri il rischio che puoi ridurre ogni anno.",
+      "input1": "Budget di trasformazione",
+      "input2": "Dipendenti totali",
+      "driver": "Esposizione al rischio ridotta",
+      "driverSub": "Riduzione stimata dell’esposizione al rischio",
+      "assumptions": "Personale coinvolto: 50%. Probabilità di insuccesso di base: 30%. Costo del ritardo per dipendente coinvolto: 1.000 €. Riduzione relativa del rischio: {reduction}.",
+      "caveat": "Modello indicativo in fase di revisione. Combina la quota di budget a rischio con un costo stimato del ritardo per dipendente, quindi applica la riduzione del rischio. Considera questa cifra solo come indicazione."
+    },
+    "reportForm": {
+      "heading": "Richiedi il tuo report ROI",
+      "body": "Inserisci i tuoi dati per richiedere il report personalizzato.",
+      "close": "Chiudi",
+      "loadError": "Non è stato possibile caricare il modulo. Riprova.",
+      "retry": "Riprova",
+      "success": "Grazie. Abbiamo ricevuto i tuoi dati."
+    }
   }
 }

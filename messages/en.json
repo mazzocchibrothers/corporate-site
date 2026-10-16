@@ -23,7 +23,8 @@
         "careers": "Careers",
         "customers": "Customer Stories",
         "talentPioneers": "Talent Pioneers",
-        "partners": "Partners"
+        "partners": "Partners",
+        "roiCalculator": "ROI calculator"
       }
     },
     "footer": {
@@ -8949,5 +8950,89 @@
     "back": "Partners",
     "heading": "Become a Skillvue <span>Partner</span>",
     "body": "Help organizations hire and develop people based on skills, not guesswork. Apply here and our partnerships team will be in touch within 1 working day."
+  },
+  "roi-calculator": {
+    "meta": {
+      "title": "Talent ROI Calculator | Skillvue",
+      "description": "Estimate the annual value of better hiring, promotions, leadership succession and transformation decisions with the Skillvue ROI calculator."
+    },
+    "eyebrow": "Talent ROI calculator",
+    "heading": "What is Skillvue worth to your organisation?",
+    "intro": "Pick a use case, enter two numbers, and see the estimated annual return for your organisation.",
+    "useCase": "Use case",
+    "positioning": "The skills operating system",
+    "positioningBody": "Evidence-based talent decisions, grounded in science.",
+    "bookDemo": "Book a demo",
+    "downloadReport": "Download report",
+    "results": "Estimated results",
+    "scenario": "Scenario",
+    "scenarios": {
+      "conservative": "Conservative",
+      "base": "Base",
+      "optimistic": "Optimistic"
+    },
+    "annualSavings": "Estimated annual savings",
+    "annualValue": "Estimated annual value",
+    "roi": "ROI",
+    "fit": "At this scale the annual license outweighs the modeled value, so let’s talk about whether Skillvue is the right fit.",
+    "softDriver": "Recruiter time freed",
+    "softDriverSub": "Saved screening time",
+    "payback": "months to pay back",
+    "assumptions": "Assumptions and methodology",
+    "license": "Assumed annual license: {amount}. The license price will be tailored to your needs.",
+    "disclaimer": "These figures are directional estimates. They exclude implementation and training costs. Validate them against your own HR and Finance data.",
+    "closing": "Put your own data behind these numbers.",
+    "hiring": {
+      "tab": "Hiring",
+      "heading": "Put a number on <span>better hiring</span>.",
+      "body": "See the recruiter time and failed-hire costs that come off your plate each year.",
+      "input1": "Hires per year",
+      "input2": "Average salary",
+      "driver": "Failed-hire costs avoided",
+      "driverSub": "Cash equivalent",
+      "assumptions": "A failed hire costs 1× annual salary. Baseline failure rate: 15%. Relative reduction in the number of failed hires: {reduction}. Screening time cut: {screening}. 100 candidates per hire, 5 minutes per screening, recruiter cost €40 per hour.",
+      "caveat": "The reduction applies to the number of failed hires, not percentage points of the failure rate. Recruiter time counts as value only if redeployed."
+    },
+    "promote": {
+      "tab": "Promote",
+      "heading": "Put a number on <span>better promotions</span>.",
+      "body": "Promote the right people with confidence, and see what fewer failed promotions save each year.",
+      "input1": "Total employees",
+      "input2": "Avg salary · promoted role",
+      "driver": "Failed promotions avoided",
+      "driverSub": "Cost of failed promotions avoided",
+      "assumptions": "Annual promotion rate: 8%. Baseline failure rate: 40%. Relative failure reduction: {reduction}. A failed promotion costs 1× annual salary.",
+      "caveat": "The baseline leadership-transition failure rate is applied to all promotions. Excludes ramp-up of the promoted employee. Validate against your own data."
+    },
+    "develop": {
+      "tab": "Develop",
+      "heading": "Put a number on your <span>leadership pipeline</span>.",
+      "body": "Know who’s ready before the seat opens, and see what shorter leadership vacancies save each year.",
+      "input1": "Total employees",
+      "input2": "Avg leadership salary",
+      "driver": "Leadership vacancy cost cut",
+      "driverSub": "Leadership roles filled sooner",
+      "assumptions": "Leadership-role share: 5%. Annual leadership turnover: 15%. Average vacancy duration: 4 months. Productivity loss: 100% of monthly salary. Vacancy duration reduction: {duration}.",
+      "caveat": "Models faster backfill of leadership roles from a ready internal pipeline. It excludes the L&D investment to develop those successors. Productivity loss is set at 100% of monthly salary."
+    },
+    "derisk": {
+      "tab": "De-risk",
+      "heading": "Put a number on <span>transformation risk</span>.",
+      "body": "Go into big transformations skills-first, and see the risk that stays off the table each year.",
+      "input1": "Transformation budget",
+      "input2": "Total employees",
+      "driver": "Risk exposure reduced",
+      "driverSub": "Estimated reduction in risk exposure",
+      "assumptions": "Workforce impacted: 50%. Baseline failure probability: 30%. Delay cost per impacted employee: €1,000. Relative risk reduction: {reduction}.",
+      "caveat": "Directional proxy model, under review. It combines the at-risk share of the budget with an estimated per-employee delay cost, then applies the risk reduction. Treat this figure as indicative only."
+    },
+    "reportForm": {
+      "heading": "Get your ROI report",
+      "body": "Enter your details to request your personalised report.",
+      "close": "Close",
+      "loadError": "The form could not be loaded. Please try again.",
+      "retry": "Try again",
+      "success": "Thank you. Your details have been received."
+    }
   }
 }

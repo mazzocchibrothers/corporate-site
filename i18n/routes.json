@@ -525,5 +525,12 @@
       "en": "/solutions/talent-acquisition",
       "it": "/soluzioni/talent-acquisition"
     }
+  },
+  {
+    "id": "roi-calculator",
+    "paths": {
+      "en": "/roi-calculator",
+      "it": "/roi-calculator"
+    }
   }
 ]

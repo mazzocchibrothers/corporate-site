@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   ChevronDown, Menu, X, ArrowRight,
   AppWindow, Atom, UserSearch, UserCog, BookOpenCheck, Move, FolderKanban,
-  SquarePlay, UserGroup, Lightbulb, Rows3, Newspaper, Building2, Briefcase, Handshake,
+  SquarePlay, UserGroup, Lightbulb, Rows3, Newspaper, Building2, Briefcase, Handshake, Calculator,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useRouter } from '@/i18n/navigation';
@@ -32,7 +32,7 @@ const navLinks: { id: string; route?: string; items: string[] | null }[] = [
   { id: 'customers', items: ['customers', 'customers/talent-pioneers', 'customers/partners'] },
   {
     id: 'resources',
-    items: ['resources/insights', 'blog', 'resources/press', 'about', 'careers'],
+    items: ['resources/insights', 'roi-calculator', 'blog', 'resources/press', 'about', 'careers'],
   },
 ];
 
@@ -49,6 +49,7 @@ const ICONS: Record<string, React.ComponentType<{ className?: string; style?: Re
   talentPioneers: UserGroup,
   partners: Handshake,
   insights: Lightbulb,
+  roiCalculator: Calculator,
   blog: Rows3,
   press: Newspaper,
   about: Building2,

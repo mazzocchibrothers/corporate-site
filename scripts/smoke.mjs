@@ -83,6 +83,55 @@ try {
   assert.match(await listing.locator('h1').innerText(), /^Gruppo Credem/, 'the Credem card should open the Italian story');
   await listing.close();
 
+  const roi = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+  await roi.addInitScript(() => {
+    window.hbspt = { forms: { create(options) {
+      const target = document.querySelector(options.target);
+      const form = document.createElement('form');
+      const input = document.createElement('input');
+      input.name = 'email'; input.type = 'email'; input.required = true;
+      const submit = document.createElement('button');
+      submit.textContent = 'Submit test contact'; submit.type = 'submit';
+      form.append(input, submit);
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        options.onFormSubmitted();
+      });
+      target.append(form);
+      target.dataset.formId = options.formId;
+      target.dataset.inlineMessage = options.inlineMessage;
+      options.onFormReady();
+    } } };
+  });
+  for (const [path, label, report, heading] of [
+    ['/roi-calculator', 'ROI calculator', 'Download report', 'Get your ROI report'],
+    ['/it/roi-calculator', 'Calcolatore ROI', 'Scarica il report', 'Richiedi il tuo report ROI'],
+  ]) {
+    await visit(roi, path);
+    await roi.locator('#desktop-trigger-resources').focus();
+    const calculatorLink = roi.getByTestId('mega-roiCalculator');
+    await calculatorLink.waitFor({ state: 'visible' });
+    assert.equal(await calculatorLink.innerText(), label);
+    assert.equal(await calculatorLink.getAttribute('href'), path);
+    await roi.keyboard.press('Escape');
+    const reportButton = roi.getByRole('button', { name: report, exact: true });
+    await reportButton.click();
+    const dialog = roi.getByRole('dialog', { name: heading });
+    await dialog.locator('input[name=email]').waitFor({ state: 'visible' });
+    assert.ok(await roi.locator('#roi-report-hubspot-form').getAttribute('data-form-id'));
+    assert.ok(await roi.locator('#roi-report-hubspot-form').getAttribute('data-inline-message'));
+    await dialog.locator('input[name=email]').fill('test@example.invalid');
+    await dialog.getByRole('button', { name: 'Submit test contact' }).click();
+    await dialog.getByRole('status').waitFor({ state: 'visible' });
+    assert.deepEqual(await roi.evaluate(() => window.dataLayer.filter((event) => event.form === 'roi-calculator').map(({ event, form }) => ({ event, form }))),
+      [{ event: 'generate_lead', form: 'roi-calculator' }]);
+    await roi.keyboard.press('Escape');
+    await roi.getByRole('dialog', { name: heading }).waitFor({ state: 'detached' });
+    assert.equal(await reportButton.evaluate((button) => button === document.activeElement), true);
+  }
+
+  await roi.close();
+
   const mobile = await browser.newPage({ viewport: { width: 390, height: 844 } });
   mobile.setDefaultNavigationTimeout(10_000);
   await visit(mobile, '/');
@@ -96,4 +145,4 @@ try {
   await browser.close();
 }
 
-console.log('[OK] browser smoke: navigation, locale, customer listing and mobile menu');
+console.log('[OK] browser smoke: navigation, locale, customer listing, mobile menu and ROI report dialog');
