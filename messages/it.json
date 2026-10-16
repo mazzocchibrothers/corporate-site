@@ -9017,7 +9017,7 @@
     },
     "reportForm": {
       "heading": "Richiedi il tuo report ROI",
-      "body": "Inserisci i tuoi dati per scaricare un report con tutti e quattro i moduli. I moduli non modificati usano i valori iniziali del calcolatore.",
+      "body": "Inserisci i tuoi dati per scaricare il report personalizzato del modulo {module}.",
       "close": "Chiudi",
       "name": "Nome",
       "email": "Email di lavoro",
