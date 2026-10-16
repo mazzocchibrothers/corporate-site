@@ -34,7 +34,7 @@ export default function CompareTable() {
   const inView = useInView(ref, '-120px');
 
   const cell = (delay: number) => ({
-    className: `transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`,
+    className: `transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`,
     style: { transitionDelay: `${delay}ms` },
   });
 

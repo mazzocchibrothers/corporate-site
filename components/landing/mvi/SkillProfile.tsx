@@ -95,7 +95,7 @@ export default function SkillProfile() {
                 }`}
               >
                 <div
-                  className="absolute inset-y-0 rounded-full overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                  className="absolute inset-y-0 rounded-full overflow-hidden transition-all duration-700 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)]"
                   style={{ left: `${left}%`, width: `${width}%`, transitionDelay: `${i * 80}ms` }}
                 >
                   <div
