@@ -95,6 +95,11 @@ try {
     ['/it/resources/roi-calculator', 'Calcolatore ROI', 'Scarica il report', 'Richiedi il tuo report ROI'],
   ]) {
     await visit(roi, path);
+    const conservative = path.startsWith('/it/') ? 'Prudente' : 'Conservative';
+    await roi.getByRole('button', { name: conservative, exact: true }).click();
+    await roi.getByRole('button', { name: conservative, exact: true, pressed: true }).waitFor();
+    await roi.getByRole('button', { name: 'Base', exact: true }).click();
+    await roi.getByRole('button', { name: 'Base', exact: true, pressed: true }).waitFor();
     await roi.locator('#desktop-trigger-resources').focus();
     const calculatorLink = roi.getByTestId('mega-roiCalculator');
     await calculatorLink.waitFor({ state: 'visible' });
@@ -127,7 +132,18 @@ try {
     assert.ok(payload.fields.some((field) => field.name === 'message' && field.value.includes('Test Company')));
     assert.equal(payload.legalConsentOptions.consent.communications[0].subscriptionTypeId, 527104760);
     assert.equal(payload.legalConsentOptions.consent.communications[0].value, true);
-    assert.equal(await dialog.getByRole('button', { name: report, exact: true }).isDisabled(), true, 'report file has not been supplied yet');
+    const [download] = await Promise.all([
+      roi.waitForEvent('download'),
+      dialog.getByRole('button', { name: report, exact: true }).click(),
+    ]);
+    assert.equal(download.suggestedFilename(), 'skillvue-roi-report.pdf');
+    const stream = await download.createReadStream();
+    const chunks = [];
+    for await (const chunk of stream) chunks.push(chunk);
+    const document = Buffer.concat(chunks);
+    assert.equal(document.subarray(0, 5).toString(), '%PDF-');
+    assert.ok(document.length > 10000, 'PDF includes its fonts and logo');
+    assert.equal((document.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length, 1, 'default report fits one A4 page');
     assert.deepEqual(await roi.evaluate(() => window.dataLayer.filter((event) => event.form === 'roi-calculator').map(({ event, form }) => ({ event, form }))),
       [{ event: 'generate_lead', form: 'roi-calculator' }]);
     await roi.keyboard.press('Escape');

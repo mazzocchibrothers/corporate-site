@@ -9052,7 +9052,69 @@
       "submit": "Get my report",
       "submitting": "Sending…",
       "submitError": "We couldn’t send your details. Please try again.",
-      "reportPending": "Your details have been received. The report will be available to download soon."
+      "generatingReport": "Preparing PDF…",
+      "downloadHint": "Download your personalised PDF report.",
+      "downloadError": "We couldn’t create the PDF. Please try again."
+    },
+    "report": {
+      "title": "What Skillvue is worth to {company}",
+      "preparedFor": "Prepared for {name} · {date}",
+      "inputs": "Your inputs",
+      "drivers": "How we calculated our savings",
+      "assumptions": "Key assumptions · {scenario} scenario",
+      "salaryMultiple": "1× salary",
+      "hourlyCost": "{amount} / hr",
+      "months": "{count} mo",
+      "disclaimer": "These figures are directional estimates; your real numbers depend on your own data.",
+      "priceNote": "The license price is an assumption and will be tailored to your needs.",
+      "cta": "Contact us for a demo",
+      "copyright": "© {year} Skillvue · skillvue.ai",
+      "assumptionLabels": {
+        "failedHireCost": "failed-hire cost",
+        "baselineFailure": "baseline failure rate",
+        "failedHireReduction": "failed-hire reduction",
+        "screeningCut": "screening time cut",
+        "recruiterCost": "recruiter cost",
+        "license": "license / yr",
+        "promotionRate": "promotion rate",
+        "failureReduction": "failure reduction",
+        "failedPromotionCost": "cost of a failed promotion",
+        "leadershipShare": "leadership-role share",
+        "leadershipTurnover": "annual leadership turnover",
+        "vacancyDuration": "avg vacancy duration",
+        "productivityLoss": "monthly-salary productivity loss",
+        "durationReduction": "duration reduction",
+        "workforceImpacted": "workforce impacted",
+        "failureProbability": "baseline failure probability",
+        "employeeCost": "cost / impacted employee",
+        "riskReduction": "risk reduction"
+      },
+      "sectors": {
+        "luxury": {
+          "label": "luxury & fashion",
+          "body": "Luxury now grows through client development and retention, both driven by your people. Skillvue measures the relational skills that keep clients coming back and spots the advisors who build lasting relationships, so hiring, promotion and succession protect both the client book and the craft."
+        },
+        "retail": {
+          "label": "large-scale retail",
+          "body": "In large-scale retail, turnover of 50 to 80% and the cost of replacing a store manager (up to around €110k in lost performance and recruitment) hit already-thin margins. Skillvue stabilises the workforce and builds a ready internal pipeline of store managers, with one standardised way of evaluating people across every location."
+        },
+        "banking": {
+          "label": "banking",
+          "body": "In banking, a mis-hired branch advisor carries more than replacement cost: certification time under IDD and MiFID, and a direct hit to branch P&L. Skillvue measures the skills that predict advisor performance before the offer, so every branch seat is filled with someone who can do the job."
+        },
+        "insurance": {
+          "label": "insurance",
+          "body": "In insurance, a failed agent or a claims-handling error is costly and slow to unwind, with IDD certification adding cost on top. Skillvue measures the skills that predict on-the-job performance, reducing mis-hires across a distributed network."
+        },
+        "pharma": {
+          "label": "pharma",
+          "body": "In pharma, a mis-hired medical rep can cost €80k to €150k once territory productivity and ramp are counted, and MSL scarcity makes the wrong hire even more expensive. Skillvue maps and measures the skills that predict field performance, in multiple languages and anchored to your own competency model."
+        },
+        "manufacturing": {
+          "label": "manufacturing",
+          "body": "In manufacturing, skills gaps on the line and in supervision show up directly in output, safety and retention. Skillvue measures the skills that predict performance, so hiring, promotion and reskilling decisions are made on evidence rather than gut feel."
+        }
+      }
     }
   }
 }

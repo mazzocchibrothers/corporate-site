@@ -9052,7 +9052,69 @@
       "submit": "Ottieni il mio report",
       "submitting": "Invio in corso…",
       "submitError": "Non è stato possibile inviare i tuoi dati. Riprova.",
-      "reportPending": "Abbiamo ricevuto i tuoi dati. Il report sarà presto disponibile per il download."
+      "generatingReport": "Preparazione del PDF…",
+      "downloadHint": "Scarica il tuo report PDF personalizzato.",
+      "downloadError": "Non è stato possibile creare il PDF. Riprova."
+    },
+    "report": {
+      "title": "Quanto vale Skillvue per {company}",
+      "preparedFor": "Preparato per {name} · {date}",
+      "inputs": "I tuoi dati",
+      "drivers": "Come abbiamo calcolato il risparmio",
+      "assumptions": "Ipotesi principali · Scenario {scenario}",
+      "salaryMultiple": "1× retribuzione",
+      "hourlyCost": "{amount} / ora",
+      "months": "{count} mesi",
+      "disclaimer": "Queste cifre sono stime indicative; i risultati effettivi dipendono dai dati della tua organizzazione.",
+      "priceNote": "Il prezzo della licenza è un’ipotesi e sarà adattato alle tue esigenze.",
+      "cta": "Contattaci per una demo",
+      "copyright": "© {year} Skillvue · skillvue.ai",
+      "assumptionLabels": {
+        "failedHireCost": "costo di un’assunzione non riuscita",
+        "baselineFailure": "tasso di insuccesso di base",
+        "failedHireReduction": "riduzione delle assunzioni non riuscite",
+        "screeningCut": "riduzione del tempo di screening",
+        "recruiterCost": "costo del recruiter",
+        "license": "licenza / anno",
+        "promotionRate": "tasso di promozione",
+        "failureReduction": "riduzione degli insuccessi",
+        "failedPromotionCost": "costo di una promozione non riuscita",
+        "leadershipShare": "quota di ruoli di leadership",
+        "leadershipTurnover": "turnover annuo dei leader",
+        "vacancyDuration": "durata media di una posizione vacante",
+        "productivityLoss": "perdita di produttività sulla retribuzione mensile",
+        "durationReduction": "riduzione della durata",
+        "workforceImpacted": "personale coinvolto",
+        "failureProbability": "probabilità di insuccesso di base",
+        "employeeCost": "costo / dipendente coinvolto",
+        "riskReduction": "riduzione del rischio"
+      },
+      "sectors": {
+        "luxury": {
+          "label": "Lusso e moda",
+          "body": "La crescita nel lusso passa oggi dallo sviluppo e dalla fidelizzazione della clientela, entrambi guidati dalle persone. Skillvue misura le competenze relazionali che fanno tornare i clienti e individua i consulenti capaci di costruire rapporti duraturi, affinché assunzioni, promozioni e successioni proteggano sia il portafoglio clienti sia il savoir-faire."
+        },
+        "retail": {
+          "label": "Grande distribuzione",
+          "body": "Nella grande distribuzione, un turnover dal 50 all’80% e il costo di sostituzione di uno store manager (fino a circa 110.000 € tra perdita di performance e selezione) incidono su margini già ridotti. Skillvue aiuta a stabilizzare il personale e a costruire una pipeline interna di store manager pronti, con un metodo standardizzato per valutare le persone in ogni punto vendita."
+        },
+        "banking": {
+          "label": "Bancario",
+          "body": "Nel settore bancario, un’assunzione non riuscita di un consulente di filiale comporta più del costo di sostituzione: i tempi di certificazione IDD e MiFID e un impatto diretto sul conto economico della filiale. Skillvue misura le competenze che prevedono la performance dei consulenti prima dell’offerta, per assegnare ogni posizione a una persona in grado di svolgere il ruolo."
+        },
+        "insurance": {
+          "label": "Assicurativo",
+          "body": "Nel settore assicurativo, un agente non adatto al ruolo o un errore nella gestione dei sinistri hanno conseguenze costose e difficili da correggere, a cui si aggiungono i costi della certificazione IDD. Skillvue misura le competenze che prevedono la performance sul lavoro, riducendo le assunzioni non riuscite nelle reti distribuite."
+        },
+        "pharma": {
+          "label": "Farmaceutico",
+          "body": "Nel settore farmaceutico, un’assunzione non riuscita di un informatore scientifico può costare da 80.000 a 150.000 €, considerando produttività del territorio e avviamento. La scarsità di MSL rende la scelta sbagliata ancora più onerosa. Skillvue mappa e misura le competenze che prevedono la performance sul campo, in più lingue e sulla base del modello di competenze dell’azienda."
+        },
+        "manufacturing": {
+          "label": "Manifatturiero",
+          "body": "Nel settore manifatturiero, le lacune di competenze nelle linee produttive e nella supervisione incidono direttamente su produzione, sicurezza e fidelizzazione. Skillvue misura le competenze che prevedono la performance, per basare assunzioni, promozioni e riqualificazione su evidenze anziché sull’intuito."
+        }
+      }
     }
   }
 }

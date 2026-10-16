@@ -65,3 +65,50 @@ export function calculate(module: Module, first: number, second: number, scenari
   const total = hard + soft;
   return { hard, soft, total, roi: (total - LICENSE) / LICENSE * 100, payback: LICENSE / (total / 12) };
 }
+
+export type ReportContact = { name: string; company: string; industry: string; date: Date };
+
+export function reportContent({ contact, module, scenario, values, locale, translate: t, demoUrl }: {
+  contact: ReportContact; module: Module; scenario: Scenario; values: number[]; locale: string;
+  translate: (key: string, values?: Record<string, string | number>) => string; demoUrl: string;
+}) {
+  const inputs = MODULES[module].inputs.map((input, i) => normalizeInput(values[i], input));
+  const result = calculate(module, inputs[0], inputs[1], scenario);
+  const euro = (value: number) => new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(value);
+  const number = (value: number) => new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(value);
+  const pct = (value: number) => new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 0 }).format(value);
+  const multiplier = SCENARIOS[scenario];
+  const assumptions = {
+    hiring: [[t('report.salaryMultiple'), 'failedHireCost'], [pct(0.15), 'baselineFailure'], [pct(0.1 * multiplier), 'failedHireReduction'], [pct(0.5 * multiplier), 'screeningCut'], [t('report.hourlyCost', { amount: euro(40) }), 'recruiterCost']],
+    promote: [[pct(0.08), 'promotionRate'], [pct(0.4), 'baselineFailure'], [pct(0.1 * multiplier), 'failureReduction'], [t('report.salaryMultiple'), 'failedPromotionCost']],
+    develop: [[pct(0.05), 'leadershipShare'], [pct(0.15), 'leadershipTurnover'], [t('report.months', { count: 4 }), 'vacancyDuration'], [pct(1), 'productivityLoss'], [pct(0.3 * multiplier), 'durationReduction']],
+    derisk: [[pct(0.5), 'workforceImpacted'], [pct(0.3), 'failureProbability'], [euro(1000), 'employeeCost'], [pct(0.1 * multiplier), 'riskReduction']],
+  }[module];
+  assumptions.push([euro(LICENSE), 'license']);
+  const sector = ['luxury', 'retail', 'banking', 'insurance', 'pharma', 'manufacturing'].includes(contact.industry) ? contact.industry : null;
+  return {
+    title: t('report.title', { company: contact.company }),
+    meta: t('report.preparedFor', { name: contact.name, date: new Intl.DateTimeFormat(locale === 'it' ? 'it' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).format(contact.date) }),
+    pill: sector ? t(`report.sectors.${sector}.label`) : t(`${module}.tab`),
+    metrics: [
+      { label: t(module === 'derisk' ? 'annualValue' : 'annualSavings'), value: euro(result.total) },
+      { label: t('roi'), value: pct(result.roi / 100) },
+      { label: t('payback'), value: result.payback < 1 ? '<1' : new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(result.payback) },
+    ],
+    inputsHeading: t('report.inputs'),
+    inputs: MODULES[module].inputs.map((input, i) => ({ label: t(`${module}.input${i + 1}`), value: 'currency' in input && input.currency ? euro(inputs[i]) : number(inputs[i]) })),
+    driversHeading: t('report.drivers'),
+    drivers: [
+      { label: t(`${module}.driver`), value: euro(result.hard) },
+      ...(result.soft > 0 ? [{ label: t('softDriver'), value: euro(result.soft) }] : []),
+    ],
+    assumptionsHeading: t('report.assumptions', { scenario: t(`scenarios.${scenario}`) }),
+    assumptions: assumptions.map(([value, key]) => ({ value, label: t(`report.assumptionLabels.${key}`) })),
+    sector: sector ? { label: t(`report.sectors.${sector}.label`), body: t(`report.sectors.${sector}.body`) } : null,
+    disclaimer: t('report.disclaimer'),
+    priceNote: t('report.priceNote'),
+    cta: t('report.cta'), demoUrl,
+    copyright: t('report.copyright', { year: contact.date.getFullYear() }),
+    locale,
+  };
+}
