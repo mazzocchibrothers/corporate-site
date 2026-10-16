@@ -104,8 +104,8 @@ try {
     } } };
   });
   for (const [path, label, report, heading] of [
-    ['/roi-calculator', 'ROI calculator', 'Download report', 'Get your ROI report'],
-    ['/it/roi-calculator', 'Calcolatore ROI', 'Scarica il report', 'Richiedi il tuo report ROI'],
+    ['/resources/roi-calculator', 'ROI calculator', 'Download report', 'Get your ROI report'],
+    ['/it/resources/roi-calculator', 'Calcolatore ROI', 'Scarica il report', 'Richiedi il tuo report ROI'],
   ]) {
     await visit(roi, path);
     await roi.locator('#desktop-trigger-resources').focus();

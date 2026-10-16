@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { MODULES, SCENARIOS, LICENSE, calculate, normalizeInput } from '../app/[locale]/roi-calculator/model.ts';
+import { MODULES, SCENARIOS, LICENSE, calculate, normalizeInput } from '../app/[locale]/resources/roi-calculator/model.ts';
 
 const expected = { hiring: 275_000, promote: 640_000, develop: 270_000, derisk: 260_000 };
 for (const [module, config] of Object.entries(MODULES)) {

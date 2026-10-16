@@ -529,8 +529,8 @@
   {
     "id": "roi-calculator",
     "paths": {
-      "en": "/roi-calculator",
-      "it": "/roi-calculator"
+      "en": "/resources/roi-calculator",
+      "it": "/resources/roi-calculator"
     }
   }
 ]
