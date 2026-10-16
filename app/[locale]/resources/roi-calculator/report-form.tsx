@@ -32,6 +32,7 @@ export default function ReportForm({ onClose, module, scenario, values }: {
   useEffect(() => {
     const dialog = dialogRef.current!;
     dialog.showModal();
+    dialog.querySelector<HTMLInputElement>('input[name="name"]')?.focus();
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => {
@@ -102,7 +103,7 @@ export default function ReportForm({ onClose, module, scenario, values }: {
 
   return (
     <dialog ref={dialogRef} className={styles.dialog} aria-labelledby="roi-report-title" aria-describedby="roi-report-description"
-      onClose={() => { if (!dialogRef.current?.open) onClose(); }} onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
+      onClose={() => { if (!dialogRef.current?.open) onClose(); }}>
       <div className={styles.dialogInner}>
         <button type="button" className={styles.close} onClick={onClose} aria-label={t('close')}><X aria-hidden="true" /></button>
         <h2 id="roi-report-title">{t('heading')}</h2>
