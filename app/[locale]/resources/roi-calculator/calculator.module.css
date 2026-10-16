@@ -52,9 +52,6 @@
 .payback { display: flex; justify-content: center; align-items: baseline; gap: 10px; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / .1); }
 .payback strong { font-size: 26px; }
 .payback span { color: rgb(255 255 255 / .65); }
-.assumptions { border-top: 1px solid rgb(255 255 255 / .12); margin-top: 32px; padding-top: 20px; font-size: 13px; color: rgb(255 255 255 / .65); line-height: 1.7; }
-.assumptions summary { cursor: pointer; color: rgb(255 255 255 / .85); }
-.assumptions p { margin-top: 12px; }
 .ctaBand { margin-top: 32px; background: linear-gradient(120deg, #1a1a2e, #0d0d1f); border: 1px solid rgb(255 255 255 / .12); border-radius: 18px; padding: 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .ctaBand h2 { font-size: clamp(20px, 2.4vw, 26px); font-weight: 600; letter-spacing: -.02em; max-width: 36ch; }
 @media (max-width: 880px) {

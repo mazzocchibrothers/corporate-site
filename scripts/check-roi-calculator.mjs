@@ -55,6 +55,8 @@ for (const locale of ['en', 'it']) {
           demoUrl: 'https://www.skillvue.ai/book-meeting' });
         assert.ok(content.title.includes('Test Company & Partners'));
         assert.ok(content.meta.includes('Zoë D’Angelo'));
+        assert.ok(content.pill.includes(translate(`${module}.tab`)), 'each page identifies its module');
+        assert.ok(content.assumptions.length >= 5, 'each module retains its fixed and scenario assumptions');
         assert.equal(content.inputs.length, 2);
         assert.equal(content.drivers.length, module === 'hiring' ? 2 : 1);
         assert.equal(content.sector === null, industry === 'other' || industry === '');

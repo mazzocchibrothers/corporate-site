@@ -8978,9 +8978,6 @@
     "softDriver": "Tempo liberato per i recruiter",
     "softDriverSub": "Tempo risparmiato nello screening",
     "payback": "mesi per recuperare l’investimento",
-    "assumptions": "Ipotesi e metodologia",
-    "license": "Canone annuo ipotizzato: {amount}. Il prezzo della licenza sarà adattato alle tue esigenze.",
-    "disclaimer": "Queste cifre sono stime indicative. Escludono i costi di implementazione e formazione. Verificale con i dati dei tuoi team HR e Finance.",
     "closing": "Dai concretezza a questi numeri con i tuoi dati.",
     "hiring": {
       "tab": "Assunzioni",
@@ -8989,9 +8986,7 @@
       "input1": "Assunzioni all’anno",
       "input2": "Retribuzione media",
       "driver": "Costi delle assunzioni non riuscite evitati",
-      "driverSub": "Controvalore economico",
-      "assumptions": "Un’assunzione non riuscita costa 1× la retribuzione annua. Tasso di insuccesso di base: 15%. Riduzione relativa del numero di assunzioni non riuscite: {reduction}. Riduzione del tempo di screening: {screening}. 100 candidati per assunzione, 5 minuti per screening, costo del recruiter di 40 € all’ora.",
-      "caveat": "La riduzione si applica al numero di assunzioni non riuscite, non ai punti percentuali del tasso di insuccesso. Il tempo dei recruiter genera valore solo se viene reinvestito in altre attività."
+      "driverSub": "Controvalore economico"
     },
     "promote": {
       "tab": "Promozioni",
@@ -9000,9 +8995,7 @@
       "input1": "Dipendenti totali",
       "input2": "Retribuzione media · nuovo ruolo",
       "driver": "Promozioni non riuscite evitate",
-      "driverSub": "Costi delle promozioni non riuscite evitati",
-      "assumptions": "Tasso annuo di promozione: 8%. Tasso di insuccesso di base: 40%. Riduzione relativa degli insuccessi: {reduction}. Una promozione non riuscita costa 1× la retribuzione annua.",
-      "caveat": "Il tasso di insuccesso di base delle transizioni di leadership è applicato a tutte le promozioni. Esclude il periodo di avviamento della persona promossa. Verifica con i tuoi dati."
+      "driverSub": "Costi delle promozioni non riuscite evitati"
     },
     "develop": {
       "tab": "Sviluppo",
@@ -9011,9 +9004,7 @@
       "input1": "Dipendenti totali",
       "input2": "Retribuzione media dei leader",
       "driver": "Riduzione dei costi dei ruoli di leadership vacanti",
-      "driverSub": "Ruoli di leadership coperti prima",
-      "assumptions": "Quota di ruoli di leadership: 5%. Turnover annuo dei leader: 15%. Durata media delle posizioni vacanti: 4 mesi. Perdita di produttività: 100% della retribuzione mensile. Riduzione della durata: {duration}.",
-      "caveat": "Il modello stima una copertura più rapida dei ruoli di leadership grazie a una pipeline interna pronta. Esclude l’investimento in formazione per preparare i successori. La perdita di produttività è pari al 100% della retribuzione mensile."
+      "driverSub": "Ruoli di leadership coperti prima"
     },
     "derisk": {
       "tab": "Rischio",
@@ -9022,13 +9013,11 @@
       "input1": "Budget di trasformazione",
       "input2": "Dipendenti totali",
       "driver": "Esposizione al rischio ridotta",
-      "driverSub": "Riduzione stimata dell’esposizione al rischio",
-      "assumptions": "Personale coinvolto: 50%. Probabilità di insuccesso di base: 30%. Costo del ritardo per dipendente coinvolto: 1.000 €. Riduzione relativa del rischio: {reduction}.",
-      "caveat": "Modello indicativo in fase di revisione. Combina la quota di budget a rischio con un costo stimato del ritardo per dipendente, quindi applica la riduzione del rischio. Considera questa cifra solo come indicazione."
+      "driverSub": "Riduzione stimata dell’esposizione al rischio"
     },
     "reportForm": {
       "heading": "Richiedi il tuo report ROI",
-      "body": "Inserisci i tuoi dati e prepareremo il tuo report personalizzato.",
+      "body": "Inserisci i tuoi dati per scaricare un report con tutti e quattro i moduli. I moduli non modificati usano i valori iniziali del calcolatore.",
       "close": "Chiudi",
       "success": "Grazie. Abbiamo ricevuto i tuoi dati.",
       "name": "Nome",
@@ -9053,13 +9042,13 @@
       "submitting": "Invio in corso…",
       "submitError": "Non è stato possibile inviare i tuoi dati. Riprova.",
       "generatingReport": "Preparazione del PDF…",
-      "downloadHint": "Scarica il tuo report PDF personalizzato.",
+      "downloadHint": "Il download parte automaticamente. Puoi scaricare un’altra copia usando il pulsante qui sopra.",
       "downloadError": "Non è stato possibile creare il PDF. Riprova."
     },
     "report": {
       "title": "Quanto vale Skillvue per {company}",
       "preparedFor": "Preparato per {name} · {date}",
-      "inputs": "I tuoi dati",
+      "inputs": "Dati del calcolatore",
       "drivers": "Come abbiamo calcolato il risparmio",
       "assumptions": "Ipotesi principali · Scenario {scenario}",
       "salaryMultiple": "1× retribuzione",

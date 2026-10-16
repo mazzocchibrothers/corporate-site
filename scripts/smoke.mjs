@@ -100,6 +100,20 @@ try {
     await roi.getByRole('button', { name: conservative, exact: true, pressed: true }).waitFor();
     await roi.getByRole('button', { name: 'Base', exact: true }).click();
     await roi.getByRole('button', { name: 'Base', exact: true, pressed: true }).waitFor();
+    const hiring = path.startsWith('/it/') ? 'Assunzioni' : 'Hiring';
+    const promote = path.startsWith('/it/') ? 'Promozioni' : 'Promote';
+    await roi.locator('#roi-input-0').focus();
+    await roi.locator('#roi-input-0').fill('350');
+    await roi.getByRole('button', { name: promote, exact: true }).click();
+    await roi.locator('#roi-input-0').focus();
+    await roi.locator('#roi-input-0').fill('5000');
+    await roi.getByRole('button', { name: hiring, exact: true }).click();
+    await roi.locator('#roi-input-0').focus();
+    assert.equal(await roi.locator('#roi-input-0').inputValue(), '350', 'switching modules retains customised inputs');
+    await roi.getByRole('button', { name: promote, exact: true }).click();
+    await roi.locator('#roi-input-0').focus();
+    assert.equal(await roi.locator('#roi-input-0').inputValue(), '5000');
+    assert.equal(await roi.locator('main details').count(), 0, 'assumptions are in the PDF, not on the calculator page');
     await roi.locator('#desktop-trigger-resources').focus();
     const calculatorLink = roi.getByTestId('mega-roiCalculator');
     await calculatorLink.waitFor({ state: 'visible' });
@@ -138,16 +152,17 @@ try {
     assert.equal(await dialog.locator('input[name=email]').inputValue(), 'test@example.invalid', 'retry keeps the entered details');
     assert.equal(await roi.evaluate(() => (window.dataLayer ?? []).filter((event) => event.form === 'roi-calculator').length), 0);
     rejectSubmission = false;
-    await dialog.locator('button[type=submit]').click();
+    const [download] = await Promise.all([
+      roi.waitForEvent('download'),
+      dialog.locator('button[type=submit]').click(),
+    ]);
     await dialog.getByRole('status').waitFor({ state: 'visible' });
     const payload = submissions.at(-1);
     assert.ok(payload.fields.some((field) => field.name === 'message' && field.value.includes('Test Company')));
     assert.equal(payload.legalConsentOptions.consent.communications[0].subscriptionTypeId, 527104760);
     assert.equal(payload.legalConsentOptions.consent.communications[0].value, true);
-    const [download] = await Promise.all([
-      roi.waitForEvent('download'),
-      dialog.getByRole('button', { name: report, exact: true }).click(),
-    ]);
+    assert.ok(payload.fields.find((field) => field.name === 'message').value.includes('350'));
+    assert.ok(payload.fields.find((field) => field.name === 'message').value.includes('5000'));
     assert.equal(download.suggestedFilename(), 'skillvue-roi-report.pdf');
     const stream = await download.createReadStream();
     const chunks = [];
@@ -155,7 +170,24 @@ try {
     const document = Buffer.concat(chunks);
     assert.equal(document.subarray(0, 5).toString(), '%PDF-');
     assert.ok(document.length > 10000, 'PDF includes its fonts and logo');
-    assert.equal((document.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length, 1, 'default report fits one A4 page');
+    assert.equal((document.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length, 4, 'the report includes one A4 page for each module');
+    if (!path.startsWith('/it/')) {
+      await roi.evaluate(() => {
+        const createObjectURL = URL.createObjectURL;
+        URL.createObjectURL = (...args) => {
+          URL.createObjectURL = createObjectURL;
+          throw new Error('Simulated download failure');
+        };
+      });
+      const submittedCount = submissions.length;
+      await dialog.getByRole('button', { name: report, exact: true }).click();
+      await dialog.getByRole('alert').waitFor({ state: 'visible' });
+      await Promise.all([
+        roi.waitForEvent('download'),
+        dialog.getByRole('button', { name: report, exact: true }).click(),
+      ]);
+      assert.equal(submissions.length, submittedCount, 'download retry must not resubmit the contact');
+    }
     assert.deepEqual(await roi.evaluate(() => window.dataLayer.filter((event) => event.form === 'roi-calculator').map(({ event, form }) => ({ event, form }))),
       [{ event: 'generate_lead', form: 'roi-calculator' }]);
     await roi.keyboard.press('Escape');

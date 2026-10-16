@@ -8978,9 +8978,6 @@
     "softDriver": "Recruiter time freed",
     "softDriverSub": "Saved screening time",
     "payback": "months to pay back",
-    "assumptions": "Assumptions and methodology",
-    "license": "Assumed annual license: {amount}. The license price will be tailored to your needs.",
-    "disclaimer": "These figures are directional estimates. They exclude implementation and training costs. Validate them against your own HR and Finance data.",
     "closing": "Put your own data behind these numbers.",
     "hiring": {
       "tab": "Hiring",
@@ -8989,9 +8986,7 @@
       "input1": "Hires per year",
       "input2": "Average salary",
       "driver": "Failed-hire costs avoided",
-      "driverSub": "Cash equivalent",
-      "assumptions": "A failed hire costs 1× annual salary. Baseline failure rate: 15%. Relative reduction in the number of failed hires: {reduction}. Screening time cut: {screening}. 100 candidates per hire, 5 minutes per screening, recruiter cost €40 per hour.",
-      "caveat": "The reduction applies to the number of failed hires, not percentage points of the failure rate. Recruiter time counts as value only if redeployed."
+      "driverSub": "Cash equivalent"
     },
     "promote": {
       "tab": "Promote",
@@ -9000,9 +8995,7 @@
       "input1": "Total employees",
       "input2": "Avg salary · promoted role",
       "driver": "Failed promotions avoided",
-      "driverSub": "Cost of failed promotions avoided",
-      "assumptions": "Annual promotion rate: 8%. Baseline failure rate: 40%. Relative failure reduction: {reduction}. A failed promotion costs 1× annual salary.",
-      "caveat": "The baseline leadership-transition failure rate is applied to all promotions. Excludes ramp-up of the promoted employee. Validate against your own data."
+      "driverSub": "Cost of failed promotions avoided"
     },
     "develop": {
       "tab": "Develop",
@@ -9011,9 +9004,7 @@
       "input1": "Total employees",
       "input2": "Avg leadership salary",
       "driver": "Leadership vacancy cost cut",
-      "driverSub": "Leadership roles filled sooner",
-      "assumptions": "Leadership-role share: 5%. Annual leadership turnover: 15%. Average vacancy duration: 4 months. Productivity loss: 100% of monthly salary. Vacancy duration reduction: {duration}.",
-      "caveat": "Models faster backfill of leadership roles from a ready internal pipeline. It excludes the L&D investment to develop those successors. Productivity loss is set at 100% of monthly salary."
+      "driverSub": "Leadership roles filled sooner"
     },
     "derisk": {
       "tab": "De-risk",
@@ -9022,13 +9013,11 @@
       "input1": "Transformation budget",
       "input2": "Total employees",
       "driver": "Risk exposure reduced",
-      "driverSub": "Estimated reduction in risk exposure",
-      "assumptions": "Workforce impacted: 50%. Baseline failure probability: 30%. Delay cost per impacted employee: €1,000. Relative risk reduction: {reduction}.",
-      "caveat": "Directional proxy model, under review. It combines the at-risk share of the budget with an estimated per-employee delay cost, then applies the risk reduction. Treat this figure as indicative only."
+      "driverSub": "Estimated reduction in risk exposure"
     },
     "reportForm": {
       "heading": "Get your ROI report",
-      "body": "Enter your details and we’ll put together your personalised report.",
+      "body": "Enter your details to download a report covering all four modules. Modules you haven’t changed use the calculator’s initial values.",
       "close": "Close",
       "success": "Thank you. Your details have been received.",
       "name": "Name",
@@ -9053,13 +9042,13 @@
       "submitting": "Sending…",
       "submitError": "We couldn’t send your details. Please try again.",
       "generatingReport": "Preparing PDF…",
-      "downloadHint": "Download your personalised PDF report.",
+      "downloadHint": "Your download starts automatically. You can download another copy using the button above.",
       "downloadError": "We couldn’t create the PDF. Please try again."
     },
     "report": {
       "title": "What Skillvue is worth to {company}",
       "preparedFor": "Prepared for {name} · {date}",
-      "inputs": "Your inputs",
+      "inputs": "Calculator inputs",
       "drivers": "How we calculated our savings",
       "assumptions": "Key assumptions · {scenario} scenario",
       "salaryMultiple": "1× salary",

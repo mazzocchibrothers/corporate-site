@@ -45,7 +45,10 @@ export default function ROICalculator() {
   const [module, setModule] = useState<Module>('hiring');
   const [scenario, setScenario] = useState<Scenario>('base');
   const [reportOpen, setReportOpen] = useState(false);
-  const [values, setValues] = useState(MODULES.hiring.inputs.map((input) => input.initial));
+  const [moduleValues, setModuleValues] = useState(() => Object.fromEntries(
+    Object.entries(MODULES).map(([key, config]) => [key, config.inputs.map((input) => input.initial)]),
+  ) as Record<Module, number[]>);
+  const values = moduleValues[module];
   const config = MODULES[module];
   const result = calculate(module, values[0], values[1], scenario);
   const low = calculate(module, values[0], values[1], 'conservative');
@@ -71,10 +74,7 @@ export default function ROICalculator() {
           </header>
           <div className={styles.modules} role="group" aria-label={t('useCase')}>
             {(Object.keys(MODULES) as Module[]).map((key) => (
-              <button key={key} type="button" aria-pressed={module === key} onClick={() => {
-                setModule(key);
-                setValues(MODULES[key].inputs.map((input) => input.initial));
-              }}>{t(`${key}.tab`)}</button>
+              <button key={key} type="button" aria-pressed={module === key} onClick={() => setModule(key)}>{t(`${key}.tab`)}</button>
             ))}
           </div>
           <div className={styles.grid}>
@@ -91,7 +91,7 @@ export default function ROICalculator() {
                 {config.inputs.map((input, index) => (
                   <NumberField key={`${module}-${index}`} id={`roi-input-${index}`} label={t(`${module}.input${index + 1}`)}
                     value={values[index]} config={input} format={'currency' in input && input.currency ? currency : number}
-                    onChange={(value) => setValues((current) => current.map((previous, i) => i === index ? value : previous))} />
+                    onChange={(value) => setModuleValues((current) => ({ ...current, [module]: current[module].map((previous, i) => i === index ? value : previous) }))} />
                 ))}
               </div>
               <div className={styles.actions}>
@@ -140,20 +140,13 @@ export default function ROICalculator() {
               {!under && <p className={styles.payback}><strong>{result.payback < 1 ? '<1' : new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(result.payback)}</strong><span>{t('payback')}</span></p>}
             </section>
           </div>
-          <details className={styles.assumptions}>
-            <summary>{t('assumptions')}</summary>
-            <p>{t('license', { amount: currency(LICENSE) })}</p>
-            <p>{t(`${module}.assumptions`, { reduction: percent(0.1 * SCENARIOS[scenario]), screening: percent(0.5 * SCENARIOS[scenario]), duration: percent(0.3 * SCENARIOS[scenario]) })}</p>
-            <p>{t(`${module}.caveat`)}</p>
-            <p>{t('disclaimer')}</p>
-          </details>
           <section className={styles.ctaBand}>
             <h2>{t('closing')}</h2>
             {bookLink}
           </section>
         </div>
       </main>
-      {reportOpen && <ReportForm onClose={() => setReportOpen(false)} module={module} scenario={scenario} values={values} />}
+      {reportOpen && <ReportForm onClose={() => setReportOpen(false)} scenario={scenario} values={moduleValues} />}
       <Footer />
     </>
   );
