@@ -112,14 +112,13 @@ export default function ReportForm({ onClose, scenario, values }: {
       onClose={() => { if (!dialogRef.current?.open) onClose(); }}>
       <div className={styles.dialogInner}>
         <button type="button" className={styles.close} onClick={onClose} aria-label={t('close')}><X aria-hidden="true" /></button>
-        <h2 id="roi-report-title">{t('heading')}</h2>
-        <p id="roi-report-description">{t('body')}</p>
+        <h2 id="roi-report-title">{t(status === 'submitted' ? 'readyHeading' : 'heading')}</h2>
+        {status !== 'submitted' && <p id="roi-report-description">{t('body')}</p>}
         {status === 'submitted' ? <div>
-          <p role="status">{t('success')}</p>
+          <p id="roi-report-description" role="status">{t('downloadHint')}</p>
           <Button type="button" mode="dark" disabled={downloading} aria-busy={downloading} icon={null} onClick={() => download()}>
-            {downloading ? t('generatingReport') : calculator('downloadReport')}
+            {t(downloading ? 'generatingReport' : 'downloadAgain')}
           </Button>
-          <p className={styles.formNote}>{t('downloadHint')}</p>
           {downloadError && <p role="alert">{t('downloadError')}</p>}
         </div> : <form className={styles.captureForm} onSubmit={submit}>
           <fieldset disabled={status === 'pending'}>
