@@ -246,7 +246,7 @@ export default function SkillvueMapPage() {
                       key={p}
                       href={`#${p}`}
                       onClick={(e) => scrollTo(e, p)}
-                      className="group flex flex-col items-center gap-[26px] rounded-2xl border border-[#e5e7eb] bg-white px-5 pt-6 pb-[22px] md:px-8 md:pt-8 md:pb-[30px] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(20,20,60,0.10),0_2px_6px_rgba(20,20,60,0.03)]"
+                      className="group flex flex-col items-center gap-[26px] rounded-2xl border border-[#e5e7eb] bg-white px-5 pt-6 pb-[22px] md:px-8 md:pt-8 md:pb-[30px] [transition-timing-function:cubic-bezier(0.23,1,0.32,1)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(20,20,60,0.10),0_2px_6px_rgba(20,20,60,0.03)]"
                     >
                       <Logo product={p} />
                       <p className="text-[16px] leading-[1.5] text-[#4B4B4B] text-balance">{t(`platform.cards.${p}`)}</p>
