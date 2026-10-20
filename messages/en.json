@@ -7058,7 +7058,7 @@
           ],
           "legendMeets": "At or above the role target",
           "legendBelow": "Below the role target: a gap to close",
-          "footerInferred": "The skill is on the profile. At what level, and against what the role needs, it doesn’t say.",
+          "footerInferred": "The skill is on the profile. Its level, and what the role needs, aren’t.",
           "footerMeasured": "Each person’s level on every skill, against the role target. The gap is visible, and so is the next step."
         }
       },
@@ -7084,9 +7084,9 @@
       "compare": {
         "eyebrow": "Skills inference vs skills assessment",
         "title": "Inference tells you a skill exists. <s>Measurement tells you the level.</s>",
-        "intro": "Both approaches are useful, and they answer different questions. Skills inference estimates which skills people have from indirect data, such as CVs, job titles, profiles, learning and work-tool activity: it describes the landscape. Skills assessment measures each person directly, with a validated method, and returns a level against what the role requires: a result you can act on, person by person.",
+        "intro": "Both approaches are useful, and they answer different questions. Skills inference estimates which skills people have from indirect data, such as profiles, HR records, learning and work-tool activity: it describes the landscape. Skills assessment measures each person directly, with a validated method, and returns a level against what the role requires: a result you can act on, person by person.",
         "colInferred": "Skills inference",
-        "colMeasured": "Skillvue skills measurement",
+        "colMeasured": "Skillvue skills assessment",
         "rows": [
           {
             "label": "The question it answers",
@@ -7095,7 +7095,7 @@
           },
           {
             "label": "Where the data comes from",
-            "inferred": "Indirect data: CVs, job titles, profiles, learning and work-tool activity.",
+            "inferred": "Indirect data: profiles, HR records, learning and work-tool activity.",
             "measured": "The person, directly: structured interviews, situational judgment, case studies, coding, simulations and other task-based items."
           },
           {
@@ -7210,7 +7210,7 @@
         "items": [
           {
             "q": "What is the difference between skills inference and skills assessment?",
-            "a": "Skills inference estimates which skills a person has from indirect data, such as CVs, job titles, profiles and work-tool activity. Skills assessment measures the skill directly, by asking the person to demonstrate it, and returns a level. Inference tells you a skill exists and where it sits across the organisation; assessment tells you at what level each person masters it, and who is ready to move."
+            "a": "Skills inference estimates which skills a person has from indirect data, such as profiles, HR records and work-tool activity. Skills assessment measures the skill directly, by asking the person to demonstrate it, and returns a level. Inference tells you a skill exists and where it sits across the organisation; assessment tells you at what level each person masters it, and who is ready to move."
           },
           {
             "q": "How do you measure employee skill levels?",
