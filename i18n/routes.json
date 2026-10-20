@@ -413,6 +413,13 @@
     "noindex": true
   },
   {
+    "id": "lp/measured-vs-inferred-v2",
+    "paths": {
+      "en": "/lp/measured-vs-inferred-v2"
+    },
+    "noindex": true
+  },
+  {
     "id": "lp/scalare-l-eccellenza",
     "paths": {
       "it": "/lp/scalare-l-eccellenza"

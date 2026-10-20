@@ -169,6 +169,23 @@ export default async function JsonLd({
     });
   }
 
+  // A page with a FAQ in its catalogue (`faq.items`, each `{q, a}`) says so,
+  // in the same words the page renders: the answers are what search engines
+  // and LLMs quote back.
+  const page = await getTranslations({ locale, namespace: namespaceOf(contentId ?? routeId) });
+  if (page.has('faq.items')) {
+    const items = page.raw('faq.items') as { q: string; a: string }[];
+    graph.push({
+      '@type': 'FAQPage',
+      inLanguage: LANG[loc],
+      mainEntity: items.map(({ q, a }) => ({
+        '@type': 'Question',
+        name: q,
+        acceptedAnswer: { '@type': 'Answer', text: a },
+      })),
+    });
+  }
+
   const crumbs = await breadcrumbs(route, loc);
   if (crumbs) graph.push(crumbs);
 
