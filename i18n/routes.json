@@ -415,7 +415,8 @@
   {
     "id": "lp/measured-vs-inferred-v2",
     "paths": {
-      "en": "/lp/measured-vs-inferred-v2"
+      "en": "/lp/measured-vs-inferred-v2",
+      "it": "/lp/misurato-vs-inferito"
     },
     "noindex": true
   },
