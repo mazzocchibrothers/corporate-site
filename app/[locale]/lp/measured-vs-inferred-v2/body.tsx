@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, BarChart3, Check, Minus, Plus, Route as RouteIcon, TrendingUp, Users } from 'lucide-react';
 import { Reveal } from '@/components/ui/reveal';
 import { Button } from '@/components/ui/button';
@@ -16,9 +16,7 @@ import LevelMatrix from '@/components/landing/mvi/LevelMatrix';
 // skill levels rather than skill tags, and laid out on its own terms rather
 // than the original's. The original stays live beside it for comparison.
 // Every CTA goes to /book-meeting with the visitor's `v` appended
-// (components/landing/booking-link.ts), as on the original. English-only.
-const BOOKING_URL = href('book-meeting', 'en');
-
+// (components/landing/booking-link.ts), as on the original.
 const FADE = { y: 32, duration: 0.7, ease: 'cubic-bezier(0.22, 1, 0.36, 1)' };
 
 // Structure the catalogue cannot hold: the icon for each decision, in the order
@@ -31,6 +29,17 @@ type Row = { label: string; inferred: string; measured: string };
 type Faq = { q: string; a: string };
 
 const accent = (chunks: React.ReactNode) => <span className="gradient-text">{chunks}</span>;
+
+// Product names in the copy link to their pages, in a new tab so the reader
+// keeps their place here; they all sit on dark sections. Skillvue Assess has no page of its own yet, so it points at
+// /product until it does.
+function productLinks(locale: string) {
+  const cls = 'text-white/90 underline underline-offset-4 decoration-1 decoration-white/30 transition-colors hover:decoration-white';
+  return {
+    map: (chunks: React.ReactNode) => <a href={href('product/skillvue-map', locale)} target="_blank" rel="noopener noreferrer" className={cls}>{chunks}</a>,
+    assess: (chunks: React.ReactNode) => <a href={href('product', locale)} target="_blank" rel="noopener noreferrer" className={cls}>{chunks}</a>,
+  };
+}
 
 const H2 = 'text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-[-0.02em] leading-[1.1]';
 const WRAP = 'max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12';
@@ -54,12 +63,15 @@ function Cta({ to, mode, children }: { to: string; mode: 'light' | 'dark'; child
 
 export default function MeasuredVsInferredV2() {
   const t = useTranslations('lp.measured-vs-inferred-v2');
-  const [booking, setBooking] = useState(BOOKING_URL);
+  const locale = useLocale();
+  const bookingUrl = href('book-meeting', locale);
+  const [booking, setBooking] = useState(bookingUrl);
 
   useEffect(() => {
-    setBooking(bookingHref(BOOKING_URL, window.location.search));
-  }, []);
+    setBooking(bookingHref(bookingUrl, window.location.search));
+  }, [bookingUrl]);
 
+  const links = productLinks(locale);
   const levels = t.raw('hero.visual.levels') as string[];
   const rows = t.raw('compare.rows') as Row[];
 
@@ -71,7 +83,7 @@ export default function MeasuredVsInferredV2() {
         {/* ── HERO: centred copy, the team matrix full width below ─── */}
         <section className="relative pt-[80px]">
           <div className={`${WRAP} pt-16 pb-16 lg:pt-6 lg:pb-20`}>
-            <div className="max-w-[920px] mx-auto text-center flex flex-col items-center">
+            <div className="max-w-[920px] lg:max-w-[1240px] mx-auto text-center flex flex-col items-center">
               <Reveal {...FADE} delay={0.1}><Eyebrow>{t('hero.eyebrow')}</Eyebrow></Reveal>
               <Reveal
                 {...FADE}
@@ -126,7 +138,12 @@ export default function MeasuredVsInferredV2() {
               <p className="text-[16px] md:text-[17px] text-[#121212]/60 leading-[1.75]">{t('compare.intro')}</p>
             </Reveal>
 
-            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+            {/* On desktop each card spans the shared row tracks (subgrid), so a
+                long answer on one side grows its row on both and the rows line up. */}
+            <div
+              className="grid md:grid-cols-2 gap-4 md:gap-x-6 md:gap-y-0 md:[grid-template-rows:repeat(var(--rows),auto)]"
+              style={{ '--rows': rows.length + 1 } as React.CSSProperties}
+            >
               {(['inferred', 'measured'] as const).map((side) => {
                 const measured = side === 'measured';
                 return (
@@ -134,16 +151,16 @@ export default function MeasuredVsInferredV2() {
                     {...FADE}
                     delay={measured ? 0.12 : 0}
                     key={side}
-                    className={`rounded-2xl p-6 md:p-8 ${
+                    className={`rounded-2xl p-6 md:p-8 md:grid md:grid-rows-subgrid md:[grid-row:span_var(--rows)] ${
                       measured ? 'bg-white border-2 border-[#4B4DF7]/40 shadow-[0_12px_40px_rgba(75,77,247,0.10)]' : 'bg-white/60 border border-black/[0.06]'
                     }`}
                   >
                     <p className={`text-[17px] font-semibold mb-6 ${measured ? 'text-[#4B4DF7]' : 'text-[#121212]/55'}`}>
                       {measured ? t('compare.colMeasured') : t('compare.colInferred')}
                     </p>
-                    <dl className="divide-y divide-black/[0.06]">
+                    <dl className="md:contents">
                       {rows.map((r) => (
-                        <div key={r.label} className="py-4 first:pt-0 last:pb-0">
+                        <div key={r.label} className="py-4 first:pt-0 last:pb-0 border-t border-black/[0.06] first:border-t-0">
                           <dt className="text-[13px] font-medium text-[#121212]/45 mb-1.5">{r.label}</dt>
                           <dd className="flex items-start gap-3">
                             <span
@@ -179,7 +196,7 @@ export default function MeasuredVsInferredV2() {
             <Reveal {...FADE} className="max-w-[860px] mb-14">
               <Eyebrow>{t('how.eyebrow')}</Eyebrow>
               <h2 className={`${H2} text-white/95 mb-6`}>{t.rich('how.title', { s: accent })}</h2>
-              <p className="text-[16px] md:text-[17px] text-white/60 leading-[1.75]">{t('how.intro')}</p>
+              <p className="text-[16px] md:text-[17px] text-white/60 leading-[1.75]">{t.rich('how.intro', links)}</p>
             </Reveal>
 
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
@@ -195,7 +212,7 @@ export default function MeasuredVsInferredV2() {
                     <div className="pt-1.5">
                       <p className="text-[13px] font-semibold text-[#8385FF] mb-1">{s.name}</p>
                       <h3 className="text-[19px] font-semibold text-white/95 leading-snug mb-2">{s.title}</h3>
-                      <p className="text-[15px] text-white/60 leading-[1.7]">{s.body}</p>
+                      <p className="text-[15px] text-white/60 leading-[1.7]">{t.rich(`how.steps.${i}.body`, links)}</p>
                     </div>
                   </Reveal>
                 ))}
@@ -270,7 +287,7 @@ export default function MeasuredVsInferredV2() {
                     <span className="stat-value text-[15px] text-[#8385FF] w-6 shrink-0" style={{ lineHeight: 1.6 }}>0{i + 1}</span>
                     <div>
                       <h3 className="text-[17px] font-semibold text-white/90 mb-1">{p.title}</h3>
-                      <p className="text-[15px] text-white/55 leading-[1.65]">{p.body}</p>
+                      <p className="text-[15px] text-white/55 leading-[1.65]">{t.rich(`stack.paths.${i}.body`, links)}</p>
                     </div>
                   </Reveal>
                 ))}

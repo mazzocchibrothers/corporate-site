@@ -83,7 +83,7 @@ export default function LevelMatrix() {
   // 800px-tall window.
   return (
     <div ref={ref} className="min-w-0 flex flex-col">
-      <p className="text-[12px] text-white/40 mb-3 lg:order-last lg:mb-0 lg:mt-3">{t('label')}</p>
+      <p className="text-[13px] md:text-[14px] font-medium text-white/65 mb-3">{t('label')}</p>
       <div className="grid lg:grid-cols-2 gap-4 md:gap-5">
         <Panel title={t('inferredTitle')} footer={t('footerInferred')}>
           <Header />

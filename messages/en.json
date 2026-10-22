@@ -7022,13 +7022,13 @@
     },
     "measured-vs-inferred-v2": {
       "meta": {
-        "title": "How to measure employee skill levels on top of your skill map | Skillvue",
-        "description": "You’ve mapped the skills; you don’t know the levels. Skillvue measures each person’s real level on every skill, on one scale comparable worldwide, for succession, mobility and workforce planning."
+        "title": "How to measure employee proficiency levels on top of your skill map | Skillvue",
+        "description": "You’ve mapped the skills; you don’t know the proficiency levels. Skillvue measures each person’s true proficiency level on the critical skills of their role, on one scale, for succession, mobility and workforce planning."
       },
       "hero": {
-        "eyebrow": "Skill levels, measured",
-        "title": "You’ve mapped the skills. <s>You don’t know the levels.</s>",
-        "sub": "Skillvue measures each person’s real level on every skill, comparable worldwide, so succession, mobility and workforce planning run on data you can trust.",
+        "eyebrow": "Proficiency levels, measured",
+        "title": "You’ve mapped the skills. <s>You don’t know the proficiency levels.</s>",
+        "sub": "Skillvue measures each person’s true proficiency level on the critical skills of their role, comparable worldwide, so succession, mobility and workforce planning run on data you can trust.",
         "cta": "Book a 20-minute conversation",
         "visual": {
           "label": "Illustrative team: five sales managers",
@@ -7058,18 +7058,18 @@
           ],
           "legendMeets": "At or above the role target",
           "legendBelow": "Below the role target: a gap to close",
-          "footerInferred": "The skill is on the profile. Its level, and what the role needs, aren’t.",
-          "footerMeasured": "Each person’s level on every skill, against the role target. The gap is visible, and so is the next step."
+          "footerInferred": "The skill is on the profile. Its proficiency level, and what the role needs, aren’t.",
+          "footerMeasured": "Each person’s proficiency level on each critical skill, against the role target. The gap is visible, and so is the next step."
         }
       },
       "problem": {
         "eyebrow": "Why skills programs stall",
-        "title": "The architecture is there. <s>The levels aren’t.</s>",
-        "body": "Many organisations have mapped skills to roles, tagged them on people’s profiles and keep that map up to date. They know which skills matter. What they don’t know is the level each person has. “Has negotiation” means little until you know at what level, against what the role requires. Without levels, three things break.",
+        "title": "The architecture is there. <s>The proficiency levels aren’t.</s>",
+        "body": "Many organisations have mapped skills to roles, tagged them on people’s profiles and keep that map up to date. They know which skills matter. What they don’t know is the proficiency level each person has. “Has negotiation” means little until you know at what level, against what the role requires. Without proficiency levels, three things break.",
         "cards": [
           {
             "title": "People can’t act on it.",
-            "body": "Without a level there is no gap, and without a gap there is no development path and no visible next career step. People have no reason to engage, and the skills program stalls after the mapping."
+            "body": "Without a proficiency level there is no gap, and without a gap there is no development path and no visible next career step. People have no reason to engage, and the skills program stalls after the mapping."
           },
           {
             "title": "Talent processes run blind.",
@@ -7077,21 +7077,21 @@
           },
           {
             "title": "The data doesn’t add up.",
-            "body": "Levels are useful to the company only if they mean the same thing in every country, business unit and team. Without one measured scale, results can’t be compared or aggregated, and can’t feed strategic workforce planning."
+            "body": "Proficiency levels are useful to the company only if they mean the same thing in every country, business unit and team. Without one measured scale, results can’t be compared or aggregated, and can’t feed strategic workforce planning."
           }
         ]
       },
       "compare": {
         "eyebrow": "Skills inference vs skills assessment",
-        "title": "Inference tells you a skill exists. <s>Measurement tells you the level.</s>",
-        "intro": "Both approaches are useful, and they answer different questions. Skills inference estimates which skills people have from indirect data, such as profiles, HR records, learning and work-tool activity: it describes the landscape. Skills assessment measures each person directly, with a validated method, and returns a level against what the role requires: a result you can act on, person by person.",
+        "title": "Inference tells you a skill exists. <s>Assessment tells you the proficiency level.</s>",
+        "intro": "Both approaches are useful, and they answer different questions. Skills inference estimates which skills people have from indirect data, such as profiles, HR records, learning and work-tool activity: it describes the landscape. Skills assessment measures each person directly, with a validated method, and returns a proficiency level against what the role requires: a result you can act on, person by person.",
         "colInferred": "Skills inference",
-        "colMeasured": "Skillvue skills assessment",
+        "colMeasured": "Skills assessment",
         "rows": [
           {
             "label": "The question it answers",
             "inferred": "Which skills are present across the organisation, and where.",
-            "measured": "At what level each person masters each skill, and how far that is from what the role requires."
+            "measured": "At what proficiency level each person masters each skill, and how far that is from what the role requires."
           },
           {
             "label": "Where the data comes from",
@@ -7100,8 +7100,8 @@
           },
           {
             "label": "What a result looks like",
-            "inferred": "A skill on a profile, sometimes with an estimated level.",
-            "measured": "A level on a five-level scale for each skill, with a justification and the evidence behind it."
+            "inferred": "A skill on a profile, sometimes with an estimated proficiency level.",
+            "measured": "A proficiency level on a five-level scale for each skill, with a justification and the evidence behind it."
           },
           {
             "label": "Comparability",
@@ -7114,18 +7114,18 @@
             "measured": "Soft skills, potential and motivation assessed: who is ready now, who in 6 months, and where the gaps are."
           }
         ],
-        "midLine": "Already have a skill map? See the levels on one critical role.",
+        "midLine": "Already have a skill map? See the proficiency levels on your critical roles.",
         "midCta": "Book a 20-minute conversation"
       },
       "how": {
-        "eyebrow": "How Skillvue measures skill levels",
-        "title": "From a skill on a profile <s>to a level you can act on.</s>",
-        "intro": "Skillvue Assess measures what each person can demonstrate against the skills and target levels of their role, with a validated method, and puts every result on the same scale.",
+        "eyebrow": "How Skillvue measures proficiency levels",
+        "title": "From a skill on a profile <s>to a proficiency level you can act on.</s>",
+        "intro": "<assess>Skillvue Assess</assess> measures what each person can demonstrate against the critical skills and target proficiency levels of their role, with a validated method, and puts every result on the same scale.",
         "steps": [
           {
             "name": "Define",
-            "title": "The level each role requires.",
-            "body": "Every skill gets a proficiency scale, by default five levels from Aware to Expert, and a target level for each role. If you already have your own framework and scale, Skillvue uses them; Skillvue Map can build or complete them."
+            "title": "The critical skills, and the level each role requires.",
+            "body": "Each role is assessed on the few critical skills that make the difference in it, not on every skill it touches. Every skill gets a proficiency scale, or rubric, by default five levels from Aware to Expert, and a target proficiency level for each role. If you already have your own framework and scale, Skillvue uses them; <map>Skillvue Map</map> can identify the critical skills of each role and build or complete the rest."
           },
           {
             "name": "Assess",
@@ -7134,13 +7134,13 @@
           },
           {
             "name": "Score",
-            "title": "A level, with the evidence behind it.",
+            "title": "A proficiency level, with the evidence behind it.",
             "body": "Every behavioural indicator or topic is scored, with a justification and the exact passages that produced the score. Scoring reads the transcript only: no face, voice or emotion."
           },
           {
             "name": "Compare",
             "title": "One scale across the organisation.",
-            "body": "Scores roll up from indicator to skill to person, and from person to team, function and country. You see each person’s level against the role target, and where the gaps are."
+            "body": "Scores roll up from indicator to skill to person, and from person to team, function and country. You see each person’s proficiency level against the role target, and where the gaps are."
           }
         ],
         "scaleLabel": "The default proficiency scale",
@@ -7148,11 +7148,11 @@
       },
       "use": {
         "eyebrow": "What you can decide with it",
-        "title": "Levels turn a skill map <s>into talent decisions.</s>",
+        "title": "Proficiency levels turn a skill map <s>into talent decisions.</s>",
         "cards": [
           {
-            "title": "Promote on demonstrated level.",
-            "body": "See who already performs at the level the next role requires, with evidence a manager can read, rather than who is most visible."
+            "title": "Promote on demonstrated proficiency.",
+            "body": "See who already performs at the proficiency level the next role requires, with evidence a manager can read, rather than who is most visible."
           },
           {
             "title": "Plan succession on readiness.",
@@ -7163,29 +7163,29 @@
             "body": "Compare internal candidates on the same scale as the target role, across business units and countries, before you look outside."
           },
           {
-            "title": "Plan the workforce on real levels.",
-            "body": "Levels that aggregate by team, function and country show where the organisation has the skills its strategy needs, and where it has to build or hire them."
+            "title": "Plan the workforce on measured proficiency.",
+            "body": "Proficiency levels that aggregate by team, function and country show where the organisation has the critical skills its strategy needs, and where it has to build or hire them."
           }
         ],
         "proof": "Carrefour Italia assessed 6,000 store employees on skills in one month. Fidia Farmaceutici mapped its medical rep network across 120+ countries in 12 languages, anchored to its own competency model."
       },
       "stack": {
         "eyebrow": "Works with what you already have",
-        "title": "Keep your skill map. <s>Add the levels on top.</s>",
-        "body": "Skillvue adapts to your taxonomy and data model; it doesn’t impose its own. Your skills, proficiency scale and roles stay the reference. Skillvue measures people against them and sends the levels back into the systems where decisions are made.",
+        "title": "Keep your skill map. <s>Add the proficiency levels on top.</s>",
+        "body": "Skillvue adapts to your taxonomy and data model; it doesn’t impose its own. Your skills, proficiency scale and roles stay the reference. Skillvue measures people against them and sends the proficiency levels back into the systems where decisions are made.",
         "pathsLabel": "How it fits",
         "paths": [
           {
             "title": "Bring your skill architecture.",
-            "body": "Your skills, job profiles and competency model, as they are today. Soft skills are mapped to Skillvue’s validated framework at the behavioural-indicator level, so every score stays traceable."
+            "body": "Your skills, job profiles and competency model, as they are today. Soft skills are mapped to Skillvue’s validated framework at the behavioural-indicator level, so every score stays traceable. No skill map yet? <map>Skillvue Map</map> builds one around your roles."
           },
           {
             "title": "Start where the decision is.",
             "body": "One population first: a critical role, a succession pool, a technical job family. Dashboards, reports and a plain-language agent work from the first assessment cycle, before any integration."
           },
           {
-            "title": "Send levels back to your stack.",
-            "body": "Measured levels flow into your HR, talent and learning platforms through our open APIs, an integration we build, or an HR API hub. No lock-in."
+            "title": "Send proficiency levels back to your stack.",
+            "body": "Measured proficiency levels flow into your HR, talent and learning platforms through our open APIs, an integration we build, or an HR API hub. No lock-in."
           }
         ],
         "layers": {
@@ -7201,32 +7201,32 @@
           "map": "Your skill map",
           "mapSub": "Your skills, roles and proficiency scale, as they are",
           "skillvue": "Skillvue",
-          "skillvueSub": "The measured level of each person, with the evidence behind it"
+          "skillvueSub": "The measured proficiency level of each person, with the evidence behind it"
         }
       },
       "faq": {
         "eyebrow": "FAQ",
-        "title": "Questions about <s>measuring skill levels</s>",
+        "title": "Questions about <s>measuring proficiency levels</s>",
         "items": [
           {
             "q": "What is the difference between skills inference and skills assessment?",
-            "a": "Skills inference estimates which skills a person has from indirect data, such as profiles, HR records and work-tool activity. Skills assessment measures the skill directly, by asking the person to demonstrate it, and returns a level. Inference tells you a skill exists and where it sits across the organisation; assessment tells you at what level each person masters it, and who is ready to move."
+            "a": "Skills inference estimates which skills a person has from indirect data, such as profiles, HR records and work-tool activity. Skills assessment measures the skill directly, by asking the person to demonstrate it, and returns a proficiency level. Inference tells you a skill exists and where it sits across the organisation; assessment tells you at what proficiency level each person masters it, and who is ready to move."
           },
           {
-            "q": "How do you measure employee skill levels?",
-            "a": "Define a proficiency scale and the target level each role requires, then assess each person with structured, role-specific exercises: behavioural interviews and situational judgment for soft skills; case studies, coding, calculations or simulations for hard skills. Score every answer against the scale, with a justification and evidence, so results compare across people. Skillvue does this end to end, in 30+ languages."
+            "q": "How do you measure employee proficiency levels?",
+            "a": "Identify the critical skills of each role, define a proficiency scale and the target level each role requires, then assess each person with structured, role-specific exercises: behavioural interviews and situational judgment for soft skills; case studies, coding, calculations or simulations for hard skills. Score every answer against the scale, with a justification and evidence, so results compare across people. Skillvue does this end to end, in 30+ languages."
           },
           {
-            "q": "Why do skill levels matter for succession planning?",
-            "a": "Succession depends on knowing who is ready for a role, not only who has the right skills on paper. Readiness means the level each candidate demonstrates against the role target, together with potential and motivation. Measured levels on one scale let you compare successors across teams and countries, and see who is ready now, who in 6 months, and what gap remains."
+            "q": "Why do proficiency levels matter for succession planning?",
+            "a": "Succession depends on knowing who is ready for a role, not only who has the right skills on paper. Readiness means the proficiency level each candidate demonstrates against the role target, together with potential and motivation. Measured proficiency levels on one scale let you compare successors across teams and countries, and see who is ready now, who in 6 months, and what gap remains."
           },
           {
             "q": "Can Skillvue work on top of the skill map we already have?",
-            "a": "Yes. Skillvue adapts to your taxonomy, roles and proficiency scale, measures people against them, and sends the measured levels back into your existing systems through APIs or an HR API hub. It adds the level to your skill map; it doesn’t ask you to replace it."
+            "a": "Yes. Skillvue adapts to your taxonomy, roles and proficiency scale, measures people against them, and sends the measured proficiency levels back into your existing systems through APIs or an HR API hub. It adds the proficiency level to your skill map; it doesn’t ask you to replace it."
           },
           {
             "q": "What proficiency scale does Skillvue use?",
-            "a": "By default, five levels: Aware, Foundation, Practitioner, Advanced and Expert. If your organisation already uses its own scale, Skillvue adapts to it."
+            "a": "A proficiency scale, often called a rubric, describes what each level of a skill looks like. By default, Skillvue uses five proficiency levels: Aware, Foundation, Practitioner, Advanced and Expert. If your organisation already uses its own scale or rubric, Skillvue adapts to it."
           },
           {
             "q": "How does Skillvue keep scores fair and explainable?",
@@ -7235,8 +7235,8 @@
         ]
       },
       "final": {
-        "title": "You’ve mapped the skills. <s>Now see the levels.</s>",
-        "body": "In 20 minutes, we’ll show what measured levels look like on one of your critical roles, on top of the skill map you already run, and what they change in your next promotion, succession or mobility decision.",
+        "title": "You’ve mapped the skills. <s>Now see the proficiency levels.</s>",
+        "body": "In 20 minutes, we’ll show what measured proficiency levels look like on your critical roles, on top of the skill map you already run, and what they change in your next promotion, succession or mobility decision.",
         "cta": "Book a 20-minute conversation"
       }
     },

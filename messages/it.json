@@ -7022,19 +7022,19 @@
     },
     "measured-vs-inferred-v2": {
       "meta": {
-        "title": "How to measure employee skill levels on top of your skill map | Skillvue",
-        "description": "You’ve mapped the skills; you don’t know the levels. Skillvue measures each person’s real level on every skill, on one scale comparable worldwide, for succession, mobility and workforce planning."
+        "title": "Come misurare i livelli di padronanza delle competenze dei dipendenti | Skillvue",
+        "description": "Hai mappato le competenze, ma non conosci i livelli di padronanza. Skillvue misura il vero livello di padronanza di ogni persona sulle competenze critiche del suo ruolo, su un’unica scala, per successione, mobilità e pianificazione della forza lavoro."
       },
       "hero": {
-        "eyebrow": "Skill levels, measured",
-        "title": "You’ve mapped the skills. <s>You don’t know the levels.</s>",
-        "sub": "Skillvue measures each person’s real level on every skill, comparable worldwide, so succession, mobility and workforce planning run on data you can trust.",
-        "cta": "Book a 20-minute conversation",
+        "eyebrow": "Livelli di padronanza, misurati",
+        "title": "Hai mappato le competenze. <s>Non conosci i livelli di padronanza.</s>",
+        "sub": "Skillvue misura il vero livello di padronanza di ogni persona sulle competenze critiche del suo ruolo, confrontabile in tutto il mondo, così successione, mobilità e pianificazione della forza lavoro si basano su dati affidabili.",
+        "cta": "Prenota una conversazione di 20 minuti",
         "visual": {
-          "label": "Illustrative team: five sales managers",
-          "inferredTitle": "What the skill map shows",
-          "measuredTitle": "What Skillvue measures",
-          "peopleLabel": "Person",
+          "label": "Team illustrativo: cinque sales manager",
+          "inferredTitle": "Cosa mostra la mappatura",
+          "measuredTitle": "Cosa misura Skillvue",
+          "peopleLabel": "Persona",
           "people": [
             "A",
             "B",
@@ -7042,11 +7042,11 @@
             "D",
             "E"
           ],
-          "targetLabel": "Role target",
+          "targetLabel": "Target",
           "skills": [
-            "Negotiation",
-            "Team leadership",
-            "Sales planning",
+            "Negoziazione",
+            "Guida del team",
+            "Piano vendite",
             "Problem solving"
           ],
           "levels": [
@@ -7056,140 +7056,140 @@
             "Advanced",
             "Expert"
           ],
-          "legendMeets": "At or above the role target",
-          "legendBelow": "Below the role target: a gap to close",
-          "footerInferred": "The skill is on the profile. Its level, and what the role needs, aren’t.",
-          "footerMeasured": "Each person’s level on every skill, against the role target. The gap is visible, and so is the next step."
+          "legendMeets": "Pari o sopra il target del ruolo",
+          "legendBelow": "Sotto il target del ruolo: un gap da colmare",
+          "footerInferred": "La competenza è sul profilo. Il livello di padronanza, e quello che serve al ruolo, no.",
+          "footerMeasured": "Il livello di padronanza di ogni persona su ogni competenza critica, rispetto al target del ruolo. Il gap è visibile, e anche il passo successivo."
         }
       },
       "problem": {
-        "eyebrow": "Why skills programs stall",
-        "title": "The architecture is there. <s>The levels aren’t.</s>",
-        "body": "Many organisations have mapped skills to roles, tagged them on people’s profiles and keep that map up to date. They know which skills matter. What they don’t know is the level each person has. “Has negotiation” means little until you know at what level, against what the role requires. Without levels, three things break.",
+        "eyebrow": "Perché i programmi sulle competenze si fermano",
+        "title": "L’architettura c’è. <s>I livelli di padronanza no.</s>",
+        "body": "Molte organizzazioni hanno associato le competenze ai ruoli, le hanno indicate sui profili delle persone e tengono aggiornata questa mappa. Sanno quali competenze contano. Non sanno quale livello di padronanza ha ogni persona. “Ha capacità di negoziazione” dice poco finché non sai a che livello, rispetto a quello che il ruolo richiede. Senza livelli di padronanza, tre cose non funzionano.",
         "cards": [
           {
-            "title": "People can’t act on it.",
-            "body": "Without a level there is no gap, and without a gap there is no development path and no visible next career step. People have no reason to engage, and the skills program stalls after the mapping."
+            "title": "Le persone non possono agire.",
+            "body": "Senza un livello di padronanza non c’è un gap, e senza un gap non c’è un percorso di sviluppo né un prossimo passo di carriera visibile. Le persone non hanno motivo di partecipare, e il programma sulle competenze si ferma dopo la mappatura."
           },
           {
-            "title": "Talent processes run blind.",
-            "body": "Succession and internal mobility depend on knowing who is ready. Readiness rests above all on soft skills, potential and motivation: what a person shows when they act, more than what documents and system activity record."
+            "title": "I processi sul talento vanno alla cieca.",
+            "body": "Successione e mobilità interna dipendono dal sapere chi è pronto. La prontezza dipende soprattutto da soft skill, potenziale e motivazione: quello che una persona mostra quando agisce, più di quello che registrano documenti e attività nei sistemi."
           },
           {
-            "title": "The data doesn’t add up.",
-            "body": "Levels are useful to the company only if they mean the same thing in every country, business unit and team. Without one measured scale, results can’t be compared or aggregated, and can’t feed strategic workforce planning."
+            "title": "I dati non tornano.",
+            "body": "I livelli di padronanza servono all’azienda solo se significano la stessa cosa in ogni paese, business unit e team. Senza un’unica scala misurata, i risultati non si possono confrontare né aggregare, e non possono alimentare la pianificazione strategica della forza lavoro."
           }
         ]
       },
       "compare": {
-        "eyebrow": "Skills inference vs skills assessment",
-        "title": "Inference tells you a skill exists. <s>Measurement tells you the level.</s>",
-        "intro": "Both approaches are useful, and they answer different questions. Skills inference estimates which skills people have from indirect data, such as profiles, HR records, learning and work-tool activity: it describes the landscape. Skills assessment measures each person directly, with a validated method, and returns a level against what the role requires: a result you can act on, person by person.",
-        "colInferred": "Skills inference",
-        "colMeasured": "Skillvue skills assessment",
+        "eyebrow": "Inferenza e valutazione delle competenze a confronto",
+        "title": "L’inferenza ti dice che una competenza c’è. <s>La valutazione ti dice il livello di padronanza.</s>",
+        "intro": "Entrambi gli approcci sono utili, e rispondono a domande diverse. L’inferenza delle competenze (skills inference) stima quali competenze hanno le persone a partire da dati indiretti, come profili, dati HR, attività di formazione e strumenti di lavoro: descrive il quadro generale. La valutazione delle competenze (skills assessment) misura direttamente ogni persona, con un metodo validato, e restituisce un livello di padronanza rispetto a quello che il ruolo richiede: un risultato su cui agire, persona per persona.",
+        "colInferred": "Inferenza delle competenze",
+        "colMeasured": "Valutazione delle competenze",
         "rows": [
           {
-            "label": "The question it answers",
-            "inferred": "Which skills are present across the organisation, and where.",
-            "measured": "At what level each person masters each skill, and how far that is from what the role requires."
+            "label": "La domanda a cui risponde",
+            "inferred": "Quali competenze sono presenti nell’organizzazione, e dove.",
+            "measured": "A quale livello di padronanza ogni persona possiede ogni competenza, e quanto è lontano da quello che il ruolo richiede."
           },
           {
-            "label": "Where the data comes from",
-            "inferred": "Indirect data: profiles, HR records, learning and work-tool activity.",
-            "measured": "The person, directly: structured interviews, situational judgment, case studies, coding, simulations and other task-based items."
+            "label": "Da dove vengono i dati",
+            "inferred": "Dati indiretti: profili, dati HR, attività di formazione e strumenti di lavoro.",
+            "measured": "Direttamente dalla persona: interviste strutturate, situational judgment, casi di studio, coding, simulazioni e altre prove pratiche."
           },
           {
-            "label": "What a result looks like",
-            "inferred": "A skill on a profile, sometimes with an estimated level.",
-            "measured": "A level on a five-level scale for each skill, with a justification and the evidence behind it."
+            "label": "Com’è un risultato",
+            "inferred": "Una competenza su un profilo, a volte con un livello di padronanza stimato.",
+            "measured": "Un livello di padronanza su una scala a cinque livelli per ogni competenza, con una motivazione e le evidenze che lo sostengono."
           },
           {
-            "label": "Comparability",
-            "inferred": "Depends on the data available for each person.",
-            "measured": "Everyone measured on the same definitions and the same scale, in 30+ languages, so results compare and aggregate across teams and countries."
+            "label": "Confrontabilità",
+            "inferred": "Dipende dai dati disponibili per ogni persona.",
+            "measured": "Tutti misurati sulle stesse definizioni e sulla stessa scala, in oltre 30 lingue, così i risultati si confrontano e si aggregano tra team e paesi."
           },
           {
-            "label": "Who is ready to move",
-            "inferred": "Where skills sit, rather than who is ready for the next role.",
-            "measured": "Soft skills, potential and motivation assessed: who is ready now, who in 6 months, and where the gaps are."
+            "label": "Chi è pronto a muoversi",
+            "inferred": "Dove si trovano le competenze, più che chi è pronto per il ruolo successivo.",
+            "measured": "Soft skill, potenziale e motivazione valutati: chi è pronto ora, chi tra 6 mesi, e dove sono i gap."
           }
         ],
-        "midLine": "Already have a skill map? See the levels on one critical role.",
-        "midCta": "Book a 20-minute conversation"
+        "midLine": "Hai già una mappatura delle competenze? Scopri i livelli di padronanza sui tuoi ruoli critici.",
+        "midCta": "Prenota una conversazione di 20 minuti"
       },
       "how": {
-        "eyebrow": "How Skillvue measures skill levels",
-        "title": "From a skill on a profile <s>to a level you can act on.</s>",
-        "intro": "Skillvue Assess measures what each person can demonstrate against the skills and target levels of their role, with a validated method, and puts every result on the same scale.",
+        "eyebrow": "Come Skillvue misura i livelli di padronanza",
+        "title": "Da una competenza sul profilo <s>a un livello di padronanza su cui agire.</s>",
+        "intro": "<assess>Skillvue Assess</assess> misura quello che ogni persona sa dimostrare rispetto alle competenze critiche e ai livelli di padronanza target del suo ruolo, con un metodo validato, e porta ogni risultato sulla stessa scala.",
         "steps": [
           {
-            "name": "Define",
-            "title": "The level each role requires.",
-            "body": "Every skill gets a proficiency scale, by default five levels from Aware to Expert, and a target level for each role. If you already have your own framework and scale, Skillvue uses them; Skillvue Map can build or complete them."
+            "name": "Definire",
+            "title": "Le competenze critiche, e il livello richiesto da ogni ruolo.",
+            "body": "Ogni ruolo viene valutato sulle poche competenze critiche che fanno la differenza, non su tutte quelle che tocca. Ogni competenza ha una scala di padronanza, o rubric, di default cinque livelli da Aware a Expert, e un livello target per ogni ruolo. Se hai già un tuo framework e una tua scala, Skillvue usa quelli; <map>Skillvue Map</map> può individuare le competenze critiche di ogni ruolo e costruire o completare il resto."
           },
           {
-            "name": "Assess",
-            "title": "What each person can demonstrate.",
-            "body": "Structured assessments built on your competency model and contextualised to industry, role and seniority. Soft skills through behavioural event interviews and situational judgment; hard skills through formats such as case studies, coding, calculations, document tasks and role-play simulations."
+            "name": "Valutare",
+            "title": "Quello che ogni persona sa dimostrare.",
+            "body": "Assessment strutturati, costruiti sul tuo modello di competenze e contestualizzati per settore, ruolo e seniority. Le soft skill con behavioural event interview e situational judgment; le hard skill con formati come casi di studio, coding, calcoli, prove su documenti e simulazioni di role-play."
           },
           {
-            "name": "Score",
-            "title": "A level, with the evidence behind it.",
-            "body": "Every behavioural indicator or topic is scored, with a justification and the exact passages that produced the score. Scoring reads the transcript only: no face, voice or emotion."
+            "name": "Assegnare il punteggio",
+            "title": "Un livello di padronanza, con le evidenze che lo sostengono.",
+            "body": "Ogni indicatore comportamentale o argomento riceve un punteggio, con una motivazione e i passaggi esatti che l’hanno prodotto. Il punteggio si basa solo sulla trascrizione: niente volto, voce o emozioni."
           },
           {
-            "name": "Compare",
-            "title": "One scale across the organisation.",
-            "body": "Scores roll up from indicator to skill to person, and from person to team, function and country. You see each person’s level against the role target, and where the gaps are."
+            "name": "Confrontare",
+            "title": "Un’unica scala in tutta l’organizzazione.",
+            "body": "I punteggi si aggregano dall’indicatore alla competenza alla persona, e dalla persona al team, alla funzione e al paese. Vedi il livello di padronanza di ogni persona rispetto al target del ruolo, e dove sono i gap."
           }
         ],
-        "scaleLabel": "The default proficiency scale",
-        "techNote": "For technical roles, an assessment can also measure how people work with AI: the skill on its own, the skill plus reviewing AI-generated output, or the task delivered with an AI assistant."
+        "scaleLabel": "La scala di padronanza di default",
+        "techNote": "Per i ruoli tecnici, un assessment può misurare anche come le persone lavorano con l’AI: la competenza da sola, la competenza più la revisione di output generati dall’AI, oppure il compito svolto con un assistente AI."
       },
       "use": {
-        "eyebrow": "What you can decide with it",
-        "title": "Levels turn a skill map <s>into talent decisions.</s>",
+        "eyebrow": "Cosa puoi decidere",
+        "title": "I livelli di padronanza trasformano la mappatura delle competenze <s>in decisioni sul talento.</s>",
         "cards": [
           {
-            "title": "Promote on demonstrated level.",
-            "body": "See who already performs at the level the next role requires, with evidence a manager can read, rather than who is most visible."
+            "title": "Promuovi sulla padronanza dimostrata.",
+            "body": "Vedi chi lavora già al livello di padronanza che il ruolo successivo richiede, con evidenze che un manager può leggere, invece di chi è più visibile."
           },
           {
-            "title": "Plan succession on readiness.",
-            "body": "A live view of who is ready now, who in 6 months, and where the gaps are, for each critical role."
+            "title": "Pianifica la successione sulla prontezza.",
+            "body": "Una vista sempre aggiornata di chi è pronto ora, chi tra 6 mesi, e dove sono i gap, per ogni ruolo critico."
           },
           {
-            "title": "Redeploy on objective fit.",
-            "body": "Compare internal candidates on the same scale as the target role, across business units and countries, before you look outside."
+            "title": "Ricolloca su un fit oggettivo.",
+            "body": "Confronta i candidati interni sulla stessa scala del ruolo target, tra business unit e paesi, prima di cercare fuori."
           },
           {
-            "title": "Plan the workforce on real levels.",
-            "body": "Levels that aggregate by team, function and country show where the organisation has the skills its strategy needs, and where it has to build or hire them."
+            "title": "Pianifica la forza lavoro sulla padronanza misurata.",
+            "body": "Livelli di padronanza aggregati per team, funzione e paese mostrano dove l’organizzazione ha le competenze critiche che servono alla sua strategia, e dove deve svilupparle o assumerle."
           }
         ],
-        "proof": "Carrefour Italia assessed 6,000 store employees on skills in one month. Fidia Farmaceutici mapped its medical rep network across 120+ countries in 12 languages, anchored to its own competency model."
+        "proof": "Carrefour Italia ha valutato le competenze di 6.000 dipendenti dei punti vendita in un mese. Fidia Farmaceutici ha mappato la sua rete di informatori scientifici in oltre 120 paesi e 12 lingue, partendo dal proprio modello di competenze."
       },
       "stack": {
-        "eyebrow": "Works with what you already have",
-        "title": "Keep your skill map. <s>Add the levels on top.</s>",
-        "body": "Skillvue adapts to your taxonomy and data model; it doesn’t impose its own. Your skills, proficiency scale and roles stay the reference. Skillvue measures people against them and sends the levels back into the systems where decisions are made.",
-        "pathsLabel": "How it fits",
+        "eyebrow": "Funziona con quello che hai già",
+        "title": "Tieni la tua mappatura delle competenze. <s>Aggiungi i livelli di padronanza.</s>",
+        "body": "Skillvue si adatta alla tua tassonomia e al tuo modello dati; non impone il suo. Le tue competenze, la tua scala di padronanza e i tuoi ruoli restano il riferimento. Skillvue misura le persone rispetto a questi e riporta i livelli di padronanza nei sistemi dove si prendono le decisioni.",
+        "pathsLabel": "Come si integra",
         "paths": [
           {
-            "title": "Bring your skill architecture.",
-            "body": "Your skills, job profiles and competency model, as they are today. Soft skills are mapped to Skillvue’s validated framework at the behavioural-indicator level, so every score stays traceable."
+            "title": "Porta la tua architettura delle competenze.",
+            "body": "Le tue competenze, i tuoi job profile e il tuo modello di competenze, così come sono oggi. Le soft skill vengono ricondotte al framework validato di Skillvue a livello di indicatore comportamentale, così ogni punteggio resta tracciabile. Non hai ancora una mappatura delle competenze? <map>Skillvue Map</map> la costruisce sui tuoi ruoli."
           },
           {
-            "title": "Start where the decision is.",
-            "body": "One population first: a critical role, a succession pool, a technical job family. Dashboards, reports and a plain-language agent work from the first assessment cycle, before any integration."
+            "title": "Parti da dove c’è la decisione.",
+            "body": "Prima una popolazione: un ruolo critico, un bacino di successione, una famiglia professionale tecnica. Dashboard, report e un agente in linguaggio naturale funzionano dal primo ciclo di assessment, prima di qualsiasi integrazione."
           },
           {
-            "title": "Send levels back to your stack.",
-            "body": "Measured levels flow into your HR, talent and learning platforms through our open APIs, an integration we build, or an HR API hub. No lock-in."
+            "title": "Riporta i livelli di padronanza nei tuoi sistemi.",
+            "body": "I livelli di padronanza misurati arrivano nelle tue piattaforme HR, di gestione del talento e di formazione tramite le nostre API aperte, un’integrazione che costruiamo noi o un HR API hub. Nessun lock-in."
           }
         ],
         "layers": {
-          "systems": "Your HR and talent systems",
+          "systems": "I tuoi sistemi HR e di gestione del talento",
           "systemsList": [
             "Workday",
             "SAP",
@@ -7198,46 +7198,46 @@
             "Greenhouse",
             "ChatGPT / Claude"
           ],
-          "map": "Your skill map",
-          "mapSub": "Your skills, roles and proficiency scale, as they are",
+          "map": "La tua mappatura delle competenze",
+          "mapSub": "Le tue competenze, i tuoi ruoli e la tua scala di padronanza, così come sono",
           "skillvue": "Skillvue",
-          "skillvueSub": "The measured level of each person, with the evidence behind it"
+          "skillvueSub": "Il livello di padronanza misurato di ogni persona, con le evidenze che lo sostengono"
         }
       },
       "faq": {
         "eyebrow": "FAQ",
-        "title": "Questions about <s>measuring skill levels</s>",
+        "title": "Domande sulla <s>misurazione dei livelli di padronanza</s>",
         "items": [
           {
-            "q": "What is the difference between skills inference and skills assessment?",
-            "a": "Skills inference estimates which skills a person has from indirect data, such as profiles, HR records and work-tool activity. Skills assessment measures the skill directly, by asking the person to demonstrate it, and returns a level. Inference tells you a skill exists and where it sits across the organisation; assessment tells you at what level each person masters it, and who is ready to move."
+            "q": "Che differenza c’è tra inferenza e valutazione delle competenze (skills inference e skills assessment)?",
+            "a": "L’inferenza delle competenze stima quali competenze ha una persona a partire da dati indiretti, come profili, dati HR e attività negli strumenti di lavoro. La valutazione delle competenze le misura direttamente, chiedendo alla persona di dimostrarle, e restituisce un livello di padronanza. L’inferenza ti dice che una competenza esiste e dove si trova nell’organizzazione; la valutazione ti dice a quale livello di padronanza ogni persona la possiede, e chi è pronto a muoversi."
           },
           {
-            "q": "How do you measure employee skill levels?",
-            "a": "Define a proficiency scale and the target level each role requires, then assess each person with structured, role-specific exercises: behavioural interviews and situational judgment for soft skills; case studies, coding, calculations or simulations for hard skills. Score every answer against the scale, with a justification and evidence, so results compare across people. Skillvue does this end to end, in 30+ languages."
+            "q": "Come si misurano i livelli di padronanza delle competenze dei dipendenti?",
+            "a": "Si individuano le competenze critiche di ogni ruolo, si definiscono una scala di padronanza e il livello target che ogni ruolo richiede, poi si valuta ogni persona con esercizi strutturati e specifici per il ruolo: interviste comportamentali e situational judgment per le soft skill; casi di studio, coding, calcoli o simulazioni per le hard skill. Ogni risposta riceve un punteggio sulla scala, con una motivazione e le evidenze, così i risultati sono confrontabili tra persone. Skillvue lo fa dall’inizio alla fine, in oltre 30 lingue."
           },
           {
-            "q": "Why do skill levels matter for succession planning?",
-            "a": "Succession depends on knowing who is ready for a role, not only who has the right skills on paper. Readiness means the level each candidate demonstrates against the role target, together with potential and motivation. Measured levels on one scale let you compare successors across teams and countries, and see who is ready now, who in 6 months, and what gap remains."
+            "q": "Perché i livelli di padronanza contano per la successione?",
+            "a": "La successione dipende dal sapere chi è pronto per un ruolo, non solo chi ha le competenze giuste sulla carta. Essere pronti significa il livello di padronanza che ogni candidato dimostra rispetto al target del ruolo, insieme a potenziale e motivazione. Livelli di padronanza misurati su un’unica scala permettono di confrontare i successori tra team e paesi, e di vedere chi è pronto ora, chi tra 6 mesi e quale gap resta."
           },
           {
-            "q": "Can Skillvue work on top of the skill map we already have?",
-            "a": "Yes. Skillvue adapts to your taxonomy, roles and proficiency scale, measures people against them, and sends the measured levels back into your existing systems through APIs or an HR API hub. It adds the level to your skill map; it doesn’t ask you to replace it."
+            "q": "Skillvue può lavorare sulla mappatura delle competenze che abbiamo già?",
+            "a": "Sì. Skillvue si adatta alla tua tassonomia, ai tuoi ruoli e alla tua scala di padronanza, misura le persone rispetto a questi e riporta i livelli di padronanza misurati nei tuoi sistemi tramite API o un HR API hub. Aggiunge il livello di padronanza alla tua mappatura delle competenze; non ti chiede di sostituirla."
           },
           {
-            "q": "What proficiency scale does Skillvue use?",
-            "a": "By default, five levels: Aware, Foundation, Practitioner, Advanced and Expert. If your organisation already uses its own scale, Skillvue adapts to it."
+            "q": "Quale scala di padronanza usa Skillvue?",
+            "a": "Una scala di padronanza, spesso chiamata rubric, descrive com’è ogni livello di una competenza. Di default Skillvue usa cinque livelli di padronanza: Aware, Foundation, Practitioner, Advanced ed Expert. Se la tua organizzazione usa già una sua scala o rubric, Skillvue si adatta."
           },
           {
-            "q": "How does Skillvue keep scores fair and explainable?",
-            "a": "Every score comes with a justification and the exact passages from the answer that produced it. Scoring reads the transcript only, with no face, voice or emotion analysis, and the model is validated for demographic stability. Skillvue is an EU AI Act Provider of a high-risk system, with signed declarations, and hosts data in the EU only."
+            "q": "Come fa Skillvue a mantenere i punteggi equi e spiegabili?",
+            "a": "Ogni punteggio ha una motivazione e i passaggi esatti della risposta che l’hanno prodotto. Il punteggio si basa solo sulla trascrizione, senza analisi di volto, voce o emozioni, e il modello è validato per la stabilità demografica. Skillvue è Provider di un sistema ad alto rischio ai sensi dell’EU AI Act, con dichiarazioni firmate, e ospita i dati solo nell’UE."
           }
         ]
       },
       "final": {
-        "title": "You’ve mapped the skills. <s>Now see the levels.</s>",
-        "body": "In 20 minutes, we’ll show what measured levels look like on one of your critical roles, on top of the skill map you already run, and what they change in your next promotion, succession or mobility decision.",
-        "cta": "Book a 20-minute conversation"
+        "title": "Hai mappato le competenze. <s>Ora scopri i livelli di padronanza.</s>",
+        "body": "In 20 minuti ti mostriamo come sono i livelli di padronanza misurati sui tuoi ruoli critici, partendo dalla mappatura delle competenze che già usi, e cosa cambiano nella tua prossima decisione di promozione, successione o mobilità.",
+        "cta": "Prenota una conversazione di 20 minuti"
       }
     },
     "scalare-l-eccellenza": {
