@@ -91,7 +91,7 @@ try {
     await route.fulfill({ status: rejectSubmission ? 400 : 200, contentType: 'application/json', body: '{}' });
   });
   for (const [path, label, report, heading] of [
-    ['/resources/roi-calculator', 'ROI calculator', 'Download report', 'Get your ROI report'],
+    ['/resources/roi-calculator', 'ROI Calculator', 'Download report', 'Get your ROI report'],
     ['/it/resources/roi-calculator', 'Calcolatore ROI', 'Scarica il report', 'Richiedi il tuo report ROI'],
   ]) {
     await visit(roi, path);
