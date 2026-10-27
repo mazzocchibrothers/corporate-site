@@ -4,7 +4,9 @@ import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Reveal } from '@/components/ui/reveal';
 import { href } from '@/i18n/routes';
 import { MODULES, SCENARIOS, LICENSE, calculate, normalizeInput, type Module, type Scenario } from './model';
 import styles from './calculator.module.css';
@@ -140,11 +142,27 @@ export default function ROICalculator() {
               {!under && <p className={styles.payback}><strong>{result.payback < 1 ? '<1' : new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(result.payback)}</strong><span>{t('payback')}</span></p>}
             </section>
           </div>
-          <section className={styles.ctaBand}>
-            <h2>{t('closing')}</h2>
-            {bookLink}
-          </section>
         </div>
+        {/* The closing banner every page ends on (CustomersFinalCTA), kept to this page's column. */}
+        <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24">
+          <div className={styles.wrap}>
+            <Reveal
+              duration={0.7}
+              className="rounded-[32px] border border-white/[0.12] backdrop-blur-sm px-6 py-16 md:px-20 md:py-20 flex flex-col items-center text-center gap-10"
+              style={{ backgroundImage: 'linear-gradient(19deg, rgba(146,147,255,0.1) 3%, rgba(255,255,255,0.1) 52%, rgba(255,127,73,0.15) 95%)' }}
+            >
+              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90 max-w-4xl">{t.rich('closing', {
+                span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+              })}</h2>
+              <Button asChild variant="primary" mode="dark">
+                <a href={href('book-meeting', locale)}>
+                  <span>{t('bookDemo')}</span>
+                  <ArrowRight aria-hidden="true" />
+                </a>
+              </Button>
+            </Reveal>
+          </div>
+        </section>
       </main>
       {reportOpen && <ReportForm onClose={() => setReportOpen(false)} module={module} scenario={scenario} values={values} />}
       <Footer />
