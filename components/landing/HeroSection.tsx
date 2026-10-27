@@ -95,6 +95,16 @@ export default function HeroSection() {
                   <a href="/science" data-testid="hero-our-science">{t('hero.cta')}</a>
                 </Button>
               </div>
+
+              {/* A text link, not a third button: the lightweight secondary action. */}
+              <div className="hero-fade-up hero-delay-1 relative mt-8">
+                <Button asChild variant="tertiary" mode="dark" size="tertiary">
+                  <a href={href('roi-calculator', lang)} data-testid="hero-roi-calculator">
+                    {t('hero.roiLink')}
+                    <ArrowRight aria-hidden="true" />
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* RIGHT. Product video — slightly larger */}
