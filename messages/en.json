@@ -9199,7 +9199,7 @@
     "softDriver": "Recruiter time freed",
     "softDriverSub": "Saved screening time",
     "payback": "months to pay back",
-    "closing": "Put your own data behind these numbers.",
+    "closing": "Put your own data behind <span>these numbers.</span>",
     "hiring": {
       "tab": "Hiring",
       "heading": "Put a number on <span>better hiring</span>.",

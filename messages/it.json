@@ -9199,7 +9199,7 @@
     "softDriver": "Tempo liberato per i recruiter",
     "softDriverSub": "Tempo risparmiato nello screening",
     "payback": "mesi per recuperare l’investimento",
-    "closing": "Dai concretezza a questi numeri con i tuoi dati.",
+    "closing": "Dai concretezza a <span>questi numeri</span> con i tuoi dati.",
     "hiring": {
       "tab": "Assunzioni",
       "heading": "Dai un valore ad <span>assunzioni migliori</span>.",
