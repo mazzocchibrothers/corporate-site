@@ -163,7 +163,10 @@ reintroduce per-page variants.
   `text-[15px] font-medium`, sentence case, never `uppercase` or tracked. A
   hand-rolled tertiary CTA (a card's "Read the news", "Read interview") is
   `text-[15px] font-medium text-[#4B4DF7]` with a `h-4 w-4` arrow, matching
-  the `tertiary` variant in `components/ui/button.tsx`.
+  the `tertiary` variant in `components/ui/button.tsx`. On dark sections the
+  `secondary` variant is a solid white outline that fills white with a
+  `#121212` label on hover — use `<Button variant="secondary" mode="dark">`,
+  never a hand-rolled outline pill.
 - **Resources page heroes** (Insights, Press) are a `lg:grid-cols-12` grid: copy
   on the left, a `<HeroVideo>` on the right (webm + mp4 + poster in
   `public/videos/`).

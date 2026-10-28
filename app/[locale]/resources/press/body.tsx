@@ -41,6 +41,14 @@ const pressArticles = [
     title: 'Skillvue to rediscover the talent in your company',
     url: 'https://aiworld.eu/story/skillvue-to-rediscover-the-talent-in-your-company',
   },
+  {
+    publication: 'LinkedIn',
+    logo: '/logos/press-linkedin.svg',
+    title: 'Skillvue is in the LinkedIn Top 10 Startups 2026 Italy',
+    // The article itself is in Italian, so its own headline is the Italian citation.
+    titleIt: 'LinkedIn Top Startups 2026: 10 aziende italiane in crescita',
+    url: 'https://www.linkedin.com/pulse/linkedin-top-startups-2026-10-aziende-italiane-crescita-vodcc/',
+  },
 ];
 
 // Italian press coverage: a list of third-party articles that exists only in
@@ -224,7 +232,7 @@ export default function PressPage() {
                       />
                     </div>
                     <p className="text-[14px] md:text-[15px] font-medium text-[#121212]/80 leading-[1.65]">
-                      {article.title}
+                      {lang === 'it' && article.titleIt ? article.titleIt : article.title}
                     </p>
                   </div>
                   {/* Same CTA as the interview cards: hover brings it in on

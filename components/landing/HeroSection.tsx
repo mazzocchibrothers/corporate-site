@@ -18,8 +18,10 @@ const clientLogos = [
   { name: 'Lagardère', src: '/logos/client-lagardere.svg', width: 115 },
   { name: 'Nespresso', src: '/logos/client-nespresso.svg', width: 151 },
   { name: 'Tecnomat', src: '/logos/client-tecnomat.svg', width: 150 },
-  { name: 'Avolta', src: '/logos/client-avolta.svg', width: 155 },
-  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2', width: 112 },
+  // The wide wordmarks sit a step smaller (h-5, 20px) than the rest.
+  { name: 'Avolta', src: '/logos/client-avolta.svg', width: 129, height: 20, className: 'h-5' },
+  // Redion: the file keeps its old name, commit 8228ad4 replaced its artwork.
+  { name: 'Redion', src: '/logos/client-europ-assistance.svg?v=2', width: 116, height: 20, className: 'h-5' },
 ];
 
 
@@ -36,8 +38,7 @@ export default function HeroSection() {
     <section
       id="hero"
       data-testid="hero-section"
-      // 128px: the 80px bar plus the 48px Skillvue Map banner (app/[locale]/body.tsx).
-      className="relative overflow-hidden flex flex-col justify-between pt-[128px]"
+      className="relative overflow-hidden flex flex-col justify-between pt-[80px]"
       style={{ width: '100%', minHeight: '100vh' }}
     >
       {/* Hero content. layered above */}
@@ -173,8 +174,8 @@ export default function HeroSection() {
                       src={logo.src}
                       alt={logo.name}
                       width={logo.width}
-                      height={24}
-                      className="h-6 w-auto object-contain"
+                      height={logo.height ?? 24}
+                      className={`${logo.className ?? 'h-6'} w-auto object-contain`}
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
                   </div>
@@ -188,8 +189,8 @@ export default function HeroSection() {
                       src={logo.src}
                       alt=""
                       width={logo.width}
-                      height={24}
-                      className="h-6 w-auto object-contain"
+                      height={logo.height ?? 24}
+                      className={`${logo.className ?? 'h-6'} w-auto object-contain`}
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
                   </div>

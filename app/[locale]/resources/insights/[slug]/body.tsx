@@ -318,11 +318,11 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
         )}
 
         {/* 7. Bottom CTA */}
-        <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
+        <section className="relative py-20 lg:py-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
             <Reveal
               duration={0.7}
-              className="relative overflow-hidden rounded-[32px] border border-white/[0.08] bg-white/[0.05] backdrop-blur-sm px-8 py-16 md:px-16 md:py-20 text-center"
+              className="relative overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 text-center"
             >
               <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">{t('detail.heading3')}</h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">{t('detail.body3')}</p>

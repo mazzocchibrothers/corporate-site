@@ -17,7 +17,9 @@ import { Button } from '@/components/ui/button';
 // Nav structure: route ids, not paths. Each URL comes from i18n/routes.json
 // through href(), which is what retired the hrefIt flags — an Italian slug is
 // declared in the registry once and every link in the site follows it.
-const navLinks: { id: string; route?: string; items: string[] | null }[] = [
+// `columns: 2` lays a dropdown out as a grid filled column by column, so the
+// first half of `items` is the left column and the rest the right.
+const navLinks: { id: string; route?: string; items: string[] | null; columns?: 2 }[] = [
   { id: 'platform', items: ['product', 'science'] },
   {
     id: 'solutions',
@@ -33,6 +35,7 @@ const navLinks: { id: string; route?: string; items: string[] | null }[] = [
   {
     id: 'resources',
     items: ['resources/insights', 'roi-calculator', 'blog', 'resources/press', 'about', 'careers'],
+    columns: 2,
   },
 ];
 
@@ -63,8 +66,7 @@ const labelKey = (id: string) =>
 /** Drops a trailing slash so '/customers/adr' and '/customers/adr/' compare equal. */
 const withoutTrailingSlash = (path: string) => path.length > 1 ? path.replace(/\/$/, '') : path;
 
-/** `banner` renders a strip under the bar, inside the fixed header (the homepage's announcement). */
-export default function Navbar({ banner }: { banner?: React.ReactNode }) {
+export default function Navbar() {
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -89,7 +91,7 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
           setScrolled(currentY > 50);
           setHidden(false);
 
-          // Just below the header — the bar alone, or the bar plus its banner.
+          // Just below the header.
           const probeY = (headerRef.current?.offsetHeight ?? 80) + 2;
           const el = document.elementFromPoint(window.innerWidth / 2, probeY);
           if (el) {
@@ -185,7 +187,6 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
 
   const textColor = isLight ? '#121212' : '#ffffff';
   const textMuted = isLight ? 'rgba(26,26,46,0.7)' : 'rgba(255,255,255,0.7)';
-  const btnBorder = isLight ? 'rgba(26,26,46,0.15)' : 'rgba(255,255,255,0.15)';
   const navCtaMode = isLight ? 'light' : 'dark';
 
   const navigateTo = (path: string) => {
@@ -316,11 +317,12 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
                     }}
                   >
                     <div
-                      className="rounded-2xl border p-2 min-w-[220px]"
+                      className={`rounded-2xl border p-2 min-w-[220px] ${link.columns === 2 ? 'grid grid-flow-col gap-x-4' : ''}`}
                       style={{
                         backgroundColor: isLight ? '#ffffff' : '#1e1e1e',
                         borderColor: isLight ? 'rgba(18,18,18,0.08)' : 'rgba(255,255,255,0.08)',
                         boxShadow: isLight ? '0 20px 40px rgba(18,18,18,0.12)' : '0 20px 40px rgba(0,0,0,0.4)',
+                        ...(link.columns === 2 && { gridTemplateRows: `repeat(${Math.ceil(link.items.length / 2)}, auto)` }),
                       }}
                     >
                       {link.items.map((id) => {
@@ -339,8 +341,7 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
                             key={id}
                             href={href(id, lang)}
                             data-testid={`mega-${key}`}
-                            className={`group flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 ${isActive ? '' : (isLight ? 'hover:bg-black/[0.04]' : 'hover:bg-white/[0.05]')}`}
-                            style={{ backgroundColor: isActive ? (isLight ? 'rgba(18,18,18,0.05)' : 'rgba(255,255,255,0.08)') : 'transparent' }}
+                            className={`group flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 ${isLight ? 'hover:bg-black/[0.04]' : 'hover:bg-white/[0.05]'}`}
                             onClick={(e) => {
                               e.preventDefault();
                               setOpenMenu(null);
@@ -364,20 +365,21 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
           {/* Desktop CTA + Language */}
           <div className="hidden lg:flex items-center gap-5">
             {/* Language toggle */}
+            {/* A segmented control: the current language sits in its own pill
+                inside a faint track, with no divider between the two. */}
             <div
-              className="flex items-center rounded-full overflow-hidden"
-              style={{ border: `1px solid ${btnBorder}` }}
+              className="flex items-center rounded-full p-[3px]"
+              style={{
+                border: `1px solid ${isLight ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.08)'}`,
+                background: isLight ? 'rgba(0,0,0,0.03)' : 'rgba(255,255,255,0.04)',
+              }}
             >
-              {(['en', 'it'] as const).map((l, i) => (
+              {(['en', 'it'] as const).map((l) => (
                 <button
                   key={l}
                   onClick={() => switchLang(l)}
-                  className="px-3 py-1.5 text-[13px] font-medium tracking-wide transition-all duration-200"
-                  style={{
-                    color: lang === l ? textColor : textMuted,
-                    borderLeft: i === 1 ? `1px solid ${btnBorder}` : 'none',
-                    background: lang === l ? (isLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.08)') : 'transparent',
-                  }}
+                  className="rounded-full px-3 py-1 text-[13px] font-medium tracking-wide transition-all duration-200"
+                  style={{ color: lang === l ? textColor : textMuted, background: lang === l ? (isLight ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.15)') : 'transparent' }}
                 >
                   {l.toUpperCase()}
                 </button>
@@ -419,7 +421,6 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
         </div>
       </nav>
 
-      {banner}
 
       {/* Mobile fullscreen menu */}
       {mobileOpen && (
@@ -487,17 +488,13 @@ export default function Navbar({ banner }: { banner?: React.ReactNode }) {
             {/* Mobile CTA */}
             <div className="mt-auto pt-8 pb-4 flex flex-col gap-4">
               {/* Language toggle */}
-              <div className="flex items-center rounded-full overflow-hidden border border-white/15 self-start">
-                {(['en', 'it'] as const).map((l, i) => (
+              <div className="flex items-center rounded-full p-[3px] border border-white/[0.08] bg-white/[0.04] self-start">
+                {(['en', 'it'] as const).map((l) => (
                   <button
                     key={l}
                     onClick={() => switchLang(l)}
-                    className="px-5 py-2 text-[14px] font-medium tracking-wide transition-all duration-200"
-                    style={{
-                      color: lang === l ? '#ffffff' : 'rgba(255,255,255,0.35)',
-                      borderLeft: i === 1 ? '1px solid rgba(255,255,255,0.15)' : 'none',
-                      background: lang === l ? 'rgba(255,255,255,0.08)' : 'transparent',
-                    }}
+                    className="rounded-full px-5 py-1.5 text-[14px] font-medium tracking-wide transition-all duration-200"
+                    style={{ color: lang === l ? '#ffffff' : 'rgba(255,255,255,0.6)', background: lang === l ? 'rgba(255,255,255,0.15)' : 'transparent' }}
                   >
                     {l.toUpperCase()}
                   </button>

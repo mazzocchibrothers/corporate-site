@@ -29,6 +29,7 @@
     },
     "footer": {
       "rights": "Tutti i diritti riservati.",
+      "award": "Top 10 Startup in Italia 2026",
       "groups": {
         "platform": "Piattaforma",
         "solutions": "Soluzioni",
@@ -1334,7 +1335,7 @@
     },
     "back": "Indietro",
     "body": "Prenota una demo con il nostro team per scoprire come Skillvue può trasformare i tuoi processi di selezione, performance e sviluppo grazie a dati chiari e oggettivi supportati dalla scienza.",
-    "heading": "Parliamo della tua <span>talent strategy.</span>",
+    "heading": "Parliamo <br></br>della tua <br></br><span>talent strategy.</span>",
     "thankYou": {
       "heading": "Grazie per la tua richiesta.",
       "body": "Ti ricontatteremo a breve via email per organizzare la tua demo."
@@ -1423,7 +1424,7 @@
       "cta": "Prenota una Demo"
     },
     "hero": {
-      "eyebrow": "Storie clienti",
+      "eyebrow": "Storie di Successo",
       "metrics": {
         "europeanEnterprises": {
           "label": "aziende europee"
@@ -5584,10 +5585,6 @@
       "title": "Skillvue | Il Sistema Operativo delle Competenze",
       "description": "Skillvue è il sistema operativo delle competenze: trasforma ogni decisione dalla selezione alla promozione in una scelta difendibile grazie all’AI e alla psicometria."
     },
-    "banner": {
-      "text": "Siamo tra le 10 migliori startup del 2026!",
-      "cta": "Scopri di più"
-    },
     "hero": {
       "cta": "Scopri la Scienza",
       "text": "I Nostri Clienti",
@@ -5734,12 +5731,9 @@
       "cta": "Prenota una Demo"
     },
     "cta": {
-      "heading": "Pronto a prendere decisioni sul talento <span>che puoi difendere?</span>",
-      "text": "Pronto per esplorare",
-      "heading2": "Prenota un meeting di 30 min",
-      "body": "Vedi Skillvue in azione con il tuo caso d'uso specifico",
-      "cta": "Prenota una Demo",
-      "text2": "I Nostri Clienti"
+      "heading": "Prendi decisioni sul talento <span>che puoi difendere.</span>",
+      "body": "Guarda Skillvue all’opera su un ruolo del tuo modello di competenze, in 30 minuti.",
+      "cta": "Prenota una Demo"
     }
   },
   "lp": {
@@ -8327,13 +8321,13 @@
         "topic": "Area Tematica",
         "hrProcess": "Processo",
         "noResults": "Nessun insight corrisponde ai filtri selezionati. Prova a modificare la selezione.",
-        "read": "Leggi"
+        "read": "Leggi",
+        "download": "Scarica"
       },
-      "text": "Risorse",
+      "text": "Insights",
       "heading": "Ricerche e approfondimenti<br></br>di settore",
       "body": "Scopri le nostre risorse e scarica ciò che ti serve.",
       "cta": "Esplora tutte le risorse",
-      "text2": "Insight",
       "heading2": "Vuoi vedere la scienza in azione?",
       "body2": "Prenota una demo con il nostro team e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
       "cta2": "Prenota una Demo",
@@ -8356,8 +8350,7 @@
       "badge": "Insight",
       "onePagersHeading": "One Pager",
       "onePagersBody": "Panoramiche rapide e condivisibili, da aprire o scaricare subito — nessun modulo richiesto.",
-      "insightsHeading": "Insights",
-      "onePagerBadge": "One Pager",
+      "insightsHeading": "Ricerche",
       "onePagers": {
         "luxury": {
           "title": "Skillvue per il Lusso",
@@ -8583,7 +8576,7 @@
       "requestCall": "Richiedi una conversazione esplorativa"
     },
     "ogEyebrow": {
-      "customers": "Storia cliente",
+      "customers": "Storia di successo",
       "customersTalentPioneers": "Community",
       "blog": "Blog",
       "solutions": "Soluzioni",

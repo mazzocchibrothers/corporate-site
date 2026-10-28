@@ -1,6 +1,8 @@
 import React from 'react';
 
-const clientLogos = [
+// `className` overrides the shared logo height: the wide wordmarks (Avolta,
+// Redion) read larger than the rest, so they sit a step smaller.
+const clientLogos: { name: string; src: string; className?: string }[] = [
   { name: 'Unicredit', src: '/logos/client-unicredit.svg' },
   { name: 'Carrefour', src: '/logos/client-carrefour.svg' },
   { name: 'Fidia', src: '/logos/client-fidia.svg' },
@@ -11,8 +13,9 @@ const clientLogos = [
   { name: 'Lagardère', src: '/logos/client-lagardere.svg' },
   { name: 'Nespresso', src: '/logos/client-nespresso.svg' },
   { name: 'Tecnomat', src: '/logos/client-tecnomat.svg' },
-  { name: 'Avolta', src: '/logos/client-avolta.svg' },
-  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2' },
+  { name: 'Avolta', src: '/logos/client-avolta.svg', className: 'h-4' },
+  // Redion: the file keeps its old name, commit 8228ad4 replaced its artwork.
+  { name: 'Redion', src: '/logos/client-europ-assistance.svg?v=2', className: 'h-4' },
 ];
 
 
@@ -52,7 +55,7 @@ export default function TrustLogosBar() {
                   <img loading="lazy" decoding="async"
                     src={logo.src}
                     alt={logo.name}
-                    className="h-5 w-auto object-contain"
+                    className={`${logo.className ?? 'h-5'} w-auto object-contain`}
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
@@ -64,7 +67,7 @@ export default function TrustLogosBar() {
                   <img loading="lazy" decoding="async"
                     src={logo.src}
                     alt=""
-                    className="h-5 w-auto object-contain"
+                    className={`${logo.className ?? 'h-5'} w-auto object-contain`}
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>

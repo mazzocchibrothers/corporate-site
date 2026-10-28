@@ -12,6 +12,7 @@ import { whitepapers } from '@/data/whitepapers';
 import { onepagers } from '@/data/onepagers';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import ClosingBanner from '@/components/shared/ClosingBanner';
 
 
 
@@ -50,7 +51,6 @@ export default function InsightsPage() {
       </div>
       <div className="flex flex-col gap-4 p-6 flex-1">
         <div className="flex flex-col gap-2">
-          <span className="text-[11px] font-medium text-[#4B4DF7] tracking-[0.1em] uppercase">{t('text2')}</span>
           <h3 className="text-[18px] font-semibold text-[#121212] leading-snug">{t(`items.${w.slug}.title`)}</h3>
           <p className="text-[14px] text-[#121212]/60 leading-[1.4] line-clamp-3">{t(`items.${w.slug}.shortDesc`)}</p>
         </div>
@@ -77,13 +77,12 @@ export default function InsightsPage() {
           </div>
           <div className="flex flex-col gap-4 p-6 flex-1">
             <div className="flex flex-col gap-2">
-              <span className="text-[11px] font-medium text-[#4B4DF7] tracking-[0.1em] uppercase">{t('onePagerBadge')}</span>
               <h3 className="text-[18px] font-semibold text-[#121212] leading-snug">{t(`onePagers.${w.slug}.title`)}</h3>
               <p className="text-[14px] text-[#121212]/60 leading-[1.4] line-clamp-3">{t(`onePagers.${w.slug}.shortDesc`)}</p>
             </div>
             {renderTags(w)}
             <span className="text-[16px] font-medium text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
-              {labels('read')} <ArrowRight className="h-4 w-4" />
+              {labels('download')} <ArrowRight className="h-4 w-4" />
             </span>
           </div>
         </a>
@@ -105,14 +104,15 @@ export default function InsightsPage() {
                   br: () => <br />,
                 })}</h1>
                 <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>{t('body')}</p>
-                <a
-                  href="#wp-grid"
-                  onClick={(e) => { e.preventDefault(); document.getElementById('wp-grid')?.scrollIntoView({ behavior: 'smooth' }); }}
-                  className="group inline-flex items-center gap-4 px-8 py-5 text-[15px] font-medium tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
-                >
-                  <span>{t('cta')}</span>
-                  <ArrowDown className="h-4 w-4 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-y-1 transition-all duration-500" strokeWidth={2} />
-                </a>
+                <Button asChild variant="secondary" mode="dark" className="group">
+                  <a
+                    href="#wp-grid"
+                    onClick={(e) => { e.preventDefault(); document.getElementById('wp-grid')?.scrollIntoView({ behavior: 'smooth' }); }}
+                  >
+                    <span>{t('cta')}</span>
+                    <ArrowDown aria-hidden="true" className="transition-transform duration-500 group-hover:translate-y-0.5" />
+                  </a>
+                </Button>
               </Reveal>
               <HeroVideo
                 poster="/videos/insights-hero-poster.jpg"
@@ -145,20 +145,8 @@ export default function InsightsPage() {
           </div>
         </section>
 
-        {/* Bottom CTA */}
-        <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <Reveal duration={0.7}>
-              <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-semibold text-white/90 mb-4 leading-[1.2] max-w-2xl mx-auto">{t('heading2')}</h2>
-              <p className="text-[16px] text-white/[0.45] mb-8 max-w-xl mx-auto">{t('body2')}</p>
-              <Button
-                onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
-                variant="primary"
-                mode="dark"
-              >{t('cta2')}</Button>
-            </Reveal>
-          </div>
-        </section>
+        {/* Closing banner — the homepage's, with this page's copy. */}
+        <ClosingBanner heading={t('heading2')} body={t('body2')} cta={t('cta2')} />
       <Footer />
       </main>
     </>

@@ -20,12 +20,11 @@ export default function CustomersFinalCTA() {
   const t = useTranslations('customers');
 
   return (
-    <section id="customers-cta" data-testid="customers-cta" className="relative pt-12 pb-20 lg:pt-16 lg:pb-24">
+    <section id="customers-cta" data-testid="customers-cta" className="relative py-20 lg:py-24">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <Reveal
           duration={0.7}
-          className="rounded-[32px] border border-white/[0.12] backdrop-blur-sm px-6 py-16 md:px-20 md:py-20 flex flex-col items-center text-center gap-10"
-          style={{ backgroundImage: 'linear-gradient(19deg, rgba(146,147,255,0.1) 3%, rgba(255,255,255,0.1) 52%, rgba(255,127,73,0.15) 95%)' }}
+          className="rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 flex flex-col items-center text-center gap-10"
         >
           <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90 max-w-4xl">{t.rich('finalCTA.heading', {
             span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,

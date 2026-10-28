@@ -29,6 +29,7 @@
     },
     "footer": {
       "rights": "All rights reserved.",
+      "award": "Top 10 Startups of Italy 2026",
       "groups": {
         "platform": "Platform",
         "solutions": "Solutions",
@@ -1334,7 +1335,7 @@
     },
     "back": "Back",
     "body": "Book a demo with our team to see how Skillvue can transform your hiring, performance, and development processes with science-backed talent intelligence.",
-    "heading": "Let's talk about your <span>talent strategy.</span>",
+    "heading": "Let's talk <br></br>about your <br></br><span>talent strategy.</span>",
     "thankYou": {
       "heading": "Thank you for your request.",
       "body": "We will be in touch shortly by email to arrange your demo."
@@ -5584,10 +5585,6 @@
       "title": "Skillvue | The Skills Operating System",
       "description": "Skillvue is the skills operating system for the enterprise, turning hiring and promotion decisions into defensible calls with psychometric-grade AI."
     },
-    "banner": {
-      "text": "We’re a Top 10 Startup of 2026!",
-      "cta": "Read more"
-    },
     "hero": {
       "cta": "See the Science",
       "text": "Our Customers",
@@ -5734,12 +5731,9 @@
       "cta": "Book a Demo"
     },
     "cta": {
-      "heading": "Ready to make talent decisions <span>you can defend?</span>",
-      "text": "Ready to explore",
-      "heading2": "Book a 30-min Demo",
-      "body": "See Skillvue live with your specific use case",
-      "cta": "Book a Demo",
-      "text2": "Our Customers"
+      "heading": "Make talent decisions <span>you can defend.</span>",
+      "body": "See Skillvue working on a role from your competency framework, in 30 minutes.",
+      "cta": "Book a Demo"
     }
   },
   "lp": {
@@ -8327,13 +8321,13 @@
         "topic": "Topic",
         "hrProcess": "HR Process",
         "noResults": "No insights match your current filters. Try adjusting your selection.",
-        "read": "Read"
+        "read": "Read",
+        "download": "Download"
       },
-      "text": "Resources",
+      "text": "Insights",
       "heading": "Industry insights<br></br>and research",
       "body": "Check out our resources and download what matters to you.",
       "cta": "Explore all resources",
-      "text2": "Insight",
       "heading2": "Want to see the science in action?",
       "body2": "Book a demo with our team and discover how Skillvue turns talent decisions into a competitive advantage.",
       "cta2": "Book a Demo",
@@ -8356,8 +8350,7 @@
       "badge": "Insight",
       "onePagersHeading": "One Pagers",
       "onePagersBody": "Quick, shareable overviews you can open or download directly — no form required.",
-      "insightsHeading": "Insights",
-      "onePagerBadge": "One Pager",
+      "insightsHeading": "Research",
       "onePagers": {
         "luxury": {
           "title": "Skillvue for Luxury Fashion",
