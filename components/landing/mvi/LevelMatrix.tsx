@@ -37,11 +37,11 @@ function Panel({ title, accent, footer, aside, children }: { title: string; acce
       }`}
     >
       <div className="flex items-baseline justify-between gap-4 mb-5 lg:mb-3">
-        <p className={`text-[15px] font-semibold ${accent ? 'text-[#8385FF]' : 'text-white/70'}`}>{title}</p>
+        <p className={`type-body-bold ${accent ? 'text-[#8385FF]' : 'text-white/70'}`}>{title}</p>
         {aside && <div className="hidden lg:block">{aside}</div>}
       </div>
       {children}
-      <p className={`mt-5 pt-4 lg:mt-3 lg:pt-3 border-t border-white/[0.08] text-[13px] leading-[1.5] ${accent ? 'text-white/80' : 'text-white/50'}`}>{footer}</p>
+      <p className={`type-body-sm mt-5 pt-4 lg:mt-3 lg:pt-3 border-t border-white/[0.08] ${accent ? 'text-white/80' : 'text-white/50'}`}>{footer}</p>
     </div>
   );
 }
@@ -64,7 +64,7 @@ export default function LevelMatrix() {
     ({ gridTemplateColumns: `minmax(0,1.6fr) repeat(${people.length + (extra ? 1 : 0)}, minmax(0,1fr))` });
 
   const Header = ({ target }: { target?: boolean }) => (
-    <div className="grid gap-1.5 md:gap-2 mb-2 text-[11px] text-white/40" style={grid(!!target)}>
+    <div className="type-caption grid gap-1.5 md:gap-2 mb-2 text-white/40" style={grid(!!target)}>
       <span>{t('peopleLabel')}</span>
       {people.map((p) => <span key={p} className="text-center">{p}</span>)}
       {target && <span className="text-center text-white/70">{t('targetLabel')}</span>}
@@ -72,7 +72,7 @@ export default function LevelMatrix() {
   );
 
   const legend = (
-    <div className="flex flex-wrap gap-x-5 gap-y-2 text-[11px] text-white/55">
+    <div className="type-caption flex flex-wrap gap-x-5 gap-y-2 text-white/55">
       <span className="inline-flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-sm bg-[#6366F8]" aria-hidden="true" />{t('legendMeets')}</span>
       <span className="inline-flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-sm bg-white/[0.15]" aria-hidden="true" />{t('legendBelow')}</span>
     </div>
@@ -83,14 +83,14 @@ export default function LevelMatrix() {
   // 800px-tall window.
   return (
     <div ref={ref} className="min-w-0 flex flex-col">
-      <p className="text-[13px] md:text-[14px] font-medium text-white/65 mb-3">{t('label')}</p>
+      <p className="type-body-sm font-medium text-white/65 mb-3">{t('label')}</p>
       <div className="grid lg:grid-cols-2 gap-4 md:gap-5">
         <Panel title={t('inferredTitle')} footer={t('footerInferred')}>
           <Header />
           <ul className="space-y-1.5 md:space-y-2 lg:space-y-1.5">
             {skills.map((s, r) => (
               <li key={s} className="grid gap-1.5 md:gap-2 items-center" style={grid(false)}>
-                <span className="text-[12px] md:text-[13px] text-white/75 leading-tight">{s}</span>
+                <span className="type-body-sm text-white/75">{s}</span>
                 {TAGS[r].map((has, c) => (
                   <span
                     key={c}
@@ -112,7 +112,7 @@ export default function LevelMatrix() {
           <ul className="space-y-1.5 md:space-y-2 lg:space-y-1.5">
             {skills.map((s, r) => (
               <li key={s} className="grid gap-1.5 md:gap-2 items-center" style={grid(true)}>
-                <span className="text-[12px] md:text-[13px] text-white/85 leading-tight">{s}</span>
+                <span className="type-body-sm text-white/85">{s}</span>
                 {LEVELS[r].map((lv, c) => {
                   const meets = lv >= TARGETS[r];
                   return (

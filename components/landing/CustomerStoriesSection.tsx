@@ -31,10 +31,10 @@ export default function CustomerStoriesSection() {
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         {/* Header */}
         <Reveal duration={0.7} className="mb-8 md:mb-16">
-          <h2 className="text-[clamp(1.6rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-3 md:mb-4">{t.rich('customerStories.heading', {
+          <h2 className="max-w-[880px] text-[clamp(1.6rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-3 md:mb-4">{t.rich('customerStories.heading', {
             span: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
           })}</h2>
-          <p className="text-[15px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-2xl">{t('customerStories.body')}</p>
+          <p className="max-w-[880px] type-body-lg text-white/[0.65]">{t('customerStories.body')}</p>
         </Reveal>
 
         {/* Story cards — horizontal scroll on mobile, 3-col grid on desktop */}
@@ -51,18 +51,18 @@ export default function CustomerStoriesSection() {
               {/* Company + industry */}
               <div>
                 <h3 className="text-[17px] md:text-[22px] font-semibold text-white/90 mb-4 md:mb-5">{t(`customerStories.stories.${s.id}.company`)}</h3>
-                <span className="inline-flex px-2.5 py-1 md:px-3 md:py-1.5 rounded-full text-[11px] md:text-[11px] font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03] tracking-wide">
+                <span className="type-caption inline-flex px-2.5 py-1 md:px-3 md:py-1.5 rounded-full font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03]">
                   {t(`customerStories.stories.${s.id}.industry`)}
                 </span>
               </div>
 
               {/* Quote */}
-              <p className="text-[14px] md:text-[17px] text-white/[0.65] italic leading-[1.6] md:leading-[1.7]">"{t(`customerStories.stories.${s.id}.quote`)}"</p>
+              <p className="type-blockquote text-white/[0.65] italic">"{t(`customerStories.stories.${s.id}.quote`)}"</p>
 
               {/* Author */}
               <div>
-                <span className="text-[13px] md:text-[15px] font-semibold text-white/60">{t(`customerStories.stories.${s.id}.author`)}</span>
-                <span className="text-[13px] md:text-[14px] text-white/35 ml-1.5 md:ml-2">{t(`customerStories.stories.${s.id}.role`)}</span>
+                <span className="type-body-bold text-white/60">{t(`customerStories.stories.${s.id}.author`)}</span>
+                <span className="type-body-sm text-white/35 ml-1.5 md:ml-2">{t(`customerStories.stories.${s.id}.role`)}</span>
               </div>
             </Reveal>
           ))}
@@ -99,12 +99,12 @@ export default function CustomerStoriesSection() {
           <h3 className="text-[18px] md:text-[20px] font-semibold text-white/90 mb-3 md:mb-4">{t.rich('customerStories.heading2', {
             span: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
           })}</h3>
-          <p className="text-[14px] md:text-[15px] text-white/[0.65] leading-[1.6] md:leading-[1.75] mb-4 md:mb-6 max-w-3xl">{t('customerStories.body2')}</p>
+          <p className="type-body text-white/[0.65] mb-4 md:mb-6 max-w-3xl">{t('customerStories.body2')}</p>
           <div className="flex flex-wrap gap-2 md:gap-3">
             {/* Standards names. They are the same in every language, and wrapping
                 them in t() only made them look translated. */}
             {['ISO 27001', 'SOC 2', 'GDPR', 'EU AI Act'].map(b => (
-              <span key={b} className="inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[12px] md:text-[12px] font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03] tracking-wide">
+              <span key={b} className="type-caption inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03]">
                 {b}
               </span>
             ))}

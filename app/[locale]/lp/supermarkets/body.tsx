@@ -7,6 +7,7 @@ import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { Download, ArrowRight, AlertTriangle, Check } from 'lucide-react';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 const GRAD = 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)';
 
@@ -37,7 +38,7 @@ function rich(text, cls = 'text-white/90') {
 const SectionHead = ({ n, label }) => (
   <div className="flex items-baseline gap-4 mb-5">
     <span className="text-[34px] md:text-[40px] font-extrabold leading-none gradient-text" style={{ backgroundImage: GRAD }}>{n}</span>
-    <span className="text-[12px] md:text-[13px] font-bold tracking-[0.16em] uppercase text-white/70">{label}</span>
+    <span className="type-body-sm font-bold uppercase text-white/70">{label}</span>
   </div>
 );
 
@@ -105,16 +106,18 @@ export default function SupermarketsPage() {
 
           {/* HERO */}
           <header className="mb-14 md:mb-20">
-            <span className="inline-block text-[11px] font-bold tracking-[0.16em] uppercase mb-4" style={{ color: '#7b7df9' }}>{t('badge')}</span>
-            <h1 className="text-[32px] md:text-[52px] font-bold tracking-[-0.02em] text-white/95" style={{ lineHeight: 1.08 }}>
-              {t('titleLead')}
-              <span className="gradient-text" style={{ backgroundImage: GRAD }}>{t('titleHighlight')}</span>
-              {t('titleTail')}
-            </h1>
-            <p className="text-[16px] md:text-[18px] text-white/65 leading-[1.55] mt-5 max-w-2xl">{rich(t('subhead'), 'text-white/85')}</p>
+            <span className="type-eyebrow inline-block mb-4" style={{ color: '#6b7dff' }}>{t('badge')}</span>
+            <HeroCopy>
+              <h1 className="text-[32px] md:text-[58px] font-bold tracking-[-0.02em] text-white/95" style={{ lineHeight: 1.1 }}>
+                {t('titleLead')}
+                <span className="gradient-text" style={{ backgroundImage: GRAD }}>{t('titleHighlight')}</span>
+                {t('titleTail')}
+              </h1>
+              <p className="type-body-lg hero-subtitle text-white/65 mt-5">{rich(t('subhead'), 'text-white/85')}</p>
+            </HeroCopy>
             <div className="flex flex-col sm:flex-row gap-3 mt-8">
               <a href={t('assets.pdf')} download onClick={() => handleDownload('download')} data-testid="download-cta"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-medium text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
+                className="type-button inline-flex items-center justify-center gap-2 px-6 py-[18px] rounded-full font-medium text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
                 <Download className="h-[18px] w-[18px]" /> {t('download')}
               </a>
             </div>
@@ -127,7 +130,7 @@ export default function SupermarketsPage() {
               {t.raw('s1.cards').map((card, i) => (
                 <div key={i} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6">
                   <h3 className="text-[17px] font-bold text-white/95 mb-3">{card.t}</h3>
-                  <p className="text-[14px] text-white/60 leading-[1.6]">{rich(card.b)}</p>
+                  <p className="type-body-sm text-white/60">{rich(card.b)}</p>
                 </div>
               ))}
             </div>
@@ -141,31 +144,31 @@ export default function SupermarketsPage() {
                 <div key={i} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-7">
                   <div className="mb-5">
                     <h3 className="text-[18px] md:text-[19px] font-bold text-white/95">{row.t}</h3>
-                    <p className="text-[13px] text-white/45 mt-1">{row.sub}</p>
+                    <p className="type-body-sm text-white/45 mt-1">{row.sub}</p>
                   </div>
                   <div className="grid md:grid-cols-3 gap-5 md:gap-6">
                     {/* Cost of inaction */}
                     <div className="md:pr-5 md:border-r md:border-white/[0.07]">
-                      <span className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.14em] uppercase mb-2.5" style={{ color: '#FF7A7A' }}>
+                      <span className="type-eyebrow flex items-center gap-1.5 mb-2.5" style={{ color: '#FF7A7A' }}>
                         <AlertTriangle className="h-3.5 w-3.5" /> {t('s2.costLabel')}
                       </span>
-                      <p className="text-[14px] text-white/60 leading-[1.6]">{rich(row.cost, 'text-white/85')}</p>
+                      <p className="type-body-sm text-white/60">{rich(row.cost, 'text-white/85')}</p>
                     </div>
                     {/* Skillvue value */}
                     <div className="md:pr-5 md:border-r md:border-white/[0.07]">
-                      <span className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.14em] uppercase mb-2.5" style={{ color: '#8a8cff' }}>
+                      <span className="type-eyebrow flex items-center gap-1.5 mb-2.5" style={{ color: '#6b7dff' }}>
                         <Check className="h-3.5 w-3.5" /> {t('s2.valueLabel')}
                       </span>
-                      <p className="text-[14px] text-white/60 leading-[1.6]">{rich(row.value, 'text-white/85')}</p>
+                      <p className="type-body-sm text-white/60">{rich(row.value, 'text-white/85')}</p>
                     </div>
                     {/* ROI chips */}
                     <div>
-                      <span className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.14em] uppercase mb-2.5" style={{ color: '#5ddba4' }}>
+                      <span className="type-eyebrow flex items-center gap-1.5 mb-2.5" style={{ color: '#5ddba4' }}>
                         <Check className="h-3.5 w-3.5" /> {t('s2.roiLabel')}
                       </span>
                       <div className="space-y-2">
                         {row.roi.map((chip, j) => (
-                          <div key={j} className="rounded-lg px-3 py-2 text-[13px] font-semibold leading-[1.4]"
+                          <div key={j} className="type-body-sm rounded-lg px-3 py-2 font-semibold"
                             style={{ background: 'rgba(52,211,153,0.10)', border: '1px solid rgba(93,219,164,0.25)', color: '#a8ecca' }}>
                             {chip}
                           </div>
@@ -181,14 +184,14 @@ export default function SupermarketsPage() {
           {/* 03 — FIRST-YEAR RETURN */}
           <section className="mb-16">
             <SectionHead n={t('s3.n')} label={t('s3.label')} />
-            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t('s3.body')}</p>
+            <p className="type-body text-white/70 mb-8 max-w-3xl">{t('s3.body')}</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {t.raw('s3.stats').map((s, i) => (
                 <div key={i} className="rounded-2xl p-5 text-center" style={{ background: 'linear-gradient(160deg, #23234d 0%, #16163a 100%)', border: '1px solid rgba(123,125,249,0.25)' }}>
                   <div className="text-[32px] md:text-[38px] font-extrabold leading-none gradient-text" style={{ backgroundImage: GRAD }}>{s.v}</div>
-                  <div className="text-[10px] font-bold tracking-[0.14em] uppercase text-white/35 mt-2">{t('s3.note')}</div>
-                  <div className="text-[14px] font-semibold text-white/90 mt-3 leading-[1.35]">{s.l}</div>
-                  <div className="text-[12px] text-white/45 mt-1">{s.s}</div>
+                  <div className="type-eyebrow text-white/35 mt-2">{t('s3.note')}</div>
+                  <div className="type-body-sm font-semibold text-white/90 mt-3">{s.l}</div>
+                  <div className="type-caption text-white/45 mt-1">{s.s}</div>
                 </div>
               ))}
             </div>
@@ -199,22 +202,22 @@ export default function SupermarketsPage() {
             style={{ background: 'linear-gradient(120deg, #1a1a3f 0%, #201436 45%, #3a1730 100%)' }}>
             <div className="pointer-events-none absolute -top-24 right-[-80px] w-[420px] h-[420px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(255,86,86,0.22) 0%, rgba(255,86,86,0) 65%)' }} />
             <div className="relative">
-              <h2 className="text-[26px] md:text-[48px] font-semibold text-white tracking-[-0.02em] mb-3">{t('cta.title')}</h2>
-              <p className="text-[15px] md:text-[16px] text-white/65 mb-8 max-w-xl mx-auto">{t('cta.body')}</p>
+              <h2 className="max-w-[880px] mx-auto text-[26px] md:text-[48px] font-semibold text-white tracking-[-0.02em] mb-3">{t('cta.title')}</h2>
+              <p className="max-w-[880px] type-body text-white/65 mb-8 mx-auto">{t('cta.body')}</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a href={href('book-meeting', lang)} onClick={() => track('book_bottom')}
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[15px] font-medium text-[#1a1a3f] bg-white hover:opacity-90 transition-all duration-300">
+                  className="type-button inline-flex items-center justify-center gap-2 px-7 py-[18px] rounded-full font-medium text-[#1a1a3f] bg-white hover:opacity-90 transition-all duration-300">
                   {t('cta.button')} <ArrowRight className="h-4 w-4" />
                 </a>
                 <a href={t('assets.pdf')} download onClick={() => handleDownload('download_bottom')}
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[15px] font-medium text-white border border-white/20 hover:bg-white/[0.08] transition-all duration-300">
+                  className="type-button inline-flex items-center justify-center gap-2 px-7 py-[18px] rounded-full font-medium text-white border border-white/20 hover:bg-white/[0.08] transition-all duration-300">
                   <Download className="h-[18px] w-[18px]" /> {t('download')}
                 </a>
               </div>
             </div>
           </section>
 
-          <p className="text-[11px] font-medium tracking-[0.16em] uppercase text-white/25 mt-10 text-center">{t('footNote')}</p>
+          <p className="type-eyebrow font-medium text-white/25 mt-10 text-center">{t('footNote')}</p>
         </div>
 
         <TrustLogosBar />

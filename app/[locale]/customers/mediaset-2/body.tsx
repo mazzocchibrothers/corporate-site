@@ -9,6 +9,7 @@ import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 import { CustomerStoryFooter, CustomerStorySection as Section } from '@/components/customers/CustomerStoryTemplate';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 
 // Structure the catalogue cannot hold: ids and the components the page
@@ -69,21 +70,23 @@ export default function Mediaset2StoryPage() {
             <Reveal y={0} delay={0.2} className="mb-5 flex items-center gap-2">
               <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{t('breadcrumb')}</Button>
               <span className="text-white/20">/</span>
-              <span className="text-[13px] text-white/[0.65]">Mediaset</span>
+              <span className="type-body-sm text-white/[0.65]">Mediaset</span>
             </Reveal>
 
             <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
               {/* Main content */}
               <div className="lg:col-span-8 flex flex-col">
                 <Reveal duration={0.7} delay={0.3} className="flex flex-col flex-1">
-                  <h1 className="text-[48px] md:text-[44px] font-semibold tracking-[-0.02em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
-                    {t.rich('headline', {
-                      hl: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
-                      hl2: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
-                      hl3: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
-                    })}
-                  </h1>
-                  <p className="text-[15px] text-white/[0.60] leading-[1.65] mb-6 max-w-2xl">{t('subtitle')}</p>
+                  <HeroCopy>
+                    <h1 className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-4" style={{ lineHeight: 1.1 }}>
+                      {t.rich('headline', {
+                        hl: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+                        hl2: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+                        hl3: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+                      })}
+                    </h1>
+                    <p className="type-body hero-subtitle text-white/[0.60] mb-6">{t('subtitle')}</p>
+                  </HeroCopy>
                   <div className="flex flex-wrap gap-4">
                     <Button variant="primary" mode="dark" onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}>
                       {t('ctaPrimary')}
@@ -97,7 +100,7 @@ export default function Mediaset2StoryPage() {
                       {t.raw('heroMetrics').map(m => (
                       <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-2.5 py-2 md:px-5 md:py-3.5 text-center">
                       <span className="block text-white text-[19px] break-words stat-value md:text-[clamp(1.3rem,2.2vw,1.5rem)]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                      <span className="text-[12px] text-white/[0.55] mt-1.5 block leading-[1.4]">{m.label}</span>
+                      <span className="type-caption text-white/[0.55] mt-1.5 block">{m.label}</span>
                       </div>
                       ))}
                     </div>
@@ -112,29 +115,29 @@ export default function Mediaset2StoryPage() {
                       <img loading="lazy" decoding="async" src="/logos/mediaset-logo.avif" alt="Mediaset logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{t('clientCard.label')}</span>
-                      <p className="text-[16px] font-bold text-white/90">Mediaset</p>
+                      <span className="type-eyebrow text-white/30 block mb-0.5">{t('clientCard.label')}</span>
+                      <p className="type-body-bold text-white/90">Mediaset</p>
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
                     {t.raw('clientCard.facts').map(s => (
                       <div key={s.label}>
-                        <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{s.label}</span>
-                        <p className="text-[13px] text-white/[0.65] leading-[1.4]">{s.value}</p>
+                        <span className="type-eyebrow text-white/30 block mb-0.5">{s.label}</span>
+                        <p className="type-body-sm text-white/[0.65]">{s.value}</p>
                       </div>
                     ))}
                   </div>
                 </div>
                 {/* Quote */}
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm px-5 py-4">
-                  <p className="text-[24px] font-medium text-white leading-[1.4] italic mb-5 pb-5 border-b border-white/[0.08]">"{t('quote.text')}"</p>
+                  <p className="type-blockquote-lg font-medium text-white italic mb-5 pb-5 border-b border-white/[0.08]">"{t('quote.text')}"</p>
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full shrink-0 border border-white/[0.15] bg-white/[0.08] flex items-center justify-center">
-                      <span className="text-[11px] font-bold text-white/60">LV</span>
+                      <span className="type-caption font-bold text-white/60">LV</span>
                     </div>
                     <div>
-                      <p className="text-[12px] font-semibold text-white/70">{t('quote.author')}</p>
-                      <p className="text-[11px] text-white/35 leading-[1.4]">{t('quote.role')}</p>
+                      <p className="type-caption font-semibold text-white/70">{t('quote.author')}</p>
+                      <p className="type-caption text-white/35">{t('quote.role')}</p>
                     </div>
                   </div>
                 </div>
@@ -149,9 +152,9 @@ export default function Mediaset2StoryPage() {
 
             {/* CONTEXT */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('context.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-6">{t('context.title')}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{t.rich('context.paragraph', {
+              <span className="type-eyebrow block mb-4" style={{ color: '#4b4df7' }}>{t('context.badge')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-6">{t('context.title')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-8">{t.rich('context.paragraph', {
     b: (chunks) => <strong className="text-[#121212]/80 font-semibold">{chunks}</strong>,
     br: () => <br />,
   })}</p>
@@ -159,12 +162,12 @@ export default function Mediaset2StoryPage() {
 
             {/* CHALLENGE */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{t('challenge.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('challenge.title')}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{t('challenge.intro')}</p>
+              <span className="type-eyebrow block mb-4" style={{ color: '#ea580c' }}>{t('challenge.badge')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('challenge.title')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-14">{t('challenge.intro')}</p>
 
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('challenge.businessLabel')}</span>
+                <span className="type-eyebrow text-[#121212]/30 mb-5 block">{t('challenge.businessLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {CHALLENGE_BUSINESS_CHALLENGES.map((ch) => (
                     <div key={t(`challenge.businessChallenges.${ch.id}.title`)} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -172,14 +175,14 @@ export default function Mediaset2StoryPage() {
                         <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`challenge.businessChallenges.${ch.id}.title`)}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`challenge.businessChallenges.${ch.id}.text`)}</p>
+                      <p className="type-body-sm text-[#121212]/55">{t(`challenge.businessChallenges.${ch.id}.text`)}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('challenge.hrLabel')}</span>
+                <span className="type-eyebrow text-[#121212]/30 mb-5 block">{t('challenge.hrLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {CHALLENGE_HR_CHALLENGES.map((ch) => (
                     <div key={t(`challenge.hrChallenges.${ch.id}.title`)} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -187,7 +190,7 @@ export default function Mediaset2StoryPage() {
                         <ch.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`challenge.hrChallenges.${ch.id}.title`)}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`challenge.hrChallenges.${ch.id}.text`)}</p>
+                      <p className="type-body-sm text-[#121212]/55">{t(`challenge.hrChallenges.${ch.id}.text`)}</p>
                     </div>
                   ))}
                 </div>
@@ -196,15 +199,15 @@ export default function Mediaset2StoryPage() {
 
             {/* OBJECTIVES */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('objectives.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-10">{t('objectives.title')}</h2>
+              <span className="type-eyebrow block mb-4" style={{ color: '#4b4df7' }}>{t('objectives.badge')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-10">{t('objectives.title')}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {OBJECTIVES_ITEMS.map((o, i) => (
                   <div key={i} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <p className="text-[15px] text-[#121212]/70 leading-[1.65]">
+                    <p className="type-body text-[#121212]/70">
                       {t.rich(`objectives.items.${o.id}.text`, {
                         b: (chunks) => <strong>{chunks}</strong>,
                       })}
@@ -216,12 +219,12 @@ export default function Mediaset2StoryPage() {
 
             {/* SOLUTION */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('solution.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('solution.title')}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('solution.intro')}</p>
+              <span className="type-eyebrow block mb-4" style={{ color: '#4b4df7' }}>{t('solution.badge')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('solution.title')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-12">{t('solution.intro')}</p>
 
               <div className="mb-12">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('solution.skillsLabel')}</span>
+                <span className="type-eyebrow text-[#121212]/30 mb-5 block">{t('solution.skillsLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {SOLUTION_SKILLS.map((s) => (
                     <div key={t(`solution.skills.${s.id}.label`)} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -238,9 +241,9 @@ export default function Mediaset2StoryPage() {
 
             {/* RESULTS */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{t('results.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('results.title')}</h2>
-              {t.has('results.subtitle') && <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('results.subtitle')}</p>}
+              <span className="type-eyebrow block mb-4" style={{ color: '#047857' }}>{t('results.badge')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('results.title')}</h2>
+              {t.has('results.subtitle') && <p className="type-body text-[#121212]/[0.65] mb-12">{t('results.subtitle')}</p>}
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
                 {[
@@ -253,7 +256,7 @@ export default function Mediaset2StoryPage() {
                       <m.Icon className="h-[22px] w-[22px]" style={{ color: '#064e3b' }} />
                     </div>
                     <h4 className="text-[32px] stat-value text-[#0b3b28] mb-3 leading-[1.3]">{m.value}</h4>
-                    <p className="text-[15px] text-[#0b3b28]/60 leading-[1.55]">{m.label}</p>
+                    <p className="type-body text-[#0b3b28]/60">{m.label}</p>
                   </div>
                 ))}
               </div>
@@ -265,7 +268,7 @@ export default function Mediaset2StoryPage() {
                       <q.icon className="h-[22px] w-[22px]" style={{ color: '#10b981' }} />
                     </div>
                     <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{t(`results.qualitative.${q.id}.title`)}</h4>
-                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{t(`results.qualitative.${q.id}.text`)}</p>
+                    <p className="type-body text-[#121212]/55">{t(`results.qualitative.${q.id}.text`)}</p>
                   </div>
                 ))}
               </div>
@@ -274,14 +277,14 @@ export default function Mediaset2StoryPage() {
             {/* QUOTE */}
             <Section className="mt-10">
               <div className="rounded-2xl border border-[#e5e7eb] bg-white p-8">
-                <p className="text-[24px] font-medium text-[#121212]/75 leading-[1.75] italic mb-6">"{t('quote.text')}"</p>
+                <p className="type-blockquote-lg font-medium text-[#121212]/75 italic mb-6">"{t('quote.text')}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full shrink-0 border border-[#4b4df7]/[0.15] bg-[#4b4df7]/[0.08] flex items-center justify-center">
-                    <span className="text-[14px] font-bold text-[#4b4df7]">LV</span>
+                    <span className="type-body-sm font-bold text-[#4b4df7]">LV</span>
                   </div>
                   <div>
-                    <p className="text-[14px] font-semibold text-[#121212]/80">{t('quote.author')}</p>
-                    <p className="text-[12px] text-[#121212]/40 leading-[1.5]">{t('quote.role')}</p>
+                    <p className="type-body-sm font-semibold text-[#121212]/80">{t('quote.author')}</p>
+                    <p className="type-caption text-[#121212]/40">{t('quote.role')}</p>
                   </div>
                 </div>
               </div>

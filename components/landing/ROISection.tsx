@@ -35,7 +35,7 @@ export default function ROISection() {
         {/* Header */}
         {/* Header row: title left + CTA right */}
         <Reveal duration={0.7} className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 md:gap-6 lg:gap-8 mb-10 md:mb-16 lg:mb-20">
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">{t.rich('roi.heading', {
+          <h2 className="max-w-[880px] text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('roi.heading', {
             span: (chunks) => <span className="italic font-semibold gradient-text-warm-on-light">{chunks}</span>,
           })}</h2>
           <Button asChild variant="primary" mode="light" className="shrink-0">
@@ -60,7 +60,7 @@ export default function ROISection() {
             >
               {/* Stat number */}
               <span
-                className="block text-[#1A1A2E] text-[32px] md:text-[64px] stat-value mb-6 md:mb-10"
+                className="block text-[#1A1A2E] text-[32px] md:text-[54px] stat-value mb-6 md:mb-10"
                 style={{
                   lineHeight: 1,
                   letterSpacing: '-0.03em',
@@ -76,7 +76,7 @@ export default function ROISection() {
                 >
                   {t(`roi.stats.${stat.id}.label`)} <span className="font-normal text-[#7A7A7A]">{t(`roi.stats.${stat.id}.sublabel`)}</span>
                 </h3>
-                <p className="text-[13px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-relaxed">
+                <p className="type-body text-[#7A7A7A]">
                   {t(`roi.stats.${stat.id}.footnote`)}
                 </p>
               </div>

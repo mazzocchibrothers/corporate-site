@@ -49,7 +49,7 @@ export default function SkillProfile() {
   return (
     <div ref={ref} className="min-w-0 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-6">
       <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
-        <span className="text-[12px] text-white/40 whitespace-nowrap">{t('label')}</span>
+        <span className="type-caption text-white/40 whitespace-nowrap">{t('label')}</span>
         <div className="inline-flex rounded-full bg-white/[0.06] p-1" role="group">
           {(['inferred', 'measured'] as const).map((m) => (
             <button
@@ -57,9 +57,9 @@ export default function SkillProfile() {
               type="button"
               aria-pressed={mode === m}
               onClick={() => choose(m)}
-              className={`rounded-full px-3.5 py-1 text-[15px] font-medium transition-colors duration-300 ${
-                mode === m ? 'bg-[#6366F8] text-white' : 'text-white/55 hover:text-white/80'
-              }`}
+              className={`type-button rounded-full px-3.5 py-2 font-medium transition-colors duration-300 ${
+ mode === m ? 'bg-[#6366F8] text-white' : 'text-white/55 hover:text-white/80'
+ }`}
             >
               {m === 'inferred' ? t('tabInferred') : t('tabMeasured')}
             </button>
@@ -76,11 +76,11 @@ export default function SkillProfile() {
           return (
             <li key={row.name}>
               <div className="flex items-center justify-between gap-3 mb-2">
-                <span className="text-[15px] font-medium text-white/90">{row.name}</span>
+                <span className="type-body font-medium text-white/90">{row.name}</span>
                 <span
-                  className={`inline-flex items-center gap-1 rounded-full border border-[#6366F8]/40 bg-[#6366F8]/15 px-2 py-0.5 text-[11px] text-[#8385FF] transition-opacity duration-500 ${
-                    measured ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  className={`type-caption inline-flex items-center gap-1 rounded-full border border-[#6366F8]/40 bg-[#6366F8]/15 px-2 py-0.5 text-[#8385FF] transition-opacity duration-500 ${
+ measured ? 'opacity-100' : 'opacity-0'
+ }`}
                   style={{ transitionDelay: measured ? `${300 + i * 120}ms` : '0ms' }}
                   aria-hidden={!measured}
                 >
@@ -108,10 +108,10 @@ export default function SkillProfile() {
               </div>
 
               <div className="grid mt-1.5">
-                <span aria-hidden={measured} className={`[grid-area:1/1] text-[12px] leading-[1.4] text-white/45 transition-opacity duration-300 ${measured ? 'opacity-0' : 'opacity-100'}`}>
+                <span aria-hidden={measured} className={`type-caption [grid-area:1/1] text-white/45 transition-opacity duration-300 ${measured ? 'opacity-0' : 'opacity-100'}`}>
                   {row.inferred}
                 </span>
-                <span aria-hidden={!measured} className={`[grid-area:1/1] text-[12px] leading-[1.4] text-white/70 transition-opacity duration-300 ${measured ? 'opacity-100' : 'opacity-0'}`}>
+                <span aria-hidden={!measured} className={`type-caption [grid-area:1/1] text-white/70 transition-opacity duration-300 ${measured ? 'opacity-100' : 'opacity-0'}`}>
                   {row.measured}
                 </span>
               </div>
@@ -121,10 +121,10 @@ export default function SkillProfile() {
       </ul>
 
       <div className="grid mt-6 pt-4 border-t border-white/[0.08]">
-        <p aria-hidden={measured} className={`[grid-area:1/1] text-[13px] text-white/50 transition-opacity duration-300 ${measured ? 'opacity-0' : 'opacity-100'}`}>
+        <p aria-hidden={measured} className={`type-body-sm [grid-area:1/1] text-white/50 transition-opacity duration-300 ${measured ? 'opacity-0' : 'opacity-100'}`}>
           {t('footerInferred')}
         </p>
-        <p aria-hidden={!measured} className={`[grid-area:1/1] text-[13px] text-white/85 transition-opacity duration-300 ${measured ? 'opacity-100' : 'opacity-0'}`}>
+        <p aria-hidden={!measured} className={`type-body-sm [grid-area:1/1] text-white/85 transition-opacity duration-300 ${measured ? 'opacity-100' : 'opacity-0'}`}>
           {t('footerMeasured')}
         </p>
       </div>

@@ -17,6 +17,12 @@
 @font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-BoldItalic.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Mona Sans'; src: url('/fonts/MonaSans-ExtraBoldItalic.woff2') format('woff2'); font-weight: 800; font-style: italic; font-display: swap; }
 
+/* Geist and Geist Mono — © 2023 Vercel, in collaboration with basement.studio,
+   SIL Open Font License 1.1. Geist is the body and rich-text face (the type-*
+   classes below); Mona Sans stays the display face for headings and metrics. */
+@font-face { font-family: 'Geist'; src: url('/fonts/Geist-Variable.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Geist Mono'; src: url('/fonts/GeistMono-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+
 /* Hero/impact stat-number weight — single source of truth for the big metric callouts
    (e.g. "50+", "85%+", "-40%") across the homepage and every customer/solution page.
    Do not restore a bold/extrabold/black override here for "desktop weight" during a
@@ -25,6 +31,19 @@
    not the className in each page. */
 .stat-value {
   font-weight: 600;
+}
+
+/* A hero's subtitle is exactly as wide as its heading's text, on every page.
+   .hero-copy wraps the h1 and the subtitle and shrinks to fit the h1;
+   .hero-subtitle takes that width without adding its own (contain: inline-size
+   keeps its text out of the wrapper's sizing), so the two end on one edge. */
+.hero-copy {
+  width: fit-content;
+  max-width: 100%;
+}
+.hero-subtitle {
+  contain: inline-size;
+  width: 100%;
 }
 
 /* Prevent horizontal scroll on mobile */
@@ -48,7 +67,7 @@ a[href*="emergent"] {
 
 body {
     margin: 0;
-    font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
         sans-serif;
     font-size: 16px;
@@ -60,7 +79,40 @@ body {
 
 
 code {
-    font-family: 'Mona Sans', monospace;
+    font-family: 'Geist Mono', monospace;
+}
+
+/* No orphan words. Running text and hero titles fill each line before the
+   next (pretty only stops a lone last word); section titles balance their
+   lines, so a two-line h2 never ends on a stub like "to life.". */
+p, li, h1, h3, h4 { text-wrap: pretty; }
+h2 { text-wrap: balance; }
+
+/* Headings and the big metric numbers are display type: Mona Sans, while the
+   body around them is Geist. Display text that is not an h-tag carries the
+   font-display utility. */
+h1, h2, h3, h4, h5, h6, .stat-value {
+    font-family: 'Mona Sans', sans-serif;
+}
+
+/* ===== BODY AND RICH-TEXT TYPE SCALE =====
+   One class per style in the type spec, each setting face, size, line height,
+   weight and tracking together. Text that is not a heading uses one of these
+   rather than a hand-set text-[Npx] / leading / tracking. Utilities still win
+   (they come later), so a font-medium or a colour on the same element applies. */
+@layer components {
+    .type-body-lg      { font-family: 'Geist', sans-serif; font-size: 18px; line-height: 28px; font-weight: 400; }
+    .type-body         { font-family: 'Geist', sans-serif; font-size: 16px; line-height: 24px; font-weight: 400; }
+    .type-body-bold    { font-family: 'Geist', sans-serif; font-size: 16px; line-height: 24px; font-weight: 600; }
+    .type-body-sm      { font-family: 'Geist', sans-serif; font-size: 14px; line-height: 20px; font-weight: 400; }
+    .type-caption      { font-family: 'Geist', sans-serif; font-size: 12px; line-height: 1.4; font-weight: 400; }
+    .type-button       { font-family: 'Geist', sans-serif; font-size: 16px; line-height: 1; font-weight: 500; }
+    .type-link         { font-family: 'Geist', sans-serif; font-size: 16px; line-height: 1.5; font-weight: 500; }
+    .type-list         { font-family: 'Geist', sans-serif; font-size: 16px; line-height: 1.6; font-weight: 400; }
+    .type-blockquote-lg { font-family: 'Geist', sans-serif; font-size: 24px; line-height: 1.4; font-weight: 500; letter-spacing: -0.01em; }
+    .type-blockquote   { font-family: 'Geist', sans-serif; font-size: 20px; line-height: 32px; font-weight: 400; letter-spacing: -0.01em; }
+    .type-eyebrow      { font-family: 'Geist', sans-serif; font-size: 12px; line-height: 1.45; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+    .type-code         { font-family: 'Geist Mono', monospace; font-size: 13px; line-height: 1.7; font-weight: 400; }
 }
 
 @layer base {
@@ -379,6 +431,16 @@ html {
 h1 .gradient-text,
 h2 .gradient-text {
   letter-spacing: inherit;
+}
+/* In a heading the accent phrase wraps word by word with the rest of the
+   title. inline-block would move a multi-word phrase to the next line whole,
+   leaving the line above it half empty; slice keeps one continuous gradient
+   across the break. */
+h1 .gradient-text,
+h2 .gradient-text {
+  display: inline;
+  -webkit-box-decoration-break: slice;
+  box-decoration-break: slice;
 }
 .gradient-text-warm {
   background: linear-gradient(135deg, #FFAF64 0%, #FF5656 50%, #4B4DF7 100%);

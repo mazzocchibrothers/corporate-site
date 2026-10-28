@@ -110,7 +110,7 @@ export default function ReportForm({ onClose, module, scenario, values }: {
       onClose={() => { if (!dialogRef.current?.open) onClose(); }}>
       <div className={styles.dialogInner}>
         <button type="button" className={styles.close} onClick={onClose} aria-label={t('close')}><X aria-hidden="true" /></button>
-        <h2 id="roi-report-title">{t(status === 'submitted' ? 'readyHeading' : 'heading')}</h2>
+        <h2 className="max-w-[880px]" id="roi-report-title">{t(status === 'submitted' ? 'readyHeading' : 'heading')}</h2>
         {status !== 'submitted' && <p id="roi-report-description">{t('body', { module: calculator(`${module}.tab`) })}</p>}
         {status === 'submitted' ? <div>
           <p id="roi-report-description" role="status">{t('downloadHint')}</p>
@@ -137,7 +137,7 @@ export default function ReportForm({ onClose, module, scenario, values }: {
             </label>
             <p className={styles.formNote}>{t('unsubscribe')}</p>
             {status === 'error' && <p role="alert">{t('submitError')}</p>}
-            <Button className="w-full rounded-[9px] text-[14px] font-semibold" type="submit" mode="dark" icon={null}>
+            <Button className="type-body-sm w-full rounded-[9px] font-semibold" type="submit" mode="dark" icon={null}>
               {t(status === 'pending' ? 'submitting' : 'submit')}
             </Button>
           </fieldset>

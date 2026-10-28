@@ -7,6 +7,7 @@ import React, { useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { trackLead } from '@/components/shared/track-lead';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 function SkillvueIcon({ size = 24 }: { size?: number }) {
   return (
@@ -98,7 +99,7 @@ export default function CareerAspirationInsuranceVetrina() {
         >
           <div className="flex items-center gap-2.5">
             <SkillvueIcon size={26} />
-            <span className="font-bold text-[15px] text-[#0D0D0D] tracking-[-0.03em]">{t('text')}</span>
+            <span className="type-body-bold text-[#0D0D0D]">{t('text')}</span>
           </div>
           <Button variant="primary" mode="light" onClick={scrollToForm}>
             {t('text2')}</Button>
@@ -109,32 +110,33 @@ export default function CareerAspirationInsuranceVetrina() {
           <div className="max-w-[760px] mx-auto text-center pt-16">
             <Reveal {...FADE} delay={0.05}>
               {t.rich('text3', {
-          s: (chunks) => <span className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-8" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
+          s: (chunks) => <span className="type-eyebrow inline-block px-4 py-1.5 rounded-full text-white mb-8" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
         })}</Reveal>
 
-            <Reveal
-              {...FADE}
-              delay={0.1}
-              as="h1"
-              className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.1] mb-6"
-            >
-              {t.rich('text4', {
-          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
-        })}</Reveal>
+            <HeroCopy className="mx-auto">
+              <Reveal
+                {...FADE}
+                delay={0.1}
+                as="h1"
+                className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.1] mb-6"
+              >
+                {t.rich('text4', {
+            s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+          })}</Reveal>
 
-            <Reveal
-              {...FADE}
-              delay={0.18}
-              as="p"
-              className="text-[17px] text-[#0D0D0D]/55 leading-[1.7] mb-4"
-              style={{ fontWeight: 300 }}
-            >
-              {t('text5')}</Reveal>
+              <Reveal
+                {...FADE}
+                delay={0.18}
+                as="p"
+                className="type-body hero-subtitle text-[#0D0D0D]/55 mb-4"
+              >
+                {t('text5')}</Reveal>
+            </HeroCopy>
 
             <Reveal
               {...FADE}
               delay={0.24}
-              className="flex items-center justify-center gap-6 text-[12px] text-[#0D0D0D]/35 mb-12"
+              className="type-caption flex items-center justify-center gap-6 text-[#0D0D0D]/35 mb-12"
             >
               {t.rich('text6', {
           s: (chunks) => <span>{chunks}</span>,
@@ -199,12 +201,12 @@ export default function CareerAspirationInsuranceVetrina() {
                   style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.05)' }}
                 >
                   <div
-                    className="text-[2rem] font-semibold md:font-bold tracking-[-0.03em] mb-1.5"
+                    className="font-display text-[2rem] font-semibold md:font-bold tracking-[-0.03em] mb-1.5"
                     style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                   >
                     {s.value}
                   </div>
-                  <div className="text-[12px] text-[#0D0D0D]/45 leading-snug">{s.label}</div>
+                  <div className="type-caption text-[#0D0D0D]/45">{s.label}</div>
                 </div>
               ))}
             </Reveal>
@@ -215,9 +217,9 @@ export default function CareerAspirationInsuranceVetrina() {
         <section className="py-16 px-6 lg:px-10 bg-white">
           <div className="max-w-[1100px] mx-auto">
             <Reveal {...FADE} className="text-center mb-12">
-              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] mb-3">
+              <h2 className="max-w-[880px] mx-auto text-[clamp(1.8rem,3.5vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] mb-3">
                 {t('heading')}</h2>
-              <p className="text-[16px] text-[#0D0D0D]/45 max-w-[580px] mx-auto leading-[1.65]" style={{ fontWeight: 300 }}>
+              <p className="max-w-[880px] type-body text-[#0D0D0D]/45 mx-auto">
                 {t('body')}</p>
             </Reveal>
 
@@ -236,7 +238,7 @@ export default function CareerAspirationInsuranceVetrina() {
                     {f.icon}
                   </div>
                   <h3 className="text-[15px] font-semibold text-[#0D0D0D] mb-2 leading-snug">{f.title}</h3>
-                  <p className="text-[13px] text-[#0D0D0D]/50 leading-[1.65]">{f.desc}</p>
+                  <p className="type-body-sm text-[#0D0D0D]/50">{f.desc}</p>
                 </Reveal>
               ))}
             </div>
@@ -249,7 +251,7 @@ export default function CareerAspirationInsuranceVetrina() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Left */}
               <Reveal {...FADE}>
-                <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.15] mb-6">
+                <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.15] mb-6">
                   {t('heading2')}</h2>
                 <ul className="space-y-3 mb-8">
                   {[
@@ -259,7 +261,7 @@ export default function CareerAspirationInsuranceVetrina() {
                     'Il ciclo operativo dal dato aspirazionale all\'intervento HR mirato',
                     '3 domande strategiche per il tuo comitato di direzione',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-[14px] text-[#0D0D0D]/60 leading-snug">
+                    <li key={i} className="type-body-sm flex items-start gap-3 text-[#0D0D0D]/60">
                       <div
                         className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                         style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
@@ -270,7 +272,7 @@ export default function CareerAspirationInsuranceVetrina() {
                     </li>
                   ))}
                 </ul>
-                <p className="flex items-center gap-2 text-[12px] text-[#0D0D0D]/30">
+                <p className="type-caption flex items-center gap-2 text-[#0D0D0D]/30">
                   <Lock width={13} height={13} strokeWidth={2} />
                   {tl('dataSafe')}
                 </p>
@@ -285,7 +287,7 @@ export default function CareerAspirationInsuranceVetrina() {
                 style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}
               >
                 <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-1">{t('heading3')}</h3>
-                <p className="text-[13px] text-[#0D0D0D]/35 mb-7">{t('body2')}</p>
+                <p className="type-body-sm text-[#0D0D0D]/35 mb-7">{t('body2')}</p>
 
                 <div id="hs-form-container" />
               </Reveal>
@@ -298,14 +300,14 @@ export default function CareerAspirationInsuranceVetrina() {
           <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-2.5">
               <SkillvueIcon size={20} />
-              <span className="text-[12px] text-[#0D0D0D]/30">{tl('copyright', { year: new Date().getFullYear() })}</span>
+              <span className="type-caption text-[#0D0D0D]/30">{tl('copyright', { year: new Date().getFullYear() })}</span>
             </div>
-            <div className="flex items-center gap-5 text-[12px]">
-              <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+            <div className="type-caption flex items-center gap-5">
+              <Button asChild variant="tertiary" mode="light" icon={null} className="type-caption">
                 {t.rich('text8', {
           a: (chunks) => <a href={href('privacy-policy', 'it')}>{chunks}</a>,
         })}</Button>
-              <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+              <Button asChild variant="tertiary" mode="light" icon={null} className="type-caption">
                 {t.rich('text9', {
           a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
         })}</Button>

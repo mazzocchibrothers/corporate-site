@@ -52,10 +52,10 @@ export default function CompareTable() {
 
         {/* Header */}
         <span className="hidden md:block row-start-1 col-start-1" />
-        <span className="hidden md:block row-start-1 col-start-2 px-5 pt-4 pb-3 text-[13px] font-medium text-[#121212]/50">
+        <span className="type-body-sm hidden md:block row-start-1 col-start-2 px-5 pt-4 pb-3 font-medium text-[#121212]/50">
           {t('colInferred')}
         </span>
-        <span className="hidden md:block row-start-1 col-start-3 px-5 pt-4 pb-3 text-[13px] font-semibold text-[#4B4DF7]">
+        <span className="type-body-sm hidden md:block row-start-1 col-start-3 px-5 pt-4 pb-3 font-semibold text-[#4B4DF7]">
           {t('colMeasured')}
         </span>
 
@@ -65,26 +65,26 @@ export default function CompareTable() {
           return (
             <React.Fragment key={r.label}>
               <div
-                className={`md:col-start-1 px-3 md:px-5 pt-5 md:py-5 text-[15px] font-semibold text-[#121212] ${i > 0 ? 'border-t border-black/[0.06]' : ''}`}
+                className={`type-body-bold md:col-start-1 px-3 md:px-5 pt-5 md:py-5 text-[#121212] ${i > 0 ? 'border-t border-black/[0.06]' : ''}`}
                 style={gridRow}
               >
                 {r.label}
               </div>
               <div className={`md:col-start-2 px-3 md:px-5 pt-3 md:py-5 ${border}`} style={gridRow}>
                 <div {...cell(i * ROW_MS)}>
-                  <span className="md:hidden block text-[12px] font-medium text-[#121212]/40 mb-1.5">{t('colInferred')}</span>
+                  <span className="type-caption md:hidden block font-medium text-[#121212]/40 mb-1.5">{t('colInferred')}</span>
                   <div className="flex items-start gap-3">
                     <Mark measured={false} />
-                    <p className="text-[15px] text-[#121212]/55 leading-[1.6]">{r.inferred}</p>
+                    <p className="type-body text-[#121212]/55">{r.inferred}</p>
                   </div>
                 </div>
               </div>
               <div className={`md:col-start-3 px-3 md:px-5 pt-3 pb-5 md:py-5 ${border}`} style={gridRow}>
                 <div {...cell(i * ROW_MS + 260)} className={`${cell(0).className} rounded-lg bg-[#4B4DF7]/[0.04] md:bg-transparent p-3 md:p-0`}>
-                  <span className="md:hidden block text-[12px] font-semibold text-[#4B4DF7] mb-1.5">{t('colMeasured')}</span>
+                  <span className="type-caption md:hidden block font-semibold text-[#4B4DF7] mb-1.5">{t('colMeasured')}</span>
                   <div className="flex items-start gap-3">
                     <Mark measured />
-                    <p className="text-[15px] text-[#121212] leading-[1.6]">{r.measured}</p>
+                    <p className="type-body text-[#121212]">{r.measured}</p>
                   </div>
                 </div>
               </div>

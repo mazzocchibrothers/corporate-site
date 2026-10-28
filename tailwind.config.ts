@@ -16,7 +16,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        mono: ['Inter', 'monospace'],
+        mono: ['Geist Mono', 'monospace'],
+        display: ['Mona Sans', 'sans-serif'],
         manrope: ['Inter', 'sans-serif'],
       },
       borderRadius: {

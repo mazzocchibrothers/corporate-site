@@ -39,8 +39,8 @@ export default function SolutionCrossLinks({ currentId }) {
             <button onClick={() => handleNav('/product')} className="group text-left rounded-xl border border-white/[0.08] bg-white/[0.03] active:bg-white/[0.06] p-5 transition-all duration-300">
               <div className="flex items-center justify-between gap-3">
                 <div>{t.rich('solutionCrossLinks.cta', {
-                  span: (chunks) => <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase block mb-1">{chunks}</span>,
-                  span2: (chunks) => <span className="text-[15px] font-semibold text-white/85 leading-snug">{chunks}</span>,
+                  span: (chunks) => <span className="type-eyebrow text-[#6B7DFF] block mb-1">{chunks}</span>,
+                  span2: (chunks) => <span className="type-body-bold text-white/85">{chunks}</span>,
                 })}</div>
                 <ArrowRight className="h-4 w-4 text-white/30 shrink-0" />
               </div>
@@ -48,8 +48,8 @@ export default function SolutionCrossLinks({ currentId }) {
             <button onClick={() => handleNav('/science')} className="group text-left rounded-xl border border-white/[0.08] bg-white/[0.03] active:bg-white/[0.06] p-5 transition-all duration-300">
               <div className="flex items-center justify-between gap-3">
                 <div>{t.rich('solutionCrossLinks.cta2', {
-                  span: (chunks) => <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase block mb-1">{chunks}</span>,
-                  span2: (chunks) => <span className="text-[15px] font-semibold text-white/85 leading-snug">{chunks}</span>,
+                  span: (chunks) => <span className="type-eyebrow text-[#6B7DFF] block mb-1">{chunks}</span>,
+                  span2: (chunks) => <span className="type-body-bold text-white/85">{chunks}</span>,
                 })}</div>
                 <ArrowRight className="h-4 w-4 text-white/30 shrink-0" />
               </div>
@@ -61,8 +61,8 @@ export default function SolutionCrossLinks({ currentId }) {
             <button onClick={() => handleNav('/product')} className="group text-left rounded-xl border border-white/[0.08] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.14] p-6 transition-all duration-500">
               <div className="flex items-center justify-between">
                 <div>{t.rich('solutionCrossLinks.cta3', {
-                  span: (chunks) => <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase block mb-1">{chunks}</span>,
-                  span2: (chunks) => <span className="text-[16px] font-semibold text-white/85">{chunks}</span>,
+                  span: (chunks) => <span className="type-eyebrow text-[#6B7DFF] block mb-1">{chunks}</span>,
+                  span2: (chunks) => <span className="type-body-bold text-white/85">{chunks}</span>,
                 })}</div>
                 <ArrowRight className="h-4 w-4 text-white/30 group-hover:text-white/60 group-hover:translate-x-1 transition-all duration-300" />
               </div>
@@ -70,8 +70,8 @@ export default function SolutionCrossLinks({ currentId }) {
             <button onClick={() => handleNav('/science')} className="group text-left rounded-xl border border-white/[0.08] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.14] p-6 transition-all duration-500">
               <div className="flex items-center justify-between">
                 <div>{t.rich('solutionCrossLinks.cta4', {
-                  span: (chunks) => <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase block mb-1">{chunks}</span>,
-                  span2: (chunks) => <span className="text-[16px] font-semibold text-white/85">{chunks}</span>,
+                  span: (chunks) => <span className="type-eyebrow text-[#6B7DFF] block mb-1">{chunks}</span>,
+                  span2: (chunks) => <span className="type-body-bold text-white/85">{chunks}</span>,
                 })}</div>
                 <ArrowRight className="h-4 w-4 text-white/30 group-hover:text-white/60 group-hover:translate-x-1 transition-all duration-300" />
               </div>
@@ -80,7 +80,7 @@ export default function SolutionCrossLinks({ currentId }) {
 
           {/* Other solutions */}
           <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-6">
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase block mb-4">{t('solutionCrossLinks.text')}</span>
+            <span className="type-eyebrow text-[#6B7DFF] block mb-4">{t('solutionCrossLinks.text')}</span>
             <div className="flex flex-wrap gap-2">
               {otherSolutions.map(s => (
                 <Button key={s.key} variant="secondary" mode="dark" icon={null} onClick={() => handleNav(href(s.id, lang))}>

@@ -6,6 +6,7 @@ import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Clock, ImageIcon } from 'lucide-react';
 import { href, localizePath } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 // ─── Fill these in when the assets/links are ready ──────────────────────────
 // Empty string '' → a labelled dashed placeholder box renders instead.
@@ -48,8 +49,8 @@ function Img({ src, label, soon }) {
     <div className="my-8 w-full rounded-2xl flex flex-col items-center justify-center gap-2 text-center px-6"
       style={{ aspectRatio: '16 / 10', background: 'linear-gradient(135deg, #ece9fb 0%, #f7e6dc 100%)', border: '1px dashed rgba(75,77,247,0.25)' }}>
       <ImageIcon className="h-7 w-7 text-[#4B4DF7]/50" />
-      <span className="text-[13px] font-semibold text-[#4B4DF7]/70">{label}</span>
-      <span className="text-[11px] uppercase tracking-[0.14em] text-[#121212]/25">{soon}</span>
+      <span className="type-body-sm font-semibold text-[#4B4DF7]/70">{label}</span>
+      <span className="type-eyebrow text-[#121212]/25">{soon}</span>
     </div>
   );
 }
@@ -60,7 +61,7 @@ function CtaLink({ label, href, newTab }) {
       <a
         href={href}
         {...(newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-        className="inline-flex items-center gap-2 rounded-full bg-[#4B4DF7] text-white text-[15px] font-medium px-6 py-3.5 transition-colors duration-300 hover:bg-[#3133E7]"
+        className="type-button inline-flex items-center gap-2 rounded-full bg-[#4B4DF7] text-white font-medium px-6 py-[18px] transition-colors duration-300 hover:bg-[#3133E7]"
       >
         {label} <ArrowRight className="h-4 w-4" />
       </a>
@@ -74,12 +75,12 @@ function EventCard({ event, localize }) {
   return (
     <div className="rounded-2xl border border-[#121212]/[0.08] bg-white px-6 py-6 md:px-7">
       <h3 className="text-[19px] font-semibold text-[#121212] tracking-[-0.01em]">{event.name}</h3>
-      <p className="mt-1.5 text-[13px] font-semibold text-[#4B4DF7] tracking-[0.01em]">{event.meta}</p>
-      <p className="mt-4 text-[16px] text-[#121212]/[0.7] leading-[1.8]">{renderRich(event.text)}</p>
+      <p className="type-body-sm mt-1.5 font-semibold text-[#4B4DF7]">{event.meta}</p>
+      <p className="type-body mt-4 text-[#121212]/[0.7]">{renderRich(event.text)}</p>
       <a
         href={localize(LINKS[event.cta.href])}
         {...(event.cta.external || event.cta.newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-        className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#4B4DF7] transition-colors duration-300 hover:text-[#3133E7]"
+        className="type-body-sm mt-5 inline-flex items-center gap-1.5 font-semibold text-[#4B4DF7] transition-colors duration-300 hover:text-[#3133E7]"
       >
         {event.cta.label} <ArrowRight className="h-4 w-4" />
       </a>
@@ -115,12 +116,14 @@ export default async function AugustNewsletter() {
             </Button>
             <Reveal duration={0.7} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
-                <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{t('tag')}</span>
-                <span className="text-[13px] text-white/35">{t('date')}</span>
-                <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('readTime')}</span>
+                <span className="type-caption inline-flex px-4 py-1.5 rounded-full font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08]">{t('tag')}</span>
+                <span className="type-body-sm text-white/35">{t('date')}</span>
+                <span className="type-body-sm text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('readTime')}</span>
               </div>
-              <h1 className="font-semibold text-white/95 mb-6 text-[40px] md:text-[60px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t('title')}</h1>
-              <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>{t('subtitle')}</p>
+              <HeroCopy>
+                <h1 className="font-semibold text-white/95 mb-6 text-[40px] md:text-[58px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t('title')}</h1>
+                <p className="type-body-lg hero-subtitle text-white/[0.5]">{t('subtitle')}</p>
+              </HeroCopy>
             </Reveal>
           </div>
         </section>
@@ -130,16 +133,16 @@ export default async function AugustNewsletter() {
           <div className="max-w-[780px] mx-auto px-6 md:px-8 lg:px-12 py-16 lg:py-20">
             {/* Intro */}
             <Reveal y={20} duration={0.6} className="space-y-5">
-              {t.raw('intro').map((p, i) => <p key={i} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
+              {t.raw('intro').map((p, i) => <p key={i} className="type-body text-[#121212]/[0.7]">{renderRich(p)}</p>)}
             </Reveal>
 
             {/* Sections */}
             {t.raw('sections').map((s, i) => (
               <Reveal y={20} key={i} className="mt-16 pt-10 border-t border-[#121212]/[0.06]">
-                <h2 className={`text-[26px] font-semibold text-[#121212] tracking-[-0.02em] ${s.img ? 'mb-1' : 'mb-5'}`}>{s.heading}</h2>
+                <h2 className={`max-w-[880px] text-[26px] font-semibold text-[#121212] tracking-[-0.02em] ${s.img ? 'mb-1' : 'mb-5'}`}>{s.heading}</h2>
                 {s.img && <Img src={imgSrc(s.img)} label={t.raw('imgLabels')[s.img]} soon={t('imgSoon')} />}
                 <div className="space-y-5">
-                  {s.body.map((p, j) => <p key={j} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
+                  {s.body.map((p, j) => <p key={j} className="type-body text-[#121212]/[0.7]">{renderRich(p)}</p>)}
                 </div>
                 {s.events && (
                   <div className="mt-8 space-y-4">
@@ -152,9 +155,9 @@ export default async function AugustNewsletter() {
 
             {/* Closing */}
             <Reveal y={20} className="mt-16 pt-10 border-t border-[#121212]/[0.06]">
-              <h2 className="text-[26px] font-semibold text-[#121212] tracking-[-0.02em] mb-4">{t('closing.heading')}</h2>
+              <h2 className="max-w-[880px] text-[26px] font-semibold text-[#121212] tracking-[-0.02em] mb-4">{t('closing.heading')}</h2>
               <div className="space-y-5">
-                {t.raw('closing.body').map((p, j) => <p key={j} className="text-[17px] text-[#121212]/[0.7] leading-[1.9]">{renderRich(p)}</p>)}
+                {t.raw('closing.body').map((p, j) => <p key={j} className="type-body text-[#121212]/[0.7]">{renderRich(p)}</p>)}
               </div>
             </Reveal>
           </div>
@@ -164,11 +167,11 @@ export default async function AugustNewsletter() {
         <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24" style={{ background: '#08080c' }}>
           <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 text-center">
             <Reveal duration={0.7}>
-              <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('finalKicker')}</span>
-              <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.02em]">
+              <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('finalKicker')}</span>
+              <h2 className="max-w-[880px] text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] mx-auto tracking-[-0.02em]">
                 {t('finalTitle')} <span className="gradient-text">{t('finalTitleHighlight')}</span>
               </h2>
-              <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">{t('finalBody')}</p>
+              <p className="max-w-[880px] type-body text-white/[0.4] mb-12 mx-auto">{t('finalBody')}</p>
               <Button asChild variant="primary" mode="dark">
                 <a href={href('book-meeting', lang)}>{t('finalButton')}<ArrowRight aria-hidden /></a>
               </Button>

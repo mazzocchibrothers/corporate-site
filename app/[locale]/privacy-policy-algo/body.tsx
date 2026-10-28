@@ -6,6 +6,7 @@ import React from 'react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { BASE_URL } from '@/i18n/urls';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 
 
@@ -26,12 +27,14 @@ export default function PrivacyPolicyAlgo() {
           </div>
           <div className="relative z-10 max-w-[900px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <Reveal y={20} duration={0.6}>
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">
+              <span className="type-eyebrow text-[#6B7DFF] mb-6 block">
                 {t('text')}</span>
-              <h1 className="font-semibold text-white/95 mb-4 text-[48px] md:text-[64px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
-                {t('heading')}</h1>
-              <p className="text-[16px] text-white/40 leading-[1.7]">
-                {t('body')}</p>
+              <HeroCopy>
+                <h1 className="font-semibold text-white/95 mb-4 text-[48px] md:text-[58px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+                  {t('heading')}</h1>
+                <p className="type-body hero-subtitle text-white/40">
+                  {t('body')}</p>
+              </HeroCopy>
             </Reveal>
           </div>
         </section>
@@ -48,19 +51,19 @@ export default function PrivacyPolicyAlgo() {
 
               {/* ══ NOTICE 1: SITO WEB ══ */}
               <div className="mb-20">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-bold tracking-[0.1em] uppercase mb-8" style={{ background: 'rgba(217,96,63,0.08)', color: '#D9603F', border: '1px solid rgba(217,96,63,0.18)' }}>
+                <div className="type-eyebrow inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8" style={{ background: 'rgba(217,96,63,0.08)', color: '#D9603F', border: '1px solid rgba(217,96,63,0.18)' }}>
                   {t('text2')}</div>
 
-                <h2 className="text-[clamp(1.4rem,2.5vw,1.9rem)] font-semibold text-[#121212] mb-3 leading-[1.3]">
+                <h2 className="max-w-[880px] text-[clamp(1.4rem,2.5vw,1.9rem)] font-semibold text-[#121212] mb-3 leading-[1.3]">
                   {t('heading2')}</h2>
-                <p className="text-[14px] text-[#121212]/40 mb-8">
+                <p className="max-w-[880px] type-body-sm text-[#121212]/40 mb-8">
                   {t('body2')}</p>
 
-                <p className="text-[16px] text-[#121212]/70 leading-[1.85] mb-6">
+                <p className="type-body text-[#121212]/70 mb-6">
                   {t.rich('body3', {
           a: (chunks) => <a href={siteUrl} target="_blank" rel="noopener noreferrer" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
         })}</p>
-                <p className="text-[16px] text-[#121212]/70 leading-[1.85] mb-10">
+                <p className="type-body text-[#121212]/70 mb-10">
                   {t('body4')}</p>
 
                 <PolicySection title={t('heading5')}>
@@ -187,7 +190,7 @@ export default function PrivacyPolicyAlgo() {
         })}</p>
                 </PolicySection>
 
-                <p className="text-[13px] text-[#121212]/35 mt-12 pt-8 border-t border-[#121212]/[0.06]">
+                <p className="type-body-sm text-[#121212]/35 mt-12 pt-8 border-t border-[#121212]/[0.06]">
                   {t('body31')}</p>
               </div>
 
@@ -201,12 +204,12 @@ export default function PrivacyPolicyAlgo() {
 
               {/* ══ NOTICE 2: CLIENTI ══ */}
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-bold tracking-[0.1em] uppercase mb-8" style={{ background: 'rgba(75,77,247,0.08)', color: '#4B4DF7', border: '1px solid rgba(75,77,247,0.15)' }}>
+                <div className="type-eyebrow inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8" style={{ background: 'rgba(75,77,247,0.08)', color: '#4B4DF7', border: '1px solid rgba(75,77,247,0.15)' }}>
                   {t('clientsBadge')}</div>
 
-                <h2 className="text-[clamp(1.4rem,2.5vw,1.9rem)] font-semibold text-[#121212] mb-3 leading-[1.3]">
+                <h2 className="max-w-[880px] text-[clamp(1.4rem,2.5vw,1.9rem)] font-semibold text-[#121212] mb-3 leading-[1.3]">
                   {t('clientsHeading')}</h2>
-                <p className="text-[14px] text-[#121212]/40 mb-10">
+                <p className="max-w-[880px] type-body-sm text-[#121212]/40 mb-10">
                   {t('clientsSubtitle')}</p>
 
                 <PolicySection title={t('clientsSection1Title')}>
@@ -333,7 +336,7 @@ export default function PrivacyPolicyAlgo() {
                   <p>{t('clientsSection12Body1')}</p>
                 </PolicySection>
 
-                <p className="text-[13px] text-[#121212]/35 mt-12 pt-8 border-t border-[#121212]/[0.06]">
+                <p className="type-body-sm text-[#121212]/35 mt-12 pt-8 border-t border-[#121212]/[0.06]">
                   {t('clientsFooterNote')}</p>
               </div>
               </>
@@ -354,7 +357,7 @@ function PolicySection({ title, children }: { title: string; children: React.Rea
       <h3 className="text-[17px] font-semibold text-[#121212] mb-4 pb-3 border-b border-[#121212]/[0.07]">
         {title}
       </h3>
-      <div className="text-[15px] text-[#121212]/65 leading-[1.8] space-y-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_ul]:mt-2">
+      <div className="type-body text-[#121212]/65 space-y-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_ul]:mt-2">
         {children}
       </div>
     </div>

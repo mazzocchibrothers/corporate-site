@@ -21,11 +21,11 @@ export default function CustomerTestimonials() {
     <section id="customers-testimonials" data-testid="customers-testimonials" className="section-breathe relative py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-14">
-          <span className="block text-[12px] font-medium text-[#4B4DF7] tracking-[0.1em] uppercase mb-4">{t('testimonials.eyebrow')}</span>
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1E1E1E] mb-4">{t.rich('testimonials.heading', {
+          <span className="type-eyebrow block font-medium text-[#4B4DF7] mb-4">{t('testimonials.eyebrow')}</span>
+          <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1E1E1E] mb-4">{t.rich('testimonials.heading', {
             span: (chunks) => <span className="font-semibold gradient-text-warm-on-light">{chunks}</span>,
           })}</h2>
-          <p className="text-[18px] text-[#4B4B4B]">{t('testimonials.body')}</p>
+          <p className="max-w-[880px] type-body-lg text-[#4B4B4B]">{t('testimonials.body')}</p>
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mb-14">
@@ -47,8 +47,8 @@ export default function CustomerTestimonials() {
                     </div>
                   </div>
                   <div className="absolute left-5 right-5 bottom-5 flex items-end justify-between">
-                    <p className="text-[24px] font-bold text-white tracking-[-0.01em]">{c.name}</p>
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-white/80">
+                    <p className="font-display text-[24px] font-bold text-white tracking-[-0.01em]">{c.name}</p>
+                    <span className="type-caption inline-flex items-center gap-1.5 font-medium text-white/80">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#FF5656]" />
                       {t('testimonials.interview')}
                     </span>
@@ -58,10 +58,10 @@ export default function CustomerTestimonials() {
                   <h3 className="text-[24px] font-semibold leading-[1.4] text-[#1E1E1E] tracking-[-0.01em] mb-4">{t(`testimonials.cards.${c.id}.title`)}</h3>
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {(t.raw(`testimonials.cards.${c.id}.tags`) as string[]).map((tag) => (
-                      <span key={tag} className="inline-flex rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[12px] text-[#4B4B4B]">{tag}</span>
+                      <span key={tag} className="type-caption inline-flex rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[#4B4B4B]">{tag}</span>
                     ))}
                   </div>
-                  <div className="flex items-center gap-2 text-[14px] font-semibold text-[#4B4DF7]">
+                  <div className="type-body-sm flex items-center gap-2 font-semibold text-[#4B4DF7]">
                     {t('testimonials.watchVideo')}
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </div>
@@ -72,7 +72,7 @@ export default function CustomerTestimonials() {
         </div>
 
         <Reveal y={0} delay={0.3} className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-          <p className="text-[15px] text-[#4B4B4B]">{t('testimonials.footerText')}</p>
+          <p className="type-body text-[#4B4B4B]">{t('testimonials.footerText')}</p>
           <Button asChild variant="primary" mode="light">
             <a href={href('book-meeting', lang)}>
               {t('testimonials.cta')}

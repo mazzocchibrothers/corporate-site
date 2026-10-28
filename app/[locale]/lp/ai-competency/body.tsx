@@ -7,6 +7,7 @@ import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { Download, Lock, Check, ChevronDown } from 'lucide-react';
 import { trackLead } from '@/components/shared/track-lead';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 const HS_PORTAL_ID = '48438018';
 const HS_REGION = 'na1';
@@ -136,17 +137,19 @@ export default function AiCompetencyPage() {
 
               {/* LEFT — description + HubSpot form */}
               <div className="lg:col-span-5">
-                <span className="inline-block text-[10px] md:text-[11px] font-bold tracking-[0.15em] uppercase mb-3" style={{ color: '#7b7df9' }}>
+                <span className="type-eyebrow inline-block mb-3" style={{ color: '#6b7dff' }}>
                   {t('badge')}
                 </span>
-                <h1 className="text-[23px] font-semibold md:text-[30px] md:font-bold tracking-[-0.02em] text-white/95 mb-2.5" style={{ lineHeight: 1.12 }}>
-                  {t('titleLead')}
-                  <span className="font-semibold md:font-bold gradient-text" style={{ display: 'inline', backgroundImage: 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)' }}>
-                    {t('titleHighlight')}
-                  </span>
-                  {t('titleTail')}
-                </h1>
-                <p className="text-[13px] text-white/65 leading-[1.5] mb-4 max-w-md">{t('intro')}</p>
+                <HeroCopy>
+                  <h1 className="text-[23px] font-semibold md:text-[58px] md:font-bold tracking-[-0.02em] text-white/95 mb-2.5" style={{ lineHeight: 1.1 }}>
+                    {t('titleLead')}
+                    <span className="font-semibold md:font-bold gradient-text" style={{ display: 'inline', backgroundImage: 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)' }}>
+                      {t('titleHighlight')}
+                    </span>
+                    {t('titleTail')}
+                  </h1>
+                  <p className="type-body-sm hero-subtitle text-white/65 mb-4">{t('intro')}</p>
+                </HeroCopy>
 
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-5 max-w-[560px]">
                   {unlocked ? (
@@ -155,15 +158,15 @@ export default function AiCompetencyPage() {
                         <Check className="h-4 w-4" style={{ color: '#7b7df9' }} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-[13px] text-white/80 mb-2.5">{t('unlockedMsg')}</p>
-                        <a href={t('assets.pdf')} download={t('assets.downloadName')} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-[15px] font-medium text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
+                        <p className="type-body-sm text-white/80 mb-2.5">{t('unlockedMsg')}</p>
+                        <a href={t('assets.pdf')} download={t('assets.downloadName')} className="type-button inline-flex items-center gap-2 px-4 py-3.5 rounded-full font-medium text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
                           <Download className="h-4 w-4" /> {t('download')}
                         </a>
                       </div>
                     </div>
                   ) : (
                     <>
-                      <p className="text-[12px] font-semibold text-white/80 mb-3 flex items-center gap-2">
+                      <p className="type-caption font-semibold text-white/80 mb-3 flex items-center gap-2">
                         <Lock className="h-3.5 w-3.5" style={{ color: '#7b7df9' }} /> {t('unlockLead')}
                       </p>
                       <div id="lead-form" ref={formRef} data-testid="lead-form" style={{ minHeight: '220px' }} />
@@ -206,8 +209,8 @@ export default function AiCompetencyPage() {
                         <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4" style={{ background: 'rgba(255,255,255,0.12)', backdropFilter: 'blur(6px)' }}>
                           <Lock className="h-6 w-6 text-white" />
                         </div>
-                        <p className="text-[16px] font-bold text-white">{t('lockedTitle')}</p>
-                        <p className="text-[13px] text-white/75 mt-1">{t('lockedHint')}</p>
+                        <p className="type-body-bold text-white">{t('lockedTitle')}</p>
+                        <p className="type-body-sm text-white/75 mt-1">{t('lockedHint')}</p>
                       </div>
                     </div>
                   )}
@@ -215,7 +218,7 @@ export default function AiCompetencyPage() {
                   {/* Scroll affordance — fades out once you reach page 2 */}
                   {!unlocked && (
                     <div
-                      className="absolute bottom-0 left-0 right-0 flex items-center justify-center gap-2 py-3 text-[13px] font-semibold text-white pointer-events-none transition-opacity duration-500"
+                      className="type-body-sm absolute bottom-0 left-0 right-0 flex items-center justify-center gap-2 py-3 font-semibold text-white pointer-events-none transition-opacity duration-500"
                       style={{ opacity: showLock ? 0 : 1, background: 'linear-gradient(180deg, rgba(8,8,12,0) 0%, rgba(8,8,12,0.92) 55%)' }}
                     >
                       <ChevronDown className="h-4 w-4 animate-bounce" /> {t('scrollHint')}

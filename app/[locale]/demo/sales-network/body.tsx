@@ -32,6 +32,7 @@ import DemoView from '@/components/demo/DemoView';
 import Chart from '@/components/demo/charts/Chart';
 import { salesNetwork } from '@/data/demo/sales-network';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 const FAMILIES = Object.keys(salesNetwork.families);
 const BANDS = Object.keys(salesNetwork.bands);
@@ -73,13 +74,13 @@ function Panel({
       duration={0.6}
       className="rounded-xl md:rounded-2xl border border-white/[0.08] bg-white/[0.04] p-6 md:p-10"
     >
-      <h2 className="text-[24px] md:text-[32px] font-semibold text-white/90 mb-3">{title}</h2>
+      <h2 className="max-w-[880px] text-[24px] md:text-[32px] font-semibold text-white/90 mb-3">{title}</h2>
       {body ? (
-        <p className="text-[15px] text-white/[0.55] leading-[1.7] max-w-3xl mb-8">{body}</p>
+        <p className="type-body text-white/[0.55] max-w-3xl mb-8">{body}</p>
       ) : null}
       {children}
       {note ? (
-        <p className="text-[13px] text-white/40 leading-[1.7] max-w-3xl mt-6">{note}</p>
+        <p className="type-body-sm text-white/40 max-w-3xl mt-6">{note}</p>
       ) : null}
     </Reveal>
   );
@@ -217,38 +218,39 @@ export default function SalesNetworkDemo() {
               as="p"
               y={20}
               duration={0.6}
-              className="text-[13px] font-semibold tracking-[0.18em] uppercase text-white/40 mb-6"
+              className="type-body-sm font-semibold uppercase text-white/40 mb-6"
             >
               {t('hero.eyebrow')}
             </Reveal>
-            <Reveal
-              as="h1"
-              y={40}
-              duration={0.8}
-              delay={0.1}
-              className="text-[40px] md:text-[56px] font-semibold tracking-[-0.02em] text-white/95 mb-8 max-w-4xl"
-              style={{ lineHeight: 1.15 }}
-            >
-              {t.rich('hero.heading', {
-                span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
-              })}
-            </Reveal>
-            <Reveal
-              as="p"
-              y={20}
-              duration={0.8}
-              delay={0.2}
-              className="text-[18px] text-white/[0.65] leading-[1.75] max-w-3xl mb-8"
-              style={{ fontWeight: 300 }}
-            >
-              {t('hero.body')}
-            </Reveal>
+            <HeroCopy>
+              <Reveal
+                as="h1"
+                y={40}
+                duration={0.8}
+                delay={0.1}
+                className="text-[40px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-8 max-w-4xl"
+                style={{ lineHeight: 1.1 }}
+              >
+                {t.rich('hero.heading', {
+                  span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+                })}
+              </Reveal>
+              <Reveal
+                as="p"
+                y={20}
+                duration={0.8}
+                delay={0.2}
+                className="type-body-lg hero-subtitle text-white/[0.65] mb-8"
+              >
+                {t('hero.body')}
+              </Reveal>
+            </HeroCopy>
             <Reveal
               as="p"
               y={20}
               duration={0.6}
               delay={0.3}
-              className="text-[14px] text-white/40 leading-[1.7] max-w-2xl"
+              className="type-body-sm text-white/40 max-w-2xl"
             >
               {t('hero.note')}
             </Reveal>
@@ -266,10 +268,10 @@ export default function SalesNetworkDemo() {
                   >
                     {s.value}
                   </span>
-                  <span className="block text-[14px] font-semibold text-white/80 mb-2">
+                  <span className="type-body-sm block font-semibold text-white/80 mb-2">
                     {t(`population.${s.id}.label`)}
                   </span>
-                  <span className="block text-[13px] text-white/40 leading-[1.7]">
+                  <span className="type-body-sm block text-white/40">
                     {t(`population.${s.id}.note`, s.args)}
                   </span>
                 </div>
@@ -295,7 +297,7 @@ export default function SalesNetworkDemo() {
             {/* Above the cards, not under them: 85 and 90 are there to be added
                 up, and a reader who does that before being told they do not
                 reach 185 has found a hole instead of being shown one. */}
-            <p className="text-[13px] text-white/40 leading-[1.7] max-w-3xl mb-6">
+            <p className="type-body-sm text-white/40 max-w-3xl mb-6">
               {t('families.coverage', { covered: n(covered, 0), assessed: n(funnel.assessed, 0) })}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -305,7 +307,7 @@ export default function SalesNetworkDemo() {
                     className="block h-1 w-8 rounded-full mb-4"
                     style={{ backgroundColor: SERIES[i] }}
                   />
-                  <span className="block text-[15px] font-semibold text-white/90 mb-4">
+                  <span className="type-body-bold block text-white/90 mb-4">
                     {t(`families.names.${f}`)}
                   </span>
                   <dl className="flex flex-col gap-2">
@@ -316,10 +318,10 @@ export default function SalesNetworkDemo() {
                       { id: 'hard', value: n(salesNetwork.families[f].hard) },
                     ].map((row) => (
                       <div key={row.id} className="flex items-baseline justify-between gap-4">
-                        <dt className="text-[13px] text-white/45">
+                        <dt className="type-body-sm text-white/45">
                           {t(`families.labels.${row.id}`)}
                         </dt>
-                        <dd className="text-[14px] font-semibold text-white/85 tabular-nums">
+                        <dd className="type-body-sm font-semibold text-white/85 tabular-nums">
                           {row.value}
                         </dd>
                       </div>
@@ -328,12 +330,12 @@ export default function SalesNetworkDemo() {
                 </div>
               ))}
             </div>
-            <p className="text-[13px] text-white/40 leading-[1.7] mt-6">{t('families.overlap')}</p>
+            <p className="type-body-sm text-white/40 mt-6">{t('families.overlap')}</p>
           </Panel>
 
           <Panel title={t('profile.heading')} body={t('profile.body')}>
             <div className="flex flex-wrap items-center gap-2 mb-8">
-              <span className="text-[12px] font-semibold tracking-[0.14em] uppercase text-white/35 mr-2">
+              <span className="type-eyebrow text-white/35 mr-2">
                 {t('profile.label')}
               </span>
               {FAMILIES.map((f) => (
@@ -342,11 +344,11 @@ export default function SalesNetworkDemo() {
                   type="button"
                   aria-pressed={family === f}
                   onClick={() => setFamily(f)}
-                  className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${
-                    family === f
-                      ? 'bg-white/[0.1] text-white border border-white/[0.15]'
-                      : 'text-white/40 border border-transparent hover:text-white/70'
-                  }`}
+                  className={`type-body-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full font-medium transition-all duration-300 ${
+ family === f
+ ? 'bg-white/[0.1] text-white border border-white/[0.15]'
+ : 'text-white/40 border border-transparent hover:text-white/70'
+ }`}
                 >
                   {t(`families.names.${f}`)}
                 </button>
@@ -365,7 +367,7 @@ export default function SalesNetworkDemo() {
                   data={profile.soft.data}
                   options={profile.soft.options}
                 />
-                <p className="text-[13px] text-white/40 leading-[1.7] mt-4">
+                <p className="type-body-sm text-white/40 mt-4">
                   {t('profile.soft.caption')}
                 </p>
               </div>
@@ -380,7 +382,7 @@ export default function SalesNetworkDemo() {
                   data={profile.hard.data}
                   options={profile.hard.options}
                 />
-                <p className="text-[13px] text-white/40 leading-[1.7] mt-4">
+                <p className="type-body-sm text-white/40 mt-4">
                   {t('profile.hard.caption')}
                 </p>
               </div>
@@ -390,7 +392,7 @@ export default function SalesNetworkDemo() {
               {t('profile.drivers.heading')}
             </h3>
             <div className="flex flex-wrap items-center gap-2 mb-6">
-              <span className="text-[12px] font-semibold tracking-[0.14em] uppercase text-white/35 mr-2">
+              <span className="type-eyebrow text-white/35 mr-2">
                 {t('profile.drivers.label')}
               </span>
               {softKeys.map((k) => (
@@ -399,11 +401,11 @@ export default function SalesNetworkDemo() {
                   type="button"
                   aria-pressed={skill === k}
                   onClick={() => setOpenSkill(k)}
-                  className={`px-4 py-2 rounded-full text-[13px] font-medium transition-all duration-300 ${
-                    skill === k
-                      ? 'bg-white/[0.1] text-white border border-white/[0.15]'
-                      : 'text-white/40 border border-transparent hover:text-white/70'
-                  }`}
+                  className={`type-body-sm px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+ skill === k
+ ? 'bg-white/[0.1] text-white border border-white/[0.15]'
+ : 'text-white/40 border border-transparent hover:text-white/70'
+ }`}
                 >
                   {t(`skills.${k}`)}
                 </button>
@@ -416,7 +418,7 @@ export default function SalesNetworkDemo() {
               data={profile.drivers.data}
               options={profile.drivers.options}
             />
-            <p className="text-[13px] text-white/40 leading-[1.7] mt-6">
+            <p className="type-body-sm text-white/40 mt-6">
               {t('profile.drivers.caption')}
             </p>
           </Panel>
@@ -437,7 +439,7 @@ export default function SalesNetworkDemo() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {QUADRANTS.map((q, i) => (
                 <div key={q} className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-5">
-                  <span className="block text-[12px] text-white/35 mb-3">
+                  <span className="type-caption block text-white/35 mb-3">
                     {t('quadrants.axisSoft')}{' '}
                     {t(q.startsWith('softHigh') ? 'quadrants.high' : 'quadrants.low', {
                       threshold: n(overview.softThreshold, 0),
@@ -458,10 +460,10 @@ export default function SalesNetworkDemo() {
                     className="block h-1 w-8 rounded-full mb-3"
                     style={{ backgroundColor: SERIES[i] }}
                   />
-                  <span className="block text-[15px] font-semibold text-white/90 mb-2">
+                  <span className="type-body-bold block text-white/90 mb-2">
                     {t(`quadrants.items.${q}.name`)}
                   </span>
-                  <p className="text-[13px] text-white/[0.55] leading-[1.7]">
+                  <p className="type-body-sm text-white/[0.55]">
                     {t(`quadrants.items.${q}.description`)}
                   </p>
                 </div>
@@ -472,7 +474,7 @@ export default function SalesNetworkDemo() {
           <Panel title={t('closing.heading')} body={t('closing.body')}>
             <a
               href={href('demo', lang)}
-              className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-4 py-2 text-[13px] font-semibold text-white/70 transition-colors duration-300 hover:text-white hover:border-white/[0.25]"
+              className="type-body-sm inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-4 py-2 font-semibold text-white/70 transition-colors duration-300 hover:text-white hover:border-white/[0.25]"
             >
               {t('closing.back')}
             </a>

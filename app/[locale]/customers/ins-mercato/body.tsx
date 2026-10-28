@@ -9,6 +9,7 @@ import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 import { CustomerStoryFooter, CustomerStorySection as Section } from '@/components/customers/CustomerStoryTemplate';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 
 
@@ -100,23 +101,25 @@ export default function InsMercatoStoryPage() {
                 {t('cta3')}
               </Button>
               <span className="text-white/20">/</span>
-              <span className="text-[13px] text-white/[0.65]">In’s Mercato</span>
+              <span className="type-body-sm text-white/[0.65]">In’s Mercato</span>
             </Reveal>
 
             <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
               {/* Main content */}
               <div className="lg:col-span-7">
                 <Reveal duration={0.7} delay={0.3}>
-                  <h1 className="text-[48px] md:text-[44px] font-semibold tracking-[-0.02em] text-white/95 mb-4" style={{ lineHeight: 1.2 }}>
-                    {t.rich('heading2', {
-    s: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
-  })
-                    }
-                  </h1>
-                  <p className="text-[15px] text-white/[0.60] leading-[1.65] mb-6 max-w-2xl">
-                    {t('body')
-                    }
-                  </p>
+                  <HeroCopy>
+                    <h1 className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-4" style={{ lineHeight: 1.1 }}>
+                      {t.rich('heading2', {
+      s: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+    })
+                      }
+                    </h1>
+                    <p className="type-body hero-subtitle text-white/[0.60] mb-6">
+                      {t('body')
+                      }
+                    </p>
+                  </HeroCopy>
                   <div className="flex flex-wrap gap-4">
                     <Button variant="primary" mode="dark" onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}>
                       {t('cta4')}
@@ -136,17 +139,17 @@ export default function InsMercatoStoryPage() {
                       <img loading="lazy" decoding="async" src="/logos/ins-mercato-logo.png" alt="In’s Mercato logo" className="w-full h-full object-contain " />
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">
+                      <span className="type-eyebrow text-white/30 block mb-0.5">
                         {t('text9')}
                       </span>
-                      <p className="text-[16px] font-bold text-white/90">In’s Mercato</p>
+                      <p className="type-body-bold text-white/90">In’s Mercato</p>
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
                     {CARD_FACTS.map((id) => (
                       <div key={id}>
-                        <span className="text-[10px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-0.5">{t(`clientCard.${id}.label`)}</span>
-                        <p className="text-[13px] text-white/[0.65] leading-[1.4]">{t(`clientCard.${id}.value`)}</p>
+                        <span className="type-eyebrow text-white/30 block mb-0.5">{t(`clientCard.${id}.label`)}</span>
+                        <p className="type-body-sm text-white/[0.65]">{t(`clientCard.${id}.value`)}</p>
                       </div>
                     ))}
                   </div>
@@ -172,9 +175,9 @@ export default function InsMercatoStoryPage() {
 
             {/* Context */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('text10')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('heading3')}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-6">
+              <span className="type-eyebrow block mb-4" style={{ color: '#4b4df7' }}>{t('text10')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('heading3')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-6">
                 {t.rich('body2', {
     b: (chunks) => <strong className="text-[#121212]/80 font-semibold">{chunks}</strong>,
   })
@@ -184,14 +187,14 @@ export default function InsMercatoStoryPage() {
 
             {/* Challenge */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#ea580c' }}>{t('text11')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('heading4')}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">
+              <span className="type-eyebrow block mb-4" style={{ color: '#ea580c' }}>{t('text11')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('heading4')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-14">
                 {t('body3')
                 }
               </p>
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('businessChallengesLabel')}</span>
+                <span className="type-eyebrow text-[#121212]/30 mb-5 block">{t('businessChallengesLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {BUSINESS_PAINS.map(p => (
                     <div key={p.id} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -199,13 +202,13 @@ export default function InsMercatoStoryPage() {
                         <p.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`${p.group}.${p.id}.title`)}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`${p.group}.${p.id}.desc`)}</p>
+                      <p className="type-body-sm text-[#121212]/55">{t(`${p.group}.${p.id}.desc`)}</p>
                     </div>
                   ))}
                 </div>
               </div>
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('hrChallengesLabel')}</span>
+                <span className="type-eyebrow text-[#121212]/30 mb-5 block">{t('hrChallengesLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {HR_PAINS.map(p => (
                     <div key={p.id} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -213,7 +216,7 @@ export default function InsMercatoStoryPage() {
                         <p.icon className="h-5 w-5" style={{ color: '#ea580c' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`${p.group}.${p.id}.title`)}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`${p.group}.${p.id}.desc`)}</p>
+                      <p className="type-body-sm text-[#121212]/55">{t(`${p.group}.${p.id}.desc`)}</p>
                     </div>
                   ))}
                 </div>
@@ -222,8 +225,8 @@ export default function InsMercatoStoryPage() {
 
             {/* Objectives */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('text12')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-10">{t('heading5')}</h2>
+              <span className="type-eyebrow block mb-4" style={{ color: '#4b4df7' }}>{t('text12')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-10">{t('heading5')}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {OBJECTIVES.map((o) => {
                   const [title, ...rest] = t(`objectives.${o.id}.label`).split(':');
@@ -234,7 +237,7 @@ export default function InsMercatoStoryPage() {
                         <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{title}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{desc}</p>
+                      <p className="type-body-sm text-[#121212]/55">{desc}</p>
                     </div>
                   );
                 })}
@@ -243,14 +246,14 @@ export default function InsMercatoStoryPage() {
 
             {/* Solution */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('text13')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('heading6')}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">
+              <span className="type-eyebrow block mb-4" style={{ color: '#4b4df7' }}>{t('text13')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('heading6')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-12">
                 {t('body4')
                 }
               </p>
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('text14')}</span>
+                <span className="type-eyebrow text-[#121212]/30 mb-5 block">{t('text14')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {SKILLS.map(s => (
                     <div key={s.id} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -263,13 +266,13 @@ export default function InsMercatoStoryPage() {
                 </div>
               </div>
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('text15')}</span>
+                <span className="type-eyebrow text-[#121212]/30 mb-5 block">{t('text15')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {METHODOLOGY.map((id, i) => (
                     <div key={id} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                      <span className="block text-[2.75rem] font-light leading-none mb-6" style={{ color: '#c7d2fe' }}>0{i + 1}</span>
+                      <span className="font-display block text-[2.75rem] font-light leading-none mb-6" style={{ color: '#c7d2fe' }}>0{i + 1}</span>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`methodologyCards.${id}.title`)}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`methodologyCards.${id}.text`)}</p>
+                      <p className="type-body-sm text-[#121212]/55">{t(`methodologyCards.${id}.text`)}</p>
                     </div>
                   ))}
                 </div>
@@ -278,11 +281,11 @@ export default function InsMercatoStoryPage() {
 
             {/* Results */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#047857' }}>{t('text16')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">
+              <span className="type-eyebrow block mb-4" style={{ color: '#047857' }}>{t('text16')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">
                 {t('heading7')}
               </h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-12">
                 {t('body5')
                 }
               </p>
@@ -293,16 +296,16 @@ export default function InsMercatoStoryPage() {
                 <div className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                   <div className="flex items-center gap-2 mb-6">
                     <TrendingUp className="h-4 w-4" style={{ color: '#4b4df7' }} />
-                    <span className="text-[15px] font-bold text-[#121212]">{t('diagram.title')}</span>
+                    <span className="type-body-bold text-[#121212]">{t('diagram.title')}</span>
                   </div>
 
                   <div className="grid grid-cols-1 lg:grid-cols-[1fr_40px_1fr_40px_1fr] gap-3 items-stretch mb-5">
                     {/* Step 1 */}
                     <div className="rounded-xl p-5" style={{ background: '#f1f5f9' }}>
-                      <span className="text-[10px] font-bold tracking-[0.12em] text-[#121212]/30 block mb-2">{t('diagram.step1')}</span>
+                      <span className="type-caption font-bold text-[#121212]/30 block mb-2">{t('diagram.step1')}</span>
                       <span className="block stat-value text-[#121212] leading-none mb-2 text-[32px] md:text-[clamp(2rem,3.5vw,2.8rem)]" style={{ letterSpacing: '-0.03em' }}>900</span>
-                      <p className="text-[13px] font-semibold text-[#121212]/70 leading-[1.4]">{t('body6')}</p>
-                      <p className="text-[12px] text-[#121212]/35 mt-1">{t('body7')}</p>
+                      <p className="type-body-sm font-semibold text-[#121212]/70">{t('body6')}</p>
+                      <p className="type-caption text-[#121212]/35 mt-1">{t('body7')}</p>
                     </div>
 
                     {/* Arrow */}
@@ -314,10 +317,10 @@ export default function InsMercatoStoryPage() {
 
                     {/* Step 2 */}
                     <div className="rounded-xl p-5" style={{ background: 'rgba(75,77,247,0.06)' }}>
-                      <span className="text-[10px] font-bold tracking-[0.12em] block mb-2" style={{ color: 'rgba(75,77,247,0.45)' }}>{t('diagram.step2')}</span>
+                      <span className="type-caption font-bold block mb-2" style={{ color: 'rgba(75,77,247,0.45)' }}>{t('diagram.step2')}</span>
                       <span className="block stat-value leading-none mb-2 text-[32px] md:text-[clamp(2rem,3.5vw,2.8rem)]" style={{ letterSpacing: '-0.03em', color: '#4b4df7' }}>90</span>
-                      <p className="text-[13px] font-semibold text-[#121212]/70 leading-[1.4]">{t('body8')}</p>
-                      <p className="text-[12px] text-[#121212]/35 mt-1">{t('body9')}</p>
+                      <p className="type-body-sm font-semibold text-[#121212]/70">{t('body8')}</p>
+                      <p className="type-caption text-[#121212]/35 mt-1">{t('body9')}</p>
                     </div>
 
                     {/* Arrow */}
@@ -332,20 +335,20 @@ export default function InsMercatoStoryPage() {
                       <div className="rounded-xl p-4 flex items-start justify-between gap-3" style={{ background: 'rgba(5,150,105,0.07)' }}>
                         <div>
                           <span className="block stat-value leading-none mb-1 text-[32px] md:text-[1.7rem]" style={{ color: '#059669', letterSpacing: '-0.02em' }}>47%</span>
-                          <p className="text-[13px] font-semibold text-[#121212]/80">{t('diagram.roleReady')}</p>
-                          <p className="text-[11px] text-[#121212]/35 mt-0.5">{t('body10')}</p>
+                          <p className="type-body-sm font-semibold text-[#121212]/80">{t('diagram.roleReady')}</p>
+                          <p className="type-caption text-[#121212]/35 mt-0.5">{t('body10')}</p>
                         </div>
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold shrink-0 mt-0.5" style={{ background: 'rgba(5,150,105,0.15)', color: '#059669' }}>
+                        <span className="type-caption inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-bold shrink-0 mt-0.5" style={{ background: 'rgba(5,150,105,0.15)', color: '#059669' }}>
                           {t('diagram.ready')}
                         </span>
                       </div>
                       <div className="rounded-xl p-4 flex items-start justify-between gap-3" style={{ background: 'rgba(217,119,6,0.07)' }}>
                         <div>
                           <span className="block stat-value leading-none mb-1 text-[32px] md:text-[1.7rem]" style={{ color: '#d97706', letterSpacing: '-0.02em' }}>53%</span>
-                          <p className="text-[13px] font-semibold text-[#121212]/80">{t('diagram.inDevelopment')}</p>
-                          <p className="text-[11px] text-[#121212]/35 mt-0.5">{t('body11')}</p>
+                          <p className="type-body-sm font-semibold text-[#121212]/80">{t('diagram.inDevelopment')}</p>
+                          <p className="type-caption text-[#121212]/35 mt-0.5">{t('body11')}</p>
                         </div>
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold shrink-0 mt-0.5" style={{ background: 'rgba(217,119,6,0.15)', color: '#d97706' }}>
+                        <span className="type-caption inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-bold shrink-0 mt-0.5" style={{ background: 'rgba(217,119,6,0.15)', color: '#d97706' }}>
                           {t('diagram.growing')}
                         </span>
                       </div>
@@ -353,7 +356,7 @@ export default function InsMercatoStoryPage() {
                   </div>
 
                   {/* Footnote */}
-                  <p className="text-[11px] text-[#121212]/30 flex items-center gap-1.5">
+                  <p className="type-caption text-[#121212]/30 flex items-center gap-1.5">
                     <Info className="w-3.5 h-3.5 shrink-0" strokeWidth={1.5} />
                     {t('body12')}
                   </p>
@@ -364,7 +367,7 @@ export default function InsMercatoStoryPage() {
 
                   {/* Completion Rate */}
                   <div className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm flex flex-col h-full">
-                    <p className="text-[14px] font-bold text-[#121212] mb-7">{t('body13')}</p>
+                    <p className="type-body-sm font-bold text-[#121212] mb-7">{t('body13')}</p>
                     <div className="flex flex-col items-center mb-6">
                       <div className="relative w-48 h-48 mb-5">
                         <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
@@ -376,11 +379,11 @@ export default function InsMercatoStoryPage() {
                           <span className="text-[32px] md:text-[2.4rem] stat-value text-[#121212]" style={{ letterSpacing: '-0.03em' }}>95%</span>
                         </div>
                       </div>
-                      <p className="text-[13px] text-[#121212]/50 text-left leading-[1.6] w-full">
+                      <p className="type-body-sm text-[#121212]/50 text-left w-full">
                         {t('body14')}
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 text-[13px] mt-auto" style={{ color: '#059669' }}>
+                    <div className="type-body-sm flex items-center gap-2 mt-auto" style={{ color: '#059669' }}>
                       <CheckCircle className="h-4 w-4 shrink-0" />
                       <span>{t('text17')}</span>
                     </div>
@@ -388,13 +391,13 @@ export default function InsMercatoStoryPage() {
 
                   {/* Selection Funnel */}
                   <div className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                    <p className="text-[14px] font-bold text-[#121212] mb-6">{t('body15')}</p>
+                    <p className="type-body-sm font-bold text-[#121212] mb-6">{t('body15')}</p>
                     <div className="space-y-4">
                       {FUNNEL.map(item => (
                         <div key={item.id}>
                           <div className="flex justify-between items-center mb-1.5">
-                            <span className="text-[12px] text-[#121212]/50">{t(`funnel.${item.id}.label`)}</span>
-                            <span className="text-[12px] font-semibold text-[#121212]/65">{item.value}</span>
+                            <span className="type-caption text-[#121212]/50">{t(`funnel.${item.id}.label`)}</span>
+                            <span className="type-caption font-semibold text-[#121212]/65">{item.value}</span>
                           </div>
                           <div className="h-[10px] rounded-full overflow-hidden" style={{ background: 'rgba(75,77,247,0.06)' }}>
                             <div className="h-full rounded-full" style={{ width: item.pct, background: item.color }} />
@@ -410,14 +413,14 @@ export default function InsMercatoStoryPage() {
 
               {/* Quote */}
               <div className="rounded-2xl border border-[#e5e7eb] bg-white p-8 mb-5">
-                <p className="text-[24px] font-medium text-[#121212]/75 leading-[1.75] italic mb-6">"{t('quote.text')}"</p>
+                <p className="type-blockquote-lg font-medium text-[#121212]/75 italic mb-6">"{t('quote.text')}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-[#4b4df7]/[0.15]">
                     <img loading="lazy" decoding="async" src="/logos/mirko%20tortolano.avif" alt={t('quote.author')} className="w-full h-full object-cover object-top" />
                   </div>
                   <div>
-                    <p className="text-[14px] font-semibold text-[#121212]/80">{t('quote.author')}</p>
-                    <p className="text-[12px] text-[#121212]/40 leading-[1.5]">{t('quote.role')}</p>
+                    <p className="type-body-sm font-semibold text-[#121212]/80">{t('quote.author')}</p>
+                    <p className="type-caption text-[#121212]/40">{t('quote.role')}</p>
                   </div>
                 </div>
               </div>
@@ -430,7 +433,7 @@ export default function InsMercatoStoryPage() {
                       <card.icon className="h-[22px] w-[22px]" style={{ color: '#10b981' }} />
                     </div>
                     <h4 className="text-[19px] font-bold text-[#121212] mb-3 leading-[1.3]">{t(`impactCards.${card.id}.title`)}</h4>
-                    <p className="text-[15px] text-[#121212]/55 leading-[1.55]">{t(`impactCards.${card.id}.text`)}</p>
+                    <p className="type-body text-[#121212]/55">{t(`impactCards.${card.id}.text`)}</p>
                   </div>
                 ))}
               </div>
@@ -439,13 +442,13 @@ export default function InsMercatoStoryPage() {
             {/* Future Vision */}
             <Section className="mb-5">
               <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-10">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold tracking-[0.12em] uppercase mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
+                <span className="type-eyebrow inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 block w-fit" style={{ background: 'rgba(75,77,247,0.1)', color: '#4b4df7', border: '1px solid rgba(75,77,247,0.2)' }}>
                   {t('text18')}
                 </span>
-                <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">
+                <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">
                   {t('heading8')}
                 </h2>
-                <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-8">
+                <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-8">
                   {t('body16')
                   }
                 </p>
@@ -453,7 +456,7 @@ export default function InsMercatoStoryPage() {
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.12)' }}>
                     <Target className="h-5 w-5" style={{ color: '#4b4df7' }} />
                   </div>
-                  <p className="text-[15px] text-[#121212]/75 leading-[1.7]">
+                  <p className="type-body text-[#121212]/75">
                     {t('body17')
                     }
                   </p>
@@ -462,7 +465,7 @@ export default function InsMercatoStoryPage() {
                   {t.raw('visionBullets').map((item, i) => (
                     <div key={i} className="flex items-start gap-4">
                       <ArrowRight className="h-4 w-4 mt-1 shrink-0" style={{ color: '#4b4df7' }} />
-                      <p className="text-[15px] text-[#121212]/65 leading-[1.65]">{item}</p>
+                      <p className="type-body text-[#121212]/65">{item}</p>
                     </div>
                   ))}
                 </div>
@@ -473,14 +476,14 @@ export default function InsMercatoStoryPage() {
             <Section>
               <div className="rounded-2xl border border-[#e2e8f0] bg-white p-8 lg:p-10 shadow-sm">
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase">{t('text')}</span>
+                  <span className="type-eyebrow text-[#121212]/30">{t('text')}</span>
                   <Button variant="tertiary" mode="dark" onClick={() => { router.push('/science'); window.scrollTo(0,0); }}>{t('cta')}</Button>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-[1fr_40px_1fr] gap-4 items-center">
                   <div className="rounded-xl bg-black/[0.03] p-6 text-center">{t.rich('text2', {
                     span: (chunks) => <span className="block text-[#121212] text-[32px] stat-value md:text-[2.5rem]" style={{ lineHeight: 1 }}>{chunks}</span>,
                     br: () => <br />,
-                    span2: (chunks) => <span className="text-[13px] text-[#121212]/40 mt-2 block">{chunks}</span>,
+                    span2: (chunks) => <span className="type-body-sm text-[#121212]/40 mt-2 block">{chunks}</span>,
                   })}</div>
                   <div className="hidden md:flex items-center justify-center">
                     <div className="w-7 h-7 rounded-full border border-[#e2e8f0] bg-white flex items-center justify-center">
@@ -490,7 +493,7 @@ export default function InsMercatoStoryPage() {
                   <div className="rounded-xl bg-[#4B4DF7]/[0.06] p-6 text-center">{t.rich('text3', {
                     span: (chunks) => <span className="block text-[32px] stat-value md:text-[2.5rem]" style={{ lineHeight: 1, color: '#4b4df7' }}>{chunks}</span>,
                     br: () => <br />,
-                    span2: (chunks) => <span className="text-[13px] text-[#121212]/[0.65] mt-2 block">{chunks}</span>,
+                    span2: (chunks) => <span className="type-body-sm text-[#121212]/[0.65] mt-2 block">{chunks}</span>,
                   })}</div>
                 </div>
               </div>

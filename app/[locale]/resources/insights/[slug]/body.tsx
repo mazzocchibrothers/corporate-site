@@ -11,6 +11,7 @@ import { whitepapers } from '@/data/whitepapers';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 import { trackLead } from '@/components/shared/track-lead';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 // The one dynamic route on the site. Its paths come from the same array the
 // sitemap expands, so a whitepaper cannot exist in one and not the other.
@@ -141,7 +142,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
   }, [formId]);
 
   if (!wp) {
-    return (<><Navbar /><div className="min-h-screen flex items-center justify-center"><p className="text-white/50 text-[18px]">{t('detail.body')}</p></div></>);
+    return (<><Navbar /><div className="min-h-screen flex items-center justify-center"><p className="type-body-lg text-white/50">{t('detail.body')}</p></div></>);
   }
 
   // Chapter data — English
@@ -176,16 +177,18 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                 <Reveal duration={0.7}>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {wp.topic.map(tag => (
-                      <span key={tag} className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{tag}</span>
+                      <span key={tag} className="type-caption inline-flex px-4 py-1.5 rounded-full font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08]">{tag}</span>
                     ))}
-                    <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-white/40 border border-white/[0.08] tracking-wide">{t('badge')}</span>
+                    <span className="type-caption inline-flex px-4 py-1.5 rounded-full font-semibold text-white/40 border border-white/[0.08]">{t('badge')}</span>
                   </div>
-                  <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]" style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}>
-                    {t(`items.${slug}.title`)}
-                  </h1>
-                  <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-2xl" style={{ fontWeight: 300 }}>
-                    {t(`items.${slug}.heroDesc`)}
-                  </p>
+                  <HeroCopy>
+                    <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[58px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+                      {t(`items.${slug}.title`)}
+                    </h1>
+                    <p className="type-body-lg hero-subtitle text-white/[0.5]">
+                      {t(`items.${slug}.heroDesc`)}
+                    </p>
+                  </HeroCopy>
                 </Reveal>
               </div>
               <Reveal y={20} duration={0.7} delay={0.3} className="lg:col-span-4">
@@ -203,7 +206,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                   >
                     <Download className="h-6 w-6 text-[#4B4DF7] shrink-0" />
                     <div>
-                      <span className="text-[15px] font-semibold text-white/90 block">{t('detail.cta2')}</span>
+                      <span className="type-body-bold text-white/90 block">{t('detail.cta2')}</span>
                     </div>
                     <ArrowRight className="h-4 w-4 text-white/20 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300 ml-auto" />
                   </a>
@@ -219,10 +222,10 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
             <div className="grid grid-cols-3 gap-8">
               {Array.from({ length: stats }, (_, i) => i + 1).map((n, i) => (
                 <Reveal y={15} delay={i * 0.12} key={i} className="text-center">
-                  <span className="block text-[#4B4DF7] font-semibold md:font-bold mb-3 text-[32px] md:text-[clamp(2.5rem,5vw,3.5rem)]" style={{ letterSpacing: '-0.03em', lineHeight: 1 }}>
+                  <span className="font-display block text-[#4B4DF7] font-semibold md:font-bold mb-3 text-[32px] md:text-[clamp(2.5rem,5vw,3.5rem)]" style={{ letterSpacing: '-0.03em', lineHeight: 1 }}>
                     {t(`items.${slug}.stats.s${n}.value`)}<span className="text-[0.6em] text-white/30 ml-1">{t.has(`items.${slug}.stats.s${n}.unit`) ? t(`items.${slug}.stats.s${n}.unit`) : ''}</span>
                   </span>
-                  <p className="text-[14px] text-white/35 leading-[1.6] max-w-[280px] mx-auto">{t(`items.${slug}.stats.s${n}.label`)}</p>
+                  <p className="type-body-sm text-white/35 max-w-[280px] mx-auto">{t(`items.${slug}.stats.s${n}.label`)}</p>
                 </Reveal>
               ))}
             </div>
@@ -233,10 +236,10 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
         <section className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <Reveal y={20} duration={0.6} className="mb-14 grid lg:grid-cols-2 gap-6 lg:gap-16 items-start">
-              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">
                 {t.rich('detail.insideHeading', { span: (chunks) => <span className="gradient-text-on-light">{chunks}</span> })}
               </h2>
-              <p className="text-[16px] text-[#121212]/[0.45] lg:pt-3">{t(`items.${slug}.fullDesc`)}</p>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.45] lg:pt-3">{t(`items.${slug}.fullDesc`)}</p>
             </Reveal>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {chapters.map((ch, i) => {
@@ -252,10 +255,10 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                       <div className="w-11 h-11 rounded-xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.1] flex items-center justify-center group-hover:bg-[#4B4DF7]/[0.12] transition-all duration-500">
                         <Icon className="h-5 w-5 text-[#4B4DF7]/60" />
                       </div>
-                      <span className="text-[12px] font-bold text-[#4B4DF7]/40 tracking-[0.15em]">{ch.num}</span>
+                      <span className="type-caption font-bold text-[#4B4DF7]/40">{ch.num}</span>
                     </div>
                     <h3 className="text-[17px] font-semibold text-[#121212] mb-3 leading-tight">{t(`items.${slug}.chapters.c${i + 1}.title`)}</h3>
-                    <p className="text-[14px] text-[#121212]/[0.5] leading-[1.7]">{t(`items.${slug}.chapters.c${i + 1}.desc`)}</p>
+                    <p className="type-body-sm text-[#121212]/[0.5]">{t(`items.${slug}.chapters.c${i + 1}.desc`)}</p>
                   </Reveal>
                 );
               })}
@@ -271,10 +274,10 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                 <div className="w-14 h-14 rounded-2xl bg-[#4B4DF7]/[0.12] border border-[#4B4DF7]/[0.15] flex items-center justify-center mb-8">
                   <FileText className="h-6 w-6 text-[#4B4DF7]" />
                 </div>
-                <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 tracking-[-0.02em]">{t.rich('detail.heading', {
+                <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 tracking-[-0.02em]">{t.rich('detail.heading', {
                   span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
                 })}</h2>
-                <p className="text-[15px] text-white/40">{t('detail.body2')}</p>
+                <p className="max-w-[880px] type-body text-white/40">{t('detail.body2')}</p>
               </Reveal>
               <Reveal y={20} duration={0.7} delay={0.15} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10">
                 <div id="wp-hubspot-form" ref={formRef} style={{ minHeight: '300px' }} />
@@ -287,7 +290,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
         {related.length > 0 && (
           <section className="relative pt-8 pb-2 lg:pt-10 lg:pb-2">
             <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-              <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]">{t('detail.heading2')}</h2>
+              <h2 className="max-w-[880px] text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]">{t('detail.heading2')}</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {related.map((rw, i) => {
                   return (
@@ -306,7 +309,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                       )}
                       <div className="flex-1">
                         <h3 className="text-[16px] font-semibold text-white/80 group-hover:text-white transition-colors duration-300 mb-1">{t(`items.${rw.slug}.title`)}</h3>
-                        <p className="text-[13px] text-white/35 line-clamp-1">{t(`items.${rw.slug}.shortDesc`)}</p>
+                        <p className="type-body-sm text-white/35 line-clamp-1">{t(`items.${rw.slug}.shortDesc`)}</p>
                       </div>
                       <ArrowRight className="h-4 w-4 text-white/15 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300 shrink-0" />
                     </Reveal>
@@ -324,8 +327,8 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
               duration={0.7}
               className="relative overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 text-center"
             >
-              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">{t('detail.heading3')}</h2>
-              <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">{t('detail.body3')}</p>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] mx-auto tracking-[-0.02em]">{t('detail.heading3')}</h2>
+              <p className="max-w-[880px] type-body text-white/[0.4] mb-10 mx-auto">{t('detail.body3')}</p>
               <Button
                 onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
                 variant="primary"

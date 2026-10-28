@@ -147,24 +147,51 @@ language switcher need no edit beyond the steps above.
 Pages were brought to one standard (#183, #194, #195). Match it; don't
 reintroduce per-page variants.
 
-- **H1 hero:** `font-semibold text-[48px] md:text-[64px]`, `lineHeight: 1.05`,
-  `letterSpacing: '-0.02em'`.
+- **H1 hero:** `font-semibold text-[48px] md:text-[58px]`, `lineHeight: 1.1`,
+  `letterSpacing: '-0.02em'`. Every h1 on the site is 58px from `md` up.
+- **Hero title and subtitle share one width.** Wrap the h1 and its subtitle in
+  `<HeroCopy>` (`components/ui/hero-copy.tsx`) and give the subtitle the
+  `hero-subtitle` class, with no `max-w-*` of its own. The subtitle then ends
+  on the heading's longest line, whatever the copy or the language.
+- **Titles run continuously.** No `<br>` to force a heading onto a new line
+  before the line above is full, and the accent phrase wraps word by word
+  (`h1 .gradient-text` is `display: inline`). A deliberate stacked heading
+  (book-a-demo, the homepage hero) is the exception, not the pattern.
 - **H2 section title:** `font-semibold tracking-[-0.02em]`, max `3rem` (48px)
   reached with a `4vw` slope — `text-[clamp(1.8rem,4vw,3rem)]`. The mobile
   minimum may vary; the max, the slope, the weight and the tracking don't.
+- **Section title and subtitle are at most 880px wide** (`max-w-[880px]`, plus
+  `mx-auto` when the section is centred), so their lines stay even. No `<br>`
+  in a section title, and no orphan words: `h2` is `text-wrap: balance`,
+  paragraphs and the other headings `text-wrap: pretty` (`styles/globals.css`).
 - **Accent phrase** in a heading: a `t.rich` `<span className="gradient-text">`,
   `font-semibold` like its heading — the accent differs by colour, never by
   weight.
 - **Big metric numbers** use the `.stat-value` class. Its font-weight lives
-  only in `styles/globals.css` — change it there, never per-file.
+  only in `styles/globals.css` — change it there, never per-file. The largest
+  ones (the homepage ROI and problem cards, the customers hero, the solutions
+  impact and problem stats) are `text-[32px] md:text-[54px]`.
+- **Body and rich text** use the type scale in `styles/globals.css`, one class
+  per style, each setting face (Geist), size, line height, weight and tracking:
+  `type-body-lg` 18/28 · `type-body` 16/24 · `type-body-bold` 16/24 semibold ·
+  `type-body-sm` 14/20 · `type-caption` 12/140% · `type-button` 16/100% medium ·
+  `type-link` 16/150% medium · `type-list` 16/160% · `type-blockquote-lg`
+  24/140% medium −1% · `type-blockquote` 20/32 −1% · `type-eyebrow` 12/145%
+  medium 10% uppercase · `type-code` Geist Mono 13/170%. Text that is not a
+  heading takes one of these — no hand-set `text-[Npx]`, `leading-*` or
+  `tracking-*` beside it. Headings (h1–h6), big numbers and other display text
+  stay Mona Sans; display text that is not an h-tag carries `font-display`.
+- **Eyebrows** (`type-eyebrow`) in brand colour are `#6B7DFF` (brand primary
+  400) on dark sections and `#4B4DF7` (500) on light ones.
 - **Tag pills:** `rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5
-  text-[12px] text-[#4B4B4B]` (Insights cards, Customer testimonials).
+  type-caption text-[#4B4B4B]` (Insights cards, Customer testimonials).
 - **Button labels** — primary, secondary and tertiary alike — are
-  `text-[15px] font-medium`, sentence case, never `uppercase` or tracked. A
-  hand-rolled tertiary CTA (a card's "Read the news", "Read interview") is
-  `text-[15px] font-medium text-[#4B4DF7]` with a `h-4 w-4` arrow, matching
-  the `tertiary` variant in `components/ui/button.tsx`. On dark sections the
-  `secondary` variant is a solid white outline that fills white with a
+  `type-button` (16px medium, 100% line height), sentence case, never
+  `uppercase` or tracked. A hand-rolled tertiary CTA (a card's "Read the news",
+  "Read interview") is `type-button text-[#4B4DF7]` with a `h-4 w-4` arrow,
+  matching the `tertiary` variant in `components/ui/button.tsx`. A pill's
+  height comes from its padding (`py-4` for the 48px default). On dark sections
+  the `secondary` variant is a solid white outline that fills white with a
   `#121212` label on hover — use `<Button variant="secondary" mode="dark">`,
   never a hand-rolled outline pill.
 - **Resources page heroes** (Insights, Press) are a `lg:grid-cols-12` grid: copy
@@ -194,9 +221,10 @@ For a raw `<a href>`, use `href(id, locale)` from `@/i18n/routes`.
 
 ## Conventions
 
-- **Fonts:** Mona Sans, self-hosted via `@font-face` in `styles/globals.css`.
-  `tailwind.config.ts` still says `Inter` in `fontFamily` — it is stale and
-  overridden by the `body` rule; don't "fix" it by adding Inter.
+- **Fonts:** Geist (body, one variable woff2) and Mona Sans (headings and
+  display), both self-hosted via `@font-face` in `styles/globals.css`; Geist
+  Mono for `type-code`. `tailwind.config.ts` still says `Inter` for `sans` — it
+  is stale and overridden by the `body` rule; don't "fix" it by adding Inter.
 - **`./app/**` is in the Tailwind content globs and must stay.** Without it a
   page compiles and silently loses every utility it uses.
 - **Scroll animations are `<Reveal>`, not framer-motion.** The site has one

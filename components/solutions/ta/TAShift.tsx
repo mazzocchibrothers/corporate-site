@@ -28,7 +28,7 @@ export default function TAShift() {
     <section id="ta-shift" data-testid="ta-shift" className="relative py-20 lg:py-28 md:flex md:items-center">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full">
         <Reveal duration={0.7} className="mb-10 md:mb-20">
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">{t.rich('taShift.heading', {
+          <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">{t.rich('taShift.heading', {
             span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
         </Reveal>
@@ -42,14 +42,14 @@ export default function TAShift() {
             delay={0.15}
             className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5"
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-6 block">{t('taShift.text')}</span>
+            <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('taShift.text')}</span>
             <div className="space-y-4">
               {oldItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-white/[0.06] flex items-center justify-center shrink-0 mt-0.5">
                     <X className="h-5 w-5 text-white/30" />
                   </div>
-                  <p className="text-[14px] text-white/40 leading-[1.7]">{t(`taShift.oldItems.${item}`)}</p>
+                  <p className="type-body-sm text-white/40">{t(`taShift.oldItems.${item}`)}</p>
                 </div>
               ))}
             </div>
@@ -76,14 +76,14 @@ export default function TAShift() {
             delay={0.4}
             className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-white/[0.06] p-5"
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-6 block">{t('taShift.text2')}</span>
+            <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('taShift.text2')}</span>
             <div className="space-y-4">
               {newItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-[#4B4DF7]/[0.12] flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="h-5 w-5 text-[#9B9DFB]" />
                   </div>
-                  <p className="text-[14px] text-white/[0.65] leading-[1.7]">{t(`taShift.newItems.${item}`)}</p>
+                  <p className="type-body-sm text-white/[0.65]">{t(`taShift.newItems.${item}`)}</p>
                 </div>
               ))}
             </div>
@@ -100,14 +100,14 @@ export default function TAShift() {
             delay={0.15}
             className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-10"
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-10 block">{t('taShift.text3')}</span>
+            <span className="type-eyebrow text-[#6B7DFF] mb-10 block">{t('taShift.text3')}</span>
             <div className="space-y-4 md:space-y-7">
               {oldItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-white/[0.06] flex items-center justify-center shrink-0 mt-0.5">
                     <X className="h-5 w-5 md:h-4 md:w-4 text-white/30" />
                   </div>
-                  <p className="text-[14px] md:text-[17px] text-white/40 leading-[1.7]">{t(`taShift.oldItems.${item}`)}</p>
+                  <p className="type-body text-white/40">{t(`taShift.oldItems.${item}`)}</p>
                 </div>
               ))}
             </div>
@@ -121,14 +121,14 @@ export default function TAShift() {
             delay={0.25}
             className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-white/[0.06] p-5 md:p-10"
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.12em] uppercase mb-10 block">{t('taShift.text4')}</span>
+            <span className="type-eyebrow text-[#6B7DFF] mb-10 block">{t('taShift.text4')}</span>
             <div className="space-y-4 md:space-y-7">
               {newItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-[#4B4DF7]/[0.12] flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="h-5 w-5 md:h-4 md:w-4 text-[#9B9DFB]" />
                   </div>
-                  <p className="text-[14px] md:text-[17px] text-white/[0.65] leading-[1.7]">{t(`taShift.newItems.${item}`)}</p>
+                  <p className="type-body text-white/[0.65]">{t(`taShift.newItems.${item}`)}</p>
                 </div>
               ))}
             </div>

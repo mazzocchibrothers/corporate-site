@@ -6,6 +6,7 @@ import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Clock, BookOpen, Users, Target, MessageCircle, Lock, Handshake, FileCheck, HelpCircle } from 'lucide-react';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 
 
@@ -46,16 +47,18 @@ export default async function BlogArticle3() {
             </Button>
             <Reveal duration={0.7} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
-                <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{t('tag')}</span>
-                <span className="text-[13px] text-white/35">{t('text')}</span>
-                <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('text2')}</span>
+                <span className="type-caption inline-flex px-4 py-1.5 rounded-full font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08]">{t('tag')}</span>
+                <span className="type-body-sm text-white/35">{t('text')}</span>
+                <span className="type-body-sm text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('text2')}</span>
               </div>
-              <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]" style={{ lineHeight: 1.12, letterSpacing: '-0.02em' }}>
-                {t('heading')}
-              </h1>
-              <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
-                {t('body')}
-              </p>
+              <HeroCopy>
+                <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[58px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+                  {t('heading')}
+                </h1>
+                <p className="type-body-lg hero-subtitle text-white/[0.5]">
+                  {t('body')}
+                </p>
+              </HeroCopy>
             </Reveal>
           </div>
         </section>
@@ -64,24 +67,24 @@ export default async function BlogArticle3() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <Reveal y={20} duration={0.6}>
-              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+              <p className="type-body text-[#121212]/[0.65] mb-6">
                 {t('body2')}
               </p>
-              <p className="text-[17px] text-[#121212]/[0.75] leading-[1.9] mb-6 font-medium">
+              <p className="type-body text-[#121212]/[0.75] mb-6 font-medium">
                 {t('body3')}
               </p>
 
-              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="max-w-[880px] text-[26px] font-semibold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
                 {t('heading2')}
               </h2>
-              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-6">
                 {t('body4')}
               </p>
 
-              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="max-w-[880px] text-[26px] font-semibold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">
                 {t('heading3')}
               </h2>
-              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-6">
                 {t.rich('body5', {
     b: (chunks) => <strong className="text-[#121212]/80">{chunks}</strong>,
   })}
@@ -89,11 +92,11 @@ export default async function BlogArticle3() {
               <div className="grid md:grid-cols-2 gap-4 my-8">
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white p-6">
                   <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{t('heading4')}</h3>
-                  <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{t('body6')}</p>
+                  <p className="type-body-sm text-[#121212]/[0.55]">{t('body6')}</p>
                 </div>
                 <div className="rounded-xl border border-[#4B4DF7]/[0.08] bg-white p-6">
                   <h3 className="text-[15px] font-semibold text-[#121212] mb-2">{t('heading5')}</h3>
-                  <p className="text-[14px] text-[#121212]/[0.55] leading-[1.7]">{t('body7')}</p>
+                  <p className="type-body-sm text-[#121212]/[0.55]">{t('body7')}</p>
                 </div>
               </div>
             </Reveal>
@@ -103,10 +106,10 @@ export default async function BlogArticle3() {
         {/* The 7 Techniques — Accordion */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
-            <Reveal as="h2" y={20} duration={0.6} className="text-[26px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]">
+            <Reveal as="h2" y={20} duration={0.6} className="max-w-[880px] text-[26px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]">
               {t('heading6')}
             </Reveal>
-            <p className="text-[17px] text-[#121212]/[0.5] leading-[1.9] mb-10">
+            <p className="max-w-[880px] type-body text-[#121212]/[0.5] mb-10">
               {t('body8')}
             </p>
 
@@ -123,15 +126,15 @@ export default async function BlogArticle3() {
                     className="group border-b border-[#121212]/[0.06] last:border-b-0"
                   >
                     <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
-                      <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">{t(`techniques.${technique.id}.num`)}</span>
-                      <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{t(`techniques.${technique.id}.title`)}</span>
-                      <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
+                      <span className="font-display text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">{t(`techniques.${technique.id}.num`)}</span>
+                      <span className="type-body-bold text-[#121212]/80 flex-1">{t(`techniques.${technique.id}.title`)}</span>
+                      <span className="font-display text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                     </summary>
                     <div className="pl-12 pb-6">
-                      <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8] mb-4">{t(`techniques.${technique.id}.summary`)}</p>
+                      <p className="type-body text-[#121212]/[0.55] mb-4">{t(`techniques.${technique.id}.summary`)}</p>
                       <div className="rounded-xl bg-[#121212]/[0.03] p-5 mt-3">
-                        <span className="text-[11px] font-bold text-[#4B4DF7]/50 tracking-[0.1em] uppercase mb-2 block">{t('text3')}</span>
-                        <p className="text-[14px] text-[#121212]/[0.55] leading-[1.75] italic">{t(`techniques.${technique.id}.example`)}</p>
+                        <span className="type-eyebrow text-[#4B4DF7]/50 mb-2 block">{t('text3')}</span>
+                        <p className="type-body-sm text-[#121212]/[0.55] italic">{t(`techniques.${technique.id}.example`)}</p>
                       </div>
                     </div>
                   </Reveal>
@@ -145,13 +148,13 @@ export default async function BlogArticle3() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <Reveal y={20} duration={0.6}>
-              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">
+              <h2 className="max-w-[880px] text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">
                 {t('heading7')}
               </h2>
-              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-6">
                 {t('body9')}
               </p>
-              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+              <p className="type-body text-[#121212]/[0.65] mb-6">
                 {t('body10')}
               </p>
 
@@ -160,7 +163,7 @@ export default async function BlogArticle3() {
                   <BookOpen className="h-5 w-5 text-[#4B4DF7]" />
                   <h3 className="text-[16px] font-semibold text-[#121212]">{t('heading8')}</h3>
                 </div>
-                <p className="text-[15px] text-[#121212]/[0.65] leading-[1.8]">
+                <p className="type-body text-[#121212]/[0.65]">
                   {t('body11')}
                 </p>
               </div>
@@ -172,13 +175,13 @@ export default async function BlogArticle3() {
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <Reveal duration={0.7}>
-              <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('text4')}</span>
-              <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.02em]">
+              <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('text4')}</span>
+              <h2 className="max-w-[880px] text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] mx-auto tracking-[-0.02em]">
                 {t.rich('heading9', {
     s: (chunks) => <span className="gradient-text">{chunks}</span>,
   })}
               </h2>
-              <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
+              <p className="max-w-[880px] type-body text-white/[0.4] mb-12 mx-auto">
                 {t('body12')}
               </p>
               <Button asChild
@@ -190,7 +193,7 @@ export default async function BlogArticle3() {
               </Button>
               <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
                 {['psychometricScience', 'beiMethodology', 'objectiveProfiles', 'skillsBasedHiring'].map((item) => (
-                  <span key={item} className="text-[13px] text-white/25 flex items-center gap-2">
+                  <span key={item} className="type-body-sm text-white/25 flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-[#4B4DF7]/50" />{t(`credentials.${item}`)}
                   </span>
                 ))}

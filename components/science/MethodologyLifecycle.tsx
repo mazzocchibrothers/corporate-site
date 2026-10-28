@@ -68,7 +68,7 @@ export default function MethodologyLifecycle() {
 
         {/* Title */}
         <Reveal duration={0.7} className="mb-8 md:mb-16">
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-4 md:mb-6">{t.rich('methodologyLifecycle.heading', {
+          <h2 className="max-w-[880px] text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-4 md:mb-6">{t.rich('methodologyLifecycle.heading', {
             span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
         </Reveal>
@@ -84,9 +84,9 @@ export default function MethodologyLifecycle() {
                 data-testid={`lifecycle-${s.num}`}
                 className={`w-full flex items-center gap-3 py-3.5 border-b transition-all duration-300 ${i === active ? 'border-[#9B9DFB]/30 bg-white/[0.03]' : 'border-white/[0.04]'}`}
               >
-                <span className={`text-[11px] font-bold w-6 ${i === active ? 'text-[#4B4DF7]' : 'text-white/40'}`}>{s.num}</span>
-                <span className={`text-[14px] flex-1 text-left ${i === active ? 'font-semibold text-white' : 'font-normal text-white/55'}`}>{t(`methodologyLifecycle.steps.${s.id}.title`)}</span>
-                <span className={`text-[14px] transition-transform duration-300 ${i === active ? 'text-[#4B4DF7] rotate-90' : 'text-white/30'}`}>›</span>
+                <span className={`type-caption font-bold w-6 ${i === active ? 'text-[#4B4DF7]' : 'text-white/40'}`}>{s.num}</span>
+                <span className={`type-body-sm flex-1 text-left ${i === active ? 'font-semibold text-white' : ' text-white/55'}`}>{t(`methodologyLifecycle.steps.${s.id}.title`)}</span>
+                <span className={`type-body-sm transition-transform duration-300 ${i === active ? 'text-[#4B4DF7] rotate-90' : 'text-white/30'}`}>›</span>
               </button>
               {i === active && (
                 <motion.div
@@ -95,7 +95,7 @@ export default function MethodologyLifecycle() {
                   transition={{ duration: 0.25 }}
                   className="overflow-hidden bg-white/[0.03]"
                 >
-                  <p className="text-[13px] text-white/[0.55] leading-[1.65] py-3 pl-9 pr-4">{t(`methodologyLifecycle.steps.${s.id}.desc`)}</p>
+                  <p className="type-body-sm text-white/[0.55] py-3 pl-9 pr-4">{t(`methodologyLifecycle.steps.${s.id}.desc`)}</p>
                 </motion.div>
               )}
             </div>
@@ -107,16 +107,16 @@ export default function MethodologyLifecycle() {
           <div className="flex flex-col space-y-1">
             {steps.map((s, i) => (
               <button key={s.num} onClick={() => setActive(i)} data-testid={`lifecycle-desktop-${s.num}`} className={`w-full text-left px-5 py-4 rounded-xl transition-all duration-400 flex items-center gap-4 ${i === active ? 'bg-white/[0.06] border border-white/[0.1]' : 'hover:bg-white/[0.03] border border-transparent'}`}>
-                <span className={`text-[12px] font-bold ${i === active ? 'text-[#4B4DF7]' : 'text-[#4B4DF7]/30'}`}>{s.num}</span>
-                <span className={`text-[15px] font-medium ${i === active ? 'text-white/90' : 'text-white/40'}`}>{t(`methodologyLifecycle.steps.${s.id}.title`)}</span>
+                <span className={`type-caption font-bold ${i === active ? 'text-[#4B4DF7]' : 'text-[#4B4DF7]/30'}`}>{s.num}</span>
+                <span className={`type-body font-medium ${i === active ? 'text-white/90' : 'text-white/40'}`}>{t(`methodologyLifecycle.steps.${s.id}.title`)}</span>
               </button>
             ))}
           </div>
 
           <Reveal y={10} duration={0.35} key={active} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-10">
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-4 block">{t('methodologyLifecycle.text')} {steps[active].num}</span>
+            <span className="type-eyebrow text-[#6B7DFF] mb-4 block">{t('methodologyLifecycle.text')} {steps[active].num}</span>
             <h3 className="text-[clamp(1.5rem,2.5vw,2rem)] font-semibold text-white/90 mb-5">{t(`methodologyLifecycle.steps.${steps[active].id}.title`)}</h3>
-            <p className="text-[16px] text-white/[0.55] leading-[1.75]">{t(`methodologyLifecycle.steps.${steps[active].id}.desc`)}</p>
+            <p className="type-body text-white/[0.55]">{t(`methodologyLifecycle.steps.${steps[active].id}.desc`)}</p>
           </Reveal>
         </div>
 
@@ -137,12 +137,12 @@ export default function MethodologyLifecycle() {
               >
                 <IconTile icon={Icon} mode="dark" className="mb-3" />
                 <h3 className="text-[16px] font-semibold text-white/90 mb-2">{t(`methodologyLifecycle.principles.${p.id}.title`)}</h3>
-                <p className="text-[14px] text-white/[0.6] leading-[1.65]">{t(`methodologyLifecycle.principles.${p.id}.desc`)}</p>
+                <p className="type-body-sm text-white/[0.6]">{t(`methodologyLifecycle.principles.${p.id}.desc`)}</p>
               </Reveal>
             );
           })()}
           <div className="flex items-center justify-between mt-4">
-            <span className="text-[11px] text-white/25 font-medium">{activePrinciple + 1} / {principles.length}</span>
+            <span className="type-caption text-white/25 font-medium">{activePrinciple + 1} / {principles.length}</span>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setActivePrinciple((p) => (p - 1 + principles.length) % principles.length)}
@@ -170,7 +170,7 @@ export default function MethodologyLifecycle() {
               <Reveal y={20} delay={0.15 + i * 0.1} key={p.id} className="group rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
                 <IconTile icon={Icon} mode="dark" className="mb-5" />
                 <h3 className="text-[20px] font-semibold text-white/90 mb-4">{t(`methodologyLifecycle.principles.${p.id}.title`)}</h3>
-                <p className="text-[15px] text-white/[0.65] leading-[1.75]">{t(`methodologyLifecycle.principles.${p.id}.desc`)}</p>
+                <p className="type-body text-white/[0.65]">{t(`methodologyLifecycle.principles.${p.id}.desc`)}</p>
               </Reveal>
             );
           })}

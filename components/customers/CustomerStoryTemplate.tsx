@@ -42,10 +42,10 @@ export function CustomerStoryFooter({
           <div className="grid md:grid-cols-2 gap-5">
             {stories.map((story) => (
               <a key={story.id} href={href(`customers/${story.id}`, lang)} className="group block text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
-                <span className="text-[14px] text-white/40 mb-4 block">{story.tag}</span>
+                <span className="type-body-sm text-white/40 mb-4 block">{story.tag}</span>
                 <h4 className="text-[24px] font-semibold text-white/90 mb-4">{story.company}</h4>
-                <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{story.headline}</p>
-                <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
+                <p className="type-body text-white/[0.65] mb-8">{story.headline}</p>
+                <span className="type-body-bold inline-flex items-center gap-2 text-white/50 group-hover:text-white/80 transition-colors duration-300">
                   {cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </a>

@@ -5,6 +5,7 @@ import { href } from '@/i18n/routes';
 import React, { useEffect } from 'react';
 import { Download, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 function SkillvueIcon({ size = 24 }: { size?: number }) {
   return (
@@ -22,12 +23,12 @@ function StatBox({ value, label }: { value: string; label: string }) {
   return (
     <div className="rounded-xl border border-black/[0.08] bg-white p-5 text-center">
       <div
-        className="text-[1.9rem] font-bold tracking-[-0.02em] mb-1"
+        className="font-display text-[1.9rem] font-bold tracking-[-0.02em] mb-1"
         style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
       >
         {value}
       </div>
-      <div className="text-[12px] text-[#0D0D0D]/45 leading-snug">{label}</div>
+      <div className="type-caption text-[#0D0D0D]/45">{label}</div>
     </div>
   );
 }
@@ -38,8 +39,8 @@ function Quote({ children, source }: { children: React.ReactNode; source?: strin
       className="rounded-xl p-6 my-8"
       style={{ borderLeft: '3px solid', borderImage: 'linear-gradient(180deg, #4B4DF7, #FF5F24) 1', background: 'rgba(75,77,247,0.03)' }}
     >
-      <p className="text-[15px] text-[#0D0D0D]/60 italic leading-[1.7] mb-2">{children}</p>
-      {source && <p className="text-[12px] text-[#0D0D0D]/35">— {source}</p>}
+      <p className="type-body text-[#0D0D0D]/60 italic mb-2">{children}</p>
+      {source && <p className="type-caption text-[#0D0D0D]/35">— {source}</p>}
     </div>
   );
 }
@@ -48,7 +49,7 @@ function SectionHeading({ num, title }: { num?: string; title: string }) {
   return (
     <div className="mt-12 mb-5">
       <div className="w-8 h-0.5 rounded mb-3" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-      <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D]">
+      <h2 className="max-w-[880px] text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D]">
         {num && <span className="mr-1">{num}.</span>}{title}
       </h2>
     </div>
@@ -67,7 +68,7 @@ function SubHeading({ title }: { title: string }) {
 }
 
 function Para({ children }: { children: React.ReactNode }) {
-  return <p className="text-[14.5px] text-[#0D0D0D]/70 leading-[1.75] mb-4">{children}</p>;
+  return <p className="type-body-sm text-[#0D0D0D]/70 mb-4">{children}</p>;
 }
 
 function InfoBox({ title, children }: { title: string; children: React.ReactNode }) {
@@ -77,12 +78,12 @@ function InfoBox({ title, children }: { title: string; children: React.ReactNode
       style={{ border: '1px solid rgba(75,77,247,0.2)', background: 'rgba(75,77,247,0.04)' }}
     >
       <p
-        className="text-[11px] font-bold tracking-[0.2em] uppercase mb-3"
+        className="type-eyebrow mb-3"
         style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
       >
         {title}
       </p>
-      <div className="text-[14px] text-[#0D0D0D]/65 leading-[1.7]">{children}</div>
+      <div className="type-body-sm text-[#0D0D0D]/65">{children}</div>
     </div>
   );
 }
@@ -110,7 +111,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
         >
           <div className="flex items-center gap-2.5">
             <SkillvueIcon size={24} />
-            <span className="font-bold text-[14px] text-[#0D0D0D] tracking-[-0.01em]">{t('text')}</span>
+            <span className="type-body-sm font-bold text-[#0D0D0D]">{t('text')}</span>
           </div>
           <div className="flex items-center gap-3">
             <Button asChild variant="secondary" mode="light">
@@ -140,25 +141,27 @@ export default function CareerAspirationInsuranceWhitepaper() {
             {/* Document Cover */}
             <div className="px-10 pt-12 pb-8 text-center border-b border-black/[0.06]">
               <span
-                className="inline-block px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.22em] uppercase text-white mb-7"
+                className="type-eyebrow inline-block px-4 py-1.5 rounded-full text-white mb-7"
                 style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}
               >
                 {t('text2')}</span>
-              <h1 className="text-[48px] md:text-[2rem] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.2] mb-2">
-                {t.rich('heading', {
-          s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
-        })}</h1>
-              <p className="text-[15px] text-[#0D0D0D]/45 italic mt-3 mb-6">
-                {t('body')}</p>
+              <HeroCopy className="mx-auto">
+                <h1 className="text-[48px] md:text-[58px] font-semibold tracking-[-0.025em] text-[#0D0D0D] leading-[1.1] mb-2">
+                  {t.rich('heading', {
+            s: (chunks) => <span className="block" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
+          })}</h1>
+                <p className="type-body hero-subtitle text-[#0D0D0D]/45 italic mt-3 mb-6">
+                  {t('body')}</p>
+              </HeroCopy>
               <div className="w-10 h-px mx-auto mb-5" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-              <p className="text-[13px] text-[#0D0D0D]/40">
+              <p className="type-body-sm text-[#0D0D0D]/40">
                 {t.rich('body2', {
           i: (chunks) => <em>{chunks}</em>,
         })}</p>
-              <p className="text-[13px] text-[#0D0D0D]/40 mt-1">{t.rich('body3', {
+              <p className="type-body-sm text-[#0D0D0D]/40 mt-1">{t.rich('body3', {
           i: (chunks) => <em>{chunks}</em>,
         })}</p>
-              <p className="text-[13px] text-[#0D0D0D]/40 mt-1">
+              <p className="type-body-sm text-[#0D0D0D]/40 mt-1">
                 {t.rich('body4', {
           s: (chunks) => <span style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>{chunks}</span>,
         })}</p>
@@ -194,8 +197,8 @@ export default function CareerAspirationInsuranceWhitepaper() {
 
               {/* TURNOVER PREVENIBILE */}
               <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
-                <p className="text-[13px] font-bold text-[#0D0D0D]/60 uppercase tracking-[0.15em] mb-1">{t('body7')}</p>
-                <p className="text-[13px] text-[#0D0D0D]/40 mb-5 italic">{t('body8')}</p>
+                <p className="type-body-sm font-bold text-[#0D0D0D]/60 uppercase mb-1">{t('body7')}</p>
+                <p className="type-body-sm text-[#0D0D0D]/40 mb-5 italic">{t('body8')}</p>
                 <div className="flex items-center gap-8">
                   {/* Donut chart visual */}
                   <div className="relative flex-shrink-0">
@@ -215,23 +218,23 @@ export default function CareerAspirationInsuranceWhitepaper() {
                           <stop offset="100%" stopColor="#FF5F24" />
                         </linearGradient>
                       </defs>
-                      <text x="50" y="55" textAnchor="middle" className="text-[16px] font-bold" fill="#0D0D0D" fontSize="16" fontWeight="bold">75%</text>
+                      <text x="50" y="55" textAnchor="middle" className="type-body-bold" fill="#0D0D0D" fontSize="16" fontWeight="bold">75%</text>
                     </svg>
                   </div>
                   <div>
                     <p
-                      className="text-[13px] font-semibold mb-3"
+                      className="type-body-sm font-semibold mb-3"
                       style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                     >
                       {t('body9')}</p>
-                    <div className="flex flex-col gap-1.5 text-[12px] text-[#0D0D0D]/45">
+                    <div className="type-caption flex flex-col gap-1.5 text-[#0D0D0D]/45">
                       {t.rich('text3', {
           s: (chunks) => <span className="flex items-center gap-1.5">{chunks}</span>,
           s2: (chunks) => <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}>{chunks}</span>,
           s3: (chunks) => <span className="flex items-center gap-1.5">{chunks}</span>,
           s4: (chunks) => <span className="w-2.5 h-2.5 rounded-full bg-gray-200 inline-block">{chunks}</span>,
         })}</div>
-                    <p className="text-[11px] text-[#0D0D0D]/25 mt-3 italic">{t('body10')}</p>
+                    <p className="type-caption text-[#0D0D0D]/25 mt-3 italic">{t('body10')}</p>
                   </div>
                 </div>
               </div>
@@ -296,7 +299,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
               {/* 5 dimensions */}
               <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-6">
                 <p
-                  className="text-[12px] font-bold tracking-[0.2em] uppercase mb-5 text-center"
+                  className="type-eyebrow mb-5 text-center"
                   style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                 >
                   {t('body11')}</p>
@@ -310,19 +313,19 @@ export default function CareerAspirationInsuranceWhitepaper() {
                   ].map((item, i) => (
                     <div key={i} className="flex gap-3">
                       <div
-                        className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-white text-[10px] font-bold"
+                        className="type-caption w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-white font-bold"
                         style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
                       >
                         {i + 1}
                       </div>
                       <div>
                         <p
-                          className="text-[13px] font-semibold mb-0.5"
+                          className="type-body-sm font-semibold mb-0.5"
                           style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                         >
                           {item.d}
                         </p>
-                        <p className="text-[12.5px] text-[#0D0D0D]/55 leading-[1.6]">{item.desc}</p>
+                        <p className="type-caption text-[#0D0D0D]/55">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -383,7 +386,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
           b2: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
           b3: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
         })}</Para>
-              <p className="text-[13.5px] font-semibold text-[#0D0D0D]/70 mb-3" style={{ fontStyle: 'italic' }}>
+              <p className="type-body-sm font-semibold text-[#0D0D0D]/70 mb-3" style={{ fontStyle: 'italic' }}>
                 {t('body12')}</p>
               <ul className="space-y-2.5 mb-5">
                 {[
@@ -391,7 +394,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
                   { bold: 'emersione del potenziale nascosto:', text: 'rivela i "talenti invisibili" che, pur non essendo stati pienamente valorizzati dal management di linea, mostrano una forte sintonia con la direzione strategica dell\'organizzazione.' },
                   { bold: 'monitoraggio predittivo della Retention:', text: 'fornisce ai comitati HR una mappa del rischio di uscita per i ruoli chiave, intercettando il malessere o il desiderio di cambiamento con mesi di anticipo rispetto ai segnali d\'allarme convenzionali.' },
                 ].map((item, i) => (
-                  <li key={i} className="flex gap-2.5 text-[13.5px] text-[#0D0D0D]/65 leading-[1.65]">
+                  <li key={i} className="type-body-sm flex gap-2.5 text-[#0D0D0D]/65">
                     <span className="text-[#4B4DF7] mt-1 flex-shrink-0">•</span>
                     <span><strong className="text-[#0D0D0D]/75">{item.bold}</strong> {item.text}</span>
                   </li>
@@ -416,7 +419,7 @@ export default function CareerAspirationInsuranceWhitepaper() {
 
               {/* 4-step cycle */}
               <div className="rounded-xl border border-black/[0.08] bg-[#F8F8FA] p-6 my-8">
-                <p className="text-[12px] font-bold text-[#0D0D0D]/50 text-center mb-6 uppercase tracking-[0.15em]">
+                <p className="type-eyebrow text-[#0D0D0D]/50 text-center mb-6">
                   {t('body13')}</p>
                 <div className="grid grid-cols-4 gap-3">
                   {[
@@ -427,13 +430,13 @@ export default function CareerAspirationInsuranceWhitepaper() {
                   ].map((step, i) => (
                     <div key={i} className="text-center">
                       <div
-                        className="text-[1.4rem] font-bold mb-1.5"
+                        className="font-display text-[1.4rem] font-bold mb-1.5"
                         style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                       >
                         {step.num}
                       </div>
-                      <p className="text-[12px] font-semibold text-[#0D0D0D]/70 leading-snug mb-1">{step.title}</p>
-                      <p className="text-[11px] text-[#0D0D0D]/35 leading-snug">{step.sub}</p>
+                      <p className="type-caption font-semibold text-[#0D0D0D]/70 mb-1">{step.title}</p>
+                      <p className="type-caption text-[#0D0D0D]/35">{step.sub}</p>
                       {i < 3 && (
                         <div className="hidden" />
                       )}
@@ -478,14 +481,14 @@ export default function CareerAspirationInsuranceWhitepaper() {
                   style={{ border: '1px solid rgba(0,0,0,0.07)', background: '#FAFAFA' }}
                 >
                   <div
-                    className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white text-[13px] font-bold"
+                    className="type-body-sm w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold"
                     style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
                   >
                     {item.n}
                   </div>
                   <div>
-                    <p className="text-[14px] font-bold text-[#0D0D0D]/80 mb-2 leading-snug">{item.q}</p>
-                    <p className="text-[13px] text-[#0D0D0D]/50 leading-[1.65]">{item.a}</p>
+                    <p className="type-body-sm font-bold text-[#0D0D0D]/80 mb-2">{item.q}</p>
+                    <p className="type-body-sm text-[#0D0D0D]/50">{item.a}</p>
                   </div>
                 </div>
               ))}
@@ -493,13 +496,13 @@ export default function CareerAspirationInsuranceWhitepaper() {
               {/* Next step */}
               <div className="mt-10 mb-8">
                 <div className="w-8 h-0.5 rounded mb-3" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)' }} />
-                <h2 className="text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D] mb-4">{t('heading2')}</h2>
+                <h2 className="max-w-[880px] text-[1.5rem] font-semibold tracking-[-0.02em] text-[#0D0D0D] mb-4">{t('heading2')}</h2>
               </div>
               <Para>
                 {t.rich('text23', {
           b: (chunks) => <strong className="text-[#0D0D0D]/80">{chunks}</strong>,
         })}</Para>
-              <p className="text-[14px] text-[#0D0D0D]/50 mb-8">
+              <p className="type-body-sm text-[#0D0D0D]/50 mb-8">
                 {t.rich('body15', {
           a: (chunks) => <a href="https://www.skillvue.ai/contact-us" className="hover:opacity-70 transition-opacity" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>{chunks}</a>,
         })}</p>
@@ -542,17 +545,17 @@ export default function CareerAspirationInsuranceWhitepaper() {
                     'LinkedIn. (2024). Workforce Learning Report 2024. LinkedIn Talent Solutions.',
                     'EIOPA. (2024). Insurance Labour Market and Conduct Supervisory Report.',
                   ].map((ref, i) => (
-                    <li key={i} className="text-[12px] text-[#0D0D0D]/40 italic leading-[1.6]">{ref}</li>
+                    <li key={i} className="type-caption text-[#0D0D0D]/40 italic">{ref}</li>
                   ))}
                 </ul>
               </div>
 
               {/* Footer */}
               <div className="border-t border-black/[0.07] pt-6 mt-8 flex items-center justify-between">
-                <span className="text-[11px] text-[#0D0D0D]/25">{t('text26')}</span>
+                <span className="type-caption text-[#0D0D0D]/25">{t('text26')}</span>
                 <div className="flex items-center gap-2">
                   <SkillvueIcon size={16} />
-                  <span className="text-[11px] text-[#0D0D0D]/25">{t('text27')}</span>
+                  <span className="type-caption text-[#0D0D0D]/25">{t('text27')}</span>
                 </div>
               </div>
 
@@ -562,14 +565,14 @@ export default function CareerAspirationInsuranceWhitepaper() {
 
         {/* Page footer */}
         <div className="py-6 px-6 text-center">
-          <p className="text-[12px] text-[#0D0D0D]/30">
+          <p className="type-caption text-[#0D0D0D]/30">
             {tl('copyright', { year: new Date().getFullYear() })} ·{' '}
-            <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+            <Button asChild variant="tertiary" mode="light" icon={null} className="type-caption">
               {t.rich('text28', {
           a: (chunks) => <a href={href('privacy-policy', 'it')}>{chunks}</a>,
         })}</Button>
             {' '}·{' '}
-            <Button asChild variant="tertiary" mode="light" icon={null} className="text-[12px]">
+            <Button asChild variant="tertiary" mode="light" icon={null} className="type-caption">
               {t.rich('text29', {
           a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
         })}</Button>

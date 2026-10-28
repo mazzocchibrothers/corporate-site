@@ -1,23 +1,25 @@
 .page { padding: 120px 0 0; color: #fff; }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
 .hero { max-width: 880px; padding: 30px 0 22px; }
-.eyebrow, .label, .ticks, .range, .payback span { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
-.eyebrow { color: #9395ff; margin-bottom: 14px; }
-.intro { color: rgb(255 255 255 / .65); font-size: 17px; line-height: 1.6; max-width: 60ch; margin-top: 20px; }
+/* Text follows the site type scale (styles/globals.css, type-*): eyebrows are
+   Geist Medium 12px / 145% / 10% tracking, numbers are Mona Sans display. */
+.eyebrow, .label, .ticks, .range, .payback span { font-size: 12px; line-height: 1.45; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+.eyebrow { color: #6b7dff; margin-bottom: 14px; }
+.intro { color: rgb(255 255 255 / .65); font-size: 18px; line-height: 28px; margin-top: 20px; }
 .modules { display: flex; gap: 2px; margin-top: 22px; border-bottom: 1px solid rgb(255 255 255 / .12); overflow-x: auto; }
-.modules button { padding: 13px 18px; white-space: nowrap; color: rgb(255 255 255 / .6); border-bottom: 2px solid transparent; }
+.modules button { padding: 13px 18px; font-size: 16px; line-height: 24px; white-space: nowrap; color: rgb(255 255 255 / .6); border-bottom: 2px solid transparent; }
 .modules button[aria-pressed=true] { color: #fff; border-color: #4b4df7; }
 .modules button:hover, .scenarios button:hover { color: #fff; }
 .page button:focus-visible, .page input:focus-visible, .page summary:focus-visible { outline: 2px solid #9395ff; outline-offset: 4px; }
 .grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 52px; align-items: center; padding-top: 38px; }
 .positioning { margin-bottom: 22px; color: rgb(255 255 255 / .6); }
 .positioning .eyebrow { margin-bottom: 12px; }
-.headline { font-size: clamp(23px, 2.7vw, 32px); font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin-bottom: 13px; }
-.sub { color: rgb(255 255 255 / .65); line-height: 1.6; margin-bottom: 30px; max-width: 44ch; }
+.headline { font-family: 'Mona Sans', sans-serif; font-size: clamp(23px, 2.7vw, 32px); font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin-bottom: 13px; }
+.sub { color: rgb(255 255 255 / .65); font-size: 16px; line-height: 24px; margin-bottom: 30px; max-width: 44ch; }
 .controls { display: flex; flex-direction: column; gap: 24px; }
 .fieldHead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
 .label { color: rgb(255 255 255 / .65); }
-.value { background: transparent; border: 1px solid transparent; border-radius: 7px; text-align: right; width: 11ch; max-width: 55%; padding: 3px 7px; font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.value { background: transparent; border: 1px solid transparent; border-radius: 7px; text-align: right; width: 11ch; max-width: 55%; padding: 3px 7px; font-family: 'Mona Sans', sans-serif; font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .value:hover { border-color: rgb(255 255 255 / .2); }
 .value:focus { background: #0d0d1f; border-color: #4b4df7; }
 .slider { width: 100%; height: 28px; accent-color: #7577f8; cursor: pointer; background: transparent; }
@@ -27,7 +29,7 @@
 .instrument { background: rgb(255 255 255 / .04); border: 1px solid rgb(255 255 255 / .07); border-radius: 16px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
 .instrument { padding: 24px 30px 26px; min-width: 0; }
 .scenarios { display: flex; gap: 4px; padding: 4px; background: rgb(255 255 255 / .03); border: 1px solid rgb(255 255 255 / .08); border-radius: 11px; margin-bottom: 20px; }
-.scenarios button { flex: 1; padding: 9px 6px; border-radius: 8px; font-size: 13px; color: rgb(255 255 255 / .65); }
+.scenarios button { flex: 1; padding: 9px 6px; border-radius: 8px; font-size: 14px; line-height: 20px; color: rgb(255 255 255 / .65); }
 /* White, not brand blue: the selected scenario must not compete with the CTAs. */
 .scenarios button[aria-pressed=true] { background: rgb(255 255 255 / .12); color: #fff; box-shadow: inset 0 0 0 1px rgb(255 255 255 / .1); }
 .gaugeWrap { position: relative; width: 100%; max-width: 372px; margin: 0 auto; }
@@ -36,13 +38,13 @@
 /* Dimmed: the needle crosses the amount and must not compete with it. */
 .needle { transform-origin: 150px 150px; transition: transform .6s; opacity: .3; }
 .readout { position: absolute; left: 0; right: 0; top: 42%; text-align: center; pointer-events: none; }
-.amount { font-size: clamp(28px, 4.5vw, 46px); font-weight: 700; letter-spacing: -.03em; color: #fff; line-height: 1.1; font-variant-numeric: tabular-nums; }
-.readout .label { margin-top: 9px; font-size: 10px; }
-.range { text-align: center; margin-top: 2px; color: rgb(255 255 255 / .55); font-size: 10px; letter-spacing: 0; line-height: 1.8; text-transform: none; }
+.amount { font-family: 'Mona Sans', sans-serif; font-size: clamp(28px, 4.5vw, 46px); font-weight: 700; letter-spacing: -.03em; color: #fff; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.readout .label { margin-top: 9px; }
+.range { text-align: center; margin-top: 2px; color: rgb(255 255 255 / .55); font-size: 12px; font-weight: 400; letter-spacing: 0; line-height: 1.4; text-transform: none; }
 .range b { color: rgb(255 255 255 / .8); font-weight: 500; }
-.roi { text-align: center; margin-top: 8px; color: rgb(255 255 255 / .65); font-size: 11px; }
-.roi strong { font-size: 20px; font-weight: 600; color: #fff; }
-.fit { text-align: center; color: #93e0bb; font-size: 13px; max-width: 38ch; margin: 6px auto 0; }
+.roi { text-align: center; margin-top: 8px; color: rgb(255 255 255 / .65); font-size: 12px; line-height: 1.4; }
+.roi strong { font-family: 'Mona Sans', sans-serif; font-size: 20px; font-weight: 600; color: #fff; }
+.fit { text-align: center; color: #93e0bb; font-size: 14px; line-height: 20px; max-width: 38ch; margin: 6px auto 0; }
 .breakdown { margin-top: 24px; padding-top: 22px; border-top: 1px solid rgb(255 255 255 / .1); }
 .bar { height: 12px; border-radius: 99px; overflow: hidden; display: flex; }
 .bar span { background: #4b4df7; }
@@ -50,18 +52,17 @@
 .driver { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; padding-left: 16px; position: relative; }
 .driver::before { content: ''; position: absolute; left: 0; top: 5px; width: 8px; height: 8px; border-radius: 3px; background: #4b4df7; }
 .softDriver::before { background: #93e0bb; }
-.driver b { font-size: 13px; font-weight: 600; display: block; }
-.driver small { font-size: 12px; color: rgb(255 255 255 / .6); }
-.driver strong { font-size: 16px; font-weight: 600; white-space: nowrap; }
+.driver b { font-size: 14px; line-height: 20px; font-weight: 600; display: block; }
+.driver small { font-size: 12px; line-height: 1.4; color: rgb(255 255 255 / .6); }
+.driver strong { font-family: 'Mona Sans', sans-serif; font-size: 16px; font-weight: 600; white-space: nowrap; }
 .payback { display: flex; justify-content: center; align-items: baseline; gap: 10px; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / .1); }
-.payback strong { font-size: 26px; }
+.payback strong { font-family: 'Mona Sans', sans-serif; font-size: 26px; }
 .payback span { color: rgb(255 255 255 / .65); }
 @media (max-width: 880px) {
   .grid { grid-template-columns: 1fr; gap: 36px; padding-top: 26px; }
   .wrap { padding: 0 18px; }
   .hero { padding-top: 10px; }
   .instrument { padding: 20px 18px; }
-  .scenarios button { font-size: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .arc, .needle { transition: none; }
@@ -70,15 +71,15 @@
 .dialog::backdrop { background: rgb(0 0 0 / .75); backdrop-filter: blur(4px); }
 .dialogInner { padding: 26px 28px; }
 .dialogInner h2 { font-size: 20px; font-weight: 600; padding-right: 28px; letter-spacing: -.02em; }
-.dialogInner p { margin: 10px 0 24px; color: rgb(255 255 255 / .65); font-size: 14px; }
+.dialogInner p { margin: 10px 0 24px; color: rgb(255 255 255 / .65); font-size: 14px; line-height: 20px; }
 .close { float: right; padding: 4px; color: rgb(255 255 255 / .7); border-radius: 4px; }
 .close:focus-visible { outline: 2px solid #9395ff; outline-offset: 2px; }
 
-.captureForm label { display: block; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgb(255 255 255 / .65); margin-bottom: 5px; }
-.captureForm input:not([type=checkbox]), .captureForm select { width: 100%; background: #0d0d1f; border: 1px solid rgb(255 255 255 / .15); border-radius: 8px; padding: 10px 12px; color: #fff; font-size: 14px; margin-bottom: 13px; }
+.captureForm label { display: block; font-size: 12px; line-height: 1.45; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgb(255 255 255 / .65); margin-bottom: 5px; }
+.captureForm input:not([type=checkbox]), .captureForm select { width: 100%; background: #0d0d1f; border: 1px solid rgb(255 255 255 / .15); border-radius: 8px; padding: 10px 12px; color: #fff; font-size: 14px; line-height: 20px; margin-bottom: 13px; }
 .captureForm input:focus-visible, .captureForm select:focus-visible { outline: 2px solid #9395ff; outline-offset: 2px; }
-.captureForm .consent { display: flex; gap: 8px; align-items: flex-start; font-size: 11px; letter-spacing: 0; text-transform: none; line-height: 1.5; margin-top: 4px; }
+.captureForm .consent { display: flex; gap: 8px; align-items: flex-start; font-size: 12px; font-weight: 400; letter-spacing: 0; text-transform: none; line-height: 1.4; margin-top: 4px; }
 .consent input { margin-top: 3px; flex: none; accent-color: #4b4df7; }
 .consent a { color: #9395ff; text-decoration: underline; }
-.dialogInner .formNote { font-size: 11px; color: rgb(255 255 255 / .55); line-height: 1.5; margin: 12px 0; }
-.captureForm [role=alert] { font-size: 13px; }
+.dialogInner .formNote { font-size: 12px; color: rgb(255 255 255 / .55); line-height: 1.4; margin: 12px 0; }
+.captureForm [role=alert] { font-size: 14px; line-height: 20px; }

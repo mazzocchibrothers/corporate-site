@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { IconTile } from '@/components/ui/icon-tile';
 import { href } from '@/i18n/routes';
 import { trackLead } from '@/components/shared/track-lead';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 /**
  * The shape shared by every page that is just "headline + copy + a HubSpot
@@ -110,17 +111,19 @@ export default function HubspotLandingPage({
                 </Button>
               )}
 
-              <h1
-                className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-4"
-                style={{ lineHeight: 1.05 }}
-              >{t.rich('heading', {
-                span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
-                br: () => <br />,
-              })}</h1>
+              <HeroCopy>
+                <h1
+                  className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-4"
+                  style={{ lineHeight: 1.1 }}
+                >{t.rich('heading', {
+                  span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+                  br: () => <br />,
+                })}</h1>
 
-              <p className="text-[16px] text-white/[0.55] leading-[1.65] max-w-md" style={{ fontWeight: 300 }}>
-                {t('body')}
-              </p>
+                <p className="type-body hero-subtitle text-white/[0.55]">
+                  {t('body')}
+                </p>
+              </HeroCopy>
             </div>
 
             {/* Right. HubSpot Form */}
@@ -144,10 +147,10 @@ export default function HubspotLandingPage({
                     style={{ minHeight: '400px' }}
                   >
                     <IconTile icon={CheckCircle} />
-                    <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-white/95" style={{ lineHeight: 1.1 }}>
+                    <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-white/95" style={{ lineHeight: 1.1 }}>
                       {t('thankYou.heading')}
                     </h2>
-                    <p className="text-[16px] text-white/[0.55] leading-[1.65] max-w-md" style={{ fontWeight: 300 }}>
+                    <p className="max-w-[880px] type-body text-white/[0.55]">
                       {t('thankYou.body')}
                     </p>
                   </div>

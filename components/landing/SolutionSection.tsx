@@ -52,16 +52,16 @@ export default function SolutionSection() {
         </div>
 
         {/* Description */}
-        <p className="text-[13px] md:text-[16px] text-white/[0.55] md:text-white/[0.65] group-hover:text-white/[0.75] leading-[1.5] md:leading-[1.75] transition-colors duration-500 mb-4 md:mb-8 mt-2 md:mt-4">
+        <p className="type-body text-white/[0.55] md:text-white/[0.65] group-hover:text-white/[0.75] transition-colors duration-500 mb-4 md:mb-8 mt-2 md:mt-4">
           {t(`solution.pillars.${pillar.id}.desc`)}
         </p>
 
         {/* Stat */}
         <div className="flex items-baseline gap-2 md:gap-3">
-          <span className="text-[22px] md:text-[1.8rem] text-[#9B9DFB] font-semibold tracking-tight leading-none">
+          <span className="font-display text-[22px] md:text-[1.8rem] text-[#9B9DFB] font-semibold tracking-tight leading-none">
             {t(`solution.pillars.${pillar.id}.stat`)}
           </span>
-          <span className="text-[11px] md:text-[13px] text-white/50 font-medium tracking-wide leading-tight">
+          <span className="type-body-sm text-white/50 font-medium">
             {t(`solution.pillars.${pillar.id}.statLabel`)}
           </span>
         </div>
@@ -74,11 +74,11 @@ export default function SolutionSection() {
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         {/* Header */}
         <Reveal duration={0.7} className="mb-16 lg:mb-20">
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 max-w-3xl">{t.rich('solution.heading', {
+          <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">{t.rich('solution.heading', {
             br: () => <br />,
             span: (chunks) => <span className="font-semibold gradient-text-warm">{chunks}</span>,
           })}</h2>
-          <p className="text-[15px] md:text-[18px] text-white/[0.65] leading-[1.7] mt-4 md:mt-6 max-w-xl">{t('solution.body')}</p>
+          <p className="max-w-[880px] type-body-lg text-white/[0.65] mt-4 md:mt-6">{t('solution.body')}</p>
         </Reveal>
 
         {/* Cards grid */}

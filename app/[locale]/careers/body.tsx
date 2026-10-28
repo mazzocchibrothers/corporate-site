@@ -8,6 +8,7 @@ import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { useRouter } from '@/i18n/navigation';
 import { Button, buttonVariants } from '@/components/ui/button';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 const stats = [
   {
@@ -110,14 +111,16 @@ export default function CareersPage() {
 
               {/* Left — headline + CTAs */}
               <Reveal duration={0.7}>
-                <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">{t('text')}</span>
-                <h1
-                  className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]"
-                  style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-                >{t.rich('heading', {
-                  span: (chunks) => <span className="italic font-semibold gradient-text-warm">{chunks}</span>,
-                })}</h1>
-                <p className="text-[15px] md:text-[17px] text-white/55 leading-[1.7] mb-8 max-w-lg font-light">{t('body')}</p>
+                <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('text')}</span>
+                <HeroCopy>
+                  <h1
+                    className="font-semibold text-white/95 mb-6 text-[48px] md:text-[58px]"
+                    style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
+                  >{t.rich('heading', {
+                    span: (chunks) => <span className="italic font-semibold gradient-text-warm">{chunks}</span>,
+                  })}</h1>
+                  <p className="type-body hero-subtitle text-white/55 mb-8">{t('body')}</p>
+                </HeroCopy>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild variant="primary" mode="dark">
                     <a href="#open-roles">
@@ -171,10 +174,10 @@ export default function CareersPage() {
                   key={i}
                   className={`pt-6 pb-8 ${i % 2 !== 0 ? 'pl-6 md:pl-8' : ''}`}
                 >
-                  <p className="text-[32px] md:text-[34px] font-semibold text-white/90 tracking-[-0.02em] leading-none mb-1.5">
+                  <p className="font-display text-[32px] md:text-[34px] font-semibold text-white/90 tracking-[-0.02em] leading-none mb-1.5">
                     {t(`stats.${s.id}.value`)}
                   </p>
-                  <p className="text-[12px] md:text-[13px] text-white/40 leading-[1.4]">{t(`stats.${s.id}.label`)}</p>
+                  <p className="type-body-sm text-white/40">{t(`stats.${s.id}.label`)}</p>
                 </div>
               ))}
             </Reveal>
@@ -185,14 +188,14 @@ export default function CareersPage() {
         <section className="section-breathe py-20 lg:py-28 min-h-screen flex flex-col justify-center">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full">
             <Reveal duration={0.7} className="max-w-4xl">
-              <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-6 block">{t('text2')}</span>
+              <span className="type-eyebrow text-[#4B4DF7] mb-6 block">{t('text2')}</span>
               <h2
-                className="font-semibold text-[#121212] mb-6"
+                className="max-w-[880px] font-semibold text-[#121212] mb-6"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t.rich('heading2', {
                 span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
               })}</h2>
-              <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.7] mb-8 max-w-2xl">{t('body2')}</p>
+              <p className="max-w-[880px] type-body text-[#7A7A7A] mb-8">{t('body2')}</p>
               <Button asChild variant="secondary" mode="light">
                 <a href="/about" onClick={(e) => { e.preventDefault(); router.push('/about'); window.scrollTo(0, 0); }}>
                   {t('cta3')}
@@ -214,14 +217,14 @@ export default function CareersPage() {
           />
           <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <Reveal duration={0.7} className="mb-12 lg:mb-16 max-w-2xl">
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-6 block">{t('text3')}</span>
+              <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('text3')}</span>
               <h2
-                className="font-semibold text-white/95 mb-4"
+                className="max-w-[880px] font-semibold text-white/95 mb-4"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t.rich('heading3', {
                 span: (chunks) => <span className="italic font-semibold gradient-text-warm">{chunks}</span>,
               })}</h2>
-              <p className="text-[15px] md:text-[17px] text-white/50 leading-[1.7] font-light">{t('body3')}</p>
+              <p className="max-w-[880px] type-body text-white/50">{t('body3')}</p>
             </Reveal>
 
             {/* Step cards */}
@@ -233,13 +236,13 @@ export default function CareersPage() {
                   key={step.num}
                   className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 md:p-8 lg:p-10"
                 >
-                  <span className="block text-[40px] md:text-[56px] font-light text-white/10 leading-none tracking-[-0.04em] mb-6 md:mb-8">
+                  <span className="font-display block text-[40px] md:text-[56px] font-light text-white/10 leading-none tracking-[-0.04em] mb-6 md:mb-8">
                     {step.num}
                   </span>
                   <h3 className="text-[16px] md:text-[18px] font-semibold text-white/90 mb-3 leading-snug">
                     {t(`steps.${step.id}.title`)}
                   </h3>
-                  <p className="text-[13px] md:text-[14px] text-white/50 leading-[1.6]">{t(`steps.${step.id}.desc`)}</p>
+                  <p className="type-body-sm text-white/50">{t(`steps.${step.id}.desc`)}</p>
                 </Reveal>
               ))}
             </div>
@@ -253,7 +256,7 @@ export default function CareersPage() {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[12px] font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03] tracking-wide"
+                  className="type-caption inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03]"
                 >
                   {t(`tags.${tag}`)}
                 </span>
@@ -266,12 +269,12 @@ export default function CareersPage() {
         <section id="life-at-skillvue" className="section-breathe py-20 lg:py-28 min-h-screen flex flex-col justify-center">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <Reveal duration={0.7} className="mb-10 lg:mb-12">
-              <span className="text-[11px] font-bold text-[#4B4DF7] tracking-[0.2em] uppercase mb-4 block">{t('text4')}</span>
+              <span className="type-eyebrow text-[#4B4DF7] mb-4 block">{t('text4')}</span>
               <h2
-                className="font-semibold text-[#121212] mb-2"
+                className="max-w-[880px] font-semibold text-[#121212] mb-2"
                 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t('heading4')}</h2>
-              <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.6]">{t('body4')}</p>
+              <p className="max-w-[880px] type-body text-[#7A7A7A]">{t('body4')}</p>
             </Reveal>
 
             {/* Photo mosaic — large left + 2×2 right */}
@@ -307,9 +310,9 @@ export default function CareersPage() {
         <section id="open-roles" className="relative py-20 lg:py-28 min-h-screen flex flex-col justify-start">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full">
             <Reveal duration={0.7} className="mb-8 lg:mb-10">
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.2em] uppercase mb-4 block">{t('text5')}</span>
+              <span className="type-eyebrow text-[#6B7DFF] mb-4 block">{t('text5')}</span>
               <h2
-                className="font-semibold text-white/95"
+                className="max-w-[880px] font-semibold text-white/95"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t('heading5')}</h2>
             </Reveal>
@@ -320,11 +323,11 @@ export default function CareersPage() {
                 <button
                   key={f}
                   onClick={() => setActiveFilter(f)}
-                  className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${
-                    activeFilter === f
-                      ? 'bg-white/[0.1] text-white border border-white/[0.15]'
-                      : 'text-white/40 border border-transparent hover:text-white/70'
-                  }`}
+                  className={`type-body-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full font-medium transition-all duration-300 ${
+ activeFilter === f
+ ? 'bg-white/[0.1] text-white border border-white/[0.15]'
+ : 'text-white/40 border border-transparent hover:text-white/70'
+ }`}
                 >
                   {f}
                 </button>
@@ -339,7 +342,7 @@ export default function CareersPage() {
                   delay={gi * 0.07}
                   key={team}
                 >
-                  <p className="text-[11px] font-medium text-white/40 tracking-[0.05em] uppercase mb-3">
+                  <p className="type-eyebrow font-medium text-white/40 mb-3">
                     {team}
                   </p>
                   <div className="flex flex-col gap-2">
@@ -351,11 +354,11 @@ export default function CareersPage() {
                         rel="noopener noreferrer"
                         className="group flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6 rounded-2xl border border-white/[0.07] bg-white/[0.03] hover:border-white/[0.14] hover:bg-white/[0.05] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
                       >
-                        <span className="text-[15px] md:text-[17px] font-semibold text-white/85 group-hover:text-white/95 transition-colors duration-300">
+                        <span className="type-body-bold text-white/85 group-hover:text-white/95 transition-colors duration-300">
                           {role.title}
                         </span>
                         <div className="flex items-center justify-between w-full gap-4 md:w-auto md:justify-start shrink-0">
-                          <span className="text-[13px] text-white/35">
+                          <span className="type-body-sm text-white/35">
                             {role.location} · {role.work}
                           </span>
                           <span className={buttonVariants({ variant: 'secondary', mode: 'dark' })}>
@@ -370,7 +373,7 @@ export default function CareersPage() {
               ))}
 
               {Object.keys(grouped).length === 0 && (
-                <p className="text-[15px] text-white/35 py-8">{t('body5')}</p>
+                <p className="type-body text-white/35 py-8">{t('body5')}</p>
               )}
             </div>
           </div>
@@ -381,7 +384,7 @@ export default function CareersPage() {
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <Reveal duration={0.7} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-8 lg:p-10 text-center">
               <h2
-                className="font-semibold text-white/90 mx-auto mb-6 max-w-2xl"
+                className="max-w-[880px] font-semibold text-white/90 mx-auto mb-6"
                 style={{
                   fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
                   lineHeight: 1.05,

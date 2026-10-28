@@ -10,6 +10,7 @@ import { ArrowDown, ArrowRight, Newspaper } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 // Structure: the card's image. The title, the date and the tag are copy and
 // live in messages/ under blog.articles, keyed on the same slug as the post
@@ -64,15 +65,15 @@ export default function BlogPage() {
         </div>
         <div className="p-5 md:p-7 flex-1 flex flex-col">
           <div className="flex items-center gap-3 mb-3 md:mb-4">
-            <span className="inline-flex rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[12px] text-[#4B4B4B] whitespace-nowrap">
+            <span className="type-caption inline-flex rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[#4B4B4B] whitespace-nowrap">
               {t(`articles.${article.id}.tag`)}
             </span>
-            <span className="text-[12px] text-[#121212]/30">{t(`articles.${article.id}.date`)}</span>
+            <span className="type-caption text-[#121212]/30">{t(`articles.${article.id}.date`)}</span>
           </div>
           <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212] leading-snug mb-3 md:mb-4">
             {t(`articles.${article.id}.title`)}
           </h3>
-          <span className="text-[15px] font-medium text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100 transition-opacity duration-300">
+          <span className="type-button font-medium text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100 transition-opacity duration-300">
             {t('text')} <ArrowRight className="h-4 w-4" />
           </span>
         </div>
@@ -102,7 +103,7 @@ export default function BlogPage() {
         {/* The date sits on the cover, so shade its lower edge — a cover's
             own bottom is often a pale shirt or a lit wall. */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2a2350]/75 via-[#2a2350]/10 via-45% to-transparent" />
-        <p className="absolute bottom-5 left-5 md:bottom-6 md:left-6 text-[22px] md:text-[24px] font-semibold leading-none tracking-[-0.01em] text-white">{month}, {year}</p>
+        <p className="font-display absolute bottom-5 left-5 md:bottom-6 md:left-6 text-[22px] md:text-[24px] font-semibold leading-none tracking-[-0.01em] text-white">{month}, {year}</p>
         {/* The arrow says the card opens. Touch has no hover, so mobile shows
             it always; desktop brings it in on hover. */}
         <ArrowRight aria-hidden="true" className="absolute bottom-5 right-5 h-6 w-6 text-white transition-all duration-300 md:bottom-6 md:right-6 md:-translate-x-1 md:opacity-0 md:group-hover:translate-x-0 md:group-hover:opacity-100 md:group-focus-visible:translate-x-0 md:group-focus-visible:opacity-100" strokeWidth={2} />
@@ -119,14 +120,16 @@ export default function BlogPage() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               <Reveal duration={0.7} className="lg:col-span-7">
-                <h1
-                  className="font-semibold text-white/95 mb-8 text-[48px] md:text-[64px]"
-                  style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-                >{t.rich('heading', {
-                  br: () => <br />,
-                  span: (chunks) => <span className="gradient-text">{chunks}</span>,
-                })}</h1>
-                <p className="text-[20px] text-white/[0.45] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>{t('body')}</p>
+                <HeroCopy>
+                  <h1
+                    className="font-semibold text-white/95 mb-8 text-[48px] md:text-[58px]"
+                    style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
+                  >{t.rich('heading', {
+                    br: () => <br />,
+                    span: (chunks) => <span className="gradient-text">{chunks}</span>,
+                  })}</h1>
+                  <p className="type-body-lg hero-subtitle text-white/[0.45] mb-12">{t('body')}</p>
+                </HeroCopy>
                 <Button asChild variant="secondary" mode="dark" className="group">
                   <a
                     href="#articles"
@@ -154,8 +157,8 @@ export default function BlogPage() {
             <Reveal y={20} duration={0.6} className="mb-10 md:mb-14">
               <div className="relative overflow-hidden rounded-3xl bg-[#030101] flex flex-col md:flex-row md:items-stretch justify-between gap-2 md:gap-8">
                 <div className="relative z-10 flex flex-col justify-center px-8 py-10 md:px-14 md:py-14 md:flex-[38]">
-                  <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#9B9DFB]">{t('newsletterBanner.eyebrow')}</p>
-                  <h2 className="mt-4 text-[clamp(2.25rem,6vw,5rem)] font-medium leading-[1] tracking-[-0.03em] text-white">
+                  <p className="type-eyebrow text-[#6B7DFF]">{t('newsletterBanner.eyebrow')}</p>
+                  <h2 className="max-w-[880px] mt-4 text-[clamp(2.25rem,6vw,5rem)] font-medium leading-[1] tracking-[-0.03em] text-white">
                     {t('newsletterBanner.title')}
                   </h2>
                 </div>
@@ -185,7 +188,7 @@ export default function BlogPage() {
         <section className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 pb-20 lg:pb-28">
             <Reveal y={20} duration={0.6} className="mb-8 md:mb-12">
-              <h2 className="text-[clamp(1.5rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading2')}</h2>
+              <h2 className="max-w-[880px] text-[clamp(1.5rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading2')}</h2>
             </Reveal>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -201,8 +204,8 @@ export default function BlogPage() {
               duration={0.7}
               className="relative overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 text-center"
             >
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">{t('heading3')}</h2>
-              <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">{t('body2')}</p>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] mx-auto tracking-[-0.02em]">{t('heading3')}</h2>
+              <p className="max-w-[880px] type-body text-white/[0.4] mb-10 mx-auto">{t('body2')}</p>
               <Button
                 onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
                 variant="primary"
