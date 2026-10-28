@@ -1127,6 +1127,142 @@
         "description": "A new customer story with Gruppo Unicomm, a closer look at the workforce challenges in the retail industry, and our upcoming events across Europe."
       }
     },
+    "newsletter-october-2026": {
+      "tag": "Newsletter",
+      "date": "October 2026",
+      "readTime": "5 min read",
+      "title": "October at Skillvue: momentum across product, people and Europe",
+      "subtitle": "Skillvue among the LinkedIn Top Startups 2026, the launch of the ROI Calculator, a month of HR events across Europe and a new partnership with Easygenerator.",
+      "intro": [
+        "October brought recognition, a new tool and many conversations with HR leaders, all around one question: **how can organisations turn skills into usable data to make better talent decisions?**"
+      ],
+      "introList": {
+        "label": "In this newsletter:",
+        "items": [
+          "Skillvue among the LinkedIn Top Startups 2026",
+          "the launch of the Skillvue ROI Calculator",
+          "an October with HR leaders across Europe",
+          "a new partnership with Easygenerator"
+        ]
+      },
+      "sections": [
+        {
+          "img": "topStartups",
+          "heading": "Skillvue among the LinkedIn Top Startups 2026",
+          "body": [
+            "October brought an important recognition for Skillvue: we were included in the **LinkedIn Top Startups 2026** list in Italy.",
+            "The recognition reflects the growth Skillvue is experiencing, the work of the team behind it, and the ambition with which we continue to build **a new way for organisations to understand and manage skills**.",
+            "For us, it is another signal that the direction we are taking is resonating, both with the companies we work with and with the people choosing to build Skillvue with us.",
+            "And we’re just getting started."
+          ],
+          "cta": {
+            "label": "Learn more",
+            "href": "topStartups",
+            "external": true
+          }
+        },
+        {
+          "img": "roiCalculator",
+          "heading": "How much does it cost to make talent decisions without objective skills data?",
+          "body": [
+            "This month, we launched the **Skillvue ROI Calculator**.",
+            "The calculator is not designed to tell companies how much ROI Skillvue will generate. Instead, it starts from a more fundamental question: **how much is it already costing your organisation to make talent decisions without objective skills data?**",
+            "The calculator covers four critical areas: **hiring, promotions, leadership succession and workforce transformation**.",
+            "The process is simple:"
+          ],
+          "list": [
+            "choose the decision you want to analyse",
+            "enter two numbers you already have",
+            "receive a conservative, base and optimistic estimate of the **cost of inaction**"
+          ],
+          "bodyAfter": [
+            "The output can also be downloaded as a report and shared with your CFO and leadership team.",
+            "By making the cost of current decision-making more visible, organisations can start connecting skills data not only to HR outcomes, but also to **business impact**."
+          ],
+          "cta": {
+            "label": "Try the Skillvue ROI Calculator",
+            "href": "roiCalculator",
+            "external": false
+          }
+        },
+        {
+          "img": "events",
+          "heading": "An October with HR leaders across Europe",
+          "body": [
+            "London, Amsterdam, Cernobbio, Paris and Milan.",
+            "October took Skillvue across Europe, creating opportunities to meet HR leaders, managers and organisations working on some of the most important challenges in talent management today.",
+            "We joined:"
+          ],
+          "list": [
+            "🇬🇧 the **Gartner HR Symposium** in London",
+            "🇳🇱 **HR Core Academy** in Amsterdam",
+            "🇮🇹 the **Retail Executive Summit** in Cernobbio",
+            "🇫🇷 **UNLEASH World** in Paris"
+          ],
+          "listBare": true,
+          "bodyAfter": [
+            "Across each event, the conversations were different, but many of the underlying challenges were remarkably similar.",
+            "At HR Core Academy in Amsterdam, together with Riccardo from Lagardère Travel Retail, we discussed one of the most difficult parts of building a skills-based organisation: **collecting reliable internal skills data and keeping it continuously up to date**.",
+            "In Milan, we explored how AI can support people management across the employee lifecycle, with concrete examples spanning **high-volume hiring, internal mobility and people development**.",
+            "At UNLEASH World in Paris, two days of conversations with HR leaders from across Europe reinforced another recurring theme: organisations are increasingly looking for ways to move **from fragmented talent information to skills data that can actually support decisions**.",
+            "Different companies, industries and contexts, but one question kept emerging: **how can organisations turn skills into usable data to make better talent decisions?**"
+          ],
+          "links": [
+            {
+              "label": "Gartner HR Symposium, London",
+              "href": "gartner"
+            },
+            {
+              "label": "HR Core Academy, Amsterdam",
+              "href": "hrCoreAcademy"
+            },
+            {
+              "label": "UNLEASH World, Paris",
+              "href": "unleash"
+            }
+          ]
+        },
+        {
+          "img": "easygenerator",
+          "heading": "A new partnership with Easygenerator",
+          "body": [
+            "October also marked the announcement of a new partnership between Skillvue and **Easygenerator**.",
+            "The idea behind the partnership is simple: identifying a skills gap is useful, but the real value comes from knowing how to close it, and **being able to measure whether development has actually worked**.",
+            "Skillvue uses conversational assessments grounded in I/O psychology to measure skills gaps across individuals and teams.",
+            "Easygenerator then enables internal subject-matter experts to transform their knowledge into **targeted learning experiences**, including courses, videos and conversation practice.",
+            "Skillvue can then reassess those same skills using the same framework, helping organisations understand **what has actually changed**."
+          ],
+          "cta": {
+            "label": "Discover Skillvue’s partnerships",
+            "href": "partners",
+            "external": false
+          }
+        }
+      ],
+      "closing": {
+        "heading": "See you next month",
+        "body": [
+          "October gave us plenty of new reasons to keep building. See you next month with more updates from Skillvue."
+        ]
+      },
+      "finalKicker": "Discover Skillvue",
+      "finalTitle": "Better talent decisions start with",
+      "finalTitleHighlight": "clearer skills.",
+      "finalBody": "Book a demo and see how Skillvue verifies skills and AI readiness across your organisation.",
+      "finalButton": "Book a Demo",
+      "back": "Back to Blog",
+      "imgSoon": "image coming",
+      "imgLabels": {
+        "topStartups": "LinkedIn Top Startups 2026",
+        "roiCalculator": "Skillvue ROI Calculator",
+        "events": "October events",
+        "easygenerator": "Skillvue × Easygenerator"
+      },
+      "meta": {
+        "title": "Skillvue — The October Newsletter",
+        "description": "Skillvue among the LinkedIn Top Startups 2026, the launch of the ROI Calculator, a month of HR events across Europe and a new partnership with Easygenerator."
+      }
+    },
     "newsletter-september-2026": {
       "tag": "Newsletter",
       "date": "September 2026",

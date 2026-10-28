@@ -109,6 +109,8 @@ const DELIBERATE = [
   // Event names are the events' own names.
   ['blog.newsletter-august-2026.sections.2.events.', 'event names'],
   ['blog.newsletter-september-2026.sections.4.events.0.name', "the event's own name"],
+  ['blog.newsletter-october-2026.imgLabels.topStartups', "the ranking's own name"],
+  ['blog.newsletter-october-2026.sections.2.links.', 'event names'],
   ['customers.talent-pioneers.stages.past.', 'conference names'],
   ['customers.talent-pioneers.stages.upcoming.forumHr.title', "the event's own name"],
   // A named interview methodology.
