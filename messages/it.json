@@ -1402,6 +1402,11 @@
       "description": "Novità e approfondimenti di Skillvue su talento, selezione e competenze: newsletter mensili e articoli."
     },
     "articles": {
+      "newsletter-october-2026": {
+        "title": "La newsletter di ottobre",
+        "date": "Ottobre 2026",
+        "tag": "Newsletter"
+      },
       "newsletter-september-2026": {
         "title": "La newsletter di settembre",
         "date": "Settembre 2026",

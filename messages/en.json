@@ -1402,6 +1402,11 @@
       "description": "News and notes on talent, hiring and skills from Skillvue: monthly newsletters and in-depth articles."
     },
     "articles": {
+      "newsletter-october-2026": {
+        "title": "The October Newsletter",
+        "date": "October 2026",
+        "tag": "Newsletter"
+      },
       "newsletter-september-2026": {
         "title": "The September Newsletter",
         "date": "September 2026",
