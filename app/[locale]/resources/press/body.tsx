@@ -10,6 +10,7 @@ import { ArrowRight, ArrowUpRight, Download, Mail } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { TOP_STARTUPS_ARTICLE } from '@/data/linkedin-top-startups';
 
 const pressArticles = [
   {
@@ -48,7 +49,7 @@ const pressArticles = [
     title: 'Skillvue is in the LinkedIn Top 10 Startups 2026 Italy',
     // The article itself is in Italian, so its own headline is the Italian citation.
     titleIt: 'LinkedIn Top Startups 2026: 10 aziende italiane in crescita',
-    url: 'https://www.linkedin.com/pulse/linkedin-top-startups-2026-10-aziende-italiane-crescita-vodcc/',
+    url: TOP_STARTUPS_ARTICLE,
   },
 ];
 

@@ -34,7 +34,7 @@ export default function ClosingBanner({ heading, body, cta }: {
   const lang = useLocale();
 
   return (
-    <section id="cta" data-testid="cta-section" className="relative pt-20 pb-16 md:pt-28 md:pb-20 lg:pt-36 lg:pb-24">
+    <section id="cta" data-testid="cta-section" className="relative py-20 lg:py-24">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <Reveal
           y={40}

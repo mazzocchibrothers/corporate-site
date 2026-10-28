@@ -236,7 +236,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
         <section className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <Reveal y={20} duration={0.6} className="mb-14 grid lg:grid-cols-2 gap-6 lg:gap-16 items-start">
-              <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">
                 {t.rich('detail.insideHeading', { span: (chunks) => <span className="gradient-text-on-light">{chunks}</span> })}
               </h2>
               <p className="max-w-[880px] type-body text-[#121212]/[0.45] lg:pt-3">{t(`items.${slug}.fullDesc`)}</p>
@@ -274,7 +274,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                 <div className="w-14 h-14 rounded-2xl bg-[#4B4DF7]/[0.12] border border-[#4B4DF7]/[0.15] flex items-center justify-center mb-8">
                   <FileText className="h-6 w-6 text-[#4B4DF7]" />
                 </div>
-                <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 tracking-[-0.02em]">{t.rich('detail.heading', {
+                <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-white/90 mb-5 tracking-[-0.02em]">{t.rich('detail.heading', {
                   span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
                 })}</h2>
                 <p className="max-w-[880px] type-body text-white/40">{t('detail.body2')}</p>
@@ -327,7 +327,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
               duration={0.7}
               className="relative overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 text-center"
             >
-              <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] mx-auto tracking-[-0.02em]">{t('detail.heading3')}</h2>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] mx-auto tracking-[-0.02em]">{t('detail.heading3')}</h2>
               <p className="max-w-[880px] type-body text-white/[0.4] mb-10 mx-auto">{t('detail.body3')}</p>
               <Button
                 onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
