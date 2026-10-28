@@ -6,6 +6,7 @@ import { Award, ArrowUpRight } from 'lucide-react';
 import { LinkedinIcon } from '@/components/ui/linkedin-icon';
 import { useLocale, useTranslations } from 'next-intl';
 import { href } from '@/i18n/routes';
+import { TOP_STARTUPS_ARTICLE } from '@/data/linkedin-top-startups';
 
 // Route ids, not paths — the URL for each comes from the registry through
 // href(), which is what retired the hrefIt flags. Labels come from the
@@ -30,8 +31,6 @@ const footerGroups = [
 const labelKey = (id: string) =>
   id.split('/').pop()!.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
 
-// LinkedIn's article on the Top Startups 2026 in Italy, Skillvue among them.
-const TOP_STARTUP_POST = 'https://www.linkedin.com/pulse/linkedin-top-startups-2026-10-aziende-italiane-crescita-vodcc/';
 
 const socials = [
   { icon: LinkedinIcon, href: 'https://www.linkedin.com/company/skillvue/', label: 'LinkedIn' },
@@ -89,7 +88,7 @@ export default function Footer() {
             </div>
 
             <a
-              href={TOP_STARTUP_POST}
+              href={TOP_STARTUPS_ARTICLE}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 whitespace-nowrap border-t border-white/[0.06] pt-5 md:pt-6 text-[14px] text-white/55 hover:text-white/75 transition-colors duration-300"

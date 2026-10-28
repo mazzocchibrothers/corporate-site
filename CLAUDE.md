@@ -173,7 +173,12 @@ reintroduce per-page variants.
 - **Navbar** is flat `#ffffff` on light sections and `#000000` on dark ones —
   no translucent tints. Its **dropdown panels** are `#ffffff` on light sections
   too, but `#1e1e1e` on dark — a dark-mode dropdown flush against the navbar's
-  own `#000000` reads as invisible but for its border.
+  own `#000000` reads as invisible but for its border. The customer stories
+  filter dropdowns sit on page content, not the navbar, and use `#1A1A1A`.
+- **Closing banners** share one card surface — `rounded-3xl border
+  border-white/[0.06] bg-white/[0.02] backdrop-blur-sm` — and equal space
+  above and below (`py-20 lg:py-24`). A plain one (heading, sentence, demo
+  button, logo row) is `components/shared/ClosingBanner.tsx`.
 - **Dark text on light sections** is `#121212` and its opacity variants. Light
   section background is `.section-breathe` (`#F7F7F7`).
 - **Colours:** every hex drawn in `app/`, `components/`, `i18n/` and
