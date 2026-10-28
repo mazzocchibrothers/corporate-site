@@ -97,7 +97,7 @@ export default async function OctoberNewsletter() {
                 <span className="type-body-sm text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('readTime')}</span>
               </div>
               <HeroCopy>
-                <h1 className="font-semibold text-white/95 mb-6 text-[40px] md:text-[58px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t('title')}</h1>
+                <h1 className="font-semibold text-white/95 mb-6 text-[40px] md:text-[46px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t('title')}</h1>
                 <p className="type-body-lg hero-subtitle text-white/[0.5]">{t('subtitle')}</p>
               </HeroCopy>
             </Reveal>
