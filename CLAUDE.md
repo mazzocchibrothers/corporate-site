@@ -163,14 +163,22 @@ reintroduce per-page variants.
   `text-[15px] font-medium`, sentence case, never `uppercase` or tracked. A
   hand-rolled tertiary CTA (a card's "Read the news", "Read interview") is
   `text-[15px] font-medium text-[#4B4DF7]` with a `h-4 w-4` arrow, matching
-  the `tertiary` variant in `components/ui/button.tsx`.
+  the `tertiary` variant in `components/ui/button.tsx`. On dark sections the
+  `secondary` variant is a solid white outline that fills white with a
+  `#121212` label on hover — use `<Button variant="secondary" mode="dark">`,
+  never a hand-rolled outline pill.
 - **Resources page heroes** (Insights, Press) are a `lg:grid-cols-12` grid: copy
   on the left, a `<HeroVideo>` on the right (webm + mp4 + poster in
   `public/videos/`).
 - **Navbar** is flat `#ffffff` on light sections and `#000000` on dark ones —
   no translucent tints. Its **dropdown panels** are `#ffffff` on light sections
   too, but `#1e1e1e` on dark — a dark-mode dropdown flush against the navbar's
-  own `#000000` reads as invisible but for its border.
+  own `#000000` reads as invisible but for its border. The customer stories
+  filter dropdowns sit on page content, not the navbar, and use `#1A1A1A`.
+- **Closing banners** share one card surface — `rounded-3xl border
+  border-white/[0.06] bg-white/[0.02] backdrop-blur-sm` — and equal space
+  above and below (`py-20 lg:py-24`). A plain one (heading, sentence, demo
+  button, logo row) is `components/shared/ClosingBanner.tsx`.
 - **Dark text on light sections** is `#121212` and its opacity variants. Light
   section background is `.section-breathe` (`#F7F7F7`).
 - **Colours:** every hex drawn in `app/`, `components/`, `i18n/` and

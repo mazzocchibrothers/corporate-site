@@ -4,6 +4,7 @@ import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowDown } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const metrics = [
   {
@@ -35,8 +36,10 @@ const clientLogos = [
   { name: 'Lagardère', src: '/logos/client-lagardere.svg' },
   { name: 'Nespresso', src: '/logos/client-nespresso.svg' },
   { name: 'Tecnomat', src: '/logos/client-tecnomat.svg' },
-  { name: 'Avolta', src: '/logos/client-avolta.svg' },
-  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2' },
+  // The wide wordmarks sit a step smaller (h-5) than the rest.
+  { name: 'Avolta', src: '/logos/client-avolta.svg', className: 'h-5' },
+  // Redion: the file keeps its old name, commit 8228ad4 replaced its artwork.
+  { name: 'Redion', src: '/logos/client-europ-assistance.svg?v=2', className: 'h-5' },
 ];
 
 
@@ -56,7 +59,6 @@ export default function CustomersHero() {
               delay={0.15}
               className="inline-flex items-center gap-2 mb-6"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#6B7DFF]" />
               <span className="text-[12px] font-medium text-[#6B7DFF] tracking-[0.1em] uppercase">{t('hero.eyebrow')}</span>
             </Reveal>
             <Reveal
@@ -79,16 +81,13 @@ export default function CustomersHero() {
             >{t('hero.body')}</Reveal>
 
             {/* CTA - Read the stories */}
-            <Reveal
-              as="a"
-              y={20}
-              duration={0.8}
-              delay={0.55}
-              href="#explore"
-              className="group inline-flex items-center gap-4 px-8 py-5 text-[15px] font-medium tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
-            >
-              <span>{t('hero.cta')}</span>
-              <ArrowDown className="h-4 w-4 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-y-1 transition-all duration-500" strokeWidth={2} />
+            <Reveal y={20} duration={0.8} delay={0.55}>
+              <Button asChild variant="secondary" mode="dark" className="group">
+                <a href="#explore">
+                  <span>{t('hero.cta')}</span>
+                  <ArrowDown aria-hidden="true" className="transition-transform duration-500 group-hover:translate-y-0.5" />
+                </a>
+              </Button>
             </Reveal>
           </div>
 
@@ -123,14 +122,14 @@ export default function CustomersHero() {
               <div className="marquee-content flex items-center gap-16 shrink-0 pr-16">
                 {logoFiles.map((l, i) => (
                   <div key={`a-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
-                    <img src={l.src} alt={l.name} className="h-6 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
+                    <img src={l.src} alt={l.name} className={`${l.className ?? 'h-6'} w-auto object-contain`} style={{ filter: 'brightness(0) invert(1)' }} />
                   </div>
                 ))}
               </div>
               <div className="marquee-content flex items-center gap-16 shrink-0 pr-16" aria-hidden="true">
                 {logoFiles.map((l, i) => (
                   <div key={`b-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
-                    <img src={l.src} alt="" className="h-6 w-auto object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
+                    <img src={l.src} alt="" className={`${l.className ?? 'h-6'} w-auto object-contain`} style={{ filter: 'brightness(0) invert(1)' }} />
                   </div>
                 ))}
               </div>

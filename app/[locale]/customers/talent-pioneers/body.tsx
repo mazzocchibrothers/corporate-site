@@ -12,6 +12,7 @@ import { Reveal } from '@/components/ui/reveal';
 import { href } from '@/i18n/routes';
 import TalentPioneersCarousel from '@/components/customers/TalentPioneersCarousel';
 import TalentPioneersContactForm from '@/components/customers/TalentPioneersContactForm';
+import { Button } from '@/components/ui/button';
 
 const EYEBROW = 'text-[12px] font-medium uppercase tracking-[1.2px]';
 
@@ -200,13 +201,14 @@ export default async function TalentPioneersPage() {
                 })}
               </h1>
               <p className="pt-6 max-w-[576px] text-[18px] leading-[1.4] text-white/65">{t('hero.subtitle')}</p>
-              <a
-                href="#meet-the-pioneers"
-                className="group mt-8 inline-flex items-center gap-4 rounded-full border border-white/10 px-8 py-5 text-[15px] font-medium tracking-wide text-white transition-all duration-500 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08]"
-              >
-                <span>{t('hero.cta')}</span>
-                <ArrowDown className="h-4 w-4 text-white/30 transition-all duration-500 group-hover:translate-y-1 group-hover:text-[#9B9DFB]" strokeWidth={2} />
-              </a>
+              <Button asChild variant="secondary" mode="dark" className="group mt-8">
+                <a
+                  href="#meet-the-pioneers"
+                >
+                  <span>{t('hero.cta')}</span>
+                  <ArrowDown aria-hidden="true" className="transition-transform duration-500 group-hover:translate-y-0.5" />
+                </a>
+              </Button>
             </Reveal>
             <Reveal y={24} delay={0.1}>
               <video
@@ -382,7 +384,7 @@ export default async function TalentPioneersPage() {
           <div className="max-w-[1400px] mx-auto w-full">
             <Reveal
               y={24}
-              className="rounded-[32px] border border-white/[0.08] bg-white/[0.05] p-8 md:p-20"
+              className="rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm p-8 md:p-20"
             >
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>

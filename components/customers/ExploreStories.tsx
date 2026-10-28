@@ -98,12 +98,12 @@ export default function ExploreStories() {
               <ChevronDown className="h-4 w-4 text-white/40" aria-hidden="true" />
             </button>
             {industryOpen && (
-              <div className="absolute z-20 mt-2 min-w-[200px] rounded-xl border border-white/[0.1] bg-[#1e1e1e] py-2 shadow-xl">
+              <div className="absolute z-20 mt-2 min-w-[220px] rounded-2xl border border-white/[0.08] bg-[#1A1A1A] p-2 shadow-xl">
                 {['all', ...filters.industry].map(f => (
                   <button
                     key={f}
                     onClick={() => { setActiveIndustry(f); setIndustryOpen(false); }}
-                    className={`block w-full text-left px-4 py-2 text-[14px] transition-colors duration-200 ${activeIndustry === f ? 'text-white bg-white/[0.06]' : 'text-white/60 hover:text-white/90 hover:bg-white/[0.04]'}`}
+                    className={`block w-full text-left px-4 py-2.5 text-[14px] rounded-xl whitespace-nowrap transition-colors duration-200 hover:bg-white/[0.05] ${activeIndustry === f ? 'text-white' : 'text-white/60 hover:text-white'}`}
                   >
                     {f === 'all' ? t('exploreStories.allIndustries') : t(`explore.industries.${f}`)}
                   </button>
@@ -122,12 +122,12 @@ export default function ExploreStories() {
               <ChevronDown className="h-4 w-4 text-white/40" aria-hidden="true" />
             </button>
             {useCaseOpen && (
-              <div className="absolute z-20 mt-2 min-w-[200px] rounded-xl border border-white/[0.1] bg-[#1e1e1e] py-2 shadow-xl">
+              <div className="absolute z-20 mt-2 min-w-[220px] rounded-2xl border border-white/[0.08] bg-[#1A1A1A] p-2 shadow-xl">
                 {['all', ...filters.useCase].map(f => (
                   <button
                     key={f}
                     onClick={() => { setActiveUseCase(f); setUseCaseOpen(false); }}
-                    className={`block w-full text-left px-4 py-2 text-[14px] transition-colors duration-200 ${activeUseCase === f ? 'text-white bg-white/[0.06]' : 'text-white/60 hover:text-white/90 hover:bg-white/[0.04]'}`}
+                    className={`block w-full text-left px-4 py-2.5 text-[14px] rounded-xl whitespace-nowrap transition-colors duration-200 hover:bg-white/[0.05] ${activeUseCase === f ? 'text-white' : 'text-white/60 hover:text-white'}`}
                   >
                     {f === 'all' ? t('exploreStories.allUseCases') : t(`explore.useCases.${f}`)}
                   </button>

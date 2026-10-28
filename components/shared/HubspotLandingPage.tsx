@@ -115,6 +115,7 @@ export default function HubspotLandingPage({
                 style={{ lineHeight: 1.05 }}
               >{t.rich('heading', {
                 span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+                br: () => <br />,
               })}</h1>
 
               <p className="text-[16px] text-white/[0.55] leading-[1.65] max-w-md" style={{ fontWeight: 300 }}>

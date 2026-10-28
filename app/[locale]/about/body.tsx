@@ -50,8 +50,10 @@ const clientLogos = [
   { name: 'Nespresso', src: '/logos/client-nespresso.svg' },
   { name: 'Douglas', src: '/logos/client-douglas.svg' },
   { name: 'Lagardère', src: '/logos/client-lagardere.svg' },
-  { name: 'Avolta', src: '/logos/client-avolta.svg' },
-  { name: 'Europ Assistance', src: '/logos/client-europ-assistance.svg?v=2' },
+  // The wide wordmarks sit a step smaller (22px) than the rest (26px).
+  { name: 'Avolta', src: '/logos/client-avolta.svg', h: 22 },
+  // Redion: the file keeps its old name, commit 8228ad4 replaced its artwork.
+  { name: 'Redion', src: '/logos/client-europ-assistance.svg?v=2', h: 22 },
   { name: 'Fidia', src: '/logos/client-fidia.svg' },
   { name: 'Novacoop', src: '/logos/client-novacoop.svg' },
   { name: 'Tecnomat', src: '/logos/client-tecnomat.svg' },
@@ -498,7 +500,7 @@ export default function AboutPage() {
                     key={logo.name}
                     src={logo.src}
                     alt={logo.name}
-                    style={{ height: 26, width: 'auto', objectFit: 'contain', filter: 'brightness(0)', opacity: 0.45 }}
+                    style={{ height: logo.h ?? 26, width: 'auto', objectFit: 'contain', filter: 'brightness(0)', opacity: 0.45 }}
                   />
                 ))}
               </div>

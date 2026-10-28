@@ -127,14 +127,15 @@ export default function BlogPage() {
                   span: (chunks) => <span className="gradient-text">{chunks}</span>,
                 })}</h1>
                 <p className="text-[20px] text-white/[0.45] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>{t('body')}</p>
-                <a
-                  href="#articles"
-                  onClick={(e) => { e.preventDefault(); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' }); }}
-                  className="group inline-flex items-center gap-4 px-8 py-5 text-[15px] font-medium tracking-wide text-white rounded-full border border-white/10 hover:border-[#4B4DF7]/40 hover:bg-[#4B4DF7]/[0.08] transition-all duration-500"
-                >
-                  <span>{t('cta')}</span>
-                  <ArrowDown className="h-4 w-4 text-white/30 group-hover:text-[#9B9DFB] group-hover:translate-y-1 transition-all duration-500" strokeWidth={2} />
-                </a>
+                <Button asChild variant="secondary" mode="dark" className="group">
+                  <a
+                    href="#articles"
+                    onClick={(e) => { e.preventDefault(); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' }); }}
+                  >
+                    <span>{t('cta')}</span>
+                    <ArrowDown aria-hidden="true" className="transition-transform duration-500 group-hover:translate-y-0.5" />
+                  </a>
+                </Button>
               </Reveal>
               <HeroVideo
                 poster="/videos/blog-hero-showcase-poster.jpg"
@@ -198,7 +199,7 @@ export default function BlogPage() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
             <Reveal
               duration={0.7}
-              className="relative overflow-hidden rounded-[32px] border border-white/[0.08] bg-white/[0.05] backdrop-blur-sm px-8 py-16 md:px-16 md:py-20 text-center"
+              className="relative overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 text-center"
             >
               <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] max-w-2xl mx-auto tracking-[-0.02em]">{t('heading3')}</h2>
               <p className="text-[16px] text-white/[0.4] mb-10 max-w-xl mx-auto leading-[1.7]">{t('body2')}</p>

@@ -2,9 +2,11 @@
 
 import React from 'react';
 import { useRouter } from '@/i18n/navigation';
+import { Award, ArrowUpRight } from 'lucide-react';
 import { LinkedinIcon } from '@/components/ui/linkedin-icon';
 import { useLocale, useTranslations } from 'next-intl';
 import { href } from '@/i18n/routes';
+import { TOP_STARTUPS_ARTICLE } from '@/data/linkedin-top-startups';
 
 // Route ids, not paths — the URL for each comes from the registry through
 // href(), which is what retired the hrefIt flags. Labels come from the
@@ -29,6 +31,7 @@ const footerGroups = [
 const labelKey = (id: string) =>
   id.split('/').pop()!.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
 
+
 const socials = [
   { icon: LinkedinIcon, href: 'https://www.linkedin.com/company/skillvue/', label: 'LinkedIn' },
 ];
@@ -51,7 +54,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/[0.04] bg-[#050508] pt-10 md:pt-14 pb-6">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-        <div className="grid lg:grid-cols-[220px_1fr] gap-8 lg:gap-24 mb-8">
+        <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 mb-8">
 
           {/* Left: logo + socials */}
           <div className="flex flex-col items-center lg:items-start">
@@ -83,6 +86,17 @@ export default function Footer() {
                 );
               })}
             </div>
+
+            <a
+              href={TOP_STARTUPS_ARTICLE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 whitespace-nowrap border-t border-white/[0.06] pt-5 md:pt-6 text-[14px] text-white/55 hover:text-white/75 transition-colors duration-300"
+            >
+              <Award aria-hidden="true" className="h-4 w-4 shrink-0" />
+              {t('footer.award')}
+              <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5 shrink-0 text-white/40 group-hover:text-white/75 transition-colors duration-300" />
+            </a>
           </div>
 
           {/* Link sections — stacked on mobile with horizontal links, 4-col grid on desktop */}

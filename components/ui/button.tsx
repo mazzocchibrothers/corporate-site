@@ -38,7 +38,8 @@ const buttonVariants = cva(
       { variant: "primary", mode: "light", class: "bg-[#4B4DF7] text-white hover:bg-[#3133E7]" },
       { variant: "primary", mode: "dark", class: "bg-[#6366F8] text-white hover:bg-[#4B4DF7]" },
       { variant: "secondary", mode: "light", class: "border-[#888888] text-[#888888] hover:bg-[#4B4DF7]/20 hover:border-[#4B4DF7]/50 hover:text-[#4B4DF7]" },
-      { variant: "secondary", mode: "dark", class: "border-[#4E4E4E] text-[#E6E6E6] hover:bg-[#8385FF]/20 hover:border-[#8385FF]/50 hover:text-[#8587FF]" },
+      // Solid white outline; hover fills it white with a dark label.
+      { variant: "secondary", mode: "dark", class: "border-white text-white hover:bg-white hover:text-[#121212]" },
       { variant: "tertiary", mode: "light", class: "text-[#6366F8] hover:text-[#3133E7]" },
       { variant: "tertiary", mode: "dark", class: "text-[#6366F8] hover:text-[#8587FF]" },
     ],
