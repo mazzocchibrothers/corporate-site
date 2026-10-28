@@ -53,8 +53,8 @@ export default function ProductCrossLinks() {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-[15px] md:text-[15px] font-semibold text-white/85 block mb-0.5 md:mb-1 leading-tight">{t(`productCrossLinks.solutions.${s.id}.name`)}</span>
-                    <span className="text-[12px] md:text-[13px] text-white/40">{t(`productCrossLinks.solutions.${s.id}.desc`)}</span>
+                    <span className="type-body-bold text-white/85 block mb-0.5 md:mb-1">{t(`productCrossLinks.solutions.${s.id}.name`)}</span>
+                    <span className="type-body-sm text-white/40">{t(`productCrossLinks.solutions.${s.id}.desc`)}</span>
                   </div>
                   <ArrowRight className="h-4 w-4 text-white/20 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-300 shrink-0 hidden md:block" />
                 </div>

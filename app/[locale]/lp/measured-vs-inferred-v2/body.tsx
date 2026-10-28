@@ -11,6 +11,7 @@ import { href } from '@/i18n/routes';
 import { IconTile } from '@/components/ui/icon-tile';
 import { bookingHref } from '@/components/landing/booking-link';
 import LevelMatrix from '@/components/landing/mvi/LevelMatrix';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 // The second cut of /lp/measured-vs-inferred: the same campaign, told as
 // skill levels rather than skill tags, and laid out on its own terms rather
@@ -46,7 +47,7 @@ const WRAP = 'max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12';
 
 function Eyebrow({ light, children }: { light?: boolean; children: React.ReactNode }) {
   return (
-    <p className={`text-[15px] md:text-[16px] font-medium mb-4 ${light ? 'text-[#4B4DF7]' : 'text-[#8385FF]'}`}>{children}</p>
+    <p className={`type-link font-medium mb-4 ${light ? 'text-[#4B4DF7]' : 'text-[#8385FF]'}`}>{children}</p>
   );
 }
 
@@ -85,18 +86,20 @@ export default function MeasuredVsInferredV2() {
           <div className={`${WRAP} pt-16 pb-16 lg:pt-6 lg:pb-20`}>
             <div className="max-w-[920px] lg:max-w-[1240px] mx-auto text-center flex flex-col items-center">
               <Reveal {...FADE} delay={0.1}><Eyebrow>{t('hero.eyebrow')}</Eyebrow></Reveal>
-              <Reveal
-                {...FADE}
-                delay={0.2}
-                as="h1"
-                className="font-semibold text-[48px] md:text-[64px] text-white/95 mb-6"
-                style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-              >
-                {t.rich('hero.title', { s: accent })}
-              </Reveal>
-              <Reveal {...FADE} delay={0.3} as="p" className="text-[17px] md:text-[18px] text-white/[0.65] leading-[1.7] mb-10 lg:mb-7 max-w-[720px]">
-                {t('hero.sub')}
-              </Reveal>
+              <HeroCopy>
+                <Reveal
+                  {...FADE}
+                  delay={0.2}
+                  as="h1"
+                  className="font-semibold text-[48px] md:text-[58px] text-white/95 mb-6"
+                  style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
+                >
+                  {t.rich('hero.title', { s: accent })}
+                </Reveal>
+                <Reveal {...FADE} delay={0.3} as="p" className="type-body-lg hero-subtitle text-white/[0.65] mb-10 lg:mb-7">
+                  {t('hero.sub')}
+                </Reveal>
+              </HeroCopy>
               <Reveal {...FADE} delay={0.4}>
                 <Cta to={booking} mode="dark">{t('hero.cta')}</Cta>
               </Reveal>
@@ -112,8 +115,8 @@ export default function MeasuredVsInferredV2() {
           <div className={`${WRAP} grid lg:grid-cols-12 gap-10 lg:gap-16`}>
             <Reveal {...FADE} className="lg:col-span-6">
               <Eyebrow light>{t('problem.eyebrow')}</Eyebrow>
-              <h2 className={`${H2} text-[#121212] mb-6`}>{t.rich('problem.title', { s: accent })}</h2>
-              <p className="text-[16px] md:text-[17px] text-[#121212]/60 leading-[1.75]">{t('problem.body')}</p>
+              <h2 className={`max-w-[880px] ${H2} text-[#121212] mb-6`}>{t.rich('problem.title', { s: accent })}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/60">{t('problem.body')}</p>
             </Reveal>
             <ol className="lg:col-span-6 divide-y divide-black/[0.08] border-y border-black/[0.08] self-start">
               {(t.raw('problem.cards') as Card[]).map((c, i) => (
@@ -121,7 +124,7 @@ export default function MeasuredVsInferredV2() {
                   <span className="stat-value text-[28px] md:text-[32px] text-[#4B4DF7] w-10 shrink-0" style={{ lineHeight: 1 }}>{i + 1}</span>
                   <div>
                     <h3 className="text-[18px] font-semibold text-[#121212] leading-snug mb-2">{c.title}</h3>
-                    <p className="text-[15px] text-[#121212]/60 leading-[1.7]">{c.body}</p>
+                    <p className="type-body text-[#121212]/60">{c.body}</p>
                   </div>
                 </Reveal>
               ))}
@@ -134,8 +137,8 @@ export default function MeasuredVsInferredV2() {
           <div className={WRAP}>
             <Reveal {...FADE} className="max-w-[860px] mx-auto text-center mb-12">
               <Eyebrow light>{t('compare.eyebrow')}</Eyebrow>
-              <h2 className={`${H2} text-[#121212] mb-6`}>{t.rich('compare.title', { s: accent })}</h2>
-              <p className="text-[16px] md:text-[17px] text-[#121212]/60 leading-[1.75]">{t('compare.intro')}</p>
+              <h2 className={`max-w-[880px] mx-auto ${H2} text-[#121212] mb-6`}>{t.rich('compare.title', { s: accent })}</h2>
+              <p className="max-w-[880px] mx-auto type-body text-[#121212]/60">{t('compare.intro')}</p>
             </Reveal>
 
             {/* On desktop each card spans the shared row tracks (subgrid), so a
@@ -155,13 +158,13 @@ export default function MeasuredVsInferredV2() {
                       measured ? 'bg-white border-2 border-[#4B4DF7]/40 shadow-[0_12px_40px_rgba(75,77,247,0.10)]' : 'bg-white/60 border border-black/[0.06]'
                     }`}
                   >
-                    <p className={`text-[17px] font-semibold mb-6 ${measured ? 'text-[#4B4DF7]' : 'text-[#121212]/55'}`}>
+                    <p className={`type-body-bold mb-6 ${measured ? 'text-[#4B4DF7]' : 'text-[#121212]/55'}`}>
                       {measured ? t('compare.colMeasured') : t('compare.colInferred')}
                     </p>
                     <dl className="md:contents">
                       {rows.map((r) => (
                         <div key={r.label} className="py-4 first:pt-0 last:pb-0 border-t border-black/[0.06] first:border-t-0">
-                          <dt className="text-[13px] font-medium text-[#121212]/45 mb-1.5">{r.label}</dt>
+                          <dt className="type-body-sm font-medium text-[#121212]/45 mb-1.5">{r.label}</dt>
                           <dd className="flex items-start gap-3">
                             <span
                               className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
@@ -171,7 +174,7 @@ export default function MeasuredVsInferredV2() {
                             >
                               {measured ? <Check className="h-3 w-3" strokeWidth={3} /> : <Minus className="h-3 w-3" />}
                             </span>
-                            <span className={`text-[15px] leading-[1.6] ${measured ? 'text-[#121212]' : 'text-[#121212]/55'}`}>
+                            <span className={`type-body ${measured ? 'text-[#121212]' : 'text-[#121212]/55'}`}>
                               {measured ? r.measured : r.inferred}
                             </span>
                           </dd>
@@ -184,7 +187,7 @@ export default function MeasuredVsInferredV2() {
             </div>
 
             <Reveal {...FADE} className="mt-10 flex flex-col items-center gap-5 text-center">
-              <p className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-[#121212]">{t('compare.midLine')}</p>
+              <p className="font-display text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-[#121212]">{t('compare.midLine')}</p>
               <Cta to={booking} mode="light">{t('compare.midCta')}</Cta>
             </Reveal>
           </div>
@@ -195,8 +198,8 @@ export default function MeasuredVsInferredV2() {
           <div className={WRAP}>
             <Reveal {...FADE} className="max-w-[860px] mb-14">
               <Eyebrow>{t('how.eyebrow')}</Eyebrow>
-              <h2 className={`${H2} text-white/95 mb-6`}>{t.rich('how.title', { s: accent })}</h2>
-              <p className="text-[16px] md:text-[17px] text-white/60 leading-[1.75]">{t.rich('how.intro', links)}</p>
+              <h2 className={`max-w-[880px] ${H2} text-white/95 mb-6`}>{t.rich('how.title', { s: accent })}</h2>
+              <p className="max-w-[880px] type-body text-white/60">{t.rich('how.intro', links)}</p>
             </Reveal>
 
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
@@ -210,9 +213,9 @@ export default function MeasuredVsInferredV2() {
                       {i + 1}
                     </span>
                     <div className="pt-1.5">
-                      <p className="text-[13px] font-semibold text-[#8385FF] mb-1">{s.name}</p>
+                      <p className="type-body-sm font-semibold text-[#8385FF] mb-1">{s.name}</p>
                       <h3 className="text-[19px] font-semibold text-white/95 leading-snug mb-2">{s.title}</h3>
-                      <p className="text-[15px] text-white/60 leading-[1.7]">{t.rich(`how.steps.${i}.body`, links)}</p>
+                      <p className="type-body text-white/60">{t.rich(`how.steps.${i}.body`, links)}</p>
                     </div>
                   </Reveal>
                 ))}
@@ -220,14 +223,14 @@ export default function MeasuredVsInferredV2() {
 
               <div className="lg:col-span-5">
                 <Reveal {...FADE} className="lg:sticky lg:top-28 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8">
-                  <p className="text-[13px] text-white/45 mb-6">{t('how.scaleLabel')}</p>
+                  <p className="type-body-sm text-white/45 mb-6">{t('how.scaleLabel')}</p>
                   {/* The five levels as a ladder, top rung first: each bar one
                       level longer than the one below it. */}
                   <ol className="flex flex-col-reverse gap-3" aria-label={t('how.scaleLabel')}>
                     {levels.map((name, i) => (
                       <li key={name} className="grid grid-cols-[24px_112px_minmax(0,1fr)] items-center gap-3">
                         <span className="stat-value text-[18px] text-white/90">{i + 1}</span>
-                        <span className="text-[14px] text-white/70">{name}</span>
+                        <span className="type-body-sm text-white/70">{name}</span>
                         <span className="h-2.5 rounded-full bg-white/[0.06]">
                           <span
                             className="block h-full rounded-full bg-[#6366F8]"
@@ -238,7 +241,7 @@ export default function MeasuredVsInferredV2() {
                       </li>
                     ))}
                   </ol>
-                  <p className="mt-6 pt-5 border-t border-white/[0.08] text-[14px] md:text-[15px] text-white/60 leading-[1.7]">{t('how.techNote')}</p>
+                  <p className="type-body mt-6 pt-5 border-t border-white/[0.08] text-white/60">{t('how.techNote')}</p>
                 </Reveal>
               </div>
             </div>
@@ -250,7 +253,7 @@ export default function MeasuredVsInferredV2() {
           <div className={WRAP}>
             <Reveal {...FADE} className="max-w-[860px] mb-10">
               <Eyebrow light>{t('use.eyebrow')}</Eyebrow>
-              <h2 className={`${H2} text-[#121212]`}>{t.rich('use.title', { s: accent })}</h2>
+              <h2 className={`max-w-[880px] ${H2} text-[#121212]`}>{t.rich('use.title', { s: accent })}</h2>
             </Reveal>
 
             <ul className="divide-y divide-black/[0.08] border-y border-black/[0.08]">
@@ -260,13 +263,13 @@ export default function MeasuredVsInferredV2() {
                     <IconTile icon={USE_ICONS[i]} mode="light" />
                     <h3 className="text-[18px] md:text-[20px] font-semibold text-[#121212] leading-snug">{c.title}</h3>
                   </div>
-                  <p className="md:col-span-7 text-[15px] md:text-[16px] text-[#121212]/60 leading-[1.7]">{c.body}</p>
+                  <p className="type-body md:col-span-7 text-[#121212]/60">{c.body}</p>
                 </Reveal>
               ))}
             </ul>
 
             <Reveal {...FADE} className="mt-12 rounded-2xl bg-white border border-black/[0.06] p-6 md:p-10">
-              <p className="text-[18px] md:text-[22px] font-semibold tracking-[-0.01em] text-[#121212] leading-[1.45] max-w-[980px]">{t('use.proof')}</p>
+              <p className="font-display text-[18px] md:text-[22px] font-semibold tracking-[-0.01em] text-[#121212] leading-[1.45] max-w-[980px]">{t('use.proof')}</p>
             </Reveal>
           </div>
         </section>
@@ -277,17 +280,17 @@ export default function MeasuredVsInferredV2() {
             <div className="lg:col-span-6">
               <Reveal {...FADE} className="mb-10">
                 <Eyebrow>{t('stack.eyebrow')}</Eyebrow>
-                <h2 className={`${H2} text-white/95 mb-6`}>{t.rich('stack.title', { s: accent })}</h2>
-                <p className="text-[16px] md:text-[17px] text-white/60 leading-[1.75]">{t('stack.body')}</p>
+                <h2 className={`max-w-[880px] ${H2} text-white/95 mb-6`}>{t.rich('stack.title', { s: accent })}</h2>
+                <p className="max-w-[880px] type-body text-white/60">{t('stack.body')}</p>
               </Reveal>
-              <p className="text-[13px] font-medium text-white/45 mb-4">{t('stack.pathsLabel')}</p>
+              <p className="type-body-sm font-medium text-white/45 mb-4">{t('stack.pathsLabel')}</p>
               <ol className="space-y-5">
                 {(t.raw('stack.paths') as Card[]).map((p, i) => (
                   <Reveal {...FADE} delay={i * 0.08} as="li" key={p.title} className="flex gap-4">
                     <span className="stat-value text-[15px] text-[#8385FF] w-6 shrink-0" style={{ lineHeight: 1.6 }}>0{i + 1}</span>
                     <div>
                       <h3 className="text-[17px] font-semibold text-white/90 mb-1">{p.title}</h3>
-                      <p className="text-[15px] text-white/55 leading-[1.65]">{t.rich(`stack.paths.${i}.body`, links)}</p>
+                      <p className="type-body text-white/55">{t.rich(`stack.paths.${i}.body`, links)}</p>
                     </div>
                   </Reveal>
                 ))}
@@ -298,10 +301,10 @@ export default function MeasuredVsInferredV2() {
                 Skillvue underneath it. Levels rise into both. */}
             <Reveal {...FADE} delay={0.15} className="lg:col-span-6 lg:sticky lg:top-28">
               <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-6">
-                <p className="text-[13px] text-white/50 mb-3">{t('stack.layers.systems')}</p>
+                <p className="type-body-sm text-white/50 mb-3">{t('stack.layers.systems')}</p>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                   {(t.raw('stack.layers.systemsList') as string[]).map((d) => (
-                    <li key={d} className="rounded-lg border border-white/[0.10] px-3 py-2.5 text-[14px] text-center text-white/80">{d}</li>
+                    <li key={d} className="type-body-sm rounded-lg border border-white/[0.10] px-3 py-2.5 text-center text-white/80">{d}</li>
                   ))}
                 </ul>
               </div>
@@ -309,8 +312,8 @@ export default function MeasuredVsInferredV2() {
                 <Plus className="h-4 w-4 text-white/30" />
               </div>
               <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-6">
-                <p className="text-[16px] font-semibold text-white/90">{t('stack.layers.map')}</p>
-                <p className="text-[13px] text-white/55 mt-1">{t('stack.layers.mapSub')}</p>
+                <p className="type-body-bold text-white/90">{t('stack.layers.map')}</p>
+                <p className="type-body-sm text-white/55 mt-1">{t('stack.layers.mapSub')}</p>
               </div>
               <div className="flex justify-center py-2" aria-hidden="true">
                 <Plus className="h-4 w-4 text-white/30" />
@@ -318,8 +321,8 @@ export default function MeasuredVsInferredV2() {
               <div className="flex items-center gap-4 rounded-2xl border border-[#6366F8]/50 bg-[#6366F8]/[0.12] p-5 md:p-6 shadow-[0_12px_40px_rgba(75,77,247,0.18)]">
                 <img src="/logos/skillvue-logomark.svg" alt="" width={32} height={32} loading="lazy" decoding="async" className="h-8 w-8 shrink-0" />
                 <div>
-                  <p className="text-[16px] font-semibold text-white">{t('stack.layers.skillvue')}</p>
-                  <p className="text-[13px] text-white/70 mt-1">{t('stack.layers.skillvueSub')}</p>
+                  <p className="type-body-bold text-white">{t('stack.layers.skillvue')}</p>
+                  <p className="type-body-sm text-white/70 mt-1">{t('stack.layers.skillvueSub')}</p>
                 </div>
               </div>
             </Reveal>
@@ -332,7 +335,7 @@ export default function MeasuredVsInferredV2() {
             <div className="max-w-[860px] mx-auto">
               <Reveal {...FADE} className="text-center mb-10">
                 <Eyebrow light>{t('faq.eyebrow')}</Eyebrow>
-                <h2 className={`${H2} text-[#121212]`}>{t.rich('faq.title', { s: accent })}</h2>
+                <h2 className={`max-w-[880px] mx-auto ${H2} text-[#121212]`}>{t.rich('faq.title', { s: accent })}</h2>
               </Reveal>
               {/* <details> rather than state: the answers are in the HTML for
                   search engines and LLMs whether or not anyone opens them. */}
@@ -343,7 +346,7 @@ export default function MeasuredVsInferredV2() {
                       <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212] leading-[1.5]">{f.q}</h3>
                       <Plus className="mt-1 h-5 w-5 shrink-0 text-[#4B4DF7] transition-transform duration-300 group-open:rotate-45" aria-hidden="true" />
                     </summary>
-                    <p className="mt-3 pr-9 text-[15px] md:text-[16px] text-[#121212]/65 leading-[1.7]">{f.a}</p>
+                    <p className="type-body mt-3 pr-9 text-[#121212]/65">{f.a}</p>
                   </details>
                 ))}
               </div>
@@ -360,8 +363,8 @@ export default function MeasuredVsInferredV2() {
               className="rounded-3xl border border-[#6366F8]/40 bg-[#6366F8]/[0.08] p-8 md:p-12 lg:p-16 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center"
             >
               <div className="lg:col-span-8">
-                <h2 className={`${H2} text-white/95 mb-5`}>{t.rich('final.title', { s: accent })}</h2>
-                <p className="text-[16px] md:text-[18px] text-white/65 leading-[1.7] max-w-[680px]">{t('final.body')}</p>
+                <h2 className={`max-w-[880px] ${H2} text-white/95 mb-5`}>{t.rich('final.title', { s: accent })}</h2>
+                <p className="max-w-[880px] type-body-lg text-white/65">{t('final.body')}</p>
               </div>
               <div className="lg:col-span-4 lg:justify-self-end">
                 <Cta to={booking} mode="dark">{t('final.cta')}</Cta>

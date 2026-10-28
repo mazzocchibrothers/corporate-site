@@ -10,6 +10,7 @@ import Navbar from '@/components/landing/Navbar';
 import SolutionFinalCTA from '@/components/shared/SolutionFinalCTA';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 function Section({ children, className = '' }) {
   return (
@@ -78,20 +79,22 @@ export default function EuropAssistanceLandingPage() {
             <Reveal y={0} delay={0.2} className="mb-6 flex items-center gap-2">
               <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{t('breadcrumb')}</Button>
               <span className="text-white/20">/</span>
-              <span className="text-[13px] text-white/[0.65]">Europ Assistance</span>
+              <span className="type-body-sm text-white/[0.65]">Europ Assistance</span>
             </Reveal>
 
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
               {/* Main content */}
               <div className="lg:col-span-7 flex flex-col">
                 <Reveal duration={0.7} delay={0.3} className="flex flex-col flex-1">
-                  <h1 className="text-[48px] md:text-[44px] font-semibold tracking-[-0.02em] text-white/95 mb-5" style={{ lineHeight: 1.2 }}>
-                    {t.rich('headline', {
-                      hl: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
-                      hl2: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
-                    })}
-                  </h1>
-                  <p className="text-[16px] text-white/[0.60] leading-[1.7] mb-7 max-w-2xl">{t('subtitle')}</p>
+                  <HeroCopy>
+                    <h1 className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-5" style={{ lineHeight: 1.1 }}>
+                      {t.rich('headline', {
+                        hl: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+                        hl2: (chunks) => <span style={{ color: '#7b7df9' }}>{chunks}</span>,
+                      })}
+                    </h1>
+                    <p className="type-body hero-subtitle text-white/[0.60] mb-7">{t('subtitle')}</p>
+                  </HeroCopy>
                   <div className="flex flex-wrap gap-4">
                     <Button variant="primary" mode="dark" onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}>
                       {t('ctaPrimary')}
@@ -105,7 +108,7 @@ export default function EuropAssistanceLandingPage() {
                     {t.raw('heroMetrics').map(m => (
                       <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-8 py-5">
                         <span className="block text-white text-[32px] stat-value md:text-[clamp(1.8rem,3vw,2.5rem)]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                        <span className="text-[14px] text-white/[0.55] mt-2 block leading-[1.4]">{m.label}</span>
+                        <span className="type-body-sm text-white/[0.55] mt-2 block">{m.label}</span>
                       </div>
                     ))}
                   </div>
@@ -132,15 +135,15 @@ export default function EuropAssistanceLandingPage() {
                       <img loading="lazy" decoding="async" src="/logos/europ-assistance-logo-2026.avif" alt="Europ Assistance logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
-                      <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{t('clientCard.label')}</span>
-                      <p className="text-[18px] font-bold text-white/90">{t('clientCard.companyName') || 'Europ Assistance'}</p>
+                      <span className="type-eyebrow text-white/30 block mb-1">{t('clientCard.label')}</span>
+                      <p className="font-display text-[18px] font-bold text-white/90">{t('clientCard.companyName') || 'Europ Assistance'}</p>
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                     {t.raw('clientCard.facts').map(s => (
                       <div key={s.label}>
-                        <span className="text-[11px] font-bold text-white/30 tracking-[0.1em] uppercase block mb-1">{s.label}</span>
-                        <p className="text-[14px] text-white/[0.65] leading-[1.5]">{s.value}</p>
+                        <span className="type-eyebrow text-white/30 block mb-1">{s.label}</span>
+                        <p className="type-body-sm text-white/[0.65]">{s.value}</p>
                       </div>
                     ))}
                   </div>
@@ -156,9 +159,9 @@ export default function EuropAssistanceLandingPage() {
 
             {/* CONTEXT */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('context.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-6">{t('context.title')}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.85] mb-8">{t.rich('context.paragraph', {
+              <span className="type-eyebrow block mb-4" style={{ color: '#4b4df7' }}>{t('context.badge')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-6">{t('context.title')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-8">{t.rich('context.paragraph', {
     b: (chunks) => <strong className="text-[#121212]/80 font-semibold">{chunks}</strong>,
     br: () => <br />,
   })}</p>
@@ -166,12 +169,12 @@ export default function EuropAssistanceLandingPage() {
 
             {/* CHALLENGE */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('challenge.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('challenge.title')}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-14">{t('challenge.intro')}</p>
+              <span className="type-eyebrow block mb-4" style={{ color: '#4b4df7' }}>{t('challenge.badge')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('challenge.title')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-14">{t('challenge.intro')}</p>
 
               <div className="mb-10">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('challenge.businessLabel')}</span>
+                <span className="type-eyebrow text-[#121212]/30 mb-5 block">{t('challenge.businessLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {CHALLENGE_BUSINESS_CHALLENGES.map((ch) => (
                     <div key={t(`challenge.businessChallenges.${ch.id}.title`)} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
@@ -179,14 +182,14 @@ export default function EuropAssistanceLandingPage() {
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`challenge.businessChallenges.${ch.id}.title`)}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`challenge.businessChallenges.${ch.id}.text`)}</p>
+                      <p className="type-body-sm text-[#121212]/55">{t(`challenge.businessChallenges.${ch.id}.text`)}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('challenge.hrLabel')}</span>
+                <span className="type-eyebrow text-[#121212]/30 mb-5 block">{t('challenge.hrLabel')}</span>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                   {CHALLENGE_HR_CHALLENGES.map((ch) => (
                     <div key={t(`challenge.hrChallenges.${ch.id}.title`)} className="rounded-2xl border border-[#4b4df7]/[0.1] bg-[#4b4df7]/[0.02] p-7">
@@ -194,7 +197,7 @@ export default function EuropAssistanceLandingPage() {
                         <ch.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                       </div>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`challenge.hrChallenges.${ch.id}.title`)}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`challenge.hrChallenges.${ch.id}.text`)}</p>
+                      <p className="type-body-sm text-[#121212]/55">{t(`challenge.hrChallenges.${ch.id}.text`)}</p>
                     </div>
                   ))}
                 </div>
@@ -203,15 +206,15 @@ export default function EuropAssistanceLandingPage() {
 
             {/* OBJECTIVES */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('objectives.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-10">{t('objectives.title')}</h2>
+              <span className="type-eyebrow block mb-4" style={{ color: '#4b4df7' }}>{t('objectives.badge')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-10">{t('objectives.title')}</h2>
               <div className="grid md:grid-cols-2 gap-5">
                 {OBJECTIVES_ITEMS.map((o, i) => (
                   <div key={i} className="flex items-start gap-5 rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(75,77,247,0.08)' }}>
                       <o.icon className="h-5 w-5" style={{ color: '#4b4df7' }} />
                     </div>
-                    <p className="text-[15px] text-[#121212]/70 leading-[1.65] pt-1.5">
+                    <p className="type-body text-[#121212]/70 pt-1.5">
                       {t(`objectives.items.${o.id}.text`).includes(':') ? <><strong className="font-bold text-[#121212]/90">{t(`objectives.items.${o.id}.text`).split(':')[0]}</strong>:{t(`objectives.items.${o.id}.text`).split(':').slice(1).join(':')}</> : t(`objectives.items.${o.id}.text`)}
                     </p>
                   </div>
@@ -221,30 +224,30 @@ export default function EuropAssistanceLandingPage() {
 
             {/* SOLUTION */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#4b4df7' }}>{t('solution.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('solution.title')}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-12">{t('solution.intro')}</p>
+              <span className="type-eyebrow block mb-4" style={{ color: '#4b4df7' }}>{t('solution.badge')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('solution.title')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-12">{t('solution.intro')}</p>
 
               <div className="mb-12">
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('solution.skillsLabel')}</span>
+                <span className="type-eyebrow text-[#121212]/30 mb-5 block">{t('solution.skillsLabel')}</span>
                 <div className="flex flex-wrap gap-3">
                   {SOLUTION_SKILLS.map((s) => (
                     <div key={t(`solution.skills.${s.id}.label`)} className="inline-flex items-center gap-3 px-5 py-4 rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
                       <s.icon className="h-5 w-5 shrink-0" style={{ color: '#4b4df7' }} />
-                      <span className="text-[14px] font-semibold text-[#121212]/70">{t(`solution.skills.${s.id}.label`)}</span>
+                      <span className="type-body-sm font-semibold text-[#121212]/70">{t(`solution.skills.${s.id}.label`)}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <span className="text-[12px] font-bold text-[#121212]/30 tracking-[0.1em] uppercase mb-5 block">{t('solution.methodologyLabel')}</span>
+                <span className="type-eyebrow text-[#121212]/30 mb-5 block">{t('solution.methodologyLabel')}</span>
                 <div className="grid md:grid-cols-3 gap-5">
                   {t.raw('solution.methodology').map((m, i) => (
                     <div key={m.title} className="rounded-2xl border border-[#e2e8f0] bg-white p-7 shadow-sm">
-                      <span className="block text-[2.75rem] font-light leading-none mb-6" style={{ color: '#c7d2fe' }}>0{i + 1}</span>
+                      <span className="font-display block text-[2.75rem] font-light leading-none mb-6" style={{ color: '#c7d2fe' }}>0{i + 1}</span>
                       <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{m.title}</h4>
-                      <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{m.text}</p>
+                      <p className="type-body-sm text-[#121212]/55">{m.text}</p>
                     </div>
                   ))}
                 </div>
@@ -253,9 +256,9 @@ export default function EuropAssistanceLandingPage() {
 
             {/* RESULTS */}
             <Section className="mb-24">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase block mb-4" style={{ color: '#16a34a' }}>{t('results.badge')}</span>
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('results.title')}</h2>
-              <p className="text-[16px] text-[#121212]/[0.65] leading-[1.8] mb-10">{t('results.intro')}</p>
+              <span className="type-eyebrow block mb-4" style={{ color: '#16a34a' }}>{t('results.badge')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] leading-[1.4] tracking-[-0.02em] mb-4">{t('results.title')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-10">{t('results.intro')}</p>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {RESULTS_CARDS.map((r) => (
@@ -264,7 +267,7 @@ export default function EuropAssistanceLandingPage() {
                       <r.icon className="h-5 w-5" style={{ color: '#16a34a' }} />
                     </div>
                     <h4 className="text-[15px] font-semibold text-[#121212] mb-3 leading-[1.4]">{t(`results.cards.${r.id}.title`)}</h4>
-                    <p className="text-[14px] text-[#121212]/55 leading-[1.65]">{t(`results.cards.${r.id}.text`)}</p>
+                    <p className="type-body-sm text-[#121212]/55">{t(`results.cards.${r.id}.text`)}</p>
                   </div>
                 ))}
               </div>
@@ -273,14 +276,14 @@ export default function EuropAssistanceLandingPage() {
             {/* QUOTE */}
             <Section>
               <div className="rounded-2xl border border-[#4b4df7]/[0.12] bg-gradient-to-br from-[#4b4df7]/[0.04] to-transparent p-8 lg:p-10">
-                <p className="text-[17px] text-[#121212]/75 leading-[1.75] italic mb-6">"{t('quote.text')}"</p>
+                <p className="type-blockquote text-[#121212]/75 italic mb-6">"{t('quote.text')}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-[#4b4df7]/[0.15]">
                     <img loading="lazy" decoding="async" src="/logos/europ-assistance-nicole.jpg" alt={t('quote.author')} className="w-full h-full object-cover object-top" />
                   </div>
                   <div>
-                    <p className="text-[14px] font-semibold text-[#121212]/80">{t('quote.author')}</p>
-                    <p className="text-[12px] text-[#121212]/40 leading-[1.5]">{t('quote.role')}</p>
+                    <p className="type-body-sm font-semibold text-[#121212]/80">{t('quote.author')}</p>
+                    <p className="type-caption text-[#121212]/40">{t('quote.role')}</p>
                   </div>
                 </div>
               </div>
@@ -298,10 +301,10 @@ export default function EuropAssistanceLandingPage() {
             <div className="grid md:grid-cols-2 gap-5">
               {t.raw('related.stories').map(s => (
                 <button key={s.id} onClick={() => { router.push(href(`customers/${s.id}`, lang)); window.scrollTo(0, 0); }} className="group text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
-                  <span className="text-[14px] text-white/40 mb-4 block">{s.tag}</span>
+                  <span className="type-body-sm text-white/40 mb-4 block">{s.tag}</span>
                   <h4 className="text-[24px] font-semibold text-white/90 mb-4">{s.company}</h4>
-                  <p className="text-[16px] text-white/[0.65] leading-[1.7] mb-8">{s.headline}</p>
-                  <span className="inline-flex items-center gap-2 text-[15px] text-white/50 group-hover:text-white/80 font-semibold transition-colors duration-300">
+                  <p className="type-body text-white/[0.65] mb-8">{s.headline}</p>
+                  <span className="type-body-bold inline-flex items-center gap-2 text-white/50 group-hover:text-white/80 transition-colors duration-300">
                     {t('related.cta')} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>

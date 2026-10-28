@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
  * default background is dark).
  */
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-full text-[15px] font-medium leading-6 whitespace-nowrap transition-colors duration-200 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "type-button inline-flex items-center justify-center gap-2 rounded-full whitespace-nowrap transition-colors duration-200 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -28,7 +28,9 @@ const buttonVariants = cva(
         dark: "",
       },
       size: {
-        default: "px-6 py-3",
+        // py-4: the label's line height is 100% (type-button), so the padding
+        // carries the 48px pill height the old 24px line height used to give.
+        default: "px-6 py-4",
         // Tertiary is a plain text link inline with surrounding copy — it does not
         // carry the pill hit-box padding, only primary/secondary do (see Figma).
         tertiary: "",

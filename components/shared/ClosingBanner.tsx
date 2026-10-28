@@ -42,8 +42,8 @@ export default function ClosingBanner({ heading, body, cta }: {
           data-testid="cta-track-a"
           className="rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 flex flex-col items-center text-center"
         >
-          <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90">{heading}</h2>
-          <p className="text-[17px] text-white/[0.65] leading-[1.7] mt-4 md:mt-5">{body}</p>
+          <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90">{heading}</h2>
+          <p className="max-w-[880px] type-body-lg text-white/[0.65] mt-4 md:mt-5">{body}</p>
           <Button asChild variant="primary" mode="dark" className="mt-8">
             <a href={href('book-meeting', lang)} data-testid="cta-book-demo">
               <span>{cta}</span>

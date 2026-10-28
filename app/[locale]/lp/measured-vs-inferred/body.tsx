@@ -14,6 +14,7 @@ import SkillProfile from '@/components/landing/mvi/SkillProfile';
 import StackFlow from '@/components/landing/mvi/StackFlow';
 import CompareTable from '@/components/landing/mvi/CompareTable';
 import { useInView } from '@/components/landing/mvi/motion';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 // The booking page for the 20-minute conversation: the site's own
 // /book-meeting, the same page the main navbar's "Book a demo" opens. Every CTA
@@ -39,7 +40,7 @@ const H2 = 'text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-[-0.02em] leadi
 
 function Eyebrow({ light, children }: { light?: boolean; children: React.ReactNode }) {
   return (
-    <p className={`text-[15px] md:text-[16px] font-medium mb-4 ${light ? 'text-[#4B4DF7]' : 'text-[#8385FF]'}`}>{children}</p>
+    <p className={`type-link font-medium mb-4 ${light ? 'text-[#4B4DF7]' : 'text-[#8385FF]'}`}>{children}</p>
   );
 }
 
@@ -93,10 +94,10 @@ function HowSteps({ steps }: { steps: Step[] }) {
           >
             <div className="flex items-center gap-3 mb-5">
               <IconTile icon={STEP_ICONS[i]} mode="light" />
-              <span className="text-[15px] font-semibold text-[#4B4DF7]">{s.name}</span>
+              <span className="type-body-bold text-[#4B4DF7]">{s.name}</span>
             </div>
             <h3 className="text-[18px] font-semibold text-[#121212] leading-snug mb-3">{s.title}</h3>
-            <p className="text-[15px] text-[#121212]/60 leading-[1.7]">{s.body}</p>
+            <p className="type-body text-[#121212]/60">{s.body}</p>
           </li>
         ))}
       </ol>
@@ -123,18 +124,20 @@ export default function MeasuredVsInferred() {
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
             <div className="min-w-0 lg:col-span-7">
               <Reveal {...FADE} delay={0.1}><Eyebrow>{t('hero.eyebrow')}</Eyebrow></Reveal>
-              <Reveal
-                {...FADE}
-                delay={0.2}
-                as="h1"
-                className="font-semibold text-[48px] md:text-[64px] text-white/95 mb-6"
-                style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-              >
-                {t.rich('hero.title', { s: accent })}
-              </Reveal>
-              <Reveal {...FADE} delay={0.3} as="p" className="text-[17px] md:text-[18px] text-white/[0.65] leading-[1.7] mb-10 max-w-[620px]">
-                {t('hero.sub')}
-              </Reveal>
+              <HeroCopy>
+                <Reveal
+                  {...FADE}
+                  delay={0.2}
+                  as="h1"
+                  className="font-semibold text-[48px] md:text-[58px] text-white/95 mb-6"
+                  style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
+                >
+                  {t.rich('hero.title', { s: accent })}
+                </Reveal>
+                <Reveal {...FADE} delay={0.3} as="p" className="type-body-lg hero-subtitle text-white/[0.65] mb-10">
+                  {t('hero.sub')}
+                </Reveal>
+              </HeroCopy>
               <Reveal {...FADE} delay={0.4} className="flex flex-col items-start gap-3">
                 <Cta to={booking} mode="dark">{t('hero.cta')}</Cta>
               </Reveal>
@@ -151,16 +154,16 @@ export default function MeasuredVsInferred() {
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <Reveal {...FADE} className="max-w-[820px] mb-12">
               <Eyebrow>{t('problem.eyebrow')}</Eyebrow>
-              <h2 className={`${H2} text-white/95 mb-6`}>{t.rich('problem.title', { s: accent })}</h2>
-              <p className="text-[16px] md:text-[17px] text-white/60 leading-[1.75]">{t('problem.body')}</p>
+              <h2 className={`max-w-[880px] ${H2} text-white/95 mb-6`}>{t.rich('problem.title', { s: accent })}</h2>
+              <p className="max-w-[880px] type-body text-white/60">{t('problem.body')}</p>
             </Reveal>
 
             <div className="grid md:grid-cols-3 gap-4 md:gap-6">
               {(t.raw('problem.cards') as Card[]).map((c, i) => (
                 <Reveal {...FADE} delay={i * 0.08} key={c.title} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7">
-                  <span className="block text-[13px] font-medium text-[#8385FF] mb-4">0{i + 1}</span>
+                  <span className="type-body-sm block font-medium text-[#8385FF] mb-4">0{i + 1}</span>
                   <h3 className="text-[18px] font-semibold text-white/90 leading-snug mb-3">{c.title}</h3>
-                  <p className="text-[15px] text-white/55 leading-[1.7]">{c.body}</p>
+                  <p className="type-body text-white/55">{c.body}</p>
                 </Reveal>
               ))}
             </div>
@@ -173,8 +176,8 @@ export default function MeasuredVsInferred() {
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <Reveal {...FADE} className="max-w-[820px] mb-12">
               <Eyebrow light>{t('compare.eyebrow')}</Eyebrow>
-              <h2 className={`${H2} text-[#121212] mb-6`}>{t.rich('compare.title', { s: accent })}</h2>
-              <p className="text-[16px] md:text-[17px] text-[#121212]/60 leading-[1.75]">{t('compare.intro')}</p>
+              <h2 className={`max-w-[880px] ${H2} text-[#121212] mb-6`}>{t.rich('compare.title', { s: accent })}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/60">{t('compare.intro')}</p>
             </Reveal>
 
             <Reveal {...FADE}>
@@ -182,7 +185,7 @@ export default function MeasuredVsInferred() {
             </Reveal>
 
             <Reveal {...FADE} className="mt-14 flex flex-col md:flex-row md:items-center md:justify-between gap-5 rounded-2xl bg-white border border-black/[0.06] p-6 md:p-8">
-              <p className="text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-[#121212]">{t('compare.midLine')}</p>
+              <p className="font-display text-[18px] md:text-[20px] font-semibold tracking-[-0.01em] text-[#121212]">{t('compare.midLine')}</p>
               <Cta to={booking} mode="light">{t('compare.midCta')}</Cta>
             </Reveal>
           </div>
@@ -193,19 +196,19 @@ export default function MeasuredVsInferred() {
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <Reveal {...FADE} className="max-w-[820px] mb-12">
               <Eyebrow>{t('stack.eyebrow')}</Eyebrow>
-              <h2 className={`${H2} text-white/95 mb-6`}>{t.rich('stack.title', { s: accent })}</h2>
-              <p className="text-[16px] md:text-[17px] text-white/60 leading-[1.75]">{t('stack.body')}</p>
+              <h2 className={`max-w-[880px] ${H2} text-white/95 mb-6`}>{t.rich('stack.title', { s: accent })}</h2>
+              <p className="max-w-[880px] type-body text-white/60">{t('stack.body')}</p>
             </Reveal>
 
             <StackFlow />
 
-            <p className="text-[16px] md:text-[17px] text-white/60 leading-[1.75] mb-6">{t('stack.pathsLabel')}</p>
+            <p className="type-body text-white/60 mb-6">{t('stack.pathsLabel')}</p>
             <div className="grid md:grid-cols-3 gap-4 md:gap-6">
               {(t.raw('stack.paths') as Card[]).map((p, i) => (
                 <Reveal {...FADE} delay={i * 0.08} key={p.title} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6">
                   <IconTile icon={PATH_ICONS[i]} mode="dark" className="mb-5" />
                   <h3 className="text-[17px] font-semibold text-white/90 mb-2">{p.title}</h3>
-                  <p className="text-[15px] text-white/55 leading-[1.65]">{p.body}</p>
+                  <p className="type-body text-white/55">{p.body}</p>
                 </Reveal>
               ))}
             </div>
@@ -217,7 +220,7 @@ export default function MeasuredVsInferred() {
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <Reveal {...FADE} className="max-w-[820px] mb-12">
               <Eyebrow light>{t('how.eyebrow')}</Eyebrow>
-              <h2 className={`${H2} text-[#121212]`}>{t.rich('how.title', { s: accent })}</h2>
+              <h2 className={`max-w-[880px] ${H2} text-[#121212]`}>{t.rich('how.title', { s: accent })}</h2>
             </Reveal>
 
             <HowSteps steps={t.raw('how.steps') as Step[]} />
@@ -231,14 +234,14 @@ export default function MeasuredVsInferred() {
             <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
               <Reveal {...FADE} className="lg:col-span-5">
                 <Eyebrow light>{t('questions.eyebrow')}</Eyebrow>
-                <h2 className={`${H2} text-[#121212]`}>{t.rich('questions.title', { s: accent })}</h2>
+                <h2 className={`max-w-[880px] ${H2} text-[#121212]`}>{t.rich('questions.title', { s: accent })}</h2>
               </Reveal>
               <div className="lg:col-span-7">
                 <ol className="space-y-3">
                   {(t.raw('questions.items') as string[]).map((q, i) => (
                     <Reveal {...FADE} delay={i * 0.06} as="li" key={q} className="flex gap-4 rounded-2xl bg-white border border-black/[0.06] p-5 md:p-6">
                       <span className="stat-value text-[20px] text-[#4B4DF7] w-6 shrink-0" style={{ lineHeight: 1.4 }}>{i + 1}</span>
-                      <p className="text-[16px] text-[#121212] leading-[1.6]">{q}</p>
+                      <p className="type-body text-[#121212]">{q}</p>
                     </Reveal>
                   ))}
                 </ol>
@@ -257,8 +260,8 @@ export default function MeasuredVsInferred() {
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 lg:h-64 bg-gradient-to-b from-transparent to-[#050508]" aria-hidden="true" />
           <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <Reveal {...FADE} className="max-w-[860px] mx-auto text-center flex flex-col items-center">
-              <h2 className={`${H2} text-white/95 mb-6`}>{t.rich('final.title', { s: accent })}</h2>
-              <p className="text-[16px] md:text-[18px] text-white/60 leading-[1.7] mb-10 max-w-[680px]">{t('final.body')}</p>
+              <h2 className={`max-w-[880px] mx-auto ${H2} text-white/95 mb-6`}>{t.rich('final.title', { s: accent })}</h2>
+              <p className="max-w-[880px] mx-auto type-body-lg text-white/60 mb-10">{t('final.body')}</p>
               <Cta to={booking} mode="dark">{t('final.cta')}</Cta>
             </Reveal>
           </div>

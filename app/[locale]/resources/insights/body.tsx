@@ -12,6 +12,7 @@ import { whitepapers } from '@/data/whitepapers';
 import { onepagers } from '@/data/onepagers';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 import ClosingBanner from '@/components/shared/ClosingBanner';
 
 
@@ -33,7 +34,7 @@ export default function InsightsPage() {
   const renderTags = (w: { industry: string[]; topic: string[] }) => (
     <div className="flex flex-wrap gap-1.5">
       {[...w.industry, ...w.topic].map(tag => (
-        <span key={tag} className="inline-flex rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[12px] text-[#4B4B4B] whitespace-nowrap">{tag}</span>
+        <span key={tag} className="type-caption inline-flex rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[#4B4B4B] whitespace-nowrap">{tag}</span>
       ))}
     </div>
   );
@@ -52,10 +53,10 @@ export default function InsightsPage() {
       <div className="flex flex-col gap-4 p-6 flex-1">
         <div className="flex flex-col gap-2">
           <h3 className="text-[18px] font-semibold text-[#121212] leading-snug">{t(`items.${w.slug}.title`)}</h3>
-          <p className="text-[14px] text-[#121212]/60 leading-[1.4] line-clamp-3">{t(`items.${w.slug}.shortDesc`)}</p>
+          <p className="type-body-sm text-[#121212]/60 line-clamp-3">{t(`items.${w.slug}.shortDesc`)}</p>
         </div>
         {renderTags(w)}
-        <span className="text-[16px] font-medium text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
+        <span className="type-button font-medium text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
           {labels('read')} <ArrowRight className="h-4 w-4" />
         </span>
       </div>
@@ -78,10 +79,10 @@ export default function InsightsPage() {
           <div className="flex flex-col gap-4 p-6 flex-1">
             <div className="flex flex-col gap-2">
               <h3 className="text-[18px] font-semibold text-[#121212] leading-snug">{t(`onePagers.${w.slug}.title`)}</h3>
-              <p className="text-[14px] text-[#121212]/60 leading-[1.4] line-clamp-3">{t(`onePagers.${w.slug}.shortDesc`)}</p>
+              <p className="type-body-sm text-[#121212]/60 line-clamp-3">{t(`onePagers.${w.slug}.shortDesc`)}</p>
             </div>
             {renderTags(w)}
-            <span className="text-[16px] font-medium text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
+            <span className="type-button font-medium text-[#4B4DF7] flex items-center gap-2 group-hover:gap-3 transition-all duration-300 mt-auto">
               {labels('download')} <ArrowRight className="h-4 w-4" />
             </span>
           </div>
@@ -99,11 +100,13 @@ export default function InsightsPage() {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               <Reveal duration={0.7} className="lg:col-span-6">
-                <span className="text-[12px] font-bold text-[#4B4DF7]/60 tracking-[0.25em] uppercase mb-8 block">{t('text')}</span>
-                <h1 className="font-semibold text-white/95 mb-8 text-[48px] md:text-[64px]" style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}>{t.rich('heading', {
-                  br: () => <br />,
-                })}</h1>
-                <p className="text-[20px] text-white/[0.5] leading-[1.75] max-w-xl mb-12" style={{ fontWeight: 300 }}>{t('body')}</p>
+                <span className="type-eyebrow text-[#6B7DFF] mb-8 block">{t('text')}</span>
+                <HeroCopy>
+                  <h1 className="font-semibold text-white/95 mb-8 text-[48px] md:text-[58px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t.rich('heading', {
+                    br: () => <br />,
+                  })}</h1>
+                  <p className="type-body-lg hero-subtitle text-white/[0.5] mb-12">{t('body')}</p>
+                </HeroCopy>
                 <Button asChild variant="secondary" mode="dark" className="group">
                   <a
                     href="#wp-grid"
@@ -130,15 +133,15 @@ export default function InsightsPage() {
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-24">
             {publishedOnePagers.length > 0 && (
               <>
-                <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-[#121212] mb-4">{t('onePagersHeading')}</h2>
-                <p className="text-[15px] text-[#121212]/45 mb-10 max-w-xl">{t('onePagersBody')}</p>
+                <h2 className="max-w-[880px] text-[clamp(1.5rem,3vw,2rem)] font-semibold text-[#121212] mb-4">{t('onePagersHeading')}</h2>
+                <p className="max-w-[880px] type-body text-[#121212]/45 mb-10">{t('onePagersBody')}</p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {publishedOnePagers.map((w, i) => renderOnePagerCard(w, i))}
                 </div>
               </>
             )}
 
-            <h2 className={`text-[clamp(1.5rem,3vw,2rem)] font-semibold text-[#121212] mb-10 ${publishedOnePagers.length > 0 ? 'mt-20 lg:mt-24' : ''}`}>{t('insightsHeading')}</h2>
+            <h2 className={`max-w-[880px] text-[clamp(1.5rem,3vw,2rem)] font-semibold text-[#121212] mb-10 ${publishedOnePagers.length > 0 ? 'mt-20 lg:mt-24' : ''}`}>{t('insightsHeading')}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {published.map((w, i) => renderCard(w, i))}
             </div>

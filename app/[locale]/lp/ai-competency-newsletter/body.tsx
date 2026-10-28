@@ -7,6 +7,7 @@ import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { Download, ArrowRight, ArrowDown, Check } from 'lucide-react';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 const GRAD = 'linear-gradient(135deg, #FFAF64 0%, #FF5656 62%, #4B4DF7 128%)';
 
@@ -28,7 +29,7 @@ const HS_DOWNLOAD_FORM_GUID = {
 const SectionHead = ({ n, label }) => (
   <div className="flex items-baseline gap-4 mb-5">
     <span className="text-[34px] md:text-[40px] font-extrabold leading-none gradient-text" style={{ backgroundImage: GRAD }}>{n}</span>
-    <span className="text-[12px] md:text-[13px] font-bold tracking-[0.16em] uppercase text-white/70">{label}</span>
+    <span className="type-body-sm font-bold uppercase text-white/70">{label}</span>
   </div>
 );
 
@@ -107,16 +108,18 @@ export default function AiCompetencyNewsletterPage() {
 
           {/* HERO */}
           <header className="mb-14 md:mb-20">
-            <span className="inline-block text-[11px] font-bold tracking-[0.16em] uppercase mb-4" style={{ color: '#7b7df9' }}>{t('badge')}</span>
-            <h1 className="text-[32px] md:text-[52px] font-bold tracking-[-0.02em] text-white/95" style={{ lineHeight: 1.08 }}>
-              {t('titleLead')}
-              <span className="gradient-text" style={{ backgroundImage: GRAD }}>{t('titleHighlight')}</span>
-              {t('titleTail')}
-            </h1>
-            <p className="text-[16px] md:text-[18px] text-white/65 leading-[1.55] mt-5 max-w-2xl">{t('subhead')}</p>
+            <span className="type-eyebrow inline-block mb-4" style={{ color: '#6b7dff' }}>{t('badge')}</span>
+            <HeroCopy>
+              <h1 className="text-[32px] md:text-[58px] font-bold tracking-[-0.02em] text-white/95" style={{ lineHeight: 1.1 }}>
+                {t('titleLead')}
+                <span className="gradient-text" style={{ backgroundImage: GRAD }}>{t('titleHighlight')}</span>
+                {t('titleTail')}
+              </h1>
+              <p className="type-body-lg hero-subtitle text-white/65 mt-5">{t('subhead')}</p>
+            </HeroCopy>
             <div className="flex flex-col sm:flex-row gap-3 mt-8">
               <a href={t('assets.pdf')} download onClick={() => handleDownload('download')} data-testid="download-cta"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-[15px] font-medium text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
+                className="type-button inline-flex items-center justify-center gap-2 px-6 py-[18px] rounded-full font-medium text-white transition-all duration-300 hover:opacity-90" style={{ background: '#4b4df7' }}>
                 <Download className="h-[18px] w-[18px]" /> {t('download')}
               </a>
             </div>
@@ -124,11 +127,11 @@ export default function AiCompetencyNewsletterPage() {
 
           {/* INTRO strip */}
           <section className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 mb-16 flex flex-col md:flex-row md:items-center gap-6">
-            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] flex-1">
+            <p className="type-body text-white/70 flex-1">
               {t('introBody')} <span className="font-semibold" style={{ color: '#8a8cff' }}>{t('introPunch')}</span>
             </p>
             <div className="flex items-center gap-3 shrink-0 md:pl-8 md:border-l md:border-white/10">
-              <span className="text-[15px] font-bold tracking-[0.06em] text-white/25 uppercase line-through decoration-white/25">{t('pillFrom')}</span>
+              <span className="type-body-bold text-white/25 uppercase line-through decoration-white/25">{t('pillFrom')}</span>
               <ArrowRight className="h-4 w-4 text-white/40" />
               <span className="text-[15px] font-extrabold tracking-[0.06em] uppercase gradient-text" style={{ backgroundImage: GRAD }}>{t('pillTo')}</span>
             </div>
@@ -137,12 +140,12 @@ export default function AiCompetencyNewsletterPage() {
           {/* 01 THE PROBLEM */}
           <section className="mb-16">
             <SectionHead n={t('s1.n')} label={t('s1.label')} />
-            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t('s1.body')}</p>
+            <p className="type-body text-white/70 mb-8 max-w-3xl">{t('s1.body')}</p>
             <div className="grid sm:grid-cols-2 gap-x-8 gap-y-5">
               {t.raw('s1.bullets').map((b, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="mt-[7px] w-2 h-2 rotate-45 shrink-0 rounded-[1px]" style={{ background: i % 2 === 0 ? '#FF5656' : '#7b7df9' }} />
-                  <p className="text-[14px] md:text-[15px] text-white/75 leading-[1.5]">{b}</p>
+                  <p className="type-body text-white/75">{b}</p>
                 </div>
               ))}
             </div>
@@ -151,14 +154,14 @@ export default function AiCompetencyNewsletterPage() {
           {/* 02 HOW WE VERIFY IT */}
           <section className="mb-16">
             <SectionHead n={t('s2.n')} label={t('s2.label')} />
-            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t('s2.body')}</p>
+            <p className="type-body text-white/70 mb-8 max-w-3xl">{t('s2.body')}</p>
 
             <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 md:p-7">
               <div className="flex flex-col md:flex-row items-stretch md:items-center gap-4 md:gap-3">
                 {/* INPUT */}
                 <div className="flex-1 rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                  <span className="text-[10px] font-bold tracking-[0.16em] uppercase text-white/40">{t('s2.inputLabel')}</span>
-                  <p className="text-[14px] font-semibold text-white/90 mt-1.5 leading-[1.35]">{t('s2.input')}</p>
+                  <span className="type-eyebrow text-white/40">{t('s2.inputLabel')}</span>
+                  <p className="type-body-sm font-semibold text-white/90 mt-1.5">{t('s2.input')}</p>
                 </div>
 
                 <ArrowRight className="hidden md:block h-5 w-5 text-[#7b7df9] shrink-0" />
@@ -169,14 +172,14 @@ export default function AiCompetencyNewsletterPage() {
                   <div className="grid grid-cols-2 gap-3">
                     {[[t('s2.sig1Label'), t('s2.sig1')], [t('s2.sig2Label'), t('s2.sig2')]].map(([l, v], i) => (
                       <div key={i} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                        <span className="text-[10px] font-bold tracking-[0.16em] uppercase text-white/40">{l}</span>
-                        <p className="text-[14px] font-semibold text-white/90 mt-1.5">{v}</p>
+                        <span className="type-eyebrow text-white/40">{l}</span>
+                        <p className="type-body-sm font-semibold text-white/90 mt-1.5">{v}</p>
                       </div>
                     ))}
                   </div>
                   <div className="flex justify-center gap-16 my-2 text-[#7b7df9]"><ArrowDown className="h-4 w-4" /><ArrowDown className="h-4 w-4" /></div>
                   <div className="rounded-xl p-3 text-center" style={{ background: 'rgba(75,77,247,0.12)', border: '1px solid rgba(123,125,249,0.25)' }}>
-                    <p className="text-[13px] font-semibold" style={{ color: '#a9aaff' }}>{t('s2.integrated')}</p>
+                    <p className="type-body-sm font-semibold" style={{ color: '#a9aaff' }}>{t('s2.integrated')}</p>
                   </div>
                 </div>
 
@@ -185,8 +188,8 @@ export default function AiCompetencyNewsletterPage() {
 
                 {/* OUTPUT */}
                 <div className="flex-1 rounded-xl p-4" style={{ background: 'linear-gradient(160deg, #23234d 0%, #16163a 100%)', border: '1px solid rgba(123,125,249,0.3)' }}>
-                  <span className="text-[10px] font-bold tracking-[0.16em] uppercase" style={{ color: '#8a8cff' }}>{t('s2.outputLabel')}</span>
-                  <p className="text-[14px] font-semibold text-white mt-1.5 leading-[1.35]">{t('s2.output')}</p>
+                  <span className="type-eyebrow" style={{ color: '#6b7dff' }}>{t('s2.outputLabel')}</span>
+                  <p className="type-body-sm font-semibold text-white mt-1.5">{t('s2.output')}</p>
                 </div>
               </div>
             </div>
@@ -195,12 +198,12 @@ export default function AiCompetencyNewsletterPage() {
           {/* 03 WHY OURS IS DIFFERENT */}
           <section className="mb-16">
             <SectionHead n={t('s3.n')} label={t('s3.label')} />
-            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t('s3.body')}</p>
+            <p className="type-body text-white/70 mb-8 max-w-3xl">{t('s3.body')}</p>
             <div className="grid sm:grid-cols-2 gap-4">
               {t.raw('s3.cards').map((card, i) => (
                 <div key={i} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6">
                   <h3 className="text-[16px] font-bold text-white/95 mb-2">{card.t}</h3>
-                  <p className="text-[14px] text-white/60 leading-[1.55]">{card.b}</p>
+                  <p className="type-body-sm text-white/60">{card.b}</p>
                 </div>
               ))}
             </div>
@@ -209,7 +212,7 @@ export default function AiCompetencyNewsletterPage() {
           {/* 04 WHAT YOU GET */}
           <section className="mb-16">
             <SectionHead n={t('s4.n')} label={t('s4.label')} />
-            <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.6] mb-8 max-w-3xl">{t('s4.body')}</p>
+            <p className="type-body text-white/70 mb-8 max-w-3xl">{t('s4.body')}</p>
             <div className="space-y-2.5">
               {t.raw('s4.levels').map((lvl, i) => {
                 const top = i === t.raw('s4.levels').length - 1;
@@ -219,8 +222,8 @@ export default function AiCompetencyNewsletterPage() {
                       ? { background: 'linear-gradient(120deg, #23234d 0%, #16163a 100%)', border: '1px solid rgba(123,125,249,0.35)' }
                       : { background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}>
                     <Bars active={top} />
-                    <span className={`text-[15px] font-bold w-[110px] shrink-0 ${top ? 'text-white' : 'text-white/90'}`}>{lvl.t}</span>
-                    <span className={`text-[14px] leading-[1.45] ${top ? 'text-white/85' : 'text-white/55'}`}>{lvl.b}</span>
+                    <span className={`type-body-bold w-[110px] shrink-0 ${top ? 'text-white' : 'text-white/90'}`}>{lvl.t}</span>
+                    <span className={`type-body-sm ${top ? 'text-white/85' : 'text-white/55'}`}>{lvl.b}</span>
                   </div>
                 );
               })}
@@ -232,22 +235,22 @@ export default function AiCompetencyNewsletterPage() {
             style={{ background: 'linear-gradient(120deg, #1a1a3f 0%, #201436 45%, #3a1730 100%)' }}>
             <div className="pointer-events-none absolute -top-24 right-[-80px] w-[420px] h-[420px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(255,86,86,0.22) 0%, rgba(255,86,86,0) 65%)' }} />
             <div className="relative">
-              <h2 className="text-[26px] md:text-[48px] font-semibold text-white tracking-[-0.02em] mb-3">{t('cta.title')}</h2>
-              <p className="text-[15px] md:text-[16px] text-white/65 mb-8 max-w-xl mx-auto">{t('cta.body')}</p>
+              <h2 className="max-w-[880px] mx-auto text-[26px] md:text-[48px] font-semibold text-white tracking-[-0.02em] mb-3">{t('cta.title')}</h2>
+              <p className="max-w-[880px] type-body text-white/65 mb-8 mx-auto">{t('cta.body')}</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a href={href('book-meeting', lang)} onClick={() => track('book_bottom')}
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[15px] font-medium text-[#1a1a3f] bg-white hover:opacity-90 transition-all duration-300">
+                  className="type-button inline-flex items-center justify-center gap-2 px-7 py-[18px] rounded-full font-medium text-[#1a1a3f] bg-white hover:opacity-90 transition-all duration-300">
                   {t('cta.button')} <ArrowRight className="h-4 w-4" />
                 </a>
                 <a href={t('assets.pdf')} download onClick={() => handleDownload('download_bottom')}
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-[15px] font-medium text-white border border-white/20 hover:bg-white/[0.08] transition-all duration-300">
+                  className="type-button inline-flex items-center justify-center gap-2 px-7 py-[18px] rounded-full font-medium text-white border border-white/20 hover:bg-white/[0.08] transition-all duration-300">
                   <Download className="h-[18px] w-[18px]" /> {t('download')}
                 </a>
               </div>
             </div>
           </section>
 
-          <p className="text-[11px] font-medium tracking-[0.16em] uppercase text-white/25 mt-10 text-center">{t('footNote')}</p>
+          <p className="type-eyebrow font-medium text-white/25 mt-10 text-center">{t('footNote')}</p>
         </div>
 
         <TrustLogosBar />

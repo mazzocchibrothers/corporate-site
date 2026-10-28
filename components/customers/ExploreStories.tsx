@@ -75,15 +75,15 @@ export default function ExploreStories() {
     <section id="explore" data-testid="explore-stories" className="relative py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-10">
-          <h2 className="text-[clamp(2.5rem,5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90 mb-6">{t.rich('exploreStories.heading', {
+          <h2 className="max-w-[880px] text-[clamp(2.5rem,5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90 mb-6">{t.rich('exploreStories.heading', {
             span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
-          <p className="text-[18px] text-white/[0.65] leading-[1.75]">{t('exploreStories.body')}</p>
+          <p className="max-w-[880px] type-body-lg text-white/[0.65]">{t('exploreStories.body')}</p>
         </Reveal>
 
         {/* Filters */}
         <Reveal y={0} delay={0.2} className="flex flex-wrap items-center gap-3 mb-12">
-          <span className="inline-flex items-center gap-2 text-[13px] text-white/50 mr-1">
+          <span className="type-body-sm inline-flex items-center gap-2 text-white/50 mr-1">
             <ListFilter className="h-4 w-4" aria-hidden="true" />
             {t('exploreStories.filterLabel')}
           </span>
@@ -91,9 +91,9 @@ export default function ExploreStories() {
           <div className="relative">
             <button
               onClick={() => { setIndustryOpen(o => !o); setUseCaseOpen(false); }}
-              className="flex items-center gap-2.5 rounded-full border border-white/[0.12] bg-white/[0.06] pl-4 pr-3 py-2.5 text-[14px] font-semibold text-white/80 hover:border-white/20 transition-colors duration-300"
+              className="type-body-sm flex items-center gap-2.5 rounded-full border border-white/[0.12] bg-white/[0.06] pl-4 pr-3 py-2.5 font-semibold text-white/80 hover:border-white/20 transition-colors duration-300"
             >
-              <span className="text-[12px] font-medium text-white/40 tracking-[0.08em] uppercase">{t('exploreStories.text')}</span>
+              <span className="type-eyebrow font-medium text-white/40">{t('exploreStories.text')}</span>
               <span>{activeIndustry === 'all' ? t('exploreStories.allIndustries') : t(`explore.industries.${activeIndustry}`)}</span>
               <ChevronDown className="h-4 w-4 text-white/40" aria-hidden="true" />
             </button>
@@ -103,7 +103,7 @@ export default function ExploreStories() {
                   <button
                     key={f}
                     onClick={() => { setActiveIndustry(f); setIndustryOpen(false); }}
-                    className={`block w-full text-left px-4 py-2.5 text-[14px] rounded-xl whitespace-nowrap transition-colors duration-200 hover:bg-white/[0.05] ${activeIndustry === f ? 'text-white' : 'text-white/60 hover:text-white'}`}
+                    className={`type-body-sm block w-full text-left px-4 py-2.5 rounded-xl whitespace-nowrap transition-colors duration-200 hover:bg-white/[0.05] ${activeIndustry === f ? 'text-white' : 'text-white/60 hover:text-white'}`}
                   >
                     {f === 'all' ? t('exploreStories.allIndustries') : t(`explore.industries.${f}`)}
                   </button>
@@ -115,9 +115,9 @@ export default function ExploreStories() {
           <div className="relative">
             <button
               onClick={() => { setUseCaseOpen(o => !o); setIndustryOpen(false); }}
-              className="flex items-center gap-2.5 rounded-full border border-white/[0.12] bg-white/[0.06] pl-4 pr-3 py-2.5 text-[14px] font-semibold text-white/80 hover:border-white/20 transition-colors duration-300"
+              className="type-body-sm flex items-center gap-2.5 rounded-full border border-white/[0.12] bg-white/[0.06] pl-4 pr-3 py-2.5 font-semibold text-white/80 hover:border-white/20 transition-colors duration-300"
             >
-              <span className="text-[12px] font-medium text-white/40 tracking-[0.08em] uppercase">{t('exploreStories.text2')}</span>
+              <span className="type-eyebrow font-medium text-white/40">{t('exploreStories.text2')}</span>
               <span>{activeUseCase === 'all' ? t('exploreStories.allUseCases') : t(`explore.useCases.${activeUseCase}`)}</span>
               <ChevronDown className="h-4 w-4 text-white/40" aria-hidden="true" />
             </button>
@@ -127,7 +127,7 @@ export default function ExploreStories() {
                   <button
                     key={f}
                     onClick={() => { setActiveUseCase(f); setUseCaseOpen(false); }}
-                    className={`block w-full text-left px-4 py-2.5 text-[14px] rounded-xl whitespace-nowrap transition-colors duration-200 hover:bg-white/[0.05] ${activeUseCase === f ? 'text-white' : 'text-white/60 hover:text-white'}`}
+                    className={`type-body-sm block w-full text-left px-4 py-2.5 rounded-xl whitespace-nowrap transition-colors duration-200 hover:bg-white/[0.05] ${activeUseCase === f ? 'text-white' : 'text-white/60 hover:text-white'}`}
                   >
                     {f === 'all' ? t('exploreStories.allUseCases') : t(`explore.useCases.${f}`)}
                   </button>
@@ -136,7 +136,7 @@ export default function ExploreStories() {
             )}
           </div>
 
-          <span className="ml-auto text-[13px] text-white/40">{t('exploreStories.storiesCount', { count: filtered.length })}</span>
+          <span className="type-body-sm ml-auto text-white/40">{t('exploreStories.storiesCount', { count: filtered.length })}</span>
         </Reveal>
 
         {/* Story grid. 3 columns, real thumbnails with title + summary below */}
@@ -162,15 +162,15 @@ export default function ExploreStories() {
                 {/* Title + summary below */}
                 <div className="pt-4">
                   <h3 className="text-[24px] font-semibold text-white/90 tracking-[-0.01em] mb-2">{s.company}</h3>
-                  <p className="text-[16px] text-white/[0.65] leading-[1.5]">{t(`explore.stories.${s.id}.headline`)}</p>
+                  <p className="type-body text-white/[0.65]">{t(`explore.stories.${s.id}.headline`)}</p>
                 </div>
               </Reveal>
             ))}
           </div>
         ) : (
           <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-10 text-center">
-            <p className="text-[16px] text-white/50 mb-4">{t('exploreStories.body2')}</p>
-            <p className="text-[14px] text-white/30">{t('exploreStories.body3')}</p>
+            <p className="type-body text-white/50 mb-4">{t('exploreStories.body2')}</p>
+            <p className="type-body-sm text-white/30">{t('exploreStories.body3')}</p>
             <Button asChild variant="secondary" mode="dark" className="mt-6">
               <a href={href('book-meeting', lang)}>
                 {t('exploreStories.cta')} <ArrowRight aria-hidden="true" />

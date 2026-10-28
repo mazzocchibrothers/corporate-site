@@ -40,7 +40,7 @@ export default function LDImpact() {
         </div>
 
         <span
-          className="block mb-2 text-[#121212] text-[32px] md:text-[64px]"
+          className="font-display block mb-2 text-[#121212] text-[32px] md:text-[54px]"
           style={{ fontWeight: 600, lineHeight: 1, letterSpacing: '-0.03em' }}
         >
           {t(`ldImpact.kpis.${k.id}.value`)}
@@ -52,7 +52,7 @@ export default function LDImpact() {
 
         <div className="w-12 h-px bg-[#4B4DF7]/[0.15] my-4 md:my-5" />
 
-        <p className="text-[14px] text-[#7A7A7A] leading-[1.75] flex-1">{t(`ldImpact.kpis.${k.id}.detail`)}</p>
+        <p className="type-body-sm text-[#7A7A7A] flex-1">{t(`ldImpact.kpis.${k.id}.detail`)}</p>
       </Reveal>
     );
   };
@@ -63,10 +63,10 @@ export default function LDImpact() {
 
         {/* Header */}
         <Reveal duration={0.7} className="text-center mb-12 md:mb-16 lg:mb-20">
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">{t.rich('ldImpact.heading', {
+          <h2 className="max-w-[880px] mx-auto text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">{t.rich('ldImpact.heading', {
             span: (chunks) => <span className="font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
-          <p className="text-[15px] md:text-[17px] text-[#7A7A7A] leading-[1.75] max-w-2xl mx-auto">{t('ldImpact.body')}</p>
+          <p className="max-w-[880px] type-body text-[#7A7A7A] mx-auto">{t('ldImpact.body')}</p>
         </Reveal>
 
         <div className="grid gap-5 lg:grid-cols-3">

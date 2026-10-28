@@ -6,6 +6,7 @@ import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Clock, AlertTriangle, Shield, Eye, Anchor, UserCheck, Zap, ThumbsUp, Brain } from 'lucide-react';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 
 
@@ -47,16 +48,18 @@ export default async function BlogArticle2() {
             </Button>
             <Reveal duration={0.7} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
-                <span className="inline-flex px-4 py-1.5 rounded-full text-[12px] font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08] tracking-wide">{t('tag')}</span>
-                <span className="text-[13px] text-white/35">{t('text')}</span>
-                <span className="text-[13px] text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('text2')}</span>
+                <span className="type-caption inline-flex px-4 py-1.5 rounded-full font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08]">{t('tag')}</span>
+                <span className="type-body-sm text-white/35">{t('text')}</span>
+                <span className="type-body-sm text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('text2')}</span>
               </div>
-              <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[64px]" style={{ lineHeight: 1.12, letterSpacing: '-0.02em' }}>
-                {t('heading')}
-              </h1>
-              <p className="text-[19px] text-white/[0.5] leading-[1.75]" style={{ fontWeight: 300 }}>
-                {t('body')}
-              </p>
+              <HeroCopy>
+                <h1 className="font-semibold text-white/95 mb-6 text-[48px] md:text-[58px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+                  {t('heading')}
+                </h1>
+                <p className="type-body-lg hero-subtitle text-white/[0.5]">
+                  {t('body')}
+                </p>
+              </HeroCopy>
             </Reveal>
           </div>
         </section>
@@ -65,24 +68,24 @@ export default async function BlogArticle2() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <Reveal y={20} duration={0.6}>
-              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+              <p className="type-body text-[#121212]/[0.65] mb-6">
                 {t('body2')}
               </p>
-              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+              <p className="type-body text-[#121212]/[0.65] mb-6">
                 {t('body3')}
               </p>
 
               <div className="rounded-xl border-l-4 border-[#4B4DF7] bg-[#4B4DF7]/[0.03] p-6 my-10">
-                <p className="text-[16px] text-[#121212]/[0.7] leading-[1.8] italic">
+                <p className="type-body text-[#121212]/[0.7] italic">
                   {t('body4')}
                 </p>
               </div>
 
-              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">{t('heading2')}</h2>
-              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+              <h2 className="max-w-[880px] text-[26px] font-semibold text-[#121212] mb-5 mt-14 tracking-[-0.02em] leading-[1.15]">{t('heading2')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-6">
                 {t('body5')}
               </p>
-              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+              <p className="type-body text-[#121212]/[0.65] mb-6">
                 {t('body6')}
               </p>
             </Reveal>
@@ -92,10 +95,10 @@ export default async function BlogArticle2() {
         {/* The 8 Biases — Minimal accordion */}
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
-            <Reveal as="h2" y={20} duration={0.6} className="text-[26px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]">
+            <Reveal as="h2" y={20} duration={0.6} className="max-w-[880px] text-[26px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.15]">
               {t('heading3')}
             </Reveal>
-            <p className="text-[17px] text-[#121212]/[0.5] leading-[1.9] mb-12">
+            <p className="max-w-[880px] type-body text-[#121212]/[0.5] mb-12">
               {t('body7')}
             </p>
 
@@ -110,15 +113,15 @@ export default async function BlogArticle2() {
                   className="group border-b border-[#121212]/[0.06] last:border-b-0"
                 >
                   <summary className="flex items-center gap-4 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
-                    <span className="text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">{t(`biases.${b.id}.num`)}</span>
-                    <span className="text-[17px] font-semibold text-[#121212]/80 flex-1">{t(`biases.${b.id}.title`)}</span>
-                    <span className="text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
+                    <span className="font-display text-[24px] font-bold text-[#4B4DF7]/25 leading-none w-8 shrink-0">{t(`biases.${b.id}.num`)}</span>
+                    <span className="type-body-bold text-[#121212]/80 flex-1">{t(`biases.${b.id}.title`)}</span>
+                    <span className="font-display text-[#4B4DF7]/40 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                   </summary>
                   <div className="pl-12 pb-6">
-                    <p className="text-[15px] text-[#121212]/[0.55] leading-[1.8] mb-4">{t(`biases.${b.id}.desc`)}</p>
+                    <p className="type-body text-[#121212]/[0.55] mb-4">{t(`biases.${b.id}.desc`)}</p>
                     <div className="flex flex-wrap gap-2">
                       {t.raw(`biases.${b.id}.mitigation`).map((m, j) => (
-                        <span key={j} className="inline-flex px-3 py-1.5 rounded-full text-[12px] text-[#4B4DF7]/70 border border-[#4B4DF7]/[0.1] bg-[#4B4DF7]/[0.03]">
+                        <span key={j} className="type-caption inline-flex px-3 py-1.5 rounded-full text-[#4B4DF7]/70 border border-[#4B4DF7]/[0.1] bg-[#4B4DF7]/[0.03]">
                           {m}
                         </span>
                       ))}
@@ -134,21 +137,21 @@ export default async function BlogArticle2() {
         <section className="section-breathe">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12 py-16 lg:py-20">
             <Reveal y={20} duration={0.6}>
-              <h2 className="text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">{t('heading4')}</h2>
-              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+              <h2 className="max-w-[880px] text-[26px] font-semibold text-[#121212] mb-5 tracking-[-0.02em] leading-[1.15]">{t('heading4')}</h2>
+              <p className="max-w-[880px] type-body text-[#121212]/[0.65] mb-6">
                 {t('body8')}
               </p>
               <div className="space-y-3 my-8">
                 {(['defineJobProfiles', 'structureInterviewsConsistent', 'evaluateUniformCriteria', 'separateDataCollection', 'compareDecisionsAcross']).map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-[#4B4DF7]/[0.06] bg-white">
                     <span className="w-6 h-6 rounded-full bg-[#4B4DF7]/[0.08] flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-[11px] font-bold text-[#4B4DF7]">{i + 1}</span>
+                      <span className="type-caption font-bold text-[#4B4DF7]">{i + 1}</span>
                     </span>
-                    <p className="text-[15px] text-[#121212]/[0.6] leading-[1.7]">{t(`text3.${item}`)}</p>
+                    <p className="type-body text-[#121212]/[0.6]">{t(`text3.${item}`)}</p>
                   </div>
                 ))}
               </div>
-              <p className="text-[17px] text-[#121212]/[0.65] leading-[1.9] mb-6">
+              <p className="type-body text-[#121212]/[0.65] mb-6">
                 {t('body9')}
               </p>
             </Reveal>
@@ -159,13 +162,13 @@ export default async function BlogArticle2() {
         <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
             <Reveal duration={0.7}>
-              <span className="text-[12px] font-bold text-[#4B4DF7]/50 tracking-[0.2em] uppercase mb-6 block">{t('text4')}</span>
-              <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] max-w-3xl mx-auto tracking-[-0.02em]">
+              <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('text4')}</span>
+              <h2 className="max-w-[880px] text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] mx-auto tracking-[-0.02em]">
                 {t.rich('heading5', {
     s: (chunks) => <span className="gradient-text">{chunks}</span>,
   })}
               </h2>
-              <p className="text-[17px] text-white/[0.4] mb-12 max-w-xl mx-auto leading-[1.75]">
+              <p className="max-w-[880px] type-body text-white/[0.4] mb-12 mx-auto">
                 {t('body10')}
               </p>
               <Button asChild
@@ -177,7 +180,7 @@ export default async function BlogArticle2() {
               </Button>
               <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
                 {(['psychometricScience', 'beiMethodology', 'objectiveProfiles', 'biasReduction']).map((item) => (
-                  <span key={t(`text5.${item}`)} className="text-[13px] text-white/25 flex items-center gap-2">
+                  <span key={t(`text5.${item}`)} className="type-body-sm text-white/25 flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-[#4B4DF7]/50" />{t(`text5.${item}`)}
                   </span>
                 ))}

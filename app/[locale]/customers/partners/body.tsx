@@ -9,6 +9,7 @@ import { Reveal } from '@/components/ui/reveal';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 import { partners } from '@/data/partners';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 // Derived from the data, so a category with no partner in it yet cannot be
 // selected and render an empty grid. 'all' is filtered out in case a future
@@ -79,18 +80,20 @@ export default function PartnersPage() {
 
           <div className={`${container} relative z-10 w-full`}>
             <Reveal duration={0.7} className="flex flex-col items-start gap-6 max-w-[640px]">
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase">
+              <span className="type-eyebrow text-[#6B7DFF]">
                 {t('hero.eyebrow')}
               </span>
-              <h1
-                className="font-semibold text-white/95 text-[48px] md:text-[64px]"
-                style={{ lineHeight: 1.05, letterSpacing: '-0.02em' }}
-              >
-                {t('hero.heading')}
-              </h1>
-              <p className="text-[18px] leading-[1.4] text-white/70">
-                {t.rich('hero.body', { br })}
-              </p>
+              <HeroCopy>
+                <h1
+                  className="font-semibold text-white/95 text-[48px] md:text-[58px]"
+                  style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
+                >
+                  {t('hero.heading')}
+                </h1>
+                <p className="type-body-lg hero-subtitle text-white/70">
+                  {t.rich('hero.body', { br })}
+                </p>
+              </HeroCopy>
               <Button asChild variant="primary" mode="dark">
                 <a href={href('become-a-partner', lang)}>
                   {t('hero.cta')}
@@ -105,11 +108,11 @@ export default function PartnersPage() {
         <section className="section-breathe py-16 lg:py-24">
           <div className={container}>
             <Reveal duration={0.7} className="flex flex-col gap-6 mb-10">
-              <h2 className="font-semibold leading-[1.1] tracking-[-0.02em] text-[clamp(1.8rem,4vw,3rem)] text-[#1E1E1E]">
+              <h2 className="max-w-[880px] font-semibold leading-[1.1] tracking-[-0.02em] text-[clamp(1.8rem,4vw,3rem)] text-[#1E1E1E]">
                 {t('network.heading')}
               </h2>
               <div className="flex flex-wrap items-center gap-3">
-                <span className="inline-flex items-center gap-2 text-[13px] text-[#4B4B4B]">
+                <span className="type-body-sm inline-flex items-center gap-2 text-[#4B4B4B]">
                   <ListFilter className="h-4 w-4" aria-hidden="true" />
                   {t('network.filterLabel')}
                 </span>
@@ -120,9 +123,9 @@ export default function PartnersPage() {
                     onClick={() => setFilterOpen((o) => !o)}
                     aria-haspopup="listbox"
                     aria-expanded={filterOpen}
-                    className="flex items-center gap-2.5 rounded-full border border-[#EBEBEB] bg-white pl-4 pr-3 py-2.5 text-[14px] font-semibold text-[#1E1E1E] hover:border-[#1E1E1E]/20 transition-colors duration-300"
+                    className="type-body-sm flex items-center gap-2.5 rounded-full border border-[#EBEBEB] bg-white pl-4 pr-3 py-2.5 font-semibold text-[#1E1E1E] hover:border-[#1E1E1E]/20 transition-colors duration-300"
                   >
-                    <span className="text-[12px] font-medium text-[#4B4B4B] tracking-[0.08em] uppercase">{t('network.categoryLabel')}</span>
+                    <span className="type-eyebrow font-medium text-[#4B4B4B]">{t('network.categoryLabel')}</span>
                     <span>{t(`network.filters.${activeFilter}`)}</span>
                     <ChevronDown className="h-4 w-4 text-[#4B4B4B]" aria-hidden="true" />
                   </button>
@@ -135,7 +138,7 @@ export default function PartnersPage() {
                           role="option"
                           aria-selected={activeFilter === f}
                           onClick={() => { setActiveFilter(f); closeFilter(true); }}
-                          className={`block w-full text-left px-4 py-2 text-[14px] transition-colors duration-200 ${activeFilter === f ? 'text-[#1E1E1E] bg-[#F7F7F7]' : 'text-[#4B4B4B] hover:text-[#1E1E1E] hover:bg-[#F7F7F7]'}`}
+                          className={`type-body-sm block w-full text-left px-4 py-2 transition-colors duration-200 ${activeFilter === f ? 'text-[#1E1E1E] bg-[#F7F7F7]' : 'text-[#4B4B4B] hover:text-[#1E1E1E] hover:bg-[#F7F7F7]'}`}
                         >
                           {t(`network.filters.${f}`)}
                         </button>
@@ -166,21 +169,21 @@ export default function PartnersPage() {
                     </div>
                     <div className="p-7 flex flex-col gap-4 flex-1">
                       <div className="flex items-center justify-between gap-3">
-                        <p className="text-[22px] font-semibold tracking-[-0.02em] text-[#1E1E1E]">
+                        <p className="font-display text-[22px] font-semibold tracking-[-0.02em] text-[#1E1E1E]">
                           {t(`network.items.${p.slug}.name`)}
                         </p>
-                        <span className="rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[12px] text-[#4B4B4B] whitespace-nowrap">
+                        <span className="type-caption rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[#4B4B4B] whitespace-nowrap">
                           {t(`network.filters.${p.category}`)}
                         </span>
                       </div>
-                      <p className="text-[16px] leading-[1.5] text-[#4B4B4B]">
+                      <p className="type-body text-[#4B4B4B]">
                         {t(`network.items.${p.slug}.description`)}
                       </p>
                       <a
                         href={p.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-[#4B4DF7] hover:text-[#3133E7] transition-colors"
+                        className="type-button mt-auto inline-flex items-center gap-2 font-medium text-[#4B4DF7] hover:text-[#3133E7] transition-colors"
                       >
                         {t(`network.items.${p.slug}.cta`)}
                         <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
@@ -204,13 +207,13 @@ export default function PartnersPage() {
                   'linear-gradient(255deg, rgba(255,115,63,0.11) 1%, rgba(0,0,0,0.08) 21%, rgba(0,0,0,0.08) 78%, rgba(73,79,255,0.13) 99%), linear-gradient(90deg, #161616 0%, #161616 100%)',
               }}
             >
-              <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase">
+              <span className="type-eyebrow text-[#6B7DFF]">
                 {t('cta.eyebrow')}
               </span>
-              <h2 className="font-semibold leading-[1.1] text-white/95 text-[clamp(1.8rem,4vw,3rem)] tracking-[-0.02em] max-w-4xl text-balance">
+              <h2 className="max-w-[880px] font-semibold leading-[1.1] text-white/95 text-[clamp(1.8rem,4vw,3rem)] tracking-[-0.02em] text-balance">
                 {t('cta.heading')}
               </h2>
-              <p className="text-[16px] text-white/65 max-w-xl">{t('cta.body')}</p>
+              <p className="max-w-[880px] type-body text-white/65">{t('cta.body')}</p>
               <Button asChild variant="primary" mode="dark">
                 <a href={href('become-a-partner', lang)}>
                   {t('cta.cta')}

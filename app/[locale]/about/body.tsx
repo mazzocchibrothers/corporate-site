@@ -250,7 +250,7 @@ export default function AboutPage() {
                 const line1 = t('heroLine1').split(' ');
                 const line2 = t('heroLine2').split(' ');
                 return (
-                  <h1 className="text-[48px] md:text-[clamp(42px,10vw,56px)] font-semibold md:font-medium" style={{ fontFamily: 'Mona Sans, sans-serif', lineHeight: 1.05, color: '#fff', letterSpacing: '-1.5px', margin: 0, textAlign: 'left' }}>
+                  <h1 className="text-[48px] md:text-[58px] font-semibold md:font-medium" style={{ fontFamily: 'Mona Sans, sans-serif', lineHeight: 1.1, color: '#fff', letterSpacing: '-1.5px', margin: 0, textAlign: 'left' }}>
                     {[...line1, ...line2].map((word, i) => (
                       <span key={i} style={{ display: 'inline-block', opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(10px)', transition: 'opacity 0.7s ease-out, transform 0.7s ease-out', transitionDelay: heroVisible ? `${0.3 + i * 0.08}s` : '0s', marginRight: '0.25em' }}>{word}</span>
                     ))}
@@ -263,7 +263,7 @@ export default function AboutPage() {
                     <p style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 600, fontSize: 32, lineHeight: 1.1, color: '#9395ff', letterSpacing: '-1.5px', margin: 0, flexShrink: 0 }}>
                       {getCounterDisplay(s.value, counts[i])}
                     </p>
-                    <p style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 400, fontSize: 14, lineHeight: 1.4, color: '#a9a9a9', margin: 0 }}>
+                    <p className="type-body-sm" style={{ color: '#a9a9a9', margin: 0 }}>
                       {t(`stats.${s.id}.label`)}
                     </p>
                   </div>
@@ -302,7 +302,7 @@ export default function AboutPage() {
                       <p style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 600, fontSize: 48, lineHeight: 1.4, color: '#9395ff', letterSpacing: '-1.75px', margin: 0 }}>
                         {getCounterDisplay(s.value, counts[i])}
                       </p>
-                      <p style={{ fontFamily: 'Mona Sans, sans-serif', fontWeight: 400, fontSize: 13.5, lineHeight: 1.5, color: '#a9a9a9', margin: 0 }}>
+                      <p className="type-body-sm" style={{ color: '#a9a9a9', margin: 0 }}>
                         {t(`stats.${s.id}.label`)}
                       </p>
                     </div>
@@ -313,7 +313,7 @@ export default function AboutPage() {
                   const line1 = t('heroLine1').split(' ');
                   const line2 = t('heroLine2').split(' ');
                   return (
-                    <div role="heading" aria-level={1} className="text-[48px] md:text-[clamp(36px,4.2vw,64px)] font-semibold md:font-medium" style={{ fontFamily: 'Mona Sans, sans-serif', lineHeight: 1.1, color: '#fff', letterSpacing: '-1.28px', margin: 0, textAlign: 'center' }}>
+                    <div role="heading" aria-level={1} className="font-display text-[48px] md:text-[clamp(36px,4.2vw,64px)] font-semibold md:font-medium" style={{ fontFamily: 'Mona Sans, sans-serif', lineHeight: 1.1, color: '#fff', letterSpacing: '-1.28px', margin: 0, textAlign: 'center' }}>
                       {line1.map((word, i) => (
                         <span key={`l1-${i}`} style={{ display: 'inline-block', opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(10px)', transition: 'opacity 0.7s ease-out, transform 0.7s ease-out', transitionDelay: heroVisible ? `${0.3 + i * 0.08}s` : '0s', marginRight: '0.25em' }}>{word}</span>
                       ))}
@@ -348,16 +348,8 @@ export default function AboutPage() {
 
             {/* Vision */}
             <div style={{ maxWidth: 1000 }}>
-              <p
-                style={{
-                  fontFamily: 'Mona Sans, sans-serif',
-                  fontWeight: 500,
-                  fontSize: 13,
-                  letterSpacing: '0.52px',
-                  color: '#9395ff',
-                  textTransform: 'uppercase',
-                  margin: '0 0 24px',
-                }}
+              <p className="type-body-sm"
+                style={{ fontWeight: 500, color: '#9395ff', textTransform: 'uppercase', margin: '0 0 24px' }}
               >{t('body')}</p>
               <p
                 style={{
@@ -383,18 +375,10 @@ export default function AboutPage() {
 
             {/* Mission */}
             <div style={{ maxWidth: 900 }}>
-              <p
-                style={{
-                  fontFamily: 'Mona Sans, sans-serif',
-                  fontWeight: 500,
-                  fontSize: 13,
-                  letterSpacing: '0.52px',
-                  color: '#9395ff',
-                  textTransform: 'uppercase',
-                  margin: '0 0 24px',
-                }}
+              <p className="type-body-sm"
+                style={{ fontWeight: 500, color: '#9395ff', textTransform: 'uppercase', margin: '0 0 24px' }}
               >{t('body3')}</p>
-              <h2
+              <h2 className="max-w-[880px]"
                 style={{
                   fontFamily: 'Mona Sans, sans-serif',
                   fontWeight: 600,
@@ -414,15 +398,8 @@ export default function AboutPage() {
                   }}
                 >{chunks}</span>,
               })}</h2>
-              <p
-                style={{
-                  fontFamily: 'Mona Sans, sans-serif',
-                  fontWeight: 400,
-                  fontSize: 20,
-                  lineHeight: 1.4,
-                  color: '#9a9a9a',
-                  margin: 0,
-                }}
+              <p className="max-w-[880px] type-body-lg"
+                style={{ color: '#9a9a9a', margin: 0 }}
               >{t('body4')}</p>
             </div>
 
@@ -432,18 +409,10 @@ export default function AboutPage() {
         {/* ─── 4. WHO WE ARE — Skills Operating System ─────────────────────── */}
         <section className="section-breathe px-5 md:px-8 lg:px-12" style={{ paddingTop: 112, paddingBottom: 112, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
-            <p
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 500,
-                fontSize: 13,
-                letterSpacing: '0.52px',
-                color: '#4b4df7',
-                textTransform: 'uppercase',
-                margin: '0 0 24px',
-              }}
+            <p className="type-body-sm"
+              style={{ fontWeight: 500, color: '#4b4df7', textTransform: 'uppercase', margin: '0 0 24px' }}
             >{t('body5')}</p>
-            <h2
+            <h2 className="max-w-[880px]"
               style={{
                 fontFamily: 'Mona Sans, sans-serif',
                 fontWeight: 600,
@@ -464,27 +433,11 @@ export default function AboutPage() {
                 }}
               >{chunks}</span>,
             })}</h2>
-            <p
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 400,
-                fontSize: 18,
-                lineHeight: 1.4,
-                color: '#7a7a7a',
-                margin: 0,
-                maxWidth: 837,
-              }}
+            <p className="max-w-[880px] type-body-lg"
+              style={{ color: '#7a7a7a', margin: 0, maxWidth: 837 }}
             >{t('body6')}</p>
-            <p
-              style={{
-                fontFamily: 'Mona Sans, sans-serif',
-                fontWeight: 400,
-                fontSize: 18,
-                lineHeight: 1.4,
-                color: '#7a7a7a',
-                margin: '24px 0 0',
-                maxWidth: 837,
-              }}
+            <p className="type-body-lg"
+              style={{ color: '#7a7a7a', margin: '24px 0 0', maxWidth: 837 }}
             >{t.rich('body7', {
               br: () => <br />,
             })}</p>
@@ -548,18 +501,10 @@ export default function AboutPage() {
             >
             {/* Left: text */}
             <div style={{ flex: '1 0 0', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 24 }}>
-              <p
-                style={{
-                  fontFamily: 'Mona Sans, sans-serif',
-                  fontWeight: 500,
-                  fontSize: 13,
-                  letterSpacing: '0.52px',
-                  color: '#6366f8',
-                  textTransform: 'uppercase',
-                  margin: 0,
-                }}
+              <p className="type-body-sm"
+                style={{ fontWeight: 500, color: '#6366f8', textTransform: 'uppercase', margin: 0 }}
               >{t('body8')}</p>
-              <h2
+              <h2 className="max-w-[880px]"
                 style={{
                   fontFamily: 'Mona Sans, sans-serif',
                   fontWeight: 600,
@@ -570,14 +515,8 @@ export default function AboutPage() {
                   margin: 0,
                 }}
               >{t('heading3')}</h2>
-              <div
-                style={{
-                  fontFamily: 'Mona Sans, sans-serif',
-                  fontWeight: 400,
-                  fontSize: 18,
-                  lineHeight: 1.4,
-                  color: '#7a7a7a',
-                }}
+              <div className="type-body-lg"
+                style={{ color: '#7a7a7a' }}
               >
                 <p style={{ margin: '0 0 16px' }}>{t('body9')}</p>
                 <p style={{ margin: 0 }}>{t('body10')}</p>
@@ -609,16 +548,8 @@ export default function AboutPage() {
 
             {/* Backers — moved into Our Story per feedback (Orbita last) */}
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 48 }}>
-              <p
-                style={{
-                  fontFamily: 'Mona Sans, sans-serif',
-                  fontWeight: 700,
-                  fontSize: 12,
-                  letterSpacing: '2.4px',
-                  color: '#848484',
-                  textTransform: 'uppercase',
-                  margin: '0 0 32px',
-                }}
+              <p className="type-eyebrow"
+                style={{ color: '#848484', textTransform: '', margin: '0 0 32px' }}
               >{t('body11')}</p>
               <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap', gap: '36px 56px', alignItems: 'center' }}>
                 {investors.map((inv) => (
@@ -639,18 +570,10 @@ export default function AboutPage() {
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%' }}>
             {/* Header */}
             <div style={{ marginBottom: 36 }}>
-              <p
-                style={{
-                  fontFamily: 'Mona Sans, sans-serif',
-                  fontWeight: 500,
-                  fontSize: 13,
-                  letterSpacing: '0.52px',
-                  color: '#4b4df7',
-                  textTransform: 'uppercase',
-                  margin: '0 0 24px',
-                }}
+              <p className="type-body-sm"
+                style={{ fontWeight: 500, color: '#4b4df7', textTransform: 'uppercase', margin: '0 0 24px' }}
               >{t('body12')}</p>
-              <h2
+              <h2 className="max-w-[880px]"
                 style={{
                   fontFamily: 'Mona Sans, sans-serif',
                   fontWeight: 600,
@@ -661,16 +584,8 @@ export default function AboutPage() {
                   margin: '0 0 24px',
                 }}
               >{t('heading4')}</h2>
-              <p
-                style={{
-                  fontFamily: 'Inter, sans-serif',
-                  fontWeight: 400,
-                  fontSize: 16,
-                  lineHeight: 1.4,
-                  color: '#7a7a7a',
-                  letterSpacing: '-0.19px',
-                  margin: 0,
-                }}
+              <p className="max-w-[880px] type-body"
+                style={{ color: '#7a7a7a', margin: 0 }}
               >{t('body13')}</p>
             </div>
 
@@ -709,27 +624,11 @@ export default function AboutPage() {
                   >
                     Nicolò Mazzocchi
                   </p>
-                  <p
-                    style={{
-                      fontFamily: 'Mona Sans, sans-serif',
-                      fontWeight: 400,
-                      fontSize: 16,
-                      lineHeight: '21px',
-                      color: '#4b4df7',
-                      letterSpacing: '-0.176px',
-                      margin: '0 0 20px',
-                    }}
+                  <p className="type-body"
+                    style={{ color: '#4b4df7', margin: '0 0 20px' }}
                   >{t('body14')}</p>
-                  <p
-                    style={{
-                      fontFamily: 'Mona Sans, sans-serif',
-                      fontWeight: 400,
-                      fontSize: 16,
-                      lineHeight: 1.4,
-                      color: '#7a7a7a',
-                      letterSpacing: '-0.176px',
-                      margin: 0,
-                    }}
+                  <p className="type-body"
+                    style={{ color: '#7a7a7a', margin: 0 }}
                   >{t('body15')}</p>
                 </div>
               </div>
@@ -764,27 +663,11 @@ export default function AboutPage() {
                   >
                     Simone Patera
                   </p>
-                  <p
-                    style={{
-                      fontFamily: 'Mona Sans, sans-serif',
-                      fontWeight: 400,
-                      fontSize: 16,
-                      lineHeight: '21px',
-                      color: '#4b4df7',
-                      letterSpacing: '-0.176px',
-                      margin: '0 0 20px',
-                    }}
+                  <p className="type-body"
+                    style={{ color: '#4b4df7', margin: '0 0 20px' }}
                   >{t('body16')}</p>
-                  <p
-                    style={{
-                      fontFamily: 'Mona Sans, sans-serif',
-                      fontWeight: 400,
-                      fontSize: 16,
-                      lineHeight: 1.4,
-                      color: '#7a7a7a',
-                      letterSpacing: '-0.176px',
-                      margin: 0,
-                    }}
+                  <p className="type-body"
+                    style={{ color: '#7a7a7a', margin: 0 }}
                   >{t('body17')}</p>
                 </div>
               </div>
@@ -817,18 +700,10 @@ export default function AboutPage() {
               className="flex-col lg:flex-row"
             >
               <div style={{ flex: '1 0 0', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 24 }}>
-                <p
-                  style={{
-                    fontFamily: 'Mona Sans, sans-serif',
-                    fontWeight: 500,
-                    fontSize: 13,
-                    letterSpacing: '0.52px',
-                    color: '#9395ff',
-                    textTransform: 'uppercase',
-                    margin: 0,
-                  }}
+                <p className="type-body-sm"
+                  style={{ fontWeight: 500, color: '#9395ff', textTransform: 'uppercase', margin: 0 }}
                 >{t('body18')}</p>
-                <h2
+                <h2 className="max-w-[880px]"
                   style={{
                     fontFamily: 'Mona Sans, sans-serif',
                     fontWeight: 600,
@@ -840,36 +715,15 @@ export default function AboutPage() {
                     maxWidth: 760,
                   }}
                 >{t('heading5')}</h2>
-                <p
-                  style={{
-                    fontFamily: 'Mona Sans, sans-serif',
-                    fontWeight: 400,
-                    fontSize: 18,
-                    lineHeight: 1.5,
-                    color: '#9a9a9a',
-                    letterSpacing: '-0.19px',
-                    margin: 0,
-                    maxWidth: 820,
-                  }}
+                <p className="max-w-[880px] type-body-lg"
+                  style={{ color: '#9a9a9a', margin: 0, maxWidth: 820 }}
                 >{t('body19')}</p>
                 {/* Discipline pills */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
                   {['psychometricians', 'engineers', 'designers', 'product'].map((tag) => (
-                    <span
+                    <span className="type-body-sm"
                       key={tag}
-                      style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        padding: '6px 16px',
-                        border: '1px solid #7a7a7a',
-                        borderRadius: 99,
-                        fontFamily: 'Mona Sans, sans-serif',
-                        fontWeight: 500,
-                        fontSize: 13,
-                        color: '#7a7a7a',
-                        lineHeight: 'normal',
-                        whiteSpace: 'nowrap',
-                      }}
+                      style={{ display: 'inline-flex', alignItems: 'center', padding: '6px 16px', border: '1px solid #7a7a7a', borderRadius: 99, fontWeight: 500, color: '#7a7a7a', whiteSpace: 'nowrap' }}
                     >
                       {t(`teamTags.${tag}`)}
                     </span>
@@ -901,16 +755,8 @@ export default function AboutPage() {
           <div style={{ maxWidth: 1304, margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', gap: 40 }}>
             {/* Header */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-              <p
-                style={{
-                  fontFamily: 'Mona Sans, sans-serif',
-                  fontWeight: 500,
-                  fontSize: 13,
-                  letterSpacing: '0.52px',
-                  color: '#4b4df7',
-                  textTransform: 'uppercase',
-                  margin: 0,
-                }}
+              <p className="type-body-sm"
+                style={{ fontWeight: 500, color: '#4b4df7', textTransform: 'uppercase', margin: 0 }}
               >{t('body20')}</p>
               <p
                 style={{

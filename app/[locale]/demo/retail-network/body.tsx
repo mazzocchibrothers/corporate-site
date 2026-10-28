@@ -22,6 +22,7 @@ import DemoView from '@/components/demo/DemoView';
 import Chart from '@/components/demo/charts/Chart';
 import { retail } from '@/data/demo/retail';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 /** One row of a cut, flattened out of the three shapes the data holds it in. */
 type Group = {
@@ -132,13 +133,13 @@ function Panel({
       duration={0.6}
       className="rounded-xl md:rounded-2xl border border-white/[0.08] bg-white/[0.04] p-6 md:p-10"
     >
-      <h2 className="text-[24px] md:text-[32px] font-semibold text-white/90 mb-3">{title}</h2>
+      <h2 className="max-w-[880px] text-[24px] md:text-[32px] font-semibold text-white/90 mb-3">{title}</h2>
       {body ? (
-        <p className="text-[15px] text-white/[0.55] leading-[1.7] max-w-3xl mb-8">{body}</p>
+        <p className="type-body text-white/[0.55] max-w-3xl mb-8">{body}</p>
       ) : null}
       {children}
       {note ? (
-        <p className="text-[13px] text-white/40 leading-[1.7] max-w-3xl mt-6">{note}</p>
+        <p className="type-body-sm text-white/40 max-w-3xl mt-6">{note}</p>
       ) : null}
     </Reveal>
   );
@@ -395,38 +396,39 @@ export default function RetailDemo() {
               as="p"
               y={20}
               duration={0.6}
-              className="text-[13px] font-semibold tracking-[0.18em] uppercase text-white/40 mb-6"
+              className="type-body-sm font-semibold uppercase text-white/40 mb-6"
             >
               {t('hero.eyebrow')}
             </Reveal>
-            <Reveal
-              as="h1"
-              y={40}
-              duration={0.8}
-              delay={0.1}
-              className="text-[40px] md:text-[56px] font-semibold tracking-[-0.02em] text-white/95 mb-8 max-w-4xl"
-              style={{ lineHeight: 1.15 }}
-            >
-              {t.rich('hero.heading', {
-                span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
-              })}
-            </Reveal>
-            <Reveal
-              as="p"
-              y={20}
-              duration={0.8}
-              delay={0.2}
-              className="text-[18px] text-white/[0.65] leading-[1.75] max-w-3xl mb-8"
-              style={{ fontWeight: 300 }}
-            >
-              {t('hero.body')}
-            </Reveal>
+            <HeroCopy>
+              <Reveal
+                as="h1"
+                y={40}
+                duration={0.8}
+                delay={0.1}
+                className="text-[40px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-8 max-w-4xl"
+                style={{ lineHeight: 1.1 }}
+              >
+                {t.rich('hero.heading', {
+                  span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+                })}
+              </Reveal>
+              <Reveal
+                as="p"
+                y={20}
+                duration={0.8}
+                delay={0.2}
+                className="type-body-lg hero-subtitle text-white/[0.65] mb-8"
+              >
+                {t('hero.body')}
+              </Reveal>
+            </HeroCopy>
             <Reveal
               as="p"
               y={20}
               duration={0.6}
               delay={0.3}
-              className="text-[14px] text-white/40 leading-[1.7] max-w-2xl"
+              className="type-body-sm text-white/40 max-w-2xl"
             >
               {t('hero.note')}
             </Reveal>
@@ -444,10 +446,10 @@ export default function RetailDemo() {
                   >
                     {s.value}
                   </span>
-                  <span className="block text-[14px] font-semibold text-white/80 mb-2">
+                  <span className="type-body-sm block font-semibold text-white/80 mb-2">
                     {t(`population.${s.id}.label`)}
                   </span>
-                  <span className="block text-[13px] text-white/40 leading-[1.7]">
+                  <span className="type-body-sm block text-white/40">
                     {t(`population.${s.id}.note`, s.args)}
                   </span>
                 </div>
@@ -474,7 +476,7 @@ export default function RetailDemo() {
 
           <Panel title={t('cuts.heading')} body={t('cuts.body')}>
             <div className="flex flex-wrap items-center gap-2 mb-8">
-              <span className="text-[12px] font-semibold tracking-[0.14em] uppercase text-white/35 mr-2">
+              <span className="type-eyebrow text-white/35 mr-2">
                 {t('cuts.label')}
               </span>
               {CUT_IDS.map((id) => (
@@ -483,11 +485,11 @@ export default function RetailDemo() {
                   type="button"
                   aria-pressed={cut === id}
                   onClick={() => setCut(id)}
-                  className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${
-                    cut === id
-                      ? 'bg-white/[0.1] text-white border border-white/[0.15]'
-                      : 'text-white/40 border border-transparent hover:text-white/70'
-                  }`}
+                  className={`type-body-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full font-medium transition-all duration-300 ${
+ cut === id
+ ? 'bg-white/[0.1] text-white border border-white/[0.15]'
+ : 'text-white/40 border border-transparent hover:text-white/70'
+ }`}
                 >
                   {t(`cuts.options.${id}`)}
                 </button>
@@ -508,11 +510,11 @@ export default function RetailDemo() {
                     options={perCut.skills.options}
                   />
                 ) : (
-                  <p className="text-[14px] text-white/45 leading-[1.7] h-[300px] md:h-[380px] flex items-center">
+                  <p className="type-body-sm text-white/45 h-[300px] md:h-[380px] flex items-center">
                     {t('cuts.skills.unavailable')}
                   </p>
                 )}
-                <p className="text-[13px] text-white/40 leading-[1.7] mt-4">
+                <p className="type-body-sm text-white/40 mt-4">
                   {t('cuts.skills.caption')}
                 </p>
               </div>
@@ -528,7 +530,7 @@ export default function RetailDemo() {
                   data={perCut.results.data}
                   options={perCut.results.options}
                 />
-                <p className="text-[13px] text-white/40 leading-[1.7] mt-4">
+                <p className="type-body-sm text-white/40 mt-4">
                   {t('cuts.results.caption')}
                 </p>
               </div>
@@ -540,7 +542,7 @@ export default function RetailDemo() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {groups.map((g) => (
                 <div key={g.id} className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-5">
-                  <span className="block text-[14px] font-semibold text-white/85 mb-4">
+                  <span className="type-body-sm block font-semibold text-white/85 mb-4">
                     {groupName(g.id)}
                   </span>
                   <dl className="flex flex-col gap-2">
@@ -548,8 +550,8 @@ export default function RetailDemo() {
                       const value = k.read(g) as number;
                       return (
                         <div key={k.id} className="flex items-baseline justify-between gap-4">
-                          <dt className="text-[13px] text-white/45">{t(`cuts.labels.${k.id}`)}</dt>
-                          <dd className="text-[14px] font-semibold text-white/85 tabular-nums">
+                          <dt className="type-body-sm text-white/45">{t(`cuts.labels.${k.id}`)}</dt>
+                          <dd className="type-body-sm font-semibold text-white/85 tabular-nums">
                             {k.unit === 'eur'
                               ? eur(value)
                               : k.unit === 'pct'
@@ -563,7 +565,7 @@ export default function RetailDemo() {
                 </div>
               ))}
             </div>
-            <p className="text-[13px] text-white/40 leading-[1.7] mt-6">
+            <p className="type-body-sm text-white/40 mt-6">
               {t('cuts.kpis.caption')} {cut === 'area' ? t('cuts.areaNote') : null}
             </p>
           </Panel>
@@ -591,10 +593,10 @@ export default function RetailDemo() {
                     >
                       {n(c.r, 2)}
                     </span>
-                    <span className="block text-[14px] font-semibold text-white/80 mb-2">
+                    <span className="type-body-sm block font-semibold text-white/80 mb-2">
                       {t(`map.${c.id}.label`)}
                     </span>
-                    <span className="block text-[13px] text-white/40 leading-[1.7]">
+                    <span className="type-body-sm block text-white/40">
                       {t(`map.${c.id}.note`, { n: n(c.count, 0) })}
                     </span>
                   </div>
@@ -611,16 +613,16 @@ export default function RetailDemo() {
                     className="block h-1 w-8 rounded-full mb-4"
                     style={{ backgroundColor: SERIES[i] }}
                   />
-                  <span className="block text-[15px] font-semibold text-white/90 mb-1">
+                  <span className="type-body-bold block text-white/90 mb-1">
                     {t(`segments.items.${s}.name`)}
                   </span>
-                  <span className="block text-[13px] text-white/45 mb-4">
+                  <span className="type-body-sm block text-white/45 mb-4">
                     {n(retail.segments[s])}% {t('segments.share')}
                   </span>
-                  <p className="text-[13px] text-white/[0.55] leading-[1.7] mb-3">
+                  <p className="type-body-sm text-white/[0.55] mb-3">
                     {t(`segments.items.${s}.description`)}
                   </p>
-                  <p className="text-[13px] text-white/[0.75] leading-[1.7]">
+                  <p className="type-body-sm text-white/[0.75]">
                     {t(`segments.items.${s}.action`)}
                   </p>
                 </div>
@@ -637,7 +639,7 @@ export default function RetailDemo() {
               data={fixed.segments.data}
               options={fixed.segments.options}
             />
-            <p className="text-[13px] text-white/40 leading-[1.7] mt-6">
+            <p className="type-body-sm text-white/40 mt-6">
               {t('segments.chart.caption')} {t('cuts.areaNote')}
             </p>
           </Panel>
@@ -664,10 +666,10 @@ export default function RetailDemo() {
                   >
                     {n(s.band.top, s.digits)}
                   </span>
-                  <span className="block text-[14px] font-semibold text-white/80 mb-2">
+                  <span className="type-body-sm block font-semibold text-white/80 mb-2">
                     {t(`top.stats.${s.id}`)}
                   </span>
-                  <span className="block text-[13px] text-white/40">
+                  <span className="type-body-sm block text-white/40">
                     {t('top.series.rest')} · {n(s.band.rest, s.digits)}
                   </span>
                 </div>
@@ -681,7 +683,7 @@ export default function RetailDemo() {
               data={fixed.top.data}
               options={fixed.top.options}
             />
-            <p className="text-[13px] text-white/40 leading-[1.7] mt-6">{t('top.caption')}</p>
+            <p className="type-body-sm text-white/40 mt-6">{t('top.caption')}</p>
           </Panel>
 
           <Panel
@@ -717,7 +719,7 @@ export default function RetailDemo() {
           <Panel title={t('closing.heading')} body={t('closing.body')}>
             <a
               href={href('demo', lang)}
-              className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-4 py-2 text-[13px] font-semibold text-white/70 transition-colors duration-300 hover:text-white hover:border-white/[0.25]"
+              className="type-body-sm inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-4 py-2 font-semibold text-white/70 transition-colors duration-300 hover:text-white hover:border-white/[0.25]"
             >
               {t('closing.back')}
             </a>

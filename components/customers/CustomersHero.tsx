@@ -4,6 +4,7 @@ import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowDown } from 'lucide-react';
+import { HeroCopy } from '@/components/ui/hero-copy';
 import { Button } from '@/components/ui/button';
 
 const metrics = [
@@ -59,26 +60,27 @@ export default function CustomersHero() {
               delay={0.15}
               className="inline-flex items-center gap-2 mb-6"
             >
-              <span className="text-[12px] font-medium text-[#6B7DFF] tracking-[0.1em] uppercase">{t('hero.eyebrow')}</span>
+              <span className="type-eyebrow font-medium text-[#6B7DFF]">{t('hero.eyebrow')}</span>
             </Reveal>
-            <Reveal
-              as="h1"
-              y={40}
-              duration={0.8}
-              delay={0.3}
-              className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-8"
-              style={{ lineHeight: 1.15 }}
-            >{t.rich('hero.heading', {
-              span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
-            })}</Reveal>
-            <Reveal
-              as="p"
-              y={20}
-              duration={0.8}
-              delay={0.5}
-              className="text-[18px] text-white/[0.65] leading-[1.75] mb-10"
-              style={{ fontWeight: 300 }}
-            >{t('hero.body')}</Reveal>
+            <HeroCopy>
+              <Reveal
+                as="h1"
+                y={40}
+                duration={0.8}
+                delay={0.3}
+                className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-8"
+                style={{ lineHeight: 1.1 }}
+              >{t.rich('hero.heading', {
+                span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+              })}</Reveal>
+              <Reveal
+                as="p"
+                y={20}
+                duration={0.8}
+                delay={0.5}
+                className="type-body-lg hero-subtitle text-white/[0.65] mb-10"
+              >{t('hero.body')}</Reveal>
+            </HeroCopy>
 
             {/* CTA - Read the stories */}
             <Reveal y={20} duration={0.8} delay={0.55}>
@@ -100,8 +102,8 @@ export default function CustomersHero() {
           >
             {metrics.map((m) => (
               <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6">
-                <span className="block text-[#6B7DFF] mb-8 stat-value text-[32px] md:text-[64px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                <span className="text-[13px] text-white/[0.65]">{t(`hero.metrics.${m.id}.label`)}</span>
+                <span className="block text-[#6B7DFF] mb-8 stat-value text-[32px] md:text-[54px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
+                <span className="type-body-sm text-white/[0.65]">{t(`hero.metrics.${m.id}.label`)}</span>
               </div>
             ))}
           </Reveal>

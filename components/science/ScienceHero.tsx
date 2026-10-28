@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 export default function ScienceHero() {
   const lang = useLocale();
@@ -15,33 +16,35 @@ export default function ScienceHero() {
       <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full py-10 md:py-16 lg:py-0">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="lg:col-span-7 flex flex-col gap-6 md:gap-8">
-            <Reveal
-              as="h1"
-              y={40}
-              duration={0.8}
-              delay={0.3}
-              className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95"
-              style={{ lineHeight: 1.1 }}
-            >{t.rich('hero.heading', {
-              br: () => <br />,
-              span: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
-            })}</Reveal>
-            <Reveal
-              y={20}
-              duration={0.8}
-              delay={0.5}
-              className="flex flex-col gap-8 md:gap-10"
-            >
-              <p className="text-[14px] md:text-[18px] text-white/[0.65] leading-[1.6] md:leading-[1.75] max-w-xl lg:max-w-2xl font-normal md:font-light">
-                {t('hero.body')}
-              </p>
-              <Button asChild variant="primary" mode="dark" className="self-start gap-8">
-                <a href={href('book-meeting', lang)}>
-                  <span>{t('hero.cta')}</span>
-                  <ArrowRight aria-hidden="true" />
-                </a>
-              </Button>
-            </Reveal>
+            <HeroCopy className="flex flex-col gap-6 md:gap-8">
+              <Reveal
+                as="h1"
+                y={40}
+                duration={0.8}
+                delay={0.3}
+                className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95"
+                style={{ lineHeight: 1.1 }}
+              >{t.rich('hero.heading', {
+                br: () => <br />,
+                span: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
+              })}</Reveal>
+              <Reveal
+                y={20}
+                duration={0.8}
+                delay={0.5}
+                className="flex flex-col gap-8 md:gap-10"
+              >
+                <p className="type-body-lg hero-subtitle text-white/[0.65]">
+                  {t('hero.body')}
+                </p>
+                <Button asChild variant="primary" mode="dark" className="self-start gap-8">
+                  <a href={href('book-meeting', lang)}>
+                    <span>{t('hero.cta')}</span>
+                    <ArrowRight aria-hidden="true" />
+                  </a>
+                </Button>
+              </Reveal>
+            </HeroCopy>
           </div>
         </div>
       </div>

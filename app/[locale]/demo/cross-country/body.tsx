@@ -29,6 +29,7 @@ import DemoView from '@/components/demo/DemoView';
 import Chart from '@/components/demo/charts/Chart';
 import { crossCountry } from '@/data/demo/cross-country';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 const FRAMES = ['competencies', 'framework'];
 const COMPETENCIES = Object.keys(crossCountry.competencies);
@@ -70,13 +71,13 @@ function Panel({
       duration={0.6}
       className="rounded-xl md:rounded-2xl border border-white/[0.08] bg-white/[0.04] p-6 md:p-10"
     >
-      <h2 className="text-[24px] md:text-[32px] font-semibold text-white/90 mb-3">{title}</h2>
+      <h2 className="max-w-[880px] text-[24px] md:text-[32px] font-semibold text-white/90 mb-3">{title}</h2>
       {body ? (
-        <p className="text-[15px] text-white/[0.55] leading-[1.7] max-w-3xl mb-8">{body}</p>
+        <p className="type-body text-white/[0.55] max-w-3xl mb-8">{body}</p>
       ) : null}
       {children}
       {note ? (
-        <p className="text-[13px] text-white/40 leading-[1.7] max-w-3xl mt-6">{note}</p>
+        <p className="type-body-sm text-white/40 max-w-3xl mt-6">{note}</p>
       ) : null}
     </Reveal>
   );
@@ -336,38 +337,39 @@ export default function CrossCountryDemo() {
               as="p"
               y={20}
               duration={0.6}
-              className="text-[13px] font-semibold tracking-[0.18em] uppercase text-white/40 mb-6"
+              className="type-body-sm font-semibold uppercase text-white/40 mb-6"
             >
               {t('hero.eyebrow')}
             </Reveal>
-            <Reveal
-              as="h1"
-              y={40}
-              duration={0.8}
-              delay={0.1}
-              className="text-[40px] md:text-[56px] font-semibold tracking-[-0.02em] text-white/95 mb-8 max-w-4xl"
-              style={{ lineHeight: 1.15 }}
-            >
-              {t.rich('hero.heading', {
-                span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
-              })}
-            </Reveal>
-            <Reveal
-              as="p"
-              y={20}
-              duration={0.8}
-              delay={0.2}
-              className="text-[18px] text-white/[0.65] leading-[1.75] max-w-3xl mb-8"
-              style={{ fontWeight: 300 }}
-            >
-              {t('hero.body')}
-            </Reveal>
+            <HeroCopy>
+              <Reveal
+                as="h1"
+                y={40}
+                duration={0.8}
+                delay={0.1}
+                className="text-[40px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-8 max-w-4xl"
+                style={{ lineHeight: 1.1 }}
+              >
+                {t.rich('hero.heading', {
+                  span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+                })}
+              </Reveal>
+              <Reveal
+                as="p"
+                y={20}
+                duration={0.8}
+                delay={0.2}
+                className="type-body-lg hero-subtitle text-white/[0.65] mb-8"
+              >
+                {t('hero.body')}
+              </Reveal>
+            </HeroCopy>
             <Reveal
               as="p"
               y={20}
               duration={0.6}
               delay={0.3}
-              className="text-[14px] text-white/40 leading-[1.7] max-w-2xl"
+              className="type-body-sm text-white/40 max-w-2xl"
             >
               {t('hero.note')}
             </Reveal>
@@ -385,10 +387,10 @@ export default function CrossCountryDemo() {
                   >
                     {s.value}
                   </span>
-                  <span className="block text-[14px] font-semibold text-white/80 mb-2">
+                  <span className="type-body-sm block font-semibold text-white/80 mb-2">
                     {t(`population.${s.id}.label`)}
                   </span>
-                  <span className="block text-[13px] text-white/40 leading-[1.7]">
+                  <span className="type-body-sm block text-white/40">
                     {t(`population.${s.id}.note`)}
                   </span>
                 </div>
@@ -417,7 +419,7 @@ export default function CrossCountryDemo() {
                   >
                     {n(s.value)}
                   </span>
-                  <span className="block text-[13px] text-white/45">{t(`matching.${s.id}`)}</span>
+                  <span className="type-body-sm block text-white/45">{t(`matching.${s.id}`)}</span>
                 </div>
               ))}
             </div>
@@ -446,12 +448,12 @@ export default function CrossCountryDemo() {
                     className="block h-1 w-8 rounded-full mb-4"
                     style={{ backgroundColor: SERIES[i] }}
                   />
-                  <span className="block text-[15px] font-semibold text-white/90 mb-3">
+                  <span className="type-body-bold block text-white/90 mb-3">
                     {t(`groups.names.${g}`)}
                   </span>
                   <div className="flex items-baseline justify-between gap-4">
-                    <span className="text-[13px] text-white/45">{t('groups.people')}</span>
-                    <span className="text-[14px] font-semibold text-white/85 tabular-nums">
+                    <span className="type-body-sm text-white/45">{t('groups.people')}</span>
+                    <span className="type-body-sm font-semibold text-white/85 tabular-nums">
                       {n(countryGroups[g].n, 0)}
                     </span>
                   </div>
@@ -469,7 +471,7 @@ export default function CrossCountryDemo() {
 
           <Panel title={t('frames.heading')} body={t('frames.body')}>
             <div className="flex flex-wrap items-center gap-2 mb-8">
-              <span className="text-[12px] font-semibold tracking-[0.14em] uppercase text-white/35 mr-2">
+              <span className="type-eyebrow text-white/35 mr-2">
                 {t('frames.label')}
               </span>
               {FRAMES.map((f) => (
@@ -478,11 +480,11 @@ export default function CrossCountryDemo() {
                   type="button"
                   aria-pressed={frame === f}
                   onClick={() => setFrame(f)}
-                  className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${
-                    frame === f
-                      ? 'bg-white/[0.1] text-white border border-white/[0.15]'
-                      : 'text-white/40 border border-transparent hover:text-white/70'
-                  }`}
+                  className={`type-body-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full font-medium transition-all duration-300 ${
+ frame === f
+ ? 'bg-white/[0.1] text-white border border-white/[0.15]'
+ : 'text-white/40 border border-transparent hover:text-white/70'
+ }`}
                 >
                   {t(`frames.options.${f}`)}
                 </button>
@@ -499,7 +501,7 @@ export default function CrossCountryDemo() {
               data={frameCharts.means.data}
               options={frameCharts.means.options}
             />
-            <p className="text-[13px] text-white/40 leading-[1.7] mt-4">
+            <p className="type-body-sm text-white/40 mt-4">
               {t('frames.means.caption', {
                 narrow: n(spreadOf(crossCountry.competencies), 2),
                 wide: n(spreadOf(crossCountry.framework), 2),
@@ -516,14 +518,14 @@ export default function CrossCountryDemo() {
               data={frameCharts.bands.data}
               options={frameCharts.bands.options}
             />
-            <p className="text-[13px] text-white/40 leading-[1.7] mt-4">
+            <p className="type-body-sm text-white/40 mt-4">
               {t('frames.bands.caption')}
             </p>
           </Panel>
 
           <Panel title={t('drivers.heading')} body={t('drivers.body')} note={t('drivers.caption')}>
             <div className="flex flex-wrap items-center gap-2 mb-8">
-              <span className="text-[12px] font-semibold tracking-[0.14em] uppercase text-white/35 mr-2">
+              <span className="type-eyebrow text-white/35 mr-2">
                 {t('drivers.label')}
               </span>
               {COMPETENCIES.map((c) => (
@@ -532,11 +534,11 @@ export default function CrossCountryDemo() {
                   type="button"
                   aria-pressed={skill === c}
                   onClick={() => setSkill(c)}
-                  className={`px-4 py-2 rounded-full text-[13px] font-medium transition-all duration-300 ${
-                    skill === c
-                      ? 'bg-white/[0.1] text-white border border-white/[0.15]'
-                      : 'text-white/40 border border-transparent hover:text-white/70'
-                  }`}
+                  className={`type-body-sm px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+ skill === c
+ ? 'bg-white/[0.1] text-white border border-white/[0.15]'
+ : 'text-white/40 border border-transparent hover:text-white/70'
+ }`}
                 >
                   {t(`competencies.${c}`)}
                 </button>
@@ -610,12 +612,12 @@ export default function CrossCountryDemo() {
             <dl className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {HOW_TO_READ.map((id) => (
                 <div key={id}>
-                  <dt className="text-[15px] font-semibold text-white/90 mb-2">
+                  <dt className="type-body-bold text-white/90 mb-2">
                     {t(`howToRead.items.${id}.question`, {
                       threshold: n(skillMatching.threshold, 0),
                     })}
                   </dt>
-                  <dd className="text-[14px] text-white/[0.55] leading-[1.7]">
+                  <dd className="type-body-sm text-white/[0.55]">
                     {t(`howToRead.items.${id}.answer`)}
                   </dd>
                 </div>
@@ -626,7 +628,7 @@ export default function CrossCountryDemo() {
           <Panel title={t('closing.heading')} body={t('closing.body')}>
             <a
               href={href('demo', lang)}
-              className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-4 py-2 text-[13px] font-semibold text-white/70 transition-colors duration-300 hover:text-white hover:border-white/[0.25]"
+              className="type-body-sm inline-flex items-center gap-2 rounded-full border border-white/[0.12] px-4 py-2 font-semibold text-white/70 transition-colors duration-300 hover:text-white hover:border-white/[0.25]"
             >
               {t('closing.back')}
             </a>

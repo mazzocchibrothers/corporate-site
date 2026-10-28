@@ -93,7 +93,7 @@ export default function FoodRetailPage() {
               {/* Left. Text */}
               <div className="lg:col-span-5">
                 <h1
-                  className="text-[48px] font-semibold md:text-[64px] md:font-bold tracking-[-0.02em] text-white/95 mb-4"
+                  className="text-[48px] font-semibold md:text-[58px] md:font-bold tracking-[-0.02em] text-white/95 mb-4"
                   style={{ lineHeight: 1.1 }}
                 >
                   {renderTitle()}
@@ -102,8 +102,7 @@ export default function FoodRetailPage() {
                 {PARAGRAPHS.map((text, i) => (
                   <p
                     key={i}
-                    className={`text-[18px] text-white/95 leading-[1.65] max-w-md${i > 0 ? ' mt-4' : ''}`}
-                    style={{ fontWeight: 300 }}
+                    className={`type-body-lg text-white/95 max-w-md${i > 0 ? ' mt-4' : ''}`}
                   >
                     {t(`paragraphs.${text}`)}
                   </p>

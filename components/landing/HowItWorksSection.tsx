@@ -60,7 +60,7 @@ export default function HowItWorksSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[clamp(1.6rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('howItWorks.heading', {
+          <h2 className="max-w-[880px] mx-auto text-[clamp(1.6rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('howItWorks.heading', {
             span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
         </m.div>
@@ -107,7 +107,7 @@ export default function HowItWorksSection() {
                     {/* Top: Number + Icon */}
                     <div className="flex items-center justify-between mb-6 md:mb-8 lg:mb-10">
                       <m.span
-                        className="text-[32px] md:text-[48px] lg:text-[56px] font-light leading-none tracking-[-0.04em]"
+                        className="font-display text-[32px] md:text-[48px] lg:text-[56px] font-light leading-none tracking-[-0.04em]"
                         animate={{ color: isActive ? 'rgba(155,157,251,0.3)' : 'rgba(26,26,46,0.12)' }}
                         transition={{ duration: 0.5 }}
                       >
@@ -128,7 +128,7 @@ export default function HowItWorksSection() {
 
                     {/* Title + Description + Tags */}
                     <m.h3
-                        className="text-[18px] md:text-[28px] lg:text-[32px] font-semibold mb-2 md:mb-4 leading-tight tracking-[-0.02em]"
+                        className="font-display text-[18px] md:text-[28px] lg:text-[32px] font-semibold mb-2 md:mb-4 leading-tight tracking-[-0.02em]"
                         animate={{ color: isActive ? 'rgba(255,255,255,0.95)' : 'rgba(26,26,46,0.85)' }}
                         transition={{ duration: 0.5 }}
                       >
@@ -136,7 +136,7 @@ export default function HowItWorksSection() {
                       </m.h3>
 
                       <m.p
-                        className="text-[13px] md:text-[15px] leading-[1.6] md:leading-[1.8] mb-3 md:mb-8"
+                        className="type-body mb-3 md:mb-8"
                         animate={{ color: isActive ? 'rgba(255,255,255,0.5)' : '#7A7A7A' }}
                         transition={{ duration: 0.5 }}
                       >
@@ -148,7 +148,7 @@ export default function HowItWorksSection() {
                       {step.keywords.map(kw => (
                         <m.span
                           key={kw}
-                          className="inline-flex px-2.5 py-1 md:px-3 md:py-1.5 rounded-full text-[11px] md:text-[11px] font-semibold tracking-wide"
+                          className="type-caption inline-flex px-2.5 py-1 md:px-3 md:py-1.5 rounded-full font-semibold"
                           animate={{
                             color: isActive ? 'rgba(155,157,251,0.7)' : 'rgba(75,77,247,1.0)',
                             backgroundColor: isActive ? 'rgba(75,77,247,0.12)' : 'rgba(75,77,247,0.04)',

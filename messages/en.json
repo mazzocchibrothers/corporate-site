@@ -5640,7 +5640,7 @@
           "stat": "6-9mo"
         }
       },
-      "heading": "Skillvue brings people processes<br></br><span>to life.</span>",
+      "heading": "Skillvue brings people processes <span>to life.</span>",
       "body": "One platform for every talent decision: hiring, performance, development, mobility. Objective. Scalable. Defensible."
     },
     "howItWorks": {
@@ -7493,7 +7493,7 @@
       "decide": "Skillvue Decide"
     },
     "platform": {
-      "heading": "Objective skills flow from jobs,<br></br>to measurement, to decisions.",
+      "heading": "Objective skills flow from jobs, to measurement, to decisions.",
       "explore": "Explore",
       "cards": {
         "map": "Build your unified skills architecture in days, not months.",
@@ -7504,7 +7504,7 @@
     "problem": "The problem",
     "solution": "The solution",
     "map": {
-      "heading": "Build your unified skills architecture<br></br>in days, not months.",
+      "heading": "Build your unified skills architecture in days, not months.",
       "problemTitle": "Skills live in scattered spreadsheets and job descriptions.",
       "problemBody": "Named differently in every team, with no shared way to compare them. Building a skills architecture with a traditional approach takes months of consulting, and the results are already out of date on delivery.",
       "solutionTitle": "From your context to a living skills map.",
@@ -7535,7 +7535,7 @@
       "readMore": "Read more"
     },
     "assess": {
-      "heading": "Assess skills and potential your way,<br></br>with scientific accuracy, at any scale.",
+      "heading": "Assess skills and potential your way, with scientific accuracy, at any scale.",
       "problemTitle": "Talent decisions run on gut feel and inconsistent interviews.",
       "problemBody": "Hiring, performance, growth and mobility each read people differently. The signal is subjective, fragmented and impossible to compare from one process to the next.",
       "solutionTitle": "Objective skills data, connected across every process.",
@@ -7564,7 +7564,7 @@
       }
     },
     "decide": {
-      "heading": "One skills language.<br></br>Defensible talent decisions, made easy.",
+      "heading": "One skills language. Defensible talent decisions, made easy.",
       "problemTitle": "Skills data, when available, ends up in siloed tools that do not drive decisions.",
       "problemBody": "Hiring managers, HR business partners and leaders still fall back on gut feel, because the data lives in other systems, disconnected from the decision in front of them.",
       "solutionTitle": "Skills data, built into every decision.",
@@ -8652,7 +8652,7 @@
     },
     "learning-development": {
       "ldHero": {
-        "heading": "Stop funding generic training.<br></br>Start focusing on the <span>real skill gaps.</span>",
+        "heading": "Stop funding generic training. Start focusing on the <span>real skill gaps.</span>",
         "body": "Skillvue gives L&D leaders objective, measurable data on where the real skill gaps are, at individual, team, and organizational level, so every training investment is targeted, measurable, and aligned to business impact.",
         "cta": "Book a Demo"
       },
@@ -9002,7 +9002,7 @@
         "cta": "Stage"
       },
       "taHero": {
-        "heading": "Stop gambling on hiring.<br></br>Start predicting who will <span>perform.</span>",
+        "heading": "Stop gambling on hiring. Start predicting who will <span>perform.</span>",
         "body": "Skillvue replaces guesswork with science at scale. AI-powered verifications customized to your roles and leadership model surface top candidates, cut early turnover, and make every hiring decision defensible.",
         "cta": "Book a Demo"
       },

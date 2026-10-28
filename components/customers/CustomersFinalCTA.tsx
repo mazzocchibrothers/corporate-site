@@ -26,14 +26,14 @@ export default function CustomersFinalCTA() {
           duration={0.7}
           className="rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 flex flex-col items-center text-center gap-10"
         >
-          <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90 max-w-4xl">{t.rich('finalCTA.heading', {
+          <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90">{t.rich('finalCTA.heading', {
             span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
-          <p className="text-[18px] text-white/[0.65]">{t('finalCTA.body')}</p>
+          <p className="max-w-[880px] type-body-lg text-white/[0.65]">{t('finalCTA.body')}</p>
 
           <div className="flex flex-wrap items-center justify-center gap-2">
             {badges.map(b => (
-              <span key={b} className="rounded-full border border-white/[0.15] px-4 py-2 text-[12px] text-white/60">{t(`finalCTA.badges.${b}`)}</span>
+              <span key={b} className="type-caption rounded-full border border-white/[0.15] px-4 py-2 text-white/60">{t(`finalCTA.badges.${b}`)}</span>
             ))}
           </div>
 

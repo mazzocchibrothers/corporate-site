@@ -255,7 +255,7 @@ export default function Navbar() {
                     data-testid={`nav-link-${link.id}`}
                     aria-expanded={openMenu === link.id}
                     aria-controls={`desktop-menu-${link.id}`}
-                    className="text-[15px] font-normal tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                    className="type-body flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
                     style={{ color: openMenu === link.id ? textColor : textMuted }}
                     onFocus={(event) => {
                       desktopTriggerRef.current = event.currentTarget;
@@ -280,7 +280,7 @@ export default function Navbar() {
                   <a
                     href={href(link.route!, lang)}
                     data-testid={`nav-link-${link.id}`}
-                    className="text-[15px] font-normal tracking-[0.02em] flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                    className="type-body flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
                     style={{ color: textMuted }}
                     onClick={(event) => {
                       event.preventDefault();
@@ -349,7 +349,7 @@ export default function Navbar() {
                             }}
                           >
                             {Icon && <Icon className={`h-[18px] w-[18px] shrink-0 transition-colors duration-200 ${itemColorClass}`} />}
-                            <span className={`text-[15px] font-normal whitespace-nowrap transition-colors duration-200 ${itemColorClass}`}>
+                            <span className={`type-body whitespace-nowrap transition-colors duration-200 ${itemColorClass}`}>
                               {t(`nav.links.${key}`)}
                             </span>
                           </a>
@@ -378,7 +378,7 @@ export default function Navbar() {
                 <button
                   key={l}
                   onClick={() => switchLang(l)}
-                  className="rounded-full px-3 py-1 text-[13px] font-medium tracking-wide transition-all duration-200"
+                  className="type-body-sm rounded-full px-3 py-1 font-medium transition-all duration-200"
                   style={{ color: lang === l ? textColor : textMuted, background: lang === l ? (isLight ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.15)') : 'transparent' }}
                 >
                   {l.toUpperCase()}
@@ -455,7 +455,7 @@ export default function Navbar() {
                       }
                     }}
                   >
-                    <span className="text-[18px] font-medium text-white">{t(`nav.${link.id}`)}</span>
+                    <span className="type-body-lg font-medium text-white">{t(`nav.${link.id}`)}</span>
                     {link.items && (
                       <ChevronDown
                         className="h-4 w-4 text-white/40"
@@ -473,7 +473,7 @@ export default function Navbar() {
                       {link.items.map((id) => (
                         <button
                           key={id}
-                          className="w-full text-left py-3 text-[16px] text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                          className="type-body w-full text-left py-3 text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
                           onClick={() => navigateTo(href(id, lang))}
                         >
                           {t(`nav.links.${labelKey(id)}`)}
@@ -493,7 +493,7 @@ export default function Navbar() {
                   <button
                     key={l}
                     onClick={() => switchLang(l)}
-                    className="rounded-full px-5 py-1.5 text-[14px] font-medium tracking-wide transition-all duration-200"
+                    className="type-body-sm rounded-full px-5 py-1.5 font-medium transition-all duration-200"
                     style={{ color: lang === l ? '#ffffff' : 'rgba(255,255,255,0.6)', background: lang === l ? 'rgba(255,255,255,0.15)' : 'transparent' }}
                   >
                     {l.toUpperCase()}
@@ -505,7 +505,7 @@ export default function Navbar() {
                 variant="primary"
                 mode="dark"
                 onClick={() => navigateTo(href('book-meeting', lang))}
-                className="w-full text-[16px]"
+                className="type-body w-full"
               >
                 {t('nav.bookDemo')}
               </Button>

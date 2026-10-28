@@ -57,7 +57,7 @@ export default function ResponsibleAI() {
       <Reveal y={20} delay={0.1 + i * 0.08} key={p.id} data-testid={`responsible-${p.id}`} className="group rounded-xl md:rounded-2xl border border-[#4B4DF7]/[0.08] hover:border-[#4B4DF7]/[0.18] bg-white/60 hover:bg-white/80 p-5 md:p-10 transition-all duration-500 h-full">
         <IconTile icon={Icon} mode="light" className="mb-3 md:mb-5" />
         <h3 className="text-[15px] md:text-[18px] font-semibold text-[#1A1A2E] mb-2 md:mb-3">{t(`responsibleAI.pillars.${p.id}.title`)}</h3>
-        <p className="text-[12px] md:text-[15px] text-[#7A7A7A] leading-[1.5] md:leading-[1.75]">{t(`responsibleAI.pillars.${p.id}.desc`)}</p>
+        <p className="type-body text-[#7A7A7A]">{t(`responsibleAI.pillars.${p.id}.desc`)}</p>
       </Reveal>
     );
   };
@@ -68,7 +68,7 @@ export default function ResponsibleAI() {
 
         {/* Responsible AI */}
         <Reveal duration={0.7} className="mb-8 md:mb-12">
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">{t.rich('responsibleAI.heading', {
+          <h2 className="max-w-[880px] text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('responsibleAI.heading', {
             span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
         </Reveal>
@@ -79,7 +79,7 @@ export default function ResponsibleAI() {
 
         {/* FAQ */}
         <Reveal duration={0.7} className="mb-6 md:mb-10">
-          <h2 className="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('responsibleAI.heading2', {
+          <h2 className="max-w-[880px] text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('responsibleAI.heading2', {
             span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
         </Reveal>
@@ -88,13 +88,13 @@ export default function ResponsibleAI() {
           {faqs.map((faq, i) => (
             <Reveal y={15} duration={0.4} delay={0.1 + i * 0.06} key={i} className="border-b border-[#1A1A2E]/[0.08]">
               <button onClick={() => setOpenIdx(openIdx === i ? null : i)} data-testid={`faq-${i}`} className="w-full flex items-center justify-between py-4 md:py-6 text-left">
-                <span className="text-[15px] md:text-[16px] font-semibold text-[#1A1A2E]/85 pr-4 md:pr-8">{t(`responsibleAI.faqs.${faq.id}.q`)}</span>
+                <span className="type-body-bold text-[#1A1A2E]/85 pr-4 md:pr-8">{t(`responsibleAI.faqs.${faq.id}.q`)}</span>
                 <ChevronDown className={`h-5 w-5 md:h-4 md:w-4 text-[#1A1A2E]/30 shrink-0 transition-transform duration-400 ${openIdx === i ? 'rotate-180' : ''}`} />
               </button>
               <AnimatePresence>
                 {openIdx === i && (
                   <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
-                    <p className="text-[14px] md:text-[15px] text-[#7A7A7A] leading-[1.65] md:leading-[1.75] pb-4 md:pb-6">{t(`responsibleAI.faqs.${faq.id}.a`)}</p>
+                    <p className="type-body text-[#7A7A7A] pb-4 md:pb-6">{t(`responsibleAI.faqs.${faq.id}.a`)}</p>
                   </motion.div>
                 )}
               </AnimatePresence>

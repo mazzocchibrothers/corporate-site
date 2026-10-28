@@ -28,7 +28,7 @@ export default function LDShift() {
     <section id="ld-shift" data-testid="ld-shift" className="relative py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-16">
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">{t.rich('ldShift.heading', {
+          <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">{t.rich('ldShift.heading', {
             span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
         </Reveal>
@@ -42,14 +42,14 @@ export default function LDShift() {
             delay={0.15}
             className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8 lg:p-10"
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-8 block">{t('ldShift.text')}</span>
+            <span className="type-eyebrow text-[#6B7DFF] mb-8 block">{t('ldShift.text')}</span>
             <div className="space-y-6">
               {oldItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <div className="w-7 h-7 rounded-full bg-white/[0.06] flex items-center justify-center shrink-0 mt-0.5">
                     <X className="h-3.5 w-3.5 text-white/30" />
                   </div>
-                  <p className="text-[15px] text-white/40 leading-[1.7]">{t(`ldShift.oldItems.${item}`)}</p>
+                  <p className="type-body text-white/40">{t(`ldShift.oldItems.${item}`)}</p>
                 </div>
               ))}
             </div>
@@ -63,14 +63,14 @@ export default function LDShift() {
             delay={0.25}
             className="rounded-2xl border border-[#4B4DF7]/[0.15] bg-white/[0.06] p-8 lg:p-10"
           >
-            <span className="text-[11px] font-bold text-[#9B9DFB] tracking-[0.1em] uppercase mb-8 block">{t('ldShift.text2')}</span>
+            <span className="type-eyebrow text-[#6B7DFF] mb-8 block">{t('ldShift.text2')}</span>
             <div className="space-y-6">
               {newItems.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <div className="w-7 h-7 rounded-full bg-[#4B4DF7]/[0.12] flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="h-3.5 w-3.5 text-[#9B9DFB]" />
                   </div>
-                  <p className="text-[15px] text-white/[0.65] leading-[1.7]">{t(`ldShift.newItems.${item}`)}</p>
+                  <p className="type-body text-white/[0.65]">{t(`ldShift.newItems.${item}`)}</p>
                 </div>
               ))}
             </div>

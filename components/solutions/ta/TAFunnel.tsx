@@ -115,9 +115,9 @@ function ColumnCard({ data, delay, t }) {
               <div key={item.id} className="flex items-start gap-3">
                 <ItemIcon className="h-5 w-5 md:h-4 md:w-4 text-[#9B9DFB]/40 mt-0.5 shrink-0" />
                 <div>
-                  <span className="text-[14px] text-[#1A1A2E]/80 font-medium">{t(`${data.keyPath}.items.${item.id}.text`)}</span>
+                  <span className="type-body-sm text-[#1A1A2E]/80 font-medium">{t(`${data.keyPath}.items.${item.id}.text`)}</span>
                   {item.detail && (
-                    <span className="text-[13px] md:text-[12px] text-[#7A7A7A] ml-1.5">({t(`${data.keyPath}.items.${item.id}.detail`)})</span>
+                    <span className="type-body-sm text-[#7A7A7A] ml-1.5">({t(`${data.keyPath}.items.${item.id}.detail`)})</span>
                   )}
                 </div>
               </div>
@@ -126,7 +126,7 @@ function ColumnCard({ data, delay, t }) {
         </div>
       ) : (
         <div>
-          <p className="text-[14px] md:text-[14px] text-[#1A1A2E]/60 font-semibold mb-5">{t(`${data.keyPath}.text`)}</p>
+          <p className="type-body-sm text-[#1A1A2E]/60 font-semibold mb-5">{t(`${data.keyPath}.text`)}</p>
           <div className="grid grid-cols-3 gap-3">
             {data.logos.map((logo) => (
               <div key={logo} className="flex items-center justify-center h-8">
@@ -157,7 +157,7 @@ export default function TAFunnel() {
 
         {/* Title */}
         <Reveal duration={0.7} className="mb-8 md:mb-14">
-          <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] max-w-4xl">{t.rich('taFunnel.heading', {
+          <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('taFunnel.heading', {
             span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
         </Reveal>
@@ -180,10 +180,10 @@ export default function TAFunnel() {
                   : 'bg-white border-[#1A1A2E]/[0.06] hover:bg-[#1A1A2E]/[0.04] hover:border-[#1A1A2E]/[0.12]'
               }`}
             >
-              <span className={`text-[11px] font-bold tracking-[0.15em] uppercase block mb-0.5 md:mb-1 ${i === active ? 'text-[#9B9DFB]' : 'text-[#1A1A2E]/25'}`}>
+              <span className={`type-eyebrow block mb-0.5 md:mb-1 ${i === active ? 'text-[#6B7DFF]' : 'text-[#1A1A2E]/25'}`}>
                 {t('taFunnel.cta')} {s.number}
               </span>
-              <span className={`text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-white' : 'text-[#7A7A7A]'}`}>
+              <span className={`font-display text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-white' : 'text-[#7A7A7A]'}`}>
                 {t(`taFunnel.stages.${s.id}.label`)}
               </span>
               {i === active && (

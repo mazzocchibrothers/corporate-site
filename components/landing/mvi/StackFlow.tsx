@@ -42,25 +42,25 @@ export default function StackFlow() {
       <div className="flex items-center gap-4 rounded-xl border border-[#6366F8]/40 bg-[#6366F8]/10 p-4 md:p-5">
         <img src="/logos/skillvue-logomark.svg" alt="" width={32} height={32} loading="lazy" decoding="async" className="h-8 w-8 shrink-0" />
         <div>
-          <p className="text-[16px] font-semibold text-white">{t('source')}</p>
-          <p className="text-[13px] text-white/60">{t('sourceSub')}</p>
+          <p className="type-body-bold text-white">{t('source')}</p>
+          <p className="type-body-sm text-white/60">{t('sourceSub')}</p>
         </div>
       </div>
 
       {/* Two lanes: out (accent) and in (grey). Horizontal from md, vertical below. */}
       <div className="flex md:flex-col items-center md:items-stretch justify-center gap-6 md:gap-0 py-4 md:py-0 md:px-4">
-        <span className="hidden md:inline-flex items-center gap-1 text-[11px] text-[#8385FF] whitespace-nowrap mb-2 md:self-center">
+        <span className="type-caption hidden md:inline-flex items-center gap-1 text-[#8385FF] whitespace-nowrap mb-2 md:self-center">
           {t('outbound')}<ArrowRight className="h-3 w-3" aria-hidden="true" />
         </span>
         <div className="flex md:flex-col gap-6 md:gap-5 h-20 md:h-auto md:w-full">
           <Lane dir="out" active={inView} />
           <Lane dir="in" active={inView} />
         </div>
-        <span className="hidden md:inline-flex items-center gap-1 text-[11px] text-white/50 whitespace-nowrap mt-2 md:self-center">
+        <span className="type-caption hidden md:inline-flex items-center gap-1 text-white/50 whitespace-nowrap mt-2 md:self-center">
           <ArrowLeft className="h-3 w-3" aria-hidden="true" />{t('inbound')}
         </span>
         {/* Labels beside the vertical lanes on small screens */}
-        <div className="md:hidden flex flex-col gap-2 text-[12px]">
+        <div className="type-caption md:hidden flex flex-col gap-2">
           <span className="inline-flex items-center gap-1 text-[#8385FF]"><ArrowDown className="h-3 w-3" aria-hidden="true" />{t('outbound')}</span>
           <span className="inline-flex items-center gap-1 text-white/50"><ArrowUp className="h-3 w-3" aria-hidden="true" />{t('inbound')}</span>
         </div>
@@ -68,14 +68,14 @@ export default function StackFlow() {
 
       {/* The visitor's stack */}
       <div>
-        <p className="text-[12px] text-white/40 mb-3">{t('label')}</p>
+        <p className="type-caption text-white/40 mb-3">{t('label')}</p>
         <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {destinations.map((d, i) => (
             <li
               key={d}
-              className={`rounded-lg border px-3 py-2.5 text-[14px] text-center transition-all duration-500 ${
-                inView ? 'border-[#6366F8]/40 bg-[#6366F8]/[0.08] text-white/90' : 'border-white/[0.08] bg-transparent text-white/40'
-              }`}
+              className={`type-body-sm rounded-lg border px-3 py-2.5 text-center transition-all duration-500 ${
+ inView ? 'border-[#6366F8]/40 bg-[#6366F8]/[0.08] text-white/90' : 'border-white/[0.08] bg-transparent text-white/40'
+ }`}
               style={{ transitionDelay: `${600 + i * 180}ms` }}
             >
               {d}

@@ -9,14 +9,15 @@ import { ArrowLeft } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { BASE_URL } from '@/i18n/urls';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 function PolicySection({ num, title, children }: { num: string; title: string; children: React.ReactNode }) {
   return (
     <div className="mb-14">
-      <h2 className="text-[clamp(1.2rem,2.2vw,1.5rem)] font-semibold text-[#121212] mb-5 pb-4 border-b border-[#121212]/[0.07] leading-[1.4]">
+      <h2 className="max-w-[880px] text-[clamp(1.2rem,2.2vw,1.5rem)] font-semibold text-[#121212] mb-5 pb-4 border-b border-[#121212]/[0.07] leading-[1.4]">
         <span className="text-[#4B4DF7] mr-2">{num}.</span>{title}
       </h2>
-      <div className="text-[15px] text-[#121212]/70 leading-[1.85] space-y-4 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_ul]:mt-2">
+      <div className="type-body text-[#121212]/70 space-y-4 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_ul]:mt-2">
         {children}
       </div>
     </div>
@@ -29,7 +30,7 @@ function SubSection({ num, title, children }: { num: string; title: string; chil
       <h3 className="text-[16px] font-semibold text-[#121212]/85 mb-3 leading-[1.5]">
         {num} {title}
       </h3>
-      <div className="text-[15px] text-[#121212]/70 leading-[1.8] space-y-3">
+      <div className="type-body text-[#121212]/70 space-y-3">
         {children}
       </div>
     </div>
@@ -61,10 +62,12 @@ export default function PrivacyPolicyPage() {
               className="mb-10"
             >{t('cta')}</Button>
             <Reveal duration={0.7}>
-              <h1 className="text-[40px] md:text-[56px] font-semibold text-white/95 mb-4 tracking-[-0.02em] leading-[1.1]">
-                {t('heading')}</h1>
-              <p className="text-[16px] text-white/[0.45] leading-[1.75] max-w-2xl" style={{ fontWeight: 300 }}>
-                {t('body')}</p>
+              <HeroCopy>
+                <h1 className="text-[40px] md:text-[58px] font-semibold text-white/95 mb-4 tracking-[-0.02em] leading-[1.1]">
+                  {t('heading')}</h1>
+                <p className="type-body hero-subtitle text-white/[0.45]">
+                  {t('body')}</p>
+              </HeroCopy>
             </Reveal>
           </div>
         </section>
@@ -78,11 +81,11 @@ export default function PrivacyPolicyPage() {
               duration={0.6}
               className="mb-16 space-y-5"
             >
-              <p className="text-[16px] text-[#121212]/70 leading-[1.85]">
+              <p className="type-body text-[#121212]/70">
                 {t.rich('body2', {
           a: (chunks) => <a href={siteUrl} target="_blank" rel="noopener noreferrer" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
         })}</p>
-              <p className="text-[16px] text-[#121212]/70 leading-[1.85]">
+              <p className="type-body text-[#121212]/70">
                 {t('body3')}</p>
             </Reveal>
 
@@ -264,7 +267,7 @@ export default function PrivacyPolicyPage() {
 
             {/* Last modified */}
             <div className="border-t border-[#121212]/[0.06] mt-4 pt-10">
-              <p className="text-[13px] text-[#121212]/[0.3] leading-[1.7]">
+              <p className="type-body-sm text-[#121212]/[0.3]">
                 {t('body34')}</p>
             </div>
           </div>

@@ -91,7 +91,7 @@ export default function Footer() {
               href={TOP_STARTUPS_ARTICLE}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 whitespace-nowrap border-t border-white/[0.06] pt-5 md:pt-6 text-[14px] text-white/55 hover:text-white/75 transition-colors duration-300"
+              className="type-body-sm group flex items-center gap-3 whitespace-nowrap border-t border-white/[0.06] pt-5 md:pt-6 text-white/55 hover:text-white/75 transition-colors duration-300"
             >
               <Award aria-hidden="true" className="h-4 w-4 shrink-0" />
               {t('footer.award')}
@@ -103,16 +103,16 @@ export default function Footer() {
           <div className="flex flex-col gap-6 md:grid md:grid-cols-4 md:gap-8">
             {footerGroups.map((group) => (
               <div key={group.id}>
-                <h4 className="text-[15px] md:text-[16px] font-semibold text-white/85 mb-2 md:mb-7 text-center md:text-left">
+                <h4 className="text-[15px] md:text-[16px] font-normal text-white/85 mb-2 md:mb-7 text-center md:text-left">
                   {t(`footer.groups.${group.id}`)}
                 </h4>
-                <div className="flex flex-col items-center gap-4 md:items-start md:block md:space-y-4">
+                <div className="flex flex-col items-center gap-2 md:items-start md:block md:space-y-2.5">
                   {group.links.map((id) => (
                     <a
                       key={id}
                       href={href(id, lang)}
                       onClick={handleClick(href(id, lang))}
-                      className="block text-center md:text-left text-[14px] md:text-[15px] text-white/55 hover:text-white/65 transition-colors duration-300 py-1 md:py-0"
+                      className="type-body-sm block text-center md:text-left text-white/55 hover:text-white/65 transition-colors duration-300 py-1 md:py-0"
                     >
                       {t(`footer.links.${labelKey(id)}`)}
                     </a>
@@ -126,10 +126,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/[0.04] pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4">
           <div className="text-center sm:text-left">
-            <p className="text-[12px] md:text-[13px] text-white/40">
+            <p className="type-caption text-white/40">
               &copy; {new Date().getFullYear()} Skillvue. {t('footer.rights')}
             </p>
-            <p className="text-[12px] md:text-[13px] text-white/40">
+            <p className="type-caption text-white/40">
               {t('footer.legalAddress')}
             </p>
           </div>
@@ -147,11 +147,11 @@ export default function Footer() {
               { label: t('footer.legal.dataProcessing'), href: href('privacy-policy-algo', lang) },
             ].map(({ label, href }) => (
               href.startsWith('http') ? (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="type-caption text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
                   {label}
                 </a>
               ) : (
-                <a key={label} href={href} onClick={handleClick(href)} className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
+                <a key={label} href={href} onClick={handleClick(href)} className="type-caption text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
                   {label}
                 </a>
               )
@@ -163,7 +163,7 @@ export default function Footer() {
             <button
               type="button"
               onClick={() => (window as any)._iub?.cs?.api?.openPreferences()}
-              className="text-[12px] md:text-[13px] text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0"
+              className="type-caption text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0"
             >
               {t('footer.legal.cookiePreferences')}
             </button>

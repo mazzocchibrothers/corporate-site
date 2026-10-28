@@ -6,6 +6,7 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import LiteYouTubeEmbed from '@/components/landing/LiteYouTubeEmbed';
 import { href } from '@/i18n/routes';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 const clientLogos = [
   { name: 'Unicredit', src: '/logos/client-unicredit.svg', width: 221 },
@@ -57,33 +58,35 @@ export default function HeroSection() {
                 }}
               />
 
-              <h1
-                className="hero-fade-up relative text-[48px] md:text-[clamp(2.5rem,4.6vw,4rem)] font-semibold tracking-[-0.02em] text-white"
-                style={{ lineHeight: 1.08, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
-              >
-                {/* Two gradient tags, not one: the English headline sets its
-                    span to md:whitespace-nowrap and the Italian one does not,
-                    and a single handler quietly gave the class to both. */}
-                {t.rich('hero.heading', {
-                  l: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
-                  g: (chunks) => (
-                    <span className="italic font-semibold gradient-text md:whitespace-nowrap">{chunks}</span>
-                  ),
-                  gw: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
-                  // The Italian "Il" sits inside the gradient span (an inline-block, so an
-                  // article left outside it drops onto a line of its own) and is painted
-                  // white; `m` keeps "Il Sistema Operativo" on one line on desktop.
-                  w: (chunks) => <span className="[-webkit-text-fill-color:#ffffff]">{chunks}</span>,
-                  m: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
-                  br: () => <br />,
-                })}
-              </h1>
-              <p
-                className="hero-fade-up hero-delay-1 relative text-[15px] md:text-[17px] text-white/75 leading-[1.65] mt-6 md:mt-8 max-w-lg md:max-w-xl font-normal md:font-light"
-                style={{ textShadow: '0 1px 8px rgba(0,0,0,0.2)' }}
-              >
-                {t('hero.body')}
-              </p>
+              <HeroCopy>
+                <h1
+                  className="hero-fade-up relative text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white"
+                  style={{ lineHeight: 1.1, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
+                >
+                  {/* Two gradient tags, not one: the English headline sets its
+                      span to md:whitespace-nowrap and the Italian one does not,
+                      and a single handler quietly gave the class to both. */}
+                  {t.rich('hero.heading', {
+                    l: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
+                    g: (chunks) => (
+                      <span className="italic font-semibold gradient-text md:whitespace-nowrap">{chunks}</span>
+                    ),
+                    gw: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
+                    // The Italian "Il" sits inside the gradient span (an inline-block, so an
+                    // article left outside it drops onto a line of its own) and is painted
+                    // white; `m` keeps "Il Sistema Operativo" on one line on desktop.
+                    w: (chunks) => <span className="[-webkit-text-fill-color:#ffffff]">{chunks}</span>,
+                    m: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
+                    br: () => <br />,
+                  })}
+                </h1>
+                <p
+                  className="type-body hero-subtitle hero-fade-up hero-delay-1 relative text-white/75 mt-6 md:mt-8"
+                  style={{ textShadow: '0 1px 8px rgba(0,0,0,0.2)' }}
+                >
+                  {t('hero.body')}
+                </p>
+              </HeroCopy>
 
               <div className="hero-fade-up hero-delay-1 relative flex flex-wrap items-center gap-4 mt-8 md:mt-10">
                 <Button asChild variant="primary" mode="dark">
@@ -148,8 +151,7 @@ export default function HeroSection() {
           {/* Fixed label. hidden on mobile, visible from md up */}
           <div className="hidden md:flex shrink-0 pl-8 lg:pl-12 pr-12 z-10 relative items-center h-full">
             <span
-              className="inline-flex items-center px-6 py-2.5 text-[15px] text-white/70 whitespace-nowrap"
-              style={{ fontWeight: 300, letterSpacing: '0.02em' }}
+              className="type-body inline-flex items-center px-6 py-2.5 text-white/70 whitespace-nowrap"
             >{t('hero.text')}</span>
           </div>
 

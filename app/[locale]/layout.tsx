@@ -73,11 +73,12 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
 
         {/* Preload the weights used above the fold on nearly every page: body
-            text (Regular), hero heading (SemiBold), and the hero's non-italic
+            text (Geist, one variable file for every weight), hero heading
+            (Mona Sans SemiBold), and the hero's non-italic
             gradient span (Bold). BoldItalic is only needed by the homepage and
             /science — those two preload it themselves rather than every other
             page paying for it. */}
-        <link rel="preload" href="/fonts/MonaSans-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/MonaSans-SemiBold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/MonaSans-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>

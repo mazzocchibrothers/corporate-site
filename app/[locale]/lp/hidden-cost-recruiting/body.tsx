@@ -8,6 +8,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import SkillvueLogo from '@/components/landing/SkillvueLogo';
 import { Button } from '@/components/ui/button';
 import { trackLead } from '@/components/shared/track-lead';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 // TODO: Replace with the actual HubSpot form ID for this whitepaper
 const HUBSPOT_PORTAL_ID = '48438018';
@@ -128,7 +129,7 @@ export default function HiddenCostRecruiting() {
         style={{ backdropFilter: 'blur(20px)', backgroundColor: 'rgba(0,0,0,0.35)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="flex items-center gap-3">
           <SkillvueLogo size={28} className="text-white" />
-          <span className="text-white/90 font-semibold text-[15px] tracking-[-0.03em]">{t('text')}</span>
+          <span className="type-body-bold text-white/90">{t('text')}</span>
         </div>
         <Button variant="primary" mode="light" icon={null} onClick={scrollToForm}>
           {t('text2')}</Button>
@@ -145,37 +146,38 @@ export default function HiddenCostRecruiting() {
               className="inline-flex items-center gap-2 mb-8"
             >
               {t.rich('text3', {
-          s: (chunks) => <span className="px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.25em] uppercase text-white" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
+          s: (chunks) => <span className="type-eyebrow px-4 py-1.5 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #4B4DF7 0%, #FF5F24 100%)' }}>{chunks}</span>,
         })}</Reveal>
 
-            {/* Title */}
-            <Reveal
-              {...FADE}
-              delay={0.2}
-              as="h1"
-              className="text-[48px] md:text-[64px] font-semibold tracking-[-0.02em] text-white/95 mb-6"
-              style={{ lineHeight: 1.1 }}
-            >
-              {t.rich('text4', {
-          s: (chunks) => <span className="gradient-text">{chunks}</span>,
-          br: () => <br />,
-        })}</Reveal>
+            <HeroCopy>
+              {/* Title */}
+              <Reveal
+                {...FADE}
+                delay={0.2}
+                as="h1"
+                className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-6"
+                style={{ lineHeight: 1.1 }}
+              >
+                {t.rich('text4', {
+            s: (chunks) => <span className="gradient-text">{chunks}</span>,
+            br: () => <br />,
+          })}</Reveal>
 
-            {/* Subtitle */}
-            <Reveal
-              {...FADE}
-              delay={0.3}
-              as="p"
-              className="text-[18px] text-white/55 leading-[1.75] mb-10 max-w-[560px]"
-              style={{ fontWeight: 300 }}
-            >
-              {t('text5')}</Reveal>
+              {/* Subtitle */}
+              <Reveal
+                {...FADE}
+                delay={0.3}
+                as="p"
+                className="type-body-lg hero-subtitle text-white/55 mb-10"
+              >
+                {t('text5')}</Reveal>
+            </HeroCopy>
 
             {/* Metadata */}
             <Reveal
               {...FADE}
               delay={0.4}
-              className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-white/40 mb-14"
+              className="type-body-sm flex flex-wrap items-center gap-x-6 gap-y-2 text-white/40 mb-14"
             >
               {t.rich('text6', {
           s: (chunks) => <span>{chunks}</span>,
@@ -205,12 +207,12 @@ export default function HiddenCostRecruiting() {
                 className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-6"
               >
                 <div
-                  className="text-[2rem] font-semibold md:font-bold tracking-[-0.03em] mb-1"
+                  className="font-display text-[2rem] font-semibold md:font-bold tracking-[-0.03em] mb-1"
                   style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                 >
                   {s.value}
                 </div>
-                <div className="text-[12px] text-white/45 leading-snug">{s.label}</div>
+                <div className="type-caption text-white/45">{s.label}</div>
               </div>
             ))}
           </Reveal>
@@ -226,10 +228,10 @@ export default function HiddenCostRecruiting() {
             className="rounded-2xl p-8 lg:p-12"
             style={{ border: '1px solid rgba(75,77,247,0.2)', background: 'rgba(75,77,247,0.05)' }}
           >
-            <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-5"
+            <p className="type-eyebrow mb-5"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               {t('body')}</p>
-            <p className="text-[18px] lg:text-[20px] text-white/80 leading-[1.75]" style={{ fontWeight: 300 }}>
+            <p className="type-body-lg text-white/80">
               {t.rich('body2', {
           b: (chunks) => <strong className="text-white/95">{chunks}</strong>,
           b2: (chunks) => <strong className="text-white/95">{chunks}</strong>,
@@ -245,10 +247,10 @@ export default function HiddenCostRecruiting() {
       <section className="section-breathe py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full">
           <Reveal {...FADE} className="mb-14">
-            <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-4"
+            <p className="type-eyebrow mb-4"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               {t('body3')}</p>
-            <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.15]">
+            <h2 className="max-w-[880px] text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.15]">
               {t('heading')}</h2>
           </Reveal>
 
@@ -260,12 +262,12 @@ export default function HiddenCostRecruiting() {
                 key={i}
                 className="rounded-2xl bg-white border border-black/[0.06] p-7 hover:shadow-md transition-shadow duration-300"
               >
-                <div className="text-[11px] font-bold tracking-[0.2em] mb-4"
+                <div className="type-caption font-bold mb-4"
                   style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                   {c.num}
                 </div>
                 <h3 className="text-[15px] font-semibold text-[#0D0D0D] mb-2 leading-snug">{c.title}</h3>
-                <p className="text-[13px] text-[#0D0D0D]/55 leading-[1.65]">{c.desc}</p>
+                <p className="type-body-sm text-[#0D0D0D]/55">{c.desc}</p>
               </Reveal>
             ))}
           </div>
@@ -277,10 +279,10 @@ export default function HiddenCostRecruiting() {
       <section className="relative py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full">
           <Reveal {...FADE} className="mb-14">
-            <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-4"
+            <p className="type-eyebrow mb-4"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               {t('body4')}</p>
-            <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-white/95 leading-[1.15] max-w-[600px]">
+            <h2 className="max-w-[880px] text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-white/95 leading-[1.15]">
               {t.rich('heading2', {
           s: (chunks) => <span className="gradient-text">{chunks}</span>,
         })}</h2>
@@ -296,19 +298,19 @@ export default function HiddenCostRecruiting() {
               >
                 <div className="flex items-start gap-4 mb-5">
                   <div
-                    className="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-[14px] flex-shrink-0"
+                    className="type-body-sm w-9 h-9 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0"
                     style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
                   >
                     {d.num}
                   </div>
                   <h3 className="text-[16px] font-semibold text-white/90 leading-snug pt-1">{d.title}</h3>
                 </div>
-                <p className="text-[14px] text-white/50 leading-[1.7] mb-6">{d.desc}</p>
+                <p className="type-body-sm text-white/50 mb-6">{d.desc}</p>
                 {/* Progress bar */}
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-[11px] text-white/30 tracking-wide">{t('text8')}</span>
-                    <span className="text-[12px] font-semibold text-white/60">{d.pct}%</span>
+                    <span className="type-caption text-white/30">{t('text8')}</span>
+                    <span className="type-caption font-semibold text-white/60">{d.pct}%</span>
                   </div>
                   <div className="h-1.5 rounded-full bg-white/[0.08]">
                     <div
@@ -327,24 +329,24 @@ export default function HiddenCostRecruiting() {
       <section className="relative pb-20 lg:pb-28">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full">
           <Reveal {...FADE} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10">
-            <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-8"
+            <p className="type-eyebrow mb-8"
               style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               {t('body5')}</p>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {economics.map((e, i) => (
                 <div key={i}>
                   <div
-                    className="text-[32px] font-semibold md:text-[2.2rem] md:font-bold tracking-[-0.03em] mb-1"
+                    className="font-display text-[32px] font-semibold md:text-[2.2rem] md:font-bold tracking-[-0.03em] mb-1"
                     style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                   >
                     {e.value}
                   </div>
-                  <div className="text-[12px] text-white/40 leading-snug">{e.label}</div>
+                  <div className="type-caption text-white/40">{e.label}</div>
                 </div>
               ))}
             </div>
             <div className="mt-10 pt-8 border-t border-white/[0.06]">
-              <p className="text-[15px] text-white/60 leading-[1.7]" style={{ fontWeight: 300 }}>
+              <p className="type-body text-white/60">
                 {t.rich('body6', {
           i: (chunks) => <em className="text-white/80 not-italic">{chunks}</em>,
         })}</p>
@@ -361,14 +363,14 @@ export default function HiddenCostRecruiting() {
             {/* Left */}
             <div className="lg:col-span-5">
               <Reveal {...FADE}>
-                <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-5"
+                <p className="type-eyebrow mb-5"
                   style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                   {t('body7')}</p>
-                <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.15] mb-6">
+                <h2 className="max-w-[880px] text-[clamp(2rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-[#0D0D0D] leading-[1.15] mb-6">
                   {t.rich('heading3', {
           s: (chunks) => <span className="italic" style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{chunks}</span>,
         })}</h2>
-                <p className="text-[16px] text-[#0D0D0D]/55 leading-[1.75] mb-8" style={{ fontWeight: 300 }}>
+                <p className="max-w-[880px] type-body text-[#0D0D0D]/55 mb-8">
                   {t('body8')}</p>
                 <ul className="space-y-3">
                   {[
@@ -378,7 +380,7 @@ export default function HiddenCostRecruiting() {
                     'The EU AI Act regulatory framework as a competitive advantage',
                     '3 strategic questions for your executive committee',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-[14px] text-[#0D0D0D]/65 leading-snug">
+                    <li key={i} className="type-body-sm flex items-start gap-3 text-[#0D0D0D]/65">
                       <div
                         className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                         style={{ background: 'linear-gradient(135deg, #4B4DF7, #FF5F24)' }}
@@ -400,7 +402,7 @@ export default function HiddenCostRecruiting() {
                 className="rounded-2xl bg-white border border-black/[0.08] p-8 lg:p-10 shadow-sm"
               >
                 <h3 className="text-[18px] font-semibold text-[#0D0D0D] mb-2">{t('heading4')}</h3>
-                <p className="text-[13px] text-[#0D0D0D]/45 mb-8">{t('body9')}</p>
+                <p className="type-body-sm text-[#0D0D0D]/45 mb-8">{t('body9')}</p>
                 <div
                   id="lp-hubspot-form"
                   ref={formRef}
@@ -408,7 +410,7 @@ export default function HiddenCostRecruiting() {
                 />
                 {!formLoaded && (
                   <div className="flex items-center justify-center h-[380px]">
-                    <div className="text-[13px] text-[#0D0D0D]/30">{t('text9')}</div>
+                    <div className="type-body-sm text-[#0D0D0D]/30">{t('text9')}</div>
                   </div>
                 )}
               </Reveal>
@@ -423,16 +425,16 @@ export default function HiddenCostRecruiting() {
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <Reveal {...FADE} className="lg:col-span-7">
-              <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-5"
+              <p className="type-eyebrow mb-5"
                 style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 {t('body10')}</p>
-              <h2 className="text-[clamp(1.8rem,3.5vw,3rem)] font-semibold tracking-[-0.02em] text-white/95 leading-[1.15] mb-6">
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold tracking-[-0.02em] text-white/95 leading-[1.15] mb-6">
                 {t.rich('heading5', {
           s: (chunks) => <span className="gradient-text">{chunks}</span>,
         })}</h2>
-              <p className="text-[16px] text-white/50 leading-[1.8] mb-4" style={{ fontWeight: 300 }}>
+              <p className="max-w-[880px] type-body text-white/50 mb-4">
                 {t('body11')}</p>
-              <p className="text-[16px] text-white/50 leading-[1.8]" style={{ fontWeight: 300 }}>
+              <p className="type-body text-white/50">
                 {t('body12')}</p>
             </Reveal>
             <Reveal
@@ -441,14 +443,14 @@ export default function HiddenCostRecruiting() {
               className="lg:col-span-5"
             >
               <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8">
-                <p className="text-[14px] text-white/40 italic leading-[1.75] mb-6">
+                <p className="type-body-sm text-white/40 italic mb-6">
                   {t('body13')}</p>
                 <div className="flex items-center gap-3">
                   <div
                     className="w-px h-8 rounded-full"
                     style={{ background: 'linear-gradient(180deg, #4B4DF7, #FF5F24)' }}
                   />
-                  <span className="text-[13px] text-white/50">{t('text10')}</span>
+                  <span className="type-body-sm text-white/50">{t('text10')}</span>
                 </div>
               </div>
             </Reveal>
@@ -461,14 +463,14 @@ export default function HiddenCostRecruiting() {
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <SkillvueLogo size={22} className="text-white/40" />
-            <span className="text-[13px] text-white/30">{t('copyright', { year: new Date().getFullYear() })}</span>
+            <span className="type-body-sm text-white/30">{t('copyright', { year: new Date().getFullYear() })}</span>
           </div>
-          <div className="flex items-center gap-6 text-[12px]">
-            <Button asChild variant="tertiary" mode="dark" icon={null} className="text-[12px]">
+          <div className="type-caption flex items-center gap-6">
+            <Button asChild variant="tertiary" mode="dark" icon={null} className="type-caption">
               {t.rich('text11', {
           a: (chunks) => <a href={href('privacy-policy', 'it')}>{chunks}</a>,
         })}</Button>
-            <Button asChild variant="tertiary" mode="dark" icon={null} className="text-[12px]">
+            <Button asChild variant="tertiary" mode="dark" icon={null} className="type-caption">
               {t.rich('text12', {
           a: (chunks) => <a href="https://www.skillvue.ai">{chunks}</a>,
         })}</Button>

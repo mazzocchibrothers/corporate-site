@@ -11,6 +11,7 @@ import { href } from '@/i18n/routes';
 import { MODULES, SCENARIOS, LICENSE, calculate, normalizeInput, type Module, type Scenario } from './model';
 import styles from './calculator.module.css';
 import ReportForm from './report-form';
+import { HeroCopy } from '@/components/ui/hero-copy';
 
 function NumberField({ label, value, config, format, onChange, id }: {
   label: string; value: number; config: typeof MODULES.hiring.inputs[number];
@@ -71,8 +72,10 @@ export default function ROICalculator() {
         <div className={styles.wrap}>
           <header className={styles.hero}>
             <p className={styles.eyebrow}>{t('eyebrow')}</p>
-            <h1 className="font-semibold text-[48px] md:text-[64px] tracking-[-0.02em]" style={{ lineHeight: 1.05 }}>{t('heading')}</h1>
-            <p className={styles.intro}>{t('intro')}</p>
+            <HeroCopy>
+              <h1 className="font-semibold text-[48px] md:text-[58px] tracking-[-0.02em]" style={{ lineHeight: 1.1 }}>{t('heading')}</h1>
+              <p className={`hero-subtitle ${styles.intro}`}>{t('intro')}</p>
+            </HeroCopy>
           </header>
           <div className={styles.modules} role="group" aria-label={t('useCase')}>
             {(Object.keys(MODULES) as Module[]).map((key) => (
@@ -85,10 +88,10 @@ export default function ROICalculator() {
                 <p className={styles.eyebrow}>{t('positioning')}</p>
                 <p>{t('positioningBody')}</p>
               </div>
-              <h2 id="calculator-heading" className={styles.headline}>{t.rich(`${module}.heading`, {
+              <h2 id="calculator-heading" className={`${styles.headline} max-w-[880px]`}>{t.rich(`${module}.heading`, {
                 span: (chunks) => <span className="gradient-text">{chunks}</span>,
               })}</h2>
-              <p className={styles.sub}>{t(`${module}.body`)}</p>
+              <p className={`${styles.sub} max-w-[880px]`}>{t(`${module}.body`)}</p>
               <div className={styles.controls}>
                 {config.inputs.map((input, index) => (
                   <NumberField key={`${module}-${index}`} id={`roi-input-${index}`} label={t(`${module}.input${index + 1}`)}
@@ -150,7 +153,7 @@ export default function ROICalculator() {
               duration={0.7}
               className="rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 flex flex-col items-center text-center gap-10"
             >
-              <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90 max-w-4xl">{t.rich('closing', {
+              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90">{t.rich('closing', {
                 span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
               })}</h2>
               <Button asChild variant="primary" mode="dark">
