@@ -20,7 +20,7 @@ const clientLogos = [
   { name: 'Nespresso', src: '/logos/client-nespresso.svg', width: 151 },
   { name: 'Tecnomat', src: '/logos/client-tecnomat.svg', width: 150 },
   // The wide wordmarks sit a step smaller (h-5, 20px) than the rest.
-  { name: 'Avolta', src: '/logos/client-avolta.svg', width: 129, height: 20, className: 'h-5' },
+  { name: 'Avolta', src: '/logos/client-avolta.svg', width: 97, height: 20, className: 'h-5' },
   // Redion: the file keeps its old name, commit 8228ad4 replaced its artwork.
   { name: 'Redion', src: '/logos/client-europ-assistance.svg?v=2', width: 116, height: 20, className: 'h-5' },
 ];
