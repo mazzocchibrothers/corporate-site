@@ -23,6 +23,7 @@ const LINKS = {
   gartner: 'https://www.linkedin.com/feed/update/urn:li:activity:7513969065657274368',
   hrCoreAcademy: 'https://www.linkedin.com/feed/update/urn:li:activity:7513632747572142081',
   unleash: 'https://www.linkedin.com/feed/update/urn:li:activity:7518647797596811264',
+  retailSummit: 'https://www.retailinstitute.it/tag/retail-executive-summit/',
   // Internal pages (already live on the site)
   roiCalculator: '/resources/roi-calculator',
   partners: '/customers/partners',

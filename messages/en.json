@@ -1131,8 +1131,8 @@
       "tag": "Newsletter",
       "date": "October 2026",
       "readTime": "5 min read",
-      "title": "October at Skillvue: new milestones, new resources and a growing presence across Europe",
-      "subtitle": "Skillvue among the LinkedIn Top Startups 2026, the launch of the ROI Calculator, a month of HR events across Europe and a new partnership with Easygenerator.",
+      "title": "October at Skillvue: new milestones, the ROI Calculator and conversations across Europe",
+      "subtitle": "What does better talent decision-making look like? This October, we explored it through new data, conversations across Europe and the launch of our ROI Calculator.",
       "intro": [
         "October brought recognition, a new tool and many conversations with HR leaders, all around one question: **how can organisations turn skills into usable data to make better talent decisions?**"
       ],
@@ -1171,8 +1171,8 @@
             "The process is simple:"
           ],
           "list": [
-            "choose the decision you want to analyse",
-            "enter two numbers you already have",
+            "select a crucial HR decision",
+            "enter key inputs",
             "receive a conservative, base and optimistic estimate of the **cost of inaction**"
           ],
           "bodyAfter": [
@@ -1187,7 +1187,7 @@
         },
         {
           "img": "events",
-          "heading": "An October with HR leaders across Europe",
+          "heading": "October across Europe",
           "body": [
             "London, Amsterdam, Cernobbio, Paris and Milan.",
             "October took Skillvue across Europe, creating opportunities to meet HR leaders, managers and organisations working on some of the most important challenges in talent management today.",
@@ -1217,6 +1217,10 @@
               "href": "hrCoreAcademy"
             },
             {
+              "label": "Retail Executive Summit, Cernobbio",
+              "href": "retailSummit"
+            },
+            {
               "label": "UNLEASH World, Paris",
               "href": "unleash"
             }
@@ -1242,7 +1246,7 @@
       "closing": {
         "heading": "See you next month",
         "body": [
-          "October gave us plenty of new reasons to keep building. See you next month with more updates from Skillvue."
+          "October was just the beginning! More launches, conversations and progress are already on the way. See you in November."
         ]
       },
       "finalKicker": "Discover Skillvue",
