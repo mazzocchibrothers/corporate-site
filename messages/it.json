@@ -1131,8 +1131,8 @@
       "tag": "Newsletter",
       "date": "Ottobre 2026",
       "readTime": "5 min di lettura",
-      "title": "Ottobre in Skillvue: nuovi traguardi, strumenti e presenze in Europa",
-      "subtitle": "Skillvue tra le LinkedIn Top Startups 2026, il nuovo calcolatore ROI di Skillvue, un mese di eventi in tutta Europa e una nuova partnership con Easygenerator.",
+      "title": "Ottobre in Skillvue: nuovi traguardi, ROI Calculator e conversazioni in tutta Europa",
+      "subtitle": "Come si prendono decisioni migliori sul talento? Questo ottobre abbiamo esplorato la risposta attraverso nuovi dati, conversazioni in tutta Europa e il lancio del nostro ROI Calculator.",
       "intro": [
         "Ottobre ha portato un riconoscimento, un nuovo strumento e tanti confronti con HR leader, tutti attorno a una domanda: **come possono le organizzazioni trasformare le competenze in dati utilizzabili per prendere decisioni migliori sul talento?**"
       ],
@@ -1171,8 +1171,8 @@
             "Il funzionamento è semplice:"
           ],
           "list": [
-            "scegli il caso d’uso che vuoi analizzare",
-            "inserisci due numeri che hai già",
+            "scegli una decisione HR",
+            "inserisci alcuni dati chiave",
             "scopri il risparmio annuo stimato, in uno scenario prudente, base e ottimistico"
           ],
           "bodyAfter": [
@@ -1187,7 +1187,7 @@
         },
         {
           "img": "events",
-          "heading": "Un ottobre con HR leader da tutta Europa",
+          "heading": "Ottobre in tutta Europa",
           "body": [
             "Londra, Amsterdam, Cernobbio, Parigi e Milano.",
             "Ottobre ha portato Skillvue in giro per l’Europa, creando opportunità per incontrare HR leader, manager e organizzazioni che stanno lavorando su alcune delle sfide più importanti del talent management di oggi.",
@@ -1217,6 +1217,10 @@
               "href": "hrCoreAcademy"
             },
             {
+              "label": "Retail Executive Summit, Cernobbio",
+              "href": "retailSummit"
+            },
+            {
               "label": "UNLEASH World, Parigi",
               "href": "unleash"
             }
@@ -1242,7 +1246,7 @@
       "closing": {
         "heading": "Ci vediamo il mese prossimo",
         "body": [
-          "Ottobre ci ha dato tanti nuovi motivi per continuare a costruire. Ci vediamo il prossimo mese con nuovi aggiornamenti da Skillvue."
+          "Ottobre è stato solo l’inizio! Nuovi lanci, conversazioni e progressi sono già in arrivo. Ci vediamo a novembre."
         ]
       },
       "finalKicker": "Scopri Skillvue",
