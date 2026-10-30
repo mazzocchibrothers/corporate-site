@@ -7684,7 +7684,184 @@
           "body": "La visualizzazione intuitiva rende la tua architettura delle competenze facile da leggere e navigare."
         }
       },
-      "readMore": "Scopri di più"
+      "readMore": "Scopri di più",
+      "screens": {
+        "url": "skillvue-map.ai",
+        "search": "Vai a spazio, competenza, pagina...",
+        "workspace": "Retail Co",
+        "user": "Andrea Rossi",
+        "explore": "Esplora",
+        "nav": {
+          "jobs": "Architettura dei ruoli",
+          "skills": "Competenze",
+          "workflow": "Flusso di lavoro",
+          "input": "Gestione input",
+          "validation": "Convalida",
+          "mapping": "Mappatura",
+          "settings": "Impostazioni",
+          "admin": "Amministrazione",
+          "workspaces": "Tutti gli spazi di lavoro",
+          "people": "Persone",
+          "prompts": "Prompt",
+          "queues": "Code"
+        },
+        "levels": {
+          "advanced": "Avanzato",
+          "qualified": "Qualificato",
+          "practitioner": "Operativo"
+        },
+        "priorities": {
+          "critical": "Critica",
+          "important": "Importante",
+          "nice": "Utile"
+        },
+        "jobs": {
+          "list": "Elenco",
+          "compare": "Confronta",
+          "run": "Nuova mappatura",
+          "summary": "6 famiglie · 48 ruoli · dimensioni e colori per headcount",
+          "roles": "{count} ruoli",
+          "families": {
+            "hr": "Risorse umane",
+            "store": "Operazioni di negozio",
+            "marketing": "Marketing e clienti",
+            "merchandising": "Merchandising e categorie",
+            "supply": "Supply chain e logistica",
+            "commercial": "Commerciale e acquisti"
+          }
+        },
+        "skills": {
+          "table": "Tabella",
+          "search": "Cerca competenza...",
+          "all": "Tutte",
+          "soft": "Soft",
+          "hard": "Hard",
+          "expected": "Livello atteso per ruolo",
+          "clusters": {
+            "business": "Business",
+            "it": "Tecnologia dell’informazione",
+            "manufacturing": "Produzione",
+            "engineering": "Ingegneria",
+            "administration": "Amministrazione",
+            "hr": "Risorse umane",
+            "marketing": "Marketing e relazioni pubbliche"
+          },
+          "pops": {
+            "business": {
+              "category": "Business",
+              "skill": "Pianificazione strategica del business",
+              "subSkill": "2 Strategia aziendale",
+              "required": "Richiesta per 6 ruoli.",
+              "roles": {
+                "director": "Business Development Director",
+                "strategy": "Manager strategia e pianificazione",
+                "analyst": "Business Analyst",
+                "commercial": "Commercial Operations Manager",
+                "intelligence": "Market Intelligence Specialist"
+              }
+            },
+            "it": {
+              "category": "Tecnologia dell’informazione",
+              "skill": "Architettura cloud",
+              "subSkill": "4 Infrastrutture e piattaforme",
+              "required": "Richiesta per 5 ruoli.",
+              "roles": {
+                "architect": "Cloud Solutions Architect",
+                "platform": "Platform Engineering Lead",
+                "devops": "DevOps Engineer",
+                "software": "Software Engineer",
+                "data": "Data Engineer"
+              }
+            },
+            "tax": {
+              "category": "Amministrazione, contabilità e fiscalità",
+              "skill": "Fiscalità internazionale",
+              "subSkill": "3 Fiscalità societaria",
+              "required": "Richiesta per 5 ruoli.",
+              "roles": {
+                "expert": "Esperto di fiscalità e conformità",
+                "manager": "Responsabile di fiscalità e conformità",
+                "member": "Membro del team di fiscalità e conformità",
+                "middle": "Middle manager di fiscalità e conformità",
+                "multi": "Manager multifunzionale di fiscalità e conformità"
+              }
+            }
+          }
+        },
+        "chat": {
+          "title": "Dimmi delle richieste del ruolo di fisca...",
+          "question": "Parlami della competenza Fiscalità internazionale nel dipartimento Business",
+          "thought": "Ragionamento",
+          "thoughtFor": "Ragionato per 2,1 s",
+          "reasoning": "L’utente chiede della competenza Fiscalità internazionale nel dipartimento Business. Chiamo getSkillDetails per recuperare la competenza e i requisiti dei ruoli.",
+          "toolCall": "1 chiamata a strumento",
+          "tool": "getSkillDetails",
+          "answerLead": "Requisiti chiave dei ruoli per Fiscalità internazionale:",
+          "role": "Ruolo",
+          "level": "Livello",
+          "roles": {
+            "expert": "Esperto di conformità fiscale",
+            "manager": "Responsabile conformità fiscale",
+            "member": "Membro del team"
+          },
+          "answer": "Avanzato: esperto e responsabile fiscale. Qualificato: membro del team, middle manager e manager multifunzionale.",
+          "copy": "Copia",
+          "export": "Esporta",
+          "refresh": "Aggiorna",
+          "ask": "Fammi una domanda...",
+          "disclaimer": "L’AI può sbagliare. Controlla le informazioni importanti.",
+          "thinking": "Sto ragionando..."
+        },
+        "compare": {
+          "title": "Confronta ruoli",
+          "a": {
+            "label": "Store Manager",
+            "role": "Regional Store Manager",
+            "meta": "Retail Operations / Gestione negozio · 25 competenze"
+          },
+          "b": {
+            "label": "Ruolo B",
+            "role": "Customer Service Supervisor",
+            "meta": "Retail Operations / Servizio clienti · 22 competenze"
+          },
+          "show": "Mostra",
+          "all": "Tutte",
+          "shared": "Solo condivise",
+          "differences": "Solo differenze",
+          "counts": "12 condivise · 13 solo A · 10 solo B",
+          "columnA": "Ruolo A · Regional Store Manager",
+          "columnB": "Ruolo B · Customer Service Supervi...",
+          "priority": "Priorità",
+          "proficiency": "Livello",
+          "skills": {
+            "inventory": "Gestione dell’inventario",
+            "scheduling": "Pianificazione dei turni",
+            "sales": "Analisi delle vendite",
+            "communication": "Comunicazione con il cliente",
+            "problemSolving": "Problem solving e decision making",
+            "product": "Conoscenza del prodotto",
+            "merchandising": "Merchandising retail",
+            "trends": "Analisi dei trend di mercato",
+            "promotion": "Strategia promozionale"
+          }
+        },
+        "welcome": {
+          "title": "Bentornato, Andrea.",
+          "quickStarts": "AZIONI RAPIDE",
+          "skill": {
+            "title": "Crea una competenza",
+            "body": "Definisci una nuova competenza per qualsiasi ruolo"
+          },
+          "assessment": {
+            "title": "Genera una valutazione",
+            "body": "Crea un colloquio strutturato da una competenza"
+          },
+          "report": {
+            "title": "Crea un report",
+            "body": "Analizza i gruppi, individua i gap di competenze e pianifica le prossime valutazioni."
+          }
+        }
+      }
     },
     "assess": {
       "heading": "Valuta competenze e potenziale su misura, con precisione scientifica, su qualsiasi scala.",
@@ -7713,6 +7890,24 @@
           "title": "Qualsiasi formato, ottima esperienza",
           "body": "Audio, video, testo scritto o risposta multipla, colloqui strutturati o conversazioni naturali: tutto pensato attorno a un’esperienza candidato fluida."
         }
+      },
+      "screens": {
+        "url": "skillvue-assess.ai",
+        "assessment": "Sales Excellence",
+        "poweredBy": "Powered by <b>Skillvue</b>",
+        "interview": {
+          "question": "Devi svolgere un compito al di fuori del tuo lavoro abituale per aiutare i colleghi sovraccarichi. Non possiedi le competenze richieste per quel ruolo. Come affronteresti questo cambiamento?",
+          "send": "Invia risposta"
+        },
+        "questions": {
+          "question": "La crisi energetica sta impattando fortemente sui profitti dell’azienda; è necessario aumentare l’efficienza dei processi. Come proporresti di procedere?",
+          "options": {
+            "kpis": "Inserire i KPI di processo negli obiettivi della prima linea del CEO",
+            "owners": "Individuare i responsabili dei processi e lavorare con ciascuno di loro per snellire ogni singolo processo",
+            "outplacement": "Chiedere ai responsabili HR di individuare le risorse in esubero e definire piani di outplacement adeguati",
+            "leaders": "Supportare i responsabili di funzione nell’ottimizzazione dei processi"
+          }
+        }
       }
     },
     "decide": {
@@ -7734,6 +7929,86 @@
           "title": "Costruisci flussi decisionali",
           "body": "Struttura le decisioni su assunzioni, performance e mobilità attorno ai tuoi processi e al tuo modello di leadership, direttamente nella piattaforma."
         }
+      },
+      "screen": {
+        "url": "skillvue-assess.ai",
+        "workspace": "Retail Co",
+        "user": "Evelyn Carter",
+        "nav": {
+          "chats": "Chat",
+          "jobs": "Posizioni",
+          "people": "Persone",
+          "skills": "Competenze",
+          "assessments": "Valutazioni",
+          "campaigns": "Campagne"
+        },
+        "chatTitle": "La migliore corrispondenza per il ruolo “Area Manager UK”",
+        "welcome": {
+          "title": "Bentornata, Evelyn.",
+          "quickStarts": "AZIONI RAPIDE",
+          "skill": {
+            "title": "Crea una competenza",
+            "body": "Definisci una nuova competenza per qualsiasi ruolo"
+          },
+          "assessment": {
+            "title": "Genera una valutazione",
+            "body": "Crea un colloquio strutturato da una competenza"
+          },
+          "report": {
+            "title": "Crea un report",
+            "body": "Analizza i gruppi, individua i gap di competenze e pianifica le prossime valutazioni."
+          }
+        },
+        "question": "Quali candidati corrispondono meglio al ruolo Area Manager UK?",
+        "ask": "Fammi una domanda...",
+        "thought": "Ragionamento",
+        "thoughtFor": "Ragionato per 1,2 s",
+        "reasoning": "L’utente vuole sapere quali candidati sono i più adatti al ruolo “Area Manager UK”.\nPrima cerco la posizione, poi esamino i candidati e i loro punteggi.\nInizio elencando le posizioni per trovare il ruolo “Area Manager UK”.",
+        "process": "Processo e strumenti usati",
+        "tools": [
+          "listJobs",
+          "listAssessments",
+          "listEvaluationSessions",
+          "getAssessmentSummary"
+        ],
+        "answer": {
+          "intro": "Mostrami i candidati con la migliore corrispondenza di competenze per il ruolo attivo.",
+          "ranking": "Area Manager UK — Classifica candidati",
+          "overview": "<b>Panoramica valutazione:</b> 55 sessioni totali · 6 idonei (completate) · 0 esclusi dalle domande killer · punteggio medio del gruppo 53,0 / 100 · tasso di completamento 11%",
+          "rankedBelow": "I 3 candidati idonei sono ordinati di seguito per punteggio (dal più alto):",
+          "table": {
+            "candidate": "Candidato",
+            "match": "Corrispondenza",
+            "date": "Data"
+          },
+          "candidates": {
+            "olivia": "Olivia Martinez",
+            "ethan": "Ethan Johnson",
+            "marco": "Marco Verdi",
+            "noah": "Noah Anderson",
+            "isabella": "Isabella Rossi",
+            "emma": "Emma Müller"
+          },
+          "dates": {
+            "olivia": "16 ott 2026",
+            "ethan": "15 ott 2026",
+            "marco": "14 ott 2026"
+          },
+          "chartTitle": "Area Manager UK — Punteggi candidati (solo idonei)",
+          "expand": "Espandi",
+          "observations": "Osservazioni principali",
+          "bullets": [
+            "Olivia Martinez (77,8) ed Ethan Johnson (74,4) sono nettamente i primi due, entrambi ben sopra la media del gruppo di 53,0.",
+            "Marco Verdi (54,7) e Noah Anderson (52,7) sono vicini tra loro e intorno alla media.",
+            "Isabella Rossi (44,4) ed Emma Müller (14,4) hanno ottenuto punteggi inferiori alla media; quello di Müller è nettamente più basso degli altri.",
+            "Nessuno dei 6 candidati idonei ha al momento un colloquio programmato.",
+            "Le restanti 49 sessioni (26 create, 16 invitate, 7 avviate) non sono ancora complete — il quadro potrebbe evolvere."
+          ]
+        },
+        "copy": "Copia",
+        "export": "Esporta",
+        "refresh": "Aggiorna",
+        "disclaimer": "L’IA può commettere errori. Verifica le informazioni importanti."
       }
     },
     "cta": {

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, type MouseEvent } from 'react';
+import { useState, type MouseEvent } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   ArrowDown, ArrowRight, Atom, BadgeCheck, Blocks, Columns3Cog, Compass, Database, Layers,
@@ -13,32 +13,18 @@ import { Button } from '@/components/ui/button';
 import { IconTile } from '@/components/ui/icon-tile';
 import { href } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { MapScreens, type MapScreen } from '@/components/product/map-screens';
+import { AssessScreens, type AssessScreen } from '@/components/product/assess-screens';
+import { DecideDemo } from '@/components/product/decide-demo';
 
 const PRODUCTS = ['map', 'assess', 'decide'] as const;
 type Product = (typeof PRODUCTS)[number];
 
-// A tab shows either a screenshot or a screen recording. Both are per locale:
-// the product UI in the capture is in the visitor's language.
-type Shot = { key: string; kind: 'image' | 'video' };
-
-const MAP_TABS: Shot[] = [
-  { key: 'jobs', kind: 'image' },
-  { key: 'skills', kind: 'video' },
-  { key: 'compare', kind: 'image' },
-];
-const ASSESS_TABS: Shot[] = [
-  { key: 'interview', kind: 'image' },
-  { key: 'questions', kind: 'image' },
-];
-
-const MEDIA: Record<string, string> = {
-  jobs: 'map-job',
-  skills: 'map-skills',
-  compare: 'map-compare',
-  interview: 'assess-interview',
-  questions: 'assess-questions',
-  decide: 'decide',
-};
+// Each tab is a screen of the product UI drawn in HTML (<MapScreens>,
+// <AssessScreens>), which reads its copy from the catalogue; Decide's is the
+// animated <DecideDemo>.
+const MAP_TABS: MapScreen[] = ['jobs', 'skills', 'compare'];
+const ASSESS_TABS: AssessScreen[] = ['interview', 'questions'];
 
 const FEATURES: Record<Product, [string, LucideIcon][]> = {
   map: [['data', Database], ['days', Zap], ['experts', BadgeCheck], ['navigate', Compass]],
@@ -69,56 +55,6 @@ function Logo({ product }: { product: Product }) {
   );
 }
 
-/** A muted screen recording. Paused for a visitor who asked for reduced motion,
- *  the same way <HeroVideo> does it. */
-function Recording({ name, label }: { name: string; label: string }) {
-  const ref = useRef<HTMLVideoElement>(null);
-  const locale = useLocale();
-
-  useEffect(() => {
-    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) ref.current?.pause();
-  }, []);
-
-  return (
-    // The recordings share the captures' 1440x1024 aspect, so they fill the
-    // same frame; the rounded border is the design's, over the window's own.
-    <video
-      ref={ref}
-      key={locale}
-      className="absolute inset-0 block h-full w-full rounded-[1.528%/2.148%] border-[1.3px] border-[#d4d4d4] bg-white object-cover"
-      poster={`/products/${name}-${locale}.avif`}
-      aria-label={label}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="metadata"
-    >
-      <source src={`/products/${name}-${locale}.webm`} type="video/webm" />
-      <source src={`/products/${name}-${locale}.mp4`} type="video/mp4" />
-    </video>
-  );
-}
-
-function ShotFrame({ shot, label }: { shot: Shot; label: string }) {
-  const locale = useLocale();
-  const name = MEDIA[shot.key];
-  return (
-    <div className="relative w-full aspect-[2520/1792]">
-      {shot.kind === 'video' ? (
-        <Recording name={name} label={label} />
-      ) : (
-        <img
-          src={`/products/${name}-${locale}.avif`}
-          alt={label}
-          loading="lazy"
-          decoding="async"
-          className="absolute inset-0 h-full w-full object-contain"
-        />
-      )}
-    </div>
-  );
-}
 
 function ProblemSolution({ product }: { product: Product }) {
   const t = useTranslations('product');
@@ -141,29 +77,36 @@ function ProblemSolution({ product }: { product: Product }) {
   );
 }
 
-function TabbedPanel({ product, tabs }: { product: Product; tabs: Shot[] }) {
+// The product screens sit on the page, not on a card: they carry their own
+// window frame. The tabs start at the left edge, in line with the section's
+// copy, and the active one is a grey pill (#E7E7E8) that reads on white.
+function TabbedPanel({ product, tabs }: { product: 'map' | 'assess'; tabs: string[] }) {
   const t = useTranslations('product');
   const [active, setActive] = useState(0);
   const label = (key: string) => t(`${product}.tabs.${key}`);
+  const tab = tabs[active];
 
   return (
-    <Reveal y={40} duration={0.9} className="mt-10 lg:mt-[84px] rounded-[24px] md:rounded-[40px] bg-[#f5f5f7] p-3 pt-4 md:px-10 md:pt-10 md:pb-[30px]">
-      <div role="tablist" className="mb-4 md:mb-10 flex flex-col md:flex-row md:flex-wrap justify-center gap-1 md:gap-6">
-        {tabs.map((tab, i) => (
+    <Reveal y={40} duration={0.9} className="mt-10 lg:mt-[84px]">
+      <div role="tablist" className="mb-4 md:mb-6 flex flex-col md:flex-row md:flex-wrap items-start gap-1 md:gap-2">
+        {tabs.map((key, i) => (
           <button
-            key={tab.key}
+            key={key}
             type="button"
             role="tab"
             aria-selected={active === i}
             onClick={() => setActive(i)}
-            className={`type-body-lg h-11 px-6 rounded-full font-medium transition-[color,background-color,box-shadow,transform] duration-150 active:scale-[0.97] ${active === i ? 'bg-white text-[#121212] shadow-[0_1px_3px_rgba(0,0,0,0.06)]' : 'text-[#4B4B4B] hover:text-[#121212]'}`}
+            className={`type-body h-11 px-6 rounded-full font-medium transition-[color,background-color,transform] duration-150 active:scale-[0.97] ${active === i ? 'bg-[#E7E7E8] text-[#121212]' : 'text-[#4B4B4B] hover:text-[#121212]'}`}
           >
-            {label(tab.key)}
+            {label(key)}
           </button>
         ))}
       </div>
       <div role="tabpanel">
-        <ShotFrame key={tabs[active].key} shot={tabs[active]} label={label(tabs[active].key)} />
+        {/* Not keyed: the screens stay mounted and cross-fade between tabs. */}
+        {product === 'map'
+          ? <MapScreens tab={tab as MapScreen} label={label(tab)} />
+          : <AssessScreens tab={tab as AssessScreen} label={label(tab)} />}
       </div>
     </Reveal>
   );
@@ -173,9 +116,9 @@ function Features({ product }: { product: Product }) {
   const t = useTranslations('product');
   const items = FEATURES[product];
   return (
-    <div className={`mt-8 lg:mt-20 grid gap-3 lg:gap-10 sm:grid-cols-2 ${items.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>
+    <div className={`mt-6 lg:mt-8 grid gap-3 lg:gap-6 sm:grid-cols-2 ${items.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>
       {items.map(([key, icon], i) => (
-        <Reveal key={key} y={16} duration={0.6} delay={i * 0.06} className="rounded-2xl border border-[#e5e7eb] p-5 lg:p-6 lg:pb-7">
+        <Reveal key={key} y={16} duration={0.6} delay={i * 0.06} className="rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-5 lg:p-6 lg:pb-7">
           <IconTile icon={icon} mode="light" />
           <h3 className="mt-4 lg:mt-[22px] text-[20px] font-semibold leading-[1.3] tracking-[-0.01em] text-[#121212]">{t(`${product}.features.${key}.title`)}</h3>
           <p className="type-body mt-3 text-[#4B4B4B]">{t(`${product}.features.${key}.body`)}</p>
@@ -296,10 +239,8 @@ export default function SkillvueMapPage() {
               <Reveal><Logo product="decide" /></Reveal>
               <Reveal delay={0.1}><h2 className={`max-w-[880px] mt-6 lg:mt-11 ${H2}`}>{t.rich('decide.heading', { br })}</h2></Reveal>
               <ProblemSolution product="decide" />
-              <Reveal y={40} duration={0.9} className="mt-10 lg:mt-28 rounded-[24px] md:rounded-[40px] bg-[#f5f5f7] p-3 md:px-10 md:py-[38px]">
-                <div className="relative w-full aspect-[2520/1792]">
-                  <Recording name={MEDIA.decide} label={t('logos.decide')} />
-                </div>
+              <Reveal y={40} duration={0.9} className="mt-10 lg:mt-28">
+                <DecideDemo label={t('logos.decide')} />
               </Reveal>
               <Features product="decide" />
             </div>

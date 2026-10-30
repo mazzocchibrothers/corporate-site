@@ -7684,7 +7684,184 @@
           "body": "Intuitive visualization makes your skills architecture easy to read and navigate."
         }
       },
-      "readMore": "Read more"
+      "readMore": "Read more",
+      "screens": {
+        "url": "skillvue-map.ai",
+        "search": "Jump to a workspace, skill, page...",
+        "workspace": "Retail Co",
+        "user": "Evelyn Carter",
+        "explore": "Explore",
+        "nav": {
+          "jobs": "Job architecture",
+          "skills": "Skills",
+          "workflow": "Workflow",
+          "input": "Input management",
+          "validation": "Validation",
+          "mapping": "Mapping",
+          "settings": "Settings",
+          "admin": "Admin",
+          "workspaces": "All workspaces",
+          "people": "People",
+          "prompts": "Prompts",
+          "queues": "Queues"
+        },
+        "levels": {
+          "advanced": "Advanced",
+          "qualified": "Qualified",
+          "practitioner": "Practitioner"
+        },
+        "priorities": {
+          "critical": "Critical",
+          "important": "Important",
+          "nice": "Nice to have"
+        },
+        "jobs": {
+          "list": "List",
+          "compare": "Compare",
+          "run": "Run new mapping",
+          "summary": "6 families · 48 roles · sized and shaded by headcount",
+          "roles": "{count} roles",
+          "families": {
+            "hr": "Human Resources",
+            "store": "Store Operations",
+            "marketing": "Marketing & Customer",
+            "merchandising": "Merchandising & Category",
+            "supply": "Supply Chain & Logistics",
+            "commercial": "Commercial & Buying"
+          }
+        },
+        "skills": {
+          "table": "Table",
+          "search": "Search skill...",
+          "all": "All",
+          "soft": "Soft",
+          "hard": "Hard",
+          "expected": "Expected Level by Role",
+          "clusters": {
+            "business": "Business",
+            "it": "Information Technology",
+            "manufacturing": "Manufacturing and\nProduction",
+            "engineering": "Engineering",
+            "administration": "Administration",
+            "hr": "Human Resources",
+            "marketing": "Marketing and Public Relations"
+          },
+          "pops": {
+            "business": {
+              "category": "Business",
+              "skill": "Strategic Business Planning",
+              "subSkill": "2 Business Strategy",
+              "required": "Required by 6 roles.",
+              "roles": {
+                "director": "Business Development Director",
+                "strategy": "Strategy & Planning Manager",
+                "analyst": "Business Analyst",
+                "commercial": "Commercial Operations Manager",
+                "intelligence": "Market Intelligence Specialist"
+              }
+            },
+            "it": {
+              "category": "Information Technology",
+              "skill": "Cloud Architecture",
+              "subSkill": "4 Infrastructure & Platforms",
+              "required": "Required by 5 roles.",
+              "roles": {
+                "architect": "Cloud Solutions Architect",
+                "platform": "Platform Engineering Lead",
+                "devops": "DevOps Engineer",
+                "software": "Software Engineer",
+                "data": "Data Engineer"
+              }
+            },
+            "tax": {
+              "category": "Administration, Accounting and Tax",
+              "skill": "International Taxation",
+              "subSkill": "3 Corporate Taxation",
+              "required": "Required by 5 roles.",
+              "roles": {
+                "expert": "Tax & Tax Compliance Expert",
+                "manager": "Tax & Tax Compliance Manager",
+                "member": "Tax & Tax Compliance Team Member",
+                "middle": "Tax & Tax Compliance Middle Manager",
+                "multi": "Tax & Tax Compliance Multifunctional Manager"
+              }
+            }
+          }
+        },
+        "chat": {
+          "title": "Tell me about International Taxation r...",
+          "question": "Tell me about the International Taxation skill in the Business department",
+          "thought": "Thought",
+          "thoughtFor": "Thought for 2.1s",
+          "reasoning": "The user is asking about the International Taxation skill within the Business department. I’ll call getSkillDetails to retrieve the skill info and role requirements.",
+          "toolCall": "1 tool call",
+          "tool": "getSkillDetails",
+          "answerLead": "Key role requirements for International Taxation:",
+          "role": "Role",
+          "level": "Level",
+          "roles": {
+            "expert": "Tax Compliance Expert",
+            "manager": "Tax Compliance Manager",
+            "member": "Team Member"
+          },
+          "answer": "Advanced: Tax Compliance Expert and Manager. Qualified: Team Member, Middle Manager, and Multifunctional Manager.",
+          "copy": "Copy",
+          "export": "Export",
+          "refresh": "Refresh",
+          "ask": "Ask me a question...",
+          "disclaimer": "AI can make mistakes. Check important info.",
+          "thinking": "Thinking..."
+        },
+        "compare": {
+          "title": "Compare Roles",
+          "a": {
+            "label": "Store Manager",
+            "role": "Regional Store Manager",
+            "meta": "Retail Operations / Store Management · 25 skills"
+          },
+          "b": {
+            "label": "Role B",
+            "role": "Customer Service Supervisor",
+            "meta": "Retail Operations / Customer Service · 22 skills"
+          },
+          "show": "Show",
+          "all": "All Skills",
+          "shared": "Shared Skills Only",
+          "differences": "Differences Only",
+          "counts": "12 shared · 13 only A · 10 only B",
+          "columnA": "Role A · Regional Store Manager",
+          "columnB": "Role B · Customer Service Supervi...",
+          "priority": "Priority",
+          "proficiency": "Proficiency",
+          "skills": {
+            "inventory": "Inventory Management",
+            "scheduling": "Staff Scheduling",
+            "sales": "Sales Analysis",
+            "communication": "Customer Communication",
+            "problemSolving": "Problem Solving and Decision Making",
+            "product": "Product Knowledge",
+            "merchandising": "Retail Merchandising",
+            "trends": "Market Trend Analysis",
+            "promotion": "Promotional Strategy"
+          }
+        },
+        "welcome": {
+          "title": "Welcome back, Evelyn.",
+          "quickStarts": "QUICK STARTS",
+          "skill": {
+            "title": "Create a skill",
+            "body": "Define a new competency for any role"
+          },
+          "assessment": {
+            "title": "Generate assessment",
+            "body": "Build a structured interview from a skill"
+          },
+          "report": {
+            "title": "Create a report",
+            "body": "Analyze cohorts, spot skill gaps and plan next assessments."
+          }
+        }
+      }
     },
     "assess": {
       "heading": "Assess skills and potential your way, with scientific accuracy, at any scale.",
@@ -7713,6 +7890,24 @@
           "title": "Any format, great UX",
           "body": "Audio, video, written or multiple choice, structured interviews or natural conversations, all built around a smooth candidate experience."
         }
+      },
+      "screens": {
+        "url": "skillvue-assess.ai",
+        "assessment": "Sales Excellence",
+        "poweredBy": "Powered by <b>Skillvue</b>",
+        "interview": {
+          "question": "You have to do something outside your usual job for the next three months in order to help your overworked colleagues. You do not possess the skills required for the job. How do you deal with this change?",
+          "send": "Send answer"
+        },
+        "questions": {
+          "question": "The energy crisis is strongly impacting the company’s profits; it is necessary to increase process efficiency. How do you propose to proceed?",
+          "options": {
+            "kpis": "Insert process KPIs into the objectives of the CEO’s frontline members",
+            "owners": "Identify the process owners and work with each of them to streamline each individual process",
+            "outplacement": "Ask HR managers to identify redundant resources and define appropriate outplacement plans",
+            "leaders": "Supporting functional leaders in process optimization"
+          }
+        }
       }
     },
     "decide": {
@@ -7734,6 +7929,86 @@
           "title": "Build workflows",
           "body": "Structure hiring, performance and mobility decisions around your own processes and leadership model, directly in the platform."
         }
+      },
+      "screen": {
+        "url": "skillvue-assess.ai",
+        "workspace": "Retail Co",
+        "user": "Evelyn Carter",
+        "nav": {
+          "chats": "Chats",
+          "jobs": "Jobs",
+          "people": "People",
+          "skills": "Skills",
+          "assessments": "Assessments",
+          "campaigns": "Campaigns"
+        },
+        "chatTitle": "The best match for the “Area Manager UK” role",
+        "welcome": {
+          "title": "Welcome back, Evelyn.",
+          "quickStarts": "QUICK STARTS",
+          "skill": {
+            "title": "Create a skill",
+            "body": "Define a new competency for any role"
+          },
+          "assessment": {
+            "title": "Generate assessment",
+            "body": "Build a structured interview from a skill"
+          },
+          "report": {
+            "title": "Create a report",
+            "body": "Analyze cohorts, spot skill gaps and plan next assessments."
+          }
+        },
+        "question": "Which candidates are the best match for the Area Manager UK role?",
+        "ask": "Ask me a question...",
+        "thought": "Thought",
+        "thoughtFor": "Thought for 1.2s",
+        "reasoning": "The user wants to know which candidates are the best match for the “Area Manager UK” role.\nLet me first look up the job to find it, then I can look at candidates and their scores.\nLet me start by listing jobs to find the “Area Manager UK” role.",
+        "process": "Process and tools used",
+        "tools": [
+          "listJobs",
+          "listAssessments",
+          "listEvaluationSessions",
+          "getAssessmentSummary"
+        ],
+        "answer": {
+          "intro": "Show me the candidates with the best skill match for the active role.",
+          "ranking": "Area Manager UK — Candidate Ranking",
+          "overview": "<b>Assessment overview:</b> 55 total sessions · 6 suitable (completed) · 0 failed on killer questions · cohort average score 53.0 / 100 · completion rate 11%",
+          "rankedBelow": "All 3 suitable candidates are ranked below by score (highest first):",
+          "table": {
+            "candidate": "Candidate",
+            "match": "Skill Match",
+            "date": "Date"
+          },
+          "candidates": {
+            "olivia": "Olivia Martinez",
+            "ethan": "Ethan Johnson",
+            "marco": "Marco Verdi",
+            "noah": "Noah Anderson",
+            "isabella": "Isabella Rossi",
+            "emma": "Emma Müller"
+          },
+          "dates": {
+            "olivia": "Oct 16, 2026",
+            "ethan": "Oct 15, 2026",
+            "marco": "Oct 14, 2026"
+          },
+          "chartTitle": "Area Manager UK — Candidate Scores (Suitable only)",
+          "expand": "Expand",
+          "observations": "Key observations",
+          "bullets": [
+            "Olivia Martinez (77.8) and Ethan Johnson (74.4) are the clear top two, both well above the cohort average of 53.0.",
+            "Marco Verdi (54.7) and Noah Anderson (52.7) are closely clustered around the average.",
+            "Isabella Rossi (44.4) and Emma Müller (14.4) scored below the cohort average; Müller’s score is notably lower than the rest.",
+            "None of the 6 suitable candidates currently has an interview scheduled (no bookings).",
+            "The remaining 49 sessions (26 created, 16 invited, 7 started) have not yet been completed — the picture may evolve as more candidates finish."
+          ]
+        },
+        "copy": "Copy",
+        "export": "Export",
+        "refresh": "Refresh",
+        "disclaimer": "AI can make mistakes. Check important info."
       }
     },
     "cta": {
