@@ -71,6 +71,9 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 //   #030101
 //             The Blog page's Skills Signal banner — the backdrop baked into
 //             its video, so the frame meets the banner with no seam.
+//   #e7e7e8
+//             The active tab pill above the Skillvue Map screens on /product,
+//             which sit on the white page with no card behind them.
 const ALLOWED = new Set(
   (
     '#14181f #d9daff #f6f7ff #e1e2ff #6b7280 #eef0f2 #555555 #777777 #444444 #f1f2ff #ececf8 #f6b24a #f4617e #8b5cf6 ' +
@@ -79,12 +82,48 @@ const ALLOWED = new Set(
     '#22c55e #23234d #2a2350 #2d1a6b #3133e7 #3a1525 #3a1730 #4b4b4b #4b4df7 #4e6bff #5667ff ' +
     '#5ddba4 #6366f8 #6b7dff #7577f8 #7a7a7a #7b4dff #7b7df9 #8385ff #848484 #8587ff #888888 #8a8cff ' +
     '#9395ff #93e0bb #9a9a9a #9b59b6 #9b9dfb #a8ecca #a9a9a9 #a9aaff #b7f5d8 #c7d2fe #cdc6f5 ' +
-    '#d4d4d4 #d9603f #d97706 #e2e8f0 #e3f9ec #e5e7eb #e6d5ea #ea580c #ebebeb #ece9fb #ef4444 #efeefb #efeefd #f0f0f8 ' +
+    '#d9603f #d97706 #e2e8f0 #e3f9ec #e5e7eb #e6d5ea #e7e7e8 #ea580c #ebebeb #ece9fb #ef4444 #efeefb #efeefd #f0f0f8 ' +
     '#f1f5f9 #f5f5f7 #f5f5fa #f7e6dc #f7f7f7 #f8ddc9 #f8f8fa #f8f8ff #fafafa #fdf1ea #fdf3ec #ff5656 #ff5b5b ' +
     '#ff5f24 #ff6262 #ff6550 #ff7a7a #ff7d49 #ff8447 #ff8a5b #ff8a8a #ff8c00 #ff8c42 #ff9a9a ' +
     '#ffaf64 #ffb74b #fff #ffffff'
   ).split(' '),
 );
+
+// The product's palette, not the site's. A component that redraws Skillvue's
+// own product UI in HTML — where a screenshot used to be — draws the colours of
+// that UI: its greys, its status pills, its chart fills. They are allowed in the
+// file that draws them and nowhere else, so the site palette above stays the
+// site's, and a product grey cannot drift into a marketing section unnoticed.
+const PRODUCT_UI = {
+  'components/product/map-screens.tsx': new Set(
+    (
+      '#1a1af0 #28c840 #2f7a2a #333 #444 #4b4ef8 #555 #5e6b12 #6264f2 #666 #777 #7f7ff7 #888 #adadfa #bbb #ccc ' +
+      '#d3f3cc #d4d4d8 #d9443c #dcdcfc #ddd #e3e3e3 #e5484d #e5566e #e6e6e6 #e7a6c4 #e8731e #e8e8e9 ' +
+      '#e9e9ea #e9f6be #eaeaea #ebebec #efeff0 #f0f0f0 #f2954a #febc2e #ff5f57'
+    ).split(' '),
+  ),
+  'components/product/map-skills-demo.tsx': new Set(
+    (
+      '#000 #22a06b #22b07d #2e8b7a #333 #3e9a6a #444 #4f86b8 #555 #5b5db8 #5b5fc7 #666 #777 #7e8f4e ' +
+      '#8a6bb8 #999 #9b5cf0 #a9d6cb #b4cde6 #b6dcc4 #b9b9e6 #b9dcd2 #bcd3ea #bcddc8 #bfe3d9 #c8705f ' +
+      '#c8c8ec #c9b8e6 #cfc2e8 #cfd3b3 #d4d8be #dadada #dcdcf2 #ddd #dddddd #ddefea #deeaf6 #def0e4 ' +
+      '#dff5e6 #e2e2f5 #e3e3e3 #e6e6e6 #e8c3bd #eac6c0 #eae2f5 #eaeaea #ebebec #eceee0 #eee #f0566e ' +
+      '#f3faf8 #f4f8fc #f4faf6 #f5f5f5 #f6e2df #f6f6fc #f9f6fc #fafbf4 #fcf5f4 #ffb35c'
+    ).split(' '),
+  ),
+  'components/product/assess-screens.tsx': new Set(
+    (
+      '#111111 #222222 #28c840 #333333 #3a3a3a #444 #555 #666 #777 #a9a3ff #bbb #cccccc #d4d4d8 #dcdcdc ' +
+      '#dedede #eeeeee #efeff0 #f7a3b0 #febc2e #ff5f57 #ffb3a0 #ffd3a4'
+    ).split(' '),
+  ),
+  'components/product/decide-demo.tsx': new Set(
+    (
+      '#000 #1d6b3a #28c840 #333 #3bb273 #444 #555 #666 #777 #888 #9a86f0 #9b7bff #bbb #c9f2d6 #ccc ' +
+      '#cfcfcf #d4d4d8 #ddd #ddf5c6 #e6e6e6 #eee #efeff0 #f46b6b #f4f4f4 #f7877a #febc2e #ff5f57 #ffb08a #ffc29a'
+    ).split(' '),
+  ),
+};
 
 const HEX = /#[0-9a-f]{3,8}\b/gi;
 
@@ -237,13 +276,26 @@ const CSS = ['styles/globals.css'];
 
 const unexpected = [];
 const used = new Set();
+const usedByProduct = Object.fromEntries(Object.keys(PRODUCT_UI).map((f) => [f, new Set()]));
 
 for (const file of SCAN.flatMap(walk)) {
+  const own = PRODUCT_UI[file];
   for (const color of colorsIn(readFileSync(join(ROOT, file), 'utf8'), file)) {
     const hex = color.toLowerCase();
+    if (own?.has(hex)) {
+      usedByProduct[file].add(hex);
+      continue;
+    }
     used.add(hex);
     if (!ALLOWED.has(hex)) unexpected.push(`${relative('.', file)}: ${color}`);
   }
+}
+
+// The same rule as the site palette's, per file: an entry the file no longer
+// draws is removed with the code that drew it.
+for (const [file, own] of Object.entries(PRODUCT_UI)) {
+  const stale = [...own].filter((c) => !usedByProduct[file].has(c));
+  assert.deepEqual(stale, [], `${file}: ${stale.length} product colour(s) it no longer draws:\n  ${stale.join('\n  ')}`);
 }
 
 for (const file of CSS) {

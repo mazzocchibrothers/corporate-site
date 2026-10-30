@@ -211,7 +211,10 @@ reintroduce per-page variants.
 - **Colours:** every hex drawn in `app/`, `components/`, `i18n/` and
   `globals.css` must be in the palette in `scripts/check-colors.mjs`. A new
   colour is added there in the same change that draws it — and never to silence
-  a false positive.
+  a false positive. A component that redraws the product UI in HTML in place of
+  a screenshot (`components/product/`: `map-screens.tsx`, `map-skills-demo.tsx`,
+  `assess-screens.tsx`, `decide-demo.tsx`) draws the product's own colours;
+  those go in `PRODUCT_UI` in the same script, allowed in that file only.
 - When a redesign changes one of these on one page, it is either a new
   standard — apply it to its sibling pages and update this section — or it is
   drift.
