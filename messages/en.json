@@ -131,7 +131,13 @@
       "eyebrow": "Our Newsletters",
       "title": "The Skills Signal"
     },
-    "heading2": "All Articles",
+    "heading2": "Articles",
+    "articleFilters": {
+      "filterLabel": "Filter",
+      "topicLabel": "Topic",
+      "all": "All topics",
+      "count": "{count, plural, one {# article} other {# articles}}"
+    },
     "heading3": "Want to go deeper? Talk to our team.",
     "body2": "Book a demo and discover how Skillvue turns talent decisions into a competitive advantage.",
     "cta2": "Book a Demo",
@@ -1408,22 +1414,22 @@
     },
     "articles": {
       "newsletter-october-2026": {
-        "title": "The October Newsletter",
+        "title": "Top 10 Startups 2026 Italy, the ROI Calculator and conversations across Europe",
         "date": "October 2026",
         "tag": "Newsletter"
       },
       "newsletter-september-2026": {
-        "title": "The September Newsletter",
+        "title": "Skills, AI and better talent decisions: September at Skillvue",
         "date": "September 2026",
         "tag": "Newsletter"
       },
       "newsletter-august-2026": {
-        "title": "The August Newsletter",
+        "title": "Skills, new insights and where to meet us across Europe",
         "date": "August 2026",
         "tag": "Newsletter"
       },
       "newsletter-july-2026": {
-        "title": "The July Newsletter",
+        "title": "Skills, AI and better talent decisions, Perspectives gathered from London to Paris, AI readiness.",
         "date": "July 2026",
         "tag": "Newsletter"
       },
