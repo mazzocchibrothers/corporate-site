@@ -1,12 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { HeroVideo } from '@/components/ui/hero-video';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { ArrowDown, ArrowRight, Newspaper } from 'lucide-react';
+import { ArrowDown, ArrowRight, ChevronDown, ListFilter, Newspaper } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
@@ -44,6 +44,39 @@ export default function BlogPage() {
   const lang = useLocale();
   const t = useTranslations('blog');
   const router = useRouter();
+
+  // The topics are the cards' own tags, so a topic with no article cannot be
+  // offered. The tag is copy, so the filter holds the localized label — a
+  // locale switch remounts the page and resets it to 'all'.
+  const topics = Array.from(new Set(ARTICLES.map((a) => t(`articles.${a.id}.tag`))));
+  const [activeTopic, setActiveTopic] = useState('all');
+  const [filterOpen, setFilterOpen] = useState(false);
+  const filterRef = useRef<HTMLDivElement>(null);
+  const filterTriggerRef = useRef<HTMLButtonElement>(null);
+
+  // Closing gives focus back to the trigger, as on the partners page — an
+  // option that unmounts under a keyboard user would drop focus to <body>.
+  const closeFilter = (restoreFocus: boolean) => {
+    setFilterOpen(false);
+    if (restoreFocus) filterTriggerRef.current?.focus();
+  };
+
+  useEffect(() => {
+    if (!filterOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => { if (e.key === 'Escape') closeFilter(true); };
+    const onClickOutside = (e: MouseEvent) => {
+      if (filterRef.current && !filterRef.current.contains(e.target as Node)) setFilterOpen(false);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    document.addEventListener('mousedown', onClickOutside);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      document.removeEventListener('mousedown', onClickOutside);
+    };
+  }, [filterOpen]);
+
+  const filteredArticles = activeTopic === 'all' ? ARTICLES : ARTICLES.filter((a) => t(`articles.${a.id}.tag`) === activeTopic);
+
   const renderArticle = (article, i) => {
     return (
       <Reveal
@@ -55,7 +88,7 @@ export default function BlogPage() {
         className="group rounded-2xl border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-500 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] h-full flex flex-col"
         data-testid={`blog-article-${article.id}`}
       >
-        <div className="aspect-[16/10] overflow-hidden">
+        <div className="aspect-video overflow-hidden">
           {!article.image ? (
             <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-700" style={{ background: 'linear-gradient(135deg, #cdc6f5 0%, #e6d5ea 55%, #f8ddc9 100%)' }}>
               <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
@@ -91,23 +124,29 @@ export default function BlogPage() {
         delay={Math.min(i * 0.06, 0.4)}
         key={newsletter.id}
         href={href(`blog/${newsletter.id}`, lang)}
-        className="group relative block aspect-[16/10] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.08]"
+        className="group rounded-2xl border border-[#E5E7EB] bg-white overflow-hidden transition-all duration-500 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] h-full flex flex-col"
         data-testid={`newsletter-${newsletter.id}`}
       >
-        {!newsletter.image ? (
-          <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-700" style={{ background: 'linear-gradient(135deg, #cdc6f5 0%, #e6d5ea 55%, #f8ddc9 100%)' }}>
-            <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
-          </div>
-        ) : (
-          <img src={newsletter.image} alt={t(`articles.${newsletter.id}.title`)} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-        )}
-        {/* The date sits on the cover, so shade its lower edge — a cover's
-            own bottom is often a pale shirt or a lit wall. */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2a2350]/75 via-[#2a2350]/10 via-45% to-transparent" />
-        <p className="font-display absolute bottom-5 left-5 md:bottom-6 md:left-6 text-[22px] md:text-[24px] font-semibold leading-none tracking-[-0.01em] text-white">{month}, {year}</p>
-        {/* The arrow says the card opens. Touch has no hover, so mobile shows
-            it always; desktop brings it in on hover. */}
-        <ArrowRight aria-hidden="true" className="absolute bottom-5 right-5 h-6 w-6 text-white transition-all duration-300 md:bottom-6 md:right-6 md:-translate-x-1 md:opacity-0 md:group-hover:translate-x-0 md:group-hover:opacity-100 md:group-focus-visible:translate-x-0 md:group-focus-visible:opacity-100" strokeWidth={2} />
+        <div className="aspect-video overflow-hidden">
+          {!newsletter.image ? (
+            <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-700" style={{ background: 'linear-gradient(135deg, #cdc6f5 0%, #e6d5ea 55%, #f8ddc9 100%)' }}>
+              <Newspaper className="h-12 w-12 text-[#2a2350]/70" strokeWidth={1.5} />
+            </div>
+          ) : (
+            <img src={newsletter.image} alt={t(`articles.${newsletter.id}.title`)} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          )}
+        </div>
+        <div className="p-5 md:p-7 flex-1 flex flex-col">
+          <p className="type-body-sm text-[#121212]/60 mb-3 md:mb-4">{month}, {year}</p>
+          <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212] leading-snug mb-3 md:mb-4">
+            {t(`articles.${newsletter.id}.title`)}
+          </h3>
+          {/* Touch has no hover, so mobile shows the link always; desktop
+              brings it in on hover. */}
+          <span className="type-button text-[#4B4DF7] flex items-center gap-1.5 mt-auto md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100 transition-opacity duration-300">
+            {t('text')} <ArrowRight className="h-4 w-4" />
+          </span>
+        </div>
       </Reveal>
     );
   };
@@ -188,12 +227,50 @@ export default function BlogPage() {
         {/* 3. All Articles */}
         <section className="section-breathe">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 pb-20 lg:pb-28">
-            <Reveal y={20} duration={0.6} className="mb-8 md:mb-12">
+            <Reveal y={20} duration={0.6} className="flex flex-col gap-6 mb-8 md:mb-12">
               <h2 className="max-w-[880px] text-[clamp(1.5rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading2')}</h2>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="type-body-sm inline-flex items-center gap-2 text-[#4B4B4B]">
+                  <ListFilter className="h-4 w-4" aria-hidden="true" />
+                  {t('articleFilters.filterLabel')}
+                </span>
+                <div className="relative" ref={filterRef}>
+                  <button
+                    ref={filterTriggerRef}
+                    type="button"
+                    onClick={() => setFilterOpen((o) => !o)}
+                    aria-haspopup="listbox"
+                    aria-expanded={filterOpen}
+                    data-testid="blog-topic-filter"
+                    className="type-body-sm flex items-center gap-2.5 rounded-full border border-[#EBEBEB] bg-white pl-4 pr-3 py-2.5 font-semibold text-[#1E1E1E] hover:border-[#1E1E1E]/20 transition-colors duration-300"
+                  >
+                    <span className="type-eyebrow font-medium text-[#4B4B4B]">{t('articleFilters.topicLabel')}</span>
+                    <span>{activeTopic === 'all' ? t('articleFilters.all') : activeTopic}</span>
+                    <ChevronDown className="h-4 w-4 text-[#4B4B4B]" aria-hidden="true" />
+                  </button>
+                  {filterOpen && (
+                    <div role="listbox" className="absolute z-20 mt-2 min-w-[200px] rounded-xl border border-[#EBEBEB] bg-white py-2 shadow-xl">
+                      {['all', ...topics].map((f) => (
+                        <button
+                          key={f}
+                          type="button"
+                          role="option"
+                          aria-selected={activeTopic === f}
+                          onClick={() => { setActiveTopic(f); closeFilter(true); }}
+                          className={`type-body-sm block w-full text-left px-4 py-2 whitespace-nowrap transition-colors duration-200 ${activeTopic === f ? 'text-[#1E1E1E] bg-[#F7F7F7]' : 'text-[#4B4B4B] hover:text-[#1E1E1E] hover:bg-[#F7F7F7]'}`}
+                        >
+                          {f === 'all' ? t('articleFilters.all') : f}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <span className="type-body-sm ml-auto text-[#4B4B4B]">{t('articleFilters.count', { count: filteredArticles.length })}</span>
+              </div>
             </Reveal>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {ARTICLES.map((article, i) => renderArticle(article, i))}
+              {filteredArticles.map((article, i) => renderArticle(article, i))}
             </div>
           </div>
         </section>

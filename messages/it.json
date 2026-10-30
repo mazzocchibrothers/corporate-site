@@ -131,7 +131,13 @@
       "eyebrow": "Le nostre newsletter",
       "title": "The Skills Signal"
     },
-    "heading2": "Tutti gli Articoli",
+    "heading2": "Articoli",
+    "articleFilters": {
+      "filterLabel": "Filtra",
+      "topicLabel": "Argomento",
+      "all": "Tutti gli argomenti",
+      "count": "{count, plural, one {# articolo} other {# articoli}}"
+    },
     "heading3": "Vuoi approfondire ulteriormente? Parla con il nostro team.",
     "body2": "Prenota una demo e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
     "cta2": "Prenota una Demo",
@@ -1408,22 +1414,22 @@
     },
     "articles": {
       "newsletter-october-2026": {
-        "title": "La newsletter di ottobre",
+        "title": "Nuovi traguardi, il ROI Calculator e conversazioni in tutta Europa",
         "date": "Ottobre 2026",
         "tag": "Newsletter"
       },
       "newsletter-september-2026": {
-        "title": "La newsletter di settembre",
+        "title": "Competenze, AI e decisioni migliori sul talento: settembre in Skillvue",
         "date": "Settembre 2026",
         "tag": "Newsletter"
       },
       "newsletter-august-2026": {
-        "title": "La newsletter di agosto",
+        "title": "Skills, nuovi insight e dove incontrarci in Europa",
         "date": "Agosto 2026",
         "tag": "Newsletter"
       },
       "newsletter-july-2026": {
-        "title": "La newsletter di luglio",
+        "title": "Competenze, AI e decisioni migliori sul talento, prospettive raccolte da Londra a Parigi, AI readiness.",
         "date": "Luglio 2026",
         "tag": "Newsletter"
       },
