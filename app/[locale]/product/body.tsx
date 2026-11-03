@@ -134,7 +134,7 @@ function ReadMore() {
   return (
     <a
       href={href('product/skillvue-map', locale)}
-      className="type-button group inline-flex h-[46px] shrink-0 items-center gap-2.5 whitespace-nowrap rounded-full border border-[#e5e7eb] bg-white pl-6 pr-[22px] font-medium text-[#121212] transition-colors hover:bg-[#f7f7f7]"
+      className="type-button group inline-flex h-12 shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-[#e5e7eb] bg-white px-6 text-[#121212] transition-colors hover:bg-[#f7f7f7]"
     >
       {t('map.readMore')}
       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.8} aria-hidden="true" />

@@ -106,7 +106,7 @@ export default function ReportForm({ onClose, module, scenario, values }: {
         {status !== 'submitted' && <p id="roi-report-description">{t('body', { module: calculator(`${module}.tab`) })}</p>}
         {status === 'submitted' ? <div>
           <p id="roi-report-description" role="status">{t('downloadHint')}</p>
-          <Button type="button" mode="dark" disabled={downloading} aria-busy={downloading} icon={null} onClick={() => download()}>
+          <Button type="button" mode="dark" disabled={downloading} aria-busy={downloading} onClick={() => download()}>
             {t(downloading ? 'generatingReport' : 'downloadAgain')}
           </Button>
           {downloadError && <p role="alert">{t('downloadError')}</p>}
@@ -133,7 +133,7 @@ export default function ReportForm({ onClose, module, scenario, values }: {
               <span>{t('processingConsent')}</span>
             </label>
             {status === 'error' && <p role="alert">{t('submitError')}</p>}
-            <Button className="type-body-sm w-full rounded-[9px] font-semibold" type="submit" mode="dark" icon={null}>
+            <Button className="w-full" type="submit" mode="dark">
               {t(status === 'pending' ? 'submitting' : 'submit')}
             </Button>
           </fieldset>

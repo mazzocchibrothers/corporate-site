@@ -37,6 +37,9 @@ const buttonVariants = cva(
       },
     },
     compoundVariants: [
+      // The 1px border sits outside the padding: a pixel less of it keeps the
+      // outlined pill at the same 48px as the primary beside it.
+      { variant: "secondary", size: "default", class: "py-[15px]" },
       { variant: "primary", mode: "light", class: "bg-[#4B4DF7] text-white hover:bg-[#3133E7]" },
       { variant: "primary", mode: "dark", class: "bg-[#6366F8] text-white hover:bg-[#4B4DF7]" },
       { variant: "secondary", mode: "light", class: "border-[#888888] text-[#888888] hover:bg-[#4B4DF7]/20 hover:border-[#4B4DF7]/50 hover:text-[#4B4DF7]" },
