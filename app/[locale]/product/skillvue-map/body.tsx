@@ -89,7 +89,10 @@ export default async function ProductPage() {
   const clip = (name: string) => `/product/${name}-${locale}`;
   const demo = (
     <Button asChild variant="primary" mode="light">
-      <a href={href('book-meeting', locale)}>{t('cta')}</a>
+      <a href={href('book-meeting', locale)}>
+        {t('cta')}
+        <ArrowRight aria-hidden="true" />
+      </a>
     </Button>
   );
 

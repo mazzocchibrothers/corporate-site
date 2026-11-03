@@ -63,7 +63,7 @@ export default function ROICalculator() {
   }).format(value);
   const number = (value: number) => new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(value);
   const percent = (value: number) => new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 0 }).format(value);
-  const bookLink = <Button asChild mode="dark"><a href={href('book-meeting', locale)}>{t('bookDemo')}</a></Button>;
+  const bookLink = <Button asChild mode="dark"><a href={href('book-meeting', locale)}>{t('bookDemo')}<ArrowRight aria-hidden="true" /></a></Button>;
 
   return (
     <>

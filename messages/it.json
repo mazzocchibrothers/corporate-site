@@ -6,7 +6,7 @@
       "solutions": "Soluzioni",
       "customers": "Clienti",
       "resources": "Risorse",
-      "bookDemo": "Prenota una Demo",
+      "bookDemo": "Prenota una demo",
       "menu": "Menu",
       "links": {
         "product": "Prodotto",
@@ -140,7 +140,7 @@
     },
     "heading3": "Vuoi approfondire ulteriormente? Parla con il nostro team.",
     "body2": "Prenota una demo e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
-    "cta2": "Prenota una Demo",
+    "cta2": "Prenota una demo",
     "accountability": {
       "scenarios": {
         "deliverableLate": {
@@ -1571,9 +1571,9 @@
       },
       "heading": "Pronto a vedere cosa Skillvue può fare per la tua <span>organizzazione?</span>",
       "text": "Pronto per esplorare",
-      "heading2": "Prenota una Demo",
+      "heading2": "Prenota una demo",
       "body": "Scopri le applicazioni di Skillvue al tuo caso d’uso specifico",
-      "cta": "Prenota una Demo"
+      "cta": "Prenota una demo"
     },
     "hero": {
       "eyebrow": "Storie di Successo",
@@ -1609,7 +1609,7 @@
       "watchVideo": "Guarda il video",
       "interview": "intervista",
       "footerText": "Scopri come portare oggettività nel tuo framework di competenze",
-      "cta": "Prenota una Demo",
+      "cta": "Prenota una demo",
       "cards": {
         "unicomm": {
           "title": "Ricostruire la gestione dei talenti su 250+ punti vendita",
@@ -1654,7 +1654,7 @@
       },
       "heading": "Le persone sono il tuo costo maggiore. <span>Ma possono anche essere il tuo ritorno maggiore.</span>",
       "body": "Ogni altra area ha un framework consolidato per il calcolo del ROI. Queste storie ti dimostrano che anche HR può averlo.",
-      "cta": "Prenota una Demo"
+      "cta": "Prenota una demo"
     },
     "exploreStories": {
       "heading": "Trova la tua <span>storia.</span>",
@@ -5740,7 +5740,7 @@
     "hero": {
       "cta": "Scopri la Scienza",
       "text": "I Nostri Clienti",
-      "cta2": "Prenota una Demo",
+      "cta2": "Prenota una demo",
       "heading": "<gw><w>Il</w> <m>Sistema Operativo</m> delle Competenze</gw><br></br>della tua organizzazione",
       "body": "Skillvue mappa, misura e riporta dati oggettivi sulle competenze: costruito sul tuo framework interno, fondato sulla scienza, potenziato dall’AI e integrato nei sistemi HR che già utilizzi, per trasformare ogni decisione sul talento, dall’assunzione allo sviluppo.",
       "videoTitle": "Video di prodotto Skillvue",
@@ -5856,7 +5856,7 @@
       },
       "heading": "<span>Fatti</span>, non promesse.",
       "body": "Le principali aziende globali prendono decisioni sul talento con fiducia.",
-      "cta": "Prenota una Demo",
+      "cta": "Prenota una demo",
       "cta2": "Unisciti a oltre 100 aziende globali",
       "heading2": "Costruito <span>per le grandi organizzazioni</span>",
       "body2": "Oltre 100 integrazioni native (Oracle, SAP, Workday, Greenhouse e altri). Completamente personalizzabile per i tuoi processi, alle tue condizioni."
@@ -5880,12 +5880,12 @@
         }
       },
       "heading": "Le persone sono il tuo costo maggiore. <span>Possono anche essere il tuo ritorno maggiore.</span>",
-      "cta": "Prenota una Demo"
+      "cta": "Prenota una demo"
     },
     "cta": {
       "heading": "Prendi decisioni sul talento <span>che puoi difendere.</span>",
       "body": "Guarda Skillvue all’opera su un ruolo del tuo modello di competenze, in 30 minuti.",
-      "cta": "Prenota una Demo"
+      "cta": "Prenota una demo"
     }
   },
   "lp": {
@@ -7636,7 +7636,7 @@
     "hero": {
       "heading": "Un’unica piattaforma.<br></br>Decisioni sui talenti, finalmente oggettive.",
       "body": "Skillvue è il sistema operativo delle competenze. Un’unica fonte di dati oggettivi sulle skills, così ogni decisione, dall’assunzione alla crescita, è basata su prove concrete, non sull’intuito.",
-      "cta": "Prenota una Demo",
+      "cta": "Prenota una demo",
       "science": "Scopri la nostra scienza"
     },
     "logos": {
@@ -8155,7 +8155,7 @@
       "text5": "Supportati da",
       "heading5": "Vuoi saperne di più?",
       "body2": "Contatta il nostro team per scoprire come Skillvue rende ogni decisione sui talenti guidata dai dati.",
-      "cta3": "Prenota una Demo",
+      "cta3": "Prenota una demo",
       "releases": {
         "seedRound": {
           "title": "Round Seed di 5 milioni per Skillvue, la startup che sta cambiando la valutazione delle competenze con l’AI",
@@ -8757,7 +8757,7 @@
       "cta": "Esplora tutte le risorse",
       "heading2": "Vuoi vedere la scienza in azione?",
       "body2": "Prenota una demo con il nostro team e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
-      "cta2": "Prenota una Demo",
+      "cta2": "Prenota una demo",
       "detail": {
         "body": "Insight non trovato.",
         "cta": "Torna a Insights",
@@ -8767,7 +8767,7 @@
         "heading2": "Altri Insight",
         "heading3": "Vuoi vedere la scienza in azione?",
         "body3": "Prenota una demo con il nostro team e scopri come Skillvue trasforma le decisioni sul talento in un vantaggio competitivo.",
-        "cta3": "Prenota una Demo",
+        "cta3": "Prenota una demo",
         "insideHeading": "Cosa <span>Contiene</span>"
       },
       "meta": {
@@ -8894,13 +8894,13 @@
     "cta": {
       "heading": "Talent intelligence supportata dalla scienza. <span>Vedila in azione.</span>",
       "text": "Pronto per esplorare",
-      "heading2": "Prenota una Demo",
+      "heading2": "Prenota una demo",
       "body": "Scopri come la scienza si traduce in migliori decisioni sul talento",
-      "cta": "Prenota una Demo"
+      "cta": "Prenota una demo"
     },
     "hero": {
       "heading": "<span>Scienza</span> su cui puoi<br></br>basare le tue decisioni",
-      "cta": "Prenota una Demo",
+      "cta": "Prenota una demo",
       "body": "Valutare le persone è difficile. Per prendere decisioni sul talento di cui fidarsi, accuratezza e affidabilità non possono essere degli optional. Skillvue è costruito su basi psicometriche e psicologiche rigorose, che garantiscono output a prova di qualsiasi scrutinio."
     },
     "team": {
@@ -8987,7 +8987,7 @@
       }
     },
     "solutionFinalCTA": {
-      "cta": "Prenota una Demo"
+      "cta": "Prenota una demo"
     },
     "a11y": {
       "previous": "Precedente",
@@ -9015,7 +9015,7 @@
       "imHero": {
         "heading": "La tua prossima migliore assunzione potrebbe già <span>work for you.</span>",
         "body": "Skillvue mappa competenze e potenziale in tutta la tua forza lavoro, rendendo visibile il talento interno, le decisioni di successione data-driven e i percorsi di mobilità trasparenti.",
-        "cta": "Prenota una Demo"
+        "cta": "Prenota una demo"
       },
       "imHowSolves": {
         "pillars": {
@@ -9081,7 +9081,7 @@
       "ldHero": {
         "heading": "Smetti di finanziare formazione generica. Concentrati sulle <span>aree più critiche.</span>",
         "body": "Skillvue fornisce ai leader L&D dati oggettivi e misurabili su dove si trovano le vere aree da migliorare nelle competenze della popolazione aziendale, lavorando a livello individuale, di team e organizzativo per far sì che ogni investimento formativo sia mirato, misurabile e allineato all'impatto aziendale.",
-        "cta": "Prenota una Demo"
+        "cta": "Prenota una demo"
       },
       "ldHowSolves": {
         "pillars": {
@@ -9180,7 +9180,7 @@
       "pmHero": {
         "heading": "Se i risultati si misurano con i KPI, perché le competenze si misurano ancora con le <span>opinioni?</span>",
         "body": "Skillvue integra valutazioni oggettive delle competenze nei tuoi cicli di performance riducendo i bias, migliorando la calibrazione e dando a ogni manager un punto di partenza basato sui dati prima di scrivere una singola review.",
-        "cta": "Prenota una Demo"
+        "cta": "Prenota una demo"
       },
       "pmHowSolves": {
         "heading": "Non rinunciare a nessuno dei <span>due parametri</span>",
@@ -9264,7 +9264,7 @@
       "prHero": {
         "heading": "Assegna le persone ai progetti in base a capacità verificate, <span>non alla semplice disponibilità.</span>",
         "body": "Skillvue dà ai project leader e ai team di resourcing una visione oggettiva di chi ha le competenze per portare a termine il lavoro, sostituendo il “chi è libero” con il “chi è adatto”. Riduci il rischio di delivery, componi team migliori e smetti di assegnare le persone alla cieca.",
-        "cta": "Prenota una Demo"
+        "cta": "Prenota una demo"
       },
       "prHowSolves": {
         "pillars": {
@@ -9431,7 +9431,7 @@
       "taHero": {
         "heading": "Smetti di scommettere sulle assunzioni. Inizia a prevedere chi <span>performerà davvero</span>",
         "body": "Skillvue sostituisce i giudizi soggettivi con la scienza su scala. Con le nostre valutazioni potenziate da AI e personalizzate per i tuoi ruoli e modello di leadership identifichi i migliori candidati, riduci il turnover iniziale e rendi ogni decisione di assunzione difendibile.",
-        "cta": "Prenota una Demo"
+        "cta": "Prenota una demo"
       },
       "taImpact": {
         "kpis": {

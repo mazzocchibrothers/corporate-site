@@ -165,8 +165,11 @@ export default function SkillvueMapPage() {
                   <p className="type-body-lg hero-subtitle mt-[26px] text-[#4B4B4B] text-balance">{t('hero.body')}</p>
                 </HeroCopy>
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-                  <Button asChild variant="primary" mode="light" icon={null}>
-                    <a href={href('book-meeting', locale)}>{t('hero.cta')}</a>
+                  <Button asChild variant="primary" mode="light">
+                    <a href={href('book-meeting', locale)}>
+                      {t('hero.cta')}
+                      <ArrowRight aria-hidden="true" />
+                    </a>
                   </Button>
                   <a href={href('science', locale)} className="type-link group flex items-center gap-3 font-medium text-[#4B4B4B] hover:text-[#121212] transition-colors">
                     {t('hero.science')}
