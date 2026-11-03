@@ -86,7 +86,7 @@ try {
   const roi = await browser.newPage({ viewport: { width: 1280, height: 900 } });
   const submissions = [];
   let rejectSubmission = true;
-  await roi.route('https://api.hsforms.com/submissions/v3/integration/submit/48438018/*', async (route) => {
+  await roi.route('**/api/roi-report', async (route) => {
     submissions.push(route.request().postDataJSON());
     await route.fulfill({ status: rejectSubmission ? 400 : 200, contentType: 'application/json', body: '{}' });
   });

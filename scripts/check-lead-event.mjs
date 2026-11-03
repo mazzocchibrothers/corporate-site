@@ -16,6 +16,8 @@ import assert from 'node:assert/strict';
 const NOT_LEADS = new Set([
   'app/[locale]/lp/supermarkets/body.tsx',
   'app/[locale]/lp/ai-competency-newsletter/body.tsx',
+  // A server relay: the ROI report form posts here and calls trackLead() itself.
+  'app/api/roi-report/route.ts',
 ]);
 
 const files = (dir) =>
