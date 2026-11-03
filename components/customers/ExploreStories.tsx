@@ -38,14 +38,11 @@ const allStories = [
     bgImage: '/logos/customer-story-cover-mediaset.avif',
   },
   {
-    id: 'fidia-farmaceutici', company: 'Fidia Farmaceutici', industry: 'pharmaceutical', useCases: ['learningDevelopment'],
-    bgImage: '/logos/customer-story-cover-fidia-farmaceutici.avif',
-  },
-  {
     id: 'credem', company: 'Gruppo Credem', industry: 'financialServices', useCases: ['hiring'],
     bgImage: '/logos/customer-story-cover-credem.avif',
   },
-  // douglas, eataly
+  // douglas, eataly, fidia-farmaceutici: pending approval, and noindex in
+  // i18n/routes.json until it is given.
 ];
 
 // Still derived from the stories, so a new story cannot arrive without its

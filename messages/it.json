@@ -1676,8 +1676,7 @@
         "retail": "Retail",
         "transportationLogistics": "Trasporti e Logistica",
         "financialServices": "Servizi Finanziari",
-        "mediaBroadcasting": "Media & Broadcasting",
-        "pharmaceutical": "Farmaceutico"
+        "mediaBroadcasting": "Media & Broadcasting"
       },
       "useCases": {
         "all": "tutti",
@@ -1706,9 +1705,6 @@
         },
         "mediaset": {
           "headline": "GRAPE, la Graduate Program Experience di Mediaset: come selezionare e accompagnare giovani di valore guardando al potenziale futuro"
-        },
-        "fidia-farmaceutici": {
-          "headline": "Fidia Farmaceutici: come fotografare su scala globale le reali competenze della rete vendita per supportare la crescita futura"
         },
         "credem": {
           "headline": "Gruppo Credem: come trovare i migliori talenti tra 30.000 candidature per seguire la crescita del business"
