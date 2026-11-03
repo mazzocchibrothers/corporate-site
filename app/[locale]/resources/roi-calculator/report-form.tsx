@@ -51,7 +51,7 @@ export default function ReportForm({ onClose, module, scenario, values }: {
       const payload = reportSubmission({
         name: String(data.get('name') ?? ''), email: String(data.get('email') ?? ''),
         company: String(data.get('company') ?? ''), industry,
-        consent: data.get('consent') === 'on',
+        marketing: data.get('marketing') === 'on', consent: data.get('consent') === 'on',
         consentText: t.markup('consent', { a: (text) => text }),
         processingText: t('processingConsent'),
         pageUri: window.location.href, pageName: document.title,
@@ -124,10 +124,14 @@ export default function ReportForm({ onClose, module, scenario, values }: {
               {INDUSTRIES.map((industry) => <option key={industry} value={industry}>{t(`industries.${industry}`)}</option>)}
             </select>
             <label className={styles.consent}>
-              <input type="checkbox" name="consent" required />
+              <input type="checkbox" name="marketing" />
               <span>{t.rich('consent', { a: (text) => <a href={locale === 'it' ? 'https://www.iubenda.com/privacy-policy/75783964' : 'https://www.iubenda.com/privacy-policy/45750674/full-legal'} target="_blank" rel="noopener noreferrer">{text}</a> })}</span>
             </label>
             <p className={styles.formNote}>{t('unsubscribe')}</p>
+            <label className={styles.consent}>
+              <input type="checkbox" name="consent" required />
+              <span>{t('processingConsent')}</span>
+            </label>
             {status === 'error' && <p role="alert">{t('submitError')}</p>}
             <Button className="type-body-sm w-full rounded-[9px] font-semibold" type="submit" mode="dark" icon={null}>
               {t(status === 'pending' ? 'submitting' : 'submit')}

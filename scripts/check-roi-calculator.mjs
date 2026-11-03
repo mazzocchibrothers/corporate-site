@@ -25,9 +25,10 @@ assert.equal(calculate('hiring', 300, 50_000, 'base').hard, 225_000,
 console.log('[OK] ROI calculator: all modules/scenarios match prototype; inputs clamp and snap');
 
 const { reportSubmission } = await import('../app/[locale]/resources/roi-calculator/report-submission.ts');
-const details = { name: ' Test Name ', email: ' test@example.invalid ', company: ' Test Co ', industry: 'retail', consent: true,
+const details = { name: ' Test Name ', email: ' test@example.invalid ', company: ' Test Co ', industry: 'retail', marketing: true, consent: true,
   consentText: 'Marketing consent', processingText: 'Processing consent', pageUri: 'https://www.skillvue.ai/resources/roi-calculator', pageName: 'ROI' };
 assert.throws(() => reportSubmission({ ...details, consent: false }), /Consent required/);
+assert.equal(reportSubmission({ ...details, marketing: false }).legalConsentOptions.consent.communications[0].value, false);
 const submission = reportSubmission(details);
 assert.deepEqual(submission.fields, [
   { name: 'firstname', value: 'Test Name' },
