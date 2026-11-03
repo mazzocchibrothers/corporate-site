@@ -1482,7 +1482,7 @@
   },
   "book-meeting": {
     "meta": {
-      "title": "Book a Demo | Skillvue",
+      "title": "Book a demo | Skillvue",
       "description": "See how Skillvue turns interviews into skills data you can act on. Book a demo and we will walk through hiring, performance and development on your own use cases."
     },
     "back": "Back",
@@ -1736,7 +1736,7 @@
           "label": "dimensions mapped"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -1930,7 +1930,7 @@
           "label": "technical and behavioural dimensions\ndetected and measured"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -2094,7 +2094,7 @@
           "label": "People assessed in 1 month"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -2290,7 +2290,7 @@
           "label": "Recruiter time optimization"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -2473,7 +2473,7 @@
           "label": "completion rate"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -2655,7 +2655,7 @@
           "label": "internal resources ready to relocate"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -2841,7 +2841,7 @@
           "label": "countries"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -3024,7 +3024,7 @@
           "label": "countries"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -3206,7 +3206,7 @@
           "label": "employees already included in assessment"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -3383,7 +3383,7 @@
           "label": "employees"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -3576,7 +3576,7 @@
           "label": "candidate experience feedback"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -3776,7 +3776,7 @@
           "label": "candidate satisfaction"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -3957,7 +3957,7 @@
           "label": "candidate satisfaction"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -4138,7 +4138,7 @@
           "label": "candidate satisfaction"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -4319,7 +4319,7 @@
           "label": "Qualified candidates after skills screening"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -4518,7 +4518,7 @@
           "label": "processes activated in parallel"
         }
       ],
-      "ctaPrimary": "Contact Us",
+      "ctaPrimary": "Book a demo",
       "ctaSecondary": "Learn More",
       "clientCard": {
         "label": "CLIENT PROFILE",
@@ -9698,7 +9698,7 @@
       "months": "{count} mo",
       "disclaimer": "These figures are directional estimates; your real numbers depend on your own data.",
       "priceNote": "The license price is an assumption and will be tailored to your needs.",
-      "cta": "Contact us for a demo",
+      "cta": "Book a demo",
       "copyright": "© {year} Skillvue · skillvue.ai",
       "assumptionLabels": {
         "failedHireCost": "failed-hire cost",

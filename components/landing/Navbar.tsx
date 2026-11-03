@@ -390,7 +390,6 @@ export default function Navbar() {
               asChild
               variant="primary"
               mode={navCtaMode}
-              className="tracking-wide"
             >
               <a
                 href={href('book-meeting', lang)}
@@ -505,7 +504,7 @@ export default function Navbar() {
                 variant="primary"
                 mode="dark"
                 onClick={() => navigateTo(href('book-meeting', lang))}
-                className="type-body w-full"
+                className="w-full"
               >
                 {t('nav.bookDemo')}
               </Button>

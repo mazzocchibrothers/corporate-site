@@ -1482,7 +1482,7 @@
   },
   "book-meeting": {
     "meta": {
-      "title": "Prenota una Demo | Skillvue",
+      "title": "Prenota una demo | Skillvue",
       "description": "Scopri come Skillvue trasforma i colloqui in dati sulle competenze su cui puoi agire. Prenota una demo: analizziamo insieme selezione, performance e sviluppo sui tuoi casi reali."
     },
     "back": "Indietro",
@@ -1736,7 +1736,7 @@
           "label": "dimensioni mappate"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -1930,7 +1930,7 @@
           "label": "dimensioni tecniche e comportamentali\nrilevate e misurate"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -2094,7 +2094,7 @@
           "label": "Persone valutate in 1 mese"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -2290,7 +2290,7 @@
           "label": "Ottimizzazione dei tempi di lavoro del recruiter"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -2473,7 +2473,7 @@
           "label": "tasso di completion"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -2655,7 +2655,7 @@
           "label": "risorse interne pronte a ricollocarsi"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -2841,7 +2841,7 @@
           "label": "Paesi"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -3024,7 +3024,7 @@
           "label": "Paesi"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -3206,7 +3206,7 @@
           "label": "dipendenti già inclusi in assessment"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -3383,7 +3383,7 @@
           "label": "dipendenti"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -3576,7 +3576,7 @@
           "label": "candidate experience feedback"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -3776,7 +3776,7 @@
           "label": "candidate satisfaction"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -3957,7 +3957,7 @@
           "label": "candidate satisfaction"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -4138,7 +4138,7 @@
           "label": "candidate satisfaction"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -4319,7 +4319,7 @@
           "label": "Candidati qualificati dopo lo skills screening"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -4518,7 +4518,7 @@
           "label": "processi attivati in parallelo"
         }
       ],
-      "ctaPrimary": "Contattaci",
+      "ctaPrimary": "Prenota una demo",
       "ctaSecondary": "Scopri di più",
       "clientCard": {
         "label": "SCHEDA CLIENTE",
@@ -9698,7 +9698,7 @@
       "months": "{count} mesi",
       "disclaimer": "Queste cifre sono stime indicative; i risultati effettivi dipendono dai dati della tua organizzazione.",
       "priceNote": "Il prezzo della licenza è un’ipotesi e sarà adattato alle tue esigenze.",
-      "cta": "Contattaci per una demo",
+      "cta": "Prenota una demo",
       "copyright": "© {year} Skillvue · skillvue.ai",
       "assumptionLabels": {
         "failedHireCost": "costo di un’assunzione non riuscita",
