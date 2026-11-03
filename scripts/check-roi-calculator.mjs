@@ -34,7 +34,7 @@ assert.deepEqual(submission.fields, [
   { name: 'firstname', value: 'Test Name' },
   { name: 'email', value: 'test@example.invalid' },
   { name: 'company', value: 'Test Co' },
-  { name: '0-2/industry', value: 'retail' },
+  { name: '0-2/industry', value: 'RETAIL' },
 ]);
 assert.deepEqual(submission.legalConsentOptions, { consent: {
   consentToProcess: true, text: details.processingText,

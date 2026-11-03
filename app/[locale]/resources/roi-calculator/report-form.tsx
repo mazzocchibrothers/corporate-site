@@ -12,9 +12,9 @@ import { BASE_URL } from '@/i18n/urls';
 import styles from './calculator.module.css';
 
 // The EN contact form accepts a single name; the IT form requires a separate surname.
-const REPORT_ENDPOINT = 'https://api.hsforms.com/submissions/v3/integration/submit/48438018/0af34526-b132-4ada-b0b5-d4f0d9b380c2';
+const REPORT_ENDPOINT = '/api/roi-report';
 
-const INDUSTRIES = ['luxury', 'retail', 'banking', 'insurance', 'pharma', 'manufacturing', 'other'];
+const INDUSTRIES = ['luxury', 'retail', 'banking', 'insurance', 'pharma', 'manufacturing', 'energy', 'other'];
 
 export default function ReportForm({ onClose, module, scenario, values }: {
   onClose: () => void; module: Module; scenario: Scenario; values: number[];

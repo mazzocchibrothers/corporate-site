@@ -9672,6 +9672,7 @@
         "insurance": "Assicurativo",
         "pharma": "Farmaceutico",
         "manufacturing": "Manifatturiero",
+        "energy": "Petrolio ed energia",
         "other": "Altro"
       },
       "consent": "Acconsento a ricevere altre comunicazioni da Skillvue. Leggi l’<a>Informativa sulla privacy</a>.",

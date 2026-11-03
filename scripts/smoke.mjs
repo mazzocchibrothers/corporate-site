@@ -86,7 +86,9 @@ try {
   const roi = await browser.newPage({ viewport: { width: 1280, height: 900 } });
   const submissions = [];
   let rejectSubmission = true;
-  await roi.route('https://api.hsforms.com/submissions/v3/integration/submit/48438018/*', async (route) => {
+  // BotID's challenge script only exists on Vercel; without it the form's fetch waits forever.
+  await roi.route('**/a-4-a/c.js*', (route) => route.fulfill({ contentType: 'text/javascript', body: 'window.V_C.push({ b: 1 })' }));
+  await roi.route('**/api/roi-report', async (route) => {
     submissions.push(route.request().postDataJSON());
     await route.fulfill({ status: rejectSubmission ? 400 : 200, contentType: 'application/json', body: '{}' });
   });
@@ -164,7 +166,7 @@ try {
     assert.equal(await dialog.getByText(/Enter your details|Inserisci i tuoi dati/).count(), 0, 'confirmation hides the form instructions');
     const payload = submissions.at(-1);
     assert.ok(payload.fields.some((field) => field.name === 'company' && field.value === 'Test Company'));
-    assert.ok(payload.fields.some((field) => field.name === '0-2/industry' && field.value === 'retail'));
+    assert.ok(payload.fields.some((field) => field.name === '0-2/industry' && field.value === 'RETAIL'));
     assert.equal(payload.legalConsentOptions.consent.communications[0].subscriptionTypeId, 527104760);
     assert.equal(payload.legalConsentOptions.consent.communications[0].value, true);
     assert.equal(download.suggestedFilename(), 'skillvue-roi-report.pdf');
