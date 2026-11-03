@@ -52,6 +52,8 @@ export function generateStaticParams() {
 // below then has no boundary above it — this is the root layout — and the
 // request answered 500. /llms.txt did, until it became a route. With this the
 // router turns an unknown locale away as a 404 before the layout renders.
+// It is inherited: a dynamic segment below this one 404s on any param its own
+// generateStaticParams does not list. resources/insights/[slug] lists them all.
 export const dynamicParams = false;
 
 export default async function LocaleLayout({

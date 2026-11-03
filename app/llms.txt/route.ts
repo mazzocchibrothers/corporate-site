@@ -1,8 +1,8 @@
 // /llms.txt — the site described for a language model (llmstxt.org).
 //
-// It used to answer 500. The proxy skips any path with a file extension, so
-// /llms.txt reached app/[locale] with "llms.txt" as the locale, and the root
-// layout's notFound() has no boundary above it to land in.
+// It used to answer 500, as every missing file URL did until
+// app/[locale]/layout.tsx set dynamicParams = false (see there). Now a missing
+// file is a 404, and this one exists.
 //
 // Like app/sitemap.ts, nothing here is a list. The pages come from
 // i18n/routes.json, their titles and summaries from the English catalogue —

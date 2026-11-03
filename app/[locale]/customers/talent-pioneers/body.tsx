@@ -35,7 +35,6 @@ const DAY_TO_DAY_ITEMS: DayToDayItem[] = [
   { id: 'carrefour', kind: 'quote', storyRoute: 'customers/carrefour' },
   { id: 'europAssistance', kind: 'story', storyRoute: 'customers/europ-assistance', bgImage: '/logos/customer-story-cover-europ-assistance.avif' },
   { id: 'subdued', kind: 'quote', storyRoute: 'customers/subdued' },
-  { id: 'fidiaFarmaceutici', kind: 'story', storyRoute: 'customers/fidia-farmaceutici', bgImage: '/logos/customer-story-cover-fidia-farmaceutici.avif' },
   { id: 'luca', kind: 'quote', storyRoute: 'customers/mediaset' },
   { id: 'unicomm', kind: 'story', storyRoute: 'customers/unicomm', bgImage: '/logos/customer-story-cover-unicomm.avif' },
   { id: 'alberto', kind: 'quote', storyRoute: 'customers/adr' },

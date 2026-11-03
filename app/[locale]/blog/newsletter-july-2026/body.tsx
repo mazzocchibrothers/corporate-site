@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Clock, ImageIcon } from 'lucide-react';
-import { href } from '@/i18n/routes';
+import { href, localizePath } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
 
 // ─── Fill these in when the assets/links are ready ──────────────────────────
@@ -19,7 +19,6 @@ const LINKS = {
   vivatech: 'https://www.linkedin.com/posts/skillvue_we-flew-to-france-for-vivatech-and-came-back-activity-7473749153379041280-cxBR?utm_source=share&utm_medium=member_desktop&rcm=ACoAACZSO2IBOJeEW6vWG4-WdHsN9EKvCSEp4DA',
   execTa: 'https://www.linkedin.com/feed/update/urn:li:activity:7480888533185093632',
   aiTest: '/lp/ai-competency-newsletter',
-  fidia: '/customers/fidia-farmaceutici',
 };
 // ────────────────────────────────────────────────────────────────────────────
 
@@ -110,7 +109,17 @@ export default async function JulyNewsletter() {
                 <div className="space-y-5">
                   {s.body.map((p, j) => <p key={j} className="type-body text-[#121212]/[0.7]">{renderRich(p)}</p>)}
                 </div>
-                <CtaLink label={s.cta.label} href={s.cta.href} external={s.cta.external} />
+                {/* The catalogue names a link by its key in LINKS; it used to be
+                    rendered as the href itself, so every button here pointed at
+                    a relative "vivatech" or "aiTest". A section without a cta
+                    has no button: the Fidia story is not public yet. */}
+                {s.cta ? (
+                  <CtaLink
+                    label={s.cta.label}
+                    href={s.cta.external ? LINKS[s.cta.href] : localizePath(LINKS[s.cta.href], locale)}
+                    external={s.cta.external}
+                  />
+                ) : null}
               </Reveal>
             ))}
 
@@ -134,7 +143,7 @@ export default async function JulyNewsletter() {
               </h2>
               <p className="max-w-[880px] type-body text-white/[0.4] mb-12 mx-auto">{t('finalBody')}</p>
               <Button asChild variant="primary" mode="dark">
-                <a href={t('onClick')}>{t('finalButton')}<ArrowRight aria-hidden /></a>
+                <a href={href('book-meeting', locale)}>{t('finalButton')}<ArrowRight aria-hidden /></a>
               </Button>
             </Reveal>
           </div>

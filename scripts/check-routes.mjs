@@ -368,7 +368,8 @@ if (noindexRoutes.length > 0) {
 // up for /lp/. These links are made to be forwarded by mail, so "it ends up
 // public somewhere" is precisely the case the noindex exists to cover, and a
 // Disallow is precisely what would stop it working. The crawl budget argument
-// does not apply either: nothing on the site links to a noindex section.
+// does not apply either: the noindex sections (/lp, /demo, unlisted stories and
+// newsletters) are reached from mail and direct links, not crawled into.
 const blocked = noindexRoutes.flatMap((r) =>
   localesOf(r)
     .map((locale) => new URL(urlFor(r, locale)).pathname)

@@ -610,7 +610,6 @@
       "tag": "Performance"
     },
     "newsletter-july-2026": {
-      "onClick": "/prenota-incontro",
       "tag": "Newsletter",
       "date": "Luglio 2026",
       "readTime": "4 min di lettura",
@@ -671,12 +670,7 @@
             "Come può un’organizzazione rendere più strutturato, oggettivo e scalabile il modo in cui valuta e sviluppa le competenze delle proprie persone?",
             "Ne parliamo nella nostra ultima customer story con Gianluca Magnani, Global People & Culture Officer di Fidia Farmaceutici, che racconta come l’organizzazione sia passata **da criteri basati sul CV a criteri basati sulle competenze** — rendendo competenze e potenziale più visibili per sviluppare sempre più persone in una rete vendita di 900 persone, dove prima solo il 5-10% riusciva a crescere nel proprio percorso di carriera.",
             "L’obiettivo non è sostituire il giudizio umano, ma offrire una base più solida per costruire percorsi di sviluppo allineati sia al potenziale delle persone sia alle esigenze dell’organizzazione."
-          ],
-          "cta": {
-            "label": "Guarda la customer story",
-            "href": "fidia",
-            "external": false
-          }
+          ]
         }
       ],
       "closing": {
@@ -4939,11 +4933,6 @@
             "quote": "Sono riuscita a ridurre il time-to-hire, mantenere un rapporto diretto con i candidati e recuperare tempo prezioso per attività strategiche a cui prima dovevo rinunciare.",
             "title": "Recuperare tempo nell’hiring",
             "company": "Subdued"
-          },
-          "fidiaFarmaceutici": {
-            "title": "Sviluppo della rete vendita",
-            "name": "Gianluca",
-            "company": "Fidia Farmaceutici"
           },
           "luca": {
             "quote": "Una delle attività più importanti che stiamo portando avanti riguarda progetti di Change Management e trasformazione culturale, che spesso partono già dalla fase di Talent Acquisition: bisogna inserire le persone giuste, capaci di rispondere alle esigenze attuali, ma anche a quelle future.",

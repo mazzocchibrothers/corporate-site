@@ -610,7 +610,6 @@
       "tag": "Performance"
     },
     "newsletter-july-2026": {
-      "onClick": "/book-meeting",
       "tag": "Newsletter",
       "date": "July 2026",
       "readTime": "4 min read",
@@ -671,12 +670,7 @@
             "How can an organisation make skills assessment and development more structured, objective and scalable?",
             "In our latest customer story, Gianluca Magnani, Global People & Culture Officer at Fidia Farmaceutici, explains how the organisation moved **from CV-based to skills-based criteria** — making skills and potential more visible in order to develop more and more people across a 900-person sales network, where previously only 5-10% managed to progress in their career.",
             "The objective is not to replace human judgement, but to provide a stronger foundation for building development paths aligned with both people’s potential and the organisation’s needs."
-          ],
-          "cta": {
-            "label": "Read the full customer story",
-            "href": "fidia",
-            "external": false
-          }
+          ]
         }
       ],
       "closing": {
@@ -4939,11 +4933,6 @@
             "quote": "I was able to reduce time-to-hire, keep a direct relationship with candidates, and reclaim valuable time for strategic activities I previously had to sacrifice.",
             "title": "Reclaiming time to hire",
             "company": "Subdued"
-          },
-          "fidiaFarmaceutici": {
-            "title": "Sales network development",
-            "name": "Gianluca",
-            "company": "Fidia Farmaceutici"
           },
           "luca": {
             "quote": "One of the biggest activities we are currently carrying out involves Change Management projects and cultural transformation, which often start at the Talent Acquisition stage — you need to onboard the right people who can respond to current needs, but also future ones.",
