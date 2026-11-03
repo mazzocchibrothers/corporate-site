@@ -7,11 +7,11 @@ import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { ArrowDown, ArrowRight } from 'lucide-react';
-import { useRouter } from '@/i18n/navigation';
 import { whitepapers } from '@/data/whitepapers';
 import { onepagers } from '@/data/onepagers';
 import { Button } from '@/components/ui/button';
-import { href } from '@/i18n/routes';
+import { href, localizePath } from '@/i18n/routes';
+import Link from 'next/link';
 import { HeroCopy } from '@/components/ui/hero-copy';
 import ClosingBanner from '@/components/shared/ClosingBanner';
 
@@ -20,7 +20,6 @@ import ClosingBanner from '@/components/shared/ClosingBanner';
 export default function InsightsPage() {
   const lang = useLocale();
   const t = useTranslations('resources.insights');
-  const router = useRouter();
   const labels = (key: string) => t(`filters.${key}`);
 
   const published = whitepapers
@@ -44,8 +43,9 @@ export default function InsightsPage() {
       y={20}
       delay={i * 0.1}
       key={w.slug}
+      as={Link}
+      href={localizePath(`/resources/insights/${w.slug}`, lang)}
       className="group cursor-pointer flex flex-col h-full bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden"
-      onClick={() => { router.push(`/resources/insights/${w.slug}`); window.scrollTo(0, 0); }}
     >
       <div className="aspect-[16/9] overflow-hidden shrink-0">
         <img src={w.coverBg ?? w.coverImage} alt="" loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />

@@ -36,7 +36,7 @@ function shortName(title: string) {
  * Italian.
  */
 const MONTHS = ['january','february','march','april','may','june','july','august','september','october','november','december'];
-function isoDate(human: string): string | undefined {
+export function isoDate(human: string): string | undefined {
   const m = human.match(/^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/);
   if (m) {
     const month = MONTHS.indexOf(m[1].toLowerCase());
@@ -59,7 +59,7 @@ function isoDate(human: string): string | undefined {
  * `/customers` is in the registry. `/lp/food-retail` gets no trail, because
  * `/lp` is not a page — a breadcrumb naming a URL that 404s is worse than none.
  */
-async function breadcrumbs(route: Route, locale: Locale) {
+async function breadcrumbs(route: Route, locale: Locale, slug?: string) {
   const path = route.paths[locale]!;
   if (path === '/') return undefined;
 
@@ -76,14 +76,22 @@ async function breadcrumbs(route: Route, locale: Locale) {
   const items: Array<{ '@type': string; position: number; name: string; item: string }> = [];
   let position = 1;
   for (const r of [home, ...trail, route]) {
-    const t = await getTranslations({ locale, namespace: `${namespaceOf(r.id)}.meta` });
-    const item = urlFor(canonicalRoute(r), locale) ?? urlFor(r, locale);
-    if (!item) continue;
+    // The dynamic route's last crumb is one insight, not the registry entry:
+    // its URL has the slug filled in and its name is that insight's title.
+    // Without this every insight ended its trail on a literal
+    // /resources/insights/[slug], named after the index.
+    const leaf = r === route && slug !== undefined;
+    const t = await getTranslations({
+      locale,
+      namespace: leaf ? `${namespaceOf(r.id)}.items.${slug}.meta` : `${namespaceOf(r.id)}.meta`,
+    });
+    const url = urlFor(canonicalRoute(r), locale) ?? urlFor(r, locale);
+    if (!url) continue;
     items.push({
       '@type': 'ListItem',
       position: position++,
       name: r.id === 'index' ? 'Skillvue' : shortName(t('title')),
-      item,
+      item: leaf ? url.replace('[slug]', slug) : url,
     });
   }
   return { '@type': 'BreadcrumbList', itemListElement: items };
@@ -98,10 +106,13 @@ async function breadcrumbs(route: Route, locale: Locale) {
 export default async function JsonLd({
   routeId,
   contentId,
+  slug,
   locale,
 }: {
   routeId: string;
   contentId?: string;
+  /** The dynamic route's segment — `resources/insights/[slug]` only. */
+  slug?: string;
   locale: string;
 }) {
   const loc = locale as Locale;
@@ -186,7 +197,7 @@ export default async function JsonLd({
     });
   }
 
-  const crumbs = await breadcrumbs(route, loc);
+  const crumbs = await breadcrumbs(route, loc, slug);
   if (crumbs) graph.push(crumbs);
 
   return (

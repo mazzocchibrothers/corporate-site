@@ -52,9 +52,6 @@ export default function Mediaset2StoryPage() {
 
   return (
     <>
-      <>
-        <meta name="robots" content="noindex, nofollow" />
-      </>
       <Navbar />
       <main>
 

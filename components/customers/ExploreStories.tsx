@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, ChevronDown, ListFilter } from 'lucide-react';
-import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import Link from 'next/link';
 
 const allStories = [
   {
@@ -63,7 +63,6 @@ export default function ExploreStories() {
   const [activeUseCase, setActiveUseCase] = useState('all');
   const [industryOpen, setIndustryOpen] = useState(false);
   const [useCaseOpen, setUseCaseOpen] = useState(false);
-  const router = useRouter();
 
   const filtered = allStories.filter(s => {
     if (activeIndustry !== 'all' && s.industry !== activeIndustry) return false;
@@ -149,8 +148,9 @@ export default function ExploreStories() {
                 delay={i * 0.06}
                 key={s.id}
                 data-testid={`story-${s.id}`}
-                className="group cursor-pointer"
-                onClick={() => { router.push(href(`customers/${s.id}`, lang)); window.scrollTo(0, 0); }}
+                as={Link}
+                href={href(`customers/${s.id}`, lang)}
+                className="group block cursor-pointer"
               >
                 {/* Card visual area */}
                 <div className="relative rounded-2xl border border-white/[0.08] group-hover:border-white/[0.16] transition-all duration-500 overflow-hidden" style={{ aspectRatio: '16/9' }}>

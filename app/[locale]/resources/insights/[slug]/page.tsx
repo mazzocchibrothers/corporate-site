@@ -80,7 +80,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <NextIntlClientProvider locale={locale} messages={await messagesForRoute(ROUTE, locale)}>
-      <JsonLd routeId={ROUTE} locale={locale} />
+      <JsonLd routeId={ROUTE} slug={slug} locale={locale} />
       <Body slug={slug} />
     </NextIntlClientProvider>
   );

@@ -9,7 +9,8 @@ import Navbar from '@/components/landing/Navbar';
 import { ArrowRight, ArrowLeft, FileText, Download, BookOpen, Users, Brain, Zap, TrendingUp } from 'lucide-react';
 import { whitepapers } from '@/data/whitepapers';
 import { Button } from '@/components/ui/button';
-import { href } from '@/i18n/routes';
+import { href, localizePath } from '@/i18n/routes';
+import Link from 'next/link';
 import { trackLead } from '@/components/shared/track-lead';
 import { HeroCopy } from '@/components/ui/hero-copy';
 
@@ -299,7 +300,8 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                       delay={i * 0.1}
                       key={rw.slug}
                       className="group flex gap-6 items-center p-5 rounded-2xl border border-white/[0.05] hover:border-white/[0.12] hover:bg-white/[0.03] transition-all duration-500 cursor-pointer"
-                      onClick={() => { router.push(`/resources/insights/${rw.slug}`); window.scrollTo(0, 0); }}
+                      as={Link}
+                      href={localizePath(`/resources/insights/${rw.slug}`, lang)}
                     >
                       {rw.coverBg && (
                         <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0 relative">
