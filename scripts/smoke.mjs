@@ -86,6 +86,8 @@ try {
   const roi = await browser.newPage({ viewport: { width: 1280, height: 900 } });
   const submissions = [];
   let rejectSubmission = true;
+  // BotID's challenge script only exists on Vercel; without it the form's fetch waits forever.
+  await roi.route('**/a-4-a/c.js*', (route) => route.fulfill({ contentType: 'text/javascript', body: 'window.V_C.push({ b: 1 })' }));
   await roi.route('**/api/roi-report', async (route) => {
     submissions.push(route.request().postDataJSON());
     await route.fulfill({ status: rejectSubmission ? 400 : 200, contentType: 'application/json', body: '{}' });
