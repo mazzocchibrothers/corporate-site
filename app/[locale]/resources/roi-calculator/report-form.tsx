@@ -14,7 +14,7 @@ import styles from './calculator.module.css';
 // The EN contact form accepts a single name; the IT form requires a separate surname.
 const REPORT_ENDPOINT = '/api/roi-report';
 
-const INDUSTRIES = ['luxury', 'retail', 'banking', 'insurance', 'pharma', 'manufacturing', 'other'];
+const INDUSTRIES = ['luxury', 'retail', 'banking', 'insurance', 'pharma', 'manufacturing', 'energy', 'other'];
 
 export default function ReportForm({ onClose, module, scenario, values }: {
   onClose: () => void; module: Module; scenario: Scenario; values: number[];

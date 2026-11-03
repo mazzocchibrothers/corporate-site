@@ -166,7 +166,7 @@ try {
     assert.equal(await dialog.getByText(/Enter your details|Inserisci i tuoi dati/).count(), 0, 'confirmation hides the form instructions');
     const payload = submissions.at(-1);
     assert.ok(payload.fields.some((field) => field.name === 'company' && field.value === 'Test Company'));
-    assert.ok(payload.fields.some((field) => field.name === '0-2/industry' && field.value === 'retail'));
+    assert.ok(payload.fields.some((field) => field.name === '0-2/industry' && field.value === 'RETAIL'));
     assert.equal(payload.legalConsentOptions.consent.communications[0].subscriptionTypeId, 527104760);
     assert.equal(payload.legalConsentOptions.consent.communications[0].value, true);
     assert.equal(download.suggestedFilename(), 'skillvue-roi-report.pdf');
