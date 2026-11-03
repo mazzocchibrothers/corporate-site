@@ -38,10 +38,14 @@ const allStories = [
     bgImage: '/logos/customer-story-cover-mediaset.avif',
   },
   {
+    id: 'fidia-farmaceutici', company: 'Fidia Farmaceutici', industry: 'pharmaceutical', useCases: ['learningDevelopment'],
+    bgImage: '/logos/customer-story-cover-fidia-farmaceutici.avif',
+  },
+  {
     id: 'credem', company: 'Gruppo Credem', industry: 'financialServices', useCases: ['hiring'],
     bgImage: '/logos/customer-story-cover-credem.avif',
   },
-  // douglas, eataly, fidia-farmaceutici: pending approval, and noindex in
+  // douglas, eataly: not public, and noindex in
   // i18n/routes.json until it is given.
 ];
 

@@ -221,8 +221,7 @@
     "paths": {
       "en": "/customers/fidia-farmaceutici",
       "it": "/clienti/fidia-farmaceutici"
-    },
-    "noindex": true
+    }
   },
   {
     "id": "customers/ins-mercato",

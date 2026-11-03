@@ -19,6 +19,7 @@ const LINKS = {
   vivatech: 'https://www.linkedin.com/posts/skillvue_we-flew-to-france-for-vivatech-and-came-back-activity-7473749153379041280-cxBR?utm_source=share&utm_medium=member_desktop&rcm=ACoAACZSO2IBOJeEW6vWG4-WdHsN9EKvCSEp4DA',
   execTa: 'https://www.linkedin.com/feed/update/urn:li:activity:7480888533185093632',
   aiTest: '/lp/ai-competency-newsletter',
+  fidia: '/customers/fidia-farmaceutici',
 };
 // ────────────────────────────────────────────────────────────────────────────
 
@@ -111,15 +112,12 @@ export default async function JulyNewsletter() {
                 </div>
                 {/* The catalogue names a link by its key in LINKS; it used to be
                     rendered as the href itself, so every button here pointed at
-                    a relative "vivatech" or "aiTest". A section without a cta
-                    has no button: the Fidia story is not public yet. */}
-                {s.cta ? (
-                  <CtaLink
-                    label={s.cta.label}
-                    href={s.cta.external ? LINKS[s.cta.href] : localizePath(LINKS[s.cta.href], locale)}
-                    external={s.cta.external}
-                  />
-                ) : null}
+                    a relative "vivatech", "aiTest" or "fidia". */}
+                <CtaLink
+                  label={s.cta.label}
+                  href={s.cta.external ? LINKS[s.cta.href] : localizePath(LINKS[s.cta.href], locale)}
+                  external={s.cta.external}
+                />
               </Reveal>
             ))}
 
