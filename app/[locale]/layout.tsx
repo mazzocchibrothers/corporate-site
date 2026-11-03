@@ -47,6 +47,13 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+// And they are the only two. A path with a file extension skips proxy.ts, so
+// a missing /foo.txt arrives here with "foo.txt" as the locale. The notFound()
+// below then has no boundary above it — this is the root layout — and the
+// request answered 500. /llms.txt did, until it became a route. With this the
+// router turns an unknown locale away as a 404 before the layout renders.
+export const dynamicParams = false;
+
 export default async function LocaleLayout({
   children,
   params,
