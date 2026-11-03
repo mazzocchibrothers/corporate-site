@@ -148,6 +148,7 @@ try {
     assert.equal(submissions.length, before, 'unchecked consent prevents submission');
     assert.equal(await dialog.locator('input[name=consent]').evaluate((input) => input.validity.valueMissing), true);
     await dialog.locator('input[name=consent]').check();
+    await dialog.locator('input[name=marketing]').check();
     rejectSubmission = true;
     await dialog.locator('button[type=submit]').click();
     await dialog.getByRole('alert').waitFor({ state: 'visible' });

@@ -1,5 +1,5 @@
-export function reportSubmission({ name, email, company, industry, consent, consentText, processingText, pageUri, pageName }: {
-  name: string; email: string; company: string; industry: string; consent: boolean;
+export function reportSubmission({ name, email, company, industry, marketing, consent, consentText, processingText, pageUri, pageName }: {
+  name: string; email: string; company: string; industry: string; marketing: boolean; consent: boolean;
   consentText: string; processingText: string; pageUri: string; pageName: string;
 }) {
   if (!consent) throw new Error('Consent required');
@@ -15,7 +15,7 @@ export function reportSubmission({ name, email, company, industry, consent, cons
       consent: {
         consentToProcess: true,
         text: processingText,
-        communications: [{ value: true, subscriptionTypeId: 527104760, text: consentText }],
+        communications: [{ value: marketing, subscriptionTypeId: 527104760, text: consentText }],
       },
     },
   };
