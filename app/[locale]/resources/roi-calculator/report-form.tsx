@@ -12,7 +12,7 @@ import { BASE_URL } from '@/i18n/urls';
 import styles from './calculator.module.css';
 
 // The EN contact form accepts a single name; the IT form requires a separate surname.
-const REPORT_ENDPOINT = 'https://api.hsforms.com/submissions/v3/integration/submit/48438018/950f4b2b-ed50-4ef7-94f9-2b34c4b19ecc';
+const REPORT_ENDPOINT = 'https://api.hsforms.com/submissions/v3/integration/submit/48438018/0af34526-b132-4ada-b0b5-d4f0d9b380c2';
 
 const INDUSTRIES = ['luxury', 'retail', 'banking', 'insurance', 'pharma', 'manufacturing', 'other'];
 
@@ -46,19 +46,11 @@ export default function ReportForm({ onClose, module, scenario, values }: {
     if (status === 'pending') return;
     const data = new FormData(event.currentTarget);
     const industry = String(data.get('industry') ?? '');
-    const message = [
-      calculator('eyebrow'),
-      `${t('company')}: ${String(data.get('company')).trim()}`,
-      `${t('industry')}: ${industry ? t(`industries.${industry}`) : t('notSpecified')}`,
-      `${calculator('scenario')}: ${calculator(`scenarios.${scenario}`)}`,
-      `${calculator('useCase')}: ${calculator(`${module}.tab`)}`,
-      `${calculator(`${module}.input1`)}: ${values[0]}`,
-      `${calculator(`${module}.input2`)}: ${values[1]}`,
-    ].join('\n');
     setStatus('pending');
     try {
       const payload = reportSubmission({
-        name: String(data.get('name') ?? ''), email: String(data.get('email') ?? ''), message,
+        name: String(data.get('name') ?? ''), email: String(data.get('email') ?? ''),
+        company: String(data.get('company') ?? ''), industry,
         consent: data.get('consent') === 'on',
         consentText: t.markup('consent', { a: (text) => text }),
         processingText: t('processingConsent'),
@@ -127,8 +119,8 @@ export default function ReportForm({ onClose, module, scenario, values }: {
             <label htmlFor="roi-company">{t('company')}</label>
             <input id="roi-company" name="company" type="text" autoComplete="organization" required pattern=".*\S.*" maxLength={200} />
             <label htmlFor="roi-industry">{t('industry')}</label>
-            <select id="roi-industry" name="industry" defaultValue="">
-              <option value="">{t('selectIndustry')}</option>
+            <select id="roi-industry" name="industry" defaultValue="" required>
+              <option value="" disabled>{t('selectIndustry')}</option>
               {INDUSTRIES.map((industry) => <option key={industry} value={industry}>{t(`industries.${industry}`)}</option>)}
             </select>
             <label className={styles.consent}>
