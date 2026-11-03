@@ -37,7 +37,7 @@ export default function ScienceHero() {
                 <p className="type-body-lg hero-subtitle text-white/[0.65]">
                   {t('hero.body')}
                 </p>
-                <Button asChild variant="primary" mode="dark" className="self-start gap-8">
+                <Button asChild variant="primary" mode="dark" className="self-start">
                   <a href={href('book-meeting', lang)}>
                     <span>{t('hero.cta')}</span>
                     <ArrowRight aria-hidden="true" />

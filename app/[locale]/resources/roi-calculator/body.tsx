@@ -63,7 +63,7 @@ export default function ROICalculator() {
   }).format(value);
   const number = (value: number) => new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(value);
   const percent = (value: number) => new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 0 }).format(value);
-  const bookLink = <Button asChild mode="dark"><a href={href('book-meeting', locale)}>{t('bookDemo')}</a></Button>;
+  const bookLink = <Button asChild mode="dark"><a href={href('book-meeting', locale)}>{t('bookDemo')}<ArrowRight aria-hidden="true" /></a></Button>;
 
   return (
     <>
@@ -156,12 +156,7 @@ export default function ROICalculator() {
               <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90">{t.rich('closing', {
                 span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
               })}</h2>
-              <Button asChild variant="primary" mode="dark">
-                <a href={href('book-meeting', locale)}>
-                  <span>{t('bookDemo')}</span>
-                  <ArrowRight aria-hidden="true" />
-                </a>
-              </Button>
+              {bookLink}
             </Reveal>
           </div>
         </section>

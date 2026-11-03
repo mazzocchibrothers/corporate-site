@@ -24,7 +24,7 @@ export default function ScienceCTA() {
             <span className="type-eyebrow text-[#6B7DFF]">{t('cta.text')}</span>
             <h3 className="text-xl md:text-2xl font-semibold text-white/90 mt-3 md:mt-4 mb-2 md:mb-3">{t('cta.heading2')}</h3>
             <p className="type-body text-white/[0.65] mb-5 md:mb-8 max-w-md">{t('cta.body')}</p>
-            <Button asChild variant="primary" mode="dark" className="w-full md:w-auto max-w-sm justify-between">
+            <Button asChild variant="primary" mode="dark">
               <a href={href('book-meeting', lang)} data-testid="science-cta-demo">
                 <span>{t('cta.cta')}</span>
                 <ArrowRight aria-hidden="true" />

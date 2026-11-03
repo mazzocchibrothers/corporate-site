@@ -134,7 +134,7 @@ function ReadMore() {
   return (
     <a
       href={href('product/skillvue-map', locale)}
-      className="type-button group inline-flex h-[46px] shrink-0 items-center gap-2.5 whitespace-nowrap rounded-full border border-[#e5e7eb] bg-white pl-6 pr-[22px] font-medium text-[#121212] transition-colors hover:bg-[#f7f7f7]"
+      className="type-button group inline-flex h-12 shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-[#e5e7eb] bg-white px-6 text-[#121212] transition-colors hover:bg-[#f7f7f7]"
     >
       {t('map.readMore')}
       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.8} aria-hidden="true" />
@@ -165,8 +165,11 @@ export default function SkillvueMapPage() {
                   <p className="type-body-lg hero-subtitle mt-[26px] text-[#4B4B4B] text-balance">{t('hero.body')}</p>
                 </HeroCopy>
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-                  <Button asChild variant="primary" mode="light" icon={null}>
-                    <a href={href('book-meeting', locale)}>{t('hero.cta')}</a>
+                  <Button asChild variant="primary" mode="light">
+                    <a href={href('book-meeting', locale)}>
+                      {t('hero.cta')}
+                      <ArrowRight aria-hidden="true" />
+                    </a>
                   </Button>
                   <a href={href('science', locale)} className="type-link group flex items-center gap-3 font-medium text-[#4B4B4B] hover:text-[#121212] transition-colors">
                     {t('hero.science')}
