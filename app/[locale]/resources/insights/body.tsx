@@ -45,6 +45,7 @@ export default function InsightsPage() {
       key={w.slug}
       as={Link}
       href={localizePath(`/resources/insights/${w.slug}`, lang)}
+      prefetch={false}
       className="group cursor-pointer flex flex-col h-full bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden"
     >
       <div className="aspect-[16/9] overflow-hidden shrink-0">

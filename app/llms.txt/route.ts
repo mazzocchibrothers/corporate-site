@@ -32,18 +32,27 @@ const clean = (title: string) => title.replace(/\s*[|\-–—]\s*Skillvue\s*$/, 
 // The order a reader needs them in: what it is, what it does, who uses it,
 // what it has published, then the company. The headings are for the model
 // reading the file, which is English-only, as llms.txt is.
-const SECTIONS: Array<{ heading: string; prefix: string[] }> = [
+//
+// The sections only order the file; they do not decide what is in it.
+// `Optional` (the llmstxt.org name for "skippable") takes every indexable route
+// no section above claims — the privacy notices today, and any new top-level
+// page until it is given a section — so a page added to the registry cannot
+// silently go missing from here.
+const SECTIONS: Array<{ heading: string; prefix: string[] | 'rest' }> = [
   { heading: 'Product', prefix: ['product', 'science'] },
   { heading: 'Solutions', prefix: ['solutions/'] },
   { heading: 'Customer stories', prefix: ['customers', 'customers/'] },
   { heading: 'Research and insights', prefix: ['resources/insights', 'roi-calculator'] },
   { heading: 'Articles and newsletters', prefix: ['blog'] },
   { heading: 'Company', prefix: ['about', 'careers', 'resources/press', 'become-a-partner', 'book-meeting'] },
-  { heading: 'Optional', prefix: ['privacy-policy'] },
+  { heading: 'Optional', prefix: 'rest' },
 ];
 
-const matches = (route: Route, prefix: string[]) =>
-  prefix.some((p) => route.id === p || route.id.startsWith(p.endsWith('/') ? p : `${p}/`));
+const matches = (route: Route, prefix: string[] | 'rest') =>
+  // The homepage is the file's header, not a line in it.
+  prefix === 'rest'
+    ? route.id !== 'index'
+    : prefix.some((p) => route.id === p || route.id.startsWith(p.endsWith('/') ? p : `${p}/`));
 
 function linesFor(route: Route): string[] {
   // Indexable, English, and the URL itself rather than a cut of another one —

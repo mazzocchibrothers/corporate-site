@@ -150,6 +150,7 @@ export default function ExploreStories() {
                 data-testid={`story-${s.id}`}
                 as={Link}
                 href={href(`customers/${s.id}`, lang)}
+                prefetch={false}
                 className="group block cursor-pointer"
               >
                 {/* Card visual area */}

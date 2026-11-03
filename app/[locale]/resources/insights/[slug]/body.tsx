@@ -302,6 +302,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                       className="group flex gap-6 items-center p-5 rounded-2xl border border-white/[0.05] hover:border-white/[0.12] hover:bg-white/[0.03] transition-all duration-500 cursor-pointer"
                       as={Link}
                       href={localizePath(`/resources/insights/${rw.slug}`, lang)}
+                      prefetch={false}
                     >
                       {rw.coverBg && (
                         <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0 relative">

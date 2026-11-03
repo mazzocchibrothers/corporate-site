@@ -12,7 +12,7 @@ import type { MetadataRoute } from 'next';
 import { routes } from '@/i18n/routes';
 import { alternatesFor, localesOf, urlFor } from '@/i18n/urls';
 import { whitepapers } from '@/data/whitepapers';
-import { isoDate } from '@/i18n/json-ld';
+import { isoDate } from '@/i18n/dates';
 import en from '@/messages/en.json';
 
 // ponytail: one route has a dynamic segment, so it gets one expansion rather
