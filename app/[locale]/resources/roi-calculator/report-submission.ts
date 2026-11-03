@@ -1,5 +1,5 @@
-export function reportSubmission({ name, email, message, consent, consentText, processingText, pageUri, pageName }: {
-  name: string; email: string; message: string; consent: boolean;
+export function reportSubmission({ name, email, company, industry, consent, consentText, processingText, pageUri, pageName }: {
+  name: string; email: string; company: string; industry: string; consent: boolean;
   consentText: string; processingText: string; pageUri: string; pageName: string;
 }) {
   if (!consent) throw new Error('Consent required');
@@ -7,8 +7,8 @@ export function reportSubmission({ name, email, message, consent, consentText, p
     fields: [
       { name: 'firstname', value: name.trim() },
       { name: 'email', value: email.trim() },
-      // shortcut: company, sector and ROI inputs use the existing message field until a dedicated ROI form is configured.
-      { name: 'message', value: message },
+      { name: 'company', value: company.trim() },
+      { name: '0-2/industry', value: industry },
     ],
     context: { pageUri, pageName },
     legalConsentOptions: {
