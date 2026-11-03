@@ -6,19 +6,20 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import Link from 'next/link';
 
 const stories = [
   {
     id: 'carrefour',
-    path: '/customers/carrefour',
+    route: 'customers/carrefour',
   },
   {
     id: 'insMercato',
-    path: '/customers/ins-mercato',
+    route: 'customers/ins-mercato',
   },
   {
     id: 'subdued',
-    path: '/customers/subdued',
+    route: 'customers/subdued',
   },
 ];
 
@@ -46,7 +47,9 @@ export default function CustomerStoriesSection() {
               key={s.id}
               data-testid={`story-${s.id}`}
               className="group rounded-2xl border border-white/[0.07] bg-white/[0.04] hover:bg-white/[0.06] hover:border-white/[0.14] backdrop-blur-sm p-5 md:p-10 transition-all duration-500 cursor-pointer flex flex-col justify-between gap-5 md:gap-8"
-              onClick={() => { router.push(s.path); window.scrollTo(0, 0); }}
+              as={Link}
+              href={href(s.route, lang)}
+              prefetch={false}
             >
               {/* Company + industry */}
               <div>

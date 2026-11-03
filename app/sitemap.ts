@@ -12,6 +12,8 @@ import type { MetadataRoute } from 'next';
 import { routes } from '@/i18n/routes';
 import { alternatesFor, localesOf, urlFor } from '@/i18n/urls';
 import { whitepapers } from '@/data/whitepapers';
+import { isoDate } from '@/i18n/dates';
+import en from '@/messages/en.json';
 
 // ponytail: one route has a dynamic segment, so it gets one expansion rather
 // than a generic mechanism. A second dynamic route is when that changes.
@@ -19,15 +21,20 @@ const DYNAMIC: Record<string, string[]> = {
   '/resources/insights/[slug]': whitepapers.map((w) => w.slug),
 };
 
-// An insight carries a real publishDate; every other route has no stored
-// change date at all. For those, lastModified is the day the canonical host
-// moved to www.skillvue.ai (#202), which changed every one of their URLs —
-// not the build date, which would re-stamp all of them on every future
-// deploy regardless of whether that page actually changed.
-const PUBLISH_DATE: Record<string, Date> = Object.fromEntries(
-  whitepapers.map((w) => [w.slug, new Date(w.publishDate)]),
+// lastmod is only worth sending when it is true. An insight carries a real
+// publishDate and a blog post its date in the catalogue; every other route has
+// no stored change date, so it sends none. It used to send the day the host
+// moved to www (#202) — 86 of 108 URLs on one date, which is the pattern that
+// teaches Google to ignore the field for the whole site, real dates included.
+const PUBLISH_DATE: Record<string, string> = Object.fromEntries(
+  whitepapers.map((w) => [w.slug, w.publishDate]),
 );
-const HOST_MIGRATION_DATE = new Date('2026-09-15');
+const BLOG_DATE: Record<string, string> = Object.fromEntries(
+  Object.entries(en.blog.articles as Record<string, { date?: string }>).flatMap(([id, a]) => {
+    const iso = a.date ? isoDate(a.date) : undefined;
+    return iso ? [[`blog/${id}`, iso]] : [];
+  }),
+);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
@@ -55,12 +62,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     for (const slug of slugs) {
       const fill = (url: string) => (slug ? url.replace('[slug]', slug) : url);
-      const lastModified = slug ? PUBLISH_DATE[slug] : HOST_MIGRATION_DATE;
+      const lastModified = slug ? PUBLISH_DATE[slug] : BLOG_DATE[route.id];
 
       for (const locale of localesOf(route)) {
         entries.push({
           url: fill(urlFor(route, locale)!),
-          lastModified,
+          ...(lastModified ? { lastModified } : {}),
           alternates: {
             languages: Object.fromEntries(
               Object.entries(languages).map(([k, v]) => [k, fill(v)]),
