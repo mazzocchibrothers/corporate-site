@@ -6,7 +6,7 @@ export const onepagers = [
   {
     slug: 'luxury-retail-customer-story',
     published: true,
-    publishDate: '[TODO: the real publish date, set when this merges]',
+    publishDate: '2026-11-04',
     languageAvailability: ['en'],
     industry: ['Luxury Retail'],
     topic: ['Customer Story'],
