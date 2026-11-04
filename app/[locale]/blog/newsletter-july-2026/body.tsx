@@ -64,6 +64,8 @@ function CtaLink({ label, href, external }) {
 export default async function JulyNewsletter() {
   const locale = await getLocale();
   const t = await getTranslations('blog.newsletter-july-2026');
+  // As in the other newsletters: localizePath leaves an external URL as it is.
+  const localize = (h) => localizePath(h, locale);
 
   return (
     <>
@@ -115,7 +117,7 @@ export default async function JulyNewsletter() {
                     a relative "vivatech", "aiTest" or "fidia". */}
                 <CtaLink
                   label={s.cta.label}
-                  href={s.cta.external ? LINKS[s.cta.href] : localizePath(LINKS[s.cta.href], locale)}
+                  href={localize(LINKS[s.cta.href])}
                   external={s.cta.external}
                 />
               </Reveal>
