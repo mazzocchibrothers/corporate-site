@@ -47,6 +47,15 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+// And they are the only two. A path with a file extension skips proxy.ts, so
+// a missing /foo.txt arrives here with "foo.txt" as the locale. The notFound()
+// in the layout then has no boundary above it — this is the root layout — and the
+// request answered 500. /llms.txt did, until it became a route. With this the
+// router turns an unknown locale away as a 404 before the layout renders.
+// It is inherited: a dynamic segment below this one 404s on any param its own
+// generateStaticParams does not list. resources/insights/[slug] lists them all.
+export const dynamicParams = false;
+
 export default async function LocaleLayout({
   children,
   params,
@@ -58,6 +67,9 @@ export default async function LocaleLayout({
 
   // An unknown locale is a 404, not a silent fallback to English: `/fr/about`
   // rendering the English page would let a broken link look like a working one.
+  // dynamicParams above is what turns one away now, before this runs; the check
+  // stays because it narrows `locale` for what follows, and it is the fallback
+  // if dynamicParams is ever removed (then this notFound() is a 500 again).
   if (!hasLocale(routing.locales, locale)) notFound();
 
   // Enables static rendering — without it every descendant becomes dynamic.

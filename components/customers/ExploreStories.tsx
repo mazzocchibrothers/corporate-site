@@ -45,7 +45,9 @@ const allStories = [
     id: 'credem', company: 'Gruppo Credem', industry: 'financialServices', useCases: ['hiring'],
     bgImage: '/logos/customer-story-cover-credem.avif',
   },
-  // douglas, eataly
+  // douglas, eataly: not public, so off this list and noindex in
+  // i18n/routes.json (eataly-2 and eataly-3 too). Publishing one means adding
+  // it back here and removing every one of those noindex flags.
 ];
 
 // Still derived from the stories, so a new story cannot arrive without its

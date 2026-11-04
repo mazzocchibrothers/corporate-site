@@ -610,7 +610,6 @@
       "tag": "Performance"
     },
     "newsletter-july-2026": {
-      "onClick": "/book-meeting",
       "tag": "Newsletter",
       "date": "July 2026",
       "readTime": "4 min read",

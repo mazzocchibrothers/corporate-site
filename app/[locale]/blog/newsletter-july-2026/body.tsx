@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Clock, ImageIcon } from 'lucide-react';
-import { href } from '@/i18n/routes';
+import { href, localizePath } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
 
 // ─── Fill these in when the assets/links are ready ──────────────────────────
@@ -64,6 +64,8 @@ function CtaLink({ label, href, external }) {
 export default async function JulyNewsletter() {
   const locale = await getLocale();
   const t = await getTranslations('blog.newsletter-july-2026');
+  // As in the other newsletters: localizePath leaves an external URL as it is.
+  const localize = (h) => localizePath(h, locale);
 
   return (
     <>
@@ -110,7 +112,14 @@ export default async function JulyNewsletter() {
                 <div className="space-y-5">
                   {s.body.map((p, j) => <p key={j} className="type-body text-[#121212]/[0.7]">{renderRich(p)}</p>)}
                 </div>
-                <CtaLink label={s.cta.label} href={s.cta.href} external={s.cta.external} />
+                {/* The catalogue names a link by its key in LINKS; it used to be
+                    rendered as the href itself, so every button here pointed at
+                    a relative "vivatech", "aiTest" or "fidia". */}
+                <CtaLink
+                  label={s.cta.label}
+                  href={localize(LINKS[s.cta.href])}
+                  external={s.cta.external}
+                />
               </Reveal>
             ))}
 
@@ -134,7 +143,7 @@ export default async function JulyNewsletter() {
               </h2>
               <p className="max-w-[880px] type-body text-white/[0.4] mb-12 mx-auto">{t('finalBody')}</p>
               <Button asChild variant="primary" mode="dark">
-                <a href={t('onClick')}>{t('finalButton')}<ArrowRight aria-hidden /></a>
+                <a href={href('book-meeting', locale)}>{t('finalButton')}<ArrowRight aria-hidden /></a>
               </Button>
             </Reveal>
           </div>

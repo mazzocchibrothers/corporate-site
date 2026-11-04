@@ -172,14 +172,16 @@
     "paths": {
       "en": "/customers/douglas",
       "it": "/clienti/douglas"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "customers/eataly",
     "paths": {
       "en": "/customers/eataly",
       "it": "/clienti/eataly"
-    }
+    },
+    "noindex": true
   },
   {
     "id": "customers/eataly-2",
@@ -187,7 +189,8 @@
       "en": "/customers/eataly-2",
       "it": "/clienti/eataly-2"
     },
-    "canonicalOf": "customers/eataly"
+    "canonicalOf": "customers/eataly",
+    "noindex": true
   },
   {
     "id": "customers/eataly-3",
@@ -195,7 +198,8 @@
       "en": "/customers/eataly-3",
       "it": "/clienti/eataly-3"
     },
-    "canonicalOf": "customers/eataly"
+    "canonicalOf": "customers/eataly",
+    "noindex": true
   },
   {
     "id": "customers/europ-assistance",
@@ -217,8 +221,7 @@
     "paths": {
       "en": "/customers/fidia-farmaceutici",
       "it": "/clienti/fidia-farmaceutici"
-    },
-    "noindex": true
+    }
   },
   {
     "id": "customers/ins-mercato",
