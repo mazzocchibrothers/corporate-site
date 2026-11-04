@@ -9,7 +9,7 @@ export const onepagers = [
     publishDate: '2026-11-04',
     languageAvailability: ['en'],
     industry: ['Luxury Retail'],
-    topic: ['Customer Story'],
+    topic: ['Case Study'],
     coverImage: '/covers/onepager-luxury-retail-customer-story.avif',
     coverBg: '/covers/onepager-luxury-retail-customer-story.avif',
     fileUrlEN: '/skillvue-one-pager-luxury-retail-customer-story.pdf',
