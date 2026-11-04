@@ -85,6 +85,17 @@ const nextConfig: NextConfig = {
     const oneYearImmutable = 'public, max-age=31536000, immutable';
     const thirtyDays = 'public, max-age=2592000, stale-while-revalidate=86400';
     return [
+      // No CSP beyond frame-ancestors: GTM injects tags we cannot enumerate from
+      // here, so a script-src allowlist would break them. This stops the site
+      // being framed, and nothing else.
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Content-Security-Policy', value: "frame-ancestors 'self'" },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+        ],
+      },
       { source: '/fonts/:path*', headers: [{ key: 'Cache-Control', value: oneYearImmutable }] },
       { source: '/logos/:path*', headers: [{ key: 'Cache-Control', value: thirtyDays }] },
       { source: '/assets/:path*', headers: [{ key: 'Cache-Control', value: thirtyDays }] },
