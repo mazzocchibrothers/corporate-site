@@ -8778,6 +8778,10 @@
       "onePagersBody": "Quick, shareable overviews you can open or download directly — no form required.",
       "insightsHeading": "Research",
       "onePagers": {
+        "luxury-retail-customer-story": {
+          "title": "How a global luxury brand scaled hiring with skills data",
+          "shortDesc": "From interns to senior client advisors, every candidate is now assessed on the skills their role needs, including storytelling."
+        },
         "luxury": {
           "title": "Skillvue for Luxury Fashion",
           "shortDesc": "Make every talent decision as excellent as your brand: protecting client relationships, craft knowledge and advisor performance with objective skills data."

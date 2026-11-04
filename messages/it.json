@@ -8778,6 +8778,10 @@
       "onePagersBody": "Panoramiche rapide e condivisibili, da aprire o scaricare subito — nessun modulo richiesto.",
       "insightsHeading": "Ricerche",
       "onePagers": {
+        "luxury-retail-customer-story": {
+          "title": "Come un brand globale del lusso ha scalato le assunzioni con i dati sulle competenze",
+          "shortDesc": "Dagli stagisti ai senior client advisor, ogni candidato viene ora valutato sulle competenze richieste dal proprio ruolo, storytelling incluso."
+        },
         "luxury": {
           "title": "Skillvue per il Lusso",
           "shortDesc": "Rendi ogni decisione sul talento eccellente quanto il tuo brand: proteggi le relazioni con i clienti, il know-how artigianale e le performance degli advisor con dati oggettivi sulle competenze."

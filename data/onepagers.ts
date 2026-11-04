@@ -4,6 +4,17 @@
 // no HubSpot gate.
 export const onepagers = [
   {
+    slug: 'luxury-retail-customer-story',
+    published: true,
+    publishDate: '2026-11-04',
+    languageAvailability: ['en'],
+    industry: ['Luxury Retail'],
+    topic: ['Customer Story'],
+    coverImage: '/covers/onepager-luxury-retail-customer-story.avif',
+    coverBg: '/covers/onepager-luxury-retail-customer-story.avif',
+    fileUrlEN: '/skillvue-one-pager-luxury-retail-customer-story.pdf',
+  },
+  {
     slug: 'luxury',
     published: true,
     publishDate: '2026-08-04',
