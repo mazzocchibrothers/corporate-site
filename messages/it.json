@@ -8779,6 +8779,10 @@
       "onePagersBody": "Panoramiche rapide e condivisibili, da aprire o scaricare subito — nessun modulo richiesto.",
       "insightsHeading": "Ricerche",
       "onePagers": {
+        "luxury-retail-customer-story": {
+          "title": "[TODO: titolo definitivo della card, arriva con il PDF finale]",
+          "shortDesc": "[TODO: descrizione breve definitiva, arriva con il PDF finale]"
+        },
         "luxury": {
           "title": "Skillvue per il Lusso",
           "shortDesc": "Rendi ogni decisione sul talento eccellente quanto il tuo brand: proteggi le relazioni con i clienti, il know-how artigianale e le performance degli advisor con dati oggettivi sulle competenze."
