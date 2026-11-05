@@ -511,6 +511,13 @@
     }
   },
   {
+    "id": "trust",
+    "paths": {
+      "en": "/trust",
+      "it": "/trust"
+    }
+  },
+  {
     "id": "solutions/internal-mobility",
     "paths": {
       "en": "/solutions/internal-mobility",

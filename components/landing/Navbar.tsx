@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   ChevronDown, Menu, X, ArrowRight,
-  AppWindow, Atom, UserSearch, UserCog, BookOpenCheck, Move, FolderKanban,
+  AppWindow, Atom, ShieldCheck, UserSearch, UserCog, BookOpenCheck, Move, FolderKanban,
   SquarePlay, UserGroup, Lightbulb, Rows3, Newspaper, Building2, Briefcase, Handshake, Calculator,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
@@ -20,7 +20,7 @@ import { Button } from '@/components/ui/button';
 // `columns: 2` lays a dropdown out as a grid filled column by column, so the
 // first half of `items` is the left column and the rest the right.
 const navLinks: { id: string; route?: string; items: string[] | null; columns?: 2 }[] = [
-  { id: 'platform', items: ['product', 'science'] },
+  { id: 'platform', items: ['product', 'science', 'trust'] },
   {
     id: 'solutions',
     items: [
@@ -43,6 +43,7 @@ const navLinks: { id: string; route?: string; items: string[] | null; columns?: 
 const ICONS: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
   product: AppWindow,
   science: Atom,
+  trust: ShieldCheck,
   talentAcquisition: UserSearch,
   performanceManagement: UserCog,
   learningDevelopment: BookOpenCheck,

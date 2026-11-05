@@ -74,8 +74,19 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 //   #e7e7e8
 //             The active tab pill above the Skillvue Map screens on /product,
 //             which sit on the white page with no card behind them.
+//   TRUST     The /trust page (app/[locale]/trust, components/trust,
+//             `.trust-*` in globals.css), drawn from its design canvas: the
+//             light greys of its cards, borders and connectors, the brand-blue
+//             tints of its pills and icon tiles, the orange tints of the
+//             customer-side cards, and the greens of its "signed" and
+//             "available" marks. Listed on their own line below.
+const TRUST =
+  '#127a4a #139559 #322abd #3b3de6 #6e6e6e #8a8a8a #8a8a94 #8c9fff #a4a4a4 #a4a4ae #a9a9c2 #bdbdd0 ' +
+  '#c2481a #c6e9d5 #cbcbcb #d4d7fb #d9d9df #e3e3ea #e3e4fd #e5e5fe #e6e6ec #e8f6ee #ea4d0f #ececf1 ' +
+  '#ecedfe #ededf1 #eeeefe #f0f0f3 #f1f1f4 #f26a2e #f2f2f2 #f3f4f5 #f4f4f6 #ffd0a6 #ffd9b8 #ffebd9 #fff7ee';
 const ALLOWED = new Set(
   (
+    TRUST + ' ' +
     '#14181f #d9daff #f6f7ff #e1e2ff #6b7280 #eef0f2 #555555 #777777 #444444 #f1f2ff #ececf8 #f6b24a #f4617e #8b5cf6 ' +
     '#000000 #010102 #030101 #040404 #047857 #050508 #059669 #064e3b #08080c #0b3b28 #0d0d0d #0d0d1f ' +
     '#0e0e0e #10b981 #111 #121212 #141516 #16163a #161616 #16a34a #1a1a1a #1a1a2e #1a1a3f #1e1e1e #201436 #222 ' +

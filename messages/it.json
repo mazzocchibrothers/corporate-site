@@ -11,6 +11,7 @@
       "links": {
         "product": "Prodotto",
         "science": "Scienza",
+        "trust": "Trust",
         "talentAcquisition": "Selezione",
         "performanceManagement": "Performance Management",
         "learningDevelopment": "Learning & Development",
@@ -39,6 +40,7 @@
       "links": {
         "product": "Prodotto",
         "science": "Scienza",
+        "trust": "Trust",
         "talentAcquisition": "Hiring",
         "performanceManagement": "Performance Management",
         "learningDevelopment": "Learning & Development",
@@ -8946,6 +8948,344 @@
     "meta": {
       "title": "La Scienza di Skillvue | Psicometria e AI per il Talent",
       "description": "Skillvue è costruita sulla psicologia I/O e la psicometria. Ogni valutazione è accurata, affidabile e progettata per resistere al vaglio scientifico."
+    }
+  },
+  "trust": {
+    "meta": {
+      "title": "Skillvue Trust | AI responsabile, dati in UE e sicurezza certificata",
+      "description": "Decidono le tue persone, i dati restano in UE e la sicurezza è certificata ISO/IEC 27001. Tutto ciò che serve a HR, Legale, IT, Acquisti e DPO per approvare Skillvue."
+    },
+    "cta": "Prenota una demo",
+    "hero": {
+      "title": "Decisioni HR che puoi difendere. Un’AI che ogni team può approvare.",
+      "subtitle": "Decidono le tue persone. I dati restano in UE. La sicurezza è certificata. Tutto ciò che serve a chi decide, in un unico Trust Pack."
+    },
+    "deal": {
+      "label": "Accordo",
+      "title": "Contratto Skillvue",
+      "signedOff": "Approvato",
+      "teams": {
+        "hr": {
+          "name": "HR",
+          "desc": "Equa, spiegabile, guidata dalle persone"
+        },
+        "legal": {
+          "name": "Legale",
+          "desc": "AI Act e termini contrattuali"
+        },
+        "it": {
+          "name": "IT",
+          "desc": "Sicurezza e SSO"
+        },
+        "dpo": {
+          "name": "DPO",
+          "desc": "GDPR e residenza dei dati in UE"
+        },
+        "procurement": {
+          "name": "Acquisti",
+          "desc": "Rischio fornitore e condizioni"
+        }
+      }
+    },
+    "ai": {
+      "title": "La nostra AI misura.<br></br>Le tue persone decidono.",
+      "body": "Le decisioni di assunzione e promozione cambiano la vita delle persone. Per questo Skillvue non le prende mai. La nostra AI mappa le competenze, le misura con metodo scientifico e spiega ogni risultato. La decisione finale spetta alle tue persone.",
+      "cards": {
+        "human": {
+          "title": "Sempre una decisione umana.",
+          "body": "Skillvue non prende decisioni automatizzate su assunzioni, promozioni o mobilità. La decisione finale spetta sempre alle tue persone.",
+          "tag": "GDPR art. 22 · AI Act art. 14"
+        },
+        "explained": {
+          "title": "Ogni punteggio è spiegato.",
+          "body": "Ogni risultato è accompagnato da una motivazione scritta, così le tue persone possono contestarlo, modificarlo e spiegarlo ai candidati in un linguaggio semplice.",
+          "tag": "AI Act art. 13 · Trasparenza"
+        },
+        "classified": {
+          "title": "Classificati e valutati secondo l’AI Act europeo.",
+          "body": "Siamo un sistema ad alto rischio ai sensi dell’Allegato III, punto 4 (occupazione), come prevede la legge. Siamo il Fornitore, abbiamo completato la valutazione di conformità secondo l’Allegato VI e le nostre Dichiarazioni AI Act firmate sono disponibili su richiesta.",
+          "tag": "Reg. 2024/1689 · Allegato III pt. 4 · Allegato VI"
+        }
+      },
+      "auditLog": {
+        "label": "Registro audit",
+        "candidate": "Candidato A-2048",
+        "generated": "Punteggi generati",
+        "suggestion": "4.2 · Avanzamento suggerito",
+        "recorded": "Decisione registrata",
+        "evaluator": "Giulia Ferri",
+        "role": "Valutatrice",
+        "placeholder": "Avanza, sospendi o scarta",
+        "pending": "In attesa",
+        "decision": "Avanza",
+        "signed": "firmato · G. Ferri"
+      },
+      "score": {
+        "skill": "Problem solving",
+        "justification": "Motivazione",
+        "text": "Ha scomposto il caso in tre passaggi e spiegato perché la seconda opzione comportava meno rischi. Più debole nel quantificare il compromesso, come il candidato ha riconosciuto quando gli è stato chiesto di",
+        "override": "Modifica punteggio"
+      },
+      "declaration": {
+        "regulation": "Reg. (UE) 2024/1689",
+        "title": "Dichiarazione di conformità all’AI Act UE",
+        "rows": [
+          {
+            "label": "Classificazione",
+            "value": "Sistema di AI ad alto rischio"
+          },
+          {
+            "label": "Allegato III",
+            "value": "Punto 4, occupazione"
+          },
+          {
+            "label": "Ruolo",
+            "value": "Fornitore"
+          },
+          {
+            "label": "Valutazione",
+            "value": "Allegato VI, controllo interno"
+          }
+        ],
+        "signatory": "Rappresentante autorizzato"
+      },
+      "prohibited": [
+        "Nessuna pratica vietata.",
+        "Valutiamo solo le parole. Nient’altro che possa introdurre bias.",
+        "Nessuna categorizzazione biometrica."
+      ],
+      "prohibitedRef": "AI Act art. 5"
+    },
+    "data": {
+      "title": "I tuoi dati. Le tue regole. Solo in UE.",
+      "body": "Tu sei il Titolare del trattamento dei dati. Noi siamo il tuo Responsabile. Agiamo solo sulla base delle tue istruzioni documentate e non trattiamo mai i tuoi dati come se fossero nostri.",
+      "record": {
+        "label": "Scheda candidato",
+        "source": "La tua piattaforma",
+        "sampleName": "Candidato di esempio"
+      },
+      "model": {
+        "label": "Inviato al modello",
+        "name": "Skill-LLM",
+        "tokenName": "CANDIDATO_7F3A",
+        "tokenEmail": "EMAIL_91C2",
+        "tokenPhone": "TELEFONO_04BE"
+      },
+      "fields": {
+        "name": "Nome",
+        "email": "Email",
+        "phone": "Telefono",
+        "answer": "Risposta"
+      },
+      "answer": "“Dividerei il problema in tre passaggi, poi confronterei…”",
+      "replaced": "Identificativi sostituiti",
+      "items": {
+        "processor": {
+          "title": "Responsabile, per contratto.",
+          "body": "Ogni contratto include un accordo sul trattamento dei dati (DPA) ai sensi dell’art. 28 GDPR. Le tue istruzioni, le tue finalità.",
+          "tag": "GDPR art. 28 · DPA"
+        },
+        "eu": {
+          "title": "Restano in UE.",
+          "body": "Tutti i dati personali sono ospitati su AWS solo in regione UE (Milano, con Francoforte e Dublino come fallback). I dati non lasciano mai l’UE.",
+          "tag": "Region AWS in UE"
+        },
+        "training": {
+          "title": "Mai usati per addestrare il nostro modello.",
+          "body": "I nostri LLM sono addestrati su un dataset proprietario, non sui dati dei tuoi candidati o dipendenti.",
+          "tag": "Dati di addestramento proprietari"
+        },
+        "identifiers": {
+          "title": "Identificativi rimossi prima che l’AI li veda.",
+          "body": "Nomi, email e numeri di telefono vengono pseudonimizzati prima che qualsiasi prompt raggiunga il modello.",
+          "tag": "Pseudonimizzazione"
+        }
+      },
+      "templates": {
+        "title": "Modelli pronti di DPIA e informativa.",
+        "body": "Imposta la tua valutazione d’impatto sulla protezione dei dati (DPIA) e le informative per i candidati partendo dai nostri modelli, non da una pagina bianca.",
+        "tag": "DPIA · Informativa"
+      }
+    },
+    "security": {
+      "title": "Una sicurezza verificata, non promessa.",
+      "body": "Tutta la nostra piattaforma opera all’interno di un Sistema di Gestione della Sicurezza delle Informazioni certificato ISO/IEC 27001 e verificato ogni anno da auditor indipendenti.",
+      "isms": {
+        "title": "ISMS certificato.",
+        "body": "ISO/IEC 27001:2022, certificato ITA-10158-ISMS, rilasciato da Scandinavian Certification AS. Esteso al cloud con ISO/IEC 27017 e ISO/IEC 27018.",
+        "certificate": "Certificato",
+        "certificateId": "ITA-10158-ISMS",
+        "issued": "Rilasciato",
+        "issuedOn": "28 lug 2025",
+        "validTo": "Valido fino al",
+        "validUntil": "28 lug 2028"
+      },
+      "cards": {
+        "encryption": {
+          "title": "Crittografia ovunque.",
+          "body": "AES-256 a riposo, TLS in transito, chiavi gestite in AWS KMS con chiavi gestite dal cliente. SSO enterprise tramite SAML 2.0.",
+          "tag": "AES-256 · TLS · AWS KMS · SAML 2.0"
+        },
+        "monitoring": {
+          "title": "Monitorata 24/7.",
+          "body": "Rilevamento continuo delle minacce e logging su AWS (GuardDuty, Security Hub, CloudTrail, WAF, Shield).",
+          "tag": "Monitoraggio continuo"
+        },
+        "pentest": {
+          "title": "Attaccata di proposito.",
+          "body": "Penetration test annuali eseguiti da una terza parte indipendente, con metodologie OWASP e OSSTMM.",
+          "tag": "OWASP · OSSTMM"
+        }
+      },
+      "extras": [
+        "Business continuity documentata.",
+        "Piano di disaster recovery.",
+        "Assicurazione per responsabilità professionale e privacy."
+      ]
+    },
+    "roles": {
+      "title": "Ruoli chiari. Nessuna zona grigia.",
+      "body": "Quando i ruoli si confondono, nascono i rischi. Ecco esattamente chi risponde di cosa.",
+      "vendorLabel": "Fornitore",
+      "customer": "Tu",
+      "customerLabel": "Cliente",
+      "rows": {
+        "aiAct": {
+          "law": "AI Act UE",
+          "ours": "Fornitore",
+          "oursText": "Sviluppa rispettando requisiti di alto rischio, documenta il sistema, fornisce strumenti di supervisione",
+          "yours": "Deployer",
+          "yoursText": "Lo utilizza secondo le istruzioni, forma le tue persone, assicura la supervisione umana"
+        },
+        "gdpr": {
+          "law": "GDPR",
+          "ours": "Responsabile",
+          "oursText": "Tratta i dati secondo le tue istruzioni, li protegge e ti assiste nelle richieste di candidati e dipendenti e nella gestione dei data breach.",
+          "yours": "Titolare",
+          "yoursText": "Decide finalità e base giuridica, informa i candidati"
+        }
+      },
+      "give": "Cosa ti forniamo",
+      "docs": [
+        "DPA",
+        "Dichiarazioni AI Act",
+        "Modello di DPIA",
+        "Modello di informativa"
+      ]
+    },
+    "pack": {
+      "title": "Tutto ciò che serve ai tuoi stakeholder. In un unico pacchetto.",
+      "body": "Niente più botta e risposta. Certificati e dichiarazioni AI Act sono già disponibili. DPA, modello di DPIA e report di sicurezza arrivano direttamente dal nostro team Legale, su misura per la tua revisione.",
+      "preview": {
+        "label": "Skillvue Trust Pack",
+        "format": "PDF",
+        "title": "Certificato ISO/IEC 27001:2022"
+      },
+      "now": {
+        "title": "Disponibili subito",
+        "items": [
+          "Certificati ISO/IEC 27001, 27017, 27018 e ISO 9001",
+          "Autovalutazione CSA STAR Level 1",
+          "Dichiarazioni AI Act firmate",
+          "Panoramica su compliance e privacy"
+        ]
+      },
+      "request": {
+        "title": "Su richiesta, tramite il team Legale",
+        "items": [
+          "Modello di DPA",
+          "Modello di DPIA",
+          "Modello di informativa sulla trasparenza dell’AI",
+          "Executive summary del penetration test",
+          "Panoramica su architettura e compliance",
+          "Valutazione dei rischi e dell’impatto dell’AI"
+        ]
+      }
+    },
+    "certs": {
+      "title": "Certificati in modo indipendente. Pensati per la normativa UE.",
+      "items": {
+        "iso27001": {
+          "name": "ISO/IEC 27001",
+          "desc": "Sicurezza delle informazioni"
+        },
+        "iso27017": {
+          "name": "ISO/IEC 27017",
+          "desc": "Sicurezza del cloud"
+        },
+        "iso27018": {
+          "name": "ISO/IEC 27018",
+          "desc": "Dati personali nel cloud"
+        },
+        "iso9001": {
+          "name": "ISO 9001",
+          "desc": "Gestione della qualità"
+        },
+        "csa": {
+          "name": "CSA STAR Level 1",
+          "desc": "Controlli cloud, autovalutazione"
+        },
+        "soc2": {
+          "name": "SOC 2 Type 2",
+          "desc": "Controlli sottoposti ad audit continuativo"
+        },
+        "iso42001": {
+          "name": "ISO/IEC 42001",
+          "desc": "Sistema di gestione dell’AI"
+        }
+      },
+      "badge": {
+        "soc": "SOC 2",
+        "type": "TYPE 2",
+        "iso": "ISO/IEC"
+      },
+      "inProgress": "In corso",
+      "chips": [
+        "Pronti per l’AI Act UE",
+        "Responsabile GDPR",
+        "Ospitato in UE"
+      ]
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": [
+        {
+          "q": "Skillvue prende decisioni di assunzione?",
+          "a": "No. Skillvue assegna punteggi e li motiva. La decisione finale spetta sempre a una persona del tuo team."
+        },
+        {
+          "q": "Skillvue è conforme all’AI Act europeo?",
+          "a": "Skillvue è classificato come sistema di AI ad alto rischio (Allegato III, punto 4). Abbiamo completato la valutazione di conformità basata sul controllo interno (Allegato VI) e le nostre dichiarazioni firmate sono disponibili. Seguiamo l’evoluzione dell’AI Act, incluso il Digital Omnibus, e aggiorniamo la nostra documentazione di conseguenza."
+        },
+        {
+          "q": "Dove sono conservati i nostri dati?",
+          "a": "Nella cloud di AWS, esclusivamente nella regione UE. I dati non lasciano mai l’UE."
+        },
+        {
+          "q": "Addestrate la vostra AI sui nostri dati?",
+          "a": "No. I nostri LLM sono addestrati su un dataset proprietario, non sui dati di candidati o dipendenti."
+        },
+        {
+          "q": "Chi sono i vostri sub-responsabili?",
+          "a": "AWS ospita la piattaforma. Ogni sub-responsabile è elencato nel DPA e ti avvisiamo prima di qualsiasi modifica."
+        },
+        {
+          "q": "La ISO 27001 è una certificazione GDPR?",
+          "a": "No, e non fingiamo che lo sia. È una prova di misure di sicurezza adeguate ai sensi dell’art. 32 GDPR. La nostra conformità al GDPR è dimostrata dal DPA e dalla documentazione di supporto."
+        },
+        {
+          "q": "Cosa succede in caso di violazione dei dati?",
+          "a": "Ti avvisiamo in tempo utile per rispettare il tuo obbligo di notifica all’autorità entro 72 ore (art. 33 GDPR)."
+        },
+        {
+          "q": "Siamo una banca / un soggetto NIS2. Potete soddisfare i nostri requisiti per i fornitori?",
+          "a": "Sì. Il nostro team Legale mappa la tua valutazione del rischio fornitori sul nostro ISMS certificato e adatta gli allegati contrattuali, incluse clausole allineate al DORA."
+        }
+      ]
+    },
+    "closing": {
+      "title": "Portaci le tue domande più difficili.",
+      "body": "Il nostro team compliance risponderà a ogni domanda dei tuoi team HR, Legale, IT e Acquisti e del tuo DPO, finché tutti non avranno dato il via libera."
     }
   },
   "shared": {
