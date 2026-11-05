@@ -14,12 +14,13 @@
 
 import type { ReactNode } from 'react';
 import { getLocale, getTranslations } from 'next-intl/server';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Cpu, Earth, Eye, FileText, Lock, ShieldCheck, Target } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import ClosingBanner from '@/components/shared/ClosingBanner';
 import { Button } from '@/components/ui/button';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { IconTile } from '@/components/ui/icon-tile';
 import { Reveal } from '@/components/ui/reveal';
 import { cn } from '@/lib/utils';
 import { href } from '@/i18n/routes';
@@ -34,8 +35,9 @@ const H2 = 'font-semibold tracking-[-0.02em] text-[clamp(1.8rem,4vw,3rem)] leadi
 const H3 = 'font-medium text-[20px] leading-[1.25] tracking-[-0.02em]';
 const BODY = 'type-body text-[#4B4B4B]';
 const TAG = 'rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 type-caption text-[#4B4B4B] max-w-full';
-const CHIP = 'flex items-center gap-2 type-body-sm text-[#121212] bg-[#f1f5f9] border border-[#e5e7eb] px-3 py-1.5 rounded-full';
-const ICON_TILE = 'w-10 h-10 rounded-[10px] bg-[#F7F7F7] border border-[#EBEBEB] flex items-center justify-center shrink-0';
+// A pill with an icon: the tag pill's colours, sized per use.
+const CHIP_BASE = 'flex items-center gap-2 text-[#121212] bg-[#f1f5f9] border border-[#e5e7eb] rounded-full';
+const CHIP = cn(CHIP_BASE, 'type-body-sm px-3 py-1.5');
 const ROLE_SHADOW = 'shadow-[0_1px_2px_rgba(16,24,40,.04),0_6px_16px_rgba(16,24,40,.04)]';
 const PILL_SHADOW = 'shadow-[0_2px_6px_rgba(16,24,40,.06)]';
 // Below 760px the "Who does what" cards lose their shadow and tighten their corners.
@@ -66,9 +68,6 @@ const LOCK = <><rect x="3.5" y="7" width="9" height="7" rx="1.6" /><path d="M5.5
 const SHIELD = <path d="M8 1.8l5 2v4c0 3-2.2 5.2-5 6.4C5.2 13 3 10.8 3 7.8v-4l5-2z" />;
 const NO = <><circle cx="8" cy="8" r="6.2" /><path d="M6 6l4 4M10 6l-4 4" /></>;
 const CHECK = <><circle cx="8" cy="8" r="6.2" /><path d="M5.3 8.2l1.8 1.8 3.6-3.8" /></>;
-const CHIP_ICON = <><rect x="4" y="4" width="8" height="8" rx="1.5" /><path d="M6 1.8v2M10 1.8v2M6 12.2v2M10 12.2v2M1.8 6h2M1.8 10h2M12.2 6h2M12.2 10h2" /></>;
-const EYE = <><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8s-2.4 4.5-6.5 4.5S1.5 8 1.5 8z" /><circle cx="8" cy="8" r="2" /></>;
-const TARGET = <><circle cx="8" cy="8" r="6.2" /><circle cx="8" cy="8" r="2.4" /></>;
 
 // ── Pieces ──────────────────────────────────────────────────────────────────
 /** The site's primary button, with a press and an arrow nudge. */
@@ -176,7 +175,7 @@ export default async function TrustPage() {
       <Navbar />
       <main className="trust-page section-light text-[#121212] [line-height:normal]">
         {/* ── Hero ── */}
-        <section className="max-w-[1184px] mx-auto px-8 pt-[168px] pb-16 grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] gap-14 items-stretch max-[760px]:px-5 max-[760px]:pt-[120px] max-[760px]:pb-10 max-[760px]:gap-10">
+        <section className={cn(CONTAINER, 'pt-[168px] pb-16 grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] gap-14 items-stretch max-[760px]:pt-[120px] max-[760px]:pb-10 max-[760px]:gap-10')}>
           <Reveal className="flex flex-col justify-center gap-8">
             <HeroCopy>
               <h1 className="font-semibold text-[48px] md:text-[58px] text-[#121212]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
@@ -213,7 +212,7 @@ export default async function TrustPage() {
             <div className="flex items-center justify-between gap-x-3 gap-y-5 flex-wrap">
               <div className="flex gap-2 flex-wrap">
                 {prohibited.map((item) => (
-                  <span key={item} className="flex items-center gap-2 type-caption text-[#121212] bg-[#f1f5f9] border border-[#e5e7eb] px-3 py-1.5 rounded-full">
+                  <span key={item} className={cn(CHIP_BASE, 'type-caption px-3 py-1.5')}>
                     <Stroke>{NO}</Stroke>
                     {item}
                   </span>
@@ -238,13 +237,13 @@ export default async function TrustPage() {
 
               <div className="grid grid-cols-4 gap-x-7 gap-y-8 max-[900px]:grid-cols-2 max-[760px]:grid-cols-1">
                 {([
-                  ['processor', <Stroke key="i" size={18}>{DOC}</Stroke>],
-                  ['eu', <img key="i" src="/trust/icon-europe.svg" alt="" loading="lazy" decoding="async" className="w-[19px] h-[19px] shrink-0 block" />],
-                  ['training', <Stroke key="i" size={18}>{CHIP_ICON}</Stroke>],
-                  ['identifiers', <Stroke key="i" size={18}>{LOCK}</Stroke>],
+                  ['processor', FileText],
+                  ['eu', Earth],
+                  ['training', Cpu],
+                  ['identifiers', Lock],
                 ] as const).map(([id, icon], i) => (
                   <Reveal key={id} delay={i * 0.1} className="flex flex-col items-start gap-4 min-w-0">
-                    <span className={ICON_TILE}>{icon}</span>
+                    <IconTile icon={icon} mode="light" />
                     <div className="flex-1 w-full min-w-0 flex flex-col gap-2 items-start">
                       <h3 className={H3}>{t(`data.items.${id}.title`)}</h3>
                       <p className={BODY}>{t(`data.items.${id}.body`)}</p>
@@ -256,7 +255,7 @@ export default async function TrustPage() {
             </div>
 
             <Reveal className="-mt-2 bg-[#F7F7F7] border border-[#EBEBEB] rounded-2xl px-7 py-5 flex items-center gap-x-5 gap-y-4 flex-wrap">
-              <span className={ICON_TILE}><Stroke size={18}>{DOC}</Stroke></span>
+              <IconTile icon={FileText} mode="light" />
               <div className="flex-[1_1_320px] min-w-0 flex flex-col gap-1">
                 <h3 className={H3}>{t('data.templates.title')}</h3>
                 <p className={BODY}>{t('data.templates.body')}</p>
@@ -277,9 +276,7 @@ export default async function TrustPage() {
 
             <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] gap-4">
               <Reveal className="trust-cq bg-[#4B4DF7] border border-[#4B4DF7] rounded-[20px] p-7 text-white flex flex-col gap-5 min-h-[380px]">
-                <span className="w-[34px] h-[34px] rounded-[8px] bg-[#3133E7] border border-white/[0.18] flex items-center justify-center shrink-0">
-                  <Stroke color="#fff">{SHIELD}</Stroke>
-                </span>
+                <IconTile icon={ShieldCheck} mode="light" className="bg-white/15" iconClassName="text-white" />
                 <h3 className="mt-2 font-medium text-[24px] leading-[1.33] tracking-[-0.02em] text-white">{t('security.isms.title')}</h3>
                 <p className="type-body text-white/85 max-w-[440px]">{t('security.isms.body')}</p>
                 <div aria-hidden="true" className="flex-1 flex items-center justify-center gap-[clamp(8px,1.4vw,18px)] py-5">
@@ -303,15 +300,13 @@ export default async function TrustPage() {
 
               <div className="flex flex-col gap-4">
                 {([
-                  ['encryption', LOCK],
-                  ['monitoring', EYE],
-                  ['pentest', TARGET],
+                  ['encryption', Lock],
+                  ['monitoring', Eye],
+                  ['pentest', Target],
                 ] as const).map(([id, icon], i) => (
                   <Reveal key={id} delay={0.1 + i * 0.1} className="bg-[#F7F7F7] border border-[#EBEBEB] rounded-[20px] p-[22px] flex flex-col gap-3 flex-1">
                     <div className="flex items-center gap-[14px]">
-                      <span className="w-9 h-9 rounded-[8px] bg-[#F1F2FF] border border-[#D9DAFF] flex items-center justify-center shrink-0">
-                        <Stroke>{icon}</Stroke>
-                      </span>
+                      <IconTile icon={icon} mode="light" />
                       <h3 className={H3}>{t(`security.cards.${id}.title`)}</h3>
                     </div>
                     <p className={BODY}>{t(`security.cards.${id}.body`)}</p>
@@ -323,7 +318,7 @@ export default async function TrustPage() {
 
             <div className="flex flex-wrap gap-[10px]">
               {extras.map((item) => (
-                <span key={item} className={cn(CHIP, 'py-[7px] pl-[10px] pr-[14px]')}>
+                <span key={item} className={cn(CHIP_BASE, 'type-body-sm py-[7px] pl-[10px] pr-[14px]')}>
                   <Stroke>{CHECK}</Stroke>
                   <span>{item}</span>
                 </span>
@@ -334,7 +329,7 @@ export default async function TrustPage() {
         </section>
 
         {/* ── Who does what ── */}
-        <section className="bg-[#F7F7F7] pt-[136px] pb-[128px] max-[760px]:py-[72px]">
+        <section className="section-breathe pt-[136px] pb-[128px] max-[760px]:py-[72px]">
           <div className={cn(CONTAINER, 'flex flex-col gap-14')}>
             <div className="flex flex-col items-center text-center gap-4">
               <Reveal as="h2" className={cn(H2, 'mx-auto')}>{t('roles.title')}</Reveal>
@@ -422,7 +417,7 @@ export default async function TrustPage() {
         </section>
 
         {/* ── Trust Pack ── */}
-        <section id="trust-pack" className="bg-[#F7F7F7] py-[136px] scroll-mt-[80px] max-[760px]:py-[72px]">
+        <section id="trust-pack" className="section-breathe py-[136px] scroll-mt-[80px] max-[760px]:py-[72px]">
           <div className={CONTAINER}>
             <Reveal className="bg-white border border-[#EBEBEB] rounded-3xl p-[clamp(28px,4vw,56px)] grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] gap-14 items-center max-[760px]:px-4 max-[760px]:py-5 max-[760px]:gap-8">
               <div className="flex flex-col gap-6">
@@ -480,7 +475,7 @@ export default async function TrustPage() {
         </section>
 
         {/* ── Certifications ── */}
-        <section className="max-w-[1184px] mx-auto px-8 pt-[136px] flex flex-col gap-5 items-center max-[760px]:py-[72px]">
+        <section className={cn(CONTAINER, 'pt-[136px] flex flex-col gap-5 items-center max-[760px]:py-[72px]')}>
           <Reveal as="h2" className={cn(H2, 'mx-auto mb-5 text-center')}>{t('certs.title')}</Reveal>
           <div className="w-full border border-[#EBEBEB] rounded-[14px] overflow-hidden bg-white">
             <div className="w-[calc(100%+1px)] -mb-px grid grid-cols-7 bg-white max-[1080px]:grid-cols-4 max-[760px]:grid-cols-1">
@@ -508,7 +503,7 @@ export default async function TrustPage() {
               ))}
             </div>
           </div>
-          <div className="flex gap-2 flex-wrap justify-center mt-6 max-[760px]:px-5">
+          <div className="flex gap-2 flex-wrap justify-center mt-6">
             {chips.map((chip, i) => (
               <span key={chip} className={cn(CHIP, 'whitespace-nowrap')}>
                 {i === 0 && <Stroke size={14}>{DOC}</Stroke>}
@@ -518,7 +513,7 @@ export default async function TrustPage() {
               </span>
             ))}
           </div>
-          <div className="flex justify-center mt-6 max-[760px]:px-5 max-[760px]:w-full"><Cta label={cta} locale={locale} /></div>
+          <div className="flex justify-center mt-6 max-[760px]:w-full"><Cta label={cta} locale={locale} /></div>
         </section>
 
         {/* ── FAQ ── */}

@@ -9011,8 +9011,11 @@
         "label": "Audit log",
         "candidate": "Candidate A-2048",
         "generated": "Scores generated",
+        "generatedAt": "09:14:02",
         "suggestion": "4.2 · Advance suggested",
         "recorded": "Decision recorded",
+        "recordedAt": "11:47:36",
+        "recordedPending": "--:--:--",
         "evaluator": "Giulia Ferri",
         "role": "Evaluator",
         "placeholder": "Advance, hold or reject",
@@ -9022,6 +9025,8 @@
       },
       "score": {
         "skill": "Problem solving",
+        "value": "3.8",
+        "outOf": "/ 5",
         "justification": "Justification",
         "text": "Broke the case into three steps and explained why the second option carried less risk. Weaker on putting numbers to the trade-off, which the candidate acknowledged when asked to",
         "override": "Override score"
@@ -9062,7 +9067,9 @@
       "record": {
         "label": "Candidate record",
         "source": "Your platform",
-        "sampleName": "Sample Candidate"
+        "sampleName": "Sample Candidate",
+        "sampleEmail": "candidate@example.com",
+        "samplePhone": "+00 000 000 0000"
       },
       "model": {
         "label": "Sent to the model",

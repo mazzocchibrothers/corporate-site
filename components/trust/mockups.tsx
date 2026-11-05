@@ -144,7 +144,7 @@ export async function AuditLogMock() {
               <img src="/trust/logomark-gradient.svg" alt="" loading="lazy" decoding="async" className="h-[11px] block grayscale opacity-[.55]" />
               {t('ai.auditLog.generated')}
             </span>
-            <span className={cn(MONO, 'text-[10px] leading-none text-[#121212]/50 whitespace-nowrap')}>09:14:02</span>
+            <span className={cn(MONO, 'text-[10px] leading-none text-[#121212]/50 whitespace-nowrap')}>{t('ai.auditLog.generatedAt')}</span>
           </div>
           <div className="flex items-center gap-1.5 text-[11px] leading-[1.3] text-[#121212]/60">
             Skillvue<span className="text-[#121212]/25">·</span>
@@ -156,8 +156,8 @@ export async function AuditLogMock() {
           <div className="flex items-center justify-between gap-2">
             <span className="text-[12px] font-semibold leading-[1.2]">{t('ai.auditLog.recorded')}</span>
             <span className={cn(MONO, 'grid text-[10px] leading-none whitespace-nowrap')}>
-              <span className="trust-log-pending [grid-area:1/1] text-[#121212]/40">--:--:--</span>
-              <span className="trust-log-done [grid-area:1/1] text-[#121212]/50">11:47:36</span>
+              <span className="trust-log-pending [grid-area:1/1] text-[#121212]/40">{t('ai.auditLog.recordedPending')}</span>
+              <span className="trust-log-done [grid-area:1/1] text-[#121212]/50">{t('ai.auditLog.recordedAt')}</span>
             </span>
           </div>
           <div className="text-[11px] leading-[1.3] text-[#121212]/60">
@@ -187,7 +187,7 @@ export async function ScoreMock() {
     <div className={cn(MOCK, 'rounded-xl gap-[10px]')}>
       <div className="flex items-center justify-between gap-2">
         <span className="text-[12px] font-semibold leading-[1.2]">{t('ai.score.skill')}</span>
-        <span className="text-[12px] font-semibold leading-none whitespace-nowrap">3.8<span className="font-medium text-[#121212]/40"> / 5</span></span>
+        <span className="text-[12px] font-semibold leading-none whitespace-nowrap">{t('ai.score.value')}<span className="font-medium text-[#121212]/40"> {t('ai.score.outOf')}</span></span>
       </div>
       <div className="grid grid-cols-5 gap-[3px]">
         <span className="h-1 rounded-[2px] bg-[#6B7DFF]" />
@@ -254,8 +254,8 @@ export async function PseudonymMock() {
   const t = await getTranslations('trust');
   const rows = [
     { field: t('data.fields.name'), source: t('data.record.sampleName'), token: t('data.model.tokenName') },
-    { field: t('data.fields.email'), source: 'candidate@example.com', token: t('data.model.tokenEmail') },
-    { field: t('data.fields.phone'), source: '+00 000 000 0000', token: t('data.model.tokenPhone') },
+    { field: t('data.fields.email'), source: t('data.record.sampleEmail'), token: t('data.model.tokenEmail') },
+    { field: t('data.fields.phone'), source: t('data.record.samplePhone'), token: t('data.model.tokenPhone') },
   ];
 
   const pill = (
