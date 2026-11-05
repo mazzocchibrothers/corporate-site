@@ -482,7 +482,7 @@ export default async function TrustPage() {
               {CERTS.map((cert) => (
                 <div
                   key={cert.id}
-                  className="bg-white shadow-[inset_-1px_-1px_0_#EBEBEB] min-h-[208px] flex flex-col items-center justify-start gap-1 px-3 pt-7 pb-6 text-center max-[760px]:min-h-0 max-[760px]:px-4 max-[760px]:py-7"
+                  className="bg-white shadow-[inset_-1px_-1px_0_#EBEBEB] min-h-[208px] max-[1080px]:last:col-span-2 max-[760px]:last:col-span-1 flex flex-col items-center justify-start gap-1 px-3 pt-7 pb-6 text-center max-[760px]:min-h-0 max-[760px]:px-4 max-[760px]:py-7"
                 >
                   {cert.img ? (
                     <img src={cert.img} alt="" loading="lazy" decoding="async" className="w-[88px] h-[88px] object-contain block" />

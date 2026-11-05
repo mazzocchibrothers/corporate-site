@@ -9099,7 +9099,7 @@
         },
         "training": {
           "title": "Never used to train our model.",
-          "body": "Our LLMs are trained on a proprietary dataset, not on your candidates or employees data.",
+          "body": "Our LLMs are trained on a proprietary dataset, not on your candidates’ or employees’ data.",
           "tag": "Proprietary training data"
         },
         "identifiers": {
@@ -9270,7 +9270,7 @@
         },
         {
           "q": "Do you train your AI on our data?",
-          "a": "No. Our LLMs are trained on a proprietary dataset, not on candidates or employees data."
+          "a": "No. Our LLMs are trained on a proprietary dataset, not on candidates’ or employees’ data."
         },
         {
           "q": "Who are your sub-processors?",

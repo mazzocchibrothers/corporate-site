@@ -9012,7 +9012,7 @@
         "candidate": "Candidato A-2048",
         "generated": "Punteggi generati",
         "generatedAt": "09:14:02",
-        "suggestion": "4.2 · Avanzamento suggerito",
+        "suggestion": "4,2 · Avanzamento suggerito",
         "recorded": "Decisione registrata",
         "recordedAt": "11:47:36",
         "recordedPending": "--:--:--",
@@ -9025,7 +9025,7 @@
       },
       "score": {
         "skill": "Problem solving",
-        "value": "3.8",
+        "value": "3,8",
         "outOf": "/ 5",
         "justification": "Motivazione",
         "text": "Ha scomposto il caso in tre passaggi e spiegato perché la seconda opzione comportava meno rischi. Più debole nel quantificare il compromesso, come il candidato ha riconosciuto quando gli è stato chiesto di",
