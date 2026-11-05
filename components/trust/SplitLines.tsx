@@ -50,7 +50,8 @@ export function SplitLines({ className }: { className?: string }) {
                 key={i}
                 d={`M${c} 0H${x - dir * r}Q${x} 0 ${x} ${r}V${geo.h}`}
                 fill="none"
-                stroke="#BDBDD0"
+                stroke="#121212"
+                strokeOpacity={0.22}
                 strokeWidth={1.5}
                 strokeDasharray="4 4"
                 strokeLinecap="round"

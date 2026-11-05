@@ -63,13 +63,14 @@ export function DealLines() {
               <path
                 d={`M${l.x1} ${l.y1}L${l.x2} ${l.y2}`}
                 fill="none"
-                stroke="#BDBDD0"
+                stroke="#121212"
+                strokeOpacity={0.22}
                 strokeWidth={1.5}
                 strokeDasharray="4 4"
                 strokeLinecap="round"
                 className="trust-dash-flow"
               />
-              <circle cx={l.x2} cy={l.y2} r={3} fill="#fff" stroke="#8C9FFF" strokeWidth={1.5} />
+              <circle cx={l.x2} cy={l.y2} r={3} fill="#fff" stroke="#8587FF" strokeWidth={1.5} />
             </g>
           ))}
         </svg>
