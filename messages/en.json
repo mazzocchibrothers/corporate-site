@@ -9056,13 +9056,13 @@
       },
       "prohibited": [
         "No prohibited practices.",
-        "No emotion recognition.",
+        "We only assess words. Nothing else that could introduce bias.",
         "No biometric categorisation."
       ],
       "prohibitedRef": "AI Act Art. 5"
     },
     "data": {
-      "title": "Your data. Your rules. EU soil.",
+      "title": "Your data. Your rules. EU only.",
       "body": "You are the Data Controller. We are your Data Processor. We act only on your documented instructions, and we never treat your data as ours.",
       "record": {
         "label": "Candidate record",
@@ -9103,7 +9103,7 @@
           "tag": "Proprietary training data"
         },
         "identifiers": {
-          "title": "Identifiers removed before the AI sees them.",
+          "title": "Identifiers removed before AI.",
           "body": "Names, emails and phone numbers are pseudonymised before any prompt reaches the model.",
           "tag": "Pseudonymisation"
         }

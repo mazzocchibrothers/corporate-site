@@ -8989,11 +8989,11 @@
     },
     "ai": {
       "title": "La nostra AI misura. Le tue persone decidono.",
-      "body": "Le decisioni di assunzione e promozione cambiano la vita delle persone. Per questo Skillvue non le prende mai. La nostra AI mappa le competenze, le misura con metodo scientifico e spiega ogni risultato. La decisione finale spetta alle tue persone.",
+      "body": "Le decisioni di assunzione e promozione cambiano la vita delle persone. Per questo Skillvue non le prende mai. La nostra AI mappa le competenze, le misura con metodo scientifico e spiega ogni risultato. La decisione finale spetta al tuo team.",
       "cards": {
         "human": {
           "title": "Sempre una decisione umana.",
-          "body": "Skillvue non prende decisioni automatizzate su assunzioni, promozioni o mobilità. La decisione finale spetta sempre alle tue persone.",
+          "body": "Skillvue non prende decisioni automatizzate su assunzioni, promozioni o mobilità. La decisione finale spetta sempre al tuo team.",
           "tag": "GDPR art. 22 · AI Act art. 14"
         },
         "explained": {
@@ -9002,8 +9002,8 @@
           "tag": "AI Act art. 13 · Trasparenza"
         },
         "classified": {
-          "title": "Classificati e valutati secondo l’AI Act europeo.",
-          "body": "Siamo un sistema ad alto rischio ai sensi dell’Allegato III, punto 4 (occupazione), come prevede la legge. Siamo il Fornitore, abbiamo completato la valutazione di conformità secondo l’Allegato VI e le nostre Dichiarazioni AI Act firmate sono disponibili su richiesta.",
+          "title": "Classificati secondo l’AI Act europeo.",
+          "body": "Il nostro sistema è classificato ad alto rischio ai sensi dell’Allegato III dell’AI Act, in ambito occupazione. In qualità di Fornitore abbiamo implementato le misure previste per i sistemi ad alto rischio e seguiamo l’evoluzione del quadro normativo europeo.",
           "tag": "Reg. 2024/1689 · Allegato III pt. 4 · Allegato VI"
         }
       },
