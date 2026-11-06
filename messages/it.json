@@ -9262,11 +9262,11 @@
         },
         {
           "q": "Skillvue è conforme all’AI Act europeo?",
-          "a": "Skillvue è classificato come sistema di AI ad alto rischio (Allegato III, punto 4). Abbiamo completato la valutazione di conformità basata sul controllo interno (Allegato VI) e le nostre dichiarazioni firmate sono disponibili. Seguiamo l’evoluzione dell’AI Act, incluso il Digital Omnibus, e aggiorniamo la nostra documentazione di conseguenza."
+          "a": "Il nostro sistema è classificato ad alto rischio ai sensi dell’Allegato III dell’AI Act, in ambito occupazione. In qualità di Fornitore abbiamo implementato le misure previste per i sistemi ad alto rischio e seguiamo l’evoluzione del quadro normativo europeo."
         },
         {
           "q": "Dove sono conservati i nostri dati?",
-          "a": "Nella cloud di AWS, esclusivamente nella regione UE. I dati non lasciano mai l’UE."
+          "a": "I dati sono conservati su infrastruttura cloud AWS selezionata da Skillvue, esclusivamente in region UE, senza trasferimenti al di fuori dello Spazio economico europeo."
         },
         {
           "q": "Addestrate la vostra AI sui nostri dati?",
