@@ -114,6 +114,22 @@ function nestedNamespaces(namespace: string): string[] {
 }
 
 /**
+ * The other routes' namespaces this route renders, from its `messages` in
+ * routes.json.
+ *
+ * A page that draws another page's component brings that component's copy
+ * with it: /product/skillvue-map shows /product's Map and Decide screens, so
+ * it lists `product.map.screens` and `product.decide.screen`. Listing them
+ * here keeps page.tsx the one place copy is delivered, and the list names
+ * exactly what crosses to the browser. scripts/check-messages.mjs fails on a
+ * namespace that is not in both catalogues.
+ */
+export function extraNamespaces(routeId: string): string[] {
+  const route = (routes as { id: string; messages?: string[] }[]).find((r) => r.id === routeId);
+  return route?.messages ?? [];
+}
+
+/**
  * Deep-merges the picked namespaces.
  *
  * A shallow spread would be wrong the moment one page wants two namespaces
@@ -151,7 +167,7 @@ export async function messagesForRoute(routeId: string, locale: string | undefin
     .default;
 
   const namespace = namespaceOf(routeId);
-  const wanted = [...SHARED, namespace];
+  const wanted = [...SHARED, namespace, ...extraNamespaces(routeId)];
   const picked = wanted.reduce<Record<string, unknown>>((acc, ns) => merge(acc, pick(all, ns)), {});
   return nestedNamespaces(namespace).reduce((acc, ns) => omit(acc, ns), picked);
 }

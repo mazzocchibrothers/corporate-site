@@ -214,8 +214,8 @@ reintroduce per-page variants.
   a false positive. A component that redraws the product UI in HTML in place of
   a screenshot (`components/product/`: `map-screens.tsx`, `map-skills-demo.tsx`,
   `map-page-screens.tsx`, `assess-screens.tsx`, `decide-demo.tsx`) draws the
-  product's own colours;
-  those go in `PRODUCT_UI` in the same script, allowed in that file only.
+  product's own colours; those go in `PRODUCT_UI` in the same script, allowed
+  in that file only.
 - When a redesign changes one of these on one page, it is either a new
   standard — apply it to its sibling pages and update this section — or it is
   drift.

@@ -8140,7 +8140,7 @@
       },
       "screens": {
         "list": {
-          "search": "Find a node role...",
+          "search": "Find a node role…",
           "families": "All families",
           "architecture": "Architecture",
           "rows": {
@@ -8165,7 +8165,7 @@
           "hard": "Hard Skill",
           "soft": "Soft Skill",
           "department": "Human Resources · Employee Engagement and Retention",
-          "compareWith": "Compare with...",
+          "compareWith": "Compare with…",
           "rerun": "Re-run mapping",
           "share": "Share",
           "descriptionTitle": "Job Description",
@@ -8175,7 +8175,7 @@
             "market": "Market Signal",
             "profile": "Skill Profile"
           },
-          "search": "Search...",
+          "search": "Search…",
           "type": "Type",
           "all": "All",
           "softFilter": "Soft",
@@ -8201,7 +8201,6 @@
           }
         },
         "roles": {
-          "title": "Compare roles",
           "a": {
             "label": "Role A",
             "role": "Store Manager",
@@ -8212,10 +8211,6 @@
             "role": "Regional Store Manager",
             "meta": "Retail Operations / Regional Leadership · 9 skills"
           },
-          "show": "Show",
-          "all": "All skills",
-          "shared": "Shared skills only",
-          "differences": "Differences only",
           "counts": "<b>6</b> shared · <b>2</b> only A · <b>3</b> only B",
           "columnA": "Role A · Store Manager",
           "columnB": "Role B · Regional Store Manager",

@@ -67,8 +67,9 @@ function Dot({ colour, size = 7 }: { colour: string; size?: number }) {
 type Priority = 'critical' | 'important' | 'nice';
 type Level = 'advanced' | 'practitioner' | 'foundational';
 
-// Compare roles' pills, as in /product's: a triangle for critical, a circle for
-// important, nothing for nice to have.
+// Compare roles' priority pills, as in /product's: a triangle for critical, a
+// circle for important, nothing for nice to have. The skill profile draws a
+// circle for every priority, as its capture does.
 const PRIORITY: Record<Priority, { colour: string; icon?: string; stroke?: string }> = {
   critical: { colour: '#D9443C', icon: PATH.triangle, stroke: '#E5484D' },
   important: { colour: '#E8731E', icon: PATH.alert, stroke: '#E8731E' },
@@ -285,7 +286,7 @@ function RolesScreen() {
   return (
     <StaggerReveal active>
       <div style={PANEL}></div>
-      <div style={TITLE}>{ro('title')}</div>
+      <div style={TITLE}>{t('compare.title')}</div>
       {ROLE_CARDS.map(({ key, left, width, border, colour }) => (
         <div key={key} style={{ position: 'absolute', left, top: 202, width, height: 135, border: `1.5px solid ${border}`, borderRadius: 10, boxSizing: 'border-box' }}>
           <div style={{ position: 'absolute', left: 17, top: 18, fontSize: 16.5, color: colour }}>{ro(`${key}.label`)}</div>
@@ -295,8 +296,8 @@ function RolesScreen() {
       ))}
       <Icon d={PATH.swap} size={24} stroke="#444" width={1.6} style={{ position: 'absolute', left: 951, top: 258 }} />
       <div style={{ position: 'absolute', left: 331, top: 362, display: 'flex', alignItems: 'center', gap: 12 }}>
-        <span style={{ fontSize: 14.5, fontWeight: '500', color: '#555' }}>{ro('show')}</span>
-        <div style={{ ...SEGMENTS, borderColor: '#EBEBEB', background: '#FAFAFA', color: '#555' }}><span style={SEGMENT_ON}>{ro('all')}</span><span style={SEGMENT}>{ro('shared')}</span><span style={SEGMENT}>{ro('differences')}</span></div>
+        <span style={{ fontSize: 14.5, fontWeight: '500', color: '#555' }}>{t('compare.show')}</span>
+        <div style={{ ...SEGMENTS, borderColor: '#EBEBEB', background: '#FAFAFA', color: '#555' }}><span style={SEGMENT_ON}>{t('compare.all')}</span><span style={SEGMENT}>{t('compare.shared')}</span><span style={SEGMENT}>{t('compare.differences')}</span></div>
       </div>
       <div style={{ position: 'absolute', right: 56, top: 372, fontSize: 14.5, color: '#555', whiteSpace: 'nowrap' }}>{ro.rich('counts', { b: (chunks) => <b style={{ fontWeight: '600', color: '#1A1A1A' }}>{chunks}</b> })}</div>
       <div style={{ position: 'absolute', left: 312, top: 422, width: 1344, ...BOX }}>

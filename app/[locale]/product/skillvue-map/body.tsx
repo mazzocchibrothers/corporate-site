@@ -1,5 +1,4 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { getLocale, getMessages, getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { ArrowRight, Check, Database, FlaskConical, Search, Sparkles } from 'lucide-react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
@@ -7,7 +6,6 @@ import { Reveal } from '@/components/ui/reveal';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
-import { merge, pick } from '@/i18n/messages';
 import { MapPageScreen, type MapPageScreenId } from '@/components/product/map-page-screens';
 import { DecideDemo } from '@/components/product/decide-demo';
 
@@ -18,7 +16,8 @@ const BODY = 'type-body text-[#4B4B4B]';
 
 // Each feature shows a screen of the product drawn in HTML, in the same window
 // as /product's: three Skillvue Map screens, then Skillvue Decide, where the
-// mapped skills are put to work.
+// mapped skills are put to work. The /product screens' copy reaches this page
+// through the route's `messages` in i18n/routes.json.
 const FEATURES: { id: string; screen: MapPageScreenId | 'decide' }[] = [
   { id: 'jobs', screen: 'list' },
   { id: 'consistency', screen: 'profile' },
@@ -60,12 +59,6 @@ const FLOW_BOX = 'flex h-[57px] items-center justify-center gap-3 rounded border
 export default async function ProductPage() {
   const locale = await getLocale();
   const t = await getTranslations('product.skillvue-map');
-  // The screens' own copy: /product's Map and Decide screens, and this page's
-  // data for the three Map stills. A provider of its own, around <main> only,
-  // so it carries just these on top of what page.tsx already sends.
-  const all = await getMessages();
-  const screens = ['product.map.screens', 'product.decide.screen', 'product.skillvue-map.screens']
-    .reduce<Record<string, unknown>>((acc, ns) => merge(acc, pick(all, ns)), {});
   const demo = (
     <Button asChild variant="primary" mode="light">
       <a href={href('book-meeting', locale)}>
@@ -78,7 +71,6 @@ export default async function ProductPage() {
   return (
     <>
       <Navbar />
-      <NextIntlClientProvider locale={locale} messages={screens}>
       <main className="section-breathe">
         {/* Hero */}
         <section className="pt-[144px] pb-16 md:pt-[168px] md:pb-[88px] lg:pt-[192px] lg:pb-[112px]">
@@ -227,7 +219,6 @@ export default async function ProductPage() {
           </Reveal>
         </section>
       </main>
-      </NextIntlClientProvider>
       <Footer />
     </>
   );

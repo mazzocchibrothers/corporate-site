@@ -8032,7 +8032,7 @@
         "titleLead": "Un’unica architettura delle skill,",
         "titleTail": "in giorni, non in mesi.",
         "body": "Skillvue Map combina i tuoi dati interni, i segnali di mercato e la nostra scienza per costruire la tua tassonomia delle skill e la mappatura skill-ruoli, in giorni, non in mesi, e le mantiene sempre aggiornate.",
-        "imageAlt": "Esplora skill di Skillvue Map: grafico a bolle dei cluster di skill con la skill International Taxation aperta e un pannello chat AI"
+        "imageAlt": "Esplora skill di Skillvue Map: grafico a bolle dei cluster di skill con la skill Fiscalità internazionale aperta e un pannello chat AI"
       },
       "problem": {
         "eyebrow": "Il problema",
@@ -8092,7 +8092,7 @@
             "Definizioni di hard skill basate sul mercato",
             "Un linguaggio comune delle skill tra business unit e sedi"
           ],
-          "imageAlt": "Profilo di skill di Skillvue Map per il ruolo Digital Marketing Manager, con skill richieste, priorità e livelli di proficiency"
+          "imageAlt": "Profilo di skill di Skillvue Map per il ruolo Responsabile marketing digitale, con skill richieste, priorità e livelli di proficiency"
         },
         "mapping": {
           "eyebrow": "Feature 3",
@@ -8140,42 +8140,42 @@
       },
       "screens": {
         "list": {
-          "search": "Trova un ruolo nodo...",
+          "search": "Trova un ruolo…",
           "families": "Tutte le famiglie",
           "architecture": "Architettura",
           "rows": {
-            "marketing": "Marketing e Clienti",
-            "merchandising": "Merchandising e Categoria",
-            "visual": "Merchandising Visivo",
-            "visualManager": "Responsabile Merchandising Visivo",
-            "category": "Gestione Categoria",
-            "space": "Pianificazione Spazi e Assortimento",
-            "commercial": "Commerciale e Acquisti",
-            "store": "Operazioni di Negozio",
-            "supply": "Catena di Fornitura e Logistica",
-            "hr": "Risorse Umane"
+            "marketing": "Marketing e clienti",
+            "merchandising": "Merchandising e categoria",
+            "visual": "Merchandising visivo",
+            "visualManager": "Responsabile merchandising visivo",
+            "category": "Gestione categoria",
+            "space": "Pianificazione spazi e assortimento",
+            "commercial": "Commerciale e acquisti",
+            "store": "Operazioni di negozio",
+            "supply": "Catena di fornitura e logistica",
+            "hr": "Risorse umane"
           },
           "idle": "Inattivo",
           "lastRun": "Ultima esecuzione 2 giorni fa",
           "openRuns": "Apri le esecuzioni di mappatura"
         },
         "profile": {
-          "family": "Marketing Digitale",
-          "title": "Responsabile Marketing Digitale",
-          "hard": "Competenza Tecnica",
-          "soft": "Competenza Trasversale",
-          "department": "Risorse Umane · Coinvolgimento e Fidelizzazione dei Dipendenti",
-          "compareWith": "Confronta con...",
+          "family": "Marketing digitale",
+          "title": "Responsabile marketing digitale",
+          "hard": "Hard skill",
+          "soft": "Soft skill",
+          "department": "Risorse umane · Coinvolgimento e fidelizzazione dei dipendenti",
+          "compareWith": "Confronta con…",
           "rerun": "Riesegui mappatura",
           "share": "Condividi",
-          "descriptionTitle": "Descrizione del lavoro",
+          "descriptionTitle": "Descrizione della posizione",
           "description": "Guida la strategia e l’esecuzione del marketing digitale su tutti i canali di performance e brand, gestendo il budget media digitale e l’elenco delle agenzie. Promuove l’innovazione dei canali, supervisiona il team di analisti digitali e riporta il ROI digitale al direttore marketing.",
           "tabs": {
             "internal": "Competenze interne",
             "market": "Segnale di mercato",
             "profile": "Profilo delle competenze"
           },
-          "search": "Cerca...",
+          "search": "Cerca…",
           "type": "Tipo",
           "all": "Tutti",
           "softFilter": "Soft",
@@ -8183,14 +8183,14 @@
           "roleName": "Nome del ruolo",
           "category": "Categoria",
           "rows": {
-            "channel": "Strategia di Marketing Digitale e Pianificazione dei Canali",
-            "strategy": "Sviluppo e Pianificazione della Strategia di Marketing",
-            "creative": "Ideazione Creativa e Innovazione",
-            "performance": "Misurazione delle Prestazioni e Analisi",
-            "data": "Pratica Generale di Analisi dei Dati"
+            "channel": "Strategia digitale e pianificazione dei canali",
+            "strategy": "Sviluppo e pianificazione della strategia di marketing",
+            "creative": "Ideazione creativa e innovazione",
+            "performance": "Misurazione delle prestazioni e analisi",
+            "data": "Pratica generale di analisi dei dati"
           },
           "categories": {
-            "marketing": "Marketing e Relazioni Pubbliche",
+            "marketing": "Marketing e relazioni pubbliche",
             "business": "Business",
             "analysis": "Analisi"
           },
@@ -8201,21 +8201,16 @@
           }
         },
         "roles": {
-          "title": "Confronta ruoli",
           "a": {
             "label": "Ruolo A",
             "role": "Store Manager",
-            "meta": "Retail Operations / Gestione negozio · 8 skills"
+            "meta": "Retail Operations / Gestione negozio · 8 competenze"
           },
           "b": {
             "label": "Ruolo B",
             "role": "Regional Store Manager",
-            "meta": "Retail Operations / Leadership regionale · 9 skills"
+            "meta": "Retail Operations / Leadership regionale · 9 competenze"
           },
-          "show": "Mostra",
-          "all": "Tutte le skills",
-          "shared": "Solo skills condivise",
-          "differences": "Solo differenze",
           "counts": "<b>6</b> condivise · <b>2</b> solo A · <b>3</b> solo B",
           "columnA": "Ruolo A · Store Manager",
           "columnB": "Ruolo B · Regional Store Manager",
