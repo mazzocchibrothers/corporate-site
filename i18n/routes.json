@@ -472,7 +472,8 @@
     "paths": {
       "en": "/product/skillvue-map",
       "it": "/prodotto/skillvue-map"
-    }
+    },
+    "messages": ["product.map.screens", "product.decide.screen"]
   },
   {
     "id": "resources/press",

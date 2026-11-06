@@ -157,6 +157,18 @@ assert.deepEqual(
     'A namespace is a route id from i18n/routes.json, `common`, or `shared.<name>`.',
 );
 
+// A route's `messages` names other namespaces its page renders. One that is
+// missing from a catalogue would reach the browser as nothing, and the
+// components reading it would fall back to their keys on that page only.
+const missingExtras = JSON.parse(readFileSync(join(ROOT, 'i18n/routes.json'), 'utf8'))
+  .flatMap((r) => (r.messages ?? []).map((ns) => [r.id, ns]))
+  .flatMap(([id, ns]) =>
+    ['en', 'it']
+      .filter((locale) => Object.keys(pick(locale === 'en' ? catalogueEn : catalogueIt, ns)).length === 0)
+      .map((locale) => `  ${id}: ${ns} is not in messages/${locale}.json`),
+  );
+assert.deepEqual(missingExtras, [], `A route's \`messages\` lists a namespace that does not exist:\n${missingExtras.join('\n')}`);
+
 // Markup in a message means a translator has to edit HTML to change a comma,
 // and a class name has to survive a language it has no business being in.
 // next-intl's t.rich() takes the tags from the component instead, so a message

@@ -102,6 +102,12 @@ const PRODUCT_UI = {
       '#e9e9ea #e9f6be #eaeaea #ebebec #efeff0 #f0f0f0 #f2954a #febc2e #ff5f57'
     ).split(' '),
   ),
+  'components/product/map-page-screens.tsx': new Set(
+    (
+      '#2f7a2a #30a46c #333 #444 #4f86e8 #555 #5b5fd7 #5e6b12 #6264f2 #666 #777 #8a6a12 #c9f0d3 #d3f3cc ' +
+      '#d9443c #ddd #e3e3e3 #e5484d #e6e6e6 #e8731e #e9f6be #eaeaea #ebebec #ecedfe #f0f0f0 #f2954a #f5f5f5 #fbefc8'
+    ).split(' '),
+  ),
   'components/product/map-skills-demo.tsx': new Set(
     (
       '#000 #22a06b #22b07d #2e8b7a #333 #3e9a6a #444 #4f86b8 #555 #5b5db8 #5b5fc7 #666 #777 #7e8f4e ' +
