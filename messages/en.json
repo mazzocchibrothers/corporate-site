@@ -11,6 +11,7 @@
       "links": {
         "product": "Product",
         "science": "Science",
+        "trust": "Trust",
         "talentAcquisition": "Hiring",
         "performanceManagement": "Performance Management",
         "learningDevelopment": "Learning & Development",
@@ -39,6 +40,7 @@
       "links": {
         "product": "Product",
         "science": "Science",
+        "trust": "Trust",
         "talentAcquisition": "Hiring",
         "performanceManagement": "Performance Management",
         "learningDevelopment": "Learning & Development",
@@ -8946,6 +8948,351 @@
     "meta": {
       "title": "The Science Behind Skillvue | Psychometrics & AI",
       "description": "Skillvue is built on I/O psychology and psychometrics. Every verification is accurate, reliable and defensible — designed to hold up to scientific scrutiny."
+    }
+  },
+  "trust": {
+    "meta": {
+      "title": "Skillvue Trust | Responsible AI, EU Data & Certified Security",
+      "description": "Your people decide, data stays in the EU and security is ISO/IEC 27001 certified. Everything HR, Legal, IT, Procurement and your DPO need to sign off on Skillvue."
+    },
+    "cta": "Book a demo",
+    "hero": {
+      "title": "HR decisions you can defend. AI every team can sign off on.",
+      "subtitle": "Your people decide. Data stays in the EU. Security is certified. Everything your reviewers need, in one Trust Pack."
+    },
+    "deal": {
+      "label": "Agreement",
+      "title": "Skillvue deal",
+      "signedOff": "Signed off",
+      "teams": {
+        "hr": {
+          "name": "HR",
+          "desc": "Fair, explainable, human-led"
+        },
+        "legal": {
+          "name": "Legal",
+          "desc": "AI Act and contract terms"
+        },
+        "it": {
+          "name": "IT",
+          "desc": "Security and SSO"
+        },
+        "dpo": {
+          "name": "DPO",
+          "desc": "GDPR and EU data residency"
+        },
+        "procurement": {
+          "name": "Procurement",
+          "desc": "Vendor risk and terms"
+        }
+      }
+    },
+    "ai": {
+      "title": "Our AI measures. Your people decide.",
+      "body": "Hiring and promotion decisions change lives. That's why Skillvue never makes them. Our AI maps skills, measures them scientifically and explains every result. Your people make the final call.",
+      "cards": {
+        "human": {
+          "title": "Always a human decision.",
+          "body": "Skillvue makes no automated hiring, promotion or mobility decisions. The final call always sits with your people.",
+          "tag": "GDPR Art. 22 · AI Act Art. 14"
+        },
+        "explained": {
+          "title": "Every score explained.",
+          "body": "Each result comes with a written justification, so your people can challenge it, override it and explain it to candidates in plain language.",
+          "tag": "AI Act Art. 13 · Transparency"
+        },
+        "classified": {
+          "title": "Classified and assessed under the EU AI Act.",
+          "body": "We are a high-risk system under Annex III, point 4 (employment), as the law intends. We are the Provider, we've completed the conformity assessment under Annex VI, and our signed AI Act Declarations are available on request.",
+          "tag": "Reg. 2024/1689 · Annex III pt. 4 · Annex VI"
+        }
+      },
+      "auditLog": {
+        "label": "Audit log",
+        "candidate": "Candidate A-2048",
+        "generated": "Scores generated",
+        "generatedAt": "09:14:02",
+        "suggestion": "4.2 · Advance suggested",
+        "recorded": "Decision recorded",
+        "recordedAt": "11:47:36",
+        "recordedPending": "--:--:--",
+        "evaluator": "Giulia Ferri",
+        "role": "Evaluator",
+        "placeholder": "Advance, hold or reject",
+        "pending": "Pending",
+        "decision": "Advance",
+        "signed": "signed · G. Ferri"
+      },
+      "score": {
+        "skill": "Problem solving",
+        "value": "3.8",
+        "outOf": "/ 5",
+        "justification": "Justification",
+        "text": "Broke the case into three steps and explained why the second option carried less risk. Weaker on putting numbers to the trade-off, which the candidate acknowledged when asked to",
+        "override": "Override score"
+      },
+      "declaration": {
+        "regulation": "Reg. (EU) 2024/1689",
+        "title": "EU AI Act Declaration of Conformity",
+        "rows": [
+          {
+            "label": "Classification",
+            "value": "High-risk AI system"
+          },
+          {
+            "label": "Annex III",
+            "value": "Point 4, employment"
+          },
+          {
+            "label": "Role",
+            "value": "Provider"
+          },
+          {
+            "label": "Assessment",
+            "value": "Annex VI, internal control"
+          }
+        ],
+        "signatory": "Authorised representative"
+      },
+      "prohibited": [
+        "No prohibited practices.",
+        "No emotion recognition.",
+        "No biometric categorisation."
+      ],
+      "prohibitedRef": "AI Act Art. 5"
+    },
+    "data": {
+      "title": "Your data. Your rules. EU soil.",
+      "body": "You are the Data Controller. We are your Data Processor. We act only on your documented instructions, and we never treat your data as ours.",
+      "record": {
+        "label": "Candidate record",
+        "source": "Your platform",
+        "sampleName": "Sample Candidate",
+        "sampleEmail": "candidate@example.com",
+        "samplePhone": "+00 000 000 0000"
+      },
+      "model": {
+        "label": "Sent to the model",
+        "name": "Skill-LLM",
+        "tokenName": "CANDIDATE_7F3A",
+        "tokenEmail": "EMAIL_91C2",
+        "tokenPhone": "PHONE_04BE"
+      },
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "answer": "Answer"
+      },
+      "answer": "“I’d split the problem into three steps, then compare…”",
+      "replaced": "Identifiers replaced",
+      "items": {
+        "processor": {
+          "title": "Processor, by contract.",
+          "body": "A Data Processing Agreement (DPA) under GDPR Art. 28 comes with every contract. Your instructions, your purposes.",
+          "tag": "GDPR Art. 28 · DPA"
+        },
+        "eu": {
+          "title": "Stays in the EU.",
+          "body": "All personal data is hosted on AWS in EU regions only (Milan, with Frankfurt and Dublin as fallback). Data never leaves the EU.",
+          "tag": "AWS EU regions"
+        },
+        "training": {
+          "title": "Never used to train our model.",
+          "body": "Our LLMs are trained on a proprietary dataset, not on your candidates’ or employees’ data.",
+          "tag": "Proprietary training data"
+        },
+        "identifiers": {
+          "title": "Identifiers removed before the AI sees them.",
+          "body": "Names, emails and phone numbers are pseudonymised before any prompt reaches the model.",
+          "tag": "Pseudonymisation"
+        }
+      },
+      "templates": {
+        "title": "Ready-made DPIA and notice templates.",
+        "body": "Start your Data Protection Impact Assessment (DPIA) and candidate information notices from our templates, not a blank page.",
+        "tag": "DPIA · Information notice"
+      }
+    },
+    "security": {
+      "title": "Security that's audited, not promised.",
+      "body": "Our whole platform runs inside an Information Security Management System certified to ISO/IEC 27001 and checked by independent auditors every year.",
+      "isms": {
+        "title": "Certified ISMS.",
+        "body": "ISO/IEC 27001:2022, certificate ITA-10158-ISMS, issued by Scandinavian Certification AS. Extended to the cloud with ISO/IEC 27017 and ISO/IEC 27018.",
+        "certificate": "Certificate",
+        "certificateId": "ITA-10158-ISMS",
+        "issued": "Issued",
+        "issuedOn": "28 Jul 2025",
+        "validTo": "Valid to",
+        "validUntil": "28 Jul 2028"
+      },
+      "cards": {
+        "encryption": {
+          "title": "Encrypted everywhere.",
+          "body": "AES-256 at rest, TLS in transit, keys managed in AWS KMS with customer-managed keys. Enterprise SSO via SAML 2.0.",
+          "tag": "AES-256 · TLS · AWS KMS · SAML 2.0"
+        },
+        "monitoring": {
+          "title": "Watched 24/7.",
+          "body": "Continuous threat detection and logging on AWS (GuardDuty, Security Hub, CloudTrail, WAF, Shield).",
+          "tag": "Continuous monitoring"
+        },
+        "pentest": {
+          "title": "Attacked on purpose.",
+          "body": "Annual penetration tests by an independent third party, using OWASP and OSSTMM methodologies.",
+          "tag": "OWASP · OSSTMM"
+        }
+      },
+      "extras": [
+        "Documented business continuity.",
+        "Disaster recovery plan.",
+        "Professional liability and privacy insurance."
+      ]
+    },
+    "roles": {
+      "title": "Clear roles. No grey zones.",
+      "body": "Liability starts where roles blur. Here is exactly who is responsible for what.",
+      "vendorLabel": "Vendor",
+      "customer": "You",
+      "customerLabel": "Customer",
+      "rows": {
+        "aiAct": {
+          "law": "EU AI Act",
+          "ours": "Provider",
+          "oursText": "Builds to high-risk requirements, documents the system, provides oversight tools",
+          "yours": "Deployer",
+          "yoursText": "Uses it as instructed, trains your people, keeps humans in the loop"
+        },
+        "gdpr": {
+          "law": "GDPR",
+          "ours": "Processor",
+          "oursText": "Processes on your instructions, secures data, assists with data subject requests and breach notification",
+          "yours": "Controller",
+          "yoursText": "Decides purpose and legal basis, informs candidates"
+        }
+      },
+      "give": "What we give you",
+      "docs": [
+        "DPA",
+        "AI Act Declarations",
+        "DPIA template",
+        "Information notice template"
+      ]
+    },
+    "pack": {
+      "title": "Everything your reviewers need. In one pack.",
+      "body": "Skip the back-and-forth. Certificates and AI Act declarations are yours today. The DPA, DPIA template and security reports come straight from our Legal team, tailored to your review.",
+      "preview": {
+        "label": "Skillvue Trust Pack",
+        "format": "PDF",
+        "title": "ISO/IEC 27001:2022 Certificate"
+      },
+      "now": {
+        "title": "Available now",
+        "items": [
+          "ISO/IEC 27001, 27017, 27018 and ISO 9001 certificates",
+          "CSA STAR Level 1 self-assessment",
+          "Signed AI Act Declarations",
+          "Compliance and Privacy Overview"
+        ]
+      },
+      "request": {
+        "title": "On request, via Legal",
+        "items": [
+          "DPA template",
+          "DPIA template",
+          "AI transparency notice template",
+          "Penetration test executive summary",
+          "Architecture and Compliance Overview",
+          "AI Risk and Impact Assessment"
+        ]
+      }
+    },
+    "certs": {
+      "title": "Independently certified. Built for EU regulation.",
+      "items": {
+        "iso27001": {
+          "name": "ISO/IEC 27001",
+          "desc": "Information security"
+        },
+        "iso27017": {
+          "name": "ISO/IEC 27017",
+          "desc": "Cloud security"
+        },
+        "iso27018": {
+          "name": "ISO/IEC 27018",
+          "desc": "Personal data in the cloud"
+        },
+        "iso9001": {
+          "name": "ISO 9001",
+          "desc": "Quality management"
+        },
+        "csa": {
+          "name": "CSA STAR Level 1",
+          "desc": "Cloud controls, self-assessment"
+        },
+        "soc2": {
+          "name": "SOC 2 Type 2",
+          "desc": "Controls audited over time"
+        },
+        "iso42001": {
+          "name": "ISO/IEC 42001",
+          "desc": "AI management system"
+        }
+      },
+      "badge": {
+        "soc": "SOC 2",
+        "type": "TYPE 2",
+        "iso": "ISO/IEC"
+      },
+      "inProgress": "In progress",
+      "chips": [
+        "EU AI Act ready",
+        "GDPR Processor",
+        "EU-hosted"
+      ]
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": [
+        {
+          "q": "Does Skillvue make hiring decisions?",
+          "a": "No. Skillvue scores and justifies. A person on your team always makes the final decision."
+        },
+        {
+          "q": "Is Skillvue compliant with the EU AI Act?",
+          "a": "Skillvue is classified as a high-risk AI system (Annex III, point 4). We've completed the conformity assessment by internal control (Annex VI) and our signed declarations are available. We track the AI Act timeline, including the Digital Omnibus, and update our documentation as it evolves."
+        },
+        {
+          "q": "Where is our data stored?",
+          "a": "On AWS, in EU regions only. It never leaves the EU."
+        },
+        {
+          "q": "Do you train your AI on our data?",
+          "a": "No. Our LLMs are trained on a proprietary dataset, not on candidates’ or employees’ data."
+        },
+        {
+          "q": "Who are your sub-processors?",
+          "a": "AWS hosts the platform. Any sub-processor is listed in the DPA, and you're notified before any change."
+        },
+        {
+          "q": "Is ISO 27001 a GDPR certification?",
+          "a": "No, and we won't pretend it is. It is evidence of appropriate security measures under GDPR Art. 32. Our GDPR compliance is demonstrated through the DPA and supporting documentation."
+        },
+        {
+          "q": "What happens if there's a data breach?",
+          "a": "We notify you in time for you to meet your 72-hour obligation to the authority (GDPR Art. 33)."
+        },
+        {
+          "q": "We're a bank / NIS2 entity. Can you meet our vendor requirements?",
+          "a": "Yes. Our Legal team maps your vendor risk assessment to our certified ISMS and adapts contract annexes, including DORA-aligned clauses."
+        }
+      ]
+    },
+    "closing": {
+      "title": "Bring your toughest questions.",
+      "body": "Our compliance team will answer every question from your HR, Legal, IT and Procurement teams and your DPO, until everyone signs off."
     }
   },
   "shared": {

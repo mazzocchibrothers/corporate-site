@@ -12,7 +12,7 @@ import { TOP_STARTUPS_ARTICLE } from '@/data/linkedin-top-startups';
 // href(), which is what retired the hrefIt flags. Labels come from the
 // catalogue, keyed on the same ids.
 const footerGroups = [
-  { id: 'platform', links: ['product', 'science'] },
+  { id: 'platform', links: ['product', 'science', 'trust'] },
   {
     id: 'solutions',
     links: [

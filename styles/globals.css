@@ -566,3 +566,46 @@ h2 .gradient-text {
   15%, 85% { opacity: 1; }
   100% { left: 100%; opacity: 0; }
 }
+
+/* ===== /trust. What utilities cannot draw: the looping dashed connectors,
+   the audit log's pending -> signed loop, the FAQ icon's open state and the
+   certificate strip's container query. Scroll motion is <Reveal>, like every
+   page; everything else is utilities in app/[locale]/trust and components/trust. ===== */
+.trust-page summary { list-style: none; cursor: pointer; }
+.trust-page summary::-webkit-details-marker { display: none; }
+.trust-page details[open]:not(.closing) .trust-faq-plus { transform: rotate(45deg); }
+
+/* The dotted board the product mock-ups sit on. */
+.trust-dots { background: #F5F5F7 radial-gradient(rgba(18, 18, 18, 0.06) 0.8px, transparent 1.1px) 0 0 / 8px 8px; }
+
+.trust-dash-x,
+.trust-dash-x-rev { background: repeating-linear-gradient(90deg, rgba(18, 18, 18, 0.22) 0 4px, transparent 4px 8px); background-size: 8px 1.5px; animation: trust-dash-x 0.9s linear infinite; }
+.trust-dash-x-rev { animation-name: trust-dash-x-rev; }
+.trust-dash-y { background: repeating-linear-gradient(180deg, rgba(18, 18, 18, 0.22) 0 4px, transparent 4px 8px); background-size: 1.5px 8px; animation: trust-dash-y 0.9s linear infinite; }
+.trust-dash-flow { animation: trust-dash-flow 0.9s linear infinite; }
+@keyframes trust-dash-x { to { background-position: 8px 0; } }
+@keyframes trust-dash-x-rev { to { background-position: -8px 0; } }
+@keyframes trust-dash-y { to { background-position: 0 8px; } }
+@keyframes trust-dash-flow { to { stroke-dashoffset: -8; } }
+
+/* The audit log: the evaluator's field waits, then the decision is signed.
+   Without motion it rests on the signed state. */
+.trust-log-pending { opacity: 0; animation: trust-log-pending 9s ease infinite; }
+.trust-log-done { opacity: 1; animation: trust-log-done 9s ease infinite; }
+.trust-caret { animation: trust-caret 1s steps(1) infinite; }
+@keyframes trust-log-pending { 0%, 42% { opacity: 1; } 48%, 94% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes trust-log-done { 0%, 44% { opacity: 0; transform: translateY(3px); } 52%, 92% { opacity: 1; transform: none; } 98%, 100% { opacity: 0; } }
+@keyframes trust-caret { 50% { opacity: 0; } }
+
+.trust-mask-62 { -webkit-mask-image: linear-gradient(180deg, #000000 62%, transparent); mask-image: linear-gradient(180deg, #000000 62%, transparent); }
+.trust-mask-70 { -webkit-mask-image: linear-gradient(180deg, #000000 70%, transparent); mask-image: linear-gradient(180deg, #000000 70%, transparent); }
+
+.trust-cq { container-type: inline-size; }
+@container (max-width: 470px) {
+  .trust-cert-strip { flex-direction: column; }
+  .trust-cert-strip > div { flex: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trust-page *, .trust-page *::before, .trust-page *::after { animation: none !important; }
+}

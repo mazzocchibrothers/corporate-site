@@ -113,6 +113,10 @@ const DELIBERATE = [
   ['blog.newsletter-october-2026.sections.2.links.', 'event names'],
   ['customers.talent-pioneers.stages.past.', 'conference names'],
   ['customers.talent-pioneers.stages.upcoming.forumHr.title', "the event's own name"],
+  // /trust: names of standards and certifications, which are not translated.
+  ['trust.security.cards.encryption.tag', 'encryption and SSO standard names (AES-256, TLS, AWS KMS, SAML 2.0)'],
+  ['trust.certs.items.csa.name', 'the certification’s own name'],
+  ['trust.certs.items.soc2.name', 'the attestation’s own name'],
   // A named interview methodology.
   ['blog.attitude-vs-competence.methods.', 'named methodologies (BEI, STAR)'],
   // Product surface named in English on both sites.
