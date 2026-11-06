@@ -1,27 +1,30 @@
-import { getLocale, getTranslations } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 import { ArrowRight, Check, Database, FlaskConical, Search, Sparkles } from 'lucide-react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { Reveal } from '@/components/ui/reveal';
 import { Button } from '@/components/ui/button';
-import { HeroVideo } from '@/components/ui/hero-video';
 import { href } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { merge, pick } from '@/i18n/messages';
+import { MapPageScreen, type MapPageScreenId } from '@/components/product/map-page-screens';
+import { DecideDemo } from '@/components/product/decide-demo';
 
 const CONTAINER = 'max-w-[1440px] mx-auto px-5 md:px-8 lg:px-12';
 const EYEBROW = 'type-eyebrow';
 const H2 = 'font-semibold tracking-[-0.02em] text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] text-[#121212]';
 const BODY = 'type-body text-[#4B4B4B]';
 
-// The product captures are 1344×956 and in the visitor's language. Below lg the
-// frame turns squarer and crops onto `focus` — the part of the UI the section
-// is about — instead of shrinking the whole screen to illegibility.
-const FEATURES = [
-  { id: 'jobs', image: 'map-job-architecture', focus: [620, 400] },
-  { id: 'consistency', image: 'map-skill-profile', focus: [620, 420] },
-  { id: 'mapping', image: 'map-compare-roles', focus: [700, 380] },
-  { id: 'activation', image: 'decide-participants', focus: [640, 420], video: true },
-] as const;
+// Each feature shows a screen of the product drawn in HTML, in the same window
+// as /product's: three Skillvue Map screens, then Skillvue Decide, where the
+// mapped skills are put to work.
+const FEATURES: { id: string; screen: MapPageScreenId | 'decide' }[] = [
+  { id: 'jobs', screen: 'list' },
+  { id: 'consistency', screen: 'profile' },
+  { id: 'mapping', screen: 'roles' },
+  { id: 'activation', screen: 'decide' },
+];
 
 const PRODUCTS = [
   { id: 'map', logo: '/product/skillvue-map-logo.svg', width: 148, height: 25 },
@@ -35,36 +38,8 @@ const FLOW_INPUTS = [
   { id: 'science', Icon: FlaskConical },
 ] as const;
 
-// `video`, when set, is a screen recording with the capture as its first frame.
-function Mockup({ src, alt, focus, video }: { src: string; alt: string; focus: readonly [number, number]; video?: string }) {
-  const position = `${(focus[0] / 1344) * 100}% ${(focus[1] / 956) * 100}%`;
-  return (
-    <div className="overflow-hidden rounded-xl border border-black/[0.12] bg-[#F7F7F7] aspect-square md:aspect-[4/3] lg:aspect-[1344/956]">
-      {video ? (
-        <div role="img" aria-label={alt} className="h-full" style={{ ['--focus' as string]: position }}>
-          <HeroVideo
-            poster={src}
-            webmSrc={`${video}.webm`}
-            mp4Src={`${video}.mp4`}
-            delay={0}
-            className="h-full"
-            videoClassName="block h-full w-full object-cover [object-position:var(--focus)]"
-          />
-        </div>
-      ) : (
-        <img
-          src={src}
-          alt={alt}
-          width={1344}
-          height={956}
-          className="block h-full w-full object-cover"
-          style={{ objectPosition: position }}
-          loading="lazy"
-          decoding="async"
-        />
-      )}
-    </div>
-  );
+function Screen({ screen, label }: { screen: MapPageScreenId | 'decide'; label: string }) {
+  return screen === 'decide' ? <DecideDemo label={label} /> : <MapPageScreen screen={screen} label={label} />;
 }
 
 function Points({ items }: { items: string[] }) {
@@ -85,8 +60,12 @@ const FLOW_BOX = 'flex h-[57px] items-center justify-center gap-3 rounded border
 export default async function ProductPage() {
   const locale = await getLocale();
   const t = await getTranslations('product.skillvue-map');
-  const shot = (name: string) => `/product/${name}-${locale}.avif`;
-  const clip = (name: string) => `/product/${name}-${locale}`;
+  // The screens' own copy: /product's Map and Decide screens, and this page's
+  // data for the three Map stills. A provider of its own, around <main> only,
+  // so it carries just these on top of what page.tsx already sends.
+  const all = await getMessages();
+  const screens = ['product.map.screens', 'product.decide.screen', 'product.skillvue-map.screens']
+    .reduce<Record<string, unknown>>((acc, ns) => merge(acc, pick(all, ns)), {});
   const demo = (
     <Button asChild variant="primary" mode="light">
       <a href={href('book-meeting', locale)}>
@@ -99,6 +78,7 @@ export default async function ProductPage() {
   return (
     <>
       <Navbar />
+      <NextIntlClientProvider locale={locale} messages={screens}>
       <main className="section-breathe">
         {/* Hero */}
         <section className="pt-[144px] pb-16 md:pt-[168px] md:pb-[88px] lg:pt-[192px] lg:pb-[112px]">
@@ -113,7 +93,7 @@ export default async function ProductPage() {
               {demo}
             </Reveal>
             <Reveal y={40} duration={0.9} delay={0.3} className="mt-12 md:mt-16 lg:mt-20">
-              <Mockup src={shot('map-skills-explore')} video={clip('map-skills-explore')} alt={t('hero.imageAlt')} focus={[700, 520]} />
+              <Screen screen="skills" label={t('hero.imageAlt')} />
             </Reveal>
           </div>
         </section>
@@ -194,7 +174,7 @@ export default async function ProductPage() {
         </section>
 
         {/* Features */}
-        {FEATURES.map(({ id, image, focus, ...f }) => (
+        {FEATURES.map(({ id, screen }) => (
           <section key={id} className="py-16 md:py-[88px] lg:py-[112px]">
             <div className={CONTAINER}>
               <Reveal y={16}>
@@ -208,7 +188,7 @@ export default async function ProductPage() {
                 </div>
               </Reveal>
               <Reveal y={24} scale={0.96} duration={0.8} className="mt-12 md:mt-16 lg:mt-20">
-                <Mockup src={shot(image)} video={'video' in f ? clip(image) : undefined} alt={t(`features.${id}.imageAlt`)} focus={focus} />
+                <Screen screen={screen} label={t(`features.${id}.imageAlt`)} />
               </Reveal>
             </div>
           </section>
@@ -247,6 +227,7 @@ export default async function ProductPage() {
           </Reveal>
         </section>
       </main>
+      </NextIntlClientProvider>
       <Footer />
     </>
   );

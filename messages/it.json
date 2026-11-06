@@ -7709,7 +7709,8 @@
         "levels": {
           "advanced": "Avanzato",
           "qualified": "Qualificato",
-          "practitioner": "Operativo"
+          "practitioner": "Operativo",
+          "foundational": "Base"
         },
         "priorities": {
           "critical": "Critica",
@@ -8102,7 +8103,7 @@
             "Suggerisci modifiche, aggiungi o rimuovi skill",
             "Gli stakeholder di business validano in piattaforma"
           ],
-          "imageAlt": "Vista Confronta ruoli di Skillvue Map: Regional Store Manager e Customer Service Supervisor a confronto"
+          "imageAlt": "Vista Confronta ruoli di Skillvue Map: Store Manager e Regional Store Manager a confronto, skill per skill"
         },
         "activation": {
           "eyebrow": "Feature 4",
@@ -8113,7 +8114,7 @@
             "Visualizzazione ed elenchi",
             "Export verso altri sistemi"
           ],
-          "imageAlt": "Elenco dei partecipanti in Skillvue Decide ordinato per corrispondenza delle skill, con un pannello chat AI"
+          "imageAlt": "Chat di Skillvue Decide che classifica i candidati migliori per un ruolo in base alla corrispondenza delle skill"
         }
       },
       "platform": {
@@ -8136,6 +8137,102 @@
       "demo": {
         "title": "Guarda Skillvue Map in azione.",
         "body": "Prenota una demo e scopri come trasformare i ruoli della tua organizzazione in profili di competenze unificati in Skillvue."
+      },
+      "screens": {
+        "list": {
+          "search": "Trova un ruolo nodo...",
+          "families": "Tutte le famiglie",
+          "architecture": "Architettura",
+          "rows": {
+            "marketing": "Marketing e Clienti",
+            "merchandising": "Merchandising e Categoria",
+            "visual": "Merchandising Visivo",
+            "visualManager": "Responsabile Merchandising Visivo",
+            "category": "Gestione Categoria",
+            "space": "Pianificazione Spazi e Assortimento",
+            "commercial": "Commerciale e Acquisti",
+            "store": "Operazioni di Negozio",
+            "supply": "Catena di Fornitura e Logistica",
+            "hr": "Risorse Umane"
+          },
+          "idle": "Inattivo",
+          "lastRun": "Ultima esecuzione 2 giorni fa",
+          "openRuns": "Apri le esecuzioni di mappatura"
+        },
+        "profile": {
+          "family": "Marketing Digitale",
+          "title": "Responsabile Marketing Digitale",
+          "hard": "Competenza Tecnica",
+          "soft": "Competenza Trasversale",
+          "department": "Risorse Umane · Coinvolgimento e Fidelizzazione dei Dipendenti",
+          "compareWith": "Confronta con...",
+          "rerun": "Riesegui mappatura",
+          "share": "Condividi",
+          "descriptionTitle": "Descrizione del lavoro",
+          "description": "Guida la strategia e l’esecuzione del marketing digitale su tutti i canali di performance e brand, gestendo il budget media digitale e l’elenco delle agenzie. Promuove l’innovazione dei canali, supervisiona il team di analisti digitali e riporta il ROI digitale al direttore marketing.",
+          "tabs": {
+            "internal": "Competenze interne",
+            "market": "Segnale di mercato",
+            "profile": "Profilo delle competenze"
+          },
+          "search": "Cerca...",
+          "type": "Tipo",
+          "all": "Tutti",
+          "softFilter": "Soft",
+          "hardFilter": "Hard",
+          "roleName": "Nome del ruolo",
+          "category": "Categoria",
+          "rows": {
+            "channel": "Strategia di Marketing Digitale e Pianificazione dei Canali",
+            "strategy": "Sviluppo e Pianificazione della Strategia di Marketing",
+            "creative": "Ideazione Creativa e Innovazione",
+            "performance": "Misurazione delle Prestazioni e Analisi",
+            "data": "Pratica Generale di Analisi dei Dati"
+          },
+          "categories": {
+            "marketing": "Marketing e Relazioni Pubbliche",
+            "business": "Business",
+            "analysis": "Analisi"
+          },
+          "rationale": {
+            "title": "Motivazione",
+            "body": "Presente nella descrizione del lavoro e fortemente supportato dai dati di mercato (punteggio 0,70, due aree chiave: Marketing e Strategie di Marketing). Essenziale per un ruolo manageriale responsabile dello sviluppo della strategia e dell’allineamento delle attività digitali con le priorità aziendali di fidelizzazione e personalizzazione del cliente.",
+            "definition": "Sviluppa strategie di marketing generali, piani e obiettivi che allineano le attività di marketing con gli obiettivi organizzativi e le opportunità di mercato."
+          }
+        },
+        "roles": {
+          "title": "Confronta ruoli",
+          "a": {
+            "label": "Ruolo A",
+            "role": "Store Manager",
+            "meta": "Retail Operations / Gestione negozio · 8 skills"
+          },
+          "b": {
+            "label": "Ruolo B",
+            "role": "Regional Store Manager",
+            "meta": "Retail Operations / Leadership regionale · 9 skills"
+          },
+          "show": "Mostra",
+          "all": "Tutte le skills",
+          "shared": "Solo skills condivise",
+          "differences": "Solo differenze",
+          "counts": "<b>6</b> condivise · <b>2</b> solo A · <b>3</b> solo B",
+          "columnA": "Ruolo A · Store Manager",
+          "columnB": "Ruolo B · Regional Store Manager",
+          "skills": {
+            "leadership": "Leadership regionale",
+            "inventory": "Gestione dell’inventario",
+            "visual": "Visual merchandising del negozio",
+            "sales": "Analisi delle vendite",
+            "communication": "Comunicazione con il cliente",
+            "problemSolving": "Problem solving e decision making",
+            "cash": "Gestione e riconciliazione della cassa",
+            "handover": "Passaggio di consegne tra turni",
+            "pnl": "Responsabilità del conto economico",
+            "multiSite": "Gestione delle performance multi-sede",
+            "talent": "Sviluppo della pipeline di talenti"
+          }
+        }
       }
     }
   },

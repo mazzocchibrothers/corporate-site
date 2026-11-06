@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState, type ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
 import { MapSkillsDemo } from '@/components/product/map-skills-demo';
 import { StaggerReveal } from '@/components/product/stagger-reveal';
@@ -23,6 +23,10 @@ import { StaggerReveal } from '@/components/product/stagger-reveal';
 //
 // Type is the site's own: Geist, and Geist Mono for the assistant's
 // transcript. The design names Inter, which the site does not load.
+//
+// The window itself — frame, browser bar, search, sidebar, user row — is
+// <MapWindow>, which /product/skillvue-map's screens (map-page-screens.tsx)
+// share, as they share the Job architecture actions (<JobsActions>).
 //
 // One departure from the design's coordinates: the Explore / List toggle is
 // anchored by its right edge, not its left, so a longer label (Esplora /
@@ -69,7 +73,18 @@ const COMPARED = [
 const PRIORITY_COLOUR = { critical: '#D9443C', important: '#E8731E', nice: '#333' } as const;
 const PROFICIENCY_COLOURS = { advanced: ['#D3F3CC', '#2F7A2A'], practitioner: ['#E9F6BE', '#5E6B12'] } as const;
 
-export function MapScreens({ tab, label }: { tab: MapScreen; label: string }) {
+// The sidebar entry shown as current: Job architecture, Skills, or neither (a
+// role's own page, Compare roles).
+export type MapNav = 'jobs' | 'skills' | null;
+
+// The panel every Map screen draws its content into, in the window's units.
+export const MAP_PANEL = { left: 293, top: 122, width: PANEL_W, height: PANEL_H } as const;
+
+// The window around every Map screen: the frame, the browser bar, the app's
+// search, sidebar and user row. A screen is its children, laid out in the
+// window's 1680-unit space. /product's three tabs and /product/skillvue-map's
+// four screens all sit in it.
+export function MapWindow({ label, nav, children }: { label: string; nav: MapNav; children: ReactNode }) {
   const t = useTranslations('product.map');
   const ref = useRef<HTMLDivElement>(null);
   // Unknown until the frame is measured, and hidden until then: a guess would
@@ -83,20 +98,6 @@ export function MapScreens({ tab, label }: { tab: MapScreen; label: string }) {
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
-
-  const tiles = TILES.map(([key, n, x, y, w, h, bg, fg]) => ({
-    t: t(`screens.jobs.families.${key}`), n, x, y, w, h, bg, fg, tw: key === 'commercial' ? '130px' : 'auto',
-  }));
-  const roleCards = ROLE_CARDS.map(({ key, ...card }) => ({
-    ...card, h: t(`screens.compare.${key}.label`), r: t(`screens.compare.${key}.role`), m: t(`screens.compare.${key}.meta`),
-  }));
-  const cmp = COMPARED.map(([key, priority, proficiency, inB]) => ({
-    t: t(`screens.compare.skills.${key}`),
-    p: t(`screens.priorities.${priority}`), pc: PRIORITY_COLOUR[priority],
-    crit: priority === 'critical', imp: priority === 'important',
-    f: t(`screens.levels.${proficiency}`), fb: PROFICIENCY_COLOURS[proficiency][0], fc: PROFICIENCY_COLOURS[proficiency][1],
-    hasB: inB, noB: !inB,
-  }));
 
   return (
     <div ref={ref} role="img" aria-label={label} style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden', background: '#fff', borderRadius: 12, border: '1px solid #D4D4D8', boxSizing: 'border-box', boxShadow: '0 20px 50px rgba(30,30,80,.12)' }}>
@@ -114,21 +115,59 @@ export function MapScreens({ tab, label }: { tab: MapScreen; label: string }) {
     <div style={{ position: 'absolute', left: 1634, top: 73, width: 36, height: 36, borderRadius: 9, border: '1.5px solid #E7A6C4', boxSizing: 'border-box', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg viewBox="0 0 24 24" fill="none" stroke="#E5566E" strokeWidth="1.5" strokeLinejoin="round" style={{ width: 22, height: 22 }}><path d="M12 3c.8 4.6 4.4 8.2 9 9-4.6.8-8.2 4.4-9 9-.8-4.6-4.4-8.2-9-9 4.6-.8 8.2-4.4 9-9z"></path></svg></div>
     <div style={{ position: 'absolute', left: 10, top: 121, width: 272, fontSize: 16.5, color: '#333' }}>
     <div style={{ height: 46, display: 'flex', alignItems: 'center', gap: 10, paddingLeft: 10 }}><span style={{ width: 26, height: 26, border: '1px solid #CCC', borderRadius: 3, boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg viewBox="0 0 24 24" fill="#222" style={{ width: 16, height: 16 }}><rect x="3" y="3" width="8" height="8" rx="1" /><circle cx="17" cy="7" r="4" /><path d="M3 13h8v8a8 8 0 0 1-8-8z" /><path d="M13 21l8-8v8z" /></svg></span>{t('screens.workspace')}<svg viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="1.8" strokeLinecap="round" style={{ marginLeft: 'auto', marginRight: 14, width: 16, height: 16 }}><path d="M9 6l6 6-6 6"></path></svg></div>
-    <div style={{ height: 46, marginTop: 1, display: 'flex', alignItems: 'center', gap: 15, paddingLeft: 14, borderRadius: 8, background: tab === 'jobs' ? '#E8E8E9' : 'transparent', width: '263px', boxSizing: 'border-box' }}><svg viewBox="0 0 24 24" fill="none" stroke="#444" strokeWidth="1.6" style={{ width: 19, height: 19 }}><rect x="4" y="4" width="6" height="6" rx="1"></rect><rect x="14" y="4" width="6" height="6" rx="1"></rect><rect x="4" y="14" width="6" height="6" rx="1"></rect><rect x="14" y="14" width="6" height="6" rx="1"></rect></svg>{t('screens.nav.jobs')}</div>
-    <div style={{ height: 46, marginTop: 1, display: 'flex', alignItems: 'center', gap: 15, paddingLeft: 14, borderRadius: 8, background: tab === 'jobs' ? 'transparent' : '#E8E8E9', width: '263px', boxSizing: 'border-box' }}><svg viewBox="0 0 24 24" fill="none" stroke="#444" strokeWidth="1.6" strokeLinejoin="round" style={{ width: 19, height: 19 }}><path d="M10 3c.6 3.6 2.4 5.4 6 6-3.6.6-5.4 2.4-6 6-.6-3.6-2.4-5.4-6-6 3.6-.6 5.4-2.4 6-6zM18 14c.3 1.8 1.2 2.7 3 3-1.8.3-2.7 1.2-3 3-.3-1.8-1.2-2.7-3-3 1.8-.3 2.7-1.2 3-3z"></path></svg>{t('screens.nav.skills')}</div>
+    <div style={{ height: 46, marginTop: 1, display: 'flex', alignItems: 'center', gap: 15, paddingLeft: 14, borderRadius: 8, background: nav === 'jobs' ? '#E8E8E9' : 'transparent', width: '263px', boxSizing: 'border-box' }}><svg viewBox="0 0 24 24" fill="none" stroke="#444" strokeWidth="1.6" style={{ width: 19, height: 19 }}><rect x="4" y="4" width="6" height="6" rx="1"></rect><rect x="14" y="4" width="6" height="6" rx="1"></rect><rect x="4" y="14" width="6" height="6" rx="1"></rect><rect x="14" y="14" width="6" height="6" rx="1"></rect></svg>{t('screens.nav.jobs')}</div>
+    <div style={{ height: 46, marginTop: 1, display: 'flex', alignItems: 'center', gap: 15, paddingLeft: 14, borderRadius: 8, background: nav === 'skills' ? '#E8E8E9' : 'transparent', width: '263px', boxSizing: 'border-box' }}><svg viewBox="0 0 24 24" fill="none" stroke="#444" strokeWidth="1.6" strokeLinejoin="round" style={{ width: 19, height: 19 }}><path d="M10 3c.6 3.6 2.4 5.4 6 6-3.6.6-5.4 2.4-6 6-.6-3.6-2.4-5.4-6-6 3.6-.6 5.4-2.4 6-6zM18 14c.3 1.8 1.2 2.7 3 3-1.8.3-2.7 1.2-3 3-.3-1.8-1.2-2.7-3-3 1.8-.3 2.7-1.2 3-3z"></path></svg>{t('screens.nav.skills')}</div>
     <div style={{ height: 46, marginTop: 1, display: 'flex', alignItems: 'center', gap: 15, paddingLeft: 14 }}><svg viewBox="0 0 24 24" fill="none" stroke="#444" strokeWidth="1.6" style={{ width: 19, height: 19 }}><rect x="5" y="4" width="14" height="17" rx="2"></rect><path d="M9 4V3h6v1M9 13l2 2 4-4"></path></svg>{t('screens.nav.workflow')}<svg viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="1.8" strokeLinecap="round" style={{ marginLeft: 'auto', marginRight: 14, width: 16, height: 16 }}><path d="M6 15l6-6 6 6"></path></svg></div>
     <div style={{ position: 'relative', paddingLeft: 46, display: 'flex', flexDirection: 'column' }}><span style={{ position: 'absolute', left: 23, top: '0', bottom: '0', width: 1, background: '#E3E3E3' }}></span><span style={{ height: 42.5, display: 'flex', alignItems: 'center' }}>{t('screens.nav.input')}</span><span style={{ height: 42.5, display: 'flex', alignItems: 'center' }}>{t('screens.nav.validation')}</span><span style={{ height: 42.5, display: 'flex', alignItems: 'center' }}>{t('screens.nav.mapping')}</span><span style={{ height: 42.5, display: 'flex', alignItems: 'center' }}>{t('screens.nav.settings')}</span></div>
     <div style={{ height: 46, display: 'flex', alignItems: 'center', gap: 15, paddingLeft: 14 }}><svg viewBox="0 0 24 24" fill="none" stroke="#444" strokeWidth="1.6" strokeLinejoin="round" style={{ width: 19, height: 19 }}><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>{t('screens.nav.admin')}<svg viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="1.8" strokeLinecap="round" style={{ marginLeft: 'auto', marginRight: 14, width: 16, height: 16 }}><path d="M6 15l6-6 6 6"></path></svg></div>
     <div style={{ position: 'relative', paddingLeft: 46, display: 'flex', flexDirection: 'column' }}><span style={{ position: 'absolute', left: 23, top: '0', bottom: '0', width: 1, background: '#E3E3E3' }}></span><span style={{ height: 42.5, display: 'flex', alignItems: 'center' }}>{t('screens.nav.workspaces')}</span><span style={{ height: 42.5, display: 'flex', alignItems: 'center' }}>{t('screens.nav.people')}</span><span style={{ height: 42.5, display: 'flex', alignItems: 'center' }}>{t('screens.nav.prompts')}</span><span style={{ height: 42.5, display: 'flex', alignItems: 'center' }}>{t('screens.nav.queues')}<svg viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="1.6" strokeLinecap="round" style={{ marginLeft: 'auto', marginRight: 14, width: 19, height: 19 }}><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></span></div>
     </div>
     <div style={{ position: 'absolute', left: 19, top: 1147 - (1194 - H), width: 250, display: 'flex', alignItems: 'center', gap: 11, fontSize: 16.5, color: '#333' }}><span style={{ width: 28, height: 28, borderRadius: '50%', background: '#E9E9EA', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, color: '#555' }}>{t('screens.user').charAt(0)}</span>{t('screens.user')}<svg viewBox="0 0 24 24" fill="none" stroke="#777" strokeWidth="1.6" style={{ marginLeft: 'auto', width: 19, height: 19 }}><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M9 4v16M16 10l-2 2 2 2"></path></svg></div>
+    {children}
+    </div>
+    </div>
+  );
+}
+
+// The Explore / List toggle and the Compare and Run buttons of Job
+// architecture, the same on the Explore screen (/product) and the List one.
+export function JobsActions({ view }: { view: 'explore' | 'list' }) {
+  const t = useTranslations('product.map');
+  const on = { height: 33, padding: '0 9px', borderRadius: 6, background: '#EBEBEC', display: 'flex', alignItems: 'center' } as const;
+  const off = { padding: '0 6px', color: '#666' } as const;
+  return (
+    <>
+    <div style={{ position: 'absolute', right: 345, top: 141, height: 41, border: '1px solid #EAEAEA', borderRadius: 8, boxSizing: 'border-box', display: 'flex', alignItems: 'center', padding: 3, gap: 4, fontSize: 16.5 }}><span style={view === 'explore' ? on : off}>{t('screens.explore')}</span><span style={view === 'list' ? on : off}>{t('screens.jobs.list')}</span></div>
+    <div style={{ position: 'absolute', left: 1347, top: 141, width: 111, height: 41, border: '1px solid #DDD', borderRadius: 8, boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16.5, fontWeight: '600' }}>{t('screens.jobs.compare')}</div>
+    <div style={{ position: 'absolute', left: 1469, top: 141, width: 178, height: 41, borderRadius: 8, background: '#4B4DF7', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16.5, fontWeight: '600' }}>{t('screens.jobs.run')}</div>
+    </>
+  );
+}
+
+export function MapScreens({ tab, label }: { tab: MapScreen; label: string }) {
+  const t = useTranslations('product.map');
+
+  const tiles = TILES.map(([key, n, x, y, w, h, bg, fg]) => ({
+    t: t(`screens.jobs.families.${key}`), n, x, y, w, h, bg, fg, tw: key === 'commercial' ? '130px' : 'auto',
+  }));
+  const roleCards = ROLE_CARDS.map(({ key, ...card }) => ({
+    ...card, h: t(`screens.compare.${key}.label`), r: t(`screens.compare.${key}.role`), m: t(`screens.compare.${key}.meta`),
+  }));
+  const cmp = COMPARED.map(([key, priority, proficiency, inB]) => ({
+    t: t(`screens.compare.skills.${key}`),
+    p: t(`screens.priorities.${priority}`), pc: PRIORITY_COLOUR[priority],
+    crit: priority === 'critical', imp: priority === 'important',
+    f: t(`screens.levels.${proficiency}`), fb: PROFICIENCY_COLOURS[proficiency][0], fc: PROFICIENCY_COLOURS[proficiency][1],
+    hasB: inB, noB: !inB,
+  }));
+
+  return (
+    <MapWindow label={label} nav={tab === 'jobs' ? 'jobs' : 'skills'}>
     <div style={{ position: 'absolute', inset: '0', opacity: tab === 'jobs' ? 1 : 0, transition: 'opacity 400ms ease' }}>
     <StaggerReveal active={tab === 'jobs'}>
     <div style={{ position: 'absolute', left: 293, top: 122, width: PANEL_W, height: PANEL_H, border: '1px solid #EBEBEB', borderRadius: 12, background: '#fff' }}></div>
     <div style={{ position: 'absolute', left: 312, top: 145, fontSize: 24, fontWeight: '600', letterSpacing: '-0.01em' }}>{t('screens.nav.jobs')}</div>
-    <div style={{ position: 'absolute', right: 345, top: 141, height: 41, border: '1px solid #EAEAEA', borderRadius: 8, boxSizing: 'border-box', display: 'flex', alignItems: 'center', padding: 3, gap: 4, fontSize: 16.5 }}><span style={{ height: 33, padding: '0 9px', borderRadius: 6, background: '#EBEBEC', display: 'flex', alignItems: 'center' }}>{t('screens.explore')}</span><span style={{ padding: '0 6px', color: '#666' }}>{t('screens.jobs.list')}</span></div>
-    <div style={{ position: 'absolute', left: 1347, top: 141, width: 111, height: 41, border: '1px solid #DDD', borderRadius: 8, boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16.5, fontWeight: '600' }}>{t('screens.jobs.compare')}</div>
-    <div style={{ position: 'absolute', left: 1469, top: 141, width: 178, height: 41, borderRadius: 8, background: '#4B4DF7', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16.5, fontWeight: '600' }}>{t('screens.jobs.run')}</div>
+    <JobsActions view="explore" />
     <div style={{ position: 'absolute', left: 312, top: 202, fontSize: 16.5, color: '#555' }}>{t('screens.jobs.summary')}</div>
     {tiles.map((tl, i0) => (<Fragment key={i0}><div style={{ position: 'absolute', left: `${tl.x}px`, top: `${tl.y}px`, width: `${tl.w}px`, height: `${tl.h}px`, borderRadius: 14, background: tl.bg, color: tl.fg, padding: '12px 15px', boxSizing: 'border-box' }}><div style={{ fontSize: 16.5, fontWeight: '500', lineHeight: '23px', width: tl.tw }}>{tl.t}</div><div style={{ fontSize: 14.5, opacity: '.85', marginTop: 2 }}>{t('screens.jobs.roles', { count: tl.n })}</div></div></Fragment>))}
     </StaggerReveal></div>
@@ -160,7 +199,6 @@ export function MapScreens({ tab, label }: { tab: MapScreen; label: string }) {
     </div>
     </StaggerReveal></div>
     <MapSkillsDemo active={tab === 'skills'} />
-    </div>
-    </div>
+    </MapWindow>
   );
 }
