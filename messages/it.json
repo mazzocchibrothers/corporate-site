@@ -7709,7 +7709,8 @@
         "levels": {
           "advanced": "Avanzato",
           "qualified": "Qualificato",
-          "practitioner": "Operativo"
+          "practitioner": "Operativo",
+          "foundational": "Base"
         },
         "priorities": {
           "critical": "Critica",
@@ -8031,7 +8032,7 @@
         "titleLead": "Un’unica architettura delle skill,",
         "titleTail": "in giorni, non in mesi.",
         "body": "Skillvue Map combina i tuoi dati interni, i segnali di mercato e la nostra scienza per costruire la tua tassonomia delle skill e la mappatura skill-ruoli, in giorni, non in mesi, e le mantiene sempre aggiornate.",
-        "imageAlt": "Esplora skill di Skillvue Map: grafico a bolle dei cluster di skill con la skill International Taxation aperta e un pannello chat AI"
+        "imageAlt": "Esplora skill di Skillvue Map: grafico a bolle dei cluster di skill con la skill Fiscalità internazionale aperta e un pannello chat AI"
       },
       "problem": {
         "eyebrow": "Il problema",
@@ -8091,7 +8092,7 @@
             "Definizioni di hard skill basate sul mercato",
             "Un linguaggio comune delle skill tra business unit e sedi"
           ],
-          "imageAlt": "Profilo di skill di Skillvue Map per il ruolo Digital Marketing Manager, con skill richieste, priorità e livelli di proficiency"
+          "imageAlt": "Profilo di skill di Skillvue Map per il ruolo Responsabile marketing digitale, con skill richieste, priorità e livelli di proficiency"
         },
         "mapping": {
           "eyebrow": "Feature 3",
@@ -8102,7 +8103,7 @@
             "Suggerisci modifiche, aggiungi o rimuovi skill",
             "Gli stakeholder di business validano in piattaforma"
           ],
-          "imageAlt": "Vista Confronta ruoli di Skillvue Map: Regional Store Manager e Customer Service Supervisor a confronto"
+          "imageAlt": "Vista Confronta ruoli di Skillvue Map: Store Manager e Regional Store Manager a confronto, skill per skill"
         },
         "activation": {
           "eyebrow": "Feature 4",
@@ -8113,7 +8114,7 @@
             "Visualizzazione ed elenchi",
             "Export verso altri sistemi"
           ],
-          "imageAlt": "Elenco dei partecipanti in Skillvue Decide ordinato per corrispondenza delle skill, con un pannello chat AI"
+          "imageAlt": "Chat di Skillvue Decide che classifica i candidati migliori per un ruolo in base alla corrispondenza delle skill"
         }
       },
       "platform": {
@@ -8136,6 +8137,97 @@
       "demo": {
         "title": "Guarda Skillvue Map in azione.",
         "body": "Prenota una demo e scopri come trasformare i ruoli della tua organizzazione in profili di competenze unificati in Skillvue."
+      },
+      "screens": {
+        "list": {
+          "search": "Trova un ruolo…",
+          "families": "Tutte le famiglie",
+          "architecture": "Architettura",
+          "rows": {
+            "marketing": "Marketing e clienti",
+            "merchandising": "Merchandising e categoria",
+            "visual": "Merchandising visivo",
+            "visualManager": "Responsabile merchandising visivo",
+            "category": "Gestione categoria",
+            "space": "Pianificazione spazi e assortimento",
+            "commercial": "Commerciale e acquisti",
+            "store": "Operazioni di negozio",
+            "supply": "Catena di fornitura e logistica",
+            "hr": "Risorse umane"
+          },
+          "idle": "Inattivo",
+          "lastRun": "Ultima esecuzione 2 giorni fa",
+          "openRuns": "Apri le esecuzioni di mappatura"
+        },
+        "profile": {
+          "family": "Marketing digitale",
+          "title": "Responsabile marketing digitale",
+          "hard": "Hard skill",
+          "soft": "Soft skill",
+          "department": "Risorse umane · Coinvolgimento e fidelizzazione dei dipendenti",
+          "compareWith": "Confronta con…",
+          "rerun": "Riesegui mappatura",
+          "share": "Condividi",
+          "descriptionTitle": "Descrizione della posizione",
+          "description": "Guida la strategia e l’esecuzione del marketing digitale su tutti i canali di performance e brand, gestendo il budget media digitale e l’elenco delle agenzie. Promuove l’innovazione dei canali, supervisiona il team di analisti digitali e riporta il ROI digitale al direttore marketing.",
+          "tabs": {
+            "internal": "Competenze interne",
+            "market": "Segnale di mercato",
+            "profile": "Profilo delle competenze"
+          },
+          "search": "Cerca…",
+          "type": "Tipo",
+          "all": "Tutti",
+          "softFilter": "Soft",
+          "hardFilter": "Hard",
+          "roleName": "Nome del ruolo",
+          "category": "Categoria",
+          "rows": {
+            "channel": "Strategia digitale e pianificazione dei canali",
+            "strategy": "Sviluppo e pianificazione della strategia di marketing",
+            "creative": "Ideazione creativa e innovazione",
+            "performance": "Misurazione delle prestazioni e analisi",
+            "data": "Pratica generale di analisi dei dati"
+          },
+          "categories": {
+            "marketing": "Marketing e relazioni pubbliche",
+            "business": "Business",
+            "analysis": "Analisi"
+          },
+          "rationale": {
+            "title": "Motivazione",
+            "body": "Presente nella descrizione del lavoro e fortemente supportato dai dati di mercato (punteggio 0,70, due aree chiave: Marketing e Strategie di Marketing). Essenziale per un ruolo manageriale responsabile dello sviluppo della strategia e dell’allineamento delle attività digitali con le priorità aziendali di fidelizzazione e personalizzazione del cliente.",
+            "definition": "Sviluppa strategie di marketing generali, piani e obiettivi che allineano le attività di marketing con gli obiettivi organizzativi e le opportunità di mercato."
+          }
+        },
+        "roles": {
+          "a": {
+            "label": "Ruolo A",
+            "role": "Store Manager",
+            "meta": "Retail Operations / Gestione negozio · 8 competenze"
+          },
+          "b": {
+            "label": "Ruolo B",
+            "role": "Regional Store Manager",
+            "meta": "Retail Operations / Leadership regionale · 9 competenze"
+          },
+          "counts": "<b>6</b> condivise · <b>2</b> solo A · <b>3</b> solo B",
+          "columnA": "Ruolo A · Store Manager",
+          "columnB": "Ruolo B · Regional Store Manager",
+          "skills": {
+            "leadership": "Leadership regionale",
+            "inventory": "Gestione dell’inventario",
+            "visual": "Visual merchandising del negozio",
+            "sales": "Analisi delle vendite",
+            "communication": "Comunicazione con il cliente",
+            "problemSolving": "Problem solving e decision making",
+            "cash": "Gestione e riconciliazione della cassa",
+            "handover": "Passaggio di consegne tra turni",
+            "pnl": "Responsabilità del conto economico",
+            "multiSite": "Gestione delle performance multi-sede",
+            "talent": "Sviluppo della pipeline di talenti"
+          }
+        }
       }
     }
   },
@@ -9033,7 +9125,7 @@
       },
       "declaration": {
         "regulation": "Reg. (UE) 2024/1689",
-        "title": "Dichiarazione di conformità all’AI Act UE",
+        "title": "Dichiarazioni AI Act",
         "rows": [
           {
             "label": "Classificazione",

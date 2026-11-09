@@ -7709,7 +7709,8 @@
         "levels": {
           "advanced": "Advanced",
           "qualified": "Qualified",
-          "practitioner": "Practitioner"
+          "practitioner": "Practitioner",
+          "foundational": "Foundational"
         },
         "priorities": {
           "critical": "Critical",
@@ -8102,7 +8103,7 @@
             "Suggest changes, add or remove skills",
             "Business stakeholders validate in the platform"
           ],
-          "imageAlt": "Skillvue Map Compare Roles view: Regional Store Manager versus Customer Service Supervisor"
+          "imageAlt": "Skillvue Map Compare roles view: Store Manager versus Regional Store Manager, skill by skill"
         },
         "activation": {
           "eyebrow": "Feature 4",
@@ -8113,7 +8114,7 @@
             "Visual and list views",
             "Export to other systems"
           ],
-          "imageAlt": "Skillvue Decide participants list ranked by skill match with an AI chat panel"
+          "imageAlt": "Skillvue Decide chat ranking the best candidates for a role by skill match"
         }
       },
       "platform": {
@@ -8136,6 +8137,97 @@
       "demo": {
         "title": "See Skillvue Map in action.",
         "body": "Book a demo to explore how your jobs can become clear, consistent skill profiles in Skillvue."
+      },
+      "screens": {
+        "list": {
+          "search": "Find a node role…",
+          "families": "All families",
+          "architecture": "Architecture",
+          "rows": {
+            "marketing": "Marketing & Customer",
+            "merchandising": "Merchandising & Category",
+            "visual": "Visual Merchandising",
+            "visualManager": "Visual Merchandising Manager",
+            "category": "Category Management",
+            "space": "Space & Range Planning",
+            "commercial": "Commercial & Buying",
+            "store": "Store Operations",
+            "supply": "Supply Chain & Logistics",
+            "hr": "Human Resources"
+          },
+          "idle": "Idle",
+          "lastRun": "Last run 2 days ago",
+          "openRuns": "Open mapping runs"
+        },
+        "profile": {
+          "family": "Digital Marketing",
+          "title": "Digital Marketing Manager",
+          "hard": "Hard Skill",
+          "soft": "Soft Skill",
+          "department": "Human Resources · Employee Engagement and Retention",
+          "compareWith": "Compare with…",
+          "rerun": "Re-run mapping",
+          "share": "Share",
+          "descriptionTitle": "Job Description",
+          "description": "Leads digital marketing strategy and execution across all performance and brand channels, owning the digital media budget and the agency roster. Drives channel innovation, oversees the digital analyst team, and reports digital ROI to the marketing director.",
+          "tabs": {
+            "internal": "Internal Skills",
+            "market": "Market Signal",
+            "profile": "Skill Profile"
+          },
+          "search": "Search…",
+          "type": "Type",
+          "all": "All",
+          "softFilter": "Soft",
+          "hardFilter": "Hard",
+          "roleName": "Role Name",
+          "category": "Category",
+          "rows": {
+            "channel": "Digital Marketing Strategy and Channel Planning",
+            "strategy": "Marketing Strategy Development and Planning",
+            "creative": "Creative Ideation and Innovation",
+            "performance": "Performance Measurement and Analytics",
+            "data": "General Data Analysis Practice"
+          },
+          "categories": {
+            "marketing": "Marketing and Public Relations",
+            "business": "Business",
+            "analysis": "Analysis"
+          },
+          "rationale": {
+            "title": "Rationale",
+            "body": "Present in JD and strongly supported by market data (0.70 score, two defining areas: Marketing and Marketing Strategies). Essential for a manager-level role responsible for strategy development and aligning digital activity with the company’s customer loyalty and personalisation priorities.",
+            "definition": "Develops overarching marketing strategies, plans, and goals that align marketing activities with organizational objectives and market opportunities."
+          }
+        },
+        "roles": {
+          "a": {
+            "label": "Role A",
+            "role": "Store Manager",
+            "meta": "Retail Operations / Store Management · 8 skills"
+          },
+          "b": {
+            "label": "Role B",
+            "role": "Regional Store Manager",
+            "meta": "Retail Operations / Regional Leadership · 9 skills"
+          },
+          "counts": "<b>6</b> shared · <b>2</b> only A · <b>3</b> only B",
+          "columnA": "Role A · Store Manager",
+          "columnB": "Role B · Regional Store Manager",
+          "skills": {
+            "leadership": "Regional Leadership",
+            "inventory": "Inventory Management",
+            "visual": "Store Visual Merchandising",
+            "sales": "Sales Analysis",
+            "communication": "Customer Communication",
+            "problemSolving": "Problem Solving and Decision Making",
+            "cash": "Cash Handling and Reconciliation",
+            "handover": "Shift Handover",
+            "pnl": "P&L Ownership",
+            "multiSite": "Multi-Site Performance Management",
+            "talent": "Talent Pipeline Development"
+          }
+        }
       }
     }
   },
