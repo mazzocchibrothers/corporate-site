@@ -47,6 +47,13 @@ assert.deepEqual(
 );
 assert.ok(home.home.meta.title, 'the picked namespace keeps its nested shape');
 
+const about = await run('about', 'en');
+assert.deepEqual(
+  Object.keys(about).sort(),
+  ['about', 'common', 'shared'],
+  'a route that lists no `messages` receives its own namespace plus the shared ones, and nothing else',
+);
+
 // The degradation path: asking for a namespace the catalogue does not have must
 // yield nothing for it, not throw and not leak the rest of the catalogue.
 const missing = await run('customers/does-not-exist', 'en');

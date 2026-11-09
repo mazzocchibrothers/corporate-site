@@ -16,10 +16,8 @@ import { HeroCopy } from '@/components/ui/hero-copy';
 import { MapScreens, type MapScreen } from '@/components/product/map-screens';
 import { AssessScreens, type AssessScreen } from '@/components/product/assess-screens';
 import { DecideDemo } from '@/components/product/decide-demo';
-import { PlatformCards } from '@/components/product/PlatformCards';
+import { PlatformCards, ProductLogo as Logo, type Product } from '@/components/product/PlatformCards';
 
-const PRODUCTS = ['map', 'assess', 'decide'] as const;
-type Product = (typeof PRODUCTS)[number];
 
 // Each tab is a screen of the product UI drawn in HTML (<MapScreens>,
 // <AssessScreens>), which reads its copy from the catalogue; Decide's is the
@@ -37,20 +35,6 @@ const H2 = 'font-semibold tracking-[-0.02em] text-[clamp(1.8rem,4vw,3rem)] leadi
 // The line break is desktop-only, so it carries the space the message does not:
 // without it a phone reads "ruoli,alla".
 const br = () => <>{' '}<br className="hidden md:inline" /></>;
-
-function Logo({ product }: { product: Product }) {
-  const t = useTranslations('product');
-  return (
-    <img
-      src={`/products/skillvue-${product}.svg`}
-      alt={t(`logos.${product}`)}
-      loading="lazy"
-      decoding="async"
-      className="h-8 w-auto block"
-    />
-  );
-}
-
 
 function ProblemSolution({ product }: { product: Product }) {
   const t = useTranslations('product');

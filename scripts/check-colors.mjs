@@ -80,7 +80,7 @@ const ALLOWED = new Set(
     '#000000 #010102 #030101 #040404 #047857 #050508 #059669 #064e3b #08080c #0b3b28 #0d0d0d #0d0d1f ' +
     '#0e0e0e #10b981 #111 #121212 #141516 #16163a #161616 #16a34a #1a1a1a #1a1a2e #1a1a3f #1e1e1e #201436 #222 ' +
     '#22c55e #23234d #2a2350 #2d1a6b #3133e7 #3a1525 #3a1730 #4b4b4b #4b4df7 #4e6bff #5667ff ' +
-    '#5ddba4 #6366f8 #6b7dff #7a7a7a #7b4dff #7b7df9 #8385ff #848484 #8587ff #888888 #8a8cff ' +
+    '#5ddba4 #6366f8 #6b7dff #7577f8 #7a7a7a #7b4dff #7b7df9 #8385ff #848484 #8587ff #888888 #8a8cff ' +
     '#9395ff #93e0bb #9a9a9a #9b59b6 #9b9dfb #a8ecca #a9a9a9 #a9aaff #b7f5d8 #c7d2fe #cdc6f5 ' +
     '#d9603f #d97706 #e2e8f0 #e3f9ec #e5e7eb #e6d5ea #e7e7e8 #ea580c #ebebeb #ece9fb #ef4444 #efeefb #efeefd #f0f0f8 ' +
     '#f1f5f9 #f5f5f7 #f5f5fa #f7e6dc #f7f7f7 #f8ddc9 #f8f8fa #f8f8ff #fafafa #fdf1ea #fdf3ec #ff5656 #ff5b5b ' +
@@ -278,7 +278,19 @@ const walk = (dir) =>
 // as the site's palette while covering half of it: whoever read it believed
 // they knew which colours the site draws, and did not.
 const SCAN = ['app', 'components', 'i18n'];
-const CSS = ['styles/globals.css'];
+// Every stylesheet the site ships: globals.css, and any CSS module beside a
+// component or page. Until the module was scanned, the ROI calculator's
+// #7577f8 (calculator.module.css) was invisible here, and the palette entry
+// was removed as unused while the calculator still drew it.
+const cssIn = (dir) =>
+  readdirSync(join(ROOT, dir), { withFileTypes: true }).flatMap((entry) =>
+    entry.isDirectory()
+      ? cssIn(join(dir, entry.name))
+      : entry.name.endsWith('.css')
+        ? [join(dir, entry.name)]
+        : [],
+  );
+const CSS = ['styles/globals.css', ...SCAN.flatMap(cssIn)];
 
 const unexpected = [];
 const used = new Set();

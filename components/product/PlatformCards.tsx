@@ -15,12 +15,24 @@ import { href } from '@/i18n/routes';
 // `link="section"` (on /product) scrolls to the product's section below;
 // `link="page"` (anywhere else) goes to that section on /product.
 
-const PRODUCTS = ['map', 'assess', 'decide'] as const;
-type Product = (typeof PRODUCTS)[number];
+export const PRODUCTS = ['map', 'assess', 'decide'] as const;
+export type Product = (typeof PRODUCTS)[number];
 
 const H2 = 'font-semibold tracking-[-0.02em] text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] text-[#121212] text-balance';
-// The line break is desktop-only, so it carries the space the message does not.
-const br = () => <>{' '}<br className="hidden md:inline" /></>;
+
+/** A product's wordmark: here on its card, and over its section on /product. */
+export function ProductLogo({ product }: { product: Product }) {
+  const t = useTranslations('product');
+  return (
+    <img
+      src={`/products/skillvue-${product}.svg`}
+      alt={t(`logos.${product}`)}
+      loading="lazy"
+      decoding="async"
+      className="h-8 w-auto block"
+    />
+  );
+}
 
 /** The block's tint, peach to lavender. A page that tints the whole section
  *  with it passes `surface={false}`, and the block then draws no card of its own. */
@@ -54,7 +66,7 @@ export function PlatformCards({ link, surface = true }: { link: 'section' | 'pag
       className={`max-w-[1344px] mx-5 md:mx-8 lg:mx-auto text-center ${surface ? 'rounded-[24px] md:rounded-[40px] px-4 pb-4 md:px-12 md:pb-12' : 'md:px-12'}`}
       style={surface ? SURFACE : undefined}
     >
-      <h2 className={`${H2} max-w-[880px] mx-auto`}>{t.rich('platform.heading', { br })}</h2>
+      <h2 className={`${H2} max-w-[880px] mx-auto`}>{t('platform.heading')}</h2>
       <div className="mt-10 lg:mt-12 grid gap-3 md:grid-cols-3 lg:gap-[42px]">
         {PRODUCTS.map((p) => (
           <a
@@ -63,13 +75,7 @@ export function PlatformCards({ link, surface = true }: { link: 'section' | 'pag
             onClick={onClick(p)}
             className="group flex flex-col items-center gap-[26px] rounded-2xl border border-[#e5e7eb] bg-white px-5 pt-6 pb-[22px] md:px-8 md:pt-8 md:pb-[30px] [transition-timing-function:cubic-bezier(0.23,1,0.32,1)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(20,20,60,0.10),0_2px_6px_rgba(20,20,60,0.03)]"
           >
-            <img
-              src={`/products/skillvue-${p}.svg`}
-              alt={t(`logos.${p}`)}
-              loading="lazy"
-              decoding="async"
-              className="h-8 w-auto block"
-            />
+            <ProductLogo product={p} />
             <p className="type-body text-[#4B4B4B] text-balance">{t(`platform.cards.${p}`)}</p>
             <span className="type-button mt-auto flex items-center gap-2 font-medium text-[#4B4DF7] group-hover:text-[#3133E7] transition-colors">
               {t('platform.explore')}

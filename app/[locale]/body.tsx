@@ -36,8 +36,9 @@ export default function HomePage() {
           <div className="fade-into-light" />
           {/* The platform as /product introduces it: Map, Assess, Decide. Here the
               whole section carries the block's tint; section-breathe still marks
-              it light for the navbar. */}
-          <section id="platform" className="section-breathe py-16 md:py-20 lg:py-28" style={{ background: PLATFORM_GRADIENT }}>
+              it light for the navbar. The id is the old section's, so links to
+              /#how-it-works still land here. */}
+          <section id="how-it-works" className="section-breathe py-16 md:py-20 lg:py-28" style={{ background: PLATFORM_GRADIENT }}>
             <PlatformCards link="page" surface={false} />
           </section>
           <div className="fade-into-dark" />
