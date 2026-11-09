@@ -61,7 +61,9 @@
         "dataProcessing": "Trattamento dati personali",
         "cookiePreferences": "Preferenze cookie"
       },
-      "legalAddress": "Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568"
+      "legalAddress": "Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568",
+      "euHosted": "Ospitato in UE",
+      "isoFamily": "Famiglia ISO 27001"
     }
   },
   "about": {
@@ -5860,7 +5862,8 @@
       "cta": "Prenota una Demo",
       "cta2": "Unisciti a oltre 100 aziende globali",
       "heading2": "Costruito <span>per le grandi organizzazioni</span>",
-      "body2": "Oltre 100 integrazioni native (Oracle, SAP, Workday, Greenhouse e altri). Completamente personalizzabile per i tuoi processi, alle tue condizioni."
+      "body2": "Oltre 100 integrazioni native (Oracle, SAP, Workday, Greenhouse e altri). Completamente personalizzabile per i tuoi processi, alle tue condizioni.",
+      "inProgress": "In corso"
     },
     "roi": {
       "stats": {
@@ -9050,7 +9053,7 @@
     "cta": "Prenota una demo",
     "hero": {
       "title": "Decisioni HR che puoi difendere. Un’AI che ogni team può approvare.",
-      "subtitle": "Decidono le tue persone. I dati restano in UE. La sicurezza è certificata. Tutto ciò che serve a chi decide, in un unico Trust Pack."
+      "subtitle": "Ogni decisione spetta alle tue persone e i dati restano in UE. La sicurezza è certificata ISO/IEC 27001."
     },
     "deal": {
       "label": "Accordo",
@@ -9302,7 +9305,7 @@
       }
     },
     "certs": {
-      "title": "Certificati in modo indipendente. Pensati per la normativa UE.",
+      "title": "Pensati per la normativa UE.",
       "items": {
         "iso27001": {
           "name": "ISO/IEC 27001",
@@ -9340,7 +9343,7 @@
       },
       "inProgress": "In corso",
       "chips": [
-        "Pronti per l’AI Act UE",
+        "Classificati secondo l’AI Act europeo",
         "Responsabile GDPR",
         "Ospitato in UE"
       ]
