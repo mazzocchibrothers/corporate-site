@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from '@/i18n/navigation';
-import { Award, ArrowUpRight } from 'lucide-react';
+import { Award, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { LinkedinIcon } from '@/components/ui/linkedin-icon';
 import { useLocale, useTranslations } from 'next-intl';
 import { href } from '@/i18n/routes';
@@ -96,6 +96,20 @@ export default function Footer() {
               <Award aria-hidden="true" className="h-4 w-4 shrink-0" />
               {t('footer.award')}
               <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5 shrink-0 text-white/40 group-hover:text-white/75 transition-colors duration-300" />
+            </a>
+
+            {/* The grouped form of the certifications, as text: the ISO 27001
+                family (27001, 27017, 27018), GDPR and EU hosting, through to
+                /trust where each one is shown and explained. GDPR is a
+                regulation's name, the same in every language. It wraps, between
+                items only: the Italian runs past the width of a 320px phone. */}
+            <a
+              href={href('trust', lang)}
+              onClick={handleClick(href('trust', lang))}
+              className="type-body-sm mt-3 flex items-center gap-3 text-left text-white/55 hover:text-white/75 transition-colors duration-300"
+            >
+              <ShieldCheck aria-hidden="true" className="h-4 w-4 shrink-0" />
+              {[t('footer.isoFamily'), 'GDPR', t('footer.euHosted')].map((item) => item.replace(/ /g, '\u00a0')).join(' · ')}
             </a>
           </div>
 

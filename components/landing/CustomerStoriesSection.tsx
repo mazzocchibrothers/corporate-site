@@ -105,10 +105,17 @@ export default function CustomerStoriesSection() {
           <p className="type-body text-white/[0.65] mb-4 md:mb-6 max-w-3xl">{t('customerStories.body2')}</p>
           <div className="flex flex-wrap gap-2 md:gap-3">
             {/* Standards names. They are the same in every language, and wrapping
-                them in t() only made them look translated. */}
-            {['ISO 27001', 'SOC 2', 'GDPR', 'EU AI Act'].map(b => (
-              <span key={b} className="type-caption inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03]">
+                them in t() only made them look translated. SOC 2 is not held
+                yet, so it says so, as it does on /trust. */}
+            {([['ISO 27001'], ['SOC 2', true], ['GDPR'], ['EU AI Act']] as [string, boolean?][]).map(([b, pending]) => (
+              <span
+                key={b}
+                className={`type-caption inline-flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold border ${
+                  pending ? 'text-white/45 border-dashed border-white/[0.15]' : 'text-white/[0.65] border-white/[0.1] bg-white/[0.03]'
+                }`}
+              >
                 {b}
+                {pending && <span className="font-normal text-white/45">· {t('customerStories.inProgress')}</span>}
               </span>
             ))}
           </div>

@@ -146,11 +146,13 @@ function PendingBadge({ top, bottom, topSize, bottomSize }: { top: string; botto
 
 // ── Data ────────────────────────────────────────────────────────────────────
 // Structure only; the words are in the catalogue under `trust`.
-const CERTS: { id: string; img?: string; year?: string; badge?: 'soc' | 'iso' }[] = [
-  { id: 'iso27001', img: '/trust/cert-iso-27001.svg', year: '2022' },
-  { id: 'iso27017', img: '/trust/cert-iso-27017.svg', year: '2015' },
-  { id: 'iso27018', img: '/trust/cert-iso-27018.svg', year: '2025' },
-  { id: 'iso9001', img: '/trust/cert-iso-9001.svg', year: '2015' },
+// No years: the ones the design showed were the standards' versions, which read
+// as the dates we were certified.
+const CERTS: { id: string; img?: string; badge?: 'soc' | 'iso' }[] = [
+  { id: 'iso27001', img: '/trust/cert-iso-27001.svg' },
+  { id: 'iso27017', img: '/trust/cert-iso-27017.svg' },
+  { id: 'iso27018', img: '/trust/cert-iso-27018.svg' },
+  { id: 'iso9001', img: '/trust/cert-iso-9001.svg' },
   { id: 'csa', img: '/trust/cert-csa-star.svg' },
   { id: 'soc2', badge: 'soc' },
   { id: 'iso42001', badge: 'iso' },
@@ -193,6 +195,46 @@ export default async function TrustPage() {
             <div className="absolute left-1/2 top-1/2 w-[520px] h-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(75,77,247,0.14),rgba(75,77,247,0.06)_40%,rgba(75,77,247,0)_70%)]" />
             <DealDiagram />
           </Reveal>
+        </section>
+
+        {/* ── Certifications: high on the page, the most scannable proof ── */}
+        <section className={cn(CONTAINER, 'pt-16 flex flex-col gap-5 items-center max-[760px]:pt-10')}>
+          <Reveal as="h2" className={cn(H2, 'mx-auto mb-5 text-center')}>{t('certs.title')}</Reveal>
+          <div className="w-full border border-[#EBEBEB] rounded-[14px] overflow-hidden bg-white">
+            <div className="w-[calc(100%+1px)] -mb-px grid grid-cols-7 bg-white max-[1080px]:grid-cols-4 max-[760px]:grid-cols-1">
+              {CERTS.map((cert) => (
+                <div
+                  key={cert.id}
+                  className="bg-white shadow-[inset_-1px_-1px_0_#EBEBEB] min-h-[208px] max-[1080px]:last:col-span-2 max-[760px]:last:col-span-1 flex flex-col items-center justify-start gap-1 px-3 pt-7 pb-6 text-center max-[760px]:min-h-0 max-[760px]:px-4 max-[760px]:py-7"
+                >
+                  {cert.img ? (
+                    <img src={cert.img} alt="" loading="lazy" decoding="async" className="w-[88px] h-[88px] object-contain block" />
+                  ) : cert.badge === 'soc' ? (
+                    <PendingBadge top={t('certs.badge.soc')} bottom={t('certs.badge.type')} topSize={15} bottomSize={8} />
+                  ) : (
+                    <PendingBadge top={t('certs.badge.iso')} bottom="42001" topSize={11.5} bottomSize={10} />
+                  )}
+                  <div className="font-display font-semibold text-[14px] mt-2 whitespace-nowrap">{t(`certs.items.${cert.id}.name`)}</div>
+                  <div className="type-body-sm text-[#4B4B4B] text-balance">{t(`certs.items.${cert.id}.desc`)}</div>
+                  {cert.badge && (
+                    <span className="mt-1 type-caption font-medium text-[#EA580C] bg-[#FDF3EC] border border-[#FDF1EA] px-2 py-px rounded-full whitespace-nowrap">
+                      {t('certs.inProgress')}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex gap-2 flex-wrap justify-center mt-6">
+            {chips.map((chip, i) => (
+              <span key={chip} className={cn(CHIP, 'whitespace-nowrap')}>
+                {i === 0 && <Stroke size={14}>{DOC}</Stroke>}
+                {i === 1 && <Stroke size={14}>{SHIELD}</Stroke>}
+                {i === 2 && <img src="/trust/icon-europe.svg" alt="" loading="lazy" decoding="async" className="w-[14px] h-[14px] shrink-0 block" />}
+                {chip}
+              </span>
+            ))}
+          </div>
         </section>
 
         {/* ── Pillar 1: responsible AI ── */}
@@ -472,48 +514,6 @@ export default async function TrustPage() {
               </div>
             </Reveal>
           </div>
-        </section>
-
-        {/* ── Certifications ── */}
-        <section className={cn(CONTAINER, 'pt-[136px] flex flex-col gap-5 items-center max-[760px]:py-[72px]')}>
-          <Reveal as="h2" className={cn(H2, 'mx-auto mb-5 text-center')}>{t('certs.title')}</Reveal>
-          <div className="w-full border border-[#EBEBEB] rounded-[14px] overflow-hidden bg-white">
-            <div className="w-[calc(100%+1px)] -mb-px grid grid-cols-7 bg-white max-[1080px]:grid-cols-4 max-[760px]:grid-cols-1">
-              {CERTS.map((cert) => (
-                <div
-                  key={cert.id}
-                  className="bg-white shadow-[inset_-1px_-1px_0_#EBEBEB] min-h-[208px] max-[1080px]:last:col-span-2 max-[760px]:last:col-span-1 flex flex-col items-center justify-start gap-1 px-3 pt-7 pb-6 text-center max-[760px]:min-h-0 max-[760px]:px-4 max-[760px]:py-7"
-                >
-                  {cert.img ? (
-                    <img src={cert.img} alt="" loading="lazy" decoding="async" className="w-[88px] h-[88px] object-contain block" />
-                  ) : cert.badge === 'soc' ? (
-                    <PendingBadge top={t('certs.badge.soc')} bottom={t('certs.badge.type')} topSize={15} bottomSize={8} />
-                  ) : (
-                    <PendingBadge top={t('certs.badge.iso')} bottom="42001" topSize={11.5} bottomSize={10} />
-                  )}
-                  <div className="font-display font-semibold text-[14px] mt-2 whitespace-nowrap">{t(`certs.items.${cert.id}.name`)}</div>
-                  <div className="type-body-sm text-[#4B4B4B] text-balance">{t(`certs.items.${cert.id}.desc`)}</div>
-                  {cert.year && <div className="type-caption text-[#121212]/60 whitespace-nowrap">{cert.year}</div>}
-                  {cert.badge && (
-                    <span className="mt-1 type-caption font-medium text-[#EA580C] bg-[#FDF3EC] border border-[#FDF1EA] px-2 py-px rounded-full whitespace-nowrap">
-                      {t('certs.inProgress')}
-                    </span>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex gap-2 flex-wrap justify-center mt-6">
-            {chips.map((chip, i) => (
-              <span key={chip} className={cn(CHIP, 'whitespace-nowrap')}>
-                {i === 0 && <Stroke size={14}>{DOC}</Stroke>}
-                {i === 1 && <Stroke size={14}>{SHIELD}</Stroke>}
-                {i === 2 && <img src="/trust/icon-europe.svg" alt="" loading="lazy" decoding="async" className="w-[14px] h-[14px] shrink-0 block" />}
-                {chip}
-              </span>
-            ))}
-          </div>
-          <div className="flex justify-center mt-6 max-[760px]:w-full"><Cta label={cta} locale={locale} /></div>
         </section>
 
         {/* ── FAQ ── */}
