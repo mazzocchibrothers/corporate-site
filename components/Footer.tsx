@@ -101,14 +101,15 @@ export default function Footer() {
             {/* The grouped form of the certifications, as text: the ISO 27001
                 family (27001, 27017, 27018), GDPR and EU hosting, through to
                 /trust where each one is shown and explained. GDPR is a
-                regulation's name, the same in every language. */}
+                regulation's name, the same in every language. It wraps, between
+                items only: the Italian runs past the width of a 320px phone. */}
             <a
               href={href('trust', lang)}
               onClick={handleClick(href('trust', lang))}
-              className="type-body-sm group mt-3 flex items-center gap-3 whitespace-nowrap text-white/55 hover:text-white/75 transition-colors duration-300"
+              className="type-body-sm mt-3 flex items-center gap-3 text-left text-white/55 hover:text-white/75 transition-colors duration-300"
             >
               <ShieldCheck aria-hidden="true" className="h-4 w-4 shrink-0" />
-              {[t('footer.isoFamily'), 'GDPR', t('footer.euHosted')].join(' · ')}
+              {[t('footer.isoFamily'), 'GDPR', t('footer.euHosted')].map((item) => item.replace(/ /g, '\u00a0')).join(' · ')}
             </a>
           </div>
 
