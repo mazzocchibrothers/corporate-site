@@ -36,8 +36,14 @@ const run = async (routeId, locale) => await messagesForRoute(routeId, locale);
 const home = await run('index', 'en');
 assert.deepEqual(
   Object.keys(home).sort(),
-  ['common', 'home', 'shared'],
-  'a page must receive its own namespace plus the shared ones (common, shared), and nothing else',
+  ['common', 'home', 'product', 'shared'],
+  'a page must receive its own namespace, the shared ones (common, shared) and what its ' +
+    'route lists under `messages`, and nothing else',
+);
+assert.deepEqual(
+  Object.keys(home.product).sort(),
+  ['logos', 'platform'],
+  'a namespace listed under `messages` arrives alone, not with the rest of its parent',
 );
 assert.ok(home.home.meta.title, 'the picked namespace keeps its nested shape');
 

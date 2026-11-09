@@ -5796,41 +5796,6 @@
       "heading": "Skillvue brings people processes <span>to life.</span>",
       "body": "One platform for every talent decision: hiring, performance, development, mobility. Objective. Scalable. Defensible."
     },
-    "howItWorks": {
-      "steps": {
-        "map": {
-          "title": "Map",
-          "desc": "Verify skills, mindset, and readiness across candidates and employees using AI-powered psychometric verifications, customized to your leadership model and deployable at scale across 50+ languages.",
-          "keywords": {
-            "skills": "Skills",
-            "mindset": "Mindset",
-            "readiness": "Readiness",
-            "languages": "50+ languages"
-          }
-        },
-        "predict": {
-          "title": "Predict",
-          "desc": "AI co-pilots surface who is ready now, who can be developed in 3-6 months, and where gaps will block your strategy, before they become expensive surprises.",
-          "keywords": {
-            "readyNow": "Ready now",
-            "months": "3-6 months",
-            "gapAnalysis": "Gap analysis",
-            "coPilot": "AI co-pilot"
-          }
-        },
-        "decide": {
-          "title": "Decide",
-          "desc": "Every hire, promotion, and transformation investment is backed by objective, auditable data. GDPR-compliant. Defensible to boards, regulators, and investors.",
-          "keywords": {
-            "objectiveData": "Objective data",
-            "auditable": "Auditable",
-            "gdpr": "GDPR",
-            "defensible": "Defensible"
-          }
-        }
-      },
-      "heading": "From verification to action <span>in three steps</span>"
-    },
     "customerStories": {
       "stories": {
         "carrefour": {

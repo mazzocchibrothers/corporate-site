@@ -5796,41 +5796,6 @@
       "heading": "Skillvue dà nuova vita ai processi <span>delle persone.</span>",
       "body": "Una piattaforma per ogni decisione sul talento, dalla selezione alla performance, allo sviluppo alla mobilità"
     },
-    "howItWorks": {
-      "steps": {
-        "map": {
-          "title": "Mappa",
-          "desc": "Valuta competenze, mentalità e prontezza tra candidati e dipendenti usando valutazioni psicometriche basate su AI, personalizzate sul tuo modello di leadership e implementabili su scala in oltre 50 lingue.",
-          "keywords": {
-            "skills": "Competenze",
-            "mindset": "Mindset",
-            "readiness": "Prontezza",
-            "languages": "50+ lingue"
-          }
-        },
-        "predict": {
-          "title": "Prevedi",
-          "desc": "Sfrutta i co-pilot AI per capire chi è pronto oggi, chi può essere sviluppato in 3-6 mesi, e dove esistono aree di miglioramento nella tua strategia prima che si trasformino in minacce",
-          "keywords": {
-            "readyNow": "Pronto ora",
-            "months": "3-6 mesi",
-            "gapAnalysis": "Analisi dei gap",
-            "coPilot": "AI co-pilot"
-          }
-        },
-        "decide": {
-          "title": "Decidi",
-          "desc": "Ogni assunzione, promozione e investimento in trasformazione è supportato da dati oggettivi e verificabili. Conforme al GDPR. Difendibile davanti a consigli di amministrazione, regolatori e investitori.",
-          "keywords": {
-            "objectiveData": "Dati oggettivi",
-            "auditable": "Verificabile",
-            "gdpr": "GDPR",
-            "defensible": "Difendibile"
-          }
-        }
-      },
-      "heading": "Dalla valutazione all'azione <span>in tre passi</span>"
-    },
     "customerStories": {
       "stories": {
         "carrefour": {
