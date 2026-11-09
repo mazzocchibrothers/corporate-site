@@ -318,7 +318,8 @@
     "paths": {
       "en": "/",
       "it": "/"
-    }
+    },
+    "messages": ["product.platform", "product.logos"]
   },
   {
     "id": "lp/ai-act-banking",

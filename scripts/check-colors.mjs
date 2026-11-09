@@ -278,7 +278,19 @@ const walk = (dir) =>
 // as the site's palette while covering half of it: whoever read it believed
 // they knew which colours the site draws, and did not.
 const SCAN = ['app', 'components', 'i18n'];
-const CSS = ['styles/globals.css'];
+// Every stylesheet the site ships: globals.css, and any CSS module beside a
+// component or page. Until the module was scanned, the ROI calculator's
+// #7577f8 (calculator.module.css) was invisible here, and the palette entry
+// was removed as unused while the calculator still drew it.
+const cssIn = (dir) =>
+  readdirSync(join(ROOT, dir), { withFileTypes: true }).flatMap((entry) =>
+    entry.isDirectory()
+      ? cssIn(join(dir, entry.name))
+      : entry.name.endsWith('.css')
+        ? [join(dir, entry.name)]
+        : [],
+  );
+const CSS = ['styles/globals.css', ...SCAN.flatMap(cssIn)];
 
 const unexpected = [];
 const used = new Set();
