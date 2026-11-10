@@ -59,7 +59,8 @@
         "privacy": "Privacy Policy",
         "cookies": "Cookie Policy",
         "dataProcessing": "Personal Data Processing",
-        "cookiePreferences": "Cookie Preferences"
+        "cookiePreferences": "Cookie Preferences",
+        "aiReporting": "AI System Reporting"
       },
       "legalAddress": "Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568",
       "euHosted": "EU-hosted",
@@ -125,6 +126,16 @@
     "coverageMap": "/about/coverage.avif",
     "heroLine1": "Unlock human potential and",
     "heroLine2": "organizational success at scale"
+  },
+  "ai-system-reporting": {
+    "meta": {
+      "title": "AI System Reporting | Skillvue",
+      "description": "Concerns about our AI? You can report anonymously."
+    },
+    "eyebrow": "Legal",
+    "heading": "AI System Reporting",
+    "body": "Concerns about our AI? Skillvue uses AI to support — but never replace — human evaluation of soft skills. If you believe our AI produced an incorrect or unfair result, was used inappropriately, or does not comply with our commitments or the law, <a>tell us here</a>. You can report anonymously. We acknowledge every report within 7 days, give feedback within 3 months, and never tolerate retaliation against anyone who reports in good faith.",
+    "newTab": "(opens in a new tab)"
   },
   "blog": {
     "text": "Read more",
