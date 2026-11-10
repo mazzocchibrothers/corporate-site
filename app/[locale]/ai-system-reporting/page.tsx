@@ -3,10 +3,7 @@
 // Every route has this pair, and this file is the same eight lines everywhere:
 // what only the server can do — the title and canonical from the registry, and
 // the message provider narrowed to this route's namespaces. body.tsx is the
-// page as it was written, and it is a client component because framer-motion,
-// useEffect and useRouter all live in it.
-//
-// Both files were produced in one pass over pages/ at the switch (#137).
+// page, a server component: it reads its copy with getTranslations.
 import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -29,9 +26,6 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function Page({ params }: Props) {
   const { locale } = await params;
-  // This route has content in one language only (#116). Rendering it under
-  // the other locale used to serve the wrong language at a URL that claimed,
-  // through hreflang, to be a translation.
   if (!hasLocale(ROUTE, locale)) notFound();
   setRequestLocale(locale);
 

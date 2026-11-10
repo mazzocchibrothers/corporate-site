@@ -137,9 +137,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-white/[0.04] pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4">
-          <div className="text-center sm:text-left">
+        {/* Bottom bar. Five legal links and the address only share one row from
+            xl up, where the links hold one row and the address does the
+            wrapping: any narrower and every label breaks onto two lines. Below
+            that the address sits above the links, which keep each label on one
+            line and wrap between items. */}
+        <div className="border-t border-white/[0.04] pt-6 md:pt-8 flex flex-col xl:flex-row items-center justify-between gap-3 md:gap-4">
+          <div className="text-center xl:text-left">
             <p className="type-caption text-white/40">
               &copy; {new Date().getFullYear()} Skillvue. {t('footer.rights')}
             </p>
@@ -147,7 +151,7 @@ export default function Footer() {
               {t('footer.legalAddress')}
             </p>
           </div>
-          <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
+          <div className="flex flex-col items-center gap-4 md:flex-row md:flex-wrap md:justify-center md:gap-x-6 md:gap-y-2 xl:flex-nowrap xl:shrink-0">
             {[
               { label: t('footer.legal.privacy'), href: href('privacy-policy', lang) },
               {
@@ -162,11 +166,11 @@ export default function Footer() {
               { label: t('footer.legal.aiReporting'), href: href('ai-system-reporting', lang) },
             ].map(({ label, href }) => (
               href.startsWith('http') ? (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="type-caption text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="type-caption text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0 md:whitespace-nowrap">
                   {label}
                 </a>
               ) : (
-                <a key={label} href={href} onClick={handleClick(href)} className="type-caption text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
+                <a key={label} href={href} onClick={handleClick(href)} className="type-caption text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0 md:whitespace-nowrap">
                   {label}
                 </a>
               )
@@ -178,7 +182,7 @@ export default function Footer() {
             <button
               type="button"
               onClick={() => (window as any)._iub?.cs?.api?.openPreferences()}
-              className="type-caption text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0"
+              className="type-caption text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0 md:whitespace-nowrap"
             >
               {t('footer.legal.cookiePreferences')}
             </button>

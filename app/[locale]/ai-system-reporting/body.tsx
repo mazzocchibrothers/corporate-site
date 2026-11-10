@@ -45,7 +45,7 @@ export default async function AiSystemReporting() {
             <Reveal y={20} duration={0.6} delay={0.2} className="prose-custom">
               <p className="type-body text-[#121212]/70">
                 {t.rich('body', {
-                  a: (chunks) => <a href={formUrl} target="_blank" rel="noopener noreferrer" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}</a>,
+                  a: (chunks) => <a href={formUrl} target="_blank" rel="noopener noreferrer" className="text-[#4B4DF7] hover:text-[#3133E7] underline underline-offset-2 transition-colors duration-200">{chunks}<span className="sr-only"> {t('newTab')}</span></a>,
                 })}</p>
             </Reveal>
           </div>
