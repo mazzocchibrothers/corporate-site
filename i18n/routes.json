@@ -455,6 +455,13 @@
     }
   },
   {
+    "id": "ai-system-reporting",
+    "paths": {
+      "en": "/ai-system-reporting",
+      "it": "/segnalazioni-sistema-ia"
+    }
+  },
+  {
     "id": "privacy-policy-algo",
     "paths": {
       "en": "/privacy-policy-algo",

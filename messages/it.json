@@ -59,7 +59,8 @@
         "privacy": "Privacy Policy",
         "cookies": "Cookie Policy",
         "dataProcessing": "Trattamento dati personali",
-        "cookiePreferences": "Preferenze cookie"
+        "cookiePreferences": "Preferenze cookie",
+        "aiReporting": "Reportistica del sistema AI"
       },
       "legalAddress": "Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568",
       "euHosted": "Ospitato in UE",
@@ -125,6 +126,15 @@
     "coverageMap": "/about/presenza.avif",
     "heroLine1": "Sblocchiamo il potenziale delle",
     "heroLine2": "persone per guidare il successo della tua organizzazione su larga scala"
+  },
+  "ai-system-reporting": {
+    "meta": {
+      "title": "Reportistica del sistema AI | Skillvue",
+      "description": "Ha dubbi sulla nostra IA? È possibile effettuare la segnalazione in forma anonima."
+    },
+    "eyebrow": "Legal",
+    "heading": "Reportistica del sistema AI",
+    "body": "Ha dubbi sulla nostra IA? Skillvue utilizza l’IA per supportare — ma mai sostituire — la valutazione umana delle competenze trasversali. Se ritiene che la nostra IA abbia prodotto un risultato errato o ingiusto, sia stata utilizzata in modo inappropriato o non sia conforme ai nostri impegni o alla legge, <a>ce lo comunichi qui</a>. È possibile effettuare la segnalazione in forma anonima. Confermiamo la ricezione di ogni segnalazione entro 7 giorni, forniamo un riscontro entro 3 mesi e non tolleriamo in alcun caso ritorsioni nei confronti di chiunque effettui una segnalazione in buona fede."
   },
   "blog": {
     "text": "Leggi di più",

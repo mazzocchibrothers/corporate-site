@@ -159,6 +159,7 @@ export default function Footer() {
                   : 'https://www.iubenda.com/privacy-policy/45750674/cookie-policy',
               },
               { label: t('footer.legal.dataProcessing'), href: href('privacy-policy-algo', lang) },
+              { label: t('footer.legal.aiReporting'), href: href('ai-system-reporting', lang) },
             ].map(({ label, href }) => (
               href.startsWith('http') ? (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="type-caption text-white/40 hover:text-white/40 transition-colors duration-300 py-2 md:py-0">
