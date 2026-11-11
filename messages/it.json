@@ -7463,6 +7463,363 @@
       "heading16": "Il costo del mancato screening attitudinale supera di gran lunga l'investimento in tecnologie di valutazione",
       "heading17": "La coerenza dei criteri di selezione è un vantaggio competitivo",
       "heading18": "Il margine di manovra strategica si restringe: l'innovazione nel recruiting non è più opzionale"
+    },
+    "safety-behaviour-assessment": {
+      "meta": {
+        "title": "Safety Behaviour Assessment: le attitudini alla sicurezza sul lavoro | Skillvue",
+        "description": "La soluzione AI di Skillvue che valuta attitudini e propensioni individuali al comportamento sicuro: un modello scientifico validato da 25 responsabili della sicurezza di grandi organizzazioni industriali italiane."
+      },
+      "hero": {
+        "eyebrow": "Safety Behaviour Assessment",
+        "title": "La sicurezza sul lavoro passa da <s>come le persone agiscono</s>",
+        "sub": "Una soluzione fondata sulla scienza e potenziata dall’AI per valutare le attitudini e le propensioni individuali al comportamento sicuro.",
+        "cta": "Prenota una demo",
+        "ctaSecondary": "Scarica il report",
+        "imageAlt": "Tre lavoratori con caschetto e gilet ad alta visibilità consultano un documento in un impianto industriale",
+        "scroll": "Scorri per scoprire"
+      },
+      "impact": {
+        "eyebrow": "Infortuni sul lavoro",
+        "title": "La dimensione e <s>l’impatto economico</s>",
+        "italyLabel": "La sicurezza sul lavoro: una criticità strutturale italiana",
+        "costLabel": "Il valore economico annuale della mancata prevenzione",
+        "italy": [
+          {
+            "value": "416.000",
+            "label": "Le denunce di infortuni in Italia nel 2025"
+          },
+          {
+            "value": "255",
+            "label": "Gli infortuni gravi ogni giorno in Italia nel 2025"
+          },
+          {
+            "value": "1.085",
+            "label": "I morti sul lavoro nel 2025"
+          }
+        ],
+        "cost": [
+          {
+            "value": "4.000 miliardi",
+            "label": "nel mondo"
+          },
+          {
+            "value": "366 miliardi",
+            "label": "nell’Unione europea"
+          },
+          {
+            "value": "45 miliardi",
+            "label": "in Italia"
+          }
+        ]
+      },
+      "elements": {
+        "eyebrow": "I tre elementi",
+        "title": "I tre elementi rilevanti della <s>sicurezza sul lavoro</s>",
+        "body": "Tre dimensioni da gestire insieme. Trascurarne anche solo una lascia scoperta una parte rilevante del rischio.",
+        "focus": "Dove interviene Skillvue",
+        "items": [
+          {
+            "name": "Competenze",
+            "tag": "Cosa sai",
+            "summary": "Formazione obbligatoria, norme, procedure e protocolli.",
+            "callout": "Una base necessaria ma non sufficiente: conoscere le regole non garantisce che vengano applicate."
+          },
+          {
+            "name": "Esperienze",
+            "tag": "Cosa sai fare",
+            "summary": "La pratica operativa che rende automatici i comportamenti sicuri.",
+            "callout": "Il rischio cresce quando l’esperienza è fragile o in transizione:",
+            "moments": [
+              "Primi anni lavorativi",
+              "Onboarding e cambi di ruolo",
+              "Nuovi contesti operativi"
+            ]
+          },
+          {
+            "name": "Attitudini e propensioni",
+            "tag": "Chi sei",
+            "summary": "I comportamenti, consapevoli o inconsci, che connotano l’azione individuale.",
+            "callout": "Serve capire come le persone agiscono quando nessuno guarda, quando hanno fretta, quando sono stanche."
+          }
+        ],
+        "field": {
+          "title": "Sul campo, <s>la formazione non basta</s>",
+          "body": "Pressione dei tempi, routine e decisioni rapide attivano comportamenti automatici che possono “sabotare” anche la migliore preparazione tecnica.",
+          "rows": [
+            {
+              "cause": "Stress alto",
+              "effect": "Si saltano passaggi di sicurezza percepiti come “lenti”"
+            },
+            {
+              "cause": "Routine",
+              "effect": "Eccesso di fiducia e calo dell’attenzione ai dettagli critici"
+            },
+            {
+              "cause": "Pressione sul risultato",
+              "effect": "Si sottovalutano i segnali di allarme"
+            }
+          ]
+        }
+      },
+      "model": {
+        "eyebrow": "Il modello di valutazione comportamentale",
+        "title": "Progettato con rigore scientifico. <s>Validato da chi opera sul campo.</s>",
+        "phases": [
+          {
+            "label": "Fase 1",
+            "title": "Progettazione scientifica",
+            "body": "Advisory scientifico in scienze comportamentali e management della sicurezza, su framework validati dalla letteratura internazionale.",
+            "badge": "SDA Bocconi School of Management"
+          },
+          {
+            "label": "Fase 2",
+            "title": "Validazione empirica",
+            "stat": "25",
+            "body": "senior executive e responsabili della sicurezza di grandi organizzazioni industriali italiane hanno valutato ogni dimensione, in modo indipendente.",
+            "badge": "Expert panel"
+          }
+        ],
+        "note": "Costruito insieme a chi il rischio lo gestisce ogni giorno."
+      },
+      "framework": {
+        "eyebrow": "L’impianto di riferimento",
+        "title": "Cosa abilita o devia i <s>comportamenti sicuri</s>",
+        "intro": "Il rischio emerge dall’interazione tra attitudini individuali e contesto operativo.",
+        "hint": "Apri un comportamento per leggerne la descrizione.",
+        "columns": [
+          {
+            "name": "Fattori abilitanti",
+            "body": "Attitudini che favoriscono comportamenti sicuri nel tempo.",
+            "items": [
+              {
+                "title": "Disciplina",
+                "body": "Rispetto delle regole, evita tentazioni e scorciatoie. Priorità al self-care (sonno, nutrizione). Sviluppa abitudini positive. Perseveranza."
+              },
+              {
+                "title": "Ricerca delle soluzioni",
+                "body": "Analizza i problemi in profondità. Cerca paralleli e contrasti. Focus su come e perché funziona. Approccio intellettualmente rigoroso."
+              },
+              {
+                "title": "Miglioramento personale",
+                "body": "Consapevole di punti di forza e debolezza. Non bloccato dagli errori. Cerca e risponde al feedback. Apertura al cambiamento."
+              },
+              {
+                "title": "Flessibilità situazionale",
+                "body": "Riconosce le differenze tra situazioni e identifica la regola più adatta a ciascuna. Non applica procedure in modo automatico, ma discrimina il contesto e calibra la risposta."
+              }
+            ],
+            "effect": "Riducono l’esposizione al rischio"
+          },
+          {
+            "name": "Derive comportamentali",
+            "body": "Tendenze che aumentano l’esposizione al rischio, spesso senza intenzione.",
+            "items": [
+              {
+                "title": "Eccessiva sicurezza di sé",
+                "body": "Eccessiva fiducia nelle proprie capacità. Tendenza al multitasking. Sottostima dei rischi. Troppo sicuro, a volte arrogante nelle valutazioni."
+              },
+              {
+                "title": "Impulsività",
+                "body": "Azione con poca riflessione preventiva. L’estremo orientamento all’azione porta ad azioni mal concepite, premature, rischiose."
+              },
+              {
+                "title": "Competitività estrema",
+                "body": "Vincere a tutti i costi. Relazioni danneggiate. Decisioni povere. Burnout. Nessuna considerazione delle conseguenze a medio termine."
+              },
+              {
+                "title": "Subalternità agli altri",
+                "body": "Incapacità di elaborare un giudizio critico autonomo. Tende ad assorbire acriticamente le valutazioni altrui, anche quando la situazione richiederebbe una risposta personale e consapevole."
+              }
+            ],
+            "effect": "Aumentano l’esposizione al rischio"
+          },
+          {
+            "name": "Acceleratore",
+            "body": "Condizioni che amplificano l’effetto dei fattori abilitanti.",
+            "items": [
+              {
+                "title": "Apertura agli altri",
+                "body": "Aiuta gli altri a pensare senza imporre risposte. Cercato per consigli. Apprezza idee diverse. Costruttivo nel disaccordo."
+              }
+            ],
+            "effect": "Amplifica ciò che protegge dal rischio"
+          }
+        ]
+      },
+      "formula": {
+        "eyebrow": "La formula",
+        "title": "Come valutiamo la <s>propensione individuale al rischio</s>",
+        "terms": [
+          {
+            "name": "Fattori abilitanti",
+            "body": "Disciplina, ricerca delle soluzioni, miglioramento personale, flessibilità situazionale."
+          },
+          {
+            "name": "Derive comportamentali",
+            "body": "Eccessiva sicurezza di sé, impulsività, competitività estrema, subalternità agli altri."
+          },
+          {
+            "name": "Acceleratore",
+            "body": "Apertura agli altri, che amplifica i fattori abilitanti."
+          }
+        ],
+        "result": "Propensione al comportamento sicuro",
+        "resultBody": "Una valutazione sintetica per ogni persona.",
+        "howTitle": "La valutazione",
+        "scaleLabel": "Valutazione sintetica",
+        "scale": [
+          "Eccellente",
+          "Virtuoso",
+          "Adeguato",
+          "A rischio",
+          "Critico",
+          "Alto rischio"
+        ]
+      },
+      "uses": {
+        "eyebrow": "Ambiti applicativi",
+        "title": "Dove la valutazione <s>supporta la riduzione del rischio</s>",
+        "cards": [
+          {
+            "title": "Talent Acquisition",
+            "body": "Identificare già in selezione chi è orientato alla sicurezza."
+          },
+          {
+            "title": "Pianificazione del lavoro",
+            "body": "Capire chi richiede supervisione e chi può operare in autonomia da subito."
+          },
+          {
+            "title": "Contesti ad alto rischio",
+            "body": "Assegnare le posizioni più esposte a chi ha le attitudini necessarie."
+          },
+          {
+            "title": "Formazione mirata",
+            "body": "Formare chi ne ha davvero bisogno, sui gap comportamentali specifici."
+          }
+        ]
+      },
+      "agents": {
+        "eyebrow": "La tecnologia",
+        "title": "Un sistema <s>multi-agent</s> per la valutazione dei comportamenti",
+        "hitl": "Human-in-the-loop",
+        "hitlRoles": [
+          "Scienziati",
+          "Subject-matter expert"
+        ],
+        "steps": [
+          {
+            "title": "Mappatura dei comportamenti",
+            "body": "Da modelli di business a un framework scientifico."
+          },
+          {
+            "title": "Generazione item",
+            "body": "Item validati con il metodo delle scienze comportamentali, sul contesto del cliente."
+          },
+          {
+            "title": "Erogazione assessment",
+            "body": "Assessment conversazionali e dinamici."
+          },
+          {
+            "title": "Analisi e review",
+            "body": "Scoring delle risposte, con cicli di revisione."
+          },
+          {
+            "title": "Presentazione output",
+            "body": "Risultati calibrati sui processi HR."
+          }
+        ]
+      },
+      "tool": {
+        "eyebrow": "Il tool",
+        "title": "Il tool digitale dedicato alla <s>sicurezza sul lavoro</s>",
+        "features": [
+          {
+            "title": "Assessment comportamentale",
+            "body": "Scenari realistici del tuo contesto operativo: misura ciò che le persone dimostrano, non ciò che dichiarano."
+          },
+          {
+            "title": "Contestualizzato",
+            "body": "Calibrato sui tuoi rischi e sulle tue dinamiche reali."
+          },
+          {
+            "title": "Scalabile",
+            "body": "Popolazioni ampie, risultati comparabili nel tempo."
+          }
+        ],
+        "imageAlt": "Una domanda del Safety Behaviour Assessment con risposta audio, su smartphone e su laptop"
+      },
+      "delivery": {
+        "eyebrow": "Modalità di erogazione",
+        "title": "Canali di invito, fruizione e <s>formati disponibili</s>",
+        "groups": [
+          {
+            "title": "Invito",
+            "items": [
+              "Email",
+              "Link dedicato",
+              "WhatsApp",
+              "SMS"
+            ]
+          },
+          {
+            "title": "Svolgimento",
+            "items": [
+              "Desktop",
+              "Tablet",
+              "Smartphone"
+            ]
+          },
+          {
+            "title": "Formato",
+            "items": [
+              "Risposta chiusa",
+              "Testo",
+              "Video",
+              "Audio"
+            ]
+          }
+        ],
+        "note": "Su una web app completamente personalizzabile."
+      },
+      "reporting": {
+        "eyebrow": "Reportistica",
+        "title": "Output <s>flessibili e integrabili</s>",
+        "cards": [
+          {
+            "title": "Dashboard personalizzabili",
+            "body": "Per valutazione, persona, competenza o qualsiasi aggregazione."
+          },
+          {
+            "title": "Report PDF",
+            "body": "Individuali e aggregati, Report Light e Report Pro."
+          },
+          {
+            "title": "Dati grezzi",
+            "body": "Via API, nei sistemi HR che già utilizzi."
+          }
+        ],
+        "individual": {
+          "title": "Il report per ruolo",
+          "example": "Esempio",
+          "roleLabel": "Ruolo",
+          "roles": [
+            "Operatore di linea",
+            "Capoturno"
+          ],
+          "floor": "Livello minimo atteso",
+          "ceiling": "Livello massimo tollerato",
+          "inLine": "In linea con il ruolo",
+          "toWatch": "Da presidiare",
+          "summary": "comportamenti in linea con quanto il ruolo richiede",
+          "legend": "Livello atteso per il ruolo",
+          "note": "Ogni punteggio con la sua motivazione e le evidenze che lo hanno prodotto."
+        }
+      },
+      "final": {
+        "title": "Scopri come le tue persone <s>agiscono davvero</s> quando il rischio è reale",
+        "body": "Ti mostriamo il Safety Behaviour Assessment calibrato sul tuo contesto operativo.",
+        "cta": "Prenota una demo"
+      }
     }
   },
   "privacy-policy-algo": {

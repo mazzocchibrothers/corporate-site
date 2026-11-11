@@ -440,6 +440,14 @@
     "noindex": true
   },
   {
+    "id": "lp/safety-behaviour-assessment",
+    "paths": {
+      "en": "/lp/safety-behaviour-assessment",
+      "it": "/lp/safety-behaviour-assessment"
+    },
+    "noindex": true
+  },
+  {
     "id": "lp/supermarkets",
     "paths": {
       "en": "/lp/supermarkets",
