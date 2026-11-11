@@ -7463,6 +7463,363 @@
       "heading16": "Il costo del mancato screening attitudinale supera di gran lunga l'investimento in tecnologie di valutazione",
       "heading17": "La coerenza dei criteri di selezione è un vantaggio competitivo",
       "heading18": "Il margine di manovra strategica si restringe: l'innovazione nel recruiting non è più opzionale"
+    },
+    "safety-behaviour-assessment": {
+      "meta": {
+        "title": "Safety Behaviour Assessment: attitudes to workplace safety | Skillvue",
+        "description": "Skillvue’s science-grounded, AI-scaled assessment of individual attitudes and propensities towards safe behaviour, validated by 25 safety leaders from large Italian industrial organisations."
+      },
+      "hero": {
+        "eyebrow": "Safety Behaviour Assessment",
+        "title": "Workplace safety comes down to <s>how people act</s>",
+        "sub": "A solution grounded in science and scaled by AI that assesses each person’s attitudes and propensities towards safe behaviour.",
+        "cta": "Book a demo",
+        "ctaSecondary": "Download the report",
+        "imageAlt": "Three workers in hard hats and high-visibility vests review a document at an industrial plant",
+        "scroll": "Scroll to explore"
+      },
+      "impact": {
+        "eyebrow": "Workplace accidents",
+        "title": "The scale and <s>the economic impact</s>",
+        "italyLabel": "Workplace safety: a structural problem in Italy",
+        "costLabel": "The yearly economic cost of failed prevention",
+        "italy": [
+          {
+            "value": "416,000",
+            "label": "Workplace accident reports in Italy in 2025"
+          },
+          {
+            "value": "255",
+            "label": "Serious accidents every day in Italy in 2025"
+          },
+          {
+            "value": "1,085",
+            "label": "Workplace deaths in 2025"
+          }
+        ],
+        "cost": [
+          {
+            "value": "4,000 billion",
+            "label": "worldwide"
+          },
+          {
+            "value": "366 billion",
+            "label": "in the European Union"
+          },
+          {
+            "value": "45 billion",
+            "label": "in Italy"
+          }
+        ]
+      },
+      "elements": {
+        "eyebrow": "The three elements",
+        "title": "The three elements that matter in <s>workplace safety</s>",
+        "body": "Three dimensions to manage together. Neglect just one and a significant part of the risk is left uncovered.",
+        "focus": "Where Skillvue comes in",
+        "items": [
+          {
+            "name": "Knowledge",
+            "tag": "What you know",
+            "summary": "Mandatory training, rules, procedures and protocols.",
+            "callout": "Necessary but not sufficient: knowing the rules does not guarantee they are applied."
+          },
+          {
+            "name": "Experience",
+            "tag": "What you can do",
+            "summary": "Hands-on practice that makes safe behaviour automatic.",
+            "callout": "Risk rises when experience is thin or in transition:",
+            "moments": [
+              "First years on the job",
+              "Onboarding and role changes",
+              "New operating contexts"
+            ]
+          },
+          {
+            "name": "Attitudes and propensities",
+            "tag": "Who you are",
+            "summary": "The behaviours, conscious or not, that shape how each person acts.",
+            "callout": "You need to understand how people act when no one is watching, when they are in a hurry, when they are tired."
+          }
+        ],
+        "field": {
+          "title": "On the job, <s>training is not enough</s>",
+          "body": "Time pressure, routine and fast decisions trigger automatic behaviours that can undermine even the best technical preparation.",
+          "rows": [
+            {
+              "cause": "High stress",
+              "effect": "Safety steps seen as “slow” get skipped"
+            },
+            {
+              "cause": "Routine",
+              "effect": "Overconfidence and less attention to critical details"
+            },
+            {
+              "cause": "Pressure for results",
+              "effect": "Warning signs get underestimated"
+            }
+          ]
+        }
+      },
+      "model": {
+        "eyebrow": "The behavioural assessment model",
+        "title": "Designed with scientific rigour. <s>Validated by people in the field.</s>",
+        "phases": [
+          {
+            "label": "Phase 1",
+            "title": "Scientific design",
+            "body": "Scientific advisory in behavioural science and safety management, on frameworks validated by international research.",
+            "badge": "SDA Bocconi School of Management"
+          },
+          {
+            "label": "Phase 2",
+            "title": "Empirical validation",
+            "stat": "25",
+            "body": "senior executives and safety leaders from large Italian industrial organisations independently rated every dimension.",
+            "badge": "Expert panel"
+          }
+        ],
+        "note": "Built with the people who manage risk every day."
+      },
+      "framework": {
+        "eyebrow": "The reference framework",
+        "title": "What enables or derails <s>safe behaviour</s>",
+        "intro": "Risk emerges from the interaction between individual attitudes and the operating context.",
+        "hint": "Open a behaviour to read its description.",
+        "columns": [
+          {
+            "name": "Enablers",
+            "body": "Attitudes that sustain safe behaviour over time.",
+            "items": [
+              {
+                "title": "Discipline",
+                "body": "Follows the rules, resists temptations and shortcuts. Puts self-care first (sleep, nutrition). Builds positive habits. Perseverance."
+              },
+              {
+                "title": "Problem solving",
+                "body": "Analyses problems in depth. Looks for parallels and contrasts. Focuses on how and why things work. An intellectually rigorous approach."
+              },
+              {
+                "title": "Self-improvement",
+                "body": "Aware of own strengths and weaknesses. Not held back by mistakes. Seeks and acts on feedback. Open to change."
+              },
+              {
+                "title": "Situational flexibility",
+                "body": "Recognises how situations differ and picks the rule that fits each one. Does not apply procedures on autopilot: reads the context and calibrates the response."
+              }
+            ],
+            "effect": "Lower exposure to risk"
+          },
+          {
+            "name": "Behavioural drifts",
+            "body": "Tendencies that raise exposure to risk, often unintentionally.",
+            "items": [
+              {
+                "title": "Overconfidence",
+                "body": "Excessive faith in own abilities. A tendency to multitask. Underestimates risks. Too sure, at times arrogant in judgement."
+              },
+              {
+                "title": "Impulsiveness",
+                "body": "Acts with little forethought. An extreme bias for action leads to ill-conceived, premature, risky moves."
+              },
+              {
+                "title": "Extreme competitiveness",
+                "body": "Winning at all costs. Damaged relationships. Poor decisions. Burnout. No thought for medium-term consequences."
+              },
+              {
+                "title": "Deference to others",
+                "body": "Unable to form an independent critical judgement. Takes on others’ views uncritically, even when the situation calls for a personal, conscious response."
+              }
+            ],
+            "effect": "Raise exposure to risk"
+          },
+          {
+            "name": "Accelerator",
+            "body": "Conditions that amplify the effect of the enablers.",
+            "items": [
+              {
+                "title": "Openness to others",
+                "body": "Helps others think without imposing answers. Sought out for advice. Values different ideas. Constructive in disagreement."
+              }
+            ],
+            "effect": "Amplifies what protects against risk"
+          }
+        ]
+      },
+      "formula": {
+        "eyebrow": "The formula",
+        "title": "How we assess <s>individual propensity to risk</s>",
+        "terms": [
+          {
+            "name": "Enablers",
+            "body": "Discipline, problem solving, self-improvement, situational flexibility."
+          },
+          {
+            "name": "Behavioural drifts",
+            "body": "Overconfidence, impulsiveness, extreme competitiveness, deference to others."
+          },
+          {
+            "name": "Accelerator",
+            "body": "Openness to others, which amplifies the enablers."
+          }
+        ],
+        "result": "Propensity for safe behaviour",
+        "resultBody": "One synthetic score for each person.",
+        "howTitle": "The assessment",
+        "scaleLabel": "Synthetic score",
+        "scale": [
+          "Excellent",
+          "Virtuous",
+          "Adequate",
+          "At risk",
+          "Critical",
+          "High risk"
+        ]
+      },
+      "uses": {
+        "eyebrow": "Use cases",
+        "title": "Where the assessment <s>helps reduce risk</s>",
+        "cards": [
+          {
+            "title": "Talent Acquisition",
+            "body": "Identify safety-minded people at the selection stage."
+          },
+          {
+            "title": "Workforce planning",
+            "body": "See who needs supervision and who can work independently from day one."
+          },
+          {
+            "title": "High-risk environments",
+            "body": "Assign the most exposed roles to people with the right attitudes."
+          },
+          {
+            "title": "Targeted training",
+            "body": "Train the people who really need it, on their specific behavioural gaps."
+          }
+        ]
+      },
+      "agents": {
+        "eyebrow": "The technology",
+        "title": "A <s>multi-agent</s> system for assessing behaviour",
+        "hitl": "Human-in-the-loop",
+        "hitlRoles": [
+          "Scientists",
+          "Subject-matter experts"
+        ],
+        "steps": [
+          {
+            "title": "Behaviour mapping",
+            "body": "From business models to a scientific framework."
+          },
+          {
+            "title": "Item generation",
+            "body": "Items validated with behavioural-science methods, built on the client’s context."
+          },
+          {
+            "title": "Assessment delivery",
+            "body": "Conversational, dynamic assessments."
+          },
+          {
+            "title": "Analysis and review",
+            "body": "Every answer scored, with review cycles."
+          },
+          {
+            "title": "Output",
+            "body": "Results calibrated to your HR processes."
+          }
+        ]
+      },
+      "tool": {
+        "eyebrow": "The tool",
+        "title": "The digital tool built for <s>workplace safety</s>",
+        "features": [
+          {
+            "title": "Behavioural assessment",
+            "body": "Realistic scenarios from your operating context: it measures what people demonstrate, not what they declare."
+          },
+          {
+            "title": "Contextualised",
+            "body": "Calibrated to your actual risks and dynamics."
+          },
+          {
+            "title": "Scalable",
+            "body": "Large populations, results comparable over time."
+          }
+        ],
+        "imageAlt": "A Safety Behaviour Assessment question with an audio answer, on a smartphone and a laptop"
+      },
+      "delivery": {
+        "eyebrow": "Delivery",
+        "title": "Invitation channels, devices and <s>answer formats</s>",
+        "groups": [
+          {
+            "title": "Invitation",
+            "items": [
+              "Email",
+              "Dedicated link",
+              "WhatsApp",
+              "SMS"
+            ]
+          },
+          {
+            "title": "Completion",
+            "items": [
+              "Desktop",
+              "Tablet",
+              "Smartphone"
+            ]
+          },
+          {
+            "title": "Format",
+            "items": [
+              "Multiple choice",
+              "Text",
+              "Video",
+              "Audio"
+            ]
+          }
+        ],
+        "note": "On a fully customisable web app."
+      },
+      "reporting": {
+        "eyebrow": "Reporting",
+        "title": "Flexible outputs, <s>built to integrate</s>",
+        "cards": [
+          {
+            "title": "Custom dashboards",
+            "body": "By assessment, person, skill or any grouping."
+          },
+          {
+            "title": "PDF reports",
+            "body": "Individual and aggregate, Report Light and Report Pro."
+          },
+          {
+            "title": "Raw data",
+            "body": "Via API, into the HR systems you already run."
+          }
+        ],
+        "individual": {
+          "title": "The role-based report",
+          "example": "Example",
+          "roleLabel": "Role",
+          "roles": [
+            "Line operator",
+            "Shift supervisor"
+          ],
+          "floor": "Minimum expected level",
+          "ceiling": "Maximum tolerated level",
+          "inLine": "In line with the role",
+          "toWatch": "To watch",
+          "summary": "behaviours in line with what the role requires",
+          "legend": "Expected level for the role",
+          "note": "Every score comes with its justification and the evidence behind it."
+        }
+      },
+      "final": {
+        "title": "See how your people <s>really act</s> when the risk is real",
+        "body": "We’ll show you the Safety Behaviour Assessment calibrated to your operating context.",
+        "cta": "Book a demo"
+      }
     }
   },
   "privacy-policy-algo": {
