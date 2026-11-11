@@ -25,14 +25,11 @@ const logos: { name: string; src: string; className?: string }[] = [
  * The banner a page closes on (homepage, Insights): one centred card — the
  * closing line, a sentence, the demo button — over a single row of client
  * logos. The copy is the page's own, passed in already translated.
- * `secondary` adds a quieter second action beside the demo button, such as a
- * file to download.
  */
-export default function ClosingBanner({ heading, body, cta, secondary }: {
+export default function ClosingBanner({ heading, body, cta }: {
   heading: React.ReactNode;
   body: string;
   cta: string;
-  secondary?: { label: string; href: string; download?: boolean; icon?: React.ReactNode };
 }) {
   const lang = useLocale();
 
@@ -47,22 +44,12 @@ export default function ClosingBanner({ heading, body, cta, secondary }: {
         >
           <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90">{heading}</h2>
           <p className="max-w-[880px] type-body-lg text-white/[0.65] mt-4 md:mt-5">{body}</p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Button asChild variant="primary" mode="dark">
-              <a href={href('book-meeting', lang)} data-testid="cta-book-demo">
-                <span>{cta}</span>
-                <ArrowRight aria-hidden="true" />
-              </a>
-            </Button>
-            {secondary && (
-              <Button asChild variant="secondary" mode="dark">
-                <a href={secondary.href} download={secondary.download || undefined}>
-                  <span>{secondary.label}</span>
-                  {secondary.icon}
-                </a>
-              </Button>
-            )}
-          </div>
+          <Button asChild variant="primary" mode="dark" className="mt-8">
+            <a href={href('book-meeting', lang)} data-testid="cta-book-demo">
+              <span>{cta}</span>
+              <ArrowRight aria-hidden="true" />
+            </a>
+          </Button>
         </Reveal>
 
         <Reveal
