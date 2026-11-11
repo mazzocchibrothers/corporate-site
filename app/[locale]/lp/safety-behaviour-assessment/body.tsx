@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import {
-  Download,
   ArrowDown,
   ArrowRight,
   ArrowUp,
@@ -71,8 +70,6 @@ import { bookingHref } from '@/components/landing/booking-link';
 // as a line of stations. Italian only, like the deck.
 const FADE = { y: 32, duration: 0.7, ease: 'cubic-bezier(0.22, 1, 0.36, 1)' };
 const IMG = '/covers/safety-behaviour-assessment';
-// The full deck, offered from the hero and the closing banner.
-const REPORT_PDF = '/skillvue-safety-behaviour-assessment.pdf';
 
 // Structure the catalogue cannot hold: icons, in the order of their arrays in
 // lp.safety-behaviour-assessment.
@@ -168,12 +165,6 @@ export default function SafetyBehaviourAssessment() {
                   <a href={booking}>
                     {t('hero.cta')}
                     <ArrowRight aria-hidden="true" />
-                  </a>
-                </Button>
-                <Button asChild variant="secondary" mode="dark">
-                  <a href={REPORT_PDF} download>
-                    {t('hero.ctaSecondary')}
-                    <Download aria-hidden="true" />
                   </a>
                 </Button>
               </Reveal>
@@ -592,12 +583,7 @@ export default function SafetyBehaviourAssessment() {
           </div>
         </section>
 
-        <ClosingBanner
-          heading={t.rich('final.title', { s: accent })}
-          body={t('final.body')}
-          cta={t('final.cta')}
-          secondary={{ label: t('hero.ctaSecondary'), href: REPORT_PDF, download: true, icon: <Download aria-hidden="true" /> }}
-        />
+        <ClosingBanner heading={t.rich('final.title', { s: accent })} body={t('final.body')} cta={t('final.cta')} />
       </main>
 
       <Footer />
