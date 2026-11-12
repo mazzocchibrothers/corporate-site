@@ -225,13 +225,13 @@ export default function SafetyBehaviourAssessment() {
                     key={e.name}
                     className={`relative flex flex-col rounded-2xl p-6 md:p-7 ${
                       focus
-                        ? 'mt-5 md:mt-0 pt-10 md:pt-10 border-2 border-[#6366F8] bg-[#6366F8]/[0.14] shadow-[0_16px_56px_rgba(75,77,247,0.35)]'
+                        ? 'mt-5 md:mt-0 border-2 border-[#6366F8] bg-[#6366F8]/[0.14] shadow-[0_16px_56px_rgba(75,77,247,0.35)]'
                         : CARD_DARK
                     }`}
                   >
                     {/* Where Skillvue comes in: a badge riding the card's top edge. */}
                     {focus && (
-                      <span className="absolute -top-4 left-5 md:left-6 inline-flex items-center gap-2 rounded-full bg-[#4B4DF7] py-1.5 pl-1.5 pr-4 shadow-[0_8px_24px_rgba(75,77,247,0.55)]">
+                      <span className="absolute -top-[18px] left-5 md:left-6 inline-flex items-center gap-2 rounded-full bg-[#4B4DF7] py-1.5 pl-1.5 pr-4 shadow-[0_8px_24px_rgba(75,77,247,0.55)]">
                         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white">
                           <img src="/logos/skillvue-logomark.svg" alt="" width={16} height={16} loading="lazy" decoding="async" className="h-4 w-4" />
                         </span>
@@ -243,8 +243,8 @@ export default function SafetyBehaviourAssessment() {
                     </div>
                     <p className="type-eyebrow text-[#6B7DFF] mb-1.5">{e.tag}</p>
                     <h3 className={`${CARD_TITLE} text-white/95 mb-2`}>{e.name}</h3>
-                    <p className="type-body-sm text-white/60 mb-5">{e.summary}</p>
-                    <p className="mt-auto border-l-2 border-[#6366F8] pl-4 type-body text-white/90">{e.callout}</p>
+                    <p className="type-body-sm text-white/60 mb-5 md:min-h-[40px]">{e.summary}</p>
+                    <p className="border-l-2 border-[#6366F8] pl-4 type-body text-white/90">{e.callout}</p>
                     {e.moments && (
                       <ul className="mt-4 flex flex-wrap gap-1.5">
                         {e.moments.map((m) => (
@@ -528,13 +528,13 @@ export default function SafetyBehaviourAssessment() {
             </div>
             <Reveal {...FADE} delay={0.15} className="lg:col-span-7">
               <img
-                src={`${IMG}-devices.avif`}
+                src={`${IMG}-devices${locale === 'en' ? '-en' : ''}.avif`}
                 alt={t('tool.imageAlt')}
-                width={1200}
-                height={772}
+                width={1400}
+                height={locale === 'en' ? 933 : 947}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-auto"
+                className="w-full h-auto rounded-3xl border border-white/[0.08]"
               />
             </Reveal>
           </div>
