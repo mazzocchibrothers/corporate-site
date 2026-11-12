@@ -7474,7 +7474,6 @@
         "title": "La sicurezza sul lavoro passa da <s>come le persone agiscono</s>",
         "sub": "Una soluzione fondata sulla scienza e potenziata dall’AI per valutare le attitudini e le propensioni individuali al comportamento sicuro.",
         "cta": "Prenota una demo",
-        "ctaSecondary": "Scarica il report",
         "imageAlt": "Tre lavoratori con caschetto e gilet ad alta visibilità consultano un documento in un impianto industriale",
         "scroll": "Scorri per scoprire"
       },
@@ -7528,7 +7527,7 @@
             "name": "Esperienze",
             "tag": "Cosa sai fare",
             "summary": "La pratica operativa che rende automatici i comportamenti sicuri.",
-            "callout": "Il rischio cresce quando l’esperienza è fragile o in transizione:",
+            "callout": "Il rischio cresce quando l’esperienza è fragile o in transizione",
             "moments": [
               "Primi anni lavorativi",
               "Onboarding e cambi di ruolo",

@@ -7474,7 +7474,6 @@
         "title": "Workplace safety comes down to <s>how people act</s>",
         "sub": "A solution grounded in science and scaled by AI that assesses each person’s attitudes and propensities towards safe behaviour.",
         "cta": "Book a demo",
-        "ctaSecondary": "Download the report",
         "imageAlt": "Three workers in hard hats and high-visibility vests review a document at an industrial plant",
         "scroll": "Scroll to explore"
       },
@@ -7528,7 +7527,7 @@
             "name": "Experience",
             "tag": "What you can do",
             "summary": "Hands-on practice that makes safe behaviour automatic.",
-            "callout": "Risk rises when experience is thin or in transition:",
+            "callout": "Risk rises when experience is thin or in transition",
             "moments": [
               "First years on the job",
               "Onboarding and role changes",
