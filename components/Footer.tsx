@@ -137,7 +137,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar. Five legal links and the address only share one row from
+        {/* Bottom bar. Four legal links and the address only share one row from
             xl up, where the links hold one row and the address does the
             wrapping: any narrower and every label breaks onto two lines. Below
             that the address sits above the links, which keep each label on one
@@ -153,7 +153,6 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-center gap-4 md:flex-row md:flex-wrap md:justify-center md:gap-x-6 md:gap-y-2 xl:flex-nowrap xl:shrink-0">
             {[
-              { label: t('footer.legal.privacy'), href: href('privacy-policy', lang) },
               {
                 label: t('footer.legal.cookies'),
                 // Two Iubenda policies, one per language — an external id, not a

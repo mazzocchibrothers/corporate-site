@@ -56,7 +56,6 @@
         "careers": "Lavora con noi"
       },
       "legal": {
-        "privacy": "Privacy Policy",
         "cookies": "Cookie Policy",
         "dataProcessing": "Trattamento dati personali",
         "cookiePreferences": "Preferenze cookie",
@@ -7825,6 +7824,8 @@
     "text": "Legal",
     "heading": "Trattamento dati personali",
     "body": "Le informative di Skillvue sul trattamento dei dati personali — Sito Web e Clienti",
+    "jumpWebsite": "Informativa Sito Web",
+    "jumpClients": "Informativa Clienti",
     "text2": "Informativa · Sito Web",
     "heading2": "Informativa sul trattamento dei dati personali",
     "body2": "Resa ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR)",
