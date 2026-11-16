@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { useLocale } from 'next-intl';
 import { trackLead } from '@/components/shared/track-lead';
+import { PHONE_COUNTRY, setPhoneCountry, styleHubspotForm } from '@/components/shared/hubspot-form-theme';
 
 const FORM_IDS: Record<string, string> = {
   en: '950f4b2b-ed50-4ef7-94f9-2b34c4b19ecc',
@@ -22,6 +23,10 @@ export default function TalentPioneersContactForm() {
         formId: FORM_IDS[lang] ?? FORM_IDS.en,
         region: 'na1',
         target: '#talent-pioneers-hubspot-form',
+        onFormReady: () => {
+          styleHubspotForm(formRef.current);
+          setPhoneCountry(formRef.current, PHONE_COUNTRY[lang]);
+        },
         onFormSubmitted: () => trackLead('talent-pioneers'),
       });
     };

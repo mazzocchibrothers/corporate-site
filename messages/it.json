@@ -5012,6 +5012,7 @@
         "headingAccent": "più importanti d’Europa.",
         "pastLabel": "Partecipazioni passate",
         "past": {
+          "retailExecutiveSummit": "Retail Executive Summit 2026",
           "hrTechEurope": "HR Tech Europe 2026",
           "hrTechnologiesUk": "HR Technologies UK 2026",
           "retailSummit": "Retail Summit 2026",
@@ -5021,25 +5022,20 @@
         "upcomingLabel": "In programma",
         "visitWebsite": "Visita il sito",
         "upcoming": {
-          "fairCultures": {
-            "date": "1 ott 2026",
-            "title": "Fair Cultures",
-            "location": "Barcellona, TBS Education"
-          },
-          "retailExecutiveSummit": {
-            "date": "15-16 ott 2026",
-            "title": "Retail Executive Summit",
-            "location": "Cernobbio, Italia"
-          },
-          "lavoroSostenibile": {
-            "date": "20 ott 2026",
-            "title": "Lavoro Sostenibile",
-            "location": "Roma, Italia"
-          },
           "forumHr": {
             "date": "19-20 nov 2026",
             "title": "Forum HR — People & Culture",
             "location": "Milano, Italia"
+          },
+          "hrCoreLab": {
+            "date": "10-11 mar 2027",
+            "title": "HR CoreLab Summit",
+            "location": "Barcellona, Spagna"
+          },
+          "hrTechEurope": {
+            "date": "21-22 apr 2027",
+            "title": "HR Tech Europe",
+            "location": "Amsterdam, Paesi Bassi"
           }
         }
       },

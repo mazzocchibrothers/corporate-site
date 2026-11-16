@@ -8,6 +8,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import SkillvueLogo from '@/components/landing/SkillvueLogo';
 import { Button } from '@/components/ui/button';
 import { trackLead } from '@/components/shared/track-lead';
+import { PHONE_COUNTRY, setPhoneCountry, styleHubspotForm } from '@/components/shared/hubspot-form-theme';
 import { HeroCopy } from '@/components/ui/hero-copy';
 
 // TODO: Replace with the actual HubSpot form ID for this whitepaper
@@ -106,7 +107,12 @@ export default function HiddenCostRecruiting() {
           formId: HUBSPOT_FORM_ID,
           region: 'na1',
           target: '#lp-hubspot-form',
-          onFormReady: () => setFormLoaded(true),
+          onFormReady: () => {
+            // A white card: the light version of the site's form theme.
+            styleHubspotForm(formRef.current, 'light');
+            setPhoneCountry(formRef.current, PHONE_COUNTRY.en);
+            setFormLoaded(true);
+          },
           onFormSubmitted: () => trackLead('lp/hidden-cost-recruiting'),
         });
       }

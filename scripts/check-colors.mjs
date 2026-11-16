@@ -84,7 +84,7 @@ const ALLOWED = new Set(
     '#9395ff #93e0bb #9a9a9a #9b59b6 #9b9dfb #a8ecca #a9a9a9 #a9aaff #b7f5d8 #c7d2fe #cdc6f5 ' +
     '#d9603f #d97706 #e2e8f0 #e3f9ec #e5e7eb #e6d5ea #e7e7e8 #ea580c #ebebeb #ece9fb #ef4444 #efeefb #efeefd #f0f0f8 ' +
     '#f1f5f9 #f5f5f7 #f5f5fa #f7e6dc #f7f7f7 #f8ddc9 #f8f8fa #f8f8ff #fafafa #fdf1ea #fdf3ec #ff5656 #ff5b5b ' +
-    '#ff5f24 #ff6262 #ff6550 #ff7a7a #ff7d49 #ff8447 #ff8a5b #ff8a8a #ff8c00 #ff8c42 #ff9a9a ' +
+    '#ff5f24 #ff6262 #ff6550 #ff7a7a #ff7d49 #ff8447 #ff8a5b #ff8c00 #ff8c42 #ff9a9a ' +
     '#ffaf64 #ffb74b #fff #ffffff'
   ).split(' '),
 );
