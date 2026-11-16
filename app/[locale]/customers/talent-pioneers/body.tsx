@@ -55,10 +55,9 @@ const PAST_STAGES = [
 ];
 
 const UPCOMING_EVENTS = [
-  { id: 'fairCultures', url: 'https://www.faircultures.com/' },
-  { id: 'retailExecutiveSummit', url: 'https://www.retailexecutivesummit.it/' },
-  { id: 'lavoroSostenibile', url: 'https://www.lavorosostenibile.com/' },
   { id: 'forumHr', url: 'https://comunicazioneitaliana.it/eventi/forum-hr-26' },
+  { id: 'hrCoreLab', url: 'https://www.hrcorelab.com/' },
+  { id: 'hrTechEurope', url: 'https://www.hrtecheurope.com/' },
 ];
 
 function Badge({ children }: { children: React.ReactNode }) {
