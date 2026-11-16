@@ -47,6 +47,7 @@ const CHAPTERS = [
 ];
 
 const PAST_STAGES = [
+  { id: 'retailExecutiveSummit', bgImage: '/logos/talent-pioneers-stage-retail-executive-summit.avif' },
   { id: 'hrTechEurope', bgImage: '/logos/talent-pioneers-stage-hrtech-europe.avif' },
   { id: 'hrTechnologiesUk', bgImage: '/logos/talent-pioneers-stage-hrtech-uk.avif' },
   { id: 'retailSummit', bgImage: '/logos/talent-pioneers-stage-retail-summit.avif' },
@@ -338,7 +339,7 @@ export default async function TalentPioneersPage() {
 
             <Reveal y={24} delay={0.1} className="pt-16">
               <p className="type-eyebrow text-[#6B7DFF]">{t('stages.pastLabel')}</p>
-              <div className="pt-5 grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div className="pt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {PAST_STAGES.map((stage) => (
                   <div
                     key={stage.id}
