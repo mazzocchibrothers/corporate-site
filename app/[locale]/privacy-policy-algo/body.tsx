@@ -7,6 +7,8 @@ import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { BASE_URL } from '@/i18n/urls';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { Button } from '@/components/ui/button';
+import { ArrowDown } from 'lucide-react';
 
 
 
@@ -35,6 +37,22 @@ export default function PrivacyPolicyAlgo() {
                 <p className="type-body hero-subtitle text-white/40">
                   {t('body')}</p>
               </HeroCopy>
+              {/* Jump links to the two notices on this page — anchors, not
+                  routes: the page scrolls, it does not navigate. */}
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <Button asChild variant="primary" mode="dark">
+                  <a href="#website-notice">
+                    {t('jumpWebsite')}
+                    <ArrowDown aria-hidden="true" />
+                  </a>
+                </Button>
+                <Button asChild variant="secondary" mode="dark">
+                  <a href="#clients-notice">
+                    {t('jumpClients')}
+                    <ArrowDown aria-hidden="true" />
+                  </a>
+                </Button>
+              </div>
             </Reveal>
           </div>
         </section>
@@ -50,7 +68,7 @@ export default function PrivacyPolicyAlgo() {
             >
 
               {/* ══ NOTICE 1: SITO WEB ══ */}
-              <div className="mb-20">
+              <div id="website-notice" className="mb-20 scroll-mt-28">
                 <div className="type-eyebrow inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8" style={{ background: 'rgba(217,96,63,0.08)', color: '#D9603F', border: '1px solid rgba(217,96,63,0.18)' }}>
                   {t('text2')}</div>
 
@@ -194,16 +212,11 @@ export default function PrivacyPolicyAlgo() {
                   {t('body31')}</p>
               </div>
 
-              {/* NOTICE 2 (Clienti) is Italian-only — no English text exists
-                  for it yet, so it renders only for Italian visitors rather
-                  than showing untranslated Italian on the English page. */}
-              {locale === 'it' && (
-              <>
               {/* Notice-level divider */}
               <div className="h-px bg-[#121212]/[0.1] mb-20" />
 
               {/* ══ NOTICE 2: CLIENTI ══ */}
-              <div>
+              <div id="clients-notice" className="scroll-mt-28">
                 <div className="type-eyebrow inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8" style={{ background: 'rgba(75,77,247,0.08)', color: '#4B4DF7', border: '1px solid rgba(75,77,247,0.15)' }}>
                   {t('clientsBadge')}</div>
 
@@ -339,8 +352,6 @@ export default function PrivacyPolicyAlgo() {
                 <p className="type-body-sm text-[#121212]/35 mt-12 pt-8 border-t border-[#121212]/[0.06]">
                   {t('clientsFooterNote')}</p>
               </div>
-              </>
-              )}
 
             </Reveal>
           </div>
