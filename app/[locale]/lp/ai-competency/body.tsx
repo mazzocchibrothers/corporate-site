@@ -7,6 +7,7 @@ import Navbar from '@/components/landing/Navbar';
 import TrustLogosBar from '@/components/landing/TrustLogosBar';
 import { Download, Lock, Check, ChevronDown } from 'lucide-react';
 import { trackLead } from '@/components/shared/track-lead';
+import { PHONE_COUNTRY, setPhoneCountry, styleHubspotForm } from '@/components/shared/hubspot-form-theme';
 import { HeroCopy } from '@/components/ui/hero-copy';
 
 const HS_PORTAL_ID = '48438018';
@@ -51,6 +52,10 @@ export default function AiCompetencyPage() {
           formId,
           region: HS_REGION,
           target: '#lead-form',
+          onFormReady: () => {
+            styleHubspotForm(formRef.current);
+            setPhoneCountry(formRef.current, PHONE_COUNTRY[lang]);
+          },
           onFormSubmitted: () => {
             trackLead('lp/ai-competency');
             setUnlocked(true);
@@ -79,44 +84,7 @@ export default function AiCompetencyPage() {
 
   return (
     <>
-      {/* Brand styling for the embedded HubSpot form */}
       <style jsx global>{`
-        /* Two-column, horizontal layout */
-        #lead-form form { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; align-items: start; }
-        #lead-form form > .hs_submit,
-        #lead-form form > .hs-richtext,
-        #lead-form form > .legal-consent-container,
-        #lead-form form > .hs_error_rollup { grid-column: 1 / -1; }
-        #lead-form fieldset { max-width: none !important; width: 100% !important; }
-        #lead-form fieldset .input { margin-right: 0 !important; }
-        #lead-form fieldset .hs-form-field { width: 100% !important; float: none !important; }
-        #lead-form .hs-form-field { margin-bottom: 8px; }
-        #lead-form .hs-form-field > label { color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600; display: block; margin-bottom: 5px; }
-        #lead-form .hs-form-field > label .hs-form-required { color: #ff8a8a; margin-left: 2px; }
-        #lead-form .hs-input {
-          width: 100% !important; box-sizing: border-box;
-          background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.14);
-          color: #fff; border-radius: 8px; padding: 10px 14px; font-size: 14px; outline: none;
-        }
-        #lead-form .hs-input:focus { border-color: #7b7df9; }
-        #lead-form .hs-input::placeholder { color: rgba(255,255,255,0.4); }
-        #lead-form select.hs-input { color: #fff; }
-        #lead-form select.hs-input option { color: #111; }
-        #lead-form .hs-fieldtype-checkbox .hs-input,
-        #lead-form .hs-fieldtype-booleancheckbox .hs-input { width: auto !important; margin-right: 8px; }
-        #lead-form .hs-form-booleancheckbox-display, #lead-form .inputs-list label { color: rgba(255,255,255,0.6); font-size: 12px; font-weight: 400; }
-        #lead-form ul.inputs-list { list-style: none; margin: 0; padding: 0; }
-        #lead-form .hs-error-msgs { list-style: none; margin: 6px 0 0; padding: 0; }
-        #lead-form .hs-error-msgs label { color: #ff9a9a; font-size: 12px; }
-        #lead-form .hs_submit { margin-top: 14px; }
-        #lead-form .hs-button {
-          width: 100%; background: #4b4df7; color: #fff; border: none;
-          border-radius: 9999px; padding: 13px 24px; font-size: 15px; font-weight: 600;
-          cursor: pointer; transition: opacity .3s ease;
-        }
-        #lead-form .hs-button:hover { opacity: 0.9; }
-        #lead-form .submitted-message { color: rgba(255,255,255,0.8); font-size: 14px; }
-
         /* Slightly smaller client-logo bar — scoped to this landing only */
         .compact-logos [class*="h-[60px]"] { height: 60px !important; }
         .compact-logos img { height: 18px !important; }

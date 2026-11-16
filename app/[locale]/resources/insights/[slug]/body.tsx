@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button';
 import { href, localizePath } from '@/i18n/routes';
 import Link from 'next/link';
 import { trackLead } from '@/components/shared/track-lead';
+import { PHONE_COUNTRY, setPhoneCountry, styleHubspotForm } from '@/components/shared/hubspot-form-theme';
 import { HeroCopy } from '@/components/ui/hero-copy';
 
 // The one dynamic route on the site. Its paths come from the same array the
@@ -135,7 +136,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
     script.async = true;
     script.onload = () => {
       if (window.hbspt) {
-        window.hbspt.forms.create({ portalId: '48438018', formId, region: 'na1', target: '#wp-hubspot-form', onFormSubmitted: () => trackLead(`resources/insights/${slug}`) });
+        window.hbspt.forms.create({ portalId: '48438018', formId, region: 'na1', target: '#wp-hubspot-form', onFormReady: () => { styleHubspotForm(formRef.current); setPhoneCountry(formRef.current, PHONE_COUNTRY[lang]); }, onFormSubmitted: () => trackLead(`resources/insights/${slug}`) });
       }
     };
     document.body.appendChild(script);

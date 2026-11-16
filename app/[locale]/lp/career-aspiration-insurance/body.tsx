@@ -6,6 +6,7 @@ import { Reveal } from '@/components/ui/reveal';
 import React, { useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { trackLead } from '@/components/shared/track-lead';
+import { styleHubspotForm } from '@/components/shared/hubspot-form-theme';
 import { href } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
 
@@ -80,6 +81,8 @@ export default function CareerAspirationInsuranceVetrina() {
           // The whitepaper page is Italian-only, so its URL carries /it — without it
           // the redirect after a successful submit landed on a 404.
           redirectUrl: window.location.origin + href('lp/career-aspiration-insurance/whitepaper', 'it'),
+          // A white card: the light version of the site's form theme.
+          onFormReady: () => styleHubspotForm(document.getElementById('hs-form-container'), 'light'),
           onFormSubmitted: () => trackLead('lp/career-aspiration-insurance'),
         });
       }
