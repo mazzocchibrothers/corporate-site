@@ -95,6 +95,18 @@ h1, h2, h3, h4, h5, h6, .stat-value {
     font-family: 'Mona Sans', sans-serif;
 }
 
+/* Mona Sans draws a single-storey "a" by default; stylistic set 05 swaps in
+   the double-storey one (and its accented forms: à, á, â…). It is switched on
+   wherever Mona Sans is, never on the root: Geist has an ss05 of its own.
+   @font-face cannot carry it — Chrome and Safari ignore that descriptor.
+   The [style*=] arm catches the inline fontFamily on about, trust and the
+   product screens. .gradient-text sets its own list and repeats it there. */
+h1, h2, h3, h4, h5, h6, .stat-value, .font-display, .mono,
+.gradient-text-warm, .gradient-text-cool, .gradient-text-on-light,
+.gradient-text-warm-on-light, [style*="Mona Sans"] {
+    font-feature-settings: 'ss05' 1;
+}
+
 /* ===== BODY AND RICH-TEXT TYPE SCALE =====
    One class per style in the type spec, each setting face, size, line height,
    weight and tracking together. Text that is not a heading uses one of these
@@ -112,6 +124,9 @@ h1, h2, h3, h4, h5, h6, .stat-value {
     .type-blockquote-lg { font-family: 'Geist', sans-serif; font-size: 24px; line-height: 1.4; font-weight: 500; letter-spacing: -0.01em; }
     .type-blockquote   { font-family: 'Geist', sans-serif; font-size: 20px; line-height: 32px; font-weight: 400; letter-spacing: -0.01em; }
     .type-eyebrow      { font-family: 'Geist', sans-serif; font-size: 12px; line-height: 1.45; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+    .type-body-lg, .type-body, .type-body-bold, .type-body-sm, .type-caption,
+    .type-button, .type-link, .type-list, .type-blockquote-lg, .type-blockquote,
+    .type-eyebrow { font-feature-settings: normal; }
     .type-code         { font-family: 'Geist Mono', monospace; font-size: 13px; line-height: 1.7; font-weight: 400; }
 }
 
@@ -441,7 +456,7 @@ html {
   font-style: normal;
   font-variation-settings: 'ital' 0;
   letter-spacing: 0.02em;
-  font-feature-settings: 'liga' 0, 'clig' 0;
+  font-feature-settings: 'liga' 0, 'clig' 0, 'ss05' 1;
 }
 /* Hero and section titles standardize on -2% tracking; keep the gradient span
    matching whatever the parent heading sets instead of this class's own

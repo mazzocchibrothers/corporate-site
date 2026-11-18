@@ -1592,29 +1592,25 @@
     "hero": {
       "eyebrow": "Customer stories",
       "metrics": {
-        "europeanEnterprises": {
-          "label": "European enterprises"
+        "fasterHires": {
+          "industry": "Retail and banking",
+          "label": "Faster hires"
         },
-        "avgReductionTime": {
-          "label": "avg reduction in time-to-hire"
+        "timeToProcess": {
+          "industry": "Transportation and logistics",
+          "label": "Reduction in time-to-process on internal applications"
         },
-        "roiWithin18": {
-          "label": "ROI within 18-24 months"
+        "peopleMapped": {
+          "industry": "Beauty retail",
+          "label": "People mapped across 370+ stores in 5 weeks"
         },
-        "savedYearly": {
-          "label": "saved yearly in failed-hire costs"
-        },
-        "fasterTimeToHire": {
-          "label": "faster time-to-hire"
-        },
-        "hiringSuccessRate": {
-          "label": "hiring success rate"
+        "turnover": {
+          "industry": "Fashion retail",
+          "label": "Turnover on new hires, across 6 countries"
         }
       },
       "heading": "The decisions that define your organization. Finally backed by <span>proof.</span>",
-      "body": "100+ European enterprises have replaced gut feel with objective talent intelligence across hiring, promotion, development, and transformation readiness. These are their stories.",
-      "cta": "Read the stories",
-      "text": "Our Customers"
+      "body": "100+ European enterprises have replaced gut feel with objective talent intelligence across hiring, promotion, development, and transformation readiness. These are their stories."
     },
     "testimonials": {
       "eyebrow": "Customer Testimonials",
@@ -1647,28 +1643,6 @@
           ]
         }
       }
-    },
-    "roi": {
-      "stats": {
-        "n45m": {
-          "value": "€4.5M",
-          "label": "saved annually in failed hire costs",
-          "sub": "Based on 300 hires, 30% failure rate, €50K average cost per failure"
-        },
-        "n69mo": {
-          "value": "6-9mo",
-          "label": "faster strategic execution",
-          "sub": "When the right people are in the right roles from day one"
-        },
-        "n1030x": {
-          "value": "10-30x",
-          "label": "ROI in 18-24 months",
-          "sub": "With payback typically in 6-12 months"
-        }
-      },
-      "heading": "People are your biggest cost. <span>They can also be your biggest return.</span>",
-      "body": "Every other budget line has an ROI framework. These companies proved talent spend can too.",
-      "cta": "Book a Demo"
     },
     "exploreStories": {
       "heading": "Find your <span>story.</span>",
@@ -5837,27 +5811,6 @@
       "body2": "100+ native integrations (Oracle, SAP, Workday, Greenhouse + more). Fully customisable to your processes, on your terms.",
       "inProgress": "In progress"
     },
-    "roi": {
-      "stats": {
-        "savedAnnually": {
-          "label": "saved annually",
-          "sublabel": "in failed hire costs",
-          "footnote": "Based on 300 hires, 30% lower failure rate, 50K average cost per failure"
-        },
-        "monthsFaster": {
-          "label": "months faster",
-          "sublabel": "strategic execution",
-          "footnote": "When the right people are in the right roles from day one"
-        },
-        "roi": {
-          "label": "ROI",
-          "sublabel": "in 18-24 months",
-          "footnote": "With payback typically in 6-12 months"
-        }
-      },
-      "heading": "People are your biggest cost. <span>They can also be your biggest return.</span>",
-      "cta": "Book a Demo"
-    },
     "cta": {
       "heading": "Make talent decisions <span>you can defend.</span>",
       "body": "See Skillvue working on a role from your competency framework, in 30 minutes.",
@@ -9781,6 +9734,25 @@
       "blog": "Blog",
       "solutions": "Solutions",
       "resources": "Resources"
+    },
+    "roi": {
+      "stats": {
+        "payback": {
+          "label": "months",
+          "sublabel": "payback"
+        },
+        "roi": {
+          "label": "ROI",
+          "sublabel": "in 18-24 months"
+        }
+      },
+      "heading": "People are your biggest cost. <span>They can also be your biggest return.</span>",
+      "card": {
+        "heading": "What’s your number?",
+        "body": "Pick a use case, enter two numbers, and see your own payback and ROI.",
+        "cta": "Find your number"
+      },
+      "note": "Based on the Skillvue ROI Calculator."
     }
   },
   "solutions": {
