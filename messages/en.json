@@ -1593,19 +1593,19 @@
       "metrics": {
         "fasterHires": {
           "industry": "Retail and banking",
-          "label": "Faster hires"
+          "label": "faster hires"
         },
         "timeToProcess": {
           "industry": "Transportation and logistics",
-          "label": "Reduction in time-to-process on internal applications"
+          "label": "reduction in time-to-process on internal applications"
         },
         "peopleMapped": {
           "industry": "Beauty retail",
-          "label": "People mapped across 370+ stores in 5 weeks"
+          "label": "people mapped across 370+ stores in 5 weeks"
         },
         "turnover": {
           "industry": "Fashion retail",
-          "label": "Turnover on new hires, across 6 countries"
+          "label": "reduction on new hires turnover, across 6 countries"
         }
       },
       "heading": "The decisions that define your organization. Finally backed by <span>proof.</span>",
