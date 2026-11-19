@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   ArrowRight, Atom, BadgeCheck, Blocks, Columns3Cog, Compass, Database, Layers,
-  Sparkles, SquareArrowOutUpRight, SquareCheckBig, Zap, type LucideIcon,
+  Sparkles, SquareArrowOutUpRight, SquareMousePointer, Zap, type LucideIcon,
 } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -27,7 +27,7 @@ const ASSESS_TABS: AssessScreen[] = ['interview', 'questions'];
 
 const FEATURES: Record<Product, [string, LucideIcon][]> = {
   map: [['data', Database], ['days', Zap], ['experts', BadgeCheck], ['navigate', Compass]],
-  assess: [['context', Columns3Cog], ['science', Atom], ['scale', SquareArrowOutUpRight], ['format', SquareCheckBig]],
+  assess: [['context', Columns3Cog], ['science', Atom], ['scale', SquareArrowOutUpRight], ['format', SquareMousePointer]],
   decide: [['stack', Layers], ['query', Sparkles], ['workflows', Blocks]],
 };
 

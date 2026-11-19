@@ -1,12 +1,5 @@
-// The server half of this route. The page itself is body.tsx.
-//
-// Every route has this pair, and this file is the same eight lines everywhere:
-// what only the server can do — the title and canonical from the registry, and
-// the message provider narrowed to this route's namespaces. body.tsx is the
-// page as it was written, and it is a client component because framer-motion,
-// useEffect and useRouter all live in it.
-//
-// Both files were produced in one pass over pages/ at the switch (#137).
+// /product/skillvue-assess: metadata, the narrowed message provider and the
+// structured data. The page is body.tsx, a server component.
 import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { buildMetadata } from '@/i18n/metadata';

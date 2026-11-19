@@ -7,7 +7,7 @@ import Navbar from '@/components/landing/Navbar';
 import HeroSection from '@/components/landing/HeroSection';
 import ProblemSection from '@/components/landing/ProblemSection';
 import SolutionSection from '@/components/landing/SolutionSection';
-import { PlatformCards } from '@/components/product/PlatformCards';
+import { PLATFORM_GRADIENT, PlatformCards } from '@/components/product/PlatformCards';
 import CustomerStoriesSection from '@/components/landing/CustomerStoriesSection';
 import ROISection from '@/components/landing/ROISection';
 import CTASection from '@/components/landing/CTASection';
@@ -34,10 +34,11 @@ export default function HomePage() {
           <div className="fade-into-dark" />
           <SolutionSection />
           <div className="fade-into-light" />
-          {/* The platform as /product introduces it: Map, Assess, Decide, on the
-              light-section grey. The id is the old section's, so links to
+          {/* The platform as /product introduces it: Map, Assess, Decide. Here the
+              whole section carries the block's tint; section-breathe still marks
+              it light for the navbar. The id is the old section's, so links to
               /#how-it-works still land here. */}
-          <section id="how-it-works" className="section-breathe py-16 md:py-20 lg:py-28">
+          <section id="how-it-works" className="section-breathe py-16 md:py-20 lg:py-28" style={{ background: PLATFORM_GRADIENT }}>
             <PlatformCards link="page" surface={false} />
           </section>
           <div className="fade-into-dark" />

@@ -235,14 +235,14 @@ export default async function SkillvueAssessPage() {
                     return (
                     <tr key={row.id}>
                       <th scope="row" className={`px-5 py-5 type-body font-normal text-[#121212] ${rule}`}>{t(`why.table.rows.${row.id}`)}</th>
-                      {row.cells.map((v, i) => (
+                      {COMPARISON_COLUMNS.map((col, i) => (
                         <td
-                          key={COMPARISON_COLUMNS[i]}
+                          key={col}
                           className={`px-3 py-5 text-center ${rule} ${
                             i === 0 ? `border-x border-x-[#a9aaff] bg-[#f6f7ff] ${last ? 'rounded-b-2xl border-b border-b-[#a9aaff]' : ''}` : ''
                           }`}
                         >
-                          <span className="inline-flex justify-center"><VerdictMark verdict={v} ours={i === 0} labels={verdicts} /></span>
+                          <span className="inline-flex justify-center"><VerdictMark verdict={row.cells[col]} ours={i === 0} labels={verdicts} /></span>
                         </td>
                       ))}
                     </tr>
@@ -257,13 +257,13 @@ export default async function SkillvueAssessPage() {
                   <div key={row.id} className="rounded-2xl border border-black/[0.08] p-4">
                     <p className="type-body-bold text-[#121212]">{t(`why.table.rows.${row.id}`)}</p>
                     <dl className="mt-3 grid grid-cols-1 gap-2">
-                      {row.cells.map((v, i) => (
+                      {COMPARISON_COLUMNS.map((col, i) => (
                         <div
-                          key={COMPARISON_COLUMNS[i]}
+                          key={col}
                           className={`flex items-center justify-between gap-3 rounded-lg px-3 py-2 ${i === 0 ? 'bg-[#f6f7ff]' : 'bg-[#fafafa]'}`}
                         >
-                          <dt className={`type-body-sm ${i === 0 ? 'text-[#4B4DF7]' : 'text-[#4B4B4B]'}`}>{t(`why.table.columns.${COMPARISON_COLUMNS[i]}`)}</dt>
-                          <dd className="flex"><VerdictMark verdict={v} ours={i === 0} labels={verdicts} /></dd>
+                          <dt className={`type-body-sm ${i === 0 ? 'text-[#4B4DF7]' : 'text-[#4B4B4B]'}`}>{t(`why.table.columns.${col}`)}</dt>
+                          <dd className="flex"><VerdictMark verdict={row.cells[col]} ours={i === 0} labels={verdicts} /></dd>
                         </div>
                       ))}
                     </dl>

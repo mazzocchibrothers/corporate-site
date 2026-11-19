@@ -97,10 +97,12 @@ export const EXPERT_MATCH = { expert: 4 as Level, assess: 4 as Level };
 // ── Why Skillvue: comparison ─────────────────────────────────────────────────
 export type Verdict = 'yes' | 'no' | 'partly';
 export const COMPARISON_COLUMNS = ['assess', 'ratings', 'inference', 'tests'] as const;
-export const COMPARISON: { id: 'measures' | 'builtOn' | 'oneScale' | 'evidence' | 'scale'; cells: [Verdict, Verdict, Verdict, Verdict] }[] = [
-  { id: 'measures', cells: ['yes', 'no', 'partly', 'yes'] },
-  { id: 'builtOn', cells: ['yes', 'yes', 'partly', 'no'] },
-  { id: 'oneScale', cells: ['yes', 'no', 'partly', 'no'] },
-  { id: 'evidence', cells: ['yes', 'no', 'no', 'partly'] },
-  { id: 'scale', cells: ['yes', 'partly', 'yes', 'yes'] },
+export type ComparisonColumn = (typeof COMPARISON_COLUMNS)[number];
+/** Each verdict keyed by its column, so reordering the columns cannot swap them. */
+export const COMPARISON: { id: 'measures' | 'builtOn' | 'oneScale' | 'evidence' | 'scale'; cells: Record<ComparisonColumn, Verdict> }[] = [
+  { id: 'measures', cells: { assess: 'yes', ratings: 'no', inference: 'partly', tests: 'yes' } },
+  { id: 'builtOn', cells: { assess: 'yes', ratings: 'yes', inference: 'partly', tests: 'no' } },
+  { id: 'oneScale', cells: { assess: 'yes', ratings: 'no', inference: 'partly', tests: 'no' } },
+  { id: 'evidence', cells: { assess: 'yes', ratings: 'no', inference: 'no', tests: 'partly' } },
+  { id: 'scale', cells: { assess: 'yes', ratings: 'partly', inference: 'yes', tests: 'yes' } },
 ];

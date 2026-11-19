@@ -20,26 +20,53 @@ import { announcementClickEvent } from '@/components/landing/announcement';
 // an anchor lands below the banner too.
 
 const LINE = 'mx-auto flex max-w-[1400px] flex-wrap items-center justify-center gap-x-6 gap-y-1 px-6 py-2.5 text-center type-body-sm lg:px-12';
+const LINK = 'inline-flex items-center gap-1 font-medium text-[#4B4DF7] underline decoration-[#4B4DF7]/40 underline-offset-4 transition-colors hover:text-[#3133E7] hover:decoration-[#3133E7]';
 
-/** The banner's text laid out invisibly in flow: the same height, nothing to read or click. */
-export function AnnouncementSpacer() {
+/**
+ * The banner's one line: its text and its link. The bar and the spacer both
+ * render this, so the spacer's height always matches the bar's. In the spacer
+ * (`live={false}`) the link is a plain span: same box, nothing to click.
+ */
+function AnnouncementLine({ live }: { live: boolean }) {
   const t = useTranslations('common.announcement');
+  const locale = useLocale();
+  const content = (
+    <>
+      {t('link')}
+      <ArrowUpRight aria-hidden="true" className="h-4 w-4" strokeWidth={1.8} />
+    </>
+  );
+  return (
+    <p data-testid={live ? 'announcement-bar' : undefined} className={`${LINE} text-[#121212]`}>
+      <span>{t('text')}</span>
+      {live ? (
+        <a
+          href={href('product/skillvue-assess', locale)}
+          data-testid="announcement-link"
+          onClick={() => {
+            (window.dataLayer ??= []).push(announcementClickEvent(locale));
+          }}
+          className={LINK}
+        >
+          {content}
+        </a>
+      ) : (
+        <span className={LINK}>{content}</span>
+      )}
+    </p>
+  );
+}
+
+/** The banner's line laid out invisibly in flow: the same height, nothing to read or click. */
+export function AnnouncementSpacer() {
   return (
     <div aria-hidden="true" inert className="invisible">
-      <p className={LINE}>
-        <span>{t('text')}</span>
-        <span className="inline-flex items-center gap-1 font-medium">
-          {t('link')}
-          <ArrowUpRight className="h-4 w-4" strokeWidth={1.8} />
-        </span>
-      </p>
+      <AnnouncementLine live={false} />
     </div>
   );
 }
 
 export function AnnouncementBar({ visible }: { visible: boolean }) {
-  const t = useTranslations('common.announcement');
-  const locale = useLocale();
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -66,23 +93,7 @@ export function AnnouncementBar({ visible }: { visible: boolean }) {
       aria-hidden={!visible}
     >
       <div className="min-h-0 overflow-hidden">
-        <p
-          data-testid="announcement-bar"
-          className={`${LINE} text-[#121212]`}
-        >
-          <span>{t('text')}</span>
-          <a
-            href={href('product/skillvue-assess', locale)}
-            data-testid="announcement-link"
-            onClick={() => {
-              (window.dataLayer ??= []).push(announcementClickEvent(locale));
-            }}
-            className="inline-flex items-center gap-1 font-medium text-[#4B4DF7] underline decoration-[#4B4DF7]/40 underline-offset-4 transition-colors hover:text-[#3133E7] hover:decoration-[#3133E7]"
-          >
-            {t('link')}
-            <ArrowUpRight aria-hidden="true" className="h-4 w-4" strokeWidth={1.8} />
-          </a>
-        </p>
+        <AnnouncementLine live />
       </div>
     </div>
   );
