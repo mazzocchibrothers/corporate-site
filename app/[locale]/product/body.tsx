@@ -108,15 +108,16 @@ function Features({ product }: { product: Product }) {
   );
 }
 
-function ReadMore() {
+// The link from a product's section to its own page.
+function ReadMore({ product }: { product: 'map' | 'assess' }) {
   const t = useTranslations('product');
   const locale = useLocale();
   return (
     <a
-      href={href('product/skillvue-map', locale)}
+      href={href(`product/skillvue-${product}`, locale)}
       className="type-button group inline-flex h-12 shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-[#e5e7eb] bg-white px-6 text-[#121212] transition-colors hover:bg-[#f7f7f7]"
     >
-      {t('map.readMore')}
+      {t(`${product}.readMore`)}
       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.8} aria-hidden="true" />
     </a>
   );
@@ -171,12 +172,12 @@ export default function SkillvueMapPage() {
               <Reveal><Logo product="map" /></Reveal>
               <Reveal delay={0.1} className="mt-6 lg:mt-11 flex flex-wrap items-end justify-between gap-x-10 gap-y-6">
                 <h2 className={`max-w-[880px] min-w-0 flex-[1_1_560px] ${H2}`}>{t.rich('map.heading', { br })}</h2>
-                <ReadMore />
+                <ReadMore product="map" />
               </Reveal>
               <ProblemSolution product="map" />
               <TabbedPanel product="map" tabs={MAP_TABS} />
               <Features product="map" />
-              <div className="mt-8 lg:mt-20 flex justify-center"><ReadMore /></div>
+              <div className="mt-8 lg:mt-20 flex justify-center"><ReadMore product="map" /></div>
             </div>
           </section>
 
@@ -184,10 +185,14 @@ export default function SkillvueMapPage() {
           <section id="assess" className={section}>
             <div className={container}>
               <Reveal><Logo product="assess" /></Reveal>
-              <Reveal delay={0.1}><h2 className={`max-w-[880px] mt-6 lg:mt-11 ${H2}`}>{t.rich('assess.heading', { br })}</h2></Reveal>
+              <Reveal delay={0.1} className="mt-6 lg:mt-11 flex flex-wrap items-end justify-between gap-x-10 gap-y-6">
+                <h2 className={`max-w-[880px] min-w-0 flex-[1_1_560px] ${H2}`}>{t.rich('assess.heading', { br })}</h2>
+                <ReadMore product="assess" />
+              </Reveal>
               <ProblemSolution product="assess" />
               <TabbedPanel product="assess" tabs={ASSESS_TABS} />
               <Features product="assess" />
+              <div className="mt-8 lg:mt-20 flex justify-center"><ReadMore product="assess" /></div>
             </div>
           </section>
 

@@ -25,7 +25,7 @@ export function ProductLogo({ product }: { product: Product }) {
   const t = useTranslations('product');
   return (
     <img
-      src={`/products/skillvue-${product}.svg`}
+      src={`/logos/skillvue-${product}-logo.svg`}
       alt={t(`logos.${product}`)}
       loading="lazy"
       decoding="async"

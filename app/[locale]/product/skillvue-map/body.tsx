@@ -26,9 +26,9 @@ const FEATURES: { id: string; screen: MapPageScreenId | 'decide' }[] = [
 ];
 
 const PRODUCTS = [
-  { id: 'map', logo: '/product/skillvue-map-logo.svg', width: 148, height: 25 },
-  { id: 'assess', logo: '/product/skillvue-assess-logo.svg', width: 231, height: 32 },
-  { id: 'decide', logo: '/product/skillvue-decide-logo.svg', width: 225, height: 32 },
+  { id: 'map', logo: '/logos/skillvue-map-logo.svg', width: 198, height: 33 },
+  { id: 'assess', logo: '/logos/skillvue-assess-logo.svg', width: 230, height: 32 },
+  { id: 'decide', logo: '/logos/skillvue-decide-logo.svg', width: 227, height: 32 },
 ] as const;
 
 const FLOW_INPUTS = [

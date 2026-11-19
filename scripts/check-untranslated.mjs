@@ -58,6 +58,7 @@ const DELIBERATE = [
   ['customers.credem.quote.role', 'job title'],
   ['customers.unicomm.quote.role', 'job title'],
   ['customers.subdued.quote.role', 'job title'],
+  ['product.skillvue-assess.proof.author', 'a name, job title and company'],
   ['customers.douglas.quote.role', 'job title'],
   ['customers.fidia-farmaceutici.quote.role', 'job title'],
   ['customers.eataly.quote.role', 'job title'],

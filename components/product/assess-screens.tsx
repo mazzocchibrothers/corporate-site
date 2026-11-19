@@ -146,7 +146,7 @@ export function AssessScreens({ tab, label }: { tab: AssessScreen; label: string
       <div style={{ position: ABS, left: '0.882cqw', top: '4.52cqw', width: '2.095cqw', height: '2.095cqw', boxSizing: 'border-box', border: '1px solid #CCCCCC', borderRadius: 3, background: '#FFFFFF' }} />
       <svg {...ICON} stroke="none" fill="#222" style={{ position: ABS, left: '1.323cqw', top: '4.906cqw', width: '1.213cqw', height: '1.213cqw' }}><rect x="3" y="3" width="8" height="8" rx="1" /><circle cx="17" cy="7" r="4" /><path d="M3 13h8v8a8 8 0 0 1-8-8z" /><path d="M13 21l8-8v8z" /></svg>
       <span style={{ position: ABS, left: '3.638cqw', top: '5.513cqw', transform: 'translateY(-50%)', fontSize: '1.058cqw', lineHeight: 1.2, whiteSpace: 'nowrap', fontWeight: 600, color: '#111111' }}>{t('assessment')}</span>
-      <img src="/products/skillvue-assess.svg" alt="" style={{ position: ABS, left: '50cqw', top: '4.84cqw', transform: 'translateX(-50%)', height: LOGO }} />
+      <img src="/logos/skillvue-assess-logo.svg" alt="" style={{ position: ABS, left: '50cqw', top: '4.84cqw', transform: 'translateX(-50%)', height: LOGO }} />
       <div style={{ position: ABS, left: '87.541cqw', top: '5.237cqw', width: '4.41cqw', height: '0.441cqw', borderRadius: '999px', background: '#DCDCDC' }}>
         <div style={{ width: '1.654cqw', height: '100%', borderRadius: '999px', background: '#4B4DF7' }} />
       </div>
