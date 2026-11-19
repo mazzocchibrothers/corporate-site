@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   ArrowRight, Atom, BadgeCheck, Blocks, Columns3Cog, Compass, Database, Layers,
-  Sparkles, SquareArrowOutUpRight, SquareMousePointer, Zap, type LucideIcon,
+  Sparkles, SquareCheckBig, Zap, createLucideIcon, type LucideIcon,
 } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -25,9 +25,19 @@ import { PlatformCards, ProductLogo as Logo, type Product } from '@/components/p
 const MAP_TABS: MapScreen[] = ['jobs', 'skills', 'compare'];
 const ASSESS_TABS: AssessScreen[] = ['interview', 'questions'];
 
+// Assess's "scale" icon: Lucide's square-arrow-out-up-right with a second
+// arrowhead pointing back in. Lucide has no such icon, so it is drawn here from
+// that one's paths, in Lucide's own stroke and grid.
+const SquareArrowDiagonal = createLucideIcon('square-arrow-diagonal', [
+  ['path', { d: 'M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6', key: 'square' }],
+  ['path', { d: 'M15 3h6v6', key: 'head-out' }],
+  ['path', { d: 'M21 3 9 15', key: 'shaft' }],
+  ['path', { d: 'M9 10v5h5', key: 'head-in' }],
+]);
+
 const FEATURES: Record<Product, [string, LucideIcon][]> = {
   map: [['data', Database], ['days', Zap], ['experts', BadgeCheck], ['navigate', Compass]],
-  assess: [['context', Columns3Cog], ['science', Atom], ['scale', SquareArrowOutUpRight], ['format', SquareMousePointer]],
+  assess: [['context', Columns3Cog], ['science', Atom], ['scale', SquareArrowDiagonal], ['format', SquareCheckBig]],
   decide: [['stack', Layers], ['query', Sparkles], ['workflows', Blocks]],
 };
 
