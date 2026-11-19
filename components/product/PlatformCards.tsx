@@ -34,9 +34,9 @@ export function ProductLogo({ product }: { product: Product }) {
   );
 }
 
-/** The block's tint, peach to lavender. A page that tints the whole section
- *  with it passes `surface={false}`, and the block then draws no card of its own. */
-export const PLATFORM_GRADIENT = 'linear-gradient(90deg, #fdf1ea 0%, #f5f5f7 50%, #efeefd 100%)';
+/** The block's tint, peach to lavender, on /product's card. The homepage passes
+ *  `surface={false}` and the block sits on its section's grey with no card. */
+const PLATFORM_GRADIENT = 'linear-gradient(90deg, #fdf1ea 0%, #f5f5f7 50%, #efeefd 100%)';
 
 // On /product the card fades in from the white hero above it.
 const SURFACE: CSSProperties = {
@@ -66,7 +66,8 @@ export function PlatformCards({ link, surface = true }: { link: 'section' | 'pag
       className={`max-w-[1344px] mx-5 md:mx-8 lg:mx-auto text-center ${surface ? 'rounded-[24px] md:rounded-[40px] px-4 pb-4 md:px-12 md:pb-12' : 'md:px-12'}`}
       style={surface ? SURFACE : undefined}
     >
-      <h2 className={`${H2} max-w-[880px] mx-auto`}>{t('platform.heading')}</h2>
+      <p className="type-eyebrow text-[#4B4DF7]">{t('platform.eyebrow')}</p>
+      <h2 className={`${H2} mt-5 max-w-[880px] mx-auto`}>{t('platform.heading')}</h2>
       <div className="mt-10 lg:mt-12 grid gap-3 md:grid-cols-3 lg:gap-[42px]">
         {PRODUCTS.map((p) => (
           <a
