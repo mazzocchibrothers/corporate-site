@@ -6,13 +6,12 @@
 ## Starting point: this repo has almost no automated safety net
 
 There is no ESLint, Jest or Vitest setup. Static gates cover routing and
-catalogue integrity; `test:smoke` uses the installed Playwright package against
-a production build for the critical browser journeys. TypeScript remains
+catalogue integrity. TypeScript remains
 `strict: false`, but no app source is excluded with `// @ts-nocheck`.
 
 `npm run build` catches syntax errors and broken imports. It does not catch a
 missing Italian translation, a route absent from the sitemap, or a wrong
-`hreflang`; those belong to the static gates and browser smoke below.
+`hreflang`; those belong to the static gates and the bilingual smoke test below.
 
 ## Level 1 — Gates (mandatory, every feature)
 
@@ -33,7 +32,7 @@ The production build (`npm run check:build`) is a separate, slower tier, skipped
 an Issue done.
 
 CI runs the same list on every PR, from `scripts/gates.mjs`, then
-`check:build`, then `npm run test:smoke` (Playwright against `npm run start`).
+`check:build`.
 The runner and the workflow cannot disagree about what runs. Running `init.sh` locally is still
 not optional: it is how you find out before the push.
 
@@ -48,7 +47,7 @@ checking lives in a `.ts` module the check imports
 (`components/customers/talent-pioneers-carousel.ts` is the model).
 
 - **`node:assert/strict`, no framework, no fixtures.** Do not install jest or
-  vitest to add one assertion. Playwright is installed for `test:smoke` only.
+  vitest to add one assertion.
 - Runs **offline** — no network, no dev server.
 - Asserts the concrete result, not merely "it didn't throw".
 - Covers the degradation path, not only the happy one: the missing translation

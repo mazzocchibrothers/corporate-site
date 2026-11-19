@@ -92,7 +92,7 @@ check can decide for you.
 ## C5 — Verification is real
 
 - [ ] `./harness/init.sh` ended green — the full run, not `--fast`.
-- [ ] CI is green on the PR: the gates, `check:build` and `test:smoke`.
+- [ ] CI is green on the PR: the gates and `check:build`.
 - [ ] Every non-trivial piece of logic added by the change has one runnable
       check: a `scripts/check-*.mjs` wired to a `check:*` script in
       `package.json` (`scripts/gates.mjs` picks it up — there is no second

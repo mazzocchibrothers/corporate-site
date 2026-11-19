@@ -10,7 +10,6 @@ pages, not building infrastructure.
 npm run dev          # localhost:3000
 ./harness/init.sh    # every gate, then the build — this is the check
 npm run check:build  # the build gate alone: next build, and a warning fails it
-npm run test:smoke   # Playwright journeys against a running server (CI runs it after the build)
 ```
 
 There is no lint and no test framework. The gates are small `node:assert`
@@ -285,8 +284,8 @@ The App Router migration is finished: there is no `app-router` branch and no
 
 ## Git
 
-One branch per change, PR into `main` (Vercel auto-deploys; CI runs the gates,
-the build and the smoke test). Commit and push only when asked.
+One branch per change, PR into `main` (Vercel auto-deploys; CI runs the gates
+and the build). Commit and push only when asked.
 
 **No AI attribution, anywhere.** No `Co-Authored-By: Claude`, no session URL, no
 "Generated with Claude Code" — not in a commit message, not in a PR body, not in
