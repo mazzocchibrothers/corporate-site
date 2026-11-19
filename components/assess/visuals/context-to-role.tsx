@@ -6,7 +6,8 @@ import { Sequence, useInView } from '@/components/assess/visuals/motion';
 import { ROLE_PROFILE } from '@/components/assess/visuals/data';
 
 // How it works, step 1: roles, context, goals and people flow into one role
-// profile — the skills a store manager needs and at what level.
+// profile: the skills a store manager needs and at what level, with a person's
+// measured level on each and the gap where it falls short.
 
 const INPUTS = ['roles', 'context', 'goals'] as const;
 
@@ -41,13 +42,13 @@ export function ContextToRole() {
           <div className="min-w-0 flex-1 rounded-xl border border-black/[0.08] bg-white p-3">
             <p className="type-caption font-semibold text-[#121212]">{t('role')}</p>
             <Sequence run={seen} offset={280} step={120} className="mt-2 flex flex-col gap-2.5">
-              {ROLE_PROFILE.map(({ skill, needed }) => (
+              {ROLE_PROFILE.map(({ skill, level, needed }) => (
                 <div key={skill}>
                   <div className="flex items-center justify-between gap-2 type-caption text-[#4B4B4B]">
                     <span className="truncate">{t(`skills.${skill}`)}</span>
                     <span className="tabular-nums text-[#121212]">{needed}</span>
                   </div>
-                  <LevelBar level={0} needed={needed} showGap={false} size="sm" className="mt-1.5" />
+                  <LevelBar level={level} needed={needed} size="sm" className="mt-1.5" />
                 </div>
               ))}
             </Sequence>

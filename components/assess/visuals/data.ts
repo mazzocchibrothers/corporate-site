@@ -6,11 +6,11 @@
 export type Level = 1 | 2 | 3 | 4 | 5;
 
 // ── Hero: team readiness ─────────────────────────────────────────────────────
-export const TEAM_SKILLS = ['stockControl', 'customerCare', 'coaching', 'compliance'] as const;
+export const TEAM_SKILLS = ['leadership', 'customerCare', 'coaching', 'compliance'] as const;
 export type TeamSkill = (typeof TEAM_SKILLS)[number];
 
 export const TEAM_NEEDED: Record<TeamSkill, Level> = {
-  stockControl: 4,
+  leadership: 4,
   customerCare: 3,
   coaching: 3,
   compliance: 4,
@@ -23,19 +23,20 @@ export const TEAM: {
   /** null: ready for the role. A skill: the one to develop. */
   develop: TeamSkill | null;
 }[] = [
-  { id: 'emily', fit: 91, levels: { stockControl: 4, customerCare: 4, coaching: 3, compliance: 5 }, develop: null },
-  { id: 'lukas', fit: 78, levels: { stockControl: 3, customerCare: 4, coaching: 3, compliance: 4 }, develop: 'stockControl' },
-  { id: 'jessica', fit: 72, levels: { stockControl: 4, customerCare: 3, coaching: 1, compliance: 4 }, develop: 'coaching' },
+  { id: 'emily', fit: 91, levels: { leadership: 4, customerCare: 4, coaching: 3, compliance: 5 }, develop: null },
+  { id: 'lukas', fit: 78, levels: { leadership: 3, customerCare: 4, coaching: 3, compliance: 4 }, develop: 'leadership' },
+  { id: 'jessica', fit: 72, levels: { leadership: 4, customerCare: 3, coaching: 1, compliance: 4 }, develop: 'coaching' },
 ];
 
 // ── How it works ─────────────────────────────────────────────────────────────
-export const ROLE_PROFILE: { skill: 'stockControl' | 'customerCare' | 'teamLeadership'; needed: Level }[] = [
-  { skill: 'stockControl', needed: 4 },
-  { skill: 'customerCare', needed: 3 },
-  { skill: 'teamLeadership', needed: 4 },
+/** A person's measured level on each skill of the role, against the level it needs. */
+export const ROLE_PROFILE: { skill: 'leadership' | 'customerCare' | 'teamLeadership'; level: Level; needed: Level }[] = [
+  { skill: 'leadership', level: 3, needed: 4 },
+  { skill: 'customerCare', level: 3, needed: 3 },
+  { skill: 'teamLeadership', level: 3, needed: 4 },
 ];
 
-export const CAPABILITY = { soft: 4 as Level, hardPercent: 70 };
+export const CAPABILITY = { soft: 4 as Level, softNeeded: 5 as Level, hardPercent: 70 };
 
 export const DECISION = {
   level: 3 as Level,

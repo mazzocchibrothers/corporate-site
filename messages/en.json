@@ -9048,7 +9048,7 @@
           },
           "needed": "Proficiency needed: {level}/5",
           "skills": {
-            "stockControl": "Stock control",
+            "leadership": "Leadership",
             "customerCare": "Customer care",
             "coaching": "Coaching",
             "compliance": "Compliance"
@@ -9064,7 +9064,7 @@
           "develop": "Develop {skill}"
         },
         "contextToRole": {
-          "label": "Roles, context, goals and people flow into one role profile: a store manager needs stock control at level 4, customer care at 3 and team leadership at 4.",
+          "label": "Roles, context, goals and people flow into one role profile: against what a store manager needs, a person measures leadership 3 of a needed 4, customer care 3 of 3 and team leadership 3 of 4.",
           "inputs": {
             "roles": "Roles",
             "context": "Context",
@@ -9072,13 +9072,13 @@
           },
           "role": "Store manager",
           "skills": {
-            "stockControl": "Stock control",
+            "leadership": "Leadership",
             "customerCare": "Customer care",
             "teamLeadership": "Team leadership"
           }
         },
         "measureCapability": {
-          "label": "A question about a real situation, a spoken answer, and the resulting scores: soft skills 4 out of 5, hard skills 70%.",
+          "label": "A question about a real situation, a spoken answer, and the resulting scores: soft skills 4 out of 5, one level below the 5 the role needs, and hard skills 70%.",
           "question": "Tell me about a time a customer was angry about something that wasn't your fault.",
           "duration": "0:09",
           "soft": "Soft skills",
@@ -9086,9 +9086,9 @@
           "hardValue": "{percent}%"
         },
         "decideResult": {
-          "label": "A person's result next to what the role needs: stock control 3 against a needed 4, routed to a development decision.",
+          "label": "A person’s result next to what the role needs: leadership 3 against a needed 4, routed to a development decision.",
           "person": "Sophie Martin",
-          "skill": "Stock control",
+          "skill": "Leadership",
           "needed": "Proficiency needed",
           "decisions": {
             "hire": "Hire",
@@ -9103,7 +9103,7 @@
           "role": "Role",
           "roleValue": "Store manager",
           "skill": "Skill",
-          "skillValue": "Stock control",
+          "skillValue": "Leadership",
           "skillType": "Soft skill",
           "level": "Level",
           "context": "Context",

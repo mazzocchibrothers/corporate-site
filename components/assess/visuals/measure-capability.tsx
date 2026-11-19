@@ -23,7 +23,7 @@ export function MeasureCapability() {
           <div className="flex flex-col gap-2.5 rounded-xl border border-black/[0.08] bg-white px-3 py-3">
             <div className="grid grid-cols-[1fr_minmax(0,1.3fr)_36px] items-center gap-2">
               <span className="type-caption text-[#121212]">{t('soft')}</span>
-              <LevelBar level={CAPABILITY.soft} size="sm" />
+              <LevelBar level={CAPABILITY.soft} needed={CAPABILITY.softNeeded} size="sm" />
               <span className="text-right type-caption tabular-nums text-[#121212]">{CAPABILITY.soft}</span>
             </div>
             <div className="grid grid-cols-[1fr_minmax(0,1.3fr)_36px] items-center gap-2">

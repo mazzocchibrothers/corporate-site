@@ -59,14 +59,14 @@ const HEIGHT = { sm: 'h-1.5', md: 'h-2', lg: 'h-2.5' } as const;
  * Five segments: filled up to the measured level, the shortfall to the level
  * the role needs in peach, and a dark tick where the role's level sits.
  */
-export function LevelBar({ level, needed, size = 'md', showGap = true, className }: { level: Level | 0; needed?: Level; size?: keyof typeof HEIGHT; showGap?: boolean; className?: string }) {
+export function LevelBar({ level, needed, size = 'md', className }: { level: Level; needed?: Level; size?: keyof typeof HEIGHT; className?: string }) {
   return (
     <span className={`relative flex min-w-0 flex-1 gap-[2px] ${className ?? ''}`}>
       {[1, 2, 3, 4, 5].map((k) => (
         <i
           key={k}
           className={`${HEIGHT[size]} flex-1 rounded-[2px] ${
-            k <= level ? SHADES[k - 1] : showGap && needed !== undefined && k <= needed ? 'bg-[#f8ddc9]' : 'bg-[#ebebeb]'
+            k <= level ? SHADES[k - 1] : needed !== undefined && k <= needed ? 'bg-[#f8ddc9]' : 'bg-[#ebebeb]'
           }`}
         />
       ))}

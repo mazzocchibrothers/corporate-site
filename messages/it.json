@@ -9048,7 +9048,7 @@
           },
           "needed": "Livello richiesto: {level}/5",
           "skills": {
-            "stockControl": "Gestione scorte",
+            "leadership": "Leadership",
             "customerCare": "Customer care",
             "coaching": "Coaching",
             "compliance": "Compliance"
@@ -9064,7 +9064,7 @@
           "develop": "Sviluppa {skill}"
         },
         "contextToRole": {
-          "label": "Ruoli, contesto, obiettivi e persone confluiscono in un unico profilo di ruolo: uno store manager ha bisogno di gestione scorte a livello 4, customer care a livello 3 e leadership del team a livello 4.",
+          "label": "Ruoli, contesto, obiettivi e persone confluiscono in un unico profilo di ruolo: rispetto a ciò che serve a uno store manager, una persona ottiene leadership 3 su un livello richiesto di 4, customer care 3 su 3 e leadership del team 3 su 4.",
           "inputs": {
             "roles": "Ruoli",
             "context": "Contesto",
@@ -9072,13 +9072,13 @@
           },
           "role": "Store manager",
           "skills": {
-            "stockControl": "Gestione scorte",
+            "leadership": "Leadership",
             "customerCare": "Customer care",
             "teamLeadership": "Leadership del team"
           }
         },
         "measureCapability": {
-          "label": "Una domanda su una situazione reale, una risposta a voce e i punteggi che ne risultano: soft skill 4 su 5, hard skill 70%.",
+          "label": "Una domanda su una situazione reale, una risposta a voce e i punteggi che ne risultano: soft skill 4 su 5, un livello sotto il 5 richiesto dal ruolo, e hard skill 70%.",
           "question": "Raccontami di una volta in cui un cliente si è arrabbiato per qualcosa che non era colpa tua.",
           "duration": "0:09",
           "soft": "Soft skill",
@@ -9086,9 +9086,9 @@
           "hardValue": "{percent}%"
         },
         "decideResult": {
-          "label": "Il risultato di una persona accanto a ciò che il ruolo richiede: gestione scorte 3 rispetto a un livello richiesto di 4, indirizzato a una decisione di sviluppo.",
+          "label": "Il risultato di una persona accanto a ciò che il ruolo richiede: leadership 3 rispetto a un livello richiesto di 4, indirizzato a una decisione di sviluppo.",
           "person": "Sophie Martin",
-          "skill": "Gestione scorte",
+          "skill": "Leadership",
           "needed": "Livello richiesto",
           "decisions": {
             "hire": "Assumere",
@@ -9103,7 +9103,7 @@
           "role": "Ruolo",
           "roleValue": "Store manager",
           "skill": "Competenza",
-          "skillValue": "Gestione scorte",
+          "skillValue": "Leadership",
           "skillType": "Soft skill",
           "level": "Livello",
           "context": "Contesto",
