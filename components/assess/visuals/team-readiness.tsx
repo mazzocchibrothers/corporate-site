@@ -10,7 +10,12 @@ import { TEAM, TEAM_NEEDED, TEAM_SKILLS } from '@/components/assess/visuals/data
 // against the level the role needs. A table from md up; one card per person
 // below that, so the phone never scrolls sideways.
 
+// One grid for the whole table; the header, the rows and the <Sequence> between
+// them are subgrids of it, so every row shares the same column widths. The
+// role-fit column is as wide as its longest word ("Compatibilità" in Italian),
+// and only a shared grid can size it once for every row.
 const COLS = 'md:grid-cols-[minmax(120px,1.3fr)_minmax(64px,min-content)_repeat(4,minmax(0,1fr))_minmax(140px,1.2fr)]';
+const ROW = 'col-span-full grid grid-cols-subgrid';
 
 export function TeamReadiness() {
   const t = useTranslations('product.skillvue-assess.visuals.team');
@@ -45,8 +50,8 @@ export function TeamReadiness() {
           </div>
 
           {/* md and up: the table */}
-          <div className="hidden md:block">
-            <div className={`grid ${COLS} border-b border-black/[0.06] type-caption text-[#7A7A7A]`}>
+          <div className={`hidden md:grid ${COLS}`}>
+            <div className={`${ROW} border-b border-black/[0.06] type-caption text-[#7A7A7A]`}>
               <span className="px-4 py-3">{t('columns.participant')}</span>
               <span className="px-2 py-3">{t('columns.roleFit')}</span>
               {TEAM_SKILLS.map((s) => (
@@ -57,9 +62,9 @@ export function TeamReadiness() {
               ))}
               <span className="border-l border-black/[0.06] px-3 py-3">{t('columns.status')}</span>
             </div>
-            <Sequence run={seen} step={140} offset={200}>
+            <Sequence run={seen} step={140} offset={200} className={ROW}>
               {TEAM.map((p) => (
-                <div key={p.id} className={`grid ${COLS} items-center border-b border-black/[0.06] last:border-b-0`}>
+                <div key={p.id} className={`${ROW} items-center border-b border-black/[0.06] last:border-b-0`}>
                   <span className="px-4 py-3">{person(p.id)}</span>
                   <span className="px-2 py-3 type-body-sm text-[#4B4B4B]">{t('fit', { fit: p.fit })}</span>
                   {TEAM_SKILLS.map((s) => (
