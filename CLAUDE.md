@@ -234,6 +234,9 @@ For a raw `<a href>`, use `href(id, locale)` from `@/i18n/routes`.
   display), both self-hosted via `@font-face` in `styles/globals.css`; Geist
   Mono for `type-code`. `tailwind.config.ts` still says `Inter` for `sans` — it
   is stale and overridden by the `body` rule; don't "fix" it by adding Inter.
+  Mona Sans draws the double-storey "a" (stylistic set `ss05`), switched on in
+  `styles/globals.css` wherever Mona Sans is set — never on the root, because
+  Geist has an `ss05` of its own. A new rule that sets Mona Sans needs it too.
 - **`./app/**` is in the Tailwind content globs and must stay.** Without it a
   page compiles and silently loses every utility it uses.
 - **Scroll animations are `<Reveal>`, not framer-motion.** The site has one

@@ -19,7 +19,7 @@
 .controls { display: flex; flex-direction: column; gap: 24px; }
 .fieldHead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
 .label { color: rgb(255 255 255 / .65); }
-.value { background: transparent; border: 1px solid transparent; border-radius: 7px; text-align: right; width: 11ch; max-width: 55%; padding: 3px 7px; font-family: 'Mona Sans', sans-serif; font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.value { background: transparent; border: 1px solid transparent; border-radius: 7px; text-align: right; width: 11ch; max-width: 55%; padding: 3px 7px; font-family: 'Mona Sans', sans-serif; font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; font-feature-settings: 'ss05' 1; }
 .value:hover { border-color: rgb(255 255 255 / .2); }
 .value:focus { background: #0d0d1f; border-color: #4b4df7; }
 .slider { width: 100%; height: 28px; accent-color: #7577f8; cursor: pointer; background: transparent; }
@@ -38,7 +38,7 @@
 /* Dimmed: the needle crosses the amount and must not compete with it. */
 .needle { transform-origin: 150px 150px; transition: transform .6s; opacity: .3; }
 .readout { position: absolute; left: 0; right: 0; top: 42%; text-align: center; pointer-events: none; }
-.amount { font-family: 'Mona Sans', sans-serif; font-size: clamp(28px, 4.5vw, 46px); font-weight: 700; letter-spacing: -.03em; color: #fff; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.amount { font-family: 'Mona Sans', sans-serif; font-size: clamp(28px, 4.5vw, 46px); font-weight: 700; letter-spacing: -.03em; color: #fff; line-height: 1.1; font-variant-numeric: tabular-nums; font-feature-settings: 'ss05' 1; }
 .readout .label { margin-top: 9px; }
 .range { text-align: center; margin-top: 2px; color: rgb(255 255 255 / .55); font-size: 12px; font-weight: 400; letter-spacing: 0; line-height: 1.4; text-transform: none; }
 .range b { color: rgb(255 255 255 / .8); font-weight: 500; }

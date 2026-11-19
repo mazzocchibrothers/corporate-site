@@ -3,27 +3,15 @@
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
-import { ArrowDown } from 'lucide-react';
 import { HeroCopy } from '@/components/ui/hero-copy';
-import { Button } from '@/components/ui/button';
 
+// One result per industry. `value` is a number so it is formatted per locale
+// (2,200 in English, 2.200 in Italian); `suffix` follows it unchanged.
 const metrics = [
-  {
-    id: 'europeanEnterprises',
-    value: '100+',
-  },
-  {
-    id: 'roiWithin18',
-    value: '10-30x',
-  },
-  {
-    id: 'savedYearly',
-    value: '€4.5M',
-  },
-  {
-    id: 'fasterTimeToHire',
-    value: '40%',
-  },
+  { id: 'fasterHires', value: 40, suffix: '%' },
+  { id: 'timeToProcess', value: 90, suffix: '%' },
+  { id: 'peopleMapped', value: 2200, suffix: '' },
+  { id: 'turnover', value: 50, suffix: '%' },
 ];
 
 const clientLogos = [
@@ -52,7 +40,7 @@ export default function CustomersHero() {
   return (
     <section id="customers-hero" data-testid="customers-hero" className="relative pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-24 lg:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] gap-16 lg:gap-12 items-center">
           <div>
             <Reveal
               y={20}
@@ -78,19 +66,10 @@ export default function CustomersHero() {
                 y={20}
                 duration={0.8}
                 delay={0.5}
-                className="type-body-lg hero-subtitle text-white/[0.65] mb-10"
+                className="type-body-lg hero-subtitle text-white/[0.65]"
               >{t('hero.body')}</Reveal>
             </HeroCopy>
 
-            {/* CTA - Read the stories */}
-            <Reveal y={20} duration={0.8} delay={0.55}>
-              <Button asChild variant="secondary" mode="dark" className="group">
-                <a href="#explore">
-                  <span>{t('hero.cta')}</span>
-                  <ArrowDown aria-hidden="true" className="transition-transform duration-500 group-hover:translate-y-0.5" />
-                </a>
-              </Button>
-            </Reveal>
           </div>
 
           {/* Metrics grid */}
@@ -98,12 +77,22 @@ export default function CustomersHero() {
             y={20}
             duration={0.8}
             delay={0.6}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
           >
             {metrics.map((m) => (
-              <div key={m.value} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6">
-                <span className="block text-[#6B7DFF] mb-8 stat-value text-[32px] md:text-[54px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
-                <span className="type-body-sm text-white/[0.65]">{t(`hero.metrics.${m.id}.label`)}</span>
+              <div
+                key={m.id}
+                data-testid={`customers-hero-metric-${m.id}`}
+                className="rounded-3xl border border-white/[0.08] bg-white/[0.04] p-6 md:p-7 min-h-[180px] md:min-h-[220px]"
+              >
+                <span className="flex items-center gap-2 type-eyebrow text-white/[0.65] mb-4 md:mb-5">
+                  <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#6B7DFF]" />
+                  {t(`hero.metrics.${m.id}.industry`)}
+                </span>
+                <span className="block font-display text-[#6B7DFF] mb-4 md:mb-6 stat-value text-[40px] md:text-[54px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>
+                  {new Intl.NumberFormat(lang, { useGrouping: 'always' }).format(m.value)}{m.suffix}
+                </span>
+                <span className="block type-body text-white/80">{t(`hero.metrics.${m.id}.label`)}</span>
               </div>
             ))}
           </Reveal>
