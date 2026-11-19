@@ -1,19 +1,23 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowUpRight } from 'lucide-react';
 import { href } from '@/i18n/routes';
 import { announcementClickEvent } from '@/components/landing/announcement';
 
 // The launch announcement above the navbar, on every page but the one it links
-// to. It sits inside the navbar's fixed header and folds away once the page
-// scrolls or the mobile menu opens, so the bar under it is the usual 80px
-// everywhere the page relies on that (section anchors, the mobile menu's top).
-// While folded it is inert: its link leaves the tab order.
+// to. It sits inside the navbar's fixed header and stays there while the page
+// scrolls. It folds away only while the mobile menu is open, because that menu
+// opens at 80px from the top. While folded it is inert: its link leaves the
+// tab order.
 //
 // The header is fixed, so the banner would cover the top of every page.
 // <AnnouncementSpacer> sits in the page's flow above everything else and takes
 // the banner's height, whatever its copy wraps to, so the page starts below it.
+// Section anchors already clear the 80px bar with their own scroll margin; the
+// banner adds its measured height to the page's scroll padding, so a jump to
+// an anchor lands below the banner too.
 
 const LINE = 'mx-auto flex max-w-[1400px] flex-wrap items-center justify-center gap-x-6 gap-y-1 px-6 py-2.5 text-center type-body-sm lg:px-12';
 
@@ -36,9 +40,25 @@ export function AnnouncementSpacer() {
 export function AnnouncementBar({ visible }: { visible: boolean }) {
   const t = useTranslations('common.announcement');
   const locale = useLocale();
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof ResizeObserver === 'undefined') return;
+    const root = document.documentElement;
+    const ro = new ResizeObserver(() => {
+      root.style.scrollPaddingTop = `${el.offsetHeight}px`;
+    });
+    ro.observe(el);
+    return () => {
+      ro.disconnect();
+      root.style.scrollPaddingTop = '';
+    };
+  }, []);
 
   return (
     <div
+      ref={ref}
       data-testid="announcement"
       className="grid bg-[#e1e2ff] transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none"
       style={{ gridTemplateRows: visible ? '1fr' : '0fr' }}

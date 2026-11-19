@@ -219,7 +219,7 @@ export default function Navbar() {
         }
       }}
     >
-      {!onAnnouncedPage && <AnnouncementBar visible={!scrolled && !mobileOpen} />}
+      {!onAnnouncedPage && <AnnouncementBar visible={!mobileOpen} />}
 
       {/* Navbar bar */}
       <nav
