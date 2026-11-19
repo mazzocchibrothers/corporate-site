@@ -19,7 +19,12 @@ import { announcementClickEvent } from '@/components/landing/announcement';
 // banner adds its measured height to the page's scroll padding, so a jump to
 // an anchor lands below the banner too.
 
-const LINE = 'mx-auto flex max-w-[1400px] flex-wrap items-center justify-center gap-x-6 gap-y-1 px-6 py-2.5 text-center type-body-sm lg:px-12';
+// Below sm the line is one flowing paragraph, the link inline after the text,
+// so the two share lines and the bar stays at two lines on a phone: from 360px
+// in both languages at 14px, and below 360px at the 12px caption size, which
+// the longer Italian copy needs there. From sm up, text and link sit side by
+// side, the link wrapping under the text only when the line runs out.
+const LINE = 'mx-auto max-w-[1400px] px-4 py-2.5 text-center type-body-sm max-[359px]:type-caption sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-1 sm:px-6 lg:px-12';
 const LINK = 'inline-flex items-center gap-1 font-medium text-[#4B4DF7] underline decoration-[#4B4DF7]/40 underline-offset-4 transition-colors hover:text-[#3133E7] hover:decoration-[#3133E7]';
 
 /**
@@ -38,7 +43,7 @@ function AnnouncementLine({ live }: { live: boolean }) {
   );
   return (
     <p data-testid={live ? 'announcement-bar' : undefined} className={`${LINE} text-[#121212]`}>
-      <span>{t('text')}</span>
+      <span>{t('text')}</span>{' '}
       {live ? (
         <a
           href={href('product/skillvue-assess', locale)}

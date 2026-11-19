@@ -7935,6 +7935,7 @@
       "decide": "Skillvue Decide"
     },
     "platform": {
+      "eyebrow": "One platform, three products",
       "heading": "Objective skills flow from jobs, to measurement, to decisions.",
       "explore": "Explore",
       "cards": {
@@ -8934,7 +8935,7 @@
           },
           {
             "q": "How accurate is Skillvue Assess?",
-            "a": "Skillvue Assess scores answers the way a trained expert assessor would. In a validation study of 1,106 people, its scores closely matched those of trained human experts. The method is built on industrial-organisational psychology, with 24 soft skills and 100+ behavioural indicators."
+            "a": "Skillvue Assess scores answers the way a trained expert assessor would. In a validation study, its scores closely matched those of trained human experts. The method is built on industrial-organisational psychology, with 24 soft skills and 100+ behavioural indicators."
           },
           {
             "q": "Can Skillvue Assess measure both hard and soft skills?",

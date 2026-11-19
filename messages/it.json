@@ -7935,12 +7935,13 @@
       "decide": "Skillvue Decide"
     },
     "platform": {
-      "heading": "Le competenze oggettive fluiscono dai ruoli, alla misurazione, alle decisioni.",
+      "eyebrow": "Una piattaforma, tre prodotti",
+      "heading": "Dati oggettivi sulle competenze: dai ruoli alla misurazione, alle decisioni",
       "explore": "Scopri",
       "cards": {
-        "map": "Costruisci la tua architettura unificata delle competenze in giorni, non in mesi.",
-        "assess": "Misura le competenze che le persone hanno davvero per i ruoli di cui la tua azienda ha bisogno.",
-        "decide": "Un unico linguaggio delle competenze. Decisioni sui talenti difendibili, in modo semplice."
+        "map": "Costruisci un’unica architettura delle competenze in pochi giorni, non in mesi.",
+        "assess": "Misura ciò che le persone sanno fare davvero, per i ruoli che servono alla tua azienda.",
+        "decide": "Un linguaggio comune sulle competenze. Decisioni sui talenti difendibili, rese finalmente semplici."
       }
     },
     "problem": "Il problema",
@@ -8934,7 +8935,7 @@
           },
           {
             "q": "Quanto è accurato Skillvue Assess?",
-            "a": "Skillvue Assess assegna i punteggi come farebbe un valutatore esperto. Lo conferma uno studio di validazione su 1.106 persone: i risultati della piattaforma sono molto vicini a quelli di esperti umani. Alla base c’è la psicologia del lavoro e delle organizzazioni, con un framework di 24 soft skill e oltre 100 indicatori comportamentali."
+            "a": "Skillvue Assess assegna i punteggi come farebbe un valutatore esperto. Lo conferma uno studio di validazione: i risultati della piattaforma sono molto vicini a quelli di esperti umani. Alla base c’è la psicologia del lavoro e delle organizzazioni, con un framework di 24 soft skill e oltre 100 indicatori comportamentali."
           },
           {
             "q": "Skillvue Assess può misurare sia le hard skill sia le soft skill?",
@@ -10383,7 +10384,7 @@
       "heading": "Le persone sono il tuo costo maggiore. <span>Possono anche essere il tuo ritorno maggiore.</span>",
       "card": {
         "heading": "Qual è il tuo numero?",
-        "body": "Scegli un use case, inserisci due numeri e scopri il tuo payback e il tuo ROI.",
+        "body": "Scegli uno use case, fornisci due numeri e scopri il tuo payback e il tuo ROI.",
         "cta": "Vedi il calcolo"
       },
       "note": "Calcolo basato sul ROI Calculator di Skillvue."

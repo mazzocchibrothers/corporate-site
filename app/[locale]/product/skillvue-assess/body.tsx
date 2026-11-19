@@ -119,6 +119,16 @@ export default async function SkillvueAssessPage() {
   const t = await getTranslations('product.skillvue-assess');
   const verdicts = t.raw('why.table.verdicts') as Record<Verdict, string>;
   const orange = (chunks: ReactNode) => <span className="text-[#ff5f24]">{chunks}</span>;
+  // A product's logo on its tile; Assess, the product this page is about, raised.
+  const productTile = ({ id, logo, width, height }: (typeof PRODUCTS)[number], className = '') => (
+    <div
+      className={`flex items-center justify-center rounded-2xl border border-black/[0.06] px-6 py-7 ${
+        id === 'assess' ? 'bg-white shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)]' : 'bg-[#fafafa]'
+      } ${className}`}
+    >
+      <img src={logo} alt={t(`how.products.${id}`)} width={width} height={height} loading="lazy" decoding="async" className="h-7 w-auto max-w-full md:h-8" />
+    </div>
+  );
 
   return (
     <>
@@ -278,51 +288,49 @@ export default async function SkillvueAssessPage() {
           <div className={CONTAINER}>
             <Head eyebrow={t('how.eyebrow')} title={t('how.title')} body={t('how.body')} />
 
-            <Reveal y={16} className="mx-auto mt-12 flex max-w-[1144px] flex-col items-stretch gap-3 md:mt-16 md:flex-row md:items-center">
-              {PRODUCTS.map(({ id, logo, width, height }, i) => (
-                <div key={id} className="contents">
-                  {i > 0 && (
-                    <ArrowRight aria-hidden="true" className="mx-auto h-5 w-5 shrink-0 rotate-90 text-[#4B4DF7] md:rotate-0" strokeWidth={1.5} />
-                  )}
-                  <div
-                    className={`flex flex-1 items-center justify-center rounded-2xl border px-6 py-7 ${
-                      id === 'assess' ? 'border-black/[0.06] bg-white shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)]' : 'border-black/[0.06] bg-[#fafafa]'
-                    }`}
-                  >
-                    <img src={logo} alt={t(`how.products.${id}`)} width={width} height={height} loading="lazy" decoding="async" className="h-7 w-auto max-w-full md:h-8" />
-                  </div>
+            {/* md and up: the three products in a row, then their three cards
+                below. On a phone each product sits right above its own card,
+                with an arrow down to the next pair. */}
+            <Reveal y={16} className="mx-auto mt-16 hidden max-w-[1144px] items-center gap-3 md:flex">
+              {PRODUCTS.map((p, i) => (
+                <div key={p.id} className="contents">
+                  {i > 0 && <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 text-[#4B4DF7]" strokeWidth={1.5} />}
+                  {productTile(p, 'flex-1')}
                 </div>
               ))}
             </Reveal>
 
-            <div className="mx-auto mt-6 grid max-w-[1144px] grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="mx-auto mt-12 grid max-w-[1144px] grid-cols-1 gap-3 md:mt-6 md:grid-cols-3 md:gap-6">
               {([
-                { id: 'context', Visual: ContextToRole },
-                { id: 'measure', Visual: MeasureCapability },
-                { id: 'decide', Visual: DecideResult },
-              ] as const).map(({ id, Visual }, i) => (
-                <Reveal
-                  key={id}
-                  y={16}
-                  delay={i * 0.1}
-                  className={`flex flex-col overflow-hidden rounded-2xl border border-black/[0.06] bg-white ${
-                    id === 'measure' ? 'shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)]' : ''
-                  }`}
-                >
-                  <div className="border-b border-black/[0.06] bg-[#fafafa] p-5">
-                    <Visual />
-                  </div>
-                  <div className="flex flex-1 flex-col p-6">
-                    <h3 className={H3}>{t(`how.${id}.title`)}</h3>
-                    <p className="mt-3 type-body text-[#4B4B4B]">{t(`how.${id}.body`)}</p>
-                    {id === 'context' && (
-                      <a href={href('product/skillvue-map', locale)} className="mt-auto inline-flex items-center gap-2 pt-6 type-button text-[#4B4DF7] hover:text-[#3133E7]">
-                        {t('how.context.link')}
-                        <ArrowRight aria-hidden="true" className="h-4 w-4" />
-                      </a>
-                    )}
-                  </div>
-                </Reveal>
+                { id: 'context', product: PRODUCTS[0], Visual: ContextToRole },
+                { id: 'measure', product: PRODUCTS[1], Visual: MeasureCapability },
+                { id: 'decide', product: PRODUCTS[2], Visual: DecideResult },
+              ] as const).map(({ id, product, Visual }, i) => (
+                <div key={id} className="contents">
+                  {i > 0 && <ArrowDown aria-hidden="true" className="mx-auto h-5 w-5 text-[#4B4DF7] md:hidden" strokeWidth={1.5} />}
+                  <Reveal y={16} delay={i * 0.1} className="flex flex-col gap-3">
+                    {productTile(product, 'md:hidden')}
+                    <div
+                      className={`flex flex-1 flex-col overflow-hidden rounded-2xl border border-black/[0.06] bg-white ${
+                        id === 'measure' ? 'shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)]' : ''
+                      }`}
+                    >
+                      <div className="border-b border-black/[0.06] bg-[#fafafa] p-5">
+                        <Visual />
+                      </div>
+                      <div className="flex flex-1 flex-col p-6">
+                        <h3 className={H3}>{t(`how.${id}.title`)}</h3>
+                        <p className="mt-3 type-body text-[#4B4B4B]">{t(`how.${id}.body`)}</p>
+                        {id === 'context' && (
+                          <a href={href('product/skillvue-map', locale)} className="mt-auto inline-flex items-center gap-2 pt-6 type-button text-[#4B4DF7] hover:text-[#3133E7]">
+                            {t('how.context.link')}
+                            <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </Reveal>
+                </div>
               ))}
             </div>
           </div>
