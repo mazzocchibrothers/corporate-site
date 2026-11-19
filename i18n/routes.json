@@ -492,6 +492,13 @@
     "messages": ["product.map.screens", "product.decide.screen"]
   },
   {
+    "id": "product/skillvue-assess",
+    "paths": {
+      "en": "/product/skillvue-assess",
+      "it": "/prodotto/skillvue-assess"
+    }
+  },
+  {
     "id": "resources/press",
     "paths": {
       "en": "/resources/press",

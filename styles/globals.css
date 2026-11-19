@@ -571,9 +571,12 @@ h2 .gradient-text {
    the audit log's pending -> signed loop, the FAQ icon's open state and the
    certificate strip's container query. Scroll motion is <Reveal>, like every
    page; everything else is utilities in app/[locale]/trust and components/trust. ===== */
-.trust-page summary { list-style: none; cursor: pointer; }
-.trust-page summary::-webkit-details-marker { display: none; }
-.trust-page details[open]:not(.closing) .trust-faq-plus { transform: rotate(45deg); }
+/* The FAQ accordion (components/trust/TrustFaq.tsx) is also the FAQ on
+   /product/skillvue-assess, which wraps it in .assess-faq. */
+.trust-page summary, .assess-faq summary { list-style: none; cursor: pointer; }
+.trust-page summary::-webkit-details-marker, .assess-faq summary::-webkit-details-marker { display: none; }
+.trust-page details[open]:not(.closing) .trust-faq-plus,
+.assess-faq details[open]:not(.closing) .trust-faq-plus { transform: rotate(45deg); }
 
 /* The dotted board the product mock-ups sit on. */
 .trust-dots { background: #F5F5F7 radial-gradient(rgba(18, 18, 18, 0.06) 0.8px, transparent 1.1px) 0 0 / 8px 8px; }

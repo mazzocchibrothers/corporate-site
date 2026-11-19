@@ -12,6 +12,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useSwitchLocale } from '@/i18n/switch-locale';
 import { href } from '@/i18n/routes';
 import { Button } from '@/components/ui/button';
+import { AnnouncementBar, AnnouncementSpacer } from '@/components/landing/AnnouncementBar';
 
 
 // Nav structure: route ids, not paths. Each URL comes from i18n/routes.json
@@ -180,6 +181,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const switchLang = useSwitchLocale();
   const t = useTranslations('common');
+  // The launch banner links to the Skillvue Assess page, so it does not show there.
+  const onAnnouncedPage = pathname?.replace(/\/$/, '') === href('product/skillvue-assess', lang);
 
   // Whether the open menu should read light-on-white or light-on-black is the
   // same question the bar itself already answers — is it over a light section
@@ -199,6 +202,10 @@ export default function Navbar() {
   };
 
   return (
+    <>
+    {/* Holds the banner's space at the top of the page, so the fixed header
+        covers it rather than the page's first lines. */}
+    {!onAnnouncedPage && <AnnouncementSpacer />}
     <div
       ref={headerRef}
       className={`fixed top-0 left-0 right-0 z-40 ${hidden && !mobileOpen ? '-translate-y-full' : 'translate-y-0'}`}
@@ -212,6 +219,8 @@ export default function Navbar() {
         }
       }}
     >
+      {!onAnnouncedPage && <AnnouncementBar visible={!scrolled && !mobileOpen} />}
+
       {/* Navbar bar */}
       <nav
         data-testid="navbar"
@@ -514,5 +523,6 @@ export default function Navbar() {
         </div>
       )}
     </div>
+    </>
   );
 }

@@ -212,7 +212,7 @@ export function DecideDemo({ label }: { label: string }) {
     </path>
     </svg>
     </div>
-    <img src="/products/skillvue-decide.svg" alt="" style={{ position: 'absolute', left: 20, top: 67.42, height: LOGO }} />
+    <img src="/logos/skillvue-decide-logo.svg" alt="" style={{ position: 'absolute', left: 20, top: 67.42, height: LOGO }} />
     <div style={{ position: 'absolute', left: 8, top: 108, width: 240, display: 'flex', flexDirection: 'column', gap: '0', fontSize: 14.5, color: '#444' }}>
     <div style={{ height: 40, display: 'flex', alignItems: 'center', gap: 9, paddingLeft: 8 }}>
     <span style={{ width: 22, height: 22, border: '1px solid #CCC', borderRadius: 3, display: 'flex', alignItems: 'center', justifyContent: 'center', boxSizing: 'border-box' }}>

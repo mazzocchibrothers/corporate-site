@@ -64,6 +64,10 @@
       "legalAddress": "Algojob S.r.l. — Via Molino delle Armi 11, 20123 Milano — P.IVA 11656370969 — REA MI-2617568",
       "euHosted": "EU-hosted",
       "isoFamily": "ISO 27001 family"
+    },
+    "announcement": {
+      "text": "New: Skillvue Assess - Measure what people can actually do",
+      "link": "See how it works"
     }
   },
   "about": {
@@ -7978,11 +7982,12 @@
       "decide": "Skillvue Decide"
     },
     "platform": {
+      "eyebrow": "One platform, three products",
       "heading": "Objective skills flow from jobs, to measurement, to decisions.",
       "explore": "Explore",
       "cards": {
         "map": "Build your unified skills architecture in days, not months.",
-        "assess": "Assess skills and potential your way, with scientific accuracy, at any scale.",
+        "assess": "Measure what skills people actually have for the roles your company needs.",
         "decide": "One skills language. Defensible talent decisions, made easy."
       }
     },
@@ -8198,31 +8203,31 @@
       }
     },
     "assess": {
-      "heading": "Assess skills and potential your way, with scientific accuracy, at any scale.",
-      "problemTitle": "Talent decisions run on gut feel and inconsistent interviews.",
-      "problemBody": "Hiring, performance, growth and mobility each read people differently. The signal is subjective, fragmented and impossible to compare from one process to the next.",
-      "solutionTitle": "Objective skills data, connected across every process.",
-      "solutionBody": "Skillvue Assess measures your people against the same science-based framework, at any scale, so every process draws on comparable, objective skills data.",
+      "heading": "Measure and understand who is capable of actually doing the job right",
+      "problemTitle": "HR leaders are betting on people at scale, without evidence",
+      "problemBody": "Accurate assessments used to take months and rarely worked at large scale. AI assessments reach everyone, but without science they’re guesswork at scale.",
+      "solutionTitle": "Verified skills data you can finally trust",
+      "solutionBody": "Skillvue Assess measures the real level of every skill each role needs based on your company operating model & goals, with scientific precision.",
       "tabs": {
         "interview": "Interview",
         "questions": "Questions"
       },
       "features": {
         "context": {
-          "title": "Contextualized to you",
-          "body": "Skillvue learns your competency framework, roles and processes, so every assessment reflects your organization, not a generic template."
+          "title": "Personalized",
+          "body": "Skills and assessments are based on your roles, company context, and operating model, so every question tests the real job, not a generic template."
         },
         "science": {
-          "title": "Science-grounded",
-          "body": "Built on a structured, science-backed framework, from Big Five personality science to validated measures of learning agility and motivation."
+          "title": "Science",
+          "body": "Soft skills are scored on behaviour, hard skills on a 1 to 5 rubric, with the evidence behind every score."
         },
         "scale": {
           "title": "AI-scaled",
-          "body": "AI-driven assessments that adapt in real time, delivering the same scientific rigor from 10 to 10,000 candidates."
+          "body": "AI-driven dialogues that adapt in real time, delivering the same scientific rigor from 10 to 10,000 candidates."
         },
         "format": {
-          "title": "Any format, great UX",
-          "body": "Audio, video, written or multiple choice, structured interviews or natural conversations, all built around a smooth candidate experience."
+          "title": "Easy to complete",
+          "body": "A short conversation people actually like completing, by text, voice or video, where they already work."
         }
       },
       "screens": {
@@ -8242,7 +8247,8 @@
             "leaders": "Supporting functional leaders in process optimization"
           }
         }
-      }
+      },
+      "readMore": "Read more"
     },
     "decide": {
       "heading": "One skills language. Defensible talent decisions, made easy.",
@@ -8559,6 +8565,659 @@
             "multiSite": "Multi-Site Performance Management",
             "talent": "Talent Pipeline Development"
           }
+        }
+      }
+    },
+    "skillvue-assess": {
+      "meta": {
+        "title": "Skillvue Assess: Measure what people can actually do | Skillvue",
+        "description": "Skillvue Assess measures what people can actually do, with the evidence behind every score."
+      },
+      "hero": {
+        "eyebrow": "Skillvue Assess",
+        "title": "Measure what people can actually do",
+        "body": "Role-specific skills assessments for enterprise. Find the real potential, soft and hard skills people have, for every job. Hire, develop, and promote across thousands of people on data you can finally trust – today and tomorrow.",
+        "cta": "See how it works",
+        "points": [
+          {
+            "title": "Grounded in validated science",
+            "body": "Made relevant based on your company context, operating model, and goals."
+          },
+          {
+            "title": "Built for your whole workforce",
+            "body": "Candidates and the people you already employ, in 30+ languages."
+          },
+          {
+            "title": "The conversation people want to have",
+            "body": "80%+ adoption rate on assessments that make people feel seen, not judged."
+          }
+        ],
+        "proof": [
+          {
+            "value": "65% → 85%",
+            "label": "hiring success when Skillvue results reach hiring managers",
+            "source": "Carrefour"
+          },
+          {
+            "value": "2,200",
+            "label": "people mapped across 370+ stores in weeks, by an HR team of 3",
+            "source": "Douglas"
+          },
+          {
+            "value": "−50%",
+            "label": "12 months turnover after employees hired with Skillvue assessment",
+            "source": "Subdued, 6 countries"
+          }
+        ],
+        "proofLabel": "Customer results"
+      },
+      "whyNow": {
+        "eyebrow": "Why now",
+        "title": "You make people decisions at scale <span>without solid proof</span>. AI <span>made it worse</span>.",
+        "body": "Until now, skill assessments took months for just a few people, so HR decisions were mostly gut feel. AI amplified that guesswork at scale, which is why most people don’t trust it.",
+        "cards": [
+          {
+            "tag": "Hire",
+            "title": "Shortlist from a flood of applicants",
+            "basis": "Based on resumes",
+            "result": "AI alone doesn’t read real skills."
+          },
+          {
+            "tag": "Promote",
+            "title": "Pick the next team leads",
+            "basis": "Based on opinions",
+            "result": "The most capable rarely win."
+          },
+          {
+            "tag": "Develop",
+            "title": "Make the most of training budget",
+            "basis": "Based on a hunch",
+            "result": "Wrong skills & people, low ROI."
+          },
+          {
+            "tag": "Internal mobility",
+            "title": "Find people to hire & move from within",
+            "basis": "Based on who’s visible",
+            "result": "The loudest win, not the skilled."
+          }
+        ],
+        "alarm": {
+          "tag": "Challenged",
+          "title": "The works council asks: “why this person?”",
+          "answer": "HR has no proof to show.",
+          "body": "Nobody has real evidence to justify decisions."
+        },
+        "stakes": "A wrong people decision hurts at any size. But for companies with 1,000+ employees, the cost is <span>millions.</span>"
+      },
+      "why": {
+        "eyebrow": "Why Skillvue",
+        "title": "Most tools make you choose one – speed, accuracy, or scale",
+        "body": "Skillvue Assess gives you the accuracy of an expert assessment in weeks, not months – at full scale. It asks questions about your real jobs, gets honest answers, scores them on your framework and shows the evidence.",
+        "table": {
+          "caption": "How Skillvue Assess compares with other approaches",
+          "columns": {
+            "features": "Features",
+            "assess": "Skillvue Assess",
+            "ratings": "Self & manager ratings",
+            "inference": "Skills inference",
+            "tests": "Generic tests"
+          },
+          "rows": {
+            "measures": "Measures what people can actually do",
+            "builtOn": "Built on your roles and your company",
+            "oneScale": "Hard and soft skills on one scale",
+            "evidence": "Evidence behind every score",
+            "scale": "Works for 1,000 or 100,000 people"
+          },
+          "verdicts": {
+            "yes": "Yes",
+            "no": "No",
+            "partly": "Partly"
+          }
+        }
+      },
+      "how": {
+        "eyebrow": "How it works",
+        "title": "Bring your context, set the rules, and score answers with validated science",
+        "body": "Skillvue Assess is the measurement layer that gives every talent decision a reliable evidence base.",
+        "products": {
+          "map": "Skillvue Map",
+          "assess": "Skillvue Assess",
+          "decide": "Skillvue Decide"
+        },
+        "context": {
+          "title": "Bring your context",
+          "body": "Share your operating model, business goals, and roles to map the skills you need.",
+          "link": "See Skillvue Map"
+        },
+        "measure": {
+          "title": "Measure real capability",
+          "body": "Approve how people get assessed. Soft skills are scored 1 to 5, hard skills from 0 to 100%."
+        },
+        "decide": {
+          "title": "Decide in the same platform",
+          "body": "Turn the evidence into who to hire, promote or move, with no exports to another tool."
+        }
+      },
+      "control": {
+        "eyebrow": "Control",
+        "title": "You set the rules. People make the decisions.",
+        "body": "Skillvue asks the questions and scores every answer against the same standard. HR decides what gets measured, and a manager makes every hiring, promotion and development call.",
+        "pillars": {
+          "ai": {
+            "role": "Consistency and scale",
+            "name": "AI",
+            "body": "Writes the questions, runs the conversation and scores what people say. The same standard for every person."
+          },
+          "science": {
+            "role": "The method",
+            "name": "Science",
+            "body": "A validated framework of 24 soft skills and 100+ behavioural indicators, with soft skills scored 1 to 5 and hard skills from 0 to 100%."
+          },
+          "people": {
+            "role": "The decision",
+            "name": "People",
+            "body": "Our scientists design the method and your experts review flagged questions. HR and managers make every call."
+          }
+        },
+        "proctoring": {
+          "eyebrow": "Proctoring",
+          "title": "Spot cheating without watching anyone",
+          "body": "Integrity checks look at browser events, such as switching tabs, and give you a risk score with a log to review. You decide which checks to run and whether people are told about them."
+        },
+        "rules": {
+          "title": "HR sets the rules",
+          "items": [
+            "What’s measured",
+            "How it’s scored",
+            "Who sees the results"
+          ]
+        },
+        "fair": {
+          "title": "People get a fair chance",
+          "items": [
+            "Practise first",
+            "Answer in their own language",
+            "Re-assess once they develop"
+          ]
+        },
+        "never": {
+          "title": "Never scored",
+          "items": {
+            "face": "Face",
+            "voice": "Voice",
+            "accent": "Accent",
+            "gender": "Gender",
+            "ethnicity": "Ethnicity",
+            "screen": "Screen recording"
+          }
+        }
+      },
+      "generate": {
+        "eyebrow": "Step 1 · Generate",
+        "title": "Ask the questions that reveal real capability",
+        "body": "Generic questions get generic answers. Skillvue Assess builds every question from your competency framework and how your company actually works, so people can show what they’re capable of.",
+        "points": [
+          {
+            "title": "Questions about the real job",
+            "body": "Built from your roles and business context."
+          },
+          {
+            "title": "Built on validated science",
+            "body": "Every question is checked for psychometric validity."
+          },
+          {
+            "title": "No two people get the same test",
+            "body": "Each person gets a unique test from a validated pool of questions for the role."
+          },
+          {
+            "title": "Set the experience",
+            "body": "Conversational or step by step, by text, audio or video, in 30+ languages."
+          }
+        ]
+      },
+      "deliver": {
+        "eyebrow": "Step 2 · Deliver",
+        "title": "Deliver assessments people actually want to complete",
+        "body": "People open up when they feel heard, not tested. Skillvue Assess is a short, dynamic conversation about their real work, so they show what they can actually do. The verified data gets real meaning you can trust.",
+        "points": [
+          {
+            "title": "A conversation, not a fixed script",
+            "body": "Each question follows from the last answer, like a real interview."
+          },
+          {
+            "title": "Their assessment, their pace",
+            "body": "Practice runs and re-records help people show their best."
+          },
+          {
+            "title": "Send assessments where people already work",
+            "body": "Complete on web, Microsoft Teams, or WhatsApp."
+          }
+        ],
+        "proof": {
+          "value": "95%",
+          "text": "of 1,000 store staff completed it on their phones.",
+          "source": "In’s Mercato, 570+ stores"
+        }
+      },
+      "measure": {
+        "eyebrow": "Step 3 · Measure",
+        "title": "Measure with scientific precision at any scale",
+        "body": "Talent decisions still run on opinion, with no agreed level to compare people. Skillvue Assess gives every person an objective level on every skill their role needs, scored with validated science, for 1,000 people or 100,000.",
+        "points": [
+          {
+            "title": "One scientific framework, specific to the role",
+            "body": "See who’s ready and where the gaps are."
+          },
+          {
+            "title": "Your words, our science",
+            "body": "The system suggests the questions. Your experts approve them."
+          },
+          {
+            "title": "Measure once, or keep measuring",
+            "body": "Re-assess after training to see if it worked."
+          }
+        ]
+      },
+      "useCases": {
+        "eyebrow": "Use cases",
+        "title": "Start with the use case you need to get right",
+        "body": "Start with one talent decision. Scale when the evidence proves its value.",
+        "cards": [
+          {
+            "tag": "Talent Acquisition",
+            "title": "Shortlist on evidence, not CVs",
+            "body": "A short conversation on their phone, about the real job, shows you who to shortlist and why.",
+            "value": "719",
+            "result": "candidates assessed, from interns to senior client advisors.",
+            "source": "Global luxury brand"
+          },
+          {
+            "tag": "Talent Management",
+            "title": "Promote people who are ready",
+            "body": "Compare everyone to the target role on one scale, and promote the people who are ready.",
+            "value": "42",
+            "result": "future store managers found among 1,000 staff.",
+            "source": "Grocery chain, 570+ stores"
+          },
+          {
+            "tag": "L&D",
+            "title": "Put training where the gaps are",
+            "body": "Measure each person’s real gap, train it, then measure again to prove what worked.",
+            "value": "2,200",
+            "result": "people mapped in 5 weeks with an 88% completion rate, run by an HR team of 3.",
+            "source": "Beauty retailer, 370+ stores"
+          },
+          {
+            "tag": "HR and business leaders",
+            "title": "Measure technical skills in weeks, not months",
+            "body": "Generate validated questions from your own business context, and your experts check only what’s flagged.",
+            "value": "321",
+            "result": "technical skills built from their own business context.",
+            "source": "Insurance group"
+          }
+        ]
+      },
+      "evidence": {
+        "eyebrow": "What you get",
+        "title": "Know who’s ready, and show why",
+        "body": "Each report puts a person’s level next to what the role needs, with the answers that earned it. HR, managers and the person each get the view they need to act on it.",
+        "points": [
+          {
+            "title": "The gap to the role",
+            "body": "See how far each person is from the role, skill by skill."
+          },
+          {
+            "title": "The answer behind every level",
+            "body": "Quote what they said when someone asks why."
+          },
+          {
+            "title": "A next step for every person",
+            "body": "See their strengths and the skills to develop next."
+          }
+        ]
+      },
+      "systems": {
+        "eyebrow": "Works with your systems",
+        "title": "Changing the way you make decisions, not adding a tool",
+        "body": "Your HRIS and ATS keep storing talent data. Skillvue Assess feeds them better skills evidence, so decisions across the company start running on what people can actually do.",
+        "columns": [
+          {
+            "title": "Start with your tools",
+            "body": "No integration needed for the pilot: just upload a CSV. At scale, connect your data through our API and MCP.",
+            "chips": [
+              "CSV",
+              "API",
+              "MCP"
+            ]
+          },
+          {
+            "title": "Bring results where you decide",
+            "body": "Export results, or have them delivered straight into your systems.",
+            "chips": [
+              "Automated delivery",
+              "API",
+              "MCP"
+            ]
+          },
+          {
+            "title": "Sign in the usual way",
+            "body": "HR managers log in with the work account they already have.",
+            "chips": [
+              "SSO"
+            ]
+          }
+        ]
+      },
+      "proof": {
+        "eyebrow": "Proof",
+        "title": "Built on science. Proven with people",
+        "body": "We checked our methodology against human experts, and we did better. More than 100 European enterprises already use it to make people decisions.",
+        "stories": {
+          "credem": {
+            "logo": "Gruppo Credem",
+            "value": "−30%",
+            "body": "unsuccessful second-step interviews in junior hiring, across 30,000 applications a year."
+          },
+          "mediaset": {
+            "logo": "Mediaset",
+            "value": "3,000+",
+            "body": "graduate applications handled end to end in 5 weeks, against a six-week target. Candidates rated it 4 out of 5."
+          },
+          "adr": {
+            "logo": "Aeroporti di Roma",
+            "value": "4,000",
+            "body": "operational staff included in development for the first time, with internal applications processed in days instead of months."
+          }
+        },
+        "cta": "Read the story",
+        "quote": "Assessment is no longer seen merely as a necessary step for a promotion: it is part of an integrated development system that enables the construction of personalised growth paths.",
+        "author": "Alberto Valenza, SVP Human Capital, Organization & Procurement, Aeroporti di Roma"
+      },
+      "science": {
+        "eyebrow": "The science",
+        "title": "Scores like a trained expert",
+        "body": "In a study of 1,106 people, the AI’s scores closely matched those of trained human experts.",
+        "facts": [
+          {
+            "value": "1,106",
+            "label": "people in the validation study"
+          },
+          {
+            "value": "24",
+            "label": "soft skills in the framework"
+          },
+          {
+            "value": "100+",
+            "label": "behavioural indicators"
+          }
+        ]
+      },
+      "trust": {
+        "eyebrow": "Trust",
+        "title": "Ready for HR, IT, legal and employee scrutiny",
+        "body": "AI makes skills data easy to produce. Science is what makes Skillvue’s data worth trusting.",
+        "cards": [
+          {
+            "tag": "Legal and DPO",
+            "title": "Only answers are scored",
+            "body": "Only the text of what people say is analysed. Face, voice and other biometric signals are never scored."
+          },
+          {
+            "tag": "HR",
+            "title": "Full explainability",
+            "body": "Every level comes with the answers that earned it. HR and managers make every decision."
+          },
+          {
+            "tag": "Works councils",
+            "title": "Fair by design",
+            "body": "Same pool of validated questions, same standard scoring, a practice round first, right to re-assess."
+          },
+          {
+            "tag": "IT",
+            "title": "Access you control",
+            "body": "Sign-in through your identity provider, role-based access to results, and an auditable log for integrity checks."
+          }
+        ]
+      },
+      "faq": {
+        "title": "FAQ",
+        "items": [
+          {
+            "q": "What is Skillvue Assess?",
+            "a": "Skillvue Assess is an AI skills assessment platform that measures the real level of every hard and soft skill a role needs, for candidates and employees. It runs short conversations about the real job, scores the answers with validated science and shows the evidence behind every score."
+          },
+          {
+            "q": "Who is Skillvue Assess for?",
+            "a": "Skillvue Assess is built for HR and talent teams at enterprises with 1,000 to 100,000+ employees. They use it to hire, develop, promote and move people on evidence, in sectors such as retail, financial services, pharma, professional services, telecom and energy."
+          },
+          {
+            "q": "How does Skillvue Assess work?",
+            "a": "Skillvue Assess works in three steps. You bring your roles and business context, it generates questions about the real job, and each person answers in a short conversation on the web, WhatsApp or Microsoft Teams. Five skills with four questions each take about 20 minutes, and every score comes with its evidence."
+          },
+          {
+            "q": "How is assessing skills different from inferring them?",
+            "a": "Assessing skills measures what a person can actually do, while inferring them estimates skills from CVs, job titles and HR system data. Skillvue Assess asks each person questions about their real work and scores the answers, so every level is measured, not guessed."
+          },
+          {
+            "q": "How accurate is Skillvue Assess?",
+            "a": "Skillvue Assess scores answers the way a trained expert assessor would. In a validation study of 1,106 people, its scores closely matched those of trained human experts. The method is built on industrial-organisational psychology, with 24 soft skills and 100+ behavioural indicators."
+          },
+          {
+            "q": "Can Skillvue Assess measure both hard and soft skills?",
+            "a": "Yes. Skillvue Assess measures hard and soft skills in one assessment. Soft skills are scored from 1 to 5 on the behaviours behind them, and hard skills from 0 to 100% against a rubric of the knowledge the role needs."
+          },
+          {
+            "q": "Can we use our own competency framework?",
+            "a": "Yes. Skillvue Assess measures against your own competency framework or Skillvue Map role profiles, and you don’t need a perfect framework to start. Your soft skills are mapped to Skillvue’s validated framework, so you keep your own language, and a focused assessment is ready in weeks."
+          },
+          {
+            "q": "Does AI make the hiring or promotion decision?",
+            "a": "No. Skillvue Assess never makes hiring, promotion or development decisions on your behalf. AI asks the questions and scores the answers, and HR and managers decide with the evidence behind every score. Face, voice and other biometric signals are never scored."
+          },
+          {
+            "q": "How does Skillvue Assess prevent cheating?",
+            "a": "Skillvue Assess flags integrity risks such as switching tabs and gives you a risk score with a log to review. Each person answers different questions from a validated pool, so answers can’t be passed around."
+          },
+          {
+            "q": "Does Skillvue Assess work with SAP SuccessFactors, Workday and other HR systems?",
+            "a": "Yes. Skillvue Assess works alongside the HR systems you already run, with no integration needed to start. Upload your participant list from SAP SuccessFactors, Workday or a CSV, sign people in with SSO, and export results as PDF or Excel or have them delivered into your systems."
+          }
+        ]
+      },
+      "closing": {
+        "title": "Get verified proof on who’s right for roles at scale – before you decide",
+        "body": "The right questions reveal what resumes and interviews miss. Give people a conversation worth having so you can get role-specific skills evidence you can trust and defend.",
+        "cta": "Start with one talent decision"
+      },
+      "visuals": {
+        "team": {
+          "label": "Team readiness view for the store manager role: each participant's role fit and level on every skill, against the proficiency the role needs",
+          "window": "Team readiness",
+          "roleLabel": "Role",
+          "role": "Store manager",
+          "legend": {
+            "measured": "Measured level",
+            "needed": "Proficiency needed",
+            "gap": "Gap"
+          },
+          "columns": {
+            "participant": "Participant",
+            "roleFit": "Role fit",
+            "status": "Status"
+          },
+          "needed": "Proficiency needed: {level}/5",
+          "skills": {
+            "stockControl": "Stock control",
+            "customerCare": "Customer care",
+            "coaching": "Coaching",
+            "compliance": "Compliance"
+          },
+          "people": {
+            "emily": "Emily P.",
+            "lukas": "Lukas R.",
+            "jessica": "Jessica M."
+          },
+          "fit": "{fit}%",
+          "score": "{level}/5",
+          "ready": "Ready",
+          "develop": "Develop {skill}"
+        },
+        "contextToRole": {
+          "label": "Roles, context, goals and people flow into one role profile: a store manager needs stock control at level 4, customer care at 3 and team leadership at 4.",
+          "inputs": {
+            "roles": "Roles",
+            "context": "Context",
+            "goals": "Goals"
+          },
+          "role": "Store manager",
+          "skills": {
+            "stockControl": "Stock control",
+            "customerCare": "Customer care",
+            "teamLeadership": "Team leadership"
+          }
+        },
+        "measureCapability": {
+          "label": "A question about a real situation, a spoken answer, and the resulting scores: soft skills 4 out of 5, hard skills 70%.",
+          "question": "Tell me about a time a customer was angry about something that wasn't your fault.",
+          "duration": "0:09",
+          "soft": "Soft skills",
+          "hard": "Hard skills",
+          "hardValue": "{percent}%"
+        },
+        "decideResult": {
+          "label": "A person's result next to what the role needs: stock control 3 against a needed 4, routed to a development decision.",
+          "person": "Sophie Martin",
+          "skill": "Stock control",
+          "needed": "Proficiency needed",
+          "decisions": {
+            "hire": "Hire",
+            "promote": "Promote",
+            "develop": "Develop",
+            "move": "Move"
+          }
+        },
+        "generator": {
+          "label": "The question generator takes a role, a skill, a target level and company context, then drafts, critiques, refines and checks each question. Confident questions are ready. Uncertain ones go to your expert.",
+          "window": "Question generator",
+          "role": "Role",
+          "roleValue": "Store manager",
+          "skill": "Skill",
+          "skillValue": "Stock control",
+          "skillType": "Soft skill",
+          "level": "Level",
+          "context": "Context",
+          "contexts": {
+            "procedures": "Procedures",
+            "jobDescription": "Job description",
+            "regionRules": "Region rules"
+          },
+          "pipeline": {
+            "draft": "Draft",
+            "critique": "Critique",
+            "refine": "Refine",
+            "check": "Check"
+          },
+          "openEnded": "Open-ended question · Level 3",
+          "ready": "Ready",
+          "multipleChoice": "Multiple choice · Level 3",
+          "expert": "Sent to your expert",
+          "rubric": "Rubric"
+        },
+        "deliver": {
+          "label": "A conversational assessment in a chat: the assessor asks a question, the participant answers by voice note, the assessor follows up on a short answer, and the next question builds on what they said.",
+          "channels": {
+            "whatsapp": {
+              "tab": "WhatsApp",
+              "name": "WhatsApp"
+            },
+            "teams": {
+              "tab": "Teams",
+              "name": "Microsoft Teams"
+            },
+            "web": {
+              "tab": "Web",
+              "name": "Web"
+            }
+          },
+          "title": "Skills conversation",
+          "subtitle": "on {channel} · in your language",
+          "q1": "Tell me about a time a customer was angry about something that wasn’t your fault. What did you do?",
+          "d1": "0:09",
+          "note1": "Answer too short · following up",
+          "q2": "Thanks. What did you actually say to the customer, and what happened next?",
+          "d2": "1:42",
+          "note2": "Next question builds on this answer",
+          "q3": "You said the delivery was late. If it happened again tomorrow, what would you do before the customer called?",
+          "chips": {
+            "scored": "Scored on what they say",
+            "never": "Never face or voice",
+            "languages": "30+ languages"
+          }
+        },
+        "mapping": {
+          "label": "A Store Manager's framework mapped to Skillvue's validated framework: Customer first to Focusing on Others, People leadership to Leading, Gets results to Delivering Results. The mapping is chosen by HR. Hard skills are scored from 0 to 100%.",
+          "window": "Framework mapping · Store Manager",
+          "yours": "Your framework",
+          "ours": "Skillvue science",
+          "yourItems": {
+            "customerFirst": "Customer first",
+            "peopleLeadership": "People leadership",
+            "getsResults": "Gets results"
+          },
+          "scienceItems": {
+            "leading": "Leading",
+            "focusingOnOthers": "Focusing on Others",
+            "deliveringResults": "Delivering Results"
+          },
+          "foot": "24 soft skills · 100+ behavioural indicators",
+          "chosen": "Mapping chosen by HR",
+          "hard": "Hard skills",
+          "min": "0%",
+          "max": "100%"
+        },
+        "report": {
+          "label": "Sophie Martin’s readiness report for the store manager role: each skill’s measured level against the proficiency the role needs, the gap, and the evidence from the answers behind each level.",
+          "window": "Sophie Martin · Store Manager readiness",
+          "legend": {
+            "measured": "Measured level",
+            "needed": "Proficiency needed",
+            "gap": "Gap"
+          },
+          "scale": "Soft skills 1 to 5 · Hard skills 0 to 100%",
+          "skills": {
+            "leading": "Leading",
+            "salesKpi": "Sales KPI analysis",
+            "focusing": "Focusing on Others",
+            "delivering": "Delivering Results",
+            "haccp": "HACCP food safety"
+          },
+          "types": {
+            "soft": "Soft skill",
+            "hard": "Hard skill"
+          },
+          "softValue": "{level}/5",
+          "hardValue": "{percent}%",
+          "softMeta": "Soft skill · Level {level} of 5 · Role needs {needed}",
+          "hardMeta": "Hard skill · {percent}% · Role needs {needed}%",
+          "developSoft": "To develop: {gap, plural, one {# level} other {# levels}} below",
+          "developHard": "To develop: {points} points below",
+          "strength": "Strength: above the role",
+          "meets": "Meets the role",
+          "ends": {
+            "softMin": "1 Novice",
+            "softMax": "5 Expert",
+            "hardMin": "0%",
+            "hardMax": "100%"
+          },
+          "evidence": "Evidence from the answers",
+          "why": "Why this level"
+        },
+        "expert": {
+          "label": "Example: a trained expert and Skillvue Assess give the same answer the same score, 4 out of 5",
+          "tag": "Same answer, scored twice",
+          "expertLabel": "Trained expert",
+          "assessLabel": "Skillvue Assess"
         }
       }
     }
