@@ -8171,11 +8171,11 @@
         },
         "science": {
           "title": "Science",
-          "body": "Soft skills are scored on behaviour, hard skills on a 1 to 5 rubric, with the evidence behind every score."
+          "body": "Soft skills are scored on behaviour, hard skills on a scale from 0 to 100%, with the evidence behind every score."
         },
         "scale": {
           "title": "AI-scaled",
-          "body": "AI-driven dialogues that adapt in real time, delivering the same scientific rigor from 10 to 10,000 candidates."
+          "body": "AI-driven dialogues that adapt in real time, delivering the same scientific rigor from 1,000 to 100,000 candidates."
         },
         "format": {
           "title": "Easy to complete",
