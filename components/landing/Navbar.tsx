@@ -9,6 +9,7 @@ import {
 import { usePathname } from 'next/navigation';
 import { useRouter } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
+import { navbarBookDemoClickEvent } from '@/components/landing/navbar-book-demo';
 import { useSwitchLocale } from '@/i18n/switch-locale';
 import { href } from '@/i18n/routes';
 import { Button } from '@/components/ui/button';
@@ -192,6 +193,8 @@ export default function Navbar() {
   const textColor = isLight ? '#121212' : '#ffffff';
   const textMuted = isLight ? 'rgba(26,26,46,0.7)' : 'rgba(255,255,255,0.7)';
   const navCtaMode = isLight ? 'light' : 'dark';
+
+  const trackBookDemo = () => { (window.dataLayer ??= []).push(navbarBookDemoClickEvent(lang, pathname)); };
 
   const navigateTo = (path: string) => {
     setMobileOpen(false);
@@ -404,7 +407,7 @@ export default function Navbar() {
               <a
                 href={href('book-meeting', lang)}
                 data-testid="nav-book-demo"
-                onClick={(e) => { e.preventDefault(); navigateTo(href('book-meeting', lang)); }}
+                onClick={(e) => { e.preventDefault(); trackBookDemo(); navigateTo(href('book-meeting', lang)); }}
               >
                 {t('nav.bookDemo')}
                 <ArrowRight aria-hidden="true" />
@@ -513,7 +516,7 @@ export default function Navbar() {
               <Button
                 variant="primary"
                 mode="dark"
-                onClick={() => navigateTo(href('book-meeting', lang))}
+                onClick={() => { trackBookDemo(); navigateTo(href('book-meeting', lang)); }}
                 className="w-full"
               >
                 {t('nav.bookDemo')}
