@@ -1593,19 +1593,19 @@
       "metrics": {
         "fasterHires": {
           "industry": "Retail e banking",
-          "label": "Riduzione del time-to-hire"
+          "label": "riduzione del time-to-hire"
         },
         "timeToProcess": {
           "industry": "Trasporti e logistica",
-          "label": "Riduzione del time-to-process sulle candidature interne"
+          "label": "riduzione del time-to-process sulle candidature interne"
         },
         "peopleMapped": {
           "industry": "Beauty retail",
-          "label": "Persone mappate su 370+ punti vendita in 5 settimane"
+          "label": "persone mappate su 370+ punti vendita in 5 settimane"
         },
         "turnover": {
           "industry": "Fashion retail",
-          "label": "Turnover sulle nuove assunzioni, in 6 Paesi"
+          "label": "riduzione del turnover sulle nuove assunzioni, in 6 Paesi"
         }
       },
       "heading": "Le tue decisioni aziendali, finalmente supportate da <span>prove.</span>",
