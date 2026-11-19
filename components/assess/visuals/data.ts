@@ -91,9 +91,6 @@ export const REPORT_DEFAULT = 1;
 export const REPORT_EVIDENCE = [92, 74, 84, 46];
 export const REPORT_WHY = [96, 68];
 
-// ── The science ──────────────────────────────────────────────────────────────
-export const EXPERT_MATCH = { expert: 4 as Level, assess: 4 as Level };
-
 // ── Why Skillvue: comparison ─────────────────────────────────────────────────
 export type Verdict = 'yes' | 'no' | 'partly';
 export const COMPARISON_COLUMNS = ['assess', 'ratings', 'inference', 'tests'] as const;

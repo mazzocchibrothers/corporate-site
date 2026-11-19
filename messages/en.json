@@ -8886,25 +8886,6 @@
         "quote": "Assessment is no longer seen merely as a necessary step for a promotion: it is part of an integrated development system that enables the construction of personalised growth paths.",
         "author": "Alberto Valenza, SVP Human Capital, Organization & Procurement, Aeroporti di Roma"
       },
-      "science": {
-        "eyebrow": "The science",
-        "title": "Scores like a trained expert",
-        "body": "In a study of 1,106 people, the AI’s scores closely matched those of trained human experts.",
-        "facts": [
-          {
-            "value": "1,106",
-            "label": "people in the validation study"
-          },
-          {
-            "value": "24",
-            "label": "soft skills in the framework"
-          },
-          {
-            "value": "100+",
-            "label": "behavioural indicators"
-          }
-        ]
-      },
       "trust": {
         "eyebrow": "Trust",
         "title": "Ready for HR, IT, legal and employee scrutiny",
@@ -9164,12 +9145,6 @@
           },
           "evidence": "Evidence from the answers",
           "why": "Why this level"
-        },
-        "expert": {
-          "label": "Example: a trained expert and Skillvue Assess give the same answer the same score, 4 out of 5",
-          "tag": "Same answer, scored twice",
-          "expertLabel": "Trained expert",
-          "assessLabel": "Skillvue Assess"
         }
       }
     }
