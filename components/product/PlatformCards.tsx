@@ -2,7 +2,7 @@
 
 import type { CSSProperties, MouseEvent } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { ArrowDown, ArrowRight } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { Reveal } from '@/components/ui/reveal';
 import { href } from '@/i18n/routes';
 
@@ -34,9 +34,9 @@ export function ProductLogo({ product }: { product: Product }) {
   );
 }
 
-/** The block's tint, peach to lavender. A page that tints the whole section
- *  with it passes `surface={false}`, and the block then draws no card of its own. */
-export const PLATFORM_GRADIENT = 'linear-gradient(90deg, #fdf1ea 0%, #f5f5f7 50%, #efeefd 100%)';
+/** The block's tint, peach to lavender, on /product's card. The homepage passes
+ *  `surface={false}` and the block sits on its section's grey with no card. */
+const PLATFORM_GRADIENT = 'linear-gradient(90deg, #fdf1ea 0%, #f5f5f7 50%, #efeefd 100%)';
 
 // On /product the card fades in from the white hero above it.
 const SURFACE: CSSProperties = {
@@ -46,8 +46,8 @@ const SURFACE: CSSProperties = {
 export function PlatformCards({ link, surface = true }: { link: 'section' | 'page'; surface?: boolean }) {
   const t = useTranslations('product');
   const locale = useLocale();
-  const Arrow = link === 'section' ? ArrowDown : ArrowRight;
-  const arrowNudge = link === 'section' ? 'group-hover:translate-y-0.5' : 'group-hover:translate-x-0.5';
+  // The arrow points down on every page, as in the design, whether the link
+  // scrolls to the section below or opens it on /product.
 
   const target = (p: Product) => (link === 'section' ? `#${p}` : `${href('product', locale)}#${p}`);
   const onClick = (p: Product) =>
@@ -66,7 +66,8 @@ export function PlatformCards({ link, surface = true }: { link: 'section' | 'pag
       className={`max-w-[1344px] mx-5 md:mx-8 lg:mx-auto text-center ${surface ? 'rounded-[24px] md:rounded-[40px] px-4 pb-4 md:px-12 md:pb-12' : 'md:px-12'}`}
       style={surface ? SURFACE : undefined}
     >
-      <h2 className={`${H2} max-w-[880px] mx-auto`}>{t('platform.heading')}</h2>
+      <p className="type-eyebrow text-[#4B4DF7]">{t('platform.eyebrow')}</p>
+      <h2 className={`${H2} mt-5 max-w-[880px] mx-auto`}>{t('platform.heading')}</h2>
       <div className="mt-10 lg:mt-12 grid gap-3 md:grid-cols-3 lg:gap-[42px]">
         {PRODUCTS.map((p) => (
           <a
@@ -79,7 +80,7 @@ export function PlatformCards({ link, surface = true }: { link: 'section' | 'pag
             <p className="type-body text-[#4B4B4B] text-balance">{t(`platform.cards.${p}`)}</p>
             <span className="type-button mt-auto flex items-center gap-2 font-medium text-[#4B4DF7] group-hover:text-[#3133E7] transition-colors">
               {t('platform.explore')}
-              <Arrow className={`w-3.5 h-3.5 transition-transform ${arrowNudge}`} strokeWidth={1.8} aria-hidden="true" />
+              <ArrowDown className="w-3.5 h-3.5 transition-transform group-hover:translate-y-0.5" strokeWidth={1.8} aria-hidden="true" />
             </span>
           </a>
         ))}
