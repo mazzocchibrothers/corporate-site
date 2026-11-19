@@ -156,8 +156,8 @@ change here is almost always **a page**, and the risk is almost always
 ## What has guardrails now, and what still does not
 
 The gates are `typecheck` plus every `check:*` script in `package.json`, run by
-`./harness/init.sh` and by CI on every PR; CI then runs the Playwright smoke
-test against the production build. `scripts/gates.mjs` derives the list, so the
+`./harness/init.sh` and by CI on every PR; CI then runs `check:build`.
+`scripts/gates.mjs` derives the list, so the
 runner and the workflow cannot disagree about what runs. What each gate guards
 is the table in `docs/verification.md`.
 

@@ -50,8 +50,7 @@ that branch and the old `pages/` directory are gone.
 - **One Issue → one branch off `origin/main` → one PR back into `main`.**
 - Rebase onto `origin/main` before opening the PR, and again before it merges
   if another PR landed first.
-- CI (`.github/workflows/ci.yml`) runs the gates, `check:build` and the
-  Playwright smoke test on every PR. An org ruleset requires an approving
+- CI (`.github/workflows/ci.yml`) runs the gates, `check:build` on every PR. An org ruleset requires an approving
   review before merge.
 
 ## 3. Hard rules (non-negotiable)
