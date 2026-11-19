@@ -30,7 +30,6 @@ import { QuestionGenerator } from '@/components/assess/visuals/question-generato
 import { DeliverChat } from '@/components/assess/visuals/deliver-chat';
 import { FrameworkMapping } from '@/components/assess/visuals/framework-mapping';
 import { ReadinessReport } from '@/components/assess/visuals/readiness-report';
-import { ExpertMatch } from '@/components/assess/visuals/expert-match';
 import { COMPARISON, COMPARISON_COLUMNS, type Verdict } from '@/components/assess/visuals/data';
 
 // /product/skillvue-assess. Built from the "Assess Product Page v8" design with
@@ -498,31 +497,13 @@ export default async function SkillvueAssessPage() {
           </div>
         </section>
 
-        {/* The science */}
-        <section id="science" className={SECTION}>
-          <div className={CONTAINER}>
-            <Head eyebrow={t('science.eyebrow')} title={t('science.title')} body={t('science.body')} />
-            <Reveal y={24} scale={0.98} duration={0.8} className="mt-12 md:mt-16">
-              <ExpertMatch />
-            </Reveal>
-            <div className="mx-auto mt-12 grid max-w-[840px] grid-cols-1 gap-8 border-t border-black/[0.08] pt-10 text-center sm:grid-cols-3 sm:gap-0">
-              {(t.raw('science.facts') as { value: string; label: string }[]).map((f, i) => (
-                <Reveal key={f.label} y={16} delay={i * 0.1} className={`flex flex-col items-center gap-3 ${i > 0 ? 'sm:border-l sm:border-black/[0.08]' : ''}`}>
-                  <CountUp value={f.value} className="stat-value block text-[36px] text-[#121212]" />
-                  <span className="type-body text-[#4B4B4B]">{f.label}</span>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Trust */}
-        <section id="trust" className={`section-breathe ${SECTION}`}>
+        <section id="trust" className={SECTION}>
           <div className={CONTAINER}>
             <Head eyebrow={t('trust.eyebrow')} title={t('trust.title')} body={t('trust.body')} />
             <div className="mx-auto mt-12 grid max-w-[1144px] grid-cols-1 gap-4 sm:grid-cols-2 md:mt-16 lg:grid-cols-4">
               {(t.raw('trust.cards') as { tag: string; title: string; body: string }[]).map((c, i) => (
-                <Reveal key={c.tag} y={16} delay={i * 0.08} className="flex flex-col rounded-2xl bg-white p-6">
+                <Reveal key={c.tag} y={16} delay={i * 0.08} className="flex flex-col rounded-2xl border border-black/[0.06] bg-white p-6">
                   <p className={EYEBROW}>{c.tag}</p>
                   <h3 className={`mt-3 ${H3}`}>{c.title}</h3>
                   <p className="mt-3 type-body-sm text-[#4B4B4B]">{c.body}</p>
@@ -533,7 +514,7 @@ export default async function SkillvueAssessPage() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className={SECTION}>
+        <section id="faq" className={`section-breathe ${SECTION}`}>
           <div className={`${CONTAINER} assess-faq`}>
             <Reveal y={16} className="text-center">
               <h2 className={H2}>{t('faq.title')}</h2>
@@ -545,7 +526,7 @@ export default async function SkillvueAssessPage() {
         </section>
 
         {/* Closing */}
-        <section className="pb-16 md:pb-[88px] lg:pb-[112px]">
+        <section className={SECTION}>
           <div className={CONTAINER}>
             <Reveal
               y={16}

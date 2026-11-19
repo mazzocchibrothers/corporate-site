@@ -8886,25 +8886,6 @@
         "quote": "La valutazione non è più vista semplicemente come un passo necessario per una promozione: fa parte di un sistema di sviluppo integrato che consente la costruzione di percorsi di crescita personalizzati.",
         "author": "Alberto Valenza, SVP Human Capital, Organization & Procurement, Aeroporti di Roma"
       },
-      "science": {
-        "eyebrow": "La scienza",
-        "title": "Valuta con la precisione di un esperto",
-        "body": "In uno studio svolto su 1.106 persone, i punteggi dell’AI si sono dimostrati statisticamente accurati quanto quelli di esperti umani.",
-        "facts": [
-          {
-            "value": "1.106",
-            "label": "partecipanti allo studio di validazione"
-          },
-          {
-            "value": "24",
-            "label": "soft skill nel framework"
-          },
-          {
-            "value": "100+",
-            "label": "indicatori comportamentali"
-          }
-        ]
-      },
       "trust": {
         "eyebrow": "Fiducia",
         "title": "A prova di HR, IT, legal e dipendenti",
@@ -9164,12 +9145,6 @@
           },
           "evidence": "Evidenze dalle risposte",
           "why": "Perché questo livello"
-        },
-        "expert": {
-          "label": "Esempio: un esperto formato e Skillvue Assess assegnano alla stessa risposta lo stesso punteggio, 4 su 5",
-          "tag": "Stessa risposta, valutata due volte",
-          "expertLabel": "Esperto formato",
-          "assessLabel": "Skillvue Assess"
         }
       }
     }
