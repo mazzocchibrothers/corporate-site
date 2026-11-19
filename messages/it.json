@@ -1591,29 +1591,25 @@
     "hero": {
       "eyebrow": "Storie di Successo",
       "metrics": {
-        "europeanEnterprises": {
-          "label": "aziende europee"
-        },
-        "avgReductionTime": {
-          "label": "riduzione media del time-to-hire"
-        },
-        "roiWithin18": {
-          "label": "ROI entro 18-24 mesi"
-        },
-        "savedYearly": {
-          "label": "risparmiati ogni anno in costi di assunzioni sbagliate"
-        },
-        "fasterTimeToHire": {
+        "fasterHires": {
+          "industry": "Retail e banking",
           "label": "riduzione del time-to-hire"
         },
-        "hiringSuccessRate": {
-          "label": "tasso di successo nelle assunzioni"
+        "timeToProcess": {
+          "industry": "Trasporti e logistica",
+          "label": "riduzione del time-to-process sulle candidature interne"
+        },
+        "peopleMapped": {
+          "industry": "Beauty retail",
+          "label": "persone mappate su 370+ punti vendita in 5 settimane"
+        },
+        "turnover": {
+          "industry": "Fashion retail",
+          "label": "riduzione del turnover sulle nuove assunzioni, in 6 Paesi"
         }
       },
-      "heading": "Le decisioni che definiscono la tua organizzazione, finalmente supportate da <span>prove.</span>",
-      "body": "Oltre 100 aziende europee hanno sostituito sensazioni e giudizi personali con dati oggettivi sulle competenze per prendere decisioni più efficaci nei propri processi di selezione, promozione e sviluppo. Queste sono le loro storie.",
-      "cta": "Leggi le storie",
-      "text": "I Nostri Clienti"
+      "heading": "Le tue decisioni aziendali, finalmente supportate da <span>prove.</span>",
+      "body": "Oltre 100 aziende europee hanno sostituito sensazioni e giudizi personali con dati oggettivi sulle competenze per prendere decisioni più efficaci nei propri processi di selezione, promozione e sviluppo. Queste sono le loro storie."
     },
     "testimonials": {
       "eyebrow": "Storie di Successo",
@@ -1646,28 +1642,6 @@
           ]
         }
       }
-    },
-    "roi": {
-      "stats": {
-        "n45m": {
-          "value": "€4,5M",
-          "label": "risparmiati annualmente da costi di potenziali assunzioni fallite",
-          "sub": "Calcolo basato su 300 assunzioni, 30% tasso mishire, €50K costo medio per mishire"
-        },
-        "n69mo": {
-          "value": "6-9 mesi",
-          "label": "esecuzione strategica più veloce",
-          "sub": "Quando le persone giuste sono nei ruoli giusti dal primo giorno"
-        },
-        "n1030x": {
-          "value": "10-30x",
-          "label": "ROI in 18-24 mesi",
-          "sub": "Con payback visibile tipicamente già nei primi 6-12 mesi"
-        }
-      },
-      "heading": "Le persone sono il tuo costo maggiore. <span>Ma possono anche essere il tuo ritorno maggiore.</span>",
-      "body": "Ogni altra area ha un framework consolidato per il calcolo del ROI. Queste storie ti dimostrano che anche HR può averlo.",
-      "cta": "Prenota una Demo"
     },
     "exploreStories": {
       "heading": "Trova la tua <span>storia.</span>",
@@ -5836,27 +5810,6 @@
       "body2": "Oltre 100 integrazioni native (Oracle, SAP, Workday, Greenhouse e altri). Completamente personalizzabile per i tuoi processi, alle tue condizioni.",
       "inProgress": "In corso"
     },
-    "roi": {
-      "stats": {
-        "savedAnnually": {
-          "label": "risparmiati annualmente",
-          "sublabel": "da costi di potenziali assunzioni fallite",
-          "footnote": "Calcolo basato su 300 assunzioni, tasso di fallimento inferiore del 30%, costo medio per fallimento 50K"
-        },
-        "monthsFaster": {
-          "label": "mesi di recupero di tempo per",
-          "sublabel": "esecuzione strategica",
-          "footnote": "Quando le persone giuste sono nei ruoli giusti dal primo giorno"
-        },
-        "roi": {
-          "label": "ROI",
-          "sublabel": "in 18-24 mesi",
-          "footnote": "Con payback visibile tipicamente già nei primi 6-12 mesi"
-        }
-      },
-      "heading": "Le persone sono il tuo costo maggiore. <span>Possono anche essere il tuo ritorno maggiore.</span>",
-      "cta": "Prenota una Demo"
-    },
     "cta": {
       "heading": "Prendi decisioni sul talento <span>che puoi difendere.</span>",
       "body": "Guarda Skillvue all’opera su un ruolo del tuo modello di competenze, in 30 minuti.",
@@ -9782,6 +9735,25 @@
       "blog": "Blog",
       "solutions": "Soluzioni",
       "resources": "Risorse"
+    },
+    "roi": {
+      "stats": {
+        "payback": {
+          "label": "mesi",
+          "sublabel": "di payback"
+        },
+        "roi": {
+          "label": "ROI",
+          "sublabel": "in 18-24 mesi"
+        }
+      },
+      "heading": "Le persone sono il tuo costo maggiore. <span>Possono anche essere il tuo ritorno maggiore.</span>",
+      "card": {
+        "heading": "Qual è il tuo numero?",
+        "body": "Scegli un use case, inserisci due numeri e scopri il tuo payback e il tuo ROI.",
+        "cta": "Vedi il calcolo"
+      },
+      "note": "Calcolo basato sul ROI Calculator di Skillvue."
     }
   },
   "solutions": {
