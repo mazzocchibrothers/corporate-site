@@ -107,10 +107,6 @@ export default async function AugustNewsletter() {
       <main>
         {/* HERO — light (interim standard) */}
         <section className="section-light relative pt-[80px] overflow-hidden">
-          <div className="pointer-events-none absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(75,77,247,0.18) 0%, rgba(75,77,247,0) 60%)' }} />
-            <div className="absolute top-10 right-[-200px] w-[600px] h-[600px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(255,86,86,0.10) 0%, rgba(255,86,86,0) 60%)' }} />
-          </div>
           <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 w-full py-16 lg:py-24">
             <Button asChild variant="tertiary" mode="light" className="mb-10">
               <a href={href('blog', lang)}><ArrowLeft aria-hidden />{t('back')}</a>

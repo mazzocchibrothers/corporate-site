@@ -87,27 +87,6 @@ export default function CareersPage() {
 
         {/* ── 1. HERO ─────────────────────────────────────────────── */}
         <section className="section-light relative overflow-hidden pt-[80px] min-h-screen flex flex-col justify-center">
-          <div className="absolute inset-0 pointer-events-none" aria-hidden>
-            <div
-              className="absolute rounded-full"
-              style={{
-                width: '700px', height: '700px',
-                top: '-200px', left: '-150px',
-                background: 'radial-gradient(circle, rgba(75,77,247,0.12) 0%, transparent 70%)',
-                filter: 'blur(60px)',
-              }}
-            />
-            <div
-              className="absolute rounded-full"
-              style={{
-                width: '500px', height: '500px',
-                bottom: '-100px', right: '-80px',
-                background: 'radial-gradient(circle, rgba(255,95,36,0.07) 0%, transparent 70%)',
-                filter: 'blur(60px)',
-              }}
-            />
-          </div>
-
           <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-16 lg:py-24">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 

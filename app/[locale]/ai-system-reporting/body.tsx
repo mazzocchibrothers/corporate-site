@@ -24,9 +24,6 @@ export default async function AiSystemReporting() {
       <main>
         {/* Hero */}
         <section className="section-light relative pt-[80px]">
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute rounded-full" style={{ width: '600px', height: '600px', top: '-200px', left: '-100px', background: 'radial-gradient(circle, rgba(75,77,247,0.10) 0%, transparent 70%)', filter: 'blur(60px)' }} />
-          </div>
           <div className="relative z-10 max-w-[900px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <Reveal y={20} duration={0.6}>
               <span className="type-eyebrow text-[#4B4DF7] mb-6 block">
