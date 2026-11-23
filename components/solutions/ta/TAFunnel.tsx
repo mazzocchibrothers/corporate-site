@@ -180,7 +180,7 @@ export default function TAFunnel() {
                   : 'bg-white border-[#1A1A2E]/[0.06] hover:bg-[#1A1A2E]/[0.04] hover:border-[#1A1A2E]/[0.12]'
               }`}
             >
-              <span className={`type-eyebrow block mb-0.5 md:mb-1 ${i === active ? 'text-[#4B4DF7]' : 'text-[#1A1A2E]/25'}`}>
+              <span className={`type-eyebrow block mb-0.5 md:mb-1 ${i === active ? 'text-[#4B4DF7]' : 'text-[#707070]'}`}>
                 {t('taFunnel.cta')} {s.number}
               </span>
               <span className={`font-display text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-[#121212]' : 'text-[#707070]'}`}>
