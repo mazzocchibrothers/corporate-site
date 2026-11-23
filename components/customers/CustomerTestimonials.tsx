@@ -23,7 +23,7 @@ export default function CustomerTestimonials() {
         <Reveal duration={0.7} className="mb-14">
           <span className="type-eyebrow block font-medium text-[#4B4DF7] mb-4">{t('testimonials.eyebrow')}</span>
           <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#1E1E1E] mb-4">{t.rich('testimonials.heading', {
-            span: (chunks) => <span className="font-semibold gradient-text-warm-on-light">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h2>
           <p className="max-w-[880px] type-body-lg text-[#4B4B4B]">{t('testimonials.body')}</p>
         </Reveal>

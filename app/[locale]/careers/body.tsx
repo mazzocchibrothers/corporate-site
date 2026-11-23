@@ -193,7 +193,7 @@ export default function CareersPage() {
                 className="max-w-[880px] font-semibold text-[#121212] mb-6"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t.rich('heading2', {
-                span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
+                span: (chunks) => <span className="italic font-semibold">{chunks}</span>,
               })}</h2>
               <p className="max-w-[880px] type-body text-[#707070] mb-8">{t('body2')}</p>
               <Button asChild variant="secondary" mode="light">

@@ -290,7 +290,7 @@ export default async function TalentPioneersPage() {
               <p className={`${EYEBROW} text-[#4b4df7]`}>{t('chapters.eyebrow')}</p>
               <h2 className="max-w-[880px] pt-6 text-balance text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
                 <span className="text-[#121212]">{t('chapters.heading')}</span>{' '}
-                <span className="gradient-text">{t('chapters.headingAccent')}</span>
+                <span>{t('chapters.headingAccent')}</span>
               </h2>
               <p className="max-w-[880px] type-body-lg pt-5 font-medium text-[#121212]/80">{t('chapters.paragraph')}</p>
             </Reveal>

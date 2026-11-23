@@ -28,7 +28,7 @@ export default function ROISection() {
               span: (chunks) => (
                 // Deliberately stacked: the return line sits under the cost line.
                 <span className="block">
-                  <span className="font-semibold gradient-text-warm-on-light">{chunks}</span>
+                  <span className="font-semibold">{chunks}</span>
                 </span>
               ),
             })}

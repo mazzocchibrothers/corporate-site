@@ -64,7 +64,7 @@ export default function LDImpact() {
         {/* Header */}
         <Reveal duration={0.7} className="text-center mb-12 md:mb-16 lg:mb-20">
           <h2 className="max-w-[880px] mx-auto text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">{t.rich('ldImpact.heading', {
-            span: (chunks) => <span className="font-semibold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h2>
           <p className="max-w-[880px] type-body text-[#707070] mx-auto">{t('ldImpact.body')}</p>
         </Reveal>

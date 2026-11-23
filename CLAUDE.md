@@ -170,11 +170,12 @@ redesign replaces it, this is the rule for any section you touch:
   baked in; HubSpot form sections (their light palette ships separately); the
   `/lp` and `/demo` pages; the ROI calculator and the scoring visuals. The
   body stays `#040404`, which the dark closing cards rely on.
-- **No gradient accent on a light section.** The `.gradient-text` family
-  starts at `#FFAF64` (about 1.8:1 on white). When a heading moves onto a
-  light section, its accent span loses the gradient class and reads
-  `#121212` like the rest of the heading; the copy and the span stay.
-  Dark sections keep the gradient.
+- **No gradient accent on a light section** — any of the `.gradient-text`
+  family, which starts at `#FFAF64` (about 1.8:1 on white). On a light
+  section the accent span keeps its words and its italic but has no
+  gradient class, so it takes the heading's colour. This holds for
+  sections that were light before the switch too. Dark sections keep the
+  gradient.
 
 The bullets below predate the switch. Where one describes a dark surface,
 it now applies only to the sections that stay dark.

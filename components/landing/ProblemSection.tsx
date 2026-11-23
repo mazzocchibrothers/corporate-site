@@ -44,7 +44,7 @@ export default function ProblemSection() {
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <AnimatedSection className="mb-4 md:mb-6">
           <h2 className="max-w-[880px] text-[clamp(1.6rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('problem.heading', {
-            span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="italic font-semibold">{chunks}</span>,
           })}</h2>
         </AnimatedSection>
 
@@ -53,7 +53,7 @@ export default function ProblemSection() {
             span: (chunks) => <span className="text-[#707070]">{chunks}</span>,
           })}</p>
           <p className="type-blockquote-lg font-normal text-[#707070] mt-4 md:mt-6">{t.rich('problem.body2', {
-            span: (chunks) => <span className="font-semibold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</p>
         </AnimatedSection>
 

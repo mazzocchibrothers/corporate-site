@@ -239,7 +239,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <Reveal y={20} duration={0.6} className="mb-14 grid lg:grid-cols-2 gap-6 lg:gap-16 items-start">
               <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">
-                {t.rich('detail.insideHeading', { span: (chunks) => <span className="gradient-text-on-light">{chunks}</span> })}
+                {t.rich('detail.insideHeading', { span: (chunks) => <span>{chunks}</span> })}
               </h2>
               <p className="max-w-[880px] type-body text-[#121212]/[0.45] lg:pt-3">{t(`items.${slug}.fullDesc`)}</p>
             </Reveal>
