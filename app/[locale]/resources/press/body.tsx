@@ -11,6 +11,7 @@ import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { HeroCopy } from '@/components/ui/hero-copy';
 import { TOP_STARTUPS_ARTICLE } from '@/data/linkedin-top-startups';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 const pressArticles = [
   {
@@ -365,16 +366,16 @@ export default function PressPage() {
           </div>
         </section>
 
-        {/* 4. Press Releases — dark section */}
-        <section className="relative py-20 lg:py-28 bg-black">
+        {/* 4. Press Releases */}
+        <section className="section-light relative py-20 lg:py-28">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <Reveal
               y={20}
               duration={0.6}
               className="mb-8 md:mb-12"
             >
-              <span className="type-eyebrow text-[#6B7DFF] mb-4 block">{t('text4')}</span>
-              <h2 className="max-w-[880px] text-[clamp(1.6rem,4vw,3rem)] font-semibold text-white/90 tracking-[-0.02em]">{t('heading4')}</h2>
+              <span className="type-eyebrow text-[#4B4DF7] mb-4 block">{t('text4')}</span>
+              <h2 className="max-w-[880px] text-[clamp(1.6rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">{t('heading4')}</h2>
             </Reveal>
 
             <div className="flex flex-col gap-3 md:gap-4">
@@ -387,17 +388,17 @@ export default function PressPage() {
                   href={t(`releases.${release.id}.url`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-6 rounded-2xl border border-white/[0.06] hover:border-white/[0.14] hover:bg-white/[0.03] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
+                  className="group flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-6 rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:border-[#121212]/20 focus-visible:border-[#121212]/20 hover:bg-[#f1f5f9] focus-visible:bg-[#f1f5f9] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
                 >
                   <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8 min-w-0 flex-1">
-                    <span className="type-code text-[#9B9DFB]/60 md:text-white/25 shrink-0 md:mt-0.5 r uppercase md:normal-case">{release.date}</span>
-                    <span className="type-body-bold md:font-medium text-white/85 md:text-white/70 group-hover:text-white/95 md:group-hover:text-white/90 transition-colors duration-300">
+                    <span className="type-code text-[#707070] shrink-0 md:mt-0.5 uppercase md:normal-case">{release.date}</span>
+                    <span className="type-body-bold md:font-medium text-[#121212]">
                       {t(`releases.${release.id}.title`)}
                     </span>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
-                    <Download className="h-4 w-4 text-[#9B9DFB]/70 md:text-white/20 group-hover:text-[#9B9DFB] md:group-hover:text-white/50 transition-colors duration-300" />
-                    <span className="type-eyebrow text-[#6B7DFF]/70 md:text-white/25 group-hover:text-[#9B9DFB] md:group-hover:text-white/50 transition-colors duration-300">{t('cta2')}</span>
+                    <Download className="h-4 w-4 text-[#4B4DF7] transition-colors duration-300 group-hover:text-[#3133E7] group-focus-visible:text-[#3133E7]" />
+                    <span className="type-eyebrow text-[#4B4DF7] transition-colors duration-300 group-hover:text-[#3133E7] group-focus-visible:text-[#3133E7]">{t('cta2')}</span>
                   </div>
                 </Reveal>
               ))}
@@ -405,10 +406,10 @@ export default function PressPage() {
           </div>
         </section>
 
-        {/* 5. Investors — animated marquee, same as About */}
-        <section className="relative pt-8 pb-8 bg-black">
+        {/* 5. Investors — animated marquee, same as About (white, continuing the releases) */}
+        <section className="section-light relative pt-8 pb-8">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <span className="type-eyebrow text-[#6B7DFF] mb-6 block text-center">{t('text5')}</span>
+            <span className="type-eyebrow text-[#4B4DF7] mb-6 block text-center">{t('text5')}</span>
           </div>
           <div
             className="overflow-hidden relative"
@@ -427,7 +428,7 @@ export default function PressPage() {
                         alt={inv.name}
                         className="object-contain"
                         style={{
-                          filter: 'brightness(0) invert(1)',
+                          filter: 'brightness(0)',
                           opacity: 0.5,
                           height: inv.h,
                         }}
@@ -440,23 +441,20 @@ export default function PressPage() {
           </div>
         </section>
 
-        {/* 6. Final CTA — dark */}
-        <section className="relative pt-8 pb-24 lg:pb-32 bg-black">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <Reveal duration={0.7}>
-              <h2
-                className="max-w-[880px] font-semibold text-white/90 mb-5 leading-[1.15] mx-auto tracking-[-0.02em]"
-                style={{ fontSize: 'clamp(1.8rem,3.5vw,3rem)' }}
-              >{t('heading5')}</h2>
-              <p className="max-w-[880px] type-body text-white/[0.4] mb-10 mx-auto">{t('body2')}</p>
-              <Button
-                onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
-                variant="primary"
-                mode="dark"
-              >{t('cta3')}</Button>
-            </Reveal>
-          </div>
-        </section>
+        {/* 6. Final CTA: the shared light closing, ruled off the white investors
+            strip above. The button keeps its client-side navigation, hence `action`. */}
+        <ClosingPanel
+          heading={t('heading5')}
+          body={t('body2')}
+          rule
+          action={
+            <Button
+              onClick={() => { router.push('/book-meeting'); window.scrollTo(0, 0); }}
+              variant="primary"
+              mode="light"
+            >{t('cta3')}</Button>
+          }
+        />
 
       </main>
       <Footer />
