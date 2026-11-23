@@ -527,10 +527,8 @@ export default async function TrustPage() {
         </section>
       </main>
 
-      {/* ── Closing: the site's shared banner, on the dark band every page closes on ── */}
-      <div className="section-dark">
-        <ClosingBanner heading={t('closing.title')} body={t('closing.body')} cta={cta} />
-      </div>
+      {/* ── Closing: the site's shared banner, light, ruled off the white FAQ above ── */}
+      <ClosingBanner heading={t('closing.title')} body={t('closing.body')} cta={cta} tone="light" rule />
       <Footer />
     </>
   );

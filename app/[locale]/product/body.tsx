@@ -17,6 +17,7 @@ import { MapScreens, type MapScreen } from '@/components/product/map-screens';
 import { AssessScreens, type AssessScreen } from '@/components/product/assess-screens';
 import { DecideDemo } from '@/components/product/decide-demo';
 import { PlatformCards, ProductLogo as Logo, type Product } from '@/components/product/PlatformCards';
+import { CLOSING_PANEL_GRADIENT } from '@/components/shared/ClosingBanner';
 
 
 // Each tab is a screen of the product UI drawn in HTML (<MapScreens>,
@@ -221,17 +222,18 @@ export default function SkillvueMapPage() {
         </div>
 
         {/* CTA */}
-        <section className="py-14 lg:py-28">
+        {/* Light, ruled off the white Decide section above. */}
+        <section className="section-light border-t border-[#e5e7eb] py-14 lg:py-28">
           <Reveal
             y={32}
             scale={0.98}
             duration={0.9}
-            className="max-w-[1344px] mx-5 md:mx-8 lg:mx-auto flex flex-col items-center rounded-[24px] md:rounded-[40px] border border-white/[0.08] bg-white/[0.04] px-5 py-12 md:px-8 md:py-20 text-center"
-            style={{ backgroundImage: 'radial-gradient(ellipse 45% 70% at 100% 0%, rgba(90,52,44,0.85) 0%, rgba(33,32,38,0) 100%)' }}
+            className="max-w-[1344px] mx-5 md:mx-8 lg:mx-auto flex flex-col items-center rounded-[20px] md:rounded-3xl px-5 py-12 md:px-8 md:py-20 text-center"
+            style={{ backgroundImage: CLOSING_PANEL_GRADIENT }}
           >
-            <h2 className="max-w-[880px] font-semibold tracking-[-0.02em] text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] text-white text-balance">{t('cta.heading')}</h2>
-            <p className="max-w-[880px] type-body-lg mt-[26px] text-white/70">{t('cta.body')}</p>
-            <Button asChild variant="primary" mode="dark" className="mt-[34px]">
+            <h2 className="max-w-[880px] font-semibold tracking-[-0.02em] text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] text-[#121212] text-balance">{t('cta.heading')}</h2>
+            <p className="max-w-[880px] type-body-lg mt-[26px] text-[#4B4B4B]">{t('cta.body')}</p>
+            <Button asChild variant="primary" mode="light" className="mt-[34px]">
               <a href={href('book-meeting', locale)}>
                 {t('cta.cta')}
                 <ArrowRight aria-hidden="true" />

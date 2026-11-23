@@ -10,10 +10,11 @@ export default function CTASection() {
   return (
     <ClosingBanner
       heading={t.rich('cta.heading', {
-        span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+        span: (chunks) => <span className="font-semibold">{chunks}</span>,
       })}
       body={t('cta.body')}
       cta={t('cta.cta')}
+      tone="light"
     />
   );
 }

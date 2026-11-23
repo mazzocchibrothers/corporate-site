@@ -26,7 +26,7 @@ export default function PerformanceManagementPage() {
         <PMHowSolves />
         <div className="fade-into-dark" />
         <SolutionCrossLinks currentId="solutions/performance-management" />
-        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} />
+        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} tone="light" rule />
       <Footer />
       </main>
     </>
