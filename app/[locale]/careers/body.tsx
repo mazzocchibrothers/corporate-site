@@ -7,7 +7,9 @@ import { ArrowDown, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { useRouter } from '@/i18n/navigation';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button, buttonVariants, SECONDARY_ON_LIGHT } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 import { HeroCopy } from '@/components/ui/hero-copy';
 
 const stats = [
@@ -84,7 +86,7 @@ export default function CareersPage() {
       <main>
 
         {/* ── 1. HERO ─────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden pt-[80px] min-h-screen flex flex-col justify-center">
+        <section className="section-light relative overflow-hidden pt-[80px] min-h-screen flex flex-col justify-center">
           <div className="absolute inset-0 pointer-events-none" aria-hidden>
             <div
               className="absolute rounded-full"
@@ -111,24 +113,24 @@ export default function CareersPage() {
 
               {/* Left — headline + CTAs */}
               <Reveal duration={0.7}>
-                <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('text')}</span>
+                <span className="type-eyebrow text-[#4B4DF7] mb-6 block">{t('text')}</span>
                 <HeroCopy>
                   <h1
-                    className="font-semibold text-white/95 mb-6 text-[48px] md:text-[58px]"
+                    className="font-semibold text-[#121212] mb-6 text-[48px] md:text-[58px]"
                     style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
                   >{t.rich('heading', {
-                    span: (chunks) => <span className="font-semibold gradient-text-warm">{chunks}</span>,
+                    span: (chunks) => <span className="font-semibold">{chunks}</span>,
                   })}</h1>
-                  <p className="type-body hero-subtitle text-white/55 mb-8">{t('body')}</p>
+                  <p className="type-body hero-subtitle text-[#4B4B4B] mb-8">{t('body')}</p>
                 </HeroCopy>
                 <div className="flex flex-wrap gap-3">
-                  <Button asChild variant="primary" mode="dark">
+                  <Button asChild variant="primary" mode="light">
                     <a href="#open-roles">
                       {t('cta')}
                       <ArrowRight aria-hidden />
                     </a>
                   </Button>
-                  <Button asChild variant="secondary" mode="dark">
+                  <Button asChild variant="secondary" mode="light" className={SECONDARY_ON_LIGHT}>
                     <a
                       href="#life-at-skillvue"
                       onClick={(e) => { e.preventDefault(); document.getElementById('life-at-skillvue')?.scrollIntoView({ behavior: 'smooth' }); }}
@@ -174,10 +176,10 @@ export default function CareersPage() {
                   key={i}
                   className={`pt-6 pb-8 ${i % 2 !== 0 ? 'pl-6 md:pl-8' : ''}`}
                 >
-                  <p className="font-display text-[32px] md:text-[34px] font-semibold text-white/90 tracking-[-0.02em] leading-none mb-1.5">
+                  <p className="font-display text-[32px] md:text-[34px] font-semibold text-[#121212] tracking-[-0.02em] leading-none mb-1.5">
                     {t(`stats.${s.id}.value`)}
                   </p>
-                  <p className="type-body-sm text-white/40">{t(`stats.${s.id}.label`)}</p>
+                  <p className="type-body-sm text-[#707070]">{t(`stats.${s.id}.label`)}</p>
                 </div>
               ))}
             </Reveal>
@@ -207,7 +209,7 @@ export default function CareersPage() {
         </section>
 
         {/* ── 3. HOW WE HIRE ──────────────────────────────────────── */}
-        <section className="relative py-20 lg:py-28 min-h-screen flex flex-col justify-center">
+        <section className="section-light relative py-20 lg:py-28 min-h-screen flex flex-col justify-center">
           <div
             className="absolute inset-0 pointer-events-none"
             aria-hidden
@@ -217,14 +219,14 @@ export default function CareersPage() {
           />
           <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
             <Reveal duration={0.7} className="mb-12 lg:mb-16 max-w-2xl">
-              <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('text3')}</span>
+              <span className="type-eyebrow text-[#4B4DF7] mb-6 block">{t('text3')}</span>
               <h2
-                className="max-w-[880px] font-semibold text-white/95 mb-4"
+                className="max-w-[880px] font-semibold text-[#121212] mb-4"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t.rich('heading3', {
-                span: (chunks) => <span className="font-semibold gradient-text-warm">{chunks}</span>,
+                span: (chunks) => <span className="font-semibold">{chunks}</span>,
               })}</h2>
-              <p className="max-w-[880px] type-body text-white/50">{t('body3')}</p>
+              <p className="max-w-[880px] type-body text-[#4B4B4B]">{t('body3')}</p>
             </Reveal>
 
             {/* Step cards */}
@@ -234,15 +236,15 @@ export default function CareersPage() {
                   y={20}
                   delay={i * 0.1}
                   key={step.num}
-                  className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 md:p-8 lg:p-10"
+                  className="rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-6 md:p-8 lg:p-10"
                 >
-                  <span className="font-display block text-[40px] md:text-[56px] font-light text-white/10 leading-none tracking-[-0.04em] mb-6 md:mb-8">
+                  <span className="font-display block text-[40px] md:text-[56px] font-light text-[#121212]/10 leading-none tracking-[-0.04em] mb-6 md:mb-8">
                     {step.num}
                   </span>
-                  <h3 className="text-[16px] md:text-[18px] font-semibold text-white/90 mb-3 leading-snug">
+                  <h3 className="text-[16px] md:text-[18px] font-semibold text-[#121212] mb-3 leading-snug">
                     {t(`steps.${step.id}.title`)}
                   </h3>
-                  <p className="type-body-sm text-white/50">{t(`steps.${step.id}.desc`)}</p>
+                  <p className="type-body-sm text-[#4B4B4B]">{t(`steps.${step.id}.desc`)}</p>
                 </Reveal>
               ))}
             </div>
@@ -256,7 +258,7 @@ export default function CareersPage() {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="type-caption inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03]"
+                  className="type-caption inline-flex px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold text-[#4B4B4B] border border-[#e5e7eb] bg-[#f1f5f9]"
                 >
                   {t(`tags.${tag}`)}
                 </span>
@@ -307,12 +309,12 @@ export default function CareersPage() {
         </section>
 
         {/* ── 5. OPEN ROLES ───────────────────────────────────────── */}
-        <section id="open-roles" className="relative py-20 lg:py-28 min-h-screen flex flex-col justify-start">
+        <section id="open-roles" className="section-light relative py-20 lg:py-28 min-h-screen flex flex-col justify-start">
           <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full">
             <Reveal duration={0.7} className="mb-8 lg:mb-10">
-              <span className="type-eyebrow text-[#6B7DFF] mb-4 block">{t('text5')}</span>
+              <span className="type-eyebrow text-[#4B4DF7] mb-4 block">{t('text5')}</span>
               <h2
-                className="max-w-[880px] font-semibold text-white/95"
+                className="max-w-[880px] font-semibold text-[#121212]"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t('heading5')}</h2>
             </Reveal>
@@ -325,8 +327,8 @@ export default function CareersPage() {
                   onClick={() => setActiveFilter(f)}
                   className={`type-body-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full font-medium transition-all duration-300 ${
  activeFilter === f
- ? 'bg-white/[0.1] text-white border border-white/[0.15]'
- : 'text-white/40 border border-transparent hover:text-white/70'
+ ? 'bg-[#E7E7E8] text-[#121212] border border-[#E7E7E8]'
+ : 'text-[#4B4B4B] border border-transparent hover:text-[#121212]'
  }`}
                 >
                   {f}
@@ -342,7 +344,7 @@ export default function CareersPage() {
                   delay={gi * 0.07}
                   key={team}
                 >
-                  <p className="type-eyebrow font-medium text-white/40 mb-3">
+                  <p className="type-eyebrow font-medium text-[#707070] mb-3">
                     {team}
                   </p>
                   <div className="flex flex-col gap-2">
@@ -352,16 +354,16 @@ export default function CareersPage() {
                         href={role.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6 rounded-2xl border border-white/[0.07] bg-white/[0.03] hover:border-white/[0.14] focus-visible:border-white/[0.14] hover:bg-white/[0.05] focus-visible:bg-white/[0.05] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
+                        className="group flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6 rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:border-[#121212]/20 focus-visible:border-[#121212]/20 hover:bg-[#f1f5f9] focus-visible:bg-[#f1f5f9] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
                       >
-                        <span className="type-body-bold text-white/85 group-hover:text-white/95 group-focus-visible:text-white/95 transition-colors duration-300">
+                        <span className="type-body-bold text-[#121212]">
                           {role.title}
                         </span>
                         <div className="flex items-center justify-between w-full gap-4 md:w-auto md:justify-start shrink-0">
-                          <span className="type-body-sm text-white/35">
+                          <span className="type-body-sm text-[#707070]">
                             {role.location} · {role.work}
                           </span>
-                          <span className={buttonVariants({ variant: 'secondary', mode: 'dark' })}>
+                          <span className={cn(buttonVariants({ variant: 'secondary', mode: 'light' }), SECONDARY_ON_LIGHT)}>
                             {t('cta4')}
                             <ArrowRight aria-hidden className="group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-transform duration-300" />
                           </span>
@@ -373,41 +375,34 @@ export default function CareersPage() {
               ))}
 
               {Object.keys(grouped).length === 0 && (
-                <p className="type-body text-white/35 py-8">{t('body5')}</p>
+                <p className="type-body text-[#707070] py-8">{t('body5')}</p>
               )}
             </div>
           </div>
         </section>
 
-        {/* ── 6. FINAL CTA ────────────────────────────────────────── */}
-        <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
-            <Reveal duration={0.7} className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5 md:p-8 lg:p-10 text-center">
-              <h2
-                className="max-w-[880px] font-semibold text-white/90 mx-auto mb-6"
-                style={{
-                  fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
-                  lineHeight: 1.05,
-                  letterSpacing: '-0.02em',
-                }}
-              >{t('heading6')}</h2>
-              <div className="flex flex-wrap items-center justify-center gap-4">
-                <Button asChild variant="primary" mode="dark">
-                  <a href="#open-roles">
-                    {t('cta5')}
-                    <ArrowRight aria-hidden />
-                  </a>
-                </Button>
-                <Button asChild variant="tertiary" mode="dark">
-                  <a href="#life-at-skillvue">
-                    {t('cta6')}
-                    <ArrowRight aria-hidden />
-                  </a>
-                </Button>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        {/* ── 6. FINAL CTA: the shared light closing, ruled off the white open
+            roles above. It keeps the page's two buttons (the Assess closing has one). */}
+        <ClosingPanel
+          heading={t('heading6')}
+          rule
+          action={
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Button asChild variant="primary" mode="light">
+                <a href="#open-roles">
+                  {t('cta5')}
+                  <ArrowRight aria-hidden />
+                </a>
+              </Button>
+              <Button asChild variant="tertiary" mode="light">
+                <a href="#life-at-skillvue">
+                  {t('cta6')}
+                  <ArrowRight aria-hidden />
+                </a>
+              </Button>
+            </div>
+          }
+        />
 
       </main>
       <Footer />
