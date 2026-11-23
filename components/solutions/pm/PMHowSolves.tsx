@@ -12,7 +12,7 @@ export default function PMHowSolves() {
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-16">
           <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212]">{t.rich('pmHowSolves.heading', {
-            span: (chunks) => <span className="font-semibold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h2>
         </Reveal>
 
@@ -29,11 +29,11 @@ export default function PMHowSolves() {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <span className="text-[#4B4DF7] font-bold mt-0.5">✓</span>
-                <p className="type-body text-[#7A7A7A]">{t('pmHowSolves.body')}</p>
+                <p className="type-body text-[#707070]">{t('pmHowSolves.body')}</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✗</span>
-                <p className="type-body text-[#7A7A7A]">{t('pmHowSolves.body2')}</p>
+                <p className="type-body text-[#707070]">{t('pmHowSolves.body2')}</p>
               </div>
             </div>
           </Reveal>
@@ -49,11 +49,11 @@ export default function PMHowSolves() {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <span className="text-[#4B4DF7] font-bold mt-0.5">✓</span>
-                <p className="type-body text-[#7A7A7A]">{t('pmHowSolves.body3')}</p>
+                <p className="type-body text-[#707070]">{t('pmHowSolves.body3')}</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✗</span>
-                <p className="type-body text-[#7A7A7A]">{t('pmHowSolves.body4')}</p>
+                <p className="type-body text-[#707070]">{t('pmHowSolves.body4')}</p>
               </div>
             </div>
           </Reveal>
@@ -63,10 +63,10 @@ export default function PMHowSolves() {
         <Reveal
           y={15}
           delay={0.35}
-          className="rounded-2xl bg-[#0E0E0E] p-8 lg:p-10"
+          className="rounded-2xl bg-[#4B4DF7] p-8 lg:p-10"
         >
-          <h3 className="text-[20px] font-semibold text-white/90 mb-4 text-center">{t('pmHowSolves.heading3')}</h3>
-          <p className="type-body text-white/[0.85] text-center max-w-3xl mx-auto font-medium">{t('pmHowSolves.body5')}</p>
+          <h3 className="text-[20px] font-semibold text-white mb-4 text-center">{t('pmHowSolves.heading3')}</h3>
+          <p className="type-body text-white text-center max-w-3xl mx-auto font-medium">{t('pmHowSolves.body5')}</p>
         </Reveal>
       </div>
     </section>

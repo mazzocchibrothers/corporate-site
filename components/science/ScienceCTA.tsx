@@ -16,11 +16,11 @@ export default function ScienceCTA() {
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-6 md:mb-10">
           <h2 className="max-w-[880px] text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">{t.rich('cta.heading', {
-            span: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
         </Reveal>
         <Reveal y={20} duration={0.7} delay={0.2}>
-          <div className="group rounded-xl md:rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.04] hover:bg-white/[0.06] backdrop-blur-sm p-5 md:p-10 transition-all duration-500">
+          <div className="group rounded-xl md:rounded-2xl border border-white/[0.06] bg-white/[0.04] backdrop-blur-sm p-5 md:p-10 transition-all duration-500">
             <span className="type-eyebrow text-[#6B7DFF]">{t('cta.text')}</span>
             <h3 className="text-xl md:text-2xl font-semibold text-white/90 mt-3 md:mt-4 mb-2 md:mb-3">{t('cta.heading2')}</h3>
             <p className="type-body text-white/[0.65] mb-5 md:mb-8 max-w-md">{t('cta.body')}</p>

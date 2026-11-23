@@ -146,6 +146,40 @@ language switcher need no edit beyond the steps above.
 Pages were brought to one standard (#183, #194, #195). Match it; don't
 reintroduce per-page variants.
 
+**Interim light standard (pending the redesign).** Content pages are being
+moved off the dark theme onto the light style of `/trust`, `/product` and
+`/product/skillvue-assess` (branch `chore/light-theme-interim`). Until the
+redesign replaces it, this is the rule for any section you touch:
+
+- A section is `.section-light` (#fff) or `.section-breathe` (#F7F7F7),
+  alternating with hard edges. The class is not decoration: the navbar turns
+  white only over an element inside one of the two, so a light section drawn
+  any other way leaves a black bar over it.
+- Text `#121212`, secondary `#4B4B4B`, meta `#707070` (not `#7A7A7A`, which
+  fails AA on white and on #F7F7F7); brand `#4B4DF7`
+  (hover `#3133E7`) for eyebrows, links and stats; borders and card edges
+  `#e5e7eb`. A card takes the other surface: `bg-[#f7f7f7]` on white,
+  `bg-white` on grey.
+- `Button` and `IconTile` take `mode="light"`. A secondary button on light is
+  the `/product` white pill — `variant="secondary" mode="light"
+  className={SECONDARY_ON_LIGHT}` from `components/ui/button.tsx` — not the
+  bare `#888` variant, which fails contrast.
+- **Still dark, on purpose:** the closing band (`.section-dark` +
+  `ClosingBanner`, `SolutionFinalCTA`, `CustomersFinalCTA`) and the `Footer`;
+  heroes with text over a photo; sections over a video with a dark backdrop
+  baked in; HubSpot form sections (their light palette ships separately); the
+  `/lp` and `/demo` pages; the ROI calculator and the scoring visuals. The
+  body stays `#040404`, which the dark closing cards rely on.
+- **No gradient accent on a light section** — any of the `.gradient-text`
+  family, which starts at `#FFAF64` (about 1.8:1 on white). On a light
+  section the accent span keeps its words but has no gradient class and no
+  italic, so it reads exactly like the rest of the heading. This holds for
+  sections that were light before the switch too. Dark sections keep the
+  gradient.
+
+The bullets below predate the switch. Where one describes a dark surface,
+it now applies only to the sections that stay dark.
+
 - **H1 hero:** `font-semibold text-[48px] md:text-[58px]`, `lineHeight: 1.1`,
   `letterSpacing: '-0.02em'`. Every h1 on the site is 58px from `md` up.
 - **Hero title and subtitle share one width.** Wrap the h1 and its subtitle in
@@ -163,9 +197,18 @@ reintroduce per-page variants.
   `mx-auto` when the section is centred), so their lines stay even. No `<br>`
   in a section title, and no orphan words: `h2` is `text-wrap: balance`,
   paragraphs and the other headings `text-wrap: pretty` (`styles/globals.css`).
-- **Accent phrase** in a heading: a `t.rich` `<span className="gradient-text">`,
-  `font-semibold` like its heading — the accent differs by colour, never by
-  weight.
+- **Accent phrase** in a heading: on a dark section, a `t.rich`
+  `<span className="gradient-text">`, `font-semibold` like its heading — the
+  accent differs by colour, never by weight. On a light section it has no
+  gradient (below). **No heading is italic**, accent or not, on any section
+  (the `/lp` landing pages are left as they are).
+- **Hover belongs to what you can click.** A card or container that is not a
+  link or button has no hover state — no shadow, border, background, glow or
+  tilt on hover. A card that is a link keeps its hover; a link inside a
+  static card animates on its own hover (`group/cta`), not the card's.
+  Every link card shows the same effect on keyboard focus: each `hover:`
+  has a `focus-visible:` twin and each `group-hover:` a `group-focus-visible:`
+  twin, with `group` on the focusable link itself, not a wrapper.
 - **Big metric numbers** use the `.stat-value` class. Its font-weight lives
   only in `styles/globals.css` — change it there, never per-file. The largest
   ones (the homepage ROI and problem cards, the customers hero, the solutions
@@ -197,10 +240,13 @@ reintroduce per-page variants.
   on the left, a `<HeroVideo>` on the right (webm + mp4 + poster in
   `public/videos/`).
 - **Navbar** is flat `#ffffff` on light sections and `#000000` on dark ones —
-  no translucent tints. Its **dropdown panels** are `#ffffff` on light sections
+  no translucent tints. The **mobile menu**, its focus rings and its CTA
+  follow the same rule: white with `#121212` text and a `#4B4DF7` ring over a
+  light section, black over a dark one. Its **dropdown panels** are `#ffffff` on light sections
   too, but `#1e1e1e` on dark — a dark-mode dropdown flush against the navbar's
   own `#000000` reads as invisible but for its border. The customer stories
-  filter dropdowns sit on page content, not the navbar, and use `#1A1A1A`.
+  filter dropdowns sit on page content, not the navbar; on the (now light)
+  Explore section they are white with a `#e5e7eb` edge, like the partners filter.
 - **Closing banners** share one card surface — `rounded-3xl border
   border-white/[0.06] bg-white/[0.02] backdrop-blur-sm` — and equal space
   above and below (`py-20 lg:py-24`). A plain one (heading, sentence, demo

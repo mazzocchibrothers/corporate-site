@@ -117,7 +117,7 @@ export default function CareersPage() {
                     className="font-semibold text-white/95 mb-6 text-[48px] md:text-[58px]"
                     style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
                   >{t.rich('heading', {
-                    span: (chunks) => <span className="italic font-semibold gradient-text-warm">{chunks}</span>,
+                    span: (chunks) => <span className="font-semibold gradient-text-warm">{chunks}</span>,
                   })}</h1>
                   <p className="type-body hero-subtitle text-white/55 mb-8">{t('body')}</p>
                 </HeroCopy>
@@ -193,9 +193,9 @@ export default function CareersPage() {
                 className="max-w-[880px] font-semibold text-[#121212] mb-6"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t.rich('heading2', {
-                span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
+                span: (chunks) => <span className="font-semibold">{chunks}</span>,
               })}</h2>
-              <p className="max-w-[880px] type-body text-[#7A7A7A] mb-8">{t('body2')}</p>
+              <p className="max-w-[880px] type-body text-[#707070] mb-8">{t('body2')}</p>
               <Button asChild variant="secondary" mode="light">
                 <a href="/about" onClick={(e) => { e.preventDefault(); router.push('/about'); window.scrollTo(0, 0); }}>
                   {t('cta3')}
@@ -222,7 +222,7 @@ export default function CareersPage() {
                 className="max-w-[880px] font-semibold text-white/95 mb-4"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t.rich('heading3', {
-                span: (chunks) => <span className="italic font-semibold gradient-text-warm">{chunks}</span>,
+                span: (chunks) => <span className="font-semibold gradient-text-warm">{chunks}</span>,
               })}</h2>
               <p className="max-w-[880px] type-body text-white/50">{t('body3')}</p>
             </Reveal>
@@ -274,7 +274,7 @@ export default function CareersPage() {
                 className="max-w-[880px] font-semibold text-[#121212] mb-2"
                 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t('heading4')}</h2>
-              <p className="max-w-[880px] type-body text-[#7A7A7A]">{t('body4')}</p>
+              <p className="max-w-[880px] type-body text-[#707070]">{t('body4')}</p>
             </Reveal>
 
             {/* Photo mosaic — large left + 2×2 right */}
@@ -352,9 +352,9 @@ export default function CareersPage() {
                         href={role.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6 rounded-2xl border border-white/[0.07] bg-white/[0.03] hover:border-white/[0.14] hover:bg-white/[0.05] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
+                        className="group flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6 rounded-2xl border border-white/[0.07] bg-white/[0.03] hover:border-white/[0.14] focus-visible:border-white/[0.14] hover:bg-white/[0.05] focus-visible:bg-white/[0.05] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
                       >
-                        <span className="type-body-bold text-white/85 group-hover:text-white/95 transition-colors duration-300">
+                        <span className="type-body-bold text-white/85 group-hover:text-white/95 group-focus-visible:text-white/95 transition-colors duration-300">
                           {role.title}
                         </span>
                         <div className="flex items-center justify-between w-full gap-4 md:w-auto md:justify-start shrink-0">
@@ -363,7 +363,7 @@ export default function CareersPage() {
                           </span>
                           <span className={buttonVariants({ variant: 'secondary', mode: 'dark' })}>
                             {t('cta4')}
-                            <ArrowRight aria-hidden className="group-hover:translate-x-1 transition-transform duration-300" />
+                            <ArrowRight aria-hidden className="group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-transform duration-300" />
                           </span>
                         </div>
                       </a>

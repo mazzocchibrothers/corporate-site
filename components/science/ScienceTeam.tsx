@@ -49,7 +49,7 @@ export default function ScienceTeam() {
       data-testid={`team-${m.name.split(' ')[0]?.toLowerCase()}`}
       className="group text-center"
     >
-      <div className="rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white overflow-hidden mb-2 md:mb-4 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500">
+      <div className="rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white overflow-hidden mb-2 md:mb-4 transition-all duration-500">
         <div className="w-full aspect-[3/4]">
           <img src={m.photo} alt={m.name} className="w-full h-full object-cover" />
         </div>
@@ -57,7 +57,7 @@ export default function ScienceTeam() {
       <h4 className="text-[13px] md:text-[15px] font-semibold text-[#1A1A2E] mb-0.5 md:mb-1 leading-tight">
         {m.name}
       </h4>
-      <p className="type-body-sm text-[#7A7A7A]">
+      <p className="type-body-sm text-[#707070]">
         {t(`team.members.${m.id}.role`)}
       </p>
     </Reveal>
@@ -70,7 +70,7 @@ export default function ScienceTeam() {
         {/* Section title */}
         <Reveal duration={0.7} className="mb-8 md:mb-12">
           <h2 className="max-w-[880px] text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('team.heading', {
-            span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h2>
         </Reveal>
 
@@ -92,7 +92,7 @@ export default function ScienceTeam() {
               <p className="type-body-bold text-[#4B4DF7]/70 mb-3 md:mb-6">
                 {t('team.lead.role')}
               </p>
-              <p className="type-body text-[#7A7A7A] max-w-2xl">
+              <p className="type-body text-[#707070] max-w-2xl">
                 {t('team.lead.bio')}
               </p>
               <a
@@ -119,7 +119,7 @@ export default function ScienceTeam() {
         >
           <span className="font-display text-[32px] font-semibold md:text-[48px] md:font-bold text-[#1A1A2E] leading-none tracking-[-0.03em] shrink-0">50+</span>
           <div className="w-px h-10 bg-[#1A1A2E]/[0.08] hidden sm:block shrink-0" />
-          <p className="type-body text-[#7A7A7A]">{t('team.body')}</p>
+          <p className="type-body text-[#707070]">{t('team.body')}</p>
         </Reveal>
       </div>
     </section>

@@ -61,8 +61,14 @@ const UPCOMING_EVENTS = [
   { id: 'hrTechEurope', url: 'https://www.hrtecheurope.com/' },
 ];
 
-function Badge({ children }: { children: React.ReactNode }) {
-  return (
+// `light`: the quote card sits on a white section and takes the tag pill; the
+// video cards keep the dark pill, which sits on a photo.
+function Badge({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
+  return light ? (
+    <div className="flex items-center rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-1.5">
+      <span className="type-caption text-[#4B4B4B]">{children}</span>
+    </div>
+  ) : (
     <div className="flex items-center rounded-full border border-white/15 bg-black/40 px-3 py-1.5 backdrop-blur-sm">
       <span className="type-caption text-white">{children}</span>
     </div>
@@ -73,20 +79,22 @@ function CardFooter({
   name,
   company,
   linkLabel,
+  light = false,
 }: {
   name?: string;
   company: string;
   linkLabel: string;
+  light?: boolean;
 }) {
   return (
     <div className="flex w-full flex-col gap-4">
       <div className="flex flex-col">
-        {name && <p className="type-body-sm text-white/80">{name}</p>}
-        <p className="font-display text-[24px] font-semibold leading-[1.25] tracking-[-0.48px] text-white/90">{company}</p>
+        {name && <p className={`type-body-sm ${light ? 'text-[#4B4B4B]' : 'text-white/80'}`}>{name}</p>}
+        <p className={`font-display text-[24px] font-semibold leading-[1.25] tracking-[-0.48px] ${light ? 'text-[#121212]' : 'text-white/90'}`}>{company}</p>
       </div>
       <div className="flex items-center gap-1.5">
-        <span className="type-body font-medium text-[#6b7dff]">{linkLabel}</span>
-        <ArrowUpRight className="h-4 w-4 text-[#6b7dff]" aria-hidden="true" />
+        <span className={`type-body font-medium ${light ? 'text-[#4B4DF7]' : 'text-[#6b7dff]'}`}>{linkLabel}</span>
+        <ArrowUpRight className={`h-4 w-4 ${light ? 'text-[#4B4DF7]' : 'text-[#6b7dff]'}`} aria-hidden="true" />
       </div>
     </div>
   );
@@ -111,20 +119,20 @@ function DayToDayCard({
     return (
       <a
         href={href(item.storyRoute, lang)}
-        className="group flex h-[420px] w-[300px] shrink-0 flex-col gap-6 rounded-2xl border border-white/[0.13] bg-white/[0.05] p-6 transition-colors duration-300 hover:border-white/20 md:h-[453px] md:w-[340px]"
+        className="group flex h-[420px] w-[300px] shrink-0 flex-col gap-6 rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-6 transition-shadow duration-300 hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] focus-visible:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] md:h-[453px] md:w-[340px]"
       >
         <div className="flex w-full items-start gap-2">
           {badges.map((badge) => (
-            <Badge key={badge}>{badge}</Badge>
+            <Badge key={badge} light>{badge}</Badge>
           ))}
         </div>
         <div className="flex w-full flex-1 flex-col gap-2">
           <img src="/logos/talent-pioneers-quote-icon.svg" alt="" loading="lazy" decoding="async" className="h-6 w-6" />
-          <p className="type-body font-medium italic text-white/85">
+          <p className="type-body font-medium italic text-[#121212]">
             &ldquo;{t(`dayToDay.items.${item.id}.quote`)}&rdquo;
           </p>
         </div>
-        <CardFooter name={name} company={company} linkLabel={t('dayToDay.readStory')} />
+        <CardFooter name={name} company={company} linkLabel={t('dayToDay.readStory')} light />
       </a>
     );
   }
@@ -140,7 +148,7 @@ function DayToDayCard({
         draggable={false}
         loading="lazy"
         decoding="async"
-        className="absolute inset-0 size-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+        className="absolute inset-0 size-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20" />
       <div className="absolute left-6 top-6 flex items-start gap-2">
@@ -149,7 +157,7 @@ function DayToDayCard({
         ))}
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="flex size-14 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div className="flex size-14 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110 group-focus-visible:scale-110">
           <Play className="h-5 w-5 pl-0.5 text-[#121212]" fill="currentColor" aria-hidden="true" />
         </div>
       </div>
@@ -209,7 +217,7 @@ export default async function TalentPioneersPage() {
                   href="#meet-the-pioneers"
                 >
                   <span>{t('hero.cta')}</span>
-                  <ArrowDown aria-hidden="true" className="transition-transform duration-500 group-hover:translate-y-0.5" />
+                  <ArrowDown aria-hidden="true" className="transition-transform duration-500 group-hover:translate-y-0.5 group-focus-visible:translate-y-0.5" />
                 </a>
               </Button>
             </Reveal>
@@ -259,15 +267,13 @@ export default async function TalentPioneersPage() {
         </section>
 
         {/* The day-to-day */}
-        <section id="meet-the-pioneers" className="min-h-screen flex flex-col justify-center px-5 md:px-8 lg:px-12 py-16 md:py-24">
+        <section id="meet-the-pioneers" className="section-light min-h-screen flex flex-col justify-center px-5 md:px-8 lg:px-12 py-16 md:py-24">
           <div className="max-w-[1400px] mx-auto w-full">
             <Reveal y={24} className="w-full">
-              <p className={`${EYEBROW} text-[#6b7dff]`}>{t('dayToDay.eyebrow')}</p>
-              <h2 className="max-w-[880px] pt-6 text-balance text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-white/95">
+              <p className={`${EYEBROW} text-[#4B4DF7]`}>{t('dayToDay.eyebrow')}</p>
+              <h2 className="max-w-[880px] pt-6 text-balance text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-[#121212]">
                 {t.rich('dayToDay.heading', {
-                  accent: (chunks) => (
-                    <span className="gradient-text">{chunks}</span>
-                  ),
+                  accent: (chunks) => <span>{chunks}</span>,
                 })}
               </h2>
             </Reveal>
@@ -284,7 +290,7 @@ export default async function TalentPioneersPage() {
               <p className={`${EYEBROW} text-[#4b4df7]`}>{t('chapters.eyebrow')}</p>
               <h2 className="max-w-[880px] pt-6 text-balance text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
                 <span className="text-[#121212]">{t('chapters.heading')}</span>{' '}
-                <span className="gradient-text">{t('chapters.headingAccent')}</span>
+                <span>{t('chapters.headingAccent')}</span>
               </h2>
               <p className="max-w-[880px] type-body-lg pt-5 font-medium text-[#121212]/80">{t('chapters.paragraph')}</p>
             </Reveal>
@@ -327,23 +333,23 @@ export default async function TalentPioneersPage() {
         </section>
 
         {/* On the biggest stages */}
-        <section className="px-5 md:px-8 lg:px-12 py-16 md:py-24">
+        <section className="section-light px-5 md:px-8 lg:px-12 py-16 md:py-24">
           <div className="max-w-[1400px] mx-auto w-full">
             <Reveal y={24} className="w-full">
-              <p className={`${EYEBROW} text-[#6B7DFF]`}>{t('stages.eyebrow')}</p>
+              <p className={`${EYEBROW} text-[#4B4DF7]`}>{t('stages.eyebrow')}</p>
               <h2 className="max-w-[880px] pt-6 text-balance text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
-                <span className="text-white/90">{t('stages.heading')}</span>{' '}
-                <span className="gradient-text">{t('stages.headingAccent')}</span>
+                <span className="text-[#121212]">{t('stages.heading')}</span>{' '}
+                <span className="text-[#121212]">{t('stages.headingAccent')}</span>
               </h2>
             </Reveal>
 
             <Reveal y={24} delay={0.1} className="pt-16">
-              <p className="type-eyebrow text-[#6B7DFF]">{t('stages.pastLabel')}</p>
+              <p className="type-eyebrow text-[#4B4DF7]">{t('stages.pastLabel')}</p>
               <div className="pt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {PAST_STAGES.map((stage) => (
                   <div
                     key={stage.id}
-                    className="relative flex aspect-[248/310] items-end overflow-hidden rounded-2xl border border-white/[0.08] p-5"
+                    className="relative flex aspect-[248/310] items-end overflow-hidden rounded-2xl border border-[#e5e7eb] p-5"
                   >
                     <img src={stage.bgImage} alt="" loading="lazy" decoding="async" className="absolute inset-0 size-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/50" />
@@ -354,24 +360,24 @@ export default async function TalentPioneersPage() {
             </Reveal>
 
             <Reveal y={24} delay={0.15} className="pt-16">
-              <p className="type-eyebrow text-[#6B7DFF]">{t('stages.upcomingLabel')}</p>
-              <div className="pt-4 border-t border-white/[0.07]">
+              <p className="type-eyebrow text-[#4B4DF7]">{t('stages.upcomingLabel')}</p>
+              <div className="pt-4 border-t border-[#e5e7eb]">
                 {UPCOMING_EVENTS.map((event) => (
                   <a
                     key={event.id}
                     href={event.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col gap-2 border-b border-white/[0.07] py-5 sm:flex-row sm:items-center sm:gap-8"
+                    className="group flex flex-col gap-2 border-b border-[#e5e7eb] py-5 sm:flex-row sm:items-center sm:gap-8"
                   >
-                    <span className="type-code w-32 shrink-0 text-white/45">
+                    <span className="type-code w-32 shrink-0 text-[#707070]">
                       {t(`stages.upcoming.${event.id}.date`)}
                     </span>
-                    <span className="type-body-bold flex-1 text-white/85">
+                    <span className="type-body-bold flex-1 text-[#121212]">
                       {t(`stages.upcoming.${event.id}.title`)}{' '}
-                      <span className="font-normal text-white/45">— {t(`stages.upcoming.${event.id}.location`)}</span>
+                      <span className="font-normal text-[#707070]">— {t(`stages.upcoming.${event.id}.location`)}</span>
                     </span>
-                    <span className="type-body-sm flex shrink-0 items-center gap-1.5 font-medium text-[#9b9dfb]">
+                    <span className="type-body-sm flex shrink-0 items-center gap-1.5 font-medium text-[#4B4DF7] group-hover:text-[#3133E7] group-focus-visible:text-[#3133E7]">
                       {t('stages.visitWebsite')}
                       <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
                     </span>

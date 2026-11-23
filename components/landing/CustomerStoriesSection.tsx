@@ -28,14 +28,14 @@ export default function CustomerStoriesSection() {
   const t = useTranslations('home');
   const router = useRouter();
   return (
-    <section id="customers" data-testid="customer-stories-section" className="relative py-16 md:py-20 lg:py-28">
+    <section id="customers" data-testid="customer-stories-section" className="section-light relative py-16 md:py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         {/* Header */}
         <Reveal duration={0.7} className="mb-8 md:mb-16">
-          <h2 className="max-w-[880px] text-[clamp(1.6rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-3 md:mb-4">{t.rich('customerStories.heading', {
-            span: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
+          <h2 className="max-w-[880px] text-[clamp(1.6rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-3 md:mb-4">{t.rich('customerStories.heading', {
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h2>
-          <p className="max-w-[880px] type-body-lg text-white/[0.65]">{t('customerStories.body')}</p>
+          <p className="max-w-[880px] type-body-lg text-[#4B4B4B]">{t('customerStories.body')}</p>
         </Reveal>
 
         {/* Story cards — horizontal scroll on mobile, 3-col grid on desktop */}
@@ -46,26 +46,26 @@ export default function CustomerStoriesSection() {
               delay={0.1 + i * 0.1}
               key={s.id}
               data-testid={`story-${s.id}`}
-              className="group rounded-2xl border border-white/[0.07] bg-white/[0.04] hover:bg-white/[0.06] hover:border-white/[0.14] backdrop-blur-sm p-5 md:p-10 transition-all duration-500 cursor-pointer flex flex-col justify-between gap-5 md:gap-8"
+              className="group rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] focus-visible:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-5 md:p-10 transition-all duration-500 cursor-pointer flex flex-col justify-between gap-5 md:gap-8"
               as={Link}
               href={href(s.route, lang)}
               prefetch={false}
             >
               {/* Company + industry */}
               <div>
-                <h3 className="text-[17px] md:text-[22px] font-semibold text-white/90 mb-4 md:mb-5">{t(`customerStories.stories.${s.id}.company`)}</h3>
-                <span className="type-caption inline-flex px-2.5 py-1 md:px-3 md:py-1.5 rounded-full font-semibold text-white/[0.65] border border-white/[0.1] bg-white/[0.03]">
+                <h3 className="text-[17px] md:text-[22px] font-semibold text-[#121212] mb-4 md:mb-5">{t(`customerStories.stories.${s.id}.company`)}</h3>
+                <span className="type-caption inline-flex px-2.5 py-1 md:px-3 md:py-1.5 rounded-full font-semibold text-[#4B4B4B] border border-[#e5e7eb] bg-[#f1f5f9]">
                   {t(`customerStories.stories.${s.id}.industry`)}
                 </span>
               </div>
 
               {/* Quote */}
-              <p className="type-blockquote text-white/[0.65] italic">"{t(`customerStories.stories.${s.id}.quote`)}"</p>
+              <p className="type-blockquote text-[#4B4B4B] italic">"{t(`customerStories.stories.${s.id}.quote`)}"</p>
 
               {/* Author */}
               <div>
-                <span className="type-body-bold text-white/60">{t(`customerStories.stories.${s.id}.author`)}</span>
-                <span className="type-body-sm text-white/35 ml-1.5 md:ml-2">{t(`customerStories.stories.${s.id}.role`)}</span>
+                <span className="type-body-bold text-[#121212]">{t(`customerStories.stories.${s.id}.author`)}</span>
+                <span className="type-body-sm text-[#707070] ml-1.5 md:ml-2">{t(`customerStories.stories.${s.id}.role`)}</span>
               </div>
             </Reveal>
           ))}
@@ -81,12 +81,12 @@ export default function CustomerStoriesSection() {
           <div className="flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6">
             <Button
               variant="primary"
-              mode="dark"
+              mode="light"
               onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
             >{t('customerStories.cta')}</Button>
             <Button
               variant="tertiary"
-              mode="dark"
+              mode="light"
               onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
             >{t('customerStories.cta2')}</Button>
           </div>
@@ -97,12 +97,12 @@ export default function CustomerStoriesSection() {
           y={20}
           duration={0.6}
           delay={0.7}
-          className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 md:p-8 lg:p-10"
+          className="rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-5 md:p-8 lg:p-10"
         >
-          <h3 className="text-[18px] md:text-[20px] font-semibold text-white/90 mb-3 md:mb-4">{t.rich('customerStories.heading2', {
-            span: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
+          <h3 className="text-[18px] md:text-[20px] font-semibold text-[#121212] mb-3 md:mb-4">{t.rich('customerStories.heading2', {
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h3>
-          <p className="type-body text-white/[0.65] mb-4 md:mb-6 max-w-3xl">{t('customerStories.body2')}</p>
+          <p className="type-body text-[#4B4B4B] mb-4 md:mb-6 max-w-3xl">{t('customerStories.body2')}</p>
           <div className="flex flex-wrap gap-2 md:gap-3">
             {/* Standards names. They are the same in every language, and wrapping
                 them in t() only made them look translated. SOC 2 is not held
@@ -111,11 +111,11 @@ export default function CustomerStoriesSection() {
               <span
                 key={b}
                 className={`type-caption inline-flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold border ${
-                  pending ? 'text-white/45 border-dashed border-white/[0.15]' : 'text-white/[0.65] border-white/[0.1] bg-white/[0.03]'
+                  pending ? 'text-[#707070] border-dashed border-[#121212]/25' : 'text-[#4B4B4B] border-[#e5e7eb] bg-[#f1f5f9]'
                 }`}
               >
                 {b}
-                {pending && <span className="font-normal text-white/45">· {t('customerStories.inProgress')}</span>}
+                {pending && <span className="font-normal text-[#707070]">· {t('customerStories.inProgress')}</span>}
               </span>
             ))}
           </div>

@@ -74,13 +74,13 @@ export function PlatformCards({ link, surface = true }: { link: 'section' | 'pag
             key={p}
             href={target(p)}
             onClick={onClick(p)}
-            className="group flex flex-col items-center gap-[26px] rounded-2xl border border-[#e5e7eb] bg-white px-5 pt-6 pb-[22px] md:px-8 md:pt-8 md:pb-[30px] [transition-timing-function:cubic-bezier(0.23,1,0.32,1)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(20,20,60,0.10),0_2px_6px_rgba(20,20,60,0.03)]"
+            className="group flex flex-col items-center gap-[26px] rounded-2xl border border-[#e5e7eb] bg-white px-5 pt-6 pb-[22px] md:px-8 md:pt-8 md:pb-[30px] [transition-timing-function:cubic-bezier(0.23,1,0.32,1)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(20,20,60,0.10),0_2px_6px_rgba(20,20,60,0.03)] focus-visible:shadow-[0_12px_32px_-12px_rgba(20,20,60,0.10),0_2px_6px_rgba(20,20,60,0.03)]"
           >
             <ProductLogo product={p} />
             <p className="type-body text-[#4B4B4B] text-balance">{t(`platform.cards.${p}`)}</p>
-            <span className="type-button mt-auto flex items-center gap-2 font-medium text-[#4B4DF7] group-hover:text-[#3133E7] transition-colors">
+            <span className="type-button mt-auto flex items-center gap-2 font-medium text-[#4B4DF7] group-hover:text-[#3133E7] group-focus-visible:text-[#3133E7] transition-colors">
               {t('platform.explore')}
-              <ArrowDown className="w-3.5 h-3.5 transition-transform group-hover:translate-y-0.5" strokeWidth={1.8} aria-hidden="true" />
+              <ArrowDown className="w-3.5 h-3.5 transition-transform group-hover:translate-y-0.5 group-focus-visible:translate-y-0.5" strokeWidth={1.8} aria-hidden="true" />
             </span>
           </a>
         ))}

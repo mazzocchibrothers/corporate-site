@@ -29,7 +29,7 @@ export default function PRProblem() {
       <div className="relative max-w-[1400px] mx-auto px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-16">
           <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212]">{t.rich('prProblem.heading', {
-            span: (chunks) => <span className="font-semibold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h2>
         </Reveal>
 
@@ -44,7 +44,7 @@ export default function PRProblem() {
             >
               <IconTile icon={p.icon} mode="light" className="mb-6 md:mb-8" />
               <h3 className="text-[15px] md:text-[15px] lg:text-[18px] font-semibold text-[#121212] leading-snug mb-2 md:mb-3 lg:mb-4">{t(`prProblem.pains.${p.id}.title`)}</h3>
-              <p className="type-body text-[#7A7A7A]">{t(`prProblem.pains.${p.id}.desc`)}</p>
+              <p className="type-body text-[#707070]">{t(`prProblem.pains.${p.id}.desc`)}</p>
             </Reveal>
           ))}
         </div>

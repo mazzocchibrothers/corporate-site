@@ -12,7 +12,7 @@ export default function LDHero() {
   const lang = useLocale();
   const t = useTranslations('solutions.learning-development');
   return (
-    <section id="ld-hero" data-testid="ld-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px]">
+    <section id="ld-hero" data-testid="ld-hero" className="section-light relative min-h-screen flex flex-col justify-center pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
         <HeroCopy>
           <Reveal
@@ -20,10 +20,10 @@ export default function LDHero() {
             y={40}
             duration={0.8}
             delay={0.3}
-            className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-10 max-w-5xl"
+            className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-[#121212] mb-10 max-w-5xl"
             style={{ lineHeight: 1.1 }}
           >{t.rich('ldHero.heading', {
-            span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</Reveal>
           <Reveal
             y={20}
@@ -31,8 +31,8 @@ export default function LDHero() {
             delay={0.5}
             className="flex flex-col items-start gap-6 md:gap-8"
           >
-            <p className="type-body-lg hero-subtitle text-white/[0.65]">{t('ldHero.body')}</p>
-            <Button asChild variant="primary" mode="dark" className="shrink-0">
+            <p className="type-body-lg hero-subtitle text-[#4B4B4B]">{t('ldHero.body')}</p>
+            <Button asChild variant="primary" mode="light" className="shrink-0">
               <a href={href('book-meeting', lang)} data-testid="ld-hero-cta">
                 <span>{t('ldHero.cta')}</span>
                 <ArrowRight aria-hidden="true" />

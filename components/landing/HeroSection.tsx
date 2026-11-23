@@ -3,7 +3,7 @@
 import React from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button, SECONDARY_ON_LIGHT } from '@/components/ui/button';
 import LiteYouTubeEmbed from '@/components/landing/LiteYouTubeEmbed';
 import { href } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
@@ -39,7 +39,7 @@ export default function HeroSection() {
     <section
       id="hero"
       data-testid="hero-section"
-      className="relative overflow-hidden flex flex-col justify-between pt-[80px]"
+      className="section-light relative overflow-hidden flex flex-col justify-between pt-[80px]"
       style={{ width: '100%', minHeight: '100vh' }}
     >
       {/* Hero content. layered above */}
@@ -60,49 +60,50 @@ export default function HeroSection() {
 
               <HeroCopy>
                 <h1
-                  className="hero-fade-up relative text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white"
-                  style={{ lineHeight: 1.1, textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
+                  className="hero-fade-up relative text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-[#121212]"
+                  style={{ lineHeight: 1.1 }}
                 >
-                  {/* Two gradient tags, not one: the English headline sets its
+                  {/* Two accent tags, not one: the English headline sets its
                       span to md:whitespace-nowrap and the Italian one does not,
-                      and a single handler quietly gave the class to both. */}
+                      and a single handler quietly gave the class to both. On the
+                      light hero the accent has no gradient and no italic: the
+                      phrase is #121212 like the rest. */}
                   {t.rich('hero.heading', {
                     l: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
                     g: (chunks) => (
-                      <span className="italic font-semibold gradient-text md:whitespace-nowrap">{chunks}</span>
+                      <span className="font-semibold md:whitespace-nowrap">{chunks}</span>
                     ),
-                    gw: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
-                    // The Italian "Il" sits inside the gradient span (an inline-block, so an
-                    // article left outside it drops onto a line of its own) and is painted
-                    // white; `m` keeps "Il Sistema Operativo" on one line on desktop.
-                    w: (chunks) => <span className="[-webkit-text-fill-color:#ffffff]">{chunks}</span>,
+                    gw: (chunks) => <span className="font-semibold">{chunks}</span>,
+                    // The Italian "Il" sits inside the accent span; it used to be painted
+                    // white out of the gradient and now simply matches the heading.
+                    // `m` keeps "Il Sistema Operativo" on one line on desktop.
+                    w: (chunks) => <span className="[-webkit-text-fill-color:#121212]">{chunks}</span>,
                     m: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
                     br: () => <br />,
                   })}
                 </h1>
                 <p
-                  className="type-body hero-subtitle hero-fade-up hero-delay-1 relative text-white/75 mt-6 md:mt-8"
-                  style={{ textShadow: '0 1px 8px rgba(0,0,0,0.2)' }}
+                  className="type-body hero-subtitle hero-fade-up hero-delay-1 relative text-[#4B4B4B] mt-6 md:mt-8"
                 >
                   {t('hero.body')}
                 </p>
               </HeroCopy>
 
               <div className="hero-fade-up hero-delay-1 relative flex flex-wrap items-center gap-4 mt-8 md:mt-10">
-                <Button asChild variant="primary" mode="dark">
+                <Button asChild variant="primary" mode="light">
                   <a href={href('book-meeting', lang)} data-testid="hero-book-demo">
                     {t('hero.cta2')}
                     <ArrowRight aria-hidden="true" />
                   </a>
                 </Button>
-                <Button asChild variant="secondary" mode="dark">
+                <Button asChild variant="secondary" mode="light" className={SECONDARY_ON_LIGHT}>
                   <a href={href('science', lang)} data-testid="hero-our-science">{t('hero.cta')}</a>
                 </Button>
               </div>
 
               {/* A text link, not a third button: the lightweight secondary action. */}
               <div className="hero-fade-up hero-delay-1 relative mt-8">
-                <Button asChild variant="tertiary" mode="dark">
+                <Button asChild variant="tertiary" mode="light">
                   <a href={href('roi-calculator', lang)} data-testid="hero-roi-calculator">
                     {t('hero.roiLink')}
                     <ArrowRight aria-hidden="true" />
@@ -114,8 +115,8 @@ export default function HeroSection() {
             {/* RIGHT. Product video — slightly larger */}
             <div className="hero-video-in hero-delay-2 lg:col-span-6 lg:-mr-8">
               <div
-                className="relative rounded-2xl overflow-hidden border border-white/10 aspect-video bg-[#0d0d1f]"
-                style={{ boxShadow: '0 20px 60px -15px rgba(75, 77, 247, 0.45), 0 0 0 1px rgba(255,255,255,0.05)' }}
+                className="relative rounded-2xl overflow-hidden border border-[#e5e7eb] aspect-video bg-[#0d0d1f]"
+                style={{ boxShadow: '0 24px 48px -24px rgba(18,18,18,0.18)' }}
               >
                 <LiteYouTubeEmbed
                   videoId="g2Ju7COKZrM"
@@ -136,22 +137,20 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Trust bar. infinite marquee with glassmorphic blur */}
+      {/* Trust bar. infinite marquee; logos drawn black at reduced opacity */}
       <div className="hero-fade-in hero-delay-3 relative z-10 overflow-hidden">
         <div
           className="flex items-center h-[60px] md:h-[80px]"
           style={{
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)',
-            backgroundColor: 'rgba(0, 0, 0, 0.35)',
-            borderTop: '1px solid rgba(255,255,255,0.08)',
-            borderBottom: '1px solid rgba(255,255,255,0.04)',
+            backgroundColor: '#ffffff',
+            borderTop: '1px solid #e5e7eb',
+            borderBottom: '1px solid #e5e7eb',
           }}
         >
           {/* Fixed label. hidden on mobile, visible from md up */}
           <div className="hidden md:flex shrink-0 pl-8 lg:pl-12 pr-12 z-10 relative items-center h-full">
             <span
-              className="type-body inline-flex items-center px-6 py-2.5 text-white/70 whitespace-nowrap"
+              className="type-body inline-flex items-center px-6 py-2.5 text-[#4B4B4B] whitespace-nowrap"
             >{t('hero.text')}</span>
           </div>
 
@@ -178,7 +177,7 @@ export default function HeroSection() {
                       width={logo.width}
                       height={logo.height ?? 24}
                       className={`${logo.className ?? 'h-6'} w-auto object-contain`}
-                      style={{ filter: 'brightness(0) invert(1)' }}
+                      style={{ filter: 'brightness(0)' }}
                     />
                   </div>
                 ))}
@@ -193,7 +192,7 @@ export default function HeroSection() {
                       width={logo.width}
                       height={logo.height ?? 24}
                       className={`${logo.className ?? 'h-6'} w-auto object-contain`}
-                      style={{ filter: 'brightness(0) invert(1)' }}
+                      style={{ filter: 'brightness(0)' }}
                     />
                   </div>
                 ))}

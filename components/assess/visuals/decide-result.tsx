@@ -26,7 +26,7 @@ export function DecideResult() {
             </div>
             <div className="mt-2.5 flex items-center justify-between gap-2 type-caption">
               <span className="text-[#121212]">{t('skill')}</span>
-              <span className="text-[#7A7A7A]">
+              <span className="text-[#707070]">
                 {t('needed')} <span className="text-[#121212]">{DECISION.needed}</span>
               </span>
             </div>

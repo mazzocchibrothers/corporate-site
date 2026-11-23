@@ -96,7 +96,7 @@ function ColumnCard({ data, delay, t }) {
   const Icon = data.icon;
   return (
     <motion.div
-      className="rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-4 md:p-8 hover:border-[#4B4DF7]/[0.15] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500"
+      className="rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-4 md:p-8 transition-all duration-500"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
@@ -117,7 +117,7 @@ function ColumnCard({ data, delay, t }) {
                 <div>
                   <span className="type-body-sm text-[#1A1A2E]/80 font-medium">{t(`${data.keyPath}.items.${item.id}.text`)}</span>
                   {item.detail && (
-                    <span className="type-body-sm text-[#7A7A7A] ml-1.5">({t(`${data.keyPath}.items.${item.id}.detail`)})</span>
+                    <span className="type-body-sm text-[#707070] ml-1.5">({t(`${data.keyPath}.items.${item.id}.detail`)})</span>
                   )}
                 </div>
               </div>
@@ -158,7 +158,7 @@ export default function TAFunnel() {
         {/* Title */}
         <Reveal duration={0.7} className="mb-8 md:mb-14">
           <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E]">{t.rich('taFunnel.heading', {
-            span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h2>
         </Reveal>
 
@@ -176,14 +176,14 @@ export default function TAFunnel() {
               data-testid={`funnel-${s.id}`}
               className={`md:flex-1 relative rounded-xl px-3 py-3 md:px-6 md:py-5 text-left transition-all duration-500 border ${
                 i === active
-                  ? 'bg-[#1A1A2E] border-[#1A1A2E]'
+                  ? 'bg-[#E7E7E8] border-[#E7E7E8]'
                   : 'bg-white border-[#1A1A2E]/[0.06] hover:bg-[#1A1A2E]/[0.04] hover:border-[#1A1A2E]/[0.12]'
               }`}
             >
-              <span className={`type-eyebrow block mb-0.5 md:mb-1 ${i === active ? 'text-[#6B7DFF]' : 'text-[#1A1A2E]/25'}`}>
+              <span className={`type-eyebrow block mb-0.5 md:mb-1 ${i === active ? 'text-[#4B4DF7]' : 'text-[#707070]'}`}>
                 {t('taFunnel.cta')} {s.number}
               </span>
-              <span className={`font-display text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-white' : 'text-[#7A7A7A]'}`}>
+              <span className={`font-display text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-[#121212]' : 'text-[#707070]'}`}>
                 {t(`taFunnel.stages.${s.id}.label`)}
               </span>
               {i === active && (
@@ -192,7 +192,7 @@ export default function TAFunnel() {
                   duration={0.3}
                   className="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full"
                 >
-                  <ArrowDown className="h-4 w-4 text-[#9B9DFB]/50 mt-2" />
+                  <ArrowDown className="h-4 w-4 text-[#4B4DF7]/50 mt-2" />
                 </Reveal>
               )}
             </button>

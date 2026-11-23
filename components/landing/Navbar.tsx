@@ -193,6 +193,9 @@ export default function Navbar() {
   const textColor = isLight ? '#121212' : '#ffffff';
   const textMuted = isLight ? 'rgba(26,26,46,0.7)' : 'rgba(255,255,255,0.7)';
   const navCtaMode = isLight ? 'light' : 'dark';
+  // A white ring vanishes on the white bar and the white mobile menu, so on a
+  // light surface the ring is brand blue (5.7:1 on white).
+  const ring = isLight ? 'focus-visible:ring-[#4B4DF7]' : 'focus-visible:ring-white/50';
 
   const trackBookDemo = () => { (window.dataLayer ??= []).push(navbarBookDemoClickEvent(lang, pathname)); };
 
@@ -230,7 +233,7 @@ export default function Navbar() {
         style={{
           transition: 'background-color 0.3s ease',
           backgroundColor: mobileOpen
-            ? '#000000'
+            ? (isLight ? '#ffffff' : '#000000')
             : isLight
               ? '#ffffff'
               : menuActive || scrolled
@@ -242,7 +245,7 @@ export default function Navbar() {
         }}
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between h-[80px] relative">
-          <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }} className="flex items-center gap-2.5 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded" data-testid="nav-logo">
+          <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }} className={`flex items-center gap-2.5 shrink-0 focus-visible:outline-none focus-visible:ring-2 ${ring} rounded`} data-testid="nav-logo">
             <img
               src={isLight ? '/logos/Skillvue_logo-on_light.svg' : '/logos/Skillvue_logo-on_dark.svg'}
               alt="Skillvue"
@@ -268,7 +271,7 @@ export default function Navbar() {
                     data-testid={`nav-link-${link.id}`}
                     aria-expanded={openMenu === link.id}
                     aria-controls={`desktop-menu-${link.id}`}
-                    className="type-body flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                    className={`type-body flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 ${ring} rounded`}
                     style={{ color: openMenu === link.id ? textColor : textMuted }}
                     onFocus={(event) => {
                       desktopTriggerRef.current = event.currentTarget;
@@ -293,7 +296,7 @@ export default function Navbar() {
                   <a
                     href={href(link.route!, lang)}
                     data-testid={`nav-link-${link.id}`}
-                    className="type-body flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                    className={`type-body flex items-center gap-1.5 py-2 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 ${ring} rounded`}
                     style={{ color: textMuted }}
                     onClick={(event) => {
                       event.preventDefault();
@@ -346,7 +349,7 @@ export default function Navbar() {
                         // muted gray, hover/active both resolve to the same
                         // flat on/off color instead of blending with the panel.
                         const solidColor = isLight ? 'text-[#121212]' : 'text-white';
-                        const mutedColor = isLight ? 'text-[#7a7a7a]' : 'text-[#888888]';
+                        const mutedColor = isLight ? 'text-[#707070]' : 'text-[#888888]';
                         const hoverColor = isLight ? 'group-hover:text-[#121212]' : 'group-hover:text-white';
                         const itemColorClass = isActive ? solidColor : `${mutedColor} ${hoverColor}`;
                         return (
@@ -417,7 +420,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden flex items-center justify-center w-10 h-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-lg"
+            className={`lg:hidden flex items-center justify-center w-10 h-10 focus-visible:outline-none focus-visible:ring-2 ${ring} rounded-lg`}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
@@ -425,7 +428,7 @@ export default function Navbar() {
             data-testid="mobile-menu-toggle"
           >
             {mobileOpen ? (
-              <X className="h-6 w-6 text-white" />
+              <X className="h-6 w-6" style={{ color: textColor }} />
             ) : (
               <Menu className="h-6 w-6" style={{ color: isLight ? '#121212' : '#ffffff' }} />
             )}
@@ -446,7 +449,9 @@ export default function Navbar() {
           style={{
             top: '80px',
             height: 'calc(100vh - 80px)',
-            backgroundColor: '#000000',
+            // The menu takes the surface the bar sits on: white over a light
+            // section, black over a dark one (a photo hero, the closing band).
+            backgroundColor: isLight ? '#ffffff' : '#000000',
             zIndex: 9999,
           }}
         >
@@ -456,7 +461,7 @@ export default function Navbar() {
                 <div key={link.id}>
                   <button
                     type="button"
-                    className="w-full flex items-center justify-between py-4 border-b border-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                    className={`w-full flex items-center justify-between py-4 border-b ${isLight ? 'border-[#e5e7eb]' : 'border-white/[0.06]'} focus-visible:outline-none focus-visible:ring-2 ${ring} rounded`}
                     aria-expanded={link.items ? mobileExpanded === link.id : undefined}
                     aria-controls={mobileExpanded === link.id ? `mobile-menu-${link.id}` : undefined}
                     onClick={() => {
@@ -467,10 +472,10 @@ export default function Navbar() {
                       }
                     }}
                   >
-                    <span className="type-body-lg font-medium text-white">{t(`nav.${link.id}`)}</span>
+                    <span className={`type-body-lg font-medium ${isLight ? 'text-[#121212]' : 'text-white'}`}>{t(`nav.${link.id}`)}</span>
                     {link.items && (
                       <ChevronDown
-                        className="h-4 w-4 text-white/40"
+                        className={`h-4 w-4 ${isLight ? 'text-[#121212]/40' : 'text-white/40'}`}
                         style={{
                           transform: mobileExpanded === link.id ? 'rotate(180deg)' : 'rotate(0deg)',
                           transition: 'transform 0.3s ease',
@@ -485,7 +490,7 @@ export default function Navbar() {
                       {link.items.map((id) => (
                         <button
                           key={id}
-                          className="type-body w-full text-left py-3 text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
+                          className={`type-body w-full text-left py-3 ${isLight ? 'text-[#4B4B4B] hover:text-[#121212]' : 'text-white/60 hover:text-white'} transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 ${ring} rounded`}
                           onClick={() => navigateTo(href(id, lang))}
                         >
                           {t(`nav.links.${labelKey(id)}`)}
@@ -500,13 +505,13 @@ export default function Navbar() {
             {/* Mobile CTA */}
             <div className="mt-auto pt-8 pb-4 flex flex-col gap-4">
               {/* Language toggle */}
-              <div className="flex items-center rounded-full p-[3px] border border-white/[0.08] bg-white/[0.04] self-start">
+              <div className={`flex items-center rounded-full p-[3px] border self-start ${isLight ? 'border-black/[0.08] bg-black/[0.03]' : 'border-white/[0.08] bg-white/[0.04]'}`}>
                 {(['en', 'it'] as const).map((l) => (
                   <button
                     key={l}
                     onClick={() => switchLang(l)}
                     className="type-body-sm rounded-full px-5 py-1.5 font-medium transition-all duration-200"
-                    style={{ color: lang === l ? '#ffffff' : 'rgba(255,255,255,0.6)', background: lang === l ? 'rgba(255,255,255,0.15)' : 'transparent' }}
+                    style={{ color: lang === l ? textColor : (isLight ? '#4B4B4B' : 'rgba(255,255,255,0.6)'), background: lang === l ? (isLight ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.15)') : 'transparent' }}
                   >
                     {l.toUpperCase()}
                   </button>
@@ -515,7 +520,7 @@ export default function Navbar() {
 
               <Button
                 variant="primary"
-                mode="dark"
+                mode={navCtaMode}
                 onClick={() => { trackBookDemo(); navigateTo(href('book-meeting', lang)); }}
                 className="w-full"
               >

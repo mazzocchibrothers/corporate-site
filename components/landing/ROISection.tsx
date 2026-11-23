@@ -28,7 +28,7 @@ export default function ROISection() {
               span: (chunks) => (
                 // Deliberately stacked: the return line sits under the cost line.
                 <span className="block">
-                  <span className="font-semibold gradient-text-warm-on-light">{chunks}</span>
+                  <span className="font-semibold">{chunks}</span>
                 </span>
               ),
             })}
@@ -49,7 +49,7 @@ export default function ROISection() {
               >
                 {stat.value}
               </span>
-              <p className="type-body-lg text-[#7A7A7A]">
+              <p className="type-body-lg text-[#707070]">
                 <span className="font-semibold text-[#1A1A2E]/80">{t(`roi.stats.${stat.id}.label`)}</span>{' '}
                 {t(`roi.stats.${stat.id}.sublabel`)}
               </p>
@@ -81,7 +81,7 @@ export default function ROISection() {
           </Reveal>
         </div>
 
-        <p className="type-body-sm text-[#7A7A7A] mt-4 md:mt-5">{t('roi.note')}</p>
+        <p className="type-body-sm text-[#707070] mt-4 md:mt-5">{t('roi.note')}</p>
       </div>
     </section>
   );

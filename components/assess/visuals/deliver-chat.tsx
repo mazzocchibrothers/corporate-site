@@ -46,7 +46,7 @@ export function DeliverChat() {
                 <span className="h-9 w-9 shrink-0 rounded-full bg-[#ebebeb]" />
                 <span className="min-w-0">
                   <span className="block type-body-sm font-medium text-[#121212]">{t('title')}</span>
-                  <span className="block truncate type-caption text-[#7A7A7A]">{t('subtitle', { channel: t(`channels.${channel}.name`) })}</span>
+                  <span className="block truncate type-caption text-[#707070]">{t('subtitle', { channel: t(`channels.${channel}.name`) })}</span>
                 </span>
               </div>
 
@@ -56,7 +56,7 @@ export function DeliverChat() {
                   <Voice bars={WAVE_SHORT} duration={t('d1')} />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <span className="type-caption text-[#7A7A7A]">{t('note1')}</span>
+                  <span className="type-caption text-[#707070]">{t('note1')}</span>
                   <p className={BUBBLE}>{t('q2')}</p>
                 </div>
                 <div className="flex justify-end">

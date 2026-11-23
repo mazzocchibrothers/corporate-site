@@ -17,7 +17,7 @@ export default function SolutionFinalCTA({ headline, accentWord }) {
         <Reveal duration={0.7} className="rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 text-center">
           <h2 className="max-w-[880px] mx-auto text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90 mb-6">
             {headline}{' '}
-            <span className="italic font-semibold gradient-text">{accentWord}</span>
+            <span className="font-semibold gradient-text">{accentWord}</span>
           </h2>
           <Button asChild variant="primary" mode="dark">
             <a href={href('book-meeting', lang)}>

@@ -239,7 +239,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <Reveal y={20} duration={0.6} className="mb-14 grid lg:grid-cols-2 gap-6 lg:gap-16 items-start">
               <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] tracking-[-0.02em]">
-                {t.rich('detail.insideHeading', { span: (chunks) => <span className="gradient-text-on-light">{chunks}</span> })}
+                {t.rich('detail.insideHeading', { span: (chunks) => <span>{chunks}</span> })}
               </h2>
               <p className="max-w-[880px] type-body text-[#121212]/[0.45] lg:pt-3">{t(`items.${slug}.fullDesc`)}</p>
             </Reveal>
@@ -251,10 +251,10 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                     y={20}
                     delay={i * 0.08}
                     key={ch.num}
-                    className="group rounded-2xl border border-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/[0.15] bg-white p-8 transition-all duration-500"
+                    className="group rounded-2xl border border-[#4B4DF7]/[0.06] bg-white p-8 transition-all duration-500"
                   >
                     <div className="flex items-center gap-4 mb-5">
-                      <div className="w-11 h-11 rounded-xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.1] flex items-center justify-center group-hover:bg-[#4B4DF7]/[0.12] transition-all duration-500">
+                      <div className="w-11 h-11 rounded-xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.1] flex items-center justify-center transition-all duration-500">
                         <Icon className="h-5 w-5 text-[#4B4DF7]/60" />
                       </div>
                       <span className="type-caption font-bold text-[#4B4DF7]/40">{ch.num}</span>
@@ -300,7 +300,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                       y={15}
                       delay={i * 0.1}
                       key={rw.slug}
-                      className="group flex gap-6 items-center p-5 rounded-2xl border border-white/[0.05] hover:border-white/[0.12] hover:bg-white/[0.03] transition-all duration-500 cursor-pointer"
+                      className="group flex gap-6 items-center p-5 rounded-2xl border border-white/[0.05] hover:border-white/[0.12] focus-visible:border-white/[0.12] hover:bg-white/[0.03] focus-visible:bg-white/[0.03] transition-all duration-500 cursor-pointer"
                       as={Link}
                       href={localizePath(`/resources/insights/${rw.slug}`, lang)}
                       prefetch={false}
@@ -312,10 +312,10 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                         </div>
                       )}
                       <div className="flex-1">
-                        <h3 className="text-[16px] font-semibold text-white/80 group-hover:text-white transition-colors duration-300 mb-1">{t(`items.${rw.slug}.title`)}</h3>
+                        <h3 className="text-[16px] font-semibold text-white/80 group-hover:text-white group-focus-visible:text-white transition-colors duration-300 mb-1">{t(`items.${rw.slug}.title`)}</h3>
                         <p className="type-body-sm text-white/35 line-clamp-1">{t(`items.${rw.slug}.shortDesc`)}</p>
                       </div>
-                      <ArrowRight className="h-4 w-4 text-white/15 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300 shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-white/15 group-hover:text-[#4B4DF7] group-focus-visible:text-[#4B4DF7] group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-all duration-300 shrink-0" />
                     </Reveal>
                   );
                 })}
