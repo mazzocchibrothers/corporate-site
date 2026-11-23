@@ -22,6 +22,7 @@ export default function ScienceCTA() {
       body={t('cta.body')}
       cta={t('cta.cta')}
       href={href('book-meeting', lang)}
+      ctaTestId="science-cta-demo"
     />
   );
 }

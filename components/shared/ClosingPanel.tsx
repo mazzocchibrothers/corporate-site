@@ -15,7 +15,8 @@ export const CLOSING_PANEL_GRADIENT = 'linear-gradient(100deg, #fdf3ec 0%, #f7f7
  * `action` replaces the default button (Assess passes its tracked
  * BookDemoButton); otherwise `href` and `cta` make the house primary button.
  * `rule` draws a #e5e7eb top line, for a closing that follows another white
- * section. `body` is optional only because the solutions and customer-story
+ * section. `ctaTestId` keeps the button's data-testid each page had before it
+ * moved onto this component. `body` is optional only because the solutions and customer-story
  * closings have no sentence of their own.
  */
 export function ClosingPanel({
@@ -27,6 +28,7 @@ export function ClosingPanel({
   rule = false,
   id,
   testId,
+  ctaTestId,
 }: {
   heading: ReactNode;
   body?: ReactNode;
@@ -36,6 +38,7 @@ export function ClosingPanel({
   rule?: boolean;
   id?: string;
   testId?: string;
+  ctaTestId?: string;
 }) {
   return (
     <section
@@ -53,7 +56,7 @@ export function ClosingPanel({
           {body && <p className="max-w-[720px] type-body-lg text-[#4B4B4B]">{body}</p>}
           {action ?? (
             <Button asChild variant="primary" mode="light">
-              <a href={href}>
+              <a href={href} data-testid={ctaTestId}>
                 {cta}
                 <ArrowRight aria-hidden="true" />
               </a>

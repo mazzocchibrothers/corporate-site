@@ -53,6 +53,7 @@ export default function ClosingBanner({ heading, body, cta, tone = 'dark', rule 
         body={body}
         cta={cta}
         href={href('book-meeting', lang)}
+        ctaTestId="cta-book-demo"
         rule={rule}
       />
     );
