@@ -26,7 +26,7 @@ export default function ProjectResourcingPage() {
         <PRConsulting />
         <div className="fade-into-dark" />
         <SolutionCrossLinks currentId="solutions/project-resourcing" />
-        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} />
+        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} tone="light" rule />
       <Footer />
       </main>
     </>

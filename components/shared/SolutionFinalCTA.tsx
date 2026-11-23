@@ -6,10 +6,33 @@ import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
-export default function SolutionFinalCTA({ headline, accentWord }) {
+// `tone="light"` (interim standard, pending the redesign) renders the shared
+// light closing, <ClosingPanel> — the Assess closing, with no gradient on the
+// accent word; `rule` draws its top line after another white section. This
+// closing has no sentence of its own, so the panel holds the heading and the
+// button only. `tone="dark"`, the default, is the original band below, kept
+// unchanged for /lp/europ-assistance.
+export default function SolutionFinalCTA({ headline, accentWord, tone = 'dark', rule = false }: {
+  headline: string;
+  accentWord: string;
+  tone?: 'dark' | 'light';
+  rule?: boolean;
+}) {
   const lang = useLocale();
   const t = useTranslations('shared');
+
+  if (tone === 'light') {
+    return (
+      <ClosingPanel
+        heading={<>{headline}{' '}<span className="font-semibold">{accentWord}</span></>}
+        cta={t('solutionFinalCTA.cta')}
+        href={href('book-meeting', lang)}
+        rule={rule}
+      />
+    );
+  }
 
   return (
     <section className="relative py-20 lg:py-24">

@@ -26,7 +26,7 @@ export default function InternalMobilityPage() {
         <IMHowSolves />
         <div className="fade-into-dark" />
         <SolutionCrossLinks currentId="solutions/internal-mobility" />
-        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} />
+        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} tone="light" rule />
       <Footer />
       </main>
     </>

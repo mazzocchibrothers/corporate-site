@@ -28,7 +28,7 @@ export default function TalentAcquisitionPage() {
         <TAImpact />
         <div className="fade-into-dark" />
         <SolutionCrossLinks currentId="solutions/talent-acquisition" />
-        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} />
+        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} tone="light" rule />
       <Footer />
       </main>
     </>

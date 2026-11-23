@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 import { partners } from '@/data/partners';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 // Derived from the data, so a category with no partner in it yet cannot be
 // selected and render an empty grid. 'all' is filtered out in case a future
@@ -196,33 +197,13 @@ export default function PartnersPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="bg-black py-20 lg:py-28">
-          <div className={container}>
-            <Reveal
-              duration={0.7}
-              className="rounded-[24px] border border-white/[0.1] px-6 py-16 md:px-20 md:py-20 flex flex-col items-center text-center gap-6"
-              style={{
-                backgroundImage:
-                  'linear-gradient(255deg, rgba(255,115,63,0.11) 1%, rgba(0,0,0,0.08) 21%, rgba(0,0,0,0.08) 78%, rgba(73,79,255,0.13) 99%), linear-gradient(90deg, #161616 0%, #161616 100%)',
-              }}
-            >
-              <span className="type-eyebrow text-[#6B7DFF]">
-                {t('cta.eyebrow')}
-              </span>
-              <h2 className="max-w-[880px] font-semibold leading-[1.1] text-white/95 text-[clamp(1.8rem,4vw,3rem)] tracking-[-0.02em] text-balance">
-                {t('cta.heading')}
-              </h2>
-              <p className="max-w-[880px] type-body text-white/65">{t('cta.body')}</p>
-              <Button asChild variant="primary" mode="dark">
-                <a href={href('become-a-partner', lang)}>
-                  {t('cta.cta')}
-                  <ArrowRight aria-hidden="true" />
-                </a>
-              </Button>
-            </Reveal>
-          </div>
-        </section>
+        {/* CTA: the shared light closing (the Assess closing) */}
+        <ClosingPanel
+          heading={t('cta.heading')}
+          body={t('cta.body')}
+          cta={t('cta.cta')}
+          href={href('become-a-partner', lang)}
+        />
       </main>
       <Footer />
     </>

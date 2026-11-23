@@ -164,12 +164,18 @@ redesign replaces it, this is the rule for any section you touch:
   the `/product` white pill — `variant="secondary" mode="light"
   className={SECONDARY_ON_LIGHT}` from `components/ui/button.tsx` — not the
   bare `#888` variant, which fails contrast.
-- **Still dark, on purpose:** the closing band (`.section-dark` +
-  `ClosingBanner`, `SolutionFinalCTA`, `CustomersFinalCTA`) and the `Footer`;
-  heroes with text over a photo; sections over a video with a dark backdrop
+- **Light pages end on a light final CTA section, then the dark `Footer`.**
+  The closing is exactly the Assess closing — white section, gradient panel,
+  one heading, one paragraph, one button, nothing else — rendered by
+  `components/shared/ClosingPanel.tsx` (Assess uses it too). `ClosingBanner` /
+  `SolutionFinalCTA` with `tone="light"` render it; `rule` adds a `#e5e7eb`
+  top line after another white section. The default
+  `tone="dark"` is the old dark band, kept for pages still dark and `/lp`.
+- **Still dark, on purpose:** the `Footer`; heroes with text over a photo; sections over a video with a dark backdrop
   baked in; HubSpot form sections (their light palette ships separately); the
   `/lp` and `/demo` pages; the ROI calculator and the scoring visuals. The
-  body stays `#040404`, which the dark closing cards rely on.
+  body stays `#040404`: the sections that are still dark have no background
+  of their own and show it through.
 - **No gradient accent on a light section** — any of the `.gradient-text`
   family, which starts at `#FFAF64` (about 1.8:1 on white). On a light
   section the accent span keeps its words but has no gradient class and no
@@ -247,10 +253,12 @@ it now applies only to the sections that stay dark.
   own `#000000` reads as invisible but for its border. The customer stories
   filter dropdowns sit on page content, not the navbar; on the (now light)
   Explore section they are white with a `#e5e7eb` edge, like the partners filter.
-- **Closing banners** share one card surface — `rounded-3xl border
-  border-white/[0.06] bg-white/[0.02] backdrop-blur-sm` — and equal space
-  above and below (`py-20 lg:py-24`). A plain one (heading, sentence, demo
-  button, logo row) is `components/shared/ClosingBanner.tsx`.
+- **Closing banners** have equal space above and below. On a light page
+  (interim standard) the closing is `<ClosingPanel>`, the Assess closing
+  exactly, with Assess's spacing (`py-16 md:py-[88px] lg:py-[112px]`). On a
+  dark page (the `/lp` pages) it is `ClosingBanner`'s default dark band
+  (`py-20 lg:py-24`, `rounded-3xl border border-white/[0.06] bg-white/[0.02]
+  backdrop-blur-sm`, logo row).
 - **Dark text on light sections** is `#121212` and its opacity variants. Light
   section background is `.section-breathe` (`#F7F7F7`).
 - **Colours:** every hex drawn in `app/`, `components/`, `i18n/` and

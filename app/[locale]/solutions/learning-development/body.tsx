@@ -32,7 +32,7 @@ export default function LearningDevelopmentPage() {
         <div className="fade-into-light" />
         <LDImpact />
         <div className="fade-into-dark" />
-        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} />
+        <SolutionFinalCTA headline={t('text')} accentWord={t('text2')} tone="light" />
       <Footer />
       </main>
     </>

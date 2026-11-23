@@ -150,7 +150,7 @@ export default function InsightsPage() {
         </section>
 
         {/* Closing banner — the homepage's, with this page's copy. */}
-        <ClosingBanner heading={t('heading2')} body={t('body2')} cta={t('cta2')} />
+        <ClosingBanner heading={t('heading2')} body={t('body2')} cta={t('cta2')} tone="light" />
       <Footer />
       </main>
     </>

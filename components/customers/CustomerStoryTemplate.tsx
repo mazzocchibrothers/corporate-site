@@ -53,7 +53,7 @@ export function CustomerStoryFooter({
           </div>
         </div>
       </section>
-      <SolutionFinalCTA headline={finalHeading} accentWord={finalAccent} />
+      <SolutionFinalCTA headline={finalHeading} accentWord={finalAccent} tone="light" rule />
       <Footer />
     </>
   );

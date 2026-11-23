@@ -31,6 +31,7 @@ import { DeliverChat } from '@/components/assess/visuals/deliver-chat';
 import { FrameworkMapping } from '@/components/assess/visuals/framework-mapping';
 import { ReadinessReport } from '@/components/assess/visuals/readiness-report';
 import { COMPARISON, COMPARISON_COLUMNS, type Verdict } from '@/components/assess/visuals/data';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 // /product/skillvue-assess. Built from the "Assess Product Page v8" design with
 // the site's own parts: the /product/skillvue-map page's container and type,
@@ -533,20 +534,12 @@ export default async function SkillvueAssessPage() {
           </div>
         </section>
 
-        {/* Closing */}
-        <section className={SECTION}>
-          <div className={CONTAINER}>
-            <Reveal
-              y={16}
-              className="mx-auto flex max-w-[1144px] flex-col items-center gap-6 rounded-[20px] px-6 py-14 text-center md:rounded-3xl md:px-10 md:py-20"
-              style={{ backgroundImage: 'linear-gradient(100deg, #fdf3ec 0%, #f7f7f7 50%, #efeefb 100%)' }}
-            >
-              <h2 className={`max-w-[880px] ${H2}`}>{t('closing.title')}</h2>
-              <p className={`max-w-[720px] ${LEDE}`}>{t('closing.body')}</p>
-              <BookDemoButton href={href('book-meeting', locale)} label={t('closing.cta')} language={locale} />
-            </Reveal>
-          </div>
-        </section>
+        {/* Closing: the shared light closing every light page ends on */}
+        <ClosingPanel
+          heading={t('closing.title')}
+          body={t('closing.body')}
+          action={<BookDemoButton href={href('book-meeting', locale)} label={t('closing.cta')} language={locale} />}
+        />
       </main>
       <Footer />
     </>

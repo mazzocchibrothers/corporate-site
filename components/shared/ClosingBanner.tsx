@@ -6,6 +6,7 @@ import { useLocale } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 // `className` overrides the logo height: the wide wordmarks read larger than
 // the rest at the shared h-6, so they sit a step smaller.
@@ -22,16 +23,41 @@ const logos: { name: string; src: string; className?: string }[] = [
 ];
 
 /**
- * The banner a page closes on (homepage, Insights): one centred card — the
- * closing line, a sentence, the demo button — over a single row of client
- * logos. The copy is the page's own, passed in already translated.
+ * The banner a page closes on. The copy is the page's own, passed in already
+ * translated.
+ *
+ * `tone="light"` (interim standard, pending the redesign) renders the shared
+ * light closing, <ClosingPanel>: the Assess closing exactly — heading,
+ * sentence, demo button, no logo row. `rule` draws its top line, after
+ * another white section.
+ *
+ * `tone="dark"`, the default, is the original dark band below — one centred
+ * card over a single row of client logos — kept unchanged for the pages that
+ * still close dark (the /lp landing pages).
  */
-export default function ClosingBanner({ heading, body, cta }: {
+export default function ClosingBanner({ heading, body, cta, tone = 'dark', rule = false }: {
   heading: React.ReactNode;
   body: string;
   cta: string;
+  tone?: 'dark' | 'light';
+  rule?: boolean;
 }) {
   const lang = useLocale();
+
+  if (tone === 'light') {
+    return (
+      <ClosingPanel
+        id="cta"
+        testId="cta-section"
+        heading={heading}
+        body={body}
+        cta={cta}
+        href={href('book-meeting', lang)}
+        ctaTestId="cta-book-demo"
+        rule={rule}
+      />
+    );
+  }
 
   return (
     <section id="cta" data-testid="cta-section" className="relative py-20 lg:py-24">
