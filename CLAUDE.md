@@ -172,8 +172,8 @@ redesign replaces it, this is the rule for any section you touch:
   body stays `#040404`, which the dark closing cards rely on.
 - **No gradient accent on a light section** — any of the `.gradient-text`
   family, which starts at `#FFAF64` (about 1.8:1 on white). On a light
-  section the accent span keeps its words and its italic but has no
-  gradient class, so it takes the heading's colour. This holds for
+  section the accent span keeps its words but has no gradient class and no
+  italic, so it reads exactly like the rest of the heading. This holds for
   sections that were light before the switch too. Dark sections keep the
   gradient.
 

@@ -33,7 +33,7 @@ export default function CustomerStoriesSection() {
         {/* Header */}
         <Reveal duration={0.7} className="mb-8 md:mb-16">
           <h2 className="max-w-[880px] text-[clamp(1.6rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-3 md:mb-4">{t.rich('customerStories.heading', {
-            span: (chunks) => <span className="italic font-semibold">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h2>
           <p className="max-w-[880px] type-body-lg text-[#4B4B4B]">{t('customerStories.body')}</p>
         </Reveal>
@@ -100,7 +100,7 @@ export default function CustomerStoriesSection() {
           className="rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-5 md:p-8 lg:p-10"
         >
           <h3 className="text-[18px] md:text-[20px] font-semibold text-[#121212] mb-3 md:mb-4">{t.rich('customerStories.heading2', {
-            span: (chunks) => <span className="italic font-semibold">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h3>
           <p className="type-body text-[#4B4B4B] mb-4 md:mb-6 max-w-3xl">{t('customerStories.body2')}</p>
           <div className="flex flex-wrap gap-2 md:gap-3">

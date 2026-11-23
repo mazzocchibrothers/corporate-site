@@ -117,7 +117,7 @@ export default function CareersPage() {
                     className="font-semibold text-white/95 mb-6 text-[48px] md:text-[58px]"
                     style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
                   >{t.rich('heading', {
-                    span: (chunks) => <span className="italic font-semibold gradient-text-warm">{chunks}</span>,
+                    span: (chunks) => <span className="font-semibold gradient-text-warm">{chunks}</span>,
                   })}</h1>
                   <p className="type-body hero-subtitle text-white/55 mb-8">{t('body')}</p>
                 </HeroCopy>
@@ -193,7 +193,7 @@ export default function CareersPage() {
                 className="max-w-[880px] font-semibold text-[#121212] mb-6"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t.rich('heading2', {
-                span: (chunks) => <span className="italic font-semibold">{chunks}</span>,
+                span: (chunks) => <span className="font-semibold">{chunks}</span>,
               })}</h2>
               <p className="max-w-[880px] type-body text-[#707070] mb-8">{t('body2')}</p>
               <Button asChild variant="secondary" mode="light">
@@ -222,7 +222,7 @@ export default function CareersPage() {
                 className="max-w-[880px] font-semibold text-white/95 mb-4"
                 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t.rich('heading3', {
-                span: (chunks) => <span className="italic font-semibold gradient-text-warm">{chunks}</span>,
+                span: (chunks) => <span className="font-semibold gradient-text-warm">{chunks}</span>,
               })}</h2>
               <p className="max-w-[880px] type-body text-white/50">{t('body3')}</p>
             </Reveal>

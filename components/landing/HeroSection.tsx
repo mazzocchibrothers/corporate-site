@@ -65,15 +65,15 @@ export default function HeroSection() {
                 >
                   {/* Two accent tags, not one: the English headline sets its
                       span to md:whitespace-nowrap and the Italian one does not,
-                      and a single handler quietly gave the class to both. The
-                      accent is italic only: on the light hero the gradient is
-                      gone and the phrase is #121212 like the rest. */}
+                      and a single handler quietly gave the class to both. On the
+                      light hero the accent has no gradient and no italic: the
+                      phrase is #121212 like the rest. */}
                   {t.rich('hero.heading', {
                     l: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
                     g: (chunks) => (
-                      <span className="italic font-semibold md:whitespace-nowrap">{chunks}</span>
+                      <span className="font-semibold md:whitespace-nowrap">{chunks}</span>
                     ),
-                    gw: (chunks) => <span className="italic font-semibold">{chunks}</span>,
+                    gw: (chunks) => <span className="font-semibold">{chunks}</span>,
                     // The Italian "Il" sits inside the accent span; it used to be painted
                     // white out of the gradient and now simply matches the heading.
                     // `m` keeps "Il Sistema Operativo" on one line on desktop.
