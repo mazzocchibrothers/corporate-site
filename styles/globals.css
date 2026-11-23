@@ -370,6 +370,11 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .scroll-arrows span { animation: none; opacity: 0.85; }
 }
+/* On a light section the arrows are drawn in the dark text colour. */
+.section-light .scroll-arrows span,
+.section-breathe .scroll-arrows span {
+  border-color: rgba(18, 18, 18, 0.6);
+}
 
 /* ===== INFINITE LOGO MARQUEE ===== */
 .marquee-track {
