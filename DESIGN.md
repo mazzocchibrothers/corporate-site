@@ -403,7 +403,8 @@ heading's colour, exactly like the rest of the heading. This matches CLAUDE.md.
 
 On dark sections (heroes and bands that stay dark, the closing band) the
 gradient remains: `t.rich('…', { span: (c) => <span className="gradient-text">{c}</span> })`,
-`font-semibold` like the heading. Inside `h1`/`h2` it wraps word by word
+`font-semibold` like the heading. **No heading is italic**, on light or dark sections: the accent
+differs by colour only. (The `/lp` landing pages are out of scope and left as they are.) Inside `h1`/`h2` it wraps word by word
 (`display:inline`, `box-decoration-break: slice`).
 
 None of the three reference pages uses the gradient. Assess uses a plain orange

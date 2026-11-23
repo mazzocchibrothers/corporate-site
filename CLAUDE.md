@@ -197,9 +197,11 @@ it now applies only to the sections that stay dark.
   `mx-auto` when the section is centred), so their lines stay even. No `<br>`
   in a section title, and no orphan words: `h2` is `text-wrap: balance`,
   paragraphs and the other headings `text-wrap: pretty` (`styles/globals.css`).
-- **Accent phrase** in a heading: a `t.rich` `<span className="gradient-text">`,
-  `font-semibold` like its heading — the accent differs by colour, never by
-  weight.
+- **Accent phrase** in a heading: on a dark section, a `t.rich`
+  `<span className="gradient-text">`, `font-semibold` like its heading — the
+  accent differs by colour, never by weight. On a light section it has no
+  gradient (below). **No heading is italic**, accent or not, on any section
+  (the `/lp` landing pages are left as they are).
 - **Hover belongs to what you can click.** A card or container that is not a
   link or button has no hover state — no shadow, border, background, glow or
   tilt on hover. A card that is a link keeps its hover; a link inside a

@@ -73,7 +73,7 @@ export default function SolutionCrossLinks({ currentId }) {
                   span: (chunks) => <span className="type-eyebrow text-[#4B4DF7] block mb-1">{chunks}</span>,
                   span2: (chunks) => <span className="type-body-bold text-[#121212]">{chunks}</span>,
                 })}</div>
-                <ArrowRight className="h-4 w-4 text-[#121212]/40 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300" />
+                <ArrowRight className="h-4 w-4 text-[#121212]/40 group-hover:text-[#4B4DF7] group-focus-visible:text-[#4B4DF7] group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-all duration-300" />
               </div>
             </button>
           </div>

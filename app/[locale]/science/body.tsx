@@ -14,10 +14,6 @@ export default function SciencePage() {
 
   return (
     <>
-      <>
-        {/* Hero's italic gradient span needs Bold Italic; only this page (and the homepage) does. */}
-        <link rel="preload" href="/fonts/MonaSans-BoldItalic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      </>
       <Navbar />
       <main>
         <ScienceHero />
