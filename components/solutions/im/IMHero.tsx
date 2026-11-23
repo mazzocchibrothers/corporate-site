@@ -23,7 +23,7 @@ export default function IMHero() {
             className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-[#121212] mb-10 max-w-5xl"
             style={{ lineHeight: 1.1 }}
           >{t.rich('imHero.heading', {
-            span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</Reveal>
           <Reveal
             y={20}

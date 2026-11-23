@@ -14,7 +14,7 @@ export default function LDIntegration() {
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <Reveal duration={0.7} className="rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-10">
           <h2 className="max-w-[880px] text-[clamp(1.5rem,4vw,3rem)] font-semibold text-[#121212] mb-6 tracking-[-0.02em]">{t.rich('ldIntegration.heading', {
-            span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h2>
           <p className="max-w-[880px] type-body text-[#4B4B4B] mb-10">{t('ldIntegration.body')}</p>
           <div className="flex flex-wrap gap-3">

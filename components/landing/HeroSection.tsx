@@ -63,18 +63,20 @@ export default function HeroSection() {
                   className="hero-fade-up relative text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-[#121212]"
                   style={{ lineHeight: 1.1 }}
                 >
-                  {/* Two gradient tags, not one: the English headline sets its
+                  {/* Two accent tags, not one: the English headline sets its
                       span to md:whitespace-nowrap and the Italian one does not,
-                      and a single handler quietly gave the class to both. */}
+                      and a single handler quietly gave the class to both. The
+                      accent is italic only: on the light hero the gradient is
+                      gone and the phrase is #121212 like the rest. */}
                   {t.rich('hero.heading', {
                     l: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
                     g: (chunks) => (
-                      <span className="italic font-semibold gradient-text md:whitespace-nowrap">{chunks}</span>
+                      <span className="italic font-semibold md:whitespace-nowrap">{chunks}</span>
                     ),
-                    gw: (chunks) => <span className="italic font-semibold gradient-text">{chunks}</span>,
-                    // The Italian "Il" sits inside the gradient span (an inline-block, so an
-                    // article left outside it drops onto a line of its own) and is painted
-                    // #121212 like the rest of the heading; `m` keeps "Il Sistema Operativo" on one line on desktop.
+                    gw: (chunks) => <span className="italic font-semibold">{chunks}</span>,
+                    // The Italian "Il" sits inside the accent span; it used to be painted
+                    // white out of the gradient and now simply matches the heading.
+                    // `m` keeps "Il Sistema Operativo" on one line on desktop.
                     w: (chunks) => <span className="[-webkit-text-fill-color:#121212]">{chunks}</span>,
                     m: (chunks) => <span className="md:whitespace-nowrap">{chunks}</span>,
                     br: () => <br />,

@@ -76,7 +76,7 @@ export default function SolutionSection() {
         <Reveal duration={0.7} className="mb-16 lg:mb-20">
           <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212]">{t.rich('solution.heading', {
             br: () => <br />,
-            span: (chunks) => <span className="font-semibold gradient-text-warm">{chunks}</span>,
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h2>
           <p className="max-w-[880px] type-body-lg text-[#4B4B4B] mt-4 md:mt-6">{t('solution.body')}</p>
         </Reveal>
