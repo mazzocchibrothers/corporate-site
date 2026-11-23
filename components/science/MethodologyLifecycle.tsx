@@ -63,7 +63,7 @@ export default function MethodologyLifecycle() {
   const [activePrinciple, setActivePrinciple] = useState(0);
 
   return (
-    <section id="methodology" data-testid="methodology" className="section-light relative py-16 md:py-20 lg:py-28">
+    <section id="methodology" data-testid="methodology" className="section-light border-t border-[#e5e7eb] relative py-16 md:py-20 lg:py-28">
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
 
         {/* Title */}

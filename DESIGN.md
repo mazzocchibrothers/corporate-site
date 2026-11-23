@@ -290,9 +290,6 @@ its own design. Don't copy that to new pages (§7).
     runs through `#F7F7F7`, so on grey its centre would melt into the section.
   - After another white section it takes a top rule (`border-t
     border-[#e5e7eb]`, the `rule` prop), the /product convention (§7 #17).
-  - **Temporary exception, until step 5:** /science has no rule. Its product
-    cross-links (white, `pb-2`) are built as one block with the CTA. Revisit
-    when /science is converted.
   - Pages still dark (and the `/lp`, `/demo` pages) keep the dark band:
     `ClosingBanner` / `SolutionFinalCTA` with the default `tone="dark"`.
 

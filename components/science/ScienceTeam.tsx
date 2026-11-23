@@ -49,7 +49,7 @@ export default function ScienceTeam() {
       data-testid={`team-${m.name.split(' ')[0]?.toLowerCase()}`}
       className="group text-center"
     >
-      <div className="rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white overflow-hidden mb-2 md:mb-4 transition-all duration-500">
+      <div className="rounded-xl md:rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] overflow-hidden mb-2 md:mb-4 transition-all duration-500">
         <div className="w-full aspect-[3/4]">
           <img src={m.photo} alt={m.name} className="w-full h-full object-cover" />
         </div>
@@ -64,7 +64,7 @@ export default function ScienceTeam() {
   );
 
   return (
-    <section id="science-team" data-testid="science-team" className="section-breathe relative py-16 lg:py-24">
+    <section id="science-team" data-testid="science-team" className="section-light relative py-16 lg:py-24">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
 
         {/* Section title */}
@@ -79,7 +79,7 @@ export default function ScienceTeam() {
           y={20}
           duration={0.6}
           delay={0.1}
-          className="rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-5 md:p-6 lg:p-10 mb-8 md:mb-14"
+          className="rounded-xl md:rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-5 md:p-6 lg:p-10 mb-8 md:mb-14"
         >
           <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-5 md:gap-8 lg:gap-12">
             <div className="relative shrink-0 w-full md:w-auto aspect-square rounded-xl md:rounded-2xl overflow-hidden bg-[#F5F5FA]">
@@ -115,7 +115,7 @@ export default function ScienceTeam() {
         <Reveal
           y={20}
           delay={0.6}
-          className="mt-8 md:mt-12 rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-5 md:p-8 lg:p-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10"
+          className="mt-8 md:mt-12 rounded-xl md:rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-5 md:p-8 lg:p-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10"
         >
           <span className="font-display text-[32px] font-semibold md:text-[48px] md:font-bold text-[#1A1A2E] leading-none tracking-[-0.03em] shrink-0">50+</span>
           <div className="w-px h-10 bg-[#1A1A2E]/[0.08] hidden sm:block shrink-0" />
