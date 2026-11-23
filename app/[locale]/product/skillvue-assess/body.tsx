@@ -483,11 +483,11 @@ export default async function SkillvueAssessPage() {
             <div className="mx-auto mt-12 grid max-w-[1144px] grid-cols-1 gap-4 md:mt-16 md:grid-cols-3 md:gap-6">
               {STORIES.map(({ id, route, logo, width, height }, i) => (
                 <Reveal key={id} y={16} delay={i * 0.1}>
-                  <a href={href(route, locale)} className="group flex h-full flex-col rounded-2xl bg-white p-6 transition-shadow duration-300 hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] md:p-8">
+                  <a href={href(route, locale)} className="group flex h-full flex-col rounded-2xl bg-white p-6 transition-shadow duration-300 hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] focus-visible:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] md:p-8">
                     <img src={logo} alt={t(`proof.stories.${id}.logo`)} width={width} height={height} loading="lazy" decoding="async" className="h-7 w-auto self-start" />
                     <CountUp value={t(`proof.stories.${id}.value`)} className={`${STAT} mt-8 block text-[40px] md:text-[44px]`} />
                     <p className="mt-3 type-body-sm text-[#4B4B4B]">{t(`proof.stories.${id}.body`)}</p>
-                    <span className="mt-auto inline-flex items-center gap-2 pt-6 type-button text-[#4B4DF7] group-hover:text-[#3133E7]">
+                    <span className="mt-auto inline-flex items-center gap-2 pt-6 type-button text-[#4B4DF7] group-hover:text-[#3133E7] group-focus-visible:text-[#3133E7]">
                       {t('proof.cta')}
                       <ArrowRight aria-hidden="true" className="h-4 w-4" />
                     </span>

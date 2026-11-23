@@ -58,16 +58,16 @@ export default function SolutionCrossLinks({ currentId }) {
 
           {/* Desktop: Platform + Science links */}
           <div className="hidden md:grid md:grid-cols-2 gap-4 mb-8">
-            <button onClick={() => handleNav('/product')} className="group text-left rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-6 transition-all duration-500">
+            <button onClick={() => handleNav('/product')} className="group text-left rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] focus-visible:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-6 transition-all duration-500">
               <div className="flex items-center justify-between">
                 <div>{t.rich('solutionCrossLinks.cta3', {
                   span: (chunks) => <span className="type-eyebrow text-[#4B4DF7] block mb-1">{chunks}</span>,
                   span2: (chunks) => <span className="type-body-bold text-[#121212]">{chunks}</span>,
                 })}</div>
-                <ArrowRight className="h-4 w-4 text-[#121212]/40 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300" />
+                <ArrowRight className="h-4 w-4 text-[#121212]/40 group-hover:text-[#4B4DF7] group-focus-visible:text-[#4B4DF7] group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-all duration-300" />
               </div>
             </button>
-            <button onClick={() => handleNav('/science')} className="group text-left rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-6 transition-all duration-500">
+            <button onClick={() => handleNav('/science')} className="group text-left rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] focus-visible:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-6 transition-all duration-500">
               <div className="flex items-center justify-between">
                 <div>{t.rich('solutionCrossLinks.cta4', {
                   span: (chunks) => <span className="type-eyebrow text-[#4B4DF7] block mb-1">{chunks}</span>,

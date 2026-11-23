@@ -46,7 +46,7 @@ export default function CustomerStoriesSection() {
               delay={0.1 + i * 0.1}
               key={s.id}
               data-testid={`story-${s.id}`}
-              className="group rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-5 md:p-10 transition-all duration-500 cursor-pointer flex flex-col justify-between gap-5 md:gap-8"
+              className="group rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] focus-visible:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-5 md:p-10 transition-all duration-500 cursor-pointer flex flex-col justify-between gap-5 md:gap-8"
               as={Link}
               href={href(s.route, lang)}
               prefetch={false}

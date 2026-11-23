@@ -41,12 +41,12 @@ export function CustomerStoryFooter({
           <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-12">{title}</h3>
           <div className="grid md:grid-cols-2 gap-5">
             {stories.map((story) => (
-              <a key={story.id} href={href(`customers/${story.id}`, lang)} className="group block text-left rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-10 transition-all duration-500">
+              <a key={story.id} href={href(`customers/${story.id}`, lang)} className="group block text-left rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] focus-visible:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-10 transition-all duration-500">
                 <span className="type-body-sm text-[#4B4B4B] mb-4 block">{story.tag}</span>
                 <h4 className="text-[24px] font-semibold text-[#121212] mb-4">{story.company}</h4>
                 <p className="type-body text-[#4B4B4B] mb-8">{story.headline}</p>
-                <span className="type-body-bold inline-flex items-center gap-2 text-[#4B4DF7] group-hover:text-[#3133E7] transition-colors duration-300">
-                  {cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                <span className="type-body-bold inline-flex items-center gap-2 text-[#4B4DF7] group-hover:text-[#3133E7] group-focus-visible:text-[#3133E7] transition-colors duration-300">
+                  {cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-transform duration-300" />
                 </span>
               </a>
             ))}

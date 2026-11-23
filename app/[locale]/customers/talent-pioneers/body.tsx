@@ -119,7 +119,7 @@ function DayToDayCard({
     return (
       <a
         href={href(item.storyRoute, lang)}
-        className="group flex h-[420px] w-[300px] shrink-0 flex-col gap-6 rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-6 transition-shadow duration-300 hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] md:h-[453px] md:w-[340px]"
+        className="group flex h-[420px] w-[300px] shrink-0 flex-col gap-6 rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-6 transition-shadow duration-300 hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] focus-visible:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] md:h-[453px] md:w-[340px]"
       >
         <div className="flex w-full items-start gap-2">
           {badges.map((badge) => (
@@ -148,7 +148,7 @@ function DayToDayCard({
         draggable={false}
         loading="lazy"
         decoding="async"
-        className="absolute inset-0 size-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+        className="absolute inset-0 size-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20" />
       <div className="absolute left-6 top-6 flex items-start gap-2">
@@ -157,7 +157,7 @@ function DayToDayCard({
         ))}
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="flex size-14 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
+        <div className="flex size-14 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110 group-focus-visible:scale-110">
           <Play className="h-5 w-5 pl-0.5 text-[#121212]" fill="currentColor" aria-hidden="true" />
         </div>
       </div>
@@ -217,7 +217,7 @@ export default async function TalentPioneersPage() {
                   href="#meet-the-pioneers"
                 >
                   <span>{t('hero.cta')}</span>
-                  <ArrowDown aria-hidden="true" className="transition-transform duration-500 group-hover:translate-y-0.5" />
+                  <ArrowDown aria-hidden="true" className="transition-transform duration-500 group-hover:translate-y-0.5 group-focus-visible:translate-y-0.5" />
                 </a>
               </Button>
             </Reveal>
@@ -377,7 +377,7 @@ export default async function TalentPioneersPage() {
                       {t(`stages.upcoming.${event.id}.title`)}{' '}
                       <span className="font-normal text-[#707070]">— {t(`stages.upcoming.${event.id}.location`)}</span>
                     </span>
-                    <span className="type-body-sm flex shrink-0 items-center gap-1.5 font-medium text-[#4B4DF7] group-hover:text-[#3133E7]">
+                    <span className="type-body-sm flex shrink-0 items-center gap-1.5 font-medium text-[#4B4DF7] group-hover:text-[#3133E7] group-focus-visible:text-[#3133E7]">
                       {t('stages.visitWebsite')}
                       <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
                     </span>

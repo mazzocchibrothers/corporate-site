@@ -49,14 +49,14 @@ export default function ProductCrossLinks() {
                 delay={0.05 + i * 0.05}
                 key={s.path}
                 onClick={() => handleNav(s.path)}
-                className="group text-left rounded-lg md:rounded-xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-4 md:p-6 transition-all duration-500"
+                className="group text-left rounded-lg md:rounded-xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] focus-visible:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-4 md:p-6 transition-all duration-500"
               >
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="type-body-bold text-[#121212] block mb-0.5 md:mb-1">{t(`productCrossLinks.solutions.${s.id}.name`)}</span>
                     <span className="type-body-sm text-[#707070]">{t(`productCrossLinks.solutions.${s.id}.desc`)}</span>
                   </div>
-                  <ArrowRight className="h-4 w-4 text-[#121212]/30 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300 shrink-0 hidden md:block" />
+                  <ArrowRight className="h-4 w-4 text-[#121212]/30 group-hover:text-[#4B4DF7] group-focus-visible:text-[#4B4DF7] group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-all duration-300 shrink-0 hidden md:block" />
                 </div>
               </Reveal>
             ))}

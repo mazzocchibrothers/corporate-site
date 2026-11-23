@@ -35,14 +35,15 @@ export default function CustomerTestimonials() {
               duration={0.5}
               delay={i * 0.1}
               key={c.id}
-              className="group"
             >
-              <a href={href(c.routeId, lang)} className="block">
+              {/* `group` is on the link, not the wrapper, so the card's hover
+                  effects also show when the link has keyboard focus. */}
+              <a href={href(c.routeId, lang)} className="group block">
                 <div className="relative rounded-lg overflow-hidden" style={{ aspectRatio: '416/233' }}>
-                  <img src={c.bgImage} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={c.bgImage} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/25" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex items-center justify-center w-16 h-16 rounded-full border border-white/25 bg-white/10 backdrop-blur-md group-hover:bg-white/20 transition-colors duration-300">
+                    <div className="flex items-center justify-center w-16 h-16 rounded-full border border-white/25 bg-white/10 backdrop-blur-md group-hover:bg-white/20 group-focus-visible:bg-white/20 transition-colors duration-300">
                       <Play className="h-6 w-6 text-white translate-x-0.5" fill="currentColor" aria-hidden="true" />
                     </div>
                   </div>

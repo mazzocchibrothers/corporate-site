@@ -352,9 +352,9 @@ export default function CareersPage() {
                         href={role.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6 rounded-2xl border border-white/[0.07] bg-white/[0.03] hover:border-white/[0.14] hover:bg-white/[0.05] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
+                        className="group flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-6 rounded-2xl border border-white/[0.07] bg-white/[0.03] hover:border-white/[0.14] focus-visible:border-white/[0.14] hover:bg-white/[0.05] focus-visible:bg-white/[0.05] px-5 py-5 md:px-8 md:py-6 transition-all duration-300"
                       >
-                        <span className="type-body-bold text-white/85 group-hover:text-white/95 transition-colors duration-300">
+                        <span className="type-body-bold text-white/85 group-hover:text-white/95 group-focus-visible:text-white/95 transition-colors duration-300">
                           {role.title}
                         </span>
                         <div className="flex items-center justify-between w-full gap-4 md:w-auto md:justify-start shrink-0">
@@ -363,7 +363,7 @@ export default function CareersPage() {
                           </span>
                           <span className={buttonVariants({ variant: 'secondary', mode: 'dark' })}>
                             {t('cta4')}
-                            <ArrowRight aria-hidden className="group-hover:translate-x-1 transition-transform duration-300" />
+                            <ArrowRight aria-hidden className="group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-transform duration-300" />
                           </span>
                         </div>
                       </a>

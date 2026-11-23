@@ -156,9 +156,9 @@ export default function ExploreStories() {
                 className="group block cursor-pointer"
               >
                 {/* Card visual area */}
-                <div className="relative rounded-2xl border border-[#e5e7eb] group-hover:border-[#121212]/20 transition-all duration-500 overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                  <img src={s.bgImage} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+                <div className="relative rounded-2xl border border-[#e5e7eb] group-hover:border-[#121212]/20 group-focus-visible:border-[#121212]/20 transition-all duration-500 overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                  <img src={s.bgImage} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105" />
+                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-400">
                     <ArrowRight className="h-4 w-4 text-white/70" />
                   </div>
                 </div>

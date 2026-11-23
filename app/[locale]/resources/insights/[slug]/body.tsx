@@ -300,7 +300,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                       y={15}
                       delay={i * 0.1}
                       key={rw.slug}
-                      className="group flex gap-6 items-center p-5 rounded-2xl border border-white/[0.05] hover:border-white/[0.12] hover:bg-white/[0.03] transition-all duration-500 cursor-pointer"
+                      className="group flex gap-6 items-center p-5 rounded-2xl border border-white/[0.05] hover:border-white/[0.12] focus-visible:border-white/[0.12] hover:bg-white/[0.03] focus-visible:bg-white/[0.03] transition-all duration-500 cursor-pointer"
                       as={Link}
                       href={localizePath(`/resources/insights/${rw.slug}`, lang)}
                       prefetch={false}
@@ -312,10 +312,10 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                         </div>
                       )}
                       <div className="flex-1">
-                        <h3 className="text-[16px] font-semibold text-white/80 group-hover:text-white transition-colors duration-300 mb-1">{t(`items.${rw.slug}.title`)}</h3>
+                        <h3 className="text-[16px] font-semibold text-white/80 group-hover:text-white group-focus-visible:text-white transition-colors duration-300 mb-1">{t(`items.${rw.slug}.title`)}</h3>
                         <p className="type-body-sm text-white/35 line-clamp-1">{t(`items.${rw.slug}.shortDesc`)}</p>
                       </div>
-                      <ArrowRight className="h-4 w-4 text-white/15 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300 shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-white/15 group-hover:text-[#4B4DF7] group-focus-visible:text-[#4B4DF7] group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-all duration-300 shrink-0" />
                     </Reveal>
                   );
                 })}
