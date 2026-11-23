@@ -45,7 +45,8 @@ const buttonVariants = cva(
       { variant: "secondary", mode: "light", class: "border-[#888888] text-[#888888] hover:bg-[#4B4DF7]/20 hover:border-[#4B4DF7]/50 hover:text-[#4B4DF7]" },
       // Solid white outline; hover fills it white with a dark label.
       { variant: "secondary", mode: "dark", class: "border-white text-white hover:bg-white hover:text-[#121212]" },
-      { variant: "tertiary", mode: "light", class: "text-[#6366F8] hover:text-[#3133E7]" },
+      // #4B4DF7, not #6366F8: the lighter blue is 4.39:1 on white and fails AA.
+      { variant: "tertiary", mode: "light", class: "text-[#4B4DF7] hover:text-[#3133E7]" },
       { variant: "tertiary", mode: "dark", class: "text-[#6366F8] hover:text-[#8587FF]" },
     ],
     defaultVariants: {
@@ -55,6 +56,15 @@ const buttonVariants = cva(
     },
   }
 );
+
+/**
+ * The secondary pill on a light section, as /product draws it: a white pill
+ * with a #e5e7eb edge and a #121212 label. The `secondary` + `light` variant's
+ * #888 outline is 3.5:1 on white and fails AA, so pages converted to the light
+ * standard pass this as `className` instead (cn() lets it win over the variant).
+ */
+export const SECONDARY_ON_LIGHT =
+  "border-[#e5e7eb] bg-white text-[#121212] hover:bg-[#f7f7f7] hover:border-[#e5e7eb] hover:text-[#121212]";
 
 const ArrowRightIcon = <ArrowRight aria-hidden="true" />;
 

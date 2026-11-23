@@ -36,16 +36,16 @@ export function CustomerStoryFooter({
   return (
     <>
       <div className="fade-into-dark" />
-      <section className="relative pt-10 pb-20 lg:pt-14 lg:pb-24">
+      <section className="section-light relative pt-10 pb-20 lg:pt-14 lg:pb-24">
         <div className={`max-w-[1400px] mx-auto ${containerClassName}`}>
-          <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-white/90 leading-[1.4] mb-12">{title}</h3>
+          <h3 className="text-[clamp(1.8rem,3vw,2.5rem)] font-semibold text-[#121212] leading-[1.4] mb-12">{title}</h3>
           <div className="grid md:grid-cols-2 gap-5">
             {stories.map((story) => (
-              <a key={story.id} href={href(`customers/${story.id}`, lang)} className="group block text-left rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
-                <span className="type-body-sm text-white/40 mb-4 block">{story.tag}</span>
-                <h4 className="text-[24px] font-semibold text-white/90 mb-4">{story.company}</h4>
-                <p className="type-body text-white/[0.65] mb-8">{story.headline}</p>
-                <span className="type-body-bold inline-flex items-center gap-2 text-white/50 group-hover:text-white/80 transition-colors duration-300">
+              <a key={story.id} href={href(`customers/${story.id}`, lang)} className="group block text-left rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-10 transition-all duration-500">
+                <span className="type-body-sm text-[#4B4B4B] mb-4 block">{story.tag}</span>
+                <h4 className="text-[24px] font-semibold text-[#121212] mb-4">{story.company}</h4>
+                <p className="type-body text-[#4B4B4B] mb-8">{story.headline}</p>
+                <span className="type-body-bold inline-flex items-center gap-2 text-[#4B4DF7] group-hover:text-[#3133E7] transition-colors duration-300">
                   {cta} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </a>

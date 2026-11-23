@@ -36,10 +36,10 @@ export default function ProductCrossLinks() {
   const handleNav = (path) => { router.push(path); window.scrollTo(0, 0); };
 
   return (
-    <section className="relative pt-8 pb-2 lg:pt-10 lg:pb-2">
+    <section className="section-light relative pt-8 pb-2 lg:pt-10 lg:pb-2">
       <div className="relative max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <Reveal y={20} duration={0.6}>
-          <h3 className="text-[16px] md:text-[20px] font-semibold text-white/90 mb-5 md:mb-8">{t('productCrossLinks.heading')}</h3>
+          <h3 className="text-[16px] md:text-[20px] font-semibold text-[#121212] mb-5 md:mb-8">{t('productCrossLinks.heading')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3">
             {solutions.map((s, i) => (
               <Reveal
@@ -49,14 +49,14 @@ export default function ProductCrossLinks() {
                 delay={0.05 + i * 0.05}
                 key={s.path}
                 onClick={() => handleNav(s.path)}
-                className="group text-left rounded-lg md:rounded-xl border border-white/[0.08] hover:border-white/[0.16] bg-white/[0.04] hover:bg-white/[0.07] p-4 md:p-6 transition-all duration-500"
+                className="group text-left rounded-lg md:rounded-xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-4 md:p-6 transition-all duration-500"
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="type-body-bold text-white/85 block mb-0.5 md:mb-1">{t(`productCrossLinks.solutions.${s.id}.name`)}</span>
-                    <span className="type-body-sm text-white/40">{t(`productCrossLinks.solutions.${s.id}.desc`)}</span>
+                    <span className="type-body-bold text-[#121212] block mb-0.5 md:mb-1">{t(`productCrossLinks.solutions.${s.id}.name`)}</span>
+                    <span className="type-body-sm text-[#7A7A7A]">{t(`productCrossLinks.solutions.${s.id}.desc`)}</span>
                   </div>
-                  <ArrowRight className="h-4 w-4 text-white/20 group-hover:text-[#9B9DFB] group-hover:translate-x-1 transition-all duration-300 shrink-0 hidden md:block" />
+                  <ArrowRight className="h-4 w-4 text-[#121212]/30 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300 shrink-0 hidden md:block" />
                 </div>
               </Reveal>
             ))}

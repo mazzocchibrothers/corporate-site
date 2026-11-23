@@ -146,6 +146,34 @@ language switcher need no edit beyond the steps above.
 Pages were brought to one standard (#183, #194, #195). Match it; don't
 reintroduce per-page variants.
 
+**Interim light standard (pending the redesign).** Content pages are being
+moved off the dark theme onto the light style of `/trust`, `/product` and
+`/product/skillvue-assess` (branch `chore/light-theme-interim`). Until the
+redesign replaces it, this is the rule for any section you touch:
+
+- A section is `.section-light` (#fff) or `.section-breathe` (#F7F7F7),
+  alternating with hard edges. The class is not decoration: the navbar turns
+  white only over an element inside one of the two, so a light section drawn
+  any other way leaves a black bar over it.
+- Text `#121212`, secondary `#4B4B4B`, meta `#7A7A7A`; brand `#4B4DF7`
+  (hover `#3133E7`) for eyebrows, links and stats; borders and card edges
+  `#e5e7eb`. A card takes the other surface: `bg-[#f7f7f7]` on white,
+  `bg-white` on grey.
+- `Button` and `IconTile` take `mode="light"`. A secondary button on light is
+  the `/product` white pill — `variant="secondary" mode="light"
+  className={SECONDARY_ON_LIGHT}` from `components/ui/button.tsx` — not the
+  bare `#888` variant, which fails contrast.
+- **Still dark, on purpose:** the closing band (`.section-dark` +
+  `ClosingBanner`, `SolutionFinalCTA`, `CustomersFinalCTA`) and the `Footer`;
+  heroes with text over a photo; sections over a video with a dark backdrop
+  baked in; HubSpot form sections (their light palette ships separately); the
+  `/lp` and `/demo` pages; the ROI calculator and the scoring visuals. The
+  body stays `#040404`, which the dark closing cards rely on.
+- Don't add a heading accent to a converted heading. Existing accents stay.
+
+The bullets below predate the switch. Where one describes a dark surface,
+it now applies only to the sections that stay dark.
+
 - **H1 hero:** `font-semibold text-[48px] md:text-[58px]`, `lineHeight: 1.1`,
   `letterSpacing: '-0.02em'`. Every h1 on the site is 58px from `md` up.
 - **Hero title and subtitle share one width.** Wrap the h1 and its subtitle in
@@ -197,7 +225,9 @@ reintroduce per-page variants.
   on the left, a `<HeroVideo>` on the right (webm + mp4 + poster in
   `public/videos/`).
 - **Navbar** is flat `#ffffff` on light sections and `#000000` on dark ones —
-  no translucent tints. Its **dropdown panels** are `#ffffff` on light sections
+  no translucent tints. The **mobile menu**, its focus rings and its CTA
+  follow the same rule: white with `#121212` text and a `#4B4DF7` ring over a
+  light section, black over a dark one. Its **dropdown panels** are `#ffffff` on light sections
   too, but `#1e1e1e` on dark — a dark-mode dropdown flush against the navbar's
   own `#000000` reads as invisible but for its border. The customer stories
   filter dropdowns sit on page content, not the navbar, and use `#1A1A1A`.
