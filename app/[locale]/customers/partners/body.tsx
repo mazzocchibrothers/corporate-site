@@ -154,7 +154,7 @@ export default function PartnersPage() {
                 // <Reveal> sets an inline transition, which would override the
                 // card's own shadow transition — so the card is the child.
                 <Reveal key={p.slug} y={20}>
-                  <div className="group h-full rounded-[20px] border border-[#EBEBEB] bg-white overflow-hidden flex flex-col transition-shadow duration-500 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04]">
+                  <div className="group h-full rounded-[20px] border border-[#EBEBEB] bg-white overflow-hidden flex flex-col transition-shadow duration-500">
                     <div className="h-[220px] flex items-center justify-center border-b border-[#EBEBEB] px-8">
                       <img
                         src={p.logo}
@@ -183,10 +183,10 @@ export default function PartnersPage() {
                         href={p.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="type-button mt-auto inline-flex items-center gap-2 font-medium text-[#4B4DF7] hover:text-[#3133E7] transition-colors"
+                        className="group/cta type-button mt-auto inline-flex items-center gap-2 font-medium text-[#4B4DF7] hover:text-[#3133E7] transition-colors"
                       >
                         {t(`network.items.${p.slug}.cta`)}
-                        <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+                        <ArrowUpRight className="size-4 transition-transform duration-300 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" aria-hidden="true" />
                       </a>
                     </div>
                   </div>

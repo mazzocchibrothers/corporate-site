@@ -20,7 +20,7 @@ export default function ScienceCTA() {
           })}</h2>
         </Reveal>
         <Reveal y={20} duration={0.7} delay={0.2}>
-          <div className="group rounded-xl md:rounded-2xl border border-white/[0.06] hover:border-white/[0.14] bg-white/[0.04] hover:bg-white/[0.06] backdrop-blur-sm p-5 md:p-10 transition-all duration-500">
+          <div className="group rounded-xl md:rounded-2xl border border-white/[0.06] bg-white/[0.04] backdrop-blur-sm p-5 md:p-10 transition-all duration-500">
             <span className="type-eyebrow text-[#6B7DFF]">{t('cta.text')}</span>
             <h3 className="text-xl md:text-2xl font-semibold text-white/90 mt-3 md:mt-4 mb-2 md:mb-3">{t('cta.heading2')}</h3>
             <p className="type-body text-white/[0.65] mb-5 md:mb-8 max-w-md">{t('cta.body')}</p>

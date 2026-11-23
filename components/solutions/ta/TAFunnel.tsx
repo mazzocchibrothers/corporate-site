@@ -96,7 +96,7 @@ function ColumnCard({ data, delay, t }) {
   const Icon = data.icon;
   return (
     <motion.div
-      className="rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-4 md:p-8 hover:border-[#4B4DF7]/[0.15] hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500"
+      className="rounded-2xl border border-[#1A1A2E]/[0.06] bg-white p-4 md:p-8 transition-all duration-500"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}

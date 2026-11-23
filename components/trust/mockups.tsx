@@ -212,7 +212,7 @@ export async function ScoreMock() {
   );
 }
 
-// ── Pillar 1: the signed AI Act declaration (tilts when its card is hovered) ─
+// ── Pillar 1: the signed AI Act declaration ─────────────────────────────────
 export async function DeclarationMock() {
   const t = await getTranslations('trust');
   const rows = t.raw('ai.declaration.rows') as { label: string; value: string }[];
@@ -220,7 +220,7 @@ export async function DeclarationMock() {
     <div
       className={cn(
         MOCK,
-        'rounded-[6px] gap-1.5 origin-[50%_55%] transition-[transform,box-shadow] duration-[350ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover:-rotate-2 group-hover:shadow-[0_2px_4px_rgba(16,24,40,.04),0_14px_30px_rgba(16,24,40,.10)] motion-reduce:transition-none',
+        'rounded-[6px] gap-1.5 origin-[50%_55%] transition-[transform,box-shadow] duration-[350ms] ease-[cubic-bezier(.2,.7,.2,1)] motion-reduce:transition-none',
       )}
     >
       <div className="flex items-center justify-between gap-2">

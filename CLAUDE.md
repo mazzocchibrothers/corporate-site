@@ -200,6 +200,10 @@ it now applies only to the sections that stay dark.
 - **Accent phrase** in a heading: a `t.rich` `<span className="gradient-text">`,
   `font-semibold` like its heading — the accent differs by colour, never by
   weight.
+- **Hover belongs to what you can click.** A card or container that is not a
+  link or button has no hover state — no shadow, border, background, glow or
+  tilt on hover. A card that is a link keeps its hover; a link inside a
+  static card animates on its own hover (`group/cta`), not the card's.
 - **Big metric numbers** use the `.stat-value` class. Its font-weight lives
   only in `styles/globals.css` — change it there, never per-file. The largest
   ones (the homepage ROI and problem cards, the customers hero, the solutions

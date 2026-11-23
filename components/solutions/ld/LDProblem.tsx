@@ -38,7 +38,7 @@ export default function LDProblem() {
               delay={0.1 + i * 0.1}
               key={p.num}
               data-testid={`ld-pain-${i}`}
-              className="group rounded-2xl border border-[#121212]/[0.08] bg-white p-6 md:p-8 lg:p-10 hover:border-[#4B4DF7]/[0.18] hover:shadow-xl hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 flex flex-col h-full"
+              className="group rounded-2xl border border-[#121212]/[0.08] bg-white p-6 md:p-8 lg:p-10 transition-all duration-500 flex flex-col h-full"
             >
               <span className="font-display text-[36px] md:text-[42px] font-normal text-[#121212]/[0.1] leading-none tracking-[-0.03em] mb-6 md:mb-8 block">{p.num}</span>
               <h3 className="text-[18px] md:text-[20px] font-semibold text-[#121212] mb-2 md:mb-3 leading-tight">{t(`ldProblem.pains.${p.id}.title`)}</h3>

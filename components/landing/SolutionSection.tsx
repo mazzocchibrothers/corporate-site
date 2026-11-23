@@ -32,11 +32,8 @@ export default function SolutionSection() {
       delay={0.1 + i * 0.1}
       key={pillar.id}
       data-testid={`solution-card-${pillar.id}`}
-      className="group relative rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-5 md:p-8 lg:p-10 transition-all duration-500 overflow-hidden md:aspect-auto"
+      className="relative rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-5 md:p-8 lg:p-10 transition-all duration-500 overflow-hidden md:aspect-auto"
     >
-      {/* Subtle hover glow */}
-      <div className="absolute top-0 right-0 w-[200px] h-[200px] rounded-full bg-[#4B4DF7]/[0.04] blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-
       <div className="relative">
         {/* Top: Icon + Label */}
         <div>

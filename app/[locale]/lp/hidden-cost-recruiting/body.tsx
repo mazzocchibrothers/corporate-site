@@ -266,7 +266,7 @@ export default function HiddenCostRecruiting() {
                 {...FADE}
                 delay={i * 0.08}
                 key={i}
-                className="rounded-2xl bg-white border border-black/[0.06] p-7 hover:shadow-md transition-shadow duration-300"
+                className="rounded-2xl bg-white border border-black/[0.06] p-7 transition-shadow duration-300"
               >
                 <div className="type-caption font-bold mb-4"
                   style={{ background: 'linear-gradient(90deg, #4B4DF7, #FF5F24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>

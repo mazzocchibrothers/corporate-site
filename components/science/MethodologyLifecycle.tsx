@@ -167,7 +167,7 @@ export default function MethodologyLifecycle() {
           {principles.map((p, i) => {
             const Icon = p.icon;
             return (
-              <Reveal y={20} delay={0.15 + i * 0.1} key={p.id} className="group rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500">
+              <Reveal y={20} delay={0.15 + i * 0.1} key={p.id} className="group rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-10 transition-all duration-500">
                 <IconTile icon={Icon} mode="dark" className="mb-5" />
                 <h3 className="text-[20px] font-semibold text-white/90 mb-4">{t(`methodologyLifecycle.principles.${p.id}.title`)}</h3>
                 <p className="type-body text-white/[0.65]">{t(`methodologyLifecycle.principles.${p.id}.desc`)}</p>

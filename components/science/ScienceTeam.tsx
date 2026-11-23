@@ -49,7 +49,7 @@ export default function ScienceTeam() {
       data-testid={`team-${m.name.split(' ')[0]?.toLowerCase()}`}
       className="group text-center"
     >
-      <div className="rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white overflow-hidden mb-2 md:mb-4 hover:shadow-lg hover:shadow-[#4B4DF7]/[0.04] transition-all duration-500">
+      <div className="rounded-xl md:rounded-2xl border border-[#1A1A2E]/[0.06] bg-white overflow-hidden mb-2 md:mb-4 transition-all duration-500">
         <div className="w-full aspect-[3/4]">
           <img src={m.photo} alt={m.name} className="w-full h-full object-cover" />
         </div>

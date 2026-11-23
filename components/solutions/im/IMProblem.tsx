@@ -34,7 +34,7 @@ export default function IMProblem() {
         delay={0.1 + i * 0.1}
         key={p.id}
         data-testid={`im-pain-${i}`}
-        className="group rounded-2xl border border-[#4B4DF7]/[0.08] hover:border-[#4B4DF7]/[0.18] bg-white/60 hover:bg-white/90 p-6 md:p-10 transition-all duration-500 flex flex-col h-full"
+        className="group rounded-2xl border border-[#4B4DF7]/[0.08] bg-white/60 p-6 md:p-10 transition-all duration-500 flex flex-col h-full"
       >
         <div className="flex items-center justify-between mb-6 md:mb-8">
           <span className="text-[#121212] text-[32px] stat-value md:text-[54px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{p.stat}</span>

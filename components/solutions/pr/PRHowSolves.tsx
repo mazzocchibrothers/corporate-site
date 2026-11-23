@@ -41,7 +41,7 @@ export default function PRHowSolves() {
                 y={20}
                 delay={0.15 + i * 0.1}
                 key={p.id}
-                className="group rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-10 transition-all duration-500"
+                className="group rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-10 transition-all duration-500"
               >
                 <IconTile icon={Icon} mode="light" className="mb-5" />
                 <h3 className="text-[20px] font-semibold text-[#121212] mb-4">{t(`prHowSolves.pillars.${p.id}.title`)}</h3>

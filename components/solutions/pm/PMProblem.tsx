@@ -37,7 +37,7 @@ export default function PMProblem() {
         delay={0.1 + i * 0.12}
         key={p.id}
         data-testid={`pm-pain-${i}`}
-        className="group rounded-2xl border border-[#121212]/[0.08] bg-white p-6 md:p-8 lg:p-10 hover:border-[#4B4DF7]/[0.18] hover:shadow-xl hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 flex flex-col h-full"
+        className="group rounded-2xl border border-[#121212]/[0.08] bg-white p-6 md:p-8 lg:p-10 transition-all duration-500 flex flex-col h-full"
       >
         <div className="flex items-center justify-between mb-6 md:mb-8">
           <span className="font-display text-[36px] md:text-[42px] font-normal text-[#121212]/[0.1] leading-none tracking-[-0.03em]">{p.num}</span>

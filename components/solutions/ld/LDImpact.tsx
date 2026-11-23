@@ -33,7 +33,7 @@ export default function LDImpact() {
       <Reveal
         delay={0.15 + i * 0.12}
         key={k.value}
-        className="group rounded-2xl border border-[#121212]/[0.08] bg-white p-6 md:p-8 lg:p-10 hover:border-[#4B4DF7]/[0.18] hover:shadow-xl hover:shadow-[#4B4DF7]/[0.05] transition-all duration-500 flex flex-col h-full"
+        className="group rounded-2xl border border-[#121212]/[0.08] bg-white p-6 md:p-8 lg:p-10 transition-all duration-500 flex flex-col h-full"
       >
         <div className="flex items-center justify-between mb-5 md:mb-6">
           <IconTile icon={Icon} mode="light" />

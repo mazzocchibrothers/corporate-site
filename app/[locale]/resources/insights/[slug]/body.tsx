@@ -251,10 +251,10 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                     y={20}
                     delay={i * 0.08}
                     key={ch.num}
-                    className="group rounded-2xl border border-[#4B4DF7]/[0.06] hover:border-[#4B4DF7]/[0.15] bg-white p-8 transition-all duration-500"
+                    className="group rounded-2xl border border-[#4B4DF7]/[0.06] bg-white p-8 transition-all duration-500"
                   >
                     <div className="flex items-center gap-4 mb-5">
-                      <div className="w-11 h-11 rounded-xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.1] flex items-center justify-center group-hover:bg-[#4B4DF7]/[0.12] transition-all duration-500">
+                      <div className="w-11 h-11 rounded-xl bg-[#4B4DF7]/[0.06] border border-[#4B4DF7]/[0.1] flex items-center justify-center transition-all duration-500">
                         <Icon className="h-5 w-5 text-[#4B4DF7]/60" />
                       </div>
                       <span className="type-caption font-bold text-[#4B4DF7]/40">{ch.num}</span>
