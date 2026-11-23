@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { useRouter } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
+import { Button, SECONDARY_ON_LIGHT } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 const stats = [
@@ -166,7 +166,7 @@ function DraggableMarquee({ photos }) {
         {[0, 1].map((copy) => (
           <div key={copy} className="flex items-center gap-4 shrink-0 pr-4" aria-hidden={copy === 1}>
             {photos.map((src, i) => (
-              <div key={`${copy}-${i}`} className="w-[280px] h-[155px] sm:w-[424px] sm:h-[235px]" style={{ borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#141516', flexShrink: 0 }}>
+              <div key={`${copy}-${i}`} className="w-[280px] h-[155px] sm:w-[424px] sm:h-[235px]" style={{ borderRadius: 12, position: 'relative', overflow: 'hidden', backgroundColor: '#f7f7f7', flexShrink: 0 }}>
                 <img src={src} alt="" draggable={false} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', pointerEvents: 'none' }} />
               </div>
             ))}
@@ -331,25 +331,21 @@ export default function AboutPage() {
 
         {/* ─── 2. VISION + MISSION (compound) ──────────────────────────────── */}
         <section
-          className="px-5 md:px-8 lg:px-12"
+          className="section-light px-5 md:px-8 lg:px-12"
           style={{
             position: 'relative',
             paddingTop: 112,
             paddingBottom: 112,
-            backgroundColor: '#040404',
             overflow: 'hidden',
           }}
         >
-          <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-            <img src="/about/section-margin.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-            <img src="/about/section-margin1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-          </div>
+          {/* The dark glow textures (section-margin*.avif) belong to the dark theme; the light section has none. */}
           <div style={{ maxWidth: 1304, margin: '0 auto', position: 'relative', width: '100%', display: 'flex', flexDirection: 'column', gap: 72 }}>
 
             {/* Vision */}
             <div style={{ maxWidth: 1000 }}>
               <p className="type-body-sm"
-                style={{ fontWeight: 500, color: '#9395ff', textTransform: 'uppercase', margin: '0 0 24px' }}
+                style={{ fontWeight: 500, color: '#4b4df7', textTransform: 'uppercase', margin: '0 0 24px' }}
               >{t('body')}</p>
               <p
                 style={{
@@ -357,7 +353,7 @@ export default function AboutPage() {
                   fontWeight: 500,
                   fontSize: 'clamp(28px, 3vw, 40px)',
                   lineHeight: 1.15,
-                  color: '#fff',
+                  color: '#121212',
                   letterSpacing: '-0.96px',
                   margin: 0,
                 }}
@@ -367,7 +363,7 @@ export default function AboutPage() {
             {/* Team images — bridging vision and mission */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {['/about/vision-1.avif', '/about/vision-2.avif', '/about/vision-3.avif'].map((src, i) => (
-                <div key={i} style={{ aspectRatio: '16/9', borderRadius: 12, overflow: 'hidden', position: 'relative', backgroundColor: '#141516' }}>
+                <div key={i} style={{ aspectRatio: '16/9', borderRadius: 12, overflow: 'hidden', position: 'relative', backgroundColor: '#f7f7f7' }}>
                   <img src={src} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
               ))}
@@ -376,7 +372,7 @@ export default function AboutPage() {
             {/* Mission */}
             <div style={{ maxWidth: 900 }}>
               <p className="type-body-sm"
-                style={{ fontWeight: 500, color: '#9395ff', textTransform: 'uppercase', margin: '0 0 24px' }}
+                style={{ fontWeight: 500, color: '#4b4df7', textTransform: 'uppercase', margin: '0 0 24px' }}
               >{t('body3')}</p>
               <h2 className="max-w-[880px]"
                 style={{
@@ -385,21 +381,14 @@ export default function AboutPage() {
                   fontSize: 'clamp(28px, 3.1vw, 48px)',
                   lineHeight: 1.1,
                   letterSpacing: '-0.96px',
-                  color: '#fff',
+                  color: '#121212',
                   margin: '0 0 24px',
                 }}
               >{t.rich('heading', {
-                span: (chunks) => <span
-                  style={{
-                    background: 'linear-gradient(90deg, #4e6bff 0%, #ff5b5b 49.52%, #ff8447 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                  }}
-                >{chunks}</span>,
+                span: (chunks) => <span>{chunks}</span>,
               })}</h2>
               <p className="max-w-[880px] type-body-lg"
-                style={{ color: '#9a9a9a', margin: 0 }}
+                style={{ color: '#4b4b4b', margin: 0 }}
               >{t('body4')}</p>
             </div>
 
@@ -424,20 +413,13 @@ export default function AboutPage() {
                 maxWidth: 850,
               }}
             >{t.rich('heading2', {
-              span: (chunks) => <span
-                style={{
-                  background: 'linear-gradient(90deg, #5667ff 0%, #ff6262 51.93%, #ff7d49 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >{chunks}</span>,
+              span: (chunks) => <span>{chunks}</span>,
             })}</h2>
             <p className="max-w-[880px] type-body-lg"
-              style={{ color: '#7a7a7a', margin: 0, maxWidth: 837 }}
+              style={{ color: '#707070', margin: 0, maxWidth: 837 }}
             >{t('body6')}</p>
             <p className="type-body-lg"
-              style={{ color: '#7a7a7a', margin: '24px 0 0', maxWidth: 837 }}
+              style={{ color: '#707070', margin: '24px 0 0', maxWidth: 837 }}
             >{t.rich('body7', {
               br: () => <br />,
             })}</p>
@@ -585,7 +567,7 @@ export default function AboutPage() {
                 }}
               >{t('heading4')}</h2>
               <p className="max-w-[880px] type-body"
-                style={{ color: '#7a7a7a', margin: 0 }}
+                style={{ color: '#707070', margin: 0 }}
               >{t('body13')}</p>
             </div>
 
@@ -606,7 +588,7 @@ export default function AboutPage() {
                   <img
                     src="/about/founder-nicolo.avif"
                     alt="Nicolò Mazzocchi"
-                    className="transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                    className="transition-transform duration-700 ease-out group-hover:scale-[1.04] group-focus-visible:scale-[1.04]"
                     style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </a>
@@ -628,7 +610,7 @@ export default function AboutPage() {
                     style={{ color: '#4b4df7', margin: '0 0 20px' }}
                   >{t('body14')}</p>
                   <p className="type-body"
-                    style={{ color: '#7a7a7a', margin: 0 }}
+                    style={{ color: '#707070', margin: 0 }}
                   >{t('body15')}</p>
                 </div>
               </div>
@@ -645,7 +627,7 @@ export default function AboutPage() {
                   <img
                     src="/about/founder-simone.avif"
                     alt="Simone Patera"
-                    className="transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                    className="transition-transform duration-700 ease-out group-hover:scale-[1.04] group-focus-visible:scale-[1.04]"
                     style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </a>
@@ -667,7 +649,7 @@ export default function AboutPage() {
                     style={{ color: '#4b4df7', margin: '0 0 20px' }}
                   >{t('body16')}</p>
                   <p className="type-body"
-                    style={{ color: '#7a7a7a', margin: 0 }}
+                    style={{ color: '#707070', margin: 0 }}
                   >{t('body17')}</p>
                 </div>
               </div>
@@ -677,22 +659,18 @@ export default function AboutPage() {
 
         {/* ─── 7. ONE TEAM ─────────────────────────────────────────────────── */}
         <section
-          className="px-5 md:px-8 lg:px-12"
+          className="section-light px-5 md:px-8 lg:px-12"
           style={{
             position: 'relative',
             paddingTop: 80,
             paddingBottom: 80,
-            backgroundColor: '#040404',
             overflow: 'hidden',
             minHeight: '100vh',
             display: 'flex',
             alignItems: 'center',
           }}
         >
-          <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-            <img src="/about/section-margin.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-            <img src="/about/section-margin1.avif" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-          </div>
+          {/* The dark glow textures (section-margin*.avif) belong to the dark theme; the light section has none. */}
           <div style={{ maxWidth: 1304, margin: '0 auto', position: 'relative', width: '100%', display: 'flex', flexDirection: 'column', gap: 80 }}>
             {/* Header row: label + heading + pills (left), Join us button (right) */}
             <div
@@ -701,7 +679,7 @@ export default function AboutPage() {
             >
               <div style={{ flex: '1 0 0', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 24 }}>
                 <p className="type-body-sm"
-                  style={{ fontWeight: 500, color: '#9395ff', textTransform: 'uppercase', margin: 0 }}
+                  style={{ fontWeight: 500, color: '#4b4df7', textTransform: 'uppercase', margin: 0 }}
                 >{t('body18')}</p>
                 <h2 className="max-w-[880px]"
                   style={{
@@ -709,21 +687,21 @@ export default function AboutPage() {
                     fontWeight: 600,
                     fontSize: 'clamp(28px, 3.1vw, 48px)',
                     lineHeight: 1.1,
-                    color: '#fff',
+                    color: '#121212',
                     letterSpacing: '-0.96px',
                     margin: 0,
                     maxWidth: 760,
                   }}
                 >{t('heading5')}</h2>
                 <p className="max-w-[880px] type-body-lg"
-                  style={{ color: '#9a9a9a', margin: 0, maxWidth: 820 }}
+                  style={{ color: '#4b4b4b', margin: 0, maxWidth: 820 }}
                 >{t('body19')}</p>
                 {/* Discipline pills */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
                   {['psychometricians', 'engineers', 'designers', 'product'].map((tag) => (
                     <span className="type-body-sm"
                       key={tag}
-                      style={{ display: 'inline-flex', alignItems: 'center', padding: '6px 16px', border: '1px solid #7a7a7a', borderRadius: 99, fontWeight: 500, color: '#7a7a7a', whiteSpace: 'nowrap' }}
+                      style={{ display: 'inline-flex', alignItems: 'center', padding: '6px 16px', border: '1px solid #e5e7eb', backgroundColor: '#f1f5f9', borderRadius: 99, fontWeight: 500, color: '#4b4b4b', whiteSpace: 'nowrap' }}
                     >
                       {t(`teamTags.${tag}`)}
                     </span>
@@ -733,7 +711,7 @@ export default function AboutPage() {
 
               {/* Join us button */}
               <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 8 }}>
-                <Button asChild variant="secondary" mode="dark" icon={null}>
+                <Button asChild variant="secondary" mode="light" className={SECONDARY_ON_LIGHT} icon={null}>
                   <a
                     href="/careers"
                     onClick={(e) => { e.preventDefault(); router.push('/careers'); }}
