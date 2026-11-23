@@ -11,6 +11,7 @@ import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 // Structure: the card's image. The title, the date and the tag are copy and
 // live in messages/ under blog.articles, keyed on the same slug as the post
@@ -275,23 +276,19 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* 4. Bottom CTA */}
-        <section className="relative py-20 lg:py-24">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <Reveal
-              duration={0.7}
-              className="relative overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 text-center"
-            >
-              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] mx-auto tracking-[-0.02em]">{t('heading3')}</h2>
-              <p className="max-w-[880px] type-body text-white/[0.4] mb-10 mx-auto">{t('body2')}</p>
-              <Button
-                onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
-                variant="primary"
-                mode="dark"
-              >{t('cta2')}</Button>
-            </Reveal>
-          </div>
-        </section>
+        {/* 4. Bottom CTA: the shared light closing. The button keeps its original
+            client-side navigation (router.push), hence `action`. */}
+        <ClosingPanel
+          heading={t('heading3')}
+          body={t('body2')}
+          action={
+            <Button
+              onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
+              variant="primary"
+              mode="light"
+            >{t('cta2')}</Button>
+          }
+        />
       <Footer />
       </main>
     </>

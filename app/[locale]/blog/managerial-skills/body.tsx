@@ -4,9 +4,10 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ArrowRight, Clock, BookOpen, Compass, Target, Heart, Handshake, Wrench } from 'lucide-react';
+import { ArrowLeft, Clock, BookOpen, Compass, Target, Heart, Handshake, Wrench } from 'lucide-react';
 import { href } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 
 
@@ -172,27 +173,13 @@ export default async function BlogArticle7() {
           </div>
         </section>
 
-        <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <Reveal duration={0.7}>
-              <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('text3')}</span>
-              <h2 className="max-w-[880px] text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] mx-auto tracking-[-0.02em]">
-                {t.rich('heading6', {
-    s: (chunks) => <span className="gradient-text">{chunks}</span>,
-  })}
-              </h2>
-              <p className="max-w-[880px] type-body text-white/[0.4] mb-12 mx-auto">
-                {t('body7')}
-              </p>
-              <Button asChild
-                variant="primary"
-                mode="dark"
-              >
-                <a href={href('book-meeting', locale)}>{t('cta2')}<ArrowRight aria-hidden /></a>
-              </Button>
-            </Reveal>
-          </div>
-        </section>
+        {/* CTA: the shared light closing */}
+        <ClosingPanel
+          heading={t.rich('heading6', { s: (chunks) => <span>{chunks}</span> })}
+          body={t('body7')}
+          cta={t('cta2')}
+          href={href('book-meeting', locale)}
+        />
       <Footer />
       </main>
     </>

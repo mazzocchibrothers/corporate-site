@@ -3,10 +3,11 @@ import { Reveal } from '@/components/ui/reveal';
 import { getLocale, getTranslations } from 'next-intl/server';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { Button } from '@/components/ui/button';
+import { Button, SECONDARY_ON_LIGHT } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Clock, BookOpen, Search, Building2, Users, BarChart3, GitBranch, Target } from 'lucide-react';
 import { href } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 
 
@@ -160,29 +161,22 @@ export default async function BlogArticle9() {
           </div>
         </section>
 
-        <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <Reveal duration={0.7}>
-              <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('text3')}</span>
-              <h2 className="max-w-[880px] text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] mx-auto tracking-[-0.02em]">
-                {t.rich('heading5', {
-    s: (chunks) => <span className="gradient-text">{chunks}</span>,
-  })}
-              </h2>
-              <p className="max-w-[880px] type-body text-white/[0.4] mb-12 mx-auto">
-                {t('body6')}
-              </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Button asChild variant="primary" mode="dark">
-                  <a href={href('book-meeting', locale)}>{t('cta2')}<ArrowRight aria-hidden /></a>
-                </Button>
-                <Button asChild variant="secondary" mode="dark">
-                  <a href={href('solutions/talent-acquisition', locale)}>{t('cta3')}<ArrowRight aria-hidden /></a>
-                </Button>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        {/* CTA: the shared light closing. It keeps the page's 2 buttons for now
+            (the Assess closing has one) — which to keep is the owner's call. */}
+        <ClosingPanel
+          heading={t.rich('heading5', { s: (chunks) => <span>{chunks}</span> })}
+          body={t('body6')}
+          action={
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Button asChild variant="primary" mode="light">
+                <a href={href('book-meeting', locale)}>{t('cta2')}<ArrowRight aria-hidden /></a>
+              </Button>
+              <Button asChild variant="secondary" mode="light" className={SECONDARY_ON_LIGHT}>
+                <a href={href('solutions/talent-acquisition', locale)}>{t('cta3')}<ArrowRight aria-hidden /></a>
+              </Button>
+            </div>
+          }
+        />
       <Footer />
       </main>
     </>

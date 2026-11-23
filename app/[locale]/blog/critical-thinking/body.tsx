@@ -4,9 +4,10 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ArrowRight, Clock, BookOpen, MessageSquare, Users, Target, Brain, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, Clock, BookOpen, MessageSquare, Users, Target, Brain, AlertTriangle } from 'lucide-react';
 import { href } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 
 
@@ -174,25 +175,25 @@ export default async function BlogArticle5() {
         </section>
 
         {/* FAQ */}
-        <section className="relative py-20 lg:py-28">
+        <section className="section-light relative py-20 lg:py-28">
           <div className="max-w-[780px] mx-auto px-8 lg:px-12">
             <Reveal
               as="h2"
               y={20}
               duration={0.6}
-              className="max-w-[880px] text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]"
+              className="max-w-[880px] text-[clamp(1.5rem,4vw,3rem)] font-semibold text-[#121212] mb-10 tracking-[-0.02em]"
             >
               {t('heading8')}
             </Reveal>
             <div className="space-y-0">
               {FAQS.map((faq, i) => (
-                <details key={i} className="group border-b border-white/[0.06]">
+                <details key={i} className="group border-b border-[#e5e7eb]">
                   <summary className="flex items-center justify-between py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none">
-                    <span className="type-body-bold text-white/85 pr-8">{t(`faqs.${faq.id}.q`)}</span>
-                    <span className="font-display text-white/30 text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
+                    <span className="type-body-bold text-[#121212] pr-8">{t(`faqs.${faq.id}.q`)}</span>
+                    <span className="font-display text-[#707070] text-[20px] transition-transform duration-300 group-open:rotate-45 shrink-0">+</span>
                   </summary>
                   <div className="pb-6">
-                    <p className="type-body text-white/[0.55]">{t(`faqs.${faq.id}.a`)}</p>
+                    <p className="type-body text-[#4B4B4B]">{t(`faqs.${faq.id}.a`)}</p>
                   </div>
                 </details>
               ))}
@@ -200,28 +201,14 @@ export default async function BlogArticle5() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="relative pt-8 pb-20 lg:pt-10 lg:pb-24">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center">
-            <Reveal duration={0.7}>
-              <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('text4')}</span>
-              <h2 className="max-w-[880px] text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] mx-auto tracking-[-0.02em]">
-                {t.rich('heading9', {
-    s: (chunks) => <span className="gradient-text">{chunks}</span>,
-  })}
-              </h2>
-              <p className="max-w-[880px] type-body text-white/[0.4] mb-12 mx-auto">
-                {t('body12')}
-              </p>
-              <Button asChild
-                variant="primary"
-                mode="dark"
-              >
-                <a href={href('book-meeting', locale)}>{t('cta2')}<ArrowRight aria-hidden /></a>
-              </Button>
-            </Reveal>
-          </div>
-        </section>
+        {/* CTA: the shared light closing, ruled off the white FAQ above */}
+        <ClosingPanel
+          rule
+          heading={t.rich('heading9', { s: (chunks) => <span>{chunks}</span> })}
+          body={t('body12')}
+          cta={t('cta2')}
+          href={href('book-meeting', locale)}
+        />
       <Footer />
       </main>
     </>
