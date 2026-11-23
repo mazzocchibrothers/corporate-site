@@ -395,11 +395,19 @@ Warm variant (hand-rolled, Assess): `h-8 w-8 rounded-lg bg-[#fdf1ea] text-[#ff5f
 
 ### 4.12 Heading accent
 
-CLAUDE.md standard: `t.rich('…', { span: (c) => <span className="gradient-text">{c}</span> })`,
-`font-semibold` like the heading. Inside `h1`/`h2` the accent wraps word by word
+**Interim standard, pending the redesign — light sections have no accent
+gradient.** The `.gradient-text` family starts at `#FFAF64`, about 1.8:1 on
+white. On a `.section-light` or `.section-breathe` section the accent span keeps
+its words but carries no gradient class and no italic: it reads in the
+heading's colour, exactly like the rest of the heading. This matches CLAUDE.md.
+
+On dark sections (heroes and bands that stay dark, the closing band) the
+gradient remains: `t.rich('…', { span: (c) => <span className="gradient-text">{c}</span> })`,
+`font-semibold` like the heading. Inside `h1`/`h2` it wraps word by word
 (`display:inline`, `box-decoration-break: slice`).
-None of the three reference pages uses it. Assess uses a plain orange span
-(`text-[#ff5f24]`) for its "problem" headline (§7).
+
+None of the three reference pages uses the gradient. Assess uses a plain orange
+span (`text-[#ff5f24]`) for its "problem" headline (§7).
 
 ### 4.13 Checked points list
 
@@ -528,7 +536,7 @@ Dark band. `<div className="section-dark"><ClosingBanner heading body cta /></di
 | 10 | Tertiary colour | `Button` `tertiary` uses `#6366F8` on light. Every hand-rolled card link and CLAUDE.md use `#4B4DF7` | Change `tertiary`/`light` to `text-[#4B4DF7]` in `button.tsx` |
 | 11 | Secondary on light | `/product` "Read more" is a hand-rolled white pill with a `#e5e7eb` border. `Button` `secondary`/`light` is a `#888` outline | Decide which is the light secondary. Then either restyle the variant or replace the hand-rolled pill |
 | 12 | Closing | Product: hand-rolled dark card, `rounded-[24px] md:rounded-[40px] border-white/[0.08] bg-white/[0.04]` + brown radial glow. Trust: `ClosingBanner` on `section-dark`. Assess: a light gradient panel with `BookDemoButton`, no dark band | `ClosingBanner` on `section-dark`. Assess's light closing is a candidate deliberate exception (product launch page). Confirm |
-| 13 | Heading accent | CLAUDE.md: `.gradient-text`. The three pages: none. Assess uses an orange `text-[#ff5f24]` span | Keep `.gradient-text` as standard. Record orange as the "problem framing" exception, or retire it |
+| 13 | Heading accent | CLAUDE.md: `.gradient-text`. The three pages: none. Assess uses an orange `text-[#ff5f24]` span | Interim: no gradient and no italic on light sections, the gradient only on dark ones (§4.12). Orange "problem framing" span still to decide |
 | 14 | Oranges | `#ff5f24`, `#d9603f`, `#EA580C` | `#ff5f24` for accents. `#EA580C` only for status pills. `#d9603f` → `#ff5f24`? Confirm |
 | 15 | Tertiary text | `#7A7A7A` (Assess) vs `text-[#121212]/60` (trust) | `#707070` — resolved: `#7A7A7A` failed AA, every text use is now `#707070` |
 | 22 | Orange icons on light | The ✗ marks in the "old way" columns (solutions pages) are `#ff5f24` on a `#ff5f24`/10 disc: about 2.5:1, under the 3:1 a meaningful icon needs. None of the allowed oranges passes | **Known contrast issue, left for the redesign.** Pick an orange that holds 3:1 on its disc, or drop the disc |
