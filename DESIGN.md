@@ -283,7 +283,18 @@ its own design. Don't copy that to new pages (§7).
   (#F7F7F7)** with hard edges (no fade strips: `.fade-into-*` is `display:none`).
 - The card colour flips with the background: grey card on white, white card on grey.
 - `scroll-mt-20` (or `scroll-mt-[80px]`) on every section that is an anchor target.
-- Pages close on a dark band (`.section-dark` + `ClosingBanner`), then `Footer`.
+- **Interim standard, pending the redesign:** a light page ends on a **light
+  final CTA section** — a white `.section-light` holding the Assess closing
+  panel (§4.19) — followed by the **dark** `Footer` (§4.20).
+  - The closing section is always white, never `#F7F7F7`: the panel's gradient
+    runs through `#F7F7F7`, so on grey its centre would melt into the section.
+  - After another white section it takes a top rule (`border-t
+    border-[#e5e7eb]`, the `rule` prop), the /product convention (§7 #17).
+  - **Temporary exception, until step 5:** /science has no rule. Its product
+    cross-links (white, `pb-2`) are built as one block with the CTA. Revisit
+    when /science is converted.
+  - Pages still dark (and the `/lp`, `/demo` pages) keep the dark band:
+    `ClosingBanner` / `SolutionFinalCTA` with the default `tone="dark"`.
 
 ---
 
@@ -444,11 +455,31 @@ The parent needs `.trust-page` or `.assess-faq` for the marker reset and the plu
 
 ### 4.19 Closing banner — `components/shared/ClosingBanner.tsx`
 
-Dark band. `<div className="section-dark"><ClosingBanner heading body cta /></div>`. Section `py-20 lg:py-24`. Card `rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24` centred, H2 `text-white/90`, body `type-body-lg text-white/[0.65]`, primary-dark `Button` `mt-8`, then a client-logo row. **Canonical page ending** (used by trust and the homepage).
+**Interim standard, pending the redesign: light on light pages.** Model: the
+Assess closing panel.
+
+- `<ClosingBanner heading body cta tone="light" rule? />` (and
+  `<SolutionFinalCTA … tone="light" rule? />`). Section `section-light py-20
+  lg:py-24`, plus `border-t border-[#e5e7eb]` with `rule`.
+- Panel `rounded-[20px] md:rounded-3xl px-6 py-14 md:px-16 md:py-24`, centred,
+  `style={{ backgroundImage: CLOSING_PANEL_GRADIENT }}` =
+  `linear-gradient(100deg, #fdf3ec 0%, #f7f7f7 50%, #efeefb 100%)` (exported
+  from `ClosingBanner.tsx`).
+- H2 `text-[#121212]`, accent phrase with no gradient and no italic. Body
+  `type-body-lg text-[#4B4B4B]`. Primary `Button` `mode="light"`.
+- Client-logo row: logos `filter: brightness(0)` at `opacity-[0.55]`, static
+  (no hover fade).
+- Single-page closings (`CTASection`, `CustomersFinalCTA`, `ScienceCTA`, the
+  /product and /partners closings) use the same panel and gradient.
+
+`tone="dark"` (the default) is the original dark band, for pages still dark
+and the `/lp` pages: card `rounded-3xl border border-white/[0.06]
+bg-white/[0.02] backdrop-blur-sm`, H2 `text-white/90`, body `text-white/[0.65]`,
+primary-dark `Button`, logos inverted with a hover fade.
 
 ### 4.20 Footer — `components/Footer.tsx`
 
-`bg-[#050508] border-t border-white/[0.04] pt-10 md:pt-14 pb-6`, same 1400 container. Render as is.
+`bg-[#050508] border-t border-white/[0.04] pt-10 md:pt-14 pb-6`, same 1400 container. Render as is. **It stays dark**, also after a light final CTA section: the light-to-dark edge is the page's end.
 
 ---
 
@@ -469,8 +500,8 @@ Dark band. `<div className="section-dark"><ClosingBanner heading body cta /></di
   Section C        section-breathe  …   (keep alternating)
   FAQ              section-breathe  centred H2 + TrustFaq (max-w 880)
 </main>
-<div className="section-dark"><ClosingBanner … /></div>
-<Footer />
+<ClosingBanner … tone="light" />   white section, Assess panel (rule after a white section)
+<Footer />                          dark
 ```
 
 **Recurring compositions**
@@ -506,7 +537,7 @@ Dark band. `<div className="section-dark"><ClosingBanner heading body cta /></di
 - Use `mode="light"` buttons and icon tiles on light sections and `mode="dark"` on dark ones.
 - Flip the card colour against the section: `#F7F7F7` card on white, white card on `#F7F7F7`.
 - Radius: 16px for cards, 24px for panels and banners, `full` for every pill.
-- Close on `section-dark` + `ClosingBanner`, then `Footer`.
+- Close on a light final CTA (`ClosingBanner tone="light"`, §4.19), then the dark `Footer`.
 - Put every visible string in `messages/{en,it}.json` and every hex in the `check-colors` palette.
 
 **Don't**
@@ -536,7 +567,7 @@ Dark band. `<div className="section-dark"><ClosingBanner heading body cta /></di
 | 9 | Elevation | Three shadow recipes (Assess raised, PlatformCards hover, trust subtle) | Assess raised for featured, PlatformCards for hover lift. Retire trust's two |
 | 10 | Tertiary colour | `Button` `tertiary` uses `#6366F8` on light. Every hand-rolled card link and CLAUDE.md use `#4B4DF7` | Change `tertiary`/`light` to `text-[#4B4DF7]` in `button.tsx` |
 | 11 | Secondary on light | `/product` "Read more" is a hand-rolled white pill with a `#e5e7eb` border. `Button` `secondary`/`light` is a `#888` outline | Decide which is the light secondary. Then either restyle the variant or replace the hand-rolled pill |
-| 12 | Closing | Product: hand-rolled dark card, `rounded-[24px] md:rounded-[40px] border-white/[0.08] bg-white/[0.04]` + brown radial glow. Trust: `ClosingBanner` on `section-dark`. Assess: a light gradient panel with `BookDemoButton`, no dark band | `ClosingBanner` on `section-dark`. Assess's light closing is a candidate deliberate exception (product launch page). Confirm |
+| 12 | Closing | Product: hand-rolled dark card, `rounded-[24px] md:rounded-[40px] border-white/[0.08] bg-white/[0.04]` + brown radial glow. Trust: `ClosingBanner` on `section-dark`. Assess: a light gradient panel with `BookDemoButton`, no dark band | **Resolved (interim):** the Assess light panel is the standard on light pages, on a white section; the dark band only where the page is still dark |
 | 13 | Heading accent | CLAUDE.md: `.gradient-text`. The three pages: none. Assess uses an orange `text-[#ff5f24]` span | Interim: no gradient and no italic on light sections, the gradient only on dark ones (§4.12). Orange "problem framing" span still to decide |
 | 14 | Oranges | `#ff5f24`, `#d9603f`, `#EA580C` | `#ff5f24` for accents. `#EA580C` only for status pills. `#d9603f` → `#ff5f24`? Confirm |
 | 15 | Tertiary text | `#7A7A7A` (Assess) vs `text-[#121212]/60` (trust) | `#707070` — resolved: `#7A7A7A` failed AA, every text use is now `#707070` |
