@@ -35,7 +35,7 @@ export default function CustomersFinalCTA() {
 
           <div className="flex flex-wrap items-center justify-center gap-2">
             {badges.map(b => (
-              <span key={b} className="type-caption rounded-full border border-white/[0.15] px-4 py-2 text-white/60">{t(`finalCTA.badges.${b}`)}</span>
+              <span key={b} className="type-caption rounded-full border border-[#e5e7eb] bg-[#f1f5f9] px-3 py-0.5 text-[#4B4B4B]">{t(`finalCTA.badges.${b}`)}</span>
             ))}
           </div>
 

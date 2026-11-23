@@ -84,8 +84,13 @@ export default function ClosingBanner({ heading, body, cta, tone = 'dark', rule 
               <img loading="lazy" decoding="async"
                 src={logo.src}
                 alt={logo.name}
-                className={`${logo.className ?? 'h-6'} w-auto object-contain opacity-[0.55] hover:opacity-[0.8] transition-opacity duration-500`}
-                style={{ filter: 'brightness(0) invert(1)' }}
+                // Light: drawn black at reduced opacity, as on the homepage
+                // logo bar, and static (the logos are not links). Dark: the
+                // original inverted logos and hover fade.
+                className={light
+                  ? `${logo.className ?? 'h-6'} w-auto object-contain opacity-[0.55]`
+                  : `${logo.className ?? 'h-6'} w-auto object-contain opacity-[0.55] hover:opacity-[0.8] transition-opacity duration-500`}
+                style={{ filter: light ? 'brightness(0)' : 'brightness(0) invert(1)' }}
               />
             </div>
           ))}
