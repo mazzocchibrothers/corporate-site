@@ -3,8 +3,8 @@ import { Reveal } from '@/components/ui/reveal';
 import { getLocale, getTranslations } from 'next-intl/server';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
-import { Button, SECONDARY_ON_LIGHT } from '@/components/ui/button';
-import { ArrowLeft, ArrowRight, Clock, BookOpen, Search, Building2, Users, BarChart3, GitBranch, Target } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, Clock, BookOpen, Search, Building2, Users, BarChart3, GitBranch, Target } from 'lucide-react';
 import { href } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
 import { ClosingPanel } from '@/components/shared/ClosingPanel';
@@ -161,21 +161,12 @@ export default async function BlogArticle9() {
           </div>
         </section>
 
-        {/* CTA: the shared light closing. It keeps the page's 2 buttons for now
-            (the Assess closing has one) — which to keep is the owner's call. */}
+        {/* CTA: the shared light closing */}
         <ClosingPanel
           heading={t.rich('heading5', { s: (chunks) => <span>{chunks}</span> })}
           body={t('body6')}
-          action={
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button asChild variant="primary" mode="light">
-                <a href={href('book-meeting', locale)}>{t('cta2')}<ArrowRight aria-hidden /></a>
-              </Button>
-              <Button asChild variant="secondary" mode="light" className={SECONDARY_ON_LIGHT}>
-                <a href={href('solutions/talent-acquisition', locale)}>{t('cta3')}<ArrowRight aria-hidden /></a>
-              </Button>
-            </div>
-          }
+          cta={t('cta2')}
+          href={href('book-meeting', locale)}
         />
       <Footer />
       </main>
