@@ -12,7 +12,7 @@ export default function TAHero() {
   const lang = useLocale();
   const t = useTranslations('solutions.talent-acquisition');
   return (
-    <section id="ta-hero" data-testid="ta-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px]">
+    <section id="ta-hero" data-testid="ta-hero" className="section-light relative min-h-screen flex flex-col justify-center pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full py-10 md:py-16 lg:py-0">
         <HeroCopy>
           <Reveal
@@ -20,7 +20,7 @@ export default function TAHero() {
             y={40}
             duration={0.8}
             delay={0.3}
-            className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-6 md:mb-10"
+            className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-[#121212] mb-6 md:mb-10"
             style={{ lineHeight: 1.1 }}
           >{t.rich('taHero.heading', {
             span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
@@ -31,8 +31,8 @@ export default function TAHero() {
             delay={0.5}
             className="flex flex-col items-start gap-5 md:gap-8"
           >
-            <p className="type-body-lg hero-subtitle text-white/[0.65]">{t('taHero.body')}</p>
-            <Button asChild variant="primary" mode="dark" className="shrink-0">
+            <p className="type-body-lg hero-subtitle text-[#4B4B4B]">{t('taHero.body')}</p>
+            <Button asChild variant="primary" mode="light" className="shrink-0">
               <a href={href('book-meeting', lang)} data-testid="ta-hero-cta">
                 <span>{t('taHero.cta')}</span>
                 <ArrowRight aria-hidden="true" />

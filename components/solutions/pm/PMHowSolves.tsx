@@ -63,10 +63,10 @@ export default function PMHowSolves() {
         <Reveal
           y={15}
           delay={0.35}
-          className="rounded-2xl bg-[#0E0E0E] p-8 lg:p-10"
+          className="rounded-2xl bg-[#4B4DF7] p-8 lg:p-10"
         >
-          <h3 className="text-[20px] font-semibold text-white/90 mb-4 text-center">{t('pmHowSolves.heading3')}</h3>
-          <p className="type-body text-white/[0.85] text-center max-w-3xl mx-auto font-medium">{t('pmHowSolves.body5')}</p>
+          <h3 className="text-[20px] font-semibold text-white mb-4 text-center">{t('pmHowSolves.heading3')}</h3>
+          <p className="type-body text-white text-center max-w-3xl mx-auto font-medium">{t('pmHowSolves.body5')}</p>
         </Reveal>
       </div>
     </section>

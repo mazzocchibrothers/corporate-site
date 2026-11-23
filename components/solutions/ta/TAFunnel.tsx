@@ -176,14 +176,14 @@ export default function TAFunnel() {
               data-testid={`funnel-${s.id}`}
               className={`md:flex-1 relative rounded-xl px-3 py-3 md:px-6 md:py-5 text-left transition-all duration-500 border ${
                 i === active
-                  ? 'bg-[#1A1A2E] border-[#1A1A2E]'
+                  ? 'bg-[#E7E7E8] border-[#E7E7E8]'
                   : 'bg-white border-[#1A1A2E]/[0.06] hover:bg-[#1A1A2E]/[0.04] hover:border-[#1A1A2E]/[0.12]'
               }`}
             >
-              <span className={`type-eyebrow block mb-0.5 md:mb-1 ${i === active ? 'text-[#6B7DFF]' : 'text-[#1A1A2E]/25'}`}>
+              <span className={`type-eyebrow block mb-0.5 md:mb-1 ${i === active ? 'text-[#4B4DF7]' : 'text-[#1A1A2E]/25'}`}>
                 {t('taFunnel.cta')} {s.number}
               </span>
-              <span className={`font-display text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-white' : 'text-[#7A7A7A]'}`}>
+              <span className={`font-display text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-[#121212]' : 'text-[#7A7A7A]'}`}>
                 {t(`taFunnel.stages.${s.id}.label`)}
               </span>
               {i === active && (
@@ -192,7 +192,7 @@ export default function TAFunnel() {
                   duration={0.3}
                   className="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full"
                 >
-                  <ArrowDown className="h-4 w-4 text-[#9B9DFB]/50 mt-2" />
+                  <ArrowDown className="h-4 w-4 text-[#4B4DF7]/50 mt-2" />
                 </Reveal>
               )}
             </button>

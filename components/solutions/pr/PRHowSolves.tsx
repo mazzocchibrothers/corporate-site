@@ -25,10 +25,10 @@ export default function PRHowSolves() {
   const t = useTranslations('solutions.project-resourcing');
 
   return (
-    <section id="pr-how" data-testid="pr-how" className="relative py-20 lg:py-28">
+    <section id="pr-how" data-testid="pr-how" className="section-light relative py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-16">
-          <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white/90">{t.rich('prHowSolves.heading', {
+          <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212]">{t.rich('prHowSolves.heading', {
             span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
           })}</h2>
         </Reveal>
@@ -41,11 +41,11 @@ export default function PRHowSolves() {
                 y={20}
                 delay={0.15 + i * 0.1}
                 key={p.id}
-                className="group rounded-2xl border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/[0.14] backdrop-blur-sm p-10 transition-all duration-500"
+                className="group rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:shadow-[0_24px_48px_-24px_rgba(18,18,18,0.18)] p-10 transition-all duration-500"
               >
-                <IconTile icon={Icon} mode="dark" className="mb-5" />
-                <h3 className="text-[20px] font-semibold text-white/90 mb-4">{t(`prHowSolves.pillars.${p.id}.title`)}</h3>
-                <p className="type-body text-white/[0.65]">{t(`prHowSolves.pillars.${p.id}.desc`)}</p>
+                <IconTile icon={Icon} mode="light" className="mb-5" />
+                <h3 className="text-[20px] font-semibold text-[#121212] mb-4">{t(`prHowSolves.pillars.${p.id}.title`)}</h3>
+                <p className="type-body text-[#4B4B4B]">{t(`prHowSolves.pillars.${p.id}.desc`)}</p>
               </Reveal>
             );
           })}
