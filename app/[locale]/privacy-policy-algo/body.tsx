@@ -7,7 +7,7 @@ import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
 import { BASE_URL } from '@/i18n/urls';
 import { HeroCopy } from '@/components/ui/hero-copy';
-import { Button } from '@/components/ui/button';
+import { Button, SECONDARY_ON_LIGHT } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 
 
@@ -23,30 +23,30 @@ export default function PrivacyPolicyAlgo() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative pt-[80px] bg-black">
+        <section className="section-light relative pt-[80px]">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute rounded-full" style={{ width: '600px', height: '600px', top: '-200px', left: '-100px', background: 'radial-gradient(circle, rgba(75,77,247,0.10) 0%, transparent 70%)', filter: 'blur(60px)' }} />
           </div>
           <div className="relative z-10 max-w-[900px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
             <Reveal y={20} duration={0.6}>
-              <span className="type-eyebrow text-[#6B7DFF] mb-6 block">
+              <span className="type-eyebrow text-[#4B4DF7] mb-6 block">
                 {t('text')}</span>
               <HeroCopy>
-                <h1 className="font-semibold text-white/95 mb-4 text-[48px] md:text-[58px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+                <h1 className="font-semibold text-[#121212] mb-4 text-[48px] md:text-[58px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
                   {t('heading')}</h1>
-                <p className="type-body hero-subtitle text-white/40">
+                <p className="type-body hero-subtitle text-[#4B4B4B]">
                   {t('body')}</p>
               </HeroCopy>
               {/* Jump links to the two notices on this page — anchors, not
                   routes: the page scrolls, it does not navigate. */}
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <Button asChild variant="primary" mode="dark">
+                <Button asChild variant="primary" mode="light">
                   <a href="#website-notice">
                     {t('jumpWebsite')}
                     <ArrowDown aria-hidden="true" />
                   </a>
                 </Button>
-                <Button asChild variant="secondary" mode="dark">
+                <Button asChild variant="secondary" mode="light" className={SECONDARY_ON_LIGHT}>
                   <a href="#clients-notice">
                     {t('jumpClients')}
                     <ArrowDown aria-hidden="true" />
