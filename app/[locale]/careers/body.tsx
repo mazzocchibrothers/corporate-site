@@ -381,28 +381,8 @@ export default function CareersPage() {
           </div>
         </section>
 
-        {/* ── 6. FINAL CTA: the shared light closing, ruled off the white open
-            roles above. It keeps the page's two buttons (the Assess closing has one). */}
-        <ClosingPanel
-          heading={t('heading6')}
-          rule
-          action={
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button asChild variant="primary" mode="light">
-                <a href="#open-roles">
-                  {t('cta5')}
-                  <ArrowRight aria-hidden />
-                </a>
-              </Button>
-              <Button asChild variant="tertiary" mode="light">
-                <a href="#life-at-skillvue">
-                  {t('cta6')}
-                  <ArrowRight aria-hidden />
-                </a>
-              </Button>
-            </div>
-          }
-        />
+        {/* ── 6. FINAL CTA: the shared light closing, ruled off the white open roles above */}
+        <ClosingPanel heading={t('heading6')} cta={t('cta5')} href="#open-roles" rule />
 
       </main>
       <Footer />
