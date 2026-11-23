@@ -24,7 +24,7 @@ export default async function ScientificPillars() {
         <IconTile icon={Icon} mode="light" className="mb-3 md:mb-5" />
         <h3 className="text-[17px] md:text-[22px] font-semibold text-[#1A1A2E] mb-1 md:mb-2">{t(`scientificPillars.pillars.${p.id}.title`)}</h3>
         <p className="type-link text-[#4B4DF7]/[0.65] font-medium mb-3 md:mb-5">{t(`scientificPillars.pillars.${p.id}.subtitle`)}</p>
-        <p className="type-body text-[#7A7A7A]">{t(`scientificPillars.pillars.${p.id}.desc`)}</p>
+        <p className="type-body text-[#707070]">{t(`scientificPillars.pillars.${p.id}.desc`)}</p>
       </Reveal>
     );
   };

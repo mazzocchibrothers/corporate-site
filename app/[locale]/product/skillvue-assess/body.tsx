@@ -166,7 +166,7 @@ export default async function SkillvueAssessPage() {
                 <Reveal key={p.source} y={16} delay={i * 0.1} className="flex flex-col items-center gap-3">
                   <span className={`${STAT} block text-[36px] md:text-[44px]`} style={{ lineHeight: 1 }}>{p.value}</span>
                   <span className="max-w-[300px] type-body text-[#121212]">{p.label}</span>
-                  <span className="type-body-sm text-[#7A7A7A]">{p.source}</span>
+                  <span className="type-body-sm text-[#707070]">{p.source}</span>
                 </Reveal>
               ))}
             </div>
@@ -411,7 +411,7 @@ export default async function SkillvueAssessPage() {
                       <CountUp value={t('deliver.proof.value')} className={`${STAT} text-[32px]`} />
                       <span className="type-body text-[#121212]">{t('deliver.proof.text')}</span>
                     </span>
-                    <span className="mt-2 block type-eyebrow text-[#7A7A7A]">{t('deliver.proof.source')}</span>
+                    <span className="mt-2 block type-eyebrow text-[#707070]">{t('deliver.proof.source')}</span>
                   </p>
                 )}
               </Reveal>

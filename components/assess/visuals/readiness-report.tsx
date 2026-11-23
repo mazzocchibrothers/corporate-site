@@ -37,7 +37,7 @@ export function ReadinessReport() {
         <Window title={t('window')} fade={140}>
           <div className="flex flex-col gap-2 border-b border-black/[0.06] px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6">
             <Legend measured={t('legend.measured')} needed={t('legend.needed')} gap={t('legend.gap')} />
-            <span className="type-caption text-[#7A7A7A]">{t('scale')}</span>
+            <span className="type-caption text-[#707070]">{t('scale')}</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
@@ -51,7 +51,7 @@ export function ReadinessReport() {
                 >
                   <span className="min-w-0">
                     <span className="block type-body-sm font-medium text-[#121212]">{t(`skills.${s.id}`)}</span>
-                    <span className="block type-caption text-[#7A7A7A]">{s.hard ? t('types.hard') : t('types.soft')}</span>
+                    <span className="block type-caption text-[#707070]">{s.hard ? t('types.hard') : t('types.soft')}</span>
                   </span>
                   <LevelBar level={s.level} needed={s.needed} size="sm" />
                   <span className="text-right type-body-sm tabular-nums text-[#4B4B4B]">{value(s)}</span>
@@ -63,7 +63,7 @@ export function ReadinessReport() {
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="min-w-0">
                   <p className="font-display text-[20px] font-semibold leading-[1.2] tracking-[-0.01em] text-[#121212] sm:text-[24px]">{t(`skills.${skill.id}`)}</p>
-                  <p className="mt-1 type-caption text-[#7A7A7A]">
+                  <p className="mt-1 type-caption text-[#707070]">
                     {skill.hard
                       ? t('hardMeta', { percent: skill.level * 20, needed: skill.needed * 20 })
                       : t('softMeta', { level: skill.level, needed: skill.needed })}
@@ -73,7 +73,7 @@ export function ReadinessReport() {
               </div>
               <div>
                 <LevelBar level={skill.level} needed={skill.needed} size="lg" />
-                <div className="mt-2 flex justify-between type-caption text-[#7A7A7A]">
+                <div className="mt-2 flex justify-between type-caption text-[#707070]">
                   <span>{skill.hard ? t('ends.hardMin') : t('ends.softMin')}</span>
                   <span>{skill.hard ? t('ends.hardMax') : t('ends.softMax')}</span>
                 </div>

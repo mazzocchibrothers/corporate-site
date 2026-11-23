@@ -73,7 +73,7 @@ export function FrameworkMapping() {
                 <i key={i} data-reveal="grow" className={`h-1.5 flex-1 rounded-full ${i < MAPPING.hardFilled ? 'bg-[#4b4df7]' : 'bg-[#ebebeb]'}`} />
               ))}
             </Sequence>
-            <div className="mt-2 flex justify-between type-caption text-[#7A7A7A]">
+            <div className="mt-2 flex justify-between type-caption text-[#707070]">
               <span>{t('min')}</span>
               <span>{t('max')}</span>
             </div>

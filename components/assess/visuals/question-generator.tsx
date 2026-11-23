@@ -31,7 +31,7 @@ export function QuestionGenerator() {
               <span className={LABEL}>{t('skill')}</span>
               <span className="flex flex-wrap items-center gap-2">
                 <span className="type-body-sm text-[#121212]">{t('skillValue')}</span>
-                <span className={`${PILL} border-black/[0.06] bg-[#f5f5f7] text-[#7A7A7A]`}>{t('skillType')}</span>
+                <span className={`${PILL} border-black/[0.06] bg-[#f5f5f7] text-[#707070]`}>{t('skillType')}</span>
               </span>
             </div>
             <div className={ROW}>
@@ -41,7 +41,7 @@ export function QuestionGenerator() {
                   <span
                     key={n}
                     className={`flex h-7 w-7 items-center justify-center rounded-full border type-caption ${
-                      n === GENERATOR.level ? 'border-black/[0.12] bg-[#ebebeb] text-[#121212]' : 'border-black/[0.08] text-[#7A7A7A]'
+                      n === GENERATOR.level ? 'border-black/[0.12] bg-[#ebebeb] text-[#121212]' : 'border-black/[0.08] text-[#707070]'
                     }`}
                   >
                     {n}
@@ -92,7 +92,7 @@ export function QuestionGenerator() {
                   <i key={i} className="h-1.5 rounded-full bg-[#ebebeb]" style={{ width: `${w}%` }} />
                 ))}
               </div>
-              <div className="mt-3 flex items-center gap-2 type-caption text-[#7A7A7A]">
+              <div className="mt-3 flex items-center gap-2 type-caption text-[#707070]">
                 {t('rubric')}
                 <span className="flex gap-1.5">
                   {['bg-[#d9daff]', 'bg-[#a9aaff]', 'bg-[#8385ff]', 'bg-[#6366f8]', 'bg-[#4b4df7]'].map((c) => (

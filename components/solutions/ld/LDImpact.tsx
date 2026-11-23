@@ -47,12 +47,12 @@ export default function LDImpact() {
         </span>
 
         <h3 className="text-[15px] md:text-[17px] font-semibold text-[#121212]/80 leading-snug mb-1.5">
-          {t(`ldImpact.kpis.${k.id}.label`)} <span className="font-normal text-[#7A7A7A]">{t(`ldImpact.kpis.${k.id}.sublabel`)}</span>
+          {t(`ldImpact.kpis.${k.id}.label`)} <span className="font-normal text-[#707070]">{t(`ldImpact.kpis.${k.id}.sublabel`)}</span>
         </h3>
 
         <div className="w-12 h-px bg-[#4B4DF7]/[0.15] my-4 md:my-5" />
 
-        <p className="type-body-sm text-[#7A7A7A] flex-1">{t(`ldImpact.kpis.${k.id}.detail`)}</p>
+        <p className="type-body-sm text-[#707070] flex-1">{t(`ldImpact.kpis.${k.id}.detail`)}</p>
       </Reveal>
     );
   };
@@ -66,7 +66,7 @@ export default function LDImpact() {
           <h2 className="max-w-[880px] mx-auto text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">{t.rich('ldImpact.heading', {
             span: (chunks) => <span className="font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
-          <p className="max-w-[880px] type-body text-[#7A7A7A] mx-auto">{t('ldImpact.body')}</p>
+          <p className="max-w-[880px] type-body text-[#707070] mx-auto">{t('ldImpact.body')}</p>
         </Reveal>
 
         <div className="grid gap-5 lg:grid-cols-3">

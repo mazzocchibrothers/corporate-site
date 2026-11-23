@@ -41,7 +41,7 @@ export default function IMProblem() {
           <IconTile icon={Icon} mode="light" />
         </div>
         <h3 className="text-[18px] font-semibold text-[#121212] mb-2 md:mb-3">{t(`imProblem.pains.${p.id}.title`)}</h3>
-        <p className="type-body text-[#7A7A7A]">{t(`imProblem.pains.${p.id}.desc`)}</p>
+        <p className="type-body text-[#707070]">{t(`imProblem.pains.${p.id}.desc`)}</p>
       </Reveal>
     );
   };

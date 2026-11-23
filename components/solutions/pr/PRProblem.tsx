@@ -44,7 +44,7 @@ export default function PRProblem() {
             >
               <IconTile icon={p.icon} mode="light" className="mb-6 md:mb-8" />
               <h3 className="text-[15px] md:text-[15px] lg:text-[18px] font-semibold text-[#121212] leading-snug mb-2 md:mb-3 lg:mb-4">{t(`prProblem.pains.${p.id}.title`)}</h3>
-              <p className="type-body text-[#7A7A7A]">{t(`prProblem.pains.${p.id}.desc`)}</p>
+              <p className="type-body text-[#707070]">{t(`prProblem.pains.${p.id}.desc`)}</p>
             </Reveal>
           ))}
         </div>

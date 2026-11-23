@@ -155,7 +155,8 @@ redesign replaces it, this is the rule for any section you touch:
   alternating with hard edges. The class is not decoration: the navbar turns
   white only over an element inside one of the two, so a light section drawn
   any other way leaves a black bar over it.
-- Text `#121212`, secondary `#4B4B4B`, meta `#7A7A7A`; brand `#4B4DF7`
+- Text `#121212`, secondary `#4B4B4B`, meta `#707070` (not `#7A7A7A`, which
+  fails AA on white and on #F7F7F7); brand `#4B4DF7`
   (hover `#3133E7`) for eyebrows, links and stats; borders and card edges
   `#e5e7eb`. A card takes the other surface: `bg-[#f7f7f7]` on white,
   `bg-white` on grey.
@@ -169,7 +170,11 @@ redesign replaces it, this is the rule for any section you touch:
   baked in; HubSpot form sections (their light palette ships separately); the
   `/lp` and `/demo` pages; the ROI calculator and the scoring visuals. The
   body stays `#040404`, which the dark closing cards rely on.
-- Don't add a heading accent to a converted heading. Existing accents stay.
+- **No gradient accent on a light section.** The `.gradient-text` family
+  starts at `#FFAF64` (about 1.8:1 on white). When a heading moves onto a
+  light section, its accent span loses the gradient class and reads
+  `#121212` like the rest of the heading; the copy and the span stay.
+  Dark sections keep the gradient.
 
 The bullets below predate the switch. Where one describes a dark surface,
 it now applies only to the sections that stay dark.

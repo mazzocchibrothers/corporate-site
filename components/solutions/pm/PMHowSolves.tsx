@@ -29,11 +29,11 @@ export default function PMHowSolves() {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <span className="text-[#4B4DF7] font-bold mt-0.5">✓</span>
-                <p className="type-body text-[#7A7A7A]">{t('pmHowSolves.body')}</p>
+                <p className="type-body text-[#707070]">{t('pmHowSolves.body')}</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✗</span>
-                <p className="type-body text-[#7A7A7A]">{t('pmHowSolves.body2')}</p>
+                <p className="type-body text-[#707070]">{t('pmHowSolves.body2')}</p>
               </div>
             </div>
           </Reveal>
@@ -49,11 +49,11 @@ export default function PMHowSolves() {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <span className="text-[#4B4DF7] font-bold mt-0.5">✓</span>
-                <p className="type-body text-[#7A7A7A]">{t('pmHowSolves.body3')}</p>
+                <p className="type-body text-[#707070]">{t('pmHowSolves.body3')}</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-red-400 font-bold mt-0.5">✗</span>
-                <p className="type-body text-[#7A7A7A]">{t('pmHowSolves.body4')}</p>
+                <p className="type-body text-[#707070]">{t('pmHowSolves.body4')}</p>
               </div>
             </div>
           </Reveal>

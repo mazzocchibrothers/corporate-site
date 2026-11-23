@@ -51,7 +51,7 @@ export default function IMHowSolves() {
                   <IconTile icon={Icon} mode="light" />
                 </div>
                 <h3 className="text-[18px] md:text-[20px] font-semibold text-[#121212] mb-2 md:mb-3 leading-tight">{t(`imHowSolves.pillars.${p.id}.title`)}</h3>
-                <p className="type-body text-[#7A7A7A] flex-1">{t(`imHowSolves.pillars.${p.id}.desc`)}</p>
+                <p className="type-body text-[#707070] flex-1">{t(`imHowSolves.pillars.${p.id}.desc`)}</p>
               </Reveal>
             );
           })}

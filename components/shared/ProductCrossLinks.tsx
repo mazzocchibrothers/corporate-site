@@ -54,7 +54,7 @@ export default function ProductCrossLinks() {
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="type-body-bold text-[#121212] block mb-0.5 md:mb-1">{t(`productCrossLinks.solutions.${s.id}.name`)}</span>
-                    <span className="type-body-sm text-[#7A7A7A]">{t(`productCrossLinks.solutions.${s.id}.desc`)}</span>
+                    <span className="type-body-sm text-[#707070]">{t(`productCrossLinks.solutions.${s.id}.desc`)}</span>
                   </div>
                   <ArrowRight className="h-4 w-4 text-[#121212]/30 group-hover:text-[#4B4DF7] group-hover:translate-x-1 transition-all duration-300 shrink-0 hidden md:block" />
                 </div>

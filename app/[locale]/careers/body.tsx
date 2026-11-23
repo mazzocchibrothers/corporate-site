@@ -195,7 +195,7 @@ export default function CareersPage() {
               >{t.rich('heading2', {
                 span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
               })}</h2>
-              <p className="max-w-[880px] type-body text-[#7A7A7A] mb-8">{t('body2')}</p>
+              <p className="max-w-[880px] type-body text-[#707070] mb-8">{t('body2')}</p>
               <Button asChild variant="secondary" mode="light">
                 <a href="/about" onClick={(e) => { e.preventDefault(); router.push('/about'); window.scrollTo(0, 0); }}>
                   {t('cta3')}
@@ -274,7 +274,7 @@ export default function CareersPage() {
                 className="max-w-[880px] font-semibold text-[#121212] mb-2"
                 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em' }}
               >{t('heading4')}</h2>
-              <p className="max-w-[880px] type-body text-[#7A7A7A]">{t('body4')}</p>
+              <p className="max-w-[880px] type-body text-[#707070]">{t('body4')}</p>
             </Reveal>
 
             {/* Photo mosaic — large left + 2×2 right */}

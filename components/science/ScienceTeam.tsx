@@ -57,7 +57,7 @@ export default function ScienceTeam() {
       <h4 className="text-[13px] md:text-[15px] font-semibold text-[#1A1A2E] mb-0.5 md:mb-1 leading-tight">
         {m.name}
       </h4>
-      <p className="type-body-sm text-[#7A7A7A]">
+      <p className="type-body-sm text-[#707070]">
         {t(`team.members.${m.id}.role`)}
       </p>
     </Reveal>
@@ -92,7 +92,7 @@ export default function ScienceTeam() {
               <p className="type-body-bold text-[#4B4DF7]/70 mb-3 md:mb-6">
                 {t('team.lead.role')}
               </p>
-              <p className="type-body text-[#7A7A7A] max-w-2xl">
+              <p className="type-body text-[#707070] max-w-2xl">
                 {t('team.lead.bio')}
               </p>
               <a
@@ -119,7 +119,7 @@ export default function ScienceTeam() {
         >
           <span className="font-display text-[32px] font-semibold md:text-[48px] md:font-bold text-[#1A1A2E] leading-none tracking-[-0.03em] shrink-0">50+</span>
           <div className="w-px h-10 bg-[#1A1A2E]/[0.08] hidden sm:block shrink-0" />
-          <p className="type-body text-[#7A7A7A]">{t('team.body')}</p>
+          <p className="type-body text-[#707070]">{t('team.body')}</p>
         </Reveal>
       </div>
     </section>

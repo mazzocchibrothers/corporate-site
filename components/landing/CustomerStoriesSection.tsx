@@ -65,7 +65,7 @@ export default function CustomerStoriesSection() {
               {/* Author */}
               <div>
                 <span className="type-body-bold text-[#121212]">{t(`customerStories.stories.${s.id}.author`)}</span>
-                <span className="type-body-sm text-[#7A7A7A] ml-1.5 md:ml-2">{t(`customerStories.stories.${s.id}.role`)}</span>
+                <span className="type-body-sm text-[#707070] ml-1.5 md:ml-2">{t(`customerStories.stories.${s.id}.role`)}</span>
               </div>
             </Reveal>
           ))}
@@ -111,11 +111,11 @@ export default function CustomerStoriesSection() {
               <span
                 key={b}
                 className={`type-caption inline-flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold border ${
-                  pending ? 'text-[#7A7A7A] border-dashed border-[#121212]/25' : 'text-[#4B4B4B] border-[#e5e7eb] bg-[#f1f5f9]'
+                  pending ? 'text-[#707070] border-dashed border-[#121212]/25' : 'text-[#4B4B4B] border-[#e5e7eb] bg-[#f1f5f9]'
                 }`}
               >
                 {b}
-                {pending && <span className="font-normal text-[#7A7A7A]">· {t('customerStories.inProgress')}</span>}
+                {pending && <span className="font-normal text-[#707070]">· {t('customerStories.inProgress')}</span>}
               </span>
             ))}
           </div>

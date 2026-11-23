@@ -29,7 +29,7 @@ export default function TAProblem() {
           <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#1A1A2E] mb-8">{t.rich('taProblem.heading', {
             span: (chunks) => <span className="italic font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
-          <p className="max-w-[880px] type-body-lg text-[#7A7A7A]">{t('taProblem.body')}</p>
+          <p className="max-w-[880px] type-body-lg text-[#707070]">{t('taProblem.body')}</p>
         </Reveal>
 
         {/* Pain cards — 3-col grid, consistent with homepage card layout */}
@@ -49,7 +49,7 @@ export default function TAProblem() {
               </span>
               <div>
                 <h3 className="text-[15px] md:text-[15px] lg:text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-2 md:mb-3 lg:mb-4">{t(`taProblem.pains.${p.id}.title`)}</h3>
-                <p className="type-body text-[#7A7A7A]">{t(`taProblem.pains.${p.id}.desc`)}</p>
+                <p className="type-body text-[#707070]">{t(`taProblem.pains.${p.id}.desc`)}</p>
               </div>
             </Reveal>
           ))}

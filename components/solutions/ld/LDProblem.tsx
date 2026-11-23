@@ -42,7 +42,7 @@ export default function LDProblem() {
             >
               <span className="font-display text-[36px] md:text-[42px] font-normal text-[#121212]/[0.1] leading-none tracking-[-0.03em] mb-6 md:mb-8 block">{p.num}</span>
               <h3 className="text-[18px] md:text-[20px] font-semibold text-[#121212] mb-2 md:mb-3 leading-tight">{t(`ldProblem.pains.${p.id}.title`)}</h3>
-              <p className="type-body text-[#7A7A7A] flex-1">{t(`ldProblem.pains.${p.id}.desc`)}</p>
+              <p className="type-body text-[#707070] flex-1">{t(`ldProblem.pains.${p.id}.desc`)}</p>
             </Reveal>
           ))}
         </div>

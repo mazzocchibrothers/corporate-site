@@ -44,11 +44,11 @@ export default function LDHowSolves() {
         </div>
 
         <h3 className="text-[18px] md:text-[20px] font-semibold text-[#121212] mb-2 md:mb-3 leading-tight">{t(`ldHowSolves.pillars.${p.id}.title`)}</h3>
-        <p className="type-body text-[#7A7A7A] mb-5 md:mb-8 flex-1">{t(`ldHowSolves.pillars.${p.id}.desc`)}</p>
+        <p className="type-body text-[#707070] mb-5 md:mb-8 flex-1">{t(`ldHowSolves.pillars.${p.id}.desc`)}</p>
 
         <div className="rounded-xl bg-[#F7F7F7] border border-[#121212]/[0.06] p-4 md:p-5">
           <span className="font-display text-[24px] md:text-[28px] font-bold text-[#121212] leading-none tracking-[-0.02em] block mb-1.5">{p.stat}</span>
-          <span className="type-caption text-[#7A7A7A]">{t(`ldHowSolves.pillars.${p.id}.statLabel`)}</span>
+          <span className="type-caption text-[#707070]">{t(`ldHowSolves.pillars.${p.id}.statLabel`)}</span>
         </div>
       </Reveal>
     );
@@ -62,7 +62,7 @@ export default function LDHowSolves() {
           <h2 className="max-w-[880px] text-[clamp(1.8rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[#121212] mb-5">{t.rich('ldHowSolves.heading', {
             span: (chunks) => <span className="font-semibold gradient-text-on-light">{chunks}</span>,
           })}</h2>
-          <p className="max-w-[880px] type-body text-[#7A7A7A]">{t('ldHowSolves.body')}</p>
+          <p className="max-w-[880px] type-body text-[#707070]">{t('ldHowSolves.body')}</p>
         </Reveal>
 
         <div className="grid gap-5 lg:grid-cols-3">

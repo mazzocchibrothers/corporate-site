@@ -34,7 +34,7 @@ export default function TAImpact() {
           {kpis.map((k, i) => (
             <Reveal delay={0.15 + i * 0.12} key={k.value} className="bg-white border border-[#E5E7EB] rounded-2xl p-5 md:p-10">
               <span className="block mb-6 md:mb-10 text-[#1A1A2E] stat-value text-[32px] md:text-[54px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{k.value}</span>
-              <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-4">{t(`taImpact.kpis.${k.id}.label`)} <span className="font-normal text-[#7A7A7A]">{t(`taImpact.kpis.${k.id}.sublabel`)}</span></h3>
+              <h3 className="text-[18px] font-semibold text-[#1A1A2E]/80 leading-snug mb-4">{t(`taImpact.kpis.${k.id}.label`)} <span className="font-normal text-[#707070]">{t(`taImpact.kpis.${k.id}.sublabel`)}</span></h3>
             </Reveal>
           ))}
         </div>

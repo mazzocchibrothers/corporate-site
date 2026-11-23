@@ -349,7 +349,7 @@ export default function Navbar() {
                         // muted gray, hover/active both resolve to the same
                         // flat on/off color instead of blending with the panel.
                         const solidColor = isLight ? 'text-[#121212]' : 'text-white';
-                        const mutedColor = isLight ? 'text-[#7a7a7a]' : 'text-[#888888]';
+                        const mutedColor = isLight ? 'text-[#707070]' : 'text-[#888888]';
                         const hoverColor = isLight ? 'group-hover:text-[#121212]' : 'group-hover:text-white';
                         const itemColorClass = isActive ? solidColor : `${mutedColor} ${hoverColor}`;
                         return (

@@ -117,7 +117,7 @@ function ColumnCard({ data, delay, t }) {
                 <div>
                   <span className="type-body-sm text-[#1A1A2E]/80 font-medium">{t(`${data.keyPath}.items.${item.id}.text`)}</span>
                   {item.detail && (
-                    <span className="type-body-sm text-[#7A7A7A] ml-1.5">({t(`${data.keyPath}.items.${item.id}.detail`)})</span>
+                    <span className="type-body-sm text-[#707070] ml-1.5">({t(`${data.keyPath}.items.${item.id}.detail`)})</span>
                   )}
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function TAFunnel() {
               <span className={`type-eyebrow block mb-0.5 md:mb-1 ${i === active ? 'text-[#4B4DF7]' : 'text-[#1A1A2E]/25'}`}>
                 {t('taFunnel.cta')} {s.number}
               </span>
-              <span className={`font-display text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-[#121212]' : 'text-[#7A7A7A]'}`}>
+              <span className={`font-display text-[13px] md:text-[18px] font-bold leading-tight ${i === active ? 'text-[#121212]' : 'text-[#707070]'}`}>
                 {t(`taFunnel.stages.${s.id}.label`)}
               </span>
               {i === active && (

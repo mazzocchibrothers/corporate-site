@@ -43,7 +43,7 @@ export function TeamReadiness() {
         <Window title={t('window')} fade={88}>
           <div className="flex flex-col gap-3 border-b border-black/[0.06] px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
             <span className="flex items-center gap-2 type-body-sm">
-              <span className="text-[#7A7A7A]">{t('roleLabel')}</span>
+              <span className="text-[#707070]">{t('roleLabel')}</span>
               <span className="font-medium text-[#121212]">{t('role')}</span>
             </span>
             <Legend measured={t('legend.measured')} needed={t('legend.needed')} gap={t('legend.gap')} />
@@ -51,7 +51,7 @@ export function TeamReadiness() {
 
           {/* md and up: the table */}
           <div className={`hidden md:grid ${COLS}`}>
-            <div className={`${ROW} border-b border-black/[0.06] type-caption text-[#7A7A7A]`}>
+            <div className={`${ROW} border-b border-black/[0.06] type-caption text-[#707070]`}>
               <span className="px-4 py-3">{t('columns.participant')}</span>
               <span className="px-2 py-3">{t('columns.roleFit')}</span>
               {TEAM_SKILLS.map((s) => (
