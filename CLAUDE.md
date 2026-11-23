@@ -235,7 +235,8 @@ it now applies only to the sections that stay dark.
   light section, black over a dark one. Its **dropdown panels** are `#ffffff` on light sections
   too, but `#1e1e1e` on dark — a dark-mode dropdown flush against the navbar's
   own `#000000` reads as invisible but for its border. The customer stories
-  filter dropdowns sit on page content, not the navbar, and use `#1A1A1A`.
+  filter dropdowns sit on page content, not the navbar; on the (now light)
+  Explore section they are white with a `#e5e7eb` edge, like the partners filter.
 - **Closing banners** share one card surface — `rounded-3xl border
   border-white/[0.06] bg-white/[0.02] backdrop-blur-sm` — and equal space
   above and below (`py-20 lg:py-24`). A plain one (heading, sentence, demo

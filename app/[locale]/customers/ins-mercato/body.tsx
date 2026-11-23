@@ -477,7 +477,7 @@ export default function InsMercatoStoryPage() {
               <div className="rounded-2xl border border-[#e2e8f0] bg-white p-8 lg:p-10 shadow-sm">
                 <div className="flex items-center justify-between mb-6">
                   <span className="type-eyebrow text-[#121212]/30">{t('text')}</span>
-                  <Button variant="tertiary" mode="dark" onClick={() => { router.push('/science'); window.scrollTo(0,0); }}>{t('cta')}</Button>
+                  <Button variant="tertiary" mode="light" onClick={() => { router.push('/science'); window.scrollTo(0,0); }}>{t('cta')}</Button>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-[1fr_40px_1fr] gap-4 items-center">
                   <div className="rounded-xl bg-black/[0.03] p-6 text-center">{t.rich('text2', {

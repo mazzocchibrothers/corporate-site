@@ -38,7 +38,7 @@ export default function CustomersHero() {
   // Repeat to keep the track wider than any viewport (no visible gap on wide screens)
   const logoFiles = [...clientLogos, ...clientLogos];
   return (
-    <section id="customers-hero" data-testid="customers-hero" className="relative pt-[80px]">
+    <section id="customers-hero" data-testid="customers-hero" className="section-light relative pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] gap-16 lg:gap-12 items-center">
           <div>
@@ -48,7 +48,7 @@ export default function CustomersHero() {
               delay={0.15}
               className="inline-flex items-center gap-2 mb-6"
             >
-              <span className="type-eyebrow font-medium text-[#6B7DFF]">{t('hero.eyebrow')}</span>
+              <span className="type-eyebrow font-medium text-[#4B4DF7]">{t('hero.eyebrow')}</span>
             </Reveal>
             <HeroCopy>
               <Reveal
@@ -56,17 +56,17 @@ export default function CustomersHero() {
                 y={40}
                 duration={0.8}
                 delay={0.3}
-                className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-8"
+                className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-[#121212] mb-8"
                 style={{ lineHeight: 1.1 }}
               >{t.rich('hero.heading', {
-                span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+                span: (chunks) => <span className="font-semibold">{chunks}</span>,
               })}</Reveal>
               <Reveal
                 as="p"
                 y={20}
                 duration={0.8}
                 delay={0.5}
-                className="type-body-lg hero-subtitle text-white/[0.65]"
+                className="type-body-lg hero-subtitle text-[#4B4B4B]"
               >{t('hero.body')}</Reveal>
             </HeroCopy>
 
@@ -83,16 +83,16 @@ export default function CustomersHero() {
               <div
                 key={m.id}
                 data-testid={`customers-hero-metric-${m.id}`}
-                className="rounded-3xl border border-white/[0.08] bg-white/[0.04] p-6 md:p-7 min-h-[180px] md:min-h-[220px]"
+                className="rounded-3xl border border-[#e5e7eb] bg-[#f7f7f7] p-6 md:p-7 min-h-[180px] md:min-h-[220px]"
               >
-                <span className="flex items-center gap-2 type-eyebrow text-white/[0.65] mb-4 md:mb-5">
-                  <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#6B7DFF]" />
+                <span className="flex items-center gap-2 type-eyebrow text-[#4B4B4B] mb-4 md:mb-5">
+                  <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#4B4DF7]" />
                   {t(`hero.metrics.${m.id}.industry`)}
                 </span>
-                <span className="block font-display text-[#6B7DFF] mb-4 md:mb-6 stat-value text-[40px] md:text-[54px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>
+                <span className="block font-display text-[#4B4DF7] mb-4 md:mb-6 stat-value text-[40px] md:text-[54px]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>
                   {new Intl.NumberFormat(lang, { useGrouping: 'always' }).format(m.value)}{m.suffix}
                 </span>
-                <span className="block type-body text-white/80">{t(`hero.metrics.${m.id}.label`)}</span>
+                <span className="block type-body text-[#121212]">{t(`hero.metrics.${m.id}.label`)}</span>
               </div>
             ))}
           </Reveal>
@@ -113,14 +113,14 @@ export default function CustomersHero() {
               <div className="marquee-content flex items-center gap-16 shrink-0 pr-16">
                 {logoFiles.map((l, i) => (
                   <div key={`a-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
-                    <img src={l.src} alt={l.name} className={`${l.className ?? 'h-6'} w-auto object-contain`} style={{ filter: 'brightness(0) invert(1)' }} />
+                    <img src={l.src} alt={l.name} className={`${l.className ?? 'h-6'} w-auto object-contain`} style={{ filter: 'brightness(0)' }} />
                   </div>
                 ))}
               </div>
               <div className="marquee-content flex items-center gap-16 shrink-0 pr-16" aria-hidden="true">
                 {logoFiles.map((l, i) => (
                   <div key={`b-${i}-${l.name}`} className="shrink-0 opacity-[0.55]">
-                    <img src={l.src} alt="" className={`${l.className ?? 'h-6'} w-auto object-contain`} style={{ filter: 'brightness(0) invert(1)' }} />
+                    <img src={l.src} alt="" className={`${l.className ?? 'h-6'} w-auto object-contain`} style={{ filter: 'brightness(0)' }} />
                   </div>
                 ))}
               </div>

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, ChevronDown, ListFilter } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button, SECONDARY_ON_LIGHT } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 import Link from 'next/link';
 
@@ -73,18 +73,18 @@ export default function ExploreStories() {
   });
 
   return (
-    <section id="explore" data-testid="explore-stories" className="relative py-20 lg:py-28">
+    <section id="explore" data-testid="explore-stories" className="section-light relative py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
         <Reveal duration={0.7} className="mb-10">
-          <h2 className="max-w-[880px] text-[clamp(2.5rem,5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90 mb-6">{t.rich('exploreStories.heading', {
-            span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+          <h2 className="max-w-[880px] text-[clamp(2.5rem,5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[#121212] mb-6">{t.rich('exploreStories.heading', {
+            span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</h2>
-          <p className="max-w-[880px] type-body-lg text-white/[0.65]">{t('exploreStories.body')}</p>
+          <p className="max-w-[880px] type-body-lg text-[#4B4B4B]">{t('exploreStories.body')}</p>
         </Reveal>
 
         {/* Filters */}
         <Reveal y={0} delay={0.2} className="flex flex-wrap items-center gap-3 mb-12">
-          <span className="type-body-sm inline-flex items-center gap-2 text-white/50 mr-1">
+          <span className="type-body-sm inline-flex items-center gap-2 text-[#4B4B4B] mr-1">
             <ListFilter className="h-4 w-4" aria-hidden="true" />
             {t('exploreStories.filterLabel')}
           </span>
@@ -92,19 +92,19 @@ export default function ExploreStories() {
           <div className="relative">
             <button
               onClick={() => { setIndustryOpen(o => !o); setUseCaseOpen(false); }}
-              className="type-body-sm flex items-center gap-2.5 rounded-full border border-white/[0.12] bg-white/[0.06] pl-4 pr-3 py-2.5 font-semibold text-white/80 hover:border-white/20 transition-colors duration-300"
+              className="type-body-sm flex items-center gap-2.5 rounded-full border border-[#e5e7eb] bg-white pl-4 pr-3 py-2.5 font-semibold text-[#121212] hover:border-[#121212]/20 transition-colors duration-300"
             >
-              <span className="type-eyebrow font-medium text-white/40">{t('exploreStories.text')}</span>
+              <span className="type-eyebrow font-medium text-[#4B4B4B]">{t('exploreStories.text')}</span>
               <span>{activeIndustry === 'all' ? t('exploreStories.allIndustries') : t(`explore.industries.${activeIndustry}`)}</span>
-              <ChevronDown className="h-4 w-4 text-white/40" aria-hidden="true" />
+              <ChevronDown className="h-4 w-4 text-[#4B4B4B]" aria-hidden="true" />
             </button>
             {industryOpen && (
-              <div className="absolute z-20 mt-2 min-w-[220px] rounded-2xl border border-white/[0.08] bg-[#1A1A1A] p-2 shadow-xl">
+              <div className="absolute z-20 mt-2 min-w-[220px] rounded-2xl border border-[#e5e7eb] bg-white p-2 shadow-xl">
                 {['all', ...filters.industry].map(f => (
                   <button
                     key={f}
                     onClick={() => { setActiveIndustry(f); setIndustryOpen(false); }}
-                    className={`type-body-sm block w-full text-left px-4 py-2.5 rounded-xl whitespace-nowrap transition-colors duration-200 hover:bg-white/[0.05] ${activeIndustry === f ? 'text-white' : 'text-white/60 hover:text-white'}`}
+                    className={`type-body-sm block w-full text-left px-4 py-2.5 rounded-xl whitespace-nowrap transition-colors duration-200 hover:bg-[#f7f7f7] ${activeIndustry === f ? 'text-[#121212] bg-[#f7f7f7]' : 'text-[#4B4B4B] hover:text-[#121212]'}`}
                   >
                     {f === 'all' ? t('exploreStories.allIndustries') : t(`explore.industries.${f}`)}
                   </button>
@@ -116,19 +116,19 @@ export default function ExploreStories() {
           <div className="relative">
             <button
               onClick={() => { setUseCaseOpen(o => !o); setIndustryOpen(false); }}
-              className="type-body-sm flex items-center gap-2.5 rounded-full border border-white/[0.12] bg-white/[0.06] pl-4 pr-3 py-2.5 font-semibold text-white/80 hover:border-white/20 transition-colors duration-300"
+              className="type-body-sm flex items-center gap-2.5 rounded-full border border-[#e5e7eb] bg-white pl-4 pr-3 py-2.5 font-semibold text-[#121212] hover:border-[#121212]/20 transition-colors duration-300"
             >
-              <span className="type-eyebrow font-medium text-white/40">{t('exploreStories.text2')}</span>
+              <span className="type-eyebrow font-medium text-[#4B4B4B]">{t('exploreStories.text2')}</span>
               <span>{activeUseCase === 'all' ? t('exploreStories.allUseCases') : t(`explore.useCases.${activeUseCase}`)}</span>
-              <ChevronDown className="h-4 w-4 text-white/40" aria-hidden="true" />
+              <ChevronDown className="h-4 w-4 text-[#4B4B4B]" aria-hidden="true" />
             </button>
             {useCaseOpen && (
-              <div className="absolute z-20 mt-2 min-w-[220px] rounded-2xl border border-white/[0.08] bg-[#1A1A1A] p-2 shadow-xl">
+              <div className="absolute z-20 mt-2 min-w-[220px] rounded-2xl border border-[#e5e7eb] bg-white p-2 shadow-xl">
                 {['all', ...filters.useCase].map(f => (
                   <button
                     key={f}
                     onClick={() => { setActiveUseCase(f); setUseCaseOpen(false); }}
-                    className={`type-body-sm block w-full text-left px-4 py-2.5 rounded-xl whitespace-nowrap transition-colors duration-200 hover:bg-white/[0.05] ${activeUseCase === f ? 'text-white' : 'text-white/60 hover:text-white'}`}
+                    className={`type-body-sm block w-full text-left px-4 py-2.5 rounded-xl whitespace-nowrap transition-colors duration-200 hover:bg-[#f7f7f7] ${activeUseCase === f ? 'text-[#121212] bg-[#f7f7f7]' : 'text-[#4B4B4B] hover:text-[#121212]'}`}
                   >
                     {f === 'all' ? t('exploreStories.allUseCases') : t(`explore.useCases.${f}`)}
                   </button>
@@ -137,7 +137,7 @@ export default function ExploreStories() {
             )}
           </div>
 
-          <span className="type-body-sm ml-auto text-white/40">{t('exploreStories.storiesCount', { count: filtered.length })}</span>
+          <span className="type-body-sm ml-auto text-[#707070]">{t('exploreStories.storiesCount', { count: filtered.length })}</span>
         </Reveal>
 
         {/* Story grid. 3 columns, real thumbnails with title + summary below */}
@@ -156,7 +156,7 @@ export default function ExploreStories() {
                 className="group block cursor-pointer"
               >
                 {/* Card visual area */}
-                <div className="relative rounded-2xl border border-white/[0.08] group-hover:border-white/[0.16] transition-all duration-500 overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                <div className="relative rounded-2xl border border-[#e5e7eb] group-hover:border-[#121212]/20 transition-all duration-500 overflow-hidden" style={{ aspectRatio: '16/9' }}>
                   <img src={s.bgImage} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
                     <ArrowRight className="h-4 w-4 text-white/70" />
@@ -164,17 +164,17 @@ export default function ExploreStories() {
                 </div>
                 {/* Title + summary below */}
                 <div className="pt-4">
-                  <h3 className="text-[24px] font-semibold text-white/90 tracking-[-0.01em] mb-2">{s.company}</h3>
-                  <p className="type-body text-white/[0.65]">{t(`explore.stories.${s.id}.headline`)}</p>
+                  <h3 className="text-[24px] font-semibold text-[#121212] tracking-[-0.01em] mb-2">{s.company}</h3>
+                  <p className="type-body text-[#4B4B4B]">{t(`explore.stories.${s.id}.headline`)}</p>
                 </div>
               </Reveal>
             ))}
           </div>
         ) : (
-          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-10 text-center">
-            <p className="type-body text-white/50 mb-4">{t('exploreStories.body2')}</p>
-            <p className="type-body-sm text-white/30">{t('exploreStories.body3')}</p>
-            <Button asChild variant="secondary" mode="dark" className="mt-6">
+          <div className="rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-10 text-center">
+            <p className="type-body text-[#4B4B4B] mb-4">{t('exploreStories.body2')}</p>
+            <p className="type-body-sm text-[#707070]">{t('exploreStories.body3')}</p>
+            <Button asChild variant="secondary" mode="light" className={`mt-6 ${SECONDARY_ON_LIGHT}`}>
               <a href={href('book-meeting', lang)}>
                 {t('exploreStories.cta')} <ArrowRight aria-hidden="true" />
               </a>
