@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 import { partners } from '@/data/partners';
 import { HeroCopy } from '@/components/ui/hero-copy';
-import { CLOSING_PANEL_GRADIENT } from '@/components/shared/ClosingBanner';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 // Derived from the data, so a category with no partner in it yet cannot be
 // selected and render an empty grid. 'all' is filtered out in case a future
@@ -197,30 +197,13 @@ export default function PartnersPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="section-light py-20 lg:py-28">
-          <div className={container}>
-            <Reveal
-              duration={0.7}
-              className="rounded-[20px] md:rounded-3xl px-6 py-16 md:px-20 md:py-20 flex flex-col items-center text-center gap-6"
-              style={{ backgroundImage: CLOSING_PANEL_GRADIENT }}
-            >
-              <span className="type-eyebrow text-[#4B4DF7]">
-                {t('cta.eyebrow')}
-              </span>
-              <h2 className="max-w-[880px] font-semibold leading-[1.1] text-[#121212] text-[clamp(1.8rem,4vw,3rem)] tracking-[-0.02em] text-balance">
-                {t('cta.heading')}
-              </h2>
-              <p className="max-w-[880px] type-body text-[#4B4B4B]">{t('cta.body')}</p>
-              <Button asChild variant="primary" mode="light">
-                <a href={href('become-a-partner', lang)}>
-                  {t('cta.cta')}
-                  <ArrowRight aria-hidden="true" />
-                </a>
-              </Button>
-            </Reveal>
-          </div>
-        </section>
+        {/* CTA: the shared light closing (the Assess closing) */}
+        <ClosingPanel
+          heading={t('cta.heading')}
+          body={t('cta.body')}
+          cta={t('cta.cta')}
+          href={href('become-a-partner', lang)}
+        />
       </main>
       <Footer />
     </>

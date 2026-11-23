@@ -6,6 +6,7 @@ import { useLocale } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 // `className` overrides the logo height: the wide wordmarks read larger than
 // the rest at the shared h-6, so they sit a step smaller.
@@ -21,18 +22,18 @@ const logos: { name: string; src: string; className?: string }[] = [
   { name: 'Redion', src: '/logos/client-europ-assistance.svg?v=2', className: 'h-5' },
 ];
 
-/** The Assess closing panel's gradient: peach → grey → lilac. */
-export const CLOSING_PANEL_GRADIENT = 'linear-gradient(100deg, #fdf3ec 0%, #f7f7f7 50%, #efeefb 100%)';
-
 /**
- * The banner a page closes on (homepage, Insights, Trust): one centred card —
- * the closing line, a sentence, the demo button — over a single row of client
- * logos. The copy is the page's own, passed in already translated.
+ * The banner a page closes on. The copy is the page's own, passed in already
+ * translated.
  *
- * `tone` is the surface. "dark" (the default) is the original dark band, kept
- * for the pages that still close dark. "light" is the interim light standard:
- * a white section holding the Assess closing panel. `rule` draws a #e5e7eb
- * line on top, for a light closing that follows another white section.
+ * `tone="light"` (interim standard, pending the redesign) renders the shared
+ * light closing, <ClosingPanel>: the Assess closing exactly — heading,
+ * sentence, demo button, no logo row. `rule` draws its top line, after
+ * another white section.
+ *
+ * `tone="dark"`, the default, is the original dark band below — one centred
+ * card over a single row of client logos — kept unchanged for the pages that
+ * still close dark (the /lp landing pages).
  */
 export default function ClosingBanner({ heading, body, cta, tone = 'dark', rule = false }: {
   heading: React.ReactNode;
@@ -42,29 +43,33 @@ export default function ClosingBanner({ heading, body, cta, tone = 'dark', rule 
   rule?: boolean;
 }) {
   const lang = useLocale();
-  const light = tone === 'light';
+
+  if (tone === 'light') {
+    return (
+      <ClosingPanel
+        id="cta"
+        testId="cta-section"
+        heading={heading}
+        body={body}
+        cta={cta}
+        href={href('book-meeting', lang)}
+        rule={rule}
+      />
+    );
+  }
 
   return (
-    <section
-      id="cta"
-      data-testid="cta-section"
-      className={light
-        ? `section-light relative py-20 lg:py-24${rule ? ' border-t border-[#e5e7eb]' : ''}`
-        : 'relative py-20 lg:py-24'}
-    >
+    <section id="cta" data-testid="cta-section" className="relative py-20 lg:py-24">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12">
         <Reveal
           y={40}
           duration={0.8}
           data-testid="cta-track-a"
-          className={light
-            ? 'rounded-[20px] md:rounded-3xl px-6 py-14 md:px-16 md:py-24 flex flex-col items-center text-center'
-            : 'rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 flex flex-col items-center text-center'}
-          style={light ? { backgroundImage: CLOSING_PANEL_GRADIENT } : undefined}
+          className="rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 flex flex-col items-center text-center"
         >
-          <h2 className={`max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] ${light ? 'text-[#121212]' : 'text-white/90'}`}>{heading}</h2>
-          <p className={`max-w-[880px] type-body-lg mt-4 md:mt-5 ${light ? 'text-[#4B4B4B]' : 'text-white/[0.65]'}`}>{body}</p>
-          <Button asChild variant="primary" mode={light ? 'light' : 'dark'} className="mt-8">
+          <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90">{heading}</h2>
+          <p className="max-w-[880px] type-body-lg text-white/[0.65] mt-4 md:mt-5">{body}</p>
+          <Button asChild variant="primary" mode="dark" className="mt-8">
             <a href={href('book-meeting', lang)} data-testid="cta-book-demo">
               <span>{cta}</span>
               <ArrowRight aria-hidden="true" />
@@ -84,13 +89,8 @@ export default function ClosingBanner({ heading, body, cta, tone = 'dark', rule 
               <img loading="lazy" decoding="async"
                 src={logo.src}
                 alt={logo.name}
-                // Light: drawn black at reduced opacity, as on the homepage
-                // logo bar, and static (the logos are not links). Dark: the
-                // original inverted logos and hover fade.
-                className={light
-                  ? `${logo.className ?? 'h-6'} w-auto object-contain opacity-[0.55]`
-                  : `${logo.className ?? 'h-6'} w-auto object-contain opacity-[0.55] hover:opacity-[0.8] transition-opacity duration-500`}
-                style={{ filter: light ? 'brightness(0)' : 'brightness(0) invert(1)' }}
+                className={`${logo.className ?? 'h-6'} w-auto object-contain opacity-[0.55] hover:opacity-[0.8] transition-opacity duration-500`}
+                style={{ filter: 'brightness(0) invert(1)' }}
               />
             </div>
           ))}

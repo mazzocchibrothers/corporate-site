@@ -455,27 +455,35 @@ The parent needs `.trust-page` or `.assess-faq` for the marker reset and the plu
 
 ### 4.19 Closing banner — `components/shared/ClosingBanner.tsx`
 
-**Interim standard, pending the redesign: light on light pages.** Model: the
-Assess closing panel.
+**Interim standard, pending the redesign: light on light pages.** Every light
+page closes on exactly the Assess closing — **white section, gradient panel,
+one heading, one paragraph, one button. Nothing else:** no eyebrow, no logo
+row, no badges.
 
-- `<ClosingBanner heading body cta tone="light" rule? />` (and
-  `<SolutionFinalCTA … tone="light" rule? />`). Section `section-light py-20
-  lg:py-24`, plus `border-t border-[#e5e7eb]` with `rule`.
-- Panel `rounded-[20px] md:rounded-3xl px-6 py-14 md:px-16 md:py-24`, centred,
-  `style={{ backgroundImage: CLOSING_PANEL_GRADIENT }}` =
-  `linear-gradient(100deg, #fdf3ec 0%, #f7f7f7 50%, #efeefb 100%)` (exported
-  from `ClosingBanner.tsx`).
-- H2 `text-[#121212]`, accent phrase with no gradient and no italic. Body
-  `type-body-lg text-[#4B4B4B]`. Primary `Button` `mode="light"`.
-- Client-logo row: logos `filter: brightness(0)` at `opacity-[0.55]`, static
-  (no hover fade).
-- Single-page closings (`CTASection`, `CustomersFinalCTA`, `ScienceCTA`, the
-  /product and /partners closings) use the same panel and gradient.
+- One implementation: `components/shared/ClosingPanel.tsx` (`<ClosingPanel>`).
+  /product/skillvue-assess renders it too (passing its tracked
+  `BookDemoButton` as `action`), so the pages cannot drift apart.
+  `ClosingBanner` and `SolutionFinalCTA` with `tone="light"`, `CTASection`,
+  `CustomersFinalCTA`, `ScienceCTA` and the /product and /partners closings all
+  render it.
+- Section `section-light py-16 md:py-[88px] lg:py-[112px]` (Assess's
+  `SECTION`), container `max-w-[1440px] mx-auto px-5 md:px-8 lg:px-12`, plus
+  `border-t border-[#e5e7eb]` with `rule` (after another white section).
+- Panel `Reveal y={16}`, `mx-auto flex max-w-[1144px] flex-col items-center
+  gap-6 rounded-[20px] px-6 py-14 text-center md:rounded-3xl md:px-10
+  md:py-20`, `backgroundImage: CLOSING_PANEL_GRADIENT` =
+  `linear-gradient(100deg, #fdf3ec 0%, #f7f7f7 50%, #efeefb 100%)`.
+- H2 `max-w-[880px]` + the house H2, `text-[#121212]`; accent phrase with no
+  gradient and no italic. Paragraph `max-w-[720px] type-body-lg
+  text-[#4B4B4B]`. Button: primary `mode="light"`, label + `ArrowRight`.
+- The solutions and customer-story closing (`SolutionFinalCTA`) has no
+  sentence of its own, so its panel holds the heading and the button only.
 
-`tone="dark"` (the default) is the original dark band, for pages still dark
-and the `/lp` pages: card `rounded-3xl border border-white/[0.06]
-bg-white/[0.02] backdrop-blur-sm`, H2 `text-white/90`, body `text-white/[0.65]`,
-primary-dark `Button`, logos inverted with a hover fade.
+`tone="dark"` (the default of `ClosingBanner` and `SolutionFinalCTA`) is the
+original dark band, kept unchanged for the `/lp` pages: card `rounded-3xl
+border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm`, H2
+`text-white/90`, body `text-white/[0.65]`, primary-dark `Button`, and in
+`ClosingBanner` a row of inverted client logos with a hover fade.
 
 ### 4.20 Footer — `components/Footer.tsx`
 
