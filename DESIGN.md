@@ -372,6 +372,12 @@ Left-aligned variant: same parts in a `max-w-[560px]` column, `mt-5` between the
 `text-[#ff5f24]` for a problem/risk section, `text-[#4B4B4B]` for a neutral card tag.
 Don't add `font-medium`; the class already sets 500.
 
+**On a photo background** (a light hero whose photo sits under a white wash, as on
+/partners): `text-[#3133E7]`, not `#4B4DF7`. Behind the 12px eyebrow the washed
+photo can be as dark as `#d1d1d1`, where `#4B4DF7` measures 3.9:1 and `#3133E7`
+about 5:1 (AA is 4.5:1). Measure the darkest point behind the eyebrow; if even
+`#3133E7` fails there, strengthen the wash instead.
+
 ### 4.9 Card
 
 | Variant | Classes |
