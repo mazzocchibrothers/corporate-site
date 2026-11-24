@@ -15,7 +15,7 @@ export default function PMHero() {
     <section id="pm-hero" data-testid="pm-hero" className="section-light relative min-h-screen flex flex-col justify-center pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
         <HeroCopy>
-          <Reveal
+          <Reveal hero
             as="h1"
             y={40}
             duration={0.8}
@@ -25,7 +25,7 @@ export default function PMHero() {
           >{t.rich('pmHero.heading', {
             span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</Reveal>
-          <Reveal
+          <Reveal hero
             y={20}
             duration={0.8}
             delay={0.5}

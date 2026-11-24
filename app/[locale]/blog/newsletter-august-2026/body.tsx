@@ -111,7 +111,7 @@ export default async function AugustNewsletter() {
             <Button asChild variant="tertiary" mode="light" className="mb-10">
               <a href={href('blog', lang)}><ArrowLeft aria-hidden />{t('back')}</a>
             </Button>
-            <Reveal duration={0.7} className="max-w-3xl">
+            <Reveal hero duration={0.7} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="type-caption inline-flex px-4 py-1.5 rounded-full font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08]">{t('tag')}</span>
                 <span className="type-body-sm text-[#707070]">{t('date')}</span>

@@ -48,7 +48,7 @@ export default async function BlogArticle8() {
             >
               <a href={href('blog', locale)}><ArrowLeft aria-hidden />{t('cta')}</a>
             </Button>
-            <Reveal duration={0.7} className="max-w-3xl">
+            <Reveal hero duration={0.7} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="type-caption inline-flex px-4 py-1.5 rounded-full font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08]">{t('tag')}</span>
                 <span className="type-body-sm text-white/35">{t('text')}</span>

@@ -200,7 +200,7 @@ export default async function TalentPioneersPage() {
         {/* Hero */}
         <section className="min-h-screen flex flex-col justify-center px-5 md:px-8 lg:px-12 pt-24 pb-16">
           <div className="max-w-[1400px] mx-auto w-full grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-            <Reveal y={24}>
+            <Reveal hero y={24}>
               <p className={`${EYEBROW} text-[#6b7dff]`}>{t('hero.eyebrow')}</p>
               <HeroCopy>
                 <h1 className="pt-6 text-[48px] md:text-[58px] font-semibold leading-[1.1] tracking-[-1.6px] text-white/95">
@@ -221,7 +221,7 @@ export default async function TalentPioneersPage() {
                 </a>
               </Button>
             </Reveal>
-            <Reveal y={24} delay={0.1}>
+            <Reveal hero y={24} delay={0.1}>
               <video
                 autoPlay
                 loop

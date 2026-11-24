@@ -161,7 +161,7 @@ export default function BlogPage() {
         <section className="section-light relative pt-[80px] min-h-screen flex items-center">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-              <Reveal duration={0.7} className="lg:col-span-7">
+              <Reveal hero duration={0.7} className="lg:col-span-7">
                 <HeroCopy>
                   <h1
                     className="font-semibold text-[#121212] mb-8 text-[48px] md:text-[58px]"

@@ -15,7 +15,7 @@ export default function TAHero() {
     <section id="ta-hero" data-testid="ta-hero" className="section-light relative min-h-screen flex flex-col justify-center pt-[80px]">
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full py-10 md:py-16 lg:py-0">
         <HeroCopy>
-          <Reveal
+          <Reveal hero
             as="h1"
             y={40}
             duration={0.8}
@@ -25,7 +25,7 @@ export default function TAHero() {
           >{t.rich('taHero.heading', {
             span: (chunks) => <span className="font-semibold">{chunks}</span>,
           })}</Reveal>
-          <Reveal
+          <Reveal hero
             y={20}
             duration={0.8}
             delay={0.5}

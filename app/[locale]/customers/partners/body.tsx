@@ -81,7 +81,7 @@ export default function PartnersPage() {
           </div>
 
           <div className={`${container} relative z-10 w-full`}>
-            <Reveal duration={0.7} className="flex flex-col items-start gap-6 max-w-[640px]">
+            <Reveal hero duration={0.7} className="flex flex-col items-start gap-6 max-w-[640px]">
               {/* Over a photo the eyebrow is #3133E7, not #4B4DF7: the washed photo
                   behind it is as dark as #d1d1d1, where #4B4DF7 is 3.9:1 (DESIGN.md §4.8). */}
               <span className="type-eyebrow text-[#3133E7]">

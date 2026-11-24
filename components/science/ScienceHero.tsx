@@ -17,7 +17,7 @@ export default function ScienceHero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="lg:col-span-7 flex flex-col gap-6 md:gap-8">
             <HeroCopy className="flex flex-col gap-6 md:gap-8">
-              <Reveal
+              <Reveal hero
                 as="h1"
                 y={40}
                 duration={0.8}
@@ -28,7 +28,7 @@ export default function ScienceHero() {
                 br: () => <br />,
                 span: (chunks) => <span className="font-semibold">{chunks}</span>,
               })}</Reveal>
-              <Reveal
+              <Reveal hero
                 y={20}
                 duration={0.8}
                 delay={0.5}

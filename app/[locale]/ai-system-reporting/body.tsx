@@ -25,7 +25,7 @@ export default async function AiSystemReporting() {
         {/* Hero */}
         <section className="section-light relative pt-[80px]">
           <div className="relative z-10 max-w-[900px] mx-auto px-8 lg:px-12 py-20 lg:py-28">
-            <Reveal y={20} duration={0.6}>
+            <Reveal hero y={20} duration={0.6}>
               <span className="type-eyebrow text-[#4B4DF7] mb-6 block">
                 {t('eyebrow')}</span>
               <HeroCopy>

@@ -61,7 +61,7 @@ export default function PrivacyPolicyPage() {
               iconPosition="left"
               className="mb-10"
             >{t('cta')}</Button>
-            <Reveal duration={0.7}>
+            <Reveal hero duration={0.7}>
               <HeroCopy>
                 <h1 className="text-[40px] md:text-[58px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.1]">
                   {t('heading')}</h1>

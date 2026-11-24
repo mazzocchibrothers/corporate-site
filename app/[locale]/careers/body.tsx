@@ -91,7 +91,7 @@ export default function CareersPage() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
               {/* Left — headline + CTAs */}
-              <Reveal duration={0.7}>
+              <Reveal hero duration={0.7}>
                 <span className="type-eyebrow text-[#4B4DF7] mb-6 block">{t('text')}</span>
                 <HeroCopy>
                   <h1
@@ -122,7 +122,7 @@ export default function CareersPage() {
               </Reveal>
 
               {/* Right — photo */}
-              <Reveal
+              <Reveal hero
                 y={0}
                 scale={0.97}
                 duration={0.8}
@@ -144,7 +144,7 @@ export default function CareersPage() {
             </div>
 
             {/* Stats row */}
-            <Reveal
+            <Reveal hero
               y={20}
               duration={0.7}
               delay={0.5}

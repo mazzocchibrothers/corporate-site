@@ -53,7 +53,7 @@ export default function AdRStoryPage2() {
 
           <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
             {/* Breadcrumb */}
-            <Reveal y={0} delay={0.2} className="mb-10 flex items-center gap-2">
+            <Reveal hero y={0} delay={0.2} className="mb-10 flex items-center gap-2">
               <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{t('breadcrumb')}</Button>
               <span className="text-white/20">/</span>
               <span className="type-body-sm text-white/[0.65]">Aeroporti di Roma</span>
@@ -62,7 +62,7 @@ export default function AdRStoryPage2() {
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
               {/* Main content */}
               <div className="lg:col-span-7">
-                <Reveal duration={0.7} delay={0.3}>
+                <Reveal hero duration={0.7} delay={0.3}>
                   <HeroCopy>
                     <h1 className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-8" style={{ lineHeight: 1.1 }}>
                       {t.rich('headline', {
@@ -84,7 +84,7 @@ export default function AdRStoryPage2() {
               </div>
 
               {/* Client card */}
-              <Reveal y={0} x={20} duration={0.6} delay={0.5} className="lg:col-span-5 lg:sticky lg:top-[100px] self-start">
+              <Reveal hero y={0} x={20} duration={0.6} delay={0.5} className="lg:col-span-5 lg:sticky lg:top-[100px] self-start">
 
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-8">
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
@@ -109,7 +109,7 @@ export default function AdRStoryPage2() {
             </div>
 
             {/* Full-width metrics */}
-            <Reveal y={20} duration={0.6} delay={0.6} className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4 mt-12">
+            <Reveal hero y={20} duration={0.6} delay={0.6} className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4 mt-12">
               {t.raw('heroMetrics').map(m => (
                 <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-3 py-3 md:px-6 md:py-4">
                   <span className="block text-white text-[19px] break-words stat-value md:text-[1.7rem]" style={{ lineHeight: 1, letterSpacing: '-0.03em' }}>{m.value}</span>
