@@ -64,7 +64,7 @@ export default function Mediaset2StoryPage() {
 
           <div className="relative z-10 w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-8 lg:py-10">
             {/* Breadcrumb */}
-            <Reveal y={0} delay={0.2} className="mb-5 flex items-center gap-2">
+            <Reveal hero y={0} delay={0.2} className="mb-5 flex items-center gap-2">
               <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{t('breadcrumb')}</Button>
               <span className="text-white/20">/</span>
               <span className="type-body-sm text-white/[0.65]">Mediaset</span>
@@ -73,7 +73,7 @@ export default function Mediaset2StoryPage() {
             <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
               {/* Main content */}
               <div className="lg:col-span-8 flex flex-col">
-                <Reveal duration={0.7} delay={0.3} className="flex flex-col flex-1">
+                <Reveal hero duration={0.7} delay={0.3} className="flex flex-col flex-1">
                   <HeroCopy>
                     <h1 className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-4" style={{ lineHeight: 1.1 }}>
                       {t.rich('headline', {
@@ -105,7 +105,7 @@ export default function Mediaset2StoryPage() {
               </div>
 
               {/* Client card + quote — no video */}
-              <Reveal y={0} x={20} duration={0.6} delay={0.5} className="lg:col-span-4 flex flex-col gap-4">
+              <Reveal hero y={0} x={20} duration={0.6} delay={0.5} className="lg:col-span-4 flex flex-col gap-4">
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-5">
                   <div className="flex items-center gap-3 mb-3 pb-3 border-b border-white/[0.08]">
                     <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">

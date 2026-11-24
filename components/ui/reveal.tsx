@@ -36,6 +36,15 @@ type Props = {
   ease?: string;
   /** The element to render. `section`, `li`, whatever the markup needs. */
   as?: ElementType;
+  /**
+   * For hero copy, in the first viewport. The content is visible in the server
+   * HTML from the first frame — never `opacity: 0` waiting for JavaScript, which
+   * made the hero heading the page's late Largest Contentful Paint. Only the
+   * movement remains: a CSS keyframe (`reveal-hero` in styles/globals.css) on
+   * `transform` alone, which starts on first paint with no observer and no
+   * hydration. prefers-reduced-motion skips it.
+   */
+  hero?: boolean;
   style?: CSSProperties;
   [key: string]: unknown;
 };
@@ -50,6 +59,7 @@ export function Reveal({
   delay = 0,
   ease = 'ease-out',
   as: Tag = 'div',
+  hero = false,
   style,
   // A caller's `ref` would land in `...rest` and replace the one the observer
   // reads, and the element would simply never appear. Ours is the only one.
@@ -60,6 +70,7 @@ export function Reveal({
   const [shown, setShown] = useState(false);
 
   useEffect(() => {
+    if (hero) return;
     const el = ref.current;
     // No observer (an old browser, a test runner): show it. An element that
     // never animates is a smaller problem than one that never appears.
@@ -79,7 +90,27 @@ export function Reveal({
     );
     io.observe(el);
     return () => io.disconnect();
-  }, []);
+  }, [hero]);
+
+  if (hero) {
+    // Visible from the first frame; the rise is CSS, driven by these variables.
+    return (
+      <Tag
+        ref={ref}
+        className={className ? `reveal-hero ${className}` : 'reveal-hero'}
+        style={{
+          ...style,
+          '--reveal-from': `translate(${x}px, ${y}px)${scale === 1 ? '' : ` scale(${scale})`}`,
+          '--reveal-duration': `${duration}s`,
+          '--reveal-ease': ease,
+          '--reveal-delay': `${delay}s`,
+        } as CSSProperties}
+        {...rest}
+      >
+        {children}
+      </Tag>
+    );
+  }
 
   // The caller's own style is merged, not spread after ours: `{...rest}` on the
   // element would replace the whole style object, and the element would simply

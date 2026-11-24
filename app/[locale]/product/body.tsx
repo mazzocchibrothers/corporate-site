@@ -149,7 +149,7 @@ export default function SkillvueMapPage() {
               make up the hero, sized to the viewport as one unit. */}
           <div className="min-h-screen flex flex-col justify-center">
             <section className="pt-[120px] pb-8 lg:pt-[152px] text-center">
-              <Reveal duration={0.7} className={`${container} flex flex-col items-center`}>
+              <Reveal hero duration={0.7} className={`${container} flex flex-col items-center`}>
                 <HeroCopy>
                   <h1 className="font-semibold text-[48px] md:text-[58px] text-[#121212] text-balance" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
                     {t.rich('hero.heading', { br })}

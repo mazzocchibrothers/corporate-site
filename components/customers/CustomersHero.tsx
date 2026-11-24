@@ -42,7 +42,7 @@ export default function CustomersHero() {
       <div className="max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] gap-16 lg:gap-12 items-center">
           <div>
-            <Reveal
+            <Reveal hero
               y={20}
               duration={0.6}
               delay={0.15}
@@ -51,7 +51,7 @@ export default function CustomersHero() {
               <span className="type-eyebrow font-medium text-[#4B4DF7]">{t('hero.eyebrow')}</span>
             </Reveal>
             <HeroCopy>
-              <Reveal
+              <Reveal hero
                 as="h1"
                 y={40}
                 duration={0.8}
@@ -61,7 +61,7 @@ export default function CustomersHero() {
               >{t.rich('hero.heading', {
                 span: (chunks) => <span className="font-semibold">{chunks}</span>,
               })}</Reveal>
-              <Reveal
+              <Reveal hero
                 as="p"
                 y={20}
                 duration={0.8}
@@ -73,7 +73,7 @@ export default function CustomersHero() {
           </div>
 
           {/* Metrics grid */}
-          <Reveal
+          <Reveal hero
             y={20}
             duration={0.8}
             delay={0.6}

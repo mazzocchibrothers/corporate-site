@@ -740,3 +740,18 @@ h2 .gradient-text {
   .press-seq-tile { transform: none; opacity: 1; }
   .press-seq-article { opacity: 0; }
 }
+
+/* ===== HERO REVEAL (components/ui/reveal.tsx, `hero`) =====
+   Hero copy is visible from the first frame: only the movement animates, on
+   transform, from the offset <Reveal> passes in (--reveal-from) back to the
+   element's own place. Pure CSS, so it starts on first paint with no
+   JavaScript, and the text is never hidden while the page loads. */
+@keyframes reveal-hero {
+  from { transform: var(--reveal-from, translate(0, 30px)); }
+}
+.reveal-hero {
+  animation: reveal-hero var(--reveal-duration, 0.5s) var(--reveal-ease, ease-out) var(--reveal-delay, 0s) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-hero { animation: none; }
+}

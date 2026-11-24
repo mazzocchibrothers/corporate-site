@@ -152,7 +152,7 @@ export default function PressPage() {
         <section className="section-light relative pt-[80px] min-h-[60vh] flex items-center overflow-hidden">
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-20 lg:py-28">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-              <Reveal duration={0.7} className="lg:col-span-7">
+              <Reveal hero duration={0.7} className="lg:col-span-7">
                 <span className="type-eyebrow text-[#4B4DF7] mb-8 block">{t('text')}</span>
                 <HeroCopy>
                   <h1

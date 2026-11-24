@@ -75,7 +75,7 @@ export default async function ProductPage() {
         {/* Hero */}
         <section className="pt-[144px] pb-16 md:pt-[168px] md:pb-[88px] lg:pt-[192px] lg:pb-[112px]">
           <div className={CONTAINER}>
-            <Reveal y={16} className="mx-auto flex max-w-[918px] flex-col items-center gap-6 text-center">
+            <Reveal hero y={16} className="mx-auto flex max-w-[918px] flex-col items-center gap-6 text-center">
               <HeroCopy>
                 <h1 className="font-semibold text-[48px] md:text-[58px] text-[#121212] text-balance" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
                   {t('hero.titleLead')} <span className="hidden lg:block" aria-hidden="true" />{t('hero.titleTail')}
@@ -84,7 +84,7 @@ export default async function ProductPage() {
               </HeroCopy>
               {demo}
             </Reveal>
-            <Reveal y={40} duration={0.9} delay={0.3} className="mt-12 md:mt-16 lg:mt-20">
+            <Reveal hero y={40} duration={0.9} delay={0.3} className="mt-12 md:mt-16 lg:mt-20">
               <Screen screen="skills" label={t('hero.imageAlt')} />
             </Reveal>
           </div>

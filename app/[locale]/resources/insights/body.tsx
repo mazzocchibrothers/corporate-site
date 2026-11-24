@@ -100,7 +100,7 @@ export default function InsightsPage() {
         <section className="section-light relative pt-[80px] min-h-screen flex items-center overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-              <Reveal duration={0.7} className="lg:col-span-6">
+              <Reveal hero duration={0.7} className="lg:col-span-6">
                 <span className="type-eyebrow text-[#4B4DF7] mb-8 block">{t('text')}</span>
                 <HeroCopy>
                   <h1

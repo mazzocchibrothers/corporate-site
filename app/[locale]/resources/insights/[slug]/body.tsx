@@ -177,7 +177,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
             >{t('detail.cta')}</Button>
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
               <div className="lg:col-span-8">
-                <Reveal duration={0.7}>
+                <Reveal hero duration={0.7}>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {wp.topic.map(tag => (
                       <span key={tag} className="type-caption inline-flex px-4 py-1.5 rounded-full font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08]">{tag}</span>
@@ -194,7 +194,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                   </HeroCopy>
                 </Reveal>
               </div>
-              <Reveal y={20} duration={0.7} delay={0.3} className="lg:col-span-4">
+              <Reveal hero y={20} duration={0.7} delay={0.3} className="lg:col-span-4">
                 <Button
                   asChild
                   variant="secondary"

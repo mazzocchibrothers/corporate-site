@@ -178,7 +178,7 @@ export default async function TrustPage() {
       <main className="trust-page section-light text-[#121212] [line-height:normal]">
         {/* ── Hero ── */}
         <section className={cn(CONTAINER, 'pt-[168px] pb-16 grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] gap-14 items-stretch max-[760px]:pt-[120px] max-[760px]:pb-10 max-[760px]:gap-10')}>
-          <Reveal className="flex flex-col justify-center gap-8">
+          <Reveal hero className="flex flex-col justify-center gap-8">
             <HeroCopy>
               <h1 className="font-semibold text-[48px] md:text-[58px] text-[#121212]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
                 {t('hero.title')}
@@ -188,7 +188,7 @@ export default async function TrustPage() {
             <div className="flex gap-3 flex-wrap max-[760px]:w-full"><Cta label={cta} locale={locale} /></div>
           </Reveal>
 
-          <Reveal
+          <Reveal hero
             delay={0.15}
             className="relative rounded-3xl bg-[#F7F7F7] px-7 py-8 flex items-center justify-center overflow-hidden max-[760px]:px-4 max-[760px]:py-5"
           >

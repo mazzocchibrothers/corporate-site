@@ -138,7 +138,7 @@ export default async function SkillvueAssessPage() {
         {/* Hero */}
         <section className="pt-[144px] pb-16 md:pt-[168px] md:pb-[88px] lg:pt-[192px] lg:pb-[112px]">
           <div className={CONTAINER}>
-            <Reveal y={16} className="mx-auto flex max-w-[918px] flex-col items-center gap-6 text-center">
+            <Reveal hero y={16} className="mx-auto flex max-w-[918px] flex-col items-center gap-6 text-center">
               <p className={EYEBROW}>{t('hero.eyebrow')}</p>
               <HeroCopy>
                 <h1 className="mb-6 font-semibold text-[48px] md:text-[58px] text-[#121212] text-balance" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>
@@ -154,17 +154,17 @@ export default async function SkillvueAssessPage() {
               </Button>
             </Reveal>
 
-            <Reveal y={16} delay={0.15} className="mx-auto mt-12 max-w-[1040px] md:mt-16">
+            <Reveal hero y={16} delay={0.15} className="mx-auto mt-12 max-w-[1040px] md:mt-16">
               <Points items={t.raw('hero.points') as Point[]} className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8" />
             </Reveal>
 
-            <Reveal y={40} duration={0.9} delay={0.3} className="mx-auto mt-12 max-w-[1040px] md:mt-16">
+            <Reveal hero y={40} duration={0.9} delay={0.3} className="mx-auto mt-12 max-w-[1040px] md:mt-16">
               <TeamReadiness />
             </Reveal>
 
             <div aria-label={t('hero.proofLabel')} role="group" className="mx-auto mt-12 grid max-w-[1040px] grid-cols-1 gap-10 text-center md:mt-16 md:grid-cols-3 md:gap-8">
               {(t.raw('hero.proof') as { value: string; label: string; source: string }[]).map((p, i) => (
-                <Reveal key={p.source} y={16} delay={i * 0.1} className="flex flex-col items-center gap-3">
+                <Reveal hero key={p.source} y={16} delay={i * 0.1} className="flex flex-col items-center gap-3">
                   <span className={`${STAT} block text-[36px] md:text-[44px]`} style={{ lineHeight: 1 }}>{p.value}</span>
                   <span className="max-w-[300px] type-body text-[#121212]">{p.label}</span>
                   <span className="type-body-sm text-[#707070]">{p.source}</span>

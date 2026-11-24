@@ -64,7 +64,7 @@ export default function Mediaset1StoryPage() {
 
           <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 py-20 lg:py-28">
             {/* Breadcrumb */}
-            <Reveal y={0} delay={0.2} className="mb-10 flex items-center gap-2">
+            <Reveal hero y={0} delay={0.2} className="mb-10 flex items-center gap-2">
               <Button variant="tertiary" mode="dark" icon={null} onClick={() => { router.push(href('customers', lang)); window.scrollTo(0, 0); }}>{t('breadcrumb')}</Button>
               <span className="text-white/20">/</span>
               <span className="type-body-sm text-white/[0.65]">Mediaset</span>
@@ -73,7 +73,7 @@ export default function Mediaset1StoryPage() {
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
               {/* Main content */}
               <div className="lg:col-span-6">
-                <Reveal duration={0.7} delay={0.3}>
+                <Reveal hero duration={0.7} delay={0.3}>
                   <HeroCopy>
                     <h1 className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-8" style={{ lineHeight: 1.1 }}>
                       {t.rich('headline', {
@@ -96,7 +96,7 @@ export default function Mediaset1StoryPage() {
               </div>
 
               {/* Client card + quote + video */}
-              <Reveal y={0} x={20} duration={0.6} delay={0.5} className="lg:col-span-5 lg:col-start-8 lg:pt-20">
+              <Reveal hero y={0} x={20} duration={0.6} delay={0.5} className="lg:col-span-5 lg:col-start-8 lg:pt-20">
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-6">
                   <div className="flex items-center gap-4 mb-4 pb-4 border-b border-white/[0.08]">
                     <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
@@ -129,7 +129,7 @@ export default function Mediaset1StoryPage() {
             </div>
 
             {/* Hero metrics — horizontal row */}
-            <Reveal y={20} duration={0.6} delay={0.8} className="mt-12">
+            <Reveal hero y={20} duration={0.6} delay={0.8} className="mt-12">
               <div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-5">
                 {t.raw('heroMetrics').map(m => (
                   <div key={m.value} className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-3 py-3 md:px-6 md:py-5 text-center">
