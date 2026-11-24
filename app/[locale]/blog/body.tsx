@@ -3,12 +3,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Reveal } from '@/components/ui/reveal';
 import { HeroVideo } from '@/components/ui/hero-video';
+import { BlogStack } from '@/components/resources/BlogStack';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { ArrowDown, ArrowRight, ChevronDown, ListFilter, Newspaper } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
+import { Button, SECONDARY_ON_LIGHT } from '@/components/ui/button';
 import { href } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
 import { ClosingPanel } from '@/components/shared/ClosingPanel';
@@ -157,21 +158,21 @@ export default function BlogPage() {
       <Navbar />
       <main>
         {/* 1. Hero */}
-        <section className="relative pt-[80px] min-h-screen flex items-center">
+        <section className="section-light relative pt-[80px] min-h-screen flex items-center">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               <Reveal duration={0.7} className="lg:col-span-7">
                 <HeroCopy>
                   <h1
-                    className="font-semibold text-white/95 mb-8 text-[48px] md:text-[58px]"
+                    className="font-semibold text-[#121212] mb-8 text-[48px] md:text-[58px]"
                     style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
                   >{t.rich('heading', {
                     br: () => <br />,
-                    span: (chunks) => <span className="gradient-text">{chunks}</span>,
+                    span: (chunks) => <span>{chunks}</span>,
                   })}</h1>
-                  <p className="type-body-lg hero-subtitle text-white/[0.45] mb-12">{t('body')}</p>
+                  <p className="type-body-lg hero-subtitle text-[#4B4B4B] mb-12">{t('body')}</p>
                 </HeroCopy>
-                <Button asChild variant="secondary" mode="dark" className="group">
+                <Button asChild variant="secondary" mode="light" className={`group ${SECONDARY_ON_LIGHT}`}>
                   <a
                     href="#articles"
                     onClick={(e) => { e.preventDefault(); document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' }); }}
@@ -181,13 +182,19 @@ export default function BlogPage() {
                   </a>
                 </Button>
               </Reveal>
-              <HeroVideo
-                poster="/videos/blog-hero-showcase-poster.jpg"
-                webmSrc="/videos/blog-hero-showcase.webm"
-                mp4Src="/videos/blog-hero-showcase.mp4"
-                className="flex justify-center lg:col-span-5"
-                videoClassName="w-full max-w-[360px] h-auto rounded-[32px]"
-              />
+              {/* Drawn in code on a transparent background: the video it replaces
+                  (/videos/blog-hero-showcase.*) has a black backdrop baked in. */}
+              <div className="flex justify-center lg:col-span-5">
+                <BlogStack
+                  cards={[
+                    { src: '/newsletter-july-cover.avif', tag: t('articles.newsletter-july-2026.tag') },
+                    { src: '/covers/blog-attitude-vs-competence.avif', tag: t('articles.attitude-vs-competence.tag') },
+                    { src: '/covers/blog-recruitment-biases.avif', tag: t('articles.recruitment-biases.tag') },
+                    { src: '/covers/blog-critical-thinking.avif', tag: t('articles.critical-thinking.tag') },
+                    { src: '/covers/blog-managerial-skills.avif', tag: t('articles.managerial-skills.tag') },
+                  ]}
+                />
+              </div>
             </div>
           </div>
         </section>

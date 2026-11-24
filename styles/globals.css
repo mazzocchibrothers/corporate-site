@@ -663,3 +663,34 @@ h2 .gradient-text {
   .insights-deck-card[data-depth="3"] { opacity: 0; z-index: 1; }
 }
 
+/* ===== BLOG HERO STACK (components/resources/BlogStack.tsx) =====
+   One 10 s loop per card, five cards offset by 2 s. Each 2 s slot holds for
+   1.5 s and moves for 0.5 s. A card rises from below the box into the front
+   place, then steps up three levels (smaller, darker each time), fades out at
+   the top, and waits below the box — clipped, so solid but unseen — until
+   its turn comes round again.
+   Positions are relative to the card's own height; the box clips the bottom
+   edge the cards rise through. */
+@keyframes blog-stack {
+  0%, 15%   { transform: translateY(0) scale(1); filter: brightness(1); opacity: 1; z-index: 5; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  20%, 35%  { transform: translateY(-16%) scale(0.96); filter: brightness(0.82); opacity: 1; z-index: 4; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  40%, 55%  { transform: translateY(-32%) scale(0.92); filter: brightness(0.7); opacity: 1; z-index: 3; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  60%, 75%  { transform: translateY(-48%) scale(0.88); filter: brightness(0.6); opacity: 1; z-index: 2; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  79.99%    { transform: translateY(-62%) scale(0.84); filter: brightness(0.55); opacity: 0; z-index: 1; }
+  80%, 95%  { transform: translateY(120%) scale(1); filter: brightness(1); opacity: 1; z-index: 6; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  100%      { transform: translateY(0) scale(1); filter: brightness(1); opacity: 1; z-index: 6; }
+}
+.blog-stack-card {
+  transform-origin: 50% 0%;
+  animation: blog-stack 10s linear infinite both;
+  will-change: transform, opacity, filter;
+}
+@media (prefers-reduced-motion: reduce) {
+  /* A still stack: the first card in front, three behind it, one hidden. */
+  .blog-stack-card { animation: none; will-change: auto; }
+  .blog-stack-card[data-depth="0"] { transform: none; z-index: 5; }
+  .blog-stack-card[data-depth="1"] { transform: translateY(-16%) scale(0.96); filter: brightness(0.82); z-index: 4; }
+  .blog-stack-card[data-depth="2"] { transform: translateY(-32%) scale(0.92); filter: brightness(0.7); z-index: 3; }
+  .blog-stack-card[data-depth="3"] { transform: translateY(-48%) scale(0.88); filter: brightness(0.6); z-index: 2; }
+  .blog-stack-card[data-depth="4"] { opacity: 0; }
+}
