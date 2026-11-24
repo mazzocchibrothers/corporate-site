@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
-import { HeroVideo } from '@/components/ui/hero-video';
+import { PressSequence } from '@/components/resources/PressSequence';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
@@ -148,58 +148,34 @@ export default function PressPage() {
       <Navbar />
       <main>
 
-        {/* 1. Hero — dark */}
-        <section className="relative pt-[80px] min-h-[60vh] flex items-center overflow-hidden bg-black">
-          {/* Subtle gradient orbs */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div
-              className="absolute rounded-full"
-              style={{
-                width: '600px', height: '600px',
-                top: '-200px', left: '-100px',
-                background: 'radial-gradient(circle, rgba(75,77,247,0.12) 0%, transparent 70%)',
-                filter: 'blur(60px)',
-              }}
-            />
-            <div
-              className="absolute rounded-full"
-              style={{
-                width: '500px', height: '500px',
-                bottom: '-150px', right: '-80px',
-                background: 'radial-gradient(circle, rgba(255,95,36,0.07) 0%, transparent 70%)',
-                filter: 'blur(60px)',
-              }}
-            />
-          </div>
-
+        {/* 1. Hero */}
+        <section className="section-light relative pt-[80px] min-h-[60vh] flex items-center overflow-hidden">
           <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-20 lg:py-28">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               <Reveal duration={0.7} className="lg:col-span-7">
-                <span className="type-eyebrow text-[#6B7DFF] mb-8 block">{t('text')}</span>
+                <span className="type-eyebrow text-[#4B4DF7] mb-8 block">{t('text')}</span>
                 <HeroCopy>
                   <h1
-                    className="font-semibold text-white/95 mb-6 text-[48px] md:text-[58px]"
+                    className="font-semibold text-[#121212] mb-6 text-[48px] md:text-[58px]"
                     style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
                   >{t.rich('heading', {
                     br: () => <br />,
-                    span: (chunks) => <span className="gradient-text">{chunks}</span>,
+                    span: (chunks) => <span>{chunks}</span>,
                   })}</h1>
-                  <p className="type-body-lg hero-subtitle text-white/[0.45] mb-10">{t('body')}</p>
+                  <p className="type-body-lg hero-subtitle text-[#4B4B4B] mb-10">{t('body')}</p>
                 </HeroCopy>
-                <Button asChild variant="tertiary" mode="dark">
+                <Button asChild variant="tertiary" mode="light">
                   <a href="mailto:press@skillvue.ai">
                     <Mail aria-hidden />
                     press@skillvue.ai
                   </a>
                 </Button>
               </Reveal>
-              <HeroVideo
-                poster="/videos/press-hero-showcase-poster.jpg"
-                webmSrc="/videos/press-hero-showcase.webm"
-                mp4Src="/videos/press-hero-showcase.mp4"
-                className="flex justify-center lg:col-span-5"
-                videoClassName="w-full max-w-[360px] h-auto rounded-[32px]"
-              />
+              {/* Drawn in code on a transparent background: the video it replaces
+                  (/videos/press-hero-showcase.*) has a dark backdrop baked in. */}
+              <div className="flex justify-center lg:col-span-5">
+                <PressSequence />
+              </div>
             </div>
           </div>
         </section>
