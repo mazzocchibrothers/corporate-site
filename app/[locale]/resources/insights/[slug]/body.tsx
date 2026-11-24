@@ -14,6 +14,7 @@ import Link from 'next/link';
 import { trackLead } from '@/components/shared/track-lead';
 import { PHONE_COUNTRY, setPhoneCountry, styleHubspotForm } from '@/components/shared/hubspot-form-theme';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 // The one dynamic route on the site. Its paths come from the same array the
 // sitemap expands, so a whitepaper cannot exist in one and not the other.
@@ -219,15 +220,15 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
         </section>
 
         {/* 2. Key Stats */}
-        <section className="relative py-20 lg:py-24 border-t border-white/[0.04]">
+        <section className="section-light relative py-20 lg:py-24">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
             <div className="grid grid-cols-3 gap-8">
               {Array.from({ length: stats }, (_, i) => i + 1).map((n, i) => (
                 <Reveal y={15} delay={i * 0.12} key={i} className="text-center">
                   <span className="font-display block text-[#4B4DF7] font-semibold md:font-bold mb-3 text-[32px] md:text-[clamp(2.5rem,5vw,3.5rem)]" style={{ letterSpacing: '-0.03em', lineHeight: 1 }}>
-                    {t(`items.${slug}.stats.s${n}.value`)}<span className="text-[0.6em] text-white/30 ml-1">{t.has(`items.${slug}.stats.s${n}.unit`) ? t(`items.${slug}.stats.s${n}.unit`) : ''}</span>
+                    {t(`items.${slug}.stats.s${n}.value`)}<span className="text-[0.6em] text-[#707070] ml-1">{t.has(`items.${slug}.stats.s${n}.unit`) ? t(`items.${slug}.stats.s${n}.unit`) : ''}</span>
                   </span>
-                  <p className="type-body-sm text-white/35 max-w-[280px] mx-auto">{t(`items.${slug}.stats.s${n}.label`)}</p>
+                  <p className="type-body-sm text-[#707070] max-w-[280px] mx-auto">{t(`items.${slug}.stats.s${n}.label`)}</p>
                 </Reveal>
               ))}
             </div>
@@ -290,9 +291,9 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
 
         {/* 6. Related */}
         {related.length > 0 && (
-          <section className="relative pt-8 pb-2 lg:pt-10 lg:pb-2">
+          <section className="section-light relative pt-8 pb-2 lg:pt-10 lg:pb-2">
             <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-              <h2 className="max-w-[880px] text-[clamp(1.5rem,4vw,3rem)] font-semibold text-white/90 mb-10 tracking-[-0.02em]">{t('detail.heading2')}</h2>
+              <h2 className="max-w-[880px] text-[clamp(1.5rem,4vw,3rem)] font-semibold text-[#121212] mb-10 tracking-[-0.02em]">{t('detail.heading2')}</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {related.map((rw, i) => {
                   return (
@@ -300,22 +301,21 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                       y={15}
                       delay={i * 0.1}
                       key={rw.slug}
-                      className="group flex gap-6 items-center p-5 rounded-2xl border border-white/[0.05] hover:border-white/[0.12] focus-visible:border-white/[0.12] hover:bg-white/[0.03] focus-visible:bg-white/[0.03] transition-all duration-500 cursor-pointer"
+                      className="group flex gap-6 items-center p-5 rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] hover:border-[#121212]/20 focus-visible:border-[#121212]/20 hover:bg-[#f1f5f9] focus-visible:bg-[#f1f5f9] transition-all duration-500 cursor-pointer"
                       as={Link}
                       href={localizePath(`/resources/insights/${rw.slug}`, lang)}
                       prefetch={false}
                     >
                       {rw.coverBg && (
                         <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0 relative">
-                          <img loading="lazy" decoding="async" src={rw.coverBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-50" />
-                          <div className="absolute inset-0 bg-black/40" />
+                          <img loading="lazy" decoding="async" src={rw.coverBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
                         </div>
                       )}
                       <div className="flex-1">
-                        <h3 className="text-[16px] font-semibold text-white/80 group-hover:text-white group-focus-visible:text-white transition-colors duration-300 mb-1">{t(`items.${rw.slug}.title`)}</h3>
-                        <p className="type-body-sm text-white/35 line-clamp-1">{t(`items.${rw.slug}.shortDesc`)}</p>
+                        <h3 className="text-[16px] font-semibold text-[#121212] mb-1">{t(`items.${rw.slug}.title`)}</h3>
+                        <p className="type-body-sm text-[#707070] line-clamp-1">{t(`items.${rw.slug}.shortDesc`)}</p>
                       </div>
-                      <ArrowRight className="h-4 w-4 text-white/15 group-hover:text-[#4B4DF7] group-focus-visible:text-[#4B4DF7] group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-all duration-300 shrink-0" />
+                      <ArrowRight className="h-4 w-4 text-[#121212]/30 group-hover:text-[#4B4DF7] group-focus-visible:text-[#4B4DF7] group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-all duration-300 shrink-0" />
                     </Reveal>
                   );
                 })}
@@ -324,23 +324,21 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
           </section>
         )}
 
-        {/* 7. Bottom CTA */}
-        <section className="relative py-20 lg:py-24">
-          <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
-            <Reveal
-              duration={0.7}
-              className="relative overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 text-center"
-            >
-              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.15] mx-auto tracking-[-0.02em]">{t('detail.heading3')}</h2>
-              <p className="max-w-[880px] type-body text-white/[0.4] mb-10 mx-auto">{t('detail.body3')}</p>
-              <Button
-                onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
-                variant="primary"
-                mode="dark"
-              >{t('detail.cta3')}</Button>
-            </Reveal>
-          </div>
-        </section>
+        {/* 7. Bottom CTA: the shared light closing, ruled off the white related
+            insights above (when there are none, the dark form section is above).
+            The button keeps its client-side navigation, hence `action`. */}
+        <ClosingPanel
+          heading={t('detail.heading3')}
+          body={t('detail.body3')}
+          rule={related.length > 0}
+          action={
+            <Button
+              onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}
+              variant="primary"
+              mode="light"
+            >{t('detail.cta3')}</Button>
+          }
+        />
       <Footer />
       </main>
     </>

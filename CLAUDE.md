@@ -105,7 +105,8 @@ person — listed in `NAMES` in `scripts/check-hardcoded.mjs`. Never a sentence.
   (`check:messages`), and an Italian value may not still be the English one
   (`check:untranslated`).
 - A key no page renders any more is dead copy: delete it in the same change
-  that stops rendering it.
+  that stops rendering it — **except during the light-theme work**, where copy is frozen
+  (see "Copy freeze" under Design system).
 
 ## Adding content
 
@@ -145,6 +146,17 @@ language switcher need no edit beyond the steps above.
 
 Pages were brought to one standard (#183, #194, #195). Match it; don't
 reintroduce per-page variants.
+
+**Copy freeze for the light-theme work (interim, and the body-background
+branch that follows it).** The theme work changes no copy at all:
+
+- `messages/en.json` and `messages/it.json` must not change. If an element is
+  removed, its keys stay in place, even unused — this overrides the "delete
+  dead copy" rule above for this work.
+- No visible text changes in components or pages either.
+- Before every push, run `git diff main --stat -- messages/` and confirm it is
+  empty; put that output in the report.
+- If a change seems to need a copy edit, stop and ask instead.
 
 **Interim light standard (pending the redesign).** Content pages are being
 moved off the dark theme onto the light style of `/trust`, `/product` and

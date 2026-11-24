@@ -12,7 +12,7 @@ export default function ScienceHero() {
   const lang = useLocale();
   const t = useTranslations('science');
   return (
-    <section id="science-hero" data-testid="science-hero" className="relative min-h-screen flex flex-col justify-center pt-[80px] overflow-hidden">
+    <section id="science-hero" data-testid="science-hero" className="section-light relative min-h-screen flex flex-col justify-center pt-[80px] overflow-hidden">
       <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 w-full py-10 md:py-16 lg:py-0">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="lg:col-span-7 flex flex-col gap-6 md:gap-8">
@@ -22,11 +22,11 @@ export default function ScienceHero() {
                 y={40}
                 duration={0.8}
                 delay={0.3}
-                className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95"
+                className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-[#121212]"
                 style={{ lineHeight: 1.1 }}
               >{t.rich('hero.heading', {
                 br: () => <br />,
-                span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+                span: (chunks) => <span className="font-semibold">{chunks}</span>,
               })}</Reveal>
               <Reveal
                 y={20}
@@ -34,10 +34,10 @@ export default function ScienceHero() {
                 delay={0.5}
                 className="flex flex-col gap-8 md:gap-10"
               >
-                <p className="type-body-lg hero-subtitle text-white/[0.65]">
+                <p className="type-body-lg hero-subtitle text-[#4B4B4B]">
                   {t('hero.body')}
                 </p>
-                <Button asChild variant="primary" mode="dark" className="self-start">
+                <Button asChild variant="primary" mode="light" className="self-start">
                   <a href={href('book-meeting', lang)}>
                     <span>{t('hero.cta')}</span>
                     <ArrowRight aria-hidden="true" />

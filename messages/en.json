@@ -1578,6 +1578,14 @@
   },
   "customers": {
     "finalCTA": {
+      "badges": {
+        "gdprCompliant": "GDPR-compliant",
+        "iso27001Certified": "ISO 27001 certified",
+        "euAiAct": "EU AI Act ready",
+        "n50Languages": "50+ languages",
+        "enterpriseReady": "Enterprise-ready",
+        "builtEuropeanEnterprises": "Built for European enterprises"
+      },
       "heading": "Ready to see what Skillvue can do for your <span>organization?</span>",
       "text": "Ready to explore",
       "heading2": "Book a Demo",
@@ -5048,6 +5056,7 @@
         }
       },
       "cta": {
+        "eyebrow": "Join us",
         "heading": "Grow with Skillvue as a partner",
         "body": "Commercial or technology, tell us how you would like to work together.",
         "cta": "Become a partner"
@@ -9900,6 +9909,8 @@
     },
     "cta": {
       "heading": "Science-backed talent intelligence. <span>See it in action.</span>",
+      "text": "Ready to explore",
+      "heading2": "Book a Demo",
       "body": "See how science translates into better talent decisions",
       "cta": "Book a Demo"
     },

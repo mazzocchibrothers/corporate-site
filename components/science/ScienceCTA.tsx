@@ -6,8 +6,7 @@ import { href } from '@/i18n/routes';
 import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 // /science closes on the shared light closing (the Assess closing): heading,
-// sentence, demo button. No top rule — a temporary exception until /science is
-// converted: the product cross-links above are built as one block with it.
+// sentence, demo button, ruled off the white product cross-links above.
 export default function ScienceCTA() {
   const lang = useLocale();
   const t = useTranslations('science');
@@ -23,6 +22,7 @@ export default function ScienceCTA() {
       cta={t('cta.cta')}
       href={href('book-meeting', lang)}
       ctaTestId="science-cta-demo"
+      rule
     />
   );
 }

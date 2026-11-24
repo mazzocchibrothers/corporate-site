@@ -51,21 +51,21 @@ export default function PrivacyPolicyPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative pt-[80px] min-h-[45vh] flex items-end">
+        <section className="section-light relative pt-[80px] min-h-[45vh] flex items-end">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-24">
             <Button
               onClick={() => router.back()}
               variant="tertiary"
-              mode="dark"
+              mode="light"
               icon={<ArrowLeft aria-hidden />}
               iconPosition="left"
               className="mb-10"
             >{t('cta')}</Button>
             <Reveal duration={0.7}>
               <HeroCopy>
-                <h1 className="text-[40px] md:text-[58px] font-semibold text-white/95 mb-4 tracking-[-0.02em] leading-[1.1]">
+                <h1 className="text-[40px] md:text-[58px] font-semibold text-[#121212] mb-4 tracking-[-0.02em] leading-[1.1]">
                   {t('heading')}</h1>
-                <p className="type-body hero-subtitle text-white/[0.45]">
+                <p className="type-body hero-subtitle text-[#4B4B4B]">
                   {t('body')}</p>
               </HeroCopy>
             </Reveal>

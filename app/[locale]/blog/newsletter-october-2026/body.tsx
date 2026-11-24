@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Clock, ImageIcon } from 'lucide-react';
 import { href, localizePath } from '@/i18n/routes';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
 // ─── Fill these in when the assets/links are ready ──────────────────────────
 // Empty string '' → a labelled dashed placeholder box renders instead.
@@ -81,25 +82,21 @@ export default async function OctoberNewsletter() {
 
       <Navbar />
       <main>
-        {/* HERO — dark, on-brand */}
-        <section className="relative pt-[80px] overflow-hidden" style={{ background: '#08080c' }}>
-          <div className="pointer-events-none absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(75,77,247,0.18) 0%, rgba(75,77,247,0) 60%)' }} />
-            <div className="absolute top-10 right-[-200px] w-[600px] h-[600px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(255,86,86,0.10) 0%, rgba(255,86,86,0) 60%)' }} />
-          </div>
+        {/* HERO — light (interim standard) */}
+        <section className="section-light relative pt-[80px] overflow-hidden">
           <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 w-full py-16 lg:py-24">
-            <Button asChild variant="tertiary" mode="dark" className="mb-10">
+            <Button asChild variant="tertiary" mode="light" className="mb-10">
               <a href={href('blog', lang)}><ArrowLeft aria-hidden />{t('back')}</a>
             </Button>
             <Reveal duration={0.7} className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="type-caption inline-flex px-4 py-1.5 rounded-full font-semibold text-[#4B4DF7] border border-[#4B4DF7]/[0.2] bg-[#4B4DF7]/[0.08]">{t('tag')}</span>
-                <span className="type-body-sm text-white/35">{t('date')}</span>
-                <span className="type-body-sm text-white/25 flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('readTime')}</span>
+                <span className="type-body-sm text-[#707070]">{t('date')}</span>
+                <span className="type-body-sm text-[#707070] flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {t('readTime')}</span>
               </div>
               <HeroCopy>
-                <h1 className="font-semibold text-white/95 mb-6 text-[40px] md:text-[46px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t('title')}</h1>
-                <p className="type-body-lg hero-subtitle text-white/[0.5]">{t('subtitle')}</p>
+                <h1 className="font-semibold text-[#121212] mb-6 text-[40px] md:text-[46px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t('title')}</h1>
+                <p className="type-body-lg hero-subtitle text-[#4B4B4B]">{t('subtitle')}</p>
               </HeroCopy>
             </Reveal>
           </div>
@@ -158,21 +155,13 @@ export default async function OctoberNewsletter() {
           </div>
         </section>
 
-        {/* FINAL CTA — dark */}
-        <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24" style={{ background: '#08080c' }}>
-          <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 text-center">
-            <Reveal duration={0.7}>
-              <span className="type-eyebrow text-[#6B7DFF] mb-6 block">{t('finalKicker')}</span>
-              <h2 className="max-w-[880px] text-[clamp(2rem,4vw,3rem)] font-semibold text-white/90 mb-5 leading-[1.1] mx-auto tracking-[-0.02em]">
-                {t('finalTitle')} <span className="gradient-text">{t('finalTitleHighlight')}</span>
-              </h2>
-              <p className="max-w-[880px] type-body text-white/[0.4] mb-12 mx-auto">{t('finalBody')}</p>
-              <Button asChild variant="primary" mode="dark">
-                <a href={href('book-meeting', lang)}>{t('finalButton')}<ArrowRight aria-hidden /></a>
-              </Button>
-            </Reveal>
-          </div>
-        </section>
+        {/* CTA: the shared light closing */}
+        <ClosingPanel
+          heading={<>{t('finalTitle')} <span>{t('finalTitleHighlight')}</span></>}
+          body={t('finalBody')}
+          cta={t('finalButton')}
+          href={href('book-meeting', lang)}
+        />
       <Footer />
       </main>
     </>

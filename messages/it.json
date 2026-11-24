@@ -1578,6 +1578,14 @@
   },
   "customers": {
     "finalCTA": {
+      "badges": {
+        "gdprCompliant": "Conforme al GDPR",
+        "iso27001Certified": "Certificato ISO 27001",
+        "euAiAct": "Conforme all’EU AI Act",
+        "n50Languages": "50+ lingue",
+        "enterpriseReady": "Pensato per le grandi aziende",
+        "builtEuropeanEnterprises": "Costruito per le aziende europee"
+      },
       "heading": "Pronto a vedere cosa Skillvue può fare per la tua <span>organizzazione?</span>",
       "text": "Pronto per esplorare",
       "heading2": "Prenota una Demo",
@@ -5048,6 +5056,7 @@
         }
       },
       "cta": {
+        "eyebrow": "Unisciti a noi",
         "heading": "Cresci insieme a Skillvue come partner",
         "body": "Commerciale o tecnologico, raccontaci come vorresti collaborare con noi.",
         "cta": "Diventa partner"
@@ -9900,6 +9909,8 @@
     },
     "cta": {
       "heading": "Talent intelligence supportata dalla scienza. <span>Vedila in azione.</span>",
+      "text": "Pronto per esplorare",
+      "heading2": "Prenota una Demo",
       "body": "Scopri come la scienza si traduce in migliori decisioni sul talento",
       "cta": "Prenota una Demo"
     },
