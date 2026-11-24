@@ -632,3 +632,111 @@ h2 .gradient-text {
 @media (prefers-reduced-motion: reduce) {
   .trust-page *, .trust-page *::before, .trust-page *::after { animation: none !important; }
 }
+
+/* ===== INSIGHTS HERO DECK (components/resources/InsightsDeck.tsx) =====
+   One 6 s loop per card, five cards offset by 1.2 s. In each 1.2 s slot a card
+   holds for 0.75 s and moves for 0.45 s. Front → lifts with a slight tilt,
+   solid for the first half of the move and fading as it clears, drops out of sight at the back, then rises through
+   the two places behind the front card back to the front. Transform and
+   opacity only. z-index steps between keyframes, so the card leaving stays
+   above the one arriving. */
+@keyframes insights-deck {
+  0%, 12.5%  { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; z-index: 5; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  16.5%      { transform: translateY(-45%) scale(1) rotate(3deg); opacity: 1; z-index: 6; animation-timing-function: cubic-bezier(0.33, 0, 0.67, 1); }
+  19.99%     { transform: translateY(-75%) scale(1) rotate(5deg); opacity: 0; z-index: 6; }
+  20%, 52.5% { transform: translateY(10%) scale(0.84) rotate(0deg); opacity: 0; z-index: 1; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  60%, 72.5% { transform: translateY(8%) scale(0.88) rotate(0deg); opacity: 0.5; z-index: 2; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  80%, 92.5% { transform: translateY(5%) scale(0.94) rotate(0deg); opacity: 1; z-index: 3; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  100%       { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; z-index: 5; }
+}
+.insights-deck-card {
+  transform-origin: 50% 100%;
+  animation: insights-deck 6s linear infinite both;
+  will-change: transform, opacity;
+}
+@media (prefers-reduced-motion: reduce) {
+  /* A still stack: the first card in front, two behind it, the rest hidden. */
+  .insights-deck-card { animation: none; will-change: auto; }
+  .insights-deck-card[data-depth="0"] { transform: none; opacity: 1; z-index: 5; }
+  .insights-deck-card[data-depth="1"] { transform: translateY(5%) scale(0.94); opacity: 1; z-index: 3; }
+  .insights-deck-card[data-depth="2"] { transform: translateY(8%) scale(0.88); opacity: 0.5; z-index: 2; }
+  .insights-deck-card[data-depth="3"] { opacity: 0; z-index: 1; }
+}
+
+/* ===== BLOG HERO STACK (components/resources/BlogStack.tsx) =====
+   One 10 s loop per card, five cards offset by 2 s. Each 2 s slot holds for
+   1.5 s and moves for 0.5 s. A card rises from below the box into the front
+   place, then steps up three levels (smaller, darker each time), fades out at
+   the top, and waits below the box — clipped, so solid but unseen — until
+   its turn comes round again.
+   Positions are relative to the card's own height; the box clips the bottom
+   edge the cards rise through. */
+@keyframes blog-stack {
+  0%, 15%   { transform: translateY(0) scale(1); filter: brightness(1); opacity: 1; z-index: 5; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  20%, 35%  { transform: translateY(-16%) scale(0.96); filter: brightness(0.82); opacity: 1; z-index: 4; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  40%, 55%  { transform: translateY(-32%) scale(0.92); filter: brightness(0.7); opacity: 1; z-index: 3; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  60%, 75%  { transform: translateY(-48%) scale(0.88); filter: brightness(0.6); opacity: 1; z-index: 2; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  79.99%    { transform: translateY(-62%) scale(0.84); filter: brightness(0.55); opacity: 0; z-index: 1; }
+  80%, 95%  { transform: translateY(120%) scale(1); filter: brightness(1); opacity: 1; z-index: 6; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  100%      { transform: translateY(0) scale(1); filter: brightness(1); opacity: 1; z-index: 6; }
+}
+.blog-stack-card {
+  transform-origin: 50% 0%;
+  animation: blog-stack 10s linear infinite both;
+  will-change: transform, opacity, filter;
+}
+@media (prefers-reduced-motion: reduce) {
+  /* A still stack: the first card in front, three behind it, one hidden. */
+  .blog-stack-card { animation: none; will-change: auto; }
+  .blog-stack-card[data-depth="0"] { transform: none; z-index: 5; }
+  .blog-stack-card[data-depth="1"] { transform: translateY(-16%) scale(0.96); filter: brightness(0.82); z-index: 4; }
+  .blog-stack-card[data-depth="2"] { transform: translateY(-32%) scale(0.92); filter: brightness(0.7); z-index: 3; }
+  .blog-stack-card[data-depth="3"] { transform: translateY(-48%) scale(0.88); filter: brightness(0.6); z-index: 2; }
+  .blog-stack-card[data-depth="4"] { opacity: 0; }
+}
+
+/* ===== PRESS HERO SEQUENCE (components/resources/PressSequence.tsx) =====
+   Five outlets, a 24 s loop, each outlet's three layers offset by 4.8 s
+   (20% of the loop). Per outlet: the group wipes in from the right (0-2.5%),
+   the tile holds, then zooms up and fades (7.5-10%) as the article grows out
+   of it, the article pans down (10-22.5%), and from 20% the next outlet
+   wipes in: one wipe line, the outgoing group clipped from the right exactly
+   as the incoming one is revealed from the right, on the same easing, so the
+   two never overlap. Then the group is hidden until its turn comes round.
+   The article is scaled from its top edge, so a pan of -8% at scale 1.08
+   reaches its bottom edge exactly; 1.08 crops only 4% off each side, inside
+   the articles' own margins. */
+@keyframes press-seq-group {
+  0%        { clip-path: inset(0 0 0 100%); opacity: 1; z-index: 2; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  2.5%      { clip-path: inset(0 0 0 0); opacity: 1; z-index: 2; }
+  19.99%    { clip-path: inset(0 0 0 0); opacity: 1; z-index: 2; }
+  20%       { clip-path: inset(0 0 0 0); opacity: 1; z-index: 1; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  22.5%     { clip-path: inset(0 100% 0 0); opacity: 1; z-index: 1; }
+  22.51%, 100% { clip-path: inset(0 100% 0 0); opacity: 0; z-index: 0; }
+}
+@keyframes press-seq-tile {
+  0%, 7.5%  { transform: scale(1); opacity: 1; animation-timing-function: cubic-bezier(0.55, 0, 0.45, 1); }
+  10%, 100% { transform: scale(2.4); opacity: 0; }
+}
+@keyframes press-seq-article {
+  0%, 7.5%  { transform: translateY(12%) scale(0.76); opacity: 0; animation-timing-function: cubic-bezier(0.55, 0, 0.45, 1); }
+  10%       { transform: translateY(0) scale(1.08); opacity: 1; animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1); }
+  22.5%, 100% { transform: translateY(-8%) scale(1.08); opacity: 1; }
+}
+@keyframes press-seq-ring {
+  0%, 7.5%  { opacity: 0; }
+  10%, 100% { opacity: 1; }
+}
+.press-seq-group   { animation: press-seq-group 24s linear infinite both; }
+.press-seq-ring    { animation: press-seq-ring 24s linear infinite both; }
+.press-seq-tile    { transform-origin: 50% 50%; animation: press-seq-tile 24s linear infinite both; will-change: transform, opacity; }
+.press-seq-article { transform-origin: 50% 0%; animation: press-seq-article 24s linear infinite both; will-change: transform, opacity; }
+@media (prefers-reduced-motion: reduce) {
+  /* The Forbes tile, still. */
+  .press-seq-group, .press-seq-tile, .press-seq-article, .press-seq-ring { animation: none; will-change: auto; }
+  .press-seq-ring { opacity: 0; }
+  .press-seq-group { opacity: 0; }
+  .press-seq-group[data-first] { opacity: 1; clip-path: none; }
+  .press-seq-tile { transform: none; opacity: 1; }
+  .press-seq-article { opacity: 0; }
+}

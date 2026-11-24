@@ -62,11 +62,11 @@ export default function PartnersPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative overflow-hidden min-h-screen flex flex-col justify-center pt-[80px]">
+        <section className="section-light relative overflow-hidden min-h-screen flex flex-col justify-center pt-[80px]">
           <div className="absolute inset-0" aria-hidden="true">
-            {/* Same dimming as the customer-story hero photos: blur(8px) is
-                what actually darkens it — brightness alone still shows
-                bright highlights clearly. The oversized offset position
+            {/* Light wash (interim light standard): the same photo and blur
+                as before, without the dark brightness filter, under a white
+                veil, so dark text reads on it. The oversized offset position
                 hides the blurred edge without needing a separate scale. */}
             <img
               src="/logos/partners-hero-secondary.avif"
@@ -75,27 +75,30 @@ export default function PartnersPage() {
               decoding="async"
               fetchPriority="high"
               className="absolute -left-1/2 -top-[93%] h-[214%] w-[150%] max-w-none object-cover"
-              style={{ filter: 'blur(8px) brightness(0.25)' }}
+              style={{ filter: 'blur(8px)' }}
             />
+            <div className="absolute inset-0 bg-white/[0.82]" />
           </div>
 
           <div className={`${container} relative z-10 w-full`}>
             <Reveal duration={0.7} className="flex flex-col items-start gap-6 max-w-[640px]">
-              <span className="type-eyebrow text-[#6B7DFF]">
+              {/* Over a photo the eyebrow is #3133E7, not #4B4DF7: the washed photo
+                  behind it is as dark as #d1d1d1, where #4B4DF7 is 3.9:1 (DESIGN.md §4.8). */}
+              <span className="type-eyebrow text-[#3133E7]">
                 {t('hero.eyebrow')}
               </span>
               <HeroCopy>
                 <h1
-                  className="font-semibold text-white/95 text-[48px] md:text-[58px]"
+                  className="font-semibold text-[#121212] text-[48px] md:text-[58px]"
                   style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}
                 >
                   {t('hero.heading')}
                 </h1>
-                <p className="type-body-lg hero-subtitle text-white/70">
+                <p className="type-body-lg hero-subtitle text-[#4B4B4B]">
                   {t.rich('hero.body', { br })}
                 </p>
               </HeroCopy>
-              <Button asChild variant="primary" mode="dark">
+              <Button asChild variant="primary" mode="light">
                 <a href={href('become-a-partner', lang)}>
                   {t('hero.cta')}
                   <ArrowRight aria-hidden="true" />
