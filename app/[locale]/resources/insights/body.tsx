@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { Reveal } from '@/components/ui/reveal';
-import { HeroVideo } from '@/components/ui/hero-video';
+import { InsightsDeck } from '@/components/resources/InsightsDeck';
 import { useLocale, useTranslations } from 'next-intl';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/landing/Navbar';
 import { ArrowDown, ArrowRight } from 'lucide-react';
 import { whitepapers } from '@/data/whitepapers';
 import { onepagers } from '@/data/onepagers';
-import { Button } from '@/components/ui/button';
+import { Button, SECONDARY_ON_LIGHT } from '@/components/ui/button';
 import { href, localizePath } from '@/i18n/routes';
 import Link from 'next/link';
 import { HeroCopy } from '@/components/ui/hero-copy';
@@ -97,18 +97,22 @@ export default function InsightsPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative pt-[80px] min-h-screen flex items-center overflow-hidden">
+        <section className="section-light relative pt-[80px] min-h-screen flex items-center overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-16 lg:py-0">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               <Reveal duration={0.7} className="lg:col-span-6">
-                <span className="type-eyebrow text-[#6B7DFF] mb-8 block">{t('text')}</span>
+                <span className="type-eyebrow text-[#4B4DF7] mb-8 block">{t('text')}</span>
                 <HeroCopy>
-                  <h1 className="font-semibold text-white/95 mb-8 text-[48px] md:text-[58px]" style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t.rich('heading', {
+                  <h1
+                    // Italian only: "approfondimenti" is wider than a phone's
+                    // column at 48px, so the Italian heading scales with the
+                    // viewport below md (CLAUDE.md, H1 hero). English keeps 48px.
+                    className={`font-semibold text-[#121212] mb-8 ${lang === 'it' ? 'text-[clamp(32px,calc((100vw-64px)/8),48px)]' : 'text-[48px]'} md:text-[58px]`} style={{ lineHeight: 1.1, letterSpacing: '-0.02em' }}>{t.rich('heading', {
                     br: () => <br />,
                   })}</h1>
-                  <p className="type-body-lg hero-subtitle text-white/[0.5] mb-12">{t('body')}</p>
+                  <p className="type-body-lg hero-subtitle text-[#4B4B4B] mb-12">{t('body')}</p>
                 </HeroCopy>
-                <Button asChild variant="secondary" mode="dark" className="group">
+                <Button asChild variant="secondary" mode="light" className={`group ${SECONDARY_ON_LIGHT}`}>
                   <a
                     href="#wp-grid"
                     onClick={(e) => { e.preventDefault(); document.getElementById('wp-grid')?.scrollIntoView({ behavior: 'smooth' }); }}
@@ -118,13 +122,19 @@ export default function InsightsPage() {
                   </a>
                 </Button>
               </Reveal>
-              <HeroVideo
-                poster="/videos/insights-hero-poster.jpg"
-                webmSrc="/videos/insights-hero.webm"
-                mp4Src="/videos/insights-hero.mp4"
-                className="flex justify-center lg:col-span-6"
-                videoClassName="w-full max-w-[560px] h-auto rounded-[40px]"
-              />
+              {/* Drawn in code on a transparent background: the video it replaces
+                  (/videos/insights-hero.*) has a black backdrop baked in. */}
+              <div className="flex justify-center lg:col-span-6">
+                <InsightsDeck
+                  cards={[
+                    { src: '/covers/onepager-luxury.avif', title: t('onePagers.luxury.title') },
+                    { src: '/covers/insight-beyond-skills.avif', title: t('items.beyond-skills.title') },
+                    { src: '/covers/insight-pay-transparency-compensation-architecture-fashion-retail.avif', title: t('items.pay-transparency-compensation-architecture-fashion-retail.title') },
+                    { src: '/covers/onepager-financial-institutions.avif', title: t('onePagers.financial-institutions.title') },
+                    { src: '/covers/insight-future-leaders.avif', title: t('items.future-leaders.title') },
+                  ]}
+                />
+              </div>
             </div>
           </div>
         </section>

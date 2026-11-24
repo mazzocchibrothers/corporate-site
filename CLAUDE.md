@@ -200,6 +200,12 @@ it now applies only to the sections that stay dark.
 
 - **H1 hero:** `font-semibold text-[48px] md:text-[58px]`, `lineHeight: 1.1`,
   `letterSpacing: '-0.02em'`. Every h1 on the site is 58px from `md` up.
+  **Exception — Italian /resources/insights:** "Ricerche e approfondimenti di
+  settore" has a word ("approfondimenti") wider than a phone's column at 48px,
+  so in Italian only the heading scales below `md` —
+  `text-[clamp(32px,calc((100vw-64px)/8),48px)]` (32px at 320, 40.75px at 390).
+  English stays 48px. No hyphenation. Size any other overflowing Italian
+  heading the same way, for that locale only.
 - **Hero title and subtitle share one width.** Wrap the h1 and its subtitle in
   `<HeroCopy>` (`components/ui/hero-copy.tsx`) and give the subtitle the
   `hero-subtitle` class, with no `max-w-*` of its own. The subtitle then ends

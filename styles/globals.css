@@ -632,3 +632,34 @@ h2 .gradient-text {
 @media (prefers-reduced-motion: reduce) {
   .trust-page *, .trust-page *::before, .trust-page *::after { animation: none !important; }
 }
+
+/* ===== INSIGHTS HERO DECK (components/resources/InsightsDeck.tsx) =====
+   One 6 s loop per card, five cards offset by 1.2 s. In each 1.2 s slot a card
+   holds for 0.75 s and moves for 0.45 s. Front → lifts with a slight tilt,
+   solid for the first half of the move and fading as it clears, drops out of sight at the back, then rises through
+   the two places behind the front card back to the front. Transform and
+   opacity only. z-index steps between keyframes, so the card leaving stays
+   above the one arriving. */
+@keyframes insights-deck {
+  0%, 12.5%  { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; z-index: 5; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  16.5%      { transform: translateY(-45%) scale(1) rotate(3deg); opacity: 1; z-index: 6; animation-timing-function: cubic-bezier(0.33, 0, 0.67, 1); }
+  19.99%     { transform: translateY(-75%) scale(1) rotate(5deg); opacity: 0; z-index: 6; }
+  20%, 52.5% { transform: translateY(10%) scale(0.84) rotate(0deg); opacity: 0; z-index: 1; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  60%, 72.5% { transform: translateY(8%) scale(0.88) rotate(0deg); opacity: 0.5; z-index: 2; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  80%, 92.5% { transform: translateY(5%) scale(0.94) rotate(0deg); opacity: 1; z-index: 3; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  100%       { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; z-index: 5; }
+}
+.insights-deck-card {
+  transform-origin: 50% 100%;
+  animation: insights-deck 6s linear infinite both;
+  will-change: transform, opacity;
+}
+@media (prefers-reduced-motion: reduce) {
+  /* A still stack: the first card in front, two behind it, the rest hidden. */
+  .insights-deck-card { animation: none; will-change: auto; }
+  .insights-deck-card[data-depth="0"] { transform: none; opacity: 1; z-index: 5; }
+  .insights-deck-card[data-depth="1"] { transform: translateY(5%) scale(0.94); opacity: 1; z-index: 3; }
+  .insights-deck-card[data-depth="2"] { transform: translateY(8%) scale(0.88); opacity: 0.5; z-index: 2; }
+  .insights-deck-card[data-depth="3"] { opacity: 0; z-index: 1; }
+}
+
