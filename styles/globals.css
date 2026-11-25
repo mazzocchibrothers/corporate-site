@@ -755,3 +755,33 @@ h2 .gradient-text {
 @media (prefers-reduced-motion: reduce) {
   .reveal-hero { animation: none; }
 }
+
+/* ===== TALENT PIONEERS HERO COLLAGE (components/customers/PioneersCollage.tsx) =====
+   One 6 s loop per photo, four photos offset by 1.5 s (25% of the loop). Each
+   photo holds 1 s and moves 0.5 s in each place: middle → bottom left → out of
+   sight (shrinking and fading where it stands) → top right (appearing where it
+   stands) → middle. The card sits at the middle place (left/top 10%, 80% wide)
+   and is moved from its top-left corner; translate is in % of its own size.
+   The photo growing into the middle is on top of the one leaving it. */
+@keyframes pioneers-collage {
+  0%, 16.67%    { transform: none; opacity: 1; z-index: 3; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  25%, 41.67%   { transform: translate(-12.5%, 77.5%) scale(0.35); opacity: 1; z-index: 2; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  50%           { transform: translate(-5%, 85%) scale(0.2); opacity: 0; z-index: 2; }
+  50.01%, 66.67% { transform: translate(81.25%, -3.75%) scale(0.2); opacity: 0; z-index: 1; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  75%, 91.66%   { transform: translate(72.5%, -12.5%) scale(0.375); opacity: 1; z-index: 1; }
+  91.67%        { transform: translate(72.5%, -12.5%) scale(0.375); opacity: 1; z-index: 4; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  100%          { transform: none; opacity: 1; z-index: 4; }
+}
+.pioneers-collage-card {
+  transform-origin: 0 0;
+  animation: pioneers-collage 6s linear infinite both;
+  will-change: transform, opacity;
+}
+@media (prefers-reduced-motion: reduce) {
+  /* The still collage: middle, top right, bottom left; the fourth hidden. */
+  .pioneers-collage-card { animation: none; will-change: auto; }
+  .pioneers-collage-card[data-place="0"] { transform: none; z-index: 3; }
+  .pioneers-collage-card[data-place="1"] { transform: translate(72.5%, -12.5%) scale(0.375); z-index: 1; }
+  .pioneers-collage-card[data-place="2"] { opacity: 0; }
+  .pioneers-collage-card[data-place="3"] { transform: translate(-12.5%, 77.5%) scale(0.35); z-index: 2; }
+}

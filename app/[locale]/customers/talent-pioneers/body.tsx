@@ -13,7 +13,8 @@ import { href } from '@/i18n/routes';
 import TalentPioneersCarousel from '@/components/customers/TalentPioneersCarousel';
 import TalentPioneersContactForm from '@/components/customers/TalentPioneersContactForm';
 import { HeroCopy } from '@/components/ui/hero-copy';
-import { Button } from '@/components/ui/button';
+import { Button, SECONDARY_ON_LIGHT } from '@/components/ui/button';
+import { PioneersCollage } from '@/components/customers/PioneersCollage';
 
 const EYEBROW = 'type-eyebrow';
 
@@ -198,21 +199,21 @@ export default async function TalentPioneersPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="min-h-screen flex flex-col justify-center px-5 md:px-8 lg:px-12 pt-24 pb-16">
+        <section className="section-light min-h-screen flex flex-col justify-center px-5 md:px-8 lg:px-12 pt-24 pb-16">
           <div className="max-w-[1400px] mx-auto w-full grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             <Reveal hero y={24}>
-              <p className={`${EYEBROW} text-[#6b7dff]`}>{t('hero.eyebrow')}</p>
+              <p className={`${EYEBROW} text-[#4B4DF7]`}>{t('hero.eyebrow')}</p>
               <HeroCopy>
-                <h1 className="pt-6 text-[48px] md:text-[58px] font-semibold leading-[1.1] tracking-[-1.6px] text-white/95">
+                <h1 className="pt-6 text-[48px] md:text-[58px] font-semibold leading-[1.1] tracking-[-1.6px] text-[#121212]">
                   {t.rich('hero.headline', {
                     hl: (chunks) => (
-                      <span className="gradient-text whitespace-nowrap">{chunks}</span>
+                      <span className="whitespace-nowrap">{chunks}</span>
                     ),
                   })}
                 </h1>
-                <p className="type-body-lg hero-subtitle pt-6 text-white/65">{t('hero.subtitle')}</p>
+                <p className="type-body-lg hero-subtitle pt-6 text-[#4B4B4B]">{t('hero.subtitle')}</p>
               </HeroCopy>
-              <Button asChild variant="secondary" mode="dark" className="group mt-8">
+              <Button asChild variant="secondary" mode="light" className={`group mt-8 ${SECONDARY_ON_LIGHT}`}>
                 <a
                   href="#meet-the-pioneers"
                 >
@@ -221,17 +222,10 @@ export default async function TalentPioneersPage() {
                 </a>
               </Button>
             </Reveal>
+            {/* Drawn in code on a transparent background: the video it replaces
+                (/logos/talent-pioneers-hero.*) has a black backdrop baked in. */}
             <Reveal hero y={24} delay={0.1}>
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="aspect-square w-full rounded-[40px] object-cover"
-              >
-                <source src="/logos/talent-pioneers-hero.webm" type="video/webm" />
-                <source src="/logos/talent-pioneers-hero.mp4" type="video/mp4" />
-              </video>
+              <PioneersCollage />
             </Reveal>
           </div>
         </section>
