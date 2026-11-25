@@ -24,6 +24,7 @@ import { ClosingPanel } from '@/components/shared/ClosingPanel';
 // Tab, announced as a link by screen readers, and opens in a new tab on
 // cmd/middle-click.
 const NEWSLETTERS = [
+  { id: 'newsletter-november-2026', image: '' },
   { id: 'newsletter-october-2026', image: '/newsletter-october-cover.avif' },
   { id: 'newsletter-september-2026', image: '/newsletter-september-cover.avif' },
   { id: 'newsletter-august-2026', image: '/newsletter-august-cover.avif' },
