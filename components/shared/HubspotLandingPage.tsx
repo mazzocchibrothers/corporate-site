@@ -65,7 +65,8 @@ export default function HubspotLandingPage({
           region: 'na1',
           target: '#hubspot-form',
           onFormReady: () => {
-            styleHubspotForm(formRef.current);
+            // The form card is light: the light palette (3:1 field borders).
+            styleHubspotForm(formRef.current, 'light');
             setPhoneCountry(formRef.current, PHONE_COUNTRY[lang]);
           },
           onFormSubmitted: () => {
@@ -90,14 +91,14 @@ export default function HubspotLandingPage({
   return (
     <>
       <Navbar />
-      <div className="relative flex flex-col min-h-screen pt-[80px]">
+      <div className="section-light relative flex flex-col min-h-screen pt-[80px]">
       <section className="relative flex-1 flex items-center">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-12 w-full py-6 lg:py-8">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             {/* Left. Text */}
             <div className="lg:col-span-6">
               {backRouteId ? (
-                <Button asChild variant="tertiary" mode="dark" className="mb-6">
+                <Button asChild variant="tertiary" mode="light" className="mb-6">
                   <a href={href(backRouteId, lang)}>
                     <ArrowLeft aria-hidden />
                     {t('back')}
@@ -107,7 +108,7 @@ export default function HubspotLandingPage({
                 <Button
                   onClick={() => { router.back(); }}
                   variant="tertiary"
-                  mode="dark"
+                  mode="light"
                   icon={<ArrowLeft aria-hidden />}
                   iconPosition="left"
                   className="mb-6"
@@ -118,14 +119,14 @@ export default function HubspotLandingPage({
 
               <HeroCopy>
                 <h1
-                  className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-white/95 mb-4"
+                  className="text-[48px] md:text-[58px] font-semibold tracking-[-0.02em] text-[#121212] mb-4"
                   style={{ lineHeight: 1.1 }}
                 >{t.rich('heading', {
-                  span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
+                  span: (chunks) => <span className="font-semibold">{chunks}</span>,
                   br: () => <br />,
                 })}</h1>
 
-                <p className="type-body hero-subtitle text-white/[0.55]">
+                <p className="type-body hero-subtitle text-[#4B4B4B]">
                   {t('body')}
                 </p>
               </HeroCopy>
@@ -134,7 +135,7 @@ export default function HubspotLandingPage({
             {/* Right. HubSpot Form */}
             <div className="lg:col-span-6">
               <div
-                className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-5 lg:p-8"
+                className="rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-5 lg:p-8"
               >
                 {/* Hidden, not unmounted: HubSpot owns the nodes inside it. */}
                 <div
@@ -151,11 +152,11 @@ export default function HubspotLandingPage({
                     className="flex flex-col items-start justify-center gap-4 p-3"
                     style={{ minHeight: '400px' }}
                   >
-                    <IconTile icon={CheckCircle} />
-                    <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-white/95" style={{ lineHeight: 1.1 }}>
+                    <IconTile icon={CheckCircle} mode="light" />
+                    <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold tracking-[-0.02em] text-[#121212]" style={{ lineHeight: 1.1 }}>
                       {t('thankYou.heading')}
                     </h2>
-                    <p className="max-w-[880px] type-body text-white/[0.55]">
+                    <p className="max-w-[880px] type-body text-[#4B4B4B]">
                       {t('thankYou.body')}
                     </p>
                   </div>
@@ -165,7 +166,7 @@ export default function HubspotLandingPage({
           </div>
         </div>
       </section>
-        <TrustLogosBar />
+        <TrustLogosBar tone="light" />
       </div>
       <Footer />
     </>

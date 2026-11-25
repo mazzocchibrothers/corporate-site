@@ -137,7 +137,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
     script.async = true;
     script.onload = () => {
       if (window.hbspt) {
-        window.hbspt.forms.create({ portalId: '48438018', formId, region: 'na1', target: '#wp-hubspot-form', onFormReady: () => { styleHubspotForm(formRef.current); setPhoneCountry(formRef.current, PHONE_COUNTRY[lang]); }, onFormSubmitted: () => trackLead(`resources/insights/${slug}`) });
+        window.hbspt.forms.create({ portalId: '48438018', formId, region: 'na1', target: '#wp-hubspot-form', onFormReady: () => { styleHubspotForm(formRef.current, 'light'); setPhoneCountry(formRef.current, PHONE_COUNTRY[lang]); }, onFormSubmitted: () => trackLead(`resources/insights/${slug}`) });
       }
     };
     document.body.appendChild(script);
@@ -270,19 +270,19 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
         </section>
 
         {/* 5. Download Form */}
-        <section id="download-form" className="relative py-16 lg:py-20">
+        <section id="download-form" className="section-light relative py-16 lg:py-20">
           <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <Reveal duration={0.7}>
                 <div className="w-14 h-14 rounded-2xl bg-[#4B4DF7]/[0.12] border border-[#4B4DF7]/[0.15] flex items-center justify-center mb-8">
                   <FileText className="h-6 w-6 text-[#4B4DF7]" />
                 </div>
-                <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-white/90 mb-5 tracking-[-0.02em]">{t.rich('detail.heading', {
-                  span: (chunks) => <span className="font-bold gradient-text">{chunks}</span>,
+                <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">{t.rich('detail.heading', {
+                  span: (chunks) => <span>{chunks}</span>,
                 })}</h2>
-                <p className="max-w-[880px] type-body text-white/40">{t('detail.body2')}</p>
+                <p className="max-w-[880px] type-body text-[#4B4B4B]">{t('detail.body2')}</p>
               </Reveal>
-              <Reveal y={20} duration={0.7} delay={0.15} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10">
+              <Reveal y={20} duration={0.7} delay={0.15} className="rounded-2xl border border-[#e5e7eb] bg-[#f7f7f7] p-8 lg:p-10">
                 <div id="wp-hubspot-form" ref={formRef} style={{ minHeight: '300px' }} />
               </Reveal>
             </div>
@@ -291,7 +291,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
 
         {/* 6. Related */}
         {related.length > 0 && (
-          <section className="section-light relative pt-8 pb-2 lg:pt-10 lg:pb-2">
+          <section className="section-light border-t border-[#e5e7eb] relative pt-8 pb-2 lg:pt-10 lg:pb-2">
             <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
               <h2 className="max-w-[880px] text-[clamp(1.5rem,4vw,3rem)] font-semibold text-[#121212] mb-10 tracking-[-0.02em]">{t('detail.heading2')}</h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -324,13 +324,13 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
           </section>
         )}
 
-        {/* 7. Bottom CTA: the shared light closing, ruled off the white related
-            insights above (when there are none, the dark form section is above).
-            The button keeps its client-side navigation, hence `action`. */}
+        {/* 7. Bottom CTA: the shared light closing, ruled off the white section
+            above it (the related insights, or the download form when there are
+            none). The button keeps its client-side navigation, hence `action`. */}
         <ClosingPanel
           heading={t('detail.heading3')}
           body={t('detail.body3')}
-          rule={related.length > 0}
+          rule
           action={
             <Button
               onClick={() => { router.push(href('book-meeting', lang)); window.scrollTo(0, 0); }}

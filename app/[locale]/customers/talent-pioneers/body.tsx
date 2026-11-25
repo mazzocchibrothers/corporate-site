@@ -382,20 +382,20 @@ export default async function TalentPioneersPage() {
           </div>
         </section>
 
-        {/* Get in touch */}
-        <section className="px-5 md:px-8 lg:px-12 py-16 md:py-24">
+        {/* Get in touch: grey section after the white "biggest stages", white card */}
+        <section className="section-breathe px-5 md:px-8 lg:px-12 py-16 md:py-24">
           <div className="max-w-[1400px] mx-auto w-full">
             <Reveal
               y={24}
-              className="rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm p-8 md:p-20"
+              className="rounded-3xl border border-[#e5e7eb] bg-white p-8 md:p-20"
             >
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                   <h2 className="max-w-[880px] text-balance text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
-                    <span className="text-white/95">{t('contact.heading')}</span>{' '}
-                    <span className="gradient-text">{t('contact.headingAccent')}</span>
+                    <span className="text-[#121212]">{t('contact.heading')}</span>{' '}
+                    <span className="text-[#121212]">{t('contact.headingAccent')}</span>
                   </h2>
-                  <p className="max-w-[880px] type-body-lg pt-5 text-white/70">{t('contact.paragraph')}</p>
+                  <p className="max-w-[880px] type-body-lg pt-5 text-[#4B4B4B]">{t('contact.paragraph')}</p>
                 </div>
                 <TalentPioneersContactForm />
               </div>

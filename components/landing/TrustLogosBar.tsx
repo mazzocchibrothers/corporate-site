@@ -22,14 +22,22 @@ const clientLogos: { name: string; src: string; className?: string }[] = [
 // No `lang` prop any more: the two locales used to pick from `trustLogosEn` /
 // `trustLogosIt`, both of which were assigned the same array, so the branch
 // chose between a value and itself.
-export default function TrustLogosBar() {
+// `tone`: "dark" (the default, unchanged for the /lp pages) is the dark glass bar
+// with the logos inverted to white; "light" is a white bar between #e5e7eb
+// rules with the logos drawn black, as on the homepage logo bar.
+export default function TrustLogosBar({ tone = 'dark' }: { tone?: 'dark' | 'light' }) {
+  const light = tone === 'light';
   const trustLogos = [...clientLogos, ...clientLogos];
 
   return (
     <div className="relative z-10 overflow-hidden">
       <div
         className="flex items-center h-[60px] md:h-[80px]"
-        style={{
+        style={light ? {
+          backgroundColor: '#ffffff',
+          borderTop: '1px solid #e5e7eb',
+          borderBottom: '1px solid #e5e7eb',
+        } : {
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
           backgroundColor: 'rgba(0, 0, 0, 0.35)',
@@ -56,7 +64,7 @@ export default function TrustLogosBar() {
                     src={logo.src}
                     alt={logo.name}
                     className={`${logo.className ?? 'h-5'} w-auto object-contain`}
-                    style={{ filter: 'brightness(0) invert(1)' }}
+                    style={{ filter: light ? 'brightness(0)' : 'brightness(0) invert(1)' }}
                   />
                 </div>
               ))}
@@ -68,7 +76,7 @@ export default function TrustLogosBar() {
                     src={logo.src}
                     alt=""
                     className={`${logo.className ?? 'h-5'} w-auto object-contain`}
-                    style={{ filter: 'brightness(0) invert(1)' }}
+                    style={{ filter: light ? 'brightness(0)' : 'brightness(0) invert(1)' }}
                   />
                 </div>
               ))}
