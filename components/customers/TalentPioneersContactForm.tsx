@@ -24,7 +24,9 @@ export default function TalentPioneersContactForm() {
         region: 'na1',
         target: '#talent-pioneers-hubspot-form',
         onFormReady: () => {
-          styleHubspotForm(formRef.current);
+          // The contact section is light (white card), so the form takes the
+          // light palette from hubspot-form-theme.
+          styleHubspotForm(formRef.current, 'light');
           setPhoneCountry(formRef.current, PHONE_COUNTRY[lang]);
         },
         onFormSubmitted: () => trackLead('talent-pioneers'),

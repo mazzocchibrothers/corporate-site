@@ -29,13 +29,14 @@ type Palette = {
   option: string;
   chevron: string;
   link: string;
+  error: string;
 };
 
 /**
  * `dark` is for a form on a dark card (most of the site); `light` is for one
  * on a white card, as on the Italian whitepaper landing pages. Everything
  * except these colours (spacing, radius, font, the blue pill button, focus
- * ring, error red) is the same in both.
+ * ring) is the same in both.
  */
 const PALETTES: Record<'dark' | 'light', Palette> = {
   dark: {
@@ -48,17 +49,23 @@ const PALETTES: Record<'dark' | 'light', Palette> = {
     option: '#1a1a1a',
     chevron: 'white',
     link: '#9395ff',
+    error: '#ff5656',
   },
   light: {
     text: '#0d0d0d',
     muted: 'rgba(13, 13, 13, 0.6)',
     field: '#ffffff',
-    border: 'rgba(13, 13, 13, 0.14)',
-    borderHover: 'rgba(13, 13, 13, 0.28)',
+    // At least 3:1 against the white field and page (WCAG 1.4.11): 0.46 over
+    // white is #909090, 3.2:1; hover is darker still. Was 0.14 (about 1.3:1).
+    border: 'rgba(13, 13, 13, 0.46)',
+    borderHover: 'rgba(13, 13, 13, 0.62)',
     placeholder: 'rgba(13, 13, 13, 0.4)',
     option: '#ffffff',
     chevron: 'black',
     link: '#4b4df7',
+    // Error messages and the required mark are small text: #ff5656 is 2.9:1
+    // on the #f7f7f7 card, red-700 is 6:1 (WCAG 1.4.3 asks 4.5:1).
+    error: '#b91c1c',
   },
 };
 
@@ -70,12 +77,14 @@ body { padding: 0 4px !important; box-sizing: border-box !important; }
 .hs-form fieldset { max-width: none !important; }
 .hs-form-field { margin-bottom: 18px !important; }
 .hs-form-field > label { display: block !important; margin-bottom: 6px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; color: ${c.text} !important; }
-.hs-form-required { color: #ff5656 !important; margin-left: 2px !important; }
+.hs-form-required { color: ${c.error} !important; margin-left: 2px !important; }
 .hs-input:not([type=checkbox]):not([type=radio]) { box-sizing: border-box !important; height: auto !important; width: 100% !important; padding: 8px 14px !important; font-family: inherit !important; font-size: 16px !important; line-height: 24px !important; color: ${c.text} !important; background: ${c.field} !important; border: 1px solid ${c.border} !important; border-radius: 12px !important; outline: none !important; transition: border-color .2s !important; }
 .hs-input:not([type=checkbox]):not([type=radio])::placeholder { color: ${c.placeholder} !important; }
 .hs-input:not([type=checkbox]):not([type=radio]):hover { border-color: ${c.borderHover} !important; }
 .hs-input:focus { border-color: #4b4df7 !important; box-shadow: 0 0 0 3px rgba(75, 77, 247, 0.3) !important; }
 select.hs-input option { background: ${c.option} !important; color: ${c.text} !important; }
+/* The thank-you message replaces the form after submit. The forms' HubSpot theme sets it #FFFFFF, invisible on a white card. */
+.submitted-message { color: ${c.text} !important; }
 textarea.hs-input { min-height: 80px !important; resize: vertical !important; }
 .hs-form .hs-fieldtype-intl-phone.hs-input:not(input) { display: flex !important; gap: 0 !important; width: 100% !important; padding: 0 !important; border: 0 !important; background: transparent !important; box-shadow: none !important; }
 .hs-fieldtype-intl-phone .hs-input { width: auto !important; flex: 1 !important; min-width: 0 !important; margin: 0 !important; float: none !important; }
@@ -90,7 +99,7 @@ select.hs-input:not([type=checkbox]):not([type=radio]) { -webkit-appearance: non
 .hs-form-booleancheckbox-display > span { margin-left: 0 !important; }
 .inputs-list { list-style: none !important; padding-left: 0 !important; margin: 0 !important; }
 .hs-error-msgs { list-style: none !important; padding: 0 !important; margin: 6px 0 0 !important; }
-.hs-error-msgs label { font-size: 12px !important; line-height: 1.4 !important; color: #ff5656 !important; }
+.hs-error-msgs label { font-size: 12px !important; line-height: 1.4 !important; color: ${c.error} !important; }
 .hs_submit { margin-top: 8px !important; }
 .hs-button { cursor: pointer !important; font-family: inherit !important; font-size: 16px !important; line-height: 1 !important; font-weight: 500 !important; color: #ffffff !important; background: #4b4df7 !important; border: 0 !important; border-radius: 9999px !important; padding: 16px 28px !important; transition: background .2s !important; }
 .hs-button:hover { background: #3133e7 !important; }
