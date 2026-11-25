@@ -278,7 +278,7 @@ export default function WhitepaperDetailPage({ slug }: { slug: string }) {
                   <FileText className="h-6 w-6 text-[#4B4DF7]" />
                 </div>
                 <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold text-[#121212] mb-5 tracking-[-0.02em]">{t.rich('detail.heading', {
-                  span: (chunks) => <span className="font-bold">{chunks}</span>,
+                  span: (chunks) => <span>{chunks}</span>,
                 })}</h2>
                 <p className="max-w-[880px] type-body text-[#4B4B4B]">{t('detail.body2')}</p>
               </Reveal>

@@ -33,8 +33,9 @@ type Palette = {
 };
 
 /**
- * `dark` is for a form on a dark card (most of the site); `light` is for one
- * on a white card, as on the Italian whitepaper landing pages. Everything
+ * `light` is for a form on a white or #f7f7f7 card: every form outside /lp,
+ * and the light /lp pages. `dark` is for a form on a dark card, which only
+ * two /lp pages still have (ai-competency, food-retail). Everything
  * except these colours (spacing, radius, font, the blue pill button, focus
  * ring) is the same in both.
  */
