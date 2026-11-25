@@ -110,7 +110,7 @@ export default function ReportForm({ onClose, module, scenario, values }: {
             {t(downloading ? 'generatingReport' : 'downloadAgain')}
           </Button>
           {downloadError && <p role="alert">{t('downloadError')}</p>}
-        </div> : <form className={styles.captureForm} onSubmit={submit}>
+        </div> : <form className={`${styles.captureForm} hs-form-do-not-collect`} data-hs-do-not-collect="true" onSubmit={submit}>
           <fieldset disabled={status === 'pending'}>
             <label htmlFor="roi-name">{t('name')}</label>
             <input id="roi-name" name="name" type="text" autoComplete="name" required pattern=".*\S.*" maxLength={200} />
