@@ -10978,94 +10978,90 @@
       "description": "Stima il valore annuo di decisioni migliori su assunzioni, promozioni, successione dei leader e trasformazione con il calcolatore ROI di Skillvue."
     },
     "eyebrow": "Calcolatore ROI del talento",
-    "heading": "Quanto vale Skillvue per la tua organizzazione?",
-    "intro": "Scegli un caso d’uso, inserisci due numeri e scopri il ritorno annuo stimato per la tua organizzazione.",
-    "useCase": "Caso d’uso",
-    "positioning": "Il sistema operativo delle competenze",
-    "positioningBody": "Decisioni sul talento basate su evidenze scientifiche.",
+    "heading": "Decisioni HR basate su evidenze: quanto puoi risparmiare?",
+    "intro": "Inserisci due dati e ottieni subito un valore indicativo. Per il tuo ROI reale, costruito sui tuoi costi, prenota una sessione con il nostro team.",
+    "useCase": "Decisione HR",
     "bookDemo": "Prenota una demo",
     "downloadReport": "Scarica il report",
-    "results": "Risultati stimati",
     "scenario": "Scenario",
     "scenarios": {
       "conservative": "Prudente",
       "base": "Base",
       "optimistic": "Ottimistico"
     },
-    "annualSavings": "Risparmio annuo stimato",
-    "annualValue": "Valore annuo stimato",
     "roi": "ROI",
-    "fit": "Con questi volumi il canone annuo supera il valore stimato: parliamone per capire se Skillvue è la soluzione giusta per te.",
+    "fit": "Su questa scala il costo della licenza supera il valore stimato. Parliamone insieme.",
     "softDriver": "Tempo liberato per i recruiter",
-    "softDriverSub": "Tempo risparmiato nello screening",
-    "payback": "mesi per recuperare l’investimento",
-    "closing": "Dai concretezza a <span>questi numeri</span> con i tuoi dati.",
+    "payback": "Mesi per recuperare l’investimento",
+    "closing": "Dai concretezza a questi numeri con i tuoi dati.",
     "hiring": {
       "tab": "Assunzioni",
-      "heading": "Dai un valore ad <span>assunzioni migliori</span>.",
+      "heading": "Dai un valore ad assunzioni migliori.",
       "body": "Scopri quanto puoi risparmiare ogni anno in tempo dei recruiter e costi delle assunzioni non riuscite.",
       "input1": "Assunzioni all’anno",
-      "input2": "Retribuzione media",
-      "driver": "Costi delle assunzioni non riuscite evitati",
-      "driverSub": "Controvalore economico"
+      "input2": "Stipendio medio",
+      "driver": "Costi per assunzioni sbagliate evitati",
+      "unit1": "assunzioni"
     },
     "promote": {
       "tab": "Promozioni",
-      "heading": "Dai un valore a <span>promozioni migliori</span>.",
-      "body": "Promuovi le persone giuste con fiducia e scopri il risparmio annuo di un minor numero di promozioni non riuscite.",
-      "input1": "Dipendenti totali",
-      "input2": "Retribuzione media · nuovo ruolo",
+      "heading": "Dai un valore a promozioni migliori.",
+      "body": "Promuovi con sicurezza le persone giuste e scopri quanto risparmi ogni anno con meno promozioni non riuscite.",
+      "input1": "Numero di dipendenti",
+      "input2": "Retribuzione media del ruolo promosso",
       "driver": "Promozioni non riuscite evitate",
-      "driverSub": "Costi delle promozioni non riuscite evitati"
+      "unit1": "dipendenti"
     },
     "develop": {
-      "tab": "Sviluppo",
-      "heading": "Dai un valore alla tua <span>pipeline di leadership</span>.",
-      "body": "Scopri chi è pronto prima che si liberi un ruolo e quanto puoi risparmiare riducendo i tempi di copertura delle posizioni di leadership.",
-      "input1": "Dipendenti totali",
+      "tab": "Successione",
+      "heading": "Dai un valore alla tua pipeline di leadership.",
+      "body": "Riconosci chi è pronto prima che il ruolo si liberi e scopri quanto risparmi ogni anno riducendo i tempi di scopertura dei ruoli di leadership.",
+      "input1": "Numero di dipendenti",
       "input2": "Retribuzione media dei leader",
       "driver": "Riduzione dei costi dei ruoli di leadership vacanti",
-      "driverSub": "Ruoli di leadership coperti prima"
+      "unit1": "dipendenti"
     },
     "derisk": {
-      "tab": "Rischio",
-      "heading": "Dai un valore al <span>rischio di trasformazione</span>.",
+      "tab": "Trasformazione",
+      "heading": "Dai un valore al rischio di trasformazione.",
       "body": "Affronta le grandi trasformazioni partendo dalle competenze e scopri il rischio che puoi ridurre ogni anno.",
-      "input1": "Budget di trasformazione",
-      "input2": "Dipendenti totali",
+      "input1": "Budget della trasformazione",
+      "input2": "Numero di dipendenti",
       "driver": "Esposizione al rischio ridotta",
-      "driverSub": "Riduzione stimata dell’esposizione al rischio"
+      "unit2": "dipendenti"
     },
     "reportForm": {
-      "heading": "Richiedi il tuo report ROI",
-      "body": "Inserisci i tuoi dati per scaricare il report personalizzato del modulo {module}.",
-      "close": "Chiudi",
+      "heading": "Ricevi il tuo report personalizzato",
+      "body": "Scarica un PDF con i tuoi dati, il dettaglio del calcolo e le ipotesi alla base del modello di calcolo.",
       "name": "Nome",
-      "email": "Email di lavoro",
+      "email": "Email aziendale",
       "company": "Azienda",
       "industry": "Settore",
-      "selectIndustry": "Seleziona...",
+      "selectIndustry": "Seleziona",
       "industries": {
         "luxury": "Lusso e moda",
-        "retail": "Retail / Grande distribuzione",
-        "banking": "Bancario",
-        "insurance": "Assicurativo",
+        "retail": "Retail",
+        "banking": "Banche",
+        "insurance": "Assicurazioni",
         "pharma": "Farmaceutico",
         "manufacturing": "Manifatturiero",
-        "energy": "Petrolio ed energia",
+        "energy": "Oil & Gas ed energia",
         "other": "Altro"
       },
-      "consent": "Acconsento a ricevere altre comunicazioni da Skillvue. Leggi l’<a>Informativa sulla privacy</a>.",
-      "processingConsent": "Consento a Skillvue di archiviare e elaborare i miei dati personali.",
-      "unsubscribe": "Puoi annullare l’iscrizione a queste comunicazioni in qualsiasi momento.",
-      "submit": "Ottieni il mio report",
+      "processingConsent": "Acconsento alla conservazione e al trattamento dei miei dati personali da parte di Skillvue, come descritto nell’<a>Informativa sulla privacy</a>.",
+      "submit": "Ricevi il mio report",
       "submitting": "Invio in corso…",
       "submitError": "Non è stato possibile inviare i tuoi dati. Riprova.",
       "generatingReport": "Preparazione del PDF…",
       "downloadHint": "Il download partirà automaticamente. Se non parte, clicca qui sotto.",
       "downloadError": "Non è stato possibile creare il PDF. Riprova.",
       "readyHeading": "Il tuo report è pronto",
-      "downloadAgain": "Scarica di nuovo"
+      "downloadAgain": "Scarica di nuovo",
+      "errorName": "Inserisci il tuo nome.",
+      "errorEmail": "Inserisci un’email aziendale valida.",
+      "errorCompany": "Inserisci il nome della tua azienda.",
+      "errorIndustry": "Seleziona un settore.",
+      "errorConsent": "Spunta la casella per continuare."
     },
     "report": {
       "title": "Quanto vale Skillvue per {company}",
@@ -11126,6 +11122,13 @@
           "body": "Nel settore manifatturiero, le lacune di competenze nelle linee produttive e nella supervisione incidono direttamente su produzione, sicurezza e fidelizzazione. Skillvue misura le competenze che prevedono la performance, per basare assunzioni, promozioni e riqualificazione su evidenze anziché sull’intuito."
         }
       }
-    }
+    },
+    "calculator": "Calcolatore",
+    "estimatedSavings": "Risparmio annuo stimato",
+    "paybackUnderOne": "meno di 1",
+    "note": "Valore indicativo. Per il tuo ROI reale, costruito sui tuoi costi, <a>prenota una sessione con il nostro team</a>.",
+    "range": "da {min} a {max}",
+    "rangeUnit": "da {min} a {max} {unit}",
+    "closingBody": "Guarda Skillvue all’opera sui tuoi ruoli, sul tuo framework e sul tuo caso d’uso."
   }
 }

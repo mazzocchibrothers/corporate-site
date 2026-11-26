@@ -359,6 +359,8 @@ The App Router migration is finished: there is no `app-router` branch and no
 One branch per change, PR into `main` (Vercel auto-deploys; CI runs the gates
 and the build). Commit and push only when asked.
 
+Open normal PRs, not drafts. Reviews happen before merging.
+
 **No AI attribution, anywhere.** No `Co-Authored-By: Claude`, no session URL, no
 "Generated with Claude Code" — not in a commit message, not in a PR body, not in
 a code comment. A commit ends with its last real paragraph. It was missed for

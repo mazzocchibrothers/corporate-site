@@ -4,40 +4,68 @@ import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/Footer';
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Reveal } from '@/components/ui/reveal';
 import { href } from '@/i18n/routes';
 import { MODULES, SCENARIOS, LICENSE, calculate, normalizeInput, type Module, type Scenario } from './model';
+import { ArrowDown } from 'lucide-react';
 import styles from './calculator.module.css';
 import ReportForm from './report-form';
 import { HeroCopy } from '@/components/ui/hero-copy';
+import { ClosingPanel } from '@/components/shared/ClosingPanel';
 
-function NumberField({ label, value, config, format, onChange, id }: {
-  label: string; value: number; config: typeof MODULES.hiring.inputs[number];
-  format: (value: number) => string; onChange: (value: number) => void; id: string;
+/**
+ * The light ROI calculator (the Talent ROI Calculator v6 design): a centred
+ * hero, the calculator as one white card on the grey section (tabs across the
+ * top, inputs left, results right), one button under it to the report form,
+ * the report form inline, and the shared light closing. Type sizes are a step
+ * below the design's, as asked for this page.
+ */
+
+type Input = typeof MODULES.hiring.inputs[number];
+
+function NumberField({ label, unit, value, input, id, onChange }: {
+  label: string; unit?: string; value: number; input: Input; id: string; onChange: (value: number) => void;
 }) {
+  const t = useTranslations('roi-calculator');
+  const locale = useLocale();
   const [draft, setDraft] = useState<string | null>(null);
+  const currency = 'currency' in input && input.currency;
+  // Thousands grouped in both languages (Italian too: 4.000, not 4000).
+  const grouped = (n: number) => new Intl.NumberFormat(locale, { maximumFractionDigits: 0, useGrouping: 'always' }).format(n);
+  // Where the euro sign goes in this language: before the number (€50,000) or after it (50.000 €).
+  const euroFirst = new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR' }).formatToParts(1)[0].type === 'currency';
+  const hint = currency && euroFirst
+    ? t('range', { min: `€${grouped(input.min)}`, max: `€${grouped(input.max)}` })
+    : currency
+      ? t('rangeUnit', { min: grouped(input.min), max: grouped(input.max), unit: '€' })
+      : unit ? t('rangeUnit', { min: grouped(input.min), max: grouped(input.max), unit }) : t('range', { min: grouped(input.min), max: grouped(input.max) });
+  const fill = ((value - input.min) / (input.max - input.min) * 100).toFixed(2);
   return (
-    <div>
-      <div className={styles.fieldHead}>
-        <label className={styles.label} htmlFor={id}>{label}</label>
-        <input id={id} className={styles.value} type="text" inputMode="numeric" autoComplete="off"
-          value={draft ?? format(value)}
-          onFocus={(event) => { setDraft(String(value)); event.target.select(); }}
-          onChange={(event) => {
-            const text = event.target.value;
-            if (!/^\d*$/.test(text)) return;
-            setDraft(text);
-            if (text !== '') onChange(normalizeInput(Number(text), config));
-          }}
-          onBlur={() => setDraft(null)}
-          onKeyDown={(event) => { if (event.key === 'Enter') event.currentTarget.blur(); }} />
+    <div className={styles.field}>
+      <div className={styles.fieldRow}>
+        <div className={styles.fieldLabel}>
+          <label className="type-body-sm font-medium text-[#121212]" htmlFor={id}>{label}</label>
+          <span id={`${id}-range`} className="type-caption text-[#707070]">{hint}</span>
+        </div>
+        <div className={styles.valueBox}>
+          {currency && euroFirst && <span className={styles.euro} aria-hidden="true">€</span>}
+          <input id={id} className={`${styles.value} font-display`} type="text" inputMode="numeric" autoComplete="off"
+            aria-describedby={`${id}-range`}
+            value={draft ?? grouped(value)}
+            onFocus={(event) => { setDraft(String(value)); event.target.select(); }}
+            onChange={(event) => {
+              const text = event.target.value.replace(/\D/g, '').slice(0, 9);
+              setDraft(text);
+              if (text !== '') onChange(normalizeInput(Number(text), input));
+            }}
+            onBlur={() => setDraft(null)}
+            onKeyDown={(event) => { if (event.key === 'Enter') event.currentTarget.blur(); }} />
+          {currency && !euroFirst && <span className={styles.euro} aria-hidden="true">€</span>}
+        </div>
       </div>
-      <input className={styles.slider} type="range" min={config.min} max={config.max} step={config.step}
-        value={value} aria-label={label} aria-valuetext={format(value)}
+      <input className={styles.slider} type="range" min={input.min} max={input.max} step={input.step}
+        value={value} aria-label={label} aria-valuetext={currency ? `${grouped(value)} €` : grouped(value)}
+        style={{ '--fill': `${fill}%` } as React.CSSProperties}
         onChange={(event) => onChange(Number(event.target.value))} />
-      <div className={styles.ticks}><span>{format(config.min)}</span><span>{format(config.max)}</span></div>
     </div>
   );
 }
@@ -46,122 +74,145 @@ export default function ROICalculator() {
   const t = useTranslations('roi-calculator');
   const locale = useLocale();
   const [module, setModule] = useState<Module>('hiring');
-  const [scenario, setScenario] = useState<Scenario>('base');
-  const [reportOpen, setReportOpen] = useState(false);
+  const [scenario, setScenario] = useState<Scenario>('conservative');
   const [moduleValues, setModuleValues] = useState(() => Object.fromEntries(
     Object.entries(MODULES).map(([key, config]) => [key, config.inputs.map((input) => input.initial)]),
   ) as Record<Module, number[]>);
   const values = moduleValues[module];
   const config = MODULES[module];
   const result = calculate(module, values[0], values[1], scenario);
-  const low = calculate(module, values[0], values[1], 'conservative');
-  const high = calculate(module, values[0], values[1], 'optimistic');
+  // At this scale the license outweighs the modelled value: no payback to show.
   const under = result.total <= LICENSE;
-  const fraction = Math.max(0, Math.min(1, result.roi / config.cap));
   const currency = (value: number) => new Intl.NumberFormat(locale, {
-    style: 'currency', currency: 'EUR', maximumFractionDigits: 0,
+    style: 'currency', currency: 'EUR', maximumFractionDigits: 0, useGrouping: 'always',
   }).format(value);
-  const number = (value: number) => new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(value);
   const percent = (value: number) => new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 0 }).format(value);
-  const bookLink = <Button asChild mode="dark"><a href={href('book-meeting', locale)}>{t('bookDemo')}<ArrowRight aria-hidden="true" /></a></Button>;
+  const share = (part: number) => percent(result.total > 0 ? part / result.total : 0);
+  // To the report form below the fixed header (scroll-margin-top), then into its first field.
+  const jumpToReport = (event: React.MouseEvent) => {
+    const target = document.getElementById('report');
+    if (!target) return;
+    event.preventDefault();
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    document.getElementById('roi-name')?.focus({ preventScroll: true });
+  };
+  const drivers = [
+    { key: 'hard', label: t(`${module}.driver`), amount: result.hard, className: styles.hard },
+    ...(result.soft > 0 ? [{ key: 'soft', label: t('softDriver'), amount: result.soft, className: styles.soft }] : []),
+  ];
+  const scenarioButtons = (Object.keys(SCENARIOS) as Scenario[]).map((key) => (
+    <button type="button" key={key} className="font-medium" aria-pressed={scenario === key} onClick={() => setScenario(key)}>{t(`scenarios.${key}`)}</button>
+  ));
 
   return (
     <>
       <Navbar />
       <main className={styles.page}>
-        <div className={styles.wrap}>
-          <header className={styles.hero}>
-            <p className={styles.eyebrow}>{t('eyebrow')}</p>
+        <section className={`section-light ${styles.hero}`}>
+          <div className={`${styles.wrap} ${styles.heroInner}`}>
+            <p className="type-eyebrow text-[#4B4B4B]">{t('eyebrow')}</p>
             <HeroCopy>
-              <h1 className="font-semibold text-[48px] md:text-[58px] tracking-[-0.02em]" style={{ lineHeight: 1.1 }}>{t('heading')}</h1>
-              <p className={`hero-subtitle ${styles.intro}`}>{t('intro')}</p>
+              <h1 className="max-w-[840px] font-semibold text-[48px] md:text-[58px] tracking-[-0.02em] text-[#121212]" style={{ lineHeight: 1.1 }}>{t('heading')}</h1>
+              <p className="hero-subtitle type-body-lg text-[#4B4B4B] mt-5">{t('intro')}</p>
             </HeroCopy>
-          </header>
-          <div className={styles.modules} role="group" aria-label={t('useCase')}>
-            {(Object.keys(MODULES) as Module[]).map((key) => (
-              <button key={key} type="button" aria-pressed={module === key} onClick={() => setModule(key)}>{t(`${key}.tab`)}</button>
-            ))}
-          </div>
-          <div className={styles.grid}>
-            <section aria-labelledby="calculator-heading">
-              <div className={styles.positioning}>
-                <p className={styles.eyebrow}>{t('positioning')}</p>
-                <p>{t('positioningBody')}</p>
-              </div>
-              <h2 id="calculator-heading" className={`${styles.headline} max-w-[880px]`}>{t.rich(`${module}.heading`, {
-                span: (chunks) => <span className="gradient-text">{chunks}</span>,
-              })}</h2>
-              <p className={`${styles.sub} max-w-[880px]`}>{t(`${module}.body`)}</p>
-              <div className={styles.controls}>
-                {config.inputs.map((input, index) => (
-                  <NumberField key={`${module}-${index}`} id={`roi-input-${index}`} label={t(`${module}.input${index + 1}`)}
-                    value={values[index]} config={input} format={'currency' in input && input.currency ? currency : number}
-                    onChange={(value) => setModuleValues((current) => ({ ...current, [module]: current[module].map((previous, i) => i === index ? value : previous) }))} />
-                ))}
-              </div>
-              <div className={styles.actions}>
-                {bookLink}
-                <Button mode="dark" variant="secondary" onClick={() => setReportOpen(true)} icon={null}>{t('downloadReport')}</Button>
-              </div>
-            </section>
-            <section className={styles.instrument} aria-label={t('results')}>
-              <div className={styles.scenarios} role="group" aria-label={t('scenario')}>
-                {(Object.keys(SCENARIOS) as Scenario[]).map((key) => (
-                  <button type="button" key={key} aria-pressed={scenario === key} onClick={() => setScenario(key)}>{t(`scenarios.${key}`)}</button>
-                ))}
-              </div>
-              <div className={styles.gaugeWrap}>
-                <svg className={styles.gauge} viewBox="0 0 300 176" aria-hidden="true">
-                  {[0, 1, 2, 3, 4, 5].map((tick) => {
-                    const angle = (180 - tick * 36) * Math.PI / 180;
-                    return <line key={tick} x1={150 + 109 * Math.cos(angle)} y1={150 - 109 * Math.sin(angle)}
-                      x2={150 + 118 * Math.cos(angle)} y2={150 - 118 * Math.sin(angle)} stroke="currentColor" opacity="0.2" strokeWidth="1.5" />;
-                  })}
-                  <path d="M 26 150 A 124 124 0 0 1 274 150" fill="none" stroke="currentColor" opacity="0.1" strokeWidth="10" strokeLinecap="round" />
-                  <path className={styles.arc} d="M 26 150 A 124 124 0 0 1 274 150" fill="none" strokeWidth="10" strokeLinecap="round"
-                    pathLength="100" strokeDasharray="100" strokeDashoffset={100 * (1 - fraction)} />
-                  <g className={styles.needle} style={{ transform: `rotate(${-90 + fraction * 180}deg)` }}>
-                    <line x1="150" y1="150" x2="150" y2="52" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-                    <circle cx="150" cy="150" r="7" fill="#0d0d1f" stroke="currentColor" strokeWidth="2.5" />
-                  </g>
-                </svg>
-                <div className={styles.readout} aria-live="polite" aria-atomic="true">
-                  <p className={styles.amount} data-testid="roi-total">{currency(result.total)}</p>
-                  <p className={styles.label}>{t(module === 'derisk' ? 'annualValue' : 'annualSavings')}</p>
-                </div>
-              </div>
-              {under ? <p className={styles.fit}>{t('fit')}</p> : <>
-                <p className={styles.range}>{t('scenarios.conservative')} <b>{currency(low.total)}</b> · {t('scenarios.optimistic')} <b>{currency(high.total)}</b></p>
-                <p className={styles.roi}><strong data-testid="roi-percent">{percent(result.roi / 100)}</strong> {t('roi')}</p>
-              </>}
-              <div className={styles.breakdown}>
-                <div className={styles.bar} aria-hidden="true">
-                  <span style={{ width: `${result.hard / result.total * 100}%` }} />
-                  {result.soft > 0 && <span className={styles.softBar} style={{ width: `${result.soft / result.total * 100}%` }} />}
-                </div>
-                <div className={styles.driver}><span><b>{t(`${module}.driver`)}</b><small>{t(`${module}.driverSub`)}</small></span><strong>{currency(result.hard)}</strong></div>
-                {result.soft > 0 && <div className={`${styles.driver} ${styles.softDriver}`}><span><b>{t('softDriver')}</b><small>{t('softDriverSub')}</small></span><strong>{currency(result.soft)}</strong></div>}
-              </div>
-              {!under && <p className={styles.payback}><strong>{result.payback < 1 ? '<1' : new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(result.payback)}</strong><span>{t('payback')}</span></p>}
-            </section>
-          </div>
-        </div>
-        {/* The closing banner every page ends on (CustomersFinalCTA), kept to this page's column. */}
-        <section className="relative py-20 lg:py-24">
-          <div className={styles.wrap}>
-            <Reveal
-              duration={0.7}
-              className="rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-6 py-14 md:px-16 md:py-24 flex flex-col items-center text-center gap-10"
-            >
-              <h2 className="max-w-[880px] text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white/90">{t.rich('closing', {
-                span: (chunks) => <span className="font-semibold gradient-text">{chunks}</span>,
-              })}</h2>
-              {bookLink}
-            </Reveal>
           </div>
         </section>
+
+        <section className={`section-breathe ${styles.calculatorSection}`} aria-label={t('calculator')}>
+          <div className={styles.wrap}>
+            <div className={styles.card}>
+              <div className={styles.tabsBar}>
+                <div className={styles.tabs} role="group" aria-label={t('useCase')}>
+                  {(Object.keys(MODULES) as Module[]).map((key) => (
+                    <button key={key} type="button" className="font-medium" aria-pressed={module === key} onClick={() => setModule(key)}>{t(`${key}.tab`)}</button>
+                  ))}
+                </div>
+              </div>
+              <div className={styles.panel}>
+                <div className={styles.inputs}>
+                  <div>
+                    <h2 id="calculator-heading" className={styles.headline}>{t(`${module}.heading`)}</h2>
+                    <p className="type-body-sm text-[#4B4B4B] mt-2">{t(`${module}.body`)}</p>
+                  </div>
+                  {config.inputs.map((input, index) => (
+                    <NumberField key={`${module}-${index}`} id={`roi-input-${index}`} input={input}
+                      label={t(`${module}.input${index + 1}`)}
+                      unit={t.has(`${module}.unit${index + 1}`) ? t(`${module}.unit${index + 1}`) : undefined}
+                      value={values[index]}
+                      onChange={(value) => setModuleValues((current) => ({ ...current, [module]: current[module].map((previous, i) => i === index ? value : previous) }))} />
+                  ))}
+                </div>
+
+                <div className={styles.results}>
+                  <div className={styles.scenario}>
+                    <p id="roi-scenario" className="type-eyebrow text-[#4B4B4B]">{t('scenario')}</p>
+                    <div className={styles.scenarioBar}>
+                      <div className={styles.scenarioTabs} role="group" aria-labelledby="roi-scenario">{scenarioButtons}</div>
+                    </div>
+                  </div>
+
+                  <div className={styles.readout} aria-live="polite" aria-atomic="true">
+                    <div className={styles.amountBox}>
+                      <p className="type-caption text-[#4B4B4B]">{t('estimatedSavings')}</p>
+                      <p className={styles.amount} data-testid="roi-total">{currency(result.total)}</p>
+                    </div>
+                    <div className={styles.split}>
+                      <div className={styles.bar} aria-hidden="true">
+                        {drivers.map((driver) => (
+                          <span key={driver.key} className={driver.className} style={{ width: `${driver.amount / result.total * 100}%` }} />
+                        ))}
+                      </div>
+                      <ul className={styles.legend}>
+                        {drivers.map((driver) => (
+                          <li key={driver.key} className="type-caption">
+                            <span className={`${styles.swatch} ${driver.className}`} aria-hidden="true" />
+                            <span className="text-[#4B4B4B]">{driver.label}</span>
+                            <span className="font-medium text-[#121212]">{share(driver.amount)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className={styles.tiles}>
+                      <div className={styles.tile}>
+                        <p className="type-caption text-[#4B4B4B]">{t('roi')}</p>
+                        <p className={`${styles.tileValue} stat-value`} data-testid="roi-percent">{percent(result.roi / 100)}</p>
+                      </div>
+                      <div className={styles.tile}>
+                        <p className="type-caption text-[#4B4B4B]">{t('payback')}</p>
+                        {under
+                          ? <p className="type-body-sm text-[#121212]">{t('fit')}</p>
+                          : <p className={`${styles.tileValue} stat-value`}>{result.payback < 1 ? t('paybackUnderOne') : new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(result.payback)}</p>}
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className={`${styles.note} type-body-sm text-[#4B4B4B]`}>{t.rich('note', {
+                    a: (chunks) => <a href={href('book-meeting', locale)}>{chunks}</a>,
+                  })}</p>
+                </div>
+              </div>
+            </div>
+            {/* Under the card, centred: the way to the report form. */}
+            <div className={styles.actions}>
+              <a href="#report" onClick={jumpToReport} className={`${styles.outlineButton} type-button`}>
+                {t('downloadReport')}<ArrowDown aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <ReportForm module={module} scenario={scenario} values={values} />
+
+        <ClosingPanel
+          id="demo"
+          rule
+          heading={t('closing')}
+          body={t('closingBody')}
+          href={href('book-meeting', locale)}
+          cta={t('bookDemo')}
+        />
       </main>
-      {reportOpen && <ReportForm onClose={() => setReportOpen(false)} module={module} scenario={scenario} values={values} />}
       <Footer />
     </>
   );

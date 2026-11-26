@@ -93,26 +93,28 @@ try {
     await route.fulfill({ status: rejectSubmission ? 400 : 200, contentType: 'application/json', body: '{}' });
   });
   for (const [path, label, report, heading] of [
-    ['/resources/roi-calculator', 'ROI Calculator', 'Download report', 'Get your ROI report'],
-    ['/it/resources/roi-calculator', 'Calcolatore ROI', 'Scarica il report', 'Richiedi il tuo report ROI'],
+    ['/resources/roi-calculator', 'ROI Calculator', 'Download the report', 'Get your personalised report'],
+    ['/it/resources/roi-calculator', 'Calcolatore ROI', 'Scarica il report', 'Ricevi il tuo report personalizzato'],
   ]) {
+    const it = path.startsWith('/it/');
     await visit(roi, path);
-    const conservative = path.startsWith('/it/') ? 'Prudente' : 'Conservative';
-    await roi.getByRole('button', { name: conservative, exact: true }).click();
+    const conservative = it ? 'Prudente' : 'Conservative';
     await roi.getByRole('button', { name: conservative, exact: true, pressed: true }).waitFor();
     await roi.getByRole('button', { name: 'Base', exact: true }).click();
     await roi.getByRole('button', { name: 'Base', exact: true, pressed: true }).waitFor();
-    const hiring = path.startsWith('/it/') ? 'Assunzioni' : 'Hiring';
-    const promote = path.startsWith('/it/') ? 'Promozioni' : 'Promote';
+    await roi.getByRole('button', { name: conservative, exact: true }).click();
+    await roi.getByRole('button', { name: conservative, exact: true, pressed: true }).waitFor();
+    const hiring = it ? 'Assunzioni' : 'Hiring';
+    const promotion = it ? 'Promozioni' : 'Promotion';
     await roi.locator('#roi-input-0').focus();
     await roi.locator('#roi-input-0').fill('350');
-    await roi.getByRole('button', { name: promote, exact: true }).click();
+    await roi.getByRole('button', { name: promotion, exact: true }).click();
     await roi.locator('#roi-input-0').focus();
     await roi.locator('#roi-input-0').fill('5000');
     await roi.getByRole('button', { name: hiring, exact: true }).click();
     await roi.locator('#roi-input-0').focus();
     assert.equal(await roi.locator('#roi-input-0').inputValue(), '350', 'switching modules retains customised inputs');
-    await roi.getByRole('button', { name: promote, exact: true }).click();
+    await roi.getByRole('button', { name: promotion, exact: true }).click();
     await roi.locator('#roi-input-0').focus();
     assert.equal(await roi.locator('#roi-input-0').inputValue(), '5000');
     assert.equal(await roi.locator('main details').count(), 0, 'assumptions are in the PDF, not on the calculator page');
@@ -122,53 +124,49 @@ try {
     assert.equal(await calculatorLink.innerText(), label);
     assert.equal(await calculatorLink.getAttribute('href'), path);
     await roi.keyboard.press('Escape');
-    const reportButton = roi.getByRole('button', { name: report, exact: true });
-    await reportButton.click();
-    const dialog = roi.getByRole('dialog');
-    await dialog.getByRole('heading', { name: heading, exact: true }).waitFor();
-    await dialog.locator('input[name=email]').waitFor({ state: 'visible' });
-    assert.ok((await dialog.locator('#roi-report-description').innerText()).includes(promote), 'the form identifies the selected report module');
-    assert.equal(await dialog.locator('iframe').count(), 0, 'the mockup uses native form fields');
-    const nameInput = dialog.locator('input[name=name]');
-    assert.equal(await nameInput.evaluate((input) => input === document.activeElement), true, 'opening focuses the name field, not the close button');
-    await nameInput.fill('Test Name');
-    await nameInput.press('Enter');
-    await dialog.waitFor({ state: 'visible' });
-    const nameBounds = await nameInput.boundingBox();
-    await roi.mouse.move(nameBounds.x + 40, nameBounds.y + nameBounds.height / 2);
-    await roi.mouse.down();
-    await roi.mouse.move(10, 10);
-    await roi.mouse.up();
-    await roi.mouse.click(10, 10);
-    await dialog.waitFor({ state: 'visible' });
-    assert.equal(await nameInput.inputValue(), 'Test Name', 'selecting text beyond the modal and clicking the backdrop keep the form and its values');
-    await dialog.locator('input[name=email]').fill('test@example.invalid');
-    await dialog.locator('input[name=company]').fill('Test Company');
-    await dialog.locator('select[name=industry]').selectOption('retail');
+    // The button under the calculator goes to the inline form and into its first field.
+    await roi.getByRole('link', { name: report }).click();
+    const form = roi.locator('#report');
+    await form.getByRole('heading', { name: heading, exact: true }).waitFor();
+    const nameInput = form.locator('input[name=name]');
+    await roi.waitForFunction(() => document.activeElement?.getAttribute('name') === 'name');
+    assert.equal(await form.locator('iframe').count(), 0, 'the report form uses native fields');
+    // Empty submit: every message, focus on the first field, nothing sent.
     const before = submissions.length;
-    await dialog.locator('button[type=submit]').click();
+    await form.locator('button[type=submit]').click();
+    assert.equal(await form.locator('[id$=-error]').count(), 5, 'each missing field says what it needs');
+    assert.equal(await nameInput.getAttribute('aria-invalid'), 'true');
+    assert.equal(await nameInput.getAttribute('aria-describedby'), 'roi-name-error');
+    await roi.waitForFunction(() => document.activeElement?.getAttribute('name') === 'name');
+    assert.equal(submissions.length, before, 'an incomplete form is not submitted');
+    await nameInput.fill('Test Name');
+    await form.locator('input[name=email]').fill('test@example.invalid');
+    await form.locator('input[name=company]').fill('Test Company');
+    await form.locator('select[name=industry]').selectOption('retail');
+    await form.locator('button[type=submit]').click();
     assert.equal(submissions.length, before, 'unchecked consent prevents submission');
-    assert.equal(await dialog.locator('input[name=consent]').evaluate((input) => input.validity.valueMissing), true);
-    await dialog.locator('input[name=consent]').check();
-    await dialog.locator('input[name=marketing]').check();
+    assert.equal(await form.locator('[id$=-error]').count(), 1);
+    assert.equal(await form.locator('input[name=marketing]').count(), 0, 'one consent only: no marketing opt-in');
+    await form.locator('input[name=consent]').check();
     rejectSubmission = true;
-    await dialog.locator('button[type=submit]').click();
-    await dialog.getByRole('alert').waitFor({ state: 'visible' });
-    assert.equal(await dialog.locator('input[name=email]').inputValue(), 'test@example.invalid', 'retry keeps the entered details');
+    await form.locator('button[type=submit]').click();
+    await form.getByRole('alert').waitFor({ state: 'visible' });
+    assert.equal(await form.locator('input[name=email]').inputValue(), 'test@example.invalid', 'retry keeps the entered details');
     assert.equal(await roi.evaluate(() => (window.dataLayer ?? []).filter((event) => event.form === 'roi-calculator').length), 0);
     rejectSubmission = false;
     const [download] = await Promise.all([
       roi.waitForEvent('download'),
-      dialog.locator('button[type=submit]').click(),
+      form.locator('button[type=submit]').click(),
     ]);
-    await dialog.getByRole('status').waitFor({ state: 'visible' });
-    await dialog.getByRole('heading', { name: path.startsWith('/it/') ? 'Il tuo report è pronto' : 'Your report is ready', exact: true }).waitFor();
-    assert.equal(await dialog.getByText(/Enter your details|Inserisci i tuoi dati/).count(), 0, 'confirmation hides the form instructions');
+    await form.getByRole('status').waitFor({ state: 'visible' });
+    assert.equal(await form.getByRole('status').innerText(), it ? 'Il tuo report è pronto' : 'Your report is ready');
+    assert.equal(await form.locator('form').count(), 0, 'confirmation replaces the form');
     const payload = submissions.at(-1);
     assert.ok(payload.fields.some((field) => field.name === 'company' && field.value === 'Test Company'));
     assert.ok(payload.fields.some((field) => field.name === '0-2/industry' && field.value === 'RETAIL'));
-    assert.equal(payload.legalConsentOptions.consent.communications[0].subscriptionTypeId, 527104760);
-    assert.equal(payload.legalConsentOptions.consent.communications[0].value, true);
+    assert.equal(payload.legalConsentOptions.consent.consentToProcess, true);
+    assert.ok(payload.legalConsentOptions.consent.text.length > 20, 'the consent sentence the visitor ticked is sent');
+    assert.equal('communications' in payload.legalConsentOptions.consent, false, 'no marketing subscription is sent');
     assert.equal(download.suggestedFilename(), 'skillvue-roi-report.pdf');
     const stream = await download.createReadStream();
     const chunks = [];
@@ -177,7 +175,7 @@ try {
     assert.equal(document.subarray(0, 5).toString(), '%PDF-');
     assert.ok(document.length > 10000, 'PDF includes its fonts and logo');
     assert.equal((document.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length, 1, 'the report includes only the selected module on one A4 page');
-    if (!path.startsWith('/it/')) {
+    if (!it) {
       await roi.evaluate(() => {
         const createObjectURL = URL.createObjectURL;
         URL.createObjectURL = (...args) => {
@@ -186,22 +184,16 @@ try {
         };
       });
       const submittedCount = submissions.length;
-      await dialog.getByRole('button', { name: 'Download again', exact: true }).click();
-      await dialog.getByRole('alert').waitFor({ state: 'visible' });
+      await form.getByRole('button', { name: 'Download again', exact: true }).click();
+      await form.getByRole('alert').waitFor({ state: 'visible' });
       await Promise.all([
         roi.waitForEvent('download'),
-        dialog.getByRole('button', { name: 'Download again', exact: true }).click(),
+        form.getByRole('button', { name: 'Download again', exact: true }).click(),
       ]);
       assert.equal(submissions.length, submittedCount, 'download retry must not resubmit the contact');
     }
     assert.deepEqual(await roi.evaluate(() => window.dataLayer.filter((event) => event.form === 'roi-calculator').map(({ event, form }) => ({ event, form }))),
       [{ event: 'generate_lead', form: 'roi-calculator' }]);
-    await roi.keyboard.press('Escape');
-    await dialog.waitFor({ state: 'detached' });
-    assert.equal(await reportButton.evaluate((button) => button === document.activeElement), true);
-    await reportButton.click();
-    await dialog.locator('button[aria-label]').click();
-    await dialog.waitFor({ state: 'detached' });
   }
 
   await roi.close();
@@ -219,4 +211,4 @@ try {
   await browser.close();
 }
 
-console.log('[OK] browser smoke: navigation, locale, customer listing, mobile menu and ROI report dialog');
+console.log('[OK] browser smoke: navigation, locale, customer listing, mobile menu and ROI report form');

@@ -1,7 +1,6 @@
 import { checkBotId } from 'botid/server';
 
 const HUBSPOT = 'https://api.hsforms.com/submissions/v3/integration/submit/48438018/0af34526-b132-4ada-b0b5-d4f0d9b380c2';
-const SUBSCRIPTION_TYPE_ID = 527104760;
 const FIELDS = ['firstname', 'email', 'company', '0-2/industry'];
 const bad = () => new Response(null, { status: 400 });
 const text = (value: unknown, max: number): value is string => typeof value === 'string' && value.length <= max;
@@ -24,10 +23,10 @@ export async function POST(request: Request) {
     clean.push({ name, value: field.value });
   }
 
+  // One consent, to store and process the data. The form asks no marketing
+  // question, so nothing is forwarded about communications.
   const consent = body?.legalConsentOptions?.consent;
-  const communication = consent?.communications?.[0];
   if (consent?.consentToProcess !== true || !text(consent.text, 1000)) return bad();
-  if (typeof communication?.value !== 'boolean' || !text(communication.text, 1000)) return bad();
 
   const { pageUri, pageName } = body?.context ?? {};
   if (!text(pageUri, 2000) || !text(pageName, 300) || !/^https?:\/\//.test(pageUri)) return bad();
@@ -37,10 +36,7 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       fields: clean,
       context: { pageUri, pageName },
-      legalConsentOptions: { consent: {
-        consentToProcess: true, text: consent.text,
-        communications: [{ value: communication.value, subscriptionTypeId: SUBSCRIPTION_TYPE_ID, text: communication.text }],
-      } },
+      legalConsentOptions: { consent: { consentToProcess: true, text: consent.text } },
     }),
     signal: AbortSignal.timeout(15000),
   });

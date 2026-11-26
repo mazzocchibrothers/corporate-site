@@ -25,10 +25,9 @@ assert.equal(calculate('hiring', 300, 50_000, 'base').hard, 225_000,
 console.log('[OK] ROI calculator: all modules/scenarios match prototype; inputs clamp and snap');
 
 const { reportSubmission } = await import('../app/[locale]/resources/roi-calculator/report-submission.ts');
-const details = { name: ' Test Name ', email: ' test@example.invalid ', company: ' Test Co ', industry: 'retail', marketing: true, consent: true,
-  consentText: 'Marketing consent', processingText: 'Processing consent', pageUri: 'https://www.skillvue.ai/resources/roi-calculator', pageName: 'ROI' };
+const details = { name: ' Test Name ', email: ' test@example.invalid ', company: ' Test Co ', industry: 'retail', consent: true,
+  processingText: 'Processing consent', pageUri: 'https://www.skillvue.ai/resources/roi-calculator', pageName: 'ROI' };
 assert.throws(() => reportSubmission({ ...details, consent: false }), /Consent required/);
-assert.equal(reportSubmission({ ...details, marketing: false }).legalConsentOptions.consent.communications[0].value, false);
 const submission = reportSubmission(details);
 assert.deepEqual(submission.fields, [
   { name: 'firstname', value: 'Test Name' },
@@ -36,13 +35,11 @@ assert.deepEqual(submission.fields, [
   { name: 'company', value: 'Test Co' },
   { name: '0-2/industry', value: 'RETAIL' },
 ]);
-assert.deepEqual(submission.legalConsentOptions, { consent: {
-  consentToProcess: true, text: details.processingText,
-  communications: [{ value: true, subscriptionTypeId: 527104760, text: details.consentText }],
-} });
+// One consent (to process the data), and no marketing subscription: the form asks no such question.
+assert.deepEqual(submission.legalConsentOptions, { consent: { consentToProcess: true, text: details.processingText } });
 assert.equal(submission.context.pageUri, details.pageUri);
 assert.equal('skipValidation' in submission, false);
-console.log('[OK] ROI form: consent required, existing HubSpot fields, correct subscription, no skipped validation');
+console.log('[OK] ROI form: consent required, existing HubSpot fields, no marketing subscription, no skipped validation');
 
 const { createTranslator } = await import('next-intl');
 const { readFileSync } = await import('node:fs');
@@ -60,6 +57,8 @@ for (const locale of ['en', 'it']) {
         assert.ok(content.pill.includes(translate(`${module}.tab`)), 'each page identifies its module');
         assert.ok(content.assumptions.length >= 5, 'each module retains its fixed and scenario assumptions');
         assert.equal(content.inputs.length, 2);
+        assert.equal(content.metrics[0].label, translate('estimatedSavings'), 'the report names the total as the page does');
+        assert.ok(content.note.before && content.note.link, 'the report opens on the page note, with its link');
         assert.equal(content.drivers.length, module === 'hiring' ? 2 : 1);
         assert.equal(content.sector === null, industry === 'other' || industry === '');
         assert.equal(content.metrics[0].value, new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(expected[module] * SCENARIOS[scenario]));

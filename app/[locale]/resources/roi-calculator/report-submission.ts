@@ -4,9 +4,12 @@ const HUBSPOT_INDUSTRY: Record<string, string> = {
   pharma: 'PHARMACEUTICALS', manufacturing: 'RAILROAD_MANUFACTURE', energy: 'OIL_ENERGY', other: 'Other',
 };
 
-export function reportSubmission({ name, email, company, industry, marketing, consent, consentText, processingText, pageUri, pageName }: {
-  name: string; email: string; company: string; industry: string; marketing: boolean; consent: boolean;
-  consentText: string; processingText: string; pageUri: string; pageName: string;
+// One consent on the form: to store and process the data (the Privacy Policy
+// sentence). There is no marketing opt-in, so no communications entry is sent:
+// a subscription answer to a question nobody was asked would be a false record.
+export function reportSubmission({ name, email, company, industry, consent, processingText, pageUri, pageName }: {
+  name: string; email: string; company: string; industry: string; consent: boolean;
+  processingText: string; pageUri: string; pageName: string;
 }) {
   if (!consent) throw new Error('Consent required');
   return {
@@ -18,11 +21,7 @@ export function reportSubmission({ name, email, company, industry, marketing, co
     ],
     context: { pageUri, pageName },
     legalConsentOptions: {
-      consent: {
-        consentToProcess: true,
-        text: processingText,
-        communications: [{ value: marketing, subscriptionTypeId: 527104760, text: consentText }],
-      },
+      consent: { consentToProcess: true, text: processingText },
     },
   };
 }
