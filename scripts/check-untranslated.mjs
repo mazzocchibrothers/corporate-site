@@ -103,8 +103,6 @@ const DELIBERATE = [
   ['blog.newsletter-september-2026.sections.4.events.0.name', "the event's own name"],
   ['blog.newsletter-october-2026.imgLabels.topStartups', "the ranking's own name"],
   ['blog.newsletter-october-2026.sections.2.links.', 'event names'],
-  ['blog.newsletter-november-2026.subtitle', "the series' own English tagline, kept on the Italian page"],
-  ['blog.newsletter-november-2026.sections.4.events.3.pending', 'an internal editorial note, the same in both drafts'],
   ['blog.newsletter-november-2026.imgLabels.marketNews', 'company names'],
   ['blog.newsletter-november-2026.imgLabels.forum', "the event's own name"],
   ['customers.talent-pioneers.stages.past.', 'conference names'],

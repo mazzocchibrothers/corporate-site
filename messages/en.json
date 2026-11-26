@@ -1154,8 +1154,8 @@
       "tag": "Newsletter",
       "date": "November 2026",
       "readTime": "5 min read",
-      "title": "The Skills Signal | November 2026",
-      "subtitle": "Cutting through the noise on skills, talent and HR tech",
+      "title": "November at Skillvue: the launch of Skillvue Assess, the ADR story and events from Zurich to Milan",
+      "subtitle": "Are skills inferred or measured? This November, we explored the question through market news, the launch of Skillvue Assess and conversations with HR leaders from Zurich to Milan.",
       "intro": [
         "What does it take to trust the skills data behind your talent decisions? This month we’re starting there: with two deals in our market that put the question in focus, the launch of Skillvue Assess, and what we heard from HR leaders in Milan and beyond."
       ],
@@ -1244,38 +1244,17 @@
         {
           "img": "events",
           "heading": "November from Zurich to Milan",
-          "events": [
-            {
-              "title": "Workforce Digital Transformation Summit DACH | 4-5 November, Zurich",
-              "body": "The skills baseline behind workforce planning, and how to measure AI readiness.",
-              "link": "Event page",
-              "href": "wdtsDach"
-            },
-            {
-              "title": "HRC Trends: Learning & Development | 10 November, SACE, Milan",
-              "body": "Turning L&D projects into observable behaviours that move business KPIs.",
-              "link": "Event page",
-              "href": "hrcTrends"
-            },
-            {
-              "title": "Job in Retail | 10 November, Gi Group HQ, Milan",
-              "body": "High-volume hiring and retention on the shop floor.",
-              "link": "Event page",
-              "href": "jobInRetail"
-            },
-            {
-              "title": "BIP “Learn. Sell. Grow.” | 26 November, Milan",
-              "body": "Our lab on skill gaps in sales networks, with a live demo.",
-              "link": "Event page",
-              "pending": "[link evento da confermare]"
-            }
+          "body": [
+            "Zurich and Milan.",
+            "This month we met HR leaders across Switzerland and Italy to talk about skills, data and business impact.",
+            "From the Workforce Digital Transformation Summit DACH in Zurich to HRC Trends: Learning & Development, Job in Retail and BIP’s “Learn. Sell. Grow.” in Milan, every conversation came back to the same theme: the value of skills data is measured by its impact on business results."
           ]
         }
       ],
       "closing": {
         "heading": "Until next month",
         "body": [
-          "Two deals, one question. Whatever your skills data looks like today, knowing what is inferred and what is measured is a good first step to know how far you can trust it. See you in December."
+          "November closes with a question to take into your next planning cycle: are your team’s skills inferred or measured? New stories and new data are already on the way. See you in December."
         ]
       },
       "finalKicker": "Discover Skillvue",
@@ -1293,7 +1272,7 @@
         "events": "November events"
       },
       "meta": {
-        "title": "The Skills Signal, November 2026: inferred or measured skills?",
+        "title": "November at Skillvue: the launch of Skillvue Assess, the ADR story and events from Zurich to Milan",
         "description": "Two deals in skills technology, one question for HR leaders: inferred or measured skills? Plus Skillvue Assess, the Forum People & Culture and Aeroporti di Roma."
       }
     },

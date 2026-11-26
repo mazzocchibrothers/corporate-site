@@ -1154,8 +1154,8 @@
       "tag": "Newsletter",
       "date": "Novembre 2026",
       "readTime": "5 min di lettura",
-      "title": "The Skills Signal | Novembre 2026",
-      "subtitle": "Cutting through the noise on skills, talent and HR tech",
+      "title": "Novembre in Skillvue: il lancio di Skillvue Assess, la storia di ADR ed eventi tra Zurigo e Milano",
+      "subtitle": "Le competenze si deducono o si misurano? Questo novembre abbiamo esplorato la domanda attraverso le novità del mercato, il lancio di Skillvue Assess e le conversazioni con HR leader tra Zurigo e Milano.",
       "intro": [
         "Quanto possiamo fidarci dei dati sulle competenze su cui basiamo le decisioni sul talento? Questo mese partiamo proprio da questa domanda, alla luce di due acquisizioni nel nostro settore, del lancio di Skillvue Assess e del confronto con gli HR leader che abbiamo incontrato a Milano e non solo."
       ],
@@ -1173,17 +1173,17 @@
               "heading": "La nostra lettura",
               "body": [
                 "Non sono due approcci equivalenti, ma due risposte complementari allo stesso problema.",
-                "La deduzione offre una visione d’insieme. Analizzando le informazioni già presenti nei sistemi aziendali (ruoli ricoperti, dati sui progetti, formazione svolta), un sistema che deduce le competenze può tracciare rapidamente una mappa delle competenze dell’intera organizzazione. È utile per pianificare la forza lavoro, costruire tassonomie e individuare le aree da approfondire.",
-                "La misurazione fornisce evidenze concrete. Quando una decisione ha conseguenze reali per una persona e per il business (un’assunzione, una promozione, un investimento in reskilling), misurare una competenza fornisce un’evidenza di natura diversa rispetto a stimarla attraverso un modello.",
+                "**La deduzione offre una visione d’insieme.** Analizzando le informazioni già presenti nei sistemi aziendali (ruoli ricoperti, dati sui progetti, formazione svolta), un sistema che deduce le competenze può tracciare rapidamente una mappa delle competenze dell’intera organizzazione. È utile per pianificare la forza lavoro, costruire tassonomie e individuare le aree da approfondire.",
+                "**La misurazione fornisce evidenze concrete.** Quando una decisione ha conseguenze reali per una persona e per il business (un’assunzione, una promozione, un investimento in reskilling), misurare una competenza fornisce un’evidenza di natura diversa rispetto a stimarla attraverso un modello.",
                 "Un approccio non sostituisce l’altro. Il fatto che le grandi piattaforme stiano investendo in entrambi suggerisce che il mercato riconosce il valore di tutti e due. Per l’HR, il rischio concreto è utilizzare questi dati senza distinguerne la provenienza. Una dashboard che combina competenze dedotte e misurate può apparire precisa, pur nascondendo livelli di affidabilità molto diversi."
               ]
             },
             {
               "heading": "Cosa significa per te",
               "list": [
-                "Chiedi a ogni fornitore e al tuo team: questa competenza è dedotta o misurata? La risposta dovrebbe essere visibile accanto al dato, non relegata a una nota metodologica.",
-                "Valuta quali evidenze servono in base alla decisione. Per individuare le aree da approfondire, spesso basta la deduzione. Per le decisioni che incidono sulla carriera di una persona, servono dati ottenuti attraverso la misurazione.",
-                "Preparati all’arrivo dei dati sulle competenze nella tua suite HR. Se usi SAP SuccessFactors, la deduzione delle competenze è destinata a entrare nella piattaforma. Conviene quindi iniziare a pensare a come questi dati si integreranno con gli assessment che utilizzi oggi."
+                "**Chiedi a ogni fornitore e al tuo team:** *questa competenza è dedotta o misurata?* La risposta dovrebbe essere visibile accanto al dato, non relegata a una nota metodologica.",
+                "**Valuta quali evidenze servono in base alla decisione.** Per individuare le aree da approfondire, spesso basta la deduzione. Per le decisioni che incidono sulla carriera di una persona, servono dati ottenuti attraverso la misurazione.",
+                "**Preparati all’arrivo dei dati sulle competenze nella tua suite HR.** Se usi SAP SuccessFactors, la deduzione delle competenze è destinata a entrare nella piattaforma. Conviene quindi iniziare a pensare a come questi dati si integreranno con gli assessment che utilizzi oggi."
               ]
             }
           ]
@@ -1244,38 +1244,17 @@
         {
           "img": "events",
           "heading": "Novembre tra Zurigo e Milano",
-          "events": [
-            {
-              "title": "Workforce Digital Transformation Summit DACH | 4-5 novembre, Zurigo",
-              "body": "Come costruire una base di dati sulle competenze per pianificare la forza lavoro e misurare l’AI readiness.",
-              "link": "Pagina evento",
-              "href": "wdtsDach"
-            },
-            {
-              "title": "HRC Trends: Learning & Development | 10 novembre, SACE, Milano",
-              "body": "Come tradurre i progetti L&D in comportamenti osservabili che incidono sui KPI di business.",
-              "link": "Pagina evento",
-              "href": "hrcTrends"
-            },
-            {
-              "title": "Job in Retail | 10 novembre, sede Gi Group, Milano",
-              "body": "Selezione su larga scala e retention nei punti vendita.",
-              "link": "Pagina evento",
-              "href": "jobInRetail"
-            },
-            {
-              "title": "“Learn. Sell. Grow.” di BIP | 26 novembre, Milano",
-              "body": "Il nostro laboratorio dedicato agli skill gap delle reti commerciali, con una demo dal vivo.",
-              "link": "Pagina evento",
-              "pending": "[link evento da confermare]"
-            }
+          "body": [
+            "Zurigo e Milano.",
+            "Questo mese abbiamo incontrato HR leader tra Svizzera e Italia per parlare di competenze, dati e impatto sul business.",
+            "Dal Workforce Digital Transformation Summit DACH a Zurigo a HRC Trends: Learning & Development, Job in Retail e “Learn. Sell. Grow.” di BIP a Milano, in tutti gli incontri è emerso lo stesso tema: il valore dei dati sulle competenze si misura dal loro impatto sui risultati di business."
           ]
         }
       ],
       "closing": {
-        "heading": "Al prossimo mese",
+        "heading": "Alla prossima",
         "body": [
-          "Due acquisizioni, una domanda. Qualunque siano i dati sulle competenze di cui disponi oggi, distinguere le competenze dedotte da quelle misurate è un buon punto di partenza per capire quanto puoi fidarti.\n\nCi sentiamo a dicembre."
+          "Novembre si chiude con una domanda da portare nel prossimo ciclo di pianificazione: le competenze del tuo team sono dedotte o misurate? Nuove storie e nuovi dati sono già in arrivo. Ci vediamo a dicembre."
         ]
       },
       "finalKicker": "Scopri Skillvue",
@@ -1293,7 +1272,7 @@
         "events": "Gli eventi di novembre"
       },
       "meta": {
-        "title": "The Skills Signal, novembre 2026: competenze dedotte o misurate?",
+        "title": "Novembre in Skillvue: il lancio di Skillvue Assess, la storia di ADR ed eventi tra Zurigo e Milano",
         "description": "Due acquisizioni nella skills technology, una domanda per chi guida l’HR: competenze dedotte o misurate? In più Skillvue Assess, il Forum People & Culture e Aeroporti di Roma."
       }
     },
