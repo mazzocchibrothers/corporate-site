@@ -1204,16 +1204,16 @@
           "img": "forum",
           "heading": "Reskill or hire?",
           "body": [
-            "At the Forum [HR People & Culture](forumHr) at IULM in Milan, the Talent Pioneers panel brought together Francesco Bianco, CHRO of Angelini Industries, Alex Grosset, Head of HR Governance & Innovation at Credem Group, and Nicolò Mazzocchi, Skillvue co-founder [ruolo da confermare], moderated by Federico Luperi.",
+            "At the Forum [HR People & Culture](forumHr) at IULM in Milan, the Talent Pioneers panel brought together [Francesco Bianco](bianco), CHRO of Angelini Industries, [Alex Grosset](grosset), Head of HR Governance & Innovation at Credem Group, and [Nicolò Mazzocchi](mazzocchi), Skillvue co-founder, moderated by [Federico Luperi](luperi).",
             "Three ideas stood out:"
           ],
           "list": [
-            "**Look inside first.** “The first market to hire from is at home.” [DA APPROVARE, Francesco Bianco] Before opening a search, know what your own people can already do.",
+            "**Look inside first.** “The first market to fish in is at home.” Before opening a search, know what your own people can already do.",
             "**Decide with data, not with perfect data.** Choosing between reskilling and hiring is a business decision. You do not need perfect information to make it, but you do need skills data you trust.",
-            "**AI widens the funnel, people make the call.** [DA APPROVARE, Credem] Technology helps you see more people and more options; the decision stays human."
+            "**AI widens the funnel, people make the call.** Technology helps you see more people and more options; the decision stays human."
           ],
           "bodyAfter": [
-            "Nicolò closed on what makes change stick: people, leaders and organisation moving together, and a status quo that should feel riskier than change. In his view, the most valuable use of skills data is workforce planning tied directly to the strategic plan."
+            "Nicolò closed on what makes change stick: people, leaders and organisation moving together, and a status quo that should feel riskier than change."
           ],
           "cta": {
             "label": "Read Nicolò’s post on the panel",
@@ -1233,9 +1233,7 @@
             "**-97%** time-to-process, from months to days",
             "**10+** dimensions mapped"
           ],
-          "bodyAfter": [
-            "In 2026 the same approach is being extended into one coherent cycle that also covers external talent acquisition."
-          ],
+          "bodyAfter": [],
           "cta": {
             "label": "Read the customer story",
             "href": "adr"
