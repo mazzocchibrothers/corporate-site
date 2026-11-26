@@ -1184,6 +1184,9 @@
                 "**Ask every vendor, and your own team:** *is this skill inferred or measured?* The answer should be visible next to the data, not buried in a methodology note.",
                 "**Scale the evidence to the decision.** Inference is often enough to decide where to look. For decisions that change someone’s career, ask for measured evidence.",
                 "**Expect skills to arrive inside your HR suite.** If you run SAP SuccessFactors, skills inference is set to become part of the core platform. Plan now for how inferred skills will sit alongside the assessments you already run."
+              ],
+              "bodyAfter": [
+                "[Source: SAP](sapTechwolf) · [Source: Pearson](pearsonWorkera)"
               ]
             }
           ]
