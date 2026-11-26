@@ -24,10 +24,6 @@ const LINKS = {
   // Forum People & Culture
   forumHr: 'https://www.forumhr.it/',
   panelPost: 'https://www.linkedin.com/posts/nicolo-mazzocchi-16a39215b_ai-is-fundamentally-changing-how-work-gets-activity-7530548453349724161-el9-',
-  // Events
-  wdtsDach: 'https://workforce-transformation.digital/dach',
-  hrcTrends: 'https://community.hrcigroup.com/eventi/learning-development-trends-20261110/',
-  jobInRetail: 'https://www.retailinstitute.it/events/job-in-retail-10-novembre-2026/',
   // Internal pages (already live on the site)
   assess: '/product/skillvue-assess',
   adr: '/customers/adr',
@@ -108,26 +104,6 @@ export default async function NovemberNewsletter() {
       {items.map((item, k) => <li key={k} className="type-list text-[#121212]/[0.7]">{rich(item)}</li>)}
     </ul>
   );
-  const events = (list) => (
-    <div className="space-y-8">
-      {list.map((e, k) => (
-        <div key={k} className="space-y-2">
-          <p className="type-body-bold text-[#121212]">{e.title}</p>
-          <p className="type-body text-[#121212]/[0.7]">{e.body}</p>
-          {e.href ? (
-            <a href={LINKS[e.href]} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[15px] font-medium text-[#4B4DF7] transition-colors duration-300 hover:text-[#3133E7]">
-              {e.link} <ArrowRight className="h-4 w-4" />
-            </a>
-          ) : (
-            <p className="inline-flex items-center gap-1.5 text-[15px] font-medium text-[#707070]">
-              {e.link} <ArrowRight className="h-4 w-4" /> {e.pending}
-            </p>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-
   return (
     <>
 
@@ -170,7 +146,6 @@ export default async function NovemberNewsletter() {
                   {paragraphs(s.body)}
                   {s.list && bullets(s.list)}
                   {paragraphs(s.bodyAfter)}
-                  {s.events && events(s.events)}
                 </div>
                 {s.parts?.map((part, j) => (
                   <div key={j} className="mt-10 space-y-5">
