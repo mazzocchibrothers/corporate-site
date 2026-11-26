@@ -5,8 +5,10 @@
 .page { color: #121212; }
 .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 3.4vw, 48px); }
 
-/* Hero: centred, below the fixed navbar. */
-.hero { padding: calc(80px + clamp(56px, 7vw, 96px)) 0 clamp(40px, 4vw, 56px); }
+/* Hero: centred between the fixed navbar and the grey section, the same space
+   above and below. The top adds the navbar's own 81px (the announcement banner
+   above it has its spacer in the flow). */
+.hero { --hero-gap: clamp(40px, 4vw, 56px); padding: calc(81px + var(--hero-gap)) 0 var(--hero-gap); }
 .heroInner { display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
 
 /* The calculator: one white card on the grey section. */
