@@ -68,8 +68,7 @@ export function calculate(module: Module, first: number, second: number, scenari
 
 /**
  * The model's assumptions for one module and scenario, as value + label pairs
- * ("15%" · "baseline failure rate"). The PDF report and the calculator's
- * "how we calculated" panel both list them, so they cannot disagree.
+ * ("15%" · "baseline failure rate"), as the PDF report lists them.
  */
 export function assumptionRows({ module, scenario, locale, translate: t }: {
   module: Module; scenario: Scenario; locale: string;
@@ -119,7 +118,7 @@ export function reportContent({ contact, module, scenario, values, locale, trans
     metrics: [
       { label: t('indicativeValue'), value: euro(result.total) },
       { label: t('roi'), value: pct(result.roi / 100) },
-      { label: t('payback'), value: result.payback < 1 ? '<1' : new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(result.payback) },
+      { label: t('payback'), value: result.payback < 1 ? t('paybackUnderOne') : new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(result.payback) },
     ],
     inputsHeading: t('report.inputs'),
     inputs: MODULES[module].inputs.map((input, i) => ({ label: t(`${module}.input${i + 1}`), value: 'currency' in input && input.currency ? euro(inputs[i]) : number(inputs[i]) })),

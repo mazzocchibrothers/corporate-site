@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowDown, Check } from 'lucide-react';
 import { Button, SECONDARY_ON_LIGHT } from '@/components/ui/button';
@@ -33,6 +33,14 @@ export default function ReportForm({ module, scenario, values }: {
   // Fields that failed the check on the last submit; a field leaves the list once it is edited.
   const [invalid, setInvalid] = useState<Field[]>([]);
   const clear = (field: Field) => () => setInvalid((current) => current.filter((f) => f !== field));
+  // Focus moves to the first invalid field after the render that marks it
+  // invalid and links its message, so a screen reader announces the error too.
+  const focusAfterRender = useRef<Field | null>(null);
+  useEffect(() => {
+    if (!focusAfterRender.current) return;
+    document.querySelector<HTMLElement>(`#report [name="${focusAfterRender.current}"]`)?.focus();
+    focusAfterRender.current = null;
+  }, [invalid]);
   const errorId = (field: Field) => `roi-${field}-error`;
   const fieldProps = (field: Field) => ({
     'aria-invalid': invalid.includes(field) || undefined,
@@ -55,11 +63,9 @@ export default function ReportForm({ module, scenario, values }: {
       ['industry', !industry],
       ['consent', data.get('consent') !== 'on'],
     ] as [Field, boolean][]).filter(([, bad]) => bad).map(([field]) => field);
+    focusAfterRender.current = failed[0] ?? null;
     setInvalid(failed);
-    if (failed.length) {
-      form.querySelector<HTMLElement>(`[name="${failed[0]}"]`)?.focus();
-      return;
-    }
+    if (failed.length) return;
     setStatus('pending');
     try {
       const payload = reportSubmission({
@@ -156,7 +162,7 @@ export default function ReportForm({ module, scenario, values }: {
             <div className={styles.consents}>
               <label className={styles.consent}>
                 <input type="checkbox" name="consent" {...fieldProps('consent')} />
-                <span>{t.rich('processingConsent', { a: (text) => <a href={locale === 'it' ? PRIVACY.it : PRIVACY.en} target="_blank" rel="noopener noreferrer">{text}</a> })}</span>
+                <span>{t.rich('processingConsent', { a: (text) => <a href={PRIVACY[locale as keyof typeof PRIVACY] ?? PRIVACY.en} target="_blank" rel="noopener noreferrer">{text}</a> })}</span>
               </label>
               {error('consent', 'errorConsent')}
               {status === 'error' && <p role="alert" className="type-body-sm text-[#b91c1c]">{t('submitError')}</p>}
