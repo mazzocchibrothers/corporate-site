@@ -220,7 +220,7 @@ export async function DeclarationMock() {
     <div
       className={cn(
         MOCK,
-        'rounded-[6px] gap-1.5 origin-[50%_55%] transition-[transform,box-shadow] duration-[350ms] ease-[cubic-bezier(.2,.7,.2,1)] motion-reduce:transition-none',
+        'rounded-[6px] gap-1.5 origin-[50%_55%] transition-[transform,box-shadow] [transition-duration:350ms] [transition-timing-function:cubic-bezier(.2,.7,.2,1)] motion-reduce:transition-none',
       )}
     >
       <div className="flex items-center justify-between gap-2">
