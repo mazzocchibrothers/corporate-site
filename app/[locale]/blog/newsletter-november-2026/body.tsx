@@ -13,8 +13,8 @@ import { ClosingPanel } from '@/components/shared/ClosingPanel';
 // Empty string '' → a labelled dashed placeholder box renders instead.
 // Put files in public/ as: /newsletter-november-<key>.<ext>
 const IMAGES = {
-  marketNews: '/newsletter-november-market-news.avif',
-  assess: '/newsletter-november-assess.avif',
+  marketNews: { en: '/newsletter-november-market-news-en.avif', it: '/newsletter-november-market-news-it.avif' },
+  assess: { en: '/newsletter-november-assess-en.avif', it: '/newsletter-november-assess-it.avif' },
   forum: '/newsletter-november-forum.avif',
   adr: '/newsletter-november-adr.avif',
   events: '/newsletter-november-events.avif',
