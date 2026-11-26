@@ -16,7 +16,7 @@ const IMAGES = {
   marketNews: { en: '/newsletter-november-market-news-en.avif', it: '/newsletter-november-market-news-it.avif' },
   assess: { en: '/newsletter-november-assess-en.avif', it: '/newsletter-november-assess-it.avif' },
   forum: '/newsletter-november-forum.avif',
-  adr: '/newsletter-november-adr.avif',
+  adr: { en: '/newsletter-november-adr-en.avif', it: '/newsletter-november-adr-it.avif' },
   events: '/newsletter-november-events.avif',
 };
 // external links → full https URL; internal links → relative path ('/lp/...', '/customers/...')
