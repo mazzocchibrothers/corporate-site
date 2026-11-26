@@ -10999,8 +10999,8 @@
       "heading": "Dai un valore ad assunzioni migliori.",
       "body": "Scopri quanto puoi risparmiare ogni anno in tempo dei recruiter e costi delle assunzioni non riuscite.",
       "input1": "Assunzioni all’anno",
-      "input2": "Retribuzione media",
-      "driver": "Costi delle assunzioni non riuscite evitati",
+      "input2": "Stipendio medio",
+      "driver": "Costi per assunzioni sbagliate evitati",
       "unit1": "assunzioni"
     },
     "promote": {
@@ -11124,7 +11124,7 @@
       }
     },
     "calculator": "Calcolatore",
-    "indicativeValue": "Valore annuo indicativo",
+    "estimatedSavings": "Risparmio annuo stimato",
     "paybackUnderOne": "meno di 1",
     "note": "Valore indicativo. Per il tuo ROI reale, costruito sui tuoi costi, <a>prenota una sessione con il nostro team</a>.",
     "range": "da {min} a {max}",

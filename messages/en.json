@@ -11124,7 +11124,7 @@
       }
     },
     "calculator": "Calculator",
-    "indicativeValue": "Indicative annual value",
+    "estimatedSavings": "Estimated annual savings",
     "paybackUnderOne": "under 1",
     "note": "Indicative value. <a>We’ll build your real ROI with you</a>, on your own costs.",
     "range": "{min} to {max}",

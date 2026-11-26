@@ -116,7 +116,7 @@ export function reportContent({ contact, module, scenario, values, locale, trans
     meta: t('report.preparedFor', { name: contact.name, date: new Intl.DateTimeFormat(locale === 'it' ? 'it' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).format(contact.date) }),
     pill: sector ? `${t(`${module}.tab`)} · ${t(`report.sectors.${sector}.label`)}` : t(`${module}.tab`),
     metrics: [
-      { label: t('indicativeValue'), value: euro(result.total) },
+      { label: t('estimatedSavings'), value: euro(result.total) },
       { label: t('roi'), value: pct(result.roi / 100) },
       { label: t('payback'), value: result.payback < 1 ? t('paybackUnderOne') : new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(result.payback) },
     ],

@@ -57,7 +57,7 @@ for (const locale of ['en', 'it']) {
         assert.ok(content.pill.includes(translate(`${module}.tab`)), 'each page identifies its module');
         assert.ok(content.assumptions.length >= 5, 'each module retains its fixed and scenario assumptions');
         assert.equal(content.inputs.length, 2);
-        assert.equal(content.metrics[0].label, translate('indicativeValue'), 'the report names the total as the page does');
+        assert.equal(content.metrics[0].label, translate('estimatedSavings'), 'the report names the total as the page does');
         assert.ok(content.note.before && content.note.link, 'the report opens on the page note, with its link');
         assert.equal(content.drivers.length, module === 'hiring' ? 2 : 1);
         assert.equal(content.sector === null, industry === 'other' || industry === '');

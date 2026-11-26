@@ -154,7 +154,7 @@ export default function ROICalculator() {
 
                   <div className={styles.readout} aria-live="polite" aria-atomic="true">
                     <div className={styles.amountBox}>
-                      <p className="type-caption text-[#4B4B4B]">{t('indicativeValue')}</p>
+                      <p className="type-caption text-[#4B4B4B]">{t('estimatedSavings')}</p>
                       <p className={styles.amount} data-testid="roi-total">{currency(result.total)}</p>
                     </div>
                     <div className={styles.split}>
