@@ -23,6 +23,10 @@ const IMAGES = {
 const LINKS = {
   // Forum People & Culture
   forumHr: 'https://www.forumhr.it/',
+  bianco: 'https://www.linkedin.com/in/frabianco/',
+  grosset: 'https://www.linkedin.com/in/alexgrosset/',
+  mazzocchi: 'https://www.linkedin.com/in/nicolo-mazzocchi-16a39215b/',
+  luperi: 'https://www.linkedin.com/in/federico-luperi/',
   panelPost: 'https://www.linkedin.com/posts/nicolo-mazzocchi-16a39215b_ai-is-fundamentally-changing-how-work-gets-activity-7530548453349724161-el9-',
   // Internal pages (already live on the site)
   assess: '/product/skillvue-assess',

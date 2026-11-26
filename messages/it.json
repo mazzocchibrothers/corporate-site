@@ -1204,16 +1204,16 @@
           "img": "forum",
           "heading": "Reskilling o nuove assunzioni?",
           "body": [
-            "Al Forum [HR People & Culture](forumHr), all’Università IULM di Milano, il panel Talent Pioneers ha riunito Francesco Bianco, CHRO di Angelini Industries, Alex Grosset, Head of HR Governance & Innovation di Credem Group, e Nicolò Mazzocchi, co-founder di Skillvue [ruolo da confermare], con la moderazione di Federico Luperi.",
+            "Al Forum [HR People & Culture](forumHr), all’Università IULM di Milano, il panel Talent Pioneers ha riunito [Francesco Bianco](bianco), CHRO di Angelini Industries, [Alex Grosset](grosset), Head of HR Governance & Innovation di Credem Group, e [Nicolò Mazzocchi](mazzocchi), co-founder di Skillvue, con la moderazione di [Federico Luperi](luperi).",
             "Tre idee su tutte:"
           ],
           "list": [
-            "**Partire dalle risorse interne.** “Il primo mercato da cui assumere è quello interno.” [DA APPROVARE, Francesco Bianco] Prima di avviare una nuova ricerca, è importante conoscere le competenze delle persone che fanno già parte dell’organizzazione.",
+            "**Partire dalle risorse interne.** “Il primo mercato dove pescare è casa.” Prima di avviare una nuova ricerca, è importante conoscere le competenze delle persone che fanno già parte dell’organizzazione.",
             "**Decidere con i dati, senza aspettare che siano perfetti.** Scegliere tra reskilling e nuove assunzioni è una decisione di business. Non servono informazioni perfette, ma dati affidabili sulle competenze.",
-            "**L’AI amplia il bacino di persone da considerare, ma la decisione resta umana.** [DA APPROVARE, Credem] La tecnologia permette di prendere in considerazione più persone e più alternative, senza sostituirsi a chi decide."
+            "**L’AI amplia il bacino di persone da considerare, ma la decisione resta umana.** La tecnologia permette di prendere in considerazione più persone e più alternative, senza sostituirsi a chi decide."
           ],
           "bodyAfter": [
-            "Nicolò ha chiuso il confronto soffermandosi sulle condizioni per un cambiamento efficace: persone, leader e organizzazione devono muoversi nella stessa direzione, e mantenere lo status quo dovrebbe fare più paura che cambiare. Secondo lui, l’applicazione più preziosa dei dati sulle competenze è una pianificazione della forza lavoro strettamente legata al piano strategico."
+            "Nicolò ha chiuso il confronto soffermandosi sulle condizioni per un cambiamento efficace: persone, leader e organizzazione devono muoversi nella stessa direzione, e mantenere lo status quo dovrebbe fare più paura che cambiare."
           ],
           "cta": {
             "label": "Leggi il post di Nicolò sul panel",
@@ -1233,9 +1233,7 @@
             "**Riduzione del 97%** dei tempi di gestione: da mesi a giorni",
             "**Oltre 10** dimensioni mappate"
           ],
-          "bodyAfter": [
-            "Nel 2026 lo stesso approccio si estende anche alla Talent Acquisition esterna, all’interno di un unico ciclo integrato."
-          ],
+          "bodyAfter": [],
           "cta": {
             "label": "Leggi la customer story",
             "href": "adr"
