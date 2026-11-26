@@ -13,30 +13,23 @@ import { ClosingPanel } from '@/components/shared/ClosingPanel';
 // Empty string '' → a labelled dashed placeholder box renders instead.
 // Put files in public/ as: /newsletter-november-<key>.<ext>
 const IMAGES = {
-  marketNews: '',
-  assess: '',
-  forum: '',
-  adr: '',
-  events: '',
+  marketNews: '/newsletter-november-market-news.avif',
+  assess: '/newsletter-november-assess.avif',
+  forum: '/newsletter-november-forum.avif',
+  adr: '/newsletter-november-adr.avif',
+  events: '/newsletter-november-events.avif',
 };
 // external links → full https URL; internal links → relative path ('/lp/...', '/customers/...')
 const LINKS = {
-  // Market news — Read more
-  sapAnnouncement: 'https://news.sap.com/2026/10/sap-to-acquire-techwolf-evidence-based-work-age-of-ai/',
-  sapCompletion: 'https://news.sap.com/2026/11/sap-completes-acquisition-of-techwolf/',
-  techwolfLetter: 'https://www.techwolf.ai/resources/blog/a-new-chapter-sap-to-acquire-techwolf',
-  techwolfDocs: 'https://docs.techwolf.ai/skills-intelligence',
-  workeraAnnouncement: 'https://www.workera.ai/blog/pearson-agrees-to-acquire-workera',
-  pearsonFiling: 'https://www.sec.gov/Archives/edgar/data/938323/000165495426009084/a9556z.htm',
-  // Events
+  // Forum People & Culture
   forumHr: 'https://www.forumhr.it/',
-  hrcTrends: 'https://community.hrcigroup.com/eventi/learning-development-trends-20261110/',
+  panelPost: 'https://www.linkedin.com/posts/nicolo-mazzocchi-16a39215b_ai-is-fundamentally-changing-how-work-gets-activity-7530548453349724161-el9-',
+  // Events
   wdtsDach: 'https://workforce-transformation.digital/dach',
+  hrcTrends: 'https://community.hrcigroup.com/eventi/learning-development-trends-20261110/',
   jobInRetail: 'https://www.retailinstitute.it/events/job-in-retail-10-novembre-2026/',
   // Internal pages (already live on the site)
   assess: '/product/skillvue-assess',
-  roiCalculator: '/resources/roi-calculator',
-  talentPioneers: '/customers/talent-pioneers',
   adr: '/customers/adr',
 };
 // Section anchors, in the order of `sections` in the catalogue. The email links
@@ -107,18 +100,30 @@ export default async function NovemberNewsletter() {
     </a>
   );
   const rich = (text) => renderRich(text, inlineLink);
-  const paragraphs = (list) => list?.map((p, j) => <p key={j} className="type-body text-[#121212]/[0.7]">{rich(p)}</p>);
+  // A blank line inside a string is a paragraph break, so a locale can split
+  // a paragraph further without changing the array's shape.
+  const paragraphs = (list) => list?.flatMap((p) => p.split('\n\n')).map((p, j) => <p key={j} className="type-body text-[#121212]/[0.7]">{rich(p)}</p>);
   const bullets = (items) => (
     <ul className="list-disc pl-6 space-y-1 marker:text-[#4B4DF7]">
       {items.map((item, k) => <li key={k} className="type-list text-[#121212]/[0.7]">{rich(item)}</li>)}
     </ul>
   );
-  const links = (list) => (
-    <div className="flex flex-col gap-3">
-      {list.map((l, k) => (
-        <a key={k} href={LINKS[l.href]} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[15px] font-medium text-[#4B4DF7] transition-colors duration-300 hover:text-[#3133E7]">
-          {l.label} <ArrowRight className="h-4 w-4" />
-        </a>
+  const events = (list) => (
+    <div className="space-y-8">
+      {list.map((e, k) => (
+        <div key={k} className="space-y-2">
+          <p className="type-body-bold text-[#121212]">{e.title}</p>
+          <p className="type-body text-[#121212]/[0.7]">{e.body}</p>
+          {e.href ? (
+            <a href={LINKS[e.href]} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[15px] font-medium text-[#4B4DF7] transition-colors duration-300 hover:text-[#3133E7]">
+              {e.link} <ArrowRight className="h-4 w-4" />
+            </a>
+          ) : (
+            <p className="inline-flex items-center gap-1.5 text-[15px] font-medium text-[#707070]">
+              {e.link} <ArrowRight className="h-4 w-4" /> {e.pending}
+            </p>
+          )}
+        </div>
       ))}
     </div>
   );
@@ -165,22 +170,16 @@ export default async function NovemberNewsletter() {
                   {paragraphs(s.body)}
                   {s.list && bullets(s.list)}
                   {paragraphs(s.bodyAfter)}
+                  {s.events && events(s.events)}
                 </div>
                 {s.parts?.map((part, j) => (
                   <div key={j} className="mt-10 space-y-5">
                     <h3 className="text-[20px] font-semibold text-[#121212] tracking-[-0.01em]">{part.heading}</h3>
                     {paragraphs(part.body)}
                     {part.list && bullets(part.list)}
-                    {part.links && links(part.links)}
                   </div>
                 ))}
-                {s.cta && (
-                  <>
-                    <CtaLink label={s.cta.label} href={isExternal(s.cta.href) ? LINKS[s.cta.href] : localize(LINKS[s.cta.href])} newTab={isExternal(s.cta.href)} />
-                    {s.cta.note && <p className="mt-3 type-body-sm text-[#707070]">{s.cta.note}</p>}
-                  </>
-                )}
-                {s.after && <div className="mt-8 space-y-5">{paragraphs(s.after)}</div>}
+                {s.cta && <CtaLink label={s.cta.label} href={isExternal(s.cta.href) ? LINKS[s.cta.href] : localize(LINKS[s.cta.href])} newTab={isExternal(s.cta.href)} />}
               </Reveal>
             ))}
 

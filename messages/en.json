@@ -1153,31 +1153,22 @@
     "newsletter-november-2026": {
       "tag": "Newsletter",
       "date": "November 2026",
-      "readTime": "7 min read",
+      "readTime": "5 min read",
       "title": "The Skills Signal | November 2026",
       "subtitle": "Cutting through the noise on skills, talent and HR tech",
       "intro": [
-        "Seven days apart this autumn, two of the best-known names in skills technology agreed to be acquired. On 29 September Pearson signed an agreement to acquire Workera. On 6 October SAP announced it would acquire TechWolf, a deal it completed on 16 November. One buyer runs one of the most widely used HR suites, the other is one of the world’s largest learning companies. Both are now bringing skills data inside their own platforms.",
-        "For HR leaders this is more than market news. It tells you where your HR stack is heading, and it raises a question worth asking before your next talent decision."
+        "What does it take to trust the skills data behind your talent decisions? This month we’re starting there: with two deals in our market that put the question in focus, the launch of Skillvue Assess, and what we heard from HR leaders in Milan and beyond."
       ],
       "sections": [
         {
           "img": "marketNews",
-          "heading": "Market news: two deals, two ways to read skills",
+          "heading": "Inferred or measured?",
+          "body": [
+            "This autumn two well-known names in skills technology found new homes, and they approach skills in opposite ways.",
+            "SAP acquired TechWolf, whose technology infers skills from the data organisations already hold, such as job histories, projects and learning records. SAP plans to make it part of the SAP SuccessFactors portfolio.",
+            "Pearson agreed to acquire Workera which, in its own words, measures demonstrated proficiency through adaptive assessments and role-specific scenarios. The deal is expected to close by the end of the year."
+          ],
           "parts": [
-            {
-              "heading": "Key event",
-              "body": [
-                "Two acquisitions announced seven days apart, from two very different buyers, around the same asset: skills data."
-              ]
-            },
-            {
-              "heading": "What happened",
-              "body": [
-                "**SAP and TechWolf.** SAP announced the acquisition of TechWolf on 6 October and completed it on 16 November. The Belgian company infers skills from the data organisations already hold, such as job histories, projects and learning records. According to SAP, it is expected to become an intelligent core of the SAP SuccessFactors portfolio and SAP’s grounding layer for AI agent queries on work and skills, supporting its assistant Joule. Financial terms were not disclosed; TechWolf’s CEO described it as the largest acquisition of a VC-backed software company in Belgian history.",
-                "**Pearson and Workera.** On 29 September Pearson agreed to acquire Workera, a Palo Alto company of around 60 people whose customers include ServiceNow and Accenture. Workera takes the opposite approach: in its own words, it measures demonstrated proficiency through adaptive assessments and role-specific scenarios. In its October filing Pearson said it expects the deal to complete before the end of the year. At the time of writing it has not closed, and the price has not been disclosed."
-              ]
-            },
             {
               "heading": "Our take",
               "body": [
@@ -1192,36 +1183,7 @@
               "list": [
                 "**Ask every vendor, and your own team:** *is this skill inferred or measured?* The answer should be visible next to the data, not buried in a methodology note.",
                 "**Scale the evidence to the decision.** Inference is often enough to decide where to look. For decisions that change someone’s career, ask for measured evidence.",
-                "**Expect skills to arrive inside your HR suite.** If you run SAP SuccessFactors, skills inference is becoming part of the core platform. Plan now for how inferred skills will sit alongside the assessments you already run."
-              ]
-            },
-            {
-              "heading": "Read more",
-              "links": [
-                {
-                  "label": "SAP, announcement (6 October)",
-                  "href": "sapAnnouncement"
-                },
-                {
-                  "label": "SAP, completion (16 November)",
-                  "href": "sapCompletion"
-                },
-                {
-                  "label": "TechWolf, CEO letter",
-                  "href": "techwolfLetter"
-                },
-                {
-                  "label": "TechWolf, how skills are inferred (documentation)",
-                  "href": "techwolfDocs"
-                },
-                {
-                  "label": "Workera, announcement (29 September)",
-                  "href": "workeraAnnouncement"
-                },
-                {
-                  "label": "Pearson, SEC filing (22 October)",
-                  "href": "pearsonFiling"
-                }
+                "**Expect skills to arrive inside your HR suite.** If you run SAP SuccessFactors, skills inference is set to become part of the core platform. Plan now for how inferred skills will sit alongside the assessments you already run."
               ]
             }
           ]
@@ -1230,27 +1192,19 @@
           "img": "assess",
           "heading": "Skillvue Assess is live",
           "body": [
-            "On 19 November we launched Skillvue Assess, built around one idea: measure what people can actually do.",
-            "Skillvue Assess creates role-specific assessments for candidates and employees, calibrated to your organisation’s context, operating model and goals. People take them as a conversation or step by step, by text, audio or video, in more than 30 languages, with participation above 80%. Soft skills are scored from 1 to 5 and hard skills from 0 to 100%, with the evidence behind every score. You set the rules; people make the decisions.",
-            "What that looks like in practice:"
-          ],
-          "list": [
-            "**Carrefour:** hiring success rose from 65% to 85% when Skillvue results reached hiring managers.",
-            "**Subdued:** 12-month turnover fell by 50% across six countries, among employees hired after a Skillvue assessment."
+            "This month we launched Skillvue Assess, built around one idea: measure what people can actually do.",
+            "Skillvue Assess creates role-specific assessments for candidates and employees, calibrated to your organisation’s context, operating model and goals. People take them as a conversation or step by step, by text, audio or video, in more than 30 languages, with participation above 80%. Soft skills are scored from 1 to 5 and hard skills from 0 to 100%, with the evidence behind every score. You set the rules; people make the decisions."
           ],
           "cta": {
             "label": "Discover Skillvue Assess",
             "href": "assess"
-          },
-          "after": [
-            "Working on a business case for 2027? [Try the Skillvue ROI Calculator](roiCalculator) to estimate the impact on your own numbers."
-          ]
+          }
         },
         {
           "img": "forum",
-          "heading": "Reskill or hire? What the Talent Pioneers said at the Forum People & Culture",
+          "heading": "Reskill or hire?",
           "body": [
-            "On 18 November, at the [Forum HR People & Culture](forumHr) at IULM in Milan, the Talent Pioneers panel brought together Francesco Bianco, CHRO of Angelini Industries, Alex Grosset, Head of HR Governance & Innovation at Credem Group, and Nicolò Mazzocchi, Skillvue co-founder [ruolo da confermare], moderated by Federico Luperi.",
+            "At the Forum [HR People & Culture](forumHr) at IULM in Milan, the Talent Pioneers panel brought together Francesco Bianco, CHRO of Angelini Industries, Alex Grosset, Head of HR Governance & Innovation at Credem Group, and Nicolò Mazzocchi, Skillvue co-founder [ruolo da confermare], moderated by Federico Luperi.",
             "Three ideas stood out:"
           ],
           "list": [
@@ -1262,17 +1216,16 @@
             "Nicolò closed on what makes change stick: people, leaders and organisation moving together, and a status quo that should feel riskier than change. In his view, the most valuable use of skills data is workforce planning tied directly to the strategic plan."
           ],
           "cta": {
-            "label": "Meet the Talent Pioneers",
-            "href": "talentPioneers",
-            "note": "[link al video del panel quando disponibile]"
+            "label": "Read Nicolò’s post on the panel",
+            "href": "panelPost"
           }
         },
         {
           "img": "adr",
-          "heading": "Aeroporti di Roma: hidden talent, finally visible",
+          "heading": "ADR: hidden talent, made visible",
           "body": [
-            "Aeroporti di Roma, part of the Mundys group, runs Fiumicino and Ciampino airports, with more than 55 million passengers a year and nearly 5,000 people. Development paths used to start from line-manager nominations, which meant the potential of roughly 4,000 operational staff was largely invisible, at a time when the airport was preparing for new terminals and infrastructure.",
-            "Together with Skillvue’s People Science team, ADR aligned the assessments to its own leadership model, covering technical skills, English and, for the first time for operational roles, soft skills. Employees see the criteria and receive structured feedback, and the results feed managers' decisions rather than replacing them.",
+            "Aeroporti di Roma, part of the Mundys group, runs Fiumicino and Ciampino airports, with more than 55 million passengers a year and nearly 5,000 people. Development paths used to start from line-manager nominations, which meant the potential of up to 4,000 operational staff was largely invisible, at a time when the airport was preparing for new terminals and infrastructure.",
+            "Together with Skillvue’s People Science team, ADR aligned the assessments to its own leadership model, covering technical skills, English and, for the first time for operational roles, soft skills. Employees see the criteria and receive structured feedback, and the results feed managers’ decisions rather than replacing them.",
             "The results:"
           ],
           "list": [
@@ -1281,7 +1234,6 @@
             "**10+** dimensions mapped"
           ],
           "bodyAfter": [
-            "“Assessment is no longer seen merely as a necessary step for a promotion: it is part of an integrated development system that enables the construction of personalised growth paths.” Alberto Valenza, SVP Human Capital, Organization & Procurement, Aeroporti di Roma",
             "In 2026 the same approach is being extended into one coherent cycle that also covers external talent acquisition."
           ],
           "cta": {
@@ -1291,12 +1243,32 @@
         },
         {
           "img": "events",
-          "heading": "What we learned in November",
-          "body": [
-            "**HRC Trends: Learning & Development, 10 November, SACE, Milan.** Six L&D cases from SACE, COIN, Coca-Cola HBC, Zegna, Politecnico di Milano and Fidia Farmaceutici. Fidia’s story closed with a simple question: do people with the skills perform better? Our Simone Patera picked it up in his talk. The business has KPIs, HR has skills data; connecting the two shows which skills actually move results and where L&D investment pays off. [Event page](hrcTrends)",
-            "**Workforce Digital Transformation Summit DACH, 4-5 November, Zurich.** Mike Thomason and Thomas Jorgensen joined senior HR leaders from across the DACH region. Thomas led two roundtables on two sides of the same challenge: the skills baseline you need before AI-powered workforce planning makes sense, and how to measure AI readiness across an organisation so reskilling budgets go where they count. [Event page](wdtsDach)",
-            "**Job in Retail, 10 November, Gi Group HQ, Milan.** At the third edition of the Retail Institute’s HR event, themed “Retail People (R)evolution”, Lara Torres and Mattia Rizzo met HR leaders dealing with high-volume hiring and retention on the shop floor. [Event page](jobInRetail) [aggiungere 1 takeaway da Lara/Mattia]",
-            "**Today: BIP “Learn. Sell. Grow.”, Milan.** As Tech & Ecosystem Partner, we are running a 15-minute lab on skill gaps in sales networks, with a live demo, for sales and business leaders. [link evento da confermare]"
+          "heading": "November from Zurich to Milan",
+          "events": [
+            {
+              "title": "Workforce Digital Transformation Summit DACH | 4-5 November, Zurich",
+              "body": "The skills baseline behind workforce planning, and how to measure AI readiness.",
+              "link": "Event page",
+              "href": "wdtsDach"
+            },
+            {
+              "title": "HRC Trends: Learning & Development | 10 November, SACE, Milan",
+              "body": "Turning L&D projects into observable behaviours that move business KPIs.",
+              "link": "Event page",
+              "href": "hrcTrends"
+            },
+            {
+              "title": "Job in Retail | 10 November, Gi Group HQ, Milan",
+              "body": "High-volume hiring and retention on the shop floor.",
+              "link": "Event page",
+              "href": "jobInRetail"
+            },
+            {
+              "title": "BIP “Learn. Sell. Grow.” | 26 November, Milan",
+              "body": "Our lab on skill gaps in sales networks, with a live demo.",
+              "link": "Event page",
+              "pending": "[link evento da confermare]"
+            }
           ]
         }
       ],
@@ -1322,7 +1294,7 @@
       },
       "meta": {
         "title": "The Skills Signal, November 2026: inferred or measured skills?",
-        "description": "SAP has completed its TechWolf acquisition and Pearson is buying Workera. What it means for HR leaders, plus Skillvue Assess, the Forum People & Culture and Aeroporti di Roma."
+        "description": "Two deals in skills technology, one question for HR leaders: inferred or measured skills? Plus Skillvue Assess, the Forum People & Culture and Aeroporti di Roma."
       }
     },
     "newsletter-october-2026": {
