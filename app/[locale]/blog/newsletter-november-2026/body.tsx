@@ -27,7 +27,10 @@ const LINKS = {
   grosset: 'https://www.linkedin.com/in/alexgrosset/',
   mazzocchi: 'https://www.linkedin.com/in/nicolo-mazzocchi-16a39215b/',
   luperi: 'https://www.linkedin.com/in/federico-luperi/',
-  panelPost: 'https://www.linkedin.com/posts/nicolo-mazzocchi-16a39215b_ai-is-fundamentally-changing-how-work-gets-activity-7530548453349724161-el9-',
+  panelPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7530551376788017152',
+  // Market news sources
+  sapTechwolf: 'https://news.sap.com/2026/10/sap-to-acquire-techwolf-evidence-based-work-age-of-ai/',
+  pearsonWorkera: 'https://www.prnewswire.com/news-releases/pearson-acquires-workera-a-pioneer-in-ai-native-enterprise-assessment-and-skills-verification-302891786.html',
   // Events (LinkedIn posts)
   zurichPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7524463266375286786',
   jobRetailPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7526262702076403712',
@@ -159,6 +162,7 @@ export default async function NovemberNewsletter() {
                     <h3 className="text-[20px] font-semibold text-[#121212] tracking-[-0.01em]">{part.heading}</h3>
                     {paragraphs(part.body)}
                     {part.list && bullets(part.list)}
+                    {paragraphs(part.bodyAfter)}
                   </div>
                 ))}
                 {s.cta && <CtaLink label={s.cta.label} href={isExternal(s.cta.href) ? LINKS[s.cta.href] : localize(LINKS[s.cta.href])} newTab={isExternal(s.cta.href)} />}

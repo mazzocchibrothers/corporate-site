@@ -105,6 +105,7 @@ const DELIBERATE = [
   ['blog.newsletter-october-2026.sections.2.links.', 'event names'],
   ['blog.newsletter-november-2026.imgLabels.marketNews', 'company names'],
   ['blog.newsletter-november-2026.imgLabels.forum', "the event's own name"],
+  ['blog.newsletter-november-2026.sections.0.parts.1.bodyAfter.0', 'source links, kept as "Source" by request'],
   ['customers.talent-pioneers.stages.past.', 'conference names'],
   ['customers.talent-pioneers.stages.upcoming.forumHr.title', "the event's own name"],
   // /trust: names of standards and certifications, which are not translated.
