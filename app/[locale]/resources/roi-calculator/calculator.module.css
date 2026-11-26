@@ -53,7 +53,7 @@
 .valueBox { flex: none; width: 172px; height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 14px; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; transition: border-color .15s, box-shadow .15s; }
 .valueBox:focus-within { border-color: #4b4df7; box-shadow: 0 0 0 3px #e1e2ff; }
 .euro { font-size: 16px; color: #707070; }
-.value { flex: 1; min-width: 0; padding: 0; border: 0; background: transparent; text-align: right; font-size: 18px; font-weight: 600; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: #121212; }
+.value { flex: 1; min-width: 0; padding: 0; border: 0; background: transparent; text-align: right; font-size: 18px; font-weight: 600; letter-spacing: -.01em; color: #121212; }
 .page .value:focus-visible { outline: none; }
 @container (max-width: 360px) {
   .fieldRow { flex-wrap: nowrap; gap: 12px; }
