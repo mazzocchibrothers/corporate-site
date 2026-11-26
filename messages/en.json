@@ -1245,7 +1245,12 @@
           "body": [
             "Zurich and Milan.",
             "This month we met HR leaders across Switzerland and Italy to talk about skills, data and business impact.",
-            "From the Workforce Digital Transformation Summit DACH in Zurich to HRC Trends: Learning & Development, Job in Retail and BIP’s “Learn. Sell. Grow.” in Milan, every conversation came back to the same theme: the value of skills data is measured by its impact on business results."
+            "From the Workforce Digital Transformation Summit DACH in Zurich to HRC Trends: Learning & Development, Job in Retail and BIP’s “Learn. Sell. Grow.” in Milan, every conversation came back to the same theme: the value of skills data is measured by its impact on business results.",
+            "Relive the events:"
+          ],
+          "list": [
+            "[Workforce Digital Transformation Summit DACH, Zurich](zurichPost)",
+            "[Job in Retail, Milan](jobRetailPost)"
           ]
         }
       ],
