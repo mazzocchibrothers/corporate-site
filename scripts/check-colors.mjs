@@ -81,7 +81,7 @@ const ALLOWED = new Set(
     '#10b981 #111 #121212 #141516 #16163a #16a34a #1a1a1a #1a1a2e #1a1a3f #1e1e1e #201436 #222 ' +
     '#22c55e #23234d #2a2350 #2d1a6b #3133e7 #3a1525 #3a1730 #4b4b4b #4b4df7 ' +
     '#5ddba4 #6366f8 #6b7dff #707070 #7a7a7a #7b4dff #7b7df9 #8385ff #848484 #8587ff #888888 #8a8cff ' +
-    '#9395ff #93e0bb #9a9a9a #9b59b6 #9b9dfb #a8ecca #a9a9a9 #a9aaff #b7f5d8 #b91c1c #c2410c #c7d2fe #cdc6f5 #d1d5db ' +
+    '#9395ff #93e0bb #9a9a9a #9b59b6 #9b9dfb #a8ecca #a9a9a9 #a9aaff #b7f5d8 #b91c1c #c2410c #c7d2fe #cdc6f5 ' +
     '#d9603f #d97706 #e2e8f0 #e3f9ec #e5e7eb #e6d5ea #e7e7e8 #e8e4df #ea580c #ebebeb #ece9fb #eeeef0 #ef4444 #efeefb #efeefd ' +
     '#f1f5f9 #f5f3f1 #f5f5f7 #f5f5fa #f6f6ff #f7e6dc #f7f7f7 #f8ddc9 #f8f8fa #fafafa #fdf1ea #fdf3ec #ff4704 #ff5656 ' +
     '#ff5f24 #ff6262 #ff6550 #ff7a7a #ff7d49 #ff8a5b #ff8c00 #ff8c42 #ff9a9a ' +

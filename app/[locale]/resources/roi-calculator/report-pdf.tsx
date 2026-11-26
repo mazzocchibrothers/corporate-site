@@ -27,7 +27,9 @@ const styles = StyleSheet.create({
   column: { flex: 1 },
   heading: { color: '#4b4df7', fontSize: 8.5, textTransform: 'uppercase', letterSpacing: 0.6, fontWeight: 600, marginBottom: 10 },
   row: { flexDirection: 'row', justifyContent: 'space-between', gap: 8, paddingVertical: 8, borderBottom: '1 solid #eef0f2' },
-  rowLabel: { color: '#555555', flexShrink: 1, lineHeight: 1.4 },
+  // The label takes the room left and wraps; the amount never shrinks, so a long
+  // Italian label and a large amount stay apart and inside the column.
+  rowLabel: { color: '#555555', flex: 1, flexShrink: 1, lineHeight: 1.4 },
   rowValue: { fontWeight: 600, flexShrink: 0 },
   driverValue: { color: '#4b4df7', fontWeight: 600, flexShrink: 0 },
   section: { marginTop: 24 },
