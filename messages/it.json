@@ -1153,75 +1153,37 @@
     "newsletter-november-2026": {
       "tag": "Newsletter",
       "date": "Novembre 2026",
-      "readTime": "7 min di lettura",
+      "readTime": "5 min di lettura",
       "title": "The Skills Signal | Novembre 2026",
       "subtitle": "Cutting through the noise on skills, talent and HR tech",
       "intro": [
-        "A sette giorni di distanza, quest’autunno, due dei nomi più noti della skills technology hanno accettato di essere acquisiti. Il 29 settembre Pearson ha firmato l’accordo per acquisire Workera. Il 6 ottobre SAP ha annunciato l’acquisizione di TechWolf, completata poi il 16 novembre. Da una parte una delle suite HR più diffuse, dall’altra uno dei maggiori gruppi mondiali della formazione: entrambi stanno portando i dati sulle competenze dentro la propria piattaforma.",
-        "Per chi guida l’HR non è solo una notizia di settore. Dice dove sta andando il tuo stack HR e pone una domanda da farsi prima della prossima decisione sul talento."
+        "Quanto possiamo fidarci dei dati sulle competenze su cui basiamo le decisioni sul talento? Questo mese partiamo proprio da questa domanda, alla luce di due acquisizioni nel nostro settore, del lancio di Skillvue Assess e del confronto con gli HR leader che abbiamo incontrato a Milano e non solo."
       ],
       "sections": [
         {
           "img": "marketNews",
-          "heading": "Market news: due acquisizioni, due modi di leggere le competenze",
+          "heading": "Dedotta o misurata?",
+          "body": [
+            "Quest’autunno due nomi noti della skills technology, con approcci diversi alle competenze, sono stati al centro di altrettante acquisizioni.",
+            "SAP ha acquisito TechWolf, la cui tecnologia deduce le competenze a partire dai dati già a disposizione delle aziende, come i ruoli ricoperti, i progetti e la formazione svolta. SAP prevede di integrarla nel portafoglio di soluzioni SAP SuccessFactors.",
+            "Pearson ha avviato l’acquisizione di Workera, che, secondo la descrizione dell’azienda stessa, misura la “demonstrated proficiency” (la competenza dimostrata) attraverso assessment adattivi e scenari specifici per ruolo. Il completamento dell’acquisizione è previsto entro fine anno."
+          ],
           "parts": [
-            {
-              "heading": "L’evento",
-              "body": [
-                "Due acquisizioni annunciate a sette giorni di distanza, da due acquirenti molto diversi, attorno allo stesso asset: i dati sulle competenze."
-              ]
-            },
-            {
-              "heading": "Cosa è successo",
-              "body": [
-                "**SAP e TechWolf.** SAP ha annunciato l’acquisizione di TechWolf il 6 ottobre e l’ha completata il 16 novembre. La società belga deduce le competenze dai dati che le aziende hanno già, come storici di ruolo, progetti e formazione svolta. Secondo SAP, diventerà uno dei motori intelligenti del portfolio SAP SuccessFactors e la base su cui gli agenti AI di SAP rispondono alle domande su lavoro e competenze, a supporto dell’assistente Joule. Le condizioni economiche non sono state rese note; il CEO di TechWolf l’ha definita la più grande acquisizione di una software company finanziata da venture capital nella storia del Belgio.",
-                "**Pearson e Workera.** Il 29 settembre Pearson ha accettato di acquisire Workera, società di Palo Alto con circa 60 persone e clienti come ServiceNow e Accenture. Workera segue l’approccio opposto: per usare le sue parole, misura la “demonstrated proficiency”, con assessment adattivi e scenari specifici per ruolo. Nel documento depositato a ottobre Pearson prevede di chiudere l’operazione entro fine anno. Al momento della pubblicazione non è ancora chiusa e il prezzo non è stato comunicato."
-              ]
-            },
             {
               "heading": "La nostra lettura",
               "body": [
-                "Non sono due versioni della stessa scommessa. Sono due metà dello stesso problema.",
-                "**La deduzione dà ampiezza.** Leggendo i segnali già presenti nei sistemi (storici di ruolo, dati di progetto, formazione svolta), un sistema che deduce le competenze può disegnare in poco tempo la mappa delle competenze di un’intera organizzazione. È utile per la pianificazione della forza lavoro, per costruire tassonomie e per capire dove guardare.",
-                "**La misurazione dà prove.** Quando una decisione ha conseguenze reali per una persona e per il business (un’assunzione, una promozione, un investimento in reskilling), una competenza misurata è un’evidenza diversa da una competenza che un modello si aspetta che qualcuno abbia.",
-                "Una non sostituisce l’altra, e il fatto che grandi piattaforme stiano comprando entrambi gli approcci fa pensare che il mercato veda valore in entrambi. Il rischio pratico, per l’HR, è mescolarle senza sapere quale sia quale. Una dashboard che unisce competenze dedotte e misurate può sembrare precisa e nascondere livelli di affidabilità molto diversi."
+                "Non sono due approcci equivalenti, ma due risposte complementari allo stesso problema.",
+                "La deduzione offre una visione d’insieme. Analizzando le informazioni già presenti nei sistemi aziendali (ruoli ricoperti, dati sui progetti, formazione svolta), un sistema che deduce le competenze può tracciare rapidamente una mappa delle competenze dell’intera organizzazione. È utile per pianificare la forza lavoro, costruire tassonomie e individuare le aree da approfondire.",
+                "La misurazione fornisce evidenze concrete. Quando una decisione ha conseguenze reali per una persona e per il business (un’assunzione, una promozione, un investimento in reskilling), misurare una competenza fornisce un’evidenza di natura diversa rispetto a stimarla attraverso un modello.",
+                "Un approccio non sostituisce l’altro. Il fatto che le grandi piattaforme stiano investendo in entrambi suggerisce che il mercato riconosce il valore di tutti e due. Per l’HR, il rischio concreto è utilizzare questi dati senza distinguerne la provenienza. Una dashboard che combina competenze dedotte e misurate può apparire precisa, pur nascondendo livelli di affidabilità molto diversi."
               ]
             },
             {
               "heading": "Cosa significa per te",
               "list": [
-                "**Chiedilo a ogni fornitore, e al tuo team:** *questa competenza è dedotta o misurata?* La risposta dovrebbe stare accanto al dato, non in una nota metodologica.",
-                "**Commisura l’evidenza alla decisione.** Per capire dove guardare spesso basta la deduzione. Per le decisioni che cambiano la carriera di una persona servono evidenze misurate.",
-                "**Aspettati le competenze dentro la tua suite HR.** Se usi SAP SuccessFactors, la deduzione delle competenze sta entrando nella piattaforma. Conviene pensare già ora a come le competenze dedotte convivranno con gli assessment che fai oggi."
-              ]
-            },
-            {
-              "heading": "Per approfondire",
-              "links": [
-                {
-                  "label": "SAP, annuncio (6 ottobre)",
-                  "href": "sapAnnouncement"
-                },
-                {
-                  "label": "SAP, closing (16 novembre)",
-                  "href": "sapCompletion"
-                },
-                {
-                  "label": "TechWolf, lettera del CEO",
-                  "href": "techwolfLetter"
-                },
-                {
-                  "label": "TechWolf, come vengono dedotte le competenze (documentazione)",
-                  "href": "techwolfDocs"
-                },
-                {
-                  "label": "Workera, annuncio (29 settembre)",
-                  "href": "workeraAnnouncement"
-                },
-                {
-                  "label": "Pearson, documento SEC (22 ottobre)",
-                  "href": "pearsonFiling"
-                }
+                "Chiedi a ogni fornitore e al tuo team: questa competenza è dedotta o misurata? La risposta dovrebbe essere visibile accanto al dato, non relegata a una nota metodologica.",
+                "Valuta quali evidenze servono in base alla decisione. Per individuare le aree da approfondire, spesso basta la deduzione. Per le decisioni che incidono sulla carriera di una persona, servono dati ottenuti attraverso la misurazione.",
+                "Preparati all’arrivo dei dati sulle competenze nella tua suite HR. Se usi SAP SuccessFactors, la deduzione delle competenze è destinata a entrare nella piattaforma. Conviene quindi iniziare a pensare a come questi dati si integreranno con gli assessment che utilizzi oggi."
               ]
             }
           ]
@@ -1230,59 +1192,49 @@
           "img": "assess",
           "heading": "Skillvue Assess è live",
           "body": [
-            "Il 19 novembre abbiamo lanciato Skillvue Assess, costruito attorno a un’idea: misurare ciò che le persone sanno fare davvero.",
-            "Skillvue Assess crea assessment specifici per ogni ruolo, per candidati e dipendenti, calibrati sul contesto, sul modello operativo e sugli obiettivi della tua azienda. Si svolgono in forma conversazionale o passo dopo passo, con testo, audio o video, in oltre 30 lingue, e la partecipazione supera l’80%. Le soft skill hanno un punteggio da 1 a 5, le hard skill da 0 a 100%, con le evidenze dietro ogni punteggio. Le regole le decidi tu, le decisioni restano alle persone.",
-            "In pratica:"
-          ],
-          "list": [
-            "**Carrefour:** le assunzioni riuscite sono passate dal 65% all’85% quando i risultati di Skillvue sono arrivati agli hiring manager.",
-            "**Subdued:** turnover a 12 mesi ridotto del 50% in 6 paesi, tra i dipendenti assunti dopo un assessment Skillvue."
+            "Questo mese abbiamo lanciato Skillvue Assess, nato da un’idea semplice: misurare ciò che le persone sanno fare davvero.",
+            "Skillvue Assess permette di creare assessment specifici per ogni ruolo, rivolti a candidati e dipendenti, tenendo conto del contesto, del modello operativo e degli obiettivi della tua azienda.\n\nGli assessment possono essere svolti in modalità conversazionale o attraverso un percorso guidato, con testo, audio o video, in oltre 30 lingue. Il tasso di partecipazione supera l’80%.\n\nLe soft skill sono misurate su una scala da 1 a 5, le hard skill da 0 a 100%, e ogni punteggio è accompagnato dalle evidenze su cui si basa. Sei tu a definire le regole, e le decisioni restano alle persone."
           ],
           "cta": {
             "label": "Scopri Skillvue Assess",
             "href": "assess"
-          },
-          "after": [
-            "Stai costruendo il business case per il 2027? [Prova Skillvue ROI Calculator](roiCalculator) per stimare l’impatto sui tuoi numeri."
-          ]
+          }
         },
         {
           "img": "forum",
-          "heading": "Reskilling o nuove assunzioni? Cosa hanno detto i Talent Pioneers al Forum People & Culture",
+          "heading": "Reskilling o nuove assunzioni?",
           "body": [
-            "Il 18 novembre, al [Forum HR People & Culture](forumHr), allo IULM di Milano, il panel Talent Pioneers ha riunito Francesco Bianco, CHRO di Angelini Industries, Alex Grosset, Head of HR Governance & Innovation di Credem Group, e Nicolò Mazzocchi, co-founder di Skillvue [ruolo da confermare], con la moderazione di Federico Luperi.",
+            "Al Forum [HR People & Culture](forumHr), all’Università IULM di Milano, il panel Talent Pioneers ha riunito Francesco Bianco, CHRO di Angelini Industries, Alex Grosset, Head of HR Governance & Innovation di Credem Group, e Nicolò Mazzocchi, co-founder di Skillvue [ruolo da confermare], con la moderazione di Federico Luperi.",
             "Tre idee su tutte:"
           ],
           "list": [
-            "**Prima si guarda in casa.** “Il primo mercato da cui assumere è quello interno.” [DA APPROVARE, Francesco Bianco] Prima di aprire una ricerca, serve sapere cosa sanno già fare le tue persone.",
-            "**Decidere con i dati, non con dati perfetti.** Scegliere tra reskilling e nuove assunzioni è una decisione di business. Non servono informazioni perfette, servono dati sulle competenze di cui ti fidi.",
-            "**L’AI allarga l’imbuto, la decisione resta alle persone.** [DA APPROVARE, Credem] La tecnologia aiuta a vedere più persone e più opzioni; la scelta resta umana."
+            "**Partire dalle risorse interne.** “Il primo mercato da cui assumere è quello interno.” [DA APPROVARE, Francesco Bianco] Prima di avviare una nuova ricerca, è importante conoscere le competenze delle persone che fanno già parte dell’organizzazione.",
+            "**Decidere con i dati, senza aspettare che siano perfetti.** Scegliere tra reskilling e nuove assunzioni è una decisione di business. Non servono informazioni perfette, ma dati affidabili sulle competenze.",
+            "**L’AI amplia il bacino di persone da considerare, ma la decisione resta umana.** [DA APPROVARE, Credem] La tecnologia permette di prendere in considerazione più persone e più alternative, senza sostituirsi a chi decide."
           ],
           "bodyAfter": [
-            "Nicolò ha chiuso su cosa fa funzionare il cambiamento: persone, leader e organizzazione che si muovono insieme, e uno status quo che dovrebbe fare più paura del cambiamento. Secondo lui, l’uso più prezioso dei dati sulle competenze è la pianificazione della forza lavoro legata direttamente al piano strategico."
+            "Nicolò ha chiuso il confronto soffermandosi sulle condizioni per un cambiamento efficace: persone, leader e organizzazione devono muoversi nella stessa direzione, e mantenere lo status quo dovrebbe fare più paura che cambiare. Secondo lui, l’applicazione più preziosa dei dati sulle competenze è una pianificazione della forza lavoro strettamente legata al piano strategico."
           ],
           "cta": {
-            "label": "Scopri i Talent Pioneers",
-            "href": "talentPioneers",
-            "note": "[link al video del panel quando disponibile]"
+            "label": "Leggi il post di Nicolò sul panel",
+            "href": "panelPost"
           }
         },
         {
           "img": "adr",
-          "heading": "Aeroporti di Roma: il talento nascosto, finalmente visibile",
+          "heading": "Il talento nascosto di ADR",
           "body": [
-            "Aeroporti di Roma, gruppo Mundys, gestisce gli aeroporti di Fiumicino e Ciampino: oltre 55 milioni di passeggeri l’anno e quasi 5.000 persone. I percorsi di sviluppo partivano dalle segnalazioni dei responsabili, e così il potenziale di circa 4.000 operativi restava in gran parte invisibile, proprio mentre l’aeroporto si preparava a nuovi terminal e nuove infrastrutture.",
-            "Insieme al team People Science di Skillvue, ADR ha allineato gli assessment al proprio modello di leadership: competenze tecniche, inglese e, per la prima volta nei ruoli operativi, soft skill. Le persone conoscono i criteri e ricevono un feedback strutturato, e i risultati alimentano le decisioni dei manager senza sostituirle.",
+            "Aeroporti di Roma, parte del gruppo Mundys, gestisce gli aeroporti di Fiumicino e Ciampino, con oltre 55 milioni di passeggeri l’anno e quasi 5.000 dipendenti. I percorsi di sviluppo partivano dalle segnalazioni dei responsabili. Di conseguenza, il potenziale dei dipendenti operativi, fino a 4.000 persone, rimaneva in gran parte inesplorato, proprio mentre ADR si preparava a nuovi terminal e nuove infrastrutture.",
+            "Insieme al team People Science di Skillvue, ADR ha allineato gli assessment al proprio modello di leadership, includendo competenze tecniche, inglese e, per la prima volta nei ruoli operativi, soft skill. Le persone conoscono i criteri di valutazione e ricevono un feedback strutturato. I risultati supportano le decisioni dei manager, senza sostituirsi al loro giudizio.",
             "I risultati:"
           ],
           "list": [
-            "**Fino a 4.000** operativi inclusi per la prima volta nei percorsi di sviluppo",
-            "**-97%** di tempi di gestione: da mesi a giorni",
-            "**10+** dimensioni mappate"
+            "**Fino a 4.000** dipendenti operativi coinvolti per la prima volta nei percorsi di sviluppo",
+            "**Riduzione del 97%** dei tempi di gestione: da mesi a giorni",
+            "**Oltre 10** dimensioni mappate"
           ],
           "bodyAfter": [
-            "“L’Assessment non è più visto soltanto come uno step necessario per una promozione: è parte di un sistema integrato di sviluppo che permette la costruzione di percorsi di crescita personalizzati.” Alberto Valenza, SVP Human Capital, Organization & Procurement, Aeroporti di Roma",
-            "Nel 2026 lo stesso approccio si estende in un unico ciclo coerente che comprende anche la Talent Acquisition esterna."
+            "Nel 2026 lo stesso approccio si estende anche alla Talent Acquisition esterna, all’interno di un unico ciclo integrato."
           ],
           "cta": {
             "label": "Leggi la customer story",
@@ -1291,19 +1243,39 @@
         },
         {
           "img": "events",
-          "heading": "Cosa abbiamo imparato a novembre",
-          "body": [
-            "**HRC Trends: Learning & Development, 10 novembre, SACE, Milano.** Sei casi L&D portati da SACE, COIN, Coca-Cola HBC, Zegna, Politecnico di Milano e Fidia Farmaceutici. Il racconto di Fidia si è chiuso con una domanda semplice: chi ha le competenze performa di più? Simone Patera è partito da lì nel suo intervento. Il business ha i KPI, l’HR ha i dati sulle competenze: metterli in relazione mostra quali competenze incidono davvero sui risultati e dove conviene investire in formazione. [Pagina evento](hrcTrends)",
-            "**Workforce Digital Transformation Summit DACH, 4-5 novembre, Zurigo.** Mike Thomason e Thomas Jorgensen si sono confrontati con HR leader di tutta l’area DACH. Thomas ha guidato due tavoli su due facce della stessa sfida: la baseline di competenze che serve prima che la pianificazione della forza lavoro con l’AI abbia senso, e come misurare la AI readiness in tutta l’organizzazione per investire in reskilling dove conta davvero. [Pagina evento](wdtsDach)",
-            "**Job in Retail, 10 novembre, sede Gi Group, Milano.** Alla terza edizione dell’evento HR di Retail Institute, dal titolo “Retail People (R)evolution”, Lara Torres e Mattia Rizzo hanno incontrato HR leader alle prese con selezione ad alti volumi e retention nei punti vendita. [Pagina evento](jobInRetail) [aggiungere 1 takeaway da Lara/Mattia]",
-            "**Oggi siamo a “Learn. Sell. Grow.” di BIP, Milano.** Come Tech & Ecosystem Partner portiamo un lab di 15 minuti sugli skill gap delle reti commerciali, con demo live, per leader sales e business. [link evento da confermare]"
+          "heading": "Novembre tra Zurigo e Milano",
+          "events": [
+            {
+              "title": "Workforce Digital Transformation Summit DACH | 4-5 novembre, Zurigo",
+              "body": "Come costruire una base di dati sulle competenze per pianificare la forza lavoro e misurare l’AI readiness.",
+              "link": "Pagina evento",
+              "href": "wdtsDach"
+            },
+            {
+              "title": "HRC Trends: Learning & Development | 10 novembre, SACE, Milano",
+              "body": "Come tradurre i progetti L&D in comportamenti osservabili che incidono sui KPI di business.",
+              "link": "Pagina evento",
+              "href": "hrcTrends"
+            },
+            {
+              "title": "Job in Retail | 10 novembre, sede Gi Group, Milano",
+              "body": "Selezione su larga scala e retention nei punti vendita.",
+              "link": "Pagina evento",
+              "href": "jobInRetail"
+            },
+            {
+              "title": "“Learn. Sell. Grow.” di BIP | 26 novembre, Milano",
+              "body": "Il nostro laboratorio dedicato agli skill gap delle reti commerciali, con una demo dal vivo.",
+              "link": "Pagina evento",
+              "pending": "[link evento da confermare]"
+            }
           ]
         }
       ],
       "closing": {
         "heading": "Al prossimo mese",
         "body": [
-          "Due acquisizioni, una domanda. Qualunque sia oggi lo stato dei tuoi dati sulle competenze, sapere cosa è dedotto e cosa è misurato è un buon primo passo per capire quanto puoi fidarti. Ci sentiamo a dicembre."
+          "Due acquisizioni, una domanda. Qualunque siano i dati sulle competenze di cui disponi oggi, distinguere le competenze dedotte da quelle misurate è un buon punto di partenza per capire quanto puoi fidarti.\n\nCi sentiamo a dicembre."
         ]
       },
       "finalKicker": "Scopri Skillvue",
@@ -1322,7 +1294,7 @@
       },
       "meta": {
         "title": "The Skills Signal, novembre 2026: competenze dedotte o misurate?",
-        "description": "SAP ha completato l’acquisizione di TechWolf e Pearson sta acquisendo Workera. Cosa cambia per chi guida l’HR, più Skillvue Assess, il Forum People & Culture e Aeroporti di Roma."
+        "description": "Due acquisizioni nella skills technology, una domanda per chi guida l’HR: competenze dedotte o misurate? In più Skillvue Assess, il Forum People & Culture e Aeroporti di Roma."
       }
     },
     "newsletter-october-2026": {
