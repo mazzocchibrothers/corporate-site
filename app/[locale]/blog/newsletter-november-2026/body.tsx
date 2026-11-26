@@ -28,6 +28,9 @@ const LINKS = {
   mazzocchi: 'https://www.linkedin.com/in/nicolo-mazzocchi-16a39215b/',
   luperi: 'https://www.linkedin.com/in/federico-luperi/',
   panelPost: 'https://www.linkedin.com/posts/nicolo-mazzocchi-16a39215b_ai-is-fundamentally-changing-how-work-gets-activity-7530548453349724161-el9-',
+  // Events (LinkedIn posts)
+  zurichPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7524463266375286786',
+  jobRetailPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7526262702076403712',
   // Internal pages (already live on the site)
   assess: '/product/skillvue-assess',
   adr: '/customers/adr',
