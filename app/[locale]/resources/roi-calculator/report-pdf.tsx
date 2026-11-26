@@ -14,7 +14,9 @@ const styles = StyleSheet.create({
   top: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 25 },
   logo: { width: 92, height: 25, objectFit: 'contain' },
   pill: { maxWidth: 270, fontSize: 8, letterSpacing: 1, textTransform: 'uppercase', color: '#4b4df7', border: '1 solid #d9daff', borderRadius: 15, paddingVertical: 5, paddingHorizontal: 12 },
-  title: { fontSize: 25, fontWeight: 600, lineHeight: 1.1, marginTop: 24, marginBottom: 5 },
+  note: { fontSize: 9, lineHeight: 1.5, color: '#555555', marginTop: 20 },
+  noteLink: { color: '#4b4df7', textDecoration: 'underline' },
+  title: { fontSize: 25, fontWeight: 600, lineHeight: 1.1, marginTop: 14, marginBottom: 5 },
   meta: { fontSize: 9, color: '#9a9a9a' },
   metrics: { flexDirection: 'row', justifyContent: 'space-between', gap: 14, marginTop: 23, backgroundColor: '#f6f7ff', border: '1 solid #e1e2ff', borderRadius: 12, padding: 22 },
   metric: { flexShrink: 1 },
@@ -54,6 +56,9 @@ export async function generateReportPDF(content: ReturnType<typeof reportContent
           <Image src="/logos/skillvue-roi-report-logo.png" style={styles.logo} />
           <Text style={styles.pill}>{content.pill}</Text>
         </View>
+        <Text style={styles.note}>
+          {content.note.before}<Link src={content.demoUrl} style={styles.noteLink}>{content.note.link}</Link>{content.note.after}
+        </Text>
         <Text style={styles.title}>{content.title}</Text>
         <Text style={styles.meta}>{content.meta}</Text>
         <View style={styles.metrics} wrap={false}>

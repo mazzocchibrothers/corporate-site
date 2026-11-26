@@ -10978,86 +10978,77 @@
       "description": "Estimate the annual value of better hiring, promotions, leadership succession and transformation decisions with the Skillvue ROI calculator."
     },
     "eyebrow": "Talent ROI calculator",
-    "heading": "What is Skillvue worth to your organisation?",
-    "intro": "Pick a use case, enter two numbers, and see the estimated annual return for your organisation.",
-    "useCase": "Use case",
-    "positioning": "The skills operating system",
-    "positioningBody": "Evidence-based talent decisions, grounded in science.",
+    "heading": "What could proven HR decisions save you?",
+    "intro": "Start with two inputs and get an indicative number now. When you’re ready, we’ll build your real ROI with you, on your own costs.",
+    "useCase": "HR decision",
     "bookDemo": "Book a demo",
-    "downloadReport": "Download report",
-    "results": "Estimated results",
+    "downloadReport": "Download the report",
     "scenario": "Scenario",
     "scenarios": {
       "conservative": "Conservative",
       "base": "Base",
       "optimistic": "Optimistic"
     },
-    "annualSavings": "Estimated annual savings",
-    "annualValue": "Estimated annual value",
     "roi": "ROI",
-    "fit": "At this scale the annual license outweighs the modeled value, so let’s talk about whether Skillvue is the right fit.",
+    "fit": "At this scale the license outweighs the modelled value. Let us talk about fit.",
     "softDriver": "Recruiter time freed",
-    "softDriverSub": "Saved screening time",
-    "payback": "months to pay back",
-    "closing": "Put your own data behind <span>these numbers.</span>",
+    "payback": "Months to pay back",
+    "closing": "Put your own skills data behind these numbers.",
     "hiring": {
       "tab": "Hiring",
-      "heading": "Put a number on <span>better hiring</span>.",
+      "heading": "Put a number on better hiring.",
       "body": "See the recruiter time and failed-hire costs that come off your plate each year.",
       "input1": "Hires per year",
       "input2": "Average salary",
       "driver": "Failed-hire costs avoided",
-      "driverSub": "Cash equivalent"
+      "unit1": "hires"
     },
     "promote": {
-      "tab": "Promote",
-      "heading": "Put a number on <span>better promotions</span>.",
+      "tab": "Promotion",
+      "heading": "Put a number on better promotions.",
       "body": "Promote the right people with confidence, and see what fewer failed promotions save each year.",
       "input1": "Total employees",
-      "input2": "Avg salary · promoted role",
+      "input2": "Avg salary of promoted role",
       "driver": "Failed promotions avoided",
-      "driverSub": "Cost of failed promotions avoided"
+      "unit1": "employees"
     },
     "develop": {
-      "tab": "Develop",
-      "heading": "Put a number on your <span>leadership pipeline</span>.",
-      "body": "Know who’s ready before the seat opens, and see what shorter leadership vacancies save each year.",
+      "tab": "Succession",
+      "heading": "Put a number on your leadership pipeline.",
+      "body": "Know who is ready before the seat opens, and see what shorter leadership vacancies save each year.",
       "input1": "Total employees",
       "input2": "Avg leadership salary",
       "driver": "Leadership vacancy cost cut",
-      "driverSub": "Leadership roles filled sooner"
+      "unit1": "employees"
     },
     "derisk": {
-      "tab": "De-risk",
-      "heading": "Put a number on <span>transformation risk</span>.",
+      "tab": "Transformation",
+      "heading": "Put a number on transformation risk.",
       "body": "Go into big transformations skills-first, and see the risk that stays off the table each year.",
       "input1": "Transformation budget",
       "input2": "Total employees",
       "driver": "Risk exposure reduced",
-      "driverSub": "Estimated reduction in risk exposure"
+      "unit2": "employees"
     },
     "reportForm": {
-      "heading": "Get your ROI report",
-      "body": "Enter your details to download your personalised {module} report.",
-      "close": "Close",
+      "heading": "Get your personalised report",
+      "body": "Download a PDF with your inputs, the breakdown and every assumption.",
       "name": "Name",
       "email": "Work email",
       "company": "Company",
       "industry": "Industry",
-      "selectIndustry": "Select...",
+      "selectIndustry": "Select",
       "industries": {
-        "luxury": "Luxury & Fashion",
-        "retail": "Retail / Large-scale distribution",
+        "luxury": "Luxury and Fashion",
+        "retail": "Retail",
         "banking": "Banking",
         "insurance": "Insurance",
         "pharma": "Pharma",
         "manufacturing": "Manufacturing",
-        "energy": "Oil & Energy",
+        "energy": "Oil and Energy",
         "other": "Other"
       },
-      "consent": "I agree to receive other communications from Skillvue. Read our <a>Privacy Policy</a>.",
-      "processingConsent": "I agree to allow Skillvue to store and process my personal data.",
-      "unsubscribe": "You can unsubscribe from these communications at any time.",
+      "processingConsent": "I agree to allow Skillvue to store and process my personal data, as described in the <a>Privacy Policy</a>.",
       "submit": "Get my report",
       "submitting": "Sending…",
       "submitError": "We couldn’t send your details. Please try again.",
@@ -11065,7 +11056,12 @@
       "downloadHint": "Your download will start automatically. If it doesn’t, use the button below.",
       "downloadError": "We couldn’t create the PDF. Please try again.",
       "readyHeading": "Your report is ready",
-      "downloadAgain": "Download again"
+      "downloadAgain": "Download again",
+      "errorName": "Please add your name.",
+      "errorEmail": "Please add a valid work email.",
+      "errorCompany": "Please add your company.",
+      "errorIndustry": "Please choose an industry.",
+      "errorConsent": "Please tick to continue."
     },
     "report": {
       "title": "What Skillvue is worth to {company}",
@@ -11126,6 +11122,13 @@
           "body": "In manufacturing, skills gaps on the line and in supervision show up directly in output, safety and retention. Skillvue measures the skills that predict performance, so hiring, promotion and reskilling decisions are made on evidence rather than gut feel."
         }
       }
-    }
+    },
+    "calculator": "Calculator",
+    "indicativeValue": "Indicative annual value",
+    "paybackUnderOne": "under 1",
+    "note": "Indicative value. <a>We’ll build your real ROI with you</a>, on your own costs.",
+    "range": "{min} to {max}",
+    "rangeUnit": "{min} to {max} {unit}",
+    "closingBody": "See Skillvue live on your own roles, framework and use case."
   }
 }

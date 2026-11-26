@@ -66,16 +66,16 @@ export function calculate(module: Module, first: number, second: number, scenari
   return { hard, soft, total, roi: (total - LICENSE) / LICENSE * 100, payback: LICENSE / (total / 12) };
 }
 
-export type ReportContact = { name: string; company: string; industry: string; date: Date };
-
-export function reportContent({ contact, module, scenario, values, locale, translate: t, demoUrl }: {
-  contact: ReportContact; module: Module; scenario: Scenario; values: number[]; locale: string;
-  translate: (key: string, values?: Record<string, string | number>) => string; demoUrl: string;
+/**
+ * The model's assumptions for one module and scenario, as value + label pairs
+ * ("15%" · "baseline failure rate"). The PDF report and the calculator's
+ * "how we calculated" panel both list them, so they cannot disagree.
+ */
+export function assumptionRows({ module, scenario, locale, translate: t }: {
+  module: Module; scenario: Scenario; locale: string;
+  translate: (key: string, values?: Record<string, string | number>) => string;
 }) {
-  const inputs = MODULES[module].inputs.map((input, i) => normalizeInput(values[i], input));
-  const result = calculate(module, inputs[0], inputs[1], scenario);
   const euro = (value: number) => new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(value);
-  const number = (value: number) => new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(value);
   const pct = (value: number) => new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 0 }).format(value);
   const multiplier = SCENARIOS[scenario];
   const assumptions = {
@@ -85,13 +85,39 @@ export function reportContent({ contact, module, scenario, values, locale, trans
     derisk: [[pct(0.5), 'workforceImpacted'], [pct(0.3), 'failureProbability'], [euro(1000), 'employeeCost'], [pct(0.1 * multiplier), 'riskReduction']],
   }[module];
   assumptions.push([euro(LICENSE), 'license']);
+  return assumptions.map(([value, key]) => ({ value, label: t(`report.assumptionLabels.${key}`) }));
+}
+
+export type ReportContact = { name: string; company: string; industry: string; date: Date };
+
+type Translate = {
+  (key: string, values?: Record<string, string | number>): string;
+  markup: (key: string, values: Record<string, (chunks: string) => string>) => string;
+};
+
+export function reportContent({ contact, module, scenario, values, locale, translate: t, demoUrl }: {
+  contact: ReportContact; module: Module; scenario: Scenario; values: number[]; locale: string;
+  translate: Translate; demoUrl: string;
+}) {
+  const inputs = MODULES[module].inputs.map((input, i) => normalizeInput(values[i], input));
+  const result = calculate(module, inputs[0], inputs[1], scenario);
+  const euro = (value: number) => new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(value);
+  const number = (value: number) => new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(value);
+  const pct = (value: number) => new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 0 }).format(value);
+  const assumptions = assumptionRows({ module, scenario, locale, translate: t });
   const sector = ['luxury', 'retail', 'banking', 'insurance', 'pharma', 'manufacturing'].includes(contact.industry) ? contact.industry : null;
   return {
+    // The page's results note, first in the report: the linked words are kept
+    // apart so the PDF can link them to the demo booking.
+    note: (() => {
+      const [before, link, after] = t.markup('note', { a: (chunks) => `\u0000${chunks}\u0000` }).split('\u0000');
+      return { before, link, after };
+    })(),
     title: t('report.title', { company: contact.company }),
     meta: t('report.preparedFor', { name: contact.name, date: new Intl.DateTimeFormat(locale === 'it' ? 'it' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).format(contact.date) }),
     pill: sector ? `${t(`${module}.tab`)} · ${t(`report.sectors.${sector}.label`)}` : t(`${module}.tab`),
     metrics: [
-      { label: t(module === 'derisk' ? 'annualValue' : 'annualSavings'), value: euro(result.total) },
+      { label: t('indicativeValue'), value: euro(result.total) },
       { label: t('roi'), value: pct(result.roi / 100) },
       { label: t('payback'), value: result.payback < 1 ? '<1' : new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(result.payback) },
     ],
@@ -103,7 +129,7 @@ export function reportContent({ contact, module, scenario, values, locale, trans
       ...(result.soft > 0 ? [{ label: t('softDriver'), value: euro(result.soft) }] : []),
     ],
     assumptionsHeading: t('report.assumptions', { scenario: t(`scenarios.${scenario}`) }),
-    assumptions: assumptions.map(([value, key]) => ({ value, label: t(`report.assumptionLabels.${key}`) })),
+    assumptions,
     sector: sector ? { label: t(`report.sectors.${sector}.label`), body: t(`report.sectors.${sector}.body`) } : null,
     disclaimer: t('report.disclaimer'),
     priceNote: t('report.priceNote'),

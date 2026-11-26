@@ -1,85 +1,126 @@
-.page { padding: 120px 0 0; color: #fff; }
-.wrap { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
-.hero { max-width: 880px; padding: 30px 0 22px; }
-/* Text follows the site type scale (styles/globals.css, type-*): eyebrows are
-   Geist Medium 12px / 145% / 10% tracking, numbers are Mona Sans display. */
-.eyebrow, .label, .ticks, .range, .payback span { font-size: 12px; line-height: 1.45; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
-.eyebrow { color: #6b7dff; margin-bottom: 14px; }
-.intro { color: rgb(255 255 255 / .65); font-size: 18px; line-height: 28px; margin-top: 20px; }
-.modules { display: flex; gap: 2px; margin-top: 22px; border-bottom: 1px solid rgb(255 255 255 / .12); overflow-x: auto; }
-.modules button { padding: 13px 18px; font-size: 16px; line-height: 24px; white-space: nowrap; color: rgb(255 255 255 / .6); border-bottom: 2px solid transparent; }
-.modules button[aria-pressed=true] { color: #fff; border-color: #4b4df7; }
-.modules button:hover, .scenarios button:hover { color: #fff; }
-.page button:focus-visible, .page input:focus-visible, .page summary:focus-visible { outline: 2px solid #9395ff; outline-offset: 4px; }
-.grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 52px; align-items: center; padding-top: 38px; }
-.positioning { margin-bottom: 22px; color: rgb(255 255 255 / .6); }
-.positioning .eyebrow { margin-bottom: 12px; }
-.headline { font-family: 'Mona Sans', sans-serif; font-size: clamp(23px, 2.7vw, 32px); font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin-bottom: 13px; }
-.sub { color: rgb(255 255 255 / .65); font-size: 16px; line-height: 24px; margin-bottom: 30px; max-width: 44ch; }
-.controls { display: flex; flex-direction: column; gap: 24px; }
-.fieldHead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
-.label { color: rgb(255 255 255 / .65); }
-.value { background: transparent; border: 1px solid transparent; border-radius: 7px; text-align: right; width: 11ch; max-width: 55%; padding: 3px 7px; font-family: 'Mona Sans', sans-serif; font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; font-feature-settings: 'ss05' 1; }
-.value:hover { border-color: rgb(255 255 255 / .2); }
-.value:focus { background: #0d0d1f; border-color: #4b4df7; }
-.slider { width: 100%; height: 28px; accent-color: #7577f8; cursor: pointer; background: transparent; }
-.ticks { display: flex; justify-content: space-between; margin-top: 4px; color: rgb(255 255 255 / .5); letter-spacing: 0; }
-.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 32px; }
-/* The homepage card surface (CustomerStoriesSection): translucent, not a solid panel. */
-.instrument { background: rgb(255 255 255 / .04); border: 1px solid rgb(255 255 255 / .07); border-radius: 16px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
-.instrument { padding: 24px 30px 26px; min-width: 0; }
-.scenarios { display: flex; gap: 4px; padding: 4px; background: rgb(255 255 255 / .03); border: 1px solid rgb(255 255 255 / .08); border-radius: 11px; margin-bottom: 20px; }
-.scenarios button { flex: 1; padding: 9px 6px; border-radius: 8px; font-size: 14px; line-height: 20px; color: rgb(255 255 255 / .65); }
-/* White, not brand blue: the selected scenario must not compete with the CTAs. */
-.scenarios button[aria-pressed=true] { background: rgb(255 255 255 / .12); color: #fff; box-shadow: inset 0 0 0 1px rgb(255 255 255 / .1); }
-.gaugeWrap { position: relative; width: 100%; max-width: 372px; margin: 0 auto; }
-.gauge { display: block; width: 100%; height: auto; overflow: visible; }
-.arc { stroke: #7577f8; transition: stroke-dashoffset .45s; }
-/* Dimmed: the needle crosses the amount and must not compete with it. */
-.needle { transform-origin: 150px 150px; transition: transform .6s; opacity: .3; }
-.readout { position: absolute; left: 0; right: 0; top: 42%; text-align: center; pointer-events: none; }
-.amount { font-family: 'Mona Sans', sans-serif; font-size: clamp(28px, 4.5vw, 46px); font-weight: 700; letter-spacing: -.03em; color: #fff; line-height: 1.1; font-variant-numeric: tabular-nums; font-feature-settings: 'ss05' 1; }
-.readout .label { margin-top: 9px; }
-.range { text-align: center; margin-top: 2px; color: rgb(255 255 255 / .55); font-size: 12px; font-weight: 400; letter-spacing: 0; line-height: 1.4; text-transform: none; }
-.range b { color: rgb(255 255 255 / .8); font-weight: 500; }
-.roi { text-align: center; margin-top: 8px; color: rgb(255 255 255 / .65); font-size: 12px; line-height: 1.4; }
-.roi strong { font-family: 'Mona Sans', sans-serif; font-size: 20px; font-weight: 600; color: #fff; }
-.fit { text-align: center; color: #93e0bb; font-size: 14px; line-height: 20px; max-width: 38ch; margin: 6px auto 0; }
-.breakdown { margin-top: 24px; padding-top: 22px; border-top: 1px solid rgb(255 255 255 / .1); }
-.bar { height: 12px; border-radius: 99px; overflow: hidden; display: flex; }
-.bar span { background: #4b4df7; }
-.bar .softBar { background: #93e0bb; }
-.driver { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; padding-left: 16px; position: relative; }
-.driver::before { content: ''; position: absolute; left: 0; top: 5px; width: 8px; height: 8px; border-radius: 3px; background: #4b4df7; }
-.softDriver::before { background: #93e0bb; }
-.driver b { font-size: 14px; line-height: 20px; font-weight: 600; display: block; }
-.driver small { font-size: 12px; line-height: 1.4; color: rgb(255 255 255 / .6); }
-.driver strong { font-family: 'Mona Sans', sans-serif; font-size: 16px; font-weight: 600; white-space: nowrap; }
-.payback { display: flex; justify-content: center; align-items: baseline; gap: 10px; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / .1); }
-.payback strong { font-family: 'Mona Sans', sans-serif; font-size: 26px; }
-.payback span { color: rgb(255 255 255 / .65); }
-@media (max-width: 880px) {
-  .grid { grid-template-columns: 1fr; gap: 36px; padding-top: 26px; }
-  .wrap { padding: 0 18px; }
-  .hero { padding-top: 10px; }
-  .instrument { padding: 20px 18px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .arc, .needle { transition: none; }
-}
-.dialog { margin: auto; width: min(400px, calc(100% - 36px)); max-height: calc(100dvh - 40px); padding: 0; border: 1px solid rgb(255 255 255 / .15); border-radius: 16px; background: #141516; color: #fff; overflow-y: auto; }
-.dialog::backdrop { background: rgb(0 0 0 / .75); backdrop-filter: blur(4px); }
-.dialogInner { padding: 26px 28px; }
-.dialogInner h2 { font-size: 20px; font-weight: 600; padding-right: 28px; letter-spacing: -.02em; }
-.dialogInner p { margin: 10px 0 24px; color: rgb(255 255 255 / .65); font-size: 14px; line-height: 20px; }
-.close { float: right; padding: 4px; color: rgb(255 255 255 / .7); border-radius: 4px; }
-.close:focus-visible { outline: 2px solid #9395ff; outline-offset: 2px; }
+/* The light ROI calculator (the Talent ROI Calculator v6 design). Text sizes
+   come from the site type scale (type-* in styles/globals.css) in the markup,
+   a step below the design's where it sets them; this file holds layout,
+   surfaces and the controls the scale does not cover. */
+.page { color: #121212; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 3.4vw, 48px); }
 
-.captureForm label { display: block; font-size: 12px; line-height: 1.45; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgb(255 255 255 / .65); margin-bottom: 5px; }
-.captureForm input:not([type=checkbox]), .captureForm select { width: 100%; background: #0d0d1f; border: 1px solid rgb(255 255 255 / .15); border-radius: 8px; padding: 10px 12px; color: #fff; font-size: 14px; line-height: 20px; margin-bottom: 13px; }
-.captureForm input:focus-visible, .captureForm select:focus-visible { outline: 2px solid #9395ff; outline-offset: 2px; }
-.captureForm .consent { display: flex; gap: 8px; align-items: flex-start; font-size: 12px; font-weight: 400; letter-spacing: 0; text-transform: none; line-height: 1.4; margin-top: 4px; }
-.consent input { margin-top: 3px; flex: none; accent-color: #4b4df7; }
-.consent a { color: #9395ff; text-decoration: underline; }
-.dialogInner .formNote { font-size: 12px; color: rgb(255 255 255 / .55); line-height: 1.4; margin: 12px 0; }
-.captureForm [role=alert] { font-size: 14px; line-height: 20px; }
+/* Hero: centred, below the fixed navbar. */
+.hero { padding: calc(80px + clamp(56px, 7vw, 96px)) 0 clamp(40px, 4vw, 56px); }
+.heroInner { display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+
+/* The calculator: one white card on the grey section. */
+.calculatorSection { padding: clamp(32px, 3vw, 40px) 0 clamp(48px, 5vw, 72px); }
+.card { border: 1px solid #e5e7eb; border-radius: 16px; background: #fff; overflow: hidden; }
+.tabsBar { padding: 8px clamp(20px, 2.4vw, 32px) 0; border-bottom: 1px solid #e5e7eb; overflow-x: auto; overflow-y: hidden; }
+.tabs, .scenarioTabs { display: flex; gap: 32px; width: max-content; }
+.tabs button, .scenarioTabs button { height: 44px; padding: 0; margin-bottom: -1px; border-bottom: 2px solid transparent; font-size: 14px; line-height: 20px; color: #707070; white-space: nowrap; transition: color .15s, border-color .15s, background .15s; }
+.tabs button:hover, .scenarioTabs button:hover { color: #121212; }
+.tabs button[aria-pressed=true], .scenarioTabs button[aria-pressed=true] { color: #121212; border-bottom-color: #121212; }
+.scenario { display: flex; flex-direction: column; gap: 4px; }
+.scenarioBar { border-bottom: 1px solid #e5e7eb; overflow-x: auto; overflow-y: hidden; }
+.page button:focus-visible, .page input:focus-visible, .page select:focus-visible, .page a:focus-visible { outline: 2px solid #4b4df7; outline-offset: 2px; }
+
+/* Under 600px, as in the design: the four tabs become a two-by-two grid of
+   pills (warm grey edge, the selected one filled warm grey), and the scenarios
+   a row of pills beside their label in one rounded track. */
+@media (max-width: 599px) {
+  .tabsBar { padding: 16px clamp(20px, 2.4vw, 32px); overflow: visible; }
+  .tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: auto; }
+  .tabs button { height: 44px; margin-bottom: 0; padding: 0 12px; border: 1px solid #e8e4df; border-radius: 999px; background: transparent; color: #4b4b4b; font-size: 15px; }
+  .tabs button[aria-pressed=true] { background: #f5f3f1; color: #121212; border-color: #e8e4df; }
+  .scenario { flex-direction: row; align-items: center; gap: 10px; }
+  .scenario > p { flex: none; font-size: 11px; letter-spacing: .08em; }
+  .scenarioBar { flex: 1; min-width: 0; border: 1px solid #e5e7eb; border-radius: 999px; padding: 3px; overflow: visible; }
+  .scenarioTabs { gap: 2px; width: auto; }
+  .scenarioTabs button { flex: 1 1 auto; height: 34px; margin-bottom: 0; padding: 0 8px; border: 0; border-radius: 999px; font-size: 13px; color: #4b4b4b; }
+  .scenarioTabs button[aria-pressed=true] { background: #e7e7e8; color: #121212; }
+}
+
+.panel { display: flex; flex-wrap: wrap; }
+.inputs { flex: 1 1 340px; min-width: 0; padding: clamp(20px, 2.4vw, 32px); display: flex; flex-direction: column; gap: 32px; container-type: inline-size; }
+.results { flex: 1.45 1 460px; min-width: 0; padding: clamp(20px, 2.4vw, 32px); border-left: 1px solid #e5e7eb; display: flex; flex-direction: column; gap: 20px; }
+@media (max-width: 899px) {
+  .results { border-left: 0; padding-top: 0; }
+}
+.headline { font-family: 'Mona Sans', sans-serif; font-weight: 600; font-size: clamp(20px, 1.8vw, 24px); line-height: 1.2; letter-spacing: -.02em; color: #121212; }
+
+/* Inputs: label and range on the left, the value in a box on the right, the
+   slider below, filled in brand blue. */
+.field { display: flex; flex-direction: column; gap: 6px; }
+.fieldRow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 16px; }
+.fieldLabel { flex: 1 1 140px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.valueBox { flex: none; width: 172px; height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 14px; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; transition: border-color .15s, box-shadow .15s; }
+.valueBox:focus-within { border-color: #4b4df7; box-shadow: 0 0 0 3px #e1e2ff; }
+.euro { font-size: 16px; color: #707070; }
+.value { flex: 1; min-width: 0; padding: 0; border: 0; background: transparent; text-align: right; font-size: 18px; font-weight: 600; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: #121212; }
+.page .value:focus-visible { outline: none; }
+@container (max-width: 360px) {
+  .fieldRow { flex-wrap: nowrap; gap: 12px; }
+  .fieldLabel { flex: 1 1 0; }
+  .valueBox { width: 136px; padding: 0 10px; gap: 6px; }
+  .euro { font-size: 15px; }
+}
+.slider { -webkit-appearance: none; appearance: none; display: block; width: 100%; height: 20px; margin: 10px 0 0; padding: 0; background: transparent; cursor: pointer; }
+.slider::-webkit-slider-runnable-track { height: 4px; border: 0; border-radius: 999px; background: linear-gradient(to right, #4b4df7 var(--fill), #e5e7eb var(--fill)); }
+.slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 20px; height: 20px; margin-top: -8px; border: 2px solid #d1d5db; border-radius: 50%; background: #fff; box-sizing: border-box; }
+.slider::-moz-range-track { height: 4px; border: 0; border-radius: 999px; background: #e5e7eb; }
+.slider::-moz-range-progress { height: 4px; border: 0; border-radius: 999px; background: #4b4df7; }
+.slider::-moz-range-thumb { width: 20px; height: 20px; border: 2px solid #d1d5db; border-radius: 50%; background: #fff; box-sizing: border-box; }
+.page .slider:focus-visible { outline: none; }
+.slider:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 2px #fff, 0 0 0 4px #4b4df7; }
+.slider:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 2px #fff, 0 0 0 4px #4b4df7; }
+
+/* Results. */
+.readout { display: flex; flex-direction: column; gap: 16px; }
+.amountBox { container-type: inline-size; display: flex; flex-direction: column; gap: 6px; }
+/* Medium, as in the design: lighter than the site's .stat-value (600), on this number only. */
+.amount { font-family: 'Mona Sans', sans-serif; font-weight: 500; font-size: min(56px, 11cqi); line-height: 1; letter-spacing: -.03em; white-space: nowrap; color: #121212; }
+.split { display: flex; flex-direction: column; gap: 12px; }
+.bar { display: flex; gap: 2px; height: 8px; border-radius: 999px; overflow: hidden; background: #eeeef0; }
+.bar span { height: 100%; transition: width .3s cubic-bezier(.2, .8, .2, 1); }
+.hard { background: #4b4df7; }
+.soft { background: #ff4704; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.legend li { display: flex; align-items: center; gap: 8px; }
+.swatch { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+.tiles { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e5e7eb; }
+.tile { padding: 12px 16px 0 0; display: flex; flex-direction: column; gap: 4px; container-type: inline-size; min-width: 0; }
+.tile + .tile { padding: 12px 0 0 16px; border-left: 1px solid #e5e7eb; }
+.tileValue { font-family: 'Mona Sans', sans-serif; font-size: min(24px, 14cqi); line-height: 1.1; letter-spacing: -.02em; white-space: nowrap; color: #121212; }
+.note a { color: #4b4df7; text-decoration: underline; text-underline-offset: 3px; transition: color .15s; }
+.note a:hover { color: #3133e7; }
+
+/* Under the card: one outlined button to the report form. */
+.actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; padding-top: 40px; }
+.outlineButton { display: inline-flex; align-items: center; gap: 8px; padding: 15px 23px; border: 1px solid #4b4df7; border-radius: 999px; color: #4b4df7; white-space: nowrap; transition: background .15s, color .15s, border-color .15s, transform .12s; }
+.outlineButton svg { width: 16px; height: 16px; }
+.outlineButton:hover { background: #f6f6ff; color: #3133e7; border-color: #3133e7; }
+.outlineButton:active { transform: scale(.98); }
+
+/* The report form, inline under the calculator. */
+.reportSection { border-top: 1px solid #e5e7eb; padding: clamp(64px, 7vw, 104px) 0; scroll-margin-top: 120px; }
+.reportGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 40px 64px; align-items: start; }
+.reportIntro { display: flex; flex-direction: column; gap: 16px; max-width: 440px; }
+.captureForm fieldset { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 16px; border: 0; margin: 0; padding: 0; min-width: 0; }
+.formField { display: flex; flex-direction: column; gap: 6px; }
+.formField label { font-size: 14px; line-height: 20px; font-weight: 500; color: #121212; }
+.formField input, .formField select { height: 48px; padding: 0 14px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 16px; color: #121212; background: #fff; transition: border-color .15s, box-shadow .15s; }
+.formField select { padding: 0 12px; cursor: pointer; }
+.formField input:focus, .formField select:focus { border-color: #4b4df7; box-shadow: 0 0 0 3px #e1e2ff; outline: none; }
+.formField [aria-invalid=true] { border-color: #c2410c; }
+.fieldError { font-size: 12px; line-height: 1.4; color: #c2410c; }
+.consents .fieldError { margin-left: 28px; }
+.consents, .submitRow { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; }
+.submitRow { align-items: flex-start; }
+.consent { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 20px; color: #4b4b4b; cursor: pointer; }
+.consent input { width: 18px; height: 18px; margin: 1px 0 0; flex: none; cursor: pointer; accent-color: #4b4df7; }
+.consent a { color: #4b4df7; text-decoration: underline; text-underline-offset: 3px; }
+.consent a:hover { color: #3133e7; }
+.ready { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; padding-top: 20px; border-top: 1px solid #121212; }
+.readyHeading { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 20px; line-height: 1.25; letter-spacing: -.01em; color: #121212; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tabs button, .scenarioTabs button, .bar span, .valueBox, .formField input, .formField select, .note a, .outlineButton { transition: none; }
+  .outlineButton:active { transform: none; }
+}
