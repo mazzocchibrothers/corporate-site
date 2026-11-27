@@ -1154,54 +1154,19 @@
       "tag": "Newsletter",
       "date": "November 2026",
       "readTime": "5 min read",
-      "title": "November at Skillvue: the launch of Skillvue Assess, the ADR customer story and events from Zurich to Milan",
-      "subtitle": "Are skills inferred or measured? It’s the question that ties this month’s news together: two deals in skills technology, the launch of Skillvue Assess and conversations with HR leaders from Zurich to Milan.",
+      "title": "November at Skillvue: what’s new in Skillvue Assess, the ADR customer story and events from Zurich to Milan",
+      "subtitle": "How do you evaluate people skills at scale? It’s the question that ties this month’s news together: Skillvue Assess, the ADR customer story and conversations with HR leaders from Zurich to Milan.",
       "intro": [
-        "**Inferred or measured: not all skills are equal.**",
-        "In November, we’re starting there. Skills inferred from CVs, job titles and profiles remain an estimate; measured skills come from direct observation. And that difference shapes how far we can trust the data behind our decisions on who to hire, who to promote and where to invest in reskilling."
+        "**People decisions, built on real skills.**",
+        "In November, we’re starting there. Who to hire, who to promote, where to invest in reskilling: these decisions need reliable data on what people can actually do, not just impressions. We explore it through Skillvue Assess, ADR’s experience and what we heard from HR leaders in Zurich and Milan."
       ],
       "sections": [
         {
-          "img": "marketNews",
-          "cta": {
-            "label": "Learn more: measured vs inferred skills",
-            "href": "measuredVsInferred"
-          },
-          "heading": "How well do you really know your team’s skills?",
-          "body": [
-            "Two well-known names in skills technology found new homes, and they approach skills in opposite ways.",
-            "SAP acquired TechWolf, whose technology infers skills from the data organisations already hold, such as job histories, projects and learning records. SAP plans to make it part of the SAP SuccessFactors portfolio.",
-            "Pearson agreed to acquire Workera which, in its own words, measures demonstrated proficiency through adaptive assessments and role-specific scenarios. The deal is expected to close by the end of the year."
-          ],
-          "parts": [
-            {
-              "heading": "Our take",
-              "body": [
-                "These deals are not two versions of the same bet. They are two halves of the same problem.",
-                "**Inference gives you breadth.** By reading the signals already in your systems (job histories, project data, learning records), an inference engine can draw a skills picture of an entire organisation quickly. That is valuable for workforce planning, taxonomy work and spotting where to look.",
-                "**Measurement gives you proof.** When a decision has real consequences for a person and for the business (a hire, a promotion, a reskilling investment), a skill that has been measured is a different kind of evidence from a skill a model expects someone to have.",
-                "Neither replaces the other, and big platforms buying both approaches suggests the market sees value in both. The practical risk for HR is mixing the two without knowing which is which. A dashboard that blends inferred and measured skills can look precise while hiding very different levels of confidence."
-              ]
-            },
-            {
-              "heading": "What this means for you",
-              "list": [
-                "**Ask every vendor, and your own team:** *is this skill inferred or measured?* The answer should be visible next to the data, not buried in a methodology note.",
-                "**Scale the evidence to the decision.** Inference is often enough to decide where to look. For decisions that change someone’s career, ask for measured evidence.",
-                "**Expect skills to arrive inside your HR suite.** If you run SAP SuccessFactors, skills inference is set to become part of the core platform. Plan now for how inferred skills will sit alongside the assessments you already run."
-              ],
-              "bodyAfter": [
-                "[Source: SAP](sapTechwolf) · [Source: Pearson](pearsonWorkera)"
-              ]
-            }
-          ]
-        },
-        {
           "img": "assess",
-          "heading": "Skillvue Assess is live",
+          "heading": "What’s new in Skillvue Assess",
           "body": [
-            "We’ve just launched Skillvue Assess, built around one idea: measure what people can actually do.",
-            "Skillvue Assess creates role-specific assessments for candidates and employees, calibrated to your organisation’s context, operating model and goals. People take them as a conversation or step by step, by text, audio or video, in more than 30 languages, with participation above 80%. Soft skills are scored from 1 to 5 and hard skills from 0 to 100%, with the evidence behind every score. You set the rules; people make the decisions."
+            "With Skillvue Assess you measure what people can actually do. This product module is continuously evolving: you can now create role-specific assessments for candidates and employees, calibrated to your organisation’s context, operating model and goals.",
+            "People take them as a conversation or step by step, by text, audio or video, in more than 30 languages, with participation above 80%. Soft skills are scored from 1 to 5 and hard skills from 0 to 100%, with the evidence behind every score. You set the rules; people make the decisions."
           ],
           "cta": {
             "label": "Discover Skillvue Assess",
@@ -1216,7 +1181,7 @@
             "Three ideas stood out:"
           ],
           "list": [
-            "**Look inside first.** “The first market to fish in is at home.” Before opening a search, know what your own people can already do.",
+            "**Look inside first.** “The first talent pool to draw from is at home.” Before opening a search, know what your own people can already do.",
             "**Decide with data, not with perfect data.** Choosing between reskilling and hiring is a business decision. You do not need perfect information to make it, but you do need skills data you trust.",
             "**AI widens the funnel, people make the call.** Technology helps you see more people and more options; the decision stays human."
           ],
@@ -1232,8 +1197,9 @@
           "img": "adr",
           "heading": "ADR: hidden talent, made visible",
           "body": [
-            "Aeroporti di Roma, part of the Mundys group, runs Fiumicino and Ciampino airports, with more than 55 million passengers a year and nearly 5,000 people. Development paths used to start from line-manager nominations, which meant the potential of up to 4,000 operational staff was largely invisible, at a time when the airport was preparing for new terminals and infrastructure.",
-            "Together with Skillvue’s People Science team, ADR aligned the assessments to its own leadership model, covering technical skills, English and, for the first time for operational roles, soft skills. Employees see the criteria and receive structured feedback, and the results feed managers’ decisions rather than replacing them.",
+            "Aeroporti di Roma, part of the Mundys group, runs Fiumicino and Ciampino airports, with more than 55 million passengers a year and nearly 5,000 people. Development paths used to start from managers evaluating their people’s skills, which meant the potential of up to 4,000 operational staff was largely invisible, at a time when the airport was preparing for new terminals and infrastructure.",
+            "With Skillvue, they now start from each person’s real proficiency level in each skill, measured objectively. Managers still make the decisions; now they make them with data.",
+            "Together with Skillvue’s People Science team, ADR aligned the assessments to its own leadership model, covering technical skills, English and, for the first time for operational roles, soft skills. Employees see the criteria and receive structured feedback.",
             "The results:"
           ],
           "list": [
@@ -1265,7 +1231,7 @@
       "closing": {
         "heading": "Until next month",
         "body": [
-          "November closes with a question to take into your next planning cycle: are your team’s skills inferred or measured? New stories and new data are already on the way. See you in December."
+          "November closes with one key question to take into your next planning cycle: how are you evaluating people skills at scale in your organisation? New stories and new data are already on the way. See you in December."
         ]
       },
       "finalKicker": "Discover Skillvue",
@@ -1276,15 +1242,14 @@
       "back": "Back to Blog",
       "imgSoon": "image coming",
       "imgLabels": {
-        "marketNews": "Skill inferred from company data or measured with a skills assessment",
         "assess": "Skillvue Assess: an interview question with soft and hard skill scores",
         "forum": "The Skillvue panel at Forum HR People & Culture 2026",
         "adr": "ADR and Skillvue customer story: up to 4,000 operational staff included for the first time",
         "events": "November events"
       },
       "meta": {
-        "title": "November at Skillvue: the launch of Skillvue Assess, the ADR customer story and events from Zurich to Milan",
-        "description": "Two deals in skills technology, one question for HR leaders: inferred or measured skills? Plus Skillvue Assess, the Forum People & Culture and Aeroporti di Roma."
+        "title": "November at Skillvue: what’s new in Skillvue Assess, the ADR customer story and events from Zurich to Milan",
+        "description": "How do you evaluate people skills at scale? What’s new in Skillvue Assess, the Forum HR People & Culture, the Aeroporti di Roma customer story and events from Zurich to Milan."
       }
     },
     "newsletter-october-2026": {
@@ -1568,7 +1533,7 @@
     },
     "articles": {
       "newsletter-november-2026": {
-        "title": "Inferred or measured skills: Skillvue Assess, ADR and events from Zurich to Milan",
+        "title": "November at Skillvue: Skillvue Assess, ADR and events from Zurich to Milan",
         "date": "November 2026",
         "tag": "Newsletter"
       },
