@@ -33,6 +33,7 @@ const LINKS = {
   // Events (LinkedIn posts)
   zurichPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7524463266375286786',
   hrcTrendsPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7526262702076403712',
+  jobRetailPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7521595703257874432',
   // Internal pages (already live on the site)
   assess: '/product/skillvue-assess',
   adr: '/customers/adr',
