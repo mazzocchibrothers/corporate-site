@@ -13,7 +13,6 @@ import { ClosingPanel } from '@/components/shared/ClosingPanel';
 // Empty string '' → a labelled dashed placeholder box renders instead.
 // Put files in public/ as: /newsletter-november-<key>.<ext>
 const IMAGES = {
-  marketNews: { en: '/newsletter-november-market-news-en.avif', it: '/newsletter-november-market-news-it.avif' },
   assess: { en: '/newsletter-november-assess-en.avif', it: '/newsletter-november-assess-it.avif' },
   forum: '/newsletter-november-forum.avif',
   adr: { en: '/newsletter-november-adr-en.avif', it: '/newsletter-november-adr-it.avif' },
@@ -43,7 +42,7 @@ const LINKS = {
 // Section anchors, in the order of `sections` in the catalogue. The email links
 // to them, so they are part of the URL, not copy: the events anchor is
 // localized because the Italian email links to #eventi.
-const ANCHORS = ['market-news', 'assess', 'forum', 'adr', { en: 'events', it: 'eventi' }];
+const ANCHORS = ['assess', 'forum', 'adr', { en: 'events', it: 'eventi' }];
 // ────────────────────────────────────────────────────────────────────────────
 
 
