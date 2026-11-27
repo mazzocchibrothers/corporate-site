@@ -32,7 +32,7 @@ const LINKS = {
   pearsonWorkera: 'https://www.prnewswire.com/news-releases/pearson-acquires-workera-a-pioneer-in-ai-native-enterprise-assessment-and-skills-verification-302891786.html',
   // Events (LinkedIn posts)
   zurichPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7524463266375286786',
-  jobRetailPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7526262702076403712',
+  hrcTrendsPost: 'https://www.linkedin.com/feed/update/urn:li:activity:7526262702076403712',
   // Internal pages (already live on the site)
   assess: '/product/skillvue-assess',
   adr: '/customers/adr',
