@@ -1157,7 +1157,8 @@
       "title": "November at Skillvue: the launch of Skillvue Assess, the ADR customer story and events from Zurich to Milan",
       "subtitle": "Are skills inferred or measured? It’s the question that ties this month’s news together: two deals in skills technology, the launch of Skillvue Assess and conversations with HR leaders from Zurich to Milan.",
       "intro": [
-        "The answer shapes how far we can trust the skills data behind our talent decisions. Data inferred from CVs, job titles and profiles estimates skills, while measured data observes them directly: a difference that matters when choosing who to hire, who to promote or where to invest in reskilling."
+        "**Inferred or measured: not all skills are equal.**",
+        "In November, we’re starting there. Skills inferred from CVs, job titles and profiles remain an estimate; measured skills come from direct observation. And that difference shapes how far we can trust the data behind our decisions on who to hire, who to promote and where to invest in reskilling."
       ],
       "sections": [
         {
