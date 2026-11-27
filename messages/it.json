@@ -1154,54 +1154,19 @@
       "tag": "Newsletter",
       "date": "Novembre 2026",
       "readTime": "5 min di lettura",
-      "title": "Novembre in Skillvue: il lancio di Skillvue Assess, la customer story di ADR ed eventi tra Zurigo e Milano",
-      "subtitle": "Le competenze si deducono o si misurano? È la domanda che lega le novità di questo mese: due acquisizioni nella skills technology, il lancio di Skillvue Assess e il confronto con gli HR leader incontrati tra Zurigo e Milano.",
+      "title": "Novembre in Skillvue: le novità di Skillvue Assess, la customer story di ADR ed eventi tra Zurigo e Milano",
+      "subtitle": "Come si valutano le competenze delle persone su larga scala? È la domanda che lega le novità di questo mese: Skillvue Assess, la customer story di ADR e il confronto con gli HR leader incontrati tra Zurigo e Milano.",
       "intro": [
-        "**Dedotte o misurate: non tutte le competenze sono uguali.**",
-        "A novembre partiamo da qui. Le competenze dedotte da CV, ruoli e profili restano una stima, quelle misurate nascono dall’osservazione diretta. E da questa differenza dipende quanto possiamo fidarci dei dati su cui decidiamo chi assumere, chi promuovere o su chi investire in reskilling."
+        "**Decisioni sulle persone, basate su competenze reali.**",
+        "A novembre partiamo da qui. Chi assumere, chi promuovere, su chi investire in reskilling: per decidere servono dati affidabili su ciò che le persone sanno fare davvero, non solo impressioni. Ne parliamo con Skillvue Assess, con l’esperienza di ADR e con gli spunti raccolti dagli HR leader tra Zurigo e Milano."
       ],
       "sections": [
         {
-          "img": "marketNews",
-          "cta": {
-            "label": "Approfondisci: competenze misurate o dedotte",
-            "href": "measuredVsInferred"
-          },
-          "heading": "Quanto conosci davvero le competenze del tuo team?",
-          "body": [
-            "Due nomi noti della skills technology, con approcci diversi alle competenze, sono stati al centro di altrettante acquisizioni.",
-            "SAP ha acquisito TechWolf, la cui tecnologia deduce le competenze a partire dai dati già a disposizione delle aziende, come i ruoli ricoperti, i progetti e la formazione svolta. SAP prevede di integrarla nel portafoglio di soluzioni SAP SuccessFactors.",
-            "Pearson ha avviato l’acquisizione di Workera, che, secondo la descrizione dell’azienda stessa, misura la “demonstrated proficiency” (la competenza dimostrata) attraverso assessment adattivi e scenari specifici per ruolo. Il completamento dell’acquisizione è previsto entro fine anno."
-          ],
-          "parts": [
-            {
-              "heading": "La nostra lettura",
-              "body": [
-                "Non sono due approcci equivalenti, ma due risposte complementari allo stesso problema.",
-                "**La deduzione offre una visione d’insieme.** Analizzando le informazioni già presenti nei sistemi aziendali (ruoli ricoperti, dati sui progetti, formazione svolta), un sistema che deduce le competenze può tracciare rapidamente una mappa delle competenze dell’intera organizzazione. È utile per pianificare la forza lavoro, costruire tassonomie e individuare le aree da approfondire.",
-                "**La misurazione fornisce evidenze concrete.** Quando una decisione ha conseguenze reali per una persona e per il business (un’assunzione, una promozione, un investimento in reskilling), misurare una competenza fornisce un’evidenza di natura diversa rispetto a stimarla attraverso un modello.",
-                "Un approccio non sostituisce l’altro. Il fatto che le grandi piattaforme stiano investendo in entrambi suggerisce che il mercato riconosce il valore di tutti e due. Per l’HR, il rischio concreto è utilizzare questi dati senza distinguerne la provenienza. Una dashboard che combina competenze dedotte e misurate può apparire precisa, pur nascondendo livelli di affidabilità molto diversi."
-              ]
-            },
-            {
-              "heading": "Cosa significa per te",
-              "list": [
-                "**Chiedi a ogni fornitore e al tuo team:** *questa competenza è dedotta o misurata?* La risposta dovrebbe essere visibile accanto al dato, non relegata a una nota metodologica.",
-                "**Valuta quali evidenze servono in base alla decisione.** Per individuare le aree da approfondire, spesso basta la deduzione. Per le decisioni che incidono sulla carriera di una persona, servono dati ottenuti attraverso la misurazione.",
-                "**Preparati all’arrivo dei dati sulle competenze nella tua suite HR.** Se usi SAP SuccessFactors, la deduzione delle competenze è destinata a entrare nella piattaforma. Conviene quindi iniziare a pensare a come questi dati si integreranno con gli assessment che utilizzi oggi."
-              ],
-              "bodyAfter": [
-                "[Source: SAP](sapTechwolf) · [Source: Pearson](pearsonWorkera)"
-              ]
-            }
-          ]
-        },
-        {
           "img": "assess",
-          "heading": "Skillvue Assess è live",
+          "heading": "Le novità di Skillvue Assess",
           "body": [
-            "Abbiamo appena lanciato Skillvue Assess, nato da un’idea semplice: misurare ciò che le persone sanno fare davvero.",
-            "Skillvue Assess permette di creare assessment specifici per ogni ruolo, rivolti a candidati e dipendenti, tenendo conto del contesto, del modello operativo e degli obiettivi della tua azienda.\n\nGli assessment possono essere svolti in modalità conversazionale o attraverso un percorso guidato, con testo, audio o video, in oltre 30 lingue. Il tasso di partecipazione supera l’80%.\n\nLe soft skill sono misurate su una scala da 1 a 5, le hard skill da 0 a 100%, e ogni punteggio è accompagnato dalle evidenze su cui si basa. Sei tu a definire le regole, e le decisioni restano alle persone."
+            "Con Skillvue Assess misuri ciò che le persone sanno fare davvero. È un modulo di prodotto in continua evoluzione: oggi puoi creare assessment specifici per ogni ruolo, rivolti a candidati e dipendenti, tenendo conto del contesto, del modello operativo e degli obiettivi della tua azienda.",
+            "Gli assessment possono essere svolti in modalità conversazionale o attraverso un percorso guidato, con testo, audio o video, in oltre 30 lingue. Il tasso di partecipazione supera l’80%.\n\nLe soft skill sono misurate su una scala da 1 a 5, le hard skill da 0 a 100%, e ogni punteggio è accompagnato dalle evidenze su cui si basa. Sei tu a definire le regole, e le decisioni restano alle persone."
           ],
           "cta": {
             "label": "Scopri Skillvue Assess",
@@ -1216,7 +1181,7 @@
             "Dal confronto sono emersi tre punti:"
           ],
           "list": [
-            "**Partire dalle risorse interne.** “Il primo mercato dove pescare è casa.” Prima di avviare una nuova ricerca, è importante conoscere le competenze delle persone che fanno già parte dell’organizzazione.",
+            "**Partire dalle risorse interne.** “Il primo bacino di talenti a cui attingere è in casa.” Prima di avviare una nuova ricerca, è importante conoscere le competenze delle persone che fanno già parte dell’organizzazione.",
             "**Decidere con i dati, senza aspettare che siano perfetti.** Scegliere tra reskilling e nuove assunzioni è una decisione di business. Non servono informazioni perfette, ma dati affidabili sulle competenze.",
             "**L’AI amplia il bacino di persone da considerare, ma la decisione resta umana.** La tecnologia permette di prendere in considerazione più persone e più alternative, senza sostituirsi a chi decide."
           ],
@@ -1232,8 +1197,9 @@
           "img": "adr",
           "heading": "Il talento nascosto di ADR",
           "body": [
-            "Aeroporti di Roma, parte del gruppo Mundys, gestisce gli aeroporti di Fiumicino e Ciampino, con oltre 55 milioni di passeggeri l’anno e quasi 5.000 dipendenti. I percorsi di sviluppo partivano dalle segnalazioni dei responsabili. Di conseguenza, il potenziale dei dipendenti operativi, fino a 4.000 persone, rimaneva in gran parte inesplorato, proprio mentre ADR si preparava a nuovi terminal e nuove infrastrutture.",
-            "Insieme al team People Science di Skillvue, ADR ha allineato gli assessment al proprio modello di leadership, includendo competenze tecniche, inglese e, per la prima volta nei ruoli operativi, soft skill. Le persone conoscono i criteri di valutazione e ricevono un feedback strutturato. I risultati supportano le decisioni dei manager, senza sostituirsi al loro giudizio.",
+            "Aeroporti di Roma, parte del gruppo Mundys, gestisce gli aeroporti di Fiumicino e Ciampino, con oltre 55 milioni di passeggeri l’anno e quasi 5.000 dipendenti. Prima, i percorsi di sviluppo partivano dalla valutazione dei responsabili sulle competenze dei propri collaboratori, e il potenziale dei dipendenti operativi, fino a 4.000 persone, rimaneva in gran parte inesplorato, proprio mentre ADR si preparava a nuovi terminal e nuove infrastrutture.",
+            "Con Skillvue, i percorsi partono dal livello reale di padronanza di ogni competenza, misurato in modo oggettivo. I manager continuano a decidere, ma ora lo fanno con i dati.",
+            "Insieme al team People Science di Skillvue, ADR ha allineato gli assessment al proprio modello di leadership, includendo competenze tecniche, inglese e, per la prima volta nei ruoli operativi, soft skill. Le persone conoscono i criteri di valutazione e ricevono un feedback strutturato.",
             "I risultati:"
           ],
           "list": [
@@ -1265,7 +1231,7 @@
       "closing": {
         "heading": "Alla prossima",
         "body": [
-          "Novembre si chiude con una domanda da portare nel prossimo ciclo di pianificazione: le competenze del tuo team sono dedotte o misurate? Nuove storie e nuovi dati sono già in arrivo. Ci vediamo a dicembre."
+          "Novembre si chiude con una domanda chiave da portare nel prossimo ciclo di pianificazione: come stai valutando le competenze delle persone, su larga scala, nella tua organizzazione? Nuove storie e nuovi dati sono già in arrivo. Ci vediamo a dicembre."
         ]
       },
       "finalKicker": "Scopri Skillvue",
@@ -1276,15 +1242,14 @@
       "back": "Torna al Blog",
       "imgSoon": "immagine in arrivo",
       "imgLabels": {
-        "marketNews": "Competenza dedotta dai dati aziendali o misurata con un assessment delle competenze",
         "assess": "Skillvue Assess: una domanda di intervista con i punteggi di soft e hard skill",
         "forum": "Il panel di Skillvue al Forum HR People & Culture 2026",
         "adr": "Customer story ADR e Skillvue: fino a 4.000 operativi coinvolti per la prima volta",
         "events": "Gli eventi di novembre"
       },
       "meta": {
-        "title": "Novembre in Skillvue: il lancio di Skillvue Assess, la customer story di ADR ed eventi tra Zurigo e Milano",
-        "description": "Due acquisizioni nella skills technology, una domanda per chi guida l’HR: competenze dedotte o misurate? In più Skillvue Assess, il Forum People & Culture e Aeroporti di Roma."
+        "title": "Novembre in Skillvue: le novità di Skillvue Assess, la customer story di ADR ed eventi tra Zurigo e Milano",
+        "description": "Come si valutano le competenze delle persone su larga scala? Le novità di Skillvue Assess, il Forum HR People & Culture, la customer story di Aeroporti di Roma e gli eventi tra Zurigo e Milano."
       }
     },
     "newsletter-october-2026": {
@@ -1568,7 +1533,7 @@
     },
     "articles": {
       "newsletter-november-2026": {
-        "title": "Competenze dedotte o misurate: Skillvue Assess, ADR ed eventi tra Zurigo e Milano",
+        "title": "Novembre in Skillvue: Skillvue Assess, ADR ed eventi tra Zurigo e Milano",
         "date": "Novembre 2026",
         "tag": "Newsletter"
       },
