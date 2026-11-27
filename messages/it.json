@@ -1154,17 +1154,21 @@
       "tag": "Newsletter",
       "date": "Novembre 2026",
       "readTime": "5 min di lettura",
-      "title": "Novembre in Skillvue: il lancio di Skillvue Assess, la storia di ADR ed eventi tra Zurigo e Milano",
-      "subtitle": "Le competenze si deducono o si misurano? Questo novembre abbiamo esplorato la domanda attraverso le novità del mercato, il lancio di Skillvue Assess e le conversazioni con HR leader tra Zurigo e Milano.",
+      "title": "Novembre in Skillvue: il lancio di Skillvue Assess, la customer story di ADR ed eventi tra Zurigo e Milano",
+      "subtitle": "Le competenze si deducono o si misurano? È la domanda che lega le novità di questo mese: due acquisizioni nella skills technology, il lancio di Skillvue Assess e il confronto con gli HR leader incontrati tra Zurigo e Milano.",
       "intro": [
-        "Quanto possiamo fidarci dei dati sulle competenze su cui basiamo le decisioni sul talento? Questo mese partiamo proprio da questa domanda, alla luce di due acquisizioni nel nostro settore, del lancio di Skillvue Assess e del confronto con gli HR leader che abbiamo incontrato a Milano e non solo."
+        "Dalla risposta dipende quanto possiamo fidarci dei dati su cui basiamo le decisioni sul talento. I dati dedotti da CV, ruoli e profili stimano le competenze, quelli misurati le osservano direttamente: una differenza che pesa quando si sceglie chi assumere, chi promuovere o su chi investire in reskilling."
       ],
       "sections": [
         {
           "img": "marketNews",
+          "cta": {
+            "label": "Approfondisci: competenze misurate o dedotte",
+            "href": "measuredVsInferred"
+          },
           "heading": "Quanto conosci davvero le competenze del tuo team?",
           "body": [
-            "Quest’autunno due nomi noti della skills technology, con approcci diversi alle competenze, sono stati al centro di altrettante acquisizioni.",
+            "Due nomi noti della skills technology, con approcci diversi alle competenze, sono stati al centro di altrettante acquisizioni.",
             "SAP ha acquisito TechWolf, la cui tecnologia deduce le competenze a partire dai dati già a disposizione delle aziende, come i ruoli ricoperti, i progetti e la formazione svolta. SAP prevede di integrarla nel portafoglio di soluzioni SAP SuccessFactors.",
             "Pearson ha avviato l’acquisizione di Workera, che, secondo la descrizione dell’azienda stessa, misura la “demonstrated proficiency” (la competenza dimostrata) attraverso assessment adattivi e scenari specifici per ruolo. Il completamento dell’acquisizione è previsto entro fine anno."
           ],
@@ -1195,7 +1199,7 @@
           "img": "assess",
           "heading": "Skillvue Assess è live",
           "body": [
-            "Questo mese abbiamo lanciato Skillvue Assess, nato da un’idea semplice: misurare ciò che le persone sanno fare davvero.",
+            "Abbiamo appena lanciato Skillvue Assess, nato da un’idea semplice: misurare ciò che le persone sanno fare davvero.",
             "Skillvue Assess permette di creare assessment specifici per ogni ruolo, rivolti a candidati e dipendenti, tenendo conto del contesto, del modello operativo e degli obiettivi della tua azienda.\n\nGli assessment possono essere svolti in modalità conversazionale o attraverso un percorso guidato, con testo, audio o video, in oltre 30 lingue. Il tasso di partecipazione supera l’80%.\n\nLe soft skill sono misurate su una scala da 1 a 5, le hard skill da 0 a 100%, e ogni punteggio è accompagnato dalle evidenze su cui si basa. Sei tu a definire le regole, e le decisioni restano alle persone."
           ],
           "cta": {
@@ -1247,7 +1251,7 @@
           "heading": "Novembre tra Zurigo e Milano",
           "body": [
             "Zurigo e Milano.",
-            "Questo mese abbiamo incontrato HR leader tra Svizzera e Italia per parlare di competenze, dati e impatto sul business.",
+            "Abbiamo incontrato HR leader tra Svizzera e Italia per parlare di competenze, dati e impatto sul business.",
             "Dal Workforce Digital Transformation Summit DACH a Zurigo a HRC Trends: Learning & Development, Job in Retail e “Learn. Sell. Grow.” di BIP a Milano, in tutti gli incontri è emerso lo stesso tema: il valore dei dati sulle competenze si misura dal loro impatto sui risultati di business.",
             "Rivivi gli eventi:"
           ],
@@ -1278,7 +1282,7 @@
         "events": "Gli eventi di novembre"
       },
       "meta": {
-        "title": "Novembre in Skillvue: il lancio di Skillvue Assess, la storia di ADR ed eventi tra Zurigo e Milano",
+        "title": "Novembre in Skillvue: il lancio di Skillvue Assess, la customer story di ADR ed eventi tra Zurigo e Milano",
         "description": "Due acquisizioni nella skills technology, una domanda per chi guida l’HR: competenze dedotte o misurate? In più Skillvue Assess, il Forum People & Culture e Aeroporti di Roma."
       }
     },

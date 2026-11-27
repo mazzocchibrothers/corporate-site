@@ -1154,17 +1154,21 @@
       "tag": "Newsletter",
       "date": "November 2026",
       "readTime": "5 min read",
-      "title": "November at Skillvue: the launch of Skillvue Assess, the ADR story and events from Zurich to Milan",
-      "subtitle": "Are skills inferred or measured? This November, we explored the question through market news, the launch of Skillvue Assess and conversations with HR leaders from Zurich to Milan.",
+      "title": "November at Skillvue: the launch of Skillvue Assess, the ADR customer story and events from Zurich to Milan",
+      "subtitle": "Are skills inferred or measured? It’s the question that ties this month’s news together: two deals in skills technology, the launch of Skillvue Assess and conversations with HR leaders from Zurich to Milan.",
       "intro": [
-        "What does it take to trust the skills data behind your talent decisions? This month we’re starting there: with two deals in our market that put the question in focus, the launch of Skillvue Assess, and what we heard from HR leaders in Milan and beyond."
+        "The answer shapes how far we can trust the skills data behind our talent decisions. Data inferred from CVs, job titles and profiles estimates skills, while measured data observes them directly: a difference that matters when choosing who to hire, who to promote or where to invest in reskilling."
       ],
       "sections": [
         {
           "img": "marketNews",
+          "cta": {
+            "label": "Learn more: measured vs inferred skills",
+            "href": "measuredVsInferred"
+          },
           "heading": "How well do you really know your team’s skills?",
           "body": [
-            "This autumn two well-known names in skills technology found new homes, and they approach skills in opposite ways.",
+            "Two well-known names in skills technology found new homes, and they approach skills in opposite ways.",
             "SAP acquired TechWolf, whose technology infers skills from the data organisations already hold, such as job histories, projects and learning records. SAP plans to make it part of the SAP SuccessFactors portfolio.",
             "Pearson agreed to acquire Workera which, in its own words, measures demonstrated proficiency through adaptive assessments and role-specific scenarios. The deal is expected to close by the end of the year."
           ],
@@ -1195,7 +1199,7 @@
           "img": "assess",
           "heading": "Skillvue Assess is live",
           "body": [
-            "This month we launched Skillvue Assess, built around one idea: measure what people can actually do.",
+            "We’ve just launched Skillvue Assess, built around one idea: measure what people can actually do.",
             "Skillvue Assess creates role-specific assessments for candidates and employees, calibrated to your organisation’s context, operating model and goals. People take them as a conversation or step by step, by text, audio or video, in more than 30 languages, with participation above 80%. Soft skills are scored from 1 to 5 and hard skills from 0 to 100%, with the evidence behind every score. You set the rules; people make the decisions."
           ],
           "cta": {
@@ -1247,7 +1251,7 @@
           "heading": "November from Zurich to Milan",
           "body": [
             "Zurich and Milan.",
-            "This month we met HR leaders across Switzerland and Italy to talk about skills, data and business impact.",
+            "We met HR leaders across Switzerland and Italy to talk about skills, data and business impact.",
             "From the Workforce Digital Transformation Summit DACH in Zurich to HRC Trends: Learning & Development, Job in Retail and BIP’s “Learn. Sell. Grow.” in Milan, every conversation came back to the same theme: the value of skills data is measured by its impact on business results.",
             "Relive the events:"
           ],
@@ -1278,7 +1282,7 @@
         "events": "November events"
       },
       "meta": {
-        "title": "November at Skillvue: the launch of Skillvue Assess, the ADR story and events from Zurich to Milan",
+        "title": "November at Skillvue: the launch of Skillvue Assess, the ADR customer story and events from Zurich to Milan",
         "description": "Two deals in skills technology, one question for HR leaders: inferred or measured skills? Plus Skillvue Assess, the Forum People & Culture and Aeroporti di Roma."
       }
     },

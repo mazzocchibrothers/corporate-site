@@ -37,6 +37,8 @@ const LINKS = {
   // Internal pages (already live on the site)
   assess: '/product/skillvue-assess',
   adr: '/customers/adr',
+  // Landing page from the Instantly campaign "Measured vs Inferred - Wave 1"
+  measuredVsInferred: '/lp/measured-vs-inferred-v2',
 };
 // Section anchors, in the order of `sections` in the catalogue. The email links
 // to them, so they are part of the URL, not copy: the events anchor is
